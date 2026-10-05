@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#162c38"><meta name="description" content="Power of Chaos 상대 AI 덱을 직접 만들고 콤보와 행동 지침을 보내세요.">
+  <title>AI 덱 만들기 · Power of Chaos</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=20261006-6"><link rel="stylesheet" href="ai-decks.css?v=20261006-6">
+  <script type="module" src="ai-decks.js?v=20261006-6"></script>
+</head>
+<body>
+  <header class="masthead"><a href="./" class="brand"><img src="assets/icon.svg" alt="" width="34" height="40"><span>POWER OF CHAOS<small>카드 도감으로 돌아가기</small></span></a><button id="export-decks" class="primary">AI 덱 보내기</button></header>
+  <main>
+    <section class="intro"><div><p class="eyebrow">BUILD YOUR NEXT OPPONENT</p><h1>상대 덱은 네가,<br>플레이 방식은 함께.</h1><p class="intro-copy">카드를 고르고 원하는 콤보를 적어줘. JSON을 보내주면 AI의 효과 사용과 판단을 수정할게.</p></div></section>
+    <p class="builder-notice">덱은 이 브라우저에 저장돼. 다른 기기에서는 JSON으로 이어서 편집할 수 있어. 게임에 적용하려면 내보낸 파일을 채팅에 보내줘.</p>
+    <p id="load-status" class="builder-status" role="status">카드를 불러오는 중…</p>
+    <nav class="builder-mobile-tabs" aria-label="덱 편집 화면"><button id="show-pool" class="active" aria-pressed="true">카드 찾기</button><button id="show-deck" aria-pressed="false">내 AI 덱 <span id="mobile-count">0</span></button></nav>
+    <div class="builder-workspace">
+      <section class="builder-pool" id="pool-panel" aria-label="넣을 카드 찾기">
+        <div class="builder-search"><label for="builder-search">카드 이름 · 효과 · 종족</label><input id="builder-search" type="search" placeholder="예: 공룡, 백룡, 융합" autocomplete="off"><div class="filter-pair"><div><label for="builder-type">종류</label><select id="builder-type"><option value="">모든 종류</option></select></div><div><label for="builder-race">종족</label><select id="builder-race"><option value="">모든 종족</option></select></div></div><div class="filter-pair"><div><label for="builder-tier">등급</label><select id="builder-tier"><option value="">모든 등급</option><option>UR</option><option>SR</option><option>R</option><option>N</option></select></div><div><label for="add-group">추가할 위치</label><select id="add-group"><option value="main">메인 덱</option><option value="extra">융합 덱</option><option value="side">사이드 덱</option></select></div></div></div>
+        <p id="pool-results" class="muted" role="status"></p><div id="builder-cards" class="builder-card-grid"></div>
+        <nav class="pagination" aria-label="카드 페이지"><button id="pool-prev">← 이전</button><span id="pool-page"></span><button id="pool-next">다음 →</button></nav>
+      </section>
+      <section class="builder-deck" id="deck-panel" aria-label="내 AI 덱 편집">
+        <div class="deck-library"><label for="deck-select">내 AI 덱</label><select id="deck-select"></select><div class="deck-library-actions"><button id="new-deck">새 덱</button><button id="clone-deck">복제</button><button id="import-decks">JSON 불러오기</button><input id="deck-import-file" type="file" accept="application/json,.json" hidden></div><details class="deck-examples"><summary>기존 상대 덱에서 시작하기</summary><label for="example-select">예시 덱</label><select id="example-select"><option value="0">기존 상대 덱 1 · 메인 42장</option><option value="1">기존 상대 덱 2 · 메인 42장</option><option value="2">기존 상대 덱 3 · 메인 48장</option><option value="3">기존 상대 덱 4 · 메인 42장</option><option value="4">기존 상대 덱 5 · 메인 42장</option></select><button id="load-example">새 덱으로 가져오기</button><p class="muted">기존 AI가 쓰는 구성이라 현재 금제에 맞지 않는 카드가 있을 수 있어. 가져온 뒤 확인 항목을 봐줘.</p></details></div>
+        <label for="deck-name">덱 이름</label><input id="deck-name" maxlength="80" placeholder="예: 공룡 전개 덱">
+        <div class="filter-pair"><div><label for="deck-rules">덱 규칙</label><select id="deck-rules"><option value="classic">현재 게임 · 40~80장</option><option value="duel_links_plan">듀얼링크스 기획 · 20~30장</option></select></div><div><label for="deck-difficulty">희망 난이도</label><select id="deck-difficulty"><option value="1">1 · 입문</option><option value="2">2 · 쉬움</option><option value="3" selected>3 · 보통</option><option value="4">4 · 중급</option><option value="5">5 · 어려움</option><option value="6">6 · 숙련</option><option value="7">7 · 최고</option></select></div></div>
+        <label class="check-row"><input id="deck-banlist" type="checkbox" checked>현재 모드의 금지·제한 적용</label>
+        <p id="rules-note" class="builder-notice" hidden>20~30장 덱 기획용이야. 듀얼링크스 규칙은 아직 게임에 적용되지 않았어. 융합·사이드 한도는 모드 구현 때 확정할게.</p>
+        <div id="deck-counts" class="deck-counts" aria-live="polite"></div>
+        <details class="deck-checks" open><summary id="validation-summary">덱 확인</summary><ul id="deck-issues"></ul></details>
+        <div id="deck-groups"></div>
+        <details class="strategy-editor" open><summary>AI가 어떻게 플레이하면 좋을까?</summary><label for="strategy-goal">승리 목표 · 덱의 컨셉</label><textarea id="strategy-goal" rows="2" maxlength="6000" placeholder="예: 공룡을 전개하고 궁극의 티라노로 공격"></textarea><label for="strategy-priorities">우선 사용할 카드·효과</label><textarea id="strategy-priorities" rows="2" maxlength="6000" placeholder="예: 화석조사로 지금 패에 부족한 공룡을 가져오기"></textarea><label for="strategy-combos">원하는 콤보 · 사용 순서</label><textarea id="strategy-combos" rows="3" maxlength="6000" placeholder="예: 묘지에 언데드를 마련한 뒤 소생으로 이어가기"></textarea><label for="strategy-avoid">피해야 할 행동</label><textarea id="strategy-avoid" rows="2" maxlength="6000" placeholder="예: 자기 필드가 유리할 때 전체 제거를 쓰지 않기"></textarea></details>
+        <p id="deck-save-status" class="muted" role="status"></p>
+      </section>
+    </div>
+    <footer><p>덱 구성과 행동 지침을 보내는 편집기야. 행동 지침이 게임의 AI 코드로 자동 변환되지는 않아. 현재 모드 효과 설명을 기준으로 구성해줘.</p></footer>
+  </main>
+  <dialog id="builder-detail" aria-labelledby="builder-detail-title"><button id="close-builder-detail" class="dialog-close" aria-label="카드 상세 닫기">×</button><div id="builder-detail-body"></div></dialog>
+  <dialog id="builder-export" aria-labelledby="builder-export-title"><button id="close-builder-export" class="dialog-close" aria-label="덱 내보내기 닫기">×</button><div class="export-body"><p class="eyebrow">YOUR AI DECKS</p><h2 id="builder-export-title">AI 덱 보내기</h2><p>JSON을 내려받아 채팅에 첨부해줘. 미완성 덱도 보낼 수 있어. 원하는 콤보와 고쳐야 할 플레이를 함께 전달할게.</p><div class="export-buttons"><button id="download-current-deck" class="primary">이 덱 JSON 내려받기</button><button id="download-all-decks">모든 AI 덱 JSON 내려받기</button><button id="download-deck-notes">이 덱 메모 내려받기</button></div><label for="deck-export-preview">전달할 내용</label><textarea id="deck-export-preview" readonly rows="10"></textarea></div></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>
