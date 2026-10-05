@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": 1,
-    "dataset_id": "917ebfb923545717b5ce6c69d6f47ab919b5978f944cba3307678faa98de7e9a",
+    "dataset_id": "f7cc416503962ef2da38f438f9dc19b56a417480fdd36262d0ab666cbbbb2da8",
     "snapshot_date": "2026-10-06",
     "title": "Yu-Gi-Oh! Power of Chaos · 한국어 모드 카드 도감",
     "total": 1115,
@@ -33,14 +33,14 @@
         "sell_price": 25
       }
     },
-    "source_exe_sha256": "4644d38b8d196defda84f9c47fa64959cea330b385c82ce3dcaffd4c980cf8b6",
+    "source_exe_sha256": "354bdf17cfe089d906c6dd731be33ecb9b46af83e21221d7a7e1477b9b4cfcfd",
     "source_resources": {
       "card_id.bin": "302b156e15e26681bad0c5e822d49a99a07de65a54f7e7d88e2619de8e3a05f5",
       "card_prop.bin": "1387b50bd3bad4fdf356133f0f8659ac92030fc8ba14eb3bac394839ffcab06e",
       "card_nameeng.bin": "80a9ec5fe676c6e483e3c4d27935c540c5811d2b0ecdbc16e4aa3f0d84bbbed0",
       "card_pack.bin": "337886dfa55531433a4e32c1b8e60dc689585787fbe0b39e38e58d63f5ce2037",
-      "card_desceng.bin": "aa880e4292cac1307c95fbc1f0973fdf6452350a33886f56817c70173f0a7026",
-      "card_indxeng.bin": "a61ab47fc83ec17dfb3a5a379271c9de276cc7b8917443077312bc667f953af9",
+      "card_desceng.bin": "662d058f4843d86bcce579676c5e404dfe09dc174cbd29e86aefebf866b1e79c",
+      "card_indxeng.bin": "892a36dfe0e2f985331021157ee10b5584580a1cce4df9163e72c5ee640253ee",
       "list_card.txt": "490f119b1713ffbbef2791191fb9d7bf98b7fff93d7a47dc70340d2f744b0b66"
     },
     "scope": "설치된 모드의 이름·한국어 설명·능력치·제한을 읽은 스냅샷. 공식 이미지의 인쇄 효과가 구현되어 있다고 가정하지 않는다."
@@ -1467,13 +1467,13 @@
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
-      "description_ko": "필드에 존재하는 동안 일반\n몬스터로 취급한다.",
+      "description_ko": "이 카드는 필드에 앞면 표시로\n존재하거나 묘지에 존재하는\n동안 일반 몬스터로 취급한다.\n필드의 이 카드를 통상\n소환으로서 다시 일반 소환할\n수 있다. 그 경우 효과\n몬스터로 취급되며 다음\n효과를 얻는다.\n이 카드가 공격할 경우,\n상대는 데미지 스텝\n종료시까지 마법 / 함정\n카드를 발동할 수 없다.",
       "special": false,
       "image": "assets/cards/0045.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=7294&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": "",
-      "review_kind": ""
+      "review_note": "실제 재소환으로 통상 소환 횟수를 소비한 뒤, 공격 중 상대의 마법·함정 카드 발동을 막는 효과를 복원했다. 뒤집거나 필드를 떠나면 재소환 상태가 초기화된다. 네이티브 코드 검사 통과, 실전 확인 대기. AI가 스스로 재소환을 선택하는 기능은 아직 추가하지 않았다.",
+      "review_kind": "restored"
     },
     {
       "slot": 46,
@@ -29556,13 +29556,13 @@
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
-      "description_ko": "이 카드가 필드에 앞면으로\n존재하는 동안 모든 땅 속성\n몬스터의 공격력을 500\n올리고, 모든 바람 속성\n몬스터의 공격력을 400\n내린다.",
+      "description_ko": "자신의 패가 0장인 동안, 이\n카드의 공격력은 1000\n상승한다.",
       "special": false,
       "image": "assets/cards/0948.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=6415&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": "",
-      "review_kind": ""
+      "review_note": "다른 땅·바람 속성 몬스터에 적용하던 모드의 강화·약화 효과를 제거했다. 현재 컨트롤러의 패가 0장이면 자신의 공격력만 1000 상승한다. 듀얼 몬스터가 아니다. 네이티브 코드 검사 통과, 실전 확인 대기.",
+      "review_kind": "restored"
     },
     {
       "slot": 949,
@@ -32853,13 +32853,13 @@
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
-      "description_ko": "이 카드는 묘지에서만 특수\n소환할 수 있다.",
+      "description_ko": "이 카드는 특수 소환할 수\n없다. 수비 표시 몬스터를\n공격할 때 공격력이\n수비력보다 높으면 그\n차이만큼 상대에게 전투\n데미지를 준다. 이 카드가\n공격할 경우, 상대는 데미지\n스텝 종료시까지 마법 / 함정\n카드를 발동할 수 없다.",
       "special": false,
       "image": "assets/cards/1053.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=6315&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": "",
-      "review_kind": ""
+      "review_note": "특수 소환 불가, 관통, 공격 중 상대의 마법·함정 카드 발동 금지를 복원했다. 네이티브 코드 검사 통과, 실전 확인 대기.",
+      "review_kind": "restored"
     },
     {
       "slot": 1054,
