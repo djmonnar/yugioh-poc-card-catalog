@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": 1,
-    "dataset_id": "08551dfd002c39c4004d5809c1e0a4ab89ebe0b076524ab16e14a9460b2d0091",
+    "dataset_id": "dcbdce6703f5a2a5dec64fb9243be75f3334a6b4280f82384d7b8056f52e6931",
     "snapshot_date": "2026-10-05",
     "title": "Yu-Gi-Oh! Power of Chaos · 한국어 모드 카드 도감",
     "total": 1115,
@@ -344,7 +344,7 @@
       "image": "assets/cards/0010.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=6397&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": ""
+      "review_note": "현재 모드 설명의 융합 소재는 사이버 드래곤·츠바이·프로토 각 1장으로, 공식 소재인 사이버 드래곤 3장과 다르다. 공식 관통 효과도 현재 설명에 없다. 소재·효과 로직 복원 검토 대상이다."
     },
     {
       "slot": 11,
@@ -4138,7 +4138,7 @@
       "image": "assets/cards/0136.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=6396&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": ""
+      "review_note": "현재 모드 설명은 사이버 드래곤 + 프로토 사이버 드래곤이다. 공식 소재는 사이버 드래곤 2장이고, 대체 소재 사용 제한과 배틀 페이즈 2회 공격이 있다. 현재 소재·효과 설명과 달라 복원 검토 대상이다."
     },
     {
       "slot": 137,
@@ -7878,7 +7878,7 @@
       "image": "assets/cards/0260.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=6454&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": ""
+      "review_note": "현재 모드의 공식 대상 효과 무효화는 미복원 상태다. 융합 소재·기본 능력치 기준으로 검토한다."
     },
     {
       "slot": 261,
@@ -14972,7 +14972,7 @@
       "image": "assets/cards/0496.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=8646&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": ""
+      "review_note": "현재 설명은 공격받은 몬스터를 다섯 번째 턴에 파괴하는 효과다. 공식 츠바이의 묘지 이름 취급·마법 공개 후 이름 변경·공격 중 타점 상승과 다르므로, 원래 효과 복원 검토 대상이다."
     },
     {
       "slot": 497,
@@ -23552,7 +23552,7 @@
       "image": "assets/cards/0782.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=6390&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": ""
+      "review_note": "현재 설명은 릴리스 없이 소환할 수 있다는 내용이다. 공식 효과는 상대 필드에만 몬스터가 있을 때 패에서 특수 소환하는 것이므로, 소환 조건·방식 복원 검토 대상이다."
     },
     {
       "slot": 783,
@@ -29448,7 +29448,7 @@
       "image": "assets/cards/0976.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=7732&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": ""
+      "review_note": "현재 모드의 공식 소재 몬스터로 분리하는 효과는 미복원 상태다. 융합 소재·기본 능력치 기준으로 검토한다."
     },
     {
       "slot": 977,

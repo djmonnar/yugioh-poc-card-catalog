@@ -36,10 +36,13 @@
 - 공식 카드 DB로의 연결은 기존 매칭 자료를 사용합니다. 매칭이 확인되지 않은 카드에는 표시가 있습니다.
 - 알려진 원본 효과와의 차이는 **효과·이름 검토 대상**에서 찾을 수 있습니다. 전체 효과 구현을 모두 검증한 목록은 아닙니다.
 - 프로토 사이버 드래곤과 엘리멘틀 히어로 플리즈마의 현재 설명은 융합 소재 대체입니다. 원래 이름 취급/이름 변경 효과와 다른 것으로 표시했습니다.
+- 사이버 드래곤의 릴리스 없는 소환 설명, 츠바이의 지연 파괴 설명, 사이버 트윈/엔드의 서로 다른 이름을 요구하는 소재도 공식 조건·효과와 달라 복원 검토 대상으로 표시했습니다.
 - 프리즈마, 플레임 윙맨, 썬더 자이언트, 붉은 눈의 암룡, 일부 마력 카운터 카드의 미복원·부분 지원도 메모로 구분했습니다.
 - 도감은 스냅샷입니다. 게임에 카드·효과·제한 변경을 적용한 뒤에는 데이터를 다시 내보내야 합니다.
 
 참고: [프로토 사이버 드래곤 공식 DB](https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=6588&ope=2&request_locale=ko), [엘리멘틀 히어로 플리즈마 공식 DB](https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=7491&ope=2&request_locale=ko).
+
+사이버 계열 비교: [사이버 드래곤](https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=6390&ope=2&request_locale=ko), [츠바이](https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=8646&ope=2&request_locale=ko), [트윈](https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=6396&ope=2&request_locale=ko), [엔드](https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=6397&ope=2&request_locale=ko).
 
 ## 파일
 
