@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="한국어 Power of Chaos 모드 전체 카드 도감. 레어도, 교체 후보, 금지·제한 의견을 모아 검토 파일로 내보내세요.">
+  <meta name="theme-color" content="#162c38">
+  <title>카드 도감 · Power of Chaos</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <a href="./" class="brand" aria-label="카드 도감 처음으로"><img src="assets/icon.svg" alt="" width="34" height="40"><span>POWER OF CHAOS<small>한국어 모드 · 카드 도감</small></span></a>
+    <div class="header-actions"><a href="https://github.com/djmonnar/yugioh-poc-card-catalog" target="_blank" rel="noopener" class="quiet-link">GitHub ↗</a><button id="export-open" class="primary">의견 내보내기 <span id="review-count">0</span></button></div>
+  </header>
+  <main>
+    <section class="intro"><div><p class="eyebrow">THE COMPLETE CARD COLLECTION</p><h1>다음 카드풀을<br class="mobile-break"> 함께 골라보자.</h1><p class="intro-copy">전체 카드를 살펴보고, 등급 조정 · 교체 후보 · 제한 의견을 남겨줘.</p></div><div class="snapshot"><b id="total-count">…</b><span>전체 카드</span><small id="snapshot-date">카드 정보를 읽는 중</small></div></section>
+    <div class="context-line"><span id="scope-count">현재 모드 기준</span><span>UR 300 · SR 200 · R 100 · N 50 골드</span><span>등급은 밸런스 검토용 초안</span></div>
+    <div class="workspace">
+      <aside class="filters" aria-label="카드 필터">
+        <div class="filter-top"><h2>카드 찾기</h2><button id="reset-filters" class="text-button">초기화</button></div>
+        <label for="search">이름 · 효과 · 카드 번호</label><input id="search" type="search" placeholder="예: 백룡, 마력 카운터, 625" autocomplete="off">
+        <div class="field"><span class="label">레어 등급</span><div id="rarity-filters" class="rarity-filters" role="group" aria-label="레어 등급 필터"></div></div>
+        <details id="advanced-filters" class="advanced-filters" open><summary>종류 · 종족 · 제한 필터</summary><div class="advanced-body">
+        <div class="filter-pair"><div><label for="type-filter">카드 종류</label><select id="type-filter"><option value="">모든 종류</option></select></div><div><label for="limit-filter">현재 제한</label><select id="limit-filter"><option value="">모든 제한</option><option value="1">제한 · 1장</option><option value="2">준제한 · 2장</option><option value="3">무제한 · 3장</option><option value="0">금지 · 0장</option></select></div></div>
+        <div class="filter-pair"><div><label for="race-filter">종족</label><select id="race-filter"><option value="">모든 종족</option></select></div><div><label for="attribute-filter">속성</label><select id="attribute-filter"><option value="">모든 속성</option></select></div></div>
+        <div class="filter-pair"><div><label for="level-min">최소 레벨</label><select id="level-min"><option value="">전체</option></select></div><div><label for="level-max">최대 레벨</label><select id="level-max"><option value="">전체</option></select></div></div>
+        <label for="status-filter">추가 조건</label><select id="status-filter"><option value="">전체 카드</option><option value="stock">상점 판매 카드</option><option value="reward">승리 보상 대상</option><option value="regular">일반 카드풀만</option><option value="special">토큰 · 특수 카드</option><option value="attention">효과·이름 검토 대상</option><option value="replace">내가 표시한 교체 후보</option></select>
+        </div></details>
+        <details class="help"><summary>등급 기준과 검토 방법</summary><p><b>UR</b> 강한 범용 카드·전체 제거·덱의 핵심<br><b>SR</b> 주요 딜러·제거·특화 지원<br><b>R</b> 실용적인 기본 카드·테마 카드<br><b>N</b> 단순하거나 사용이 까다로운 카드</p><p>현재 모드의 효과·능력치를 기준으로 매긴 임시 등급이야. 카드를 눌러 의견을 남기고, 상단에서 검토 파일을 내려받아 채팅에 보내줘.</p><p>의견은 이 브라우저에 자동 저장돼. 다른 기기에서는 JSON 파일로 이어서 볼 수 있어.</p></details>
+      </aside>
+      <section class="collection" aria-label="카드 목록">
+        <div class="collection-toolbar"><div class="tabs" role="group" aria-label="목록 선택"><button id="tab-all" class="active" aria-pressed="true">전체 도감</button><button id="tab-reviews" aria-pressed="false">내 검토 <span id="tab-review-count">0</span></button></div><select id="sort" aria-label="카드 정렬"><option value="rarity">레어 등급순</option><option value="name">이름순</option><option value="slot">카드 번호순</option><option value="attack">공격력 높은순</option><option value="level">레벨 높은순</option></select></div>
+        <div class="results-line"><p id="results" role="status">불러오는 중…</p><span id="active-summary"></span></div>
+        <div id="cards" class="card-grid"></div>
+        <div id="empty" class="empty" hidden><b>조건에 맞는 카드가 없어.</b><p>검색 조건을 줄이거나 카드에 검토 의견을 남겨줘.</p></div>
+        <nav class="pagination" aria-label="페이지 이동"><button id="prev" aria-label="이전 페이지">← 이전</button><span id="page-info"></span><button id="next" aria-label="다음 페이지">다음 →</button></nav>
+      </section>
+    </div>
+    <footer><p>게임에 설치된 이름·한국어 설명·능력치·제한을 읽은 도감이야. 공식 카드 이미지에 적힌 효과와 모드의 구현은 다를 수 있어.</p><p>카드 이미지와 원작 명칭의 권리는 각 권리자에게 있어. 비공식 팬 프로젝트 · <a href="data/cards.csv" download>전체 CSV 내려받기</a> · <a href="README.md">사용 안내</a></p></footer>
+  </main>
+  <dialog id="card-dialog" aria-labelledby="detail-title"><button id="close-detail" class="dialog-close" aria-label="카드 상세 닫기">×</button><div id="detail-body"></div></dialog>
+  <dialog id="export-dialog" aria-labelledby="export-title"><button id="close-export" class="dialog-close" aria-label="내보내기 닫기">×</button><div class="export-body"><p class="eyebrow">YOUR CARD REVIEW</p><h2 id="export-title">검토 의견 보내기</h2><p id="export-summary"></p><div id="export-stats" class="export-stats"></div><p class="muted">JSON 파일을 내려받아 이 채팅에 첨부해줘. 다시 불러오면 다른 기기에서도 검토를 이어갈 수 있어.</p><div class="export-buttons"><button id="download-json" class="primary">검토 JSON 내려받기</button><button id="download-md">메모 Markdown 내려받기</button><button id="copy-review">전달할 내용 복사</button></div><label for="review-preview">전달할 내용 미리보기</label><textarea id="review-preview" readonly rows="8"></textarea><div class="import-row"><button id="import-json">검토 JSON 불러오기</button><span>같은 카드의 의견만 합치며, 이전 의견은 백업해.</span><input id="import-file" type="file" accept="application/json,.json" hidden></div><p id="import-status" role="status"></p><button id="download-backup" class="text-button" hidden>불러오기 전 의견 백업 내려받기</button></div></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>
