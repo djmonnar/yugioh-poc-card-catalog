@@ -1,4 +1,5 @@
 import {TIERS, STORAGE_KEY, changesFor, makeReview, exportPayload, parseImport, reviewCounts, reviewMarkdown} from './review-core.js';
+import {RESET_BACKUP_KEY, resetStoredReviews} from './review-storage.js';
 
 const $ = id => document.getElementById(id);
 const PAGE_SIZE = 36;
@@ -8,7 +9,13 @@ const narrowLayout = matchMedia('(max-width: 800px)');
 $('advanced-filters').open = !narrowLayout.matches;
 narrowLayout.addEventListener('change', event => { $('advanced-filters').open = !event.matches; });
 let cards = [], meta = null, reviews = new Map(), unmatched = [], page = 1, rarity = '', view = 'all', selected = null, backup = null;
-let timer;
+let timer, resetBackup = null;
+const resetPanel=el('section',null,'reset-panel');
+resetPanel.append(el('h3','검토 의견 초기화'),el('p','내보내기는 의견을 유지해. 전달을 마쳤다면 초기화하고 새 검토를 시작할 수 있어.'));
+for(const [id,text] of [['reset-reviews','의견 전체 초기화'],['undo-reset','초기화 전 의견 복원'],['download-reset-backup','초기화 전 백업 JSON 내려받기']]){
+  const button=el('button',text);button.id=id;button.type='button';button.hidden=id!=='reset-reviews';resetPanel.append(button);
+}
+$('export-dialog').querySelector('.export-body').append(resetPanel);
 function el(tag, text, className) {
   const node = document.createElement(tag);
   if (text != null) node.textContent = text;
@@ -170,6 +177,9 @@ function openExport() {
   $('export-summary').textContent=`${counts.total}장의 카드에 의견을 남겼어.${unmatched.length ? ` 현재 카드풀과 일치하지 않는 이전 의견 ${unmatched.length}건도 파일에 보관해.` : ''}`;
   $('export-stats').replaceChildren(...[[counts.rarity,'등급 조정'],[counts.replace,'교체 후보'],[counts.limit,'제한 조정']].map(([n,t])=>el('span',`${t} ${n}건`)));
   $('review-preview').value=reviewMarkdown(payload); $('import-status').textContent=''; $('download-backup').hidden=!backup;
+  $('reset-reviews').disabled = !reviews.size && !unmatched.length;
+  $('undo-reset').hidden = !resetBackup;
+  $('download-reset-backup').hidden = !resetBackup;
   if (!$('export-dialog').open) $('export-dialog').showModal();
 }
 function resetFilters() {
@@ -178,7 +188,7 @@ function resetFilters() {
 }
 async function init() {
   try {
-    const response=await fetch('./data/cards.json?v=20261005-2',{cache:'no-cache'});if(!response.ok)throw new Error('카드 자료를 가져오지 못했어.');
+    const response=await fetch('./data/cards.json?v=20261006-1',{cache:'no-cache'});if(!response.ok)throw new Error('카드 자료를 가져오지 못했어.');
     const data=await response.json();meta=data.meta;cards=data.cards;
     if(cards.length!==meta.total||new Set(cards.map(c=>c.identity_key)).size!==cards.length)throw new Error('카드 자료를 확인할 수 없어.');
     for(const c of cards)c.searchText=[c.name_ko,c.name_en,c.description_ko,c.race,c.attribute,String(c.slot),String(c.internal_id)].join(' ').normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,'');
@@ -187,6 +197,7 @@ async function init() {
     const levels=[...new Set(cards.map(c=>c.level).filter(v=>v!=null))].sort((a,b)=>a-b);fillFilter('level-min',levels);fillFilter('level-max',levels);
     try {const stored=localStorage.getItem(STORAGE_KEY);if(stored){const parsed=parseImport(JSON.parse(stored),cards);reviews=new Map(parsed.valid.map(r=>[r.identity_key,r]));unmatched=parsed.unmatched;if(unmatched.length)toast(`카드가 바뀐 이전 의견 ${unmatched.length}건을 따로 보관했어.`);}backup=localStorage.getItem(STORAGE_KEY+'-before-import');}
     catch{toast('이전 의견을 읽지 못했어. 기존 저장 내용은 그대로 두었어.');}
+    try { resetBackup = localStorage.getItem(RESET_BACKUP_KEY); } catch {}
     rarityButtons();render();
     const match=/^#card-(\d+)$/.exec(location.hash);if(match)openCard(Number(match[1]),false);
   }catch(error){$('results').textContent=error.message;$('cards').replaceChildren(el('p','새로고침해 보거나 GitHub 저장소의 data/cards.csv를 확인해줘.','muted'));}
@@ -220,5 +231,31 @@ $('import-file').addEventListener('change',async()=>{
   finally{$('import-file').value='';}
 });
 $('download-backup').addEventListener('click',()=>{if(backup)download('카드검토_불러오기전_백업.json',backup,'application/json;charset=utf-8');});
+$('reset-reviews').addEventListener('click',()=>{
+  $('reset-summary').textContent=`작성한 의견 ${reviews.size}건${unmatched.length ? `과 이전 카드 의견 ${unmatched.length}건` : ''}을 비울 거야. 초기화 전 내용을 백업하고, 새 의견을 작성할 수 있어.`;
+  $('reset-dialog').showModal();
+});
+$('cancel-reset').addEventListener('click',()=>$('reset-dialog').close());
+$('confirm-reset').addEventListener('click',()=>{
+  try {
+    resetBackup=resetStoredReviews(localStorage,currentPayload());
+    reviews=new Map();unmatched=[];page=1;
+    $('reset-dialog').close();render();if(selected)openCard(selected.slot);openExport();
+    toast('의견을 초기화했어. 아래 버튼으로 초기화 전 의견을 복원할 수 있어.');
+  } catch {
+    $('reset-dialog').close();toast('백업 또는 저장에 실패해서 초기화를 취소했어. JSON을 내려받아 보관해줘.');
+  }
+});
+$('download-reset-backup').addEventListener('click',()=>{if(resetBackup)download('카드검토_초기화전_백업.json',resetBackup,'application/json;charset=utf-8');});
+$('undo-reset').addEventListener('click',()=>{
+  if(!resetBackup)return;
+  try {
+    const parsed=parseImport(JSON.parse(resetBackup),cards);
+    const merged=new Map(reviews);for(const row of parsed.valid)if(!merged.has(row.identity_key))merged.set(row.identity_key,row);
+    const old=new Map(unmatched.map(r=>[r.identity_key,r]));for(const row of parsed.unmatched)if(!old.has(row.identity_key))old.set(row.identity_key,row);
+    localStorage.setItem(STORAGE_KEY,JSON.stringify(exportPayload(meta,[...merged.values()],[...old.values()])));
+    reviews=merged;unmatched=[...old.values()];render();if(selected)openCard(selected.slot);openExport();toast('초기화 전 의견을 복원했어. 새로 작성한 의견도 유지했어.');
+  } catch {toast('복원에 실패했어. 초기화 전 백업 JSON을 내려받아 보관해줘.');}
+});
 window.addEventListener('hashchange',()=>{const match=/^#card-(\d+)$/.exec(location.hash);if(match)openCard(Number(match[1]),false);});
 init();

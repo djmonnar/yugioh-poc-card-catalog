@@ -59,7 +59,9 @@ test('public catalog is complete, each preview exists and personal paths are abs
   assert.equal(new Set(catalog.cards.map(c=>c.identity_key)).size,1115);
   assert.equal(catalog.cards.filter(c=>c.stock).length,catalog.meta.stock_count);
   assert.ok(catalog.meta.stock_count>=60);
-  assert.equal(catalog.cards.filter(c=>c.deck_limit===2).length,3);
+  for(const [slot,limit] of [[278,2],[369,1],[554,0],[601,1],[741,1]]){
+    const c=catalog.cards.find(c=>c.slot===slot);assert.equal(c.deck_limit,limit);assert.equal(c.deck_limit_without_banlist,limit);
+  }
   assert.equal(catalog.cards.find(c=>c.slot===1115).name_en,'Megalosmasher X');
   for(const c of catalog.cards){assert.ok(existsSync(new URL('../'+c.image,import.meta.url)));assert.ok(['UR','SR','R','N'].includes(c.rarity));}
   const publicText=JSON.stringify(catalog);

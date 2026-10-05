@@ -7,8 +7,8 @@
   <meta name="theme-color" content="#162c38">
   <title>카드 도감 · Power of Chaos</title>
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=20261005-1">
-  <script type="module" src="app.js?v=20261005-2"></script>
+  <link rel="stylesheet" href="style.css?v=20261006-1">
+  <script type="module" src="app.js?v=20261006-1"></script>
 </head>
 <body>
   <header class="masthead">
@@ -43,6 +43,7 @@
   </main>
   <dialog id="card-dialog" aria-labelledby="detail-title"><button id="close-detail" class="dialog-close" aria-label="카드 상세 닫기">×</button><div id="detail-body"></div></dialog>
   <dialog id="export-dialog" aria-labelledby="export-title"><button id="close-export" class="dialog-close" aria-label="내보내기 닫기">×</button><div class="export-body"><p class="eyebrow">YOUR CARD REVIEW</p><h2 id="export-title">검토 의견 보내기</h2><p id="export-summary"></p><div id="export-stats" class="export-stats"></div><p class="muted">JSON 파일을 내려받아 이 채팅에 첨부해줘. 다시 불러오면 다른 기기에서도 검토를 이어갈 수 있어.</p><div class="export-buttons"><button id="download-json" class="primary">검토 JSON 내려받기</button><button id="download-md">메모 Markdown 내려받기</button><button id="copy-review">전달할 내용 복사</button></div><label for="review-preview">전달할 내용 미리보기</label><textarea id="review-preview" readonly rows="8"></textarea><div class="import-row"><button id="import-json">검토 JSON 불러오기</button><span>같은 카드의 의견만 합치며, 이전 의견은 백업해.</span><input id="import-file" type="file" accept="application/json,.json" hidden></div><p id="import-status" role="status"></p><button id="download-backup" class="text-button" hidden>불러오기 전 의견 백업 내려받기</button></div></dialog>
+  <dialog id="reset-dialog" aria-labelledby="reset-title"><div class="export-body"><h2 id="reset-title">검토 의견을 초기화할까?</h2><p id="reset-summary"></p><div class="export-buttons"><button id="cancel-reset" autofocus>취소 · 의견 유지</button><button id="confirm-reset" class="primary">백업하고 초기화</button></div></div></dialog>
   <div id="toast" class="toast" role="status" hidden></div>
 </body>
 </html>
