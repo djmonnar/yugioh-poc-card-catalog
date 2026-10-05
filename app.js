@@ -178,7 +178,7 @@ function resetFilters() {
 }
 async function init() {
   try {
-    const response=await fetch('./data/cards.json?v=20261005-1',{cache:'no-cache'});if(!response.ok)throw new Error('카드 자료를 가져오지 못했어.');
+    const response=await fetch('./data/cards.json?v=20261005-2',{cache:'no-cache'});if(!response.ok)throw new Error('카드 자료를 가져오지 못했어.');
     const data=await response.json();meta=data.meta;cards=data.cards;
     if(cards.length!==meta.total||new Set(cards.map(c=>c.identity_key)).size!==cards.length)throw new Error('카드 자료를 확인할 수 없어.');
     for(const c of cards)c.searchText=[c.name_ko,c.name_en,c.description_ko,c.race,c.attribute,String(c.slot),String(c.internal_id)].join(' ').normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,'');
