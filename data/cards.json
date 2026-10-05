@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": 1,
-    "dataset_id": "91c6cbc075cd988b4d31a0430ad01d7ac9d22845a8493bacdc689f46c1037623",
+    "dataset_id": "4228ce3dfe305996ec4a059b5d300d411178776f8353c0246993a1c3f2f17d60",
     "snapshot_date": "2026-10-05",
     "title": "Yu-Gi-Oh! Power of Chaos · 한국어 모드 카드 도감",
     "total": 1115,
@@ -24333,7 +24333,7 @@
       "image": "assets/cards/0782.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=6390&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": "현재 설명은 릴리스 없이 소환할 수 있다는 내용이다. 공식 효과는 상대 필드에만 몬스터가 있을 때 패에서 특수 소환하는 것이므로, 소환 조건·방식 복원 검토 대상이다.",
+      "review_note": "현재 모드는 레벨 4이며, 설명은 릴리스 없이 소환할 수 있다는 내용이다. 공식 카드는 레벨 5이고, 상대 필드에만 몬스터가 있을 때 패에서 특수 소환할 수 있다. 레벨·소환 조건·방식 복원 검토 대상이다.",
       "review_kind": "effect"
     },
     {
