@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": 1,
-    "dataset_id": "f7cc416503962ef2da38f438f9dc19b56a417480fdd36262d0ab666cbbbb2da8",
+    "dataset_id": "40bd98c1a0bfa797c89b5dc2e0eda509a942ad90ed1b1ef44ccea71b3e2bcd15",
     "snapshot_date": "2026-10-06",
     "title": "Yu-Gi-Oh! Power of Chaos · 한국어 모드 카드 도감",
     "total": 1115,
@@ -33,14 +33,14 @@
         "sell_price": 25
       }
     },
-    "source_exe_sha256": "354bdf17cfe089d906c6dd731be33ecb9b46af83e21221d7a7e1477b9b4cfcfd",
+    "source_exe_sha256": "282538e6627caac32a604451c07eb9871c486aee20cb775647ca1addf472d7c6",
     "source_resources": {
       "card_id.bin": "302b156e15e26681bad0c5e822d49a99a07de65a54f7e7d88e2619de8e3a05f5",
       "card_prop.bin": "1387b50bd3bad4fdf356133f0f8659ac92030fc8ba14eb3bac394839ffcab06e",
       "card_nameeng.bin": "80a9ec5fe676c6e483e3c4d27935c540c5811d2b0ecdbc16e4aa3f0d84bbbed0",
       "card_pack.bin": "337886dfa55531433a4e32c1b8e60dc689585787fbe0b39e38e58d63f5ce2037",
-      "card_desceng.bin": "662d058f4843d86bcce579676c5e404dfe09dc174cbd29e86aefebf866b1e79c",
-      "card_indxeng.bin": "892a36dfe0e2f985331021157ee10b5584580a1cce4df9163e72c5ee640253ee",
+      "card_desceng.bin": "047ada33db05f52d7a5cd73e501299ecf37172fe9f59d3c42f1f5767ab48482b",
+      "card_indxeng.bin": "b9d0e5a05992fa53855a77c41e6e80c4df56ce005b0109d78d483861f4864f16",
       "list_card.txt": "490f119b1713ffbbef2791191fb9d7bf98b7fff93d7a47dc70340d2f744b0b66"
     },
     "scope": "설치된 모드의 이름·한국어 설명·능력치·제한을 읽은 스냅샷. 공식 이미지의 인쇄 효과가 구현되어 있다고 가정하지 않는다."
@@ -864,13 +864,13 @@
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
-      "description_ko": "자신의 필드 몬스터 2장을\n릴리스하고 상대에게 1200\n직접 데미지를 준다. 어드밴스\n소환이나 다른 카드 효과로\n릴리스한 몬스터는 포함하지\n않는다.",
+      "description_ko": "1턴에 1번, 자신 필드의\n몬스터 1장을 릴리스하고\n발동할 수 있다. 상대에게\n1000 데미지를 준다. 이\n효과를 발동하는 턴에, 이\n카드는 공격 선언할 수 없다.",
       "special": false,
       "image": "assets/cards/0026.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=6816&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": "",
-      "review_kind": ""
+      "review_note": "1장 릴리스·상대에게 1000 데미지·턴당 1회·효과를 발동하는 턴의 공격 선언 금지를 복원했다. 이미 공격 선언한 턴에는 효과를 쓸 수 없다. 네이티브 코드와 기존 효과 회귀검사 통과, 실전 듀얼 확인 대기.",
+      "review_kind": "restored"
     },
     {
       "slot": 27,
