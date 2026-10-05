@@ -44,7 +44,7 @@ function rarityButtons() {
     b.className = value === rarity ? 'active' : '';
     b.setAttribute('aria-pressed', String(value === rarity));
     b.setAttribute('aria-label', value ? `${value} 등급 보기` : '모든 등급 보기');
-    if (value) b.append(el('small', meta.rarity_counts[value]));
+    if (value) b.append(el('small', cards.filter(c => c.rarity === value).length));
     b.addEventListener('click', () => { rarity = value; page = 1; rarityButtons(); render(); });
     $('rarity-filters').append(b);
   }
