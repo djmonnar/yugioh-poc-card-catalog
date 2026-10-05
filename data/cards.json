@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": 1,
-    "dataset_id": "e4fdb091df813ad8c2db2781265a5db80c7b1e70255e8d07913970a4a8d6ce98",
+    "dataset_id": "08551dfd002c39c4004d5809c1e0a4ab89ebe0b076524ab16e14a9460b2d0091",
     "snapshot_date": "2026-10-05",
     "title": "Yu-Gi-Oh! Power of Chaos · 한국어 모드 카드 도감",
     "total": 1115,
@@ -13,7 +13,7 @@
       "SR": 102,
       "UR": 47
     },
-    "stock_count": 60,
+    "stock_count": 70,
     "rarity_policy": "모드에서 실제 사용할 수 있는 효과·능력치에 따른 자체 등급. 공식 상품 레어도와 별개.",
     "rarity_prices": {
       "UR": {
@@ -1175,12 +1175,26 @@
       "rarity_basis": "manual_effective_card_review",
       "buy_price": 100,
       "sell_price": 50,
-      "stock": false,
+      "stock": true,
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
       "description_ko": "\"엘리멘틀 히어로 스파크맨\" +\n\"엘리멘틀 히어로 클레이맨\"",
       "special": false,
+      "fusion_materials": [
+        {
+          "slot": 1097,
+          "name_ko": "엘리멘틀 히어로 스파크맨",
+          "shop_stock": false,
+          "reward_eligible": true
+        },
+        {
+          "slot": 151,
+          "name_ko": "엘리멘틀 히어로 클레이맨",
+          "shop_stock": false,
+          "reward_eligible": true
+        }
+      ],
       "image": "assets/cards/0038.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=6345&request_locale=ko",
       "identity_status": "official_link",
@@ -7831,16 +7845,36 @@
       "atk": 3800,
       "def": 2500,
       "rarity": "SR",
-      "rarity_reason": "소환 비용이 필요한 공격력 3000 이상의 특수 몬스터; 원본 효과는 추가 추정하지 않음",
-      "rarity_basis": "effective_stats",
+      "rarity_reason": "퀸즈·잭스·킹스 나이트로 소환 가능; 원본 대상 효과 무효화 미복원",
+      "rarity_basis": "manual_effective_card_review",
       "buy_price": 200,
       "sell_price": 100,
-      "stock": false,
+      "stock": true,
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
       "description_ko": "\"퀸즈 나이트\" + \"잭스\n나이트\" + \"킹스 나이트\"",
       "special": false,
+      "fusion_materials": [
+        {
+          "slot": 350,
+          "name_ko": "퀸즈 나이트",
+          "shop_stock": false,
+          "reward_eligible": true
+        },
+        {
+          "slot": 224,
+          "name_ko": "잭스 나이트",
+          "shop_stock": false,
+          "reward_eligible": true
+        },
+        {
+          "slot": 85,
+          "name_ko": "킹스 나이트",
+          "shop_stock": false,
+          "reward_eligible": true
+        }
+      ],
       "image": "assets/cards/0260.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=6454&request_locale=ko",
       "identity_status": "official_link",
@@ -9811,16 +9845,30 @@
       "atk": 0,
       "def": 0,
       "rarity": "N",
-      "rarity_reason": "융합·의식 비용 대비 타점이 낮거나 활용 조건이 까다로운 기본 특수 몬스터",
-      "rarity_basis": "effective_stats",
+      "rarity_reason": "새크리파이스와 천개의 눈을 가진 사교신을 소재로 하는 기존 효과 융합",
+      "rarity_basis": "manual_effective_card_review",
       "buy_price": 50,
       "sell_price": 25,
-      "stock": false,
+      "stock": true,
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
       "description_ko": "\"새크리파이스\" + \"천개의\n눈을 가진 사교신\". 이 카드가\n필드에 앞면으로 존재하는\n동안 다른 몬스터는 표시\n형식을 변경하거나 공격할 수\n없다. 상대 필드의 몬스터\n1장의 공격력과 수비력을 이\n카드의 공격력과 수비력으로\n한다. 뒷면 몬스터를 선택하면\n각각 0이 된다. 선택한\n몬스터를 장착 마법 카드로\n취급하여 이 카드에 장착한다.\n이 효과는 1턴에 1번만 사용할\n수 있으며, 동시에 1장만\n장착할 수 있다.",
       "special": false,
+      "fusion_materials": [
+        {
+          "slot": 331,
+          "name_ko": "새크리파이스",
+          "shop_stock": false,
+          "reward_eligible": true
+        },
+        {
+          "slot": 482,
+          "name_ko": "천개의 눈을 가진 사교신",
+          "shop_stock": false,
+          "reward_eligible": true
+        }
+      ],
       "image": "assets/cards/0326.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=4740&request_locale=ko",
       "identity_status": "official_link",
@@ -24031,16 +24079,30 @@
       "atk": 3200,
       "def": 2500,
       "rarity": "SR",
-      "rarity_reason": "소환 비용이 필요한 공격력 3000 이상의 특수 몬스터; 원본 효과는 추가 추정하지 않음",
-      "rarity_basis": "effective_stats",
+      "rarity_reason": "데몬 소환과 붉은 눈의 흑룡을 소재로 하는 공격력 3200의 기존 융합",
+      "rarity_basis": "manual_effective_card_review",
       "buy_price": 200,
       "sell_price": 100,
-      "stock": false,
+      "stock": true,
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
       "description_ko": "\"데몬 소환\" + \"붉은 눈의\n흑룡\"",
       "special": false,
+      "fusion_materials": [
+        {
+          "slot": 582,
+          "name_ko": "데몬 소환",
+          "shop_stock": true,
+          "reward_eligible": true
+        },
+        {
+          "slot": 1082,
+          "name_ko": "붉은 눈의 흑룡",
+          "shop_stock": false,
+          "reward_eligible": true
+        }
+      ],
       "image": "assets/cards/0800.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=4223&request_locale=ko",
       "identity_status": "official_link",
@@ -24451,16 +24513,36 @@
       "atk": 4500,
       "def": 3800,
       "rarity": "SR",
-      "rarity_reason": "소환 비용이 필요한 공격력 3000 이상의 특수 몬스터; 원본 효과는 추가 추정하지 않음",
-      "rarity_basis": "effective_stats",
+      "rarity_reason": "푸른 눈의 백룡 3장으로 소환하는 공격력 4500의 기존 융합",
+      "rarity_basis": "manual_effective_card_review",
       "buy_price": 200,
       "sell_price": 100,
-      "stock": false,
+      "stock": true,
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
       "description_ko": "\"푸른 눈의 백룡\" ＋ \"푸른\n눈의 백룡\" ＋ \"푸른 눈의\n백룡\"",
       "special": false,
+      "fusion_materials": [
+        {
+          "slot": 816,
+          "name_ko": "푸른 눈의 백룡",
+          "shop_stock": true,
+          "reward_eligible": true
+        },
+        {
+          "slot": 816,
+          "name_ko": "푸른 눈의 백룡",
+          "shop_stock": true,
+          "reward_eligible": true
+        },
+        {
+          "slot": 816,
+          "name_ko": "푸른 눈의 백룡",
+          "shop_stock": true,
+          "reward_eligible": true
+        }
+      ],
       "image": "assets/cards/0814.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=4386&request_locale=ko",
       "identity_status": "official_link",
@@ -27155,12 +27237,26 @@
       "rarity_basis": "manual_effective_card_review",
       "buy_price": 50,
       "sell_price": 25,
-      "stock": false,
+      "stock": true,
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
       "description_ko": "\"엘리멘틀 히어로 페더맨\" +\n\"엘리멘틀 히어로 버스트\n레이디\"",
       "special": false,
+      "fusion_materials": [
+        {
+          "slot": 1104,
+          "name_ko": "엘리멘틀 히어로 페더맨",
+          "shop_stock": false,
+          "reward_eligible": true
+        },
+        {
+          "slot": 4,
+          "name_ko": "엘리멘틀 히어로 버스트 레이디",
+          "shop_stock": false,
+          "reward_eligible": true
+        }
+      ],
       "image": "assets/cards/0904.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=6344&request_locale=ko",
       "identity_status": "official_link",
@@ -27751,16 +27847,30 @@
       "atk": 4200,
       "def": 3700,
       "rarity": "SR",
-      "rarity_reason": "소환 비용이 필요한 공격력 3000 이상의 특수 몬스터; 원본 효과는 추가 추정하지 않음",
-      "rarity_basis": "effective_stats",
+      "rarity_reason": "빅 코알라와 데스 캥거루로 소환하는 공격력 4200의 기존 융합; 효과 없음",
+      "rarity_basis": "manual_effective_card_review",
       "buy_price": 200,
       "sell_price": 100,
-      "stock": false,
+      "stock": true,
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
       "description_ko": "\"빅 코알라\" ＋ \"데스 캥거루\"",
       "special": false,
+      "fusion_materials": [
+        {
+          "slot": 835,
+          "name_ko": "빅 코알라",
+          "shop_stock": false,
+          "reward_eligible": true
+        },
+        {
+          "slot": 936,
+          "name_ko": "데스 캥거루",
+          "shop_stock": false,
+          "reward_eligible": true
+        }
+      ],
       "image": "assets/cards/0924.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=6127&request_locale=ko",
       "identity_status": "official_link",
@@ -29311,16 +29421,30 @@
       "atk": 2600,
       "def": 1300,
       "rarity": "R",
-      "rarity_reason": "추가 소재·의식이 필요한 공격력 2300 이상의 특수 몬스터",
-      "rarity_basis": "effective_stats",
+      "rarity_reason": "빅 피스 골렘과 미드 피스 골렘으로 소환 가능; 원본 분리 효과 미복원",
+      "rarity_basis": "manual_effective_card_review",
       "buy_price": 100,
       "sell_price": 50,
-      "stock": false,
+      "stock": true,
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
       "description_ko": "\"빅 피스 골렘\" + \"미드 피스\n골렘\"",
       "special": false,
+      "fusion_materials": [
+        {
+          "slot": 286,
+          "name_ko": "빅 피스 골렘",
+          "shop_stock": false,
+          "reward_eligible": true
+        },
+        {
+          "slot": 1081,
+          "name_ko": "미드 피스 골렘",
+          "shop_stock": false,
+          "reward_eligible": true
+        }
+      ],
       "image": "assets/cards/0976.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=7732&request_locale=ko",
       "identity_status": "official_link",
@@ -29431,16 +29555,30 @@
       "atk": 3500,
       "def": 2000,
       "rarity": "SR",
-      "rarity_reason": "소환 비용이 필요한 공격력 3000 이상의 특수 몬스터; 원본 효과는 추가 추정하지 않음",
-      "rarity_basis": "effective_stats",
+      "rarity_reason": "붉은 눈의 흑룡과 메테오 드래곤을 소재로 하는 공격력 3500의 기존 융합",
+      "rarity_basis": "manual_effective_card_review",
       "buy_price": 200,
       "sell_price": 100,
-      "stock": false,
+      "stock": true,
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
       "description_ko": "\"붉은 눈의 흑룡\" + \"메테오\n드래곤\"",
       "special": false,
+      "fusion_materials": [
+        {
+          "slot": 1082,
+          "name_ko": "붉은 눈의 흑룡",
+          "shop_stock": false,
+          "reward_eligible": true
+        },
+        {
+          "slot": 979,
+          "name_ko": "메테오 드래곤",
+          "shop_stock": false,
+          "reward_eligible": true
+        }
+      ],
       "image": "assets/cards/0980.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=4719&request_locale=ko",
       "identity_status": "official_link",
@@ -30961,16 +31099,30 @@
       "atk": 2100,
       "def": 1800,
       "rarity": "N",
-      "rarity_reason": "융합·의식 비용 대비 타점이 낮거나 활용 조건이 까다로운 기본 특수 몬스터",
-      "rarity_basis": "effective_stats",
+      "rarity_reason": "환상수왕 가젤과 바포메트를 소재로 하는 기존 효과 융합",
+      "rarity_basis": "manual_effective_card_review",
       "buy_price": 50,
       "sell_price": 25,
-      "stock": false,
+      "stock": true,
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
       "description_ko": "\"환상수왕 가젤\" +\n\"바포메트\". 이 카드가\n파괴되었을 때, 묘지의\n\"환상수왕 가젤\" 또는\n\"바포메트\"를 자신의 필드에\n앞면 공격 표시 또는 앞면\n수비 표시로 특수 소환할 수\n있다.",
       "special": false,
+      "fusion_materials": [
+        {
+          "slot": 277,
+          "name_ko": "환상수왕 가젤",
+          "shop_stock": false,
+          "reward_eligible": true
+        },
+        {
+          "slot": 725,
+          "name_ko": "바포메트",
+          "shop_stock": false,
+          "reward_eligible": true
+        }
+      ],
       "image": "assets/cards/1031.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=4756&request_locale=ko",
       "identity_status": "official_link",

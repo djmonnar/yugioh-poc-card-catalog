@@ -121,6 +121,15 @@ function openCard(slot, updateHash = true) {
   const title = el('h2', card.name_ko); title.id = 'detail-title'; info.append(top, title, el('p', card.name_en, 'english-name'));
   const tags = el('div', null, 'detail-tags'); for (const t of [card.type, card.subtype, card.race, card.attribute, card.level == null ? '' : `LV ${card.level}`, card.atk == null ? '' : `ATK ${card.atk} / DEF ${card.def}`].filter(Boolean)) tags.append(el('span',t)); info.append(tags);
   info.append(el('p', '현재 모드 설명', 'description-title'), el('div', card.description_ko || '별도의 카드 설명이 없는 토큰·특수 카드야.', 'description'));
+  if (card.fusion_materials?.length) {
+    const materials=el('div',null,'fusion-materials');materials.append(el('p','이 모드에서 확인한 융합 소재','description-title'));
+    const grouped=new Map();for(const material of card.fusion_materials){const item=grouped.get(material.slot);if(item)item.count++;else grouped.set(material.slot,{...material,count:1});}
+    for(const material of grouped.values()){
+      const item=el('div',null,'material-row'),button=el('button',`${material.name_ko}${material.count>1?' ×'+material.count:''}`,'material-link');button.type='button';button.addEventListener('click',()=>openCard(material.slot));
+      item.append(button,el('span',material.shop_stock?'상점 판매 중':material.reward_eligible?'승리 보상으로 입수':'입수 경로 확인 필요','muted'));materials.append(item);
+    }
+    info.append(materials);
+  }
   if (card.review_note) info.append(el('p', card.review_note, 'review-note'));
   if (card.special) info.append(el('p', '일반 카드풀에서 얻거나 덱에 넣는 카드가 아닌, 듀얼 중 생성·참조되는 카드야.', 'review-note'));
   info.append(el('p', `등급 초안 근거: ${card.rarity_reason}`, 'grade-reason'));
