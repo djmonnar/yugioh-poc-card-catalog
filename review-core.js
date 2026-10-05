@@ -51,18 +51,27 @@ export function parseImport(payload, cards) {
   if (payload.reviews.length > 10000 || (payload.unmatched_reviews || []).length > 10000) throw new Error('검토 항목이 너무 많아.');
   if (payload.unmatched_reviews && !Array.isArray(payload.unmatched_reviews)) throw new Error('미일치 검토 목록이 잘못됐어.');
   const index = new Map(cards.map(c => [c.identity_key, c]));
+  // Only the published catalog may authorize aliases for a correction to the
+  // same card. Never match an old review using a reused slot or native ID alone.
+  for (const card of cards) for (const alias of card.previous_identity_keys || []) {
+    if (!/^[a-f0-9]{64}$/.test(alias) || index.has(alias)) throw new Error('도감의 이전 카드 식별 정보가 잘못됐어.');
+    index.set(alias, card);
+  }
   const seen = new Set(), valid = [], unmatched = [];
+  const acceptedKeys = new Set();
   for (const row of [...payload.reviews, ...(payload.unmatched_reviews || [])]) {
     if (!row || !/^[a-f0-9]{64}$/.test(row.identity_key || '') || !Number.isInteger(row.slot) || !Number.isInteger(row.internal_id) || !row.changes) throw new Error('검토 항목의 카드 식별 정보가 잘못됐어.');
     if (seen.has(row.identity_key)) throw new Error('같은 카드의 검토 항목이 중복되어 있어.');
     seen.add(row.identity_key);
     const card = index.get(row.identity_key);
-    if (!card || card.slot !== row.slot || card.internal_id !== row.internal_id) {
+    if (!card || card.slot !== row.slot || card.internal_id !== row.internal_id || (card.identity_key !== row.identity_key && card.name_ko !== row.name_ko)) {
       // Preserve the full user opinion as an unmatched item; never apply it to
       // a replacement that happens to reuse the same native slot or ID.
       unmatched.push(row);
       continue;
     }
+    if (acceptedKeys.has(card.identity_key)) throw new Error('같은 카드의 이전·현재 검토 항목이 중복되어 있어.');
+    acceptedKeys.add(card.identity_key);
     let original=null;
     if (row.original && TIERS.includes(row.original.rarity) && (row.original.deck_limit == null || [0, 1, 2, 3].includes(row.original.deck_limit))) {
       original={rarity: row.original.rarity, deck_limit: row.original.deck_limit ?? null, type: String(row.original.type || '').slice(0, 100), level: row.original.level ?? null, atk: row.original.atk ?? null, def: row.original.def ?? null, description_ko: String(row.original.description_ko || '').slice(0, 20000)};

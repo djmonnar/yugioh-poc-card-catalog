@@ -59,6 +59,26 @@ test('a mismatched native slot or ID is not accepted despite a matching key', ()
   const row = empty({note:'x'}); row.internal_id += 1;
   assert.equal(parseImport(exportPayload(catalog.meta,[row]),catalog.cards).valid.length,0);
 });
+test('published alias preserves opinions for a corrected card and retains the old baseline',()=>{
+  const row=empty({note:'효과 복원',proposed_rarity:'UR'});
+  const corrected={...card,identity_key:'b'.repeat(64),level:5,previous_identity_keys:[card.identity_key]};
+  const migrated=parseImport(exportPayload(catalog.meta,[row]),[corrected]);
+  assert.equal(migrated.valid.length,1);assert.equal(migrated.unmatched.length,0);
+  assert.equal(migrated.valid[0].identity_key,corrected.identity_key);
+  assert.deepEqual(migrated.valid[0].changes,row.changes);
+  assert.deepEqual(migrated.valid[0].original,row.original);
+  assert.deepEqual(parseImport(exportPayload(catalog.meta,migrated.valid),[corrected]).valid[0].changes,row.changes);
+  const wrongName={...row,name_ko:'다른 카드'};
+  assert.equal(parseImport(exportPayload(catalog.meta,[wrongName]),[corrected]).unmatched.length,1);
+  assert.equal(parseImport(exportPayload(catalog.meta,[{...row,internal_id:row.internal_id+1}]),[corrected]).unmatched.length,1);
+});
+test('old and corrected identities cannot import duplicate opinions for the same card',()=>{
+  const row=empty({note:'기존 의견'});
+  const corrected={...card,identity_key:'b'.repeat(64),previous_identity_keys:[card.identity_key]};
+  const newer=makeReview(corrected,{note:'다른 의견'});
+  assert.throws(()=>parseImport(exportPayload(catalog.meta,[row,newer]),[corrected]));
+  assert.throws(()=>parseImport(exportPayload(catalog.meta,[row]),[{...corrected,previous_identity_keys:[corrected.identity_key]}]));
+});
 test('invalid choices, duplicate imports and unsupported schemas fail before merge', () => {
   assert.throws(()=>changesFor(card,{proposed_rarity:'SSR'}));
   assert.throws(()=>changesFor(card,{proposed_limit:4}));

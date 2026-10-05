@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": 1,
-    "dataset_id": "40bd98c1a0bfa797c89b5dc2e0eda509a942ad90ed1b1ef44ccea71b3e2bcd15",
+    "dataset_id": "e050d301a3d13d71e904d4a44ae21ab0af295e2d5a1d989528f4f6a7fcb774cd",
     "snapshot_date": "2026-10-06",
     "title": "Yu-Gi-Oh! Power of Chaos · 한국어 모드 카드 도감",
     "total": 1115,
@@ -33,14 +33,14 @@
         "sell_price": 25
       }
     },
-    "source_exe_sha256": "282538e6627caac32a604451c07eb9871c486aee20cb775647ca1addf472d7c6",
+    "source_exe_sha256": "528d2acb33d965b493af4af35bedde96c7348e86263acc8a4c6280b19c93d5db",
     "source_resources": {
       "card_id.bin": "302b156e15e26681bad0c5e822d49a99a07de65a54f7e7d88e2619de8e3a05f5",
-      "card_prop.bin": "1387b50bd3bad4fdf356133f0f8659ac92030fc8ba14eb3bac394839ffcab06e",
+      "card_prop.bin": "1a413574e3705f2df081831b464467814e5ddf3c710c76c2f91788f3246d4ddb",
       "card_nameeng.bin": "80a9ec5fe676c6e483e3c4d27935c540c5811d2b0ecdbc16e4aa3f0d84bbbed0",
       "card_pack.bin": "337886dfa55531433a4e32c1b8e60dc689585787fbe0b39e38e58d63f5ce2037",
-      "card_desceng.bin": "047ada33db05f52d7a5cd73e501299ecf37172fe9f59d3c42f1f5767ab48482b",
-      "card_indxeng.bin": "b9d0e5a05992fa53855a77c41e6e80c4df56ce005b0109d78d483861f4864f16",
+      "card_desceng.bin": "44601e9ad8beaa226afb7cca8e1fac838543ef68c8644ec5b39424030184d959",
+      "card_indxeng.bin": "1f08181011524abe5c944413db7c3b8151efdf1ee1be8f3d30e5b4fc80a1e695",
       "list_card.txt": "490f119b1713ffbbef2791191fb9d7bf98b7fff93d7a47dc70340d2f744b0b66"
     },
     "scope": "설치된 모드의 이름·한국어 설명·능력치·제한을 읽은 스냅샷. 공식 이미지의 인쇄 효과가 구현되어 있다고 가정하지 않는다."
@@ -373,7 +373,7 @@
       "image": "assets/cards/0010.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=6397&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": "사이버 드래곤 3장만 사용하는 지정 융합 소재와 관통 효과를 복원했다. 대체 소재 차단·관통 코드 검사는 통과했으며 실전 듀얼 확인은 대기 중이다. 프로토·츠바이·사이버 드래곤의 원본 효과는 별도 복원 대상이다.",
+      "review_note": "사이버 드래곤 3장 지정 융합과 관통을 복원했다. 앞면 프로토와 효과로 이름을 바꾼 츠바이도 필드의 사이버 드래곤으로 소재가 된다. 대체 소재 차단·네이티브 선택 검사를 통과했다. 실전 확인 대기.",
       "review_kind": "restored"
     },
     {
@@ -1963,13 +1963,13 @@
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
-      "description_ko": "이 카드를 융합 소재 몬스터\n1장 대신 사용할 수 있다.\n같은 융합에서 다른 융합\n소재까지 대체할 수는 없다.",
+      "description_ko": "이 카드는 몬스터 존에 앞면\n표시로 존재하는 한, 카드명을\n\"사이버 드래곤\"으로\n취급한다.",
       "special": false,
       "image": "assets/cards/0061.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=6588&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": "현재 모드 설명은 융합 소재 대체 효과다. 공식 프로토 사이버 드래곤은 몬스터 존에서 이름을 사이버 드래곤으로 취급하는 카드이므로, 원래 효과 복원 검토 대상이다.",
-      "review_kind": "effect"
+      "review_note": "프로토의 몬스터 존 앞면 표시 중 사이버 드래곤 이름 취급을 복원했다. 기존 임의 융합 소재 대체는 제거했다. 네이티브 융합 선택·무효화 검사 통과, 실전 확인 대기.",
+      "review_kind": "restored"
     },
     {
       "slot": 62,
@@ -15482,13 +15482,13 @@
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
-      "description_ko": "이 카드에게 공격받은\n몬스터는 공격 후 다섯 번째\n턴의 엔드 페이즈에 파괴된다.",
+      "description_ko": "①: 이 카드의 카드명은,\n묘지에 존재하는 한 \"사이버\n드래곤\"으로 취급한다. ②:\n1턴에 1번, 패의 마법 카드\n1장을 상대에게 보여주고\n발동할 수 있다. 이 카드의\n카드명은 엔드 페이즈까지\n\"사이버 드래곤\"으로\n취급한다. ③: 이 카드가 상대\n몬스터에 공격하는 데미지\n스텝 동안, 이 카드의\n공격력은 300 올린다.",
       "special": false,
       "image": "assets/cards/0496.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=8646&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": "현재 설명은 공격받은 몬스터를 다섯 번째 턴에 파괴하는 효과다. 공식 츠바이의 묘지 이름 취급·마법 공개 후 이름 변경·공격 중 타점 상승과 다르므로, 원래 효과 복원 검토 대상이다.",
-      "review_kind": "effect"
+      "review_note": "묘지 이름 취급, 패의 마법 공개 후 엔드 페이즈까지 이름 변경, 상대 몬스터에 공격하는 데미지 스텝의 공격력 300 상승을 복원했다. 네이티브 코드 검사 통과, 실전 확인 대기. 이후 추가할 묘지 이름 지정 효과는 위치를 받는 공통 이름 API에 연결해야 한다.",
+      "review_kind": "restored"
     },
     {
       "slot": 497,
@@ -24328,7 +24328,7 @@
     {
       "slot": 782,
       "internal_id": 602,
-      "identity_key": "c0663acfd00eb6d7efb79e2c03f2bb32d2f5e3ca9b1cb314f699c0289576ab00",
+      "identity_key": "4ee7da1607ec6bac05c5cb186ca2a8b4bf5337490734f05276fe43575087f4c7",
       "name_ko": "사이버 드래곤",
       "name_en": "Cyber Dragon",
       "official_cid": 6390,
@@ -24336,7 +24336,7 @@
       "subtype": "",
       "race": "기계족",
       "attribute": "빛",
-      "level": 4,
+      "level": 5,
       "atk": 2100,
       "def": 1600,
       "rarity": "UR",
@@ -24348,13 +24348,16 @@
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
-      "description_ko": "릴리스 없이 소환할 수 있다.",
+      "description_ko": "상대 필드에만 몬스터가\n존재할 경우, 이 카드는\n패에서 특수 소환할 수 있다.",
       "special": false,
+      "previous_identity_keys": [
+        "c0663acfd00eb6d7efb79e2c03f2bb32d2f5e3ca9b1cb314f699c0289576ab00"
+      ],
       "image": "assets/cards/0782.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=6390&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": "현재 모드는 레벨 4이며, 설명은 릴리스 없이 소환할 수 있다는 내용이다. 공식 카드는 레벨 5이고, 상대 필드에만 몬스터가 있을 때 패에서 특수 소환할 수 있다. 레벨·소환 조건·방식 복원 검토 대상이다.",
-      "review_kind": "effect"
+      "review_note": "레벨을 5로 수정하고 상대 필드에만 몬스터가 있을 때 패에서 체인을 만들지 않는 특수 소환을 복원했다. 플레이어 메뉴·AI 소환 가능 조회와 일반 소환의 릴리스 1장 검사를 통과했다. 실전 소환 연출·AI 선택 확인 대기.",
+      "review_kind": "restored"
     },
     {
       "slot": 783,
