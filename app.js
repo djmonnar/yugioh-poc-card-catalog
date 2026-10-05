@@ -57,6 +57,7 @@ function filteredCards() {
     if (view === 'reviews' && !reviews.has(c.identity_key)) return false;
     if (rarity && c.rarity !== rarity || type && c.type !== type || race && c.race !== race || attribute && c.attribute !== attribute) return false;
     if (limit !== '' && c.deck_limit !== Number(limit)) return false;
+    if (status === 'effect-difference' && c.review_kind !== 'effect') return false;
     if (min && (c.level == null || c.level < Number(min)) || max && (c.level == null || c.level > Number(max))) return false;
     if (status === 'stock' && !c.stock || status === 'reward' && !c.reward_eligible || status === 'regular' && c.special || status === 'special' && !c.special || status === 'attention' && !c.review_note || status === 'replace' && !(reviews.get(c.identity_key)?.changes.replacement_candidate || reviews.get(c.identity_key)?.changes.replacement_name)) return false;
     return !q || c.searchText.includes(q);
