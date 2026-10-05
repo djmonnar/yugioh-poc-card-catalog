@@ -24,7 +24,10 @@ export function hasChanges(change) {
 }
 
 export function makeReview(card, fields, previous = null) {
-  const changes = changesFor(card, fields);
+  // An applied tier/limit does not erase the user's prior request. Preserve
+  // its original baseline until the user clears it or chooses current values.
+  const baseline=previous?.original ? {...card,rarity:previous.original.rarity,deck_limit:previous.original.deck_limit} : card;
+  const changes = changesFor(baseline, fields);
   if (!hasChanges(changes)) return null;
   return {
     identity_key: card.identity_key, slot: card.slot, internal_id: card.internal_id,
@@ -60,13 +63,15 @@ export function parseImport(payload, cards) {
       unmatched.push(row);
       continue;
     }
-    const accepted = makeReview(card, row.changes);
+    let original=null;
+    if (row.original && TIERS.includes(row.original.rarity) && (row.original.deck_limit == null || [0, 1, 2, 3].includes(row.original.deck_limit))) {
+      original={rarity: row.original.rarity, deck_limit: row.original.deck_limit ?? null, type: String(row.original.type || '').slice(0, 100), level: row.original.level ?? null, atk: row.original.atk ?? null, def: row.original.def ?? null, description_ko: String(row.original.description_ko || '').slice(0, 20000)};
+    }
+    const accepted = makeReview(card, row.changes, original ? {original} : null);
     if (accepted) {
       // Retain the baseline as it appeared when the opinion was first written.
       // Reconstruct a strict allowlist; imported objects never enter the DOM.
-      if (row.original && TIERS.includes(row.original.rarity) && (row.original.deck_limit == null || [0, 1, 2, 3].includes(row.original.deck_limit))) {
-        accepted.original = {rarity: row.original.rarity, deck_limit: row.original.deck_limit ?? null, type: String(row.original.type || '').slice(0, 100), level: row.original.level ?? null, atk: row.original.atk ?? null, def: row.original.def ?? null, description_ko: String(row.original.description_ko || '').slice(0, 20000)};
-      }
+      if (original) accepted.original=original;
       valid.push(accepted);
     }
   }

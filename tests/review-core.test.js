@@ -27,6 +27,25 @@ test('forbidden zero survives export and import', () => {
   const row = empty({proposed_limit: 0});
   assert.equal(parseImport(exportPayload(catalog.meta,[row]),catalog.cards).valid[0].changes.proposed_limit,0);
 });
+
+test('catalog tier/limit updates retain already-applied review requests until manual reset',()=>{
+  const row=empty({proposed_rarity:'UR',proposed_limit:2});
+  const updated={...card,rarity:'UR',deck_limit:2};
+  const imported=parseImport(exportPayload(catalog.meta,[row]),[updated]);
+  assert.equal(imported.valid.length,1);
+  assert.deepEqual(imported.valid[0].changes,row.changes);
+  assert.equal(imported.valid[0].original.rarity,card.rarity);
+  assert.equal(imported.valid[0].original.deck_limit,card.deck_limit);
+});
+
+test('editing notes after a catalog update preserves the previous proposal baseline',()=>{
+  const row=empty({proposed_rarity:'UR',proposed_limit:2,note:'기존 의견'});
+  const updated={...card,rarity:'UR',deck_limit:2};
+  const edited=makeReview(updated,{...row.changes,note:'새 메모'},row);
+  assert.equal(edited.changes.proposed_rarity,'UR');assert.equal(edited.changes.proposed_limit,2);
+  assert.equal(edited.changes.note,'새 메모');
+  assert.equal(makeReview(updated,{proposed_rarity:'',proposed_limit:''},row),null);
+});
 test('old card identity cannot modify a replacement in the same slot and ID', () => {
   const row = empty({note:'이전 카드 교체 요청'});
   row.identity_key = 'a'.repeat(64);
