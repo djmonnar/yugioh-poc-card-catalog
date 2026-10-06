@@ -1,6 +1,113 @@
 {
   "schema_version": 1,
   "kind": "poc-ai-sync-state",
-  "revision": 0,
-  "entries": {}
+  "revision": 1,
+  "entries": {
+    "cpu_000.ydc": {
+      "issue_number": 1,
+      "issue_updated_at": "2026-10-06T08:48:58Z",
+      "revision": "df5554dc0f4c1fdd2320372f9d2e8feed6033157755120748f67d53112db0acc",
+      "packet": {
+        "schema_version": 1,
+        "kind": "poc-ai-deck-sync",
+        "catalog_dataset_id": "850ef9d6c7b5c7603c98f5c7b8da15173877fb6357923584c18f91e426091852",
+        "target": {
+          "filename": "cpu_000.ydc",
+          "sha256": "f50f1fc949d1e7d7e95f3902b8313502fd5d6a2a94b0cbb53b0add5a06f38f35",
+          "difficulty_levels": [
+            1
+          ]
+        },
+        "deck": {
+          "name": "온라인 연동 검사 · 실제 적용용 아님",
+          "ruleset": "classic",
+          "banlist_enabled": true,
+          "difficulty": 3,
+          "strategy": {
+            "goal": "",
+            "priorities": "",
+            "combos": "",
+            "avoid": ""
+          },
+          "groups": {
+            "main": [
+              [
+                1,
+                1504,
+                3
+              ],
+              [
+                3,
+                50,
+                3
+              ],
+              [
+                4,
+                171,
+                3
+              ],
+              [
+                9,
+                445,
+                3
+              ],
+              [
+                12,
+                212,
+                3
+              ],
+              [
+                24,
+                77,
+                3
+              ],
+              [
+                25,
+                594,
+                3
+              ],
+              [
+                29,
+                179,
+                3
+              ],
+              [
+                31,
+                37,
+                3
+              ],
+              [
+                32,
+                2037,
+                3
+              ],
+              [
+                34,
+                9,
+                3
+              ],
+              [
+                36,
+                232,
+                3
+              ],
+              [
+                40,
+                514,
+                3
+              ],
+              [
+                42,
+                568,
+                1
+              ]
+            ],
+            "extra": [],
+            "side": []
+          }
+        },
+        "identity_sha256": "75f3e9323af21d6826d1cc8edbd8560dc144f035438fabb8d59d9d175bd7e6f5"
+      }
+    }
+  }
 }
