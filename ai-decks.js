@@ -1,6 +1,6 @@
 import {DECK_STORAGE_KEY,GROUPS,GROUP_LABELS,RULESETS,emptyDeck,cardLimit,copyCount,groupCount,placementError,adjustCard,resolveCard,validateDeck,parseBundle,exportBundle,deckMarkdown} from './ai-deck-core.js?v=20261006-10';
 import {renderPagination} from './pagination.js?v=20261006-8';
-import {SYNC_REPO,SYNC_URL,makeSyncPacket,issueDraft,packetDeck} from './ai-sync-core.js?v=20261006-11';
+import {SYNC_REPO,SYNC_URL,makeSyncPacket,issueDraft,packetDeck} from './ai-sync-core.js?v=20261006-12';
 
 const $=id=>document.getElementById(id), PAGE=24;
 let cards=[],meta=null,decks=[],active='',page=1,timer,storageBlocked=false,opponents=[];
@@ -137,7 +137,7 @@ async function prepareOnline(){
 async function loadOnline(){
   $('load-online').disabled=true;$('online-status').textContent='온라인에 저장된 덱을 확인하는 중…';
   try{
-    const response=await fetch(SYNC_URL+'?check='+Date.now(),{cache:'no-store',signal:AbortSignal.timeout(10000)});
+    const response=await fetch(SYNC_URL+'&check='+Date.now(),{cache:'no-store',headers:{Accept:'application/vnd.github.raw+json'},signal:AbortSignal.timeout(10000)});
     if(!response.ok)throw new Error('온라인 덱을 가져오지 못했어. 잠시 후 다시 눌러줘.');
     const remote=await response.json();if(remote.kind!=='poc-ai-sync-state'||remote.schema_version!==1||!remote.entries||Object.keys(remote.entries).length>42)throw new Error('온라인 자료 형식을 확인할 수 없어.');
     const entries=Object.values(remote.entries);if(!entries.length){$('online-status').textContent='아직 GitHub 저장 검사를 통과한 덱이 없어. 저장을 확정한 뒤 잠시 기다려줘.';return;}

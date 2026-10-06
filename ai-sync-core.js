@@ -1,7 +1,7 @@
 import {GROUPS,RULESETS,parseBundle,validateDeck,cardLine} from './ai-deck-core.js';
 
 export const SYNC_REPO='djmonnar/yugioh-poc-card-catalog';
-export const SYNC_URL=`https://raw.githubusercontent.com/${SYNC_REPO}/ai-sync-data/sync.json`;
+export const SYNC_URL=`https://api.github.com/repos/${SYNC_REPO}/contents/sync.json?ref=ai-sync-data`;
 export const SYNC_MARKER='<!-- POC-AI-SYNC:v1 -->';
 const digest=async text=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text))),b=>b.toString(16).padStart(2,'0')).join('');
 function identityRows(groups,cards){return GROUPS.flatMap(g=>groups[g].map(([slot,id,count])=>{const c=cards.find(c=>c.slot===slot&&c.internal_id===id);if(!c)throw new Error('현재 도감과 카드 번호가 달라.');return [g,slot,id,count,c.identity_key];}));}

@@ -19,7 +19,7 @@ import uuid
 
 REPO = 'djmonnar/yugioh-poc-card-catalog'
 OWNER = 'djmonnar'
-SYNC_URL = f'https://raw.githubusercontent.com/{REPO}/ai-sync-data/sync.json'
+SYNC_URL = f'https://api.github.com/repos/{REPO}/contents/sync.json?ref=ai-sync-data'
 MARKER = '<!-- POC-AI-SYNC:v1 -->'
 GROUPS = ('main', 'extra', 'side')
 
@@ -132,7 +132,7 @@ def packet_revision(packet):
     return sha(json.dumps(packet,sort_keys=True,separators=(',',':'),ensure_ascii=False).encode('utf-8'))
 
 def fetch_state():
-    request = urllib.request.Request(SYNC_URL+'?check='+uuid.uuid4().hex,headers={'User-Agent':'PoC-AI-Deck-Sync/1','Cache-Control':'no-cache'})
+    request = urllib.request.Request(SYNC_URL+'&check='+uuid.uuid4().hex,headers={'User-Agent':'PoC-AI-Deck-Sync/1','Cache-Control':'no-cache','Accept':'application/vnd.github.raw+json'})
     with urllib.request.urlopen(request,timeout=5) as response:
         require(response.geturl().startswith(SYNC_URL), 'Unexpected sync redirect')
         data = response.read(2*1024*1024+1)
