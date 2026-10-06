@@ -2,13 +2,15 @@ export const DECK_STORAGE_KEY = 'poc-ai-decks-v1';
 export const GROUPS = ['main', 'extra', 'side'];
 export const GROUP_LABELS = {main:'메인', extra:'융합', side:'사이드'};
 export const RULESETS = {
-  classic:{label:'현재 게임 · 40~80장', min:40,max:80,playable:true},
-  duel_links_plan:{label:'듀얼링크스 기획 · 20~30장', min:20,max:30,playable:false}
+  classic:{label:'일반 듀얼용 · 40~80장', shortLabel:'일반 듀얼', mode:'normal', min:40,max:80,playable:true},
+  // Keep this key so existing browser saves and exported drafts still import.
+  duel_links_plan:{label:'스피드 듀얼용 · 20~30장', shortLabel:'스피드 듀얼', mode:'speed', min:20,max:30,playable:false}
 };
 const text = (value,max=6000) => { if(typeof value!=='string'||value.length>max)throw new Error('덱의 글자 수나 형식이 올바르지 않아.');return value; };
 const fail = message => {throw new Error(message);};
-export function emptyDeck(id) {
-  return {deck_id:id,name:'새 AI 덱',ruleset:'classic',banlist_enabled:true,difficulty:3,
+export function emptyDeck(id,ruleset='classic') {
+  if(!Object.hasOwn(RULESETS,ruleset))fail('덱의 듀얼 모드를 선택해줘.');
+  return {deck_id:id,name:ruleset==='classic'?'새 일반 AI 덱':'새 스피드 AI 덱',ruleset,banlist_enabled:true,difficulty:3,
     strategy:{goal:'',priorities:'',combos:'',avoid:''},groups:{main:[],extra:[],side:[]}};
 }
 export function cardLine(card,count=1) {
@@ -74,7 +76,14 @@ export function parseBundle(payload,cards) {
     if(!input||typeof input!=='object')fail('덱 형식을 확인할 수 없어.');
     const id=text(input.deck_id,100);if(!/^[a-zA-Z0-9_-]{1,100}$/.test(id)||seen.has(id))fail('덱 번호가 중복되거나 잘못되었어.');seen.add(id);
     if(!Object.hasOwn(RULESETS,input.ruleset)||typeof input.banlist_enabled!=='boolean'||!Number.isInteger(input.difficulty)||input.difficulty<1||input.difficulty>7)fail('덱 규칙과 난이도를 확인할 수 없어.');
+    if(input.duel_mode!==undefined&&input.duel_mode!==RULESETS[input.ruleset].mode)fail('덱 규칙과 듀얼 모드가 서로 달라.');
     const deck=emptyDeck(id);deck.name=text(input.name,80);deck.ruleset=input.ruleset;deck.banlist_enabled=input.banlist_enabled;deck.difficulty=input.difficulty;
+    if(input.source_recipe!==undefined){
+      const s=input.source_recipe;
+      if(!s||! /^(?:cpu|DLR)_\d{3}\.ydc$/.test(s.filename)||! /^[a-f0-9]{64}$/.test(s.sha256)||!Array.isArray(s.difficulty_levels)||!s.difficulty_levels.length||s.difficulty_levels.length>7||s.difficulty_levels.some(n=>!Number.isInteger(n)||n<1||n>7)||new Set(s.difficulty_levels).size!==s.difficulty_levels.length)fail('기존 AI 덱의 출처를 확인할 수 없어.');
+      if((s.filename.startsWith('cpu_')?'normal':'speed')!==RULESETS[input.ruleset].mode)fail('기존 AI 덱 출처와 듀얼 모드가 달라. 새 모드의 덱은 복제 후 출처를 분리해줘.');
+      deck.source_recipe={filename:s.filename,sha256:s.sha256,difficulty_levels:[...s.difficulty_levels]};
+    }
     for(const key of Object.keys(deck.strategy))deck.strategy[key]=text(input.strategy?.[key]??'');
     for(const group of GROUPS) {
       if(!Array.isArray(input.groups?.[group])||input.groups[group].length>100)fail('덱 카드 목록을 확인할 수 없어.');
@@ -90,17 +99,18 @@ export function exportBundle(meta,decks,cards) {
   // Structural checks keep invalid drafts exportable while refusing malformed input.
   const clean=parseBundle({schema_version:1,kind:'poc-ai-deck-bundle',decks},cards);
   return {schema_version:1,kind:'poc-ai-deck-bundle',catalog_dataset_id:meta.dataset_id,
-    exported_at:new Date().toISOString(),decks:clean.map(d=>({...d,validation:validateDeck(d,cards)}))};
+    exported_at:new Date().toISOString(),decks:clean.map(d=>({...d,duel_mode:RULESETS[d.ruleset].mode,mode_label:RULESETS[d.ruleset].shortLabel,validation:validateDeck(d,cards)}))};
 }
 export function deckMarkdown(meta,decks,cards) {
   const lines=['# Power of Chaos AI 덱 설계',`도감 기준: ${meta.snapshot_date}`,''];
   for(const deck of decks) {
     const check=validateDeck(deck,cards);
     lines.push(`## ${deck.name}`,`규칙: ${RULESETS[deck.ruleset].label} · 난이도 ${deck.difficulty} · 금제 ${deck.banlist_enabled?'적용':'해제'}`,'');
+    if(deck.source_recipe)lines.push(`기존 AI 파일: ${deck.source_recipe.filename} · 등장 난이도 ${deck.source_recipe.difficulty_levels.join(', ')}`,'');
     for(const group of GROUPS){lines.push(`### ${GROUP_LABELS[group]} ${check.counts[group]}장`);for(const row of deck.groups[group])lines.push(`- ${row.name_ko} ×${row.count} (#${row.slot}, ID ${row.internal_id})`);lines.push('');}
     for(const [key,label] of [['goal','승리 목표'],['priorities','우선 사용할 카드·효과'],['combos','원하는 콤보·순서'],['avoid','피해야 할 행동']])if(deck.strategy[key])lines.push(`### ${label}`,deck.strategy[key],'');
     if(check.issues.length)lines.push('### 확인할 항목',...check.issues.map(i=>'- '+i),'');
-    if(!RULESETS[deck.ruleset].playable)lines.push('듀얼링크스 기획 덱: 게임 규칙 변경 후 별도 적용이 필요하다.','');
+    if(!RULESETS[deck.ruleset].playable)lines.push('스피드 듀얼용 덱: 듀얼링크스 규칙 시험 모드에 별도 적용 요청. 완성된 공식 규칙으로 검증된 덱은 아니다.','');
   }
   return lines.join('\n');
 }

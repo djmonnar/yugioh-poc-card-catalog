@@ -10,6 +10,23 @@ const fusion={...normal,identity_key:'c'.repeat(64),slot:3,internal_id:202,type:
 const token={...normal,identity_key:'d'.repeat(64),slot:4,internal_id:203,special:true};
 const pool=[normal,limited,fusion,token];
 const payload=decks=>({schema_version:1,kind:'poc-ai-deck-bundle',decks});
+test('all 42 installed opponents preserve mode, native origin and difficulty routing',()=>{
+  const data=JSON.parse(readFileSync(new URL('../data/ai-opponents.json',import.meta.url),'utf8'));
+  const decks=parseBundle(data,catalog.cards);assert.equal(decks.length,42);
+  assert.equal(decks.filter(d=>d.ruleset==='classic').length,21);
+  assert.equal(decks.filter(d=>d.ruleset==='duel_links_plan').length,21);
+  assert.deepEqual(exportBundle(catalog.meta,decks,catalog.cards).decks.map(d=>d.source_recipe),decks.map(d=>d.source_recipe));
+  for(const d of decks){assert.equal(validateDeck(d,catalog.cards).unknown,0);assert.ok(d.source_recipe.difficulty_levels.includes(d.difficulty));assert.match(d.name,/난이도/);}
+  assert.equal(decks.find(d=>d.source_recipe.filename==='cpu_003.ydc').source_recipe.difficulty_levels.join(','),'1,2');
+  assert.doesNotMatch(JSON.stringify(data),/C:\\|system\.dat|ledger\.json|USERPROFILE/i);
+});
+test('source metadata rejects wrong mode and cannot become a filesystem path',()=>{
+  const d=emptyDeck('origin');d.source_recipe={filename:'cpu_000.ydc',sha256:'a'.repeat(64),difficulty_levels:[1]};
+  const imported=parseBundle(payload([d]),pool)[0];imported.name='내가 정한 상대 이름';
+  assert.equal(exportBundle({dataset_id:'test'},[imported],pool).decks[0].name,imported.name);
+  d.source_recipe.filename='../cpu_000.ydc';assert.throws(()=>parseBundle(payload([d]),pool));
+  d.source_recipe.filename='DLR_000.ydc';assert.throws(()=>parseBundle(payload([d]),pool));
+});
 test('main and side copies share the same limit; removing frees one copy',()=>{
   const d=emptyDeck('test');adjustCard(d,normal,'main',1);adjustCard(d,normal,'main',1);adjustCard(d,normal,'side',1);
   assert.equal(copyCount(d,normal.identity_key),3);assert.throws(()=>adjustCard(d,normal,'side',1));
@@ -68,4 +85,23 @@ test('built-in examples reference known current cards and contain no private pat
   assert.deepEqual(examples.map(d=>validateDeck(d,catalog.cards).counts.main),[42,42,48,42,42]);
   for(const d of examples)assert.equal(validateDeck(d,catalog.cards).unknown,0);
   assert.doesNotMatch(raw,/C:\\|system\.dat|wallet|USERPROFILE/i);
+});
+
+test('new normal and speed decks keep their mode through export and legacy import',()=>{
+  const normalDeck=emptyDeck('normal','classic'),speedDeck=emptyDeck('speed','duel_links_plan');
+  const exported=exportBundle(catalog.meta,[normalDeck,speedDeck],pool);
+  assert.deepEqual(exported.decks.map(d=>d.duel_mode),['normal','speed']);
+  assert.deepEqual(parseBundle(exported,pool),[normalDeck,speedDeck]);
+  assert.deepEqual(parseBundle(payload([speedDeck]),pool),[speedDeck]);
+  assert.match(deckMarkdown(catalog.meta,[speedDeck],pool),/スピード|스피드 듀얼용 · 20~30장/);
+  assert.throws(()=>parseBundle(payload([{...normalDeck,duel_mode:'speed'}]),pool));
+  assert.throws(()=>emptyDeck('bad','unknown'));
+});
+
+test('switching a populated normal deck to speed reports excess without deleting cards',()=>{
+  const regular=catalog.cards.filter(c=>!c.special&&c.type!=='융합 몬스터'&&c.deck_limit>=1).slice(0,40);
+  const deck=emptyDeck('switch');deck.groups.main=regular.map(c=>cardLine(c));
+  const before=structuredClone(deck.groups);deck.ruleset='duel_links_plan';
+  assert.ok(validateDeck(deck,catalog.cards).issues.some(s=>s.includes('20~30')));
+  assert.deepEqual(deck.groups,before);
 });
