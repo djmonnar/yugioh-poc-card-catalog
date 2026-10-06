@@ -1,5 +1,6 @@
 import {TIERS, STORAGE_KEY, changesFor, makeReview, exportPayload, parseImport, reviewCounts, reviewMarkdown} from './review-core.js?v=20261006-5';
 import {RESET_BACKUP_KEY, resetStoredReviews} from './review-storage.js?v=20261006-5';
+import {categoryMatches, groupCards, cardLink, groupHash, parseCatalogHash} from './card-groups.js?v=20261006-7';
 
 const $ = id => document.getElementById(id);
 const PAGE_SIZE = 36;
@@ -62,6 +63,7 @@ function filteredCards() {
   const limit = $('limit-filter').value, status = $('status-filter').value, min = $('level-min').value, max = $('level-max').value;
   return cards.filter(c => {
     if (view === 'reviews' && !reviews.has(c.identity_key)) return false;
+    if (!categoryMatches(c, $('mechanic-filter').value, $('group-filter').value)) return false;
     if (rarity && c.rarity !== rarity || type && c.type !== type || race && c.race !== race || attribute && c.attribute !== attribute) return false;
     if (limit !== '' && c.deck_limit !== Number(limit)) return false;
     if (status === 'effect-difference' && c.review_kind !== 'effect') return false;
@@ -101,7 +103,7 @@ function render() {
   $('cards').replaceChildren(...results.slice((page-1)*PAGE_SIZE, page*PAGE_SIZE).map(renderCard));
   $('empty').hidden = results.length > 0;
   $('results').textContent = `${fmt(results.length)}장${view === 'reviews' ? '의 검토' : '의 카드'} · 전체 ${fmt(cards.length)}장`;
-  $('active-summary').textContent = [rarity, $('type-filter').value, $('race-filter').value].filter(Boolean).join(' · ');
+  $('active-summary').textContent = [rarity, $('type-filter').value, $('race-filter').value, $('mechanic-filter').selectedOptions[0]?.value ? $('mechanic-filter').selectedOptions[0].textContent : '', $('group-filter').selectedOptions[0]?.value ? $('group-filter').selectedOptions[0].textContent : ''].filter(Boolean).join(' · ');
   $('page-info').textContent = `${page} / ${pages}`; $('prev').disabled = page <= 1; $('next').disabled = page >= pages;
   $('tab-all').classList.toggle('active', view === 'all'); $('tab-reviews').classList.toggle('active', view === 'reviews');
   $('tab-all').setAttribute('aria-pressed', String(view === 'all')); $('tab-reviews').setAttribute('aria-pressed', String(view === 'reviews'));
@@ -113,6 +115,48 @@ function selectControl(id, label, values, chosen, disabled = false) {
   for (const [value,text] of values) { const option = el('option', text); option.value = value; control.append(option); }
   control.value = chosen == null ? '' : String(chosen);
   box.append(title, control); return box;
+}
+function relatedLink(card, label = card.name_ko) {
+  const link = el('a', label, 'related-link'); link.href = cardLink(card.slot);
+  link.addEventListener('click', event => {event.preventDefault(); openCard(card.slot);});
+  return link;
+}
+function showGroup(id) {
+  if (!meta.card_system?.groups.some(g => g.id === id)) return;
+  if ($('card-dialog').open) closeCard();
+  view = 'all'; resetFilters(); $('group-filter').value = id; page = 1; render();
+  history.replaceState(null, '', groupHash(id));
+  $('results').scrollIntoView({block:'start'});
+}
+function renderRelations(card, info) {
+  if (card.mechanics?.length) {
+    const box=el('section',null,'card-relations'); box.append(el('h3','기믹 분류'));
+    const badges=el('div',null,'relation-links');
+    for (const mechanic of card.mechanics) {
+      const button=el('button',mechanic.name);button.type='button';button.title=mechanic.note;
+      button.addEventListener('click',()=>{closeCard();view='all';resetFilters();$('mechanic-filter').value=mechanic.id;render();});badges.append(button);
+    }
+    box.append(badges,el('p','공식 카드의 분류야. 이 모드의 원본 효과 복원 여부는 아래 검토 메모를 확인해줘.','muted'));info.append(box);
+  }
+  for (const group of card.card_groups || []) {
+    const box=el('section',null,'card-relations'),heading=el('h3',`${group.name} · ${group.role === 'support' ? '지원 카드' : '소속 카드'}`);
+    const all=el('button','묶음 전체 보기','text-button');all.type='button';all.addEventListener('click',()=>showGroup(group.id));box.append(heading,all);
+    for (const [role,label] of [['member','소속 카드'],['support','지원 카드']]) {
+      const rows=groupCards(cards,group.id,role).filter(c=>c.slot!==card.slot);
+      if (!rows.length) continue;
+      const links=el('div',null,'relation-links');box.append(el('p',label,'description-title'));
+      for (const related of rows) links.append(relatedLink(related));box.append(links);
+    }
+    box.append(el('p',group.note,'muted'));info.append(box);
+  }
+  if (card.related_cards?.length) {
+    const box=el('section',null,'card-relations');box.append(el('h3','직접 연결된 카드'));
+    for (const related of card.related_cards) {
+      const target=cards.find(c=>c.slot===related.slot && c.identity_key===related.identity_key);
+      if(target){const row=el('div',null,'relation-links');row.append(el('span',related.label,'muted'),relatedLink(target));box.append(row);}
+    }
+    info.append(box);
+  }
 }
 function openCard(slot, updateHash = true) {
   const card = cards.find(c => c.slot === slot); if (!card) return;
@@ -129,6 +173,7 @@ function openCard(slot, updateHash = true) {
   const title = el('h2', card.name_ko); title.id = 'detail-title'; info.append(top, title, el('p', card.name_en, 'english-name'));
   const tags = el('div', null, 'detail-tags'); for (const t of [card.type, card.subtype, card.race, card.attribute, card.level == null ? '' : `LV ${card.level}`, card.atk == null ? '' : `ATK ${card.atk} / DEF ${card.def}`].filter(Boolean)) tags.append(el('span',t)); info.append(tags);
   info.append(el('p', '현재 모드 설명', 'description-title'), el('div', card.description_ko || '별도의 카드 설명이 없는 토큰·특수 카드야.', 'description'));
+  renderRelations(card, info);
   if (card.fusion_materials?.length) {
     const materials=el('div',null,'fusion-materials');materials.append(el('p','이 모드에서 확인한 융합 소재','description-title'));
     const grouped=new Map();for(const material of card.fusion_materials){const item=grouped.get(material.slot);if(item)item.count++;else grouped.set(material.slot,{...material,count:1});}
@@ -167,6 +212,7 @@ function openCard(slot, updateHash = true) {
   for (const id of ['replacement-name','review-note']) $(id).addEventListener('input',save);
   remove.addEventListener('click',()=>{reviews.delete(card.identity_key);persist();render();openCard(card.slot);toast('이 카드의 검토 의견을 지웠어.');});
   if (!$('card-dialog').open) $('card-dialog').showModal();
+  $('card-dialog').scrollTop = 0;
 }
 function closeCard() { $('card-dialog').close(); selected=null; history.replaceState(null,'',location.pathname+location.search); }
 function download(name, body, type) {
@@ -183,15 +229,17 @@ function openExport() {
   if (!$('export-dialog').open) $('export-dialog').showModal();
 }
 function resetFilters() {
-  for(const id of ['search','type-filter','limit-filter','race-filter','attribute-filter','level-min','level-max','status-filter']) $(id).value='';
+  for(const id of ['search','type-filter','limit-filter','race-filter','attribute-filter','level-min','level-max','status-filter','mechanic-filter','group-filter']) $(id).value='';
   rarity='';page=1;rarityButtons();render();
 }
 async function init() {
   try {
-    const response=await fetch('./data/cards.json?v=20261006-5',{cache:'no-cache'});if(!response.ok)throw new Error('카드 자료를 가져오지 못했어.');
+    const response=await fetch('./data/cards.json?v=20261006-7',{cache:'no-cache'});if(!response.ok)throw new Error('카드 자료를 가져오지 못했어.');
     const data=await response.json();meta=data.meta;cards=data.cards;
     if(cards.length!==meta.total||new Set(cards.map(c=>c.identity_key)).size!==cards.length)throw new Error('카드 자료를 확인할 수 없어.');
-    for(const c of cards)c.searchText=[c.name_ko,c.name_en,c.description_ko,c.race,c.attribute,String(c.slot),String(c.internal_id)].join(' ').normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,'');
+    for(const c of cards)c.searchText=[c.name_ko,c.name_en,c.description_ko,c.race,c.attribute,...(c.mechanics||[]).map(m=>m.name),...(c.card_groups||[]).map(g=>g.name),String(c.slot),String(c.internal_id)].join(' ').normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,'');
+    for(const [id,rows] of [['mechanic-filter',meta.card_system?.mechanics||[]],['group-filter',meta.card_system?.groups||[]]])
+      for(const row of rows){const option=el('option',row.name);option.value=row.id;$(id).append(option);}
     $('total-count').textContent=fmt(cards.length);$('scope-count').textContent=`일반 카드 ${fmt(meta.regular_count)}장 · 토큰·특수 ${meta.special_count}종`;$('snapshot-date').textContent=meta.snapshot_date+' 기준';
     fillFilter('type-filter',[...new Set(cards.map(c=>c.type))]);fillFilter('race-filter',[...new Set(cards.map(c=>c.race).filter(Boolean))].sort(collator.compare));fillFilter('attribute-filter',[...new Set(cards.map(c=>c.attribute).filter(Boolean))]);
     const levels=[...new Set(cards.map(c=>c.level).filter(v=>v!=null))].sort((a,b)=>a-b);fillFilter('level-min',levels);fillFilter('level-max',levels);
@@ -199,12 +247,12 @@ async function init() {
     catch{toast('이전 의견을 읽지 못했어. 기존 저장 내용은 그대로 두었어.');}
     try { resetBackup = localStorage.getItem(RESET_BACKUP_KEY); } catch {}
     rarityButtons();render();
-    const match=/^#card-(\d+)$/.exec(location.hash);if(match)openCard(Number(match[1]),false);
+    const destination=parseCatalogHash(location.hash);if(destination?.card)openCard(destination.card,false);else if(destination?.group)showGroup(destination.group);
   }catch(error){$('results').textContent=error.message;$('cards').replaceChildren(el('p','새로고침해 보거나 GitHub 저장소의 data/cards.csv를 확인해줘.','muted'));}
 }
 
 $('search').addEventListener('input',()=>{page=1;render();});
-for(const id of ['type-filter','limit-filter','race-filter','attribute-filter','level-min','level-max','status-filter','sort'])$(id).addEventListener('change',()=>{page=1;render();});
+for(const id of ['type-filter','limit-filter','race-filter','attribute-filter','level-min','level-max','status-filter','mechanic-filter','group-filter','sort'])$(id).addEventListener('change',()=>{page=1;render();});
 $('reset-filters').addEventListener('click',resetFilters);
 $('tab-all').addEventListener('click',()=>{view='all';page=1;render();});$('tab-reviews').addEventListener('click',()=>{view='reviews';resetFilters();});
 $('prev').addEventListener('click',()=>{page--;render();$('results').scrollIntoView({block:'start'});});$('next').addEventListener('click',()=>{page++;render();$('results').scrollIntoView({block:'start'});});
@@ -257,5 +305,5 @@ $('undo-reset').addEventListener('click',()=>{
     reviews=merged;unmatched=[...old.values()];render();if(selected)openCard(selected.slot);openExport();toast('초기화 전 의견을 복원했어. 새로 작성한 의견도 유지했어.');
   } catch {toast('복원에 실패했어. 초기화 전 백업 JSON을 내려받아 보관해줘.');}
 });
-window.addEventListener('hashchange',()=>{const match=/^#card-(\d+)$/.exec(location.hash);if(match)openCard(Number(match[1]),false);});
+window.addEventListener('hashchange',()=>{const destination=parseCatalogHash(location.hash);if(destination?.card)openCard(destination.card,false);else if(destination?.group)showGroup(destination.group);});
 init();
