@@ -1,4 +1,4 @@
-import {DECK_STORAGE_KEY,GROUPS,GROUP_LABELS,RULESETS,emptyDeck,cardLimit,copyCount,groupCount,placementError,adjustCard,resolveCard,validateDeck,parseBundle,exportBundle,deckMarkdown} from './ai-deck-core.js?v=20261006-10';
+import {DECK_STORAGE_KEY,GROUPS,GROUP_LABELS,RULESETS,emptyDeck,cardLimit,copyCount,groupCount,groupTypeCounts,placementError,adjustCard,resolveCard,validateDeck,parseBundle,exportBundle,deckMarkdown} from './ai-deck-core.js?v=20261006-15';
 import {renderPagination} from './pagination.js?v=20261006-8';
 import {makeSyncPacket,packetDeck} from './ai-sync-core.js?v=20261006-12';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
@@ -47,6 +47,10 @@ function renderDeck(){
   $('recipe-source').hidden=!d.source_recipe;
   $('recipe-source').textContent=d.source_recipe?`적용 상대: ${d.source_recipe.filename} · 등장 난이도 ${d.source_recipe.difficulty_levels.join(', ')} · 온라인 저장으로 다음 실행 때 반영할 수 있어.`:'';
   $('deck-counts').replaceChildren(...GROUPS.map(g=>el('span',`${GROUP_LABELS[g]} ${check.counts[g]}장`)));
+  const composition=groupTypeCounts(d,cards);
+  $('deck-type-counts').replaceChildren(...[['normal','일반 몬스터'],['effect','효과 몬스터'],['spell','마법'],['trap','함정'],['ritual','의식 몬스터'],['other','기타'],['unknown','미확인']]
+    .filter(([key],index)=>index<4||composition[key]>0)
+    .map(([key,label])=>{const badge=el('span',null,`deck-type-count ${key}`);badge.append(el('span',label),el('strong',`${composition[key]}장`));return badge;}));
   $('validation-summary').textContent=check.issues.length?`확인할 항목 ${check.issues.length}개`:check.ready_for_game?'일반 덱 구성 확인 완료 · 적용 요청 가능':'스피드 덱 구성 완료 · 시험 모드 적용 요청 가능';
   $('deck-issues').replaceChildren(...check.issues.map(message=>el('li',message)));$('validation-summary').parentElement.classList.toggle('ok',!check.issues.length);
   $('deck-groups').replaceChildren(...GROUPS.map(group=>{

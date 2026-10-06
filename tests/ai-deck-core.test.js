@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {emptyDeck,cardLine,adjustCard,validateDeck,parseBundle,exportBundle,deckMarkdown,copyCount} from '../ai-deck-core.js';
+import {emptyDeck,cardLine,adjustCard,validateDeck,parseBundle,exportBundle,deckMarkdown,copyCount,groupTypeCounts,groupCount} from '../ai-deck-core.js';
 
 const catalog=JSON.parse(readFileSync(new URL('../data/cards.json',import.meta.url),'utf8'));
 const normal={identity_key:'a'.repeat(64),slot:1,internal_id:200,name_ko:'시험 몬스터',name_en:'Test monster',type:'일반 몬스터',special:false,deck_limit:3,deck_limit_without_banlist:3};
@@ -10,6 +10,23 @@ const fusion={...normal,identity_key:'c'.repeat(64),slot:3,internal_id:202,type:
 const token={...normal,identity_key:'d'.repeat(64),slot:4,internal_id:203,special:true};
 const pool=[normal,limited,fusion,token];
 const payload=decks=>({schema_version:1,kind:'poc-ai-deck-bundle',decks});
+test('main composition counts copies, separates ritual and unresolved cards, excludes supplemental groups',()=>{
+  const types=['일반 몬스터','효과 몬스터','마법','함정','의식 몬스터'];
+  const cards=types.map((type,i)=>({...normal,slot:i+10,internal_id:i+500,identity_key:String(i+1).repeat(64),type}));
+  const d=emptyDeck('composition');d.groups.main=cards.map((c,i)=>cardLine(c,[3,2,3,1,2][i]));
+  d.groups.main.push(cardLine(limited));d.groups.side=[cardLine(cards[0],3)];d.groups.extra=[cardLine(fusion,3)];
+  assert.deepEqual(groupTypeCounts(d,cards),{normal:3,effect:2,spell:3,trap:1,ritual:2,other:0,unknown:1});
+  adjustCard(d,cards[1],'main',-1);assert.equal(groupTypeCounts(d,cards).effect,1);
+  assert.equal(groupTypeCounts(d,cards,'side').normal,3);
+});
+test('composition totals match every installed normal and speed opponent main deck',()=>{
+  const data=JSON.parse(readFileSync(new URL('../data/ai-opponents.json',import.meta.url),'utf8'));
+  for(const deck of parseBundle(data,catalog.cards)){
+    const counts=groupTypeCounts(deck,catalog.cards);
+    assert.equal(Object.values(counts).reduce((sum,n)=>sum+n,0),groupCount(deck,'main'),deck.name);
+    assert.equal(counts.unknown,0,deck.name);assert.equal(counts.other,0,deck.name);
+  }
+});
 test('all 42 installed opponents preserve mode, native origin and difficulty routing',()=>{
   const data=JSON.parse(readFileSync(new URL('../data/ai-opponents.json',import.meta.url),'utf8'));
   const decks=parseBundle(data,catalog.cards);assert.equal(decks.length,42);

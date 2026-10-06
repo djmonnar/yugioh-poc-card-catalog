@@ -5,9 +5,9 @@
   <meta name="theme-color" content="#162c38"><meta name="description" content="Power of Chaos 상대 AI 덱을 직접 만들고 콤보와 행동 지침을 보내세요.">
   <title>AI 덱 만들기 · Power of Chaos</title>
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=20261006-8"><link rel="stylesheet" href="ai-decks.css?v=20261006-12">
+  <link rel="stylesheet" href="style.css?v=20261006-8"><link rel="stylesheet" href="ai-decks.css?v=20261006-15">
   <link rel="stylesheet" href="ai-sync.css?v=20261006-13">
-  <script type="module" src="ai-decks.js?v=20261006-14"></script>
+  <script type="module" src="ai-decks.js?v=20261006-15"></script>
 </head>
 <body>
   <header class="masthead"><a href="./" class="brand"><img src="assets/icon.svg" alt="" width="34" height="40"><span>POWER OF CHAOS<small>카드 도감으로 돌아가기</small></span></a><button id="export-decks" class="primary">AI 덱 보내기</button></header>
@@ -39,6 +39,7 @@
         <label class="check-row"><input id="deck-banlist" type="checkbox" checked>현재 모드의 금지·제한 적용</label>
         <p id="rules-note" class="builder-notice" hidden>듀얼링크스 규칙 시험 모드용 덱이야. 메인 덱 20~30장으로 만들고 내보내줘. 융합·사이드는 현재 편집기 한도인 15장을 사용해. 완성된 듀얼링크스 규칙에 대한 검사는 아직 준비 중이야.</p>
         <div id="deck-counts" class="deck-counts" aria-live="polite"></div>
+        <section class="deck-composition" aria-label="메인 덱 카드 구성"><p>메인 덱 카드 구성</p><div id="deck-type-counts" class="deck-type-counts" aria-live="polite"></div></section>
         <details class="deck-checks" open><summary id="validation-summary">덱 확인</summary><ul id="deck-issues"></ul></details>
         <div id="deck-groups"></div>
         <details class="strategy-editor" open><summary>AI가 어떻게 플레이하면 좋을까?</summary><label for="strategy-goal">승리 목표 · 덱의 컨셉</label><textarea id="strategy-goal" rows="2" maxlength="6000" placeholder="예: 공룡을 전개하고 궁극의 티라노로 공격"></textarea><label for="strategy-priorities">우선 사용할 카드·효과</label><textarea id="strategy-priorities" rows="2" maxlength="6000" placeholder="예: 화석조사로 지금 패에 부족한 공룡을 가져오기"></textarea><label for="strategy-combos">원하는 콤보 · 사용 순서</label><textarea id="strategy-combos" rows="3" maxlength="6000" placeholder="예: 묘지에 언데드를 마련한 뒤 소생으로 이어가기"></textarea><label for="strategy-avoid">피해야 할 행동</label><textarea id="strategy-avoid" rows="2" maxlength="6000" placeholder="예: 자기 필드가 유리할 때 전체 제거를 쓰지 않기"></textarea></details>

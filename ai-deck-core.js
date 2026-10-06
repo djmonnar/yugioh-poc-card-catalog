@@ -25,6 +25,15 @@ export function copyCount(deck,key) {
   return GROUPS.reduce((sum,g)=>sum+deck.groups[g].filter(r=>r.identity_key===key).reduce((n,r)=>n+r.count,0),0);
 }
 export function groupCount(deck,group) {return deck.groups[group].reduce((n,r)=>n+r.count,0);}
+export function groupTypeCounts(deck,cards,group='main') {
+  const counts={normal:0,effect:0,spell:0,trap:0,ritual:0,other:0,unknown:0};
+  const types={'일반 몬스터':'normal','효과 몬스터':'effect','마법':'spell','함정':'trap','의식 몬스터':'ritual'};
+  for(const row of deck.groups[group]) {
+    const card=resolveCard(row,cards);
+    counts[card?(types[card.type]||'other'):'unknown']+=row.count;
+  }
+  return counts;
+}
 export function cardLimit(deck,card) {return Math.min(3,(deck.banlist_enabled?card.deck_limit:card.deck_limit_without_banlist)??3);}
 export function placementError(card,group) {
   if(card.special)return '토큰·특수 카드는 덱에 넣을 수 없어.';
