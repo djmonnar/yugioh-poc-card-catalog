@@ -1,0 +1,82 @@
+export const STORY_KEY='poc-story-authoring-v1';
+export const SKILLS={lp_bonus:'시작 LP 추가',heal_once:'전투당 1회 LP 회복',start_hand:'시작 패에 카드 추가',start_field:'시작 필드에 카드 배치',add_hand_once:'전투당 1회 카드 받기'};
+export const REWARD_TIERS=['ANY','N','R','SR','UR'];
+const fail=msg=>{throw new Error(msg);};
+const text=(v,max)=>typeof v==='string'&&v.length<=max?v:fail('글자 수나 문서 형식을 확인해줘.');
+const id=v=>/^[a-zA-Z0-9_-]{1,100}$/.test(v)?v:fail('항목 ID를 확인해줘.');
+const integer=(n,min,max)=>Number.isInteger(n)&&n>=min&&n<=max?n:fail('숫자 범위를 확인해줘.');
+export function cardRef(c){return {slot:c.slot,internal_id:c.internal_id,identity_key:c.identity_key,name_ko:c.name_ko};}
+export function resolveRef(ref,cards){return ref&&cards.find(c=>c.slot===ref.slot&&c.internal_id===ref.internal_id&&c.identity_key===ref.identity_key);}
+function ref(v){if(!v||!Number.isInteger(v.slot)||!Number.isInteger(v.internal_id)||!/^[a-f0-9]{64}$/.test(v.identity_key))fail('카드 식별값을 확인해줘.');return {...cardRef(v),name_ko:text(v.name_ko,200)};}
+export function safePortrait(v){return typeof v==='string'&&(v===''||/^(?:assets|content-packs)\/[a-zA-Z0-9_./-]+\.(?:png|jpe?g|webp)$/.test(v)&&!v.includes('..')||/^https:\/\/[a-z]{20}\.supabase\.co\/storage\/v1\/object\/public\/poc-story-assets\/[a-zA-Z0-9_./-]+\.(?:png|jpe?g|webp)$/.test(v)&&!v.includes('..'));}
+export function newActor(actor_id=crypto.randomUUID()){return {actor_id,name:'새 캐릭터',portrait:'',skills:[]};}
+export function newBattle(battle_id=crypto.randomUUID()){return {battle_id,name:'새 전투',actor_id:'',recipe:'',ruleset:'duel_links_plan',intro:'',win:'',loss:'',rewards:{first:[],repeat:[]}};}
+export function emptyStory(){return {schema_version:1,kind:'poc-story-authoring',title:'나의 스토리',catalog_dataset_id:'',actors:[],battles:[]};}
+function reward(r){
+  if(r.kind==='gold')return {kind:'gold',amount:integer(r.amount,1,100000)};
+  if(r.kind==='card')return {kind:'card',card:ref(r.card),count:integer(r.count,1,3)};
+  if(r.kind==='random'&&REWARD_TIERS.includes(r.rarity))return {kind:'random',rarity:r.rarity,count:integer(r.count,1,3)};
+  fail('보상 종류를 확인해줘.');
+}
+export function parseStory(v){
+  if(v?.schema_version!==1||v.kind!=='poc-story-authoring'||!Array.isArray(v.actors)||!Array.isArray(v.battles)||v.actors.length>100||v.battles.length>100)fail('스토리 편집기에서 내보낸 JSON을 골라줘.');
+  const doc={...emptyStory(),title:text(v.title,200),catalog_dataset_id:text(v.catalog_dataset_id,100)};
+  const seen=new Set();doc.actors=v.actors.map(a=>{
+    id(a.actor_id);if(seen.has(a.actor_id)||!safePortrait(a.portrait)||!Array.isArray(a.skills)||a.skills.length>5)fail('캐릭터 ID·초상화·스킬을 확인해줘.');seen.add(a.actor_id);
+    const kinds=new Set();return {actor_id:a.actor_id,name:text(a.name,100),portrait:a.portrait,skills:a.skills.map(s=>{
+      if(!Object.hasOwn(SKILLS,s.kind)||kinds.has(s.kind))fail('중복 또는 알 수 없는 스킬이 있어.');kinds.add(s.kind);
+      return ['lp_bonus','heal_once'].includes(s.kind)?{kind:s.kind,value:integer(s.value,100,8000)}:{kind:s.kind,card:ref(s.card)};
+    })};
+  });
+  const battles=new Set();doc.battles=v.battles.map(b=>{
+    id(b.battle_id);if(battles.has(b.battle_id)||!['classic','duel_links_plan'].includes(b.ruleset)||!(b.recipe===''||/^(?:cpu|DLR)_\d{3}\.ydc$/.test(b.recipe)))fail('전투 ID·덱·규칙을 확인해줘.');battles.add(b.battle_id);
+    const out={battle_id:b.battle_id,name:text(b.name,100),actor_id:text(b.actor_id,100),recipe:b.recipe,ruleset:b.ruleset,
+      intro:text(b.intro,6000),win:text(b.win,6000),loss:text(b.loss,6000),rewards:{}};
+    for(const k of ['first','repeat']){if(!Array.isArray(b.rewards?.[k])||b.rewards[k].length>20)fail('전투 보상을 확인해줘.');out.rewards[k]=b.rewards[k].map(reward);}
+    return out;
+  });return doc;
+}
+export function validateStory(doc,cards,decks){
+  const issues=[];
+  try{parseStory(doc);}catch(e){issues.push(e.message);}
+  if(!doc.title.trim())issues.push('시나리오 이름을 입력해줘.');if(!doc.battles.length)issues.push('전투를 한 개 이상 추가해줘.');
+  for(const a of doc.actors){
+    if(!a.name.trim())issues.push('캐릭터 이름을 입력해줘.');
+    for(const skill of a.skills){
+      if(skill.card){const card=resolveRef(skill.card,cards);if(!card||card.special||card.type==='융합 몬스터')issues.push(`${a.name}: 스킬의 카드를 현재 도감에서 다시 골라줘.`);
+        else if(skill.kind==='start_field'&&!['마법','함정'].includes(card.type))issues.push(`${a.name}: 시작 필드는 마법·함정 카드를 골라줘.`);}
+    }
+  }
+  for(const b of doc.battles){
+    if(!b.name.trim())issues.push('전투 이름을 입력해줘.');
+    const actor=doc.actors.find(a=>a.actor_id===b.actor_id),deck=decks.find(d=>d.source_recipe.filename===b.recipe);
+    if(!actor)issues.push(`${b.name}: 전투 상대를 골라줘.`);
+    if(!deck||deck.ruleset!==b.ruleset)issues.push(`${b.name}: 규칙에 맞는 AI 덱을 골라줘.`);
+    for(const k of ['first','repeat'])for(const r of b.rewards[k]){
+      if(r.kind==='card'){const c=resolveRef(r.card,cards);if(!c||c.special||!c.reward_eligible)issues.push(`${b.name}: 보상 카드를 현재 도감에서 다시 골라줘.`);}
+      if(r.kind==='random'&&!cards.some(c=>!c.special&&c.reward_eligible&&(r.rarity==='ANY'||c.rarity===r.rarity)))issues.push(`${b.name}: ${r.rarity} 무작위 보상 카드풀이 비어 있어.`);
+    }
+  }
+  return {issues,authoring_ready:!issues.length,engine_applied:false};
+}
+export async function reviewFiles(doc,meta,cards,decks){
+  const clean=parseStory(doc);clean.catalog_dataset_id=meta.dataset_id;
+  const check=validateStory(clean,cards,decks);if(check.issues.length)fail(check.issues.join('\n'));
+  const source=JSON.stringify(clean,null,2)+'\n';
+  const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(source))),b=>b.toString(16).padStart(2,'0')).join('');
+  const used=[...new Set(clean.battles.map(b=>b.recipe))],ids=new Map(used.map((name,i)=>[name,`deck-${i}`]));
+  const actors=clean.actors.filter(a=>clean.battles.some(b=>b.actor_id===a.actor_id)).map((a,i)=>({id:`actor-${i}`,name:a.name,portrait:null,decks:[...new Set(clean.battles.filter(b=>b.actor_id===a.actor_id).map(b=>ids.get(b.recipe)))]}));
+  const actorId=new Map(clean.actors.filter(a=>clean.battles.some(b=>b.actor_id===a.actor_id)).map((a,i)=>[a.actor_id,`actor-${i}`]));
+  const nodes=[];
+  clean.battles.forEach((b,i)=>{
+    const actor=actorId.get(b.actor_id);nodes.push({id:`intro-${i}`,kind:'dialogue',actor,text:b.intro||`${b.name} 시작`,next:`duel-${i}`},
+      {id:`duel-${i}`,kind:'duel',actor,deck:ids.get(b.recipe),on_win:`win-${i}`,on_loss:`loss-${i}`},
+      {id:`win-${i}`,kind:'dialogue',actor,text:b.win||'승리!',next:i+1<clean.battles.length?`intro-${i+1}`:'end'},
+      {id:`loss-${i}`,kind:'end',text:b.loss||'다시 도전해 보자.'});
+  });nodes.push({id:'end',kind:'end',text:'시나리오 완료'});
+  const pack={schema_version:1,kind:'poc-content-pack',id:'story-authoring',name:clean.title,status:'draft',catalog_dataset_id:meta.dataset_id,
+    assets:[],implementations:[{id:'authoring-data',kind:'story_event',source:'story-source.json',sha256:digest}],cards:[],
+    decks:used.map(name=>({id:ids.get(name),ruleset:decks.find(d=>d.source_recipe.filename===name).ruleset,source_recipe:name})),actors,
+    story:[{id:'chapter-1',title:clean.title,start:'intro-0',nodes}],roguelite:[]};
+  return {source,pack};
+}

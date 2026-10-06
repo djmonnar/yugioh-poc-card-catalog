@@ -62,6 +62,10 @@ begin
   if v::text::integer>limitnum then raise exception 'poc_copy_limit'; end if;
  end loop;
  if encode(sha256(convert_to(poc_private.compact(ids),'UTF8')),'hex') is distinct from p->>'identity_sha256' then raise exception 'poc_identity_changed'; end if;
+ if (select coalesce(sum(e.amount::text::integer),0) from jsonb_each(totals) as e(slot_key,amount) join poc_private.cards harpie_card on harpie_card.slot=e.slot_key::integer
+     where (harpie_card.slot,harpie_card.internal_id) in ((108,1530),(606,609),(696,61),(697,1249),(827,608)))>3 then
+  raise exception 'poc_harpie_shared_copy_limit';
+ end if;
 end; $$;
 create or replace function public.poc_load_ai_decks() returns jsonb language sql stable security definer set search_path = pg_catalog as $$
 select coalesce(jsonb_agg(jsonb_build_object('filename',filename,'version',version,'packet',packet,'updated_at',updated_at) order by filename),'[]'::jsonb) from public.poc_ai_decks;

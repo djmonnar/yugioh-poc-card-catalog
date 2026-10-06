@@ -9,8 +9,11 @@ headers={'apikey':config['publishable_key'],'Content-Type':'application/json'}
 with urllib.request.urlopen(urllib.request.Request(config['url']+'/rest/v1/rpc/poc_load_card_settings',data=b'{}',method='POST',headers=headers),timeout=10) as response:
     card_settings=json.loads(response.read(2*1024*1024))
 assert isinstance(card_settings,list)
+with urllib.request.urlopen(urllib.request.Request(config['url']+'/rest/v1/rpc/poc_load_story',data=b'{}',method='POST',headers=headers),timeout=10) as response:
+    story=json.loads(response.read(2*1024*1024))
+assert story is None or isinstance(story,dict)
 blocked=[]
-for path,body in [('/rest/v1/rpc/poc_save_ai_deck',{'p_packet':{},'p_expected_version':0}),('/rest/v1/poc_ai_decks',{'filename':'NOT_A_NATIVE_FILE','version':1,'packet':{}}),('/rest/v1/rpc/poc_save_card_setting',{'p_dataset':'test','p_slot':1,'p_identity_key':'0'*64,'p_rarity':'N','p_stock':False,'p_expected_version':0})]:
+for path,body in [('/rest/v1/rpc/poc_save_ai_deck',{'p_packet':{},'p_expected_version':0}),('/rest/v1/poc_ai_decks',{'filename':'NOT_A_NATIVE_FILE','version':1,'packet':{}}),('/rest/v1/rpc/poc_save_card_setting',{'p_dataset':'test','p_slot':1,'p_identity_key':'0'*64,'p_rarity':'N','p_stock':False,'p_expected_version':0}),('/rest/v1/rpc/poc_save_story',{'p_document':{},'p_expected_version':0})]:
     req=urllib.request.Request(config['url']+path,data=json.dumps(body).encode(),method='POST',headers=headers)
     try:
         with urllib.request.urlopen(req,timeout=10) as response:raise AssertionError('Anonymous write unexpectedly allowed')

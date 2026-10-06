@@ -4,7 +4,7 @@
   "id": "dinosaur-speed",
   "name": "다이노소어 용만 · 첫 스피드 공룡 상대",
   "status": "draft",
-  "catalog_dataset_id": "850ef9d6c7b5c7603c98f5c7b8da15173877fb6357923584c18f91e426091852",
+  "catalog_dataset_id": "8f3780a357798693d784139fb4b803e2e77f7496efc9cc95d595b53235de4db0",
   "assets": [
     {"id": "dinosaur-yongman-portrait", "kind": "portrait", "source": "assets/dinosaur-yongman.jpg", "sha256": "ad4b5dceac3548194c81947ed040bbab273490bcbcd54d4d953b1640689eb79e"}
   ],
@@ -19,11 +19,11 @@
       "packet": {
         "schema_version": 1,
         "kind": "poc-ai-deck-sync",
-        "catalog_dataset_id": "850ef9d6c7b5c7603c98f5c7b8da15173877fb6357923584c18f91e426091852",
+        "catalog_dataset_id": "8f3780a357798693d784139fb4b803e2e77f7496efc9cc95d595b53235de4db0",
         "identity_sha256": "dabc3044a4ec68d2f999e58b6b1092a1c01e4ad42fb7513f3db838ba454590df",
         "target": {
           "filename": "DLR_000.ydc",
-          "sha256": "6e5890827f8a513a01a3f858391bf494119215f3f3a899747680dfea68c2c425",
+          "sha256": "565f3c05b78cb171f932c25514a68657d56c9d85d286db1bd465728d01ef91bb",
           "difficulty_levels": [1]
         },
         "deck": {
@@ -44,6 +44,18 @@
   "actors": [
     {"id": "dinosaur-yongman", "name": "다이노소어 용만", "portrait": "dinosaur-yongman-portrait", "decks": ["dinosaur-speed-first"]}
   ],
-  "story": [],
+  "story": [
+    {
+      "id": "dinosaur-chapter-one",
+      "title": "1화 · 공룡의 도전자",
+      "start": "greeting",
+      "nodes": [
+        {"id":"greeting","kind":"dialogue","actor":"dinosaur-yongman","text":"내 공룡 덱의 힘을 보여주지!\n네 덱으로 어디 한번 덤벼 봐!","next":"first-duel"},
+        {"id":"first-duel","kind":"duel","actor":"dinosaur-yongman","deck":"dinosaur-speed-first","on_win":"victory","on_loss":"defeat"},
+        {"id":"victory","kind":"end","text":"제법인데! 다음에는 내 공룡 덱도 더 강해질 거야."},
+        {"id":"defeat","kind":"end","text":"공룡의 힘을 봤지? 덱을 다듬어서 다시 도전해 봐!"}
+      ]
+    }
+  ],
   "roguelite": []
 }

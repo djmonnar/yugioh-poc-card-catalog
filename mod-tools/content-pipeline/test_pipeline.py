@@ -101,6 +101,13 @@ class PipelineTests(unittest.TestCase):
         item.update(source='game.exe',sha256=p.sha(path.read_bytes()))
         with self.assertRaisesRegex(ValueError, 'Unsupported file type'):self.check()
 
+    def test_json_adapter_source_is_hashed_data_and_rejects_changed_bytes(self):
+        path=self.root/'registry.json';path.write_text('{"actions":[]}\n',encoding='utf-8')
+        self.pack['implementations']=[{'id':'registry','kind':'card_effect','source':'registry.json','sha256':p.sha(path.read_bytes())}]
+        self.assertEqual(self.check()['files'][0]['sha256'],p.sha(path.read_bytes()))
+        path.write_text('{"actions":[1]}\n',encoding='utf-8')
+        with self.assertRaisesRegex(ValueError,'hash mismatch'):self.check()
+
     def test_immutable_staging_and_manifest_never_touch_progress(self):
         sentinel = self.root/'system.dat'
         sentinel.write_bytes(b'player-progress-sentinel')

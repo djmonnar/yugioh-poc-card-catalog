@@ -86,7 +86,7 @@ def validate(pack_path, catalog_path=None, opponents_path=None):
 
     files = []
     for kind, suffixes in (('assets', {'.png', '.jpg', '.jpeg', '.webp', '.wav', '.ogg'}),
-                           ('implementations', {'.c', '.h', '.inc', '.py'})):
+                           ('implementations', {'.c', '.h', '.inc', '.py', '.json'})):
         for item in rows[kind].values():
             fields(item, ('id', 'kind', 'source', 'sha256'), (), kind)
             expected_kinds = ('portrait', 'card_art', 'background', 'icon', 'audio') if kind == 'assets' else ('card_effect', 'ai_policy', 'story_event', 'roguelite_rule')

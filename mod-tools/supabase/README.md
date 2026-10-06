@@ -17,6 +17,10 @@ PC 실행기는 공개 덱 데이터만 읽는다. 인증 토큰·이메일·sec
 
 `001_ai_decks.sql`을 SQL Editor에서 실행한다. SQL 자체가 공개·비공개 테이블의 RLS를 모두 활성화한다.
 이어서 `002_card_settings.sql`을 실행한다.
+스토리 제작 온라인 저장은 `003_story_authoring.sql`이다. 제작 문서를 저장하며 게임 보상을 지급하지 않는다.
+기존 프로젝트의 도감 갱신은 `prepare_update.py`가 만든 `.local-cloud/catalog-story-update.sql`을 실행한다.
+해피 레이디 5종의 합산 3장 검사와 스토리 저장도 이 갱신에 포함된다. `prepare_story_checks.py`는
+실제 DB의 저장·읽기·충돌·신원 오류·비소유자 수정 거부·해피 4장 거부를 전체 rollback으로 검사한다.
 `prepare_seed.py --owner-email <소유자 이메일>`은 현재 도감·상대 원본과 비공개 허용 목록을 `.local-cloud/bootstrap.sql`에 준비한다. 이 디렉터리는 Git에서 제외한다.
 현재 dataset은 한 개만 유지해야 한다. 카드 변경 배포 시 서버 seed도 갱신하고 오래된 저장 레시피는 새 도감에서 검토한 뒤 다시 저장한다.
 Auth Site URL은 실제 `ai-decks.html` 주소로 설정한다. 이메일 링크를 받은 사용자가 직접 인증을 완료한다.

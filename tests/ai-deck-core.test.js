@@ -10,6 +10,17 @@ const fusion={...normal,identity_key:'c'.repeat(64),slot:3,internal_id:202,type:
 const token={...normal,identity_key:'d'.repeat(64),slot:4,internal_id:203,special:true};
 const pool=[normal,limited,fusion,token];
 const payload=decks=>({schema_version:1,kind:'poc-ai-deck-bundle',decks});
+
+test('five Harpie names share three copies across main/side even without banlist; Sisters is separate',()=>{
+  const cards=[108,606,696,697,827,698].map(slot=>catalog.cards.find(c=>c.slot===slot));
+  for(const banlist of [true,false]){
+    const d=emptyDeck('harpies');d.banlist_enabled=banlist;
+    adjustCard(d,cards[2],'main',1);adjustCard(d,cards[2],'main',1);adjustCard(d,cards[0],'side',1);
+    for(const card of cards.slice(0,5))assert.throws(()=>adjustCard(d,card,'main',1),/같은 이름/);
+    adjustCard(d,cards[5],'main',1);adjustCard(d,cards[2],'main',-1);adjustCard(d,cards[4],'main',1);
+    d.groups.side.push(cardLine(cards[3]));assert.match(validateDeck(d,catalog.cards).issues.join(' '),/같은 이름 취급 합계 3/);
+  }
+});
 test('main composition counts copies, separates ritual and unresolved cards, excludes supplemental groups',()=>{
   const types=['일반 몬스터','효과 몬스터','마법','함정','의식 몬스터'];
   const cards=types.map((type,i)=>({...normal,slot:i+10,internal_id:i+500,identity_key:String(i+1).repeat(64),type}));

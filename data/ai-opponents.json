@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "kind": "poc-ai-deck-bundle",
-  "catalog_dataset_id": "850ef9d6c7b5c7603c98f5c7b8da15173877fb6357923584c18f91e426091852",
-  "snapshot_at": "2026-10-06T16:57:40.941407+09:00",
+  "catalog_dataset_id": "8f3780a357798693d784139fb4b803e2e77f7496efc9cc95d595b53235de4db0",
+  "snapshot_at": "2026-10-07T00:12:36.523381+09:00",
   "decks": [
     {
       "deck_id": "installed-normal-000",
@@ -9203,7 +9203,7 @@
       "difficulty": 1,
       "source_recipe": {
         "filename": "DLR_000.ydc",
-        "sha256": "6e5890827f8a513a01a3f858391bf494119215f3f3a899747680dfea68c2c425",
+        "sha256": "565f3c05b78cb171f932c25514a68657d56c9d85d286db1bd465728d01ef91bb",
         "difficulty_levels": [
           1
         ]
@@ -9217,92 +9217,52 @@
       "groups": {
         "main": [
           {
-            "identity_key": "a902fd7ff228ad2c3f298ad6dcec79da90f3236f39d6aa67398ba7aa8e57e5e6",
-            "slot": 582,
-            "internal_id": 21,
-            "name_ko": "데몬 소환",
-            "name_en": "Summoned Skull",
-            "count": 1
+            "identity_key": "7e5184751796a88db124dbc28ddcb4d7772f74a755a7f26bc5aa9dff360396a9",
+            "slot": 1115,
+            "internal_id": 1999,
+            "name_ko": "메가로스매셔X",
+            "name_en": "Megalosmasher X",
+            "count": 2
           },
           {
-            "identity_key": "86a8cab516758502258f73e58a02a6cbef2925d4c9f0ff6725668c673ccff36d",
-            "slot": 178,
-            "internal_id": 1112,
-            "name_ko": "미라지 드래곤",
-            "name_en": "Mirage Dragon",
-            "count": 1
+            "identity_key": "c3fa06a9d06fadf7799f0f7e3f92836f7733c7ff57e0128887d9bb916569bdfc",
+            "slot": 838,
+            "internal_id": 8,
+            "name_ko": "세이버 사우루스",
+            "name_en": "Sabersaurus",
+            "count": 2
           },
           {
-            "identity_key": "dcd6222115d919762b6c0055a05b858b4473c90a8588ac6932fe52c0079d1b76",
-            "slot": 805,
-            "internal_id": 1210,
-            "name_ko": "숙련된 흑마술사",
-            "name_en": "Skilled Dark Magician",
-            "count": 1
+            "identity_key": "e6fb6de67c6bf7634070a7a3231fb2c61a71f6680839c7d9b9c26adbe69e2e88",
+            "slot": 324,
+            "internal_id": 440,
+            "name_ko": "쥐라기 월드",
+            "name_en": "Jurassic World",
+            "count": 2
           },
           {
-            "identity_key": "f7bc7a8d74195c935635ad688463c17b154bbd8c9f12b1534c719f58d5ead136",
-            "slot": 887,
-            "internal_id": 756,
-            "name_ko": "마그넷 워리어 β",
-            "name_en": "Beta The Magnet Warrior",
-            "count": 1
+            "identity_key": "4248e33821c5cbc681eefe853492d05a3780780fa88d8348cafbc0934506a7e0",
+            "slot": 26,
+            "internal_id": 1432,
+            "name_ko": "초전도 티라노",
+            "name_en": "Super Conductor Tyranno",
+            "count": 2
           },
           {
-            "identity_key": "c17e0ba95348ec1681e456751c1577d98e203ee10bfbcb76a1790af31f622a2e",
-            "slot": 85,
-            "internal_id": 625,
-            "name_ko": "킹스 나이트",
-            "name_en": "King's Knight",
-            "count": 1
+            "identity_key": "513343a524e3abe1d8a307e7eaf54026604852fff5b19160e429bc669cac6089",
+            "slot": 613,
+            "internal_id": 102,
+            "name_ko": "킬러사우루스",
+            "name_en": "Destroyersaurus",
+            "count": 2
           },
           {
-            "identity_key": "8161d6ceb76744009e39c3fb2b93b2b7b4eeb3c3e91e9df8824f293971b65584",
-            "slot": 886,
-            "internal_id": 800,
-            "name_ko": "마그넷 워리어 γ",
-            "name_en": "Gamma The Magnet Warrior",
-            "count": 1
-          },
-          {
-            "identity_key": "ce1bbd8f9297aaaf5c42774fcaf75b213251c06773c9684e5a74c021dc0a1d3b",
-            "slot": 872,
-            "internal_id": 1251,
-            "name_ko": "번롱하는 엘프 검사",
-            "name_en": "Obnoxious Celtic Guard",
-            "count": 1
-          },
-          {
-            "identity_key": "277ac88e644e6f8e793cb9d937d52ff78ed6cdeb4b16ad33831c2e6b46bb35d8",
-            "slot": 248,
-            "internal_id": 47,
-            "name_ko": "크리터",
-            "name_en": "Sangan",
-            "count": 1
-          },
-          {
-            "identity_key": "ad4ba2d01e13630a28da2f9e38ad127efcb6a11379ddb448138339999c9fb344",
-            "slot": 375,
-            "internal_id": 1338,
-            "name_ko": "죽음의 4성 무당벌레",
-            "name_en": "4-Starred Ladybug of Doom",
-            "count": 1
-          },
-          {
-            "identity_key": "3b4c4c590f1a20bc917eb2f7e2463798d591d0f87520a19a9ba57f855e59600c",
-            "slot": 251,
-            "internal_id": 57,
-            "name_ko": "크리보",
-            "name_en": "Kuriboh",
-            "count": 1
-          },
-          {
-            "identity_key": "2a895888f59b125714c2508b62b0e242b315be47c18a0741235baea2a968e7c6",
-            "slot": 300,
-            "internal_id": 1027,
-            "name_ko": "마음의 변화",
-            "name_en": "Change of Heart",
-            "count": 1
+            "identity_key": "fa110fa4ecf126e45c1218b4ecd12f41441c809df3f9fbf87e1733ab129c4b9f",
+            "slot": 720,
+            "internal_id": 197,
+            "name_ko": "화석조사",
+            "name_en": "Fossil Dig",
+            "count": 2
           },
           {
             "identity_key": "97ec3d0a386c623b1626d1d27d3b5344ca1f4e5d7950107c7422740f07303f65",
@@ -9310,22 +9270,30 @@
             "internal_id": 1001,
             "name_ko": "갈라진 대지",
             "name_en": "Fissure",
+            "count": 2
+          },
+          {
+            "identity_key": "ea4cb63a2f5b4442f3286cd894bc918277c53244436ce839f8bfe3ef173a8285",
+            "slot": 120,
+            "internal_id": 1002,
+            "name_ko": "함정 속으로",
+            "name_en": "Trap Hole",
+            "count": 2
+          },
+          {
+            "identity_key": "3ba23b1428ef54afed5b66ff7aac445988c7d7678d50b070ab755fbcb40dc825",
+            "slot": 585,
+            "internal_id": 225,
+            "name_ko": "자이언트 렉스",
+            "name_en": "Giant Rex",
             "count": 1
           },
           {
-            "identity_key": "14ef258363d710ff47bd001f920d5d2da6c8c35f10ae8e91a935c8195660ce78",
-            "slot": 114,
-            "internal_id": 1061,
-            "name_ko": "태풍",
-            "name_en": "Heavy Storm",
-            "count": 1
-          },
-          {
-            "identity_key": "99ecb0005356e2d273d84b197aa7869b5bc16ecf8e22c552bd4f6cabb1aff8fc",
-            "slot": 359,
-            "internal_id": 1008,
-            "name_ko": "죽은 자의 소생",
-            "name_en": "Monster Reborn",
+            "identity_key": "d97f656e6005215ecd87240e736b41af44734ba0f03be3d399d1772d58f1e1e6",
+            "slot": 571,
+            "internal_id": 443,
+            "name_ko": "프로스트사우루스",
+            "name_en": "Frostosaurus",
             "count": 1
           },
           {
@@ -9337,169 +9305,16 @@
             "count": 1
           },
           {
-            "identity_key": "bb2944521fe3be609ca839e0bc9026555884f1734a357351789a36a6a89911d5",
-            "slot": 345,
-            "internal_id": 336,
-            "name_ko": "번개",
-            "name_en": "Raigeki",
-            "count": 1
-          },
-          {
-            "identity_key": "60e35f535dd5d99446ffa1b9158db6d9a3585dc04e9c7a10bfb1f781f582dd1b",
-            "slot": 22,
-            "internal_id": 1159,
-            "name_ko": "얕은 무덤",
-            "name_en": "The Shallow Grave",
-            "count": 1
-          },
-          {
-            "identity_key": "e8045946b7d6b3ee7eb3239ad1044bb6f5204721bd9d60e8df8fbf84951fcd64",
-            "slot": 332,
-            "internal_id": 1094,
-            "name_ko": "더스트 토네이도",
-            "name_en": "Dust Tornado",
-            "count": 1
-          },
-          {
-            "identity_key": "7d784394abeefe58120d79e3cf17f1bb7d1f40f5f01d69502a52caf8a8c040d9",
-            "slot": 890,
-            "internal_id": 945,
-            "name_ko": "매지컬 실크햇",
-            "name_en": "Magical Hats",
-            "count": 1
-          },
-          {
-            "identity_key": "e4f184c4fd898c9c92b387022dfea1366ea0a99d167d2f34bc4c89c3725c8935",
-            "slot": 1092,
-            "internal_id": 348,
-            "name_ko": "육망성의 저주",
-            "name_en": "Spellbinding Circle",
+            "identity_key": "2e5b09e8cbb003a78a38101064462aeb0d78745bbca28fb850e2f1911f497552",
+            "slot": 316,
+            "internal_id": 1079,
+            "name_ko": "싸이크론",
+            "name_en": "Mystical Space Typhoon",
             "count": 1
           }
         ],
         "extra": [],
-        "side": [
-          {
-            "identity_key": "2178700891b903d91949920884ba774e2cb562b877f06b40fd3fb3f83d597302",
-            "slot": 1109,
-            "internal_id": 1911,
-            "name_ko": "오시리스의 천공룡",
-            "name_en": "Slifer the Sky Dragon",
-            "count": 1
-          },
-          {
-            "identity_key": "f0d959e022143fa3bb82fc15ca28ca7a75985b5a6b45ff245f8afb403be46b22",
-            "slot": 716,
-            "internal_id": 808,
-            "name_ko": "버스터 블레이더",
-            "name_en": "Buster Blader",
-            "count": 1
-          },
-          {
-            "identity_key": "4f1fd929af0b3e748e3333dade001152ebf6868f8f6974033b594d0358cd50d3",
-            "slot": 365,
-            "internal_id": 1250,
-            "name_ko": "질풍의 암흑 기사 가이아",
-            "name_en": "Swift Gaia the Fierce Knight",
-            "count": 1
-          },
-          {
-            "identity_key": "e374269f0a9cb158bd01059ada43047d964258cac7f3f24cc24b35b3a6f11b23",
-            "slot": 37,
-            "internal_id": 1242,
-            "name_ko": "암흑 마족 길퍼 데몬",
-            "name_en": "Beast of Gilfer",
-            "count": 1
-          },
-          {
-            "identity_key": "efe2cca00a012cfb25e938b0c0c265fd5a4fdb4bda8b17bafbbb74d30cf84647",
-            "slot": 625,
-            "internal_id": 109,
-            "name_ko": "크루세이더 오브 엔디미온",
-            "name_en": "Crusader of Endymion",
-            "count": 1
-          },
-          {
-            "identity_key": "ec901d9869918e48ad6b7bfa4f2823ee1308c2d03969f8731401562f4139b0ab",
-            "slot": 132,
-            "internal_id": 83,
-            "name_ko": "토이 매지션",
-            "name_en": "Toy Magician",
-            "count": 1
-          },
-          {
-            "identity_key": "813a3284da4ab499ec5a97cfe9c83519b6fb31dea2a68abafacef3c06446f8f9",
-            "slot": 277,
-            "internal_id": 746,
-            "name_ko": "환상수왕 가젤",
-            "name_en": "Gazelle the King of Mythical Beasts",
-            "count": 1
-          },
-          {
-            "identity_key": "9d7e0188464713fdff3be0816d9ad6a109212baecb72871a8e4cc1bfc747644a",
-            "slot": 725,
-            "internal_id": 1240,
-            "name_ko": "바포메트",
-            "name_en": "Berfomet",
-            "count": 1
-          },
-          {
-            "identity_key": "ce1bbd8f9297aaaf5c42774fcaf75b213251c06773c9684e5a74c021dc0a1d3b",
-            "slot": 872,
-            "internal_id": 1251,
-            "name_ko": "번롱하는 엘프 검사",
-            "name_en": "Obnoxious Celtic Guard",
-            "count": 1
-          },
-          {
-            "identity_key": "f0e154f94ffe8a7a28abd997fe418c42a175c0b7ca6d113f4252d590c74d4968",
-            "slot": 261,
-            "internal_id": 573,
-            "name_ko": "검은 숲의 마녀",
-            "name_en": "Witch of the Black Forest",
-            "count": 1
-          },
-          {
-            "identity_key": "09cb0f23c3e62db5c3b626165a6dd18feac6562108e4123e55913564c2f6f5aa",
-            "slot": 718,
-            "internal_id": 1044,
-            "name_ko": "날개 크리보",
-            "name_en": "Winged Kuriboh",
-            "count": 1
-          },
-          {
-            "identity_key": "e7a0ae4a02cc970faa1d456a1b3332ccb2402e49fc8c92ea125aff18e54ec19d",
-            "slot": 265,
-            "internal_id": 1212,
-            "name_ko": "흑마술의 커튼",
-            "name_en": "Dark Magic Curtain",
-            "count": 1
-          },
-          {
-            "identity_key": "e3df1c7dcf8e584d6be15dafc7bb3b6b03def40864d28a28b257ea175616f1af",
-            "slot": 370,
-            "internal_id": 1213,
-            "name_ko": "죽음의 매직 박스",
-            "name_en": "Mystic Box",
-            "count": 1
-          },
-          {
-            "identity_key": "77da1b9e3ab109f0be6b782abdba8e401815cc79f0ff2c5f97408b1a0ad59cc2",
-            "slot": 406,
-            "internal_id": 1031,
-            "name_ko": "승천의 뿔피리",
-            "name_en": "Horn of Heaven",
-            "count": 1
-          },
-          {
-            "identity_key": "d03c1150a6f1ddaad3aced5b7eb3dd42933cb8316cac84a05108da048e4437ff",
-            "slot": 379,
-            "internal_id": 1317,
-            "name_ko": "시프트 체인지",
-            "name_en": "Shift",
-            "count": 1
-          }
-        ]
+        "side": []
       }
     },
     {

@@ -1,4 +1,4 @@
-import {DECK_STORAGE_KEY,GROUPS,GROUP_LABELS,RULESETS,emptyDeck,cardLimit,copyCount,groupCount,groupTypeCounts,placementError,adjustCard,resolveCard,validateDeck,parseBundle,exportBundle,deckMarkdown} from './ai-deck-core.js?v=20261006-15';
+import {DECK_STORAGE_KEY,GROUPS,GROUP_LABELS,RULESETS,emptyDeck,cardLimit,copyCount,groupCount,groupTypeCounts,placementError,adjustCard,resolveCard,validateDeck,parseBundle,exportBundle,deckMarkdown} from './ai-deck-core.js?v=20261007-41';
 import {renderPagination} from './pagination.js?v=20261006-8';
 import {makeSyncPacket,packetDeck} from './ai-sync-core.js?v=20261006-12';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';

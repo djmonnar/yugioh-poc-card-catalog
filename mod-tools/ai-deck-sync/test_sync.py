@@ -96,6 +96,19 @@ class SyncTests(unittest.TestCase):
         for mutate in mutations:
             packet=copy.deepcopy(self.packet);mutate(packet)
             with self.assertRaises(SyncError):validate_packet(packet,CATALOG,OPPONENTS)
+    def test_harpie_shared_name_counts_main_and_side_without_banlist(self):
+        packet=copy.deepcopy(self.packet)
+        target=next(d for d in OPPONENTS['decks'] if d['source_recipe']['filename']=='DLR_000.ydc')
+        packet['target']=target['source_recipe'];packet['deck'].update(ruleset='duel_links_plan',banlist_enabled=False)
+        by={c['slot']:c for c in CATALOG['cards']}
+        fillers=[c for c in CATALOG['cards'] if not c['special'] and c['type']=='일반 몬스터' and c['deck_limit_without_banlist']==3 and c['slot'] not in (108,606,696,697,827)][:6]
+        packet['deck']['groups']={'main':[[c['slot'],c['internal_id'],3] for c in fillers]+[[108,1530,1],[606,609,1]],'extra':[],'side':[[696,61,1]]}
+        def stamp():
+            rows=[[g,s,n,k,by[s]['identity_key']] for g in sync_core.GROUPS for s,n,k in packet['deck']['groups'][g]]
+            packet['identity_sha256']=sha(json.dumps(rows,separators=(',',':'),ensure_ascii=False).encode())
+        stamp();self.assertEqual(len(validate_packet(packet,CATALOG,OPPONENTS)[0]),20)
+        packet['deck']['groups']['side'].append([697,1249,1]);stamp()
+        with self.assertRaisesRegex(SyncError,'Harpie Lady shared name'):validate_packet(packet,CATALOG,OPPONENTS)
     def test_mapping_and_external_recipe_changes_are_rejected(self):
         ids=self.game/'Mege/bin#/card_id.bin';blob=bytearray(ids.read_bytes());struct.pack_into('<H',blob,self.packet['deck']['groups']['main'][0][0]*2,65535);ids.write_bytes(blob)
         self.assertEqual(len(self.native.apply(self.remote)['rejected']),1)

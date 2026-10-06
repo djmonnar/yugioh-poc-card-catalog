@@ -104,6 +104,9 @@ def validate_packet(packet, catalog, opponents):
         card = cards[key]
         limit = card.get('deck_limit' if deck['banlist_enabled'] else 'deck_limit_without_banlist',3)
         require(type(limit) is int and count <= min(3,limit), f'Card copy limit: {card["name_ko"]}')
+    harpies={(108,1530),(606,609),(696,61),(697,1249),(827,608)}
+    require(sum(count for key,count in totals.items() if key in harpies)<=3,
+            'Harpie Lady shared name: main/side total must not exceed 3')
     require(sha(json.dumps(identities,separators=(',',':'),ensure_ascii=False).encode('utf-8')) == packet.get('identity_sha256'), 'Card identities changed')
     return expanded
 

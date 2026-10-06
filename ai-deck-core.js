@@ -35,6 +35,9 @@ export function groupTypeCounts(deck,cards,group='main') {
   return counts;
 }
 export function cardLimit(deck,card) {return Math.min(3,(deck.banlist_enabled?card.deck_limit:card.deck_limit_without_banlist)??3);}
+const HARPIE_IDENTITIES=new Map([[108,1530],[606,609],[696,61],[697,1249],[827,608]]);
+export function sharesHarpieName(card) {return HARPIE_IDENTITIES.get(card.slot)===card.internal_id;}
+export function harpieCount(deck) {return GROUPS.reduce((n,g)=>n+deck.groups[g].reduce((sum,row)=>sum+(sharesHarpieName(row)?row.count:0),0),0);}
 export function placementError(card,group) {
   if(card.special)return '토큰·특수 카드는 덱에 넣을 수 없어.';
   const fusion=card.type==='융합 몬스터';
@@ -47,6 +50,7 @@ export function adjustCard(deck,card,group,delta) {
   const rows=deck.groups[group], row=rows.find(r=>r.identity_key===card.identity_key);
   if(delta>0) {
     const problem=placementError(card,group);if(problem)fail(problem);
+    if(sharesHarpieName(card)&&harpieCount(deck)>=3)fail('해피 레이디·1·2·3·SB는 같은 이름으로 취급하여 메인·사이드 합계 3장까지 넣을 수 있어.');
     if(copyCount(deck,card.identity_key)>=cardLimit(deck,card))fail(`${card.name_ko}: 모든 덱을 합쳐 ${cardLimit(deck,card)}장까지 넣을 수 있어.`);
     const max=group==='main'?RULESETS[deck.ruleset].max:15;
     if(groupCount(deck,group)>=max)fail(`${GROUP_LABELS[group]} 덱은 ${max}장까지야.`);
@@ -71,6 +75,7 @@ export function validateDeck(deck,cards) {
     }
   }
   for(const {card,count} of totals.values())if(count>cardLimit(deck,card))issues.push(`${card.name_ko}: 총 ${count}장 · 제한 ${cardLimit(deck,card)}장을 초과했어.`);
+  if(harpieCount(deck)>3)issues.push(`해피 레이디 계열 총 ${harpieCount(deck)}장 · 같은 이름 취급 합계 3장을 초과했어.`);
   return {counts:Object.fromEntries(GROUPS.map(g=>[g,groupCount(deck,g)])),issues,unknown,
     ready_for_game:!issues.length&&rules.playable};
 }
