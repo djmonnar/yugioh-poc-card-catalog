@@ -1,0 +1,22 @@
+name: Check content authoring
+on:
+  push:
+    branches: [main]
+    paths: ['content-packs/**', 'mod-tools/content-pipeline/**', 'mod-tools/ai-deck-sync/**', 'data/cards.json', 'data/ai-opponents.json', '.github/workflows/content-check.yml']
+  pull_request:
+    paths: ['content-packs/**', 'mod-tools/content-pipeline/**', 'mod-tools/ai-deck-sync/**', 'data/cards.json', 'data/ai-opponents.json', '.github/workflows/content-check.yml']
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - run: python3 -m unittest discover -s mod-tools/content-pipeline -p 'test_*.py'
+      - name: Validate authored packs
+        run: |
+          find content-packs -name pack.json -print0 | while IFS= read -r -d '' pack; do
+            python3 mod-tools/content-pipeline/pipeline.py check "$pack" || exit 1
+          done
