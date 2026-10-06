@@ -2,6 +2,9 @@ import {TIERS, STORAGE_KEY, changesFor, makeReview, exportPayload, parseImport, 
 import {RESET_BACKUP_KEY, resetStoredReviews} from './review-storage.js?v=20261006-5';
 import {categoryMatches, groupCards, cardLink, groupHash, parseCatalogHash} from './card-groups.js?v=20261006-7';
 import {renderPagination} from './pagination.js?v=20261006-8';
+import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
+import {validateCloudConfig,DeckCloud,cloudError} from './supabase-cloud.js?v=20261006-13';
+import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261006-14';
 
 const $ = id => document.getElementById(id);
 const PAGE_SIZE = 36;
@@ -12,6 +15,37 @@ $('advanced-filters').open = !narrowLayout.matches;
 narrowLayout.addEventListener('change', event => { $('advanced-filters').open = !event.matches; });
 let cards = [], meta = null, reviews = new Map(), unmatched = [], page = 1, rarity = '', view = 'all', selected = null, backup = null;
 let timer, resetBackup = null;
+let settingsCloud=null,settingsAuth=null,catalogCanEdit=false,catalogAuthGeneration=0;
+function liveSettings(card,info){
+  if(card.special)return;
+  const box=el('section',null,'review-editor live-card-settings');box.append(el('h3','게임 설정 바로 저장'));
+  const ready=catalogCanEdit&&settingsCloud?.rows!==null&&settingsCloud;
+  const expected=ready?settingsCloud.version(card):null;
+  box.append(selectControl('live-rarity','현재 카드 등급',TIERS.map(t=>[t,`${t} · ${meta.rarity_prices[t].buy_price} 골드`]),card.rarity,!ready));
+  const checkRow=el('div',null,'check-row'),stock=el('input');stock.id='live-stock';stock.type='checkbox';stock.checked=card.stock;stock.disabled=!ready;
+  const label=el('label','상점에서 이 카드 판매');label.htmlFor=stock.id;checkRow.append(stock,label);box.append(checkRow);
+  const save=el('button','등급·판매 여부 저장','primary');save.type='button';save.id='save-card-setting';save.disabled=!ready;
+  const status=el('p',ready?'저장하면 도감에 반영돼. PC 상점도 실행 중이면 설정을 받아와.':'이메일 로그인 후 등급과 상점 판매 여부를 직접 바꿀 수 있어.','muted');status.id='live-setting-status';status.setAttribute('role','status');box.append(save,status);
+  if(!ready){const login=el('a','이메일 로그인');login.href='ai-decks.html#login';box.append(login);}
+  save.addEventListener('click',async()=>{
+    const rarity=$('live-rarity').value,stocked=stock.checked;save.disabled=true;stock.disabled=true;$('live-rarity').disabled=true;status.textContent='설정을 저장하는 중…';
+    try{const row=await settingsCloud.save(meta,card,rarity,stocked,expected);applySettings(cards,[row]);rarityButtons();render();const top=$('card-dialog').scrollTop;
+      if(selected?.slot===card.slot){openCard(card.slot);$('card-dialog').scrollTop=top;$('live-setting-status').textContent='저장 완료 · 등급·가격·상점 판매 여부를 반영했어.';}toast('카드 설정을 온라인에 저장했어.');
+    }catch(error){status.textContent=error.message;save.disabled=false;stock.disabled=false;if(selected?.slot===card.slot)$('live-rarity').disabled=false;}
+  });info.append(box);
+}
+async function refreshCardSettings(){
+  if(!settingsCloud)return;const rows=await settingsCloud.load();applySettings(cards,rows);rarityButtons();render();if(selected)openCard(selected.slot);
+}
+async function initCardSettings(){
+  try{
+    const response=await fetch('./data/cloud-config.json?v=20261006-13',{cache:'no-store'});if(!response.ok)throw new Error('설정 없음');const config=validateCloudConfig(await response.json());
+    settingsAuth=createClient(config.url,config.publishable_key,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true,storageKey:'poc-ai-editor-auth-v1'},global:{fetch:(url,options)=>fetch(url,{...options,signal:options?.signal||AbortSignal.timeout(10000)})}});
+    settingsCloud=new CardSettingsCloud(settingsAuth);await refreshCardSettings();
+    const update=async session=>{const generation=++catalogAuthGeneration,previous=catalogCanEdit;try{const allowed=session?await new DeckCloud(settingsAuth).editor():false;if(generation!==catalogAuthGeneration)return;catalogCanEdit=allowed;$('card-cloud-status').textContent=catalogCanEdit?'로그인됨 · 카드 상세에서 등급·판매 여부를 바로 저장할 수 있어.':'등급·상점 판매 설정을 직접 저장하려면 이메일로 로그인해줘.';if(selected&&previous!==catalogCanEdit)openCard(selected.slot);}catch(error){if(generation===catalogAuthGeneration){catalogCanEdit=false;$('card-cloud-status').textContent=cloudError(error);}}};
+    settingsAuth.auth.onAuthStateChange((_event,session)=>setTimeout(()=>update(session),0));const {data,error}=await settingsAuth.auth.getSession();if(error)throw error;await update(data.session);
+  }catch(error){$('card-cloud-status').textContent=cloudError(error);}
+}
 const resetPanel=el('section',null,'reset-panel');
 resetPanel.append(el('h3','검토 의견 초기화'),el('p','내보내기는 의견을 유지해. 전달을 마쳤다면 초기화하고 새 검토를 시작할 수 있어.'));
 for(const [id,text] of [['reset-reviews','의견 전체 초기화'],['undo-reset','초기화 전 의견 복원'],['download-reset-backup','초기화 전 백업 JSON 내려받기']]){
@@ -192,6 +226,7 @@ function openCard(slot, updateHash = true) {
     const context = [card.stock ? '상점 판매 중' : '현재 상점 상품 아님', card.reward_eligible ? '승리 보상 대상' : '승리 보상 제외', `등급 기준 가격 ${card.buy_price} / 판매 ${card.sell_price} 골드`, `금지·제한 해제 옵션에서 ${card.deck_limit_without_banlist}장`];
     info.append(el('p', context.join(' · '), 'muted'));
   }
+  liveSettings(card,info);
   const editor = el('section', null, 'review-editor'); editor.append(el('h3', '이 카드에 대한 의견'));
   const fields = el('div', null, 'review-fields');
   fields.append(selectControl('proposed-rarity', '바꾸고 싶은 레어 등급', [['', `현재 ${card.rarity} 유지`], ...TIERS.map(t => [t, `${t} · ${meta.rarity_prices[t].buy_price} 골드`])], change.proposed_rarity));
@@ -248,12 +283,13 @@ async function init() {
     try {const stored=localStorage.getItem(STORAGE_KEY);if(stored){const parsed=parseImport(JSON.parse(stored),cards);reviews=new Map(parsed.valid.map(r=>[r.identity_key,r]));unmatched=parsed.unmatched;if(unmatched.length)toast(`카드가 바뀐 이전 의견 ${unmatched.length}건을 따로 보관했어.`);}backup=localStorage.getItem(STORAGE_KEY+'-before-import');}
     catch{toast('이전 의견을 읽지 못했어. 기존 저장 내용은 그대로 두었어.');}
     try { resetBackup = localStorage.getItem(RESET_BACKUP_KEY); } catch {}
-    rarityButtons();render();
+    rarityButtons();render();await initCardSettings();
     const destination=parseCatalogHash(location.hash);if(destination?.card)openCard(destination.card,false);else if(destination?.group)showGroup(destination.group);
   }catch(error){$('results').textContent=error.message;$('cards').replaceChildren(el('p','새로고침해 보거나 GitHub 저장소의 data/cards.csv를 확인해줘.','muted'));}
 }
 
 $('search').addEventListener('input',()=>{page=1;render();});
+$('refresh-card-settings').addEventListener('click',async()=>{try{await refreshCardSettings();toast('온라인 카드 설정을 다시 불러왔어.');}catch(error){toast(cloudError(error));}});
 for(const id of ['type-filter','limit-filter','race-filter','attribute-filter','level-min','level-max','status-filter','mechanic-filter','group-filter','sort'])$(id).addEventListener('change',()=>{page=1;render();});
 $('reset-filters').addEventListener('click',resetFilters);
 $('tab-all').addEventListener('click',()=>{view='all';page=1;render();});$('tab-reviews').addEventListener('click',()=>{view='reviews';resetFilters();});

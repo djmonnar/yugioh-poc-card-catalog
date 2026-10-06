@@ -2,9 +2,9 @@ name: Check content authoring
 on:
   push:
     branches: [main]
-    paths: ['content-packs/**', 'mod-tools/content-pipeline/**', 'mod-tools/ai-deck-sync/**', 'data/cards.json', 'data/ai-opponents.json', '.github/workflows/content-check.yml']
+    paths: ['content-packs/**', 'mod-tools/**', 'data/**', 'tests/**', '*.js', '*.html', 'package*.json', '.github/workflows/content-check.yml']
   pull_request:
-    paths: ['content-packs/**', 'mod-tools/content-pipeline/**', 'mod-tools/ai-deck-sync/**', 'data/cards.json', 'data/ai-opponents.json', '.github/workflows/content-check.yml']
+    paths: ['content-packs/**', 'mod-tools/**', 'data/**', 'tests/**', '*.js', '*.html', 'package*.json', '.github/workflows/content-check.yml']
 permissions:
   contents: read
 jobs:
@@ -15,6 +15,10 @@ jobs:
         with:
           persist-credentials: false
       - run: python3 -m unittest discover -s mod-tools/content-pipeline -p 'test_*.py'
+      - run: node --test tests/*.test.js
+      # Native recipe tests also run locally against copied game files.
+      - run: python3 -m unittest discover -s mod-tools/ai-deck-sync -p 'test_supabase.py'
+      - run: python3 -m unittest discover -s mod-tools/supabase -p 'test_*.py'
       - name: Validate authored packs
         run: |
           find content-packs -name pack.json -print0 | while IFS= read -r -d '' pack; do

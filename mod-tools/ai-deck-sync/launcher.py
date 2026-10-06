@@ -11,6 +11,16 @@ def core(patch):
     spec.loader.exec_module(module)
     return module
 
+def fetch_remote(patch,settings=None):
+    settings=settings or json.loads((pathlib.Path(patch)/'config/ai_sync.json').read_text(encoding='utf-8'))
+    if settings.get('backend','github')=='github':return core(patch).fetch_state()
+    if settings.get('backend')!='supabase':raise ValueError('Unknown AI sync backend')
+    path=pathlib.Path(patch)/'card_encyclopedia/mod-tools/ai-deck-sync/supabase_provider.py'
+    spec=importlib.util.spec_from_file_location('poc_supabase_provider',path)
+    provider=importlib.util.module_from_spec(spec);spec.loader.exec_module(provider)
+    config=json.loads((pathlib.Path(patch)/'card_encyclopedia/data/cloud-config.json').read_text(encoding='utf-8'))
+    return provider.fetch_state(config)
+
 def store(launcher):
     module = core(launcher.P)
     catalog = module.load(launcher.P/'card_encyclopedia/data/cards.json')
@@ -27,7 +37,7 @@ def before_launch(launcher):
     launcher.require_game_closed()
     with native.locked():
         recovered = native.recover()
-        try:remote = module.fetch_state()
+        try:remote = fetch_remote(launcher.P)
         except Exception:
             result = {'status':'offline','message':'온라인 덱 확인 실패 · 기존 AI 덱으로 실행','recovered':recovered}
         else:result = native.apply(remote)
@@ -43,7 +53,7 @@ def main():
     args = parser.parse_args()
     if args.check:
         module = core(launcher.P)
-        remote = module.fetch_state()
+        remote = fetch_remote(launcher.P)
         native = store(launcher)
         results = []
         for name,entry in remote['entries'].items():

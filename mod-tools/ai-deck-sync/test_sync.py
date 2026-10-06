@@ -20,6 +20,15 @@ OPPONENTS=load(ROOT/'data/ai-opponents.json')
 FIXTURE=load(PATCH/'reports/ai_sync_fixture.json')
 
 class SyncTests(unittest.TestCase):
+    def test_supabase_provider_applies_only_to_isolated_native_recipes(self):
+        from supabase_provider import adapt_rows
+        remote=adapt_rows([{'filename':self.name,'version':23,'packet':self.packet,'updated_at':'2026-10-06T04:00:00+00:00'}])
+        with self.native.locked():result=self.native.apply(remote)
+        self.assertEqual(result['status'],'applied')
+        self.assertEqual(len(self.native.catalog['cards']),1115)
+        actual=(self.game/'Mege/y/file'/self.name).read_bytes()
+        self.assertEqual(actual[:8],self.original[:8])
+        self.assertEqual(len(sync_core.decode_recipe(actual)[0]),40)
     def setUp(self):
         parent=PATCH/'assets/ai_sync_tests';parent.mkdir(exist_ok=True)
         self.temp=tempfile.TemporaryDirectory(dir=parent)

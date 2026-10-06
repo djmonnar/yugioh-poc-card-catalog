@@ -1,1 +1,1 @@
-{"name":"yugioh-poc-card-catalog","private":true,"version":"1.0.0","type":"module","scripts":{"test":"node --test tests/*.test.js"}}
+{"name":"yugioh-poc-card-catalog","private":true,"version":"1.0.0","type":"module","scripts":{"test":"node --test tests/*.test.js","build:cloud":"node scripts/build-cloud.mjs"},"dependencies":{"@supabase/supabase-js":"2.117.2"},"devDependencies":{"esbuild":"0.28.2"}}

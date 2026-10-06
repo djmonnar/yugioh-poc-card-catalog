@@ -8,7 +8,8 @@
   <title>카드 도감 · Power of Chaos</title>
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css?v=20261006-8">
-  <script type="module" src="app.js?v=20261006-8"></script>
+  <link rel="stylesheet" href="card-settings.css?v=20261006-14">
+  <script type="module" src="app.js?v=20261006-14"></script>
 </head>
 <body>
   <header class="masthead">
@@ -18,6 +19,7 @@
   <main>
     <section class="intro"><div><p class="eyebrow">THE COMPLETE CARD COLLECTION</p><h1>다음 카드풀을<br class="mobile-break"> 함께 골라보자.</h1><p class="intro-copy">전체 카드를 살펴보고, 등급 조정 · 교체 후보 · 제한 의견을 남겨줘.</p></div><div class="snapshot"><b id="total-count">…</b><span>전체 카드</span><small id="snapshot-date">카드 정보를 읽는 중</small></div></section>
     <div class="context-line"><span id="scope-count">현재 모드 기준</span><span>UR 300 · SR 200 · R 100 · N 50 골드</span><span>등급은 밸런스 검토용 초안</span></div>
+    <section class="cloud-card-toolbar" aria-label="카드 등급과 상점 설정"><p id="card-cloud-status" role="status">온라인 카드 설정을 읽는 중…</p><a href="ai-decks.html#login">이메일 로그인</a><button id="refresh-card-settings" type="button">설정 새로 불러오기</button></section>
     <div class="workspace">
       <aside class="filters" aria-label="카드 필터">
         <div class="filter-top"><h2>카드 찾기</h2><button id="reset-filters" class="text-button">초기화</button></div>
