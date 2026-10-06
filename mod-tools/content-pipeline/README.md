@@ -38,6 +38,8 @@ Claude와 Codex가 동일한 검사·빌드·적용 경로를 쓰는 것이다.
 `bundle.json`에 선언과 기능별 상태, `manifest.json`에 묶음 내 파일 해시가 들어간다.
 소스의 원래 위치는 `source`, 묶음 안 위치는 `bundle_path`다.
 GitHub의 `Check content authoring`도 같은 검사기를 실행한다.
+pack 내부의 그림·후보 소스는 `.gitattributes`에서 바이트를 보존한다.
+Windows와 Linux의 자동 줄바꿈 변환으로 작성한 소스 해시가 달라지지 않게 하기 위한 규칙이다.
 
 ## 공통 규격
 

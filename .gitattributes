@@ -1,0 +1,4 @@
+# Authored assets and implementation candidates carry byte hashes in pack.json.
+# Preserve those bytes between Windows and Linux/GitHub CI.
+content-packs/** -text
+content-packs/**/pack.json text eol=lf
