@@ -5,6 +5,7 @@ import {renderPagination} from './pagination.js?v=20261006-8';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 import {validateCloudConfig,DeckCloud,cloudError} from './supabase-cloud.js?v=20261006-13';
 import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261006-14';
+import {createStatFilters, statConditionsMatch} from './card-filters.js?v=20261007-44';
 
 const $ = id => document.getElementById(id);
 const PAGE_SIZE = 36;
@@ -16,6 +17,7 @@ narrowLayout.addEventListener('change', event => { $('advanced-filters').open = 
 let cards = [], meta = null, reviews = new Map(), unmatched = [], page = 1, rarity = '', view = 'all', selected = null, backup = null;
 let timer, resetBackup = null;
 let settingsCloud=null,settingsAuth=null,catalogCanEdit=false,catalogAuthGeneration=0;
+const statFilters = createStatFilters($('stat-filters'), () => {page = 1; render();});
 function liveSettings(card,info){
   if(card.special)return;
   const box=el('section',null,'review-editor live-card-settings');box.append(el('h3','게임 설정 바로 저장'));
@@ -96,6 +98,7 @@ function filteredCards() {
   const q = $('search').value.trim().normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g, '');
   const type = $('type-filter').value, race = $('race-filter').value, attribute = $('attribute-filter').value;
   const limit = $('limit-filter').value, status = $('status-filter').value, min = $('level-min').value, max = $('level-max').value;
+  const statConditions = statFilters.values();
   return cards.filter(c => {
     if (view === 'reviews' && !reviews.has(c.identity_key)) return false;
     if (!categoryMatches(c, $('mechanic-filter').value, $('group-filter').value)) return false;
@@ -103,6 +106,7 @@ function filteredCards() {
     if (limit !== '' && c.deck_limit !== Number(limit)) return false;
     if (status === 'effect-difference' && c.review_kind !== 'effect') return false;
     if (min && (c.level == null || c.level < Number(min)) || max && (c.level == null || c.level > Number(max))) return false;
+    if (!statConditionsMatch(c, statConditions)) return false;
     if (status === 'stock' && !c.stock || status === 'reward' && !c.reward_eligible || status === 'regular' && c.special || status === 'special' && !c.special || status === 'attention' && !c.review_note || status === 'replace' && !(reviews.get(c.identity_key)?.changes.replacement_candidate || reviews.get(c.identity_key)?.changes.replacement_name)) return false;
     return !q || c.searchText.includes(q);
   });
@@ -138,7 +142,7 @@ function render() {
   $('cards').replaceChildren(...results.slice((page-1)*PAGE_SIZE, page*PAGE_SIZE).map(renderCard));
   $('empty').hidden = results.length > 0;
   $('results').textContent = `${fmt(results.length)}장${view === 'reviews' ? '의 검토' : '의 카드'} · 전체 ${fmt(cards.length)}장`;
-  $('active-summary').textContent = [rarity, $('type-filter').value, $('race-filter').value, $('mechanic-filter').selectedOptions[0]?.value ? $('mechanic-filter').selectedOptions[0].textContent : '', $('group-filter').selectedOptions[0]?.value ? $('group-filter').selectedOptions[0].textContent : ''].filter(Boolean).join(' · ');
+  $('active-summary').textContent = [rarity, $('type-filter').value, $('race-filter').value, ...statFilters.summary(), $('mechanic-filter').selectedOptions[0]?.value ? $('mechanic-filter').selectedOptions[0].textContent : '', $('group-filter').selectedOptions[0]?.value ? $('group-filter').selectedOptions[0].textContent : ''].filter(Boolean).join(' · ');
   for(const id of ['catalog-pages-top','catalog-pages-bottom'])renderPagination($(id),page,pages,goPage);
   $('tab-all').classList.toggle('active', view === 'all'); $('tab-reviews').classList.toggle('active', view === 'reviews');
   $('tab-all').setAttribute('aria-pressed', String(view === 'all')); $('tab-reviews').setAttribute('aria-pressed', String(view === 'reviews'));
@@ -267,6 +271,7 @@ function openExport() {
 }
 function resetFilters() {
   for(const id of ['search','type-filter','limit-filter','race-filter','attribute-filter','level-min','level-max','status-filter','mechanic-filter','group-filter']) $(id).value='';
+  statFilters.reset();
   rarity='';page=1;rarityButtons();render();
 }
 async function init() {
