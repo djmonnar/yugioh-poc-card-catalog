@@ -23,7 +23,7 @@
 - `.github/workflows/ai-deck-sync.yml`: 소유자 본인의 Issue 생성·수정만 처리.
 - `github_update.py`: 저장 요청을 검사하고 `ai-sync-data` 브랜치의 `sync.json` 갱신.
 - `sync_core.py`: PC에서 내려받기, native ID 검사, YDC의 원래 8바이트 헤더 보존, 적용·복구.
-- `KoreanPatch/scripts/ai_deck_sync.py`: 기존 창모드 실행기 연결. 기본 표준 라이브러리만 사용.
+- `launcher.py`: 기존 창모드 실행기 연결. `KoreanPatch/scripts/ai_deck_sync.py`는 이 파일을 부르는 호환 진입점이다. 기본 표준 라이브러리만 사용.
 
 브라우저와 게임 실행기에 GitHub 쓰기 토큰을 넣지 않는다. GitHub Actions의 일회성
 저장소 토큰은 해당 작업에서만 사용된다. Issue 본문은 데이터로만 읽으며 명령으로 실행하지 않는다.
@@ -42,7 +42,7 @@ PC 적용은 게임 종료 상태에서 원본 해시·카드 신원·금제·�
 & 'C:/Users/djmon/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe' -X utf8 KoreanPatch/scripts/ai_deck_sync.py --restore 'KoreanPatch/ai_sync/backups/해당_백업_폴더'
 ```
 
-이후 다른 패치를 적용해 manifest가 달라졌다면 복구를 거부한다. 세이브를 과거 것으로 되돌리지 않는다.
+복구 명령은 자동 연동을 함께 끈다. 이후 다른 패치를 적용해 manifest가 달라졌다면 복구를 거부한다. 세이브를 과거 것으로 되돌리지 않는다.
 
 GitHub 기능 근거: [Issue URL query](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue#creating-an-issue-from-a-url-query),
 [repository contents API](https://docs.github.com/en/rest/repos/contents), [workflow tokens](https://docs.github.com/en/actions/security-for-github-actions/security-guides/automatic-token-authentication).

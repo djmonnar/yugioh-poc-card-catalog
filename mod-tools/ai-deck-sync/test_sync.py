@@ -113,7 +113,7 @@ class SyncTests(unittest.TestCase):
         issue={'number':1,'user':{'login':'djmonnar'},'updated_at':'2026-10-06T12:00:00Z','body':MARKER+'\n```poc-ai-sync\n'+packed+'\n```'}
         with self.assertRaises(SyncError):parse_issue(issue,CATALOG,OPPONENTS)
     def integration(self):
-        spec=importlib.util.spec_from_file_location('sync_launcher_test',PATCH/'scripts/ai_deck_sync.py')
+        spec=importlib.util.spec_from_file_location('sync_launcher_test',ROOT/'mod-tools/ai-deck-sync/launcher.py')
         module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
         import types
         launcher=types.SimpleNamespace(P=self.root,require_game_closed=self.native.guard)
