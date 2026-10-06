@@ -4,3 +4,11 @@ __pycache__/
 *.log
 screenshots/
 local-reviews/
+*.exe
+*.dll
+*.ydc
+system.dat
+ledger.json
+.env*
+ai_sync/
+full_patch_files/

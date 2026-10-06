@@ -1,5 +1,6 @@
 import {DECK_STORAGE_KEY,GROUPS,GROUP_LABELS,RULESETS,emptyDeck,cardLimit,copyCount,groupCount,placementError,adjustCard,resolveCard,validateDeck,parseBundle,exportBundle,deckMarkdown} from './ai-deck-core.js?v=20261006-10';
 import {renderPagination} from './pagination.js?v=20261006-8';
+import {SYNC_REPO,SYNC_URL,makeSyncPacket,issueDraft,packetDeck} from './ai-sync-core.js?v=20261006-11';
 
 const $=id=>document.getElementById(id), PAGE=24;
 let cards=[],meta=null,decks=[],active='',page=1,timer,storageBlocked=false,opponents=[];
@@ -108,6 +109,47 @@ function newDeck(clone=false,ruleset='classic'){
   const d=clone?structuredClone(current()):emptyDeck(uid(),ruleset);d.deck_id=uid();if(clone)d.name=(d.name+' 복제').slice(0,80);decks.push(d);selectDeck(d.deck_id);persist();switchView(true);
 }
 function chooseNewDeck(){if(meta&&!$('new-deck-dialog').open)$('new-deck-dialog').showModal();}
+function onlineSummary(){
+  $('online-ready').hidden=true;$('online-dialog-status').textContent='';
+  const target=opponents.find(d=>d.deck_id===$('online-target').value),d=current();
+  $('online-summary').textContent=target?`${d.name} · 메인 ${groupCount(d,'main')}장 / 융합 ${groupCount(d,'extra')}장 / 사이드 ${groupCount(d,'side')}장 → ${target.source_recipe.filename} · 실제 등장 난이도 ${target.source_recipe.difficulty_levels.join(', ')}`:'같은 모드의 적용 상대가 없어.';
+}
+function openOnline(){
+  if(!meta)return;
+  const targets=opponents.filter(d=>d.ruleset===current().ruleset);
+  $('online-target').replaceChildren(...targets.map(d=>{const o=el('option',`${d.name} · ${d.source_recipe.filename}`);o.value=d.deck_id;return o;}));
+  const source=current().source_recipe?.filename,original=targets.find(d=>d.source_recipe.filename===source);
+  if(original)$('online-target').value=original.deck_id;
+  onlineSummary();$('online-dialog').showModal();
+}
+async function prepareOnline(){
+  $('prepare-online').disabled=true;$('online-ready').hidden=true;
+  try{
+    const target=opponents.find(d=>d.deck_id===$('online-target').value),packet=await makeSyncPacket(meta,current(),target,cards),draft=await issueDraft(packet);
+    $('online-body-text').value=draft.body;
+    const url=draft.prefilled?draft.url:`https://github.com/${SYNC_REPO}/issues/new?title=${encodeURIComponent('[AI 덱 저장] '+current().name)}`;
+    $('confirm-online').href=url;
+    $('online-copy-note').textContent=draft.prefilled?'GitHub 화면에 저장 내용이 자동 입력돼. 해당 계정으로 로그인한 뒤 저장을 확정해줘.':'메모가 길어서 아래 저장 내용을 복사하고 GitHub 본문에 붙여 넣어줘.';
+    $('online-dialog-status').textContent='';$('online-ready').hidden=false;
+  }catch(error){$('online-dialog-status').textContent=error.message;}
+  finally{$('prepare-online').disabled=false;}
+}
+async function loadOnline(){
+  $('load-online').disabled=true;$('online-status').textContent='온라인에 저장된 덱을 확인하는 중…';
+  try{
+    const response=await fetch(SYNC_URL+'?check='+Date.now(),{cache:'no-store',signal:AbortSignal.timeout(10000)});
+    if(!response.ok)throw new Error('온라인 덱을 가져오지 못했어. 잠시 후 다시 눌러줘.');
+    const remote=await response.json();if(remote.kind!=='poc-ai-sync-state'||remote.schema_version!==1||!remote.entries||Object.keys(remote.entries).length>42)throw new Error('온라인 자료 형식을 확인할 수 없어.');
+    const entries=Object.values(remote.entries);if(!entries.length){$('online-status').textContent='아직 GitHub 저장 검사를 통과한 덱이 없어. 저장을 확정한 뒤 잠시 기다려줘.';return;}
+    if(decks.length+entries.length>100)throw new Error('온라인 덱을 추가하면 100개를 넘어. 기존 JSON을 먼저 보관해줘.');
+    const incoming=[];for(const entry of entries){if(entry.packet.catalog_dataset_id!==meta.dataset_id)throw new Error('도감이 변경됐어. 이전 온라인 덱은 JSON으로 검토해야 해.');incoming.push(await packetDeck(entry.packet,cards,uid()));}
+    if(storageBlocked)throw new Error('이전 브라우저 저장을 보존 중이야. 먼저 JSON을 보관해줘.');
+    localStorage.setItem(DECK_STORAGE_KEY+'-before-online',JSON.stringify(bundle()));
+    decks.push(...incoming);selectDeck(incoming[0].deck_id);persist();switchView(true);
+    $('online-status').textContent=`온라인 저장 ${incoming.length}개를 편집본으로 가져왔어. 기존 편집본도 보존했어. 실제 PC 적용 기록은 KoreanPatch/reports/last_ai_sync.json에서 확인할 수 있어.`;
+  }catch(error){$('online-status').textContent=error.message;}
+  finally{$('load-online').disabled=false;}
+}
 function renderOpponentOptions(){
   const mode=$('opponent-mode').value,difficulty=Number($('opponent-difficulty').value),previous=$('example-select').value;
   const filtered=opponents.filter(d=>(!mode||RULESETS[d.ruleset].mode===mode)&&(!difficulty||d.source_recipe.difficulty_levels.includes(difficulty)));
@@ -136,6 +178,13 @@ async function init(){
 $('builder-search').addEventListener('input',()=>{page=1;renderPool();});for(const id of ['builder-type','builder-race','builder-tier','add-group'])$(id).addEventListener('change',()=>{page=1;renderPool();});
 $('show-pool').addEventListener('click',()=>switchView(false));$('show-deck').addEventListener('click',()=>switchView(true));$('deck-select').addEventListener('change',()=>selectDeck($('deck-select').value));$('new-deck').addEventListener('click',chooseNewDeck);$('choose-new-mode').addEventListener('click',chooseNewDeck);$('clone-deck').addEventListener('click',()=>newDeck(true));
 $('close-new-deck').addEventListener('click',()=>$('new-deck-dialog').close());
+$('save-online').addEventListener('click',openOnline);
+$('load-online').addEventListener('click',loadOnline);
+$('close-online').addEventListener('click',()=>$('online-dialog').close());
+$('online-target').addEventListener('change',onlineSummary);
+$('prepare-online').addEventListener('click',prepareOnline);
+$('copy-online-body').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('online-body-text').value);$('online-dialog-status').textContent='복사했어. GitHub 본문에 붙여 넣어줘.';}catch{$('online-body-text').focus();$('online-body-text').select();$('online-dialog-status').textContent='아래 내용을 선택했어. 직접 복사해줘.';}});
+$('confirm-online').addEventListener('click',()=>{$('online-status').textContent='GitHub 저장 화면을 열었어. 아직 저장 완료는 아니야. GitHub에서 저장 확정 후 ‘온라인 덱 불러오기’로 검사 결과를 확인해줘.';});
 for(const [id,rules] of [['create-classic','classic'],['create-speed','duel_links_plan']])$(id).addEventListener('click',()=>{$('new-deck-dialog').close();newDeck(false,rules);});
 $('load-example').addEventListener('click',async()=>{
   try{if(decks.length>=100)throw new Error('덱은 100개까지야.');const original=opponents.find(d=>d.deck_id===$('example-select').value);if(!original)throw new Error('상대 덱을 골라줘.');const d=structuredClone(original);d.deck_id=uid();decks.push(d);selectDeck(d.deck_id);persist();switchView(true);$('deck-name').focus({preventScroll:true});toast('현재 AI 덱을 편집본으로 가져왔어. 카드와 이름을 바꾼 뒤 JSON으로 보내줘.');}catch(error){toast(error.message);}

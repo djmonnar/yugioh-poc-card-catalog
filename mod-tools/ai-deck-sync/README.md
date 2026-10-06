@@ -1,0 +1,48 @@
+# AI 덱 온라인 저장과 게임 연동
+
+도감의 AI 편집기와 네이티브 적용 도구를 같은 저장소에서 관리한다.
+원본 EXE, 리소스 아카이브, 플레이어 덱·세이브·상점 장부는 이 도구에 포함하지 않는다.
+게임은 PC에서 실행되며 GitHub에는 상대 덱 설정과 이 패치의 소스만 저장한다.
+
+1. 도감에서 현재 AI 덱을 가져오거나 일반/스피드 덱을 만든다.
+2. 덱 확인 항목을 해결하고 **이 덱 온라인 저장**을 누른다.
+3. 바꿀 상대와 실제 등장 난이도를 확인하고 **저장 내용 확인**을 누른다.
+4. **GitHub에서 저장 확정**을 누르고 `djmonnar` 계정으로 로그인한다.
+5. GitHub의 **Create / Submit new issue**를 눌러 저장한다. 이 단계 전에는 온라인 저장이 완료되지 않는다.
+6. `Save AI deck` Actions 검사가 성공하면 게임의 기존 창모드 바로가기로 다음 실행 시 적용한다.
+
+다른 기기에서는 **온라인 덱 불러오기**로 검사에 통과한 최신 덱을 편집본으로 가져온다.
+새 저장은 같은 상대 파일의 이전 온라인 설정을 교체한다. 희망 난이도 메모만 바꾸면
+엔진의 등장 난이도 연결은 바뀌지 않는다. 저장할 때 그 난이도에 등장하는 상대를 고른다.
+난이도를 공유하는 파일은 표시된 여러 난이도에 같이 반영된다.
+콤보·행동 메모는 저장하지만 AI 코드를 자동 생성하지 않는다.
+
+## 구조
+
+- `ai-sync-core.js`: 도감 카드 신원, 매수, 규칙 검사와 압축 저장 요청 생성.
+- `.github/workflows/ai-deck-sync.yml`: 소유자 본인의 Issue 생성·수정만 처리.
+- `github_update.py`: 저장 요청을 검사하고 `ai-sync-data` 브랜치의 `sync.json` 갱신.
+- `sync_core.py`: PC에서 내려받기, native ID 검사, YDC의 원래 8바이트 헤더 보존, 적용·복구.
+- `KoreanPatch/scripts/ai_deck_sync.py`: 기존 창모드 실행기 연결. 기본 표준 라이브러리만 사용.
+
+브라우저와 게임 실행기에 GitHub 쓰기 토큰을 넣지 않는다. GitHub Actions의 일회성
+저장소 토큰은 해당 작업에서만 사용된다. Issue 본문은 데이터로만 읽으며 명령으로 실행하지 않는다.
+공개 저장소이므로 AI 덱 이름·구성·메모도 공개된다.
+
+PC 적용은 게임 종료 상태에서 원본 해시·카드 신원·금제·그룹·크기를 검사한다.
+적용 전 상대 파일과 패치 manifest를 `KoreanPatch/ai_sync/backups`에 백업한다.
+원본 또는 이전 동기화 결과와 다른 변경이 있으면 보류하며, 끊긴 적용은 저널로 이어 처리한다.
+인터넷 확인에 실패하면 기존 상대 덱으로 실행한다. 플레이 중 자동 변경은 하지 않는다.
+
+`KoreanPatch/reports/last_ai_sync.json`에서 적용·보류·오프라인 기록을 확인한다.
+동기화를 끄려면 `KoreanPatch/config/ai_sync.json`의 `enabled`를 `false`로 바꾼다.
+게임 종료 후 AI 동기화 백업만 복구하는 예:
+
+```powershell
+& 'C:/Users/djmon/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe' -X utf8 KoreanPatch/scripts/ai_deck_sync.py --restore 'KoreanPatch/ai_sync/backups/해당_백업_폴더'
+```
+
+이후 다른 패치를 적용해 manifest가 달라졌다면 복구를 거부한다. 세이브를 과거 것으로 되돌리지 않는다.
+
+GitHub 기능 근거: [Issue URL query](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue#creating-an-issue-from-a-url-query),
+[repository contents API](https://docs.github.com/en/rest/repos/contents), [workflow tokens](https://docs.github.com/en/actions/security-for-github-actions/security-guides/automatic-token-authentication).
