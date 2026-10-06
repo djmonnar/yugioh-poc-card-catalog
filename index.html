@@ -7,8 +7,8 @@
   <meta name="theme-color" content="#162c38">
   <title>카드 도감 · Power of Chaos</title>
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=20261006-7">
-  <script type="module" src="app.js?v=20261006-7"></script>
+  <link rel="stylesheet" href="style.css?v=20261006-8">
+  <script type="module" src="app.js?v=20261006-8"></script>
 </head>
 <body>
   <header class="masthead">
@@ -35,9 +35,10 @@
       <section class="collection" aria-label="카드 목록">
         <div class="collection-toolbar"><div class="tabs" role="group" aria-label="목록 선택"><button id="tab-all" class="active" aria-pressed="true">전체 도감</button><button id="tab-reviews" aria-pressed="false">내 검토 <span id="tab-review-count">0</span></button></div><select id="sort" aria-label="카드 정렬"><option value="rarity">레어 등급순</option><option value="name">이름순</option><option value="slot">카드 번호순</option><option value="attack">공격력 높은순</option><option value="level">레벨 높은순</option></select></div>
         <div class="results-line"><p id="results" role="status">불러오는 중…</p><span id="active-summary"></span></div>
+        <nav id="catalog-pages-top" class="pagination" aria-label="도감 위쪽 페이지 이동"></nav>
         <div id="cards" class="card-grid"></div>
         <div id="empty" class="empty" hidden><b>조건에 맞는 카드가 없어.</b><p>검색 조건을 줄이거나 카드에 검토 의견을 남겨줘.</p></div>
-        <nav class="pagination" aria-label="페이지 이동"><button id="prev" aria-label="이전 페이지">← 이전</button><span id="page-info"></span><button id="next" aria-label="다음 페이지">다음 →</button></nav>
+        <nav id="catalog-pages-bottom" class="pagination" aria-label="도감 아래쪽 페이지 이동"></nav>
       </section>
     </div>
     <footer><p>게임에 설치된 이름·한국어 설명·능력치·제한을 읽은 도감이야. 공식 카드 이미지에 적힌 효과와 모드의 구현은 다를 수 있어.</p><p>카드 이미지와 원작 명칭의 권리는 각 권리자에게 있어. 비공식 팬 프로젝트 · <a href="data/cards.csv" download>전체 CSV 내려받기</a> · <a href="README.md">사용 안내</a></p></footer>

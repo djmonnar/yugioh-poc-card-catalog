@@ -1,4 +1,5 @@
 import {DECK_STORAGE_KEY,GROUPS,GROUP_LABELS,RULESETS,emptyDeck,cardLimit,copyCount,groupCount,placementError,adjustCard,resolveCard,validateDeck,parseBundle,exportBundle,deckMarkdown} from './ai-deck-core.js?v=20261006-6';
+import {renderPagination} from './pagination.js?v=20261006-8';
 
 const $=id=>document.getElementById(id), PAGE=24;
 let cards=[],meta=null,decks=[],active='',page=1,timer,storageBlocked=false;
@@ -21,6 +22,19 @@ function showFields(){
   const d=current();$('deck-name').value=d.name;$('deck-rules').value=d.ruleset;$('deck-difficulty').value=String(d.difficulty);$('deck-banlist').checked=d.banlist_enabled;
   for(const key of Object.keys(d.strategy))$('strategy-'+key).value=d.strategy[key];
 }
+function keepViewport(update){
+  const x=window.scrollX,y=window.scrollY,panels=[$('deck-panel'),$('builder-detail')].map(node=>[node,node.scrollTop]);
+  const focused=document.activeElement, row=focused?.closest('.deck-row');
+  const identity=row?.dataset.identity,group=row?.dataset.group,direction=focused?.dataset.direction;
+  update();
+  for(const [node,top] of panels)node.scrollTop=top;
+  if(focused?.isConnected)focused.focus({preventScroll:true});
+  else if(identity&&direction){
+    const replacement=[...$('deck-groups').querySelectorAll('.deck-row')].find(n=>n.dataset.identity===identity&&n.dataset.group===group)?.querySelector(`[data-direction="${direction}"]`);
+    replacement?.focus({preventScroll:true});
+  }
+  window.scrollTo(x,y);
+}
 function renderDeck(){
   const d=current(),check=validateDeck(d,cards);$('mobile-count').textContent=String(check.counts.main);
   $('rules-note').hidden=RULESETS[d.ruleset].playable;
@@ -33,12 +47,16 @@ function renderDeck(){
     if(!d.groups[group].length)section.append(el('p','카드 찾기에서 추가할 위치를 고르고 ＋ 버튼을 눌러줘.','builder-empty'));
     for(const row of d.groups[group]){
       const card=resolveCard(row,cards),line=el('div',null,'deck-row'+(card?'':' unknown'));
+      line.dataset.identity=row.identity_key;line.dataset.group=group;
       if(card){const img=el('img');img.src=card.image;img.alt='';img.width=33;img.height=48;img.loading='lazy';line.append(img);}
       const name=el('button',row.name_ko,'deck-row-name');name.type='button';name.addEventListener('click',()=>card?openDetail(card):toast('도감과 일치하지 않는 이전 카드야. 빼고 새 카드를 골라줘.'));line.append(name);
       const controls=el('div',null,'deck-quantity'),minus=el('button','−'),plus=el('button','＋');minus.type=plus.type='button';minus.setAttribute('aria-label',`${row.name_ko} 한 장 빼기`);plus.setAttribute('aria-label',`${row.name_ko} 한 장 추가`);
+      minus.dataset.direction='minus';plus.dataset.direction='plus';
       minus.addEventListener('click',()=>{
+        keepViewport(()=>{
         if(card)adjustCard(d,card,group,-1);else{row.count--;if(!row.count)d.groups[group].splice(d.groups[group].indexOf(row),1);}
-        persist();renderDeck();renderPool();
+        persist();renderDeck();updatePoolControls();
+        });
       });
       plus.disabled=!card||copyCount(d,card.identity_key)>=cardLimit(d,card)||groupCount(d,group)>=(group==='main'?RULESETS[d.ruleset].max:15);
       plus.addEventListener('click',()=>add(card,group));controls.append(minus,el('span',String(row.count)),plus);line.append(controls);section.append(line);
@@ -52,18 +70,27 @@ function filtered(){
 }
 function renderPool(){
   const rows=filtered(),pages=Math.max(1,Math.ceil(rows.length/PAGE));page=Math.min(page,pages);
-  $('pool-results').textContent=`${rows.length.toLocaleString('ko-KR')}종 · ${GROUP_LABELS[$('add-group').value]} 덱에 추가`;$('pool-page').textContent=`${page} / ${pages}`;$('pool-prev').disabled=page<=1;$('pool-next').disabled=page>=pages;
+  $('pool-results').textContent=`${rows.length.toLocaleString('ko-KR')}종 · ${GROUP_LABELS[$('add-group').value]} 덱에 추가`;
+  for(const id of ['pool-pages-top','pool-pages-bottom'])renderPagination($(id),page,pages,goPage);
   $('builder-cards').replaceChildren(...rows.slice((page-1)*PAGE,page*PAGE).map(card=>{
     const item=el('article',null,'builder-card'),art=el('button',null,'builder-art');art.type='button';art.setAttribute('aria-label',`${card.name_ko} 효과 보기`);
+    item.poolCard=card;
     const img=el('img');img.src=card.image;img.alt='';img.width=200;img.height=290;img.loading='lazy';art.append(img);art.addEventListener('click',()=>openDetail(card));
     const addButton=el('button',null,'builder-add');addButton.type='button';const used=copyCount(current(),card.identity_key),limit=cardLimit(current(),card),wrong=placementError(card,$('add-group').value);
-    addButton.textContent=wrong?'효과 보기':`＋ 추가 · ${used}/${limit}`;addButton.setAttribute('aria-label',wrong?`${card.name_ko} 효과 보기`:`${card.name_ko} ${GROUP_LABELS[$('add-group').value]} 덱에 추가`);
-    addButton.disabled=!wrong&&used>=limit;addButton.addEventListener('click',()=>wrong?openDetail(card):add(card,$('add-group').value));
+    setPoolControl(card,addButton);addButton.addEventListener('click',()=>wrong?openDetail(card):add(card,$('add-group').value));
     item.append(art,el('h3',card.name_ko),el('span',card.rarity,`rarity ${card.rarity}`),el('p',[card.type,card.race,limit===3?'3장':limit===0?'금지':`제한 ${limit}장`].filter(Boolean).join(' · '),'muted'),addButton);return item;
   }));
   if(!rows.length)$('builder-cards').append(el('p','조건에 맞는 카드가 없어. 검색이나 필터를 줄여줘.','muted'));
 }
-function add(card,group){try{adjustCard(current(),card,group,1);persist();renderDeck();renderPool();toast(`${card.name_ko} · ${GROUP_LABELS[group]} 덱에 추가했어.`);}catch(error){toast(error.message);}}
+function setPoolControl(card,button){
+  const d=current(),group=$('add-group').value,used=copyCount(d,card.identity_key),limit=cardLimit(d,card),wrong=placementError(card,group);
+  button.textContent=wrong?'효과 보기':`＋ 추가 · ${used}/${limit}`;
+  button.setAttribute('aria-label',wrong?`${card.name_ko} 효과 보기`:`${card.name_ko} ${GROUP_LABELS[group]} 덱에 추가`);
+  button.disabled=!wrong&&(used>=limit||groupCount(d,group)>=(group==='main'?RULESETS[d.ruleset].max:15));
+}
+function updatePoolControls(){for(const item of $('builder-cards').children)if(item.poolCard)setPoolControl(item.poolCard,item.querySelector('.builder-add'));}
+function goPage(next){page=next;renderPool();$('pool-results').scrollIntoView({block:'start'});}
+function add(card,group){try{keepViewport(()=>{adjustCard(current(),card,group,1);persist();renderDeck();updatePoolControls();});toast(`${card.name_ko} · ${GROUP_LABELS[group]} 덱에 추가했어.`);}catch(error){toast(error.message);}}
 function openDetail(card){
   const layout=el('div',null,'detail-layout'),art=el('div',null,'detail-art'),info=el('div',null,'detail-info'),img=el('img');img.src=card.image;img.alt=card.name_ko;img.width=200;img.height=290;art.append(img);
   const title=el('h2',card.name_ko);title.id='builder-detail-title';info.append(title,el('p',[card.type,card.race,card.level==null?'':`LV ${card.level}`,card.atk==null?'':`ATK ${card.atk} / DEF ${card.def}`].filter(Boolean).join(' · '),'muted'),el('p','현재 모드 효과','description-title'),el('div',card.description_ko,'description'));
@@ -90,7 +117,6 @@ async function init(){
   }catch(error){$('load-status').textContent=error.message;$('export-decks').disabled=true;document.querySelector('.builder-workspace').hidden=true;}
 }
 $('builder-search').addEventListener('input',()=>{page=1;renderPool();});for(const id of ['builder-type','builder-race','builder-tier','add-group'])$(id).addEventListener('change',()=>{page=1;renderPool();});
-$('pool-prev').addEventListener('click',()=>{page--;renderPool();$('pool-results').scrollIntoView({block:'start'});});$('pool-next').addEventListener('click',()=>{page++;renderPool();$('pool-results').scrollIntoView({block:'start'});});
 $('show-pool').addEventListener('click',()=>switchView(false));$('show-deck').addEventListener('click',()=>switchView(true));$('deck-select').addEventListener('change',()=>selectDeck($('deck-select').value));$('new-deck').addEventListener('click',()=>newDeck());$('clone-deck').addEventListener('click',()=>newDeck(true));
 $('load-example').addEventListener('click',async()=>{
   try{if(decks.length>=100)throw new Error('덱은 100개까지야.');const response=await fetch('./data/ai-deck-examples.json?v=20261006-6');if(!response.ok)throw new Error('기존 상대 덱을 가져오지 못했어.');const examples=parseBundle(await response.json(),cards),d=examples[Number($('example-select').value)];if(!d)throw new Error('예시 덱을 확인할 수 없어.');d.deck_id=uid();decks.push(d);selectDeck(d.deck_id);persist();switchView(true);toast('기존 상대 덱을 새 편집본으로 가져왔어.');}catch(error){toast(error.message);}

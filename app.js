@@ -1,6 +1,7 @@
 import {TIERS, STORAGE_KEY, changesFor, makeReview, exportPayload, parseImport, reviewCounts, reviewMarkdown} from './review-core.js?v=20261006-5';
 import {RESET_BACKUP_KEY, resetStoredReviews} from './review-storage.js?v=20261006-5';
 import {categoryMatches, groupCards, cardLink, groupHash, parseCatalogHash} from './card-groups.js?v=20261006-7';
+import {renderPagination} from './pagination.js?v=20261006-8';
 
 const $ = id => document.getElementById(id);
 const PAGE_SIZE = 36;
@@ -104,11 +105,12 @@ function render() {
   $('empty').hidden = results.length > 0;
   $('results').textContent = `${fmt(results.length)}장${view === 'reviews' ? '의 검토' : '의 카드'} · 전체 ${fmt(cards.length)}장`;
   $('active-summary').textContent = [rarity, $('type-filter').value, $('race-filter').value, $('mechanic-filter').selectedOptions[0]?.value ? $('mechanic-filter').selectedOptions[0].textContent : '', $('group-filter').selectedOptions[0]?.value ? $('group-filter').selectedOptions[0].textContent : ''].filter(Boolean).join(' · ');
-  $('page-info').textContent = `${page} / ${pages}`; $('prev').disabled = page <= 1; $('next').disabled = page >= pages;
+  for(const id of ['catalog-pages-top','catalog-pages-bottom'])renderPagination($(id),page,pages,goPage);
   $('tab-all').classList.toggle('active', view === 'all'); $('tab-reviews').classList.toggle('active', view === 'reviews');
   $('tab-all').setAttribute('aria-pressed', String(view === 'all')); $('tab-reviews').setAttribute('aria-pressed', String(view === 'reviews'));
   updateCounts();
 }
+function goPage(next) {page=next;render();$('results').scrollIntoView({block:'start'});}
 function selectControl(id, label, values, chosen, disabled = false) {
   const box = el('div'); const title = el('label', label); title.htmlFor = id;
   const control = el('select'); control.id = id; control.disabled = disabled;
@@ -255,7 +257,6 @@ $('search').addEventListener('input',()=>{page=1;render();});
 for(const id of ['type-filter','limit-filter','race-filter','attribute-filter','level-min','level-max','status-filter','mechanic-filter','group-filter','sort'])$(id).addEventListener('change',()=>{page=1;render();});
 $('reset-filters').addEventListener('click',resetFilters);
 $('tab-all').addEventListener('click',()=>{view='all';page=1;render();});$('tab-reviews').addEventListener('click',()=>{view='reviews';resetFilters();});
-$('prev').addEventListener('click',()=>{page--;render();$('results').scrollIntoView({block:'start'});});$('next').addEventListener('click',()=>{page++;render();$('results').scrollIntoView({block:'start'});});
 $('close-detail').addEventListener('click',closeCard);$('card-dialog').addEventListener('cancel',()=>{selected=null;history.replaceState(null,'',location.pathname+location.search);});
 $('card-dialog').addEventListener('click',e=>{if(e.target===$('card-dialog')){const rect=$('card-dialog').getBoundingClientRect();if(e.clientX<rect.left||e.clientX>rect.right||e.clientY<rect.top||e.clientY>rect.bottom)closeCard();}});
 $('export-open').addEventListener('click',()=>{if(meta)openExport();});$('close-export').addEventListener('click',()=>$('export-dialog').close());

@@ -5,8 +5,8 @@
   <meta name="theme-color" content="#162c38"><meta name="description" content="Power of Chaos 상대 AI 덱을 직접 만들고 콤보와 행동 지침을 보내세요.">
   <title>AI 덱 만들기 · Power of Chaos</title>
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=20261006-6"><link rel="stylesheet" href="ai-decks.css?v=20261006-6">
-  <script type="module" src="ai-decks.js?v=20261006-6"></script>
+  <link rel="stylesheet" href="style.css?v=20261006-8"><link rel="stylesheet" href="ai-decks.css?v=20261006-8">
+  <script type="module" src="ai-decks.js?v=20261006-8"></script>
 </head>
 <body>
   <header class="masthead"><a href="./" class="brand"><img src="assets/icon.svg" alt="" width="34" height="40"><span>POWER OF CHAOS<small>카드 도감으로 돌아가기</small></span></a><button id="export-decks" class="primary">AI 덱 보내기</button></header>
@@ -18,8 +18,10 @@
     <div class="builder-workspace">
       <section class="builder-pool" id="pool-panel" aria-label="넣을 카드 찾기">
         <div class="builder-search"><label for="builder-search">카드 이름 · 효과 · 종족</label><input id="builder-search" type="search" placeholder="예: 공룡, 백룡, 융합" autocomplete="off"><div class="filter-pair"><div><label for="builder-type">종류</label><select id="builder-type"><option value="">모든 종류</option></select></div><div><label for="builder-race">종족</label><select id="builder-race"><option value="">모든 종족</option></select></div></div><div class="filter-pair"><div><label for="builder-tier">등급</label><select id="builder-tier"><option value="">모든 등급</option><option>UR</option><option>SR</option><option>R</option><option>N</option></select></div><div><label for="add-group">추가할 위치</label><select id="add-group"><option value="main">메인 덱</option><option value="extra">융합 덱</option><option value="side">사이드 덱</option></select></div></div></div>
-        <p id="pool-results" class="muted" role="status"></p><div id="builder-cards" class="builder-card-grid"></div>
-        <nav class="pagination" aria-label="카드 페이지"><button id="pool-prev">← 이전</button><span id="pool-page"></span><button id="pool-next">다음 →</button></nav>
+        <p id="pool-results" class="muted" role="status"></p>
+        <nav id="pool-pages-top" class="pagination" aria-label="AI 카드 위쪽 페이지 이동"></nav>
+        <div id="builder-cards" class="builder-card-grid"></div>
+        <nav id="pool-pages-bottom" class="pagination" aria-label="AI 카드 아래쪽 페이지 이동"></nav>
       </section>
       <section class="builder-deck" id="deck-panel" aria-label="내 AI 덱 편집">
         <div class="deck-library"><label for="deck-select">내 AI 덱</label><select id="deck-select"></select><div class="deck-library-actions"><button id="new-deck">새 덱</button><button id="clone-deck">복제</button><button id="import-decks">JSON 불러오기</button><input id="deck-import-file" type="file" accept="application/json,.json" hidden></div><details class="deck-examples"><summary>기존 상대 덱에서 시작하기</summary><label for="example-select">예시 덱</label><select id="example-select"><option value="0">기존 상대 덱 1 · 메인 42장</option><option value="1">기존 상대 덱 2 · 메인 42장</option><option value="2">기존 상대 덱 3 · 메인 48장</option><option value="3">기존 상대 덱 4 · 메인 42장</option><option value="4">기존 상대 덱 5 · 메인 42장</option></select><button id="load-example">새 덱으로 가져오기</button><p class="muted">기존 AI가 쓰는 구성이라 현재 금제에 맞지 않는 카드가 있을 수 있어. 가져온 뒤 확인 항목을 봐줘.</p></details></div>
