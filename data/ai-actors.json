@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "actors": [
+    {
+      "actor_id": "dinosaur-yongman",
+      "name": "다이노소어 용만",
+      "portrait": "content-packs/dinosaur-speed/assets/dinosaur-yongman.jpg",
+      "bindings": [{"filename": "DLR_000.ydc", "ruleset": "duel_links_plan"}]
+    }
+  ]
+}
