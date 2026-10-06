@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": 1,
-    "dataset_id": "e050d301a3d13d71e904d4a44ae21ab0af295e2d5a1d989528f4f6a7fcb774cd",
+    "dataset_id": "26788082158bf0754fc8acfa01e41dead4b435f8f658b393a5ad8db09a1cb914",
     "snapshot_date": "2026-10-06",
     "title": "Yu-Gi-Oh! Power of Chaos · 한국어 모드 카드 도감",
     "total": 1115,
@@ -33,14 +33,14 @@
         "sell_price": 25
       }
     },
-    "source_exe_sha256": "528d2acb33d965b493af4af35bedde96c7348e86263acc8a4c6280b19c93d5db",
+    "source_exe_sha256": "22768f757ebd54b39b36af7f13c24a259da0c121edfa49e38a434c5c626f4f5b",
     "source_resources": {
       "card_id.bin": "302b156e15e26681bad0c5e822d49a99a07de65a54f7e7d88e2619de8e3a05f5",
-      "card_prop.bin": "1a413574e3705f2df081831b464467814e5ddf3c710c76c2f91788f3246d4ddb",
+      "card_prop.bin": "6d345fc719ec1cf0b042557a92f102f4555ce6286fa824fe0856496c99c50f54",
       "card_nameeng.bin": "80a9ec5fe676c6e483e3c4d27935c540c5811d2b0ecdbc16e4aa3f0d84bbbed0",
       "card_pack.bin": "337886dfa55531433a4e32c1b8e60dc689585787fbe0b39e38e58d63f5ce2037",
-      "card_desceng.bin": "44601e9ad8beaa226afb7cca8e1fac838543ef68c8644ec5b39424030184d959",
-      "card_indxeng.bin": "1f08181011524abe5c944413db7c3b8151efdf1ee1be8f3d30e5b4fc80a1e695",
+      "card_desceng.bin": "24050e0ab9881fdd7a5ed974b13a4eb39fdbacf9163819e7495d2e816ee202b0",
+      "card_indxeng.bin": "eacc8298ce4c8f7dd151be389108939cf6653e842c81c9c91536642f51c72673",
       "list_card.txt": "490f119b1713ffbbef2791191fb9d7bf98b7fff93d7a47dc70340d2f744b0b66"
     },
     "scope": "설치된 모드의 이름·한국어 설명·능력치·제한을 읽은 스냅샷. 공식 이미지의 인쇄 효과가 구현되어 있다고 가정하지 않는다."
@@ -3048,13 +3048,13 @@
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
-      "description_ko": "\"마법도시 엔디미온\"의 마력\n카운터 6개를 제거하고 특수\n소환한다.",
+      "description_ko": "1턴에 1번, 패의 마법 카드\n1장을 버리고 필드의 카드\n1장을 대상으로 발동할 수\n있다. 그 카드를 파괴한다.\n[미지원] 현재 카드풀에 마법\n도시 엔디미온이 없어, 도시\n카운터를 쓰는 특수 소환과 그\n소환 시 마법 회수는 지원하지\n않는다.",
       "special": false,
       "image": "assets/cards/0096.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=8132&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": "",
-      "review_kind": ""
+      "review_note": "패의 마법 1장 버리기·필드 카드 파괴와 AI 사용을 연결했다. 현재 카드풀에 마법 도시 엔디미온이 없어 도시 카운터 특수 소환·그 소환 시 마법 회수는 미지원이다.",
+      "review_kind": "effect"
     },
     {
       "slot": 97,
@@ -5776,13 +5776,13 @@
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
-      "description_ko": "필드에 앞면으로 존재하는\n동안 일반 몬스터로 취급한다.",
+      "description_ko": "이 카드는 묘지 또는 필드\n위에 앞면 표시로 존재할\n경우, 일반 몬스터로\n취급한다. 필드 위에 앞면\n표시로 존재하는 이 카드를\n일반 소환으로 취급하여 다시\n소환하는 것으로, 이 카드는\n효과 몬스터로 취급되며,\n이하의 효과를 얻는다.\n●이 카드가 앞면 표시로\n존재하는 한, 1번만 이 카드에\n마력 카운터를 1개 얹을 수\n있다. 이 카드에 얹혀 있는\n마력 카운터 1개당, 이 카드의\n공격력은 300 포인트 올린다.\n그 마력 카운터를 1개\n제거하는 것으로, 필드 위의\n몬스터 1장을 파괴한다.",
       "special": false,
       "image": "assets/cards/0184.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=7600&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": "",
-      "review_kind": ""
+      "review_note": "마력카운터 생성·표시·공유 저장소와 카드별 효과를 연결했다. 네이티브 x86 검사 통과, 게임 화면의 실제 플레이 검증은 대기 중이다.",
+      "review_kind": "restored"
     },
     {
       "slot": 185,
@@ -15451,13 +15451,13 @@
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
-      "description_ko": "이 카드가 파괴한 몬스터는\n배틀 페이즈 종료시에 이\n카드의 공격력을 200 올리는\n장착 마법 카드가 된다.",
+      "description_ko": "이 카드가 전투에 의해서 상대\n몬스터를 파괴했을 경우, 이\n카드에 마력 카운터를 1개\n놓는다. 이 카드의 공격력은\n이 카드에 얹혀 있는 마력\n카운터의 수 × 200 포인트\n올린다.",
       "special": false,
       "image": "assets/cards/0495.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=7660&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": "",
-      "review_kind": ""
+      "review_note": "마력카운터 생성·표시·공유 저장소와 카드별 효과를 연결했다. 네이티브 x86 검사 통과, 게임 화면의 실제 플레이 검증은 대기 중이다.",
+      "review_kind": "restored"
     },
     {
       "slot": 496,
@@ -19486,8 +19486,8 @@
       "image": "assets/cards/0625.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=8465&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": "",
-      "review_kind": ""
+      "review_note": "마력카운터 생성·표시·공유 저장소와 카드별 효과를 연결했다. 네이티브 x86 검사 통과, 게임 화면의 실제 플레이 검증은 대기 중이다.",
+      "review_kind": "restored"
     },
     {
       "slot": 626,
@@ -22840,7 +22840,7 @@
     {
       "slot": 734,
       "internal_id": 701,
-      "identity_key": "180e5ae14ab959f5be6a756177b3b96ee3f3ea9f73ac1b535d16973bf5e4d57f",
+      "identity_key": "6402595737ffd8ae9f049206bf0b2caa7d53bc997fe226d360786854188fba80",
       "name_ko": "전설의 폭염사",
       "name_en": "Legendary Flame Lord",
       "official_cid": 5781,
@@ -22848,7 +22848,7 @@
       "subtype": "",
       "race": "마법사족",
       "attribute": "화염",
-      "level": 6,
+      "level": 7,
       "atk": 2400,
       "def": 2000,
       "rarity": "R",
@@ -22860,13 +22860,16 @@
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
-      "description_ko": "이 몬스터는 의식 마법\n\"작열의 시련\"으로만 의식\n소환할 수 있다. 필드 또는\n자신의 패에서 레벨의 합계가\n6 이상이 되도록 몬스터를\n릴리스해야 한다.",
+      "description_ko": "\"작열의 시련\"에 의해 의식\n소환. 필드나 패에서, 레벨이\n7 이상이 되도록 카드를\n제물로 바쳐야 한다. 자신\n또는 상대가 마법을 발동할\n때마다, 이 카드에 마력\n카운터를 1개 얹는다. 이\n카드의 마력 카운터를 3개\n제거하는 것으로, 이 카드\n이외의 필드 위의 몬스터를\n전부 파괴한다.",
       "special": false,
+      "previous_identity_keys": [
+        "180e5ae14ab959f5be6a756177b3b96ee3f3ea9f73ac1b535d16973bf5e4d57f"
+      ],
       "image": "assets/cards/0734.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=5781&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": "",
-      "review_kind": ""
+      "review_note": "마력카운터 생성·표시·공유 저장소와 카드별 효과를 연결했다. 네이티브 x86 검사 통과, 게임 화면의 실제 플레이 검증은 대기 중이다.",
+      "review_kind": "restored"
     },
     {
       "slot": 735,
@@ -25083,8 +25086,8 @@
       "image": "assets/cards/0805.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=5649&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": "",
-      "review_kind": ""
+      "review_note": "마력카운터 생성·표시·공유 저장소와 카드별 효과를 연결했다. 네이티브 x86 검사 통과, 게임 화면의 실제 플레이 검증은 대기 중이다.",
+      "review_kind": "restored"
     },
     {
       "slot": 806,
@@ -28682,8 +28685,8 @@
       "image": "assets/cards/0920.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=5655&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": "",
-      "review_kind": ""
+      "review_note": "마력카운터 생성·표시·공유 저장소와 카드별 효과를 연결했다. 네이티브 x86 검사 통과, 게임 화면의 실제 플레이 검증은 대기 중이다.",
+      "review_kind": "restored"
     },
     {
       "slot": 921,
@@ -29311,13 +29314,13 @@
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
-      "description_ko": "마력 카운터 1개를 제거하고\n앞면 함정 카드 1장을\n파괴한다.",
+      "description_ko": "①: 이 카드가 일반 소환에\n성공했을 경우에 발동한다. 이\n카드에 마력 카운터를 1개\n놓는다(최대 1개까지). ②: 이\n카드의 마력 카운터를 1개\n제거하고, 필드의 앞면 표시의\n함정 카드 1장을 대상으로\n하여 발동할 수 있다. 그 앞면\n표시의 함정 카드를 파괴한다.",
       "special": false,
       "image": "assets/cards/0940.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=4750&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": "마력 카운터를 받는 저장소·필드 숫자는 지원한다. 공식 카드의 전체 효과는 아직 복원하지 않았다.",
-      "review_kind": "effect"
+      "review_note": "마력카운터 생성·표시·공유 저장소와 카드별 효과를 연결했다. 네이티브 x86 검사 통과, 게임 화면의 실제 플레이 검증은 대기 중이다.",
+      "review_kind": "restored"
     },
     {
       "slot": 941,
@@ -29373,13 +29376,13 @@
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
-      "description_ko": "이 카드가 필드에 앞면으로\n존재하는 동안 모든 어둠 속성\n몬스터의 공격력을 500\n올리고, 모든 빛 속성\n몬스터의 공격력을 400\n내린다.",
+      "description_ko": "이 카드가 일반 소환에\n성공했을 때, 이 카드에 마력\n카운터를 2개 얹는다. 자신\n또는 상대가 마법 카드를\n발동할 때마다, 이 카드에\n마력 카운터를 1개 얹는다. 이\n카드에 얹혀 있는 마력 카운터\n1개당, 이 카드의 공격력은\n300 포인트 올린다. 또한, 이\n카드에 얹혀 있는 마력\n카운터를 2개 제거하는\n것으로, 상대의 패를 무작위로\n1장 버린다. 이 효과는 1턴에\n1번밖에 사용할 수 없다.",
       "special": false,
       "image": "assets/cards/0942.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=6555&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": "",
-      "review_kind": ""
+      "review_note": "마력카운터 생성·표시·공유 저장소와 카드별 효과를 연결했다. 네이티브 x86 검사 통과, 게임 화면의 실제 플레이 검증은 대기 중이다.",
+      "review_kind": "restored"
     },
     {
       "slot": 943,
@@ -29874,8 +29877,8 @@
       "image": "assets/cards/0958.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=6167&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": "",
-      "review_kind": ""
+      "review_note": "마력카운터 생성·표시·공유 저장소와 카드별 효과를 연결했다. 네이티브 x86 검사 통과, 게임 화면의 실제 플레이 검증은 대기 중이다.",
+      "review_kind": "restored"
     },
     {
       "slot": 959,
@@ -30982,13 +30985,13 @@
       "deck_limit": 3,
       "deck_limit_without_banlist": 3,
       "reward_eligible": true,
-      "description_ko": "이 카드가 일반 소환되었을\n때, 이 카드에 카운터를 1개\n놓는다.",
+      "description_ko": "①: 이 카드가 일반 소환에\n성공했을 경우에 발동한다. 이\n카드에 마력 카운터를 1개\n놓는다(최대 1개까지). ②:\n1턴에 1번, 필드의 마법사족\n몬스터가 파괴될 경우, 대신에\n그 수만큼 자신 필드의 마력\n카운터를 제거할 수 있다.",
       "special": false,
       "image": "assets/cards/0993.webp",
       "official_url": "https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=8134&request_locale=ko",
       "identity_status": "official_link",
-      "review_note": "마력 카운터를 받는 저장소·필드 숫자는 지원한다. 공식 카드의 전체 효과는 아직 복원하지 않았다.",
-      "review_kind": "effect"
+      "review_note": "마력카운터 생성·표시·공유 저장소와 카드별 효과를 연결했다. 네이티브 x86 검사 통과, 게임 화면의 실제 플레이 검증은 대기 중이다. 파괴 방지 선택은 커서 상태를 보존하는 별도 창이다. 동시 효과 파괴는 지원하며, 같은 전투에서 양쪽 마법사족이 동시에 파괴될 때 두 장을 한 번에 보호하는 처리는 아직 미지원이다.",
+      "review_kind": "restored"
     },
     {
       "slot": 994,
