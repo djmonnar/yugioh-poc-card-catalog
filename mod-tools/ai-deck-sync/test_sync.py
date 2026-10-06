@@ -50,6 +50,8 @@ class SyncTests(unittest.TestCase):
     def test_javascript_payload_is_accepted_and_only_owner_can_save(self):
         issue={'number':1,'user':{'login':'djmonnar'},'updated_at':'2026-10-06T12:00:00Z','body':FIXTURE['draft']['body']}
         self.assertEqual(parse_issue(issue,CATALOG,OPPONENTS)['packet'],self.packet)
+        issue['body']=issue['body'].replace('\n','\r\n')
+        self.assertEqual(parse_issue(issue,CATALOG,OPPONENTS)['packet'],self.packet)
         issue['user']['login']='someone-else'
         with self.assertRaises(SyncError):parse_issue(issue,CATALOG,OPPONENTS)
     def test_native_apply_preserves_header_updates_stage_manifest_and_is_idempotent(self):

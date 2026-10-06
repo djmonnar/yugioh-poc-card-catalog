@@ -112,6 +112,7 @@ def parse_issue(issue, catalog, opponents):
     require(type(issue.get('number')) is int and issue['number'] > 0, 'Invalid issue number')
     body = issue.get('body', '')
     require(isinstance(body, str) and len(body) <= 100000 and body.startswith(MARKER), 'Not an AI sync issue')
+    body = body.replace('\r\n','\n').replace('\r','\n')
     match = re.search(r'```poc-ai-sync\n([A-Za-z0-9_-]{1,64000})\n```', body)
     require(match is not None, 'Missing sync payload')
     packed = match.group(1)
