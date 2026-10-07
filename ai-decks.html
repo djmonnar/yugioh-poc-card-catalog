@@ -5,10 +5,10 @@
   <meta name="theme-color" content="#162c38"><meta name="description" content="Power of Chaos 상대 AI 덱을 직접 만들고 콤보와 행동 지침을 보내세요.">
   <title>AI 덱 만들기 · Power of Chaos</title>
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=20261006-8"><link rel="stylesheet" href="ai-decks.css?v=20261006-37">
+  <link rel="stylesheet" href="style.css?v=20261006-8"><link rel="stylesheet" href="ai-decks.css?v=20261007-49">
   <link rel="stylesheet" href="ai-sync.css?v=20261006-13">
   <link rel="stylesheet" href="card-tags.css?v=20261007-47">
-  <script type="module" src="ai-decks.js?v=20261007-48"></script>
+  <script type="module" src="ai-decks.js?v=20261007-49"></script>
 </head>
 <body>
   <header class="masthead"><a href="./" class="brand"><img src="assets/icon.svg" alt="" width="34" height="40"><span>POWER OF CHAOS<small>카드 도감으로 돌아가기</small></span></a><button id="export-decks" class="primary">AI 덱 보내기</button></header>
@@ -20,7 +20,7 @@
     <nav class="builder-mobile-tabs" aria-label="덱 편집 화면"><button id="show-pool" class="active" aria-pressed="true">카드 찾기</button><button id="show-deck" aria-pressed="false">내 AI 덱 <span id="mobile-count">0</span></button></nav>
     <div class="builder-workspace">
       <section class="builder-pool" id="pool-panel" aria-label="넣을 카드 찾기">
-        <div class="builder-search"><label for="builder-search">카드 이름 · 효과 · 종족</label><input id="builder-search" type="search" placeholder="예: 공룡, 백룡, 융합" autocomplete="off"><div class="filter-pair"><div><label for="builder-type">종류</label><select id="builder-type"><option value="">모든 종류</option></select></div><div><label for="builder-race">종족</label><select id="builder-race"><option value="">모든 종족</option></select></div></div><div class="filter-pair"><div><label for="builder-tier">등급</label><select id="builder-tier"><option value="">모든 등급</option><option>UR</option><option>SR</option><option>R</option><option>N</option></select></div><div><label for="add-group">추가할 위치</label><select id="add-group"><option value="main">메인 덱</option><option value="extra">융합 덱</option><option value="side">사이드 덱</option></select></div></div></div>
+        <div class="builder-search"><label for="builder-search">카드 이름 · 효과 · 종족</label><input id="builder-search" type="search" placeholder="예: 공룡, 백룡, 융합" autocomplete="off"><div class="filter-pair"><div><label for="builder-type">종류</label><select id="builder-type"><option value="">모든 종류</option></select></div><div><label for="builder-race">종족</label><select id="builder-race"><option value="">모든 종족</option></select></div></div><div class="filter-pair"><div><label for="builder-tier">등급</label><select id="builder-tier"><option value="">모든 등급</option><option>L</option><option>UR</option><option>SR</option><option>R</option><option>N</option></select></div><div><label for="add-group">추가할 위치</label><select id="add-group"><option value="main">메인 덱</option><option value="extra">융합 덱</option><option value="side">사이드 덱</option></select></div></div></div>
         <details class="custom-category-tools" open><summary>내 카테고리 · 태그</summary><div id="builder-tag-filters" class="annotation-categories" aria-label="AI 카드 태그 필터"></div><p id="builder-tag-status" class="muted" role="status">도감에서 만든 태그로 카드를 찾아.</p><div class="filter-pair"><button id="refresh-builder-tags" type="button">태그 새로 불러오기</button><button id="clear-builder-tags" type="button">태그 선택 해제</button></div></details>
         <p id="pool-results" class="muted" role="status"></p>
         <nav id="pool-pages-top" class="pagination" aria-label="AI 카드 위쪽 페이지 이동"></nav>
@@ -31,7 +31,7 @@
         <div class="deck-library"><label for="deck-select">내 AI 덱</label><select id="deck-select"></select><div class="deck-library-actions"><button id="new-deck">새 덱</button><button id="clone-deck">복제</button><button id="import-decks">JSON 불러오기</button><input id="deck-import-file" type="file" accept="application/json,.json" hidden></div>
           <details class="deck-examples" open><summary>현재 게임 AI 덱 보기·편집</summary>
             <div class="filter-pair"><div><label for="opponent-mode">듀얼 모드</label><select id="opponent-mode"><option value="">모든 모드</option><option value="normal">일반 듀얼</option><option value="speed">스피드 듀얼</option></select></div><div><label for="opponent-difficulty">등장 난이도</label><select id="opponent-difficulty"><option value="0">모든 난이도</option><option value="1">1 · 입문</option><option value="2">2 · 쉬움</option><option value="3">3 · 보통</option><option value="4">4 · 중급</option><option value="5">5 · 어려움</option><option value="6">6 · 숙련</option><option value="7">7 · 최고</option></select></div></div>
-            <p id="opponent-count" class="muted" role="status">상대 덱을 불러오는 중…</p><label for="example-select">현재 상대 덱</label><select id="example-select"></select><button id="load-example" disabled>선택한 덱 보기·편집</button><p class="muted">설치된 카드 구성의 편집본을 가져와. 현재 금제·효과에 맞지 않는 카드도 확인할 수 있어. 편집 후 ‘이 덱 온라인 저장’으로 반영해줘. 이미 온라인에서 바꾼 덱은 ‘온라인 덱 불러오기’로 가져와.</p>
+            <p id="opponent-count" class="muted" role="status">상대 덱을 불러오는 중…</p><label for="example-select">현재 상대 덱</label><select id="example-select"></select><button id="load-example" disabled>선택한 덱 보기·편집</button><p class="muted">설치된 카드 구성의 편집본을 가져와. 플레이어 금제 표시와 현재 효과를 확인할 수 있어. AI에는 금제를 적용하지 않아. 편집 후 ‘이 덱 온라인 저장’으로 반영해줘. 이미 온라인에서 바꾼 덱은 ‘온라인 덱 불러오기’로 가져와.</p>
             <div id="selected-opponent-actor" class="deck-actor" hidden></div>
           </details>
         </div>
@@ -40,7 +40,7 @@
         <section class="online-decks" aria-label="온라인 AI 덱 저장"><h2>온라인 저장 · 게임 연동</h2><p>카드 구성은 다음 창모드 실행 때 적용되고, 콤보 메모는 AI 작업 자료로 남아.</p><p id="auth-status" role="status">온라인 연결을 준비하는 중…</p><div class="online-actions"><button id="auth-open" type="button">이메일로 로그인</button><button id="auth-signout" type="button" hidden>로그아웃</button></div><div class="online-actions"><button id="save-online" class="primary" type="button">이 덱 온라인 저장</button><button id="load-online" type="button">온라인 덱 불러오기</button></div><p id="online-status" role="status" class="muted">게임이 켜져 있으면 다음 실행까지 적용을 기다려.</p></section>
         <label for="deck-name">덱 이름</label><input id="deck-name" maxlength="80" placeholder="예: 공룡 전개 덱">
         <div class="filter-pair"><div><label for="deck-rules">이 덱의 듀얼 모드</label><select id="deck-rules"><option value="classic">일반 듀얼용 · 40~80장</option><option value="duel_links_plan">스피드 듀얼용 · 20~30장</option></select></div><div><label for="deck-difficulty">희망 난이도</label><select id="deck-difficulty"><option value="1">1 · 입문</option><option value="2">2 · 쉬움</option><option value="3" selected>3 · 보통</option><option value="4">4 · 중급</option><option value="5">5 · 어려움</option><option value="6">6 · 숙련</option><option value="7">7 · 최고</option></select></div></div>
-        <label class="check-row"><input id="deck-banlist" type="checkbox" checked>현재 모드의 금지·제한 적용</label>
+        <label class="check-row"><input id="deck-banlist" type="checkbox" disabled>AI 금제 예외 · 금제 표시는 플레이어 기준</label>
         <p id="rules-note" class="builder-notice" hidden>듀얼링크스 규칙 시험 모드용 덱이야. 메인 덱 20~30장으로 만들고 내보내줘. 융합·사이드는 현재 편집기 한도인 15장을 사용해. 완성된 듀얼링크스 규칙에 대한 검사는 아직 준비 중이야.</p>
         <div id="deck-counts" class="deck-counts" aria-live="polite"></div>
         <section class="deck-composition" aria-label="메인 덱 카드 구성"><p>메인 덱 카드 구성</p><div id="deck-type-counts" class="deck-type-counts" aria-live="polite"></div></section>

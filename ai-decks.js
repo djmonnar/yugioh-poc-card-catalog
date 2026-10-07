@@ -1,9 +1,9 @@
-import {DECK_STORAGE_KEY,GROUPS,GROUP_LABELS,RULESETS,emptyDeck,cardLimit,copyCount,groupCount,groupTypeCounts,placementError,adjustCard,resolveCard,validateDeck,speedBuckets,parseBundle,exportBundle,deckMarkdown} from './ai-deck-core.js?v=20261007-46';
+import {DECK_STORAGE_KEY,GROUPS,GROUP_LABELS,RULESETS,emptyDeck,cardLimit,copyCount,groupCount,groupTypeCounts,placementError,adjustCard,resolveCard,validateDeck,speedBuckets,parseBundle,exportBundle,deckMarkdown} from './ai-deck-core.js?v=20261007-49';
 import {renderPagination} from './pagination.js?v=20261006-8';
-import {makeSyncPacket,packetDeck} from './ai-sync-core.js?v=20261007-46';
+import {makeSyncPacket,packetDeck} from './ai-sync-core.js?v=20261007-49';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 import {validateCloudConfig,DeckCloud,cloudError} from './supabase-cloud.js?v=20261006-13';
-import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261006-14';
+import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261007-49';
 import {parseActors,actorForDeck} from './ai-actors.js?v=20261006-37';
 import {CardTagsCloud,annotationFor,tagMatches,relatedAnnotations} from './card-tags.js?v=20261007-47';
 
@@ -13,6 +13,14 @@ let cloud=null,authClient=null,canEdit=false,onlineVersions=null,authGeneration=
 let tagsCloud=null;const selectedTags=new Set();
 const collator=new Intl.Collator('ko');
 function el(tag,text,className){const node=document.createElement(tag);if(text!=null)node.textContent=text;if(className)node.className=className;return node;}
+function restrictionBadge(deck,card,overlay=false){
+  const speed=deck.ruleset==='duel_links_plan',limit=speed?(card.speed_limit??3):Math.min(3,card.deck_limit??3),restricted=speed?card.speed_limit!=null:limit<3;
+  if(overlay&&!restricted)return null;
+  const label=restricted?(limit===0?'금지':`제한 ${limit}`):'제한 없음';
+  const badge=el('span',label,`restriction-badge ${restricted?'limit-'+limit:'unrestricted'}${overlay?' on-art':''}`);
+  badge.title='플레이어 금제 정보야. AI는 금제를 적용하지 않고 같은 카드 3장까지 사용할 수 있어. '+(restricted?(limit===0?'플레이어 덱에서는 사용할 수 없어.':speed?`제한 ${limit} 카드들의 종류를 합쳐 전체 덱에서 ${limit}장까지.`:`같은 카드의 전체 덱 합계 ${limit}장까지.`):'플레이어도 같은 카드 3장까지.');
+  return badge;
+}
 function toast(message){$('toast').textContent=message;$('toast').hidden=false;clearTimeout(timer);timer=setTimeout(()=>$('toast').hidden=true,4500);}
 function uid(){return crypto.randomUUID();}
 function current(){return decks.find(d=>d.deck_id===active);}
@@ -28,7 +36,7 @@ function renderLibrary(){
 }
 function showFields(){
   const d=current();$('deck-name').value=d.name;$('deck-rules').value=d.ruleset;$('deck-difficulty').value=String(d.difficulty);$('deck-banlist').checked=d.banlist_enabled;
-  $('deck-banlist').disabled=d.ruleset==='duel_links_plan';$('deck-banlist').title=d.ruleset==='duel_links_plan'?'스피드 금제는 제한 그룹별 합산 규칙을 항상 적용해.':'';
+  $('deck-banlist').checked=false;$('deck-banlist').disabled=true;$('deck-banlist').title='AI는 플레이어 금제를 적용하지 않아.';
   for(const key of Object.keys(d.strategy))$('strategy-'+key).value=d.strategy[key];
 }
 function keepViewport(update){
@@ -46,6 +54,7 @@ function keepViewport(update){
 }
 function renderDeck(){
   const d=current(),check=validateDeck(d,cards);$('mobile-count').textContent=String(check.counts.main);
+  const buckets=speedBuckets(d,cards);
   renderActor($('deck-actor'),d);
   const rules=RULESETS[d.ruleset];$('active-mode-label').textContent=rules.shortLabel;$('active-mode-label').classList.toggle('speed',rules.mode==='speed');$('active-mode-summary').textContent=`${d.name} · 메인 ${check.counts.main}/${rules.min}~${rules.max}장`;
   $('rules-note').hidden=RULESETS[d.ruleset].playable;
@@ -57,8 +66,8 @@ function renderDeck(){
     .filter(([key],index)=>index<4||composition[key]>0)
     .map(([key,label])=>{const badge=el('span',null,`deck-type-count ${key}`);badge.append(el('span',label),el('strong',`${composition[key]}장`));return badge;}));
   $('validation-summary').textContent=check.issues.length?`확인할 항목 ${check.issues.length}개`:`${rules.shortLabel} 덱 구성 확인 완료 · 온라인 저장 가능`;
-  if(check.buckets.length)$('validation-summary').textContent+=` · ${check.buckets.map(b=>`제한 ${b.maximum}: ${b.used}/${b.maximum}`).join(' · ')}`;
-  $('deck-banlist').disabled=d.ruleset==='duel_links_plan';
+  $('validation-summary').textContent+=' · AI 금제 예외';
+  $('deck-banlist').disabled=true;
   $('deck-issues').replaceChildren(...check.issues.map(message=>el('li',message)));$('validation-summary').parentElement.classList.toggle('ok',!check.issues.length);
   $('deck-groups').replaceChildren(...GROUPS.map(group=>{
     const section=el('section',null,'deck-group'),title=el('h2',`${GROUP_LABELS[group]} 덱 · ${check.counts[group]}장`),select=el('button','카드 찾기');select.type='button';
@@ -68,7 +77,12 @@ function renderDeck(){
       const card=resolveCard(row,cards),line=el('div',null,'deck-row'+(card?'':' unknown'));
       line.dataset.identity=row.identity_key;line.dataset.group=group;
       if(card){const img=el('img');img.src=card.image;img.alt='';img.width=33;img.height=48;img.loading='lazy';line.append(img);}
-      const name=el('button',row.name_ko,'deck-row-name');name.type='button';name.addEventListener('click',()=>card?openDetail(card):toast('도감과 일치하지 않는 이전 카드야. 빼고 새 카드를 골라줘.'));line.append(name);
+      const info=el('div',null,'deck-row-info'),name=el('button',row.name_ko,'deck-row-name');name.type='button';name.addEventListener('click',()=>card?openDetail(card):toast('도감과 일치하지 않는 이전 카드야. 빼고 새 카드를 골라줘.'));info.append(name);
+      if(card){
+        info.append(restrictionBadge(d,card));
+        if(d.ruleset==='duel_links_plan'&&card.speed_limit>0){const bucket=buckets[card.speed_limit],usage=el('small',`같은 제한 그룹 ${bucket.used}장 · AI 예외`,'deck-limit-usage');usage.title=bucket.cards.map(({card,count})=>`${card.name_ko} ${count}장`).join(', ');info.append(usage);}
+      }else info.append(el('span','금제 확인 불가','restriction-badge unrestricted'));
+      line.append(info);
       const controls=el('div',null,'deck-quantity'),minus=el('button','−'),plus=el('button','＋');minus.type=plus.type='button';minus.setAttribute('aria-label',`${row.name_ko} 한 장 빼기`);plus.setAttribute('aria-label',`${row.name_ko} 한 장 추가`);
       minus.dataset.direction='minus';plus.dataset.direction='plus';
       minus.addEventListener('click',()=>{
@@ -109,11 +123,10 @@ function renderPool(){
   $('builder-cards').replaceChildren(...rows.slice((page-1)*PAGE,page*PAGE).map(card=>{
     const item=el('article',null,'builder-card'),art=el('button',null,'builder-art');art.type='button';art.setAttribute('aria-label',`${card.name_ko} 효과 보기`);
     item.poolCard=card;
-    const img=el('img');img.src=card.image;img.alt='';img.width=200;img.height=290;img.loading='lazy';art.append(img);art.addEventListener('click',()=>openDetail(card));
+    const img=el('img');img.src=card.image;img.alt='';img.width=200;img.height=290;img.loading='lazy';art.append(img);const badge=restrictionBadge(current(),card,true);if(badge)art.append(badge);art.addEventListener('click',()=>openDetail(card));
     const addButton=el('button',null,'builder-add');addButton.type='button';const used=copyCount(current(),card.identity_key),limit=cardLimit(current(),card),wrong=placementError(card,$('add-group').value);
     setPoolControl(card,addButton);addButton.addEventListener('click',()=>wrong?openDetail(card):add(card,$('add-group').value));
-    const restriction=current().ruleset==='duel_links_plan'?(card.speed_limit==null?'동명 3장':card.speed_limit===0?'스피드 금지':`제한 ${card.speed_limit} 그룹`):(limit===3?'3장':limit===0?'금지':`제한 ${limit}장`);
-    item.append(art,el('h3',card.name_ko),el('span',card.rarity,`rarity ${card.rarity}`),el('p',[card.type,card.race,restriction].filter(Boolean).join(' · '),'muted'),addButton);return item;
+    item.append(art,el('h3',card.name_ko),el('span',card.rarity,`rarity ${card.rarity}`),el('p',[card.type,card.race].filter(Boolean).join(' · '),'muted'),addButton);return item;
   }));
   if(!rows.length)$('builder-cards').append(el('p','조건에 맞는 카드가 없어. 검색이나 필터를 줄여줘.','muted'));
 }
@@ -122,14 +135,16 @@ function setPoolControl(card,button){
   button.textContent=wrong?'효과 보기':`＋ 추가 · ${used}/${limit}`;
   button.setAttribute('aria-label',wrong?`${card.name_ko} 효과 보기`:`${card.name_ko} ${GROUP_LABELS[group]} 덱에 추가`);
   button.disabled=!wrong&&(used>=limit||groupCount(d,group)>=(group==='main'?RULESETS[d.ruleset].max:15));
-  if(!wrong&&d.ruleset==='duel_links_plan'&&card.speed_limit>0&&speedBuckets(d,cards)[card.speed_limit].used>=card.speed_limit){button.disabled=true;button.title=`제한 ${card.speed_limit} 그룹 합산 한도`;}else button.title='';
+  button.title=wrong?'':used>=limit?'AI도 같은 카드는 전체 덱 합계 3장까지.':'AI 금제 예외 · 같은 카드 3장까지';
 }
 function updatePoolControls(){for(const item of $('builder-cards').children)if(item.poolCard)setPoolControl(item.poolCard,item.querySelector('.builder-add'));}
 function goPage(next){page=next;renderPool();$('pool-results').scrollIntoView({block:'start'});}
 function add(card,group){try{keepViewport(()=>{adjustCard(current(),card,group,1,cards);persist();renderDeck();updatePoolControls();});toast(`${card.name_ko} · ${GROUP_LABELS[group]} 덱에 추가했어.`);}catch(error){toast(error.message);}}
 function openDetail(card){
-  const layout=el('div',null,'detail-layout'),art=el('div',null,'detail-art'),info=el('div',null,'detail-info'),img=el('img');img.src=card.image;img.alt=card.name_ko;img.width=200;img.height=290;art.append(img);
-  const title=el('h2',card.name_ko);title.id='builder-detail-title';info.append(title,el('p',[card.type,card.race,card.level==null?'':`LV ${card.level}`,card.atk==null?'':`ATK ${card.atk} / DEF ${card.def}`].filter(Boolean).join(' · '),'muted'),el('p','현재 모드 효과','description-title'),el('div',card.description_ko,'description'));
+  const layout=el('div',null,'detail-layout'),art=el('div',null,'detail-art'),info=el('div',null,'detail-info'),img=el('img');img.src=card.image;img.alt=card.name_ko;img.width=200;img.height=290;art.append(img);const artBadge=restrictionBadge(current(),card,true);if(artBadge)art.append(artBadge);
+  const title=el('h2',card.name_ko);title.id='builder-detail-title';info.append(title,el('p',[card.type,card.race,card.level==null?'':`LV ${card.level}`,card.atk==null?'':`ATK ${card.atk} / DEF ${card.def}`].filter(Boolean).join(' · '),'muted'),restrictionBadge(current(),card));
+  info.append(el('p','배지는 플레이어 금제 기준이야. AI는 금제와 관계없이 같은 카드 3장까지 사용할 수 있어.','muted'));
+  info.append(el('p','현재 모드 효과','description-title'),el('div',card.description_ko,'description'));
   if(card.review_note)info.append(el('p',card.review_note,'review-note'));
   const tags=annotationFor(tagsCloud?.state,card)?.tags||[];
   if(tags.length){const badges=el('div',null,'custom-tag-badges');for(const tag of tags){const b=el('button','#'+tag,'tag-badge');b.type='button';b.addEventListener('click',()=>{selectedTags.clear();selectedTags.add(tag);$('builder-search').value='';for(const id of ['builder-type','builder-race','builder-tier'])$(id).value='';page=1;renderTags();renderPool();$('builder-detail').close();switchView(false);});badges.append(b);}info.append(badges);}

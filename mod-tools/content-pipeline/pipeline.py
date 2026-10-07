@@ -130,7 +130,7 @@ def validate(pack_path, catalog_path=None, opponents_path=None):
         for key, value in item['fields'].items():
             if key in ('name_ko', 'description_ko', 'race', 'attribute', 'card_type'):
                 require(isinstance(value, str) and 0 < len(value) <= 6000, 'Invalid card text')
-            elif key == 'rarity':require(value in ('N', 'R', 'SR', 'UR'), 'Invalid rarity')
+            elif key == 'rarity':require(value in ('N', 'R', 'SR', 'UR', 'L'), 'Invalid rarity')
             else:
                 require(type(value) is int and value >= 0, 'Invalid numeric card field')
                 if key == 'limit':require(value <= 3, 'Invalid copy limit')

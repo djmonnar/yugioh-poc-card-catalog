@@ -59,15 +59,8 @@ begin
  end loop;
  if (t.ruleset='classic' and mainnum not between 40 and 80) or (t.ruleset='duel_links_plan' and mainnum not between 20 and 30) then raise exception 'poc_invalid_size'; end if;
  for k,v in select * from jsonb_each(totals) loop
-  select least(3,case when t.ruleset='duel_links_plan' then coalesce(speed_limit,3) when (d->>'banlist_enabled')::boolean then limited else unlimited end) into limitnum from poc_private.cards where slot=k::integer;
-  if v::text::integer>limitnum then raise exception 'poc_copy_limit'; end if;
+  if v::text::integer>3 then raise exception 'poc_copy_limit'; end if;
  end loop;
- if t.ruleset='duel_links_plan' then
-  for bucket in 1..3 loop
-   select coalesce(sum(e.amount::text::integer),0) into used from jsonb_each(totals) e(slot_key,amount) join poc_private.cards card on card.slot=e.slot_key::integer where card.speed_limit=bucket;
-   if used>bucket then raise exception 'poc_speed_limit_%: % / %',bucket,used,bucket;end if;
-  end loop;
- end if;
  if encode(sha256(convert_to(poc_private.compact(ids),'UTF8')),'hex') is distinct from p->>'identity_sha256' then raise exception 'poc_identity_changed'; end if;
  if (select coalesce(sum(e.amount::text::integer),0) from jsonb_each(totals) as e(slot_key,amount) join poc_private.cards harpie_card on harpie_card.slot=e.slot_key::integer
      where (harpie_card.slot,harpie_card.internal_id) in ((108,1530),(606,609),(696,61),(697,1249),(827,608)))>3 then

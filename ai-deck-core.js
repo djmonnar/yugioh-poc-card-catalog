@@ -34,7 +34,8 @@ export function groupTypeCounts(deck,cards,group='main') {
   }
   return counts;
 }
-export function cardLimit(deck,card) {return Math.min(3,deck.ruleset==='duel_links_plan'?(card.speed_limit??3):((deck.banlist_enabled?card.deck_limit:card.deck_limit_without_banlist)??3));}
+// AI opponents ignore the player's banlist; the structural same-card cap stays 3.
+export function cardLimit(deck,card) {return 3;}
 export function speedBuckets(deck,cards) {
   const buckets=[null,{used:0,maximum:1,cards:[]},{used:0,maximum:2,cards:[]},{used:0,maximum:3,cards:[]}];
   if(deck.ruleset!=='duel_links_plan')return buckets;
@@ -64,10 +65,6 @@ export function adjustCard(deck,card,group,delta,cards) {
     const problem=placementError(card,group);if(problem)fail(problem);
     if(sharesHarpieName(card)&&harpieCount(deck)>=3)fail('해피 레이디·1·2·3·SB는 같은 이름으로 취급하여 메인·사이드 합계 3장까지 넣을 수 있어.');
     if(copyCount(deck,card.identity_key)>=cardLimit(deck,card))fail(`${card.name_ko}: 모든 덱을 합쳐 ${cardLimit(deck,card)}장까지 넣을 수 있어.`);
-    if(deck.ruleset==='duel_links_plan'&&card.speed_limit>0&&cards) {
-      const bucket=speedBuckets(deck,cards)[card.speed_limit];
-      if(bucket.used>=bucket.maximum)fail(`제한 ${card.speed_limit} 그룹은 종류를 합쳐 ${card.speed_limit}장까지야. ${bucket.cards.map(({card,count})=>`${card.name_ko} ${count}장`).join(', ')}`);
-    }
     const max=group==='main'?RULESETS[deck.ruleset].max:15;
     if(groupCount(deck,group)>=max)fail(`${GROUP_LABELS[group]} 덱은 ${max}장까지야.`);
     if(row)row.count++;else rows.push(cardLine(card));
@@ -93,7 +90,6 @@ export function validateDeck(deck,cards) {
   for(const {card,count} of totals.values())if(count>cardLimit(deck,card))issues.push(`${card.name_ko}: 총 ${count}장 · 제한 ${cardLimit(deck,card)}장을 초과했어.`);
   if(harpieCount(deck)>3)issues.push(`해피 레이디 계열 총 ${harpieCount(deck)}장 · 같은 이름 취급 합계 3장을 초과했어.`);
   const buckets=speedBuckets(deck,cards);
-  for(const bucket of buckets.slice(1))if(bucket.used>bucket.maximum)issues.push(`제한 ${bucket.maximum} 그룹 합계 ${bucket.used}장 / ${bucket.maximum}장: ${bucket.cards.map(({card,count})=>`${card.name_ko} ${count}장`).join(', ')}`);
   return {counts:Object.fromEntries(GROUPS.map(g=>[g,groupCount(deck,g)])),issues,unknown,
     buckets:deck.ruleset==='duel_links_plan'?buckets.slice(1):[],ready_for_game:!issues.length&&rules.playable};
 }

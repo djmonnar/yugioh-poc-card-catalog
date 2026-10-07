@@ -102,16 +102,10 @@ def validate_packet(packet, catalog, opponents):
     require(limits[0] <= len(expanded[0]) <= limits[1] and len(expanded[1]) <= 15 and len(expanded[2]) <= 15, 'Deck size outside mode limits')
     for key,count in totals.items():
         card = cards[key]
-        limit = (card.get('speed_limit') if deck['ruleset']=='duel_links_plan' else card.get('deck_limit' if deck['banlist_enabled'] else 'deck_limit_without_banlist',3))
-        if limit is None:limit=3
-        require(type(limit) is int and count <= min(3,limit), f'Card copy limit: {card["name_ko"]}')
+        require(count <= 3, f'AI same-card copy limit: {card["name_ko"]}')
     harpies={(108,1530),(606,609),(696,61),(697,1249),(827,608)}
     require(sum(count for key,count in totals.items() if key in harpies)<=3,
             'Harpie Lady shared name: main/side total must not exceed 3')
-    if deck['ruleset']=='duel_links_plan':
-        for limit in (1,2,3):
-            members=[(cards[key]['name_ko'],count) for key,count in totals.items() if cards[key].get('speed_limit')==limit]
-            require(sum(count for _,count in members)<=limit,f'제한 {limit} 그룹 합산 초과: '+', '.join(f'{name} {count}장' for name,count in members))
     require(sha(json.dumps(identities,separators=(',',':'),ensure_ascii=False).encode('utf-8')) == packet.get('identity_sha256'), 'Card identities changed')
     return expanded
 

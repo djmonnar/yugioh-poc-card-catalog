@@ -21,4 +21,12 @@ class SettingsTests(unittest.TestCase):
     def test_duplicate_and_wrong_types_never_replace_cache(self):
         for rows in [[self.row,self.row],[{**self.row,'stock':1}],[{**self.row,'version':True}],[{**self.row,'rarity':'XX'}]]:
             with self.assertRaises(ValueError):sync.validate_rows(rows)
+    def test_legend_and_draw_settings_preserve_identity_and_grant_eligibility(self):
+        row={**self.row,'rarity':'L','stock':False,'draw_enabled':False}
+        sync.validate_rows([row]);path=self.root/'legend.json'
+        path.write_text(json.dumps({'schema_version':1,'kind':'poc-cloud-card-settings','rows':[row]}),encoding='utf-8')
+        cards={316:{**self.row,'reward_eligible':True}};c=sync.apply_overrides(cards,path)[316]
+        self.assertEqual((c['stock'],c['draw_enabled'],c['sell_enabled'],c['sell_price']),(False,False,False,0));self.assertTrue(c['reward_eligible'])
+        for bad in ({**row,'stock':True},{**row,'draw_enabled':True},{**row,'draw_enabled':1}):
+            with self.assertRaises(ValueError):sync.validate_rows([bad])
 if __name__=='__main__':unittest.main()

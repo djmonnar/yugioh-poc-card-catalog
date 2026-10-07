@@ -12,3 +12,17 @@ test('card save passes the displayed version and leaves the old settings on conf
  const calls=[],cloud=new CardSettingsCloud({rpc:async(name,args)=>{calls.push([name,args]);return name==='poc_load_card_settings'?{data:[setting]}:{error:{message:'poc_conflict'}};}});
  assert.throws(()=>cloud.version(card));await cloud.load();await assert.rejects(cloud.save({dataset_id:'dataset'},card,'R',false,cloud.version(card)),/다른 기기/);assert.equal(calls[1][1].p_expected_version,3);assert.equal(cloud.rows[0].rarity,'UR');
 });
+test('legend settings enforce no stock/draw; the draw toggle preserves fixed reward eligibility',()=>{
+ const cards=[{...card,reward_eligible:true}];
+ applySettings(cards,[{...setting,rarity:'L',stock:false,draw_enabled:false}]);
+ assert.deepEqual([cards[0].rarity,cards[0].stock,cards[0].draw_enabled,cards[0].sell_enabled,cards[0].buy_price,cards[0].sell_price],['L',false,false,false,0,0]);
+ assert.equal(cards[0].reward_eligible,true);
+ applySettings(cards,[{...setting,draw_enabled:false}]);assert.equal(cards[0].draw_enabled,false);
+ applySettings(cards,[{...setting,draw_enabled:true}]);assert.equal(cards[0].draw_enabled,true);
+ for(const row of [{...setting,rarity:'L'},{...setting,rarity:'L',stock:false,draw_enabled:true},{...setting,draw_enabled:1}])assert.throws(()=>settingsRows([row]));
+});
+test('legend save uses the new RPC and forces stock/draw false',async()=>{
+ const calls=[],cloud=new CardSettingsCloud({rpc:async(name,args)=>{calls.push([name,args]);return {data:{...setting,rarity:'L',stock:false,draw_enabled:false,version:4}};}});
+ await cloud.save({dataset_id:'dataset'},card,'L',true,3,true);
+ assert.equal(calls[0][0],'poc_save_card_setting_v2');assert.equal(calls[0][1].p_stock,false);assert.equal(calls[0][1].p_draw_enabled,false);
+});

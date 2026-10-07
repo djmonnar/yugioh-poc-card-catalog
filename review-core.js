@@ -1,4 +1,4 @@
-export const TIERS = ['UR', 'SR', 'R', 'N'];
+export const TIERS = ['L', 'UR', 'SR', 'R', 'N'];
 export const EXPORT_KIND = 'poc-card-catalog-review';
 export const STORAGE_KEY = 'poc-card-catalog-reviews-v1';
 

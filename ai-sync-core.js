@@ -1,4 +1,4 @@
-import {GROUPS,RULESETS,parseBundle,validateDeck,cardLine} from './ai-deck-core.js?v=20261007-46';
+import {GROUPS,RULESETS,parseBundle,validateDeck,cardLine} from './ai-deck-core.js?v=20261007-49';
 
 export const SYNC_REPO='djmonnar/yugioh-poc-card-catalog';
 export const SYNC_URL=`https://api.github.com/repos/${SYNC_REPO}/contents/sync.json?ref=ai-sync-data`;

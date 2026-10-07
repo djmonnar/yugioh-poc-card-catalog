@@ -45,7 +45,7 @@ begin
 end; $refresh$;""".replace('__DATASET__',catalog['meta']['dataset_id'])
     story = (root / 'mod-tools/supabase/003_story_authoring.sql').read_text(encoding='utf-8')
     annotations = (root / 'mod-tools/supabase/004_card_annotations.sql').read_text(encoding='utf-8')
-    return '\n'.join(['begin;', migrate, body(seed()), base[start:end], refresh, body(story), body(annotations), 'commit;',
+    return '\n'.join(['begin;', migrate, body(seed()), base[start:end], refresh, body((root / 'mod-tools/supabase/002_card_settings.sql').read_text(encoding='utf-8')), body(story), body(annotations), 'commit;',
         "select 'catalogue, independent speed limits and story authoring installed' as status,"
         "(select count(*) from poc_private.cards) as cards,"
         "(select count(*) from poc_private.targets) as ai_decks,"

@@ -1,10 +1,10 @@
-import {TIERS, STORAGE_KEY, changesFor, makeReview, exportPayload, parseImport, reviewCounts, reviewMarkdown} from './review-core.js?v=20261006-5';
+import {TIERS, STORAGE_KEY, changesFor, makeReview, exportPayload, parseImport, reviewCounts, reviewMarkdown} from './review-core.js?v=20261007-49';
 import {RESET_BACKUP_KEY, resetStoredReviews} from './review-storage.js?v=20261006-5';
 import {categoryMatches, groupCards, cardLink, groupHash, parseCatalogHash} from './card-groups.js?v=20261006-7';
 import {renderPagination} from './pagination.js?v=20261006-8';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 import {validateCloudConfig,DeckCloud,cloudError} from './supabase-cloud.js?v=20261006-13';
-import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261006-14';
+import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261007-49';
 import {createStatFilters, statConditionsMatch} from './card-filters.js?v=20261007-44';
 import {CardTagsUI} from './card-tags-ui.js?v=20261007-47';
 
@@ -27,17 +27,22 @@ function liveSettings(card,info){
   const box=el('section',null,'review-editor live-card-settings');box.append(el('h3','게임 설정 바로 저장'));
   const ready=catalogCanEdit&&settingsCloud?.rows!==null&&settingsCloud;
   const expected=ready?settingsCloud.version(card):null;
-  box.append(selectControl('live-rarity','현재 카드 등급',TIERS.map(t=>[t,`${t} · ${meta.rarity_prices[t].buy_price} 골드`]),card.rarity,!ready));
+  box.append(selectControl('live-rarity','현재 카드 등급',TIERS.map(t=>[t,t==='L'?'L · 레전드 · 지정 보상 전용':`${t} · ${meta.rarity_prices[t].buy_price} 골드`]),card.rarity,!ready));
   const checkRow=el('div',null,'check-row'),stock=el('input');stock.id='live-stock';stock.type='checkbox';stock.checked=card.stock;stock.disabled=!ready;
   const label=el('label','상점에서 이 카드 판매');label.htmlFor=stock.id;checkRow.append(stock,label);box.append(checkRow);
-  const save=el('button','등급·판매 여부 저장','primary');save.type='button';save.id='save-card-setting';save.disabled=!ready;
+  const drawRow=el('div',null,'check-row'),draw=el('input');draw.id='live-draw';draw.type='checkbox';draw.checked=card.draw_enabled??true;const drawLabel=el('label','가챠·랜덤 승리 보상에 포함');drawLabel.htmlFor=draw.id;drawRow.append(draw,drawLabel);box.append(drawRow);
+  const legendNote=el('p','L · 레전드: 지정한 스토리 보상으로만 반복 획득 가능 · 구매·판매·랜덤 뽑기 불가','review-note');box.append(legendNote);
+  const raritySelect=box.querySelector('#live-rarity');
+  function applyLegendControls(){const legend=raritySelect.value==='L';legendNote.hidden=!legend;stock.disabled=draw.disabled=!ready||legend;if(legend){stock.checked=false;draw.checked=false;}}
+  raritySelect.addEventListener('change',applyLegendControls);applyLegendControls();
+  const save=el('button','카드 설정 저장','primary');save.type='button';save.id='save-card-setting';save.disabled=!ready;
   const status=el('p',ready?'저장하면 도감에 반영돼. PC 상점도 실행 중이면 설정을 받아와.':'이메일 로그인 후 등급과 상점 판매 여부를 직접 바꿀 수 있어.','muted');status.id='live-setting-status';status.setAttribute('role','status');box.append(save,status);
   if(!ready){const login=el('a','이메일 로그인');login.href='ai-decks.html#login';box.append(login);}
   save.addEventListener('click',async()=>{
-    const rarity=$('live-rarity').value,stocked=stock.checked;save.disabled=true;stock.disabled=true;$('live-rarity').disabled=true;status.textContent='설정을 저장하는 중…';
-    try{const row=await settingsCloud.save(meta,card,rarity,stocked,expected);applySettings(cards,[row]);rarityButtons();render();const top=$('card-dialog').scrollTop;
-      if(selected?.slot===card.slot){openCard(card.slot);$('card-dialog').scrollTop=top;$('live-setting-status').textContent='저장 완료 · 등급·가격·상점 판매 여부를 반영했어.';}toast('카드 설정을 온라인에 저장했어.');
-    }catch(error){status.textContent=error.message;save.disabled=false;stock.disabled=false;if(selected?.slot===card.slot)$('live-rarity').disabled=false;}
+    const rarity=$('live-rarity').value,stocked=stock.checked;save.disabled=true;stock.disabled=draw.disabled=true;$('live-rarity').disabled=true;status.textContent='설정을 저장하는 중…';
+    try{const row=await settingsCloud.save(meta,card,rarity,stocked,expected,draw.checked);applySettings(cards,[row]);rarityButtons();render();const top=$('card-dialog').scrollTop;
+      if(selected?.slot===card.slot){openCard(card.slot);$('card-dialog').scrollTop=top;$('live-setting-status').textContent='저장 완료 · 등급·상점·뽑기 설정을 반영했어.';}toast('카드 설정을 온라인에 저장했어.');
+    }catch(error){status.textContent=error.message;save.disabled=false;if(selected?.slot===card.slot){$('live-rarity').disabled=false;applyLegendControls();}}
   });info.append(box);
 }
 async function refreshCardSettings(){
@@ -112,7 +117,7 @@ function filteredCards() {
     if (status === 'effect-difference' && c.review_kind !== 'effect') return false;
     if (min && (c.level == null || c.level < Number(min)) || max && (c.level == null || c.level > Number(max))) return false;
     if (!statConditionsMatch(c, statConditions)) return false;
-    if (status === 'stock' && !c.stock || status === 'reward' && !c.reward_eligible || status === 'regular' && c.special || status === 'special' && !c.special || status === 'attention' && !c.review_note || status === 'replace' && !(reviews.get(c.identity_key)?.changes.replacement_candidate || reviews.get(c.identity_key)?.changes.replacement_name)) return false;
+    if (status === 'stock' && !c.stock || status === 'reward' && (!c.reward_eligible||c.rarity==='L'||c.draw_enabled===false) || status === 'regular' && c.special || status === 'special' && !c.special || status === 'attention' && !c.review_note || status === 'replace' && !(reviews.get(c.identity_key)?.changes.replacement_candidate || reviews.get(c.identity_key)?.changes.replacement_name)) return false;
     return !q || c.searchText.includes(q) || tagUI.searchText(c).includes(q);
   });
 }
@@ -233,13 +238,13 @@ function openCard(slot, updateHash = true) {
   if (card.special) info.append(el('p', '일반 카드풀에서 얻거나 덱에 넣는 카드가 아닌, 듀얼 중 생성·참조되는 카드야.', 'review-note'));
   info.append(el('p', `등급 초안 근거: ${card.rarity_reason}`, 'grade-reason'));
   if (!card.special) {
-    const context = [card.stock ? '상점 판매 중' : '현재 상점 상품 아님', card.reward_eligible ? '승리 보상 대상' : '승리 보상 제외', `등급 기준 가격 ${card.buy_price} / 판매 ${card.sell_price} 골드`, `금지·제한 해제 옵션에서 ${card.deck_limit_without_banlist}장`];
+    const context = [card.stock ? '상점 판매 중' : '현재 상점 상품 아님', card.rarity==='L'?'지정 스토리 보상 전용 · 구매·판매 불가':card.reward_eligible&&card.draw_enabled!==false?'랜덤 승리 보상 대상':'랜덤 승리 보상 제외', ...(card.rarity==='L'?[]:[`등급 기준 가격 ${card.buy_price} / 판매 ${card.sell_price} 골드`]), `금지·제한 해제 옵션에서 ${card.deck_limit_without_banlist}장`];
     info.append(el('p', context.join(' · '), 'muted'));
   }
   liveSettings(card,info);
   const editor = el('section', null, 'review-editor'); editor.append(el('h3', '이 카드에 대한 의견'));
   const fields = el('div', null, 'review-fields');
-  fields.append(selectControl('proposed-rarity', '바꾸고 싶은 레어 등급', [['', `현재 ${card.rarity} 유지`], ...TIERS.map(t => [t, `${t} · ${meta.rarity_prices[t].buy_price} 골드`])], change.proposed_rarity));
+  fields.append(selectControl('proposed-rarity', '바꾸고 싶은 레어 등급', [['', `현재 ${card.rarity} 유지`], ...TIERS.map(t => [t, t==='L'?'L · 레전드 · 지정 보상 전용':`${t} · ${meta.rarity_prices[t].buy_price} 골드`])], change.proposed_rarity));
   fields.append(selectControl('proposed-limit', '덱에 넣을 수 있는 매수', [['',card.special ? '특수 카드 · 대상 아님' : `현재 ${card.deck_limit}장 유지`], ['1','제한 · 1장'],['2','준제한 · 2장'],['3','무제한 · 3장'],['0','금지 · 0장']], change.proposed_limit, card.special));
   editor.append(fields);
   const checkRow = el('div', null, 'check-row'); const check = el('input'); check.id = 'replacement-candidate'; check.type = 'checkbox'; check.checked = change.replacement_candidate;

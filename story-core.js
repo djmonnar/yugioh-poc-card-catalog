@@ -53,8 +53,8 @@ export function validateStory(doc,cards,decks){
     if(!actor)issues.push(`${b.name}: 전투 상대를 골라줘.`);
     if(!deck||deck.ruleset!==b.ruleset)issues.push(`${b.name}: 규칙에 맞는 AI 덱을 골라줘.`);
     for(const k of ['first','repeat'])for(const r of b.rewards[k]){
-      if(r.kind==='card'){const c=resolveRef(r.card,cards);if(!c||c.special||!c.reward_eligible)issues.push(`${b.name}: 보상 카드를 현재 도감에서 다시 골라줘.`);}
-      if(r.kind==='random'&&!cards.some(c=>!c.special&&c.reward_eligible&&(r.rarity==='ANY'||c.rarity===r.rarity)))issues.push(`${b.name}: ${r.rarity} 무작위 보상 카드풀이 비어 있어.`);
+      if(r.kind==='card'){const c=resolveRef(r.card,cards);if(!c||c.special||(!c.reward_eligible&&c.rarity!=='L'))issues.push(`${b.name}: 보상 카드를 현재 도감에서 다시 골라줘.`);}
+      if(r.kind==='random'&&!cards.some(c=>!c.special&&c.reward_eligible&&c.rarity!=='L'&&c.draw_enabled!==false&&(r.rarity==='ANY'||c.rarity===r.rarity)))issues.push(`${b.name}: ${r.rarity} 무작위 보상 카드풀이 비어 있어.`);
     }
   }
   return {issues,authoring_ready:!issues.length,engine_applied:false};

@@ -60,10 +60,14 @@ test('main and side copies share the same limit; removing frees one copy',()=>{
   assert.equal(copyCount(d,normal.identity_key),3);assert.throws(()=>adjustCard(d,normal,'side',1));
   adjustCard(d,normal,'main',-1);adjustCard(d,normal,'side',1);assert.equal(copyCount(d,normal.identity_key),3);
 });
-test('forced restriction remains enforced when banlist is disabled',()=>{
-  const d=emptyDeck('test');d.banlist_enabled=false;adjustCard(d,limited,'main',1);assert.throws(()=>adjustCard(d,limited,'side',1));
-  const banned={...limited,deck_limit:0,deck_limit_without_banlist:0};assert.throws(()=>adjustCard(emptyDeck('test'),banned,'main',1));
+test('AI ignores both mode banlists but still allows at most three copies',()=>{
+  for(const mode of ['classic','duel_links_plan']){
+    const d=emptyDeck('test',mode),banned={...limited,deck_limit:0,deck_limit_without_banlist:0,speed_limit:0};
+    for(let i=0;i<3;i++)adjustCard(d,banned,'main',1);
+    assert.throws(()=>adjustCard(d,banned,'side',1));assert.equal(copyCount(d,banned.identity_key),3);
+  }
 });
+
 test('fusion and tokens cannot enter wrong groups',()=>{
   const d=emptyDeck('test');assert.throws(()=>adjustCard(d,fusion,'main',1));assert.throws(()=>adjustCard(d,fusion,'side',1));assert.throws(()=>adjustCard(d,normal,'extra',1));assert.throws(()=>adjustCard(d,token,'main',1));
   adjustCard(d,fusion,'extra',1);assert.equal(d.groups.extra[0].internal_id,202);
@@ -88,7 +92,7 @@ test('a published exact identity correction migrates but different ID or name do
   assert.equal(validateDeck(parseBundle(payload([d]),[{...updated,name_ko:'다른 이름'}])[0],[{...updated,name_ko:'다른 이름'}]).unknown,1);
 });
 test('all groups are included when validating manually imported limits',()=>{
-  const d=emptyDeck('test');d.groups.main=[cardLine(limited)];d.groups.side=[cardLine(limited)];assert.ok(validateDeck(d,pool).issues.some(s=>s.includes('제한 1장')));
+  const d=emptyDeck('test');d.groups.main=[cardLine(limited,3)];d.groups.side=[cardLine(limited)];assert.ok(validateDeck(d,pool).issues.some(s=>s.includes('3장')));
 });
 test('invalid structures fail before any caller merges drafts',()=>{
   const d=emptyDeck('test');d.groups.main=[cardLine(normal),cardLine(normal)];assert.throws(()=>parseBundle(payload([d]),pool));
@@ -103,17 +107,16 @@ test('current-game and future-mode counts have different readiness',()=>{
   d.ruleset='duel_links_plan';d.groups.main=d.groups.main.slice(0,20);const v=validateDeck(d,catalog.cards);assert.equal(v.issues.length,0);assert.equal(v.ready_for_game,true);
   d.groups.main=d.groups.main.slice(0,19);assert.ok(validateDeck(d,catalog.cards).issues.length);
 });
-test('speed grouped 1/2/3 limits cross all zones, remain active without classic banlist, and name members',()=>{
-  const a={...normal,speed_limit:2},b={...limited,speed_limit:2};
-  const cards=[a,b];
+test('AI ignores speed shared budgets and retains informational bucket totals',()=>{
+  const a={...normal,speed_limit:2},b={...limited,speed_limit:2};const cards=[a,b];
   for(const enabled of [false,true]){
     const d=emptyDeck('speed-limits','duel_links_plan');d.banlist_enabled=enabled;
-    adjustCard(d,a,'main',1,cards);adjustCard(d,b,'side',1,cards);
-    assert.throws(()=>adjustCard(d,a,'main',1,cards),/제한 2 그룹/);
-    d.groups.main[0].count=2;
-    assert.match(validateDeck(d,cards).issues.join(' '),/제한 2 그룹 합계 3장.*시험 몬스터 2장.*제한 카드 1장/);
+    adjustCard(d,a,'main',1,cards);adjustCard(d,b,'side',1,cards);adjustCard(d,a,'main',1,cards);
+    const v=validateDeck(d,cards);assert.equal(v.buckets[1].used,3);
+    assert.ok(!v.issues.some(issue=>issue.includes('제한 2 그룹')));
   }
 });
+
 test('card add respects mode maximum and supplemental capacity',()=>{
   const d=emptyDeck('test');d.ruleset='duel_links_plan';const many=Array.from({length:31},(_,i)=>({...normal,slot:i+20,internal_id:i+300,identity_key:i.toString(16).padStart(64,'0')}));
   for(const c of many.slice(0,30))adjustCard(d,c,'main',1);assert.throws(()=>adjustCard(d,many[30],'main',1));
