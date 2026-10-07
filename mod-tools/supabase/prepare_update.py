@@ -44,11 +44,13 @@ begin
  end loop;
 end; $refresh$;""".replace('__DATASET__',catalog['meta']['dataset_id'])
     story = (root / 'mod-tools/supabase/003_story_authoring.sql').read_text(encoding='utf-8')
-    return '\n'.join(['begin;', migrate, body(seed()), base[start:end], refresh, body(story), 'commit;',
-        "select 'catalogue, shared Harpie limit and story authoring installed' as status,"
+    annotations = (root / 'mod-tools/supabase/004_card_annotations.sql').read_text(encoding='utf-8')
+    return '\n'.join(['begin;', migrate, body(seed()), base[start:end], refresh, body(story), body(annotations), 'commit;',
+        "select 'catalogue, independent speed limits and story authoring installed' as status,"
         "(select count(*) from poc_private.cards) as cards,"
         "(select count(*) from poc_private.targets) as ai_decks,"
-        "(select count(*) from public.poc_stories) as stories;"])
+        "(select count(*) from public.poc_stories) as stories,"
+        "(select count(*) from poc_private.cards where speed_limit is not null) as speed_limited_cards;"])
 
 
 if __name__ == '__main__':

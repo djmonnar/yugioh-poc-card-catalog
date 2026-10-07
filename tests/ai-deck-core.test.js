@@ -100,8 +100,19 @@ test('invalid structures fail before any caller merges drafts',()=>{
 test('current-game and future-mode counts have different readiness',()=>{
   const regular=catalog.cards.filter(c=>!c.special&&c.type!=='융합 몬스터'&&c.deck_limit>=1).slice(0,40);
   const d=emptyDeck('test');d.groups.main=regular.map(c=>cardLine(c));assert.equal(validateDeck(d,catalog.cards).ready_for_game,true);
-  d.ruleset='duel_links_plan';d.groups.main=d.groups.main.slice(0,20);const v=validateDeck(d,catalog.cards);assert.equal(v.issues.length,0);assert.equal(v.ready_for_game,false);
+  d.ruleset='duel_links_plan';d.groups.main=d.groups.main.slice(0,20);const v=validateDeck(d,catalog.cards);assert.equal(v.issues.length,0);assert.equal(v.ready_for_game,true);
   d.groups.main=d.groups.main.slice(0,19);assert.ok(validateDeck(d,catalog.cards).issues.length);
+});
+test('speed grouped 1/2/3 limits cross all zones, remain active without classic banlist, and name members',()=>{
+  const a={...normal,speed_limit:2},b={...limited,speed_limit:2};
+  const cards=[a,b];
+  for(const enabled of [false,true]){
+    const d=emptyDeck('speed-limits','duel_links_plan');d.banlist_enabled=enabled;
+    adjustCard(d,a,'main',1,cards);adjustCard(d,b,'side',1,cards);
+    assert.throws(()=>adjustCard(d,a,'main',1,cards),/제한 2 그룹/);
+    d.groups.main[0].count=2;
+    assert.match(validateDeck(d,cards).issues.join(' '),/제한 2 그룹 합계 3장.*시험 몬스터 2장.*제한 카드 1장/);
+  }
 });
 test('card add respects mode maximum and supplemental capacity',()=>{
   const d=emptyDeck('test');d.ruleset='duel_links_plan';const many=Array.from({length:31},(_,i)=>({...normal,slot:i+20,internal_id:i+300,identity_key:i.toString(16).padStart(64,'0')}));

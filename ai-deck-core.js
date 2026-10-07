@@ -4,7 +4,7 @@ export const GROUP_LABELS = {main:'메인', extra:'융합', side:'사이드'};
 export const RULESETS = {
   classic:{label:'일반 듀얼용 · 40~80장', shortLabel:'일반 듀얼', mode:'normal', min:40,max:80,playable:true},
   // Keep this key so existing browser saves and exported drafts still import.
-  duel_links_plan:{label:'스피드 듀얼용 · 20~30장', shortLabel:'스피드 듀얼', mode:'speed', min:20,max:30,playable:false}
+  duel_links_plan:{label:'스피드 듀얼용 · 20~30장', shortLabel:'스피드 듀얼', mode:'speed', min:20,max:30,playable:true}
 };
 const text = (value,max=6000) => { if(typeof value!=='string'||value.length>max)throw new Error('덱의 글자 수나 형식이 올바르지 않아.');return value; };
 const fail = message => {throw new Error(message);};
@@ -34,7 +34,19 @@ export function groupTypeCounts(deck,cards,group='main') {
   }
   return counts;
 }
-export function cardLimit(deck,card) {return Math.min(3,(deck.banlist_enabled?card.deck_limit:card.deck_limit_without_banlist)??3);}
+export function cardLimit(deck,card) {return Math.min(3,deck.ruleset==='duel_links_plan'?(card.speed_limit??3):((deck.banlist_enabled?card.deck_limit:card.deck_limit_without_banlist)??3));}
+export function speedBuckets(deck,cards) {
+  const buckets=[null,{used:0,maximum:1,cards:[]},{used:0,maximum:2,cards:[]},{used:0,maximum:3,cards:[]}];
+  if(deck.ruleset!=='duel_links_plan')return buckets;
+  const totals=new Map();
+  for(const group of GROUPS)for(const row of deck.groups[group]) {
+    const card=cards?resolveCard(row,cards):row;
+    if(!card||card.speed_limit==null||card.speed_limit===0)continue;
+    totals.set(card.slot,{card,count:(totals.get(card.slot)?.count||0)+row.count});
+  }
+  for(const {card,count} of totals.values()) {const bucket=buckets[card.speed_limit];bucket.used+=count;bucket.cards.push({card,count});}
+  return buckets;
+}
 const HARPIE_IDENTITIES=new Map([[108,1530],[606,609],[696,61],[697,1249],[827,608]]);
 export function sharesHarpieName(card) {return HARPIE_IDENTITIES.get(card.slot)===card.internal_id;}
 export function harpieCount(deck) {return GROUPS.reduce((n,g)=>n+deck.groups[g].reduce((sum,row)=>sum+(sharesHarpieName(row)?row.count:0),0),0);}
@@ -45,13 +57,17 @@ export function placementError(card,group) {
   if(group!=='extra'&&fusion)return '융합 몬스터는 융합 덱에 넣어줘.';
   return '';
 }
-export function adjustCard(deck,card,group,delta) {
+export function adjustCard(deck,card,group,delta,cards) {
   if(!GROUPS.includes(group)||![1,-1].includes(delta))fail('덱 편집 요청을 확인할 수 없어.');
   const rows=deck.groups[group], row=rows.find(r=>r.identity_key===card.identity_key);
   if(delta>0) {
     const problem=placementError(card,group);if(problem)fail(problem);
     if(sharesHarpieName(card)&&harpieCount(deck)>=3)fail('해피 레이디·1·2·3·SB는 같은 이름으로 취급하여 메인·사이드 합계 3장까지 넣을 수 있어.');
     if(copyCount(deck,card.identity_key)>=cardLimit(deck,card))fail(`${card.name_ko}: 모든 덱을 합쳐 ${cardLimit(deck,card)}장까지 넣을 수 있어.`);
+    if(deck.ruleset==='duel_links_plan'&&card.speed_limit>0&&cards) {
+      const bucket=speedBuckets(deck,cards)[card.speed_limit];
+      if(bucket.used>=bucket.maximum)fail(`제한 ${card.speed_limit} 그룹은 종류를 합쳐 ${card.speed_limit}장까지야. ${bucket.cards.map(({card,count})=>`${card.name_ko} ${count}장`).join(', ')}`);
+    }
     const max=group==='main'?RULESETS[deck.ruleset].max:15;
     if(groupCount(deck,group)>=max)fail(`${GROUP_LABELS[group]} 덱은 ${max}장까지야.`);
     if(row)row.count++;else rows.push(cardLine(card));
@@ -76,8 +92,10 @@ export function validateDeck(deck,cards) {
   }
   for(const {card,count} of totals.values())if(count>cardLimit(deck,card))issues.push(`${card.name_ko}: 총 ${count}장 · 제한 ${cardLimit(deck,card)}장을 초과했어.`);
   if(harpieCount(deck)>3)issues.push(`해피 레이디 계열 총 ${harpieCount(deck)}장 · 같은 이름 취급 합계 3장을 초과했어.`);
+  const buckets=speedBuckets(deck,cards);
+  for(const bucket of buckets.slice(1))if(bucket.used>bucket.maximum)issues.push(`제한 ${bucket.maximum} 그룹 합계 ${bucket.used}장 / ${bucket.maximum}장: ${bucket.cards.map(({card,count})=>`${card.name_ko} ${count}장`).join(', ')}`);
   return {counts:Object.fromEntries(GROUPS.map(g=>[g,groupCount(deck,g)])),issues,unknown,
-    ready_for_game:!issues.length&&rules.playable};
+    buckets:deck.ruleset==='duel_links_plan'?buckets.slice(1):[],ready_for_game:!issues.length&&rules.playable};
 }
 function parseLine(row) {
   if(!row||typeof row!=='object'||!/^[a-f0-9]{64}$/.test(row.identity_key)||!Number.isInteger(row.slot)||row.slot<1||!Number.isInteger(row.internal_id)||row.internal_id<0||row.internal_id>65535||!Number.isInteger(row.count)||row.count<1||row.count>3)fail('카드 식별값이나 매수를 확인할 수 없어.');

@@ -9,7 +9,8 @@
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css?v=20261007-44">
   <link rel="stylesheet" href="card-settings.css?v=20261006-14">
-  <script type="module" src="app.js?v=20261007-44"></script>
+  <link rel="stylesheet" href="card-tags.css?v=20261007-47">
+  <script type="module" src="app.js?v=20261007-47"></script>
 </head>
 <body>
   <header class="masthead">
@@ -25,6 +26,7 @@
         <div class="filter-top"><h2>카드 찾기</h2><button id="reset-filters" class="text-button">초기화</button></div>
         <label for="search">이름 · 효과 · 카드 번호</label><input id="search" type="search" placeholder="예: 백룡, 마력 카운터, 625" autocomplete="off">
         <div class="field"><span class="label">레어 등급</span><div id="rarity-filters" class="rarity-filters" role="group" aria-label="레어 등급 필터"></div></div>
+        <details class="custom-category-tools" open><summary>내 카테고리 · 태그</summary><p class="muted">여러 태그를 선택하면 모두 포함한 카드를 찾아.</p><div id="custom-tag-filters" aria-label="카테고리 태그 필터"></div><label for="new-category-name">새 카테고리</label><input id="new-category-name" maxlength="40" placeholder="예: 공룡덱, 마력 카운터" disabled><button id="create-category" type="button" disabled>카테고리 만들기</button><p id="category-status" class="muted" role="status"></p></details>
         <section id="stat-filters" class="stat-filters" aria-label="공격력·수비력·레벨 조건"></section>
         <details id="advanced-filters" class="advanced-filters" open><summary>기믹 · 카드군 · 상세 필터</summary><div class="advanced-body">
         <div class="filter-pair"><div><label for="mechanic-filter">기믹 분류</label><select id="mechanic-filter"><option value="">모든 기믹</option></select></div><div><label for="group-filter">카드군 · 덱 테마</label><select id="group-filter"><option value="">모든 묶음</option></select></div></div>

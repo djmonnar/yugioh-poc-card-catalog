@@ -5,11 +5,12 @@ def literal(value):
     return "'" + json.dumps(value,ensure_ascii=False,separators=(',',':')).replace("'","''") + "'::jsonb"
 def seed():
     data=json.loads((root/'data/cards.json').read_text(encoding='utf-8'))
-    cards=[dict(slot=c['slot'],internal_id=c['internal_id'],identity_key=c['identity_key'],fusion=c['type']=='융합 몬스터',special=bool(c.get('special')),limited=c.get('deck_limit') or 0,unlimited=c.get('deck_limit_without_banlist') or 0) for c in data['cards']]
+    cards=[dict(slot=c['slot'],internal_id=c['internal_id'],identity_key=c['identity_key'],fusion=c['type']=='융합 몬스터',special=bool(c.get('special')),limited=c.get('deck_limit') or 0,unlimited=c.get('deck_limit_without_banlist') or 0,speed_limit=c.get('speed_limit')) for c in data['cards']]
     decks=json.loads((root/'data/ai-opponents.json').read_text(encoding='utf-8'))['decks']
     targets=[dict(filename=d['source_recipe']['filename'],recipe=d['source_recipe'],ruleset=d['ruleset']) for d in decks]
     return '\n'.join(['begin;',"insert into poc_private.catalog values ('"+data['meta']['dataset_id']+"') on conflict do nothing;",
-        'insert into poc_private.cards select * from jsonb_to_recordset('+literal(cards)+') as x(slot integer,internal_id integer,identity_key text,fusion boolean,special boolean,limited integer,unlimited integer) on conflict(slot) do update set internal_id=excluded.internal_id,identity_key=excluded.identity_key,fusion=excluded.fusion,special=excluded.special,limited=excluded.limited,unlimited=excluded.unlimited;',
+        'alter table poc_private.cards add column if not exists speed_limit integer check(speed_limit between 0 and 3);',
+        'insert into poc_private.cards(slot,internal_id,identity_key,fusion,special,limited,unlimited,speed_limit) select * from jsonb_to_recordset('+literal(cards)+') as x(slot integer,internal_id integer,identity_key text,fusion boolean,special boolean,limited integer,unlimited integer,speed_limit integer) on conflict(slot) do update set internal_id=excluded.internal_id,identity_key=excluded.identity_key,fusion=excluded.fusion,special=excluded.special,limited=excluded.limited,unlimited=excluded.unlimited,speed_limit=excluded.speed_limit;',
         'insert into poc_private.targets select * from jsonb_to_recordset('+literal(targets)+') as x(filename text,recipe jsonb,ruleset text) on conflict(filename) do update set recipe=excluded.recipe,ruleset=excluded.ruleset;', 'commit;'])
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--owner-email',required=True);args=parser.parse_args()
