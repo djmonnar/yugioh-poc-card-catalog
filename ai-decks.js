@@ -5,10 +5,12 @@ import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 import {validateCloudConfig,DeckCloud,cloudError} from './supabase-cloud.js?v=20261006-13';
 import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261006-14';
 import {parseActors,actorForDeck} from './ai-actors.js?v=20261006-37';
+import {CardTagsCloud,annotationFor,tagMatches,relatedAnnotations} from './card-tags.js?v=20261007-47';
 
 const $=id=>document.getElementById(id), PAGE=24;
 let cards=[],meta=null,decks=[],active='',page=1,timer,storageBlocked=false,opponents=[],actors=[];
 let cloud=null,authClient=null,canEdit=false,onlineVersions=null,authGeneration=0;
+let tagsCloud=null;const selectedTags=new Set();
 const collator=new Intl.Collator('ko');
 function el(tag,text,className){const node=document.createElement(tag);if(text!=null)node.textContent=text;if(className)node.className=className;return node;}
 function toast(message){$('toast').textContent=message;$('toast').hidden=false;clearTimeout(timer);timer=setTimeout(()=>$('toast').hidden=true,4500);}
@@ -81,9 +83,24 @@ function renderDeck(){
     return section;
   }));
 }
+function renderTags(){
+  const box=$('builder-tag-filters');box.replaceChildren();
+  for(const {name} of tagsCloud?.state?.categories||[]){
+    const label=el('label',null,'tag-choice'),check=el('input');check.type='checkbox';check.checked=selectedTags.has(name);
+    check.addEventListener('change',()=>{check.checked?selectedTags.add(name):selectedTags.delete(name);page=1;renderPool();});
+    label.append(check,el('span',name));box.append(label);
+  }
+  if(!box.children.length)box.append(el('p','도감에서 카테고리를 만들고 카드에 태그를 붙이면 여기에 표시돼.','muted'));
+}
+async function refreshTags(){
+  $('refresh-builder-tags').disabled=true;
+  try{if(!tagsCloud)throw new Error('온라인 연결을 확인해줘.');await tagsCloud.load();renderTags();keepViewport(renderPool);$('builder-tag-status').textContent='온라인 태그를 불러왔어. 여러 개 선택하면 모두 포함한 카드를 찾아.';}
+  catch(e){$('builder-tag-status').textContent='태그를 불러오지 못했어. 새로 불러오기를 눌러줘.';}
+  finally{$('refresh-builder-tags').disabled=false;}
+}
 function filtered(){
   const q=$('builder-search').value.normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,'');
-  return cards.filter(c=>!c.special&&(!q||c.searchText.includes(q))&&(!$('builder-type').value||c.type===$('builder-type').value)&&(!$('builder-race').value||c.race===$('builder-race').value)&&(!$('builder-tier').value||c.rarity===$('builder-tier').value)).sort((a,b)=>collator.compare(a.name_ko,b.name_ko));
+  return cards.filter(c=>!c.special&&tagMatches(tagsCloud?.state,c,[...selectedTags])&&(!q||c.searchText.includes(q)||(annotationFor(tagsCloud?.state,c)?.tags||[]).join(' ').normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,'').includes(q))&&(!$('builder-type').value||c.type===$('builder-type').value)&&(!$('builder-race').value||c.race===$('builder-race').value)&&(!$('builder-tier').value||c.rarity===$('builder-tier').value)).sort((a,b)=>collator.compare(a.name_ko,b.name_ko));
 }
 function renderPool(){
   const rows=filtered(),pages=Math.max(1,Math.ceil(rows.length/PAGE));page=Math.min(page,pages);
@@ -114,6 +131,10 @@ function openDetail(card){
   const layout=el('div',null,'detail-layout'),art=el('div',null,'detail-art'),info=el('div',null,'detail-info'),img=el('img');img.src=card.image;img.alt=card.name_ko;img.width=200;img.height=290;art.append(img);
   const title=el('h2',card.name_ko);title.id='builder-detail-title';info.append(title,el('p',[card.type,card.race,card.level==null?'':`LV ${card.level}`,card.atk==null?'':`ATK ${card.atk} / DEF ${card.def}`].filter(Boolean).join(' · '),'muted'),el('p','현재 모드 효과','description-title'),el('div',card.description_ko,'description'));
   if(card.review_note)info.append(el('p',card.review_note,'review-note'));
+  const tags=annotationFor(tagsCloud?.state,card)?.tags||[];
+  if(tags.length){const badges=el('div',null,'custom-tag-badges');for(const tag of tags){const b=el('button','#'+tag,'tag-badge');b.type='button';b.addEventListener('click',()=>{selectedTags.clear();selectedTags.add(tag);$('builder-search').value='';for(const id of ['builder-type','builder-race','builder-tier'])$(id).value='';page=1;renderTags();renderPool();$('builder-detail').close();switchView(false);});badges.append(b);}info.append(badges);}
+  const related=relatedAnnotations(tagsCloud?.state,card,cards);
+  if(related.length){const links=el('div',null,'relation-links');info.append(el('h3','관련 카드'),links);for(const c of related){const b=el('button',c.name_ko);b.type='button';b.addEventListener('click',()=>openDetail(c));links.append(b);}}
   const buttons=el('div',null,'builder-detail-add');for(const group of GROUPS)if(!placementError(card,group)){const b=el('button',`${GROUP_LABELS[group]}에 추가`,'primary');b.type='button';b.addEventListener('click',()=>add(card,group));buttons.append(b);}info.append(buttons);
   const catalogLink=el('a','도감에서 검토 의견 보기 ↗');catalogLink.href=`./#card-${card.slot}`;catalogLink.target='_blank';catalogLink.rel='noopener';info.append(el('p'),catalogLink);layout.append(art,info);$('builder-detail-body').replaceChildren(layout);if(!$('builder-detail').open)$('builder-detail').showModal();
 }
@@ -177,6 +198,7 @@ async function initCloud(){
     const response=await fetch('./data/cloud-config.json?v=20261006-13',{cache:'no-store'});if(!response.ok)throw new Error('설정 없음');
     const config=validateCloudConfig(await response.json());authClient=createClient(config.url,config.publishable_key,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true,storageKey:'poc-ai-editor-auth-v1'},global:{fetch:(url,options)=>fetch(url,{...options,signal:options?.signal||AbortSignal.timeout(10000)})}});cloud=new DeckCloud(authClient);
     authClient.auth.onAuthStateChange((_event,session)=>{setTimeout(()=>authStatus(session),0);});
+    tagsCloud=new CardTagsCloud(authClient);await refreshTags();
     const {data,error}=await authClient.auth.getSession();if(error)throw error;await authStatus(data.session);
     applySettings(cards,await new CardSettingsCloud(authClient).load());renderPool();
   }catch(error){$('auth-status').textContent=cloudError(error);}
@@ -227,6 +249,7 @@ async function init(){
   }catch(error){$('load-status').textContent=error.message;$('export-decks').disabled=true;document.querySelector('.builder-workspace').hidden=true;}
 }
 $('builder-search').addEventListener('input',()=>{page=1;renderPool();});for(const id of ['builder-type','builder-race','builder-tier','add-group'])$(id).addEventListener('change',()=>{page=1;renderPool();});
+$('refresh-builder-tags').addEventListener('click',refreshTags);$('clear-builder-tags').addEventListener('click',()=>{selectedTags.clear();renderTags();page=1;renderPool();});
 $('show-pool').addEventListener('click',()=>switchView(false));$('show-deck').addEventListener('click',()=>switchView(true));$('deck-select').addEventListener('change',()=>selectDeck($('deck-select').value));$('new-deck').addEventListener('click',chooseNewDeck);$('choose-new-mode').addEventListener('click',chooseNewDeck);$('clone-deck').addEventListener('click',()=>newDeck(true));
 $('close-new-deck').addEventListener('click',()=>$('new-deck-dialog').close());
 $('save-online').addEventListener('click',openOnline);

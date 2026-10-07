@@ -4,15 +4,27 @@
   "id": "pipeline-demo",
   "name": "콘텐츠 제작 형식 예제 · 게임 미적용",
   "status": "draft",
-  "catalog_dataset_id": "5a70b93b61a8134fa33a13a1c0bcfaab9af6c02e4a3ae0a558228c7f29787a7a",
+  "catalog_dataset_id": "69a59ba37617ea583bdc70f4117a6d3c060f3140cedb9052f6e08d12eae16449",
   "assets": [],
   "implementations": [],
   "cards": [],
   "decks": [
-    {"id": "training-normal", "ruleset": "classic", "source_recipe": "cpu_000.ydc", "name": "입문 상대 · 구성은 현재 게임 기준"}
+    {
+      "id": "training-normal",
+      "ruleset": "classic",
+      "source_recipe": "cpu_000.ydc",
+      "name": "입문 상대 · 구성은 현재 게임 기준"
+    }
   ],
   "actors": [
-    {"id": "guide", "name": "튜토리얼 진행자", "portrait": null, "decks": ["training-normal"]}
+    {
+      "id": "guide",
+      "name": "튜토리얼 진행자",
+      "portrait": null,
+      "decks": [
+        "training-normal"
+      ]
+    }
   ],
   "story": [
     {
@@ -20,11 +32,46 @@
       "title": "첫 듀얼 · 분기 제작 예제",
       "start": "welcome",
       "nodes": [
-        {"id": "welcome", "kind": "dialogue", "actor": "guide", "text": "연습 듀얼을 시작해 볼까요?", "next": "practice"},
-        {"id": "practice", "kind": "duel", "actor": "guide", "deck": "training-normal", "on_win": "victory", "on_loss": "retry"},
-        {"id": "victory", "kind": "end", "text": "첫 듀얼에 성공했습니다."},
-        {"id": "retry", "kind": "choice", "text": "다시 도전할까요?", "choices": [{"text": "다시 도전", "next": "practice"}, {"text": "다음에 도전", "next": "leave"}]},
-        {"id": "leave", "kind": "end", "text": "다음 도전을 기다릴게요."}
+        {
+          "id": "welcome",
+          "kind": "dialogue",
+          "actor": "guide",
+          "text": "연습 듀얼을 시작해 볼까요?",
+          "next": "practice"
+        },
+        {
+          "id": "practice",
+          "kind": "duel",
+          "actor": "guide",
+          "deck": "training-normal",
+          "on_win": "victory",
+          "on_loss": "retry"
+        },
+        {
+          "id": "victory",
+          "kind": "end",
+          "text": "첫 듀얼에 성공했습니다."
+        },
+        {
+          "id": "retry",
+          "kind": "choice",
+          "text": "다시 도전할까요?",
+          "choices": [
+            {
+              "text": "다시 도전",
+              "next": "practice"
+            },
+            {
+              "text": "다음에 도전",
+              "next": "leave"
+            }
+          ]
+        },
+        {
+          "id": "leave",
+          "kind": "end",
+          "text": "다음 도전을 기다릴게요."
+        }
       ]
     }
   ],
@@ -32,10 +79,17 @@
     {
       "id": "training-run",
       "ruleset": "classic",
-      "encounters": ["training-normal"],
+      "encounters": [
+        "training-normal"
+      ],
       "permanent_progress": false,
       "rules": [
-        {"id": "pick-one-reward", "description": "승리 후 보상 후보 중 카드 한 장을 선택하는 기믹의 제작 자리. 실행 기능은 아직 없음.", "trigger": "after_win", "implementation": null}
+        {
+          "id": "pick-one-reward",
+          "description": "승리 후 보상 후보 중 카드 한 장을 선택하는 기믹의 제작 자리. 실행 기능은 아직 없음.",
+          "trigger": "after_win",
+          "implementation": null
+        }
       ]
     }
   ]
