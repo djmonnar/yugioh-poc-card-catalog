@@ -1,4 +1,5 @@
 import {GROUPS,RULESETS,parseBundle,validateDeck,cardLine} from './ai-deck-core.js?v=20261007-49';
+import {cloudRows} from './supabase-cloud.js?v=20261006-13';
 
 export const SYNC_REPO='djmonnar/yugioh-poc-card-catalog';
 export const SYNC_URL=`https://api.github.com/repos/${SYNC_REPO}/contents/sync.json?ref=ai-sync-data`;
@@ -31,4 +32,22 @@ export async function packetDeck(packet,cards,id){
   if(await digest(JSON.stringify(identityRows(packet.deck.groups,cards)))!==packet.identity_sha256)throw new Error('온라인 덱의 카드가 현재 도감과 달라.');
   const groups=Object.fromEntries(GROUPS.map(g=>[g,packet.deck.groups[g].map(([slot,n,count])=>cardLine(cards.find(c=>c.slot===slot&&c.internal_id===n),count))]));
   return parseBundle({schema_version:1,kind:'poc-ai-deck-bundle',decks:[{...packet.deck,deck_id:id,groups,source_recipe:packet.target}]},cards)[0];
+}
+
+// The bundled opponents are installation baselines, not the latest saved recipes.
+// Read on every click so saves from this page or another device are immediately visible.
+// A failed read must never silently substitute an older baseline.
+export async function loadOpponentDeck(meta,target,cards,id,load){
+  if(!target?.source_recipe)throw new Error('상대 덱을 골라줘.');
+  const entries=cloudRows(await load());
+  const entry=entries.find(row=>row.filename===target.source_recipe.filename);
+  if(!entry){
+    const copy=structuredClone(target);copy.deck_id=id;
+    const deck=parseBundle({schema_version:1,kind:'poc-ai-deck-bundle',decks:[copy]},cards)[0];
+    return {deck,source:'installed',version:null};
+  }
+  if(entry.packet.catalog_dataset_id!==meta.dataset_id)throw new Error('온라인 덱의 도감 버전이 달라. 페이지를 새로 열고 확인해줘. 기본 덱으로 되돌리지 않았어.');
+  const deck=await packetDeck(entry.packet,cards,id);
+  if(deck.ruleset!==target.ruleset||deck.source_recipe.sha256!==target.source_recipe.sha256)throw new Error('온라인 덱의 적용 상대가 현재 자료와 달라. 기본 덱으로 되돌리지 않았어.');
+  return {deck,source:'online',version:entry.version};
 }
