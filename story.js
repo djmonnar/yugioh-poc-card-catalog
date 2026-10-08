@@ -1,4 +1,5 @@
 import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261007-49';
+import {CardLimitsCloud,applyLimits} from './card-limits.js?v=20261008-61';
 import {STORY_KEY,SKILLS,emptyStory,newActor,newBattle,parseStory,canonicalStory,validateStory,cardRef,reviewFiles,safePortrait} from './story-core.js?v=20261008-59b';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 import {validateCloudConfig,cloudError} from './supabase-cloud.js?v=20261006-13';
@@ -31,6 +32,7 @@ async function cloudInit(){
     const config=validateCloudConfig(await fetch('data/cloud-config.json',{cache:'no-store'}).then(r=>r.json()));
     client=createClient(config.url,config.publishable_key,{auth:{storageKey:'poc-ai-editor-auth-v1',detectSessionInUrl:true,persistSession:true,autoRefreshToken:true}});
     await new CardSettingsCloud(client).load().then(rows=>applySettings(cards,rows));
+    applyLimits(cards,await new CardLimitsCloud(client).load());
     const [story,access,recipes]=await Promise.all([client.rpc('poc_load_story'),client.rpc('poc_editor_status'),client.rpc('poc_load_ai_decks')]);
     if(story.error)throw story.error;version=story.data?.version??0;editor=access.data===true;
     if(!recipes.error&&Array.isArray(recipes.data))for(const entry of recipes.data){

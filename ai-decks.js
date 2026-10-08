@@ -4,6 +4,7 @@ import {makeSyncPacket,packetDeck,loadOpponentDeck} from './ai-sync-core.js?v=20
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 import {validateCloudConfig,DeckCloud,cloudError} from './supabase-cloud.js?v=20261006-13';
 import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261007-49';
+import {CardLimitsCloud,applyLimits} from './card-limits.js?v=20261008-61';
 import {parseActors,actorForDeck} from './ai-actors.js?v=20261006-37';
 import {CardTagsCloud,annotationFor,tagMatches,relatedAnnotations} from './card-tags.js?v=20261007-47';
 
@@ -218,7 +219,7 @@ async function initCloud(){
     authClient.auth.onAuthStateChange((_event,session)=>{setTimeout(()=>authStatus(session),0);});
     tagsCloud=new CardTagsCloud(authClient);await refreshTags();
     const {data,error}=await authClient.auth.getSession();if(error)throw error;await authStatus(data.session);
-    applySettings(cards,await new CardSettingsCloud(authClient).load());renderPool();
+    applySettings(cards,await new CardSettingsCloud(authClient).load());applyLimits(cards,await new CardLimitsCloud(authClient).load());renderPool();
   }catch(error){$('auth-status').textContent=cloudError(error);}
 }
 async function sendLogin(){

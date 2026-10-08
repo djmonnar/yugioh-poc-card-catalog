@@ -7,6 +7,7 @@ import {validateCloudConfig,DeckCloud,cloudError} from './supabase-cloud.js?v=20
 import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261007-49';
 import {createStatFilters, statConditionsMatch} from './card-filters.js?v=20261007-44';
 import {CardTagsUI} from './card-tags-ui.js?v=20261007-47';
+import {CardLimitsCloud,applyLimits,speedLimitName} from './card-limits.js?v=20261008-61';
 
 const $ = id => document.getElementById(id);
 const PAGE_SIZE = 36;
@@ -17,7 +18,7 @@ $('advanced-filters').open = !narrowLayout.matches;
 narrowLayout.addEventListener('change', event => { $('advanced-filters').open = !event.matches; });
 let cards = [], meta = null, reviews = new Map(), unmatched = [], page = 1, rarity = '', view = 'all', selected = null, backup = null;
 let timer, resetBackup = null;
-let settingsCloud=null,settingsAuth=null,catalogCanEdit=false,catalogAuthGeneration=0;
+let settingsCloud=null,limitsCloud=null,settingsAuth=null,catalogCanEdit=false,catalogAuthGeneration=0;
 const statFilters = createStatFilters($('stat-filters'), () => {page = 1; render();});
 const tagUI=new CardTagsUI({cards:()=>cards,meta:()=>meta,canEdit:()=>catalogCanEdit,
   changed:()=>{page=1;render();},reopen:()=>{if(selected){const top=$('card-dialog').scrollTop;openCard(selected.slot);$('card-dialog').scrollTop=top;}},
@@ -46,13 +47,13 @@ function liveSettings(card,info){
   });info.append(box);
 }
 async function refreshCardSettings(){
-  if(!settingsCloud)return;const rows=await settingsCloud.load();applySettings(cards,rows);try{await tagUI.reload();$('category-status').textContent='';}catch(e){$('category-status').textContent='온라인 분류를 불러오지 못했어. 설정 새로 불러오기를 눌러줘.';}rarityButtons();render();if(selected)openCard(selected.slot);
+  if(!settingsCloud)return;const rows=await settingsCloud.load();applySettings(cards,rows);applyLimits(cards,await limitsCloud.load());try{await tagUI.reload();$('category-status').textContent='';}catch(e){$('category-status').textContent='온라인 분류를 불러오지 못했어. 설정 새로 불러오기를 눌러줘.';}rarityButtons();render();if(selected)openCard(selected.slot);
 }
 async function initCardSettings(){
   try{
     const response=await fetch('./data/cloud-config.json?v=20261006-13',{cache:'no-store'});if(!response.ok)throw new Error('설정 없음');const config=validateCloudConfig(await response.json());
     settingsAuth=createClient(config.url,config.publishable_key,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true,storageKey:'poc-ai-editor-auth-v1'},global:{fetch:(url,options)=>fetch(url,{...options,signal:options?.signal||AbortSignal.timeout(10000)})}});
-    settingsCloud=new CardSettingsCloud(settingsAuth);try{await tagUI.connect(settingsAuth);}catch(e){$('category-status').textContent='온라인 분류를 불러오지 못했어. 설정 새로 불러오기를 눌러줘.';}await refreshCardSettings();
+    settingsCloud=new CardSettingsCloud(settingsAuth);limitsCloud=new CardLimitsCloud(settingsAuth);try{await tagUI.connect(settingsAuth);}catch(e){$('category-status').textContent='온라인 분류를 불러오지 못했어. 설정 새로 불러오기를 눌러줘.';}await refreshCardSettings();
     const update=async session=>{const generation=++catalogAuthGeneration,previous=catalogCanEdit;try{const allowed=session?await new DeckCloud(settingsAuth).editor():false;if(generation!==catalogAuthGeneration)return;catalogCanEdit=allowed;tagUI.renderFilters();$('card-cloud-status').textContent=catalogCanEdit?'로그인됨 · 카드 상세에서 등급·판매 여부·태그·관련 링크를 저장할 수 있어.':'직접 편집하려면 이메일로 로그인해줘. 저장된 태그와 관련 링크는 로그인 없이 볼 수 있어.';if(selected&&previous!==catalogCanEdit)openCard(selected.slot);}catch(error){if(generation===catalogAuthGeneration){catalogCanEdit=false;tagUI.renderFilters();$('card-cloud-status').textContent=cloudError(error);}}};
     settingsAuth.auth.onAuthStateChange((_event,session)=>setTimeout(()=>update(session),0));const {data,error}=await settingsAuth.auth.getSession();if(error)throw error;await update(data.session);
   }catch(error){$('card-cloud-status').textContent=cloudError(error);}
@@ -76,6 +77,21 @@ function toast(message) {
 function limitName(limit) { return limit == null ? '특수' : limit === 0 ? '금지' : limit === 1 ? '제한 1' : limit === 2 ? '준제한 2' : '3장'; }
 function labelTier(tier) { return el('span', tier, `rarity ${tier}`); }
 function regularLimit(card) { return el('span', limitName(card.deck_limit), 'limit' + (card.deck_limit === 3 || card.special ? ' unlimited' : '')); }
+function liveLimits(card,info){
+  if(card.special)return;
+  const box=el('section',null,'review-editor live-card-limits'),ready=catalogCanEdit&&limitsCloud?.rows!==null&&limitsCloud;
+  const row=limitsCloud?.row(card);box.append(el('h3','플레이어 금제 바로 저장'));
+  box.append(selectControl('live-normal-limit','일반 듀얼',[['','기본값'],['0','금지 · 0장'],['1','제한 · 1장'],['2','준제한 · 2장'],['3','제한 없음 · 동명 3장']],row?.normal_limit??'',!ready));
+  box.append(selectControl('live-speed-limit','스피드 듀얼',[['','기본값'],['-1','제한 없음 · 동명 3장'],['0','금지 · 플레이어 사용 불가'],['1','제한 1 그룹 · 합계 1장'],['2','제한 2 그룹 · 합계 2장'],['3','제한 3 그룹 · 합계 3장']],row?.speed_limit??'',!ready));
+  box.append(el('p','AI는 금지·제한을 적용받지 않아. 스피드 제한 1·2·3은 같은 그룹의 카드들을 합산해. 일반 듀얼은 게임의 금제 적용 옵션을 따라.','muted'));
+  const button=el('button','금제 온라인 저장','primary');button.type='button';button.disabled=!ready;
+  const status=el('p',ready?'저장 후 게임을 다시 실행하면 배지·추가 경고·덱 검사에도 반영돼.':'이메일 로그인 후 금제를 직접 바꿀 수 있어.','muted');status.setAttribute('role','status');box.append(button,status);
+  button.addEventListener('click',async()=>{button.disabled=true;status.textContent='금제를 저장하는 중…';
+    const value=id=>$(id).value===''?null:Number($(id).value);
+    try{await limitsCloud.save(meta,card,value('live-normal-limit'),value('live-speed-limit'));applyLimits(cards,limitsCloud.rows);render();const top=$('card-dialog').scrollTop;if(selected?.slot===card.slot){openCard(card.slot);$('card-dialog').scrollTop=top;}toast('플레이어 금제 저장 완료 · 게임 재실행 시 반영');}
+    catch(e){status.textContent=e.message;button.disabled=false;}
+  });info.append(box);
+}
 function kind(card) { return [card.type, card.subtype, card.race].filter(Boolean).join(' · '); }
 function statText(card) { return card.level == null ? (card.special ? '듀얼 전용 · 참고 카드' : card.subtype + ' ' + card.type) : `LV ${card.level} · ATK ${card.atk} / DEF ${card.def}`; }
 function currentPayload() { return exportPayload(meta, [...reviews.values()], unmatched); }
@@ -242,6 +258,8 @@ function openCard(slot, updateHash = true) {
     info.append(el('p', context.join(' · '), 'muted'));
   }
   liveSettings(card,info);
+  if(!card.special)info.append(el('p',speedLimitName(card)+' · AI 예외','review-note'));
+  liveLimits(card,info);
   const editor = el('section', null, 'review-editor'); editor.append(el('h3', '이 카드에 대한 의견'));
   const fields = el('div', null, 'review-fields');
   fields.append(selectControl('proposed-rarity', '바꾸고 싶은 레어 등급', [['', `현재 ${card.rarity} 유지`], ...TIERS.map(t => [t, t==='L'?'L · 레전드 · 지정 보상 전용':`${t} · ${meta.rarity_prices[t].buy_price} 골드`])], change.proposed_rarity));

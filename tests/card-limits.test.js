@@ -1,0 +1,7 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {CardLimitsCloud,applyLimits,limitRows} from '../card-limits.js';
+const c={slot:720,internal_id:123,identity_key:'a'.repeat(64),deck_limit:3,speed_limit:2,special:false};
+const r={slot:720,internal_id:123,identity_key:c.identity_key,normal_limit:1,speed_limit:0,version:1};
+test('forbidden speed and normal caps are independent; reset restores original policy',()=>{const cards=[{...c}];applyLimits(cards,[r]);assert.equal(cards[0].speed_limit,0);assert.equal(cards[0].deck_limit,1);applyLimits(cards,[{...r,normal_limit:null,speed_limit:-1}]);assert.equal(cards[0].deck_limit,3);assert.equal(cards[0].speed_limit,null);applyLimits(cards,[]);assert.equal(cards[0].speed_limit,2);});
+test('replaced cards and tokens do not inherit limits; invalid groups rejected',()=>{assert.equal(applyLimits([{...c,identity_key:'b'.repeat(64)}],[r]),0);assert.equal(applyLimits([{...c,special:true}],[r]),0);assert.throws(()=>limitRows([{...r,speed_limit:4}]));assert.throws(()=>limitRows([{...r,normal_limit:-1}]));});
+test('save preserves optimistic version and uses separate limits RPC',async()=>{const calls=[];const cloud=new CardLimitsCloud({rpc:async(name,args)=>{calls.push([name,args]);return {data:name==='poc_load_card_limits'?[r]:{...r,speed_limit:3,version:2}};}});await cloud.load();await cloud.save({dataset_id:'dataset'},c,1,3);assert.equal(calls[1][0],'poc_save_card_limit');assert.equal(calls[1][1].p_expected_version,1);assert.equal(cloud.row(c).speed_limit,3);});
