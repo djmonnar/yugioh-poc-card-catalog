@@ -21,6 +21,17 @@ class SettingsTests(unittest.TestCase):
     def test_duplicate_and_wrong_types_never_replace_cache(self):
         for rows in [[self.row,self.row],[{**self.row,'stock':1}],[{**self.row,'version':True}],[{**self.row,'rarity':'XX'}]]:
             with self.assertRaises(ValueError):sync.validate_rows(rows)
+    def test_capacity_expansion_accepts_all_supported_slots(self):
+        rows=[{**self.row,'slot':slot} for slot in range(1,2048)]
+        self.assertEqual(len(sync.validate_rows(rows)),2047)
+        with self.assertRaises(ValueError):sync.validate_rows(rows+[{**self.row,'slot':2048}])
+    def test_declared_property_correction_preserves_saved_settings(self):
+        path=self.root/'settings.json'
+        path.write_text(json.dumps({'schema_version':1,'kind':'poc-cloud-card-settings','rows':[self.row]}),encoding='utf-8')
+        card={**self.row,'identity_key':'b'*64,'previous_identity_keys':['a'*64],'rarity':'N'}
+        self.assertEqual(sync.apply_overrides({316:card},path)[316]['rarity'],'UR')
+        card={**card,'internal_id':2,'rarity':'N'}
+        self.assertEqual(sync.apply_overrides({316:card},path)[316]['rarity'],'N')
     def test_legend_and_draw_settings_preserve_identity_and_grant_eligibility(self):
         row={**self.row,'rarity':'L','stock':False,'draw_enabled':False}
         sync.validate_rows([row]);path=self.root/'legend.json'

@@ -2,7 +2,7 @@
 import json,os,pathlib,re,urllib.request,uuid
 PRICES={'L':(0,0),'UR':(300,150),'SR':(200,100),'R':(100,50),'N':(50,25)}
 def validate_rows(rows):
-    if not isinstance(rows,list) or len(rows)>1110:raise ValueError('Invalid card settings')
+    if not isinstance(rows,list) or len(rows)>2047:raise ValueError('Invalid card settings')
     seen=set()
     for r in rows:
         if (not isinstance(r,dict) or type(r.get('slot')) is not int or not 1<=r['slot']<=2047 or r['slot'] in seen or type(r.get('internal_id')) is not int or not re.fullmatch(r'[a-f0-9]{64}',r.get('identity_key','')) or r.get('rarity') not in PRICES or type(r.get('stock')) is not bool or type(r.get('version')) is not int or r['version']<1):raise ValueError('Invalid card setting')
@@ -15,7 +15,7 @@ def apply_overrides(cards,path):
     if state.get('schema_version')!=1 or state.get('kind')!='poc-cloud-card-settings':raise ValueError('Invalid card overlay')
     for row in validate_rows(state.get('rows')):
         c=cards.get(row['slot'])
-        if c and c['identity_key']==row['identity_key'] and c['internal_id']==row['internal_id']:
+        if c and row['identity_key'] in (c['identity_key'],*c.get('previous_identity_keys',[])) and c['internal_id']==row['internal_id']:
             c.update(rarity=row['rarity'],stock=row['stock'],draw_enabled=row.get('draw_enabled',True),sell_enabled=row['rarity']!='L',buy_price=PRICES[row['rarity']][0],sell_price=PRICES[row['rarity']][1],rarity_reason='도감에서 직접 저장한 등급')
     return cards
 def fetch_rows(config):

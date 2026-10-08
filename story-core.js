@@ -60,8 +60,15 @@ export function validateStory(doc,cards,decks){
   }
   return {issues,authoring_ready:!issues.length,engine_applied:false};
 }
-export async function reviewFiles(doc,meta,cards,decks){
+export function canonicalStory(doc,meta,cards){
   const clean=parseStory(doc);clean.catalog_dataset_id=meta.dataset_id;
+  const current=ref=>{const c=resolveRef(ref,cards);if(!c)fail('카드가 변경됐어. 현재 도감에서 다시 골라줘.');return cardRef(c);};
+  for(const a of clean.actors)for(const s of a.skills)if(s.card)s.card=current(s.card);
+  for(const b of clean.battles)for(const k of ['first','repeat'])for(const r of b.rewards[k])if(r.kind==='card')r.card=current(r.card);
+  return clean;
+}
+export async function reviewFiles(doc,meta,cards,decks){
+  const clean=canonicalStory(doc,meta,cards);
   const check=validateStory(clean,cards,decks);if(check.issues.length)fail(check.issues.join('\n'));
   const source=JSON.stringify(clean,null,2)+'\n';
   const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(source))),b=>b.toString(16).padStart(2,'0')).join('');
