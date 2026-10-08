@@ -211,6 +211,128 @@
           "identity_key": "6c194d1444ee4f9e7b2c4fa0cb3de200a1cc2186b108e8549f1207633f76cb18"
         }
       ]
+    },
+    {
+      "id": "20261009-staples",
+      "name": "기본 지원 카드 23장",
+      "added_at": "2026-10-09T08:36:10.153864+09:00",
+      "cards": [
+        {
+          "slot": 1154,
+          "internal_id": 1938,
+          "identity_key": "1dfd0d1fdf80d231ffca04839b9e8e5c601541aa2c47ddac92616bf4fea08dae"
+        },
+        {
+          "slot": 1155,
+          "internal_id": 1939,
+          "identity_key": "912cf13c207613b87e6a7afc37682e73795f77fe5341b285e7bce0137f7192bd"
+        },
+        {
+          "slot": 1156,
+          "internal_id": 1940,
+          "identity_key": "45d860d25b85638ceddfaeb743ab74b99d71467e48c4e8f1bc8ca3060872695f"
+        },
+        {
+          "slot": 1157,
+          "internal_id": 1941,
+          "identity_key": "bed88d3117e91d7548cd6db5ca4c27d1e642c04ee6479938eac2ba59f27dc5d8"
+        },
+        {
+          "slot": 1158,
+          "internal_id": 1942,
+          "identity_key": "2f3d9696714ab0240e21754af8c9eab7061ed8c10ea4abfa162660ba79508d03"
+        },
+        {
+          "slot": 1159,
+          "internal_id": 1943,
+          "identity_key": "c6ecd2fea13b049d8d969e3eeeee0ab17150bf4c3ccff896806dd9206383e539"
+        },
+        {
+          "slot": 1160,
+          "internal_id": 1944,
+          "identity_key": "3a1aba1642ddca25ba3c4076c14113cf56d13756cd1f1940974230767b6848ae"
+        },
+        {
+          "slot": 1161,
+          "internal_id": 1945,
+          "identity_key": "d2772250f78a9cb2bd6415635278e8498b7356339fa70fc44cff19d8091feb1c"
+        },
+        {
+          "slot": 1162,
+          "internal_id": 1946,
+          "identity_key": "fbb7bedc53740d491118336884be8c1349f614f88fc1799e428eff9ff57e8753"
+        },
+        {
+          "slot": 1163,
+          "internal_id": 1947,
+          "identity_key": "5349c07bb3874169f6339512131cedfe6f1738b0de781c72c986b3f1dad27839"
+        },
+        {
+          "slot": 1164,
+          "internal_id": 1948,
+          "identity_key": "90c257c09a13be5c08dde46feb5430c8094a96ccb3e70d8540d72d4661d99a67"
+        },
+        {
+          "slot": 1165,
+          "internal_id": 1949,
+          "identity_key": "59d2eeb4510631822483357e45dd52235c268a83ee173b8ec311bf9993209514"
+        },
+        {
+          "slot": 1166,
+          "internal_id": 1950,
+          "identity_key": "a007bca3e1f98bc0dbcd13c19091dba971722ad8a7221d64f011725c71e5c34a"
+        },
+        {
+          "slot": 1167,
+          "internal_id": 1951,
+          "identity_key": "8adb59c5972ccfe1646ae6ad96fe09872d2fd42c0865391d43032e633cc6e8e0"
+        },
+        {
+          "slot": 1168,
+          "internal_id": 1952,
+          "identity_key": "95d18603a0ca6ce675cac605d9c55144e80d889d2bcb79283471a33ed29464e3"
+        },
+        {
+          "slot": 1169,
+          "internal_id": 1953,
+          "identity_key": "0a9aff4e154654edbe7aee2ee5827aa90d0eaad8293694c3a17560baa00bdbe5"
+        },
+        {
+          "slot": 1170,
+          "internal_id": 1954,
+          "identity_key": "7f6ea51117f2d1f9acb474978a566e9ead6bdbe7d9af12a9c324896ce7214a6e"
+        },
+        {
+          "slot": 1171,
+          "internal_id": 1955,
+          "identity_key": "410f06ce4e398037c5f235484d60c8eae6ceda1ff0b961416212c87b83b60c5b"
+        },
+        {
+          "slot": 1172,
+          "internal_id": 1956,
+          "identity_key": "580dd284064c95b4aa16f4099e32bc1b479ce0ce0d1481763c3c1411c4fdb476"
+        },
+        {
+          "slot": 1173,
+          "internal_id": 1957,
+          "identity_key": "7f4a69749834c9d67bc83bf88ac1032074234f16b595401ae090a5b5a5532b93"
+        },
+        {
+          "slot": 1174,
+          "internal_id": 1958,
+          "identity_key": "8efd470271f99973d71b09b61ff5ffc846ef706cf31b08d7264f4564219e7835"
+        },
+        {
+          "slot": 1175,
+          "internal_id": 1959,
+          "identity_key": "d4050ab620226c6914918df362b7641732dc6eb6436e1a8de04b53d0b5802400"
+        },
+        {
+          "slot": 1176,
+          "internal_id": 1960,
+          "identity_key": "f3b58da3235b3c692c8559605e61ea018331bfb49e7648d399635cb9c7d323de"
+        }
+      ]
     }
   ]
 }
