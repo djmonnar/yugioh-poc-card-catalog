@@ -7,7 +7,7 @@ export function groupCards(cards, id, role = '') {
   return cards.filter(card => (card.card_groups || []).some(g => g.id === id && (!role || g.role === role)));
 }
 export function cardLink(slot) {
-  if (!Number.isInteger(slot) || slot < 1 || slot > 1115) throw new Error('Invalid card slot');
+  if (!Number.isInteger(slot) || slot < 1 || slot > 2047) throw new Error('Invalid card slot');
   return `#card-${slot}`;
 }
 export function groupHash(id) {
@@ -16,7 +16,10 @@ export function groupHash(id) {
 }
 export function parseCatalogHash(hash) {
   const card = /^#card-(\d+)$/.exec(hash);
-  if (card && Number(card[1]) >= 1 && Number(card[1]) <= 1115) return {card: Number(card[1])};
+  if (card && Number(card[1]) >= 1 && Number(card[1]) <= 2047) return {card: Number(card[1])};
+  if (hash === '#new-cards') return {newCards: true};
+  const release = /^#release-([a-z0-9][a-z0-9_-]*)$/.exec(hash);
+  if (release) return {release: release[1]};
   const group = /^#group-([a-z][a-z_0-9]*)$/.exec(hash);
   return group ? {group: group[1]} : null;
 }

@@ -7,10 +7,10 @@
   <meta name="theme-color" content="#162c38">
   <title>카드 도감 · Power of Chaos</title>
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=20261007-49">
+  <link rel="stylesheet" href="style.css?v=20261008-additions">
   <link rel="stylesheet" href="card-settings.css?v=20261006-14">
   <link rel="stylesheet" href="card-tags.css?v=20261007-47">
-  <script type="module" src="app.js?v=20261008-limits-labels"></script>
+  <script type="module" src="app.js?v=20261008-additions"></script>
 </head>
 <body>
   <header class="masthead">
@@ -21,10 +21,15 @@
     <section class="intro"><div><p class="eyebrow">THE COMPLETE CARD COLLECTION</p><h1>다음 카드풀을<br class="mobile-break"> 함께 골라보자.</h1><p class="intro-copy">전체 카드를 살펴보고, 등급 조정 · 교체 후보 · 제한 의견을 남겨줘.</p></div><div class="snapshot"><b id="total-count">…</b><span>전체 카드</span><small id="snapshot-date">카드 정보를 읽는 중</small></div></section>
     <div class="context-line"><span id="scope-count">현재 모드 기준</span><span>UR 300 · SR 200 · R 100 · N 50 골드</span><span>등급은 밸런스 검토용 초안</span></div>
     <section class="cloud-card-toolbar" aria-label="카드 등급과 상점 설정"><p id="card-cloud-status" role="status">온라인 카드 설정을 읽는 중…</p><a href="ai-decks.html#login">이메일 로그인</a><button id="refresh-card-settings" type="button">설정 새로 불러오기</button></section>
+    <section id="new-cards-banner" class="catalog-updates" aria-label="새로 추가된 카드">
+      <div><b>새로 추가된 카드</b><p id="new-cards-summary">추가 이력을 읽는 중…</p></div>
+      <button id="show-new-cards" type="button" disabled>새 카드 보기</button>
+    </section>
     <div class="workspace">
       <aside class="filters" aria-label="카드 필터">
         <div class="filter-top"><h2>카드 찾기</h2><button id="reset-filters" class="text-button">초기화</button></div>
         <label for="search">이름 · 효과 · 카드 번호</label><input id="search" type="search" placeholder="예: 백룡, 마력 카운터, 625" autocomplete="off">
+        <div class="field"><label for="release-filter">카드 추가 시기</label><select id="release-filter"><option value="">전체 카드</option></select></div>
         <div class="field"><span class="label">레어 등급</span><div id="rarity-filters" class="rarity-filters" role="group" aria-label="레어 등급 필터"></div></div>
         <details class="custom-category-tools" open><summary>내 카테고리 · 태그</summary><p class="muted">여러 태그를 선택하면 모두 포함한 카드를 찾아.</p><div id="custom-tag-filters" aria-label="카테고리 태그 필터"></div><label for="new-category-name">새 카테고리</label><input id="new-category-name" maxlength="40" placeholder="예: 공룡덱, 마력 카운터" disabled><button id="create-category" type="button" disabled>카테고리 만들기</button><p id="category-status" class="muted" role="status"></p></details>
         <section id="stat-filters" class="stat-filters" aria-label="공격력·수비력·레벨 조건"></section>
@@ -38,7 +43,7 @@
         <details class="help"><summary>등급 기준과 검토 방법</summary><p><b>UR</b> 강한 범용 카드·전체 제거·덱의 핵심<br><b>SR</b> 주요 딜러·제거·특화 지원<br><b>R</b> 실용적인 기본 카드·테마 카드<br><b>N</b> 단순하거나 사용이 까다로운 카드</p><p>현재 모드의 효과·능력치를 기준으로 매긴 임시 등급이야. 카드를 눌러 의견을 남기고, 상단에서 검토 파일을 내려받아 채팅에 보내줘.</p><p>의견은 이 브라우저에 자동 저장돼. 다른 기기에서는 JSON 파일로 이어서 볼 수 있어.</p></details>
       </aside>
       <section class="collection" aria-label="카드 목록">
-        <div class="collection-toolbar"><div class="tabs" role="group" aria-label="목록 선택"><button id="tab-all" class="active" aria-pressed="true">전체 도감</button><button id="tab-reviews" aria-pressed="false">내 검토 <span id="tab-review-count">0</span></button></div><select id="sort" aria-label="카드 정렬"><option value="rarity">레어 등급순</option><option value="name">이름순</option><option value="slot">카드 번호순</option><option value="attack">공격력 높은순</option><option value="level">레벨 높은순</option></select></div>
+        <div class="collection-toolbar"><div class="tabs" role="group" aria-label="목록 선택"><button id="tab-all" class="active" aria-pressed="true">전체 도감</button><button id="tab-reviews" aria-pressed="false">내 검토 <span id="tab-review-count">0</span></button></div><select id="sort" aria-label="카드 정렬"><option value="rarity">레어 등급순</option><option value="added">최근 추가순</option><option value="name">이름순</option><option value="slot">카드 번호순</option><option value="attack">공격력 높은순</option><option value="level">레벨 높은순</option></select></div>
         <div class="results-line"><p id="results" role="status">불러오는 중…</p><span id="active-summary"></span></div>
         <nav id="catalog-pages-top" class="pagination" aria-label="도감 위쪽 페이지 이동"></nav>
         <div id="cards" class="card-grid"></div>

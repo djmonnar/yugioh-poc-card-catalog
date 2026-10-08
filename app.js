@@ -1,6 +1,7 @@
 import {TIERS, STORAGE_KEY, changesFor, makeReview, exportPayload, parseImport, reviewCounts, reviewMarkdown} from './review-core.js?v=20261007-49';
 import {RESET_BACKUP_KEY, resetStoredReviews} from './review-storage.js?v=20261006-5';
-import {categoryMatches, groupCards, cardLink, groupHash, parseCatalogHash} from './card-groups.js?v=20261006-7';
+import {categoryMatches, groupCards, cardLink, groupHash, parseCatalogHash} from './card-groups.js?v=20261008-additions';
+import {additionIndex, additionMatches, compareAdded} from './card-additions.js?v=20261008-additions';
 import {renderPagination} from './pagination.js?v=20261006-8';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 import {validateCloudConfig,DeckCloud,cloudError} from './supabase-cloud.js?v=20261006-13';
@@ -13,6 +14,7 @@ const $ = id => document.getElementById(id);
 const PAGE_SIZE = 36;
 const fmt = n => n.toLocaleString('ko-KR');
 const collator = new Intl.Collator('ko');
+let additions = {byIdentity: new Map(), releases: [], latest: null};
 const narrowLayout = matchMedia('(max-width: 800px)');
 $('advanced-filters').open = !narrowLayout.matches;
 narrowLayout.addEventListener('change', event => { $('advanced-filters').open = !event.matches; });
@@ -125,6 +127,7 @@ function filteredCards() {
   const limit = $('limit-filter').value, status = $('status-filter').value, min = $('level-min').value, max = $('level-max').value;
   const statConditions = statFilters.values();
   return cards.filter(c => {
+    if (!additionMatches(c, $('release-filter').value, additions)) return false;
     if (view === 'reviews' && !reviews.has(c.identity_key)) return false;
     if (!tagUI.matches(c)) return false;
     if (!categoryMatches(c, $('mechanic-filter').value, $('group-filter').value)) return false;
@@ -140,6 +143,7 @@ function filteredCards() {
 function sortCards(rows) {
   const value = $('sort').value;
   rows.sort((a,b) => {
+    if (value === 'added') return compareAdded(a, b, additions);
     if (value === 'slot') return a.slot - b.slot;
     if (value === 'attack') return (b.atk ?? -1) - (a.atk ?? -1) || collator.compare(a.name_ko,b.name_ko);
     if (value === 'level') return (b.level ?? -1) - (a.level ?? -1) || (b.atk ?? -1) - (a.atk ?? -1) || collator.compare(a.name_ko,b.name_ko);
@@ -154,11 +158,17 @@ function renderCard(card) {
   b.setAttribute('aria-label', `${card.name_ko} · ${card.rarity} · ${limitName(card.deck_limit)} · 상세 및 검토`);
   const image = document.createElement('img'); image.src = card.image; image.alt = ''; image.width = 200; image.height = 290; image.loading = 'lazy'; image.decoding = 'async';
   b.append(image);
+  const addition = additions.byIdentity.get(card.identity_key);
+  if (addition?.id === additions.latest?.id) {
+    b.append(el('span', 'NEW', 'new-card-mark'));
+    b.setAttribute('aria-label', `NEW · ${addition.date} 추가 · ${b.getAttribute('aria-label')}`);
+  }
   if (reviews.has(card.identity_key)) b.append(el('span', '검토 작성', 'review-mark'));
   const metadata = el('div', null, 'card-meta'); metadata.append(labelTier(card.rarity), regularLimit(card)); b.append(metadata);
   const name = el('h3', card.name_ko);
   if (card.review_note) { const dot = el('span', '', 'attention-dot'); dot.title = '효과·이름 검토 대상'; name.append(dot); }
   b.append(name, el('span', kind(card), 'kind'), el('span', statText(card), 'stats'));
+  if (addition) b.append(el('span', `${addition.date} 추가`, 'card-added-date'));
   b.addEventListener('click', () => openCard(card.slot));
   return b;
 }
@@ -169,12 +179,26 @@ function render() {
   $('empty').hidden = results.length > 0;
   $('results').textContent = `${fmt(results.length)}장${view === 'reviews' ? '의 검토' : '의 카드'} · 전체 ${fmt(cards.length)}장`;
   $('active-summary').textContent = [rarity, $('type-filter').value, $('race-filter').value, ...statFilters.summary(), ...tagUI.summary(), $('mechanic-filter').selectedOptions[0]?.value ? $('mechanic-filter').selectedOptions[0].textContent : '', $('group-filter').selectedOptions[0]?.value ? $('group-filter').selectedOptions[0].textContent : ''].filter(Boolean).join(' · ');
+  if ($('release-filter').value) $('active-summary').textContent = [
+    $('release-filter').selectedOptions[0]?.textContent, $('active-summary').textContent].filter(Boolean).join(' · ');
+  $('show-new-cards').setAttribute('aria-pressed', String($('release-filter').value === 'latest'));
   for(const id of ['catalog-pages-top','catalog-pages-bottom'])renderPagination($(id),page,pages,goPage);
   $('tab-all').classList.toggle('active', view === 'all'); $('tab-reviews').classList.toggle('active', view === 'reviews');
   $('tab-all').setAttribute('aria-pressed', String(view === 'all')); $('tab-reviews').setAttribute('aria-pressed', String(view === 'reviews'));
   updateCounts();
 }
 function goPage(next) {page=next;render();$('results').scrollIntoView({block:'start'});}
+function releaseHash() {
+  const value = $('release-filter').value;
+  return value === 'latest' ? '#new-cards' : value ? `#release-${value}` : '';
+}
+function showNewCards(release = 'latest') {
+  if (!additions.latest || (release !== 'latest' && !additions.releases.some(r => r.id === release && r.count))) return;
+  if ($('card-dialog').open) closeCard();
+  view = 'all'; resetFilters(); $('release-filter').value = release; $('sort').value = 'added'; render();
+  history.replaceState(null, '', releaseHash());
+  $('new-cards-banner').scrollIntoView({block:'start'});
+}
 function selectControl(id, label, values, chosen, disabled = false) {
   const box = el('div'); const title = el('label', label); title.htmlFor = id;
   const control = el('select'); control.id = id; control.disabled = disabled;
@@ -237,6 +261,13 @@ function openCard(slot, updateHash = true) {
   art.append(el('p', '그림에 인쇄된 내용보다 오른쪽의 현재 모드 설명을 기준으로 의견을 남겨줘.'));
   const info = el('div', null, 'detail-info'); const top = el('div'); top.append(labelTier(card.rarity), document.createTextNode(' '), regularLimit(card));
   const title = el('h2', card.name_ko); title.id = 'detail-title'; info.append(top, title, el('p', card.name_en, 'english-name'));
+  const addition = additions.byIdentity.get(card.identity_key);
+  if (addition) {
+    const note = el('div', null, 'addition-note');
+    note.append(el('b', `${addition.id === additions.latest?.id ? 'NEW · ' : ''}${addition.date} 추가`), el('p', addition.name));
+    const batch = el('button', '같이 추가된 카드 보기', 'text-button'); batch.type = 'button';
+    batch.addEventListener('click', () => showNewCards(addition.id)); note.append(batch); info.append(note);
+  }
   const tags = el('div', null, 'detail-tags'); for (const t of [card.type, card.subtype, card.race, card.attribute, card.level == null ? '' : `LV ${card.level}`, card.atk == null ? '' : `ATK ${card.atk} / DEF ${card.def}`].filter(Boolean)) tags.append(el('span',t)); info.append(tags);
   info.append(el('p', '현재 모드 설명', 'description-title'), el('div', card.description_ko || '별도의 카드 설명이 없는 토큰·특수 카드야.', 'description'));
   renderRelations(card, info);
@@ -287,7 +318,7 @@ function openCard(slot, updateHash = true) {
   if (!$('card-dialog').open) $('card-dialog').showModal();
   $('card-dialog').scrollTop = 0;
 }
-function closeCard() { $('card-dialog').close(); selected=null; history.replaceState(null,'',location.pathname+location.search); }
+function closeCard() { $('card-dialog').close(); selected=null; history.replaceState(null,'',location.pathname+location.search+releaseHash()); }
 function download(name, body, type) {
   const url=URL.createObjectURL(new Blob([body],{type})); const a=el('a'); a.href=url; a.download=name; document.body.append(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(url),20000);
 }
@@ -302,7 +333,9 @@ function openExport() {
   if (!$('export-dialog').open) $('export-dialog').showModal();
 }
 function resetFilters() {
-  for(const id of ['search','type-filter','limit-filter','race-filter','attribute-filter','level-min','level-max','status-filter','mechanic-filter','group-filter']) $(id).value='';
+  for(const id of ['search','type-filter','limit-filter','race-filter','attribute-filter','level-min','level-max','status-filter','mechanic-filter','group-filter','release-filter']) $(id).value='';
+  const destination = parseCatalogHash(location.hash);
+  if (destination?.newCards || destination?.release) history.replaceState(null, '', location.pathname+location.search);
   statFilters.reset();
   tagUI.reset();
   rarity='';page=1;rarityButtons();render();
@@ -312,6 +345,21 @@ async function init() {
     const response=await fetch('./data/cards.json?v=20261006-7',{cache:'no-cache'});if(!response.ok)throw new Error('카드 자료를 가져오지 못했어.');
     const data=await response.json();meta=data.meta;cards=data.cards;
     if(cards.length!==meta.total||new Set(cards.map(c=>c.identity_key)).size!==cards.length)throw new Error('카드 자료를 확인할 수 없어.');
+    try {
+      const response = await fetch('./data/card-additions.json?v=20261008', {cache:'no-cache'});
+      if (!response.ok) throw new Error('추가 이력 없음');
+      additions = additionIndex(cards, await response.json());
+      if (additions.latest) {
+        $('new-cards-summary').textContent = `${additions.latest.date} · ${additions.latest.name} · ${additions.latest.count}장`;
+        $('show-new-cards').textContent = `새 카드 ${additions.latest.count}장 보기`; $('show-new-cards').disabled = false;
+        const latest = el('option', `최근 추가 · ${additions.latest.count}장`); latest.value = 'latest'; $('release-filter').append(latest);
+        for (const release of additions.releases.filter(r => r.count)) {
+          const option = el('option', `${release.date} · ${release.name} · ${release.count}장`); option.value = release.id; $('release-filter').append(option);
+        }
+      } else $('new-cards-summary').textContent = '아직 기록된 신규 카드가 없어.';
+    } catch {
+      $('new-cards-summary').textContent = '추가 이력을 불러오지 못했어. 새로고침해줘.';
+    }
     for(const c of cards)c.searchText=[c.name_ko,c.name_en,c.description_ko,c.race,c.attribute,...(c.mechanics||[]).map(m=>m.name),...(c.card_groups||[]).map(g=>g.name),String(c.slot),String(c.internal_id)].join(' ').normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,'');
     for(const [id,rows] of [['mechanic-filter',meta.card_system?.mechanics||[]],['group-filter',meta.card_system?.groups||[]]])
       for(const row of rows){const option=el('option',row.name);option.value=row.id;$(id).append(option);}
@@ -321,8 +369,9 @@ async function init() {
     try {const stored=localStorage.getItem(STORAGE_KEY);if(stored){const parsed=parseImport(JSON.parse(stored),cards);reviews=new Map(parsed.valid.map(r=>[r.identity_key,r]));unmatched=parsed.unmatched;if(unmatched.length)toast(`카드가 바뀐 이전 의견 ${unmatched.length}건을 따로 보관했어.`);}backup=localStorage.getItem(STORAGE_KEY+'-before-import');}
     catch{toast('이전 의견을 읽지 못했어. 기존 저장 내용은 그대로 두었어.');}
     try { resetBackup = localStorage.getItem(RESET_BACKUP_KEY); } catch {}
-    rarityButtons();render();await initCardSettings();
-    const destination=parseCatalogHash(location.hash);if(destination?.card)openCard(destination.card,false);else if(destination?.group)showGroup(destination.group);
+    rarityButtons();render();
+    const destination=parseCatalogHash(location.hash);if(destination?.card)openCard(destination.card,false);else if(destination?.group)showGroup(destination.group);else if(destination?.newCards||destination?.release)showNewCards(destination.release);
+    await initCardSettings();
   }catch(error){$('results').textContent=error.message;$('cards').replaceChildren(el('p','새로고침해 보거나 GitHub 저장소의 data/cards.csv를 확인해줘.','muted'));}
 }
 
@@ -331,8 +380,10 @@ $('create-category').addEventListener('click',async()=>{const button=$('create-c
 $('refresh-card-settings').addEventListener('click',async()=>{try{await refreshCardSettings();toast('온라인 카드 설정을 다시 불러왔어.');}catch(error){toast(cloudError(error));}});
 for(const id of ['type-filter','limit-filter','race-filter','attribute-filter','level-min','level-max','status-filter','mechanic-filter','group-filter','sort'])$(id).addEventListener('change',()=>{page=1;render();});
 $('reset-filters').addEventListener('click',resetFilters);
+$('show-new-cards').addEventListener('click',()=>showNewCards());
+$('release-filter').addEventListener('change',()=>{page=1;render();history.replaceState(null,'',location.pathname+location.search+releaseHash());});
 $('tab-all').addEventListener('click',()=>{view='all';page=1;render();});$('tab-reviews').addEventListener('click',()=>{view='reviews';resetFilters();});
-$('close-detail').addEventListener('click',closeCard);$('card-dialog').addEventListener('cancel',()=>{selected=null;history.replaceState(null,'',location.pathname+location.search);});
+$('close-detail').addEventListener('click',closeCard);$('card-dialog').addEventListener('cancel',()=>{selected=null;history.replaceState(null,'',location.pathname+location.search+releaseHash());});
 $('card-dialog').addEventListener('click',e=>{if(e.target===$('card-dialog')){const rect=$('card-dialog').getBoundingClientRect();if(e.clientX<rect.left||e.clientX>rect.right||e.clientY<rect.top||e.clientY>rect.bottom)closeCard();}});
 $('export-open').addEventListener('click',()=>{if(meta)openExport();});$('close-export').addEventListener('click',()=>$('export-dialog').close());
 $('download-json').addEventListener('click',()=>download(`카드검토_${new Date().toISOString().slice(0,10)}.json`,JSON.stringify(currentPayload(),null,2)+'\n','application/json;charset=utf-8'));
@@ -381,5 +432,5 @@ $('undo-reset').addEventListener('click',()=>{
     reviews=merged;unmatched=[...old.values()];render();if(selected)openCard(selected.slot);openExport();toast('초기화 전 의견을 복원했어. 새로 작성한 의견도 유지했어.');
   } catch {toast('복원에 실패했어. 초기화 전 백업 JSON을 내려받아 보관해줘.');}
 });
-window.addEventListener('hashchange',()=>{const destination=parseCatalogHash(location.hash);if(destination?.card)openCard(destination.card,false);else if(destination?.group)showGroup(destination.group);});
+window.addEventListener('hashchange',()=>{const destination=parseCatalogHash(location.hash);if(destination?.card)openCard(destination.card,false);else if(destination?.group)showGroup(destination.group);else if(destination?.newCards||destination?.release)showNewCards(destination.release);});
 init();

@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "releases": [
+    {
+      "id": "20261008-expansion",
+      "name": "공룡·마도서·테마 지원 카드",
+      "added_at": "2026-10-08T09:46:31+09:00",
+      "cards": [
+        {
+          "slot": 1116,
+          "internal_id": 1991,
+          "identity_key": "99671c3ee186622841d591fb906bf0e5173c6b861861184cd6b9204831f5e55e"
+        },
+        {
+          "slot": 1117,
+          "internal_id": 1992,
+          "identity_key": "412b07e4bf913effbac7320d2f4f386dad3de45eaffcfe521537145be9535323"
+        },
+        {
+          "slot": 1118,
+          "internal_id": 1993,
+          "identity_key": "b1d844d40d803bd9a5bc5ab462ff1f88fd2b0c0223deb50ef692b2f1ee026168"
+        },
+        {
+          "slot": 1119,
+          "internal_id": 1994,
+          "identity_key": "590ebbfd869bc3fd0b77820167c95ac7e84aca64e1c8602339630cbabf8311d1"
+        },
+        {
+          "slot": 1120,
+          "internal_id": 1995,
+          "identity_key": "40fe19da25a33221e6e411461336045daf621428298e8c68e20308e96419e5fc"
+        },
+        {
+          "slot": 1121,
+          "internal_id": 1996,
+          "identity_key": "1dbce5cc81e936a9721f3efd57f13c3f73157dd1878eff8d75c06f633a2e37a8"
+        },
+        {
+          "slot": 1122,
+          "internal_id": 1997,
+          "identity_key": "45eab39ec65aeec9dcac963d5792275e6a7dea9fd4bec26704f8a109e1a17d94"
+        },
+        {
+          "slot": 1123,
+          "internal_id": 1998,
+          "identity_key": "29ab88756ffd4a4c0e6f2913b6d9511139f200d9fe245bfe48789a899befe76f"
+        },
+        {
+          "slot": 1124,
+          "internal_id": 1981,
+          "identity_key": "3c6568f0a1abb5ce3c499a9d96861f20a08eb8c024a97295e71ba4e12d5614f0"
+        },
+        {
+          "slot": 1125,
+          "internal_id": 1982,
+          "identity_key": "520e8f4df3cd3373a49129bc8f1db9578f9994a379a2353936600f3b59052f2b"
+        },
+        {
+          "slot": 1126,
+          "internal_id": 1983,
+          "identity_key": "03dbf53add567d57ebff85c6b76f1ae329a0f6f279836b06a6d29f815f01632a"
+        },
+        {
+          "slot": 1127,
+          "internal_id": 1984,
+          "identity_key": "3f200f8a0c7eabfc472f13b23f4318e4b62e0db2a02f3170e58b4eb3794c4c60"
+        },
+        {
+          "slot": 1128,
+          "internal_id": 1985,
+          "identity_key": "1a0521301c49056d22a41a8cab3179e044439f9ffa85a41121eb6a866bd62292"
+        },
+        {
+          "slot": 1129,
+          "internal_id": 1986,
+          "identity_key": "14731e34f0fd21f670680848e9d5a1a95d715191d55ff333db1f42ff905d025d"
+        },
+        {
+          "slot": 1130,
+          "internal_id": 1987,
+          "identity_key": "eb56bda135722818f0033a4d349f3dfefbcefab6b0812888dd729d8fb0798f6a"
+        },
+        {
+          "slot": 1131,
+          "internal_id": 1988,
+          "identity_key": "e270f74645a847d3114a2a76144ad2c6d1dea641121a2269e1d40cb428d70233"
+        },
+        {
+          "slot": 1132,
+          "internal_id": 1989,
+          "identity_key": "2f457513c48e2ee0e034ae7e508d84ec54b1f58c5d36a1ba1c495de7031eb4af"
+        },
+        {
+          "slot": 1133,
+          "internal_id": 1990,
+          "identity_key": "3853f067a84dd61b64a0028e9eccc0f2cb9f8013dbc600bb0cd4b61485e5ebf4"
+        },
+        {
+          "slot": 1134,
+          "internal_id": 1971,
+          "identity_key": "f3f27c7e51578a2a9ba9a8a9963f554467a27c8d8e42470d49b7a5109cf832c7"
+        },
+        {
+          "slot": 1135,
+          "internal_id": 1972,
+          "identity_key": "213154da06d5229af4a68a0d57c221c31f67ca7b48ba86ea70761b89f57ae67d"
+        },
+        {
+          "slot": 1136,
+          "internal_id": 1973,
+          "identity_key": "1606189c59fad766b10bbffded84651244251ff913ebbe39c20604ed2bc2dc70"
+        }
+      ]
+    }
+  ]
+}
