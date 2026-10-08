@@ -92,19 +92,23 @@ test('tokens have no deck limit proposals', () => {
   assert.throws(()=>changesFor(token,{proposed_limit:1}));
 });
 test('public catalog is complete, each preview exists and personal paths are absent', () => {
-  assert.equal(catalog.cards.length,1136);
-  assert.equal(catalog.cards.filter(c=>!c.special).length,1131);
+  assert.equal(catalog.cards.length,1143);
+  assert.equal(catalog.cards.filter(c=>!c.special).length,1138);
   assert.equal(catalog.cards.filter(c=>c.special).length,5);
-  assert.equal(new Set(catalog.cards.map(c=>c.identity_key)).size,1136);
+  assert.equal(new Set(catalog.cards.map(c=>c.identity_key)).size,1143);
   assert.equal(catalog.cards.filter(c=>c.stock).length,catalog.meta.stock_count);
   assert.ok(catalog.meta.stock_count>=60);
   for(const [slot,limit] of [[278,2],[369,1],[554,0],[601,1],[741,1]]){
     const c=catalog.cards.find(c=>c.slot===slot);assert.equal(c.deck_limit,limit);assert.equal(c.deck_limit_without_banlist,limit);
   }
   assert.equal(catalog.cards.find(c=>c.slot===1115).name_en,'Megalosmasher X');
-  for(let slot=1116;slot<=1136;slot++){
+  for(let slot=1116;slot<=1143;slot++){
     const c=catalog.cards.find(c=>c.slot===slot);assert.ok(c&&!c.special&&c.official_cid);
     assert.equal(c.review_kind,'restored');
+  }
+  for(const [slot,id,name] of [[1137,1974,'Plaguespreader Zombie'],[1138,1975,'Gozuki'],[1139,1976,'Vampire Lord'],[1140,1977,'Book of Life'],[1141,1978,'Goblin Zombie'],[1142,1979,'Call of the Mummy'],[1143,1980,'Pumprincess the Princess of Ghosts']]){
+    const c=catalog.cards.find(c=>c.slot===slot);assert.equal(c.internal_id,id);assert.equal(c.name_en,name);
+    assert.match(c.review_note,/188b/);
   }
   for(const c of catalog.cards){assert.ok(existsSync(new URL('../'+c.image,import.meta.url)));assert.ok(['UR','SR','R','N'].includes(c.rarity));}
   const publicText=JSON.stringify(catalog);

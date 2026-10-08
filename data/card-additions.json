@@ -112,6 +112,48 @@
           "identity_key": "1606189c59fad766b10bbffded84651244251ff913ebbe39c20604ed2bc2dc70"
         }
       ]
+    },
+    {
+      "id": "20261009-bonz",
+      "name": "해골수스 지원 카드",
+      "added_at": "2026-10-09T01:11:01.239154+09:00",
+      "cards": [
+        {
+          "slot": 1137,
+          "internal_id": 1974,
+          "identity_key": "1ac54eeda1823f0e2b4a8b9e1a9cb0beb006b836805538ae56586d5cc9c3a986"
+        },
+        {
+          "slot": 1138,
+          "internal_id": 1975,
+          "identity_key": "6cb500df0ca7264d464f668edfbab3f006d3278fe3b7ef9c5efeb83e6f6b09e5"
+        },
+        {
+          "slot": 1139,
+          "internal_id": 1976,
+          "identity_key": "03a20d640181f88c02b06b03dcacf08bef18ca9b8198e2124d050b2f8c51bd72"
+        },
+        {
+          "slot": 1140,
+          "internal_id": 1977,
+          "identity_key": "ab46d64d448b0c8211557fb6747062799954baea63eef898b4ac4973481de4fd"
+        },
+        {
+          "slot": 1141,
+          "internal_id": 1978,
+          "identity_key": "b81ade9072c67c200f791300d52f035b939f0092a4691de7200156fa2fa05a24"
+        },
+        {
+          "slot": 1142,
+          "internal_id": 1979,
+          "identity_key": "1fb1d0436c0264d0b1932c1a3ad9b4d51d08c9bc7923e77f63ff136d100685e0"
+        },
+        {
+          "slot": 1143,
+          "internal_id": 1980,
+          "identity_key": "45a513c1b1ffd4171b1ef905366b94a2812c4babc9fa91684d70848878e96663"
+        }
+      ]
     }
   ]
 }
