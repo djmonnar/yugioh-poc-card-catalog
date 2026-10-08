@@ -154,6 +154,63 @@
           "identity_key": "45a513c1b1ffd4171b1ef905366b94a2812c4babc9fa91684d70848878e96663"
         }
       ]
+    },
+    {
+      "id": "20261009-red-eyes",
+      "name": "붉은 눈 지원 카드",
+      "added_at": "2026-10-09T03:05:52.893550+09:00",
+      "cards": [
+        {
+          "slot": 1144,
+          "internal_id": 1961,
+          "identity_key": "6f0407c61e1df4385486b2d994e9bc339ef0fa8b2ec6a1415b426e4fd5fbb4ad"
+        },
+        {
+          "slot": 1145,
+          "internal_id": 1962,
+          "identity_key": "f33134167c74a8c4cb6a521f4e41cb51e2089b9e1c43014c21ed0ab3ef59c55b"
+        },
+        {
+          "slot": 1146,
+          "internal_id": 1963,
+          "identity_key": "1e45fe3dc91f290e363273a33c54acb539d4f7a7c8ff2eb5b9cb63bdef0a4e03"
+        },
+        {
+          "slot": 1147,
+          "internal_id": 1964,
+          "identity_key": "fe2b38b4f4bcd724274c1d8f8c1b09cee26e197d2b2b2eb5422bb7153505ad6f"
+        },
+        {
+          "slot": 1148,
+          "internal_id": 1965,
+          "identity_key": "33cc22a983e08c6f5a9b6c2d25dc4a64b707e4de12052e1d29f4408c1aaaee1e"
+        },
+        {
+          "slot": 1149,
+          "internal_id": 1966,
+          "identity_key": "663c53641dd92b60cd43ebbc2ae4fdb609853e74d2a52558a9bc03aeead79dd8"
+        },
+        {
+          "slot": 1150,
+          "internal_id": 1967,
+          "identity_key": "185cdc87e8f2a4d63f7820cd314d9d96c41fbe7032edd38c95f77f444482d067"
+        },
+        {
+          "slot": 1151,
+          "internal_id": 1968,
+          "identity_key": "9f4f025b62389da4fe96b712a67e804d97d36837341867b6c6e9840adf8b007f"
+        },
+        {
+          "slot": 1152,
+          "internal_id": 1969,
+          "identity_key": "794e27f39c93feb0eda5028ccd9246eaf700f43f43e88138e48a5fbe68501605"
+        },
+        {
+          "slot": 1153,
+          "internal_id": 1970,
+          "identity_key": "6c194d1444ee4f9e7b2c4fa0cb3de200a1cc2186b108e8549f1207633f76cb18"
+        }
+      ]
     }
   ]
 }

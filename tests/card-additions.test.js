@@ -13,8 +13,10 @@ const makeHistory = (...releases) => ({schema_version:1, releases});
 test('published latest addition batch matches actual cards without changing gameplay data', () => {
   const before = JSON.stringify(data), index = additionIndex(data.cards, history);
   const latest = history.releases.find(r => r.id === index.latest.id);
-  assert.equal(latest.id, '20261009-bonz');
-  assert.equal(latest.cards.length, 7);
+  assert.equal(latest.id, '20261009-red-eyes');
+  assert.equal(latest.cards.length, 10);
+  assert.deepEqual(latest.cards.map(c => [c.slot, c.internal_id]),
+    Array.from({length:10}, (_, i) => [1144+i, 1961+i]));
   assert.equal(index.latest.count, latest.cards.length);
   assert.ok(index.latest.count > 0);
   assert.equal(data.cards.filter(c => additionMatches(c, 'latest', index)).length, latest.cards.length);
