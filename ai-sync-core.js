@@ -1,5 +1,5 @@
 import {GROUPS,RULESETS,parseBundle,validateDeck,cardLine} from './ai-deck-core.js?v=20261007-49';
-import {cloudRows} from './supabase-cloud.js?v=20261006-13';
+import {cloudRows} from './supabase-cloud.js?v=20261008-70';
 
 export const SYNC_REPO='djmonnar/yugioh-poc-card-catalog';
 export const SYNC_URL=`https://api.github.com/repos/${SYNC_REPO}/contents/sync.json?ref=ai-sync-data`;

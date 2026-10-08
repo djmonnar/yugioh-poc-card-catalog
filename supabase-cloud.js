@@ -4,7 +4,7 @@ export function validateCloudConfig(config){
   return config;
 }
 export function cloudRows(value){
-  if(!Array.isArray(value)||value.length>42)throw new Error('온라인 덱 자료를 확인할 수 없어.');
+  if(!Array.isArray(value)||value.length>142)throw new Error('온라인 덱 자료를 확인할 수 없어.');
   const seen=new Set();
   for(const row of value){
     if(!row||typeof row.filename!=='string'||!Number.isSafeInteger(row.version)||row.version<1||row.packet?.target?.filename!==row.filename||row.packet.kind!=='poc-ai-deck-sync'||seen.has(row.filename))throw new Error('온라인 덱 버전을 확인할 수 없어.');
@@ -14,6 +14,7 @@ export function cloudRows(value){
 }
 export function cloudError(error){
   const msg=error?.message||'';
+  if(msg.includes('poc_ai_asset_limit'))return '새 AI 덱은 100개까지 온라인 저장할 수 있어.';
   if(msg.includes('poc_story_scenario_limit'))return '시나리오는 20개까지 온라인 저장할 수 있어.';
   if(msg.includes('poc_story_battle_limit'))return '온라인 시나리오 전체 전투는 합쳐서 100개까지야.';
   if(msg.includes('poc_conflict'))return '다른 기기에서 이 덱을 수정했어. 온라인 덱을 불러온 뒤 변경 내용을 비교하고 다시 저장해줘.';
@@ -34,4 +35,8 @@ export class DeckCloud{
     this.rows=[...(this.rows||[]).filter(r=>r.filename!==row.filename),row];return row;
   }
   async editor(){const {data,error}=await this.client.rpc('poc_editor_status');if(error)throw error;return data===true;}
+  async create(packet,requestId){
+    const {data,error}=await this.client.rpc('poc_create_ai_deck',{p_packet:packet,p_request_id:requestId});if(error)throw error;
+    const row=cloudRows([data])[0];this.rows=[...(this.rows||[]).filter(r=>r.filename!==row.filename),row];return row;
+  }
 }

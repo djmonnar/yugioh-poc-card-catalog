@@ -13,7 +13,7 @@ def validate_config(config):
     return config
 
 def adapt_rows(rows):
-    if not isinstance(rows,list) or len(rows)>42: raise ValueError('Invalid Supabase state')
+    if not isinstance(rows,list) or len(rows)>142: raise ValueError('Invalid Supabase state')
     entries={}
     for row in rows:
         name,version,packet=row.get('filename'),row.get('version'),row.get('packet')

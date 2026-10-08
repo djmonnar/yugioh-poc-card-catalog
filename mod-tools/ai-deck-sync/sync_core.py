@@ -22,6 +22,17 @@ OWNER = 'djmonnar'
 SYNC_URL = f'https://api.github.com/repos/{REPO}/contents/sync.json?ref=ai-sync-data'
 MARKER = '<!-- POC-AI-SYNC:v1 -->'
 GROUPS = ('main', 'extra', 'side')
+ASSET_SEED = bytes.fromhex('01fc1200eb82eb3f')+bytes(6)
+
+def asset_name(name):
+    return isinstance(name,str) and re.fullmatch(r'(cpu|DLR)_1\d{2}\.ydc',name) is not None
+
+def asset_target(target, ruleset):
+    return (isinstance(target,dict) and set(target)=={'filename','sha256','difficulty_levels'}
+            and asset_name(target['filename']) and target['filename'].startswith('cpu_' if ruleset=='classic' else 'DLR_')
+            and target['sha256']==sha(ASSET_SEED) and isinstance(target['difficulty_levels'],list)
+            and len(target['difficulty_levels'])==1 and type(target['difficulty_levels'][0]) is int
+            and 1<=target['difficulty_levels'][0]<=7)
 
 class SyncError(ValueError):
     pass
@@ -76,7 +87,10 @@ def validate_packet(packet, catalog, opponents):
     target = packet.get('target', {})
     require(isinstance(target, dict), 'Invalid target')
     original = next((d for d in opponents['decks'] if d['source_recipe']['filename'] == target.get('filename')), None)
-    require(original is not None and target == original['source_recipe'], 'Target differs from audited opponent recipe')
+    if original is None:
+        require(asset_target(target,packet.get('deck',{}).get('ruleset')), 'Unknown custom AI asset')
+        original={'source_recipe':target,'ruleset':'classic' if target['filename'].startswith('cpu_') else 'duel_links_plan'}
+    require(target == original['source_recipe'], 'Target differs from audited opponent recipe')
     deck = packet.get('deck', {})
     require(isinstance(deck, dict) and deck.get('ruleset') == original['ruleset'], 'Duel mode differs from target')
     require(type(deck.get('banlist_enabled')) is bool and type(deck.get('difficulty')) is int and 1 <= deck['difficulty'] <= 7, 'Invalid deck policy')
@@ -149,7 +163,7 @@ def fetch_state():
         data = response.read(2*1024*1024+1)
     require(len(data) <= 2*1024*1024,'Remote state too large')
     value = json.loads(data)
-    require(value.get('schema_version') == 1 and value.get('kind') == 'poc-ai-sync-state' and isinstance(value.get('entries'),dict) and len(value['entries']) <= 42,'Invalid online state')
+    require(value.get('schema_version') == 1 and value.get('kind') == 'poc-ai-sync-state' and isinstance(value.get('entries'),dict) and len(value['entries']) <= 142,'Invalid online state')
     return value
 
 class NativeSync:
@@ -182,7 +196,7 @@ class NativeSync:
         allowed = {d['source_recipe']['filename'] for d in self.opponents['decks']}
         paths = {'manifest':self.manifest,'state':self.state_path}
         for name in names:
-            require(name in allowed and re.fullmatch(r'(cpu|DLR)_\d{3}\.ydc',name), 'Unauthorized recipe path')
+            require((name in allowed or asset_name(name)) and re.fullmatch(r'(cpu|DLR)_\d{3}\.ydc',name), 'Unauthorized recipe path')
             relative = pathlib.Path('Mege/y/file')/name
             for label,root in (('game',self.game),('stage',self.stage)):
                 path = root/relative
@@ -202,7 +216,7 @@ class NativeSync:
             actual = sha(path.read_bytes()) if path.exists() else None
             require(actual in (row['before'],row['after']),'Local change conflicts with interrupted AI sync')
             if row['after'] is None:
-                require(key.startswith('stage:cpu_') and row['blob'] is None,'Invalid journal deletion')
+                require((key.startswith('stage:cpu_') or key.startswith(('stage:','game:')) and asset_name(key.split(':',1)[1])) and row['blob'] is None,'Invalid journal deletion')
             else:require(sha(base64.b64decode(row['blob'],validate=True)) == row['after'],'Invalid journal content')
         for key,row in value['writes'].items():
             self.guard()
@@ -216,7 +230,7 @@ class NativeSync:
     def apply(self, remote):
         self.guard()
         recovered = self.recover()
-        require(remote.get('schema_version') == 1 and remote.get('kind') == 'poc-ai-sync-state' and isinstance(remote.get('entries'),dict) and len(remote['entries']) <= 42,'Invalid online state')
+        require(remote.get('schema_version') == 1 and remote.get('kind') == 'poc-ai-sync-state' and isinstance(remote.get('entries'),dict) and len(remote['entries']) <= 142,'Invalid online state')
         state = load(self.state_path) if self.state_path.exists() else {'schema':1,'targets':{}}
         require(state.get('schema') == 1 and isinstance(state.get('targets'),dict),'Invalid local state')
         manifest = load(self.manifest)
@@ -232,11 +246,14 @@ class NativeSync:
                 require(isinstance(entry.get('issue_updated_at'),str) and re.fullmatch(r'\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ',entry['issue_updated_at']),'Invalid remote timestamp')
                 previous = state['targets'].get(name,{})
                 paths = self.paths([name])
-                current = paths['game:'+name].read_bytes()
+                created=asset_name(name) and not previous
+                if created:
+                    require(not paths['game:'+name].exists() and not paths['stage:'+name].exists(),'Custom AI asset collides with an existing file')
+                current = ASSET_SEED if created else paths['game:'+name].read_bytes()
                 staged = paths['stage:'+name]
-                require((staged.exists() and staged.read_bytes() == current) or (not staged.exists() and name.startswith('cpu_') and not previous),'Game and stage recipe differ')
+                require(created or (staged.exists() and staged.read_bytes() == current) or (not staged.exists() and name.startswith('cpu_') and not previous),'Game and stage recipe differ')
                 relative = 'Mege/y/file/'+name
-                require((relative in rows and rows[relative]['patched_sha256'] == sha(current)) or (relative not in rows and name.startswith('cpu_') and not previous),'Recipe differs from applied manifest')
+                require((relative in rows and rows[relative]['patched_sha256'] == sha(current)) or (relative not in rows and (created or name.startswith('cpu_') and not previous)),'Recipe differs from applied manifest')
                 require(sha(current) == previous.get('after_sha256',packet['target']['sha256']),'Recipe changed since audited source')
                 decode_recipe(current)
                 for group in GROUPS:
@@ -247,10 +264,11 @@ class NativeSync:
                 require(decode_recipe(after) == groups,'Native encoding mismatch')
                 for label in ('game','stage'):writes[label+':'+name] = after
                 if relative not in rows:
-                    rows[relative] = {'path':relative,'original_sha256':sha(current),'pilot_sha256':sha(current)}
+                    rows[relative] = {'path':relative,'original_sha256':None if created else sha(current),'pilot_sha256':None if created else sha(current)}
                     manifest['files'].append(rows[relative])
                 rows[relative].update(patched_sha256=sha(after),size=len(after))
                 state['targets'][name] = {k:entry[k] for k in ('issue_number','revision','issue_updated_at')}|{'after_sha256':sha(after),'base_sha256':packet['target']['sha256'],'name':packet['deck']['name'],'strategy':packet['deck']['strategy']}
+                if asset_name(name):state['targets'][name].update(source_recipe=packet['target'],ruleset=packet['deck']['ruleset'],created=True)
                 updates.append(name)
             except (KeyError,TypeError,ValueError,OSError) as exc:
                 rejected.append({'filename':name,'reason':str(exc)})
@@ -284,7 +302,7 @@ class NativeSync:
             actual = sha(paths[key].read_bytes()) if paths[key].exists() else None
             require(actual == row['after'],'Files changed after this AI sync; restore stopped')
             if row['before'] is None:
-                require(key == 'state' or key.startswith('stage:cpu_'),'Unexpected missing original')
+                require(key == 'state' or key.startswith('stage:cpu_') or key.startswith(('game:','stage:')) and asset_name(key.split(':',1)[1]),'Unexpected missing original')
                 blob = json_bytes({'schema':1,'targets':{}}) if key == 'state' else None
             else:
                 blob = (backup/(key.replace(':','_')+'.bak')).read_bytes()

@@ -20,6 +20,26 @@ OPPONENTS=load(ROOT/'data/ai-opponents.json')
 FIXTURE=load(PATCH/'reports/ai_sync_fixture.json')
 
 class SyncTests(unittest.TestCase):
+    def custom_remote(self):
+        packet=copy.deepcopy(self.packet);packet['target']={'filename':'cpu_100.ydc','sha256':sha(sync_core.ASSET_SEED),'difficulty_levels':[3]}
+        entry={**self.entry,'packet':packet,'revision':packet_revision(packet)}
+        return {**self.remote,'entries':{'cpu_100.ydc':entry}}
+    def test_custom_asset_creates_separate_file_and_restores_absence(self):
+        remote=self.custom_remote();result=self.native.apply(remote);self.assertEqual(result['status'],'applied')
+        file=self.game/'Mege/y/file/cpu_100.ydc';self.assertEqual(file.read_bytes()[:8],self.original[:8])
+        self.assertEqual(len(sync_core.decode_recipe(file.read_bytes())[0]),40)
+        self.assertEqual((self.game/'Mege/y/file'/self.name).read_bytes(),self.original)
+        self.assertEqual(self.native.apply(remote)['status'],'unchanged')
+        self.native.restore(result['backup']);self.assertFalse(file.exists());self.assertFalse((self.stage/'Mege/y/file/cpu_100.ydc').exists())
+    def test_custom_asset_interrupted_creation_recovers_and_unknown_collision_blocks(self):
+        remote=self.custom_remote()
+        self.native.fault=lambda step:(_ for _ in ()).throw(RuntimeError('interruption')) if step=='write:game:cpu_100.ydc' else None
+        with self.assertRaises(RuntimeError):self.native.apply(remote)
+        self.native.fault=lambda _:None;self.assertEqual(self.native.apply(remote)['status'],'unchanged')
+        self.assertEqual((self.game/'Mege/y/file/cpu_100.ydc').read_bytes(),(self.stage/'Mege/y/file/cpu_100.ydc').read_bytes())
+        bad=self.custom_remote();bad['entries']['cpu_101.ydc']=bad['entries'].pop('cpu_100.ydc');bad['entries']['cpu_101.ydc']['packet']['target']['filename']='cpu_101.ydc';bad['entries']['cpu_101.ydc']['revision']=packet_revision(bad['entries']['cpu_101.ydc']['packet'])
+        occupied=self.game/'Mege/y/file/cpu_101.ydc';occupied.write_bytes(b'unknown')
+        result=self.native.apply(bad);self.assertEqual(result['status'],'unchanged');self.assertTrue(result['rejected']);self.assertEqual(occupied.read_bytes(),b'unknown')
     def test_supabase_provider_applies_only_to_isolated_native_recipes(self):
         from supabase_provider import adapt_rows
         remote=adapt_rows([{'filename':self.name,'version':23,'packet':self.packet,'updated_at':'2026-10-06T04:00:00+00:00'}])
@@ -115,6 +135,7 @@ class SyncTests(unittest.TestCase):
         by[98]['name_en']='A Legendary Ocean'
         fillers=[c for c in catalog['cards'] if not c['special'] and c['type']=='일반 몬스터' and c['slot'] not in (86,98)][:6]
         packet=copy.deepcopy(self.packet)
+        packet['catalog_dataset_id']=catalog['meta']['dataset_id']
         target=next(d for d in OPPONENTS['decks'] if d['source_recipe']['filename']=='DLR_000.ydc')
         packet['target']=target['source_recipe'];packet['deck'].update(ruleset='duel_links_plan',banlist_enabled=False)
         packet['deck']['groups']={'main':[[c['slot'],c['internal_id'],3] for c in fillers]+[[86,333,2]],'extra':[],'side':[[98,2040,1]]}

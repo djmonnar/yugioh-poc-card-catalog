@@ -67,8 +67,8 @@ begin
   raise exception 'poc_harpie_shared_copy_limit';
  end if;
  if (select coalesce(sum(e.amount::text::integer),0) from jsonb_each(totals) as e(slot_key,amount)
-     join poc_private.cards c on c.slot=e.slot_key::integer
-     where (c.slot,c.internal_id) in ((86,333),(98,2040)))>3 then
+     join poc_private.cards umi_card on umi_card.slot=e.slot_key::integer
+     where (umi_card.slot,umi_card.internal_id) in ((86,333),(98,2040)))>3 then
   raise exception 'poc_umi_shared_copy_limit';
  end if;
 end; $$;
