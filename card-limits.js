@@ -14,7 +14,14 @@ export function applyLimits(cards,rows){
     if(r.speed_limit!==null)c.speed_limit=r.speed_limit===-1?null:r.speed_limit;count++;
   }return count;
 }
-export function speedLimitName(card){return card.speed_limit==null?'스피드 · 제한 없음':card.speed_limit===0?'스피드 · 금지':`스피드 · 제한 ${card.speed_limit} 그룹`;}
+const normalName=limit=>limit===0?'금지 · 0장':limit===1?'제한 · 1장':limit===2?'준제한 · 2장':'제한 없음 · 동명 3장';
+const speedName=limit=>limit==null?'제한 없음':limit===0?'금지':`제한 ${limit} 그룹`;
+export function normalLimitName(card){return '일반 · '+normalName(card.deck_limit);}
+export function speedLimitName(card){return '스피드 · '+speedName(card.speed_limit);}
+export function defaultLimitNames(card){
+  const base=bases.get(card)??{normal:card.deck_limit,speed:card.speed_limit};
+  return {normal:normalName(base.normal),speed:speedName(base.speed)};
+}
 export class CardLimitsCloud{
   constructor(client){this.client=client;this.rows=null;}
   async load(){const {data,error}=await this.client.rpc('poc_load_card_limits');if(error)throw error;return this.rows=limitRows(data);}

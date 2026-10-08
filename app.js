@@ -7,7 +7,7 @@ import {validateCloudConfig,DeckCloud,cloudError} from './supabase-cloud.js?v=20
 import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261007-49';
 import {createStatFilters, statConditionsMatch} from './card-filters.js?v=20261007-44';
 import {CardTagsUI} from './card-tags-ui.js?v=20261007-47';
-import {CardLimitsCloud,applyLimits,speedLimitName} from './card-limits.js?v=20261008-61';
+import {CardLimitsCloud,applyLimits,normalLimitName,speedLimitName,defaultLimitNames} from './card-limits.js?v=20261008-limits-labels';
 
 const $ = id => document.getElementById(id);
 const PAGE_SIZE = 36;
@@ -80,9 +80,9 @@ function regularLimit(card) { return el('span', limitName(card.deck_limit), 'lim
 function liveLimits(card,info){
   if(card.special)return;
   const box=el('section',null,'review-editor live-card-limits'),ready=catalogCanEdit&&limitsCloud?.rows!==null&&limitsCloud;
-  const row=limitsCloud?.row(card);box.append(el('h3','플레이어 금제 바로 저장'));
-  box.append(selectControl('live-normal-limit','일반 듀얼',[['','기본값'],['0','금지 · 0장'],['1','제한 · 1장'],['2','준제한 · 2장'],['3','제한 없음 · 동명 3장']],row?.normal_limit??'',!ready));
-  box.append(selectControl('live-speed-limit','스피드 듀얼',[['','기본값'],['-1','제한 없음 · 동명 3장'],['0','금지 · 플레이어 사용 불가'],['1','제한 1 그룹 · 합계 1장'],['2','제한 2 그룹 · 합계 2장'],['3','제한 3 그룹 · 합계 3장']],row?.speed_limit??'',!ready));
+  const row=limitsCloud?.row(card),defaults=defaultLimitNames(card);box.append(el('h3','플레이어 금제 바로 저장'));
+  box.append(selectControl('live-normal-limit','일반 듀얼',[['',`기본값 · ${defaults.normal}`],['0','금지 · 0장'],['1','제한 · 1장'],['2','준제한 · 2장'],['3','제한 없음 · 동명 3장']],row?.normal_limit??'',!ready));
+  box.append(selectControl('live-speed-limit','스피드 듀얼',[['',`기본값 · ${defaults.speed}`],['-1','제한 없음 · 동명 3장'],['0','금지 · 플레이어 사용 불가'],['1','제한 1 그룹 · 합계 1장'],['2','제한 2 그룹 · 합계 2장'],['3','제한 3 그룹 · 합계 3장']],row?.speed_limit??'',!ready));
   box.append(el('p','AI는 금지·제한을 적용받지 않아. 스피드 제한 1·2·3은 같은 그룹의 카드들을 합산해. 일반 듀얼은 게임의 금제 적용 옵션을 따라.','muted'));
   const button=el('button','금제 온라인 저장','primary');button.type='button';button.disabled=!ready;
   const status=el('p',ready?'저장 후 게임을 다시 실행하면 배지·추가 경고·덱 검사에도 반영돼.':'이메일 로그인 후 금제를 직접 바꿀 수 있어.','muted');status.setAttribute('role','status');box.append(button,status);
@@ -258,7 +258,10 @@ function openCard(slot, updateHash = true) {
     info.append(el('p', context.join(' · '), 'muted'));
   }
   liveSettings(card,info);
-  if(!card.special)info.append(el('p',speedLimitName(card)+' · AI 예외','review-note'));
+  if(!card.special){
+    info.append(el('p',normalLimitName(card)+' · AI 예외','review-note'));
+    info.append(el('p',speedLimitName(card)+' · AI 예외','review-note'));
+  }
   liveLimits(card,info);
   const editor = el('section', null, 'review-editor'); editor.append(el('h3', '이 카드에 대한 의견'));
   const fields = el('div', null, 'review-fields');
