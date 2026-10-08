@@ -1,5 +1,6 @@
 export const STORY_KEY='poc-story-authoring-v1';
-export const SKILLS={lp_bonus:'시작 LP 추가',heal_once:'전투당 1회 LP 회복',start_hand:'시작 패에 카드 추가',start_field:'시작 필드에 카드 배치',add_hand_once:'전투당 1회 카드 받기'};
+import {NUMERIC_SKILLS,battleSkills} from './story-skills.js?v=20261009-73';
+export const SKILLS={lp_bonus:'시작 LP 추가',heal_once:'전투당 1회 LP 회복',opening_draw:'시작 패 장수 추가',start_hand:'지정 카드를 패에 들고 시작',start_field:'마법·함정을 놓고 시작',start_monster:'몬스터를 필드에 놓고 시작',add_hand_once:'전투당 1회 지정 카드 받기',draw_once:'위기 상황에서 1회 추가 드로우'};
 export const REWARD_TIERS=['ANY','N','R','SR','UR'];
 const fail=msg=>{throw new Error(msg);};
 const text=(v,max)=>typeof v==='string'&&v.length<=max?v:fail('글자 수나 문서 형식을 확인해줘.');
@@ -19,21 +20,34 @@ function reward(r){
   if(r.kind==='random'&&REWARD_TIERS.includes(r.rarity))return {kind:'random',rarity:r.rarity,count:integer(r.count,1,3)};
   fail('보상 종류를 확인해줘.');
 }
+export function parseSkills(values){
+  if(!Array.isArray(values)||values.length>8)fail('특성은 종류별 한 개씩, 최대 8개까지야.');
+  const kinds=new Set();return values.map(s=>{
+    if(!s||!Object.hasOwn(SKILLS,s.kind)||kinds.has(s.kind))fail('중복 또는 알 수 없는 스킬이 있어.');kinds.add(s.kind);
+    const bounds=NUMERIC_SKILLS[s.kind],out=bounds?{kind:s.kind,value:integer(s.value,bounds[0],bounds[1])}:{kind:s.kind,card:ref(s.card)};
+    if(s.kind==='draw_once')out.threshold=integer(s.threshold,100,16000);
+    if(s.kind==='start_monster'){if(!['attack','defense','set'].includes(s.position))fail('시작 몬스터의 표시 형식을 골라줘.');out.position=s.position;}
+    return out;
+  });
+}
+export function parsePreset(v){
+  if(v?.schema_version!==1||v.kind!=='poc-skill-preset')fail('특성 묶음 JSON을 골라줘.');
+  return {name:text(v.name,100),skills:parseSkills(v.skills)};
+}
 export function parseStory(v){
   if(v?.schema_version!==1||v.kind!=='poc-story-authoring'||!Array.isArray(v.actors)||!Array.isArray(v.battles)||v.actors.length>100||v.battles.length>100)fail('스토리 편집기에서 내보낸 JSON을 골라줘.');
   const doc={...emptyStory(),title:text(v.title,200),catalog_dataset_id:text(v.catalog_dataset_id,100)};
   const seen=new Set();doc.actors=v.actors.map(a=>{
-    id(a.actor_id);if(seen.has(a.actor_id)||!safePortrait(a.portrait)||!Array.isArray(a.skills)||a.skills.length>5)fail('캐릭터 ID·초상화·스킬을 확인해줘.');seen.add(a.actor_id);
-    const kinds=new Set();return {actor_id:a.actor_id,name:text(a.name,100),portrait:a.portrait,skills:a.skills.map(s=>{
-      if(!Object.hasOwn(SKILLS,s.kind)||kinds.has(s.kind))fail('중복 또는 알 수 없는 스킬이 있어.');kinds.add(s.kind);
-      return ['lp_bonus','heal_once'].includes(s.kind)?{kind:s.kind,value:integer(s.value,100,8000)}:{kind:s.kind,card:ref(s.card)};
-    })};
+    id(a.actor_id);if(seen.has(a.actor_id)||!safePortrait(a.portrait))fail('캐릭터 ID·초상화를 확인해줘.');seen.add(a.actor_id);
+    const out={actor_id:a.actor_id,name:text(a.name,100),portrait:a.portrait,skills:parseSkills(a.skills)};
+    if(a.skill_profiles!==undefined){if(!Array.isArray(a.skill_profiles)||a.skill_profiles.length>10)fail('특성 묶음은 캐릭터별 10개까지야.');const ids=new Set();out.skill_profiles=a.skill_profiles.map(p=>{id(p.profile_id);if(ids.has(p.profile_id))fail('특성 묶음 ID가 중복돼.');ids.add(p.profile_id);return {profile_id:p.profile_id,name:text(p.name,100),skills:parseSkills(p.skills)};});}return out;
   });
   const battles=new Set();doc.battles=v.battles.map(b=>{
     id(b.battle_id);if(battles.has(b.battle_id)||!['classic','duel_links_plan'].includes(b.ruleset)||!(b.recipe===''||/^(?:cpu|DLR)_\d{3}\.ydc$/.test(b.recipe)))fail('전투 ID·덱·규칙을 확인해줘.');battles.add(b.battle_id);
     const out={battle_id:b.battle_id,name:text(b.name,100),actor_id:text(b.actor_id,100),recipe:b.recipe,ruleset:b.ruleset,
       intro:text(b.intro,6000),win:text(b.win,6000),loss:text(b.loss,6000),rewards:{}};
     for(const k of ['first','repeat']){if(!Array.isArray(b.rewards?.[k])||b.rewards[k].length>20)fail('전투 보상을 확인해줘.');out.rewards[k]=b.rewards[k].map(reward);}
+    if(b.skill_profile!==undefined)out.skill_profile=b.skill_profile===''?'':id(b.skill_profile);
     return out;
   });return doc;
 }
@@ -43,15 +57,17 @@ export function validateStory(doc,cards,decks){
   if(!doc.title.trim())issues.push('시나리오 이름을 입력해줘.');if(!doc.battles.length)issues.push('전투를 한 개 이상 추가해줘.');
   for(const a of doc.actors){
     if(!a.name.trim())issues.push('캐릭터 이름을 입력해줘.');
-    for(const skill of a.skills){
+    for(const profile of [{name:'기본 특성',skills:a.skills},...(a.skill_profiles||[])]){if(!profile.name.trim())issues.push(`${a.name}: 특성 이름을 입력해줘.`);for(const skill of profile.skills){
       if(skill.card){const card=resolveRef(skill.card,cards);if(!card||card.special||card.type==='융합 몬스터')issues.push(`${a.name}: 스킬의 카드를 현재 도감에서 다시 골라줘.`);
         else if(skill.kind==='start_field'&&!['마법','함정'].includes(card.type))issues.push(`${a.name}: 시작 필드는 마법·함정 카드를 골라줘.`);}
-    }
+      if(skill.kind==='start_monster'){const c=resolveRef(skill.card,cards);if(!c||!c.type.includes('몬스터')||c.type==='융합 몬스터')issues.push(`${a.name}: 시작 몬스터는 메인 덱 몬스터를 골라줘.`);}
+    }}
   }
   for(const b of doc.battles){
     if(!b.name.trim())issues.push('전투 이름을 입력해줘.');
     const actor=doc.actors.find(a=>a.actor_id===b.actor_id),deck=decks.find(d=>d.source_recipe.filename===b.recipe);
     if(!actor)issues.push(`${b.name}: 전투 상대를 골라줘.`);
+    else try{battleSkills(actor,b);}catch(e){issues.push(`${b.name}: ${e.message}`);}
     if(!deck||deck.ruleset!==b.ruleset)issues.push(`${b.name}: 규칙에 맞는 AI 덱을 골라줘.`);
     for(const k of ['first','repeat'])for(const r of b.rewards[k]){
       if(r.kind==='card'){const c=resolveRef(r.card,cards);if(!c||c.special||(!c.reward_eligible&&c.rarity!=='L'))issues.push(`${b.name}: 보상 카드를 현재 도감에서 다시 골라줘.`);}
@@ -63,7 +79,7 @@ export function validateStory(doc,cards,decks){
 export function canonicalStory(doc,meta,cards){
   const clean=parseStory(doc);clean.catalog_dataset_id=meta.dataset_id;
   const current=ref=>{const c=resolveRef(ref,cards);if(!c)fail('카드가 변경됐어. 현재 도감에서 다시 골라줘.');return cardRef(c);};
-  for(const a of clean.actors)for(const s of a.skills)if(s.card)s.card=current(s.card);
+  for(const a of clean.actors)for(const p of [{skills:a.skills},...(a.skill_profiles||[])])for(const s of p.skills)if(s.card)s.card=current(s.card);
   for(const b of clean.battles)for(const k of ['first','repeat'])for(const r of b.rewards[k])if(r.kind==='card')r.card=current(r.card);
   return clean;
 }
