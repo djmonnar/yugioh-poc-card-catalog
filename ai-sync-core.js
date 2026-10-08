@@ -5,7 +5,12 @@ export const SYNC_REPO='djmonnar/yugioh-poc-card-catalog';
 export const SYNC_URL=`https://api.github.com/repos/${SYNC_REPO}/contents/sync.json?ref=ai-sync-data`;
 export const SYNC_MARKER='<!-- POC-AI-SYNC:v1 -->';
 const digest=async text=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text))),b=>b.toString(16).padStart(2,'0')).join('');
-function identityRows(groups,cards){return GROUPS.flatMap(g=>groups[g].map(([slot,id,count])=>{const c=cards.find(c=>c.slot===slot&&c.internal_id===id);if(!c)throw new Error('현재 도감과 카드 번호가 달라.');return [g,slot,id,count,c.identity_key];}));}
+function identityRows(groups,cards,snapshot=null){return GROUPS.flatMap(g=>groups[g].map(([slot,id,count])=>{
+  const c=cards.find(c=>c.slot===slot&&c.internal_id===id);if(!c)throw new Error('현재 도감과 카드 번호가 달라.');
+  const key=snapshot?snapshot.find(r=>r[0]===slot&&r[1]===id)?.[2]:c.identity_key;
+  if(!key||![c.identity_key,...(c.previous_identity_keys||[])].includes(key))throw new Error('온라인 덱의 카드가 현재 도감과 달라.');
+  return [g,slot,id,count,key];
+}));}
 
 export async function makeSyncPacket(meta,deck,target,cards){
   const clean=parseBundle({schema_version:1,kind:'poc-ai-deck-bundle',decks:[deck]},cards)[0];
@@ -27,9 +32,14 @@ export async function issueDraft(packet){
   return {body,url:url.toString(),prefilled:url.toString().length<=7000};
 }
 
-export async function packetDeck(packet,cards,id){
+export async function packetDeck(packet,cards,id,meta=null){
   if(packet?.kind!=='poc-ai-deck-sync'||packet.schema_version!==1)throw new Error('온라인 덱 형식을 확인할 수 없어.');
-  if(await digest(JSON.stringify(identityRows(packet.deck.groups,cards)))!==packet.identity_sha256)throw new Error('온라인 덱의 카드가 현재 도감과 달라.');
+  let snapshot=null;
+  if(meta&&packet.catalog_dataset_id!==meta.dataset_id){
+    snapshot=meta.compatible_datasets?.find(r=>r.dataset_id===packet.catalog_dataset_id)?.identities;
+    if(!snapshot)throw new Error('온라인 덱의 도감 버전을 확인할 수 없어. 기본 덱으로 되돌리지 않았어.');
+  }
+  if(await digest(JSON.stringify(identityRows(packet.deck.groups,cards,snapshot)))!==packet.identity_sha256)throw new Error('온라인 덱의 카드가 현재 도감과 달라.');
   const groups=Object.fromEntries(GROUPS.map(g=>[g,packet.deck.groups[g].map(([slot,n,count])=>cardLine(cards.find(c=>c.slot===slot&&c.internal_id===n),count))]));
   return parseBundle({schema_version:1,kind:'poc-ai-deck-bundle',decks:[{...packet.deck,deck_id:id,groups,source_recipe:packet.target}]},cards)[0];
 }
@@ -46,8 +56,7 @@ export async function loadOpponentDeck(meta,target,cards,id,load){
     const deck=parseBundle({schema_version:1,kind:'poc-ai-deck-bundle',decks:[copy]},cards)[0];
     return {deck,source:'installed',version:null};
   }
-  if(entry.packet.catalog_dataset_id!==meta.dataset_id)throw new Error('온라인 덱의 도감 버전이 달라. 페이지를 새로 열고 확인해줘. 기본 덱으로 되돌리지 않았어.');
-  const deck=await packetDeck(entry.packet,cards,id);
+  const deck=await packetDeck(entry.packet,cards,id,meta);
   if(deck.ruleset!==target.ruleset||deck.source_recipe.sha256!==target.source_recipe.sha256)throw new Error('온라인 덱의 적용 상대가 현재 자료와 달라. 기본 덱으로 되돌리지 않았어.');
   return {deck,source:'online',version:entry.version};
 }

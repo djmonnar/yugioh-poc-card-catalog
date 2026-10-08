@@ -25,7 +25,7 @@ class SyncTests(unittest.TestCase):
         remote=adapt_rows([{'filename':self.name,'version':23,'packet':self.packet,'updated_at':'2026-10-06T04:00:00+00:00'}])
         with self.native.locked():result=self.native.apply(remote)
         self.assertEqual(result['status'],'applied')
-        self.assertEqual(len(self.native.catalog['cards']),1115)
+        self.assertEqual(len(self.native.catalog['cards']),len(CATALOG['cards']))
         actual=(self.game/'Mege/y/file'/self.name).read_bytes()
         self.assertEqual(actual[:8],self.original[:8])
         self.assertEqual(len(sync_core.decode_recipe(actual)[0]),40)
@@ -113,6 +113,30 @@ class SyncTests(unittest.TestCase):
         ids=self.game/'Mege/bin#/card_id.bin';blob=bytearray(ids.read_bytes());struct.pack_into('<H',blob,self.packet['deck']['groups']['main'][0][0]*2,65535);ids.write_bytes(blob)
         self.assertEqual(len(self.native.apply(self.remote)['rejected']),1)
         self.assertFalse(self.native.journal.exists())
+    def test_new_slot_can_sync_without_touching_player_files(self):
+        packet=copy.deepcopy(self.packet);packet['catalog_dataset_id']=CATALOG['meta']['dataset_id']
+        new=next(c for c in CATALOG['cards'] if c['slot']==1136)
+        packet['deck']['groups']['main'][0][2]-=1
+        packet['deck']['groups']['main'].append([new['slot'],new['internal_id'],1])
+        by={c['slot']:c for c in CATALOG['cards']}
+        rows=[[g,s,n,k,by[s]['identity_key']] for g in sync_core.GROUPS for s,n,k in packet['deck']['groups'][g]]
+        packet['identity_sha256']=sha(json.dumps(rows,separators=(',',':'),ensure_ascii=False).encode())
+        entry={**self.entry,'packet':packet,'revision':packet_revision(packet)}
+        result=self.native.apply({**self.remote,'entries':{self.name:entry}})
+        self.assertEqual(result['status'],'applied')
+        groups=sync_core.decode_recipe((self.game/'Mege/y/file'/self.name).read_bytes())
+        self.assertIn(new['internal_id'],groups[0]);self.assertEqual(len(groups[0]),40)
+    def test_previous_snapshot_requires_known_identity_and_exact_fingerprint(self):
+        self.assertNotEqual(self.packet['catalog_dataset_id'],CATALOG['meta']['dataset_id'])
+        self.assertEqual(len(validate_packet(self.packet,CATALOG,OPPONENTS)[0]),40)
+        unknown=copy.deepcopy(self.packet);unknown['catalog_dataset_id']='f'*64
+        with self.assertRaises(SyncError):validate_packet(unknown,CATALOG,OPPONENTS)
+        corrupt=copy.deepcopy(self.packet);corrupt['identity_sha256']='f'*64
+        with self.assertRaises(SyncError):validate_packet(corrupt,CATALOG,OPPONENTS)
+        replaced=copy.deepcopy(CATALOG);slot=self.packet['deck']['groups']['main'][0][0]
+        row=next(c for c in replaced['cards'] if c['slot']==slot)
+        row['identity_key']='f'*64;row.pop('previous_identity_keys',None)
+        with self.assertRaises(SyncError):validate_packet(self.packet,replaced,OPPONENTS)
     def test_restore_changes_only_synced_participants(self):
         result=self.native.apply(self.remote);self.assertEqual(self.native.restore(result['backup'])['status'],'restored')
         self.assertEqual((self.game/'Mege/y/file'/self.name).read_bytes(),self.original)

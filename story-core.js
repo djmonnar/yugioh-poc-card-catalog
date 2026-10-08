@@ -6,7 +6,8 @@ const text=(v,max)=>typeof v==='string'&&v.length<=max?v:fail('글자 수나 문
 const id=v=>/^[a-zA-Z0-9_-]{1,100}$/.test(v)?v:fail('항목 ID를 확인해줘.');
 const integer=(n,min,max)=>Number.isInteger(n)&&n>=min&&n<=max?n:fail('숫자 범위를 확인해줘.');
 export function cardRef(c){return {slot:c.slot,internal_id:c.internal_id,identity_key:c.identity_key,name_ko:c.name_ko};}
-export function resolveRef(ref,cards){return ref&&cards.find(c=>c.slot===ref.slot&&c.internal_id===ref.internal_id&&c.identity_key===ref.identity_key);}
+export function resolveRef(ref,cards){return ref&&cards.find(c=>c.slot===ref.slot&&c.internal_id===ref.internal_id&&
+  (c.identity_key===ref.identity_key||(c.previous_identity_keys?.includes(ref.identity_key)&&c.name_ko===ref.name_ko)));}
 function ref(v){if(!v||!Number.isInteger(v.slot)||!Number.isInteger(v.internal_id)||!/^[a-f0-9]{64}$/.test(v.identity_key))fail('카드 식별값을 확인해줘.');return {...cardRef(v),name_ko:text(v.name_ko,200)};}
 export function safePortrait(v){return typeof v==='string'&&(v===''||/^(?:assets|content-packs)\/[a-zA-Z0-9_./-]+\.(?:png|jpe?g|webp)$/.test(v)&&!v.includes('..')||/^https:\/\/[a-z]{20}\.supabase\.co\/storage\/v1\/object\/public\/poc-story-assets\/[a-zA-Z0-9_./-]+\.(?:png|jpe?g|webp)$/.test(v)&&!v.includes('..'));}
 export function newActor(actor_id=crypto.randomUUID()){return {actor_id,name:'새 캐릭터',portrait:'',skills:[]};}

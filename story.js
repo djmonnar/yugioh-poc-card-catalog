@@ -1,5 +1,5 @@
 import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261007-49';
-import {STORY_KEY,SKILLS,emptyStory,newActor,newBattle,parseStory,validateStory,cardRef,reviewFiles,safePortrait} from './story-core.js?v=20261007-49';
+import {STORY_KEY,SKILLS,emptyStory,newActor,newBattle,parseStory,validateStory,cardRef,reviewFiles,safePortrait} from './story-core.js?v=20261008-59';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 import {validateCloudConfig,cloudError} from './supabase-cloud.js?v=20261006-13';
 const $=id=>document.getElementById(id),node=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};

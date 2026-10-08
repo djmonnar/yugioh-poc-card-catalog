@@ -89,6 +89,23 @@ test('invalid saved catalog, card identity, mode and target cannot silently rest
   await assert.rejects(loadOpponentDeck(meta,target,cards,'target',async()=>row(base)),/적용 상대/);
   await assert.rejects(loadOpponentDeck(meta,target,cards,'duplicate',async()=>[...row(packet),...row(packet)]),/버전/);
 });
+test('known previous catalogs survive an append or declared printed-stat correction',async()=>{
+  const {target,deck}=fixture(),priorCards=structuredClone(cards),first=deck.groups.main[0].slot;
+  priorCards.find(c=>c.slot===first).identity_key='1'.repeat(64);
+  deck.groups.main[0]=cardLine(priorCards.find(c=>c.slot===first),deck.groups.main[0].count);
+  const priorMeta={...meta,dataset_id:'known-previous'},packet=await makeSyncPacket(priorMeta,deck,target,priorCards);
+  const currentCards=structuredClone(cards);currentCards.find(c=>c.slot===first).previous_identity_keys=['1'.repeat(64)];
+  const currentMeta={...meta,compatible_datasets:[{dataset_id:priorMeta.dataset_id,identities:priorCards.map(c=>[c.slot,c.internal_id,c.identity_key])}]};
+  const read=async()=>[{filename:packet.target.filename,version:99,packet}];
+  const loaded=await loadOpponentDeck(currentMeta,target,currentCards,'saved',read);
+  assert.equal(loaded.source,'online');assert.equal(loaded.deck.groups.main[0].identity_key,currentCards.find(c=>c.slot===first).identity_key);
+  const next=await makeSyncPacket(currentMeta,loaded.deck,target,currentCards);assert.equal(next.catalog_dataset_id,meta.dataset_id);
+  assert.notEqual(next.identity_sha256,packet.identity_sha256);
+  const replaced=structuredClone(currentCards);delete replaced.find(c=>c.slot===first).previous_identity_keys;
+  await assert.rejects(loadOpponentDeck(currentMeta,target,replaced,'replaced',read),/카드가 현재/);
+  const corrupt=structuredClone(packet);corrupt.identity_sha256='f'.repeat(64);
+  await assert.rejects(loadOpponentDeck(currentMeta,target,currentCards,'tampered',async()=>[{filename:packet.target.filename,version:99,packet:corrupt}]),/카드가 현재/);
+});
 // Explicit fixture command is used for cross-language and live cloud tests.
 if(process.env.POC_SYNC_FIXTURE_OUTPUT){
   const {target,deck}=fixture(),packet=await makeSyncPacket(meta,deck,target,cards),draft=await issueDraft(packet);

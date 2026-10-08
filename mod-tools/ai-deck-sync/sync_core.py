@@ -68,7 +68,11 @@ def decode_recipe(blob):
 
 def validate_packet(packet, catalog, opponents):
     require(isinstance(packet, dict) and packet.get('schema_version') == 1 and packet.get('kind') == 'poc-ai-deck-sync', 'Invalid sync packet')
-    require(packet.get('catalog_dataset_id') == catalog['meta']['dataset_id'], 'Catalog changed; reopen current catalog')
+    snapshot=None
+    if packet.get('catalog_dataset_id') != catalog['meta']['dataset_id']:
+        compatible=next((s for s in catalog['meta'].get('compatible_datasets',[]) if s['dataset_id']==packet.get('catalog_dataset_id')),None)
+        require(compatible is not None, 'Catalog changed; reopen current catalog')
+        snapshot={(s,n):key for s,n,key in compatible['identities']}
     target = packet.get('target', {})
     require(isinstance(target, dict), 'Invalid target')
     original = next((d for d in opponents['decks'] if d['source_recipe']['filename'] == target.get('filename')), None)
@@ -94,7 +98,9 @@ def validate_packet(packet, catalog, opponents):
             card = cards[(slot,internal_id)]
             require(not card.get('special'), 'Special card cannot enter deck')
             require((card['type'] == '융합 몬스터') == (group == 'extra'), 'Wrong card group')
-            identities.append([group,slot,internal_id,count,card['identity_key']])
+            key=card['identity_key'] if snapshot is None else snapshot.get((slot,internal_id))
+            require(key in {card['identity_key'],*card.get('previous_identity_keys',[])}, 'Card identity changed; reopen current catalog')
+            identities.append([group,slot,internal_id,count,key])
             ids.extend([internal_id]*count)
             totals[(slot,internal_id)] += count
         expanded.append(ids)

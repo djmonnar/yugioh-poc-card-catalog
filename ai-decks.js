@@ -1,6 +1,6 @@
 import {DECK_STORAGE_KEY,GROUPS,GROUP_LABELS,RULESETS,emptyDeck,cardLimit,copyCount,groupCount,groupTypeCounts,placementError,adjustCard,resolveCard,validateDeck,speedBuckets,parseBundle,exportBundle,deckMarkdown} from './ai-deck-core.js?v=20261007-49';
 import {renderPagination} from './pagination.js?v=20261006-8';
-import {makeSyncPacket,packetDeck,loadOpponentDeck} from './ai-sync-core.js?v=20261007-53';
+import {makeSyncPacket,packetDeck,loadOpponentDeck} from './ai-sync-core.js?v=20261008-59';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 import {validateCloudConfig,DeckCloud,cloudError} from './supabase-cloud.js?v=20261006-13';
 import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261007-49';
@@ -197,7 +197,7 @@ async function loadOnline(){
     if(!cloud)throw new Error('온라인 연결 준비 중이야. 잠시 후 다시 시도해줘.');
     const entries=await cloud.load();if(!entries.length){$('online-status').textContent='아직 온라인에 저장한 덱이 없어. 현재 상대 덱을 편집한 뒤 온라인 저장해줘.';return;}
     if(decks.length+entries.length>100)throw new Error('온라인 덱을 추가하면 100개를 넘어. 기존 JSON을 먼저 보관해줘.');
-    const incoming=[];for(const entry of entries){if(entry.packet.catalog_dataset_id!==meta.dataset_id)throw new Error('도감이 변경됐어. 이전 온라인 덱은 JSON으로 검토해야 해.');incoming.push(await packetDeck(entry.packet,cards,uid()));}
+    const incoming=[];for(const entry of entries){incoming.push(await packetDeck(entry.packet,cards,uid(),meta));}
     if(storageBlocked)throw new Error('이전 브라우저 저장을 보존 중이야. 먼저 JSON을 보관해줘.');
     localStorage.setItem(DECK_STORAGE_KEY+'-before-online',JSON.stringify(bundle()));
     decks.push(...incoming);selectDeck(incoming[0].deck_id);persist();switchView(true);
