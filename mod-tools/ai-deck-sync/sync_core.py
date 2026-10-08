@@ -112,6 +112,9 @@ def validate_packet(packet, catalog, opponents):
     harpies={(108,1530),(606,609),(696,61),(697,1249),(827,608)}
     require(sum(count for key,count in totals.items() if key in harpies)<=3,
             'Harpie Lady shared name: main/side total must not exceed 3')
+    require(sum(count for key,count in totals.items() if key==(86,333) or
+                (key==(98,2040) and cards[key]['name_en']=='A Legendary Ocean'))<=3,
+            'Umi / A Legendary Ocean shared name: all groups total must not exceed 3')
     require(sha(json.dumps(identities,separators=(',',':'),ensure_ascii=False).encode('utf-8')) == packet.get('identity_sha256'), 'Card identities changed')
     return expanded
 

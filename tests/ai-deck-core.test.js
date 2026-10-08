@@ -11,6 +11,24 @@ const token={...normal,identity_key:'d'.repeat(64),slot:4,internal_id:203,specia
 const pool=[normal,limited,fusion,token];
 const payload=decks=>({schema_version:1,kind:'poc-ai-deck-bundle',decks});
 
+test('Umi and Atlantis share three copies in both modes and manual imports; the old donor is separate',()=>{
+  const umi={...normal,slot:86,internal_id:333,name_ko:'바다',name_en:'Umi'};
+  const ocean={...normal,slot:98,internal_id:2040,identity_key:'e'.repeat(64),name_ko:'전설의 도시 아틀란티스',name_en:'A Legendary Ocean'};
+  const donor={...ocean,identity_key:'f'.repeat(64),name_en:'Elf Swordsman',name_ko:'엘프 검사'};
+  for(const mode of ['classic','duel_links_plan'])for(const banlist of [true,false]){
+    const d=emptyDeck('oceans',mode);d.banlist_enabled=banlist;
+    adjustCard(d,umi,'main',1);adjustCard(d,umi,'main',1);adjustCard(d,ocean,'side',1);
+    assert.throws(()=>adjustCard(d,ocean,'main',1),/같은 이름/);
+    assert.throws(()=>adjustCard(d,umi,'side',1),/같은 이름/);
+    adjustCard(d,umi,'main',-1);adjustCard(d,ocean,'side',1);
+    d.groups.main.push(cardLine(umi));
+    assert.match(validateDeck(d,[umi,ocean]).issues.join(' '),/바다·아틀란티스.*같은 이름/);
+    const old=emptyDeck('donor',mode);adjustCard(old,umi,'main',1);adjustCard(old,umi,'main',1);adjustCard(old,umi,'main',1);
+    adjustCard(old,donor,'side',1);assert.equal(validateDeck(old,[umi,donor]).unknown,0);
+    assert.ok(!validateDeck(old,[umi,donor]).issues.some(s=>s.includes('바다·아틀란티스')));
+  }
+});
+
 test('five Harpie names share three copies across main/side even without banlist; Sisters is separate',()=>{
   const cards=[108,606,696,697,827,698].map(slot=>catalog.cards.find(c=>c.slot===slot));
   for(const banlist of [true,false]){

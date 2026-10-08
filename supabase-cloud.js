@@ -14,6 +14,8 @@ export function cloudRows(value){
 }
 export function cloudError(error){
   const msg=error?.message||'';
+  if(msg.includes('poc_story_scenario_limit'))return '시나리오는 20개까지 온라인 저장할 수 있어.';
+  if(msg.includes('poc_story_battle_limit'))return '온라인 시나리오 전체 전투는 합쳐서 100개까지야.';
   if(msg.includes('poc_conflict'))return '다른 기기에서 이 덱을 수정했어. 온라인 덱을 불러온 뒤 변경 내용을 비교하고 다시 저장해줘.';
   if(msg.includes('poc_editor_required')||error?.code==='42501')return '덱 편집 권한이 있는 이메일 계정으로 로그인해줘.';
   if(msg.includes('poc_invalid_catalog')||msg.includes('poc_identity_changed'))return '카드 자료가 바뀌었어. 페이지를 새로 열고 현재 카드로 확인해줘.';

@@ -109,6 +109,24 @@ class SyncTests(unittest.TestCase):
         stamp();self.assertEqual(len(validate_packet(packet,CATALOG,OPPONENTS)[0]),20)
         packet['deck']['groups']['side'].append([697,1249,1]);stamp()
         with self.assertRaisesRegex(SyncError,'Harpie Lady shared name'):validate_packet(packet,CATALOG,OPPONENTS)
+    def test_umi_atlantis_combined_cap_preserves_historical_donor_identity(self):
+        catalog=copy.deepcopy(CATALOG)
+        by={c['slot']:c for c in catalog['cards']}
+        by[98]['name_en']='A Legendary Ocean'
+        fillers=[c for c in catalog['cards'] if not c['special'] and c['type']=='일반 몬스터' and c['slot'] not in (86,98)][:6]
+        packet=copy.deepcopy(self.packet)
+        target=next(d for d in OPPONENTS['decks'] if d['source_recipe']['filename']=='DLR_000.ydc')
+        packet['target']=target['source_recipe'];packet['deck'].update(ruleset='duel_links_plan',banlist_enabled=False)
+        packet['deck']['groups']={'main':[[c['slot'],c['internal_id'],3] for c in fillers]+[[86,333,2]],'extra':[],'side':[[98,2040,1]]}
+        def stamp():
+            rows=[[g,s,n,k,by[s]['identity_key']] for g in sync_core.GROUPS for s,n,k in packet['deck']['groups'][g]]
+            packet['identity_sha256']=sha(json.dumps(rows,separators=(',',':'),ensure_ascii=False).encode())
+        stamp();self.assertEqual(len(validate_packet(packet,catalog,OPPONENTS)[0]),20)
+        packet['deck']['groups']['side'][0][2]=2;stamp()
+        with self.assertRaisesRegex(SyncError,'Umi / A Legendary Ocean shared name'):validate_packet(packet,catalog,OPPONENTS)
+        # The pre-180 Elf Swordsman occupied this same slot/ID.
+        by[98]['name_en']='Elf Swordsman'
+        self.assertEqual(len(validate_packet(packet,catalog,OPPONENTS)[0]),20)
     def test_mapping_and_external_recipe_changes_are_rejected(self):
         ids=self.game/'Mege/bin#/card_id.bin';blob=bytearray(ids.read_bytes());struct.pack_into('<H',blob,self.packet['deck']['groups']['main'][0][0]*2,65535);ids.write_bytes(blob)
         self.assertEqual(len(self.native.apply(self.remote)['rejected']),1)

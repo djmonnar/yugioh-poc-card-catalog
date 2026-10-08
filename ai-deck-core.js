@@ -51,6 +51,8 @@ export function speedBuckets(deck,cards) {
 const HARPIE_IDENTITIES=new Map([[108,1530],[606,609],[696,61],[697,1249],[827,608]]);
 export function sharesHarpieName(card) {return HARPIE_IDENTITIES.get(card.slot)===card.internal_id;}
 export function harpieCount(deck) {return GROUPS.reduce((n,g)=>n+deck.groups[g].reduce((sum,row)=>sum+(sharesHarpieName(row)?row.count:0),0),0);}
+export function sharesUmiName(card) {return (card.slot===86&&card.internal_id===333)||(card.slot===98&&card.internal_id===2040&&card.name_en==='A Legendary Ocean');}
+export function umiCount(deck) {return GROUPS.reduce((n,g)=>n+deck.groups[g].reduce((sum,row)=>sum+(sharesUmiName(row)?row.count:0),0),0);}
 export function placementError(card,group) {
   if(card.special)return '토큰·특수 카드는 덱에 넣을 수 없어.';
   const fusion=card.type==='융합 몬스터';
@@ -64,6 +66,7 @@ export function adjustCard(deck,card,group,delta,cards) {
   if(delta>0) {
     const problem=placementError(card,group);if(problem)fail(problem);
     if(sharesHarpieName(card)&&harpieCount(deck)>=3)fail('해피 레이디·1·2·3·SB는 같은 이름으로 취급하여 메인·사이드 합계 3장까지 넣을 수 있어.');
+    if(sharesUmiName(card)&&umiCount(deck)>=3)fail('바다·전설의 도시 아틀란티스는 같은 이름으로 취급하여 메인·사이드 합계 3장까지 넣을 수 있어.');
     if(copyCount(deck,card.identity_key)>=cardLimit(deck,card))fail(`${card.name_ko}: 모든 덱을 합쳐 ${cardLimit(deck,card)}장까지 넣을 수 있어.`);
     const max=group==='main'?RULESETS[deck.ruleset].max:15;
     if(groupCount(deck,group)>=max)fail(`${GROUP_LABELS[group]} 덱은 ${max}장까지야.`);
@@ -89,6 +92,7 @@ export function validateDeck(deck,cards) {
   }
   for(const {card,count} of totals.values())if(count>cardLimit(deck,card))issues.push(`${card.name_ko}: 총 ${count}장 · 제한 ${cardLimit(deck,card)}장을 초과했어.`);
   if(harpieCount(deck)>3)issues.push(`해피 레이디 계열 총 ${harpieCount(deck)}장 · 같은 이름 취급 합계 3장을 초과했어.`);
+  if(umiCount(deck)>3)issues.push(`바다·아틀란티스 총 ${umiCount(deck)}장 · 같은 이름 취급 합계 3장을 초과했어.`);
   const buckets=speedBuckets(deck,cards);
   return {counts:Object.fromEntries(GROUPS.map(g=>[g,groupCount(deck,g)])),issues,unknown,
     buckets:deck.ruleset==='duel_links_plan'?buckets.slice(1):[],ready_for_game:!issues.length&&rules.playable};

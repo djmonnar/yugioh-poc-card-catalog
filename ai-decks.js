@@ -4,6 +4,7 @@ import {makeSyncPacket,packetDeck,loadOpponentDeck} from './ai-sync-core.js?v=20
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 import {validateCloudConfig,DeckCloud,cloudError} from './supabase-cloud.js?v=20261006-13';
 import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261007-49';
+import {namedRecipeRows} from './story-library.js?v=20261008-69';
 import {CardLimitsCloud,applyLimits} from './card-limits.js?v=20261008-61';
 import {parseActors,actorForDeck} from './ai-actors.js?v=20261006-37';
 import {CardTagsCloud,annotationFor,tagMatches,relatedAnnotations} from './card-tags.js?v=20261007-47';
@@ -176,7 +177,7 @@ async function openOnline(){
   const source=current().source_recipe?.filename,original=targets.find(d=>d.source_recipe.filename===source);
   if(original)$('online-target').value=original.deck_id;
   onlineVersions=null;onlineSummary();$('online-dialog').showModal();$('prepare-online').disabled=true;
-  try{if(!cloud)throw new Error('온라인 연결 준비 중이야. 잠시 후 다시 시도해줘.');const rows=await cloud.load();onlineVersions=new Map(rows.map(r=>[r.filename,r.version]));$('online-dialog-status').textContent=canEdit?'적용 상대를 확인한 뒤 저장해줘.':'이메일 인증 후 저장할 수 있어.';}
+  try{if(!cloud)throw new Error('온라인 연결 준비 중이야. 잠시 후 다시 시도해줘.');const rows=await cloud.load();namedRecipeRows(opponents,rows);renderOpponentOptions();for(const option of $('online-target').options){const target=opponents.find(d=>d.deck_id===option.value);if(target)option.textContent=`${target.name} · ${target.source_recipe.filename}`;}onlineVersions=new Map(rows.map(r=>[r.filename,r.version]));$('online-dialog-status').textContent=canEdit?'적용 상대를 확인한 뒤 저장해줘.':'이메일 인증 후 저장할 수 있어.';}
   catch(error){$('online-dialog-status').textContent=cloudError(error);}
   finally{$('prepare-online').disabled=!canEdit||onlineVersions===null;}
 }
@@ -187,6 +188,7 @@ async function prepareOnline(){
     const target=opponents.find(d=>d.deck_id===$('online-target').value),packet=await makeSyncPacket(meta,current(),target,cards);
     $('online-dialog-status').textContent='덱을 검사하고 저장하는 중…';
     const row=await cloud.save(packet,onlineVersions.get(packet.target.filename)??0);onlineVersions.set(row.filename,row.version);
+    namedRecipeRows(opponents,[{filename:packet.target.filename,packet}]);renderOpponentOptions();
     $('online-dialog-status').textContent=`저장 완료 · ${packet.deck.name} · ${row.filename} · 다음 창모드 실행 때 반영돼.`;
     $('online-status').textContent=$('online-dialog-status').textContent;toast('AI 덱을 온라인에 저장했어.');
   }catch(error){$('online-dialog-status').textContent=error.message?.includes('poc_')||error.code?cloudError(error):error.message;}
@@ -220,6 +222,7 @@ async function initCloud(){
     tagsCloud=new CardTagsCloud(authClient);await refreshTags();
     const {data,error}=await authClient.auth.getSession();if(error)throw error;await authStatus(data.session);
     applySettings(cards,await new CardSettingsCloud(authClient).load());applyLimits(cards,await new CardLimitsCloud(authClient).load());renderPool();
+    namedRecipeRows(opponents,await cloud.load());renderOpponentOptions();
   }catch(error){$('auth-status').textContent=cloudError(error);}
 }
 async function sendLogin(){
