@@ -1,4 +1,4 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#162c38"><title>스토리 제작 · Power of Chaos</title><link rel="icon" href="assets/icon.svg"><link rel="stylesheet" href="style.css?v=20261007-49"><link rel="stylesheet" href="story.css?v=20261009-media88"><script type="module" src="story.js?v=20261010-raid90"></script></head><body>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#162c38"><title>스토리 제작 · Power of Chaos</title><link rel="icon" href="assets/icon.svg"><link rel="stylesheet" href="style.css?v=20261007-49"><link rel="stylesheet" href="story.css?v=20261010-picker"><script type="module" src="story.js?v=20261010-picker"></script></head><body>
 <header class="masthead"><a class="brand" href="./"><img src="assets/icon.svg" width="34" height="40" alt=""><span>POWER OF CHAOS<small>스토리 제작</small></span></a><a class="ai-builder-link" href="ai-decks.html">AI 덱 편집</a></header>
 <main class="story-main"><p class="eyebrow">WRITE YOUR NEXT DUEL</p><h1>네가 만드는 다음 이야기.</h1><p>전투를 차례대로 배치하고, 상대와 보상을 골라줘. 편집본은 자동으로 이 브라우저에 저장돼.</p><p class="builder-notice">용만·유희 등 시나리오를 각각 만들 수 있어. 전투마다 ‘이전 전투 클리어 필요’를 끄면 순서와 관계없이 바로 도전할 수 있어. 온라인 저장 후 다음 게임 실행 때 반영돼.</p>
 <section class="scenario-library" aria-label="내 시나리오"><label for="scenario-select">편집할 시나리오<select id="scenario-select"></select></label><button id="new-scenario" type="button">+ 새 시나리오</button><p class="story-hint">새 시나리오는 전투·진행 기록이 따로 관리돼. 캐릭터 설정은 복사해서 재사용할 수 있어.</p></section>
@@ -8,6 +8,27 @@
 <section id="battles-panel"><div class="section-head"><h2>전투 순서</h2><div class="row-actions"><button id="collapse-battles" type="button">모두 접기</button><button id="add-battle" type="button">+ 전투 추가</button></div></div><p class="story-hint">전투 이름을 누르면 상대·덱·대사·보상을 편집할 수 있어.</p><div id="battle-list"></div></section>
 <section id="actors-panel" hidden><div class="section-head"><h2>전투 상대</h2><div class="row-actions"><button id="collapse-actors" type="button">모두 접기</button><button id="import-actor" type="button">캐릭터 불러오기</button><button id="add-actor" type="button">+ 캐릭터 추가</button></div></div><p class="story-hint">캐릭터 이름을 누르면 이름·초상화·특성을 편집할 수 있어. 다른 시나리오에서 나중에 만든 캐릭터도 불러올 수 있어.</p><div id="actor-list"></div></section>
 <aside id="validation" aria-live="polite"></aside></main>
-<dialog id="card-picker"><div class="picker-head"><h2>카드 고르기</h2><button id="close-picker" aria-label="닫기">×</button></div><input id="card-search" type="search" placeholder="이름 · 종족 · 효과 검색" autocomplete="off"><p id="picker-purpose"></p><div id="picker-results"></div><div class="picker-footer"><p id="picker-selection" role="status" hidden></p><div class="picker-pages"><button id="prev-cards">이전</button><span id="picker-page"></span><button id="next-cards">다음</button></div><button id="finish-picker" class="primary" hidden>선택 완료</button></div></dialog>
+<dialog id="card-picker" aria-labelledby="picker-title">
+  <div class="picker-head"><h2 id="picker-title">카드 고르기</h2><button id="close-picker" aria-label="닫기">×</button></div>
+  <input id="card-search" type="search" aria-label="카드 이름·효과·번호 검색" placeholder="이름 · 효과 · 카드 번호 검색" autocomplete="off">
+  <p id="picker-purpose"></p>
+  <div class="picker-filters">
+    <label for="picker-rarity">등급<select id="picker-rarity"><option value="">전체</option><option>L</option><option>UR</option><option>SR</option><option>R</option><option>N</option></select></label>
+    <label for="picker-type">카드 종류<select id="picker-type"></select></label>
+    <label for="picker-race">종족<select id="picker-race"></select></label>
+    <label for="picker-attribute">속성<select id="picker-attribute"></select></label>
+  </div>
+  <details class="picker-advanced"><summary>추가 필터 · 세부 종류·분류·능력치</summary>
+    <div class="picker-filters">
+      <label for="picker-subtype">세부 종류<select id="picker-subtype"></select></label>
+      <label for="picker-mechanic">효과 분류<select id="picker-mechanic"></select></label>
+      <label for="picker-group">카드 묶음<select id="picker-group"></select></label>
+    </div>
+    <div id="picker-stats" class="stat-filters"></div>
+  </details>
+  <div class="picker-tools"><label for="picker-sort">정렬<select id="picker-sort"><option value="rarity">등급순</option><option value="name">이름순</option><option value="attack">공격력 높은순</option><option value="level">레벨 높은순</option></select></label><button id="reset-picker" type="button">필터 초기화</button></div>
+  <p id="picker-empty" role="status" hidden>조건에 맞는 카드가 없어. 검색어나 필터를 줄여줘.</p>
+  <div id="picker-results"></div><div class="picker-footer"><p id="picker-selection" role="status" hidden></p><div class="picker-pages"><button id="prev-cards">이전</button><span id="picker-page"></span><button id="next-cards">다음</button></div><button id="finish-picker" class="primary" hidden>선택 완료</button></div>
+</dialog>
 <dialog id="actor-importer"><div class="picker-head"><h2>다른 시나리오에서 캐릭터 불러오기</h2><button id="close-actor-importer" aria-label="닫기">×</button></div><label for="import-actor-select">가져올 캐릭터</label><select id="import-actor-select"></select><p id="import-actor-note"></p><button id="import-actor-confirm" class="primary">이 시나리오에 추가</button></dialog>
 </body></html>

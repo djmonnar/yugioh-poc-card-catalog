@@ -7,12 +7,16 @@ import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 import {MEDIA_EVENTS,defaultPresentation,parsePresentation,safeMedia,validateAudioFile} from './story-media.js?v=20261009-media88';
 import {validateCloudConfig,cloudError} from './supabase-cloud.js?v=20261008-70';
 import {mergeAIAssets} from './ai-assets.js?v=20261008-70';
+import {createStatFilters} from './card-filters.js?v=20261007-44';
+import {pickerCards} from './card-picker.js?v=20261010-picker';
 const $=id=>document.getElementById(id),node=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
 let doc=emptyStory(),cards=[],decks=[],meta,chooseCard,pickerPage=0,pickerSelection=null,filter=()=>true,client,version=null,editor=false,storageBlocked=false;
 let library=readLibrary(null),remoteScenarios=[],libraryReady=false,libraryAPI=false;
 let installed=[];
 let openedActors=new WeakSet(),openedBattles=new WeakSet();
 const openedMedia=new WeakSet(),openedMediaEvents=new WeakMap();
+const pickerFields=['rarity','type','subtype','race','attribute','mechanic','group'];
+const pickerStats=createStatFilters($('picker-stats'),()=>{pickerPage=0;renderPicker();});
 async function refreshDecks(){
   try{if(!client)throw new Error('온라인 연결을 확인해줘.');const reply=await client.rpc('poc_load_ai_decks');if(reply.error)throw reply.error;
     decks=await mergeAIAssets(installed,reply.data,cards,meta);renderBattles();check();status('AI 덱 목록을 갱신했어. 저장한 이름으로 고를 수 있어.');
@@ -69,10 +73,31 @@ function redraw(){const y=window.scrollY;render();requestAnimationFrame(()=>wind
 function button(text,action,cls){const b=node('button',text);b.type='button';if(cls)b.className=cls;b.addEventListener('click',action);return b;}
 function input(label,value,changed,{type='text',max=6000}={}){const l=node('label',label),i=node(type==='textarea'?'textarea':'input');if(type!=='textarea')i.type=type;i.value=value;i.maxLength=max;i.addEventListener('input',()=>{changed(type==='number'?Number(i.value):i.value);persist();});l.append(i);return l;}
 function select(label,value,rows,changed){const l=node('label',label),s=node('select');for(const [key,text] of rows){const o=node('option',text);o.value=key;s.append(o);}s.value=value;s.addEventListener('change',()=>{changed(s.value);redraw();});l.append(s);return l;}
-function picker(accept,purpose,done,selection=null){filter=accept;chooseCard=done;pickerSelection=selection;pickerPage=0;$('card-search').value='';$('picker-purpose').textContent=purpose;renderPicker();$('card-picker').showModal();$('card-search').focus();}
+function resetPicker(){
+  $('card-search').value='';for(const field of pickerFields)$(`picker-${field}`).value='';
+  $('picker-sort').value='rarity';pickerStats.reset();pickerPage=0;renderPicker();
+}
+function pickerOptions(){
+  const eligible=cards.filter(filter),collator=new Intl.Collator('ko');
+  for(const field of ['type','subtype','race','attribute']){
+    const control=$(`picker-${field}`);control.replaceChildren(node('option','전체'));
+    control.firstChild.value='';
+    for(const value of [...new Set(eligible.map(c=>c[field]).filter(Boolean))].sort(collator.compare)){
+      const option=node('option',value);option.value=value;control.append(option);
+    }
+  }
+  for(const [field,rows] of [['mechanic',meta.card_system?.mechanics||[]],['group',meta.card_system?.groups||[]]]){
+    const control=$(`picker-${field}`);control.replaceChildren(node('option','전체'));control.firstChild.value='';
+    for(const row of rows){const option=node('option',row.name);option.value=row.id;control.append(option);}
+  }
+}
+function picker(accept,purpose,done,selection=null){filter=accept;chooseCard=done;pickerSelection=selection;pickerOptions();resetPicker();$('picker-purpose').textContent=purpose;$('card-picker').showModal();$('card-search').focus();}
 function renderPicker(){
-  const query=$('card-search').value.trim().toLowerCase(),found=cards.filter(c=>filter(c)&&[c.name_ko,c.name_en,c.description_ko,c.race].join(' ').toLowerCase().includes(query)),pages=Math.max(1,Math.ceil(found.length/12));pickerPage=Math.min(pickerPage,pages-1);
+  const criteria={query:$('card-search').value,sort:$('picker-sort').value,stats:pickerStats.values()};
+  for(const field of pickerFields)criteria[field]=$(`picker-${field}`).value;
+  const found=pickerCards(cards,criteria,filter),pages=Math.max(1,Math.ceil(found.length/12));pickerPage=Math.min(pickerPage,pages-1);
   const box=$('picker-results');box.replaceChildren();
+  $('picker-empty').hidden=found.length!==0;
   for(const c of found.slice(pickerPage*12,(pickerPage+1)*12)){
     const selected=pickerSelection?.selected(c)===true,full=pickerSelection&&pickerSelection.count()>=(pickerSelection.limit||100);
     const b=button('',()=>{
@@ -82,7 +107,8 @@ function renderPicker(){
       else{dialog.close();redraw();}
     },'picker-card'),img=node('img'),label=node('span',c.name_ko);
     b.disabled=selected||Boolean(full);b.classList.toggle('is-selected',selected);b.dataset.cardSlot=c.slot;
-    img.src=c.image;img.alt='';img.loading='lazy';label.append(node('small',`${c.rarity} · ${c.type} · ${c.race||c.subtype||''}`));
+    img.src=c.image;img.alt='';img.loading='lazy';label.append(node('small',[c.rarity,c.type,c.race||c.subtype,c.attribute,c.level==null?'':`LV ${c.level}`].filter(Boolean).join(' · ')));
+    if(c.atk!=null)label.append(node('small',`ATK ${c.atk} / DEF ${c.def??'?'}`));
     if(selected){const badge=node('small','✓ 추가됨');badge.className='picker-selected';label.append(badge);}
     b.append(img,label);box.append(b);
   }
@@ -240,6 +266,8 @@ for(const kind of ['battles','actors'])$(`tab-${kind}`).onclick=()=>{for(const k
 $('export').onclick=()=>download('story-source.json',JSON.stringify(doc,null,2)+'\n');$('pack').onclick=async()=>{try{const files=await reviewFiles(doc,meta,cards,decks);download('story-source.json',files.source);download('pack.json',JSON.stringify(files.pack,null,2)+'\n');status('두 JSON 파일을 같은 폴더에 두면 콘텐츠 파이프라인에서 검사할 수 있어.');}catch(e){status(e.message);}};
 $('import').onclick=()=>$('import-file').click();$('import-file').onchange=async()=>{try{const file=$('import-file').files[0];if(!file)return;if(file.size>1024*1024)throw new Error('스토리 JSON은 1MB 이하로 골라줘.');const next=parseStory(JSON.parse(await file.text()));doc=next;storageBlocked=false;$('story-title').value=doc.title;render();persist();}catch(e){status(e.message);}finally{$('import-file').value='';}};
 $('close-picker').onclick=()=>$('card-picker').close();$('finish-picker').onclick=()=>$('card-picker').close();$('card-picker').addEventListener('close',()=>{pickerSelection=null;renderActors();});$('card-search').oninput=()=>{pickerPage=0;renderPicker();};$('prev-cards').onclick=()=>{pickerPage--;renderPicker();};$('next-cards').onclick=()=>{pickerPage++;renderPicker();};
+for(const field of [...pickerFields,'sort'])$(`picker-${field}`).onchange=()=>{pickerPage=0;renderPicker();};
+$('reset-picker').onclick=resetPicker;
 // Sharing the catalogue's email session avoids a second editor account.
 const toolbar=$('export').parentNode;
 toolbar.append(button('이 시나리오 온라인 저장',async()=>{
