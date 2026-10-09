@@ -92,39 +92,48 @@ test('tokens have no deck limit proposals', () => {
   assert.throws(()=>changesFor(token,{proposed_limit:1}));
 });
 test('public catalog is complete, each preview exists and personal paths are absent', () => {
-  assert.equal(catalog.cards.length,1198);
-  assert.equal(catalog.cards.filter(c=>!c.special).length,1193);
+  assert.equal(catalog.cards.length,1231);
+  assert.equal(catalog.cards.filter(c=>!c.special).length,1226);
   assert.equal(catalog.cards.filter(c=>c.special).length,5);
-  assert.equal(new Set(catalog.cards.map(c=>c.identity_key)).size,1198);
+  assert.equal(new Set(catalog.cards.map(c=>c.identity_key)).size,1231);
   assert.equal(catalog.cards.filter(c=>c.stock).length,catalog.meta.stock_count);
   assert.ok(catalog.meta.stock_count>=60);
   for(const [slot,limit] of [[278,2],[369,1],[554,0],[601,1],[741,1]]){
     const c=catalog.cards.find(c=>c.slot===slot);assert.equal(c.deck_limit,limit);assert.equal(c.deck_limit_without_banlist,limit);
   }
   assert.equal(catalog.cards.find(c=>c.slot===1115).name_en,'Megalosmasher X');
-  for(let slot=1116;slot<=1198;slot++){
+  for(let slot=1116;slot<=1231;slot++){
     const c=catalog.cards.find(c=>c.slot===slot);assert.ok(c&&!c.special&&c.official_cid);
     assert.equal(c.review_kind,'restored');
   }
   for(const [slot,id,name] of [[1137,1974,'Plaguespreader Zombie'],[1138,1975,'Gozuki'],[1139,1976,'Vampire Lord'],[1140,1977,'Book of Life'],[1141,1978,'Goblin Zombie'],[1142,1979,'Call of the Mummy'],[1143,1980,'Pumprincess the Princess of Ghosts']]){
     const c=catalog.cards.find(c=>c.slot===slot);assert.equal(c.internal_id,id);assert.equal(c.name_en,name);
-    assert.match(c.review_note,/Claude243/);
+    assert.match(c.review_note,/Claude276/);
   }
   for(let slot=1144;slot<=1153;slot++){
     const c=catalog.cards.find(c=>c.slot===slot);
     assert.equal(c.internal_id,1961+slot-1144);
-    assert.match(c.review_note,/Claude243/);
+    assert.match(c.review_note,/Claude276/);
   }
   assert.equal(catalog.cards.find(c=>c.slot===1151).type,'의식 몬스터');
   for(let slot=1154;slot<=1176;slot++){
     const c=catalog.cards.find(c=>c.slot===slot);
     assert.equal(c.internal_id,1938+slot-1154);
-    assert.match(c.review_note,/Claude243/);
+    assert.match(c.review_note,/Claude276/);
   }
   for(const [i,id] of [1927,1929,1930,1931,1932,1933,1934,1935,1936,1937,1908,1909,1913,1914,1915,1916,1917,1918,1919,1924,1925,1926].entries()){
     const c=catalog.cards.find(c=>c.slot===1177+i);
-    assert.equal(c.internal_id,id);assert.match(c.review_note,/Claude243/);
+    assert.equal(c.internal_id,id);assert.match(c.review_note,/Claude276/);
   }
+  for(const [i,id] of [...Array.from({length:28},(_,i)=>1872+i),1904,1905,1906,1907,1871].entries()){
+    const c=catalog.cards.find(c=>c.slot===1199+i);
+    assert.equal(c.internal_id,id);assert.match(c.review_note,/Claude276/);
+  }
+  assert.equal(catalog.cards.find(c=>c.slot===1229).type,'융합 몬스터');
+  assert.equal(catalog.cards.find(c=>c.slot===1230).type,'융합 몬스터');
+  assert.equal(catalog.cards.find(c=>c.slot===1231).type,'일반 몬스터');
+  assert.match(catalog.cards.find(c=>c.slot===1220).review_note,/지속 효과/);
+  assert.match(catalog.cards.find(c=>c.slot===1191).review_note,/어드밴스 소환 준비/);
   assert.match(catalog.cards.find(c=>c.slot===1168).review_note,/2장/);
   assert.match(catalog.cards.find(c=>c.slot===1190).review_note,/자동/);
   assert.match(catalog.cards.find(c=>c.slot===1192).review_note,/소재 대용/);

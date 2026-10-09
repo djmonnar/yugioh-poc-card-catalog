@@ -450,6 +450,178 @@
           "identity_key": "7ab0d1cad6193baa7f779cf81ee04d9a377f6583b8baf25ee742220662eaf193"
         }
       ]
+    },
+    {
+      "id": "20261009-atlantis-chaos-fusion",
+      "name": "아틀란티스·카오스·융합 지원 33장",
+      "added_at": "2026-10-09T16:32:14.605214+09:00",
+      "cards": [
+        {
+          "slot": 1199,
+          "internal_id": 1872,
+          "identity_key": "69db8c3a15c31b677515e4ae95af703c4a59d5f2c2b071c3cf81120100e2212b"
+        },
+        {
+          "slot": 1200,
+          "internal_id": 1873,
+          "identity_key": "6378eb1b6e277e92109a100dd73d985a43cfab3de04718c9933ce330e2ff803c"
+        },
+        {
+          "slot": 1201,
+          "internal_id": 1874,
+          "identity_key": "9cc91f5bc4ba8c34de8d8387128cc634883356abc20f4482a25248b00defc6db"
+        },
+        {
+          "slot": 1202,
+          "internal_id": 1875,
+          "identity_key": "b781c54ef02789ecc1ca8b98fc91db18c49bdfbd9af4d65e5e1e1da2e0a9fb87"
+        },
+        {
+          "slot": 1203,
+          "internal_id": 1876,
+          "identity_key": "81d9d8980c8c7048f4809d505ef2fb1d8bb049d732779428c68bf8701699ebd7"
+        },
+        {
+          "slot": 1204,
+          "internal_id": 1877,
+          "identity_key": "5d2c02a144e186abb8172b737e999056a915863c1463dcc0242798a1f490e352"
+        },
+        {
+          "slot": 1205,
+          "internal_id": 1878,
+          "identity_key": "04c4280f9e6f4053393ce32d35b3c3a8cb921a501c8992434436eb943b4ead51"
+        },
+        {
+          "slot": 1206,
+          "internal_id": 1879,
+          "identity_key": "fc96bfcb834663d61bc76b8386df7c10a3074853f134b58175043f5fb3a457dc"
+        },
+        {
+          "slot": 1207,
+          "internal_id": 1880,
+          "identity_key": "0dd50f6fd0171fe688825db1ac4906bdf2dba0c5933100e63a8fd5ed021a8e28"
+        },
+        {
+          "slot": 1208,
+          "internal_id": 1881,
+          "identity_key": "09ae25ba611ab0efa07634059c0a7dfadc28855699e598c28d12b7376292024e"
+        },
+        {
+          "slot": 1209,
+          "internal_id": 1882,
+          "identity_key": "98bcc1c4a6a5fafd4c449c99095c0a7354bf74dc70790330b065f32ce4e29c37"
+        },
+        {
+          "slot": 1210,
+          "internal_id": 1883,
+          "identity_key": "c335c482bc19cb8785faf255d8d4a88a80eab9b136ec765a4322f39238709d4f"
+        },
+        {
+          "slot": 1211,
+          "internal_id": 1884,
+          "identity_key": "7d3679087cfd67fcb206dde9a15fb2a6353cebe98012039aafc8f1c36982bda1"
+        },
+        {
+          "slot": 1212,
+          "internal_id": 1885,
+          "identity_key": "339b4eaa677c67989ded9c942a01f578cf97c0054c26791765f9e024653c8fb4"
+        },
+        {
+          "slot": 1213,
+          "internal_id": 1886,
+          "identity_key": "6c0478800ca751c783ffee5c3f77c5f95834a4a22c08a90fda4041462b8b6c98"
+        },
+        {
+          "slot": 1214,
+          "internal_id": 1887,
+          "identity_key": "29e207bf7722a2b7543bcab39ee0322c7dea262e4bd4deb992c4a8d0e2339abb"
+        },
+        {
+          "slot": 1215,
+          "internal_id": 1888,
+          "identity_key": "62d49484afd4ee81dcd0521bcd53aaf0f39dad042b7bfe2f914362639620f07b"
+        },
+        {
+          "slot": 1216,
+          "internal_id": 1889,
+          "identity_key": "11deec273674ab27d556ef6c986bb2b641b62d439aeab9dde239f05f64249e97"
+        },
+        {
+          "slot": 1217,
+          "internal_id": 1890,
+          "identity_key": "3deec948113c7208b292c6a765a9895d923260b55138c92083b37a2658770373"
+        },
+        {
+          "slot": 1218,
+          "internal_id": 1891,
+          "identity_key": "69239aa3ffa6f83d823f15d9b605ed480e17fa696bca09da8d8e5065a20af6e8"
+        },
+        {
+          "slot": 1219,
+          "internal_id": 1892,
+          "identity_key": "e15ed14a8c7a5dad643760cbf4de53e2f3763a728c7a1291dc33f7af655b979a"
+        },
+        {
+          "slot": 1220,
+          "internal_id": 1893,
+          "identity_key": "3b89bea291e4b395c94950818b9e39fd813a0d8e2f04145056d97e4816841d70"
+        },
+        {
+          "slot": 1221,
+          "internal_id": 1894,
+          "identity_key": "fdf747b75ff493d7a5c4643aec9eb3a4726acb49efde71c82a7c195e41e139fe"
+        },
+        {
+          "slot": 1222,
+          "internal_id": 1895,
+          "identity_key": "e9ff351334b0907f819c281a306f59c7c4062bc20383dfe58c3d73f51d39db0e"
+        },
+        {
+          "slot": 1223,
+          "internal_id": 1896,
+          "identity_key": "fc595945ce5690c209234d0ef69c678412c17bd0730fed41acaa6e334328853f"
+        },
+        {
+          "slot": 1224,
+          "internal_id": 1897,
+          "identity_key": "17c600367139fbd24a9c5774252aa2739700130791fa9eafebadaa55d92a584d"
+        },
+        {
+          "slot": 1225,
+          "internal_id": 1898,
+          "identity_key": "8eb7b0b13cdaed21967f28dfb5ad23c6708fd6cbcc0315189c250126baf10b02"
+        },
+        {
+          "slot": 1226,
+          "internal_id": 1899,
+          "identity_key": "422ced7fae2540081e1e13a15d7d93fb27d9bbda53af6b594edfbfdcd8aac7fd"
+        },
+        {
+          "slot": 1227,
+          "internal_id": 1904,
+          "identity_key": "847c0f75550778e6ac35148031c74605cc98328541d728a4dadb8d6546011fb1"
+        },
+        {
+          "slot": 1228,
+          "internal_id": 1905,
+          "identity_key": "32d464c0d207ed70f9813c36cb59b2d11fd9e82d364780043c326c9ac4daf5b2"
+        },
+        {
+          "slot": 1229,
+          "internal_id": 1906,
+          "identity_key": "97d0c76de1b1087ac3c8494e36dc4acd2e3a8ab929f4577c6f8cb085ab50b975"
+        },
+        {
+          "slot": 1230,
+          "internal_id": 1907,
+          "identity_key": "3bedc619681dd879b26fed6b168a3c2545aa7e9e1da3d37cc5fc05290cae8d47"
+        },
+        {
+          "slot": 1231,
+          "internal_id": 1871,
+          "identity_key": "338e76bb8ef47b80f71d275e5df925f0ccd0683bdf044801c9651597a75f0f22"
+        }
+      ]
     }
   ]
 }

@@ -13,10 +13,13 @@ const makeHistory = (...releases) => ({schema_version:1, releases});
 test('published latest addition batch matches actual cards without changing gameplay data', () => {
   const before = JSON.stringify(data), index = additionIndex(data.cards, history);
   const latest = history.releases.find(r => r.id === index.latest.id);
-  assert.equal(latest.id, '20261009-white-dark-kit');
-  assert.equal(latest.cards.length, 22);
+  assert.equal(latest.id, '20261009-atlantis-chaos-fusion');
+  assert.equal(latest.cards.length, 33);
   assert.deepEqual(latest.cards.map(c => [c.slot, c.internal_id]),
-    [1927,1929,1930,1931,1932,1933,1934,1935,1936,1937,1908,1909,1913,1914,1915,1916,1917,1918,1919,1924,1925,1926].map((id,i) => [1177+i,id]));
+    [...Array.from({length:28},(_,i)=>1872+i),1904,1905,1906,1907,1871].map((id,i) => [1199+i,id]));
+  const previous = history.releases.find(r=>r.id==='20261009-white-dark-kit');
+  assert.equal(previous.cards.length,22);
+  assert.equal(data.cards.filter(c=>additionMatches(c,previous.id,index)).length,22);
   assert.equal(index.latest.count, latest.cards.length);
   assert.ok(index.latest.count > 0);
   assert.equal(data.cards.filter(c => additionMatches(c, 'latest', index)).length, latest.cards.length);
