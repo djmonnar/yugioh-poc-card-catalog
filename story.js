@@ -1,6 +1,6 @@
 import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261007-49';
 import {CardLimitsCloud,applyLimits} from './card-limits.js?v=20261008-61';
-import {STORY_KEY,SKILLS,parseSkills,parsePreset,emptyStory,newActor,newBattle,parseStory,canonicalStory,validateStory,cardRef,reviewFiles,safePortrait} from './story-core.js?v=20261009-open-battles';
+import {STORY_KEY,SKILLS,parseSkills,parsePreset,emptyStory,newActor,newBattle,parseStory,canonicalStory,validateStory,cardRef,reviewFiles,safePortrait} from './story-core.js?v=20261009-grave-parasite';
 import {NUMERIC_SKILLS,skillSets,copyProfile,removeProfile,profilePacket} from './story-skills.js?v=20261009-73';
 import {LIBRARY_KEY,scenarioKey,copyBattle,createScenario,readLibrary,parseRemoteScenarios,actorTemplates,importActor} from './story-library.js?v=20261009-open-battles';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
@@ -72,9 +72,9 @@ function renderPicker(){
   const query=$('card-search').value.trim().toLowerCase(),found=cards.filter(c=>filter(c)&&[c.name_ko,c.name_en,c.description_ko,c.race].join(' ').toLowerCase().includes(query)),pages=Math.max(1,Math.ceil(found.length/12));pickerPage=Math.min(pickerPage,pages-1);
   const box=$('picker-results');box.replaceChildren();
   for(const c of found.slice(pickerPage*12,(pickerPage+1)*12)){
-    const selected=pickerSelection?.selected(c)===true,full=pickerSelection&&pickerSelection.count()>=100;
+    const selected=pickerSelection?.selected(c)===true,full=pickerSelection&&pickerSelection.count()>=(pickerSelection.limit||100);
     const b=button('',()=>{
-      if(pickerSelection&&(pickerSelection.selected(c)||pickerSelection.count()>=100))return;
+      if(pickerSelection&&(pickerSelection.selected(c)||pickerSelection.count()>=(pickerSelection.limit||100)))return;
       const dialog=$('card-picker'),scroll=dialog.scrollTop;chooseCard(cardRef(c));
       if(pickerSelection){redraw();renderPicker();dialog.scrollTop=scroll;const next=Array.from($('picker-results').children).find(el=>!el.disabled);(next||$('finish-picker')).focus({preventScroll:true});}
       else{dialog.close();redraw();}
@@ -86,7 +86,7 @@ function renderPicker(){
   }
   $('picker-page').textContent=`${pickerPage+1} / ${pages} · ${found.length}장`;$('prev-cards').disabled=pickerPage===0;$('next-cards').disabled=pickerPage+1===pages;
   $('finish-picker').hidden=!pickerSelection;$('picker-selection').hidden=!pickerSelection;
-  $('picker-selection').textContent=pickerSelection?`후보 ${pickerSelection.count()} / 100장 · ${pickerSelection.count()>=100?'후보를 모두 채웠어.':'여러 장을 계속 골라줘.'}`:'';
+  $('picker-selection').textContent=pickerSelection?`${pickerSelection.label||'후보'} ${pickerSelection.count()} / ${pickerSelection.limit||100}장 · ${pickerSelection.count()>=(pickerSelection.limit||100)?'모두 채웠어.':'여러 장을 계속 골라줘.'}`:'';
 }
 function poolPicker(reward,onCreate){
   let pool=reward;
@@ -145,9 +145,15 @@ function renderSkillSet(profile,box){
   for(const [kind,label] of Object.entries(SKILLS)){
     const row=node('div');row.className='skill-row';const l=node('label'),toggle=node('input');toggle.type='checkbox';toggle.checked=profile.skills.some(s=>s.kind===kind);l.append(toggle,node('span',label));row.append(l);
     const accept=c=>!c.special&&c.type!=='융합 몬스터'&&(kind!=='start_field'||['마법','함정'].includes(c.type))&&(kind!=='start_monster'||c.type.includes('몬스터'));
-    toggle.onchange=()=>{profile.skills=profile.skills.filter(s=>s.kind!==kind);if(toggle.checked){const bounds=NUMERIC_SKILLS[kind];if(bounds){profile.skills.push({kind,value:bounds[2],...(kind==='draw_once'?{threshold:2000}:{})});redraw();}else picker(accept,label,card=>profile.skills.push({kind,card,...(kind==='start_monster'?{position:'attack'}:{})}));}else redraw();};
+    const gravePicker=skill=>{let current=skill;picker(accept,'시작 묘지 카드 · 여러 장을 고른 뒤 선택 완료',card=>{if(!current){current={kind,entries:[]};profile.skills.push(current);}current.entries.push({card,count:1});},{selected:c=>current?.entries.some(e=>e.card.slot===c.slot)===true,count:()=>current?.entries.reduce((n,e)=>n+e.count,0)||0,limit:12,label:'묘지 합계'});};
+    toggle.onchange=()=>{profile.skills=profile.skills.filter(s=>s.kind!==kind);if(toggle.checked){const bounds=NUMERIC_SKILLS[kind];if(kind==='start_grave')gravePicker();else if(kind==='parasite_deck'){profile.skills.push({kind});redraw();}else if(bounds){profile.skills.push({kind,value:bounds[2],...(kind==='draw_once'?{threshold:2000}:{})});redraw();}else picker(accept,label,card=>profile.skills.push({kind,card,...(kind==='start_monster'?{position:'attack'}:{})}));}else redraw();};
     const skill=profile.skills.find(s=>s.kind===kind);
-    if(skill){if(skill.card)row.append(button(skill.card.name_ko+' · 바꾸기',()=>picker(accept,label,card=>skill.card=card)));else{const bounds=NUMERIC_SKILLS[kind],field=input(bounds[3],skill.value,v=>skill.value=v,{type:'number'});field.lastChild.min=bounds[0];field.lastChild.max=bounds[1];row.append(field);}
+    if(skill){if(kind==='start_grave'){
+        const total=node('small'),updateTotal=()=>{total.textContent=`묘지 합계 ${skill.entries.reduce((n,e)=>n+e.count,0)} / 12장 · 덱 장수는 유지되고 특성으로 별도 추가돼.`;};
+        for(const entry of skill.entries){const line=node('div');line.className='reward-row grave-entry';line.append(node('span',entry.card.name_ko));const count=input('묘지에 둘 장수',entry.count,v=>{entry.count=v;updateTotal();check();},{type:'number'});count.lastChild.min=1;count.lastChild.max=12;line.append(count,button('제거',()=>{skill.entries=skill.entries.filter(e=>e!==entry);if(!skill.entries.length)profile.skills=profile.skills.filter(s=>s!==skill);redraw();},'remove-button'));row.append(line);}
+        updateTotal();row.append(button('+ 묘지 카드 추가',()=>gravePicker(skill)),total);
+      }else if(kind==='parasite_deck')row.append(node('small','상대 덱의 무작위 위치에 앞면 기생충 1장을 넣어. 뽑으면 수비 표시로 특수 소환되고 1,000 데미지와 곤충족 변경 효과가 적용돼.'));
+      else if(skill.card)row.append(button(skill.card.name_ko+' · 바꾸기',()=>picker(accept,label,card=>skill.card=card)));else{const bounds=NUMERIC_SKILLS[kind],field=input(bounds[3],skill.value,v=>skill.value=v,{type:'number'});field.lastChild.min=bounds[0];field.lastChild.max=bounds[1];row.append(field);}
       if(kind==='start_monster')row.append(select('시작 몬스터의 표시 형식',skill.position,[['attack','앞면 공격 표시'],['defense','앞면 수비 표시'],['set','뒷면 수비 표시']],v=>skill.position=v));
       if(kind==='draw_once'){const threshold=input('내 LP가 이 값 이하일 때',skill.threshold,v=>skill.threshold=v,{type:'number'});threshold.lastChild.min=100;threshold.lastChild.max=16000;row.append(threshold);}}
     const hints={opening_draw:'기본 시작 패에 덱 위에서 1~3장을 더 뽑아. 지정 카드 추가와 함께 쓸 수 있어.',draw_once:'상대의 메인 페이즈에 조건을 만족하면 한 번만 덱에서 뽑아.',heal_once:'회복량만큼 LP가 줄어든 뒤 상대 메인 페이즈에 한 번 회복해.',add_hand_once:'상대 메인 페이즈에 패가 3장 이하이면 지정 카드를 한 번 받아.',start_field:'필드·지속 마법은 앞면, 다른 마법·함정은 세트 상태로 시작해.'};if(hints[kind])row.append(node('small',hints[kind]));box.append(row);
