@@ -118,7 +118,7 @@ function rewards(b,kind,title){const box=node('div');box.className='reward-block
   const tier=node('select');tier.setAttribute('aria-label','무작위 보상 등급');for(const v of ['ANY','N','R','SR','UR']){const o=node('option',v==='ANY'?'랜덤 허용 등급':v);o.value=v;tier.append(o);}tools.append(tier,button('무작위 1장',()=>add({kind:'random',rarity:tier.value,count:1})),button('지정 카드 랜덤 추가',()=>{if(b.rewards[kind].length>=20)return status('보상은 종류별 20개까지야.');poolPicker(null,r=>b.rewards[kind].push(r));}));box.append(tools);return box;
 }
 function raidControls(b){
-  const box=node('div'),toggle=node('label'),on=node('input');on.type='checkbox';on.checked=!!b.raid;
+  const box=node('div'),toggle=node('label'),on=node('input');toggle.className='battle-unlock';on.type='checkbox';on.checked=!!b.raid;
   on.onchange=()=>{if(on.checked){b.raid={max_hp:20000,milestones:[]};b.requires_previous=false;}else delete b.raid;redraw();};
   toggle.append(on,node('span','레이드 전투'));box.append(toggle);
   if(!b.raid)return box;
