@@ -17,6 +17,13 @@ export function emptyStory(){return {schema_version:1,kind:'poc-story-authoring'
 function reward(r){
   if(r.kind==='gold')return {kind:'gold',amount:integer(r.amount,1,100000)};
   if(r.kind==='card')return {kind:'card',card:ref(r.card),count:integer(r.count,1,3)};
+  if(r.kind==='card_pool'){
+    if(!Array.isArray(r.entries)||!r.entries.length||r.entries.length>100)fail('랜덤 후보 카드는 1~100종을 골라줘.');
+    const seen=new Set();return {kind:'card_pool',count:integer(r.count,1,3),entries:r.entries.map(e=>{
+      const card=ref(e.card);if(seen.has(card.slot))fail('랜덤 후보에 같은 카드가 두 번 있어.');seen.add(card.slot);
+      return {card,weight:integer(e.weight,1,10000)};
+    })};
+  }
   if(r.kind==='random'&&REWARD_TIERS.includes(r.rarity))return {kind:'random',rarity:r.rarity,count:integer(r.count,1,3)};
   fail('보상 종류를 확인해줘.');
 }
@@ -71,6 +78,7 @@ export function validateStory(doc,cards,decks){
     if(!deck||deck.ruleset!==b.ruleset)issues.push(`${b.name}: 규칙에 맞는 AI 덱을 골라줘.`);
     for(const k of ['first','repeat'])for(const r of b.rewards[k]){
       if(r.kind==='card'){const c=resolveRef(r.card,cards);if(!c||c.special||(!c.reward_eligible&&c.rarity!=='L'))issues.push(`${b.name}: 보상 카드를 현재 도감에서 다시 골라줘.`);}
+      if(r.kind==='card_pool')for(const e of r.entries||[]){const c=resolveRef(e.card,cards);if(!c||c.special||(!c.reward_eligible&&c.rarity!=='L'))issues.push(`${b.name}: 랜덤 후보 카드를 현재 도감에서 다시 골라줘.`);}
       if(r.kind==='random'&&!cards.some(c=>!c.special&&c.reward_eligible&&c.rarity!=='L'&&c.draw_enabled!==false&&(r.rarity==='ANY'||c.rarity===r.rarity)))issues.push(`${b.name}: ${r.rarity} 무작위 보상 카드풀이 비어 있어.`);
     }
   }
@@ -80,7 +88,10 @@ export function canonicalStory(doc,meta,cards){
   const clean=parseStory(doc);clean.catalog_dataset_id=meta.dataset_id;
   const current=ref=>{const c=resolveRef(ref,cards);if(!c)fail('카드가 변경됐어. 현재 도감에서 다시 골라줘.');return cardRef(c);};
   for(const a of clean.actors)for(const p of [{skills:a.skills},...(a.skill_profiles||[])])for(const s of p.skills)if(s.card)s.card=current(s.card);
-  for(const b of clean.battles)for(const k of ['first','repeat'])for(const r of b.rewards[k])if(r.kind==='card')r.card=current(r.card);
+  for(const b of clean.battles)for(const k of ['first','repeat'])for(const r of b.rewards[k]){
+    if(r.kind==='card')r.card=current(r.card);
+    if(r.kind==='card_pool')for(const e of r.entries)e.card=current(e.card);
+  }
   return clean;
 }
 export async function reviewFiles(doc,meta,cards,decks){

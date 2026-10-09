@@ -1,8 +1,8 @@
 import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261007-49';
 import {CardLimitsCloud,applyLimits} from './card-limits.js?v=20261008-61';
-import {STORY_KEY,SKILLS,parseSkills,parsePreset,emptyStory,newActor,newBattle,parseStory,canonicalStory,validateStory,cardRef,reviewFiles,safePortrait} from './story-core.js?v=20261009-73';
+import {STORY_KEY,SKILLS,parseSkills,parsePreset,emptyStory,newActor,newBattle,parseStory,canonicalStory,validateStory,cardRef,reviewFiles,safePortrait} from './story-core.js?v=20261009-reward-pool';
 import {NUMERIC_SKILLS,skillSets,copyProfile,removeProfile,profilePacket} from './story-skills.js?v=20261009-73';
-import {LIBRARY_KEY,scenarioKey,copyBattle,createScenario,readLibrary,parseRemoteScenarios} from './story-library.js?v=20261008-69';
+import {LIBRARY_KEY,scenarioKey,copyBattle,createScenario,readLibrary,parseRemoteScenarios} from './story-library.js?v=20261009-reward-pool';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 import {validateCloudConfig,cloudError} from './supabase-cloud.js?v=20261008-70';
 import {mergeAIAssets} from './ai-assets.js?v=20261008-70';
@@ -54,9 +54,25 @@ function input(label,value,changed,{type='text',max=6000}={}){const l=node('labe
 function select(label,value,rows,changed){const l=node('label',label),s=node('select');for(const [key,text] of rows){const o=node('option',text);o.value=key;s.append(o);}s.value=value;s.addEventListener('change',()=>{changed(s.value);redraw();});l.append(s);return l;}
 function picker(accept,purpose,done){filter=accept;chooseCard=done;pickerPage=0;$('card-search').value='';$('picker-purpose').textContent=purpose;renderPicker();$('card-picker').showModal();$('card-search').focus();}
 function renderPicker(){const query=$('card-search').value.trim().toLowerCase(),found=cards.filter(c=>filter(c)&&[c.name_ko,c.name_en,c.description_ko,c.race].join(' ').toLowerCase().includes(query)),pages=Math.max(1,Math.ceil(found.length/12));pickerPage=Math.min(pickerPage,pages-1);const box=$('picker-results');box.replaceChildren();for(const c of found.slice(pickerPage*12,(pickerPage+1)*12)){const b=button('',()=>{chooseCard(cardRef(c));$('card-picker').close();redraw();},'picker-card'),img=node('img'),label=node('span',c.name_ko);img.src=c.image;img.alt='';img.loading='lazy';label.append(node('small',`${c.rarity} · ${c.type} · ${c.race||c.subtype||''}`));b.append(img,label);box.append(b);}$('picker-page').textContent=`${pickerPage+1} / ${pages} · ${found.length}장`;$('prev-cards').disabled=pickerPage===0;$('next-cards').disabled=pickerPage+1===pages;}
-function rewards(b,kind){const box=node('div');box.className='reward-block';box.append(node('h4',kind==='first'?'첫 승리 보상':'이후 승리 보상'));b.rewards[kind].forEach((r,i)=>{const row=node('div');row.className='reward-row';row.append(node('span',r.kind==='gold'?`${r.amount} 골드`:r.kind==='card'?`${r.card.name_ko} ×${r.count}`:`무작위 ${r.rarity==='ANY'?'랜덤 허용 등급':r.rarity} 카드 ×${r.count}`));row.append(button('삭제',()=>{b.rewards[kind].splice(i,1);redraw();},'remove-button'));box.append(row);});const add=r=>{if(b.rewards[kind].length>=20){status('보상은 종류별 20개까지야.');return;}b.rewards[kind].push(r);redraw();};
+function poolReward(r,remove){
+  const box=node('div');box.className='pool-reward';
+  const head=node('div');head.className='reward-row';head.append(node('b','지정 카드 랜덤'),button('보상 삭제',remove,'remove-button'));box.append(head);
+  const count=input('받을 장수 · 매번 독립 추첨',r.count,v=>r.count=v,{type:'number'});count.lastChild.min=1;count.lastChild.max=3;box.append(count);
+  const percentages=[];
+  const update=()=>{const total=r.entries.reduce((n,e)=>n+e.weight,0),valid=r.entries.every(e=>Number.isInteger(e.weight)&&e.weight>=1&&e.weight<=10000);percentages.forEach((el,i)=>el.textContent=valid?`${(100*r.entries[i].weight/total).toFixed(1)}%`:'비중 확인');};
+  for(const e of r.entries){
+    const row=node('div');row.className='pool-candidate';const c=resolveRewardCard(e.card),img=node('img');img.src=c?.image||'';img.alt='';img.loading='lazy';
+    const label=node('span',e.card.name_ko),percent=node('span');percent.className='pool-percent';percentages.push(percent);
+    const weight=input('비중',e.weight,v=>{e.weight=v;update();},{type:'number'});weight.lastChild.min=1;weight.lastChild.max=10000;
+    row.append(img,label,weight,percent,button('후보 삭제',()=>{r.entries=r.entries.filter(x=>x!==e);if(!r.entries.length)remove();else redraw();},'remove-button'));box.append(row);
+  }
+  update();box.append(node('small','비중 3 : 1이면 75% : 25%. 여러 장을 뽑으면 같은 카드가 다시 나올 수 있어. 보유 한도에 찬 후보는 제외하고 다시 계산해.'));
+  const add=button('+ 후보 카드',()=>picker(c=>!c.special&&(c.reward_eligible||c.rarity==='L')&&!r.entries.some(e=>e.card.slot===c.slot),'랜덤 보상 후보 카드',card=>r.entries.push({card,weight:1})));add.disabled=r.entries.length>=100;box.append(add);return box;
+}
+function resolveRewardCard(ref){return cards.find(c=>c.slot===ref.slot&&c.internal_id===ref.internal_id);}
+function rewards(b,kind){const box=node('div');box.className='reward-block';box.append(node('h4',kind==='first'?'첫 승리 보상':'이후 승리 보상'));b.rewards[kind].forEach((r,i)=>{const remove=()=>{b.rewards[kind].splice(i,1);redraw();};if(r.kind==='card_pool'){box.append(poolReward(r,remove));return;}const row=node('div');row.className='reward-row';row.append(node('span',r.kind==='gold'?`${r.amount} 골드`:r.kind==='card'?`${r.card.name_ko} ×${r.count}`:`무작위 ${r.rarity==='ANY'?'랜덤 허용 등급':r.rarity} 카드 ×${r.count}`));row.append(button('삭제',remove,'remove-button'));box.append(row);});const add=r=>{if(b.rewards[kind].length>=20){status('보상은 종류별 20개까지야.');return;}b.rewards[kind].push(r);redraw();};
   const tools=node('div');tools.className='row-actions';const amount=node('input');amount.type='number';amount.min=1;amount.max=100000;amount.value=50;amount.style.width='100px';amount.setAttribute('aria-label','추가할 골드');tools.append(amount,button('골드 추가',()=>{const n=Number(amount.value);if(!Number.isInteger(n)||n<1||n>100000)return status('골드는 1~100,000 사이로 입력해줘.');add({kind:'gold',amount:n});}),button('카드 검색',()=>picker(c=>!c.special&&(c.reward_eligible||c.rarity==='L'),'보상으로 받을 카드 · 1장',card=>add({kind:'card',card,count:1}))));
-  const tier=node('select');tier.setAttribute('aria-label','무작위 보상 등급');for(const v of ['ANY','N','R','SR','UR']){const o=node('option',v==='ANY'?'랜덤 허용 등급':v);o.value=v;tier.append(o);}tools.append(tier,button('무작위 1장',()=>add({kind:'random',rarity:tier.value,count:1})));box.append(tools);return box;
+  const tier=node('select');tier.setAttribute('aria-label','무작위 보상 등급');for(const v of ['ANY','N','R','SR','UR']){const o=node('option',v==='ANY'?'랜덤 허용 등급':v);o.value=v;tier.append(o);}tools.append(tier,button('무작위 1장',()=>add({kind:'random',rarity:tier.value,count:1})),button('지정 카드 랜덤 추가',()=>{if(b.rewards[kind].length>=20)return status('보상은 종류별 20개까지야.');picker(c=>!c.special&&(c.reward_eligible||c.rarity==='L'),'첫 번째 랜덤 후보 카드',card=>add({kind:'card_pool',count:1,entries:[{card,weight:1}]}));}));box.append(tools);return box;
 }
 function renderBattles(){const root=$('battle-list');root.replaceChildren();doc.battles.forEach((b,index)=>{
   const box=node('details');box.className='story-box fold-box battle-box';box.open=openedBattles.has(b);
