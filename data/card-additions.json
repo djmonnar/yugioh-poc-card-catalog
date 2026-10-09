@@ -704,6 +704,133 @@
           "identity_key": "e0702d912a9490eb5f0904584a5f04c4bb8a36329a212d3e6db1658577d52a35"
         }
       ]
+    },
+    {
+      "id": "20261010-mai-white-ritual",
+      "name": "해피·아마조네스·백룡 의식 24장",
+      "added_at": "2026-10-10T01:26:45.828859+09:00",
+      "cards": [
+        {
+          "slot": 1247,
+          "internal_id": 1832,
+          "identity_key": "700fde8859d973fdcefb68a64de41c7e6f6619025b1309c4e06bba58da071b22"
+        },
+        {
+          "slot": 1248,
+          "internal_id": 1833,
+          "identity_key": "9cbb703e9751611a56ce5f22c8b305e9f9e9d3511898432edf8cd6b0e5520319"
+        },
+        {
+          "slot": 1249,
+          "internal_id": 1834,
+          "identity_key": "53388ce7cb9044f650d95938c4808fec22d461c09e7b06728d2794a215823c35"
+        },
+        {
+          "slot": 1250,
+          "internal_id": 1835,
+          "identity_key": "3a250d64f9ed5f6430dd4ca3fd330ebb2be59862272cfb2027d7d671354b0986"
+        },
+        {
+          "slot": 1251,
+          "internal_id": 1836,
+          "identity_key": "d5042751eb332a8704ebe13f677970b6d897f75fe1b275c081fa132a73168d5d"
+        },
+        {
+          "slot": 1252,
+          "internal_id": 1837,
+          "identity_key": "2d6820c46b2e5a167340dd51d08d4653bcd40b6b69169fa306a1a1cf49d736c7"
+        },
+        {
+          "slot": 1253,
+          "internal_id": 1838,
+          "identity_key": "1cc438e8511fb5e84e2fd51101ec555b82f55584a194230ebcf9bc63e919bf00"
+        },
+        {
+          "slot": 1254,
+          "internal_id": 1839,
+          "identity_key": "e4f488e3398bbe7fc892b8c9bb98fdef7e4f763694f11660c054601a9a7a1e5f"
+        },
+        {
+          "slot": 1255,
+          "internal_id": 1841,
+          "identity_key": "a495332dab5ebb921101cebcbbd1710c19672cba179a8c80104635574ccd8da6"
+        },
+        {
+          "slot": 1256,
+          "internal_id": 1842,
+          "identity_key": "590f87c6f2883d29315dd001eed70f3e109605caaf357e1753a836aeaa5f0bf3"
+        },
+        {
+          "slot": 1257,
+          "internal_id": 1843,
+          "identity_key": "c8649042ab64749db95a76ff00802063648fd8c76bfe27f3e81daf08a7ebc811"
+        },
+        {
+          "slot": 1258,
+          "internal_id": 1844,
+          "identity_key": "82fa152a314b6f3434da63d8cc6e091ba616918f597d926d87255d12691ba6d5"
+        },
+        {
+          "slot": 1259,
+          "internal_id": 1845,
+          "identity_key": "e98a15bc87cf2b2362911ac37f5c3b2a5471635ad250b7ca12e49dc967ace706"
+        },
+        {
+          "slot": 1260,
+          "internal_id": 1846,
+          "identity_key": "fba9617e3e89a457bfa5e121a46bec40c732fb602c2d19bf87c000922b8ba382"
+        },
+        {
+          "slot": 1261,
+          "internal_id": 1847,
+          "identity_key": "7bc57a63e105b5f6868ed97c70fcac2e7a229efb0d9fcdfa2fdbe9ec53f6273f"
+        },
+        {
+          "slot": 1262,
+          "internal_id": 1848,
+          "identity_key": "75e671c7c65e9a8b1f29ba3234e7dac8c23b491d32e2ee13828df7079c9ed094"
+        },
+        {
+          "slot": 1263,
+          "internal_id": 1849,
+          "identity_key": "455a7bd3ffaa3711deea284e83642a93d61d34c32da0899bc44c300c698c10af"
+        },
+        {
+          "slot": 1264,
+          "internal_id": 1851,
+          "identity_key": "1a901561e7efb97d1cebceeb19d547185581c568055c983bace6cba346602abf"
+        },
+        {
+          "slot": 1265,
+          "internal_id": 1852,
+          "identity_key": "e9a12b768656b3a2fce3653ce06837096df7754a8282ffd08d3598c9ebde5df2"
+        },
+        {
+          "slot": 1266,
+          "internal_id": 1853,
+          "identity_key": "7c900a217a9ae58ff028100977f57fb0fa3733624a2c029331a3c1379e617e53"
+        },
+        {
+          "slot": 1267,
+          "internal_id": 1854,
+          "identity_key": "1c076f9af40f515797bfdba448d30aa7f468c0cd7195047fd3b11322b8e59a9c"
+        },
+        {
+          "slot": 1268,
+          "internal_id": 1855,
+          "identity_key": "b89a915cb8af2e67265471c4159a268923fda8ebb8ded7dbd0f18ec37e1e605f"
+        },
+        {
+          "slot": 1269,
+          "internal_id": 1830,
+          "identity_key": "30bfd3541ad8aa466442ad2e900a6f2f3c80984cbcfa638bfdece70f8b1a72a9"
+        },
+        {
+          "slot": 1270,
+          "internal_id": 1831,
+          "identity_key": "b41c745f047ff13852b281890f4be14314cae6592489aca75333d9513ae9ac62"
+        }
+      ]
     }
   ]
 }
