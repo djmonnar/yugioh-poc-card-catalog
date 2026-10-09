@@ -1,9 +1,9 @@
-import {STORY_KEY,emptyStory,parseStory} from './story-core.js?v=20261009-grave-parasite';
+import {STORY_KEY,emptyStory,parseStory} from './story-core.js?v=20261009-media88';
 
 export const LIBRARY_KEY='poc-story-library-v1';
 export const scenarioKey=id=>id==='main'?STORY_KEY:`${STORY_KEY}:${id}`;
 export function actorTemplates(scenarios,current){
-  const content=a=>JSON.stringify([a.name,a.portrait,a.skills,a.skill_profiles||[]]);
+  const content=a=>JSON.stringify([a.name,a.portrait,a.skills,a.skill_profiles||[],a.presentation||null]);
   const seen=new Set(current.actors.map(content)),out=[];
   for(const scenario of scenarios){
     for(const actor of parseStory(scenario.document).actors){

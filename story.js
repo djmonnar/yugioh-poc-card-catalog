@@ -1,9 +1,10 @@
 import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261007-49';
 import {CardLimitsCloud,applyLimits} from './card-limits.js?v=20261008-61';
-import {STORY_KEY,SKILLS,parseSkills,parsePreset,emptyStory,newActor,newBattle,parseStory,canonicalStory,validateStory,cardRef,reviewFiles,safePortrait} from './story-core.js?v=20261009-grave-parasite';
+import {STORY_KEY,SKILLS,parseSkills,parsePreset,emptyStory,newActor,newBattle,parseStory,canonicalStory,validateStory,cardRef,reviewFiles,safePortrait} from './story-core.js?v=20261009-media88';
 import {NUMERIC_SKILLS,skillSets,copyProfile,removeProfile,profilePacket} from './story-skills.js?v=20261009-73';
-import {LIBRARY_KEY,scenarioKey,copyBattle,createScenario,readLibrary,parseRemoteScenarios,actorTemplates,importActor} from './story-library.js?v=20261009-grave-parasite';
+import {LIBRARY_KEY,scenarioKey,copyBattle,createScenario,readLibrary,parseRemoteScenarios,actorTemplates,importActor} from './story-library.js?v=20261009-media88';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
+import {MEDIA_EVENTS,defaultPresentation,parsePresentation,safeMedia,validateAudioFile} from './story-media.js?v=20261009-media88';
 import {validateCloudConfig,cloudError} from './supabase-cloud.js?v=20261008-70';
 import {mergeAIAssets} from './ai-assets.js?v=20261008-70';
 const $=id=>document.getElementById(id),node=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
@@ -11,6 +12,7 @@ let doc=emptyStory(),cards=[],decks=[],meta,chooseCard,pickerPage=0,pickerSelect
 let library=readLibrary(null),remoteScenarios=[],libraryReady=false,libraryAPI=false;
 let installed=[];
 let openedActors=new WeakSet(),openedBattles=new WeakSet();
+const openedMedia=new WeakSet(),openedMediaEvents=new WeakMap();
 async function refreshDecks(){
   try{if(!client)throw new Error('온라인 연결을 확인해줘.');const reply=await client.rpc('poc_load_ai_decks');if(reply.error)throw reply.error;
     decks=await mergeAIAssets(installed,reply.data,cards,meta);renderBattles();check();status('AI 덱 목록을 갱신했어. 저장한 이름으로 고를 수 있어.');
@@ -140,7 +142,24 @@ function renderActors(){const root=$('actor-list');root.replaceChildren();doc.ac
   box.addEventListener('toggle',()=>{if(!box.isConnected)return;if(box.open)openedActors.add(a);else openedActors.delete(a);});
   const head=node('div');head.className='actor-head';head.append(input('캐릭터 이름',a.name,v=>{a.name=v;title.textContent=v||'이름 없는 캐릭터';},{max:100}));box.append(head);
   const portrait=input('초상화 주소',a.portrait,v=>{if(safePortrait(v))a.portrait=v;else status('프로젝트 이미지나 상점 이미지 보관소 주소를 사용해줘.');},{max:1000});box.append(portrait);const file=node('input');file.type='file';file.accept='image/png,image/jpeg,image/webp';file.setAttribute('aria-label','캐릭터 초상화 업로드');file.addEventListener('change',async()=>{const image=file.files[0];if(!image)return;try{if(!client||!editor)throw new Error('초상화 업로드는 이메일로 로그인한 뒤 사용해줘.');if(image.size>3*1024*1024||!['image/png','image/jpeg','image/webp'].includes(image.type))throw new Error('PNG·JPEG·WebP, 3MB 이하 이미지를 골라줘.');const ext={'image/png':'png','image/jpeg':'jpg','image/webp':'webp'}[image.type],path=`portraits/${crypto.randomUUID()}.${ext}`,{error}=await client.storage.from('poc-story-assets').upload(path,image,{contentType:image.type,upsert:false});if(error)throw error;a.portrait=client.storage.from('poc-story-assets').getPublicUrl(path).data.publicUrl;redraw();}catch(e){status(e.message);}});box.append(file,node('p','스킬은 전투 시작 조건·사용 횟수를 설정하는 제작 자료야. 온라인 저장 후 다음 게임 실행부터 상대 캐릭터에 적용돼.'));
-  renderProfiles(a,box);box.append(button('캐릭터 삭제',()=>{doc.actors=doc.actors.filter(x=>x!==a);redraw();},'remove-button'));root.append(box);});}
+  renderMedia(a,box);renderProfiles(a,box);box.append(button('캐릭터 삭제',()=>{doc.actors=doc.actors.filter(x=>x!==a);redraw();},'remove-button'));root.append(box);});}
+function renderMedia(a,box){
+  const panel=node('details');panel.className='media-settings';panel.open=openedMedia.has(a);panel.addEventListener('toggle',()=>{if(panel.isConnected){if(panel.open)openedMedia.add(a);else openedMedia.delete(a);}});panel.append(node('summary','캐릭터 컷신 · 음성'));
+  const value=()=>a.presentation||defaultPresentation(a);
+  const set=(change)=>{const v=structuredClone(value());change(v);a.presentation=parsePresentation(v);redraw();};
+  const toggle=(label,key)=>{const l=node('label'),c=node('input');c.type='checkbox';c.checked=value()[key];c.onchange=()=>set(v=>v[key]=c.checked);l.append(c,node('span',label));return l;};
+  panel.append(toggle('이 캐릭터의 외부 컷신·음성 사용','enabled'),toggle('상황별 이미지가 없으면 초상화 사용','portrait'),node('p','유희·카이바·조이 외에는 기존 초상화를 기본 컷인으로 사용해. 한 장의 이미지에 게임의 기존 움직임을 적용하고, 상황별 파일을 올리면 그 파일로 바뀌어. 유희·카이바·조이는 지정하지 않은 음성을 원본으로 유지하고, 다른 캐릭터는 등록한 음성만 재생해. PNG·JPEG·WebP는 3MB, 음성은 12초 이하 PCM WAV로 올려줘.'));
+  const rowFor=key=>value().events[key]||{image:'',audio:''};
+  const change=(key,kind,url)=>{if(!safeMedia(url,kind))return status('프로젝트 에셋이나 이 도감의 이미지·음성 보관소 주소를 사용해줘.');set(v=>{v.events[key]={...rowFor(key),[kind]:url};});};
+  const upload=(event,kind)=>{const file=node('input');file.type='file';file.accept=kind==='audio'?'.wav,audio/wav,audio/x-wav':'image/png,image/jpeg,image/webp';file.setAttribute('aria-label',`${MEDIA_EVENTS[event]} ${kind==='audio'?'음성':'이미지'} 업로드`);file.onchange=async()=>{try{const f=file.files[0];if(!f)return;if(!client||!editor)throw new Error('에셋 업로드는 이메일 로그인 후 사용해줘.');let ext,mime;if(kind==='audio'){await validateAudioFile(f);ext='wav';mime='audio/wav';}else{if(f.size>3*1024*1024||!['image/png','image/jpeg','image/webp'].includes(f.type))throw new Error('PNG·JPEG·WebP, 3MB 이하 이미지를 골라줘.');ext={'image/png':'png','image/jpeg':'jpg','image/webp':'webp'}[f.type];mime=f.type;}const path=`media/${crypto.randomUUID()}.${ext}`,reply=await client.storage.from('poc-story-assets').upload(path,f,{contentType:mime,upsert:false});if(reply.error)throw reply.error;change(event,kind,client.storage.from('poc-story-assets').getPublicUrl(path).data.publicUrl);}catch(e){status(e.message);}finally{file.value='';}};return file;};
+  for(const [key,label] of Object.entries(MEDIA_EVENTS)){
+    const row=node('details');row.className='media-event';row.open=openedMediaEvents.get(a)?.has(key)||false;row.addEventListener('toggle',()=>{if(!row.isConnected)return;if(!openedMediaEvents.has(a))openedMediaEvents.set(a,new Set());const opened=openedMediaEvents.get(a);if(row.open)opened.add(key);else opened.delete(key);});row.append(node('summary',`${label}${rowFor(key).image?' · 이미지':''}${rowFor(key).audio?' · 음성':''}`));
+    for(const [kind,title] of [['image','이미지'],['audio','음성']]){row.append(input(`${label} ${title} 주소`,rowFor(key)[kind],v=>change(key,kind,v),{max:1000}),upload(key,kind));}
+    row.append(button(`${label} 미리보기`,()=>{const v=rowFor(key),dialog=node('dialog');dialog.className='media-preview';dialog.setAttribute('aria-label',`${a.name} ${label} 미리보기`);dialog.append(node('h2',`${a.name} · ${label}`));const image=v.image||(value().portrait?a.portrait:'');if(image){const im=node('img');im.src=image;im.alt=`${a.name} ${label} 컷인`;dialog.append(im);}else dialog.append(node('p','등록한 이미지가 없어.'));if(v.audio){const sound=node('audio');sound.src=v.audio;sound.controls=true;sound.preload='metadata';dialog.append(sound);}else dialog.append(node('p','등록한 음성이 없어.'));dialog.append(button('닫기',()=>dialog.close()));dialog.addEventListener('close',()=>{dialog.querySelector('audio')?.pause();dialog.remove();});document.body.append(dialog);dialog.showModal();}));panel.append(row);
+  }
+  panel.append(button('컷신·음성 JSON 내보내기',()=>download('character-media.json',JSON.stringify({schema_version:1,kind:'poc-character-media',name:a.name,presentation:value()},null,2))));
+  const json=node('input');json.type='file';json.accept='.json,application/json';json.setAttribute('aria-label','컷신·음성 JSON 불러오기');json.onchange=async()=>{try{const f=json.files[0];if(!f)return;if(f.size>32000)throw new Error('에셋 설정 JSON은 32KB 이하로 골라줘.');const v=JSON.parse(await f.text());if(v.schema_version!==1||v.kind!=='poc-character-media')throw new Error('컷신·음성 JSON을 골라줘.');a.presentation=parsePresentation(v.presentation);redraw();}catch(e){status(e.message);}finally{json.value='';}};panel.append(json);box.append(panel);
+}
 function renderSkillSet(profile,box){
   for(const [kind,label] of Object.entries(SKILLS)){
     const row=node('div');row.className='skill-row';const l=node('label'),toggle=node('input');toggle.type='checkbox';toggle.checked=profile.skills.some(s=>s.kind===kind);l.append(toggle,node('span',label));row.append(l);

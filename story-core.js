@@ -1,5 +1,6 @@
 export const STORY_KEY='poc-story-authoring-v1';
 import {NUMERIC_SKILLS,battleSkills} from './story-skills.js?v=20261009-73';
+import {parsePresentation} from './story-media.js?v=20261009-media88';
 export const SKILLS={lp_bonus:'시작 LP 추가',heal_once:'전투당 1회 LP 회복',opening_draw:'시작 패 장수 추가',start_hand:'지정 카드를 패에 들고 시작',start_field:'마법·함정을 놓고 시작',start_monster:'몬스터를 필드에 놓고 시작',start_grave:'지정 카드를 묘지에 두고 시작',parasite_deck:'상대 덱에 발동된 기생충 파라사이드 넣기',add_hand_once:'전투당 1회 지정 카드 받기',draw_once:'위기 상황에서 1회 추가 드로우'};
 export const REWARD_TIERS=['ANY','N','R','SR','UR'];
 const fail=msg=>{throw new Error(msg);};
@@ -54,6 +55,7 @@ export function parseStory(v){
   const seen=new Set();doc.actors=v.actors.map(a=>{
     id(a.actor_id);if(seen.has(a.actor_id)||!safePortrait(a.portrait))fail('캐릭터 ID·초상화를 확인해줘.');seen.add(a.actor_id);
     const out={actor_id:a.actor_id,name:text(a.name,100),portrait:a.portrait,skills:parseSkills(a.skills)};
+    if(a.presentation!==undefined)out.presentation=parsePresentation(a.presentation);
     if(a.skill_profiles!==undefined){if(!Array.isArray(a.skill_profiles)||a.skill_profiles.length>10)fail('특성 묶음은 캐릭터별 10개까지야.');const ids=new Set();out.skill_profiles=a.skill_profiles.map(p=>{id(p.profile_id);if(ids.has(p.profile_id))fail('특성 묶음 ID가 중복돼.');ids.add(p.profile_id);return {profile_id:p.profile_id,name:text(p.name,100),skills:parseSkills(p.skills)};});}return out;
   });
   const battles=new Set();doc.battles=v.battles.map(b=>{
