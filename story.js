@@ -1,8 +1,8 @@
 import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261007-49';
 import {CardLimitsCloud,applyLimits} from './card-limits.js?v=20261008-61';
-import {STORY_KEY,SKILLS,parseSkills,parsePreset,emptyStory,newActor,newBattle,parseStory,canonicalStory,validateStory,cardRef,reviewFiles,safePortrait} from './story-core.js?v=20261009-reward-pool';
+import {STORY_KEY,SKILLS,parseSkills,parsePreset,emptyStory,newActor,newBattle,parseStory,canonicalStory,validateStory,cardRef,reviewFiles,safePortrait} from './story-core.js?v=20261009-open-battles';
 import {NUMERIC_SKILLS,skillSets,copyProfile,removeProfile,profilePacket} from './story-skills.js?v=20261009-73';
-import {LIBRARY_KEY,scenarioKey,copyBattle,createScenario,readLibrary,parseRemoteScenarios} from './story-library.js?v=20261009-reward-pool';
+import {LIBRARY_KEY,scenarioKey,copyBattle,createScenario,readLibrary,parseRemoteScenarios,actorTemplates,importActor} from './story-library.js?v=20261009-open-battles';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 import {validateCloudConfig,cloudError} from './supabase-cloud.js?v=20261008-70';
 import {mergeAIAssets} from './ai-assets.js?v=20261008-70';
@@ -32,6 +32,21 @@ async function fetchScenarios(){
   return legacy.data?parseRemoteScenarios([{...legacy.data,id:'main'}]):[];
 }
 const entry=()=>library.entries.find(e=>e.id===library.active);
+function characterImports(){
+  const sources=[];const ids=new Set([...library.entries.map(e=>e.id),...remoteScenarios.map(e=>e.id)]);
+  for(const id of ids){if(id===library.active)continue;
+    try{const saved=localStorage.getItem(scenarioKey(id)),online=remoteScenarios.find(s=>s.id===id);
+      if(saved||online)sources.push({id,document:saved?parseStory(JSON.parse(saved)):online.document});
+    }catch{/* Keep unreadable drafts intact; they are not imported. */}
+  }
+  return actorTemplates(sources,doc);
+}
+function renderCharacterImports(){
+  const choices=characterImports(),select=$('import-actor-select');select.replaceChildren();
+  for(const t of choices){const option=node('option',`${t.actor.name} · ${t.source}`);option.value=t.key;select.append(option);}
+  $('import-actor-confirm').disabled=!choices.length||doc.actors.length>=100;
+  $('import-actor-note').textContent=choices.length?'이름·초상화·기본 특성·난이도별 특성을 복사해. 가져온 캐릭터는 이 시나리오에서 따로 편집할 수 있어.':'가져올 새 캐릭터가 없어. 다른 시나리오의 캐릭터 편집본이나 온라인 저장본을 확인해줘.';
+}
 function storeLibrary(){localStorage.setItem(LIBRARY_KEY,JSON.stringify({schema:1,...library}));}
 function renderScenarios(){const select=$('scenario-select');select.replaceChildren(...library.entries.map(e=>{const o=node('option',e.title||'이름 없는 시나리오');o.value=e.id;return o;}));select.value=library.active;$('new-scenario').disabled=library.entries.length>=20;}
 function switchScenario(id){
@@ -105,11 +120,14 @@ function renderBattles(){const root=$('battle-list');root.replaceChildren();doc.
   const summary=node('summary');summary.className='fold-summary';
   const heading=node('span');heading.className='fold-name';
   const title=node('span',`${index+1}. ${b.name||'이름 없는 전투'}`),actor=doc.actors.find(a=>a.actor_id===b.actor_id);
-  heading.append(title,node('small',`${actor?.name||'상대 미선택'} · ${b.ruleset==='classic'?'일반 듀얼':'스피드 듀얼'}`));
+  heading.append(title,node('small',`${actor?.name||'상대 미선택'} · ${b.ruleset==='classic'?'일반 듀얼':'스피드 듀얼'}${b.requires_previous===false?' · 자유 도전':''}`));
   const fold=node('span');fold.className='fold-label';fold.setAttribute('aria-hidden','true');summary.append(heading,fold);box.append(summary);
   box.addEventListener('toggle',()=>{if(!box.isConnected)return;if(box.open)openedBattles.add(b);else openedBattles.delete(b);});
   const tools=node('div');tools.className='row-actions';for(const [label,step] of [['↑ 위로',-1],['↓ 아래로',1]]){const move=button(label,()=>{[doc.battles[index],doc.battles[index+step]]=[doc.battles[index+step],doc.battles[index]];redraw();});move.disabled=index+step<0||index+step>=doc.battles.length;tools.append(move);}
   tools.append(button('전투 복사',()=>{if(doc.battles.length>=100)return status('전투는 100개까지야.');const copy=copyBattle(b);doc.battles.splice(index+1,0,copy);openedBattles.add(copy);redraw();}),button('전투 삭제',()=>{doc.battles.splice(index,1);redraw();},'remove-button'));
+  const gate=node('label');gate.className='battle-unlock';const required=node('input');required.type='checkbox';required.checked=b.requires_previous!==false;
+  required.onchange=()=>{b.requires_previous=required.checked;redraw();};gate.append(required,node('span','이전 전투 클리어 필요'));
+  box.append(gate,node('small',index===0?'첫 전투는 항상 바로 도전할 수 있어. 순서를 옮기면 이 설정이 적용돼.':'끄면 이전 전투를 안 깨도 바로 선택해 대전할 수 있어. 온라인 저장하면 게임에 반영돼.'));
   box.append(tools,input('전투 이름',b.name,v=>{b.name=v;title.textContent=`${index+1}. ${v||'이름 없는 전투'}`;},{max:100}));const grid=node('div');grid.className='story-grid';grid.append(select('전투 상대',b.actor_id,[['','상대 선택'],...doc.actors.map(a=>[a.actor_id,a.name])],v=>{b.actor_id=v;b.skill_profile='';}),select('듀얼 규칙',b.ruleset,[['classic','일반 듀얼 · 40~80장'],['duel_links_plan','스피드 듀얼 · 20~30장']],v=>{b.ruleset=v;b.recipe='';}));box.append(grid,deckControls(b));if(actor)box.append(select('이 전투의 특성 · 난이도',b.skill_profile||'',skillSets(actor).map(p=>[p.profile_id,p.name]),v=>b.skill_profile=v));box.append(input('전투 진입 대사',b.intro,v=>b.intro=v,{type:'textarea'}));const details=node('details');details.append(node('summary','승리·패배 대사'),input('승리 대사',b.win,v=>b.win=v,{type:'textarea'}),input('패배 대사',b.loss,v=>b.loss=v,{type:'textarea'}));box.append(details,rewards(b,'first'),rewards(b,'repeat'));root.append(box);
 });if(!doc.battles.length)root.append(node('p','전투를 추가해서 시나리오를 시작해줘.'));}
 function renderActors(){const root=$('actor-list');root.replaceChildren();doc.actors.forEach(a=>{
@@ -169,6 +187,12 @@ async function cloudInit(){
 async function start(){try{const [catalog,opponents,actors]=await Promise.all(['data/cards.json','data/ai-opponents.json','data/ai-actors.json'].map(url=>fetch(url,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('자료를 불러올 수 없어.');return r.json();})));cards=catalog.cards;meta=catalog.meta;installed=opponents.decks;decks=structuredClone(installed);try{library=readLibrary(JSON.parse(localStorage.getItem(LIBRARY_KEY)));}catch{storageBlocked=true;status('기존 시나리오 목록을 보존하고 있어.');}version=entry().version;const saved=localStorage.getItem(scenarioKey(library.active));if(saved){try{doc=parseStory(JSON.parse(saved));}catch{storageBlocked=true;status('기존 저장본을 읽을 수 없어 보존했어. JSON을 내보내기 전에 확인해줘.');}}else{doc.actors=actors.actors.map(a=>({actor_id:a.actor_id,name:a.name,portrait:a.portrait,skills:[]}));const b=newBattle('first-battle');b.name='용만과 첫 결투';b.actor_id=doc.actors[0]?.actor_id||'';b.recipe='DLR_000.ydc';b.intro='공룡의 힘을 보여주마!';b.rewards.first=[{kind:'gold',amount:100},{kind:'random',rarity:'SR',count:1}];b.rewards.repeat=[{kind:'gold',amount:20}];doc.battles.push(b);}doc.catalog_dataset_id=meta.dataset_id;$('story-title').value=doc.title;renderScenarios();render();if(!storageBlocked)persist();await cloudInit();}catch(e){status(e.message);}}
 $('story-title').addEventListener('input',()=>{doc.title=$('story-title').value;persist();});$('add-battle').onclick=()=>{if(doc.battles.length<100){const battle=newBattle();doc.battles.push(battle);openedBattles.add(battle);redraw();requestAnimationFrame(()=>$('battle-list').lastElementChild.querySelector('input').focus());}};$('add-actor').onclick=()=>{if(doc.actors.length<100){const actor=newActor();doc.actors.push(actor);openedActors.add(actor);redraw();requestAnimationFrame(()=>$('actor-list').lastElementChild.querySelector('input').focus());}};
 $('collapse-actors').onclick=()=>{openedActors=new WeakSet();renderActors();};
+$('import-actor').onclick=()=>{renderCharacterImports();$('actor-importer').showModal();};
+$('close-actor-importer').onclick=()=>$('actor-importer').close();
+$('import-actor-confirm').onclick=()=>{
+  const template=characterImports().find(t=>t.key===$('import-actor-select').value);if(!template||doc.actors.length>=100)return;
+  const actor=importActor(template);doc.actors.push(actor);openedActors.add(actor);redraw();renderCharacterImports();status(`${actor.name} 캐릭터를 가져왔어. 전투 상대에서 골라준 뒤 온라인 저장해줘.`);
+};
 $('collapse-battles').onclick=()=>{openedBattles=new WeakSet();renderBattles();};
 for(const kind of ['battles','actors'])$(`tab-${kind}`).onclick=()=>{for(const k of ['battles','actors']){$(`${k}-panel`).hidden=k!==kind;$(`tab-${k}`).setAttribute('aria-selected',String(k===kind));}};
 $('export').onclick=()=>download('story-source.json',JSON.stringify(doc,null,2)+'\n');$('pack').onclick=async()=>{try{const files=await reviewFiles(doc,meta,cards,decks);download('story-source.json',files.source);download('pack.json',JSON.stringify(files.pack,null,2)+'\n');status('두 JSON 파일을 같은 폴더에 두면 콘텐츠 파이프라인에서 검사할 수 있어.');}catch(e){status(e.message);}};

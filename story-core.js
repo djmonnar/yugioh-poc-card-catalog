@@ -55,6 +55,7 @@ export function parseStory(v){
       intro:text(b.intro,6000),win:text(b.win,6000),loss:text(b.loss,6000),rewards:{}};
     for(const k of ['first','repeat']){if(!Array.isArray(b.rewards?.[k])||b.rewards[k].length>20)fail('전투 보상을 확인해줘.');out.rewards[k]=b.rewards[k].map(reward);}
     if(b.skill_profile!==undefined)out.skill_profile=b.skill_profile===''?'':id(b.skill_profile);
+    if(b.requires_previous!==undefined){if(typeof b.requires_previous!=='boolean')fail('이전 전투 클리어 필요 설정을 확인해줘.');out.requires_previous=b.requires_previous;}
     return out;
   });return doc;
 }

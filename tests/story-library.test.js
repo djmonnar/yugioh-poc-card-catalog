@@ -1,7 +1,15 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {newBattle,emptyStory} from '../story-core.js';
-import {copyBattle,createScenario,readLibrary,scenarioKey,namedRecipeRows,parseRemoteScenarios} from '../story-library.js';
+import {newBattle,newActor,emptyStory} from '../story-core.js';
+import {copyBattle,createScenario,readLibrary,scenarioKey,namedRecipeRows,parseRemoteScenarios,actorTemplates,importActor} from '../story-library.js';
+test('later characters can be copied back into earlier scenarios with independent IDs and profiles',()=>{
+ const current=emptyStory(),later=emptyStory(),actor=newActor('joey');actor.name='조이';actor.skill_profiles=[{profile_id:'hard',name:'상급',skills:[{kind:'lp_bonus',value:1000}]}];later.actors=[actor];
+ const templates=actorTemplates([{id:'later',document:later}],current);assert.equal(templates.length,1);
+ const imported=importActor(templates[0],'new-joey');assert.equal(imported.actor_id,'new-joey');assert.equal(imported.name,'조이');
+ imported.skill_profiles[0].skills[0].value=2000;assert.equal(actor.skill_profiles[0].skills[0].value,1000);
+ current.actors=[importActor(templates[0],'copy')];assert.equal(actorTemplates([{id:'later',document:later}],current).length,0);
+ const b=newBattle('old');b.requires_previous=false;assert.equal(copyBattle(b,'new').requires_previous,false);
+});
 test('battle copy has independent dialogue/reward data and a fresh progress identity',()=>{
   const b=newBattle('original');b.rewards.first=[{kind:'card',card:{slot:1},count:1}];
   const c=copyBattle(b,'copy');assert.equal(c.battle_id,'copy');assert.equal(c.name,'새 전투 복사');

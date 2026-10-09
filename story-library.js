@@ -1,7 +1,20 @@
-import {STORY_KEY,emptyStory,parseStory} from './story-core.js?v=20261009-reward-pool';
+import {STORY_KEY,emptyStory,parseStory} from './story-core.js?v=20261009-open-battles';
 
 export const LIBRARY_KEY='poc-story-library-v1';
 export const scenarioKey=id=>id==='main'?STORY_KEY:`${STORY_KEY}:${id}`;
+export function actorTemplates(scenarios,current){
+  const content=a=>JSON.stringify([a.name,a.portrait,a.skills,a.skill_profiles||[]]);
+  const seen=new Set(current.actors.map(content)),out=[];
+  for(const scenario of scenarios){
+    for(const actor of parseStory(scenario.document).actors){
+      const fingerprint=content(actor);if(seen.has(fingerprint))continue;seen.add(fingerprint);
+      out.push({key:`${scenario.id}:${actor.actor_id}`,source:scenario.document.title,actor:structuredClone(actor)});
+    }
+  }return out;
+}
+export function importActor(template,actor_id=crypto.randomUUID()){
+  const actor=structuredClone(template.actor);actor.actor_id=actor_id;return actor;
+}
 export function copyBattle(battle,battle_id=crypto.randomUUID()){
   if(battle_id===battle.battle_id)throw new Error('복사본에는 새 전투 ID가 필요해.');
   const copy=structuredClone(battle);copy.battle_id=battle_id;copy.name=(copy.name+' 복사').slice(0,100);

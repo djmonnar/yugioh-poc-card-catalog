@@ -2,6 +2,11 @@ import test from 'node:test';import assert from 'node:assert/strict';import {rea
 import {emptyStory,newActor,newBattle,parseStory,canonicalStory,validateStory,cardRef,reviewFiles,safePortrait} from '../story-core.js';
 const catalog=JSON.parse(readFileSync(new URL('../data/cards.json',import.meta.url))),decks=JSON.parse(readFileSync(new URL('../data/ai-opponents.json',import.meta.url))).decks;
 function fixture(){const doc=emptyStory(),actor=newActor('yongman'),battle=newBattle('battle-1');actor.name='다이노소어 용만';battle.actor_id=actor.actor_id;battle.recipe='DLR_000.ydc';doc.actors=[actor];doc.battles=[battle];return doc;}
+test('optional prerequisite survives export and defaults to legacy ordered battles',()=>{
+ const doc=fixture();assert.equal(Object.hasOwn(parseStory(doc).battles[0],'requires_previous'),false);
+ for(const required of [false,true]){doc.battles[0].requires_previous=required;assert.equal(canonicalStory(doc,catalog.meta,catalog.cards).battles[0].requires_previous,required);}
+ for(const value of [0,1,'false',null,[]]){doc.battles[0].requires_previous=value;assert.throws(()=>parseStory(doc));}
+});
 test('story preserves character skills and separate first/repeat reward identities',()=>{const doc=fixture(),card=catalog.cards.find(c=>c.type==='마법'&&c.reward_eligible);doc.actors[0].skills=[{kind:'lp_bonus',value:1000},{kind:'start_field',card:cardRef(card)}];doc.battles[0].rewards.first=[{kind:'gold',amount:100},{kind:'card',card:cardRef(card),count:1}];doc.battles[0].rewards.repeat=[{kind:'random',rarity:'SR',count:1}];assert.deepEqual(parseStory(doc).battles,doc.battles);assert.equal(validateStory(doc,catalog.cards,decks).issues.length,0);assert.equal(validateStory(doc,catalog.cards,decks).engine_applied,false);});
 test('replaced cards and mismatched rules are flagged without deleting authoring draft',()=>{const doc=fixture(),c=catalog.cards.find(c=>c.reward_eligible);doc.battles[0].rewards.first=[{kind:'card',card:{...cardRef(c),identity_key:'a'.repeat(64)},count:1}];doc.battles[0].ruleset='classic';assert.ok(validateStory(parseStory(doc),catalog.cards,decks).issues.length>=2);assert.equal(parseStory(doc).battles[0].rewards.first.length,1);});
 test('printed-stat aliases preserve existing story rewards but a renamed replacement does not',()=>{
