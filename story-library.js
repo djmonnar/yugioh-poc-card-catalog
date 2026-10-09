@@ -1,4 +1,4 @@
-import {STORY_KEY,emptyStory,parseStory} from './story-core.js?v=20261009-media88';
+import {STORY_KEY,emptyStory,parseStory} from './story-core.js?v=20261010-raid90';
 
 export const LIBRARY_KEY='poc-story-library-v1';
 export const scenarioKey=id=>id==='main'?STORY_KEY:`${STORY_KEY}:${id}`;

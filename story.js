@@ -1,8 +1,8 @@
 import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261007-49';
 import {CardLimitsCloud,applyLimits} from './card-limits.js?v=20261008-61';
-import {STORY_KEY,SKILLS,parseSkills,parsePreset,emptyStory,newActor,newBattle,parseStory,canonicalStory,validateStory,cardRef,reviewFiles,safePortrait} from './story-core.js?v=20261009-media88';
+import {STORY_KEY,SKILLS,parseSkills,parsePreset,emptyStory,newActor,newBattle,parseStory,canonicalStory,validateStory,cardRef,reviewFiles,safePortrait} from './story-core.js?v=20261010-raid90';
 import {NUMERIC_SKILLS,skillSets,copyProfile,removeProfile,profilePacket} from './story-skills.js?v=20261009-73';
-import {LIBRARY_KEY,scenarioKey,copyBattle,createScenario,readLibrary,parseRemoteScenarios,actorTemplates,importActor} from './story-library.js?v=20261009-media88';
+import {LIBRARY_KEY,scenarioKey,copyBattle,createScenario,readLibrary,parseRemoteScenarios,actorTemplates,importActor} from './story-library.js?v=20261010-raid90';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 import {MEDIA_EVENTS,defaultPresentation,parsePresentation,safeMedia,validateAudioFile} from './story-media.js?v=20261009-media88';
 import {validateCloudConfig,cloudError} from './supabase-cloud.js?v=20261008-70';
@@ -59,7 +59,7 @@ function switchScenario(id){
 }
 const status=msg=>{$('status').textContent=msg;};
 function download(name,content){const url=URL.createObjectURL(new Blob([content],{type:'application/json;charset=utf-8'})),a=node('a');a.download=name;a.href=url;a.click();setTimeout(()=>URL.revokeObjectURL(url),10000);}
-function check(){const result=validateStory(doc,cards,decks),box=$('validation');box.replaceChildren();box.className=result.issues.length?'story-warning':'story-ok';box.append(node('b',result.issues.length?'확인할 항목':'시나리오 자료 준비 완료'));for(const message of result.issues)box.append(node('p',message));if(!result.issues.length)box.append(node('p','온라인 저장 후 다음 게임 실행의 스토리 모드에서 선택할 수 있어.'));}
+function check(){const result=validateStory(doc,cards,decks),box=$('validation');box.replaceChildren();box.className=result.issues.length?'story-warning':'story-ok';box.append(node('b',result.issues.length?'확인할 항목':'시나리오 자료 준비 완료'));for(const message of result.issues)box.append(node('p',message));if(!result.issues.length)box.append(node('p',doc.battles.some(b=>b.raid)?'온라인 저장 후 다음 게임 실행의 레이드 전투 메뉴에서 선택할 수 있어. 일반 전투는 스토리 모드에서 선택해.':'온라인 저장 후 다음 게임 실행의 스토리 모드에서 선택할 수 있어.'));}
 function persist(){
   if(storageBlocked){status('기존 문서를 보존하고 있어. 현재 편집본은 JSON으로 내려받아줘.');check();return;}
   try{parseStory(doc);}catch(e){status(e.message+' 이전 저장본은 유지돼.');check();return;}
@@ -113,24 +113,41 @@ function poolReward(r,remove){
   const add=button('+ 후보 카드',()=>poolPicker(r));add.disabled=r.entries.length>=100;box.append(add);return box;
 }
 function resolveRewardCard(ref){return cards.find(c=>c.slot===ref.slot&&c.internal_id===ref.internal_id);}
-function rewards(b,kind){const box=node('div');box.className='reward-block';box.append(node('h4',kind==='first'?'첫 승리 보상':'이후 승리 보상'));b.rewards[kind].forEach((r,i)=>{const remove=()=>{b.rewards[kind].splice(i,1);redraw();};if(r.kind==='card_pool'){box.append(poolReward(r,remove));return;}const row=node('div');row.className='reward-row';row.append(node('span',r.kind==='gold'?`${r.amount} 골드`:r.kind==='card'?`${r.card.name_ko} ×${r.count}`:`무작위 ${r.rarity==='ANY'?'랜덤 허용 등급':r.rarity} 카드 ×${r.count}`));row.append(button('삭제',remove,'remove-button'));box.append(row);});const add=r=>{if(b.rewards[kind].length>=20){status('보상은 종류별 20개까지야.');return;}b.rewards[kind].push(r);redraw();};
+function rewards(b,kind,title){const box=node('div');box.className='reward-block';box.append(node('h4',title||(kind==='first'?'첫 승리 보상':'이후 승리 보상')));b.rewards[kind].forEach((r,i)=>{const remove=()=>{b.rewards[kind].splice(i,1);redraw();};if(r.kind==='card_pool'){box.append(poolReward(r,remove));return;}const row=node('div');row.className='reward-row';row.append(node('span',r.kind==='gold'?`${r.amount} 골드`:r.kind==='card'?`${r.card.name_ko} ×${r.count}`:`무작위 ${r.rarity==='ANY'?'랜덤 허용 등급':r.rarity} 카드 ×${r.count}`));row.append(button('삭제',remove,'remove-button'));box.append(row);});const add=r=>{if(b.rewards[kind].length>=20){status('보상은 종류별 20개까지야.');return;}b.rewards[kind].push(r);redraw();};
   const tools=node('div');tools.className='row-actions';const amount=node('input');amount.type='number';amount.min=1;amount.max=100000;amount.value=50;amount.style.width='100px';amount.setAttribute('aria-label','추가할 골드');tools.append(amount,button('골드 추가',()=>{const n=Number(amount.value);if(!Number.isInteger(n)||n<1||n>100000)return status('골드는 1~100,000 사이로 입력해줘.');add({kind:'gold',amount:n});}),button('카드 검색',()=>picker(c=>!c.special&&(c.reward_eligible||c.rarity==='L'),'보상으로 받을 카드 · 1장',card=>add({kind:'card',card,count:1}))));
   const tier=node('select');tier.setAttribute('aria-label','무작위 보상 등급');for(const v of ['ANY','N','R','SR','UR']){const o=node('option',v==='ANY'?'랜덤 허용 등급':v);o.value=v;tier.append(o);}tools.append(tier,button('무작위 1장',()=>add({kind:'random',rarity:tier.value,count:1})),button('지정 카드 랜덤 추가',()=>{if(b.rewards[kind].length>=20)return status('보상은 종류별 20개까지야.');poolPicker(null,r=>b.rewards[kind].push(r));}));box.append(tools);return box;
+}
+function raidControls(b){
+  const box=node('div'),toggle=node('label'),on=node('input');on.type='checkbox';on.checked=!!b.raid;
+  on.onchange=()=>{if(on.checked){b.raid={max_hp:20000,milestones:[]};b.requires_previous=false;}else delete b.raid;redraw();};
+  toggle.append(on,node('span','레이드 전투'));box.append(toggle);
+  if(!b.raid)return box;
+  box.append(node('p','양쪽 합계 10턴 · 모든 보스 합계 하루 3회 (한국 시간 자정 초기화). 패배·무승부에도 남은 보스 체력으로 이어서 도전해.'));
+  box.append(input('보스 최대 체력 · 1~60,000',b.raid.max_hp,v=>b.raid.max_hp=v,{type:'number'}));
+  box.append(node('small','진행 중인 보스의 최대 체력은 처치한 뒤 변경할 수 있어. 체력 구간 보상은 한 회차에 한 번만 받아.'));
+  b.raid.milestones.forEach((m,i)=>{
+    const section=node('details');section.append(node('summary',`${m.hp.toLocaleString()} HP 이하 보상`));
+    section.append(input('남은 체력이 이 값 이하가 되면 지급',m.hp,v=>m.hp=v,{type:'number'}),
+      rewards(m,'first','첫 회차 · 체력 구간 보상'),rewards(m,'repeat','두 번째 회차부터 · 체력 구간 보상'),
+      button('체력 구간 삭제',()=>{b.raid.milestones.splice(i,1);redraw();},'remove-button'));box.append(section);
+  });
+  const add=button('+ 체력 구간 보상',()=>{b.raid.milestones.push({milestone_id:crypto.randomUUID(),hp:Math.max(1,Math.floor(b.raid.max_hp/2)),rewards:{first:[],repeat:[]}});redraw();});
+  add.disabled=b.raid.milestones.length>=10;box.append(add);return box;
 }
 function renderBattles(){const root=$('battle-list');root.replaceChildren();doc.battles.forEach((b,index)=>{
   const box=node('details');box.className='story-box fold-box battle-box';box.open=openedBattles.has(b);
   const summary=node('summary');summary.className='fold-summary';
   const heading=node('span');heading.className='fold-name';
   const title=node('span',`${index+1}. ${b.name||'이름 없는 전투'}`),actor=doc.actors.find(a=>a.actor_id===b.actor_id);
-  heading.append(title,node('small',`${actor?.name||'상대 미선택'} · ${b.ruleset==='classic'?'일반 듀얼':'스피드 듀얼'}${b.requires_previous===false?' · 자유 도전':''}`));
+  heading.append(title,node('small',`${actor?.name||'상대 미선택'} · ${b.ruleset==='classic'?'일반 듀얼':'스피드 듀얼'}${b.raid?` · 레이드 ${b.raid.max_hp.toLocaleString()} HP`:b.requires_previous===false?' · 자유 도전':''}`));
   const fold=node('span');fold.className='fold-label';fold.setAttribute('aria-hidden','true');summary.append(heading,fold);box.append(summary);
   box.addEventListener('toggle',()=>{if(!box.isConnected)return;if(box.open)openedBattles.add(b);else openedBattles.delete(b);});
   const tools=node('div');tools.className='row-actions';for(const [label,step] of [['↑ 위로',-1],['↓ 아래로',1]]){const move=button(label,()=>{[doc.battles[index],doc.battles[index+step]]=[doc.battles[index+step],doc.battles[index]];redraw();});move.disabled=index+step<0||index+step>=doc.battles.length;tools.append(move);}
   tools.append(button('전투 복사',()=>{if(doc.battles.length>=100)return status('전투는 100개까지야.');const copy=copyBattle(b);doc.battles.splice(index+1,0,copy);openedBattles.add(copy);redraw();}),button('전투 삭제',()=>{doc.battles.splice(index,1);redraw();},'remove-button'));
-  const gate=node('label');gate.className='battle-unlock';const required=node('input');required.type='checkbox';required.checked=b.requires_previous!==false;
+  const gate=node('label');gate.className='battle-unlock';const required=node('input');required.type='checkbox';required.checked=b.requires_previous!==false;required.disabled=!!b.raid;
   required.onchange=()=>{b.requires_previous=required.checked;redraw();};gate.append(required,node('span','이전 전투 클리어 필요'));
   box.append(gate,node('small',index===0?'첫 전투는 항상 바로 도전할 수 있어. 순서를 옮기면 이 설정이 적용돼.':'끄면 이전 전투를 안 깨도 바로 선택해 대전할 수 있어. 온라인 저장하면 게임에 반영돼.'));
-  box.append(tools,input('전투 이름',b.name,v=>{b.name=v;title.textContent=`${index+1}. ${v||'이름 없는 전투'}`;},{max:100}));const grid=node('div');grid.className='story-grid';grid.append(select('전투 상대',b.actor_id,[['','상대 선택'],...doc.actors.map(a=>[a.actor_id,a.name])],v=>{b.actor_id=v;b.skill_profile='';}),select('듀얼 규칙',b.ruleset,[['classic','일반 듀얼 · 40~80장'],['duel_links_plan','스피드 듀얼 · 20~30장']],v=>{b.ruleset=v;b.recipe='';}));box.append(grid,deckControls(b));if(actor)box.append(select('이 전투의 특성 · 난이도',b.skill_profile||'',skillSets(actor).map(p=>[p.profile_id,p.name]),v=>b.skill_profile=v));box.append(input('전투 진입 대사',b.intro,v=>b.intro=v,{type:'textarea'}));const details=node('details');details.append(node('summary','승리·패배 대사'),input('승리 대사',b.win,v=>b.win=v,{type:'textarea'}),input('패배 대사',b.loss,v=>b.loss=v,{type:'textarea'}));box.append(details,rewards(b,'first'),rewards(b,'repeat'));root.append(box);
+  box.append(tools,input('전투 이름',b.name,v=>{b.name=v;title.textContent=`${index+1}. ${v||'이름 없는 전투'}`;},{max:100}));const grid=node('div');grid.className='story-grid';grid.append(select('전투 상대',b.actor_id,[['','상대 선택'],...doc.actors.map(a=>[a.actor_id,a.name])],v=>{b.actor_id=v;b.skill_profile='';}),select('듀얼 규칙',b.ruleset,[['classic','일반 듀얼 · 40~80장'],['duel_links_plan','스피드 듀얼 · 20~30장']],v=>{b.ruleset=v;b.recipe='';}));box.append(grid,deckControls(b));if(actor)box.append(select('이 전투의 특성 · 난이도',b.skill_profile||'',skillSets(actor).map(p=>[p.profile_id,p.name]),v=>b.skill_profile=v));box.append(input('전투 진입 대사',b.intro,v=>b.intro=v,{type:'textarea'}));const details=node('details');details.append(node('summary','승리·패배 대사'),input('승리 대사',b.win,v=>b.win=v,{type:'textarea'}),input('패배 대사',b.loss,v=>b.loss=v,{type:'textarea'}));box.append(details,raidControls(b),rewards(b,'first',b.raid?'첫 보스 처치 보상':null),rewards(b,'repeat',b.raid?'두 번째 처치부터 보상':null));root.append(box);
 });if(!doc.battles.length)root.append(node('p','전투를 추가해서 시나리오를 시작해줘.'));}
 function renderActors(){const root=$('actor-list');root.replaceChildren();doc.actors.forEach(a=>{
   const box=node('details');box.className='story-box fold-box actor-box';box.open=openedActors.has(a);

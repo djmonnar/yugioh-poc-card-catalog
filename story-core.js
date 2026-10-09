@@ -28,6 +28,21 @@ function reward(r){
   if(r.kind==='random'&&REWARD_TIERS.includes(r.rarity))return {kind:'random',rarity:r.rarity,count:integer(r.count,1,3)};
   fail('보상 종류를 확인해줘.');
 }
+export function parseRaid(v){
+  const max_hp=integer(v?.max_hp,1,60000);
+  if(!Array.isArray(v.milestones)||v.milestones.length>10)fail('체력 구간 보상은 10개까지야.');
+  const ids=new Set(),hps=new Set();
+  const milestones=v.milestones.map(m=>{
+    const milestone_id=id(m.milestone_id),hp=integer(m.hp,1,max_hp-1);
+    if(ids.has(milestone_id)||hps.has(hp))fail('체력 구간이나 ID가 중복돼.');ids.add(milestone_id);hps.add(hp);
+    const rewards={};for(const k of ['first','repeat']){
+      if(!Array.isArray(m.rewards?.[k])||m.rewards[k].length>20)fail('체력 구간 보상을 확인해줘.');
+      rewards[k]=m.rewards[k].map(reward);
+    }
+    return {milestone_id,hp,rewards};
+  });return {max_hp,milestones};
+}
+export function battleRewardLists(b){return [b.rewards,...(b.raid?.milestones||[]).map(m=>m.rewards)];}
 export function parseSkills(values){
   if(!Array.isArray(values)||values.length>10)fail('특성은 종류별 한 개씩, 최대 10개까지야.');
   const kinds=new Set();return values.map(s=>{
@@ -65,6 +80,8 @@ export function parseStory(v){
     for(const k of ['first','repeat']){if(!Array.isArray(b.rewards?.[k])||b.rewards[k].length>20)fail('전투 보상을 확인해줘.');out.rewards[k]=b.rewards[k].map(reward);}
     if(b.skill_profile!==undefined)out.skill_profile=b.skill_profile===''?'':id(b.skill_profile);
     if(b.requires_previous!==undefined){if(typeof b.requires_previous!=='boolean')fail('이전 전투 클리어 필요 설정을 확인해줘.');out.requires_previous=b.requires_previous;}
+    if(b.raid!==undefined){out.raid=parseRaid(b.raid);out.requires_previous=false;
+      for(const k of ['first','repeat'])if(battleRewardLists(out).reduce((n,list)=>n+list[k].reduce((s,r)=>s+(r.count||0),0),0)>60)fail('한 회차에 받는 카드는 체력 구간·처치 보상을 합쳐 60장까지야.');}
     return out;
   });return doc;
 }
@@ -88,7 +105,7 @@ export function validateStory(doc,cards,decks){
     if(!actor)issues.push(`${b.name}: 전투 상대를 골라줘.`);
     else try{battleSkills(actor,b);}catch(e){issues.push(`${b.name}: ${e.message}`);}
     if(!deck||deck.ruleset!==b.ruleset)issues.push(`${b.name}: 규칙에 맞는 AI 덱을 골라줘.`);
-    for(const k of ['first','repeat'])for(const r of b.rewards[k]){
+    for(const list of battleRewardLists(b))for(const k of ['first','repeat'])for(const r of list[k]){
       if(r.kind==='card'){const c=resolveRef(r.card,cards);if(!c||c.special||(!c.reward_eligible&&c.rarity!=='L'))issues.push(`${b.name}: 보상 카드를 현재 도감에서 다시 골라줘.`);}
       if(r.kind==='card_pool')for(const e of r.entries||[]){const c=resolveRef(e.card,cards);if(!c||c.special||(!c.reward_eligible&&c.rarity!=='L'))issues.push(`${b.name}: 랜덤 후보 카드를 현재 도감에서 다시 골라줘.`);}
       if(r.kind==='random'&&!cards.some(c=>!c.special&&c.reward_eligible&&c.rarity!=='L'&&c.draw_enabled!==false&&(r.rarity==='ANY'||c.rarity===r.rarity)))issues.push(`${b.name}: ${r.rarity} 무작위 보상 카드풀이 비어 있어.`);
@@ -100,7 +117,7 @@ export function canonicalStory(doc,meta,cards){
   const clean=parseStory(doc);clean.catalog_dataset_id=meta.dataset_id;
   const current=ref=>{const c=resolveRef(ref,cards);if(!c)fail('카드가 변경됐어. 현재 도감에서 다시 골라줘.');return cardRef(c);};
   for(const a of clean.actors)for(const p of [{skills:a.skills},...(a.skill_profiles||[])])for(const s of p.skills){if(s.card)s.card=current(s.card);if(s.kind==='start_grave')for(const e of s.entries)e.card=current(e.card);}
-  for(const b of clean.battles)for(const k of ['first','repeat'])for(const r of b.rewards[k]){
+  for(const b of clean.battles)for(const list of battleRewardLists(b))for(const k of ['first','repeat'])for(const r of list[k]){
     if(r.kind==='card')r.card=current(r.card);
     if(r.kind==='card_pool')for(const e of r.entries)e.card=current(e.card);
   }
