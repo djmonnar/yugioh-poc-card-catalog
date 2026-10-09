@@ -622,6 +622,88 @@
           "identity_key": "338e76bb8ef47b80f71d275e5df925f0ccd0683bdf044801c9651597a75f0f22"
         }
       ]
+    },
+    {
+      "id": "20261009-insect-battle-support",
+      "name": "곤충·전투 지원 15장",
+      "added_at": "2026-10-09T21:26:45.424457+09:00",
+      "cards": [
+        {
+          "slot": 1232,
+          "internal_id": 1857,
+          "identity_key": "d5bd969701a421b8a8e9520202a00969264aac72d447e64132004df14d084135"
+        },
+        {
+          "slot": 1233,
+          "internal_id": 1858,
+          "identity_key": "42155c28cf76409f52010ad1e7160ab26c1caefec67a813f070aa73211d5fbf7"
+        },
+        {
+          "slot": 1234,
+          "internal_id": 1859,
+          "identity_key": "a16462f1a6d6be3b2bc206c0437c13a6cc62435a331abb5b27ecabd61c5bdda2"
+        },
+        {
+          "slot": 1235,
+          "internal_id": 1860,
+          "identity_key": "4e1e0ede1d0f983d111f81ab6cde7674794b87e41a8faccc19636c384352956c"
+        },
+        {
+          "slot": 1236,
+          "internal_id": 1861,
+          "identity_key": "e1b2190f27c6c2a3da9c95452128afbce750a87e9b402b136a0b8d3bede36858"
+        },
+        {
+          "slot": 1237,
+          "internal_id": 1862,
+          "identity_key": "da30de197a4eaa55bcc6cfa05e6fa63e9ff9898a60cfb1a4f049da6212f13746"
+        },
+        {
+          "slot": 1238,
+          "internal_id": 1863,
+          "identity_key": "b3e06dcc70f771e67c32799d76cca8b705505d6fe6e2b532122b7ce131a8a65d"
+        },
+        {
+          "slot": 1239,
+          "internal_id": 1864,
+          "identity_key": "608794603e392cdf9bb5adce455f1635dcd5dcafba817e56f3fca03f6f4b6b04"
+        },
+        {
+          "slot": 1240,
+          "internal_id": 1865,
+          "identity_key": "46ec6929e8e4645989f7d2dd9b6fd6fb97598c4e3f8c7da3c0e51cd506ec4ab4"
+        },
+        {
+          "slot": 1241,
+          "internal_id": 1866,
+          "identity_key": "155d928e7de5bb62ff056e5e89a3fce23297a171b381bc1f52b4dd96d4201ca2"
+        },
+        {
+          "slot": 1242,
+          "internal_id": 1867,
+          "identity_key": "80142ca35139c49aaf31a365fd75052a6960c1fccd052738b8ddfa4f5d5e4ab1"
+        },
+        {
+          "slot": 1243,
+          "internal_id": 1868,
+          "identity_key": "fab18c6524493e1a9505d0e0783453814c3a98d330fd080e9a99b8d97c5509b7"
+        },
+        {
+          "slot": 1244,
+          "internal_id": 1869,
+          "identity_key": "8880a92158b5d5a94a15e304f3c88f60c74342b4a2b0a9fd64493fb07d081352"
+        },
+        {
+          "slot": 1245,
+          "internal_id": 1870,
+          "identity_key": "3d9594b63ef011a1724d570ee7f2c5319a67576b3fa42ae54a1857e6546c5465"
+        },
+        {
+          "slot": 1246,
+          "internal_id": 1856,
+          "identity_key": "e0702d912a9490eb5f0904584a5f04c4bb8a36329a212d3e6db1658577d52a35"
+        }
+      ]
     }
   ]
 }

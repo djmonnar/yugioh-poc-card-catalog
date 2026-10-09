@@ -7,7 +7,7 @@ import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 import {validateCloudConfig,DeckCloud,cloudError} from './supabase-cloud.js?v=20261006-13';
 import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261007-49';
 import {createStatFilters, statConditionsMatch} from './card-filters.js?v=20261007-44';
-import {CardTagsUI} from './card-tags-ui.js?v=20261007-47';
+import {CardTagsUI} from './card-tags-ui.js?v=20261009-keep-editor';
 import {CardLimitsCloud,applyLimits,normalLimitName,speedLimitName,defaultLimitNames} from './card-limits.js?v=20261008-limits-labels';
 
 const $ = id => document.getElementById(id);
@@ -23,7 +23,7 @@ let timer, resetBackup = null;
 let settingsCloud=null,limitsCloud=null,settingsAuth=null,catalogCanEdit=false,catalogAuthGeneration=0;
 const statFilters = createStatFilters($('stat-filters'), () => {page = 1; render();});
 const tagUI=new CardTagsUI({cards:()=>cards,meta:()=>meta,canEdit:()=>catalogCanEdit,
-  changed:()=>{page=1;render();},reopen:()=>{if(selected){const top=$('card-dialog').scrollTop;openCard(selected.slot);$('card-dialog').scrollTop=top;}},
+  changed:({preservePage=false}={})=>{if(!preservePage)page=1;render();},reopen:()=>{if(selected){const top=$('card-dialog').scrollTop;openCard(selected.slot);$('card-dialog').scrollTop=top;}},
   showTag:name=>{if(selected)closeCard();view='all';resetFilters();tagUI.select(name);render();$('results').scrollIntoView({block:'start'});},toast});
 function liveSettings(card,info){
   if(card.special)return;

@@ -13,10 +13,13 @@ const makeHistory = (...releases) => ({schema_version:1, releases});
 test('published latest addition batch matches actual cards without changing gameplay data', () => {
   const before = JSON.stringify(data), index = additionIndex(data.cards, history);
   const latest = history.releases.find(r => r.id === index.latest.id);
-  assert.equal(latest.id, '20261009-atlantis-chaos-fusion');
-  assert.equal(latest.cards.length, 33);
+  assert.equal(latest.id, '20261009-insect-battle-support');
+  assert.equal(latest.cards.length, 15);
   assert.deepEqual(latest.cards.map(c => [c.slot, c.internal_id]),
-    [...Array.from({length:28},(_,i)=>1872+i),1904,1905,1906,1907,1871].map((id,i) => [1199+i,id]));
+    [...Array.from({length:14},(_,i)=>1857+i),1856].map((id,i) => [1232+i,id]));
+  const atlantis = history.releases.find(r=>r.id==='20261009-atlantis-chaos-fusion');
+  assert.equal(atlantis.cards.length,33);
+  assert.equal(data.cards.filter(c=>additionMatches(c,atlantis.id,index)).length,33);
   const previous = history.releases.find(r=>r.id==='20261009-white-dark-kit');
   assert.equal(previous.cards.length,22);
   assert.equal(data.cards.filter(c=>additionMatches(c,previous.id,index)).length,22);

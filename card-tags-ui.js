@@ -30,13 +30,16 @@ export class CardTagsUI{
     for(const tag of tags){const b=node('button','#'+tag,'tag-badge');b.type='button';b.addEventListener('click',()=>this.options.showTag(tag));list.append(b);}container.append(list);
   }
   detail(card,info,relatedLink){
-    const related=relatedAnnotations(this.cloud?.state,card,this.options.cards());
-    const heading=node('section',null,'card-relations');heading.append(node('h3','내 카테고리 · 관련 카드'));this.badges(card,heading);
-    if(related.length){const list=node('div',null,'relation-links');for(const c of related)list.append(relatedLink(c));heading.append(list);}
-    else heading.append(node('p','관련 카드를 연결하면 양쪽 카드에서 서로 이동할 수 있어.','muted'));
+    const heading=node('section',null,'card-relations');
+    const renderHeading=()=>{
+      heading.replaceChildren(node('h3','내 카테고리 · 관련 카드'));this.badges(card,heading);
+      const related=relatedAnnotations(this.cloud?.state,card,this.options.cards());
+      if(related.length){const list=node('div',null,'relation-links');for(const c of related)list.append(relatedLink(c));heading.append(list);}
+      else heading.append(node('p','관련 카드를 연결하면 양쪽 카드에서 서로 이동할 수 있어.','muted'));
+    };renderHeading();
     info.append(heading);
     const box=node('section',null,'review-editor annotation-editor');box.append(node('h3','카테고리·링크 편집'));
-    const ready=this.ready(),stored=annotationFor(this.cloud?.state,card),expected=ready?this.cloud.version(card):null;
+    const ready=this.ready(),stored=annotationFor(this.cloud?.state,card);let expected=ready?this.cloud.version(card):null;
     let draft=this.drafts.get(card.identity_key);
     if(!draft)draft={tags:[...(stored?.tags||[])],links:(stored?.links||[]).map(l=>({...l}))};
     const remember=()=>this.drafts.set(card.identity_key,draft);
@@ -59,7 +62,16 @@ export class CardTagsUI{
     const status=node('p',ready?'태그는 최대 12개, 관련 카드는 20장까지. 저장한 분류는 다른 기기에서도 볼 수 있어.':'이메일 로그인 후 분류와 관련 카드 연결을 저장할 수 있어.','muted');status.id='annotation-status';status.setAttribute('role','status');box.append(save,status);
     save.addEventListener('click',async()=>{
       box.querySelectorAll('input,button').forEach(n=>n.disabled=true);status.textContent='분류를 저장하는 중…';
-      try{await this.cloud.save(this.options.meta(),card,draft.tags,draft.links,expected);this.drafts.delete(card.identity_key);this.renderFilters();this.options.changed();this.options.reopen();this.options.toast('카테고리와 관련 카드 연결을 저장했어.');}
+      try{
+        const saved=await this.cloud.save(this.options.meta(),card,draft.tags,draft.links,expected);expected=saved.version;
+        this.drafts.delete(card.identity_key);
+        const dialog=box.closest('dialog'),top=save.getBoundingClientRect().top;
+        this.renderFilters();this.options.changed({preservePage:true});renderHeading();
+        box.querySelectorAll('input,button').forEach(n=>n.disabled=!this.ready());
+        status.textContent='저장 완료 · 카테고리와 관련 카드 연결을 반영했어.';
+        if(dialog)dialog.scrollTop+=save.getBoundingClientRect().top-top;
+        this.options.toast('카테고리와 관련 카드 연결을 저장했어.');
+      }
       catch(e){status.textContent=e.message;box.querySelectorAll('input,button').forEach(n=>n.disabled=!this.ready());}
     });renderLinks();info.append(box);
   }
