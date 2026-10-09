@@ -333,6 +333,123 @@
           "identity_key": "f3b58da3235b3c692c8559605e61ea018331bfb49e7648d399635cb9c7d323de"
         }
       ]
+    },
+    {
+      "id": "20261009-white-dark-kit",
+      "name": "백룡·블랙 매지션 지원과 카드 키트 22장",
+      "added_at": "2026-10-09T12:11:18.105785+09:00",
+      "cards": [
+        {
+          "slot": 1177,
+          "internal_id": 1927,
+          "identity_key": "40ed81512aa2831063fbd3657650e782d98ca30484242fbd0883454014eea624"
+        },
+        {
+          "slot": 1178,
+          "internal_id": 1929,
+          "identity_key": "6049d6ff21cae261e6b826a4856dc70f0f160b42f83f308a0a52507bed448a15"
+        },
+        {
+          "slot": 1179,
+          "internal_id": 1930,
+          "identity_key": "0a6bfcbb90b1857fd1ab17e602d557c33e59c36ffd0b0166b1b598b612eacc14"
+        },
+        {
+          "slot": 1180,
+          "internal_id": 1931,
+          "identity_key": "944aa3c2135f15a3966da004f7540d70f99bf191743ac5818bd0734d94b0ad03"
+        },
+        {
+          "slot": 1181,
+          "internal_id": 1932,
+          "identity_key": "69d85e6a0e15901e5e02efc5ab79b84cbaa3a232f38f3ff799a74a24bd89cf03"
+        },
+        {
+          "slot": 1182,
+          "internal_id": 1933,
+          "identity_key": "2d32723e05325c462bd6991969607f23079c63e389bc937ba4ede1d70b29b9d5"
+        },
+        {
+          "slot": 1183,
+          "internal_id": 1934,
+          "identity_key": "f130cae911f76b5e23b36f8f75a9b7b9b79c1636516b3ec52caf8220d8df226a"
+        },
+        {
+          "slot": 1184,
+          "internal_id": 1935,
+          "identity_key": "900003f145b33f2790d4dcf4b19234c46abd2ebc940072c875c3e0ae35384714"
+        },
+        {
+          "slot": 1185,
+          "internal_id": 1936,
+          "identity_key": "6411ed6e26bf8596a9bf00fdb95c63863046f17823917295634cc38c9b274c09"
+        },
+        {
+          "slot": 1186,
+          "internal_id": 1937,
+          "identity_key": "f2689223b9219d762bf88ee30db9568eca4c7e5ca2f9a667abcd22fc99f81927"
+        },
+        {
+          "slot": 1187,
+          "internal_id": 1908,
+          "identity_key": "9f459c59d9294e03c2b260af6bbdd5392b6d7a0a6d02b1d7ab09df945eaf1bdc"
+        },
+        {
+          "slot": 1188,
+          "internal_id": 1909,
+          "identity_key": "998afac3a223057d36b54952c7ee5f217881aa823759d2f0e3586eeab705c1b8"
+        },
+        {
+          "slot": 1189,
+          "internal_id": 1913,
+          "identity_key": "c6c4af8c112e81d1955f9c18a69786db466c65aa50c43a7a98ee01d24254a8b7"
+        },
+        {
+          "slot": 1190,
+          "internal_id": 1914,
+          "identity_key": "925e8a7745b34deb543a7dd2f8d3d0995da9baca63261b1b83afa1acda0d0858"
+        },
+        {
+          "slot": 1191,
+          "internal_id": 1915,
+          "identity_key": "57552d0f61322c86932f8d08513f03308c84e66150d7bb95902e2259bbb8018e"
+        },
+        {
+          "slot": 1192,
+          "internal_id": 1916,
+          "identity_key": "05162f6740ec23960625cae410c4330e55f38b11544da804e475179c75f5179d"
+        },
+        {
+          "slot": 1193,
+          "internal_id": 1917,
+          "identity_key": "389828818d18ff9751e6883c28e1159288f287f3285a8a895ff6ff9febebd6f6"
+        },
+        {
+          "slot": 1194,
+          "internal_id": 1918,
+          "identity_key": "c797a5a23bbe1c474544f2826663e3b533a0b8588541ac0f967ad74a6c29949c"
+        },
+        {
+          "slot": 1195,
+          "internal_id": 1919,
+          "identity_key": "b95e23efbf7f92b0782f5396650a928bfac919b8dda9f064d9d3e45839013a39"
+        },
+        {
+          "slot": 1196,
+          "internal_id": 1924,
+          "identity_key": "e59839abbcfb0aeca99b2305a17c4280aaa98be82be82bcdf349e6a1d8c6aa0b"
+        },
+        {
+          "slot": 1197,
+          "internal_id": 1925,
+          "identity_key": "8a96c1c8818cfc0823a7527a2bb44e1ddc9f0c11a2b5f82ee8b1a7e9cacfb9ba"
+        },
+        {
+          "slot": 1198,
+          "internal_id": 1926,
+          "identity_key": "7ab0d1cad6193baa7f779cf81ee04d9a377f6583b8baf25ee742220662eaf193"
+        }
+      ]
     }
   ]
 }
