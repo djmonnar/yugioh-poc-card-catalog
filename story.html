@@ -1,4 +1,4 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#162c38"><title>스토리 제작 · Power of Chaos</title><link rel="icon" href="assets/icon.svg"><link rel="stylesheet" href="style.css?v=20261007-49"><link rel="stylesheet" href="story.css?v=20261010-trash105"><script type="module" src="story.js?v=20261010-trash105"></script></head><body>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#162c38"><title>스토리 제작 · Power of Chaos</title><link rel="icon" href="assets/icon.svg"><link rel="stylesheet" href="style.css?v=20261007-49"><link rel="stylesheet" href="story.css?v=20261010-picker106"><script type="module" src="story.js?v=20261010-picker106"></script></head><body>
 <header class="masthead"><a class="brand" href="./"><img src="assets/icon.svg" width="34" height="40" alt=""><span>POWER OF CHAOS<small>스토리 제작</small></span></a><a class="ai-builder-link" href="ai-decks.html">AI 덱 편집</a></header>
 <main class="story-main"><p class="eyebrow">WRITE YOUR NEXT DUEL</p><h1>네가 만드는 다음 이야기.</h1><p>전투를 차례대로 배치하고, 상대와 보상을 골라줘. 편집본은 자동으로 이 브라우저에 저장돼.</p><p class="builder-notice">용만·유희 등 시나리오를 각각 만들 수 있어. 전투마다 ‘이전 전투 클리어 필요’를 끄면 순서와 관계없이 바로 도전할 수 있어. 온라인 저장 후 다음 게임 실행 때 반영돼.</p>
 <section class="scenario-library" aria-label="내 시나리오"><label for="scenario-select">편집할 시나리오<select id="scenario-select"></select></label><button id="new-scenario" type="button">+ 새 시나리오</button><button id="delete-scenario" class="remove-button" type="button" disabled>현재 시나리오 삭제</button><button id="show-trash" type="button">삭제한 시나리오 복원</button><p class="story-hint">새 시나리오는 전투·진행 기록이 따로 관리돼. 공용 캐릭터를 연결해서 프로필·컷신·음성을 함께 사용해. 삭제한 시나리오는 복원할 수 있어. 기본 시나리오는 유지돼.</p></section>
@@ -11,8 +11,9 @@
 <aside id="validation" aria-live="polite"></aside></main>
 <dialog id="card-picker" aria-labelledby="picker-title">
   <div class="picker-head"><h2 id="picker-title">카드 고르기</h2><button id="close-picker" aria-label="닫기">×</button></div>
-  <input id="card-search" type="search" aria-label="카드 이름·효과·번호 검색" placeholder="이름 · 효과 · 카드 번호 검색" autocomplete="off">
+  <input id="card-search" type="search" aria-label="카드 이름·효과·번호·태그 검색" placeholder="이름 · 효과 · 카드 번호 · 내 태그 검색" autocomplete="off">
   <p id="picker-purpose"></p>
+  <details class="picker-advanced" open><summary>내 태그로 찾기</summary><div id="picker-tags" aria-label="보상 카드 태그 필터"></div><p id="picker-tag-status" role="status">도감에 저장한 태그를 불러오는 중…</p><button id="refresh-picker-tags" type="button">태그 새로 불러오기</button></details>
   <div class="picker-filters">
     <label for="picker-rarity">등급<select id="picker-rarity"><option value="">전체</option><option>L</option><option>UR</option><option>SR</option><option>R</option><option>N</option></select></label>
     <label for="picker-type">카드 종류<select id="picker-type"></select></label>

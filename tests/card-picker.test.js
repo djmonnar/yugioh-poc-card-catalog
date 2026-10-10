@@ -28,3 +28,17 @@ test('rarity and numeric sorting are deterministic without changing candidate or
   assert.equal(pickerCards(cards,{sort:'level'})[0].slot,4);
   assert.deepEqual(cards.map(c=>c.slot),[1,2,3,4]);
 });
+
+test('saved custom tags work in text search and combine with filters without following replaced card identities',()=>{
+  const cards=[{...monster(1,'SR'),identity_key:'a'.repeat(64)},{...monster(2,'R'),identity_key:'b'.repeat(64)}];
+  const annotations={categories:[{name:'내 툰 덱'},{name:'서포트'}],annotations:[
+    {...cards[0],tags:['내 툰 덱','서포트'],links:[],version:1},
+    {...cards[1],tags:['내 툰 덱'],links:[],version:1}
+  ]};
+  for(const query of ['내툰덱','#내 툰 덱'])assert.deepEqual(pickerCards(cards,{query},()=>true,annotations).map(c=>c.slot),[1,2]);
+  assert.deepEqual(pickerCards(cards,{tags:['내 툰 덱','서포트'],rarity:'SR',race:'공룡족'},()=>true,annotations).map(c=>c.slot),[1]);
+  cards[0].identity_key='c'.repeat(64);
+  assert.deepEqual(pickerCards(cards,{query:'#서포트'},()=>true,annotations),[]);
+  assert.deepEqual(pickerCards(cards,{tags:['내 툰 덱']},()=>true,annotations).map(c=>c.slot),[2]);
+  assert.equal(pickerCards(cards,{tags:[]},()=>true,null).length,2);
+});

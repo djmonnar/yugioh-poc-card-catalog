@@ -8,7 +8,9 @@ import {MEDIA_EVENTS,defaultPresentation,parsePresentation,safeMedia,validateAud
 import {validateCloudConfig,cloudError as commonCloudError} from './supabase-cloud.js?v=20261008-70';
 import {mergeAIAssets} from './ai-assets.js?v=20261008-70';
 import {createStatFilters} from './card-filters.js?v=20261007-44';
-import {pickerCards} from './card-picker.js?v=20261010-picker';
+import {pickerCards} from './card-picker.js?v=20261010-picker106';
+import {CardTagsCloud,annotationFor} from './card-tags.js?v=20261007-47';
+import {poolCardSelected,togglePoolCard} from './reward-picker.js?v=20261010-picker106';
 import {CHARACTER_KEY,parseCharacters,attachCharacter,characterUpdates,linkLegacyCharacters,resolveCharacters,rebaseCharacters,synchronizeCharacterCopies} from './character-library.js?v=20261010-characters103';
 import {TRASH_KEY,parseTrash,archiveLocal,restoreLocal} from './scenario-trash.js?v=20261010-trash105';
 const $=id=>document.getElementById(id),node=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
@@ -18,6 +20,8 @@ let installed=[];
 let characters=[],charactersReady=false;
 let characterBases=[];
 let scenarioTrash=[],remoteTrash=[],trashStorageBlocked=false;
+let pickerTagsCloud=null;
+const selectedPickerTags=new Set();
 try{scenarioTrash=parseTrash(JSON.parse(localStorage.getItem(TRASH_KEY)||'[]'));}catch{trashStorageBlocked=true;}
 function cloudError(error){
   const message=error?.message||'';
@@ -121,7 +125,26 @@ function input(label,value,changed,{type='text',max=6000}={}){const l=node('labe
 function select(label,value,rows,changed){const l=node('label',label),s=node('select');for(const [key,text] of rows){const o=node('option',text);o.value=key;s.append(o);}s.value=value;s.addEventListener('change',()=>{changed(s.value);redraw();});l.append(s);return l;}
 function resetPicker(){
   $('card-search').value='';for(const field of pickerFields)$(`picker-${field}`).value='';
-  $('picker-sort').value='rarity';pickerStats.reset();pickerPage=0;renderPicker();
+  selectedPickerTags.clear();renderPickerTags();$('picker-sort').value='rarity';pickerStats.reset();pickerPage=0;renderPicker();
+}
+function renderPickerTags(){
+  const box=$('picker-tags');box.replaceChildren();
+  for(const {name} of pickerTagsCloud?.state?.categories||[]){
+    const label=node('label'),check=node('input');label.className='picker-tag-choice';check.type='checkbox';check.checked=selectedPickerTags.has(name);
+    check.onchange=()=>{check.checked?selectedPickerTags.add(name):selectedPickerTags.delete(name);pickerPage=0;renderPicker();};
+    label.append(check,node('span',name));box.append(label);
+  }
+  if(!box.children.length)box.append(node('p','도감에서 만든 태그가 여기에 표시돼.'));
+}
+async function refreshPickerTags(){
+  $('refresh-picker-tags').disabled=true;
+  try{
+    if(!pickerTagsCloud)throw new Error('온라인 연결을 확인해줘.');
+    await pickerTagsCloud.load();const names=new Set(pickerTagsCloud.state.categories.map(c=>c.name));
+    for(const tag of selectedPickerTags)if(!names.has(tag))selectedPickerTags.delete(tag);
+    renderPickerTags();pickerPage=0;renderPicker();$('picker-tag-status').textContent='여러 태그를 선택하면 모두 포함한 카드를 찾아. 검색창에도 태그 이름을 입력할 수 있어.';
+  }catch{$('picker-tag-status').textContent='태그를 불러오지 못했어. 태그 새로 불러오기를 눌러줘.';}
+  finally{$('refresh-picker-tags').disabled=false;}
 }
 function pickerOptions(){
   const eligible=cards.filter(filter),collator=new Intl.Collator('ko');
@@ -139,37 +162,38 @@ function pickerOptions(){
 }
 function picker(accept,purpose,done,selection=null){filter=accept;chooseCard=done;pickerSelection=selection;pickerOptions();resetPicker();$('picker-purpose').textContent=purpose;$('card-picker').showModal();$('card-search').focus();}
 function renderPicker(){
-  const criteria={query:$('card-search').value,sort:$('picker-sort').value,stats:pickerStats.values()};
+  const criteria={query:$('card-search').value,sort:$('picker-sort').value,stats:pickerStats.values(),tags:[...selectedPickerTags]};
   for(const field of pickerFields)criteria[field]=$(`picker-${field}`).value;
-  const found=pickerCards(cards,criteria,filter),pages=Math.max(1,Math.ceil(found.length/12));pickerPage=Math.min(pickerPage,pages-1);
+  const found=pickerCards(cards,criteria,filter,pickerTagsCloud?.state),pages=Math.max(1,Math.ceil(found.length/12));pickerPage=Math.min(pickerPage,pages-1);
   const box=$('picker-results');box.replaceChildren();
   $('picker-empty').hidden=found.length!==0;
   for(const c of found.slice(pickerPage*12,(pickerPage+1)*12)){
     const selected=pickerSelection?.selected(c)===true,full=pickerSelection&&pickerSelection.count()>=(pickerSelection.limit||100);
     const b=button('',()=>{
-      if(pickerSelection&&(pickerSelection.selected(c)||pickerSelection.count()>=(pickerSelection.limit||100)))return;
-      const dialog=$('card-picker'),scroll=dialog.scrollTop;chooseCard(cardRef(c));
-      if(pickerSelection){redraw();renderPicker();dialog.scrollTop=scroll;const next=Array.from($('picker-results').children).find(el=>!el.disabled);(next||$('finish-picker')).focus({preventScroll:true});}
+      if(pickerSelection&&!pickerSelection.selected(c)&&pickerSelection.count()>=(pickerSelection.limit||100))return;
+      const dialog=$('card-picker'),scroll=dialog.scrollTop;
+      try{chooseCard(cardRef(c));}catch(e){$('picker-selection').textContent=e.message;return;}
+      if(pickerSelection){redraw();renderPicker();dialog.scrollTop=scroll;const same=Array.from($('picker-results').children).find(el=>Number(el.dataset.cardSlot)===c.slot);(same||$('finish-picker')).focus({preventScroll:true});}
       else{dialog.close();redraw();}
     },'picker-card'),img=node('img'),label=node('span',c.name_ko);
-    b.disabled=selected||Boolean(full);b.classList.toggle('is-selected',selected);b.dataset.cardSlot=c.slot;
+    b.disabled=Boolean(full)&&!selected;b.classList.toggle('is-selected',selected);b.dataset.cardSlot=c.slot;if(pickerSelection)b.setAttribute('aria-pressed',String(selected));
     img.src=c.image;img.alt='';img.loading='lazy';label.append(node('small',[c.rarity,c.type,c.race||c.subtype,c.attribute,c.level==null?'':`LV ${c.level}`].filter(Boolean).join(' · ')));
     if(c.atk!=null)label.append(node('small',`ATK ${c.atk} / DEF ${c.def??'?'}`));
-    if(selected){const badge=node('small','✓ 추가됨');badge.className='picker-selected';label.append(badge);}
+    const tags=annotationFor(pickerTagsCloud?.state,c)?.tags||[];if(tags.length)label.append(node('small',tags.map(tag=>'#'+tag).join(' · ')));
+    if(selected){const badge=node('small','✓ 선택됨 · 다시 누르면 취소');badge.className='picker-selected';label.append(badge);}
     b.append(img,label);box.append(b);
   }
   $('picker-page').textContent=`${pickerPage+1} / ${pages} · ${found.length}장`;$('prev-cards').disabled=pickerPage===0;$('next-cards').disabled=pickerPage+1===pages;
   $('finish-picker').hidden=!pickerSelection;$('picker-selection').hidden=!pickerSelection;
-  $('picker-selection').textContent=pickerSelection?`${pickerSelection.label||'후보'} ${pickerSelection.count()} / ${pickerSelection.limit||100}장 · ${pickerSelection.count()>=(pickerSelection.limit||100)?'모두 채웠어.':'여러 장을 계속 골라줘.'}`:'';
+  $('picker-selection').textContent=pickerSelection?`${pickerSelection.label||'후보'} ${pickerSelection.count()} / ${pickerSelection.limit||100}장 · 선택한 카드를 다시 누르면 취소돼.`:'';
 }
-function poolPicker(reward,onCreate){
+function poolPicker(reward,rewards){
   let pool=reward;
-  picker(c=>!c.special&&(c.reward_eligible||c.rarity==='L'),'랜덤 보상 후보 카드 · 선택 완료를 누르면 닫혀',card=>{
-    if(!pool){pool={kind:'card_pool',count:1,entries:[]};onCreate(pool);}
-    pool.entries.push({card,weight:1});
-  },{selected:c=>pool?.entries.some(e=>e.card.slot===c.slot)===true,count:()=>pool?.entries.length||0});
+  picker(c=>!c.special&&(c.reward_eligible||c.rarity==='L'),'랜덤 보상 후보 · 다시 누르면 선택 취소 · 선택 완료를 누르면 닫혀',card=>{
+    pool=togglePoolCard(rewards,pool,card);
+  },{selected:c=>poolCardSelected(pool,c),count:()=>pool?.entries.length||0});
 }
-function poolReward(r,remove){
+function poolReward(r,remove,rewards){
   const box=node('div');box.className='pool-reward';
   const head=node('div');head.className='reward-row';head.append(node('b','지정 카드 랜덤'),button('보상 삭제',remove,'remove-button'));box.append(head);
   const count=input('받을 장수 · 매번 독립 추첨',r.count,v=>r.count=v,{type:'number'});count.lastChild.min=1;count.lastChild.max=3;box.append(count);
@@ -182,12 +206,12 @@ function poolReward(r,remove){
     row.append(img,label,weight,percent,button('후보 삭제',()=>{r.entries=r.entries.filter(x=>x!==e);if(!r.entries.length)remove();else redraw();},'remove-button'));box.append(row);
   }
   update();box.append(node('small','비중 3 : 1이면 75% : 25%. 여러 장을 뽑으면 같은 카드가 다시 나올 수 있어. 보유 한도에 찬 후보는 제외하고 다시 계산해.'));
-  const add=button('+ 후보 카드',()=>poolPicker(r));add.disabled=r.entries.length>=100;box.append(add);return box;
+  box.append(button('후보 선택·취소',()=>poolPicker(r,rewards)));return box;
 }
 function resolveRewardCard(ref){return cards.find(c=>c.slot===ref.slot&&c.internal_id===ref.internal_id);}
-function rewards(b,kind,title){const list=b.rewards[kind],box=node('details');box.className='reward-block reward-fold';box.open=openedRewards.has(list);box.append(node('summary',(title||(kind==='first'?'첫 승리 보상':'이후 승리 보상'))+' · '+list.length+'개'));box.addEventListener('toggle',()=>{if(!box.isConnected)return;if(box.open)openedRewards.add(list);else openedRewards.delete(list);});b.rewards[kind].forEach((r,i)=>{const remove=()=>{b.rewards[kind].splice(i,1);redraw();};if(r.kind==='card_pool'){box.append(poolReward(r,remove));return;}const row=node('div');row.className='reward-row';row.append(node('span',r.kind==='gold'?`${r.amount} 골드`:r.kind==='card'?`${r.card.name_ko} ×${r.count}`:`무작위 ${r.rarity==='ANY'?'랜덤 허용 등급':r.rarity} 카드 ×${r.count}`));row.append(button('삭제',remove,'remove-button'));box.append(row);});const add=r=>{if(b.rewards[kind].length>=20){status('보상은 종류별 20개까지야.');return;}b.rewards[kind].push(r);redraw();};
+function rewards(b,kind,title){const list=b.rewards[kind],box=node('details');box.className='reward-block reward-fold';box.open=openedRewards.has(list);box.append(node('summary',(title||(kind==='first'?'첫 승리 보상':'이후 승리 보상'))+' · '+list.length+'개'));box.addEventListener('toggle',()=>{if(!box.isConnected)return;if(box.open)openedRewards.add(list);else openedRewards.delete(list);});b.rewards[kind].forEach((r,i)=>{const remove=()=>{b.rewards[kind].splice(i,1);redraw();};if(r.kind==='card_pool'){box.append(poolReward(r,remove,list));return;}const row=node('div');row.className='reward-row';row.append(node('span',r.kind==='gold'?`${r.amount} 골드`:r.kind==='card'?`${r.card.name_ko} ×${r.count}`:`무작위 ${r.rarity==='ANY'?'랜덤 허용 등급':r.rarity} 카드 ×${r.count}`));row.append(button('삭제',remove,'remove-button'));box.append(row);});const add=r=>{if(b.rewards[kind].length>=20){status('보상은 종류별 20개까지야.');return;}b.rewards[kind].push(r);redraw();};
   const tools=node('div');tools.className='row-actions';const amount=node('input');amount.type='number';amount.min=1;amount.max=100000;amount.value=50;amount.style.width='100px';amount.setAttribute('aria-label','추가할 골드');tools.append(amount,button('골드 추가',()=>{const n=Number(amount.value);if(!Number.isInteger(n)||n<1||n>100000)return status('골드는 1~100,000 사이로 입력해줘.');add({kind:'gold',amount:n});}),button('카드 검색',()=>picker(c=>!c.special&&(c.reward_eligible||c.rarity==='L'),'보상으로 받을 카드 · 1장',card=>add({kind:'card',card,count:1}))));
-  const tier=node('select');tier.setAttribute('aria-label','무작위 보상 등급');for(const v of ['ANY','N','R','SR','UR']){const o=node('option',v==='ANY'?'랜덤 허용 등급':v);o.value=v;tier.append(o);}tools.append(tier,button('무작위 1장',()=>add({kind:'random',rarity:tier.value,count:1})),button('지정 카드 랜덤 추가',()=>{if(b.rewards[kind].length>=20)return status('보상은 종류별 20개까지야.');poolPicker(null,r=>b.rewards[kind].push(r));}));box.append(tools);return box;
+  const tier=node('select');tier.setAttribute('aria-label','무작위 보상 등급');for(const v of ['ANY','N','R','SR','UR']){const o=node('option',v==='ANY'?'랜덤 허용 등급':v);o.value=v;tier.append(o);}tools.append(tier,button('무작위 1장',()=>add({kind:'random',rarity:tier.value,count:1})),button('지정 카드 랜덤 추가',()=>{if(b.rewards[kind].length>=20)return status('보상은 종류별 20개까지야.');poolPicker(null,list);}));box.append(tools);return box;
 }
 function raidControls(b){
   const box=node('div'),toggle=node('label'),on=node('input');toggle.className='battle-unlock';on.type='checkbox';on.checked=!!b.raid;
@@ -291,9 +315,10 @@ async function cloudInit(){
   try{
     const config=validateCloudConfig(await fetch('data/cloud-config.json',{cache:'no-store'}).then(r=>r.json()));
     client=createClient(config.url,config.publishable_key,{auth:{storageKey:'poc-ai-editor-auth-v1',detectSessionInUrl:true,persistSession:true,autoRefreshToken:true}});
+    pickerTagsCloud=new CardTagsCloud(client);
     await new CardSettingsCloud(client).load().then(rows=>applySettings(cards,rows));
     applyLimits(cards,await new CardLimitsCloud(client).load());
-    const [stories,access,recipes]=await Promise.all([fetchScenarios(),client.rpc('poc_editor_status'),client.rpc('poc_load_ai_decks'),loadCharacters()]);
+    const [stories,access,recipes]=await Promise.all([fetchScenarios(),client.rpc('poc_editor_status'),client.rpc('poc_load_ai_decks'),loadCharacters(),refreshPickerTags()]);
     remoteScenarios=stories;editor=access.data===true;libraryReady=true;
     for(const s of remoteScenarios){const existing=library.entries.find(e=>e.id===s.id);if(!existing)library.entries.push({id:s.id,title:s.document.title,version:s.version});else if(existing.version===null)existing.version=s.version;}
     version=entry().version??0;entry().version=version;if(!storageBlocked)storeLibrary();
@@ -319,6 +344,7 @@ $('import').onclick=()=>$('import-file').click();$('import-file').onchange=async
 $('close-picker').onclick=()=>$('card-picker').close();$('finish-picker').onclick=()=>$('card-picker').close();$('card-picker').addEventListener('close',()=>{pickerSelection=null;renderActors();});$('card-search').oninput=()=>{pickerPage=0;renderPicker();};$('prev-cards').onclick=()=>{pickerPage--;renderPicker();};$('next-cards').onclick=()=>{pickerPage++;renderPicker();};
 for(const field of [...pickerFields,'sort'])$(`picker-${field}`).onchange=()=>{pickerPage=0;renderPicker();};
 $('reset-picker').onclick=resetPicker;
+$('refresh-picker-tags').onclick=async()=>{if(!pickerTagsCloud)await cloudInit();else await refreshPickerTags();};
 // Sharing the catalogue's email session avoids a second editor account.
 const toolbar=$('export').parentNode;
 toolbar.append(button('이 시나리오 온라인 저장',async()=>{
