@@ -13,10 +13,17 @@ const makeHistory = (...releases) => ({schema_version:1, releases});
 test('published latest addition batch matches actual cards without changing gameplay data', () => {
   const before = JSON.stringify(data), index = additionIndex(data.cards, history);
   const latest = history.releases.find(r => r.id === index.latest.id);
-  assert.equal(latest.id, '20261010-spirit-toon-gravekeeper');
-  assert.equal(latest.cards.length, 8);
+  assert.equal(latest.id, '20261011-sphere');
+  assert.equal(latest.cards.length, 1);
   assert.deepEqual(latest.cards.map(c => [c.slot, c.internal_id]),
-    Array.from({length:8},(_,i)=>[1279+i,1814+i]));
+    [[335,272]]);
+  const sphere=data.cards.find(c=>c.slot===335);
+  assert.equal(sphere.name_en,'Mystical Shine Ball');
+  assert.equal(sphere.official_cid,5949);
+  assert.equal(sphere.previous_identity_keys,undefined);
+  const spirit=history.releases.find(r=>r.id==='20261010-spirit-toon-gravekeeper');
+  assert.deepEqual(spirit.cards.map(c=>[c.slot,c.internal_id]),Array.from({length:8},(_,i)=>[1279+i,1814+i]));
+  assert.equal(data.cards.filter(c=>additionMatches(c,spirit.id,index)).length,8);
   const marik = history.releases.find(r=>r.id==='20261010-marik-ishizu');
   assert.equal(marik.cards.length,8);
   assert.equal(data.cards.filter(c=>additionMatches(c,marik.id,index)).length,8);

@@ -925,6 +925,18 @@
           "identity_key": "3e406fa6e3a0a7716c9f5d1e09d304206e01205e39cf44092d107aa689e3c78a"
         }
       ]
+    },
+    {
+      "id": "20261011-sphere",
+      "name": "비행코끼리 교체 · 신성한 구체",
+      "added_at": "2026-10-11T02:45:33.336786+09:00",
+      "cards": [
+        {
+          "slot": 335,
+          "internal_id": 272,
+          "identity_key": "3fe303dc5c490fe7949d8149a146400ecfb2c047eabfdfe1c9793513dc4d671e"
+        }
+      ]
     }
   ]
 }
