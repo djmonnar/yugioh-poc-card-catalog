@@ -878,6 +878,53 @@
           "identity_key": "b9165ddc34db4f34904dcf646fd737d2770b95080484adb417844ac99503cc14"
         }
       ]
+    },
+    {
+      "id": "20261010-spirit-toon-gravekeeper",
+      "name": "정령·툰·묘지기 8장",
+      "added_at": "2026-10-10T23:31:56.457207+09:00",
+      "cards": [
+        {
+          "slot": 1279,
+          "internal_id": 1814,
+          "identity_key": "440bb0e90128d6ad228ce405f401979eeff283403ae25dbae03dae823219dc2b"
+        },
+        {
+          "slot": 1280,
+          "internal_id": 1815,
+          "identity_key": "53ad399b71e4a36523a12d055e8fc6053ada1396f043af20ad47c6a706a43dcb"
+        },
+        {
+          "slot": 1281,
+          "internal_id": 1816,
+          "identity_key": "ac48445f42071f9b9b826a891483059ffb718c310e65a56cd42030fdcee4632a"
+        },
+        {
+          "slot": 1282,
+          "internal_id": 1817,
+          "identity_key": "42e707296ec5840626bc380ba4ab75fa644307669b04928f578a51cb39952633"
+        },
+        {
+          "slot": 1283,
+          "internal_id": 1818,
+          "identity_key": "66094f4d66f3bdd55ca1eaf133e88c3bc7f8f53156f700d01601240d41cc2d5d"
+        },
+        {
+          "slot": 1284,
+          "internal_id": 1819,
+          "identity_key": "866b89cc4b0821ce50754784e7222445742e50a7b68fb4be4e4a76bd6bb0843f"
+        },
+        {
+          "slot": 1285,
+          "internal_id": 1820,
+          "identity_key": "241fb02635adf86aa7881c4567ea8a48014852c7f04879327e3f3a3f7c2fd663"
+        },
+        {
+          "slot": 1286,
+          "internal_id": 1821,
+          "identity_key": "3e406fa6e3a0a7716c9f5d1e09d304206e01205e39cf44092d107aa689e3c78a"
+        }
+      ]
     }
   ]
 }
