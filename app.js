@@ -7,7 +7,8 @@ import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 import {validateCloudConfig,DeckCloud,cloudError} from './supabase-cloud.js?v=20261006-13';
 import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261007-49';
 import {createStatFilters, statConditionsMatch} from './card-filters.js?v=20261007-44';
-import {CardTagsUI} from './card-tags-ui.js?v=20261009-keep-editor';
+import {CardTagsUI} from './card-tags-ui.js?v=20261011-tags';
+import {subtypeMatches,fillSubtypeFilter} from './card-subtypes.js?v=20261011-tags';
 import {CardLimitsCloud,applyLimits,normalLimitName,speedLimitName,defaultLimitNames} from './card-limits.js?v=20261008-limits-labels';
 
 const $ = id => document.getElementById(id);
@@ -56,7 +57,7 @@ async function initCardSettings(){
     const response=await fetch('./data/cloud-config.json?v=20261006-13',{cache:'no-store'});if(!response.ok)throw new Error('설정 없음');const config=validateCloudConfig(await response.json());
     settingsAuth=createClient(config.url,config.publishable_key,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true,storageKey:'poc-ai-editor-auth-v1'},global:{fetch:(url,options)=>fetch(url,{...options,signal:options?.signal||AbortSignal.timeout(10000)})}});
     settingsCloud=new CardSettingsCloud(settingsAuth);limitsCloud=new CardLimitsCloud(settingsAuth);try{await tagUI.connect(settingsAuth);}catch(e){$('category-status').textContent='온라인 분류를 불러오지 못했어. 설정 새로 불러오기를 눌러줘.';}await refreshCardSettings();
-    const update=async session=>{const generation=++catalogAuthGeneration,previous=catalogCanEdit;try{const allowed=session?await new DeckCloud(settingsAuth).editor():false;if(generation!==catalogAuthGeneration)return;catalogCanEdit=allowed;tagUI.renderFilters();$('card-cloud-status').textContent=catalogCanEdit?'로그인됨 · 카드 상세에서 등급·판매 여부·태그·관련 링크를 저장할 수 있어.':'직접 편집하려면 이메일로 로그인해줘. 저장된 태그와 관련 링크는 로그인 없이 볼 수 있어.';if(selected&&previous!==catalogCanEdit)openCard(selected.slot);}catch(error){if(generation===catalogAuthGeneration){catalogCanEdit=false;tagUI.renderFilters();$('card-cloud-status').textContent=cloudError(error);}}};
+    const update=async session=>{const generation=++catalogAuthGeneration,previous=catalogCanEdit;try{const allowed=session?await new DeckCloud(settingsAuth).editor():false;if(allowed&&!previous)await tagUI.reload();if(generation!==catalogAuthGeneration)return;catalogCanEdit=allowed;tagUI.renderFilters();$('card-cloud-status').textContent=catalogCanEdit?'로그인됨 · 카드 상세에서 등급·판매 여부·태그·관련 링크를 저장할 수 있어.':'직접 편집하려면 이메일로 로그인해줘. 저장된 태그와 관련 링크는 로그인 없이 볼 수 있어.';if(selected&&previous!==catalogCanEdit)openCard(selected.slot);}catch(error){if(generation===catalogAuthGeneration){catalogCanEdit=false;tagUI.renderFilters();$('card-cloud-status').textContent=cloudError(error);}}};
     settingsAuth.auth.onAuthStateChange((_event,session)=>setTimeout(()=>update(session),0));const {data,error}=await settingsAuth.auth.getSession();if(error)throw error;await update(data.session);
   }catch(error){$('card-cloud-status').textContent=cloudError(error);}
 }
@@ -130,6 +131,7 @@ function filteredCards() {
     if (!additionMatches(c, $('release-filter').value, additions)) return false;
     if (view === 'reviews' && !reviews.has(c.identity_key)) return false;
     if (!tagUI.matches(c)) return false;
+    if (!subtypeMatches(c,$('subtype-filter').value)) return false;
     if (!categoryMatches(c, $('mechanic-filter').value, $('group-filter').value)) return false;
     if (rarity && c.rarity !== rarity || type && c.type !== type || race && c.race !== race || attribute && c.attribute !== attribute) return false;
     if (limit !== '' && c.deck_limit !== Number(limit)) return false;
@@ -178,7 +180,7 @@ function render() {
   $('cards').replaceChildren(...results.slice((page-1)*PAGE_SIZE, page*PAGE_SIZE).map(renderCard));
   $('empty').hidden = results.length > 0;
   $('results').textContent = `${fmt(results.length)}장${view === 'reviews' ? '의 검토' : '의 카드'} · 전체 ${fmt(cards.length)}장`;
-  $('active-summary').textContent = [rarity, $('type-filter').value, $('race-filter').value, ...statFilters.summary(), ...tagUI.summary(), $('mechanic-filter').selectedOptions[0]?.value ? $('mechanic-filter').selectedOptions[0].textContent : '', $('group-filter').selectedOptions[0]?.value ? $('group-filter').selectedOptions[0].textContent : ''].filter(Boolean).join(' · ');
+  $('active-summary').textContent = [rarity, $('type-filter').value, $('subtype-filter').value?$('subtype-filter').selectedOptions[0]?.textContent:'', $('race-filter').value, ...statFilters.summary(), ...tagUI.summary(), $('mechanic-filter').selectedOptions[0]?.value ? $('mechanic-filter').selectedOptions[0].textContent : '', $('group-filter').selectedOptions[0]?.value ? $('group-filter').selectedOptions[0].textContent : ''].filter(Boolean).join(' · ');
   if ($('release-filter').value) $('active-summary').textContent = [
     $('release-filter').selectedOptions[0]?.textContent, $('active-summary').textContent].filter(Boolean).join(' · ');
   $('show-new-cards').setAttribute('aria-pressed', String($('release-filter').value === 'latest'));
@@ -333,7 +335,8 @@ function openExport() {
   if (!$('export-dialog').open) $('export-dialog').showModal();
 }
 function resetFilters() {
-  for(const id of ['search','type-filter','limit-filter','race-filter','attribute-filter','level-min','level-max','status-filter','mechanic-filter','group-filter','release-filter']) $(id).value='';
+  for(const id of ['search','type-filter','subtype-filter','limit-filter','race-filter','attribute-filter','level-min','level-max','status-filter','mechanic-filter','group-filter','release-filter']) $(id).value='';
+  fillSubtypeFilter($('subtype-filter'));
   const destination = parseCatalogHash(location.hash);
   if (destination?.newCards || destination?.release) history.replaceState(null, '', location.pathname+location.search);
   statFilters.reset();
@@ -365,6 +368,7 @@ async function init() {
       for(const row of rows){const option=el('option',row.name);option.value=row.id;$(id).append(option);}
     $('total-count').textContent=fmt(cards.length);$('scope-count').textContent=`일반 카드 ${fmt(meta.regular_count)}장 · 토큰·특수 ${meta.special_count}종`;$('snapshot-date').textContent=meta.snapshot_date+' 기준';
     fillFilter('type-filter',[...new Set(cards.map(c=>c.type))]);fillFilter('race-filter',[...new Set(cards.map(c=>c.race).filter(Boolean))].sort(collator.compare));fillFilter('attribute-filter',[...new Set(cards.map(c=>c.attribute).filter(Boolean))]);
+    fillSubtypeFilter($('subtype-filter'));
     const levels=[...new Set(cards.map(c=>c.level).filter(v=>v!=null))].sort((a,b)=>a-b);fillFilter('level-min',levels);fillFilter('level-max',levels);
     try {const stored=localStorage.getItem(STORAGE_KEY);if(stored){const parsed=parseImport(JSON.parse(stored),cards);reviews=new Map(parsed.valid.map(r=>[r.identity_key,r]));unmatched=parsed.unmatched;if(unmatched.length)toast(`카드가 바뀐 이전 의견 ${unmatched.length}건을 따로 보관했어.`);}backup=localStorage.getItem(STORAGE_KEY+'-before-import');}
     catch{toast('이전 의견을 읽지 못했어. 기존 저장 내용은 그대로 두었어.');}
@@ -378,7 +382,8 @@ async function init() {
 $('search').addEventListener('input',()=>{page=1;render();});
 $('create-category').addEventListener('click',async()=>{const button=$('create-category'),status=$('category-status');button.disabled=true;try{await tagUI.create($('new-category-name').value);$('new-category-name').value='';status.textContent='만들었어. 카드 상세에서 태그로 선택할 수 있어.';}catch(e){status.textContent=e.message;}finally{button.disabled=!tagUI.ready();}});
 $('refresh-card-settings').addEventListener('click',async()=>{try{await refreshCardSettings();toast('온라인 카드 설정을 다시 불러왔어.');}catch(error){toast(cloudError(error));}});
-for(const id of ['type-filter','limit-filter','race-filter','attribute-filter','level-min','level-max','status-filter','mechanic-filter','group-filter','sort'])$(id).addEventListener('change',()=>{page=1;render();});
+$('type-filter').addEventListener('change',()=>{fillSubtypeFilter($('subtype-filter'),$('type-filter').value);page=1;render();});
+for(const id of ['subtype-filter','limit-filter','race-filter','attribute-filter','level-min','level-max','status-filter','mechanic-filter','group-filter','sort'])$(id).addEventListener('change',()=>{page=1;render();});
 $('reset-filters').addEventListener('click',resetFilters);
 $('show-new-cards').addEventListener('click',()=>showNewCards());
 $('release-filter').addEventListener('change',()=>{page=1;render();history.replaceState(null,'',location.pathname+location.search+releaseHash());});

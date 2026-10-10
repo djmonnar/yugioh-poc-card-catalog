@@ -1,7 +1,7 @@
-import {CardTagsCloud,annotationFor,tagMatches,relatedAnnotations} from './card-tags.js?v=20261007-47';
+import {CardTagsCloud,annotationFor,tagMatches,relatedAnnotations,tagName} from './card-tags.js?v=20261011-tags';
 const node=(tag,text,cls)=>{const n=document.createElement(tag);if(text!=null)n.textContent=text;if(cls)n.className=cls;return n;};
 export class CardTagsUI{
-  constructor(options){this.options=options;this.cloud=null;this.selected=new Set();this.drafts=new Map();this.renderFilters();}
+  constructor(options){this.options=options;this.cloud=null;this.selected=new Set();this.drafts=new Map();this.busy=false;this.renderFilters();}
   async connect(client){this.cloud=new CardTagsCloud(client);await this.reload();}
   async reload(){if(this.cloud)await this.cloud.load();this.renderFilters();}
   reset(){this.selected.clear();this.renderFilters();}
@@ -9,16 +9,46 @@ export class CardTagsUI{
   matches(card){return tagMatches(this.cloud?.state,card,[...this.selected]);}
   searchText(card){return (annotationFor(this.cloud?.state,card)?.tags||[]).join(' ').normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,'');}
   summary(){return [...this.selected].map(t=>'#'+t);}
-  ready(){return this.options.canEdit()&&this.cloud?.state!=null;}
+  ready(){return !this.busy&&this.options.canEdit()&&this.cloud?.state!=null;}
   renderFilters(){
     const box=document.getElementById('custom-tag-filters');if(!box)return;box.replaceChildren();
     const counts=new Map(),cards=new Map(this.options.cards().map(c=>[c.slot,c]));
     for(const row of this.cloud?.state?.annotations||[]){const c=cards.get(row.slot);if(!c||c.identity_key!==row.identity_key||c.internal_id!==row.internal_id)continue;for(const tag of row.tags)counts.set(tag,(counts.get(tag)||0)+1);}
     const categories=this.cloud?.state?.categories||[];
+    const names=new Set(categories.map(c=>c.name));for(const name of this.selected)if(!names.has(name))this.selected.delete(name);
     for(const {name} of categories){const label=node('label',null,'tag-choice'),check=node('input');check.type='checkbox';check.checked=this.selected.has(name);check.addEventListener('change',()=>{check.checked?this.selected.add(name):this.selected.delete(name);this.options.changed();});label.append(check,node('span',name),node('small',counts.get(name)||0));box.append(label);}
     if(!categories.length)box.append(node('p',this.cloud?.state?'아직 만든 카테고리가 없어. 아래에서 하나 만들어봐.':'온라인 카테고리를 읽는 중…','muted'));
     document.getElementById('create-category').disabled=!this.ready();
     document.getElementById('new-category-name').disabled=!this.ready();
+    this.renderManager();
+  }
+  renderManager(){
+    const box=document.getElementById('tag-manager');if(!box)return;box.replaceChildren();
+    if(!this.options.canEdit()){box.append(node('p','이메일 로그인 후 태그의 이름을 바꾸거나 삭제할 수 있어.','muted'));return;}
+    for(const category of this.cloud?.state?.categories||[]){
+      const row=node('div',null,'tag-manager-row'),input=node('input');input.value=category.name;input.maxLength=40;input.setAttribute('aria-label',`${category.name} 새 이름`);input.disabled=!this.ready();
+      const save=node('button','변경'),remove=node('button','삭제');save.type=remove.type='button';save.disabled=remove.disabled=!this.ready();save.setAttribute('aria-label',`${category.name} 이름 변경`);remove.setAttribute('aria-label',`${category.name} 삭제`);
+      save.addEventListener('click',()=>this.manage('rename',category.name,input.value));remove.addEventListener('click',()=>this.manage('remove',category.name));row.append(input,save,remove);box.append(row);
+    }
+    const deleted=this.cloud?.state?.deleted_categories||[];
+    if(deleted.length){const trash=node('details',null,'tag-trash');trash.append(node('summary',`삭제한 태그 · ${deleted.length}개`));for(const {name} of deleted){const row=node('div',null,'tag-trash-row'),restore=node('button','복원');restore.type='button';restore.disabled=!this.ready();restore.setAttribute('aria-label',`${name} 복원`);restore.addEventListener('click',()=>this.manage('restore',name));row.append(node('span',name),restore);trash.append(row);}box.append(trash);}
+  }
+  async manage(action,name,newName){
+    if(!this.ready())return;
+    const status=document.getElementById('category-status');
+    try{
+      if(action==='rename'){newName=tagName(newName);if(newName===name){status.textContent='새 이름을 적어줘.';return;}}
+      this.busy=true;this.renderFilters();status.textContent='태그를 저장하는 중…';
+      await (action==='rename'?this.cloud.rename(name,newName):action==='remove'?this.cloud.remove(name):this.cloud.restore(name));
+      if(this.selected.delete(name)&&action==='rename')this.selected.add(newName);
+      for(const [identity,draft] of this.drafts){
+        if(action==='rename')draft.tags=draft.tags.map(t=>t===name?newName:t);
+        else if(action==='remove')draft.tags=draft.tags.filter(t=>t!==name);
+        else if(this.cloud.state.annotations.some(r=>r.identity_key===identity&&r.tags.includes(name))&&!draft.tags.includes(name))draft.tags.push(name);
+      }
+      this.options.changed({preservePage:true});status.textContent=action==='rename'?`‘${name}’ → ‘${newName}’ · 카드의 태그도 변경했어.`:action==='remove'?`‘${name}’ 태그를 삭제했어. 삭제한 태그에서 복원할 수 있어.`:`‘${name}’ 태그와 연결된 카드 분류를 복원했어.`;
+    }catch(error){status.textContent=error.message;}
+    finally{this.busy=false;this.renderFilters();this.options.reopen();}
   }
   async create(name){
     if(!this.ready())throw new Error('이메일 로그인 후 카테고리를 만들 수 있어.');
@@ -41,7 +71,8 @@ export class CardTagsUI{
     const box=node('section',null,'review-editor annotation-editor');box.append(node('h3','카테고리·링크 편집'));
     const ready=this.ready(),stored=annotationFor(this.cloud?.state,card);let expected=ready?this.cloud.version(card):null;
     let draft=this.drafts.get(card.identity_key);
-    if(!draft)draft={tags:[...(stored?.tags||[])],links:(stored?.links||[]).map(l=>({...l}))};
+    if(!draft)draft={tags:[...(stored?.tags||[])],links:(stored?.links||[]).map(l=>({...l})),expectedVersion:expected};
+    else expected=draft.expectedVersion;
     const remember=()=>this.drafts.set(card.identity_key,draft);
     const choices=node('div',null,'annotation-categories');
     for(const {name} of this.cloud?.state?.categories||[]){const label=node('label',null,'tag-choice'),check=node('input');check.type='checkbox';check.checked=draft.tags.includes(name);check.disabled=!ready;check.addEventListener('change',()=>{draft.tags=check.checked?[...draft.tags,name]:draft.tags.filter(t=>t!==name);remember();});label.append(check,node('span',name));choices.append(label);}
@@ -60,6 +91,10 @@ export class CardTagsUI{
     search.addEventListener('input',renderLinks);
     const save=node('button','카테고리·링크 온라인 저장','primary');save.type='button';save.disabled=!ready;save.id='save-card-annotation';
     const status=node('p',ready?'태그는 최대 12개, 관련 카드는 20장까지. 저장한 분류는 다른 기기에서도 볼 수 있어.':'이메일 로그인 후 분류와 관련 카드 연결을 저장할 수 있어.','muted');status.id='annotation-status';status.setAttribute('role','status');box.append(save,status);
+    if(ready&&expected!==this.cloud.version(card)){
+      save.disabled=true;status.textContent='편집을 시작한 뒤 태그나 카드 분류가 바뀌었어. 작성 중인 연결을 덮어쓰지 않도록 저장을 멈췄어.';
+      const reload=node('button','저장된 분류로 다시 불러오기');reload.type='button';reload.addEventListener('click',()=>{this.drafts.delete(card.identity_key);this.options.reopen();});box.append(reload);
+    }
     save.addEventListener('click',async()=>{
       box.querySelectorAll('input,button').forEach(n=>n.disabled=true);status.textContent='분류를 저장하는 중…';
       try{
