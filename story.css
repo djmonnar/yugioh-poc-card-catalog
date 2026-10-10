@@ -25,3 +25,8 @@
 #picker-empty{padding:18px;border-radius:10px;background:#fff1d5}
 #card-picker .stat-condition-add{grid-template-columns:minmax(0,1fr) auto}
 @media(max-width:400px){.picker-filters{gap:10px}.picker-advanced{padding:10px}.picker-advanced summary{font-size:13px}}
+.reward-fold>summary{cursor:pointer;font-weight:700;min-height:28px;padding:8px 0}
+.reward-fold[open]>summary{margin-bottom:14px}
+#scenario-trash{width:min(520px,calc(100vw - 32px));padding:24px;border:1px solid #bccdcc;border-radius:16px;background:#f5f8f7;color:#142e36}
+#scenario-trash::backdrop{background:#071522cc}
+#scenario-trash select{width:100%;min-height:44px;padding:8px;font:inherit;margin-top:8px}

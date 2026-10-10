@@ -1,19 +1,64 @@
 import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261007-49';
 import {CardLimitsCloud,applyLimits} from './card-limits.js?v=20261008-61';
-import {STORY_KEY,SKILLS,parseSkills,parsePreset,emptyStory,newActor,newBattle,parseStory,canonicalStory,validateStory,cardRef,reviewFiles,safePortrait} from './story-core.js?v=20261010-raid90';
+import {STORY_KEY,SKILLS,parseSkills,parsePreset,emptyStory,newActor,newBattle,parseStory,canonicalStory,validateStory,cardRef,reviewFiles,safePortrait} from './story-core.js?v=20261010-characters103';
 import {NUMERIC_SKILLS,skillSets,copyProfile,removeProfile,profilePacket} from './story-skills.js?v=20261009-73';
-import {LIBRARY_KEY,scenarioKey,copyBattle,createScenario,readLibrary,parseRemoteScenarios,actorTemplates,importActor} from './story-library.js?v=20261010-raid90';
+import {LIBRARY_KEY,scenarioKey,copyBattle,createScenario,readLibrary,parseRemoteScenarios,actorTemplates,importActor} from './story-library.js?v=20261010-characters103';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 import {MEDIA_EVENTS,defaultPresentation,parsePresentation,safeMedia,validateAudioFile} from './story-media.js?v=20261009-media88';
-import {validateCloudConfig,cloudError} from './supabase-cloud.js?v=20261008-70';
+import {validateCloudConfig,cloudError as commonCloudError} from './supabase-cloud.js?v=20261008-70';
 import {mergeAIAssets} from './ai-assets.js?v=20261008-70';
 import {createStatFilters} from './card-filters.js?v=20261007-44';
 import {pickerCards} from './card-picker.js?v=20261010-picker';
+import {CHARACTER_KEY,parseCharacters,attachCharacter,characterUpdates,linkLegacyCharacters,resolveCharacters,rebaseCharacters,synchronizeCharacterCopies} from './character-library.js?v=20261010-characters103';
+import {TRASH_KEY,parseTrash,archiveLocal,restoreLocal} from './scenario-trash.js?v=20261010-trash105';
 const $=id=>document.getElementById(id),node=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
 let doc=emptyStory(),cards=[],decks=[],meta,chooseCard,pickerPage=0,pickerSelection=null,filter=()=>true,client,version=null,editor=false,storageBlocked=false;
 let library=readLibrary(null),remoteScenarios=[],libraryReady=false,libraryAPI=false;
 let installed=[];
+let characters=[],charactersReady=false;
+let characterBases=[];
+let scenarioTrash=[],remoteTrash=[],trashStorageBlocked=false;
+try{scenarioTrash=parseTrash(JSON.parse(localStorage.getItem(TRASH_KEY)||'[]'));}catch{trashStorageBlocked=true;}
+function cloudError(error){
+  const message=error?.message||'';
+  if(message.includes('poc_scenario_deleted'))return '온라인에서 삭제된 시나리오야. 삭제한 시나리오 복원에서 먼저 되돌려줘.';
+  if(message.includes('poc_scenario_trash_limit'))return '삭제한 시나리오는 100개까지 보관할 수 있어. 복원함을 확인해줘.';
+  if(message.includes('poc_conflict'))return '온라인 시나리오나 공용 캐릭터가 다른 곳에서 변경됐어. 편집본을 내보낸 뒤 온라인 자료를 불러와 비교해줘.';
+  if(message.includes('poc_editor_required')||error?.code==='42501')return '시나리오 편집 권한이 있는 이메일 계정으로 로그인해줘.';
+  if(message.includes('poc_invalid_story'))return '시나리오의 전투·캐릭터·보상 설정을 확인해줘.';
+  return commonCloudError(error);
+}
+const baseKey=()=>`${scenarioKey(library.active)}:character-bases103`;
+try{characters=parseCharacters(JSON.parse(localStorage.getItem(CHARACTER_KEY)||'[]'));}catch{/* Preserve unreadable drafts. */}
+async function loadCharacters(){
+  const reply=await client.rpc('poc_load_characters');if(reply.error)throw reply.error;
+  characters=parseCharacters(reply.data);charactersReady=true;localStorage.setItem(CHARACTER_KEY,JSON.stringify(characters));
+}
+function storedCharacterBases(){
+  try{return parseCharacters(JSON.parse(localStorage.getItem(baseKey())||'[]'));}catch{return [];}
+}
+function linkCurrentCharacters(baselines=storedCharacterBases()){
+  characterBases=baselines;
+  if(!characters.length)return;
+  const linked=linkLegacyCharacters(doc,characters);
+  if(JSON.stringify(linked)!==JSON.stringify(doc)){
+    const backup=`${scenarioKey(library.active)}:before-characters103`;
+    if(!localStorage.getItem(backup))localStorage.setItem(backup,JSON.stringify(doc));
+    doc=linked;
+  }
+  const rebased=rebaseCharacters(doc,characterBases,characters);doc=rebased.document;characterBases=rebased.baselines;
+}
+async function saveCharacterChanges(){
+  if(!charactersReady)await loadCharacters();
+  synchronizeCharacterCopies(doc,characterBases);
+  const updates=characterUpdates(doc,characterBases);if(!updates.length)return;
+  const reply=await client.rpc('poc_save_characters',{p_characters:updates});if(reply.error)throw reply.error;
+  characters=parseCharacters(reply.data);localStorage.setItem(CHARACTER_KEY,JSON.stringify(characters));
+  doc=resolveCharacters(doc,characters);
+  characterBases=characters.filter(c=>doc.actors.some(a=>a.character_id===c.id));
+}
 let openedActors=new WeakSet(),openedBattles=new WeakSet();
+const openedRewards=new WeakSet();
 const openedMedia=new WeakSet(),openedMediaEvents=new WeakMap();
 const pickerFields=['rarity','type','subtype','race','attribute','mechanic','group'];
 const pickerStats=createStatFilters($('picker-stats'),()=>{pickerPage=0;renderPicker();});
@@ -39,6 +84,7 @@ async function fetchScenarios(){
 }
 const entry=()=>library.entries.find(e=>e.id===library.active);
 function characterImports(){
+  if(characters.length){const used=new Set(doc.actors.map(a=>a.character_id));return characters.filter(c=>!used.has(c.id)).map(c=>({key:c.id,source:'공용 캐릭터',actor:c.profile,character:c}));}
   const sources=[];const ids=new Set([...library.entries.map(e=>e.id),...remoteScenarios.map(e=>e.id)]);
   for(const id of ids){if(id===library.active)continue;
     try{const saved=localStorage.getItem(scenarioKey(id)),online=remoteScenarios.find(s=>s.id===id);
@@ -51,14 +97,14 @@ function renderCharacterImports(){
   const choices=characterImports(),select=$('import-actor-select');select.replaceChildren();
   for(const t of choices){const option=node('option',`${t.actor.name} · ${t.source}`);option.value=t.key;select.append(option);}
   $('import-actor-confirm').disabled=!choices.length||doc.actors.length>=100;
-  $('import-actor-note').textContent=choices.length?'이름·초상화·기본 특성·난이도별 특성을 복사해. 가져온 캐릭터는 이 시나리오에서 따로 편집할 수 있어.':'가져올 새 캐릭터가 없어. 다른 시나리오의 캐릭터 편집본이나 온라인 저장본을 확인해줘.';
+  $('import-actor-note').textContent=characters.length?'공용 프로필·컷신·음성을 연결해. 덱과 전투 특성은 이 시나리오에서 설정해.':choices.length?'기존 캐릭터를 가져올 수 있어. 온라인 공용 목록에 연결되면 같은 캐릭터를 함께 사용해.':'공용 캐릭터 목록을 불러오거나 새 캐릭터를 추가해줘.';
 }
 function storeLibrary(){localStorage.setItem(LIBRARY_KEY,JSON.stringify({schema:1,...library}));}
-function renderScenarios(){const select=$('scenario-select');select.replaceChildren(...library.entries.map(e=>{const o=node('option',e.title||'이름 없는 시나리오');o.value=e.id;return o;}));select.value=library.active;$('new-scenario').disabled=library.entries.length>=20;}
+function renderScenarios(){const select=$('scenario-select');select.replaceChildren(...library.entries.map(e=>{const o=node('option',e.title||'이름 없는 시나리오');o.value=e.id;return o;}));select.value=library.active;$('new-scenario').disabled=library.entries.length>=20;$('delete-scenario').disabled=library.active==='main'||storageBlocked;}
 function switchScenario(id){
   if(id===library.active)return;persist();
   try{const saved=localStorage.getItem(scenarioKey(id)),online=remoteScenarios.find(s=>s.id===id);const next=saved?parseStory(JSON.parse(saved)):online?parseStory(online.document):emptyStory();
-    library.active=id;doc=next;version=entry().version;storageBlocked=false;$('story-title').value=doc.title;renderScenarios();render();persist();
+    library.active=id;doc=next;linkCurrentCharacters();version=entry().version;storageBlocked=false;$('story-title').value=doc.title;renderScenarios();render();persist();
   }catch(e){status(e.message+' 이전 편집본은 유지돼.');renderScenarios();}
 }
 const status=msg=>{$('status').textContent=msg;};
@@ -66,8 +112,8 @@ function download(name,content){const url=URL.createObjectURL(new Blob([content]
 function check(){const result=validateStory(doc,cards,decks),box=$('validation');box.replaceChildren();box.className=result.issues.length?'story-warning':'story-ok';box.append(node('b',result.issues.length?'확인할 항목':'시나리오 자료 준비 완료'));for(const message of result.issues)box.append(node('p',message));if(!result.issues.length)box.append(node('p',doc.battles.some(b=>b.raid)?'온라인 저장 후 다음 게임 실행의 레이드 전투 메뉴에서 선택할 수 있어. 일반 전투는 스토리 모드에서 선택해.':'온라인 저장 후 다음 게임 실행의 스토리 모드에서 선택할 수 있어.'));}
 function persist(){
   if(storageBlocked){status('기존 문서를 보존하고 있어. 현재 편집본은 JSON으로 내려받아줘.');check();return;}
-  try{parseStory(doc);}catch(e){status(e.message+' 이전 저장본은 유지돼.');check();return;}
-  try{doc.catalog_dataset_id=meta.dataset_id;localStorage.setItem(scenarioKey(library.active),JSON.stringify(doc));entry().title=doc.title;entry().version=version;storeLibrary();renderScenarios();status('이 시나리오 편집본을 브라우저에 저장했어. 게임 반영은 온라인 저장을 눌러줘.');}catch{status('브라우저 저장에 실패했어. JSON으로 내려받아줘.');}check();
+  try{synchronizeCharacterCopies(doc,characterBases);parseStory(doc);}catch(e){status(e.message+' 이전 저장본은 유지돼.');check();return;}
+  try{doc.catalog_dataset_id=meta.dataset_id;localStorage.setItem(scenarioKey(library.active),JSON.stringify(doc));localStorage.setItem(baseKey(),JSON.stringify(characterBases));entry().title=doc.title;entry().version=version;storeLibrary();renderScenarios();status('이 시나리오 편집본을 브라우저에 저장했어. 게임 반영은 온라인 저장을 눌러줘.');}catch{status('브라우저 저장에 실패했어. JSON으로 내려받아줘.');}check();
 }
 function redraw(){const y=window.scrollY;render();requestAnimationFrame(()=>window.scrollTo({top:y,behavior:'instant'}));persist();}
 function button(text,action,cls){const b=node('button',text);b.type='button';if(cls)b.className=cls;b.addEventListener('click',action);return b;}
@@ -139,7 +185,7 @@ function poolReward(r,remove){
   const add=button('+ 후보 카드',()=>poolPicker(r));add.disabled=r.entries.length>=100;box.append(add);return box;
 }
 function resolveRewardCard(ref){return cards.find(c=>c.slot===ref.slot&&c.internal_id===ref.internal_id);}
-function rewards(b,kind,title){const box=node('div');box.className='reward-block';box.append(node('h4',title||(kind==='first'?'첫 승리 보상':'이후 승리 보상')));b.rewards[kind].forEach((r,i)=>{const remove=()=>{b.rewards[kind].splice(i,1);redraw();};if(r.kind==='card_pool'){box.append(poolReward(r,remove));return;}const row=node('div');row.className='reward-row';row.append(node('span',r.kind==='gold'?`${r.amount} 골드`:r.kind==='card'?`${r.card.name_ko} ×${r.count}`:`무작위 ${r.rarity==='ANY'?'랜덤 허용 등급':r.rarity} 카드 ×${r.count}`));row.append(button('삭제',remove,'remove-button'));box.append(row);});const add=r=>{if(b.rewards[kind].length>=20){status('보상은 종류별 20개까지야.');return;}b.rewards[kind].push(r);redraw();};
+function rewards(b,kind,title){const list=b.rewards[kind],box=node('details');box.className='reward-block reward-fold';box.open=openedRewards.has(list);box.append(node('summary',(title||(kind==='first'?'첫 승리 보상':'이후 승리 보상'))+' · '+list.length+'개'));box.addEventListener('toggle',()=>{if(!box.isConnected)return;if(box.open)openedRewards.add(list);else openedRewards.delete(list);});b.rewards[kind].forEach((r,i)=>{const remove=()=>{b.rewards[kind].splice(i,1);redraw();};if(r.kind==='card_pool'){box.append(poolReward(r,remove));return;}const row=node('div');row.className='reward-row';row.append(node('span',r.kind==='gold'?`${r.amount} 골드`:r.kind==='card'?`${r.card.name_ko} ×${r.count}`:`무작위 ${r.rarity==='ANY'?'랜덤 허용 등급':r.rarity} 카드 ×${r.count}`));row.append(button('삭제',remove,'remove-button'));box.append(row);});const add=r=>{if(b.rewards[kind].length>=20){status('보상은 종류별 20개까지야.');return;}b.rewards[kind].push(r);redraw();};
   const tools=node('div');tools.className='row-actions';const amount=node('input');amount.type='number';amount.min=1;amount.max=100000;amount.value=50;amount.style.width='100px';amount.setAttribute('aria-label','추가할 골드');tools.append(amount,button('골드 추가',()=>{const n=Number(amount.value);if(!Number.isInteger(n)||n<1||n>100000)return status('골드는 1~100,000 사이로 입력해줘.');add({kind:'gold',amount:n});}),button('카드 검색',()=>picker(c=>!c.special&&(c.reward_eligible||c.rarity==='L'),'보상으로 받을 카드 · 1장',card=>add({kind:'card',card,count:1}))));
   const tier=node('select');tier.setAttribute('aria-label','무작위 보상 등급');for(const v of ['ANY','N','R','SR','UR']){const o=node('option',v==='ANY'?'랜덤 허용 등급':v);o.value=v;tier.append(o);}tools.append(tier,button('무작위 1장',()=>add({kind:'random',rarity:tier.value,count:1})),button('지정 카드 랜덤 추가',()=>{if(b.rewards[kind].length>=20)return status('보상은 종류별 20개까지야.');poolPicker(null,r=>b.rewards[kind].push(r));}));box.append(tools);return box;
 }
@@ -182,6 +228,9 @@ function renderActors(){const root=$('actor-list');root.replaceChildren();doc.ac
   const title=node('span',a.name||'이름 없는 캐릭터');title.className='fold-name';
   const fold=node('span');fold.className='fold-label';fold.setAttribute('aria-hidden','true');
   summary.append(title,fold);box.append(summary);
+  if(a.character_id)box.append(node('p','공용 캐릭터 · 이름·프로필·컷신·음성을 저장하면 이 캐릭터를 사용하는 모든 시나리오에 적용돼. 아래 특성은 현재 시나리오에서 사용해.'));
+  else box.append(button('공용 캐릭터로 등록',()=>{a.character_id='character-'+crypto.randomUUID();redraw();}));
+  if(a.character_id)box.append(button('공용 프로필·음성 온라인 저장',async()=>{try{if(!client||!charactersReady)await cloudInit();if(!editor)throw new Error('도감에서 이메일로 로그인한 뒤 사용해줘.');await saveCharacterChanges();render();persist();status('공용 프로필·컷신·음성을 저장했어. 이 캐릭터를 쓰는 모든 시나리오에 반영돼.');}catch(e){status(e.message||cloudError(e));}}));
   box.addEventListener('toggle',()=>{if(!box.isConnected)return;if(box.open)openedActors.add(a);else openedActors.delete(a);});
   const head=node('div');head.className='actor-head';head.append(input('캐릭터 이름',a.name,v=>{a.name=v;title.textContent=v||'이름 없는 캐릭터';},{max:100}));box.append(head);
   const portrait=input('초상화 주소',a.portrait,v=>{if(safePortrait(v))a.portrait=v;else status('프로젝트 이미지나 상점 이미지 보관소 주소를 사용해줘.');},{max:1000});box.append(portrait);const file=node('input');file.type='file';file.accept='image/png,image/jpeg,image/webp';file.setAttribute('aria-label','캐릭터 초상화 업로드');file.addEventListener('change',async()=>{const image=file.files[0];if(!image)return;try{if(!client||!editor)throw new Error('초상화 업로드는 이메일로 로그인한 뒤 사용해줘.');if(image.size>3*1024*1024||!['image/png','image/jpeg','image/webp'].includes(image.type))throw new Error('PNG·JPEG·WebP, 3MB 이하 이미지를 골라줘.');const ext={'image/png':'png','image/jpeg':'jpg','image/webp':'webp'}[image.type],path=`portraits/${crypto.randomUUID()}.${ext}`,{error}=await client.storage.from('poc-story-assets').upload(path,image,{contentType:image.type,upsert:false});if(error)throw error;a.portrait=client.storage.from('poc-story-assets').getPublicUrl(path).data.publicUrl;redraw();}catch(e){status(e.message);}});box.append(file,node('p','스킬은 전투 시작 조건·사용 횟수를 설정하는 제작 자료야. 온라인 저장 후 다음 게임 실행부터 상대 캐릭터에 적용돼.'));
@@ -191,7 +240,7 @@ function renderMedia(a,box){
   const value=()=>a.presentation||defaultPresentation(a);
   const set=(change)=>{const v=structuredClone(value());change(v);a.presentation=parsePresentation(v);redraw();};
   const toggle=(label,key)=>{const l=node('label'),c=node('input');c.type='checkbox';c.checked=value()[key];c.onchange=()=>set(v=>v[key]=c.checked);l.append(c,node('span',label));return l;};
-  panel.append(toggle('이 캐릭터의 외부 컷신·음성 사용','enabled'),toggle('상황별 이미지가 없으면 초상화 사용','portrait'),node('p','유희·카이바·조이 외에는 기존 초상화를 기본 컷인으로 사용해. 한 장의 이미지에 게임의 기존 움직임을 적용하고, 상황별 파일을 올리면 그 파일로 바뀌어. 유희·카이바·조이는 지정하지 않은 음성을 원본으로 유지하고, 다른 캐릭터는 등록한 음성만 재생해. PNG·JPEG·WebP는 3MB, 음성은 12초 이하 PCM WAV로 올려줘.'));
+  panel.append(toggle('이 캐릭터의 외부 컷신·음성 사용','enabled'),toggle('상황별 이미지가 없으면 초상화 사용','portrait'),node('p','기본 캐릭터는 공용 컷신·음성을 사용해. 상황별 파일을 올리면 그 파일로 바꿀 수 있어. PNG·JPEG·WebP는 3MB, 음성은 12초 이하 PCM WAV로 올려줘.'));
   const rowFor=key=>value().events[key]||{image:'',audio:''};
   const change=(key,kind,url)=>{if(!safeMedia(url,kind))return status('프로젝트 에셋이나 이 도감의 이미지·음성 보관소 주소를 사용해줘.');set(v=>{v.events[key]={...rowFor(key),[kind]:url};});};
   const upload=(event,kind)=>{const file=node('input');file.type='file';file.accept=kind==='audio'?'.wav,audio/wav,audio/x-wav':'image/png,image/jpeg,image/webp';file.setAttribute('aria-label',`${MEDIA_EVENTS[event]} ${kind==='audio'?'음성':'이미지'} 업로드`);file.onchange=async()=>{try{const f=file.files[0];if(!f)return;if(!client||!editor)throw new Error('에셋 업로드는 이메일 로그인 후 사용해줘.');let ext,mime;if(kind==='audio'){await validateAudioFile(f);ext='wav';mime='audio/wav';}else{if(f.size>3*1024*1024||!['image/png','image/jpeg','image/webp'].includes(f.type))throw new Error('PNG·JPEG·WebP, 3MB 이하 이미지를 골라줘.');ext={'image/png':'png','image/jpeg':'jpg','image/webp':'webp'}[f.type];mime=f.type;}const path=`media/${crypto.randomUUID()}.${ext}`,reply=await client.storage.from('poc-story-assets').upload(path,f,{contentType:mime,upsert:false});if(reply.error)throw reply.error;change(event,kind,client.storage.from('poc-story-assets').getPublicUrl(path).data.publicUrl);}catch(e){status(e.message);}finally{file.value='';}};return file;};
@@ -244,27 +293,29 @@ async function cloudInit(){
     client=createClient(config.url,config.publishable_key,{auth:{storageKey:'poc-ai-editor-auth-v1',detectSessionInUrl:true,persistSession:true,autoRefreshToken:true}});
     await new CardSettingsCloud(client).load().then(rows=>applySettings(cards,rows));
     applyLimits(cards,await new CardLimitsCloud(client).load());
-    const [stories,access,recipes]=await Promise.all([fetchScenarios(),client.rpc('poc_editor_status'),client.rpc('poc_load_ai_decks')]);
+    const [stories,access,recipes]=await Promise.all([fetchScenarios(),client.rpc('poc_editor_status'),client.rpc('poc_load_ai_decks'),loadCharacters()]);
     remoteScenarios=stories;editor=access.data===true;libraryReady=true;
     for(const s of remoteScenarios){const existing=library.entries.find(e=>e.id===s.id);if(!existing)library.entries.push({id:s.id,title:s.document.title,version:s.version});else if(existing.version===null)existing.version=s.version;}
     version=entry().version??0;entry().version=version;if(!storageBlocked)storeLibrary();
     if(recipes.error)throw recipes.error;decks=await mergeAIAssets(installed,recipes.data,cards,meta);
-    renderScenarios();renderBattles();status(storageBlocked?'기존 저장본을 보존하고 있어. JSON을 확인한 뒤 불러와줘.':`온라인 시나리오 ${remoteScenarios.length}개 · ${editor?'이메일 로그인 확인됨':'온라인 저장은 도감에서 이메일 로그인 후 사용해줘'}`);
+    if(!storageBlocked)linkCurrentCharacters();renderScenarios();render();status(storageBlocked?'기존 저장본을 보존하고 있어. JSON을 확인한 뒤 불러와줘.':`공용 캐릭터 ${characters.length}명 · 온라인 시나리오 ${remoteScenarios.length}개 · ${editor?'이메일 로그인 확인됨':'온라인 저장은 도감에서 이메일 로그인 후 사용해줘'}`);
   }catch{libraryReady=false;status(storageBlocked?'기존 저장본을 읽을 수 없어 보존했어.':'브라우저 편집 가능 · 온라인 시나리오 연결을 확인하지 못했어. 저장할 때 다시 연결할게.');}
 }
-async function start(){try{const [catalog,opponents,actors]=await Promise.all(['data/cards.json','data/ai-opponents.json','data/ai-actors.json'].map(url=>fetch(url,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('자료를 불러올 수 없어.');return r.json();})));cards=catalog.cards;meta=catalog.meta;installed=opponents.decks;decks=structuredClone(installed);try{library=readLibrary(JSON.parse(localStorage.getItem(LIBRARY_KEY)));}catch{storageBlocked=true;status('기존 시나리오 목록을 보존하고 있어.');}version=entry().version;const saved=localStorage.getItem(scenarioKey(library.active));if(saved){try{doc=parseStory(JSON.parse(saved));}catch{storageBlocked=true;status('기존 저장본을 읽을 수 없어 보존했어. JSON을 내보내기 전에 확인해줘.');}}else{doc.actors=actors.actors.map(a=>({actor_id:a.actor_id,name:a.name,portrait:a.portrait,skills:[]}));const b=newBattle('first-battle');b.name='용만과 첫 결투';b.actor_id=doc.actors[0]?.actor_id||'';b.recipe='DLR_000.ydc';b.intro='공룡의 힘을 보여주마!';b.rewards.first=[{kind:'gold',amount:100},{kind:'random',rarity:'SR',count:1}];b.rewards.repeat=[{kind:'gold',amount:20}];doc.battles.push(b);}doc.catalog_dataset_id=meta.dataset_id;$('story-title').value=doc.title;renderScenarios();render();if(!storageBlocked)persist();await cloudInit();}catch(e){status(e.message);}}
-$('story-title').addEventListener('input',()=>{doc.title=$('story-title').value;persist();});$('add-battle').onclick=()=>{if(doc.battles.length<100){const battle=newBattle();doc.battles.push(battle);openedBattles.add(battle);redraw();requestAnimationFrame(()=>$('battle-list').lastElementChild.querySelector('input').focus());}};$('add-actor').onclick=()=>{if(doc.actors.length<100){const actor=newActor();doc.actors.push(actor);openedActors.add(actor);redraw();requestAnimationFrame(()=>$('actor-list').lastElementChild.querySelector('input').focus());}};
+async function start(){try{const [catalog,opponents,actors]=await Promise.all(['data/cards.json','data/ai-opponents.json','data/ai-actors.json'].map(url=>fetch(url,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('자료를 불러올 수 없어.');return r.json();})));cards=catalog.cards;meta=catalog.meta;installed=opponents.decks;decks=structuredClone(installed);try{library=readLibrary(JSON.parse(localStorage.getItem(LIBRARY_KEY)));}catch{storageBlocked=true;status('기존 시나리오 목록을 보존하고 있어.');}version=entry().version;const saved=localStorage.getItem(scenarioKey(library.active));if(saved){try{doc=parseStory(JSON.parse(saved));}catch{storageBlocked=true;status('기존 저장본을 읽을 수 없어 보존했어. JSON을 내보내기 전에 확인해줘.');}}else{doc.actors=actors.actors.map(a=>({actor_id:a.actor_id,name:a.name,portrait:a.portrait,skills:[]}));const b=newBattle('first-battle');b.name='용만과 첫 결투';b.actor_id=doc.actors[0]?.actor_id||'';b.recipe='DLR_000.ydc';b.intro='공룡의 힘을 보여주마!';b.rewards.first=[{kind:'gold',amount:100},{kind:'random',rarity:'SR',count:1}];b.rewards.repeat=[{kind:'gold',amount:20}];doc.battles.push(b);}doc.catalog_dataset_id=meta.dataset_id;if(!storageBlocked)linkCurrentCharacters();$('story-title').value=doc.title;renderScenarios();render();if(!storageBlocked)persist();await cloudInit();}catch(e){status(e.message);}}
+$('story-title').addEventListener('input',()=>{doc.title=$('story-title').value;persist();});$('add-battle').onclick=()=>{if(doc.battles.length<100){const battle=newBattle();doc.battles.push(battle);openedBattles.add(battle);redraw();requestAnimationFrame(()=>$('battle-list').lastElementChild.querySelector('input').focus());}};$('add-actor').onclick=()=>{if(doc.actors.length<100){const actor=newActor();actor.character_id='character-'+crypto.randomUUID();doc.actors.push(actor);openedActors.add(actor);redraw();requestAnimationFrame(()=>$('actor-list').lastElementChild.querySelector('input').focus());}};
 $('collapse-actors').onclick=()=>{openedActors=new WeakSet();renderActors();};
 $('import-actor').onclick=()=>{renderCharacterImports();$('actor-importer').showModal();};
 $('close-actor-importer').onclick=()=>$('actor-importer').close();
 $('import-actor-confirm').onclick=()=>{
   const template=characterImports().find(t=>t.key===$('import-actor-select').value);if(!template||doc.actors.length>=100)return;
-  const actor=importActor(template);doc.actors.push(actor);openedActors.add(actor);redraw();renderCharacterImports();status(`${actor.name} 캐릭터를 가져왔어. 전투 상대에서 골라준 뒤 온라인 저장해줘.`);
+  const actor=template.character?attachCharacter(template.character):importActor(template);
+  if(template.character&&!characterBases.some(c=>c.id===template.character.id))characterBases.push(structuredClone(template.character));
+  doc.actors.push(actor);openedActors.add(actor);redraw();renderCharacterImports();status(`${actor.name} 공용 캐릭터를 연결했어. 전투 상대에서 골라준 뒤 온라인 저장해줘.`);
 };
 $('collapse-battles').onclick=()=>{openedBattles=new WeakSet();renderBattles();};
 for(const kind of ['battles','actors'])$(`tab-${kind}`).onclick=()=>{for(const k of ['battles','actors']){$(`${k}-panel`).hidden=k!==kind;$(`tab-${k}`).setAttribute('aria-selected',String(k===kind));}};
 $('export').onclick=()=>download('story-source.json',JSON.stringify(doc,null,2)+'\n');$('pack').onclick=async()=>{try{const files=await reviewFiles(doc,meta,cards,decks);download('story-source.json',files.source);download('pack.json',JSON.stringify(files.pack,null,2)+'\n');status('두 JSON 파일을 같은 폴더에 두면 콘텐츠 파이프라인에서 검사할 수 있어.');}catch(e){status(e.message);}};
-$('import').onclick=()=>$('import-file').click();$('import-file').onchange=async()=>{try{const file=$('import-file').files[0];if(!file)return;if(file.size>1024*1024)throw new Error('스토리 JSON은 1MB 이하로 골라줘.');const next=parseStory(JSON.parse(await file.text()));doc=next;storageBlocked=false;$('story-title').value=doc.title;render();persist();}catch(e){status(e.message);}finally{$('import-file').value='';}};
+$('import').onclick=()=>$('import-file').click();$('import-file').onchange=async()=>{try{const file=$('import-file').files[0];if(!file)return;if(file.size>1024*1024)throw new Error('스토리 JSON은 1MB 이하로 골라줘.');const next=parseStory(JSON.parse(await file.text()));doc=next;storageBlocked=false;linkCurrentCharacters(characterBases);$('story-title').value=doc.title;render();persist();}catch(e){status(e.message);}finally{$('import-file').value='';}};
 $('close-picker').onclick=()=>$('card-picker').close();$('finish-picker').onclick=()=>$('card-picker').close();$('card-picker').addEventListener('close',()=>{pickerSelection=null;renderActors();});$('card-search').oninput=()=>{pickerPage=0;renderPicker();};$('prev-cards').onclick=()=>{pickerPage--;renderPicker();};$('next-cards').onclick=()=>{pickerPage++;renderPicker();};
 for(const field of [...pickerFields,'sort'])$(`picker-${field}`).onchange=()=>{pickerPage=0;renderPicker();};
 $('reset-picker').onclick=resetPicker;
@@ -274,6 +325,7 @@ toolbar.append(button('이 시나리오 온라인 저장',async()=>{
   try{
     if(!client||!libraryReady)await cloudInit();if(!libraryReady)throw new Error('온라인 시나리오 연결을 확인해줘.');
     if(!editor)throw new Error('카드 도감에서 이메일로 로그인한 뒤 이 페이지를 다시 열어줘.');
+    await saveCharacterChanges();
     const value=canonicalStory(doc,meta,cards),issues=validateStory(value,cards,decks).issues;if(issues.length)throw new Error(issues.join(' '));
     if(!libraryAPI)await fetchScenarios();
     if(!libraryAPI&&library.active!=='main')throw new Error('새 시나리오 온라인 저장은 Supabase의 시나리오 추가 SQL 적용 후 사용할 수 있어. 편집본은 브라우저에 보관돼.');
@@ -286,9 +338,11 @@ toolbar.append(button('이 시나리오 온라인 저장',async()=>{
   try{
     if(!client||!libraryReady)await cloudInit();if(!libraryReady)throw new Error('온라인 연결을 확인해줘.');
     remoteScenarios=await fetchScenarios();
+    await loadCharacters();
     const row=remoteScenarios.find(s=>s.id===library.active);if(!row)return status('이 시나리오는 아직 온라인에 저장하지 않았어.');
     if(!confirm('이 시나리오의 온라인 저장본을 불러올까? 현재 편집본은 JSON으로 백업할게.'))return;
     download('story-before-online-load.json',JSON.stringify(doc,null,2));doc=row.document;version=row.version;storageBlocked=false;
+    characterBases=characters.filter(c=>doc.actors.some(a=>a.character_id===c.id));
     $('story-title').value=doc.title;render();persist();
   }catch(e){status(cloudError(e));}
 }));
@@ -299,5 +353,63 @@ $('new-scenario').addEventListener('click',()=>{
   persist();const next=createScenario(doc);library.entries.push({id:next.id,title:next.document.title,version:0});library.active=next.id;
   doc=next.document;version=0;$('story-title').value=doc.title;renderScenarios();render();persist();$('story-title').focus();
 });
+function trashChoices(){
+  const active=new Set(library.entries.map(e=>e.id)),byId=new Map(scenarioTrash.filter(r=>!active.has(r.id)).map(r=>[r.id,r]));
+  for(const r of remoteTrash){if(!active.has(r.id)){const local=byId.get(r.id);byId.set(r.id,{...r,...(local?{document:local.document,baselines:local.baselines}:{}),cloud:true});}}
+  return [...byId.values()];
+}
+function renderTrash(){
+  const rows=trashChoices(),control=$('trash-select');control.replaceChildren();
+  for(const r of rows){const option=node('option',r.document.title+(r.cloud?' · 온라인':' · 이 브라우저'));option.value=r.id;control.append(option);}
+  $('restore-scenario').disabled=!rows.length;
+  $('trash-note').textContent=rows.length?'복원하면 이전 전투와 진행 기록을 이어서 사용할 수 있어.':'삭제한 시나리오가 없어.';
+}
+async function loadTrash(){
+  if(!editor){remoteTrash=[];return;}
+  const reply=await client.rpc('poc_load_scenario_trash');if(reply.error)throw reply.error;remoteTrash=parseTrash(reply.data);
+}
+$('show-trash').onclick=async()=>{
+  try{if(trashStorageBlocked)throw new Error('기존 복원함을 읽을 수 없어 보존 중이야. 브라우저 저장 자료를 먼저 확인해줘.');if(!client||!libraryReady)await cloudInit();await loadTrash();renderTrash();$('scenario-trash').showModal();}catch(e){status(e.message||cloudError(e));}
+};
+$('close-trash').onclick=()=>$('scenario-trash').close();
+$('delete-scenario').onclick=async()=>{
+  try{
+    if(storageBlocked||library.active==='main')return;
+    if(trashStorageBlocked)throw new Error('기존 복원함을 읽을 수 없어 보존 중이야. 브라우저 저장 자료를 먼저 확인해줘.');
+    if(!client||!libraryReady)await cloudInit();
+    const online=remoteScenarios.find(s=>s.id===library.active),cloud=!!online||version>0;
+    if(cloud&&(!libraryReady||!editor))throw new Error('온라인 시나리오 삭제는 도감에서 이메일로 로그인한 뒤 사용해줘.');
+    if(!confirm(`「${doc.title}」을 삭제할까?${cloud?' 온라인과 게임 목록에서 빠져.':''} 삭제한 시나리오 복원에서 되돌릴 수 있어.`))return;
+    const prepared=archiveLocal(library,doc,version,characterBases,scenarioTrash);prepared.row.cloud=cloud;
+    // Store the current draft before changing the online library.
+    localStorage.setItem(TRASH_KEY,JSON.stringify(prepared.trash));scenarioTrash=prepared.trash;
+    if(cloud){
+      const reply=await client.rpc('poc_archive_scenario',{p_scenario_id:prepared.row.id,p_expected_version:version});if(reply.error)throw reply.error;
+      prepared.row.version=reply.data.version;remoteScenarios=remoteScenarios.filter(s=>s.id!==prepared.row.id);
+      localStorage.setItem(TRASH_KEY,JSON.stringify(scenarioTrash));
+    }
+    library=prepared.library;localStorage.removeItem(scenarioKey(prepared.row.id));localStorage.removeItem(`${scenarioKey(prepared.row.id)}:character-bases103`);
+    const saved=localStorage.getItem(scenarioKey('main')),main=remoteScenarios.find(s=>s.id==='main');doc=saved?parseStory(JSON.parse(saved)):main?parseStory(main.document):emptyStory();
+    version=entry().version;linkCurrentCharacters();$('story-title').value=doc.title;renderScenarios();render();persist();
+    status(`「${prepared.row.document.title}」을 삭제했어. 삭제한 시나리오 복원에서 되돌릴 수 있어.${cloud?' 다음 게임 실행 때 반영돼.':''}`);
+  }catch(e){status(e.message?.includes('poc_')?cloudError(e):e.message);}
+};
+$('restore-scenario').onclick=async()=>{
+  try{
+    const row=trashChoices().find(r=>r.id===$('trash-select').value);if(!row)return;
+    let restored=restoreLocal(library,row);
+    if(row.cloud){
+      if(!editor)throw new Error('온라인 시나리오 복원은 도감에서 이메일로 로그인한 뒤 사용해줘.');
+      await loadTrash();const remote=remoteTrash.find(r=>r.id===row.id);if(!remote)throw new Error('온라인 삭제 목록이 바뀌었어. 목록을 다시 열어줘.');
+      const reply=await client.rpc('poc_restore_scenario',{p_scenario_id:row.id,p_expected_version:remote.version});if(reply.error)throw reply.error;
+      restored.version=reply.data.version;restored.library.entries.find(e=>e.id===row.id).version=reply.data.version;
+      if(!scenarioTrash.some(r=>r.id===row.id)){restored.document=parseStory(reply.data.document);restored.baselines=characters.filter(c=>restored.document.actors.some(a=>a.character_id===c.id));}
+      remoteScenarios.push(reply.data);remoteTrash=remoteTrash.filter(r=>r.id!==row.id);
+    }
+    persist();library=restored.library;doc=restored.document;version=restored.version;storageBlocked=false;linkCurrentCharacters(restored.baselines);
+    scenarioTrash=scenarioTrash.filter(r=>r.id!==row.id);localStorage.setItem(TRASH_KEY,JSON.stringify(scenarioTrash));
+    $('story-title').value=doc.title;renderScenarios();render();persist();$('scenario-trash').close();status(`「${doc.title}」을 복원했어. 이전 전투 ID와 진행 기록을 이어서 사용할 수 있어.`);
+  }catch(e){status(e.message?.includes('poc_')?cloudError(e):e.message);}
+};
 start();
 window.addEventListener('focus',()=>{if(client)refreshDecks();});
