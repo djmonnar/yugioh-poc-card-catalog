@@ -831,6 +831,53 @@
           "identity_key": "b41c745f047ff13852b281890f4be14314cae6592489aca75333d9513ae9ac62"
         }
       ]
+    },
+    {
+      "id": "20261010-marik-ishizu",
+      "name": "마리크·이시즈 묘지기 8장",
+      "added_at": "2026-10-10T17:40:31.832629+09:00",
+      "cards": [
+        {
+          "slot": 1271,
+          "internal_id": 1822,
+          "identity_key": "dbaf42f889935cae91b4090f8c249a4ebab5a9af22394288c56e47e842c60267"
+        },
+        {
+          "slot": 1272,
+          "internal_id": 1823,
+          "identity_key": "d6e7f990fd9282c3e00bc77ff3ecaad52afefa8ff4e3a39cb9d6cba7a5afe2b3"
+        },
+        {
+          "slot": 1273,
+          "internal_id": 1824,
+          "identity_key": "dfe0fdf9b0d3ac09c4299de2fe5c42f56ce63e08eb19022b9c46ce0cf6c80e0f"
+        },
+        {
+          "slot": 1274,
+          "internal_id": 1825,
+          "identity_key": "cd25dbadd1f45fb9fda4fcc2ee7c2a1574f44d36584b495a80db699c3c951de4"
+        },
+        {
+          "slot": 1275,
+          "internal_id": 1826,
+          "identity_key": "513b0f2e788710c3ca8e10bfda266cae824d66000487a9b3a7a0d5b81f57e73f"
+        },
+        {
+          "slot": 1276,
+          "internal_id": 1827,
+          "identity_key": "7162cc7fd2c004837beabf292c05659b65f4db064b047810e5d56b2c42b8070a"
+        },
+        {
+          "slot": 1277,
+          "internal_id": 1828,
+          "identity_key": "b1ee59f2ac81c544858100bcfb40d164c39b02a26b246bfafe916f2eb9fac123"
+        },
+        {
+          "slot": 1278,
+          "internal_id": 1829,
+          "identity_key": "b9165ddc34db4f34904dcf646fd737d2770b95080484adb417844ac99503cc14"
+        }
+      ]
     }
   ]
 }
