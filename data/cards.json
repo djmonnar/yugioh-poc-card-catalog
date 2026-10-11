@@ -33,7 +33,7 @@
         "sell_price": 25
       }
     },
-    "source_exe_sha256": "6067b4020de4e3ee0ad9982d546acd4dd89f6525bbec87dfdecc84125062829f",
+    "source_exe_sha256": "bb5c6b40b44144939e01a9d195570ceb7042e946c693e3c2c20fa3636630b036",
     "source_resources": {
       "card_id.bin": "642c1420e4a8ea2f4d6f91da9ad96b36f84fa51f080b80ace5e31eb6946ee3eb",
       "card_prop.bin": "0be72e46eddde8dd88fae8ec23ec9724bd25bf7c923b17f9854e46a805544dcb",

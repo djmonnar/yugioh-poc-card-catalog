@@ -32,6 +32,14 @@ test('legacy copies link by character identity; explicit references survive pars
   const linked=linkLegacyCharacters(d,[{id:'pegasus',version:1,profile:{name:'페가수스',portrait:'assets/actors/shared-pegasus.png'}}]);
   assert.equal(linked.actors[0].character_id,'pegasus');assert.deepEqual(linked.actors[0].skills,d.actors[0].skills);assert.equal(d.actors[0].name,'페가수스 j 크로프트');
 });
+test('Tea aliases reuse the same shared character without changing battle skills',()=>{
+  const tea={id:'user-tea',version:4,profile:{name:'안수진',portrait:'assets/actors/shared-tea114.png'}};
+  for(const name of ['안수진','수진','마자키 안즈','Tea Gardner','Téa Gardner','Anzu Mazaki']){
+    const d=emptyStory();d.actors=[{actor_id:'local',name,portrait:'',skills:[{kind:'heal_once',value:500}]}];
+    const linked=linkLegacyCharacters(d,[tea]);assert.equal(linked.actors[0].character_id,tea.id);
+    assert.equal(linked.actors[0].name,'안수진');assert.deepEqual(linked.actors[0].skills,d.actors[0].skills);
+  }
+});
 test('updates carry expected versions; unknown references and unsafe profiles cannot silently pass',()=>{
   const d=emptyStory();d.actors=[attachCharacter(row,'a')];assert.deepEqual(characterUpdates(d,[row]),[]);
   d.actors[0].name='수정';assert.equal(characterUpdates(d,[row])[0].expected_version,2);

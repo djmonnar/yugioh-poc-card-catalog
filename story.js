@@ -11,7 +11,7 @@ import {createStatFilters} from './card-filters.js?v=20261007-44';
 import {pickerCards} from './card-picker.js?v=20261010-picker106';
 import {CardTagsCloud,annotationFor} from './card-tags.js?v=20261007-47';
 import {poolCardSelected,togglePoolCard} from './reward-picker.js?v=20261010-picker106';
-import {CHARACTER_KEY,parseCharacters,attachCharacter,characterUpdates,linkLegacyCharacters,resolveCharacters,rebaseCharacters,synchronizeCharacterCopies} from './character-library.js?v=20261010-characters103';
+import {CHARACTER_KEY,parseCharacters,attachCharacter,characterUpdates,linkLegacyCharacters,resolveCharacters,rebaseCharacters,synchronizeCharacterCopies} from './character-library.js?v=20261011-tea114';
 import {TRASH_KEY,parseTrash,archiveLocal,restoreLocal} from './scenario-trash.js?v=20261010-trash105';
 const $=id=>document.getElementById(id),node=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
 let doc=emptyStory(),cards=[],decks=[],meta,chooseCard,pickerPage=0,pickerSelection=null,filter=()=>true,client,version=null,editor=false,storageBlocked=false;

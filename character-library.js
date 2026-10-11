@@ -4,6 +4,7 @@ import {parsePresentation} from './story-media.js?v=20261009-media88';
 export const CHARACTER_KEY='poc-character-library-v1';
 export function characterName(name){
   const key=name.normalize('NFKC').toLowerCase().replace(/[\s.]/g,'');
+  if(['안수진','수진','마자키안즈','anzumazaki','teagardner','téagardner'].includes(key))return '안수진';
   return ['페가수스j크로프트','페가수스j크로포드'].includes(key)?'페가수스':key;
 }
 export function linkLegacyCharacters(document,characters){
