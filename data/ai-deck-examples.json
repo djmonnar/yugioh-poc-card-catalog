@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "kind": "poc-ai-deck-bundle",
-  "catalog_dataset_id": "e050d301a3d13d71e904d4a44ae21ab0af295e2d5a1d989528f4f6a7fcb774cd",
+  "catalog_dataset_id": "a063de5dee41362ddb270ed5f1f5f5e12082299db368f43633ef8d4ec05daadc",
   "decks": [
     {
       "deck_id": "builtin-opponent-0",
@@ -518,11 +518,11 @@
             "count": 1
           },
           {
-            "identity_key": "b565f717dc3b92ae7f946a4c2346eb1d988a9ce35fe53ea56e73673463b1a5e6",
+            "identity_key": "53f16521704cd72079070a7455e15b5f4a06562f43a5699a20478b284c128371",
             "slot": 868,
             "internal_id": 113,
-            "name_ko": "마도전사 매지션 걸",
-            "name_en": "Breaker the Magician Girl",
+            "name_ko": "환상의 견습 마도사",
+            "name_en": "Apprentice Illusion Magician",
             "count": 1
           },
           {

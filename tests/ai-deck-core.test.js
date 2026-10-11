@@ -90,6 +90,18 @@ test('fusion and tokens cannot enter wrong groups',()=>{
   const d=emptyDeck('test');assert.throws(()=>adjustCard(d,fusion,'main',1));assert.throws(()=>adjustCard(d,fusion,'side',1));assert.throws(()=>adjustCard(d,normal,'extra',1));assert.throws(()=>adjustCard(d,token,'main',1));
   adjustCard(d,fusion,'extra',1);assert.equal(d.groups.extra[0].internal_id,202);
 });
+test('published support cards are usable in both modes while their generated token is excluded',()=>{
+  const plant=catalog.cards.find(c=>c.slot===1307),ruby=catalog.cards.find(c=>c.slot===1295);
+  assert.equal(plant.special,true);assert.equal(plant.reward_eligible,false);
+  assert.equal(plant.atk,800);assert.equal(plant.def,800);
+  for(const mode of ['classic','duel_links_plan']){
+    const d=emptyDeck('support',mode);
+    for(const group of ['main','extra','side'])assert.throws(()=>adjustCard(d,plant,group,1));
+    assert.throws(()=>adjustCard(d,ruby,'main',1));adjustCard(d,ruby,'extra',1);
+    for(const c of catalog.cards.filter(c=>c.slot>=1287&&c.slot<=1306&&c.type!=='융합 몬스터'))adjustCard(d,c,'main',1);
+    assert.equal(validateDeck(d,catalog.cards).unknown,0);
+  }
+});
 test('export and import preserve strategy, counts, Unicode and multiple decks',()=>{
   const d=emptyDeck('deck_1');d.name='언데드 덱';d.strategy.combos='묘지 준비\n소생';adjustCard(d,normal,'main',1);
   const second=emptyDeck('deck_2');const restored=parseBundle(JSON.parse(JSON.stringify(exportBundle(catalog.meta,[d,second],pool))),pool);

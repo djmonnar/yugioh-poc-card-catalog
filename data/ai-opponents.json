@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "kind": "poc-ai-deck-bundle",
-  "catalog_dataset_id": "5a70b93b61a8134fa33a13a1c0bcfaab9af6c02e4a3ae0a558228c7f29787a7a",
+  "catalog_dataset_id": "a063de5dee41362ddb270ed5f1f5f5e12082299db368f43633ef8d4ec05daadc",
   "snapshot_at": "2026-10-07T07:57:41.093632+09:00",
   "decks": [
     {
@@ -535,11 +535,11 @@
             "count": 1
           },
           {
-            "identity_key": "b565f717dc3b92ae7f946a4c2346eb1d988a9ce35fe53ea56e73673463b1a5e6",
+            "identity_key": "53f16521704cd72079070a7455e15b5f4a06562f43a5699a20478b284c128371",
             "slot": 868,
             "internal_id": 113,
-            "name_ko": "마도전사 매지션 걸",
-            "name_en": "Breaker the Magician Girl",
+            "name_ko": "환상의 견습 마도사",
+            "name_en": "Apprentice Illusion Magician",
             "count": 1
           },
           {
@@ -2712,11 +2712,11 @@
             "count": 1
           },
           {
-            "identity_key": "b565f717dc3b92ae7f946a4c2346eb1d988a9ce35fe53ea56e73673463b1a5e6",
+            "identity_key": "53f16521704cd72079070a7455e15b5f4a06562f43a5699a20478b284c128371",
             "slot": 868,
             "internal_id": 113,
-            "name_ko": "마도전사 매지션 걸",
-            "name_en": "Breaker the Magician Girl",
+            "name_ko": "환상의 견습 마도사",
+            "name_en": "Apprentice Illusion Magician",
             "count": 1
           },
           {
@@ -4889,11 +4889,11 @@
             "count": 1
           },
           {
-            "identity_key": "b565f717dc3b92ae7f946a4c2346eb1d988a9ce35fe53ea56e73673463b1a5e6",
+            "identity_key": "53f16521704cd72079070a7455e15b5f4a06562f43a5699a20478b284c128371",
             "slot": 868,
             "internal_id": 113,
-            "name_ko": "마도전사 매지션 걸",
-            "name_en": "Breaker the Magician Girl",
+            "name_ko": "환상의 견습 마도사",
+            "name_en": "Apprentice Illusion Magician",
             "count": 1
           },
           {
@@ -7066,11 +7066,11 @@
             "count": 1
           },
           {
-            "identity_key": "b565f717dc3b92ae7f946a4c2346eb1d988a9ce35fe53ea56e73673463b1a5e6",
+            "identity_key": "53f16521704cd72079070a7455e15b5f4a06562f43a5699a20478b284c128371",
             "slot": 868,
             "internal_id": 113,
-            "name_ko": "마도전사 매지션 걸",
-            "name_en": "Breaker the Magician Girl",
+            "name_ko": "환상의 견습 마도사",
+            "name_en": "Apprentice Illusion Magician",
             "count": 1
           },
           {
@@ -9348,11 +9348,11 @@
             "count": 1
           },
           {
-            "identity_key": "b565f717dc3b92ae7f946a4c2346eb1d988a9ce35fe53ea56e73673463b1a5e6",
+            "identity_key": "53f16521704cd72079070a7455e15b5f4a06562f43a5699a20478b284c128371",
             "slot": 868,
             "internal_id": 113,
-            "name_ko": "마도전사 매지션 걸",
-            "name_en": "Breaker the Magician Girl",
+            "name_ko": "환상의 견습 마도사",
+            "name_en": "Apprentice Illusion Magician",
             "count": 1
           },
           {
@@ -10797,11 +10797,11 @@
             "count": 1
           },
           {
-            "identity_key": "b565f717dc3b92ae7f946a4c2346eb1d988a9ce35fe53ea56e73673463b1a5e6",
+            "identity_key": "53f16521704cd72079070a7455e15b5f4a06562f43a5699a20478b284c128371",
             "slot": 868,
             "internal_id": 113,
-            "name_ko": "마도전사 매지션 걸",
-            "name_en": "Breaker the Magician Girl",
+            "name_ko": "환상의 견습 마도사",
+            "name_en": "Apprentice Illusion Magician",
             "count": 1
           },
           {
@@ -12246,11 +12246,11 @@
             "count": 1
           },
           {
-            "identity_key": "b565f717dc3b92ae7f946a4c2346eb1d988a9ce35fe53ea56e73673463b1a5e6",
+            "identity_key": "53f16521704cd72079070a7455e15b5f4a06562f43a5699a20478b284c128371",
             "slot": 868,
             "internal_id": 113,
-            "name_ko": "마도전사 매지션 걸",
-            "name_en": "Breaker the Magician Girl",
+            "name_ko": "환상의 견습 마도사",
+            "name_en": "Apprentice Illusion Magician",
             "count": 1
           },
           {
@@ -13695,11 +13695,11 @@
             "count": 1
           },
           {
-            "identity_key": "b565f717dc3b92ae7f946a4c2346eb1d988a9ce35fe53ea56e73673463b1a5e6",
+            "identity_key": "53f16521704cd72079070a7455e15b5f4a06562f43a5699a20478b284c128371",
             "slot": 868,
             "internal_id": 113,
-            "name_ko": "마도전사 매지션 걸",
-            "name_en": "Breaker the Magician Girl",
+            "name_ko": "환상의 견습 마도사",
+            "name_en": "Apprentice Illusion Magician",
             "count": 1
           },
           {

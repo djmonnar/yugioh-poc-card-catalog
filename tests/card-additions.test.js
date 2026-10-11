@@ -13,10 +13,11 @@ const makeHistory = (...releases) => ({schema_version:1, releases});
 test('published latest addition batch matches actual cards without changing gameplay data', () => {
   const before = JSON.stringify(data), index = additionIndex(data.cards, history);
   const latest = history.releases.find(r => r.id === index.latest.id);
-  assert.equal(latest.id, '20261011-sphere');
-  assert.equal(latest.cards.length, 1);
-  assert.deepEqual(latest.cards.map(c => [c.slot, c.internal_id]),
-    [[335,272]]);
+  assert.equal(latest.id, '20261011-review-support');
+  assert.equal(latest.cards.length, 27);
+  assert.deepEqual(latest.cards.map(c => c.slot),
+    [...Array.from({length:20},(_,i)=>1287+i),193,367,386,439,456,817,868]);
+  assert.ok(!latest.cards.some(c=>c.slot===1307),'Duel-only tokens are not collectible additions');
   const sphere=data.cards.find(c=>c.slot===335);
   assert.equal(sphere.name_en,'Mystical Shine Ball');
   assert.equal(sphere.official_cid,5949);
