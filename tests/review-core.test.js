@@ -92,10 +92,10 @@ test('tokens have no deck limit proposals', () => {
   assert.throws(()=>changesFor(token,{proposed_limit:1}));
 });
 test('public catalog is complete, each preview exists and personal paths are absent', () => {
-  assert.equal(catalog.cards.length,1307);
-  assert.equal(catalog.cards.filter(c=>!c.special).length,1301);
+  assert.equal(catalog.cards.length,1326);
+  assert.equal(catalog.cards.filter(c=>!c.special).length,1320);
   assert.equal(catalog.cards.filter(c=>c.special).length,6);
-  assert.equal(new Set(catalog.cards.map(c=>c.identity_key)).size,1307);
+  assert.equal(new Set(catalog.cards.map(c=>c.identity_key)).size,1326);
   assert.equal(catalog.cards.filter(c=>c.stock).length,catalog.meta.stock_count);
   assert.ok(catalog.meta.stock_count>=60);
   for(const [slot,limit] of [[278,2],[369,1],[554,0],[601,1],[741,1]]){
@@ -106,6 +106,13 @@ test('public catalog is complete, each preview exists and personal paths are abs
     const c=catalog.cards.find(c=>c.slot===slot);assert.ok(c&&!c.special&&c.official_cid);
     assert.equal(c.review_kind,'restored');
   }
+  for(let slot=1308;slot<=1326;slot++){
+    const c=catalog.cards.find(c=>c.slot===slot);assert.ok(c&&!c.special&&c.official_cid);
+    assert.equal(c.review_kind,'restored');
+  }
+  assert.equal(catalog.cards.find(c=>c.slot===174).name_en,'Mokey Mokey');
+  assert.equal(catalog.cards.find(c=>c.slot===269).name_en,'Cosmo Brain');
+  assert.match(catalog.cards.find(c=>c.slot===1322).review_note,/実|전투|공격/);
   for(const [slot,id,name] of [[1137,1974,'Plaguespreader Zombie'],[1138,1975,'Gozuki'],[1139,1976,'Vampire Lord'],[1140,1977,'Book of Life'],[1141,1978,'Goblin Zombie'],[1142,1979,'Call of the Mummy'],[1143,1980,'Pumprincess the Princess of Ghosts']]){
     const c=catalog.cards.find(c=>c.slot===slot);assert.equal(c.internal_id,id);assert.equal(c.name_en,name);
     assert.match(c.review_note,/Claude320b/);

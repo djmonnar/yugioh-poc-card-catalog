@@ -13,9 +13,12 @@ const makeHistory = (...releases) => ({schema_version:1, releases});
 test('published latest addition batch matches actual cards without changing gameplay data', () => {
   const before = JSON.stringify(data), index = additionIndex(data.cards, history);
   const latest = history.releases.find(r => r.id === index.latest.id);
-  assert.equal(latest.id, '20261011-review-support');
-  assert.equal(latest.cards.length, 27);
+  assert.equal(latest.id, '20261011-low-level-support');
+  assert.equal(latest.cards.length, 25);
   assert.deepEqual(latest.cards.map(c => c.slot),
+    [76,174,269,305,631,1067,...Array.from({length:19},(_,i)=>1308+i)]);
+  const previousSupport = history.releases.find(r => r.id === '20261011-review-support');
+  assert.deepEqual(previousSupport.cards.map(c => c.slot),
     [...Array.from({length:20},(_,i)=>1287+i),193,367,386,439,456,817,868]);
   assert.ok(!latest.cards.some(c=>c.slot===1307),'Duel-only tokens are not collectible additions');
   const sphere=data.cards.find(c=>c.slot===335);
