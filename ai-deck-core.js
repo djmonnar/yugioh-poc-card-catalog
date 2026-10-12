@@ -24,6 +24,18 @@ export function resolveCard(line,cards) {
 export function copyCount(deck,key) {
   return GROUPS.reduce((sum,g)=>sum+deck.groups[g].filter(r=>r.identity_key===key).reduce((n,r)=>n+r.count,0),0);
 }
+export function groupCardCount(deck,key,group) {
+  if(!GROUPS.includes(group))fail('덱 위치를 확인할 수 없어.');
+  return deck.groups[group].filter(row=>row.identity_key===key).reduce((sum,row)=>sum+row.count,0);
+}
+export function copiedDeckName(name,existingNames=[]) {
+  const base=text(name,80).trim()||'AI 덱',used=new Set(existingNames);
+  for(let number=1;;number++) {
+    const suffix=number===1?' 복사본':` 복사본 (${number})`;
+    const candidate=base.slice(0,80-suffix.length)+suffix;
+    if(!used.has(candidate))return candidate;
+  }
+}
 export function groupCount(deck,group) {return deck.groups[group].reduce((n,r)=>n+r.count,0);}
 export function groupTypeCounts(deck,cards,group='main') {
   const counts={normal:0,effect:0,spell:0,trap:0,ritual:0,other:0,unknown:0};

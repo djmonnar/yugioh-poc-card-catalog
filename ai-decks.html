@@ -5,10 +5,10 @@
   <meta name="theme-color" content="#162c38"><meta name="description" content="Power of Chaos 상대 AI 덱을 직접 만들고 콤보와 행동 지침을 보내세요.">
   <title>AI 덱 만들기 · Power of Chaos</title>
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=20261006-8"><link rel="stylesheet" href="ai-decks.css?v=20261012-filters122">
+  <link rel="stylesheet" href="style.css?v=20261006-8"><link rel="stylesheet" href="ai-decks.css?v=20261013-copy129">
   <link rel="stylesheet" href="ai-sync.css?v=20261006-13">
   <link rel="stylesheet" href="card-tags.css?v=20261007-47">
-  <script type="module" src="ai-decks.js?v=20261012-filters122"></script>
+  <script type="module" src="ai-decks.js?v=20261013-copy129"></script>
 </head>
 <body>
   <header class="masthead"><a href="./" class="brand"><img src="assets/icon.svg" alt="" width="34" height="40"><span>POWER OF CHAOS<small>카드 도감으로 돌아가기</small></span></a><button id="export-decks" class="primary">AI 덱 보내기</button></header>
@@ -51,10 +51,10 @@
         <div class="deck-library">
           <section class="deck-examples" aria-label="게임·스토리 AI 덱"><h2>게임·스토리 AI 덱</h2>
             <div class="filter-pair"><div><label for="opponent-mode">듀얼 모드</label><select id="opponent-mode"><option value="">모든 모드</option><option value="normal">일반 듀얼</option><option value="speed">스피드 듀얼</option></select></div><div><label for="opponent-difficulty">등장 난이도</label><select id="opponent-difficulty"><option value="0">모든 난이도</option><option value="1">1 · 입문</option><option value="2">2 · 쉬움</option><option value="3">3 · 보통</option><option value="4">4 · 중급</option><option value="5">5 · 어려움</option><option value="6">6 · 숙련</option><option value="7">7 · 최고</option></select></div></div>
-            <p id="opponent-count" class="muted" role="status">상대 덱을 불러오는 중…</p><label for="example-select">편집할 AI 덱</label><select id="example-select" disabled></select><button id="load-example" disabled>온라인 저장본 다시 불러오기</button><p id="opponent-load-status" class="muted" role="status" aria-live="polite"></p>
+            <p id="opponent-count" class="muted" role="status">상대 덱을 불러오는 중…</p><label for="example-select">편집할 AI 덱</label><select id="example-select" disabled></select><div class="opponent-deck-actions"><button id="copy-example" type="button" disabled>선택한 덱 복사해서 편집</button><button id="load-example" type="button" disabled>온라인 저장본 다시 불러오기</button></div><p id="opponent-load-status" class="muted" role="status" aria-live="polite"></p>
             <div id="selected-opponent-actor" class="deck-actor" hidden></div>
           </section>
-          <div class="deck-library-actions"><button id="new-deck">+ 새 AI 덱</button><button id="clone-deck">이 덱 복제</button></div>
+          <div class="deck-library-actions"><button id="new-deck" type="button">+ 새 AI 덱</button><button id="clone-deck" type="button">이 덱 복사해서 편집</button></div><p class="deck-edit-hint">복사본은 새 AI 덱으로 저장돼. 카드 찾기와 덱 목록의 − / ＋로 카드를 넣고 빼면 돼.</p>
           <label for="deck-name">AI 덱 이름</label><input id="deck-name" maxlength="80" placeholder="예: 용만 · 공룡 초급 덱" aria-describedby="deck-name-note"><p id="deck-name-note" class="muted">이름을 바꾸고 ‘이 덱 온라인 저장’을 눌러줘. 스토리의 AI 덱 목록에도 같은 이름으로 표시돼.</p>
           <details class="local-drafts"><summary>이 브라우저의 이전 편집본 · JSON</summary><label for="deck-select">보관된 편집본</label><select id="deck-select"></select><button id="import-decks">JSON 불러오기</button><input id="deck-import-file" type="file" accept="application/json,.json" hidden><p class="muted">기존 편집본은 모두 보존돼. 이 목록의 미저장 덱도 온라인 저장하면 스토리에서 쓸 수 있어.</p></details>
         </div>
