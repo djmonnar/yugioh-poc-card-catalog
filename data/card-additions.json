@@ -1211,6 +1211,43 @@
           "identity_key": "521b6c4e31f198237aae4841b7fef016095bdf82b46a11e8b2e25fefb2322763"
         }
       ]
+    },
+    {
+      "id": "20261012-bandit-keith",
+      "name": "밴디트 키스 · 기계족 6장",
+      "added_at": "2026-10-12T23:32:25.735793+09:00",
+      "cards": [
+        {
+          "slot": 1327,
+          "internal_id": 2024,
+          "identity_key": "544243db3fb2545affba714527ce5f69b0369f14dddccebe0e87a39e6fc8e437"
+        },
+        {
+          "slot": 1328,
+          "internal_id": 2025,
+          "identity_key": "d61cf20cdac1800b1c3c1c6d44cc142579ba1be08ab9d0287c3619127c6642bc"
+        },
+        {
+          "slot": 1329,
+          "internal_id": 2026,
+          "identity_key": "451ec98f39752ceff25e1fb3367202f326e72d575eda4188fddffb45416260d9"
+        },
+        {
+          "slot": 1330,
+          "internal_id": 2027,
+          "identity_key": "93a585816dbf82d2293506b928e866c322b7e304dba0edf281759d0863c0e079"
+        },
+        {
+          "slot": 1331,
+          "internal_id": 2028,
+          "identity_key": "8cc690d2effd5350c0f9a04829d896424e927eecd4991a26462d81f8874b28b4"
+        },
+        {
+          "slot": 1332,
+          "internal_id": 2029,
+          "identity_key": "5f7d46af5046f02e7dfebcc71d0b462fa235707ac827d6472ddea86ced043f21"
+        }
+      ]
     }
   ]
 }

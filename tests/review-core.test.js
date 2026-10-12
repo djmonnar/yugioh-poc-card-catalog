@@ -92,10 +92,14 @@ test('tokens have no deck limit proposals', () => {
   assert.throws(()=>changesFor(token,{proposed_limit:1}));
 });
 test('public catalog is complete, each preview exists and personal paths are absent', () => {
-  assert.equal(catalog.cards.length,1326);
-  assert.equal(catalog.cards.filter(c=>!c.special).length,1320);
+  assert.equal(catalog.cards.length,1332);
+  assert.equal(catalog.cards.filter(c=>!c.special).length,1326);
   assert.equal(catalog.cards.filter(c=>c.special).length,6);
-  assert.equal(new Set(catalog.cards.map(c=>c.identity_key)).size,1326);
+  assert.equal(new Set(catalog.cards.map(c=>c.identity_key)).size,1332);
+  for(let slot=1327;slot<=1332;slot++){
+    const c=catalog.cards.find(c=>c.slot===slot);assert.ok(c&&!c.special&&c.official_cid);
+    assert.equal(c.internal_id,2024+slot-1327);
+  }
   assert.equal(catalog.cards.filter(c=>c.stock).length,catalog.meta.stock_count);
   assert.ok(catalog.meta.stock_count>=60);
   for(const [slot,limit] of [[278,2],[369,1],[554,0],[601,1],[741,1]]){

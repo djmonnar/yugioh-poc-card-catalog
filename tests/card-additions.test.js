@@ -13,9 +13,12 @@ const makeHistory = (...releases) => ({schema_version:1, releases});
 test('published latest addition batch matches actual cards without changing gameplay data', () => {
   const before = JSON.stringify(data), index = additionIndex(data.cards, history);
   const latest = history.releases.find(r => r.id === index.latest.id);
-  assert.equal(latest.id, '20261011-low-level-support');
-  assert.equal(latest.cards.length, 25);
-  assert.deepEqual(latest.cards.map(c => c.slot),
+  assert.equal(latest.id, '20261012-bandit-keith');
+  assert.deepEqual(latest.cards.map(c => [c.slot,c.internal_id]),
+    Array.from({length:6},(_,i)=>[1327+i,2024+i]));
+  const lowLevel = history.releases.find(r => r.id === '20261011-low-level-support');
+  assert.equal(lowLevel.cards.length, 25);
+  assert.deepEqual(lowLevel.cards.map(c => c.slot),
     [76,174,269,305,631,1067,...Array.from({length:19},(_,i)=>1308+i)]);
   const previousSupport = history.releases.find(r => r.id === '20261011-review-support');
   assert.deepEqual(previousSupport.cards.map(c => c.slot),

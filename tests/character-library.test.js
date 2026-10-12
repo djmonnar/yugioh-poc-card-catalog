@@ -3,8 +3,10 @@ import assert from 'node:assert/strict';
 import {emptyStory,parseStory} from '../story-core.js';
 import {parseCharacters,attachCharacter,resolveCharacters,characterUpdates,linkLegacyCharacters,rebaseCharacters,synchronizeCharacterCopies} from '../character-library.js';
 const row={id:'bakura',version:2,profile:{name:'어둠의 바쿠라',portrait:'assets/actors/shared-bakura.png'}};
+// These compatibility cases describe actors authored before shared traits.
+const legacyAttach=(row,id)=>({...attachCharacter(row,id),use_shared_skills:false});
 test('a common profile update reaches independent scenarios while their skills and battles remain',()=>{
-  const a=emptyStory(),b=emptyStory();a.actors=[attachCharacter(row,'a')];b.actors=[attachCharacter(row,'b')];
+  const a=emptyStory(),b=emptyStory();a.actors=[legacyAttach(row,'a')];b.actors=[legacyAttach(row,'b')];
   a.actors[0].skills=[{kind:'opening_draw',value:2}];b.actors[0].skills=[{kind:'heal_once',value:1000}];
   const next={...row,profile:{...row.profile,name:'바쿠라',presentation:{enabled:true,portrait:true,events:{attack:{image:'',audio:'assets/voices/attack.wav'}}}}};
   const aa=resolveCharacters(a,[next]),bb=resolveCharacters(b,[next]);
@@ -13,7 +15,7 @@ test('a common profile update reaches independent scenarios while their skills a
 });
 
 test('fresh global profiles refresh clean drafts while dirty drafts keep their original expected version',()=>{
-  const d=emptyStory();d.actors=[attachCharacter(row,'a')];
+  const d=emptyStory();d.actors=[legacyAttach(row,'a')];
   const latest={...row,version:3,profile:{...row.profile,name:'새 공용 이름'}};
   const clean=rebaseCharacters(d,[row],[latest]);assert.equal(clean.document.actors[0].name,'새 공용 이름');assert.deepEqual(characterUpdates(clean.document,clean.baselines),[]);
   d.actors[0].name='내 미저장 편집';const dirty=rebaseCharacters(d,[row],[latest]);
