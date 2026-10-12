@@ -1310,6 +1310,108 @@
           "identity_key": "f20c109a9c087b033ebcfbace806be90c4b1d9e4398de8d3e52c79a26276b6ea"
         }
       ]
+    },
+    {
+      "id": "20261013-plant-support",
+      "name": "식물족 지원 · 낙오된 모케모케 19장",
+      "added_at": "2026-10-13T06:35:39.708010+09:00",
+      "cards": [
+        {
+          "slot": 1340,
+          "internal_id": 2039,
+          "identity_key": "15e0aa00503aadc1e90dbb4652016d1326e77c5f4bdde35613603d08a0e4a2dc"
+        },
+        {
+          "slot": 1341,
+          "internal_id": 2041,
+          "identity_key": "64741d3fb7b1b783edf926d04ab5bc8c7ced74cf90ce97892864e0439cb78008"
+        },
+        {
+          "slot": 1342,
+          "internal_id": 2042,
+          "identity_key": "3ea236bed9f5ee9d7e1d0697feca4e3ff5cbec3d4aa454ddc9c0d2ff8b37e1b1"
+        },
+        {
+          "slot": 1343,
+          "internal_id": 2043,
+          "identity_key": "b2144721d4f1aa41748a566fae0de29806007e8253b367143c1e877b14da98c6"
+        },
+        {
+          "slot": 1344,
+          "internal_id": 2044,
+          "identity_key": "7b277d7d79e864630242dff5fbf1107f451088479880cabdc2b0f2789473ce65"
+        },
+        {
+          "slot": 1345,
+          "internal_id": 2045,
+          "identity_key": "2866b79dd0f3a8a12ff9a7f9ce8b758bdfce84300807e6751d5b171be3a1d974"
+        },
+        {
+          "slot": 1346,
+          "internal_id": 2046,
+          "identity_key": "0778f846f6cc96a7a54b31a9148046fe8e39870d0f1e6844e5d9d193d400c36b"
+        },
+        {
+          "slot": 1347,
+          "internal_id": 2047,
+          "identity_key": "5fdc58a7f4a2a6120dc749446ceec3c3836a0b58423a2ebda696ce8d62e5bbdd"
+        },
+        {
+          "slot": 1348,
+          "internal_id": 2048,
+          "identity_key": "180fb28b08087708a5df9362a0451802b0b2e4e29565d4dea4d40d5126fd44ac"
+        },
+        {
+          "slot": 1349,
+          "internal_id": 2049,
+          "identity_key": "ef09eb63a48ccc265d6f647420bcce9e766271db10d86401b6ec0057afddfebe"
+        },
+        {
+          "slot": 1350,
+          "internal_id": 2050,
+          "identity_key": "30e4b4df076b004b21da58147ebbb26ee7d56b82d3d43fa88b3e58ba423bf7d1"
+        },
+        {
+          "slot": 1351,
+          "internal_id": 2051,
+          "identity_key": "f7e4fa33a6b0aa26ca1193f79a0c18a71873e5b610bec1db23825c31d6bbe50e"
+        },
+        {
+          "slot": 1352,
+          "internal_id": 2052,
+          "identity_key": "9f69d2c7ac800664f24057cd71d4b89bd29080c431316fa864196663434e8d9b"
+        },
+        {
+          "slot": 1353,
+          "internal_id": 2053,
+          "identity_key": "522711c3b2f9ad06ba23d4c52a266a2d77db0a1104b9e9a00a47941284312cd1"
+        },
+        {
+          "slot": 1354,
+          "internal_id": 2054,
+          "identity_key": "52dfe00bd48baa89cbea0a4652c7ffe1771534d8b4ca03faeed724796e753106"
+        },
+        {
+          "slot": 1355,
+          "internal_id": 2055,
+          "identity_key": "a284f7cdbeacb83e2b42faabe4df25bc793f6150ce8d7a02bc87d5b29efde4c0"
+        },
+        {
+          "slot": 1356,
+          "internal_id": 2056,
+          "identity_key": "f85b48f717f59cf0db8e2ecb406325ddf2ead6884702ccc7e20e18ef24cdaa51"
+        },
+        {
+          "slot": 1357,
+          "internal_id": 2057,
+          "identity_key": "d812c6451b66762bfc80bf11983503ac26fa383d8dcf77be37cf003c5efdda39"
+        },
+        {
+          "slot": 1358,
+          "internal_id": 2058,
+          "identity_key": "868ff1ad87e5a0c45d222ce4cf1bf7fce016c2ebf770835c45ae106f9800a17b"
+        }
+      ]
     }
   ]
 }

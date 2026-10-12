@@ -10,6 +10,7 @@ import {createStatFilters, statConditionsMatch} from './card-filters.js?v=202610
 import {CardTagsUI} from './card-tags-ui.js?v=20261011-tags';
 import {subtypeMatches,fillSubtypeFilter} from './card-subtypes.js?v=20261011-tags';
 import {CardLimitsCloud,applyLimits,normalLimitName,speedLimitName,defaultLimitNames} from './card-limits.js?v=20261008-limits-labels';
+import {CatalogCardPacks} from './card-packs-catalog.js?v=20261013-packs131';
 
 const $ = id => document.getElementById(id);
 const PAGE_SIZE = 36;
@@ -26,6 +27,8 @@ const statFilters = createStatFilters($('stat-filters'), () => {page = 1; render
 const tagUI=new CardTagsUI({cards:()=>cards,meta:()=>meta,canEdit:()=>catalogCanEdit,
   changed:({preservePage=false}={})=>{if(!preservePage)page=1;render();},reopen:()=>{if(selected){const top=$('card-dialog').scrollTop;openCard(selected.slot);$('card-dialog').scrollTop=top;}},
   showTag:name=>{if(selected)closeCard();view='all';resetFilters();tagUI.select(name);render();$('results').scrollIntoView({block:'start'});},toast});
+const packUI=new CatalogCardPacks({cards:()=>cards,meta:()=>meta,canEdit:()=>catalogCanEdit,
+  reopen:()=>{if(selected){const top=$('card-dialog').scrollTop;openCard(selected.slot);$('card-dialog').scrollTop=top;}},toast});
 function liveSettings(card,info){
   if(card.special)return;
   const box=el('section',null,'review-editor live-card-settings');box.append(el('h3','게임 설정 바로 저장'));
@@ -51,12 +54,14 @@ function liveSettings(card,info){
 }
 async function refreshCardSettings(){
   if(!settingsCloud)return;const rows=await settingsCloud.load();applySettings(cards,rows);applyLimits(cards,await limitsCloud.load());try{await tagUI.reload();$('category-status').textContent='';}catch(e){$('category-status').textContent='온라인 분류를 불러오지 못했어. 설정 새로 불러오기를 눌러줘.';}rarityButtons();render();if(selected)openCard(selected.slot);
+  try{await packUI.reload();if(selected)openCard(selected.slot);}catch{/* Independent pack API failures never block card settings. */}
 }
 async function initCardSettings(){
   try{
     const response=await fetch('./data/cloud-config.json?v=20261006-13',{cache:'no-store'});if(!response.ok)throw new Error('설정 없음');const config=validateCloudConfig(await response.json());
     settingsAuth=createClient(config.url,config.publishable_key,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true,storageKey:'poc-ai-editor-auth-v1'},global:{fetch:(url,options)=>fetch(url,{...options,signal:options?.signal||AbortSignal.timeout(10000)})}});
     settingsCloud=new CardSettingsCloud(settingsAuth);limitsCloud=new CardLimitsCloud(settingsAuth);try{await tagUI.connect(settingsAuth);}catch(e){$('category-status').textContent='온라인 분류를 불러오지 못했어. 설정 새로 불러오기를 눌러줘.';}await refreshCardSettings();
+    try{await packUI.connect(settingsAuth);packUI.reopen();}catch{/* Keep the catalog and draft settings usable before the pack API is installed. */}
     const update=async session=>{const generation=++catalogAuthGeneration,previous=catalogCanEdit;try{const allowed=session?await new DeckCloud(settingsAuth).editor():false;if(allowed&&!previous)await tagUI.reload();if(generation!==catalogAuthGeneration)return;catalogCanEdit=allowed;tagUI.renderFilters();$('card-cloud-status').textContent=catalogCanEdit?'로그인됨 · 카드 상세에서 등급·판매 여부·태그·관련 링크를 저장할 수 있어.':'직접 편집하려면 이메일로 로그인해줘. 저장된 태그와 관련 링크는 로그인 없이 볼 수 있어.';if(selected&&previous!==catalogCanEdit)openCard(selected.slot);}catch(error){if(generation===catalogAuthGeneration){catalogCanEdit=false;tagUI.renderFilters();$('card-cloud-status').textContent=cloudError(error);}}};
     settingsAuth.auth.onAuthStateChange((_event,session)=>setTimeout(()=>update(session),0));const {data,error}=await settingsAuth.auth.getSession();if(error)throw error;await update(data.session);
   }catch(error){$('card-cloud-status').textContent=cloudError(error);}
@@ -274,6 +279,7 @@ function openCard(slot, updateHash = true) {
   info.append(el('p', '현재 모드 설명', 'description-title'), el('div', card.description_ko || '별도의 카드 설명이 없는 토큰·특수 카드야.', 'description'));
   renderRelations(card, info);
   tagUI.detail(card,info,relatedLink);
+  packUI.detail(card,info);
   if (card.fusion_materials?.length) {
     const materials=el('div',null,'fusion-materials');materials.append(el('p','이 모드에서 확인한 융합 소재','description-title'));
     const grouped=new Map();for(const material of card.fusion_materials){const item=grouped.get(material.slot);if(item)item.count++;else grouped.set(material.slot,{...material,count:1});}
