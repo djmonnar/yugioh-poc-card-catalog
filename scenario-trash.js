@@ -1,6 +1,6 @@
-import {parseStory} from './story-core.js?v=20261010-characters103';
-import {readLibrary} from './story-library.js?v=20261010-characters103';
-import {parseCharacters} from './character-library.js?v=20261011-tea114';
+import {parseStory} from './story-core.js?v=20261012-shared127';
+import {readLibrary} from './story-library.js?v=20261013-conflict128';
+import {parseCharacters} from './character-library.js?v=20261012-shared127';
 export const TRASH_KEY='poc-scenario-trash-v1';
 const validId=id=>typeof id==='string'&&/^[A-Za-z0-9_-]{1,100}$/.test(id)&&id!=='main';
 export function parseTrash(rows){

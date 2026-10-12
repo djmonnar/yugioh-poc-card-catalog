@@ -2,7 +2,7 @@ import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261007-49'
 import {CardLimitsCloud,applyLimits} from './card-limits.js?v=20261008-61';
 import {STORY_KEY,SKILLS,parseSkills,parsePreset,emptyStory,newActor,newBattle,parseStory,canonicalStory,validateStory,cardRef,reviewFiles,safePortrait} from './story-core.js?v=20261012-shared127';
 import {NUMERIC_SKILLS,skillSets,copyProfile,removeProfile,profilePacket} from './story-skills.js?v=20261009-73';
-import {LIBRARY_KEY,scenarioKey,copyBattle,createScenario,readLibrary,parseRemoteScenarios,actorTemplates,importActor} from './story-library.js?v=20261010-characters103';
+import {LIBRARY_KEY,scenarioKey,copyBattle,createScenario,readLibrary,parseRemoteScenarios,actorTemplates,importActor} from './story-library.js?v=20261013-conflict128';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 import {MEDIA_EVENTS,defaultPresentation,parsePresentation,safeMedia,validateAudioFile} from './story-media.js?v=20261009-media88';
 import {validateCloudConfig,cloudError as commonCloudError} from './supabase-cloud.js?v=20261008-70';
@@ -12,8 +12,8 @@ import {pickerCards} from './card-picker.js?v=20261010-picker106';
 import {CardTagsCloud,annotationFor} from './card-tags.js?v=20261007-47';
 import {poolCardSelected,togglePoolCard} from './reward-picker.js?v=20261010-picker106';
 import {CHARACTER_KEY,parseCharacters,attachCharacter,linkLegacyCharacters,resolveCharacters,rebaseCharacters} from './character-library.js?v=20261012-shared127';
-import {TRASH_KEY,parseTrash,archiveLocal,restoreLocal} from './scenario-trash.js?v=20261010-trash105';
-import {saveScenarioSnapshot,storySyncSummary,initialOnlineScenario} from './story-online-save.js?v=20261012-shared127';
+import {TRASH_KEY,parseTrash,archiveLocal,restoreLocal} from './scenario-trash.js?v=20261013-conflict128';
+import {saveScenarioSnapshot,saveConfirmedScenarioSnapshot,loadScenarioSnapshot,storySyncSummary,initialOnlineScenario} from './story-online-save.js?v=20261013-conflict128';
 import {CHARACTER_TRANSFER_KEY} from './character-editor-core.js?v=20261012-shared127';
 const $=id=>document.getElementById(id),node=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
 let doc=emptyStory(),cards=[],decks=[],meta,chooseCard,pickerPage=0,pickerSelection=null,filter=()=>true,client,version=null,editor=false,storageBlocked=false;
@@ -24,13 +24,14 @@ let characterBases=[];
 let scenarioTrash=[],remoteTrash=[],trashStorageBlocked=false;
 let pickerTagsCloud=null;
 let initialSeed=null;
+let scenarioConflict=null,conflictRequest=0;
 const selectedPickerTags=new Set();
 try{scenarioTrash=parseTrash(JSON.parse(localStorage.getItem(TRASH_KEY)||'[]'));}catch{trashStorageBlocked=true;}
 function cloudError(error){
   const message=error?.message||'';
   if(message.includes('poc_scenario_deleted'))return '온라인에서 삭제된 시나리오야. 삭제한 시나리오 복원에서 먼저 되돌려줘.';
   if(message.includes('poc_scenario_trash_limit'))return '삭제한 시나리오는 100개까지 보관할 수 있어. 복원함을 확인해줘.';
-  if(message.includes('poc_conflict'))return '온라인 전투 설정도 다른 곳에서 바뀌었어. 현재 편집본은 보존돼. JSON 내보내기로 백업하고 온라인 저장본과 비교해줘.';
+  if(message.includes('poc_conflict'))return '온라인 저장본과 편집본의 기준이 달라. 아래 두 전투 목록을 확인한 뒤 현재 편집본으로 저장할 수 있어.';
   if(message.includes('poc_editor_required')||error?.code==='42501')return '시나리오 편집 권한이 있는 이메일 계정으로 로그인해줘.';
   if(message.includes('poc_invalid_story'))return '시나리오의 전투·캐릭터·보상 설정을 확인해줘.';
   return commonCloudError(error);
@@ -106,7 +107,16 @@ function switchScenario(id){
     library.active=id;doc=next;linkCurrentCharacters();version=entry().version;storageBlocked=false;$('story-title').value=doc.title;renderScenarios();render();persist();
   }catch(e){status(e.message+' 이전 편집본은 유지돼.');renderScenarios();}
 }
-function renderSync(){const info=storySyncSummary(doc,remoteScenarios.find(s=>s.id===library.active));$('sync-status').textContent=info.text;$('sync-status').dataset.state=info.state;}
+function renderScenarioConflict(){
+  const box=$('scenario-conflict'),offer=scenarioConflict?.id===library.active?scenarioConflict:null;box.hidden=!offer;if(!offer)return;
+  const remote=offer.online.document;
+  $('conflict-local-title').textContent=`현재 편집본 · ${doc.battles.length}전투`;
+  $('conflict-online-title').textContent=`온라인 저장본 · ${remote.battles.length}전투`;
+  for(const [id,value] of [['conflict-local-battles',doc],['conflict-online-battles',remote]])$(id).replaceChildren(...value.battles.map(b=>node('li',b.name||'이름 없는 전투')));
+  $('conflict-note').textContent=`「${remote.title}」의 온라인 ${remote.battles.length}전투 설정을 현재 편집본 ${doc.battles.length}전투로 바꿔 저장해. 캐릭터 공용 설정은 별도로 유지돼.`;
+  $('save-conflict-draft').disabled=scenarioSaving;
+}
+function renderSync(){const info=storySyncSummary(doc,remoteScenarios.find(s=>s.id===library.active));$('sync-status').textContent=info.text;$('sync-status').dataset.state=info.state;renderScenarioConflict();}
 const status=msg=>{$('status').textContent=msg;renderSync();};
 const scenarioBaseKey=id=>`${scenarioKey(id)}:online-base127`;
 function scenarioBaseline(id,expected){try{const value=JSON.parse(localStorage.getItem(scenarioBaseKey(id))||'null');return value?.id===id&&value.version===expected?value:null;}catch{return null;}}
@@ -368,30 +378,46 @@ $('refresh-picker-tags').onclick=async()=>{if(!pickerTagsCloud)await cloudInit()
 // Sharing the catalogue's email session avoids a second editor account.
 const toolbar=$('export').parentNode;
 let scenarioSaving=false;
+function applyScenarioSaveResult(id,captured,result){
+  const row=result.row;remoteScenarios=remoteScenarios.filter(s=>s.id!==id);remoteScenarios.push(row);keepScenarioBase(row);
+  const savedEntry=library.entries.find(e=>e.id===id);if(savedEntry)savedEntry.version=row.version;
+  if(scenarioConflict?.id===id){scenarioConflict=null;conflictRequest++;}
+  if(library.active===id){
+    version=row.version;
+    // A response only replaces the exact draft captured for this request.
+    if(JSON.stringify(parseStory(doc))===JSON.stringify(captured)){doc=row.document;$('story-title').value=doc.title;render();}
+    persist();
+  }else storeLibrary();
+  status(`「${row.document.title}」 ${row.document.battles.length}전투 온라인 저장 완료${result.rebased?' · 공용 캐릭터 변경을 함께 갱신했어':''}. 다음 게임 실행 때 반영돼.`);
+}
+async function showScenarioConflict(id){
+  const request=++conflictRequest;scenarioConflict=null;renderScenarioConflict();
+  const online=await loadScenarioSnapshot(client,id);
+  if(request!==conflictRequest)return;
+  scenarioConflict={id,online};remoteScenarios=remoteScenarios.filter(s=>s.id!==id);remoteScenarios.push(online);renderSync();
+}
 toolbar.append(button('이 시나리오 온라인 저장',async()=>{
   if(scenarioSaving)return;scenarioSaving=true;
+  let capturedRequest=null;
   try{
     if(!client||!libraryReady)await cloudInit();if(!libraryReady)throw new Error('온라인 시나리오 연결을 확인해줘.');
     if(!editor)throw new Error('카드 도감에서 이메일로 로그인한 뒤 이 페이지를 다시 열어줘.');
     const id=library.active,captured=parseStory(structuredClone(doc)),expected=version??0;
+    capturedRequest={id,captured};
     const safetyKey=`${scenarioKey(id)}:before-independent-save127`;if(!localStorage.getItem(safetyKey))localStorage.setItem(safetyKey,JSON.stringify(captured));
     const value=canonicalStory(captured,meta,cards),issues=validateStory(value,cards,decks).issues;if(issues.length)throw new Error(issues.join(' '));
     if(!libraryAPI)await fetchScenarios();
     if(!libraryAPI&&id!=='main')throw new Error('새 시나리오 온라인 저장은 시나리오 추가 SQL 적용 후 사용할 수 있어. 편집본은 브라우저에 보관돼.');
     status(`「${value.title}」 ${value.battles.length}전투 온라인 저장 중…`);
-    const result=await saveScenarioSnapshot(client,{id,document:value,expectedVersion:expected,baseline:scenarioBaseline(id,expected),legacyAPI:!libraryAPI,normalizeDocument:value=>canonicalStory(value,meta,cards)}),row=result.row;
-    remoteScenarios=remoteScenarios.filter(s=>s.id!==id);remoteScenarios.push(row);keepScenarioBase(row);
-    const savedEntry=library.entries.find(e=>e.id===id);if(savedEntry)savedEntry.version=row.version;
-    if(library.active===id){
-      version=row.version;
-      // Keep edits made while the request was running. Shared metadata can
-      // refresh only when the complete captured draft is still current.
-      if(JSON.stringify(parseStory(doc))===JSON.stringify(captured)){doc=row.document;$('story-title').value=doc.title;render();}
-      persist();
-    }else storeLibrary();
-    status(`「${row.document.title}」 ${row.document.battles.length}전투 온라인 저장 완료${result.rebased?' · 공용 캐릭터 변경을 함께 갱신했어':''}. 다음 게임 실행 때 반영돼.`);
-  }catch(e){status((e.message?.includes('poc_')?cloudError(e):e.message)+' 현재 브라우저 편집본은 유지돼.');}
-  finally{scenarioSaving=false;}
+    const result=await saveScenarioSnapshot(client,{id,document:value,expectedVersion:expected,baseline:scenarioBaseline(id,expected),legacyAPI:!libraryAPI,normalizeDocument:value=>canonicalStory(value,meta,cards)});
+    applyScenarioSaveResult(id,captured,result);
+  }catch(e){
+    if(e.message?.includes('poc_conflict')&&capturedRequest&&libraryAPI){
+      try{await showScenarioConflict(capturedRequest.id);}catch(loadError){status('온라인 저장본을 비교하지 못했어. '+(loadError.message||cloudError(loadError))+' 현재 편집본은 유지돼.');return;}
+    }
+    status((e.message?.includes('poc_')?cloudError(e):e.message)+' 현재 브라우저 편집본은 유지돼.');
+  }
+  finally{scenarioSaving=false;renderScenarioConflict();}
 }),button('이 시나리오 온라인 불러오기',async()=>{
   try{
     if(!client||!libraryReady)await cloudInit();if(!libraryReady)throw new Error('온라인 연결을 확인해줘.');
@@ -399,11 +425,32 @@ toolbar.append(button('이 시나리오 온라인 저장',async()=>{
     await loadCharacters();
     const row=remoteScenarios.find(s=>s.id===library.active);if(!row)return status('이 시나리오는 아직 온라인에 저장하지 않았어.');
     if(!confirm('이 시나리오의 온라인 저장본을 불러올까? 현재 편집본은 JSON으로 백업할게.'))return;
-    download('story-before-online-load.json',JSON.stringify(doc,null,2));doc=row.document;version=row.version;keepScenarioBase(row);storageBlocked=false;
+    download('story-before-online-load.json',JSON.stringify(doc,null,2));doc=row.document;version=row.version;keepScenarioBase(row);storageBlocked=false;scenarioConflict=null;conflictRequest++;
     characterBases=characters.filter(c=>doc.actors.some(a=>a.character_id===c.id));
     $('story-title').value=doc.title;render();persist();
   }catch(e){status(cloudError(e));}
 }));
+$('save-conflict-draft').onclick=async()=>{
+  const offer=scenarioConflict;if(scenarioSaving||!offer||offer.id!==library.active)return;
+  scenarioSaving=true;renderScenarioConflict();
+  const id=offer.id;
+  try{
+    const captured=parseStory(structuredClone(doc));
+    if(!editor)throw new Error('카드 도감에서 이메일로 로그인한 뒤 이 페이지를 다시 열어줘.');
+    const value=canonicalStory(captured,meta,cards),issues=validateStory(value,cards,decks).issues;if(issues.length)throw new Error(issues.join(' '));
+    // Persist the current local draft before submitting the explicit choice.
+    persist();status(`「${value.title}」 ${value.battles.length}전투 온라인 저장 중…`);
+    const result=await saveConfirmedScenarioSnapshot(client,{id,document:value,online:offer.online});
+    applyScenarioSaveResult(id,captured,result);
+  }catch(e){
+    if(e.message?.includes('poc_conflict')){
+      scenarioConflict=null;
+      try{await showScenarioConflict(id);status('온라인 저장본이 다시 바뀌었어. 새 목록을 확인하고 현재 편집본으로 저장할지 다시 골라줘. 현재 편집본은 유지돼.');}
+      catch(loadError){status('온라인 저장본을 다시 비교하지 못했어. '+(loadError.message||cloudError(loadError))+' 현재 편집본은 유지돼.');}
+    }else status((e.message?.includes('poc_')?cloudError(e):e.message)+' 현재 브라우저 편집본은 유지돼.');
+  }finally{scenarioSaving=false;renderScenarioConflict();}
+};
+$('dismiss-scenario-conflict').onclick=()=>{scenarioConflict=null;conflictRequest++;renderScenarioConflict();status('현재 편집본을 유지하며 계속 편집할 수 있어. 온라인 저장은 아직 완료되지 않았어.');};
 $('scenario-select').addEventListener('change',()=>switchScenario($('scenario-select').value));
 $('new-scenario').addEventListener('click',()=>{
   if(storageBlocked)return status('기존 저장을 보존 중이야. JSON을 먼저 보관해줘.');

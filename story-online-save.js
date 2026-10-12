@@ -1,5 +1,5 @@
 import {parseStory} from './story-core.js?v=20261012-shared127';
-import {parseRemoteScenarios} from './story-library.js?v=20261010-characters103';
+import {parseRemoteScenarios} from './story-library.js?v=20261013-conflict128';
 
 const plain=value=>JSON.stringify(value);
 const conflict=()=>Object.assign(new Error('poc_conflict'),{code:'P0001'});
@@ -26,6 +26,22 @@ function checkedRow(row,id){
   const [clean]=parseRemoteScenarios([row]);
   if(clean.id!==id)throw new Error('저장 결과의 시나리오가 달라. 편집본은 유지돼.');
   return clean;
+}
+
+export async function loadScenarioSnapshot(client,id){
+  const reply=await client.rpc('poc_load_scenarios');if(reply.error)throw reply.error;
+  const row=parseRemoteScenarios(reply.data).find(row=>row.id===id);
+  if(!row)throw new Error('이 시나리오의 온라인 저장본이 없어. 목록을 다시 확인해줘.');
+  return row;
+}
+
+// The explicit conflict choice submits against the displayed server revision
+// once. A new conflict must be displayed again before another user choice.
+export async function saveConfirmedScenarioSnapshot(client,{id,document,online}){
+  const latest=checkedRow(online,id),snapshot=parseStory(structuredClone(document));
+  const reply=await client.rpc('poc_save_scenario',{p_scenario_id:id,p_document:snapshot,p_expected_version:latest.version});
+  if(reply.error)throw reply.error;
+  return {row:checkedRow(reply.data,id),rebased:false};
 }
 
 export async function saveScenarioSnapshot(client,{id,document,expectedVersion,baseline=null,legacyAPI=false,normalizeDocument=parseStory}){

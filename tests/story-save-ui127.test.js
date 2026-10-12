@@ -24,7 +24,7 @@ function harness(source){
   const context={...core,...libraryCore,...characterCore,...online,...skillCore,...mediaCore,console,structuredClone,crypto,WeakSet,WeakMap,Map,Set,Intl,JSON,URL,Blob,window:{addEventListener(){},scrollY:0,scrollTo(){}},document,localStorage:{getItem:k=>storage.get(k)??null,setItem:(k,v)=>storage.set(k,v),removeItem:k=>storage.delete(k)},requestAnimationFrame:fn=>fn(),createStatFilters:()=>({values:()=>[],reset(){}}),commonCloudError:e=>e.message,CHARACTER_TRANSFER_KEY:'transfer',setTimeout(){},confirm:()=>false};
   vm.createContext(context);
   const code=source.replace(/^import .*?;\r?\n/gm,'').replace(/^start\(\);\r?$/m,'')+`
-globalThis.fixture={set(v){doc=v.doc;library=v.library;remoteScenarios=v.remoteScenarios;version=v.version;client=v.client;meta=v.meta;cards=v.cards;decks=v.decks;libraryReady=true;libraryAPI=true;editor=true;charactersReady=true;characters=v.characters||[];characterBases=v.characterBases||[];},state(){return {doc,library,remoteScenarios,version};}};`;
+globalThis.fixture={set(v){doc=v.doc;library=v.library;remoteScenarios=v.remoteScenarios;version=v.version;client=v.client;meta=v.meta;cards=v.cards;decks=v.decks;libraryReady=true;libraryAPI=true;editor=true;charactersReady=true;characters=v.characters||[];characterBases=v.characterBases||[];},state(){return {doc,library,remoteScenarios,version};},refresh(){renderSync();}};`;
   vm.runInContext(code,context);
   return {...context,nodes,storage,toolbar,save:toolbar.children.find(e=>e.textContent==='이 시나리오 온라인 저장').listeners.click};
 }
@@ -87,4 +87,66 @@ test('edits during network save stay local and the persistent status reports the
   state.doc.battles.push({...core.newBattle('fifth'),actor_id:'actor',recipe:'DLR_000.ydc'});reply({data:{id:'mai',version:2,document:story(4)}});await running;
   assert.equal(h.fixture.state().doc.battles.length,5);assert.equal(h.fixture.state().version,2);
   assert.match(h.nodes.get('sync-status').textContent,/5전투.*4전투.*미반영/);assert.equal(JSON.parse(h.storage.get(core.STORY_KEY+':mai')||'null')?.battles?.length??JSON.parse(h.storage.get(libraryCore.scenarioKey('mai'))).battles.length,5);
+});
+
+const conflict={message:'poc_conflict',code:'P0001'};
+const onlineRow=(count=2,version=2)=>({id:'mai',version,document:story(count)});
+const chooseDraft=h=>h.nodes.get('save-conflict-draft').onclick();
+
+test('a zero-version browser draft can explicitly save four battles over the displayed online two without losing its draft',async()=>{
+  const calls=[],h=harness(candidate),client={async rpc(name,args){calls.push({name,args:structuredClone(args)});if(name==='poc_load_scenarios')return {data:[onlineRow()]};if(name==='poc_save_scenario')return args.p_expected_version===0?{error:conflict}:{data:{id:'mai',version:3,document:args.p_document}};throw new Error(name);}};
+  const state=fixture(story(4),client);state.version=0;state.library.entries[0].version=0;h.fixture.set(state);await h.save();
+  assert.equal(h.fixture.state().doc.battles.length,4);assert.equal(h.fixture.state().version,0);assert.equal(h.nodes.get('scenario-conflict').hidden,false);
+  assert.match(h.nodes.get('conflict-local-title').textContent,/4전투/);assert.match(h.nodes.get('conflict-online-title').textContent,/2전투/);
+  assert.equal(h.nodes.get('conflict-local-battles').children.length,4);assert.equal(h.nodes.get('conflict-online-battles').children.length,2);
+  assert.deepEqual(calls.map(c=>c.name),['poc_save_scenario','poc_load_scenarios']);
+  await chooseDraft(h);
+  assert.equal(calls.at(-1).args.p_expected_version,2);assert.equal(calls.at(-1).args.p_document.battles.length,4);assert.equal(h.fixture.state().version,3);
+  assert.equal(h.nodes.get('scenario-conflict').hidden,true);assert.match(h.nodes.get('sync-status').textContent,/4전투.*4전투.*반영됨/);
+  assert.equal(JSON.parse(h.storage.get(libraryCore.scenarioKey('mai'))).battles.length,4);
+});
+
+test('missing historical revision exposes the comparison instead of requiring export or replacing local four battles',async()=>{
+  const calls=[],h=harness(candidate),client={async rpc(name,args){calls.push(name);if(name==='poc_save_scenario')return {error:conflict};if(name==='poc_load_scenarios')return {data:[onlineRow()]};if(name==='poc_load_scenario_revision')return {data:null};throw new Error(name);}};
+  h.fixture.set(fixture(story(4),client));await h.save();
+  assert.equal(calls.filter(n=>n==='poc_save_scenario').length,1);assert.equal(h.fixture.state().doc.battles.length,4);assert.equal(h.fixture.state().version,1);
+  assert.equal(h.nodes.get('scenario-conflict').hidden,false);assert.doesNotMatch(h.nodes.get('status').textContent,/내보내기로/);
+});
+
+test('a second remote edit rejects the explicit CAS once, keeps the draft, and displays the new revision for another choice',async()=>{
+  const calls=[],h=harness(candidate);let latest=onlineRow(),accept=false;
+  const client={async rpc(name,args){calls.push({name,args:structuredClone(args)});if(name==='poc_load_scenarios')return {data:[latest]};if(name==='poc_save_scenario')return accept?{data:{id:'mai',version:4,document:args.p_document}}:{error:conflict};throw new Error(name);}};
+  const state=fixture(story(4),client);state.version=0;h.fixture.set(state);await h.save();latest=onlineRow(3,3);await chooseDraft(h);
+  assert.equal(calls.filter(c=>c.name==='poc_save_scenario').length,2);assert.equal(calls.filter(c=>c.name==='poc_save_scenario').at(-1).args.p_expected_version,2);
+  assert.equal(h.fixture.state().version,0);assert.equal(h.fixture.state().doc.battles.length,4);assert.match(h.nodes.get('conflict-online-title').textContent,/3전투/);assert.match(h.nodes.get('status').textContent,/다시 바뀌었어/);
+  accept=true;await chooseDraft(h);assert.equal(calls.at(-1).args.p_expected_version,3);assert.equal(h.fixture.state().version,4);
+});
+
+test('the explicit choice saves later local edits shown in the comparison and preserves still newer edits during the request',async()=>{
+  let response;const calls=[],h=harness(candidate),client={async rpc(name,args){calls.push({name,args:structuredClone(args)});if(name==='poc_load_scenarios')return {data:[onlineRow()]};if(args.p_expected_version===0)return {error:conflict};return new Promise(resolve=>response=resolve);}};
+  const state=fixture(story(4),client);state.version=0;h.fixture.set(state);await h.save();
+  state.doc.battles.push({...core.newBattle('fifth'),name:'다섯째',actor_id:'actor',recipe:'DLR_000.ydc'});h.fixture.refresh();assert.match(h.nodes.get('conflict-local-title').textContent,/5전투/);
+  const running=chooseDraft(h);await chooseDraft(h);assert.equal(calls.filter(c=>c.name==='poc_save_scenario').length,2);assert.equal(calls.at(-1).args.p_document.battles.length,5);
+  state.doc.battles.push({...core.newBattle('sixth'),name:'여섯째',actor_id:'actor',recipe:'DLR_000.ydc'});response({data:{id:'mai',version:3,document:calls.at(-1).args.p_document}});await running;
+  assert.equal(h.fixture.state().doc.battles.length,6);assert.match(h.nodes.get('sync-status').textContent,/6전투.*5전투.*미반영/);assert.equal(JSON.parse(h.storage.get(libraryCore.scenarioKey('mai'))).battles.length,6);
+});
+
+test('switching scenarios while loading the conflict comparison cannot offer to save the new scenario over Mai',async()=>{
+  let response,entered;const loading=new Promise(resolve=>entered=resolve),calls=[],h=harness(candidate),client={async rpc(name,args){calls.push(name);if(name==='poc_save_scenario')return {error:conflict};return new Promise(resolve=>{response=resolve;entered();});}};
+  const state=fixture(story(4),client);state.version=0;h.fixture.set(state);const running=h.save();await loading;
+  state.library.active='regular';h.fixture.set({...state,doc:story(7,'일반'),version:4});response({data:[onlineRow()]});await running;
+  assert.equal(h.nodes.get('scenario-conflict').hidden,true);await chooseDraft(h);assert.equal(calls.filter(n=>n==='poc_save_scenario').length,1);assert.equal(h.fixture.state().doc.battles.length,7);
+});
+
+test('switching scenarios during the explicit save keeps the selected seven-battle document and records Mai separately',async()=>{
+  let response;const h=harness(candidate),client={async rpc(name,args){if(name==='poc_load_scenarios')return {data:[onlineRow()]};if(args.p_expected_version===0)return {error:conflict};return new Promise(resolve=>response=resolve);}};
+  const state=fixture(story(4),client);state.version=0;h.fixture.set(state);await h.save();const running=chooseDraft(h);
+  state.library.active='regular';h.fixture.set({...state,doc:story(7,'일반'),version:4});response({data:{id:'mai',version:3,document:story(4)}});await running;
+  assert.equal(h.fixture.state().doc.battles.length,7);assert.equal(h.fixture.state().version,4);assert.equal(state.library.entries.find(e=>e.id==='mai').version,3);assert.equal(state.library.entries.find(e=>e.id==='regular').version,4);
+});
+
+test('continuing to edit dismisses the comparison without saving or loading the remote document',async()=>{
+  const calls=[],h=harness(candidate),client={async rpc(name){calls.push(name);return name==='poc_save_scenario'?{error:conflict}:{data:[onlineRow()]};}};
+  const state=fixture(story(4),client);state.version=0;h.fixture.set(state);await h.save();h.nodes.get('dismiss-scenario-conflict').onclick();
+  assert.equal(h.nodes.get('scenario-conflict').hidden,true);assert.equal(h.fixture.state().doc.battles.length,4);assert.deepEqual(calls,['poc_save_scenario','poc_load_scenarios']);assert.match(h.nodes.get('status').textContent,/아직 완료되지/);
 });
