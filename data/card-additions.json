@@ -1248,6 +1248,68 @@
           "identity_key": "5f7d46af5046f02e7dfebcc71d0b462fa235707ac827d6472ddea86ced043f21"
         }
       ]
+    },
+    {
+      "id": "20261013-fairy-support",
+      "name": "천사족 지원 7장 · 카드 교체와 효과 교정 4장",
+      "added_at": "2026-10-13T03:11:19.695839+09:00",
+      "cards": [
+        {
+          "slot": 5,
+          "internal_id": 123,
+          "identity_key": "78486ecd82422d0aea7f012dbdecd08467b2923bf3759dd24e6d67290415eb23"
+        },
+        {
+          "slot": 158,
+          "internal_id": 405,
+          "identity_key": "e482ae48702c6d09b37a0dce9b3ae0f638252949e17981d50ab53123ade26d08"
+        },
+        {
+          "slot": 199,
+          "internal_id": 275,
+          "identity_key": "fc99f09581dc32afcd4eac98e90f54e9acb605a2a69d9467c6238664cbfe8166"
+        },
+        {
+          "slot": 312,
+          "internal_id": 484,
+          "identity_key": "0a3da1b24f0dd5e682b113cb56acc71333a91b2960c01881ba6f5f7d049a7558"
+        },
+        {
+          "slot": 1333,
+          "internal_id": 2030,
+          "identity_key": "fbed888acabc0416a9ed3b0d0f5e06207e5123688f00a8c871e520bd47d57510"
+        },
+        {
+          "slot": 1334,
+          "internal_id": 2031,
+          "identity_key": "287ec4a6044185bc2da6056a309b198e749b0d0b456098a3eb6e62382b91de94"
+        },
+        {
+          "slot": 1335,
+          "internal_id": 2032,
+          "identity_key": "1ffec6c1ccc750081216a9426282fe6416b0a0f84fb420e378f52c48870d4406"
+        },
+        {
+          "slot": 1336,
+          "internal_id": 2033,
+          "identity_key": "00378e2157a55b7f266438e3a0bacb027d271da4d58acead4a2fb887bec92be1"
+        },
+        {
+          "slot": 1337,
+          "internal_id": 2035,
+          "identity_key": "d0e0c1f5939df608f7a1850b2a47e3216c40b309d376d0c670a77e6eebdb23fa"
+        },
+        {
+          "slot": 1338,
+          "internal_id": 2036,
+          "identity_key": "cc66d3b0752722e7eaa14f429ca7916e79be0c09b67c2aa5aac6f0063e31c436"
+        },
+        {
+          "slot": 1339,
+          "internal_id": 2038,
+          "identity_key": "f20c109a9c087b033ebcfbace806be90c4b1d9e4398de8d3e52c79a26276b6ea"
+        }
+      ]
     }
   ]
 }
