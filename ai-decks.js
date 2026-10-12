@@ -7,7 +7,11 @@ import {CardSettingsCloud,applySettings} from './card-settings.js?v=20261007-49'
 import {mergeAIAssets,copyAIAsset} from './ai-assets.js?v=20261008-70';
 import {CardLimitsCloud,applyLimits} from './card-limits.js?v=20261008-61';
 import {parseActors,actorForDeck} from './ai-actors.js?v=20261006-37';
-import {CardTagsCloud,annotationFor,tagMatches,relatedAnnotations} from './card-tags.js?v=20261007-47';
+import {CardTagsCloud,annotationFor,relatedAnnotations} from './card-tags.js?v=20261007-47';
+import {createStatFilters} from './card-filters.js?v=20261007-44';
+import {fillSubtypeFilter} from './card-subtypes.js?v=20261011-tags';
+import {additionIndex} from './card-additions.js?v=20261008-additions';
+import {builderCardMatches,builderSearchText,sortBuilderCards} from './ai-deck-filters.js?v=20261012-filters122';
 
 const $=id=>document.getElementById(id), PAGE=24;
 let cards=[],meta=null,decks=[],active='',page=1,timer,storageBlocked=false,opponents=[],actors=[];
@@ -18,6 +22,10 @@ const ACTIVE_KEY=DECK_STORAGE_KEY+'-active',PENDING_KEY=DECK_STORAGE_KEY+'-pendi
 const opponentSources=new Map();
 let tagsCloud=null;const selectedTags=new Set();
 const collator=new Intl.Collator('ko');
+let additions={byIdentity:new Map(),releases:[],latest:null};
+const FILTER_CONTROLS={query:'builder-search',type:'builder-type',race:'builder-race',attribute:'builder-attribute',tier:'builder-tier',subtype:'builder-subtype',minLevel:'builder-level-min',maxLevel:'builder-level-max',mechanic:'builder-mechanic',group:'builder-group',release:'builder-release',limit:'builder-limit',speedLimit:'builder-speed-limit',status:'builder-status'};
+const statFilters=createStatFilters($('builder-stat-filters'),()=>{page=1;renderPool();});
+$('builder-advanced-filters').open=!matchMedia('(max-width:800px)').matches;
 function el(tag,text,className){const node=document.createElement(tag);if(text!=null)node.textContent=text;if(className)node.className=className;return node;}
 function restrictionBadge(deck,card,overlay=false){
   const speed=deck.ruleset==='duel_links_plan',limit=speed?(card.speed_limit??3):Math.min(3,card.deck_limit??3),restricted=speed?card.speed_limit!=null:limit<3;
@@ -78,7 +86,7 @@ function renderDeck(){
   $('deck-issues').replaceChildren(...check.issues.map(message=>el('li',message)));$('validation-summary').parentElement.classList.toggle('ok',!check.issues.length);
   $('deck-groups').replaceChildren(...GROUPS.map(group=>{
     const section=el('section',null,'deck-group'),title=el('h2',`${GROUP_LABELS[group]} 덱 · ${check.counts[group]}장`),select=el('button','카드 찾기');select.type='button';
-    select.addEventListener('click',()=>{$('add-group').value=group;if(group==='extra')$('builder-type').value='융합 몬스터';else if($('builder-type').value==='융합 몬스터')$('builder-type').value='';page=1;renderPool();switchView(false);$('builder-search').focus();});title.append(select);section.append(title);
+    select.addEventListener('click',()=>{$('add-group').value=group;if(group==='extra')$('builder-type').value='융합 몬스터';else if($('builder-type').value==='융합 몬스터')$('builder-type').value='';fillSubtypeFilter($('builder-subtype'),$('builder-type').value);page=1;renderPool();switchView(false);$('builder-search').focus();});title.append(select);section.append(title);
     if(!d.groups[group].length)section.append(el('p','카드 찾기에서 추가할 위치를 고르고 ＋ 버튼을 눌러줘.','builder-empty'));
     for(const row of d.groups[group]){
       const card=resolveCard(row,cards),line=el('div',null,'deck-row'+(card?'':' unknown'));
@@ -119,12 +127,30 @@ async function refreshTags(){
   catch(e){$('builder-tag-status').textContent='태그를 불러오지 못했어. 새로 불러오기를 눌러줘.';}
   finally{$('refresh-builder-tags').disabled=false;}
 }
-function filtered(){
-  const q=$('builder-search').value.normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,'');
-  return cards.filter(c=>!c.special&&tagMatches(tagsCloud?.state,c,[...selectedTags])&&(!q||c.searchText.includes(q)||(annotationFor(tagsCloud?.state,c)?.tags||[]).join(' ').normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,'').includes(q))&&(!$('builder-type').value||c.type===$('builder-type').value)&&(!$('builder-race').value||c.race===$('builder-race').value)&&(!$('builder-tier').value||c.rarity===$('builder-tier').value)).sort((a,b)=>collator.compare(a.name_ko,b.name_ko));
+function filterValues(){
+  return {...Object.fromEntries(Object.entries(FILTER_CONTROLS).map(([key,id])=>[key,$(id).value])),statConditions:statFilters.values(),tags:[...selectedTags]};
+}
+function filtered(filters){
+  return sortBuilderCards(cards.filter(card=>builderCardMatches(card,filters,{tagsState:tagsCloud?.state,additions})),$('builder-sort').value,additions);
+}
+function filterSummary(filters){
+  const labels=Object.entries(FILTER_CONTROLS).filter(([,id])=>$(id).value).map(([key,id])=>{
+    if(key==='query')return `검색: ${$(id).value}`;
+    if(key==='minLevel')return `레벨 ${$(id).value} 이상`;
+    if(key==='maxLevel')return `레벨 ${$(id).value} 이하`;
+    const label=$(id).selectedOptions[0]?.textContent||'';
+    return key==='limit'?`일반 금제: ${label}`:key==='speedLimit'?`스피드 금제: ${label}`:label;
+  });
+  labels.push(...statFilters.summary(),...filters.tags.map(tag=>'#'+tag));
+  $('builder-filter-count').textContent=labels.length?`· ${labels.length}개 조건`:'';
+  $('builder-active-filters').textContent=labels.length?labels.join(' · '):'전체 카드 · 토큰·특수 카드 제외';
+}
+function resetPoolFilters(){
+  for(const id of Object.values(FILTER_CONTROLS))$(id).value='';
+  $('builder-sort').value='name';fillSubtypeFilter($('builder-subtype'));statFilters.reset();selectedTags.clear();renderTags();
 }
 function renderPool(){
-  const rows=filtered(),pages=Math.max(1,Math.ceil(rows.length/PAGE));page=Math.min(page,pages);
+  const filters=filterValues(),rows=filtered(filters),pages=Math.max(1,Math.ceil(rows.length/PAGE));page=Math.min(page,pages);filterSummary(filters);
   $('pool-results').textContent=`${rows.length.toLocaleString('ko-KR')}종 · ${GROUP_LABELS[$('add-group').value]} 덱에 추가`;
   for(const id of ['pool-pages-top','pool-pages-bottom'])renderPagination($(id),page,pages,goPage);
   $('builder-cards').replaceChildren(...rows.slice((page-1)*PAGE,page*PAGE).map(card=>{
@@ -154,7 +180,7 @@ function openDetail(card){
   info.append(el('p','현재 모드 효과','description-title'),el('div',card.description_ko,'description'));
   if(card.review_note)info.append(el('p',card.review_note,'review-note'));
   const tags=annotationFor(tagsCloud?.state,card)?.tags||[];
-  if(tags.length){const badges=el('div',null,'custom-tag-badges');for(const tag of tags){const b=el('button','#'+tag,'tag-badge');b.type='button';b.addEventListener('click',()=>{selectedTags.clear();selectedTags.add(tag);$('builder-search').value='';for(const id of ['builder-type','builder-race','builder-tier'])$(id).value='';page=1;renderTags();renderPool();$('builder-detail').close();switchView(false);});badges.append(b);}info.append(badges);}
+  if(tags.length){const badges=el('div',null,'custom-tag-badges');for(const tag of tags){const b=el('button','#'+tag,'tag-badge');b.type='button';b.addEventListener('click',()=>{resetPoolFilters();selectedTags.add(tag);page=1;renderTags();renderPool();$('builder-detail').close();switchView(false);});badges.append(b);}info.append(badges);}
   const related=relatedAnnotations(tagsCloud?.state,card,cards);
   if(related.length){const links=el('div',null,'relation-links');info.append(el('h3','관련 카드'),links);for(const c of related){const b=el('button',c.name_ko);b.type='button';b.addEventListener('click',()=>openDetail(c));links.append(b);}}
   const buttons=el('div',null,'builder-detail-add');for(const group of GROUPS)if(!placementError(card,group)){const b=el('button',`${GROUP_LABELS[group]}에 추가`,'primary');b.type='button';b.addEventListener('click',()=>add(card,group));buttons.append(b);}info.append(buttons);
@@ -301,8 +327,17 @@ async function init(){
   try{
     const response=await fetch('./data/cards.json?v=20261006-6',{cache:'no-cache'});if(!response.ok)throw new Error('카드 자료를 가져오지 못했어.');const data=await response.json();meta=data.meta;cards=data.cards;
     if(cards.length!==meta.total||new Set(cards.map(c=>c.identity_key)).size!==cards.length)throw new Error('도감 자료를 확인할 수 없어.');
-    for(const c of cards)c.searchText=[c.name_ko,c.name_en,c.description_ko,c.race,c.type,String(c.slot)].join(' ').normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,'');
-    for(const [id,values] of [['builder-type',[...new Set(cards.filter(c=>!c.special).map(c=>c.type))]],['builder-race',[...new Set(cards.filter(c=>!c.special).map(c=>c.race).filter(Boolean))].sort(collator.compare)]])for(const value of values){const o=el('option',value);o.value=value;$(id).append(o);}
+    for(const card of cards)card.searchText=builderSearchText(card);
+    const regular=cards.filter(card=>!card.special),levels=[...new Set(regular.map(card=>card.level).filter(value=>value!=null))].sort((a,b)=>a-b);
+    for(const [id,values] of [['builder-type',[...new Set(regular.map(card=>card.type))]],['builder-race',[...new Set(regular.map(card=>card.race).filter(Boolean))].sort(collator.compare)],['builder-attribute',[...new Set(regular.map(card=>card.attribute).filter(Boolean))]],['builder-level-min',levels],['builder-level-max',levels]])for(const value of values){const option=el('option',value);option.value=String(value);$(id).append(option);}
+    for(const [id,rows] of [['builder-mechanic',meta.card_system?.mechanics||[]],['builder-group',meta.card_system?.groups||[]]])for(const row of rows){const option=el('option',row.name);option.value=row.id;$(id).append(option);}
+    fillSubtypeFilter($('builder-subtype'));
+    try{
+      const response=await fetch('./data/card-additions.json?v=20261008',{cache:'no-cache'});if(!response.ok)throw new Error('추가 이력 없음');
+      additions=additionIndex(cards,await response.json());
+      if(additions.latest){const option=el('option',`최근 추가 · ${additions.latest.count}장`);option.value='latest';$('builder-release').append(option);}
+      for(const release of additions.releases.filter(row=>row.count)){const option=el('option',`${release.date} · ${release.name} · ${release.count}장`);option.value=release.id;$('builder-release').append(option);}
+    }catch{$('builder-release').disabled=true;$('builder-sort').querySelector('[value="added"]').disabled=true;$('builder-release-status').hidden=false;$('builder-release-status').textContent='추가 이력을 불러오지 못했어. 나머지 필터는 사용할 수 있어.';}
     try{const stored=localStorage.getItem(DECK_STORAGE_KEY);if(stored)decks=parseBundle(JSON.parse(stored),cards);}catch{storageBlocked=true;toast('이전 AI 덱을 읽지 못했어. 기존 저장은 유지하고 현재 편집은 JSON으로 보관할게.');}
     try{for(const [id,s] of JSON.parse(localStorage.getItem(SOURCES_KEY)||'[]'))if(decks.some(d=>d.deck_id===id)&&['online','installed'].includes(s.source)&&Number.isSafeInteger(s.version)&&s.version>=0)opponentSources.set(id,s);}catch{}
     if(!decks.length)decks=[emptyDeck(uid())];active=decks.find(d=>d.deck_id===localStorage.getItem(ACTIVE_KEY))?.deck_id||decks[0].deck_id;selectDeck(active);
@@ -314,7 +349,10 @@ async function init(){
     const match=/^#card-(\d+)$/.exec(location.hash);if(match){const card=cards.find(c=>c.slot===Number(match[1]));if(card&&!card.special)openDetail(card);}else if(location.hash==='#login')$('auth-dialog').showModal();
   }catch(error){$('load-status').textContent=error.message;$('export-decks').disabled=true;document.querySelector('.builder-workspace').hidden=true;}
 }
-$('builder-search').addEventListener('input',()=>{page=1;renderPool();});for(const id of ['builder-type','builder-race','builder-tier','add-group'])$(id).addEventListener('change',()=>{page=1;renderPool();});
+$('builder-search').addEventListener('input',()=>{page=1;renderPool();});
+$('builder-type').addEventListener('change',()=>{fillSubtypeFilter($('builder-subtype'),$('builder-type').value);page=1;renderPool();});
+for(const id of [...Object.values(FILTER_CONTROLS).filter(id=>!['builder-search','builder-type'].includes(id)),'builder-sort','add-group'])$(id).addEventListener('change',()=>{page=1;renderPool();});
+$('reset-builder-filters').addEventListener('click',()=>{resetPoolFilters();page=1;renderPool();});
 $('refresh-builder-tags').addEventListener('click',refreshTags);$('clear-builder-tags').addEventListener('click',()=>{selectedTags.clear();renderTags();page=1;renderPool();});
 $('show-pool').addEventListener('click',()=>switchView(false));$('show-deck').addEventListener('click',()=>switchView(true));$('deck-select').addEventListener('change',()=>selectDeck($('deck-select').value));$('new-deck').addEventListener('click',chooseNewDeck);$('choose-new-mode').addEventListener('click',chooseNewDeck);$('clone-deck').addEventListener('click',()=>newDeck(true));
 $('close-new-deck').addEventListener('click',()=>$('new-deck-dialog').close());

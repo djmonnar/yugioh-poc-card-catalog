@@ -5,10 +5,10 @@
   <meta name="theme-color" content="#162c38"><meta name="description" content="Power of Chaos 상대 AI 덱을 직접 만들고 콤보와 행동 지침을 보내세요.">
   <title>AI 덱 만들기 · Power of Chaos</title>
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=20261006-8"><link rel="stylesheet" href="ai-decks.css?v=20261008-70">
+  <link rel="stylesheet" href="style.css?v=20261006-8"><link rel="stylesheet" href="ai-decks.css?v=20261012-filters122">
   <link rel="stylesheet" href="ai-sync.css?v=20261006-13">
   <link rel="stylesheet" href="card-tags.css?v=20261007-47">
-  <script type="module" src="ai-decks.js?v=20261008-70"></script>
+  <script type="module" src="ai-decks.js?v=20261012-filters122"></script>
 </head>
 <body>
   <header class="masthead"><a href="./" class="brand"><img src="assets/icon.svg" alt="" width="34" height="40"><span>POWER OF CHAOS<small>카드 도감으로 돌아가기</small></span></a><button id="export-decks" class="primary">AI 덱 보내기</button></header>
@@ -20,7 +20,27 @@
     <nav class="builder-mobile-tabs" aria-label="덱 편집 화면"><button id="show-pool" class="active" aria-pressed="true">카드 찾기</button><button id="show-deck" aria-pressed="false">내 AI 덱 <span id="mobile-count">0</span></button></nav>
     <div class="builder-workspace">
       <section class="builder-pool" id="pool-panel" aria-label="넣을 카드 찾기">
-        <div class="builder-search"><label for="builder-search">카드 이름 · 효과 · 종족</label><input id="builder-search" type="search" placeholder="예: 공룡, 백룡, 융합" autocomplete="off"><div class="filter-pair"><div><label for="builder-type">종류</label><select id="builder-type"><option value="">모든 종류</option></select></div><div><label for="builder-race">종족</label><select id="builder-race"><option value="">모든 종족</option></select></div></div><div class="filter-pair"><div><label for="builder-tier">등급</label><select id="builder-tier"><option value="">모든 등급</option><option>L</option><option>UR</option><option>SR</option><option>R</option><option>N</option></select></div><div><label for="add-group">추가할 위치</label><select id="add-group"><option value="main">메인 덱</option><option value="extra">융합 덱</option><option value="side">사이드 덱</option></select></div></div></div>
+        <div class="builder-search">
+          <label for="builder-search">카드 이름 · 효과 · 카드군 · 내 태그</label><input id="builder-search" type="search" placeholder="예: 공룡, 백룡, 묘지기, 내 태그" autocomplete="off">
+          <div class="filter-pair"><div><label for="builder-type">종류</label><select id="builder-type"><option value="">모든 종류</option></select></div><div><label for="builder-tier">등급</label><select id="builder-tier"><option value="">모든 등급</option><option>L</option><option>UR</option><option>SR</option><option>R</option><option>N</option></select></div></div>
+          <div class="filter-pair"><div><label for="add-group">추가할 위치</label><select id="add-group"><option value="main">메인 덱</option><option value="extra">융합 덱</option><option value="side">사이드 덱</option></select></div><div><label for="builder-sort">카드 정렬</label><select id="builder-sort"><option value="name">이름순</option><option value="added">최근 추가순</option><option value="attack">공격력 높은 순</option><option value="level">레벨 높은 순</option><option value="slot">도감 번호순</option></select></div></div>
+          <details id="builder-advanced-filters" class="builder-advanced-filters" open>
+            <summary>카드 필터 <span id="builder-filter-count"></span></summary>
+            <div class="builder-filter-body">
+              <p class="muted">도감과 같은 조건으로 찾아. 선택한 조건은 모두 적용돼.</p>
+              <div class="filter-pair"><div><label for="builder-race">종족</label><select id="builder-race"><option value="">모든 종족</option></select></div><div><label for="builder-attribute">속성</label><select id="builder-attribute"><option value="">모든 속성</option></select></div></div>
+              <div class="filter-pair"><div><label for="builder-level-min">최소 레벨</label><select id="builder-level-min"><option value="">전체</option></select></div><div><label for="builder-level-max">최대 레벨</label><select id="builder-level-max"><option value="">전체</option></select></div></div>
+              <label for="builder-subtype">마법 · 함정 세부 종류</label><select id="builder-subtype"><option value="">모든 세부 종류</option></select>
+              <div class="filter-pair"><div><label for="builder-mechanic">기믹</label><select id="builder-mechanic"><option value="">모든 기믹</option></select></div><div><label for="builder-group">카드군</label><select id="builder-group"><option value="">모든 카드군</option></select></div></div>
+              <label for="builder-release">카드 추가 시기</label><select id="builder-release"><option value="">전체 카드</option></select><p id="builder-release-status" class="muted" role="status" hidden></p>
+              <div class="filter-pair"><div><label for="builder-limit">일반 듀얼 플레이어 금제</label><select id="builder-limit"><option value="">모든 제한</option><option value="0">금지 · 0장</option><option value="1">제한 · 1장</option><option value="2">준제한 · 2장</option><option value="3">무제한 · 3장</option></select></div><div><label for="builder-speed-limit">스피드 듀얼 플레이어 금제</label><select id="builder-speed-limit"><option value="">모든 제한</option><option value="0">금지</option><option value="1">제한 1</option><option value="2">제한 2</option><option value="3">제한 3</option><option value="unrestricted">제한 없음</option></select></div></div>
+              <p class="muted">금제 필터는 플레이어 기준이야. AI는 같은 카드 3장까지 사용할 수 있어.</p>
+              <label for="builder-status">추가 조건</label><select id="builder-status"><option value="">전체 카드</option><option value="stock">상점 판매 카드</option><option value="reward">승리 보상 대상</option><option value="effect-difference">공식 효과 차이·부분 복원</option><option value="attention">효과·이름 검토 대상</option></select>
+              <section id="builder-stat-filters" class="stat-filters" aria-label="공격력·수비력·레벨 조건"></section>
+            </div>
+          </details>
+          <div class="builder-filter-footer"><p id="builder-active-filters" class="muted" role="status"></p><button id="reset-builder-filters" type="button">필터 초기화</button></div>
+        </div>
         <details class="custom-category-tools" open><summary>내 카테고리 · 태그</summary><div id="builder-tag-filters" class="annotation-categories" aria-label="AI 카드 태그 필터"></div><p id="builder-tag-status" class="muted" role="status">도감에서 만든 태그로 카드를 찾아.</p><div class="filter-pair"><button id="refresh-builder-tags" type="button">태그 새로 불러오기</button><button id="clear-builder-tags" type="button">태그 선택 해제</button></div></details>
         <p id="pool-results" class="muted" role="status"></p>
         <nav id="pool-pages-top" class="pagination" aria-label="AI 카드 위쪽 페이지 이동"></nav>
