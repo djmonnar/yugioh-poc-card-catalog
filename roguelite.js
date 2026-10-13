@@ -1,5 +1,6 @@
 import {STORAGE_KEY,emptySave,readStore,writeStore,parseSave,serializeSave,makeStarter,createRun,validatePlayerDeck,beginDeckEdit,adjustRunDeck,commitRunDeck} from './roguelite-core.js';
 import {generateMap,nodeLabel,nodeSummary,TOWER_THEME,TOWER_EVENTS} from './roguelite-map.js';
+import {renderTowerMap,renderMapLegend,MAP_ASSETS} from './roguelite-map-view.js';
 import {loadCatalog,browserDecks,onlineDecks,importedDecks} from './roguelite-data.js';
 import {createStatFilters,statConditionsMatch} from './card-filters.js';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
@@ -12,6 +13,8 @@ const option=(label,value)=>{const e=node('option',label);e.value=value;return e
 const img=card=>{const e=node('img');e.src=card.image;e.alt=card.name_ko;e.loading='lazy';return e;};
 let cards=[],meta={},save=emptySave(),activeSlot=null,draft=null,sourceDecks=[],sourceCards=[],pendingSlot=null;
 let blocked=false,rawSave=null,busy=false,sourceBusy=false,externalChange=false,toastTimer;
+let mapView=null,mapViewKey=null;
+const mapSelections=new Map();
 const statFilters=createStatFilters($('collection-stat-filters'),()=>renderCollection());
 const run=()=>save.slots.find(slot=>slot.slot_id===activeSlot)?.run;
 const runCards=()=>run()?.collection.map(entry=>entry.card)||[];
@@ -92,14 +95,20 @@ function renderRun(){
   if(draft)renderEditor();saveStatus();
 }
 function renderMap(r){
-  const root=$('run-map');root.replaceChildren();if(!r.map){root.append(node('p','이 백업에는 아직 지도가 없어.','muted'));return;}
-  for(let floor=1;floor<=r.map.floors;floor++){
-    const line=node('div',null,'map-floor');line.append(node('span',`${floor}층`));
-    for(const entry of r.map.nodes.filter(n=>n.floor===floor)){
-      const e=button(nodeLabel(entry.kind),()=>showNode(entry,r),`map-node kind-${entry.kind}`);
-      e.style.gridColumn=String(entry.lane+2);e.title=`${entry.floor}층 · ${nodeLabel(entry.kind)}`;line.append(e);
-    }root.append(line);
+  const root=$('run-map'),key=`${r.id}:${JSON.stringify(r.map)}`;
+  if(mapViewKey!==key){
+    mapView?.destroy();mapView=null;mapViewKey=key;root.replaceChildren();
+    if(!r.map){root.append(node('p','이 백업에는 아직 지도가 없어.','muted'));mapDetails(r,null);return;}
+    if(!r.map.nodes.some(n=>n.id===mapSelections.get(r.id)))mapSelections.delete(r.id);
+    mapView=renderTowerMap(root,r.map,{selectedNodeId:mapSelections.get(r.id)||null,onNode:entry=>{mapSelections.set(r.id,entry.id);mapDetails(r,entry);}});
   }
+  const selected=r.map?.nodes.find(n=>n.id===mapSelections.get(r.id));mapDetails(r,selected||null);
+}
+function mapDetails(r,entry){
+  $('map-selected-title').textContent=entry?`${entry.floor}층 · ${nodeLabel(entry.kind)}`:'첫 관문에서 봉인의 중심까지';
+  $('map-selected-summary').textContent=entry?entry.next.length?`이 칸에서 다음 ${entry.floor+1}층으로 이어지는 길 ${entry.next.length}개를 강조했어.`:'탑의 마지막 관문이야. 다음 층으로 이어지는 길은 없어.':'칸을 누르면 그곳에서 이어지는 루트를 볼 수 있어. 점선은 저장된 지도에서 연결된 길이야.';
+  $('map-selected-icon').hidden=!entry;if(entry)$('map-selected-icon').src=MAP_ASSETS[entry.kind];
+  $('inspect-map-node').disabled=!entry;$('map-route-status').textContent=entry?`${entry.floor}층 ${nodeLabel(entry.kind)} 루트 미리보기. 원정 진행도는 유지돼.`:'전체 루트 미리보기 · 아래에서 위로 올라가';
 }
 function showNode(entry,r){
   $('node-title').textContent=`${entry.floor}층 · ${nodeLabel(entry.kind)}`;
@@ -219,6 +228,17 @@ $('commit-deck').addEventListener('click',()=>safe(async()=>{const changed=commi
 for(const id of ['collection-search','collection-type','collection-race','collection-attribute','collection-rarity','collection-sort'])$(id).addEventListener(id==='collection-search'?'input':'change',renderCollection);
 $('reset-collection').addEventListener('click',()=>{filterOptions();renderCollection();});
 $('view-intro').addEventListener('click',()=>$('intro-dialog').showModal());
+let demoView=null;
+$('open-map-demo').addEventListener('click',()=>safe(()=>{
+  const map=generateMap('sealed-duel-tower-art137');$('map-demo-dialog').showModal();renderMapLegend($('map-demo-legend'));
+  demoView=renderTowerMap($('map-demo'),map,{onNode:entry=>showNode(entry,{map})});
+}));
+$('close-map-demo').addEventListener('click',()=>$('map-demo-dialog').close());
+$('map-demo-dialog').addEventListener('close',()=>{demoView?.destroy();demoView=null;$('map-demo-legend').replaceChildren();});
+$('reset-map-route').addEventListener('click',()=>{const r=run();if(!r)return;mapSelections.delete(r.id);mapView?.setSelection(null);mapDetails(r,null);});
+$('map-to-start').addEventListener('click',()=>mapView?.scrollToStart({focus:true,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'}));
+$('map-to-top').addEventListener('click',()=>mapView?.scrollToNode('f10-l1',{focus:true,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'}));
+$('inspect-map-node').addEventListener('click',()=>{const r=run(),entry=r?.map?.nodes.find(n=>n.id===mapSelections.get(r.id));if(entry)showNode(entry,r);});
 $('export-save').addEventListener('click',()=>safe(()=>download(serializeSave(save),'YU-GI-OH-CLASSIC-expeditions.json')));
 $('download-raw').addEventListener('click',()=>{if(rawSave!==null)download(rawSave,'YU-GI-OH-CLASSIC-expeditions-original.json');});
 $('import-save').addEventListener('click',()=>$('save-file').click());
@@ -235,5 +255,6 @@ $('reload-save').addEventListener('click',()=>safe(async()=>{if(!await leaveDraf
 addEventListener('storage',event=>{if(event.key!==STORAGE_KEY&&event.key!==null)return;externalChange=true;saveStatus();renderSlots();if(draft)renderEditor();else renderRun();toast('다른 창에서 저장이 바뀌었어. 현재 편집본은 유지돼.');});
 addEventListener('beforeunload',event=>{if(dirty()){event.preventDefault();event.returnValue='';}});
 
+renderMapLegend($('map-legend'));
 try{({cards,meta}=await loadCatalog());readSaved();}
 catch(error){blocked=true;$('save-error').hidden=false;$('save-error-text').textContent=error.message;$('save-status').textContent='카드 자료를 읽지 못했어. 새로고침해줘.';renderSlots();}
