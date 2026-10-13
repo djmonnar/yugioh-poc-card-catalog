@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#102b31"><title>스토리 원정 · YU-GI-OH CLASSIC</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="roguelite.css?v=20261014-136">
+  <script type="module" src="roguelite.js?v=20261014-136"></script>
+</head>
+<body>
+<header class="masthead"><a class="brand" href="./"><img src="assets/icon.svg" width="30" height="36" alt=""><span>YU-GI-OH CLASSIC<small>덱과 함께 성장하는 스토리 원정</small></span></a><nav aria-label="제작 도구"><a href="./">카드 도감</a><a href="ai-decks.html">AI 덱 편집</a><a href="story.html">AI 배틀 제작</a><a href="characters.html">공용 캐릭터</a></nav></header>
+<main>
+  <section class="hero"><div><p class="eyebrow">STORY EXPEDITION</p><h1>봉인된 듀얼의 탑</h1><p>시작 덱 한 벌로 탑의 문을 연다.<br>선택한 길과 얻은 카드가 다음 듀얼을 바꾼다.</p></div><div class="tower-mark" aria-hidden="true"><span>Ⅰ</span><span>Ⅱ</span><span>Ⅲ</span></div></section>
+  <p class="phase-note">원정 준비 화면 · 지금은 시작 덱 등록, 슬롯 저장·불러오기, 원정 덱 편집과 지도 미리보기를 사용할 수 있어. 실제 듀얼과 전투 보상은 다음 연결 단계야.</p>
+  <div class="storage-bar"><p id="save-status" role="status">저장 슬롯을 읽는 중…</p><div><button id="export-save" type="button" disabled>슬롯 백업 받기</button><button id="import-save" type="button">슬롯 백업 불러오기</button><button id="reload-save" type="button">저장본 다시 읽기</button></div></div>
+  <section id="save-error" class="error-panel" hidden><h2>저장본을 확인할 수 없어</h2><p id="save-error-text"></p><button id="download-raw" type="button">원본 백업 받기</button></section>
+  <section class="slots-section"><div class="section-head"><div><p class="eyebrow">YOUR EXPEDITIONS</p><h2>원정 저장 슬롯</h2></div><button id="open-starters" type="button">시작 덱 등록·관리</button></div><div id="slots" class="slots"></div></section>
+  <section id="run-panel" class="run-panel" hidden>
+    <div class="section-head"><div><p id="run-slot" class="eyebrow"></p><h2 id="run-title"></h2><p id="run-subtitle" class="muted"></p></div><div class="actions"><button id="close-run" type="button">슬롯 목록</button><button id="save-run" type="button">원정 저장</button></div></div>
+    <dl class="run-stats"><div><dt>현재 LP</dt><dd id="run-lp"></dd></div><div><dt>진행</dt><dd id="run-floor"></dd></div><div><dt>원정 금화</dt><dd id="run-gold"></dd></div><div><dt>유물</dt><dd id="run-relics"></dd></div></dl>
+    <div class="run-columns"><section class="deck-overview"><h3>원정 덱</h3><p id="deck-counts"></p><div id="deck-preview" class="deck-preview"></div><button id="edit-deck" class="primary" type="button">카드함에서 덱 편집</button><p class="muted">획득한 카드만 사용할 수 있어. 평소 보유 카드와 덱은 따로 관리돼.</p></section><section class="map-section"><div class="section-head"><h3>원정 지도 미리보기</h3><button id="view-intro" type="button">시작 이야기</button></div><p class="muted">아래 칸을 눌러 어떤 길인지 볼 수 있어. 저장된 지도를 다시 뽑지는 않아.</p><div id="run-map" class="tower-map"></div><p id="map-seed" class="muted seed"></p></section></div>
+  </section>
+  <section id="deck-editor" class="editor" hidden>
+    <div class="section-head"><div><p class="eyebrow">EXPEDITION DECK</p><h2>원정 카드함과 덱 편집</h2><p id="editor-counts"></p></div><div class="actions"><button id="discard-deck" type="button">편집 취소</button><button id="commit-deck" class="primary" type="button">덱 저장</button></div></div>
+    <p id="editor-issues" class="editor-issues" role="status"></p>
+    <div class="deck-edit-groups"><section><h3>메인 덱 <span id="main-count"></span></h3><div id="main-rows" class="deck-rows"></div></section><section><h3>엑스트라 덱 <span id="extra-count"></span></h3><div id="extra-rows" class="deck-rows"></div></section></div>
+    <section class="collection-section"><h3>런 카드함</h3><p class="muted">메인은 20~30장으로 저장해. 편집 중에는 잠시 20장보다 적어도 괜찮아.</p>
+      <div class="collection-filters"><label>이름·효과·번호·태그<input id="collection-search" type="search" placeholder="예: 야수족, 회복, #묘지기"></label><label>종류<select id="collection-type"><option value="">전체</option></select></label><label>종족<select id="collection-race"><option value="">전체</option></select></label><label>속성<select id="collection-attribute"><option value="">전체</option></select></label><label>등급<select id="collection-rarity"><option value="">전체</option><option>N</option><option>R</option><option>SR</option><option>UR</option><option>L</option></select></label><label>정렬<select id="collection-sort"><option value="name">이름순</option><option value="rarity">등급순</option><option value="attack">공격력순</option><option value="level">레벨순</option></select></label><button id="reset-collection" type="button">초기화</button></div>
+      <div id="collection-stat-filters" class="stat-filters"></div><p id="collection-result" role="status"></p><div id="collection-cards" class="collection-cards"></div>
+    </section>
+  </section>
+</main>
+<dialog id="starter-dialog" aria-labelledby="starter-title"><div class="dialog-head"><h2 id="starter-title">시작 덱 등록·관리</h2><button id="close-starters" type="button" aria-label="시작 덱 관리 닫기">×</button></div><p>네가 만든 스피드 듀얼 덱을 시작 덱으로 등록해. 등록된 구성은 원정을 시작할 때 복사돼.</p><div class="actions"><button id="load-browser-decks" type="button">이 브라우저의 AI 덱 읽기</button><button id="load-online-decks" type="button">온라인 AI 덱 읽기</button><button id="import-decks" type="button">AI 덱 JSON 가져오기</button><a href="ai-decks.html" target="_blank" rel="noopener">AI 덱 편집 열기 ↗</a></div><p id="source-status" role="status"></p><label>등록할 스피드 듀얼 덱<select id="source-deck"><option value="">덱 자료를 먼저 불러와줘.</option></select></label><p id="source-summary"></p><label>시작 덱 이름<input id="starter-name" maxlength="80" placeholder="예: 작은 야수들의 여행"></label><p id="source-issues" class="editor-issues" role="status"></p><button id="register-starter" class="primary" type="button" disabled>이 덱을 시작 덱으로 등록</button><hr><h3>등록한 시작 덱</h3><div id="starter-list"></div></dialog>
+<dialog id="new-run-dialog" aria-labelledby="new-run-title"><div class="dialog-head"><h2 id="new-run-title">새 원정 준비</h2><button id="close-new-run" type="button" aria-label="새 원정 닫기">×</button></div><p id="new-run-slot"></p><label>시작 덱<select id="start-deck"></select></label><div id="starter-preview" class="starter-preview"></div><details><summary>지도 시드 정하기</summary><label>지도 시드<input id="run-seed-input" maxlength="128" placeholder="비워두면 새 지도"></label><p class="muted">같은 시드로 같은 지도를 준비할 수 있어.</p></details><button id="create-run" class="primary" type="button">이 덱으로 원정 준비</button></dialog>
+<dialog id="card-dialog" aria-labelledby="card-title"><div class="dialog-head"><h2 id="card-title"></h2><button id="close-card" type="button" aria-label="카드 상세 닫기">×</button></div><div id="card-detail" class="card-detail"></div></dialog>
+<dialog id="node-dialog" aria-labelledby="node-title"><div class="dialog-head"><h2 id="node-title"></h2><button id="close-node" type="button" aria-label="지도 칸 설명 닫기">×</button></div><p id="node-description"></p><p class="phase-note">지도 미리보기야. 실제 이동과 듀얼은 전투 연결 후 사용할 수 있어.</p></dialog>
+<dialog id="intro-dialog" aria-labelledby="intro-title"><div class="dialog-head"><h2 id="intro-title">봉인된 듀얼의 탑</h2><button id="close-intro" type="button" aria-label="이야기 닫기">×</button></div><p class="story-copy">도미노 시티의 밤하늘에, 지도에도 없는 탑이 모습을 드러냈다. 탑의 문을 넘는 순간 카드들은 빛을 잃고, 네 손에는 낡은 덱 한 벌만 남는다.</p><blockquote>승자의 카드는 다음 문을 연다.</blockquote><p class="story-copy">위층에서 들리는 셔플 소리를 따라, 너는 첫 듀얼을 준비한다.</p></dialog>
+<dialog id="confirm-dialog" aria-labelledby="confirm-title"><div class="dialog-head"><h2 id="confirm-title">내용 확인</h2></div><p id="confirm-text"></p><div class="actions"><button id="confirm-cancel" type="button">취소</button><button id="confirm-ok" class="primary" type="button">확인</button></div></dialog>
+<input id="save-file" type="file" accept=".json,application/json" hidden><input id="deck-file" type="file" accept=".json,application/json" hidden>
+<div id="toast" class="toast" role="status" hidden></div>
+<footer>YU-GI-OH CLASSIC · OwnerVista <span>원정 자료는 이 브라우저에 저장돼. 다른 기기로 옮길 때 슬롯 백업을 사용해.</span></footer>
+</body></html>
