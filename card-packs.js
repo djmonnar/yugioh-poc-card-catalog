@@ -46,7 +46,23 @@ function renderReadiness(){
   $('pack-selected-count').textContent=`선택 ${pack().cards.length}종`;
 }
 function selected(card){return Boolean(pack()?.cards.some(ref=>resolvePackCard(ref,cards)?.identity_key===card.identity_key||ref.identity_key===card.identity_key));}
-function toggle(card){try{entry().document=togglePackCard(pack(),card,cards);render();persist();if(detailCard===card)showDetail(card);}catch(e){toast(e.message);}}
+function toggle(card){
+  const root=$('pack-results'),tiles=[...root.children],anchor=tiles.find(n=>n.dataset.identity===card.identity_key);
+  const position={x:window.scrollX,y:window.scrollY,top:anchor?.getBoundingClientRect().top},focused=root.contains(document.activeElement),index=tiles.indexOf(anchor);
+  try{
+    entry().document=togglePackCard(pack(),card,cards);renderReadiness();
+    if($('pack-selected-only').checked||(!packCardEligible(card)&&!selected(card))){
+      renderCards();if(focused){const next=root.children[Math.min(Math.max(index,0),root.children.length-1)];next?.querySelector('.pack-card-toggle')?.focus({preventScroll:true});}
+    }else{
+      const selection=new Set(pack().cards.map(ref=>resolvePackCard(ref,cards)?.identity_key||ref.identity_key));
+      for(const tile of root.children){const chosen=selection.has(tile.dataset.identity),button=tile.querySelector('.pack-card-toggle');tile.classList.toggle('selected',chosen);button.textContent=chosen?'✓ 선택됨 · 빼기':'+ 카드 선택';button.setAttribute('aria-pressed',String(chosen));}
+    }
+    renderConflict();persist();
+    if(detailCard===card&&$('pack-card-detail').open){const button=$('pack-card-detail').querySelector('.pack-detail-toggle');button.textContent=selected(card)?'이 팩에서 빼기':'이 팩에 추가';button.disabled=!selected(card)&&!packCardEligible(card);}
+    const offset=anchor?.isConnected?anchor.getBoundingClientRect().top-position.top:0;
+    window.scrollTo({left:position.x,top:position.y+offset,behavior:'instant'});
+  }catch(e){toast(e.message);}
+}
 function renderCards(){
   if(!pack())return;const criteria=Object.fromEntries(Object.entries(filters).map(([key,id])=>[key,$(id).value]));criteria.statConditions=stats.values();criteria.tags=[...selectedTags];
   const selection=new Set(pack().cards.map(ref=>resolvePackCard(ref,cards)?.identity_key||ref.identity_key));
@@ -55,13 +71,13 @@ function renderCards(){
   $('pack-results').replaceChildren(...found.slice((page-1)*PER_PAGE,page*PER_PAGE).map(card=>{
     const chosen=selection.has(card.identity_key),tile=el('article',null,'pack-card'+(chosen?' selected':''));tile.dataset.identity=card.identity_key;
     const detail=el('button'),img=el('img');detail.type='button';detail.setAttribute('aria-label',`${card.name_ko} 카드 능력 보기`);img.src=card.image;img.alt='';img.loading='lazy';detail.append(img,el('h3',card.name_ko),el('small',[card.type,card.race,card.attribute].filter(Boolean).join(' · ')),el('small',card.level==null?card.subtype||'':`★${card.level} · ${card.atk} / ${card.def}`));detail.onclick=()=>showDetail(card);tile.append(detail,el('span',card.rarity,'rarity '+card.rarity));
-    const button=el('button',chosen?'✓ 선택됨 · 빼기':'+ 카드 선택','pack-card-toggle');button.type='button';button.setAttribute('aria-pressed',String(chosen));button.onclick=()=>{toggle(card);const replacement=[...$('pack-results').children].find(n=>n.dataset.identity===card.identity_key)?.querySelector('.pack-card-toggle');(replacement||$('pack-search')).focus({preventScroll:true});};tile.append(button);if(!packCardEligible(card))tile.append(el('span','현재 뽑기 제외 카드','pack-card-excluded'));return tile;
+    const button=el('button',chosen?'✓ 선택됨 · 빼기':'+ 카드 선택','pack-card-toggle');button.type='button';button.setAttribute('aria-pressed',String(chosen));button.onclick=()=>toggle(card);tile.append(button);if(!packCardEligible(card))tile.append(el('span','현재 뽑기 제외 카드','pack-card-excluded'));return tile;
   }));$('pack-page').textContent=`${page} / ${pages}`;$('pack-prev').disabled=page<=1;$('pack-next').disabled=page>=pages;
 }
 function render(){renderList();renderReadiness();renderCards();renderSync();renderConflict();}
 function showDetail(card){
   const alreadyOpen=$('pack-card-detail').open;detailCard=card;const layout=el('div',null,'pack-detail-layout'),img=el('img');img.src=card.image;img.alt=card.name_ko;const info=el('div');info.append(el('span',card.rarity,'rarity '+card.rarity));const title=el('h2',card.name_ko);title.id='pack-detail-title';info.append(title,el('p',card.name_en,'muted'),el('p',[card.type,card.subtype,card.race,card.attribute,card.level==null?'':`★ ${card.level}`,card.atk==null?'':`ATK ${card.atk} / DEF ${card.def}`].filter(Boolean).join(' · '),'muted'),el('div',card.description_ko,'description'));
-  const actions=el('div',null,'pack-actions'),button=el('button',selected(card)?'이 팩에서 빼기':'이 팩에 추가','primary');button.type='button';button.disabled=!selected(card)&&!packCardEligible(card);button.onclick=()=>toggle(card);const link=el('a','도감에서 등급·뽑기 설정 보기');link.href=`./#card-${card.slot}`;link.target='_blank';link.rel='noopener';actions.append(button,link);info.append(actions);if(!packCardEligible(card))info.append(el('p','이 카드는 현재 랜덤 뽑기에서 제외돼. 선택은 유지되며, 도감에서 뽑기 설정을 바꾸면 다시 후보가 돼.','muted'));layout.append(img,info);$('pack-detail-body').replaceChildren(layout);if(!alreadyOpen)$('pack-card-detail').showModal();else button.focus({preventScroll:true});
+  const actions=el('div',null,'pack-actions'),button=el('button',selected(card)?'이 팩에서 빼기':'이 팩에 추가','primary pack-detail-toggle');button.type='button';button.disabled=!selected(card)&&!packCardEligible(card);button.onclick=()=>toggle(card);const link=el('a','도감에서 등급·뽑기 설정 보기');link.href=`./#card-${card.slot}`;link.target='_blank';link.rel='noopener';actions.append(button,link);info.append(actions);if(!packCardEligible(card))info.append(el('p','이 카드는 현재 랜덤 뽑기에서 제외돼. 선택은 유지되며, 도감에서 뽑기 설정을 바꾸면 다시 후보가 돼.','muted'));layout.append(img,info);$('pack-detail-body').replaceChildren(layout);if(!alreadyOpen)$('pack-card-detail').showModal();else button.focus({preventScroll:true});
 }
 function renderTags(){const root=$('pack-tag-filters');root.replaceChildren();for(const {name} of tags?.state?.categories||[]){const label=el('label'),input=el('input');input.type='checkbox';input.checked=selectedTags.has(name);input.onchange=()=>{input.checked?selectedTags.add(name):selectedTags.delete(name);page=1;renderCards();};label.append(input,el('span',name));root.append(label);}}
 async function refreshTags(){if(!tags)return;try{await tags.load();renderTags();renderCards();$('pack-tag-status').textContent='태그 이름은 검색창으로도 찾을 수 있어. 여러 태그는 모두 포함한 카드를 찾아.';}catch(e){$('pack-tag-status').textContent='태그를 불러오지 못했어. 현재 카드 선택은 유지돼.';}}
