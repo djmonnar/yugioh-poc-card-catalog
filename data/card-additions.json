@@ -1412,6 +1412,133 @@
           "identity_key": "868ff1ad87e5a0c45d222ce4cf1bf7fce016c2ebf770835c45ae106f9800a17b"
         }
       ]
+    },
+    {
+      "id": "20261013-beast-support",
+      "name": "야수족 지원 · 하인 프린스 · 파샤스 · 신벌24장",
+      "added_at": "2026-10-13T03:12:42.468778+00:00",
+      "cards": [
+        {
+          "slot": 1359,
+          "internal_id": 2059,
+          "identity_key": "f0821962c3b0944a72d41ae0f1b7c6d951d261185ca520a42af642be36cf2f6f"
+        },
+        {
+          "slot": 1360,
+          "internal_id": 2060,
+          "identity_key": "2d215a8650c95ba95426e0abeaabfd00264dc40eb052560f5a484cc77e66d401"
+        },
+        {
+          "slot": 1361,
+          "internal_id": 2061,
+          "identity_key": "f22146429f465277cbf5eb94e3042a72b127c5c76958d04129d1f17df0cb601c"
+        },
+        {
+          "slot": 1362,
+          "internal_id": 2062,
+          "identity_key": "0a58bfb16fbc85ae3ca233b8f30665a35d870eed97c94a168c13a38796981164"
+        },
+        {
+          "slot": 1363,
+          "internal_id": 2064,
+          "identity_key": "9a6eb7ebecf4b89ef0d4f0db187a5e407d0ec8d9e3f03f9558cc909b5d2be735"
+        },
+        {
+          "slot": 1364,
+          "internal_id": 2065,
+          "identity_key": "ecdfd296882c318c3dc7c1010d715874f950a7590d9aead00715c60c6a1f7067"
+        },
+        {
+          "slot": 1365,
+          "internal_id": 2066,
+          "identity_key": "2e4847d2832e3429885d9ff38739fb5236c22728d0b0ef3c7f217ba0323ddcbe"
+        },
+        {
+          "slot": 1366,
+          "internal_id": 2067,
+          "identity_key": "19aaaa77edd48098f585413f87dade04d3715ed373bfa5ae3e11fc27ef7875b0"
+        },
+        {
+          "slot": 1367,
+          "internal_id": 2069,
+          "identity_key": "224a6c9a6a6378fd615982599caa84e3415a3a912c4c8c48f8951c97aaeb626e"
+        },
+        {
+          "slot": 1368,
+          "internal_id": 2070,
+          "identity_key": "150a730543578073e576c9c464ef3a0f74914f8f05f2bc8e901b5caa746f9aa5"
+        },
+        {
+          "slot": 1369,
+          "internal_id": 2071,
+          "identity_key": "4904a794d17e83888cdc3f99c59fac5f2f7c8dc1d99677c95364cf1519eddea4"
+        },
+        {
+          "slot": 1370,
+          "internal_id": 2072,
+          "identity_key": "1771f7d68b08e587cfcc7036c1b6535042035b14b34606706463173890de8e54"
+        },
+        {
+          "slot": 1371,
+          "internal_id": 2073,
+          "identity_key": "157126802564b0006076f1563c20e7409b8be9482f1808b39e72bb009f50e4b1"
+        },
+        {
+          "slot": 1372,
+          "internal_id": 2074,
+          "identity_key": "f8fc3a63e54cccb01ee9b7c8848645de32fb714e3356be6b7d0558a73361acf0"
+        },
+        {
+          "slot": 1373,
+          "internal_id": 2075,
+          "identity_key": "bbc53e2ec11776db7deb7f5d291e80c8a89562722630ee4c45933a5bdc87e7f4"
+        },
+        {
+          "slot": 1374,
+          "internal_id": 2076,
+          "identity_key": "00165ad978596316309d3acc81c65457dd3c4bc7e6dd6819565687fe90432862"
+        },
+        {
+          "slot": 1375,
+          "internal_id": 2077,
+          "identity_key": "9bed1e7afe9e73136058a5ad847845335af62763425e8407efc6941ef1226517"
+        },
+        {
+          "slot": 1376,
+          "internal_id": 2078,
+          "identity_key": "a51136374017d7d6e1bf6afdafb3fd52fb6c80a02f573d5f90e13643099273a0"
+        },
+        {
+          "slot": 1377,
+          "internal_id": 2079,
+          "identity_key": "dd57397ded4e6d7a1ec30247b265833c122f4025ade9def9b0a266b6691650dd"
+        },
+        {
+          "slot": 1378,
+          "internal_id": 2080,
+          "identity_key": "f1caeafcd92bec95dc4b63369825d84b2e3e2ed9bc7c979aea463722dfb3fa69"
+        },
+        {
+          "slot": 1379,
+          "internal_id": 2081,
+          "identity_key": "a61ec797c2097c5c7a998b119474c78a0c6e2c78952dcb4495ce6212581bc2bf"
+        },
+        {
+          "slot": 1380,
+          "internal_id": 2082,
+          "identity_key": "84fdf374562c5c486b67cd56147a498442bca51b2dbc5373e20a56b57b356311"
+        },
+        {
+          "slot": 1381,
+          "internal_id": 2083,
+          "identity_key": "a80e735029b3e028cdac3a760c3036737ce521569cdd6761558340cf2091fda2"
+        },
+        {
+          "slot": 1382,
+          "internal_id": 2084,
+          "identity_key": "74ce2d213073ed98888c123018b65739dcf029cfe1ba59e397cc16da3384a1ad"
+        }
+      ]
     }
   ]
 }
