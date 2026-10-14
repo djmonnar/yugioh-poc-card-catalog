@@ -1539,6 +1539,63 @@
           "identity_key": "74ce2d213073ed98888c123018b65739dcf029cfe1ba59e397cc16da3384a1ad"
         }
       ]
+    },
+    {
+      "id": "20261015-honest-rock-support",
+      "name": "어니스트 · 암석족 지원 10장",
+      "added_at": "2026-10-15T00:00:00+09:00",
+      "cards": [
+        {
+          "slot": 1383,
+          "internal_id": 2085,
+          "identity_key": "41148609d6513d683e3379523262f4e11e4144e2732c838b88901b49b28941bd"
+        },
+        {
+          "slot": 1384,
+          "internal_id": 2086,
+          "identity_key": "6504d59bc73f15b820fcd676bb029e390966919edbe5582b814a0464b3342061"
+        },
+        {
+          "slot": 1385,
+          "internal_id": 2087,
+          "identity_key": "6c78caa08b3890ec67c03d3cc61bb84a19bb6b787cd011f939f0f1387054d966"
+        },
+        {
+          "slot": 1386,
+          "internal_id": 2088,
+          "identity_key": "e7551a348acf33c317e372aa86fe49dc41a8470a212e932dfa583ff256d3d509"
+        },
+        {
+          "slot": 1387,
+          "internal_id": 2089,
+          "identity_key": "1a7b9a9cb2e196f128565435e7b0303dca167b67e71af570e0f0696ad5427876"
+        },
+        {
+          "slot": 1388,
+          "internal_id": 2090,
+          "identity_key": "56929ca6f7ee1e0ae20e72a60d6e324f33c3d9ec8008f32d559a967cd1549db4"
+        },
+        {
+          "slot": 1389,
+          "internal_id": 2091,
+          "identity_key": "a0f9834d220ce9d2cc1ef1b9950094e71d76da1fd8417788f202c298bed501a1"
+        },
+        {
+          "slot": 1390,
+          "internal_id": 2092,
+          "identity_key": "44424e8cb647f8b0671685ce17556a97e10455eb6bbeac2bcce65a9900e4027b"
+        },
+        {
+          "slot": 1391,
+          "internal_id": 2093,
+          "identity_key": "12ab11c31deeab6289cc10cbcd2af4c442c0e3dedebd6b149da59d415650c08a"
+        },
+        {
+          "slot": 1392,
+          "internal_id": 2094,
+          "identity_key": "e1d9e1505223bb464f6924e555bb5d178315db005e557cb10adc5a27faca02a0"
+        }
+      ]
     }
   ]
 }
