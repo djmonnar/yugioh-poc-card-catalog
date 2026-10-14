@@ -1,7 +1,10 @@
 import {cardLine, resolveCard, placementError, sharesHarpieName, sharesUmiName} from './ai-deck-core.js';
 import {validateMap} from './roguelite-map.js?v=20261014-138';
 import {cleanEncounters} from './roguelite-encounters.js?v=20261014-138';
-import {cleanRestClaims,restOutcome} from './roguelite-rules.js?v=20261014-138';
+import {cleanRestClaims,restOutcome} from './roguelite-rules.js?v=20261014-139';
+import {snapshotCard} from './roguelite-card.js?v=20261014-139';
+import {cleanRewardTrack,emptyRewardTrack} from './roguelite-rewards.js?v=20261014-139';
+export {snapshotCard} from './roguelite-card.js?v=20261014-139';
 
 export const SLOT_COUNT = 3;
 export const SCHEMA_VERSION = 1;
@@ -9,7 +12,6 @@ export const STORAGE_KEY = 'yugioh-classic-roguelite-v1';
 export const SAVE_KIND = 'yugioh-classic-roguelite-save';
 export const RUN_STATES = ['between_nodes', 'at_node', 'in_battle', 'reward_pending', 'completed', 'defeated'];
 const GROUPS = ['main', 'extra'];
-const CARD_TYPES = ['일반 몬스터', '효과 몬스터', '의식 몬스터', '융합 몬스터', '마법', '함정'];
 const MAX_SAVE_BYTES = 8_000_000;
 const clone = value => JSON.parse(JSON.stringify(value));
 const fail = message => { throw new Error(message); };
@@ -38,40 +40,6 @@ const identity = value => {
   if (typeof value !== 'string' || !/^[a-f0-9]{64}$/.test(value)) fail('카드 식별값이 올바르지 않아.');
   return value;
 };
-
-// Acquire card metadata once. Later catalog changes do not rewrite an ongoing run.
-export function snapshotCard(card) {
-  if (!record(card)) fail('카드 정보를 확인할 수 없어.');
-  const result = {
-    identity_key: identity(card.identity_key),
-    slot: integer(card.slot, 1, 2047, '카드 번호'),
-    internal_id: integer(card.internal_id, 0, 65535, '카드 내부 번호'),
-    name_ko: text(card.name_ko, 200, '카드 이름'),
-    name_en: text(card.name_en, 200, '카드 영문 이름'),
-    type: text(card.type, 30, '카드 종류'),
-    special: card.special === true,
-    speed_limit: card.speed_limit ?? null,
-    deck_limit: card.deck_limit ?? 3,
-    rarity: card.rarity ?? 'N',
-    description_ko: text(card.description_ko ?? '', 10000, '카드 설명', true),
-    image: text(card.image ?? '', 300, '카드 그림', true),
-    subtype: text(card.subtype ?? '', 80, '카드 분류', true),
-    race: text(card.race ?? '', 50, '종족', true),
-    attribute: text(card.attribute ?? '', 50, '속성', true)
-  };
-  if (!Array.isArray(card.tags ?? []) || (card.tags ?? []).length > 50) fail('카드 태그를 확인할 수 없어.');
-  result.tags = [...new Set((card.tags ?? []).map(tag => text(tag, 80, '카드 태그')))];
-  if (!CARD_TYPES.includes(result.type) || result.special) fail('토큰·특수 카드나 지원하지 않는 카드 종류는 원정 덱에 넣을 수 없어.');
-  if (![null, 0, 1, 2, 3].includes(result.speed_limit) || ![0, 1, 2, 3].includes(result.deck_limit)) fail('카드 금제 정보를 확인할 수 없어.');
-  if (!['N', 'R', 'SR', 'UR', 'L'].includes(result.rarity)) fail('카드 등급을 확인할 수 없어.');
-  if (result.image && (!/^assets\/cards\/[a-zA-Z0-9_./-]+$/.test(result.image) || result.image.split('/').includes('..'))) fail('카드 그림 경로를 확인할 수 없어.');
-  for (const field of ['level', 'atk', 'def']) {
-    const value = card[field] ?? null;
-    if (value !== null && (!Number.isInteger(value) || value < -2 || value > 65535)) fail('카드 능력치를 확인할 수 없어.');
-    result[field] = value;
-  }
-  return result;
-}
 
 function parseRows(rows, cards, group) {
   if (!Array.isArray(rows) || rows.length > 100) fail('덱 카드 목록을 확인할 수 없어.');
@@ -215,10 +183,10 @@ export function createRun({id, slotId, starter, cards, catalogVersion, seed, now
   const normalizedSeed = typeof seed === 'number' ? String(integer(seed, 0, 0xffffffff, '맵 시드')) : text(seed, 200, '맵 시드');
   const time = timestamp(now);
   return cleanRun({id, slot_id: slotId, revision: 0, starter_id: registered.starter_id, starter_name: registered.name,
-    catalog_version: text(catalogVersion ?? registered.catalog_version, 200, '도감 버전'), content_version: 'prototype138',
+    catalog_version: text(catalogVersion ?? registered.catalog_version, 200, '도감 버전'), content_version: 'prototype139',
     seed: normalizedSeed, created_at: time, updated_at: time, lp: 4000, max_lp: 4000, gold: 0, floor: 0, state: 'between_nodes',
     collection: clone(registered.collection), active_deck: activeDeck(id, registered.name, registered.groups),
-    relics: [], reward_claims: [], history: [], map: null, current_node_id:null, encounters:{}, rest_claims:[]});
+    relics: [], reward_claims: [], reward_track: emptyRewardTrack(), history: [], map: null, current_node_id:null, encounters:{}, rest_claims:[]});
 }
 
 function jsonValue(value, depth = 0, budget = {nodes: 0}) {
@@ -280,7 +248,7 @@ function cleanRun(run) {
     seed: text(run.seed, 200, '맵 시드'), created_at: timestamp(run.created_at), updated_at: timestamp(run.updated_at),
     lp, max_lp: maxLp, gold: integer(run.gold, 0, 2_000_000_000, '원정 금화'), floor: integer(run.floor, 0, 10000, '진행 층'),
     state: run.state, collection, active_deck: activeDeck(id, text(run.active_deck.name, 80, '원정 덱 이름'), groups),
-    relics, reward_claims: rewardClaims, history: jsonValue(run.history), map: jsonValue(run.map),
+    relics, reward_claims: rewardClaims, reward_track: cleanRewardTrack(run.reward_track ?? emptyRewardTrack()), history: jsonValue(run.history), map: jsonValue(run.map),
     current_node_id:currentNode, encounters, rest_claims:restClaims};
 }
 

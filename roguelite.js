@@ -1,9 +1,10 @@
-import {STORAGE_KEY,emptySave,readStore,writeStore,parseSave,serializeSave,makeStarter,createRun,validatePlayerDeck,beginDeckEdit,adjustRunDeck,commitRunDeck} from './roguelite-core.js?v=20261014-138';
+import {STORAGE_KEY,emptySave,readStore,writeStore,parseSave,serializeSave,makeStarter,createRun,validatePlayerDeck,beginDeckEdit,adjustRunDeck,commitRunDeck} from './roguelite-core.js?v=20261014-139';
 import {generateMap,nodeLabel,nodeSummary,TOWER_THEME,TOWER_EVENTS} from './roguelite-map.js?v=20261014-138';
 import {renderTowerMap,renderMapLegend,MAP_ASSETS} from './roguelite-map-view.js?v=20261014-138';
 import {loadCatalog,browserDecks,onlineDecks,importedDecks} from './roguelite-data.js';
 import {cleanEncounterPool,assignEncounters,browserEncounterPool} from './roguelite-encounters.js?v=20261014-138';
-import {REST_CHOICES,RELICS,restOutcome,rewardPolicy} from './roguelite-rules.js?v=20261014-138';
+import {REST_CHOICES,RELICS,restOutcome,rewardPolicy} from './roguelite-rules.js?v=20261014-139';
+import {mountRewardPreview} from './roguelite-reward-preview.js?v=20261014-139';
 import {createStatFilters,statConditionsMatch} from './card-filters.js';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 
@@ -127,7 +128,7 @@ function showNode(entry,r){
   }
   if(['battle','elite','midboss','boss'].includes(entry.kind)){
     const policy=rewardPolicy(entry.kind);
-    text+=`\n\n승리 보상 설정 · ${policy.gold} 금화 / ${policy.min_rarity} 이상 카드 ${policy.card_choices}개 후보 중 1장${policy.relic?' / 유물 1개':''}`;
+    text+=`\n\n승리 보상 설정 · ${policy.gold} 금화 / 카드 ${policy.card_choices}개 후보 중 1장${policy.min_rarity==='N'?'':` (후보에 ${policy.min_rarity} 이상 1장 보장)`}${policy.relic?' / 유물 1개':''}`;
     if(!opponent)text+='\n이전 저장 지도에는 상대가 아직 지정되지 않았어. 새 원정부터 상대가 표시돼.';
   }
   if(entry.kind==='event'){
@@ -324,5 +325,5 @@ $('opponent-browser').addEventListener('click',()=>safe(()=>{
   if(!data.pool.length)throw new Error(data.issues.map(issue=>issue.message).join(' ')||'이 브라우저에 연결 가능한 AI 배틀과 덱이 없어.');
   opponentPool=copy(data.pool);opponentSource=`이 브라우저의 AI 배틀 ${data.pool.length}개${data.issues.length?' · 제외 '+data.issues.length+'개':''}`;opponentLoadError='';renderOpponentPool();
 }));
-try{({cards,meta}=await loadCatalog());readSaved();await opponentLoad;}
+try{({cards,meta}=await loadCatalog());mountRewardPreview({cards,showCard});readSaved();await opponentLoad;}
 catch(error){blocked=true;$('save-error').hidden=false;$('save-error-text').textContent=error.message;$('save-status').textContent='카드 자료를 읽지 못했어. 새로고침해줘.';renderSlots();}

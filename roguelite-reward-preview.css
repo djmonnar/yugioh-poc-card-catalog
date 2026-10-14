@@ -1,0 +1,10 @@
+.reward-preview-entry{margin:20px 0}.reward-preview-entry span{font-size:13px}
+#reward-preview-dialog{width:950px;max-width:calc(100vw - 32px)}
+.reward-controls{display:flex;align-items:end;gap:12px;flex-wrap:wrap}.reward-controls label{min-width:130px;margin:0;flex:1}.reward-controls button{flex:1;white-space:normal}
+.reward-odds{background:#e5eee5;border:1px solid #c6d5c7;padding:12px;border-radius:8px;font-size:14px}
+.reward-candidates{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:20px 0}
+.reward-card{--tier:#9bada5;position:relative;border:2px solid var(--tier);padding:10px;border-radius:10px;background:#fff;display:flex;flex-direction:column;align-items:stretch;gap:9px;min-width:0}
+.reward-card.tier-R{--tier:#427eae}.reward-card.tier-SR{--tier:#9b52c2;background:#f4eafd;box-shadow:0 0 15px #a452ce35}.reward-card.tier-UR{--tier:#bf8b24;background:#fff1cc;box-shadow:0 0 18px #edbd4560}
+.reward-card.chosen{outline:3px solid #1e7458;outline-offset:2px}.reward-art{padding:0;border:0;min-height:0;background:none;align-self:center}.reward-art img{display:block;width:100%;max-width:130px;height:auto;border-radius:4px}.reward-tier{font-size:12px;font-weight:800;color:var(--tier)}.reward-card strong{font-size:13px;overflow-wrap:anywhere;flex:1;line-height:1.5}.reward-select{padding:8px 4px;font-size:12px;white-space:normal;min-height:44px}
+#reward-base-odds table{width:100%;border-collapse:collapse;font-size:13px;text-align:center}#reward-base-odds caption{text-align:left;margin:12px 0;color:var(--muted)}#reward-base-odds td,#reward-base-odds th{padding:10px 4px;border-bottom:1px solid var(--line)}
+@media(max-width:700px){.reward-candidates{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.reward-card:last-child:nth-child(odd){grid-column:1/-1;width:calc(50% - 6px);justify-self:center}.reward-controls{gap:9px}.reward-controls button{flex-basis:40%}#reward-preview-dialog{width:calc(100vw - 24px);max-width:none}.reward-card{padding:10px}.reward-art img{max-width:118px}.reward-odds{font-size:12px}.reward-controls select{font-size:14px}}

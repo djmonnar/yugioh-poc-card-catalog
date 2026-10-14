@@ -4,15 +4,17 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#102b31"><title>스토리 원정 · YU-GI-OH CLASSIC</title>
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="roguelite.css?v=20261014-138">
+  <link rel="stylesheet" href="roguelite.css?v=20261014-139">
   <link rel="stylesheet" href="roguelite-map-view.css?v=20261014-138">
-  <script type="module" src="roguelite.js?v=20261014-138"></script>
+  <link rel="stylesheet" href="roguelite-reward-preview.css?v=20261014-139">
+  <script type="module" src="roguelite.js?v=20261014-139"></script>
 </head>
 <body>
 <header class="masthead"><a class="brand" href="./"><img src="assets/icon.svg" width="30" height="36" alt=""><span>YU-GI-OH CLASSIC<small>덱과 함께 성장하는 스토리 원정</small></span></a><nav aria-label="제작 도구"><a href="./">카드 도감</a><a href="ai-decks.html">AI 덱 편집</a><a href="story.html">AI 배틀 제작</a><a href="characters.html">공용 캐릭터</a></nav></header>
 <main>
   <section class="hero"><div><p class="eyebrow">STORY EXPEDITION</p><h1>봉인된 듀얼의 탑</h1><p>시작 덱 한 벌로 탑의 문을 연다.<br>선택한 길과 얻은 카드가 다음 듀얼을 바꾼다.</p></div><button id="open-map-demo" class="tower-preview-card" type="button"><img src="assets/roguelite/tower137/icon-boss-v1.webp" alt="" width="66" height="66"><span>맵 그림 미리보기 ↗</span></button></section>
   <p class="phase-note">20층 원정 준비 · 새 원정마다 길과 상대를 새로 뽑고, 이어하기에서는 같은 지도를 유지해. 엘리트는 피하거나 여러 번 도전할 수 있어. 지금은 지도·상대·휴식 선택을 미리 볼 수 있고, 실제 이동·듀얼은 다음 연결 단계야.</p>
+  <div class="actions reward-preview-entry"><button id="open-reward-preview" type="button" disabled>카드 보상 · 확률 체험</button><span class="muted">후보 5장 중 1장 선택 · 구역별 확률 · SR·UR 천장</span></div>
   <div class="storage-bar"><p id="save-status" role="status">저장 슬롯을 읽는 중…</p><div><button id="export-save" type="button" disabled>슬롯 백업 받기</button><button id="import-save" type="button">슬롯 백업 불러오기</button><button id="reload-save" type="button">저장본 다시 읽기</button></div></div>
   <section id="save-error" class="error-panel" hidden><h2>저장본을 확인할 수 없어</h2><p id="save-error-text"></p><button id="download-raw" type="button">원본 백업 받기</button></section>
   <section class="slots-section"><div class="section-head"><div><p class="eyebrow">YOUR EXPEDITIONS</p><h2>원정 저장 슬롯</h2></div><button id="open-starters" type="button">시작 덱 등록·관리</button></div><div id="slots" class="slots"></div></section>
@@ -36,6 +38,14 @@
 <dialog id="new-run-dialog" aria-labelledby="new-run-title"><div class="dialog-head"><h2 id="new-run-title">새 원정 준비</h2><button id="close-new-run" type="button" aria-label="새 원정 닫기">×</button></div><p id="new-run-slot"></p><label>시작 덱<select id="start-deck"></select></label><div id="starter-preview" class="starter-preview"></div><details id="opponent-settings"><summary>출현 상대·덱 고르기</summary><p>각 상대를 일반·엘리트·보스 중 어디에서 만날지 골라줘. 한 상대를 여러 종류에 넣어도 돼. 시작할 때 확정된 상대와 덱은 이 원정 동안 유지돼.</p><p id="opponent-source-status" class="muted" role="status"></p><div class="actions"><button id="opponent-defaults" type="button">기본 상대 풀</button><button id="opponent-browser" type="button">이 브라우저 AI 배틀에서 읽기</button></div><label>상대·덱·전투 이름 검색<input id="opponent-search" type="search" placeholder="예: 메이, 해피, 엑조디아"></label><p id="opponent-counts" role="status"></p><div id="opponent-pool" class="opponent-pool"></div></details><details><summary>지도 시드 정하기</summary><label>지도 시드<input id="run-seed-input" maxlength="128" placeholder="비워두면 매번 새 지도"></label><p class="muted">같은 시드와 같은 상대 풀에서는 같은 지도와 상대가 나와. 이어하기는 저장된 배치를 그대로 사용해.</p></details><button id="create-run" class="primary" type="button">이 덱으로 원정 준비</button></dialog>
 <dialog id="card-dialog" aria-labelledby="card-title"><div class="dialog-head"><h2 id="card-title"></h2><button id="close-card" type="button" aria-label="카드 상세 닫기">×</button></div><div id="card-detail" class="card-detail"></div></dialog>
 <dialog id="node-dialog" aria-labelledby="node-title"><div class="dialog-head"><h2 id="node-title"></h2><button id="close-node" type="button" aria-label="지도 칸 설명 닫기">×</button></div><div id="node-opponent" class="node-opponent" hidden></div><p id="node-description"></p><section id="rest-preview" hidden><h3>휴식 선택 체험</h3><p class="muted">체험용 LP 2,400 / 4,000으로 셋 중 하나를 골라봐. 슬롯의 LP·유물은 바뀌지 않아.</p><div id="rest-choices" class="rest-choices"></div><p id="rest-result" class="rest-result" role="status"></p></section><p class="phase-note">지도 미리보기야. 실제 이동·듀얼과 승리 보상·유물 효과 적용은 전투 연결 후 사용할 수 있어.</p></dialog>
+<dialog id="reward-preview-dialog" aria-labelledby="reward-preview-title">
+  <div class="dialog-head"><h2 id="reward-preview-title">승리의 카드 · 보상 체험</h2><button id="close-reward-preview" type="button" aria-label="카드 보상 체험 닫기">×</button></div>
+  <p class="muted">시험용 보상이야. 카드를 눌러 효과를 확인한 뒤 하나를 골라봐. 원정 슬롯과 계정 보유 카드는 바뀌지 않아.</p>
+  <div class="reward-controls"><label>구역<select id="reward-area"><option value="1">1구역</option><option value="2">2구역</option><option value="3">3구역 이후</option></select></label><label>전투<select id="reward-kind"><option value="battle">일반 전투</option><option value="elite">엘리트 전투</option><option value="boss">구역 보스</option></select></label><button id="next-reward-preview" class="primary" type="button">보상 5장 보기</button><button id="reset-reward-preview" type="button">체험 처음부터</button></div>
+  <p id="reward-odds" class="reward-odds"></p><p id="reward-pity" class="muted"></p>
+  <div id="reward-candidates" class="reward-candidates"></div><p id="reward-result" class="rest-result" role="status">보상 5장 보기를 눌러 시작해.</p>
+  <details><summary>확률과 천장 규칙</summary><div id="reward-base-odds"></div><p>확률은 후보 한 장 기준이야. 구역이 바뀌어야 기본 확률이 올라가며, 층수로는 바뀌지 않아. 같은 보상에는 같은 카드가 두 번 나오지 않아.</p><p>SR 이상이 없으면 다음 보상의 SR 확률 +2%p, UR이 없으면 UR 확률 +0.5%p. SR 이상은 늦어도 5번째, UR은 늦어도 10번째 보상 후보에 등장해. UR이 나오면 두 천장이 모두 초기화돼. 고르지 않아도 등장한 것으로 계산해.</p><p>엘리트는 후보 중 SR 이상 1장, 구역 보스는 UR 1장을 보장해. 나머지 후보는 구역 확률을 사용해. 구역을 넘어도 천장은 이어져.</p><p>이번 수치는 첫 테스트용이야. 체험을 닫았다 열면 같은 후보가 유지되고, 페이지를 새로고침하면 시험 기록은 초기화돼.</p></details>
+</dialog>
 <dialog id="intro-dialog" aria-labelledby="intro-title"><div class="dialog-head"><h2 id="intro-title">봉인된 듀얼의 탑</h2><button id="close-intro" type="button" aria-label="이야기 닫기">×</button></div><p class="story-copy">도미노 시티의 밤하늘에, 지도에도 없는 탑이 모습을 드러냈다. 탑의 문을 넘는 순간 카드들은 빛을 잃고, 네 손에는 낡은 덱 한 벌만 남는다.</p><blockquote>승자의 카드는 다음 문을 연다.</blockquote><p class="story-copy">위층에서 들리는 셔플 소리를 따라, 너는 첫 듀얼을 준비한다.</p></dialog>
 <dialog id="confirm-dialog" aria-labelledby="confirm-title"><div class="dialog-head"><h2 id="confirm-title">내용 확인</h2></div><p id="confirm-text"></p><div class="actions"><button id="confirm-cancel" type="button">취소</button><button id="confirm-ok" class="primary" type="button">확인</button></div></dialog>
 <input id="save-file" type="file" accept=".json,application/json" hidden><input id="deck-file" type="file" accept=".json,application/json" hidden>

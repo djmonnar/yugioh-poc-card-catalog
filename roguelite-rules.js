@@ -7,14 +7,15 @@ export const REST_CHOICES = Object.freeze([
 export const RELICS = Object.freeze([
   Object.freeze({id:'golden_scarab',name:'황금 풍뎅이',description:'전투 승리 시 원정 금화 +20.',win_gold:20}),
   Object.freeze({id:'restoring_ankh',name:'재생의 앙크',description:'전투 승리 시 LP 200 회복.',win_heal:200}),
-  Object.freeze({id:'card_slate',name:'카드의 석판',description:'전투 카드 보상 후보 +1.',reward_choices:1}),
+  Object.freeze({id:'card_slate',name:'카드의 석판',description:'전투 카드 보상 후보 +1. 기본 5장에서 6장으로 늘어나.',reward_choices:1}),
   Object.freeze({id:'merchant_seal',name:'상인의 인장',description:'원정 상점 가격 15% 할인.',shop_discount:0.15}),
   Object.freeze({id:'life_fragment',name:'생명의 조각',description:'획득 즉시 최대 LP +250. 현재 LP는 그대로야.',max_lp:250})
 ]);
 export const BATTLE_REWARDS = Object.freeze({
-  battle:Object.freeze({gold:50,card_choices:3,min_rarity:'N',relic:false}),
-  elite:Object.freeze({gold:120,card_choices:3,min_rarity:'SR',relic:true}),
-  boss:Object.freeze({gold:200,card_choices:3,min_rarity:'UR',relic:true})
+  // min_rarity guarantees one candidate; other candidates use the area odds.
+  battle:Object.freeze({gold:50,card_choices:5,min_rarity:'N',relic:false}),
+  elite:Object.freeze({gold:120,card_choices:5,min_rarity:'SR',relic:true}),
+  boss:Object.freeze({gold:200,card_choices:5,min_rarity:'UR',relic:true})
 });
 const fail = message => {throw new Error(message);};
 function hash(text){let value=2166136261;for(const char of text){value^=char.codePointAt(0);value=Math.imul(value,16777619);}return value>>>0;}
