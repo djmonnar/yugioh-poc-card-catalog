@@ -1,5 +1,7 @@
 import {cardLine, resolveCard, placementError, sharesHarpieName, sharesUmiName} from './ai-deck-core.js';
-import {validateMap} from './roguelite-map.js';
+import {validateMap} from './roguelite-map.js?v=20261014-138';
+import {cleanEncounters} from './roguelite-encounters.js?v=20261014-138';
+import {cleanRestClaims,restOutcome} from './roguelite-rules.js?v=20261014-138';
 
 export const SLOT_COUNT = 3;
 export const SCHEMA_VERSION = 1;
@@ -213,10 +215,10 @@ export function createRun({id, slotId, starter, cards, catalogVersion, seed, now
   const normalizedSeed = typeof seed === 'number' ? String(integer(seed, 0, 0xffffffff, '맵 시드')) : text(seed, 200, '맵 시드');
   const time = timestamp(now);
   return cleanRun({id, slot_id: slotId, revision: 0, starter_id: registered.starter_id, starter_name: registered.name,
-    catalog_version: text(catalogVersion ?? registered.catalog_version, 200, '도감 버전'), content_version: 'prototype136',
+    catalog_version: text(catalogVersion ?? registered.catalog_version, 200, '도감 버전'), content_version: 'prototype138',
     seed: normalizedSeed, created_at: time, updated_at: time, lp: 4000, max_lp: 4000, gold: 0, floor: 0, state: 'between_nodes',
     collection: clone(registered.collection), active_deck: activeDeck(id, registered.name, registered.groups),
-    relics: [], reward_claims: [], history: [], map: null});
+    relics: [], reward_claims: [], history: [], map: null, current_node_id:null, encounters:{}, rest_claims:[]});
 }
 
 function jsonValue(value, depth = 0, budget = {nodes: 0}) {
@@ -264,13 +266,33 @@ function cleanRun(run) {
     if (!mapCheck.valid) fail(`원정 지도 자료를 확인할 수 없어. ${mapCheck.errors.join(' ')}`);
     if (run.map.seed !== run.seed || run.floor > run.map.floors) fail('원정 지도와 시드·진행 층이 일치하지 않아.');
   }
+  const currentNode = run.current_node_id ?? null;
+  if (currentNode !== null && !run.map?.nodes.some(node => node.id === currentNode && node.floor === run.floor)) fail('원정 위치와 진행 층이 일치하지 않아.');
+  const encounters = cleanEncounters(run.encounters ?? {}, run.map);
+  const restClaims = cleanRestClaims(run.rest_claims ?? [],run.map,relics);
+  for (const claim of restClaims) {
+    const visited = run.map.nodes.find(node => node.id === claim.node_id);
+    if (visited.floor > run.floor || (visited.floor === run.floor && currentNode !== visited.id)) fail('휴식 기록과 원정 방문 위치가 일치하지 않아.');
+  }
   return {id, slot_id: run.slot_id, revision: integer(run.revision, 0, Number.MAX_SAFE_INTEGER, '원정 버전'),
     starter_id: identifier(run.starter_id, '시작 덱 번호'), starter_name: text(run.starter_name, 80, '시작 덱 이름'),
     catalog_version: text(run.catalog_version, 200, '도감 버전'), content_version: text(run.content_version, 200, '콘텐츠 버전'),
     seed: text(run.seed, 200, '맵 시드'), created_at: timestamp(run.created_at), updated_at: timestamp(run.updated_at),
     lp, max_lp: maxLp, gold: integer(run.gold, 0, 2_000_000_000, '원정 금화'), floor: integer(run.floor, 0, 10000, '진행 층'),
     state: run.state, collection, active_deck: activeDeck(id, text(run.active_deck.name, 80, '원정 덱 이름'), groups),
-    relics, reward_claims: rewardClaims, history: jsonValue(run.history), map: jsonValue(run.map)};
+    relics, reward_claims: rewardClaims, history: jsonValue(run.history), map: jsonValue(run.map),
+    current_node_id:currentNode, encounters, rest_claims:restClaims};
+}
+
+// Only an entered rest node can affect a saved run. Map preview never calls this.
+export function resolveRestChoice(run,nodeId,choice,{now = new Date()} = {}) {
+  const clean=cleanRun(run),previous=clean.rest_claims.find(claim=>claim.node_id===nodeId);
+  if(previous){if(previous.choice!==choice)fail('이 휴식에서는 이미 다른 선택을 마쳤어.');return clean;}
+  if(clean.state!=='at_node'||clean.current_node_id!==nodeId||!clean.map?.nodes.some(node=>node.id===nodeId&&node.kind==='rest')) fail('도착한 휴식 장소에서만 선택할 수 있어.');
+  const outcome=restOutcome({lp:clean.lp,max_lp:clean.max_lp,relics:clean.relics,seed:clean.seed,nodeId},choice);
+  return cleanRun({...clean,lp:outcome.lp,max_lp:outcome.max_lp,relics:outcome.relics,state:'between_nodes',
+    rest_claims:[...clean.rest_claims,{node_id:nodeId,choice,relic_id:outcome.relic_id}],
+    revision:clean.revision+1,updated_at:timestamp(now)});
 }
 
 export function validateRun(run) {

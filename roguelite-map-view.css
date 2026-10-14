@@ -24,3 +24,19 @@ button.tower-node{position:absolute;z-index:3;width:68px;height:68px;min-height:
 @media(prefers-reduced-motion:reduce){.tower-route,button.tower-node,.tower-node-disc{transition:none}}
 .hero>button.tower-preview-card{background-image:linear-gradient(#0e292f0a,#0e292f8c),url('assets/roguelite/tower137/map-background-v2.webp');background-size:cover;background-repeat:no-repeat;background-position:center}
 @media(max-width:700px){.hero>button.tower-preview-card{background-position:center 17%}}
+.tower-map-expanded{min-width:420px;min-height:0;container-type:inline-size;background-image:linear-gradient(90deg,#7a613640,transparent 13%,transparent 88%,#7a613640),var(--map-background);background-size:100% 100%,100% auto;background-position:center,center top;background-repeat:no-repeat}
+.tower-map-expanded:before{content:"";position:absolute;inset:280px 5% 220px;z-index:0;background:repeating-linear-gradient(0deg,#a88e5015 0,#a88e5015 1px,transparent 1px,transparent 65px);border-left:1px solid #af92584a;border-right:1px solid #af92584a;pointer-events:none}
+.tower-map-expanded:after{content:"";position:absolute;inset:auto 0 0;height:150px;z-index:0;background-image:linear-gradient(#eadfc0,transparent 30%),var(--map-background);background-position:center,bottom;background-size:100% 100%,100% auto;pointer-events:none}
+.tower-map-expanded .tower-floor-label{left:1.5%;font-size:10px;padding:3px}
+.tower-map-expanded .map-art-foot{z-index:1}
+.tower-node-label>span{display:block}
+.tower-node.has-opponent .tower-node-label{width:112px;white-space:normal;padding:4px 5px;line-height:1.35}
+.tower-map-expanded button.tower-node{width:clamp(52px,10cqw,68px);height:clamp(52px,10cqw,68px)}
+.tower-map-expanded .tower-node.has-opponent .tower-node-label{width:clamp(82px,17cqw,112px)}
+.tower-opponent-name{font-weight:800;overflow-wrap:anywhere;margin-top:2px}
+.tower-node-label>.tower-opponent-name{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.has-opponent .tower-node-type{font-size:9px;font-weight:600;opacity:.8}
+.tower-node img.tower-opponent-portrait{width:calc(100% - 6px);height:calc(100% - 6px);border-radius:50%;object-fit:cover;object-position:center 22%;filter:none}
+.tower-node img.tower-kind-badge{position:absolute;width:24px;height:24px;right:-6px;bottom:-4px;border:1px solid #bca668;background:#f8efd9;border-radius:50%;padding:1px}
+.tower-node.kind-elite .tower-node-disc{border-color:#846297;background:radial-gradient(circle,#f6eacc,#bda8bb)}
+@media(max-width:700px){.tower-node.has-opponent .tower-node-label{width:82px;font-size:10px;padding:3px 4px}.has-opponent .tower-node-type{font-size:8px}.tower-node img.tower-kind-badge{width:21px;height:21px;right:-5px;bottom:-4px}.tower-map-expanded .tower-floor-label{font-size:9px}.tower-map-expanded:before{top:220px}}

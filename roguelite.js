@@ -1,7 +1,9 @@
-import {STORAGE_KEY,emptySave,readStore,writeStore,parseSave,serializeSave,makeStarter,createRun,validatePlayerDeck,beginDeckEdit,adjustRunDeck,commitRunDeck} from './roguelite-core.js';
-import {generateMap,nodeLabel,nodeSummary,TOWER_THEME,TOWER_EVENTS} from './roguelite-map.js';
-import {renderTowerMap,renderMapLegend,MAP_ASSETS} from './roguelite-map-view.js';
+import {STORAGE_KEY,emptySave,readStore,writeStore,parseSave,serializeSave,makeStarter,createRun,validatePlayerDeck,beginDeckEdit,adjustRunDeck,commitRunDeck} from './roguelite-core.js?v=20261014-138';
+import {generateMap,nodeLabel,nodeSummary,TOWER_THEME,TOWER_EVENTS} from './roguelite-map.js?v=20261014-138';
+import {renderTowerMap,renderMapLegend,MAP_ASSETS} from './roguelite-map-view.js?v=20261014-138';
 import {loadCatalog,browserDecks,onlineDecks,importedDecks} from './roguelite-data.js';
+import {cleanEncounterPool,assignEncounters,browserEncounterPool} from './roguelite-encounters.js?v=20261014-138';
+import {REST_CHOICES,RELICS,restOutcome,rewardPolicy} from './roguelite-rules.js?v=20261014-138';
 import {createStatFilters,statConditionsMatch} from './card-filters.js';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 
@@ -14,6 +16,8 @@ const img=card=>{const e=node('img');e.src=card.image;e.alt=card.name_ko;e.loadi
 let cards=[],meta={},save=emptySave(),activeSlot=null,draft=null,sourceDecks=[],sourceCards=[],pendingSlot=null;
 let blocked=false,rawSave=null,busy=false,sourceBusy=false,externalChange=false,toastTimer;
 let mapView=null,mapViewKey=null;
+let opponentPool=[],defaultOpponentPool=[],opponentSource='',opponentLoadError='';
+const encounterKinds=['battle','elite','boss'];
 const mapSelections=new Map();
 const statFilters=createStatFilters($('collection-stat-filters'),()=>renderCollection());
 const run=()=>save.slots.find(slot=>slot.slot_id===activeSlot)?.run;
@@ -36,6 +40,7 @@ function readSaved(){
 function saveStatus(){
   $('save-status').textContent=blocked?'저장본 보호 중 · 원본을 덮어쓰지 않았어.':externalChange?'다른 창에서 저장이 바뀌었어. 편집본은 유지돼. 저장본 다시 읽기를 눌러줘.':`이 브라우저에 저장 · 버전 ${save.revision} · 시작 덱 ${save.starters.length}개`;
   $('export-save').disabled=blocked;for(const id of ['open-starters','save-run','create-run'])$(id).disabled=blocked||busy||externalChange;
+  $('create-run').disabled||=!opponentPoolReady();
   if(blocked||busy||externalChange)$('commit-deck').disabled=true;
 }
 // All new writes share a Web Lock, then compare the revision again inside it.
@@ -61,7 +66,7 @@ function renderSlots(){
     e.append(node('span',`SLOT ${i+1}`,'slot-number'));
     const actions=node('div',null,'actions');
     if(slot.run){
-      const r=slot.run;e.append(node('h3',r.starter_name),node('p',`${r.floor} / 10층 · LP ${r.lp.toLocaleString()} / ${r.max_lp.toLocaleString()}`),node('p',`메인 ${count(r.active_deck.groups.main)}장 · ${new Date(r.updated_at).toLocaleString('ko-KR')}`));
+      const r=slot.run;e.append(node('h3',r.starter_name),node('p',`${r.floor} / ${r.map?.floors??20}층 · LP ${r.lp.toLocaleString()} / ${r.max_lp.toLocaleString()}`),node('p',`메인 ${count(r.active_deck.groups.main)}장 · ${new Date(r.updated_at).toLocaleString('ko-KR')}`));
       const open=button('불러오기',()=>openRun(slot.slot_id),'primary');open.disabled=blocked;
       const remove=button('슬롯 비우기',async()=>{
         if(!await confirm('이 원정 슬롯을 비울까?',`${r.starter_name}의 원정 기록과 카드함을 비워. 시작 덱 등록은 유지돼. 필요하면 슬롯 백업을 먼저 받아줘.`))return;
@@ -87,7 +92,7 @@ function renderRun(){
   const r=run();$('run-panel').hidden=!r;$('deck-editor').hidden=!draft||!r;if(!r)return;
   $('run-slot').textContent=`SLOT ${save.slots.findIndex(s=>s.slot_id===activeSlot)+1}`;$('run-title').textContent=r.starter_name;
   $('run-subtitle').textContent=`원정 준비됨 · ${r.collection.length}종 ${r.collection.reduce((n,e)=>n+e.count,0)}장 보유`;
-  $('run-lp').textContent=`${r.lp.toLocaleString()} / ${r.max_lp.toLocaleString()}`;$('run-floor').textContent=`${r.floor} / 10층`;
+  $('run-lp').textContent=`${r.lp.toLocaleString()} / ${r.max_lp.toLocaleString()}`;$('run-floor').textContent=`${r.floor} / ${r.map?.floors??20}층`;
   $('run-gold').textContent=r.gold.toLocaleString();$('run-relics').textContent=`${r.relics.length}개`;
   $('deck-counts').textContent=`메인 ${count(r.active_deck.groups.main)}장 · 엑스트라 ${count(r.active_deck.groups.extra)}장`;
   deckPreview($('deck-preview'),r.active_deck.groups,runCards());$('map-seed').textContent=`지도 시드: ${r.seed}`;renderMap(r);
@@ -95,17 +100,19 @@ function renderRun(){
   if(draft)renderEditor();saveStatus();
 }
 function renderMap(r){
-  const root=$('run-map'),key=`${r.id}:${JSON.stringify(r.map)}`;
+  const root=$('run-map'),key=`${r.id}:${JSON.stringify(r.map)}:${JSON.stringify(r.encounters)}`;
   if(mapViewKey!==key){
     mapView?.destroy();mapView=null;mapViewKey=key;root.replaceChildren();
     if(!r.map){root.append(node('p','이 백업에는 아직 지도가 없어.','muted'));mapDetails(r,null);return;}
     if(!r.map.nodes.some(n=>n.id===mapSelections.get(r.id)))mapSelections.delete(r.id);
-    mapView=renderTowerMap(root,r.map,{selectedNodeId:mapSelections.get(r.id)||null,onNode:entry=>{mapSelections.set(r.id,entry.id);mapDetails(r,entry);}});
+    mapView=renderTowerMap(root,r.map,{encounters:r.encounters,selectedNodeId:mapSelections.get(r.id)||null,onNode:entry=>{mapSelections.set(r.id,entry.id);mapDetails(r,entry);}});
+    if(r.map.floors===20)root.prepend(node('p','↔ 좁은 화면에서는 지도를 좌우로 움직여 상대와 길을 확인해.','muted map-gesture-hint'));
   }
   const selected=r.map?.nodes.find(n=>n.id===mapSelections.get(r.id));mapDetails(r,selected||null);
 }
 function mapDetails(r,entry){
-  $('map-selected-title').textContent=entry?`${entry.floor}층 · ${nodeLabel(entry.kind)}`:'첫 관문에서 봉인의 중심까지';
+  const opponent=entry&&r.encounters?.[entry.id];
+  $('map-selected-title').textContent=entry?`${entry.floor}층 · ${nodeLabel(entry.kind)}${opponent?' · '+opponent.opponent_name:''}`:'첫 관문에서 봉인의 중심까지';
   $('map-selected-summary').textContent=entry?entry.next.length?`이 칸에서 다음 ${entry.floor+1}층으로 이어지는 길 ${entry.next.length}개를 강조했어.`:'탑의 마지막 관문이야. 다음 층으로 이어지는 길은 없어.':'칸을 누르면 그곳에서 이어지는 루트를 볼 수 있어. 점선은 저장된 지도에서 연결된 길이야.';
   $('map-selected-icon').hidden=!entry;if(entry)$('map-selected-icon').src=MAP_ASSETS[entry.kind];
   $('inspect-map-node').disabled=!entry;$('map-route-status').textContent=entry?`${entry.floor}층 ${nodeLabel(entry.kind)} 루트 미리보기. 원정 진행도는 유지돼.`:'전체 루트 미리보기 · 아래에서 위로 올라가';
@@ -113,14 +120,58 @@ function mapDetails(r,entry){
 function showNode(entry,r){
   $('node-title').textContent=`${entry.floor}층 · ${nodeLabel(entry.kind)}`;
   let text=nodeSummary(entry.kind);
+  const opponent=r.encounters?.[entry.id],opponentRoot=$('node-opponent');opponentRoot.replaceChildren();opponentRoot.hidden=!opponent;
+  if(opponent){
+    const info=node('div');info.append(node('h3',opponent.opponent_name),node('p',`사용 덱 · ${opponent.deck_name}`),node('p',`전투 · ${opponent.battle_name} / AI 난이도 ${opponent.difficulty}`,'muted'));
+    const details=node('details'),summary=node('summary','상대 덱 카드 보기'),preview=node('div',null,'deck-preview');deckPreview(preview,opponent.deck.groups,cards);details.append(summary,preview);info.append(details);opponentRoot.append(info);
+  }
+  if(['battle','elite','midboss','boss'].includes(entry.kind)){
+    const policy=rewardPolicy(entry.kind);
+    text+=`\n\n승리 보상 설정 · ${policy.gold} 금화 / ${policy.min_rarity} 이상 카드 ${policy.card_choices}개 후보 중 1장${policy.relic?' / 유물 1개':''}`;
+    if(!opponent)text+='\n이전 저장 지도에는 상대가 아직 지정되지 않았어. 새 원정부터 상대가 표시돼.';
+  }
   if(entry.kind==='event'){
     const events=TOWER_EVENTS;const index=r.map.nodes.filter(n=>n.kind==='event').findIndex(n=>n.id===entry.id);const event=events[index%events.length];
     text+=`\n\n${event.title}\n${event.text}\n\n${event.choices.map(c=>`${c.label}: ${c.preview}`).join('\n')}`;
   }else if(entry.kind==='rest')text+=`\n\n${TOWER_THEME.rest_text}`;
-  else if(entry.kind==='midboss')text+=`\n\n${TOWER_THEME.midboss_text}`;
+  else if(entry.kind==='midboss'||entry.kind==='elite')text+=`\n\n${TOWER_THEME.elite_text}`;
   else if(entry.kind==='boss')text+=`\n\n${TOWER_THEME.boss_text}`;
-  const next=entry.next.map(id=>r.map.nodes.find(n=>n.id===id)).filter(Boolean);if(next.length)text+=`\n\n다음 길: ${next.map(n=>`${n.floor}층 ${nodeLabel(n.kind)}`).join(' / ')}`;
+  const next=entry.next.map(id=>r.map.nodes.find(n=>n.id===id)).filter(Boolean);if(next.length)text+=`\n\n다음 길: ${next.map(n=>`${n.floor}층 ${nodeLabel(n.kind)}${r.encounters?.[n.id]?' · '+r.encounters[n.id].opponent_name:''}`).join(' / ')}`;
+  $('rest-preview').hidden=entry.kind!=='rest';if(entry.kind==='rest')renderRestPreview(entry,r);
   $('node-description').textContent=text;$('node-dialog').showModal();
+}
+function renderRestPreview(entry,r){
+  const root=$('rest-choices');root.replaceChildren();$('rest-result').textContent='한 장소에서 한 가지만 선택할 수 있어.';
+  for(const choice of REST_CHOICES){
+    const action=button('',()=>{
+      const result=restOutcome({lp:2400,max_lp:4000,relics:[],seed:r.map.seed,nodeId:entry.id},choice.id);
+      for(const control of root.querySelectorAll('button'))control.disabled=true;
+      action.classList.add('chosen');
+      const relic=RELICS.find(item=>item.id===result.relic_id);
+      $('rest-result').textContent=`${choice.name} 선택 · LP ${result.lp.toLocaleString()} / ${result.max_lp.toLocaleString()}${relic?'\n획득: '+relic.name+' — '+relic.description:''}\n체험 결과야. 원정 저장은 바뀌지 않았어.`;
+    },'rest-choice');
+    action.dataset.choice=choice.id;action.append(node('strong',choice.name),node('span',choice.description));root.append(action);
+  }
+}
+
+function opponentPoolReady(){return encounterKinds.every(kind=>opponentPool.some(entry=>entry.allowed_kinds.includes(kind)));}
+function renderOpponentPool(){
+  const root=$('opponent-pool'),query=$('opponent-search').value.trim().toLocaleLowerCase('ko');root.replaceChildren();
+  $('opponent-source-status').textContent=opponentLoadError||opponentSource||'상대 자료를 읽는 중…';
+  $('opponent-counts').textContent=encounterKinds.map(kind=>`${nodeLabel(kind)} ${opponentPool.filter(entry=>entry.allowed_kinds.includes(kind)).length}개`).join(' · ')+(opponentPoolReady()?'':' · 각 종류에서 상대를 하나 이상 골라줘.');
+  for(const entry of opponentPool){
+    if(query&&!`${entry.opponent_name} ${entry.deck_name} ${entry.battle_name}`.toLocaleLowerCase('ko').includes(query))continue;
+    const row=node('fieldset',null,'opponent-row');row.append(node('legend',entry.opponent_name),node('p',`${entry.deck_name} · ${entry.battle_name} · 난이도 ${entry.difficulty}`));
+    const choices=node('div',null,'opponent-tiers');
+    for(const kind of encounterKinds){const label=node('label'),control=node('input');control.type='checkbox';control.checked=entry.allowed_kinds.includes(kind);control.setAttribute('aria-label',`${entry.opponent_name} ${entry.battle_name} ${nodeLabel(kind)}`);
+      control.addEventListener('change',()=>{entry.allowed_kinds=encounterKinds.filter(value=>value===kind?control.checked:entry.allowed_kinds.includes(value));$('opponent-counts').textContent=encounterKinds.map(value=>`${nodeLabel(value)} ${opponentPool.filter(item=>item.allowed_kinds.includes(value)).length}개`).join(' · ')+(opponentPoolReady()?'':' · 각 종류에서 상대를 하나 이상 골라줘.');saveStatus();});label.append(control,document.createTextNode(nodeLabel(kind)));choices.append(label);}
+    row.append(choices);root.append(row);
+  }saveStatus();
+}
+async function loadOpponentPool(){
+  try{const response=await fetch('data/roguelite-opponents.json?v=20261014-138',{cache:'no-store'});if(!response.ok)throw new Error('상대 자료를 읽지 못했어.');const data=await response.json();defaultOpponentPool=cleanEncounterPool(data.pool);opponentPool=copy(defaultOpponentPool);opponentSource='설치된 AI 배틀에서 준비한 상대 풀 · 출현 종류를 자유롭게 바꿀 수 있어.';opponentLoadError='';}
+  catch(error){opponentLoadError=error.message+' 새로고침하거나 이 브라우저의 AI 배틀에서 읽어줘.';}
+  renderOpponentPool();
 }
 function showCard(card){
   $('card-title').textContent=card.name_ko;const root=$('card-detail');root.replaceChildren();root.append(img(card));const info=node('div');
@@ -157,7 +208,7 @@ async function prepareRun(slotId){
   if(!await leaveDraft())return;renderRun();
   pendingSlot=slotId;if(!save.starters.length){$('starter-dialog').showModal();toast('시작 덱을 먼저 등록해줘.');return;}
   $('new-run-slot').textContent=`슬롯 ${save.slots.findIndex(s=>s.slot_id===slotId)+1}에 저장할 원정이야.`;
-  $('start-deck').replaceChildren(...save.starters.map(s=>option(s.name,s.starter_id)));$('run-seed-input').value='';previewStarter();$('new-run-dialog').showModal();
+  $('start-deck').replaceChildren(...save.starters.map(s=>option(s.name,s.starter_id)));$('run-seed-input').value='';previewStarter();renderOpponentPool();$('new-run-dialog').showModal();
 }
 function previewStarter(){const starter=save.starters.find(s=>s.starter_id===$('start-deck').value),target=$('starter-preview');target.replaceChildren();if(!starter)return;target.append(node('p',`LP 4,000 · 메인 ${count(starter.groups.main)} · 엑스트라 ${count(starter.groups.extra)}`));const preview=node('div',null,'deck-preview');deckPreview(preview,starter.groups,starter.collection.map(e=>e.card));target.append(preview);}
 function filterOptions(){for(const [id,key]of [['collection-type','type'],['collection-race','race'],['collection-attribute','attribute']]){const select=$(id);select.replaceChildren(option('전체',''),...[...new Set(runCards().map(c=>c[key]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ko')).map(v=>option(v,v)));}for(const id of ['collection-search','collection-rarity'])$(id).value='';$('collection-sort').value='name';statFilters.reset();}
@@ -214,7 +265,9 @@ $('start-deck').addEventListener('change',previewStarter);
 $('create-run').addEventListener('click',()=>safe(async()=>{
   const starter=save.starters.find(s=>s.starter_id===$('start-deck').value);if(!starter||!pendingSlot)throw new Error('시작 덱과 슬롯을 선택해줘.');
   if(save.slots.find(s=>s.slot_id===pendingSlot)?.run)throw new Error('이 슬롯에는 원정이 있어. 빈 슬롯을 골라줘.');
+  if(!opponentPoolReady())throw new Error('일반·엘리트·보스에 출현할 상대를 각각 하나 이상 골라줘.');
   const r=createRun({id:crypto.randomUUID(),slotId:pendingSlot,starter,cards,catalogVersion:meta.dataset_id,seed:$('run-seed-input').value.trim().normalize('NFC')||crypto.randomUUID()});r.map=generateMap(r.seed);
+  r.encounters=assignEncounters(r.map,opponentPool.filter(entry=>entry.allowed_kinds.length));
   const next=copy(save);next.slots.find(s=>s.slot_id===pendingSlot).run=r;await persist(next,'새 원정을 저장했어.');$('new-run-dialog').close();activeSlot=pendingSlot;draft=null;renderSlots();renderRun();$('run-panel').scrollIntoView({behavior:'smooth',block:'start'});
 }));
 $('close-run').addEventListener('click',()=>safe(async()=>{if(!await leaveDraft())return;activeSlot=null;renderSlots();renderRun();}));
@@ -228,16 +281,23 @@ $('commit-deck').addEventListener('click',()=>safe(async()=>{const changed=commi
 for(const id of ['collection-search','collection-type','collection-race','collection-attribute','collection-rarity','collection-sort'])$(id).addEventListener(id==='collection-search'?'input':'change',renderCollection);
 $('reset-collection').addEventListener('click',()=>{filterOptions();renderCollection();});
 $('view-intro').addEventListener('click',()=>$('intro-dialog').showModal());
-let demoView=null;
-$('open-map-demo').addEventListener('click',()=>safe(()=>{
-  const map=generateMap('sealed-duel-tower-art137');$('map-demo-dialog').showModal();renderMapLegend($('map-demo-legend'));
-  demoView=renderTowerMap($('map-demo'),map,{onNode:entry=>showNode(entry,{map})});
-}));
+let demoView=null,demoMap=null;
+function drawDemo(){
+  if(!defaultOpponentPool.length)throw new Error(opponentLoadError||'상대 자료를 읽고 있어. 잠시 후 다시 눌러줘.');
+  const map=generateMap(crypto.randomUUID()),encounters=assignEncounters(map,defaultOpponentPool);
+  demoMap=map;demoView?.destroy();renderMapLegend($('map-demo-legend'));$('demo-seed').textContent=`20층 · ${map.nodes.length}개 지점 · 시드 ${map.seed}`;
+  demoView=renderTowerMap($('map-demo'),map,{encounters,onNode:entry=>showNode(entry,{map,encounters})});
+  $('map-demo').prepend(node('p','↔ 좁은 화면에서는 지도를 좌우로 움직여 상대와 길을 확인해.','muted map-gesture-hint'));
+}
+$('open-map-demo').addEventListener('click',()=>safe(()=>{drawDemo();$('map-demo-dialog').showModal();}));
+$('reroll-map-demo').addEventListener('click',()=>safe(drawDemo));
+$('demo-to-top').addEventListener('click',()=>demoView?.scrollToNode(demoMap?.nodes.find(n=>n.kind==='boss')?.id,{focus:true}));
+$('demo-to-start').addEventListener('click',()=>demoView?.scrollToStart({focus:true}));
 $('close-map-demo').addEventListener('click',()=>$('map-demo-dialog').close());
 $('map-demo-dialog').addEventListener('close',()=>{demoView?.destroy();demoView=null;$('map-demo-legend').replaceChildren();});
 $('reset-map-route').addEventListener('click',()=>{const r=run();if(!r)return;mapSelections.delete(r.id);mapView?.setSelection(null);mapDetails(r,null);});
 $('map-to-start').addEventListener('click',()=>mapView?.scrollToStart({focus:true,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'}));
-$('map-to-top').addEventListener('click',()=>mapView?.scrollToNode('f10-l1',{focus:true,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'}));
+$('map-to-top').addEventListener('click',()=>mapView?.scrollToNode(run()?.map?.nodes.find(n=>n.kind==='boss')?.id,{focus:true,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'}));
 $('inspect-map-node').addEventListener('click',()=>{const r=run(),entry=r?.map?.nodes.find(n=>n.id===mapSelections.get(r.id));if(entry)showNode(entry,r);});
 $('export-save').addEventListener('click',()=>safe(()=>download(serializeSave(save),'YU-GI-OH-CLASSIC-expeditions.json')));
 $('download-raw').addEventListener('click',()=>{if(rawSave!==null)download(rawSave,'YU-GI-OH-CLASSIC-expeditions-original.json');});
@@ -256,5 +316,13 @@ addEventListener('storage',event=>{if(event.key!==STORAGE_KEY&&event.key!==null)
 addEventListener('beforeunload',event=>{if(dirty()){event.preventDefault();event.returnValue='';}});
 
 renderMapLegend($('map-legend'));
-try{({cards,meta}=await loadCatalog());readSaved();}
+const opponentLoad=loadOpponentPool();
+$('opponent-search').addEventListener('input',renderOpponentPool);
+$('opponent-defaults').addEventListener('click',()=>safe(async()=>{if(!defaultOpponentPool.length)await loadOpponentPool();opponentPool=copy(defaultOpponentPool);opponentLoadError='';opponentSource='설치된 AI 배틀의 기본 상대 풀';renderOpponentPool();}));
+$('opponent-browser').addEventListener('click',()=>safe(()=>{
+  const data=browserEncounterPool(localStorage,browserDecks(localStorage,cards),cards);
+  if(!data.pool.length)throw new Error(data.issues.map(issue=>issue.message).join(' ')||'이 브라우저에 연결 가능한 AI 배틀과 덱이 없어.');
+  opponentPool=copy(data.pool);opponentSource=`이 브라우저의 AI 배틀 ${data.pool.length}개${data.issues.length?' · 제외 '+data.issues.length+'개':''}`;opponentLoadError='';renderOpponentPool();
+}));
+try{({cards,meta}=await loadCatalog());readSaved();await opponentLoad;}
 catch(error){blocked=true;$('save-error').hidden=false;$('save-error-text').textContent=error.message;$('save-status').textContent='카드 자료를 읽지 못했어. 새로고침해줘.';renderSlots();}

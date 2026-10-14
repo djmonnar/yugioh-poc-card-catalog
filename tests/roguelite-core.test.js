@@ -172,7 +172,7 @@ test('malformed, future, duplicate slots, impossible LP and forged card metadata
   const dangling = copy(valid); dangling.slots[0].run.map = generateMap(run.seed);
   dangling.slots[0].run.map.nodes[0].next = ['missing-node']; assert.throws(() => parseSave(dangling), /지도 자료/);
   const wrongSeed = copy(valid); wrongSeed.slots[0].run.map = generateMap('other-seed'); assert.throws(() => parseSave(wrongSeed), /시드/);
-  const beyondTop = copy(valid); beyondTop.slots[0].run.map = generateMap(run.seed); beyondTop.slots[0].run.floor = 11;
+  const beyondTop = copy(valid); beyondTop.slots[0].run.map = generateMap(run.seed); beyondTop.slots[0].run.floor = beyondTop.slots[0].run.map.floors + 1;
   assert.throws(() => parseSave(beyondTop), /진행 층/);
 });
 
