@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "kind": "poc-ai-deck-bundle",
-  "catalog_dataset_id": "50e4e27edacdbe260b70e06ca8e7490ef0ea414a173e4ae6d8684f43314c0be5",
+  "catalog_dataset_id": "85ec1985c69e72c4dc5f341c0fa2ac26cc25d8daed34b56763223d62bb4861c1",
   "decks": [
     {
       "deck_id": "builtin-opponent-0",

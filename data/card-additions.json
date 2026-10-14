@@ -1596,6 +1596,63 @@
           "identity_key": "e1d9e1505223bb464f6924e555bb5d178315db005e557cb10adc5a27faca02a0"
         }
       ]
+    },
+    {
+      "id": "20261015-gemini-support",
+      "name": "듀얼 몬스터 · 지원 마법/함정 10장",
+      "added_at": "2026-10-15T00:00:00+09:00",
+      "cards": [
+        {
+          "slot": 1393,
+          "internal_id": 2095,
+          "identity_key": "d0628519a37f3c68e4af6f66733de78aa0afd13bf4467f919ef0cf27968007c5"
+        },
+        {
+          "slot": 1394,
+          "internal_id": 2096,
+          "identity_key": "deb110b0a723f0ddbd8f05f796a6fdb249ba9eb2adb36536fa7ca298adb42050"
+        },
+        {
+          "slot": 1395,
+          "internal_id": 2097,
+          "identity_key": "0cd0e89ef0c25ebd87e76f96b9b27a2b664fb48368b7c217ee7e4647af0f03f4"
+        },
+        {
+          "slot": 1396,
+          "internal_id": 2098,
+          "identity_key": "f81f7ec5663edae9dd76667bffeb11bec26a9dc1b3ee41203e2148d73c69b2f5"
+        },
+        {
+          "slot": 1397,
+          "internal_id": 2099,
+          "identity_key": "7b02f26a565aeb85f805170f6f362ab708b1de9ac4090cabc285ebf19b469e32"
+        },
+        {
+          "slot": 1398,
+          "internal_id": 2100,
+          "identity_key": "f3a8103576c6b2be3ef295a23bdcd68eb7d9025a372cceb9747f055ea93c43f9"
+        },
+        {
+          "slot": 1399,
+          "internal_id": 2101,
+          "identity_key": "2efa468fbbcaee28d45d696615341968ac1535fe942c8bb72fa0e964ca45975b"
+        },
+        {
+          "slot": 1400,
+          "internal_id": 2102,
+          "identity_key": "8b3b45e753ed851101f7265bb0742a6f236cef943540740ebd1390ecaabc1f4b"
+        },
+        {
+          "slot": 1401,
+          "internal_id": 2103,
+          "identity_key": "10ea3cb3e7ca9ce12f88d8bc1f0fa80dd3e4e59dd82b7fe2fbec0152013321c1"
+        },
+        {
+          "slot": 1402,
+          "internal_id": 2104,
+          "identity_key": "f9c15b67a23a8e9c9c25d93916d213d5c94f72a36c02433ec22125314e9b6468"
+        }
+      ]
     }
   ]
 }
