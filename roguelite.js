@@ -1,12 +1,14 @@
-import {STORAGE_KEY,emptySave,readStore,writeStore,parseSave,serializeSave,makeStarter,createRun,validatePlayerDeck,beginDeckEdit,adjustRunDeck,commitRunDeck} from './roguelite-core.js?v=20261014-139';
+import {STORAGE_KEY,emptySave,readStore,writeStore,parseSave,serializeSave,makeStarter,createRun,validatePlayerDeck,beginDeckEdit,adjustRunDeck,commitRunDeck} from './roguelite-core.js?v=20261015-147';
 import {generateMap,nodeLabel,nodeSummary,TOWER_THEME,TOWER_EVENTS} from './roguelite-map.js?v=20261014-138';
 import {renderTowerMap,renderMapLegend,MAP_ASSETS} from './roguelite-map-view.js?v=20261014-138';
 import {loadCatalog,browserDecks,onlineDecks,importedDecks} from './roguelite-data.js';
 import {cleanEncounterPool,assignEncounters,browserEncounterPool} from './roguelite-encounters.js?v=20261014-138';
-import {REST_CHOICES,RELICS,restOutcome,rewardPolicy} from './roguelite-rules.js?v=20261014-139';
+import {REST_CHOICES,RELICS,restOutcome,rewardPolicy} from './roguelite-rules.js?v=20261015-147';
 import {mountRewardPreview} from './roguelite-reward-preview.js?v=20261014-139';
 import {createStatFilters,statConditionsMatch} from './card-filters.js';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
+import {BRIDGE} from './roguelite147-config.js?v=20261015-147';
+import {mountBridge147} from './roguelite147-ui.js?v=20261015-147';
 
 const $=id=>document.getElementById(id), copy=value=>structuredClone(value);
 const count=rows=>rows.reduce((sum,row)=>sum+row.count,0);
@@ -17,6 +19,7 @@ const img=card=>{const e=node('img');e.src=card.image;e.alt=card.name_ko;e.loadi
 let cards=[],meta={},save=emptySave(),activeSlot=null,draft=null,sourceDecks=[],sourceCards=[],pendingSlot=null;
 let blocked=false,rawSave=null,busy=false,sourceBusy=false,externalChange=false,toastTimer;
 let mapView=null,mapViewKey=null;
+let bridgeUI=null;
 let opponentPool=[],defaultOpponentPool=[],opponentSource='',opponentLoadError='';
 const encounterKinds=['battle','elite','boss'];
 const mapSelections=new Map();
@@ -70,9 +73,16 @@ function renderSlots(){
       const r=slot.run;e.append(node('h3',r.starter_name),node('p',`${r.floor} / ${r.map?.floors??20}층 · LP ${r.lp.toLocaleString()} / ${r.max_lp.toLocaleString()}`),node('p',`메인 ${count(r.active_deck.groups.main)}장 · ${new Date(r.updated_at).toLocaleString('ko-KR')}`));
       const open=button('불러오기',()=>openRun(slot.slot_id),'primary');open.disabled=blocked;
       const remove=button('슬롯 비우기',async()=>{
+        if(r.bridge147)throw new Error('게임에 연결된 원정은 게임의 저장 기록에서 관리해. 브라우저에서 지우지 않았어.');
         if(!await confirm('이 원정 슬롯을 비울까?',`${r.starter_name}의 원정 기록과 카드함을 비워. 시작 덱 등록은 유지돼. 필요하면 슬롯 백업을 먼저 받아줘.`))return;
         const next=copy(save);next.slots[i].run=null;await persist(next,'슬롯을 비웠어.');if(activeSlot===slot.slot_id){activeSlot=null;draft=null;renderRun();}
-      },'remove');remove.disabled=blocked||externalChange;actions.append(open,remove);
+      },'remove');remove.disabled=blocked||externalChange||Boolean(r.bridge147);actions.append(open);
+      if(r.bridge147&&bridgeUI?.isLocal()){
+        const archive=button('원정 보관하고 슬롯 비우기',async()=>{
+          if(!await confirm('원정을 보관하고 슬롯을 비울까?',`${r.starter_name}의 원정 기록과 보상 영수증을 게임에 보관하고 슬롯을 새 원정에 사용할 수 있게 비워. 현재 덱 편집은 취소돼. 전투 시작 대기·진행·중단 상태에서는 보관할 수 없어.`))return;
+          await bridgeUI.archiveRun(r);
+        },'remove');archive.disabled=blocked||externalChange||!bridgeUI.canArchive(r);actions.append(archive);
+      }else actions.append(remove);
     }else{
       e.append(node('h3','새로운 원정'),node('p','등록한 시작 덱으로 나만의 지도를 준비해.'));
       const start=button('새 원정 준비',()=>prepareRun(slot.slot_id),'primary');start.disabled=blocked||externalChange;actions.append(start);
@@ -92,13 +102,17 @@ function deckPreview(target,groups,pool){
 function renderRun(){
   const r=run();$('run-panel').hidden=!r;$('deck-editor').hidden=!draft||!r;if(!r)return;
   $('run-slot').textContent=`SLOT ${save.slots.findIndex(s=>s.slot_id===activeSlot)+1}`;$('run-title').textContent=r.starter_name;
-  $('run-subtitle').textContent=`원정 준비됨 · ${r.collection.length}종 ${r.collection.reduce((n,e)=>n+e.count,0)}장 보유`;
+  $('run-subtitle').textContent=`${r.bridge147?'게임 연결 원정':'원정 준비됨'} · ${r.collection.length}종 ${r.collection.reduce((n,e)=>n+e.count,0)}장 보유`;
   $('run-lp').textContent=`${r.lp.toLocaleString()} / ${r.max_lp.toLocaleString()}`;$('run-floor').textContent=`${r.floor} / ${r.map?.floors??20}층`;
   $('run-gold').textContent=r.gold.toLocaleString();$('run-relics').textContent=`${r.relics.length}개`;
   $('deck-counts').textContent=`메인 ${count(r.active_deck.groups.main)}장 · 엑스트라 ${count(r.active_deck.groups.extra)}장`;
   deckPreview($('deck-preview'),r.active_deck.groups,runCards());$('map-seed').textContent=`지도 시드: ${r.seed}`;renderMap(r);
-  $('edit-deck').disabled=blocked||externalChange||!['between_nodes','at_node'].includes(r.state);
-  if(draft)renderEditor();saveStatus();
+  $('edit-deck').disabled=blocked||externalChange||!['between_nodes','at_node'].includes(r.state)||(Boolean(r.bridge147)&&!bridgeUI?.isBound(r));
+  if(draft)renderEditor();saveStatus();bridgeUI?.render();
+  const reachable=r.bridge147&&bridgeUI?.isLocal()?new Set(r.current_node_id===null?r.map.nodes.filter(n=>n.floor===1).map(n=>n.id):r.map.nodes.find(n=>n.id===r.current_node_id)?.next||[]):new Set();
+  for(const tile of $('run-map').querySelectorAll('[data-node-id]')){
+    tile.classList.toggle('current-run-node',tile.dataset.nodeId===r.current_node_id);tile.classList.toggle('run-next-node',r.state==='between_nodes'&&reachable.has(tile.dataset.nodeId));
+  }
 }
 function renderMap(r){
   const root=$('run-map'),key=`${r.id}:${JSON.stringify(r.map)}:${JSON.stringify(r.encounters)}`;
@@ -138,8 +152,8 @@ function showNode(entry,r){
   else if(entry.kind==='midboss'||entry.kind==='elite')text+=`\n\n${TOWER_THEME.elite_text}`;
   else if(entry.kind==='boss')text+=`\n\n${TOWER_THEME.boss_text}`;
   const next=entry.next.map(id=>r.map.nodes.find(n=>n.id===id)).filter(Boolean);if(next.length)text+=`\n\n다음 길: ${next.map(n=>`${n.floor}층 ${nodeLabel(n.kind)}${r.encounters?.[n.id]?' · '+r.encounters[n.id].opponent_name:''}`).join(' / ')}`;
-  $('rest-preview').hidden=entry.kind!=='rest';if(entry.kind==='rest')renderRestPreview(entry,r);
-  $('node-description').textContent=text;$('node-dialog').showModal();
+  const bound=bridgeUI?.isBound(r);$('rest-preview').hidden=entry.kind!=='rest'||bound;if(entry.kind==='rest'&&!bound)renderRestPreview(entry,r);
+  $('node-description').textContent=text;bridgeUI?.renderNode(entry,r,!r.id);$('node-dialog').showModal();
 }
 function renderRestPreview(entry,r){
   const root=$('rest-choices');root.replaceChildren();$('rest-result').textContent='한 장소에서 한 가지만 선택할 수 있어.';
@@ -278,7 +292,7 @@ $('edit-deck').addEventListener('click',()=>safe(()=>{
   $('deck-editor').scrollIntoView({behavior:'smooth',block:'start'});
 }));
 $('discard-deck').addEventListener('click',()=>safe(async()=>{if(!await leaveDraft())return;renderRun();}));
-$('commit-deck').addEventListener('click',()=>safe(async()=>{const changed=commitRunDeck(run(),draft);const next=copy(save);next.slots.find(s=>s.slot_id===activeSlot).run=changed;await persist(next,'원정 덱을 저장했어.');draft=null;renderRun();}));
+$('commit-deck').addEventListener('click',()=>safe(async()=>{if(run()?.bridge147){if(!bridgeUI?.isBound(run()))throw new Error('게임 실행기의 원정 화면에서 덱을 저장해줘.');await bridgeUI.syncDeck(draft);draft=null;renderRun();return;}const changed=commitRunDeck(run(),draft);const next=copy(save);next.slots.find(s=>s.slot_id===activeSlot).run=changed;await persist(next,'원정 덱을 저장했어.');draft=null;renderRun();}));
 for(const id of ['collection-search','collection-type','collection-race','collection-attribute','collection-rarity','collection-sort'])$(id).addEventListener(id==='collection-search'?'input':'change',renderCollection);
 $('reset-collection').addEventListener('click',()=>{filterOptions();renderCollection();});
 $('view-intro').addEventListener('click',()=>$('intro-dialog').showModal());
@@ -308,6 +322,8 @@ $('deck-file').addEventListener('change',()=>safe(async()=>{const raw=await file
 $('save-file').addEventListener('change',()=>safe(async()=>{
   const raw=await fileText($('save-file'));if(raw===null)return;const incoming=parseSave(raw);
   if(blocked)throw new Error('현재 저장 원본을 보호 중이야. 원본 백업을 받아 확인한 뒤 복구해줘.');
+  if(save.slots.some(slot=>slot.run?.bridge147))throw new Error('게임 연결 원정을 백업 파일로 덮어쓰지 않았어. 게임 진행 다시 불러오기로 복구해줘.');
+  if(incoming.slots.some(slot=>slot.run?.bridge147))throw new Error('게임 연결 기록은 백업만으로 승인할 수 없어. 게임 실행기에서 저장된 원정을 다시 불러와줘.');
   const populated=incoming.slots.filter(s=>s.run).length;
   if(!await confirm('슬롯 백업을 불러올까?',`시작 덱 ${incoming.starters.length}개와 원정 ${populated}개를 불러와 현재 원정 슬롯을 교체해. 현재 자료가 필요하면 먼저 슬롯 백업을 받아줘.`))return;
   incoming.revision=save.revision;await persist(incoming,'슬롯 백업을 불러왔어.');draft=null;activeSlot=null;renderSlots();renderRun();
@@ -325,5 +341,23 @@ $('opponent-browser').addEventListener('click',()=>safe(()=>{
   if(!data.pool.length)throw new Error(data.issues.map(issue=>issue.message).join(' ')||'이 브라우저에 연결 가능한 AI 배틀과 덱이 없어.');
   opponentPool=copy(data.pool);opponentSource=`이 브라우저의 AI 배틀 ${data.pool.length}개${data.issues.length?' · 제외 '+data.issues.length+'개':''}`;opponentLoadError='';renderOpponentPool();
 }));
-try{({cards,meta}=await loadCatalog());mountRewardPreview({cards,showCard});readSaved();await opponentLoad;}
+try{({cards,meta}=await loadCatalog());mountRewardPreview({cards,showCard});readSaved();
+  bridgeUI=mountBridge147({config:BRIDGE,getRun:run,getSave:()=>save,showCard,toast,onChanged:()=>{renderSlots();renderRun();},applyArchived:async(receipt,{fromStatus=false}={})=>{
+    const next=copy(save),slot=next.slots.find(s=>s.slot_id===receipt.slot_id);
+    if(!slot?.run||slot.run.id!==receipt.run_id){if(fromStatus)return;throw new Error('보관한 원정과 브라우저 슬롯이 달라. 기존 슬롯을 비우지 않았어.');}
+    if(fromStatus&&!slot.run.bridge147)return;
+    if(fromStatus&&activeSlot===receipt.slot_id&&dirty())throw new Error('이 원정은 다른 창에서 보관됐어. 현재 덱 편집은 보존했어. 편집을 취소한 뒤 게임 진행을 다시 불러와줘.');
+    slot.run=null;const priorDraft=draft,priorSlot=activeSlot;if(activeSlot===receipt.slot_id){draft=null;activeSlot=null;}
+    try{await persist(next,'원정 기록을 게임에 보관하고 슬롯을 비웠어.');}catch(error){draft=priorDraft;activeSlot=priorSlot;throw error;}
+    renderSlots();renderRun();
+  },applyRuns:async(runs,{allowDraftCommit=false}={})=>{
+    const next=copy(save);let changed=false;
+    for(const incoming of runs){const slot=next.slots.find(s=>s.slot_id===incoming.slot_id);if(!slot)throw new Error('게임 저장 슬롯을 확인할 수 없어.');
+      if(slot.run&&slot.run.id!==incoming.id)throw new Error('이 브라우저 슬롯에 다른 원정이 있어. 먼저 슬롯 백업을 받아줘. 원본은 바꾸지 않았어.');
+      if(JSON.stringify(slot.run)!==JSON.stringify(incoming)){slot.run=incoming;changed=true;}
+    }
+    if(changed){if(dirty()&&!allowDraftCommit)throw new Error('게임 진행이 바뀌었어. 현재 덱 편집을 취소한 뒤 다시 불러와줘.');await persist(next);}
+    if(activeSlot===null&&runs.length)activeSlot=runs[0].slot_id;
+  }});
+  renderRun();await opponentLoad;}
 catch(error){blocked=true;$('save-error').hidden=false;$('save-error-text').textContent=error.message;$('save-status').textContent='카드 자료를 읽지 못했어. 새로고침해줘.';renderSlots();}

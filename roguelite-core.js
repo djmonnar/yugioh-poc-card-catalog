@@ -1,9 +1,10 @@
 import {cardLine, resolveCard, placementError, sharesHarpieName, sharesUmiName} from './ai-deck-core.js';
 import {validateMap} from './roguelite-map.js?v=20261014-138';
 import {cleanEncounters} from './roguelite-encounters.js?v=20261014-138';
-import {cleanRestClaims,restOutcome} from './roguelite-rules.js?v=20261014-139';
+import {cleanRestClaims,restOutcome} from './roguelite-rules.js?v=20261015-147';
 import {snapshotCard} from './roguelite-card.js?v=20261014-139';
 import {cleanRewardTrack,emptyRewardTrack} from './roguelite-rewards.js?v=20261014-139';
+import {cleanBridgeState} from './roguelite147-state.js?v=20261015-147';
 export {snapshotCard} from './roguelite-card.js?v=20261014-139';
 
 export const SLOT_COUNT = 3;
@@ -249,8 +250,11 @@ function cleanRun(run) {
     lp, max_lp: maxLp, gold: integer(run.gold, 0, 2_000_000_000, '원정 금화'), floor: integer(run.floor, 0, 10000, '진행 층'),
     state: run.state, collection, active_deck: activeDeck(id, text(run.active_deck.name, 80, '원정 덱 이름'), groups),
     relics, reward_claims: rewardClaims, reward_track: cleanRewardTrack(run.reward_track ?? emptyRewardTrack()), history: jsonValue(run.history), map: jsonValue(run.map),
-    current_node_id:currentNode, encounters, rest_claims:restClaims};
+    current_node_id:currentNode, encounters, rest_claims:restClaims,
+    ...(run.bridge147 == null ? {} : {bridge147:cleanBridgeState(run.bridge147,run)})};
 }
+
+export const normalizeRun = cleanRun;
 
 // Only an entered rest node can affect a saved run. Map preview never calls this.
 export function resolveRestChoice(run,nodeId,choice,{now = new Date()} = {}) {

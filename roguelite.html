@@ -4,16 +4,17 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#102b31"><title>스토리 원정 · YU-GI-OH CLASSIC</title>
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="roguelite.css?v=20261014-139">
+  <link rel="stylesheet" href="roguelite.css?v=20261015-147">
   <link rel="stylesheet" href="roguelite-map-view.css?v=20261014-138">
   <link rel="stylesheet" href="roguelite-reward-preview.css?v=20261014-139">
-  <script type="module" src="roguelite.js?v=20261014-139"></script>
+  <link rel="stylesheet" href="roguelite147.css?v=20261015-147">
+  <script type="module" src="roguelite.js?v=20261015-147"></script>
 </head>
 <body>
 <header class="masthead"><a class="brand" href="./"><img src="assets/icon.svg" width="30" height="36" alt=""><span>YU-GI-OH CLASSIC<small>덱과 함께 성장하는 스토리 원정</small></span></a><nav aria-label="제작 도구"><a href="./">카드 도감</a><a href="ai-decks.html">AI 덱 편집</a><a href="story.html">AI 배틀 제작</a><a href="characters.html">공용 캐릭터</a></nav></header>
 <main>
   <section class="hero"><div><p class="eyebrow">STORY EXPEDITION</p><h1>봉인된 듀얼의 탑</h1><p>시작 덱 한 벌로 탑의 문을 연다.<br>선택한 길과 얻은 카드가 다음 듀얼을 바꾼다.</p></div><button id="open-map-demo" class="tower-preview-card" type="button"><img src="assets/roguelite/tower137/icon-boss-v1.webp" alt="" width="66" height="66"><span>맵 그림 미리보기 ↗</span></button></section>
-  <p class="phase-note">20층 원정 준비 · 새 원정마다 길과 상대를 새로 뽑고, 이어하기에서는 같은 지도를 유지해. 엘리트는 피하거나 여러 번 도전할 수 있어. 지금은 지도·상대·휴식 선택을 미리 볼 수 있고, 실제 이동·듀얼은 다음 연결 단계야.</p>
+  <p class="phase-note">20층 원정 · 새 원정마다 길과 상대를 새로 뽑고, 이어하기에서는 같은 지도를 유지해. 게임 실행기로 연 원정 화면에서 실제 듀얼·종료 LP·승리 카드 보상을 이어가. 상점과 이벤트는 이번 연결판에서는 통과만 가능해.</p>
   <div class="actions reward-preview-entry"><button id="open-reward-preview" type="button" disabled>카드 보상 · 확률 체험</button><span class="muted">후보 5장 중 1장 선택 · 구역별 확률 · SR·UR 천장</span></div>
   <div class="storage-bar"><p id="save-status" role="status">저장 슬롯을 읽는 중…</p><div><button id="export-save" type="button" disabled>슬롯 백업 받기</button><button id="import-save" type="button">슬롯 백업 불러오기</button><button id="reload-save" type="button">저장본 다시 읽기</button></div></div>
   <section id="save-error" class="error-panel" hidden><h2>저장본을 확인할 수 없어</h2><p id="save-error-text"></p><button id="download-raw" type="button">원본 백업 받기</button></section>

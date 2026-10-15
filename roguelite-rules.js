@@ -1,4 +1,5 @@
 // Run-host rules. Native duel completion will supply the real LP/result later.
+export const MAX_RUN_LP = 60000;
 export const REST_CHOICES = Object.freeze([
   Object.freeze({id:'max_lp',name:'생명의 그릇',description:'최대 LP +500. 현재 LP는 그대로야.'}),
   Object.freeze({id:'heal',name:'완전한 휴식',description:'현재 LP를 최대 LP까지 모두 회복해.'}),
@@ -25,18 +26,18 @@ export function rewardPolicy(kind,relics=[]){
   return {...base,gold:base.gold+owned.reduce((n,r)=>n+(r.win_gold||0),0),card_choices:base.card_choices+owned.reduce((n,r)=>n+(r.reward_choices||0),0),heal:owned.reduce((n,r)=>n+(r.win_heal||0),0)};
 }
 export function restOutcome({lp,max_lp,relics=[],seed,nodeId},choice){
-  if(!Number.isSafeInteger(max_lp)||max_lp<1||max_lp>65535||!Number.isSafeInteger(lp)||lp<1||lp>max_lp)fail('휴식 전 LP를 확인해줘.');
+  if(!Number.isSafeInteger(max_lp)||max_lp<1||max_lp>MAX_RUN_LP||!Number.isSafeInteger(lp)||lp<1||lp>max_lp)fail('휴식 전 LP를 60,000 이하로 확인해줘.');
   if(!Array.isArray(relics)||new Set(relics).size!==relics.length||!relics.every(id=>typeof id==='string'))fail('유물 목록을 확인해줘.');
   if(typeof seed!=='string'||!seed||typeof nodeId!=='string'||!nodeId)fail('휴식 장소를 확인해줘.');
   const next={lp,max_lp,relics:[...relics],relic_id:null};
   if(choice==='max_lp'){
-    if(max_lp>65035)fail('최대 LP가 한계에 도달해 다른 휴식을 선택해야 해.');
+    if(max_lp>MAX_RUN_LP-500)fail('최대 LP가 60,000 한계에 도달해 다른 휴식을 선택해야 해.');
     next.max_lp+=500;
   }else if(choice==='heal'){
     if(lp===max_lp)fail('이미 LP가 가득 차 있어. 다른 휴식을 선택해줘.');
     next.lp=max_lp;
   }else if(choice==='relic'){
-    const candidates=RELICS.filter(r=>!relics.includes(r.id)&&max_lp+(r.max_lp||0)<=65535);
+    const candidates=RELICS.filter(r=>!relics.includes(r.id)&&max_lp+(r.max_lp||0)<=MAX_RUN_LP);
     if(!candidates.length)fail('받을 수 있는 유물을 모두 갖고 있어. 다른 휴식을 선택해줘.');
     const selected=candidates[hash(`rest138|${seed}|${nodeId}`)%candidates.length];
     next.relic_id=selected.id;next.relics.push(selected.id);next.max_lp+=selected.max_lp||0;
