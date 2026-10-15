@@ -1653,6 +1653,108 @@
           "identity_key": "f9c15b67a23a8e9c9c25d93916d213d5c94f72a36c02433ec22125314e9b6468"
         }
       ]
+    },
+    {
+      "id": "20261015-volcanic-fire-mist",
+      "name": "볼캐닉 · 화염 지원 · 안개 골짜기 19장",
+      "added_at": "2026-10-15T05:51:10.4710986+00:00",
+      "cards": [
+        {
+          "slot": 1403,
+          "internal_id": 2105,
+          "identity_key": "3020114321ff2db5e5fdb5f5ca4d2794fc80c362110e97f79c29512e0c6a9ce5"
+        },
+        {
+          "slot": 1404,
+          "internal_id": 2106,
+          "identity_key": "184999d07133621a16a4ef296b7e218469d447fca7373d9a6d5e7e54cb3531c6"
+        },
+        {
+          "slot": 1405,
+          "internal_id": 2107,
+          "identity_key": "5d2f5425c5c4ca0f5da3e3bf5aa7cf556f6a963d2c98fa9386f619c8e2e1ca95"
+        },
+        {
+          "slot": 1406,
+          "internal_id": 2108,
+          "identity_key": "e62c8716039889d477cf8be2a601e270144f10bcdbb47646796fd72b9272299a"
+        },
+        {
+          "slot": 1407,
+          "internal_id": 2109,
+          "identity_key": "4d7b67f355652a4933cbe0850b1ef39a87dcf5e33ca48c558ae4b179e8bcf62f"
+        },
+        {
+          "slot": 1408,
+          "internal_id": 2110,
+          "identity_key": "e1436f93c45208cc8edf03b45b430ff270e9061482b9c63dded116dfcdffb938"
+        },
+        {
+          "slot": 1409,
+          "internal_id": 2111,
+          "identity_key": "07adebc96bf42075a206419dd47a38a346663582d7700098aa5e308fbf591e6c"
+        },
+        {
+          "slot": 1410,
+          "internal_id": 2112,
+          "identity_key": "9a950d467b21525f75348d120ef5f58bd4aea4c831b1a818049771bd8b03b406"
+        },
+        {
+          "slot": 1411,
+          "internal_id": 2113,
+          "identity_key": "637941745a9fc184b3eb74e6eb1931da71a1b745f95c776ef2966054bd750eba"
+        },
+        {
+          "slot": 1412,
+          "internal_id": 2114,
+          "identity_key": "6333010a0c989ec29a4ce118fda69a9f71f0f4efb008a97a8bb68372529306c0"
+        },
+        {
+          "slot": 1413,
+          "internal_id": 2115,
+          "identity_key": "be61a6384248d4830b5c7243e5043f31d3a3aa8484e82afa682033e011f087db"
+        },
+        {
+          "slot": 1414,
+          "internal_id": 2116,
+          "identity_key": "83f9551be865da8a132e51c4eb82d0138f7630570eafc4755974632e9ffc0bec"
+        },
+        {
+          "slot": 1415,
+          "internal_id": 2117,
+          "identity_key": "ee8f9c4f3e37384d485c5695a78ebfcb44bafab1798bb1797a522ef340c726a2"
+        },
+        {
+          "slot": 1416,
+          "internal_id": 2118,
+          "identity_key": "2066e47de2542a1e077d6b5ca5708a1dfeab4dd79c8e52de393e8495fa1c2b0e"
+        },
+        {
+          "slot": 1417,
+          "internal_id": 2119,
+          "identity_key": "803a201ac142d155aad9a0754e701d685ec66bc628b827141b48fccef3daa322"
+        },
+        {
+          "slot": 1418,
+          "internal_id": 2120,
+          "identity_key": "96faff172cb397385a477ffe177840a1f27390747807cc7a6860e182c91a1fa6"
+        },
+        {
+          "slot": 1419,
+          "internal_id": 2121,
+          "identity_key": "691d649364d49611e4014848081feb8564a260847bc5e8cadac25995d7ce5802"
+        },
+        {
+          "slot": 1420,
+          "internal_id": 2122,
+          "identity_key": "27057a437812b2034db198f5fd7393e9136643d4bd477d917ec5d36678c17f31"
+        },
+        {
+          "slot": 1421,
+          "internal_id": 2123,
+          "identity_key": "0055baeeba8df234a97ecff259dabf614873650b5678a740bd36b056842fdeb0"
+        }
+      ]
     }
   ]
 }

@@ -13,9 +13,14 @@ const makeHistory = (...releases) => ({schema_version:1, releases});
 test('published latest addition batch matches actual cards without changing gameplay data', () => {
   const before = JSON.stringify(data), index = additionIndex(data.cards, history);
   const latest = history.releases.find(r => r.id === index.latest.id);
-  assert.equal(latest.id, '20261015-gemini-support');
+  assert.equal(latest.id, '20261015-volcanic-fire-mist');
   assert.deepEqual(latest.cards.map(c => [c.slot,c.internal_id]),
+    Array.from({length:19},(_,i)=>[1403+i,2105+i]));
+  const gemini = history.releases.find(r => r.id === '20261015-gemini-support');
+  assert.deepEqual(gemini.cards.map(c => [c.slot,c.internal_id]),
     Array.from({length:10},(_,i)=>[1393+i,2095+i]));
+  assert.equal(data.cards.filter(c=>additionMatches(c,gemini.id,index)).length,10);
+  assert.ok(Date.parse(latest.added_at)>Date.parse(gemini.added_at));
   const rocks = history.releases.find(r => r.id === '20261015-honest-rock-support');
   assert.deepEqual(rocks.cards.map(c => [c.slot,c.internal_id]),
     Array.from({length:10},(_,i)=>[1383+i,2085+i]));

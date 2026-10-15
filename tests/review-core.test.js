@@ -92,10 +92,15 @@ test('tokens have no deck limit proposals', () => {
   assert.throws(()=>changesFor(token,{proposed_limit:1}));
 });
 test('public catalog is complete, each preview exists and personal paths are absent', () => {
-  assert.equal(catalog.cards.length,1402);
-  assert.equal(catalog.cards.filter(c=>!c.special).length,1396);
+  assert.equal(catalog.cards.length,1421);
+  assert.equal(catalog.cards.filter(c=>!c.special).length,1415);
   assert.equal(catalog.cards.filter(c=>c.special).length,6);
-  assert.equal(new Set(catalog.cards.map(c=>c.identity_key)).size,1402);
+  assert.equal(new Set(catalog.cards.map(c=>c.identity_key)).size,1421);
+  for(let slot=1403;slot<=1421;slot++){
+    const c=catalog.cards.find(c=>c.slot===slot);assert.ok(c&&!c.special&&c.official_cid);
+    assert.equal(c.internal_id,2105+slot-1403);
+    assert.equal(c.review_kind,catalog.meta.preparation_status==='draft_native_candidate_pending_do_not_publish'?'effect':'restored');
+  }
   for(let slot=1383;slot<=1402;slot++){
     const c=catalog.cards.find(c=>c.slot===slot);assert.ok(c&&!c.special&&c.official_cid);
     assert.equal(c.internal_id,2085+slot-1383);assert.equal(c.review_kind,'restored');

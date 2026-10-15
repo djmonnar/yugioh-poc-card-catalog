@@ -40,3 +40,12 @@ test('new relation metadata preserves existing review round-trip',()=>{
   const c=card(625),review=makeReview(c,{note:'같은 카드군 효과 확인',proposed_limit:1});
   assert.deepEqual(parseImport(exportPayload(data.meta,[review]),data.cards).valid[0].changes,review.changes);
 });
+
+test('Volcanic and Mist Valley use official membership and keep Blaze support separate',()=>{
+  assert.deepEqual(groupCards(data.cards,'volcanic','member').map(c=>c.slot),[293,...Array.from({length:7},(_,i)=>1403+i)]);
+  assert.deepEqual(groupCards(data.cards,'volcanic','support').map(c=>c.slot),[1289,1290]);
+  assert.deepEqual(groupCards(data.cards,'mist_valley','member').map(c=>c.slot),[669,719,...Array.from({length:5},(_,i)=>1417+i)]);
+  assert.equal(categoryMatches(card(1416),'','volcanic'),false);
+  assert.equal(categoryMatches(card(1289),'','volcanic'),true);
+  for(const slot of [1418,1419])assert.match(card(slot).review_note,/튜너.*싱크로/);
+});
