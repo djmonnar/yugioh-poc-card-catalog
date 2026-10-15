@@ -13,8 +13,15 @@ const makeHistory = (...releases) => ({schema_version:1, releases});
 test('published latest addition batch matches actual cards without changing gameplay data', () => {
   const before = JSON.stringify(data), index = additionIndex(data.cards, history);
   const latest = history.releases.find(r => r.id === index.latest.id);
-  assert.equal(latest.id, '20261013-beast-support');
+  assert.equal(latest.id, '20261015-gemini-support');
   assert.deepEqual(latest.cards.map(c => [c.slot,c.internal_id]),
+    Array.from({length:10},(_,i)=>[1393+i,2095+i]));
+  const rocks = history.releases.find(r => r.id === '20261015-honest-rock-support');
+  assert.deepEqual(rocks.cards.map(c => [c.slot,c.internal_id]),
+    Array.from({length:10},(_,i)=>[1383+i,2085+i]));
+  assert.ok(Date.parse(latest.added_at)>Date.parse(rocks.added_at));
+  const beasts = history.releases.find(r => r.id === '20261013-beast-support');
+  assert.deepEqual(beasts.cards.map(c => [c.slot,c.internal_id]),
     [2059,2060,2061,2062,2064,2065,2066,2067,2069,2070,2071,2072,2073,2074,2075,2076,2077,2078,2079,2080,2081,2082,2083,2084].map((id,i)=>[1359+i,id]));
   const plants = history.releases.find(r => r.id === '20261013-plant-support');
   assert.deepEqual(plants.cards.map(c => [c.slot,c.internal_id]),
