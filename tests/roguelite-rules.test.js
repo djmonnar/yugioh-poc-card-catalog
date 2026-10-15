@@ -4,7 +4,7 @@ import {readFileSync} from 'node:fs';
 import {emptyDeck,cardLine} from '../ai-deck-core.js';
 import {generateMap} from '../roguelite-map.js';
 import {assignEncounters} from '../roguelite-encounters.js';
-import {REST_CHOICES,RELICS,restOutcome,rewardPolicy} from '../roguelite-rules.js';
+import {MAX_RUN_LP,REST_CHOICES,RELICS,restOutcome,rewardPolicy} from '../roguelite-rules.js';
 import {makeStarter,createRun,emptySave,serializeSave,parseSave,resolveRestChoice,commitRunDeck,beginDeckEdit} from '../roguelite-core.js';
 const cards=JSON.parse(readFileSync(new URL('../data/cards.json',import.meta.url),'utf8')).cards;
 const pool=JSON.parse(readFileSync(new URL('../data/roguelite-opponents.json',import.meta.url),'utf8')).pool;
@@ -38,7 +38,9 @@ test('random relic is stable on retry/reload, excludes all owned, handles exhaus
   const first=restOutcome(context,'relic');assert.deepEqual(restOutcome(structuredClone(context),'relic'),first);
   for(const missing of RELICS){const out=restOutcome({...context,relics:RELICS.filter(r=>r!==missing).map(r=>r.id)},'relic');assert.equal(out.relic_id,missing.id);}
   assert.throws(()=>restOutcome({...context,relics:RELICS.map(r=>r.id)},'relic'),/모두/);
-  assert.throws(()=>restOutcome({...context,max_lp:65036},'max_lp'),/한계/);
+  assert.equal(restOutcome({...context,max_lp:MAX_RUN_LP-500},'max_lp').max_lp,MAX_RUN_LP);
+  assert.throws(()=>restOutcome({...context,max_lp:MAX_RUN_LP},'max_lp'),/한계/);
+  assert.throws(()=>restOutcome({...context,max_lp:MAX_RUN_LP+1},'max_lp'),/LP/);
   assert.throws(()=>restOutcome({...context,lp:4000},'heal'),/가득/);
   assert.throws(()=>restOutcome({...context,lp:0},'heal'),/LP/);
 });
