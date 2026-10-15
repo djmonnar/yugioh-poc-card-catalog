@@ -1755,6 +1755,38 @@
           "identity_key": "0055baeeba8df234a97ecff259dabf614873650b5678a740bd36b056842fdeb0"
         }
       ]
+    },
+    {
+      "id": "20261015-volcanic-mist-procedures",
+      "name": "볼캐닉 · 안개 골짜기 절차 지원 5장",
+      "added_at": "2026-10-15T08:02:55Z",
+      "cards": [
+        {
+          "slot": 1422,
+          "internal_id": 2124,
+          "identity_key": "a9aa7e4588fcca348af07bee8f0673c6eccacc3b9ef5bbbd6fc9e3710135bdda"
+        },
+        {
+          "slot": 1423,
+          "internal_id": 2125,
+          "identity_key": "6a3c77735e326d28769214d37e2ad2746df4b71aeb7aaf6d911438cb023c6fcc"
+        },
+        {
+          "slot": 1424,
+          "internal_id": 2126,
+          "identity_key": "53e18ab94e0454d41dcf5186a875b0477a50fab5a21758c219767eec9f510979"
+        },
+        {
+          "slot": 1425,
+          "internal_id": 2127,
+          "identity_key": "5c3da29305041d4d90caedf287fce054c06fe737e1a0fb69e44ee517261529fd"
+        },
+        {
+          "slot": 1426,
+          "internal_id": 2128,
+          "identity_key": "7a1b792cab5bdd2c2fe81530c1355ee25bc81a7fcb53a7fecf3f035c5fe7358f"
+        }
+      ]
     }
   ]
 }

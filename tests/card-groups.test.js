@@ -42,10 +42,17 @@ test('new relation metadata preserves existing review round-trip',()=>{
 });
 
 test('Volcanic and Mist Valley use official membership and keep Blaze support separate',()=>{
-  assert.deepEqual(groupCards(data.cards,'volcanic','member').map(c=>c.slot),[293,...Array.from({length:7},(_,i)=>1403+i)]);
+  assert.deepEqual(groupCards(data.cards,'volcanic','member').map(c=>c.slot),[293,...Array.from({length:7},(_,i)=>1403+i),1422,1423]);
   assert.deepEqual(groupCards(data.cards,'volcanic','support').map(c=>c.slot),[1289,1290]);
-  assert.deepEqual(groupCards(data.cards,'mist_valley','member').map(c=>c.slot),[669,719,...Array.from({length:5},(_,i)=>1417+i)]);
+  assert.deepEqual(groupCards(data.cards,'mist_valley','member').map(c=>c.slot),[669,719,...Array.from({length:5},(_,i)=>1417+i),1424,1425,1426]);
   assert.equal(categoryMatches(card(1416),'','volcanic'),false);
   assert.equal(categoryMatches(card(1289),'','volcanic'),true);
   for(const slot of [1418,1419])assert.match(card(slot).review_note,/튜너.*싱크로/);
+});
+
+test('procedure additions retain twelve groups and official tuner caveat',()=>{
+  assert.equal(data.meta.card_system.groups.length,12);
+  assert.match(card(1425).review_note,/튜너.*싱크로/);
+  for(const slot of [1422,1423])assert.equal(categoryMatches(card(slot),'','volcanic'),true);
+  for(const slot of [1424,1425,1426])assert.equal(categoryMatches(card(slot),'','mist_valley'),true);
 });
