@@ -1,0 +1,43 @@
+/* Built-in image_gen painted atlas, original pixels/alpha preserved. 6 columns x4 rows. */
+.relic-icon154[data-relic],.definition-card[data-relic] .relic-icon163,.definition-card[data-event=card_duplication] .relic-icon163 {background-image:url(assets/expedition160/relic-atlas160.png)!important;background-size:600% 400%!important;background-repeat:no-repeat!important;filter:drop-shadow(0 3px 5px #0007);}
+.relic-icon154[data-relic] {background-position:100% 100%!important;}
+.relic-icon154[data-relic="golden_scarab"],.definition-card[data-relic="golden_scarab"] .relic-icon163 {background-position:0% 0.00000000%!important;}
+.relic-icon154[data-relic="restoring_ankh"],.definition-card[data-relic="restoring_ankh"] .relic-icon163 {background-position:20% 0.00000000%!important;}
+.relic-icon154[data-relic="card_slate"],.definition-card[data-relic="card_slate"] .relic-icon163 {background-position:40% 0.00000000%!important;}
+.relic-icon154[data-relic="merchant_seal"],.definition-card[data-relic="merchant_seal"] .relic-icon163 {background-position:60% 0.00000000%!important;}
+.relic-icon154[data-relic="life_fragment"],.definition-card[data-relic="life_fragment"] .relic-icon163 {background-position:80% 0.00000000%!important;}
+.relic-icon154[data-relic="kuriboh_charm"],.definition-card[data-relic="kuriboh_charm"] .relic-icon163 {background-position:100% 0.00000000%!important;}
+.relic-icon154[data-relic="destiny_draw"],.definition-card[data-relic="destiny_draw"] .relic-icon163 {background-position:0% 33.33333333%!important;}
+.relic-icon154[data-relic="field_legacy"],.definition-card[data-relic="field_legacy"] .relic-icon163 {background-position:20% 33.33333333%!important;}
+.relic-icon154[data-relic="draw_scroll"],.definition-card[data-relic="draw_scroll"] .relic-icon163 {background-position:40% 33.33333333%!important;}
+.relic-icon154[data-relic="draw_tome"],.definition-card[data-relic="draw_tome"] .relic-icon163 {background-position:60% 33.33333333%!important;}
+.relic-icon154[data-relic="healing_potion"],.definition-card[data-relic="healing_potion"] .relic-icon163 {background-position:80% 33.33333333%!important;}
+.relic-icon154[data-relic="greater_healing_potion"],.definition-card[data-relic="greater_healing_potion"] .relic-icon163 {background-position:100% 33.33333333%!important;}
+.relic-icon154[data-relic="rare_cache"],.definition-card[data-relic="rare_cache"] .relic-icon163 {background-position:0% 66.66666667%!important;}
+.relic-icon154[data-relic="fusion_cache"],.definition-card[data-relic="fusion_cache"] .relic-icon163 {background-position:20% 66.66666667%!important;}
+.relic-icon154[data-relic="destruction_scroll"],.definition-card[data-relic="destruction_scroll"] .relic-icon163 {background-position:40% 66.66666667%!important;}
+.relic-icon154[data-relic="flame_scroll"],.definition-card[data-relic="flame_scroll"] .relic-icon163 {background-position:60% 66.66666667%!important;}
+.relic-icon154[data-relic="thorn_armor"],.definition-card[data-relic="thorn_armor"] .relic-icon163 {background-position:80% 66.66666667%!important;}
+.relic-icon154[data-relic="golden_pot"],.definition-card[data-relic="golden_pot"] .relic-icon163 {background-position:100% 66.66666667%!important;}
+.relic-icon154[data-relic="wise_burial"],.definition-card[data-relic="wise_burial"] .relic-icon163 {background-position:0% 100.00000000%!important;}
+.relic-icon154[data-relic="prepared_trap"],.definition-card[data-relic="prepared_trap"] .relic-icon163 {background-position:20% 100.00000000%!important;}
+.relic-icon154[data-relic="prepared_spell"],.definition-card[data-relic="prepared_spell"] .relic-icon163 {background-position:40% 100.00000000%!important;}
+.relic-icon154[data-relic="prepared_monster"],.definition-card[data-relic="prepared_monster"] .relic-icon163 {background-position:60% 100.00000000%!important;}
+.relic-icon154[data-relic="weak_power"],.definition-card[data-relic="weak_power"] .relic-icon163 {background-position:80% 100.00000000%!important;}
+.relic-icon154[data-relic="card_duplication"],.definition-card[data-relic="card_duplication"] .relic-icon163,.definition-card[data-event=card_duplication] .relic-icon163 {background-position:100% 100.00000000%!important;}
+
+.relic-icon154[data-relic="forge_attack"],.definition-card[data-relic="forge_attack"] .relic-icon163 {background-image:url(assets/expedition163/relic-atlas163.png)!important;background-size:492.777777778% 246.388888889%!important;background-position:4.59688826% 14.231499051%!important;}
+
+.relic-icon154[data-relic="forge_defense"],.definition-card[data-relic="forge_defense"] .relic-icon163 {background-image:url(assets/expedition163/relic-atlas163.png)!important;background-size:492.777777778% 246.388888889%!important;background-position:35.007072136% 14.231499051%!important;}
+
+.relic-icon154[data-relic="dreamcatcher"],.definition-card[data-relic="dreamcatcher"] .relic-icon163 {background-image:url(assets/expedition163/relic-atlas163.png)!important;background-size:492.777777778% 246.388888889%!important;background-position:65.099009901% 14.326375712%!important;}
+
+.relic-icon154[data-relic="reload"],.definition-card[data-relic="reload"] .relic-icon163 {background-image:url(assets/expedition163/relic-atlas163.png)!important;background-size:492.777777778% 246.388888889%!important;background-position:95.40311174% 14.326375712%!important;}
+
+.relic-icon154[data-relic="tactics_manual"],.definition-card[data-relic="tactics_manual"] .relic-icon163 {background-image:url(assets/expedition163/relic-atlas163.png)!important;background-size:492.777777778% 246.388888889%!important;background-position:4.702970297% 84.819734345%!important;}
+
+.relic-icon154[data-relic="lizard_tail"],.definition-card[data-relic="lizard_tail"] .relic-icon163 {background-image:url(assets/expedition163/relic-atlas163.png)!important;background-size:492.777777778% 246.388888889%!important;background-position:35.113154173% 84.819734345%!important;}
+
+.relic-icon154[data-relic="mystery_card"],.definition-card[data-relic="mystery_card"] .relic-icon163 {background-image:url(assets/expedition163/relic-atlas163.png)!important;background-size:492.777777778% 246.388888889%!important;background-position:65.099009901% 84.819734345%!important;}
+
+.relic-icon154[data-relic="lamb_charm"],.definition-card[data-relic="lamb_charm"] .relic-icon163 {background-image:url(assets/expedition163/relic-atlas163.png)!important;background-size:492.777777778% 246.388888889%!important;background-position:95.367751061% 84.819734345%!important;}
