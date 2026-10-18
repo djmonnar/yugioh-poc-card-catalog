@@ -1,0 +1,44 @@
+.game152 #new-run-dialog {width:min(1080px,calc(100vw - 40px));}
+.game152 .new-run-intro164 {color:#e4d4af;line-height:1.7;}
+.game152 .start-section164 {margin:22px 0;}
+.game152 .start-section164 h3 {font-size:18px;color:#ffe3a0;margin-bottom:14px;}
+.game152 .starter-details164 {margin-top:14px;color:#e3ce96;}
+.game152 .starter-details164 summary {cursor:pointer;}
+.game152 .campaign-overview164 a {display:inline-block;margin:12px;color:#e6cf93;}
+.game152 .starter-choices164 {display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;max-height:350px;overflow:auto;padding:4px;}
+.game152 button.starter-choice164 {display:flex;flex-direction:column;align-items:stretch;gap:9px;white-space:normal;min-width:0;padding:14px;border:1px solid #887343;background:linear-gradient(145deg,#17273f,#080f20);text-align:left;box-shadow:inset 0 0 20px #0007;border-radius:7px;}
+.game152 .starter-choice164 strong {font-size:18px;color:#f5dfab;overflow-wrap:anywhere;}
+.game152 .starter-choice164 span {font-size:13px;color:#b9c6d6;}
+.game152 .starter-choice-art164 {display:flex;justify-content:center;align-items:center;min-height:100px;overflow:hidden;}
+.game152 .starter-choice-art164 img {width:60px;height:88px;object-fit:contain;filter:drop-shadow(0 3px 4px #0008);}
+.game152 .starter-choice-art164 img:nth-child(1) {transform:rotate(-9deg) translateX(5px);}
+.game152 .starter-choice-art164 img:nth-child(2) {position:relative;z-index:1;transform:translateY(-4px);}
+.game152 .starter-choice-art164 img:nth-child(3) {transform:rotate(9deg) translateX(-5px);}
+.game152 button.starter-choice164[aria-pressed=true],.game152 button.save-slot-choice164[aria-pressed=true] {border-color:#ffdb7d;box-shadow:0 0 0 2px #dba941,inset 0 0 18px #c9982922;background:linear-gradient(145deg,#314154,#152332);}
+.game152 .save-slot-choices164 {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;}
+.game152 button.save-slot-choice164 {white-space:normal;padding:14px 8px;min-height:52px;}
+.game152 .campaign-overview164 {border:1px solid #84734b;border-radius:6px;padding:14px;margin:20px 0;background:#0b1521a6;}
+.game152 .campaign-overview164 summary {font-weight:700;color:#ead49a;cursor:pointer;}
+.game152 .campaign-summary164 {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0;}
+.game152 .campaign-summary164 article {padding:12px;background:#21304791;border:1px solid #8f784a6e;border-radius:5px;}
+.game152 .campaign-summary164 h4 {margin:0 0 12px;color:#ffe1a3;}
+.game152 .campaign-summary164 p {font-size:13px;line-height:1.6;overflow-wrap:anywhere;}
+.game152 #create-run {width:100%;min-height:54px;font-size:19px;margin-top:16px;}
+.game152 .chapter-progress164 {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 12px;}
+.game152 .chapter164-step {padding:10px 14px;border:1px solid #746142;background:#0e192ad9;color:#8d98a8;border-radius:4px;overflow-wrap:anywhere;}
+.game152 .chapter164-step small {display:block;font-size:11px;margin-top:4px;}
+.game152 .chapter164-step[data-state=current] {color:#ffe5a2;border-color:#dfbd67;background:#263349;}
+.game152 .chapter164-step[data-state=cleared] {color:#bfe2cb;border-color:#61897a;}
+.game152 .enemy-lp164 {color:#f4d68c;font-weight:700;}
+.game152 .enemy-traits164 {padding-left:22px;color:#d5dfe8;line-height:1.8;}
+@media(max-width:620px){
+  .game152 #new-run-dialog {width:calc(100vw - 16px);}
+  .game152 .starter-choices164 {grid-template-columns:repeat(2,minmax(0,1fr));max-height:320px;}
+  .game152 button.starter-choice164 {padding:9px;}
+  .game152 .starter-choice164 strong {font-size:15px;}
+  .game152 .starter-choice-art164 img {width:43px;height:64px;}
+  .game152 .starter-choice-art164 {min-height:74px;}
+  .game152 .campaign-summary164 {grid-template-columns:1fr;}
+  .game152 .chapter164-step {font-size:12px;padding:8px;}
+  .game152 .save-slot-choices164 {gap:6px;}
+}

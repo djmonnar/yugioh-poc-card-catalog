@@ -1,0 +1,27 @@
+/* Secret Rare-inspired diagonal spectral foil. Labels/effects stay crisp and readable. */
+.copy166-card{position:relative;isolation:isolate;}
+.secret-rare166{position:relative;isolation:isolate;border-color:#b8dcf0!important;box-shadow:0 0 0 1px #8acde855,0 0 13px #74c2e93d;}
+.secret-rare166>img,.secret-rare166>.reward-art,.secret-rare166>.node150-art{filter:saturate(1.08) contrast(1.04);}
+.secret-rare166::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:2;opacity:.48;background:repeating-linear-gradient(132deg,transparent 0 14px,#bce8ff4a 15px 16px,transparent 18px 31px),linear-gradient(110deg,transparent 26%,#89e9ff22 38%,#e9a6ff55 45%,#fff9cc66 50%,#91ffa144 55%,#8bdfff33 62%,transparent 73%);background-size:100% 100%,260% 100%;background-position:center,120% center;mix-blend-mode:screen;animation:secretFoil166 7s ease-in-out infinite;}
+@keyframes secretFoil166{0%,15%{background-position:center,120% center}65%,100%{background-position:center,-70% center}}
+.forge166-badge,.seal166-badge,.copy166-label{position:absolute;z-index:3;left:3px;right:3px;display:block;padding:3px 4px;border-radius:4px;font:700 11px/1.3 system-ui,sans-serif;text-align:center;text-shadow:none;}
+.forge166-badge{top:3px;color:#042a3a;background:linear-gradient(110deg,#c4f7ff,#e2d0ff,#fff4b7);box-shadow:0 1px 5px #0008;}
+.copy166-label{bottom:3px;background:#081623e8;color:#e1edf5;white-space:nowrap;font-size:10px;}
+.seal166-badge{top:3px;background:#382454f5;color:#fff3c7;border:1px solid #c5a2e1;}
+.sealed166{border:2px dashed #b895de!important;}
+.sealed166>img{filter:grayscale(.65) brightness(.65);}
+.copy166-enhancement{position:relative;z-index:3;margin:10px 0;padding:10px 12px;background:#081d2af2;border:1px solid #c5d7ed;border-radius:7px;color:#edf5fa;text-shadow:none;}
+.copy166-enhancement p{margin:6px 0;font-size:14px;line-height:1.5;}
+.copy166-enhancement small{color:#b7ccdc;}
+.copy166-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin-top:12px;}
+.copy166-tile{position:relative;display:flex;flex-direction:column;gap:5px;padding:8px;background:#0d2435;color:#e3eef4;border:1px solid #547185;border-radius:7px;min-width:0;text-align:left;}
+.copy166-tile>img{width:100%;height:auto;display:block;}
+.copy166-tile strong,.copy166-tile p,.copy166-tile small{position:relative;z-index:3;overflow-wrap:anywhere;}
+.copy166-tile p{margin:4px 0;font-size:12px;line-height:1.45;}
+.copy166-tile.chosen{outline:3px solid #e9cb6c;outline-offset:2px;}
+.copy166-editor-list{margin-top:16px;padding:12px;border:1px solid #6c8493;border-radius:8px;}
+.boss166-reward{padding:12px;border:1px solid #bda04d;background:#332b15;color:#fff0b8;border-radius:7px;}
+.forge166-grid .reward-card{padding:10px;}
+#card-detail.secret-rare166::after{inset:0 auto 0 0;width:min(35%,280px);}
+@media(prefers-reduced-motion:reduce){.secret-rare166::after{animation:none;background-position:center,48% center;}}
+@media(max-width:520px){.copy166-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.copy166-enhancement{padding:8px}.copy166-enhancement p{font-size:13px}.boss166-reward{font-size:14px;line-height:1.5}.copy166-label,.forge166-badge,.seal166-badge{font-size:10px}}
