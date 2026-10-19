@@ -8,12 +8,26 @@
   <link rel="stylesheet" href="roguelite-map-view.css?v=20261014-138">
   <link rel="stylesheet" href="roguelite-reward-preview.css?v=20261014-139">
   <link rel="stylesheet" href="roguelite150.css?v=20261018-163">
-  <script type="module" src="roguelite166.js?v=20261018-166"></script>
+  <script type="module" src="roguelite-entry014.js?v=20261019-014"></script>
+  <link rel="stylesheet" href="roguelite-entry014.css?v=20261019-014">
   <link rel="stylesheet" href="roguelite164.css?v=20261018-164">
   <link rel="stylesheet" href="roguelite154.css?v=20261018-163">
   <link rel="stylesheet" href="roguelite163.css?v=20261018-163">
 <link rel="preload" as="image" href="assets/expedition163/relic-atlas163.png"><link rel="stylesheet" href="visuals160.css?v=20261017-160"><link rel="stylesheet" href="relic-icons163.css?v=20261018-163"><link rel="stylesheet" href="opening163.css?v=20261018-163"><link rel="stylesheet" href="roguelite166.css?v=20261018-166"><link rel="stylesheet" href="relic-icons166.css?v=20261018-166"></head>
-<body class="game152 game153" data-screen="hub" data-embed="connecting">
+<body class="game152 game153 web-entry014" data-screen="hub" data-embed="connecting">
+<section id="web-editor014" aria-labelledby="web-editor014-title">
+  <p class="entry014-brand">YU-GI-OH CLASSIC · EXPEDITION STUDIO</p>
+  <h1 id="web-editor014-title">원정 제작 · 적 편성</h1>
+  <p>웹에서는 덱과 원정을 편집하고, 원정 플레이는 Unity 게임에서 시작해.</p>
+  <div class="entry014-grid">
+    <a class="entry014-card" href="campaign164.html"><h2>장별 적 편성 →</h2><p>1~3장의 일반·엘리트·보스 덱을 고르고 LP와 특성을 설정해.</p><small>기존 온라인 설정과 이 브라우저의 편집본을 이어서 사용해.</small></a>
+    <a class="entry014-card" href="ai-decks.html"><h2>AI 덱 편집 →</h2><p>상대가 사용할 덱을 만들고 카드를 추가·제거해.</p></a>
+    <a class="entry014-card" href="story.html"><h2>AI 배틀 · 캐릭터 연결 →</h2><p>완성한 스피드 듀얼 덱을 상대 캐릭터와 연결해.</p></a>
+    <a class="entry014-card" href="expedition-content.html"><h2>유물 · 이벤트 · 상점 →</h2><p>원정 콘텐츠와 보상 수치를 편집해.</p></a>
+  </div>
+  <div class="entry014-flow"><h2>수정한 적 덱을 원정에 반영하려면</h2><ol><li>AI 덱과 AI 배틀을 온라인 저장해.</li><li>장별 적 편성에서 ‘온라인 AI 배틀·캐릭터 불러오기’를 눌러.</li><li>기존 상대를 수정했다면 ‘최신 자료로 갱신’을 누르고, 장별 편성을 온라인 저장해.</li><li>Unity 게임의 ‘적 편성’에서 온라인 자료를 불러와 저장한 뒤 새 원정을 시작해.</li></ol><p>진행 중인 원정은 시작할 때 고른 적 편성을 유지해.</p></div>
+  <nav class="entry014-footer" aria-label="다른 제작 도구"><a href="./">카드 도감</a><a href="characters.html">공용 캐릭터 편집</a></nav>
+</section>
 <header class="game152-header"><button id="hub-back" type="button" aria-label="원정 허브로">‹ <span>원정 허브</span></button><div class="game152-brand">YU-GI-OH <span>CLASSIC</span></div><div class="game152-settings"><details id="audio152-settings"><summary aria-label="원정 음악 설정">♫ <span id="audio152-label">음악</span></summary><div><button id="audio152-toggle" type="button">음악 끄기</button><label>음량<input id="audio152-volume" type="range" min="0" max="1" step="0.05" value="0.35"></label><p id="audio152-status" role="status"></p></div></details><button id="game152-close" type="button">게임으로 돌아가기</button></div></header>
 <main>
   <section class="hub152" aria-labelledby="hub152-title"><div class="hub152-story"><p class="eyebrow">SEALED DUEL TOWER</p><h1 id="hub152-title">봉인된 듀얼의 탑</h1><p>덱 한 벌로 문을 열고,<br>네가 고른 길로 정상을 향해.</p><div class="hub152-actions"><button id="hub152-continue" class="primary" type="button" disabled>원정 이어하기</button><button id="hub152-new" type="button" disabled>새로운 원정</button></div><p id="hub152-status" class="muted" role="status">원정 기록을 불러오는 중…</p></div><div class="hub152-art" aria-hidden="true"><img src="assets/roguelite/tower137/icon-boss-v1.webp" alt=""><span>길 위의 모든 선택이<br>다음 듀얼을 바꾼다.</span></div></section>

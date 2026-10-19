@@ -1,0 +1,20 @@
+/* This class is removed before the established embedded game is loaded. */
+body.web-entry014{margin:0;min-height:100dvh;background:#101e2d;color:#e8edf1;font-family:system-ui,-apple-system,"Malgun Gothic",sans-serif}
+body.web-entry014>*:not(#web-editor014){display:none!important}
+body.web-entry014 #web-editor014{display:block;box-sizing:border-box;max-width:1080px;margin:auto;padding:clamp(24px,6vw,72px) clamp(18px,5vw,48px);line-height:1.7}
+body.web-entry014 #web-editor014 [hidden]{display:none!important}
+body.web-entry014 #web-editor014 h1{font-size:clamp(28px,5vw,46px);line-height:1.3;color:#e3c786;margin:14px 0}
+body.web-entry014 #web-editor014 h2{font-size:20px;color:#e3c786;margin:0 0 6px}
+body.web-entry014 #web-editor014 p{margin:0 0 18px}
+body.web-entry014 #web-editor014 .entry014-brand{font-weight:700;letter-spacing:.12em;color:#b5cad6}
+body.web-entry014 #web-editor014 .entry014-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:28px 0}
+body.web-entry014 #web-editor014 .entry014-card{display:block;min-width:0;padding:22px;border:1px solid #6a7f8a;border-radius:12px;background:#172d3c;color:#e8edf1;text-decoration:none;overflow-wrap:anywhere}
+body.web-entry014 #web-editor014 .entry014-card:hover{background:#213b4b;border-color:#e3c786}
+body.web-entry014 #web-editor014 a:focus-visible{outline:3px solid #e3c786;outline-offset:4px}
+body.web-entry014 #web-editor014 .entry014-card p{margin:0}
+body.web-entry014 #web-editor014 .entry014-card small{color:#bfd0d8}
+body.web-entry014 #web-editor014 .entry014-flow{padding:20px 24px;border-left:3px solid #c6a763;background:#142838;border-radius:0 10px 10px 0}
+body.web-entry014 #web-editor014 .entry014-flow ol{padding-left:24px;margin:8px 0}
+body.web-entry014 #web-editor014 .entry014-footer{display:flex;flex-wrap:wrap;gap:16px;margin-top:26px}
+body.web-entry014 #web-editor014 .entry014-footer a{color:#d4dfeb}
+@media(max-width:600px){body.web-entry014 #web-editor014 .entry014-grid{grid-template-columns:1fr}body.web-entry014 #web-editor014 .entry014-card{padding:18px}}
