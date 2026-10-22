@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "android023-baseline",
+  "platform": "Android",
+  "minAppVersion": "0.17.0",
+  "maxAppVersion": "0.17.0",
+  "minContentSchema": 1,
+  "maxContentSchema": 1,
+  "files": [
+    {
+      "kind": "assetbundle",
+      "path": "p/f17794a0-d5b1e17440707070.bundle",
+      "sha256": "d5b1e174407070709842d4eace0c250966dee7bdc8bcd5d7debb0c739af4b1d6",
+      "dataKey": null,
+      "sizeBytes": 1130392,
+      "assets": [
+        {
+          "resourceKey": "Art/frame",
+          "assetName": "ovres/art/frame"
+        }
+      ]
+    }
+  ]
+}
