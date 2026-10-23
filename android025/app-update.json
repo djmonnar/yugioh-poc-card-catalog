@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.2",
-  "versionCode": 21,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.2/YGOClassicExpedition-0.18.2-arm64.apk",
-  "sizeBytes": 94251403,
-  "sha256": "e243bf81d8e96f8c81167c799a0c00948d9b86f117abc53afa546fe085e68b58",
-  "releaseNotes": "모바일 카드 그림·한글 효과, 어드밴스 소환·효과 대상 안내와 강조 표시를 개선했어. 백석 등 약한 효과 몬스터의 배치와 불리한 상황의 수비 판단, 첫 선물·지도 이미지 UI를 수정했어."
+  "versionName": "0.18.3",
+  "versionCode": 22,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.3/YGOClassicExpedition-0.18.3-arm64.apk",
+  "sizeBytes": 94286473,
+  "sha256": "f046615124996f922968d96952c8e3c7ed6d2840d2da311ed2df0cea25bb6a90",
+  "releaseNotes": "하단 LP 전용 표시줄과 그림 중심 상점으로 모바일 가독성을 높였어. 발동 확인 자동·항상 전환, 바쿠라의 지속 카드·함정 AI, 묘지·제외 이동 이펙트, 캐릭터·소환 이펙트의 배경 처리를 수정했어."
 }
