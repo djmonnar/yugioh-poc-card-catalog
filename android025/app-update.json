@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.0",
-  "versionCode": 19,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.0/YGOClassicExpedition-0.18.0-arm64.apk",
-  "sizeBytes": 94185481,
-  "sha256": "e2157b682f89737f02cb743918778df27023b4b9869e9f4a2600c64dbd4ce9a1",
-  "releaseNotes": "게임 안에서 앱 업데이트 확인·다운로드·설치 연결. 큰 그림·음악은 별도로 받고 재사용해."
+  "versionName": "0.18.1",
+  "versionCode": 20,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.1/YGOClassicExpedition-0.18.1-arm64.apk",
+  "sizeBytes": 94233001,
+  "sha256": "1cfbc57544952c0582ee535ce6b9a85c62b93a2141e3088312e8b0ff23026ed5",
+  "releaseNotes": "웹에서 등록한 적 편성·시작 덱을 자동으로 불러와. 시작 덱 편집 도구와 게임 메뉴를 연결했어. 변경한 덱은 새 원정부터 적용돼."
 }
