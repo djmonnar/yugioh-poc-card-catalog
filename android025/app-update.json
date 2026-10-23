@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.1",
-  "versionCode": 20,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.1/YGOClassicExpedition-0.18.1-arm64.apk",
-  "sizeBytes": 94233001,
-  "sha256": "1cfbc57544952c0582ee535ce6b9a85c62b93a2141e3088312e8b0ff23026ed5",
-  "releaseNotes": "웹에서 등록한 적 편성·시작 덱을 자동으로 불러와. 시작 덱 편집 도구와 게임 메뉴를 연결했어. 변경한 덱은 새 원정부터 적용돼."
+  "versionName": "0.18.2",
+  "versionCode": 21,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.2/YGOClassicExpedition-0.18.2-arm64.apk",
+  "sizeBytes": 94251403,
+  "sha256": "e243bf81d8e96f8c81167c799a0c00948d9b86f117abc53afa546fe085e68b58",
+  "releaseNotes": "모바일 카드 그림·한글 효과, 어드밴스 소환·효과 대상 안내와 강조 표시를 개선했어. 백석 등 약한 효과 몬스터의 배치와 불리한 상황의 수비 판단, 첫 선물·지도 이미지 UI를 수정했어."
 }
