@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.3",
-  "versionCode": 22,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.3/YGOClassicExpedition-0.18.3-arm64.apk",
-  "sizeBytes": 94286473,
-  "sha256": "f046615124996f922968d96952c8e3c7ed6d2840d2da311ed2df0cea25bb6a90",
-  "releaseNotes": "하단 LP 전용 표시줄과 그림 중심 상점으로 모바일 가독성을 높였어. 발동 확인 자동·항상 전환, 바쿠라의 지속 카드·함정 AI, 묘지·제외 이동 이펙트, 캐릭터·소환 이펙트의 배경 처리를 수정했어."
+  "versionName": "0.18.4",
+  "versionCode": 23,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.4/YGOClassicExpedition-0.18.4-arm64.apk",
+  "sizeBytes": 99304071,
+  "sha256": "36989c5fefaab3b216264b392c09901de51ade81bd9b482388b567e1023ba275",
+  "releaseNotes": "전투 후 보상은 카드 보관함으로 받아. 실제 이동 경로와 현재 위치, 상대 상단 LP, 유물 획득·장착·카드 확인·묘지·제외 연출을 개선했어. 융합 소재가 섞이고 의식 제물이 모이는 연출, 강화한 카드 한 장에만 시크릿 효과와 능력치 색을 넣었어. 이차원의 여전사 등 전투 후 효과 AI와 무효·불발 안내, AI 검토 메모도 추가했어."
 }
