@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Unity 원정 · 덱 편집기</title><link rel="stylesheet" href="native035.css?v=035-1"></head>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Unity 원정 · 덱 편집기</title><link rel="stylesheet" href="native035.css?v=035-2"></head>
 <body>
 <header class="top"><a href="index.html">카드 도감</a><div><h1>원정 덱 공방</h1><p>Unity 원정 · 시작 덱과 적 편성</p></div><a href="characters.html">캐릭터 편집</a></header>
 <section class="cloud"><span id="account">온라인 연결 중…</span><input id="email" type="email" autocomplete="email" placeholder="편집 계정 이메일" aria-label="편집 계정 이메일"><button id="login">로그인 메일</button><button id="logout" hidden>로그아웃</button><button id="load">온라인 불러오기</button><button id="save" class="gold" disabled>온라인 저장</button></section>
 <div class="document-tools"><button id="download">편집본 받기</button><label class="file-button">편집본 열기<input id="import" type="file" accept=".json,application/json" hidden></label><span id="version">저장본 확인 전</span></div>
 <nav class="tabs" aria-label="편집 영역"><button data-tab="decks" class="active">덱 만들기</button><button data-tab="starters">시작 덱</button><button data-tab="chapters">장별 적 편성</button><button data-tab="settings">추가 카드 설정</button></nav>
 <p id="status" role="status" aria-live="polite">카드 목록을 불러오는 중…</p>
-<p class="compatibility">기존 원정의 설정은 유지돼. <a href="roguelite.html">기존 시작 덱 편집</a> · <a href="campaign164.html">기존 적 편성</a> · 이곳에서 적용을 켠 항목만 새 편성으로 바뀌어.</p>
+<p class="compatibility">기존 원정의 설정은 유지돼. <a href="starters026.html">기존 시작 덱 편집</a> · <a href="campaign164.html">기존 적 편성</a> · 이곳에서 적용을 켠 항목만 새 편성으로 바뀌어.</p>
 <main>
 <section id="decks" class="tab-panel">
  <div class="deck-toolbar"><select id="deck-list" aria-label="편집할 덱"></select><button id="new-deck">새 덱</button><button id="copy-deck">복사</button><button id="delete-deck">삭제</button></div>
@@ -23,5 +23,5 @@
 <section id="settings" class="tab-panel" hidden><div class="section-heading"><h2>추가 카드 · 30장</h2><label class="check"><input id="apply-settings" type="checkbox">이 설정을 게임에 적용</label></div><p class="hint">기존 카드의 등급·상점·보상 설정은 <a href="index.html">카드 도감</a>에서 바꿀 수 있어.</p><div id="setting-list" class="setting-list"></div></section>
 </main>
 <dialog id="card-info"><button id="close-info" class="close" aria-label="카드 정보 닫기">×</button><div class="card-detail"><img id="info-image" alt=""><div class="card-summary"><p id="info-kind"></p><h2 id="info-name"></h2><p id="info-stats"></p></div><p id="info-description"></p><div id="info-actions"></div></div></dialog>
-<script type="module" src="native035-editor.js?v=035-1"></script>
+<script type="module" src="native035-editor.js?v=035-2"></script>
 </body></html>

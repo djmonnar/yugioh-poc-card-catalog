@@ -54,6 +54,21 @@ test('shared character profiles must belong to that exact character',()=>{
  const d=document();d.decks[0].character_skill_profile_id='power';assert.equal(parseNative035(d,index,options).decks[0].character_skill_profile_id,'power');
  d.decks[0].character_skill_profile_id='unknown';assert.throws(()=>parseNative035(d,index,options));d.decks[0].character_skill_profile_id='power';d.decks[0].character_id=null;assert.throws(()=>parseNative035(d,index,options));
 });
+test('an absent lower-limit alias sibling still limits its whole catalog name family',()=>{
+ const d=document(),cards=index.cards.map(c=>({...c})),high=cards.find(c=>c.sourceId===d.decks[0].main[0].source_id),low=cards.find(c=>c.sourceId===2419);
+ assert.ok(!d.decks[0].main.some(r=>r.source_id===low.sourceId));low.alias=high.code;low.deckLimit=1;high.deckLimit=3;
+ const own={cards,bySource:new Map(cards.map(c=>[c.sourceId,c])),byCode:new Map(cards.map(c=>[c.code,c]))};
+ d.decks[0].main[0].count=2;assert.throws(()=>parseNative035(d,own,options),/제한/);
+ d.decks[0].banlist_enabled=false;assert.doesNotThrow(()=>parseNative035(d,own,options));
+ d.decks[0].main[0].count=4;assert.throws(()=>parseNative035(d,own,options));
+});
+test('a real Umi alias obeys the absent sibling live limit while AI physical-three mode remains available',()=>{
+ const d=document(),low=index.bySource.get(333),high=index.bySource.get(2040);
+ assert.equal(high.alias,low.code);assert.ok(!d.decks[0].main.some(r=>r.source_id===low.sourceId));d.decks[0].main[0]={...cardRef035(high),count:2};
+ const refs={card_limits:[{slot:low.slot,internal_id:low.sourceId,identity_key:low.identity_key,normal_limit:1,speed_limit:null,version:1},{slot:high.slot,internal_id:high.sourceId,identity_key:high.identity_key,normal_limit:3,speed_limit:null,version:1}],characters:[character]};
+ const live=applyReferences035(refs,index).index;assert.equal(live.bySource.get(high.sourceId).deckLimit,3);assert.equal(live.bySource.get(low.sourceId).deckLimit,1);assert.throws(()=>parseNative035(d,live,options),/제한/);
+ d.decks[0].banlist_enabled=false;assert.doesNotThrow(()=>parseNative035(d,live,options));
+});
 test('version zero, lab-only and disabled chapter categories preserve the old026 configuration',()=>{
  const old={starters:['old-start'],chapters:[1,2,3].map(chapter=>({chapter,battle:{tag:`old-${chapter}-battle`},elite:{tag:`old-${chapter}-elite`},boss:{tag:`old-${chapter}-boss`}})),nativeSettings:['old']};
  const d=document(),l=library(d);assert.deepEqual(effectiveSections035(l,old),old);d.applySections.starters=true;d.starters=['d1'];assert.deepEqual(effectiveSections035(library(d,0),old),old);

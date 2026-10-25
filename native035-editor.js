@@ -1,5 +1,5 @@
-import {NATIVE035_CATALOG,NATIVE035_BASE_BINDINGS,emptyNative035,indexNative035,parseNative035,sha256035,cardRef035,isExtra035,filterCards035} from './native035-core.js?v=035-1';
-import {NativeCloud035} from './native035-cloud.js?v=035-1';
+import {NATIVE035_CATALOG,NATIVE035_BASE_BINDINGS,emptyNative035,indexNative035,parseNative035,sha256035,cardRef035,isExtra035,filterCards035} from './native035-core.js?v=035-2';
+import {NativeCloud035} from './native035-cloud.js?v=035-2';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 import {validateCloudConfig,cloudError} from './supabase-cloud.js?v=20261008-70';
 const $=id=>document.getElementById(id),DRAFT='poc-native035-draft-v1',clone=structuredClone;

@@ -38,6 +38,10 @@ export function parseNative035(value,index,{characterIds=null,characterRows=null
   fields(value.applySections,['starters','chapters','settings']);
   for(const k of ['starters','chapters','settings'])if(typeof value.applySections[k]!=='boolean')fail('적용 범위를 확인해줘.');
   if(!Array.isArray(value.decks)||value.decks.length>200||!Array.isArray(value.starters)||value.starters.length>100||!Array.isArray(value.chapters)||value.chapters.length!==3||!Array.isArray(value.settings)||value.settings.length>30)fail('목록 크기를 확인해줘.');
+  // A card which is not in this deck can still share its printed name. The
+  // entire catalog family uses its lowest current limit, as the Native book does.
+  const familyLimits=new Map();
+  for(const c of index.cards)if(c.playable&&!c.token){const key=c.alias||c.code;familyLimits.set(key,Math.min(familyLimits.get(key)??3,c.deckLimit));}
   const seen=new Set(),decks=value.decks.map(d=>{
     fields(d,['deck_id','name','character_id','character_skill_profile_id','use_shared_skills','banlist_enabled','main','extra']);
     if(!id(d.deck_id)||seen.has(d.deck_id)||typeof d.name!=='string'||!d.name.trim()||d.name.length>100||typeof d.banlist_enabled!=='boolean'||d.use_shared_skills!==true||d.character_id!==null&&(!id(d.character_id)||characterIds&&!characterIds.has(d.character_id)))fail('덱 이름·캐릭터·제한 설정을 확인해줘.');
@@ -50,7 +54,7 @@ export function parseNative035(value,index,{characterIds=null,characterRows=null
         fields(r,['source_id','identity_key','count']);const c=index.bySource.get(r.source_id);
         if(!c||c.identity_key!==r.identity_key||!c.playable||c.token||sources.has(c.sourceId)||!integer(r.count,1,3)||isExtra035(c)!==extra)fail('카드 종류·매수·식별자를 확인해줘.');
         sources.add(c.sourceId);total+=r.count;const key=c.alias||c.code;quantities.set(key,(quantities.get(key)||0)+r.count);
-        nameLimits.set(key,Math.min(nameLimits.get(key)??3,d.banlist_enabled?c.deckLimit:3));
+        nameLimits.set(key,Math.min(nameLimits.get(key)??3,d.banlist_enabled?familyLimits.get(key):3));
         if(quantities.get(key)>nameLimits.get(key))fail(`${c.name}: 같은 이름의 카드 제한을 초과했어.`);
         if(d.banlist_enabled&&c.speedLimit===0)fail(`${c.name}: 현재 금지 카드야.`);
         if(d.banlist_enabled&&c.speedLimit>0&&c.speedLimit<=3){speedUsed[c.speedLimit]+=r.count;if(speedUsed[c.speedLimit]>c.speedLimit)fail(`제한 ${c.speedLimit} 카드의 합계 매수를 초과했어.`);}
