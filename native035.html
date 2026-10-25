@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Unity 원정 · 덱 편집기</title><link rel="stylesheet" href="native035.css?v=035-1"></head>
+<body>
+<header class="top"><a href="index.html">카드 도감</a><div><h1>원정 덱 공방</h1><p>Unity 원정 · 시작 덱과 적 편성</p></div><a href="characters.html">캐릭터 편집</a></header>
+<section class="cloud"><span id="account">온라인 연결 중…</span><input id="email" type="email" autocomplete="email" placeholder="편집 계정 이메일" aria-label="편집 계정 이메일"><button id="login">로그인 메일</button><button id="logout" hidden>로그아웃</button><button id="load">온라인 불러오기</button><button id="save" class="gold" disabled>온라인 저장</button></section>
+<div class="document-tools"><button id="download">편집본 받기</button><label class="file-button">편집본 열기<input id="import" type="file" accept=".json,application/json" hidden></label><span id="version">저장본 확인 전</span></div>
+<nav class="tabs" aria-label="편집 영역"><button data-tab="decks" class="active">덱 만들기</button><button data-tab="starters">시작 덱</button><button data-tab="chapters">장별 적 편성</button><button data-tab="settings">추가 카드 설정</button></nav>
+<p id="status" role="status" aria-live="polite">카드 목록을 불러오는 중…</p>
+<p class="compatibility">기존 원정의 설정은 유지돼. <a href="roguelite.html">기존 시작 덱 편집</a> · <a href="campaign164.html">기존 적 편성</a> · 이곳에서 적용을 켠 항목만 새 편성으로 바뀌어.</p>
+<main>
+<section id="decks" class="tab-panel">
+ <div class="deck-toolbar"><select id="deck-list" aria-label="편집할 덱"></select><button id="new-deck">새 덱</button><button id="copy-deck">복사</button><button id="delete-deck">삭제</button></div>
+ <div class="workspace">
+  <article class="deck-panel"><div class="deck-properties"><label>덱 이름<input id="deck-name" maxlength="100"></label><label>캐릭터<select id="character"></select></label><label>캐릭터 특성<select id="character-profile"></select></label><label class="check"><input id="banlist" type="checkbox">카드 제한 적용 <small>시작 덱은 필수</small></label></div><p class="hint">카드를 눌러 확인 · 길게 눌러 드래그 · 카드 목록으로 옮기면 빼기</p>
+   <section id="main-drop" class="drop-zone" data-zone="main"><h2>메인 덱 <span id="main-count"></span></h2><div id="main-cards" class="card-grid"></div></section>
+   <section id="extra-drop" class="drop-zone" data-zone="extra"><h2>엑스트라 덱 <span id="extra-count"></span></h2><div id="extra-cards" class="card-grid"></div></section>
+  </article>
+  <article class="catalog-panel" id="catalog-drop" data-zone="catalog"><h2>카드 목록 <span id="match-count"></span></h2><div class="filters"><input id="search" type="search" placeholder="카드 이름 검색" aria-label="카드 검색"><select id="engine" aria-label="지원 엔진"><option value="all">전체 카드</option><option value="native">Unity 추가 카드</option><option value="legacy">기존 카드</option></select><select id="kind" aria-label="카드 종류"><option value="all">모든 종류</option><option value="monster">몬스터</option><option value="spell">마법</option><option value="trap">함정</option></select></div><div id="catalog-cards" class="card-grid"></div><div id="pages" class="pages"></div></article>
+ </div>
+</section>
+<section id="starters" class="tab-panel" hidden><div class="section-heading"><h2>원정 시작 덱</h2><label class="check"><input id="apply-starters" type="checkbox">이 목록을 게임에 적용</label></div><p class="hint">적용을 끄면 기존 시작 덱을 사용해. 등록한 덱 중에서 새 원정을 시작할 때 고를 수 있어.</p><div id="starter-list" class="choice-list"></div></section>
+<section id="chapters" class="tab-panel" hidden><div class="section-heading"><h2>세 장의 적 편성</h2><label class="check"><input id="apply-chapters" type="checkbox">아래 편성을 게임에 적용</label></div><p class="hint">각 전투의 ‘직접 지정’을 켠 곳만 바뀌어. 끈 곳은 기존 편성을 유지해. 캐릭터 특성은 공용 캐릭터 편집기에서 연결해.</p><div id="chapter-list"></div></section>
+<section id="settings" class="tab-panel" hidden><div class="section-heading"><h2>추가 카드 · 30장</h2><label class="check"><input id="apply-settings" type="checkbox">이 설정을 게임에 적용</label></div><p class="hint">기존 카드의 등급·상점·보상 설정은 <a href="index.html">카드 도감</a>에서 바꿀 수 있어.</p><div id="setting-list" class="setting-list"></div></section>
+</main>
+<dialog id="card-info"><button id="close-info" class="close" aria-label="카드 정보 닫기">×</button><div class="card-detail"><img id="info-image" alt=""><div class="card-summary"><p id="info-kind"></p><h2 id="info-name"></h2><p id="info-stats"></p></div><p id="info-description"></p><div id="info-actions"></div></div></dialog>
+<script type="module" src="native035-editor.js?v=035-1"></script>
+</body></html>
