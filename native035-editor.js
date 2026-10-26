@@ -2,7 +2,11 @@ import {NATIVE035_CATALOG,NATIVE035_BASE_BINDINGS,emptyNative035,indexNative035,
 import {NativeCloud035} from './native035-cloud.js?v=035-2';
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 import {validateCloudConfig,cloudError} from './supabase-cloud.js?v=20261008-70';
-const $=id=>document.getElementById(id),DRAFT='poc-native035-draft-v1',clone=structuredClone;
+const $=id=>document.getElementById(id),DRAFT='poc-native035-draft-v1',LOAD_BACKUP='poc-native035-before-load038',clone=structuredClone;
+const requestedDeck=new URLSearchParams(location.search).get('deck');
+const handoffDeck=requestedDeck&&/^[A-Za-z0-9_-]{1,100}$/.test(requestedDeck)?requestedDeck:null;
+function activatePanel(){const tab=['decks','starters','chapters','settings'].includes(location.hash.slice(1))?location.hash.slice(1):'decks';for(const panel of document.querySelectorAll('.tab-panel'))panel.hidden=panel.id!==tab;for(const b of document.querySelectorAll('[data-tab]'))b.classList.toggle('active',b.dataset.tab===tab);}
+function handoffNotice(remoteVersion){if(!handoffDeck)return;if(remoteVersion!==undefined&&version!==remoteVersion){say('AI 덱 만들기에서 온라인 저장본을 변경했어. 현재 편집본을 유지하고 있으니 온라인 불러오기를 눌러 새 덱을 확인해줘. 불러오기 전 편집본은 백업돼.');return;}const deck=doc.decks.find(d=>d.deck_id===handoffDeck);if(deck){selected=deck.deck_id;renderDeckChoices();renderDeck();say(`${deck.name} 덱을 원정에 편성할 수 있어. 전투의 직접 지정을 켜고 덱을 선택한 뒤 온라인 저장을 눌러줘.`);}else say('AI 덱 만들기에서 저장한 덱을 보려면 온라인 불러오기를 눌러줘. 현재 편집본은 불러오기 전에 백업돼.');}
 let index,doc=emptyNative035(),characters=[],selected=null,page=0,cloud=null,client=null,version=null,isEditor=false,busy=false,activeCard=null,draftRestored=false;
 const say=t=>$('status').textContent=t;
 function el(tag,text,cls){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;}
@@ -68,7 +72,8 @@ function renderChapters(){
 }
 function renderSettings(){$('apply-settings').checked=doc.applySections.settings;$('setting-list').replaceChildren();for(const c of index.cards.filter(c=>c.expanded)){const card=el('article',undefined,'setting'),image=el('img');image.src=c.image;image.alt=c.name;image.loading='lazy';card.append(image,el('h3',c.name));const controls=el('div',undefined,'controls'),before=doc.settings.find(s=>s.source_id===c.sourceId),value=before??{...cardRef035(c),rarity:c.rarity,stock:true,draw_enabled:true};const change=()=>{if(!doc.settings.some(s=>s.source_id===c.sourceId))doc.settings.push(value);persist();};const rarity=el('select');rarity.setAttribute('aria-label',`${c.name} 등급`);for(const r of ['N','R','SR','UR']){const o=el('option',r);o.value=r;rarity.append(o);}rarity.value=value.rarity;rarity.onchange=()=>{value.rarity=rarity.value;change();};controls.append(rarity);for(const [key,text]of [['stock','상점'],['draw_enabled','보상']]){const l=el('label'),input=el('input');input.type='checkbox';input.checked=value[key];input.onchange=()=>{value[key]=input.checked;change();};l.append(input,el('span',text));controls.append(l);}card.append(controls);$('setting-list').append(card);}}
 function renderAll(){renderDeckChoices();renderDeck();renderCatalog();renderStarters();renderChapters();renderSettings();persist();}
-for(const b of document.querySelectorAll('[data-tab]'))b.onclick=()=>{for(const p of document.querySelectorAll('.tab-panel'))p.hidden=p.id!==b.dataset.tab;for(const n of document.querySelectorAll('[data-tab]'))n.classList.toggle('active',n===b);};
+for(const b of document.querySelectorAll('[data-tab]'))b.onclick=()=>{history.replaceState(null,'',location.pathname+location.search+'#'+b.dataset.tab);activatePanel();};
+window.addEventListener('hashchange',activatePanel);activatePanel();
 $('new-deck').onclick=()=>attempt(()=>newDeck());$('copy-deck').onclick=()=>attempt(()=>current()&&newDeck(current()));$('delete-deck').onclick=()=>attempt(removeDeck);$('deck-list').onchange=()=>{selected=$('deck-list').value;renderDeck();};
 $('deck-name').onchange=()=>{if(current())current().name=$('deck-name').value;saveDraft();};$('character').onchange=()=>{if(current()){current().character_id=$('character').value||null;current().character_skill_profile_id=null;}renderCharacterProfiles();saveDraft();};$('character-profile').onchange=()=>{if(current())current().character_skill_profile_id=$('character-profile').value||null;saveDraft();};$('banlist').onchange=()=>{if(current())current().banlist_enabled=$('banlist').checked;if(!$('banlist').checked)doc.starters=doc.starters.filter(k=>k!==selected);saveDraft();};
 for(const id of ['search','engine','kind'])$(id).addEventListener(id==='search'?'input':'change',()=>{page=0;renderCatalog();});
@@ -77,7 +82,26 @@ $('download').onclick=()=>attempt(()=>{ready();const blob=new Blob([JSON.stringi
 $('import').onchange=()=>attempt(async()=>{ready();const file=$('import').files[0];if(!file)return;if(file.size>2000000)throw Error('편집본은 2MB 이하로 열어줘.');const value=JSON.parse(await file.text());if(value?.kind!=='unity-native035-draft'||value.schema!==1)throw Error('Unity 원정 편집본 파일을 골라줘.');doc=parseNative035(value.document,index,{allowIncomplete:true,characterIds:new Set(characters.map(c=>c.id))});renderAll();say('편집본을 열었어. 현재 온라인 버전은 유지했어.');});
 async function auth(session){isEditor=false;$('logout').hidden=!session;$('login').hidden=Boolean(session);$('email').hidden=Boolean(session);$('account').textContent=session?`${session.user.email} · 권한 확인 중`:'로그인 전 · 열람과 브라우저 편집 가능';if(session){const r=await client.rpc('poc_editor_status');if(!r.error)isEditor=r.data===true;$('account').textContent=`${session.user.email} · ${isEditor?'편집 가능':'열람 계정'}`;}$('save').disabled=!isEditor||busy;}
 async function connect(){const config=validateCloudConfig(await fetch('data/cloud-config.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('온라인 설정을 읽지 못했어.');return r.json();}));client=createClient(config.url,config.publishable_key,{auth:{storageKey:'poc-ai-editor-auth-v1',persistSession:true,autoRefreshToken:true,detectSessionInUrl:true},global:{fetch:(url,options)=>fetch(url,{...options,signal:options?.signal||AbortSignal.timeout(15000)})}});cloud=new NativeCloud035(client,index);client.auth.onAuthStateChange((_event,session)=>setTimeout(()=>attempt(()=>auth(session)),0));const r=await client.auth.getSession();if(r.error)throw r.error;await auth(r.data.session);}
-async function online(save){if(busy)return;if(!cloud)throw Error('온라인 연결을 준비하지 못했어. 새로 열어줘.');busy=true;$('save').disabled=true;try{const lib=save?await cloud.save(doc,version):await cloud.load();index=cloud.index;characters=lib.references.characters;doc=lib.document;version=lib.version;renderAll();say(save?'Unity 원정 덱과 적용 범위를 저장했어. 변경한 시작 덱·적 편성은 새 원정부터 적용돼.':lib.version===0?'등록된 Unity 덱은 아직 없어. 기존 게임의 시작 덱·적 편성은 그대로야.':'온라인 Unity 덱을 불러왔어.');}finally{busy=false;$('save').disabled=!isEditor;}}
+async function online(save){
+ if(busy)return;if(!cloud)throw Error('온라인 연결을 준비하지 못했어. 새로 열어줘.');busy=true;$('save').disabled=true;
+ try{
+  const lib=save?await cloud.save(doc,version):await cloud.load();
+  if(!save&&JSON.stringify(doc)!==JSON.stringify(lib.document)){
+   // A handoff from the AI builder must never discard an older local draft.
+   // If its recovery copy cannot be stored, leave the current document alone.
+   localStorage.setItem(LOAD_BACKUP,JSON.stringify({schema:1,kind:'unity-native035-draft',document:doc,baseVersion:version}));
+   $('download-load-backup').hidden=false;
+  }
+  index=cloud.index;characters=lib.references.characters;doc=lib.document;version=lib.version;renderAll();
+  say(save?'Unity 원정 덱과 적용 범위를 저장했어. 변경한 시작 덱·적 편성은 새 원정부터 적용돼.':lib.version===0?'등록된 Unity 덱은 아직 없어. 기존 게임의 시작 덱·적 편성은 그대로야.':'온라인 Unity 덱을 불러왔어.');
+  if(!save)handoffNotice(lib.version);
+ }finally{busy=false;$('save').disabled=!isEditor;}
+}
+$('download-load-backup').onclick=()=>attempt(()=>{
+ const raw=localStorage.getItem(LOAD_BACKUP);if(!raw)throw Error('불러오기 전 편집본이 없어.');const saved=JSON.parse(raw);
+ if(saved.schema!==1||saved.kind!=='unity-native035-draft'||saved.document?.catalog_id!==NATIVE035_CATALOG)throw Error('백업 형식을 확인할 수 없어. 원본은 보존했어.');
+ const url=URL.createObjectURL(new Blob([raw],{type:'application/json'})),a=el('a');a.href=url;a.download='expedition.before-load038.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),20000);
+});
 $('load').onclick=()=>attempt(()=>online(false));$('save').onclick=()=>attempt(()=>online(true));$('login').onclick=()=>attempt(async()=>{if(!client)throw Error('온라인 연결을 먼저 확인해줘.');const email=$('email').value.trim();if(!email)throw Error('편집 계정 이메일을 입력해줘.');const r=await client.auth.signInWithOtp({email,options:{emailRedirectTo:location.href.split('#')[0]}});if(r.error)throw r.error;say('로그인 메일을 보냈어. 같은 기기에서 링크를 열어줘.');});$('logout').onclick=()=>attempt(async()=>{const r=await client.auth.signOut();if(r.error)throw r.error;await auth(null);});
 async function pinned(path,pin){const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error('카드 자료를 읽지 못했어.');const raw=await r.arrayBuffer();if(await sha256035(raw)!==pin)throw Error('카드 자료 버전이 맞지 않아. 새로 열어줘.');return JSON.parse(new TextDecoder().decode(raw));}
 await attempt(async()=>{
@@ -85,12 +109,12 @@ await attempt(async()=>{
  index=indexNative035(base,expansion);
  try{const saved=JSON.parse(localStorage.getItem(DRAFT)||'null');if(saved?.schema===1&&saved.document?.catalog_id===NATIVE035_CATALOG){doc=parseNative035(saved.document,index,{allowIncomplete:true});version=Number.isSafeInteger(saved.baseVersion)?saved.baseVersion:null;draftRestored=true;}}
  catch{say('이전 편집본을 읽지 못했어. 온라인 저장본을 불러와줘.');}
- renderAll();say('새 덱을 만들거나 온라인 저장본을 불러와줘. 적용을 켜지 않은 항목은 기존 설정을 유지해.');await connect();
+ renderAll();activatePanel();$('download-load-backup').hidden=!localStorage.getItem(LOAD_BACKUP);say('새 덱을 만들거나 온라인 저장본을 불러와줘. 적용을 켜지 않은 항목은 기존 설정을 유지해.');await connect();
  // Always refresh references. A local draft, even an intentionally empty one,
  // is not replaced merely because the page was reopened.
  const lib=await cloud.load();index=cloud.index;characters=lib.references.characters;
  if(!draftRestored){doc=lib.document;version=lib.version;}
  else if(version===null&&lib.version===0)version=0;
  renderAll();
- say(lib.version===0?'기존 시작 덱·적 편성은 유지돼. 새로 지정할 항목만 적용을 켜줘.':draftRestored&&version!==lib.version?'브라우저 편집본을 유지했어. 온라인 버전이 바뀌었으니 저장 전에 비교해줘.':'캐릭터와 금제를 불러왔어. 편집본은 이 브라우저에 보관 중이야.');
+ say(lib.version===0?'기존 시작 덱·적 편성은 유지돼. 새로 지정할 항목만 적용을 켜줘.':draftRestored&&version!==lib.version?'브라우저 편집본을 유지했어. 온라인 버전이 바뀌었으니 저장 전에 비교해줘.':'캐릭터와 금제를 불러왔어. 편집본은 이 브라우저에 보관 중이야.');handoffNotice(lib.version);
 });
