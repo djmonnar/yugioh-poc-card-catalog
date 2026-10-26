@@ -1,0 +1,221 @@
+// One database snapshot and one serial, idempotent authoring queue.
+// Local storage holds only unfinished writes/recovery receipts, never a second catalog.
+export const PROJECT039 = 'ygoclassic-expedition';
+export const IDENTITY039 = Object.freeze({base_catalog_sha256:'b73dd51c78aeab8c9beebf936b46e4cac16040e70df3a7980dec38c40db21e09',catalog035_sha256:'b5f1e9749cec0c1497c5fdcbfb2dc9c64895dcd859f083ec0ec4014580f05308',native_manifest_sha256:'4674de031c9e3044c86b90fcd402d9533d9353347802f268863746bf3bd7e4d7'});
+export const LEGACY_CREATION_KEYS039 = Object.freeze([
+  'poc-ai-decks-v1','poc-ai-native035-drafts-v1','poc-native035-draft-v1',
+  'poc-card-catalog-reviews-v1','poc-native035-card-catalog-reviews-v1',
+  'poc-ai-decks-v1-before-import','poc-ai-native035-drafts-v1-before-replace',
+  'poc-native035-before-load038','poc-card-catalog-reviews-before-import037',
+  'poc-card-catalog-reviews-before-reset037','poc-card-catalog-reviews-recovery037',
+  'poc-card-pack-drafts-v1','yugioh-classic-campaign164-draft',
+  'yugioh-classic-expedition-content166-draft','yugioh-classic-expedition-content163-draft',
+  'yugioh-classic-expedition-content159-draft','yugioh-classic-expedition-content158-draft',
+  'yugioh-classic-expedition-content157-draft','poc-character-editor-v1',
+  'poc-character-transfer-v1','poc-character-library-v1',
+  'poc-starting-deck-editor026','poc-starting-deck-backup026'
+]);
+const HASH = /^[a-f0-9]{64}$/;
+const UUID = /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
+const KINDS = new Set(['card_display','card_setting','card_annotation','card_limit','category','character','deck','chapter_role','starter_list','relic','event','shop_rules','meta_pack','meta_score','recovery_archive']);
+const clone = value => structuredClone(value);
+const equal = (a,b) => JSON.stringify(a) === JSON.stringify(b);
+const key = (type,id) => `${type}\n${id}`;
+const integer = value => Number.isSafeInteger(value) && value >= 0;
+const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
+function need(ok,message) { if (!ok) throw new Error(message); }
+function explain(error) {
+  const message=String(error?.message??error??'DB 연결을 확인해줘.');
+  if(/unified039_editor_required/.test(message))return '편집 권한을 확인하지 못했어. 편집 계정으로 다시 로그인해줘.';
+  if(/unified039_(validation|invalid)/.test(message))return '입력값을 저장할 수 없어. 카드 매수와 항목의 허용 범위를 확인해줘.';
+  return message;
+}
+function safe(value,depth=0) {
+  need(depth < 32,'제작 데이터가 너무 깊게 중첩되어 있어.');
+  if (Array.isArray(value)) { need(value.length <= 20000,'제작 데이터 항목이 너무 많아.'); for (const v of value) safe(v,depth+1); }
+  else if (object(value)) for (const [k,v] of Object.entries(value)) { need(!['__proto__','constructor','prototype'].includes(k),'허용되지 않은 데이터 키야.'); safe(v,depth+1); }
+  else need(value === null || ['string','boolean'].includes(typeof value) || typeof value === 'number' && Number.isFinite(value),'제작 데이터 형식을 확인해줘.');
+  return value;
+}
+function validEntity(row) {
+  need(object(row) && KINDS.has(row.entity_type) && typeof row.entity_id === 'string' && row.entity_id.length <= 200 && integer(row.version),'DB 항목의 식별자와 버전을 확인할 수 없어.');
+  need(row.deleted === true || object(row.content),'DB 항목의 내용이 올바르지 않아.');
+  return safe(row);
+}
+async function digest(text,crypto) {
+  const bytes = await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text));
+  return [...new Uint8Array(bytes)].map(n=>n.toString(16).padStart(2,'0')).join('');
+}
+export async function normalizeBootstrap039(raw,crypto=globalThis.crypto) {
+  need(object(raw) && raw.schema === 1 && raw.kind === 'unified039-bootstrap' && raw.project_id === PROJECT039 && integer(raw.project_revision) && typeof raw.unchanged === 'boolean','통합 DB 응답을 확인할 수 없어.');
+  need(object(raw.permissions) && typeof raw.permissions.can_edit === 'boolean','DB 편집 권한 응답이 올바르지 않아.');
+  if (raw.unchanged) return clone(raw);
+  const env = raw.game;
+  need(object(env) && env.schema === 1 && env.kind === 'poc-unified-game039' && integer(env.game_revision) && integer(env.authoring_revision) && /^\d+$/.test(env.metadata_revision) && HASH.test(env.source_fingerprint) && typeof env.payload_json === 'string','게임용 제작 데이터의 형식이 올바르지 않아.');
+  need(env.authoring_revision<=raw.project_revision&&env.game_revision<=raw.project_revision&&Object.entries(IDENTITY039).every(([k,v])=>env.identity?.[k]===v),'제작 데이터의 게임 버전이 일치하지 않아.');
+  need(await digest(env.payload_json,crypto) === env.source_fingerprint,'게임용 제작 데이터의 검증값이 일치하지 않아.');
+  const payload = safe(JSON.parse(env.payload_json));
+  for (const field of ['catalog','deck_rules035','opponents','starters','content022','meta017','characters','shop_rules']) need(payload[field] !== undefined,`게임용 ${field} 데이터가 없어.`);
+  const rows = raw.authoring?.entities ?? [];
+  need(Array.isArray(rows),'제작 항목 목록이 올바르지 않아.');
+  const seen = new Set();
+  for (const row of rows) { validEntity(row); const k=key(row.entity_type,row.entity_id); need(!seen.has(k),'DB에 중복된 제작 항목이 있어.'); seen.add(k); }
+  return {...clone(raw),gameEnvelope:clone(env),gamePayload:payload,game:{...clone(env),...payload}};
+}
+
+export class AuthoringStore039 {
+  constructor({client,storage=globalThis.localStorage,crypto=globalThis.crypto,debounceMs=400,idleRefreshMs=400,pollMs=15000,redirectUrl=globalThis.location?.href,events=globalThis}={}) {
+    need(client?.rpc && client?.auth,'DB 연결이 필요해.');
+    Object.assign(this,{client,storage,crypto,debounceMs,idleRefreshMs,pollMs,redirectUrl,events});
+    this.listeners=new Set(); this.queue=[]; this.user=null; this.bootstrap=null; this.phase='loading'; this.error=null; this.pendingRevision=null; this.fetchedRevision=null; this.generation=0; this.busy=false; this.stopped=false; this.failures=0;
+    this.online=()=>this.retry();
+  }
+  subscribe(fn) { this.listeners.add(fn); fn(this.snapshot()); return ()=>this.listeners.delete(fn); }
+  snapshot() {
+    const entities=clone(this.bootstrap?.authoring?.entities ?? []);
+    for (const q of this.queue) {
+      const i=entities.findIndex(e=>key(e.entity_type,e.entity_id)===key(q.type,q.id));
+      if(q.operation==='delete') { if(i>=0) entities.splice(i,1); continue; }
+      const next={...(i<0?{entity_type:q.type,entity_id:q.id,version:0,state:'draft',issues:[]}:entities[i]),content:{...(entities[i]?.content??{}),...clone(q.fields)},pending:true};
+      if(i<0) entities.push(next); else entities[i]=next;
+    }
+    const status=this.phase==='conflict'?'다른 창의 수정과 겹쳤어.':this.phase==='invalid'?'수정할 값을 확인해줘.':this.phase==='error'?'저장을 다시 시도할게.':this.busy?'저장 중…':this.queue.length?'변경 사항 저장 대기 중…':this.phase==='loading'?'제작 데이터 불러오는 중…':'자동 저장됨';
+    return {bootstrap:clone(this.bootstrap),entities,gamePayload:clone(this.bootstrap?.gamePayload??null),phase:this.phase,status,error:this.error,user:this.user?{id:this.user.id,email:this.user.email}:null,canEdit:!!this.user&&this.bootstrap?.permissions?.can_edit===true,pending:this.queue.length};
+  }
+  emit() { const snap=this.snapshot(); for(const fn of this.listeners) fn(snap); }
+  getRow(type,id) { return this.bootstrap?.authoring?.entities?.find(e=>e.entity_type===type&&e.entity_id===id); }
+  outboxKey() { return this.user?`poc-authoring039-outbox:${this.user.id}`:null; }
+  persist() {
+    if(!this.outboxKey()) return;
+    try { this.storage?.setItem(this.outboxKey(),JSON.stringify({schema:1,items:this.queue.map(({resolve,...q})=>q)})); }
+    catch { this.error='이 기기에 저장 대기분을 보관할 수 없어. DB 연결이 돌아올 때까지 이 창을 유지해줘.'; }
+  }
+  restore() {
+    try {
+      const raw=this.storage?.getItem(this.outboxKey()); if(!raw) return;
+      const data=JSON.parse(raw); need(data.schema===1&&Array.isArray(data.items)&&data.items.length<=1000,'outbox');
+      for(const q of data.items) {
+        need(KINDS.has(q.type)&&typeof q.id==='string'&&q.id.length<=200&&['create','patch','delete'].includes(q.operation)&&object(q.fields)&&integer(q.baseVersion)&&object(q.baseContent),'outbox'); safe(q.fields);
+        if(q.body) { need(UUID.test(q.requestId)&&q.body.request_id===q.requestId&&q.body.project_id===PROJECT039&&q.body.schema===1&&integer(q.body.expected_project_revision),'outbox'); const c=q.body.changes; need(c?.length===1&&c[0].entity_type===q.type&&c[0].entity_id===q.id&&c[0].operation===q.operation&&c[0].expected_entity_version===q.baseVersion&&equal(c[0].fields,q.fields),'outbox'); }
+      }
+      this.queue=data.items.map(q=>({...q,resolve:()=>{}}));
+    } catch { this.error='이전 저장 대기분을 자동으로 읽지 못했어. 원본은 보존되어 있어.'; }
+  }
+  async start() {
+    if(!this.watching) { this.watching=true; this.events.addEventListener?.('online',this.online);
+      this.authSubscription=this.client.auth.onAuthStateChange?.((_event,session)=>queueMicrotask(()=>this.acceptSession(session).catch(e=>this.setError(e)))); }
+    let result;try { result=await this.client.auth.getSession(); if(result.error) throw result.error; }
+    catch(error) { this.setError(error); throw error; }
+    await this.acceptSession(result.data?.session??null);
+    if(this.pollMs&&!this.poll) { this.poll=setInterval(()=>{if(!this.busy&&!this.queue.length)this.refresh().catch(e=>this.setError(e));},this.pollMs); this.poll.unref?.(); }
+    return this;
+  }
+  async acceptSession(session) {
+    const id=session?.user?.id??null;
+    if(this.started&&id===(this.user?.id??null)) return;
+    this.started=true; this.persist(); this.generation++; clearTimeout(this.idleTimer); this.pendingRevision=null; this.user=session?.user??null; this.queue=[]; this.bootstrap=null; this.fetchedRevision=null; this.phase='loading'; this.error=null; this.emit();
+    try { await this.refresh(true); if(this.snapshot().canEdit) { this.restore(); await this.archiveLegacy(); if(this.queue.length) this.schedule(0); } }
+    catch(e) { this.setError(e); throw e; }
+  }
+  async refresh(force=false) {
+    const generation=this.generation;
+    const result=await this.client.rpc('poc_bootstrap039',{p_view:'authoring',p_known_revision:force?null:this.fetchedRevision});
+    if(result.error) throw result.error;
+    const next=await normalizeBootstrap039(result.data,this.crypto); if(generation!==this.generation) return;
+    if(!next.unchanged) { need(!this.bootstrap||next.project_revision>=this.bootstrap.project_revision,'이전 DB 개정이 도착했어. 다시 확인할게.'); this.bootstrap=next; this.fetchedRevision=next.project_revision; }
+    else { need(this.bootstrap,'DB가 첫 응답을 생략했어. 다시 연결해줘.'); this.bootstrap.permissions=clone(next.permissions); }
+    if(this.pendingRevision!==null&&this.fetchedRevision>=this.pendingRevision) this.pendingRevision=null;
+    if(!this.queue.length) { this.phase='ready'; this.error=null; } this.emit();
+  }
+  patch(type,id,fields,{operation='patch'}={}) {
+    need(this.snapshot().canEdit,'편집자로 로그인해줘.'); need(KINDS.has(type)&&typeof id==='string'&&id.length>0&&id.length<=200&&object(fields)&&['create','patch','delete'].includes(operation),'저장할 항목을 확인해줘.'); safe(fields);
+    const row=this.getRow(type,id),tail=this.queue.at(-1),rejected=this.queue.find(q=>q.rejected&&q.type===type&&q.id===id&&q.operation!=='delete');
+    need(operation==='create'||row||this.queue.some(q=>q.type===type&&q.id===id&&q.operation==='create'),'수정할 DB 항목을 찾을 수 없어.');
+    let q;
+    if(operation==='patch'&&rejected) { q=rejected; q.fields={...q.fields,...clone(fields)}; q.rejected=false; }
+    else if(operation==='patch'&&tail&&tail.type===type&&tail.id===id&&!tail.body&&tail.operation!=='delete') { q=tail; q.fields={...q.fields,...clone(fields)}; }
+    else { q={type,id,operation,fields:clone(fields),baseVersion:row?.version??0,baseContent:clone(row?.content??{}),resolve:[]}; this.queue.push(q); }
+    if(!Array.isArray(q.resolve)) q.resolve=[];
+    const promise=new Promise(resolve=>q.resolve.push(resolve));
+    this.error=null; if(this.phase!=='conflict') this.phase=this.queue[0]?.rejected?'invalid':'pending'; this.persist(); this.emit(); this.schedule(); return promise;
+  }
+  schedule(delay=this.debounceMs) { clearTimeout(this.timer); clearTimeout(this.idleTimer); if(!this.stopped&&!['conflict','invalid'].includes(this.phase)) this.timer=setTimeout(()=>this.drain(),delay); this.timer?.unref?.(); }
+  scheduleIdleRefresh() {
+    clearTimeout(this.idleTimer);
+    if(this.stopped||this.busy||this.queue.length||this.pendingRevision===null) return;
+    const generation=this.generation;
+    this.idleTimer=setTimeout(()=>{
+      if(this.stopped||this.busy||this.queue.length||this.pendingRevision===null) return;
+      this.refresh().catch(e=>{if(!this.stopped&&generation===this.generation)this.setError(e);});
+    },this.idleRefreshMs);
+    this.idleTimer?.unref?.();
+  }
+  setError(error) { this.phase='error'; this.error=explain(error); this.emit(); }
+  async drain() {
+    if(this.busy||!this.queue.length||!this.snapshot().canEdit||['conflict','invalid'].includes(this.phase)||this.stopped) return;
+    const q=this.queue[0],generation=this.generation; this.busy=true; this.emit();
+    try {
+      if(!q.body) { q.requestId=this.crypto.randomUUID(); q.body={schema:1,project_id:PROJECT039,request_id:q.requestId,expected_project_revision:this.bootstrap.project_revision,changes:[{entity_type:q.type,entity_id:q.id,expected_entity_version:q.baseVersion,operation:q.operation,fields:clone(q.fields)}]}; this.persist(); }
+      const result=await this.client.rpc('poc_apply_intent039',{p_intent:clone(q.body)});
+      if(generation!==this.generation) return;
+      if(result.error) {
+        if(/unified039_conflict/.test(result.error.message??'')) {
+          await this.refresh(true); const row=this.getRow(q.type,q.id);
+          const compatible=q.operation==='create'?!row:q.operation==='delete'?row?.version===q.baseVersion:row&&Object.keys(q.fields).every(f=>equal(row.content[f],q.baseContent[f]));
+          if(compatible) { q.baseVersion=row?.version??0; q.baseContent=clone(row?.content??{}); delete q.body; delete q.requestId; this.phase='pending'; this.persist(); }
+          else { this.phase='conflict'; this.error='같은 항목이 다른 창에서 수정되었어. 저장 대기분을 보존했어.'; this.persist(); }
+          return;
+        }
+        if(/unified039_(validation|invalid|forbidden|unauthorized|editor_required)/.test(result.error.message??'')) {
+          // A typed server rejection certifies no mutation; a timeout does not.
+          delete q.body; delete q.requestId; q.rejected=true; this.phase='invalid'; this.error=explain(result.error); this.persist(); return;
+        }
+        throw result.error;
+      }
+      const ack=result.data;
+      need(ack?.schema===1&&ack.kind==='unified039-write-ack'&&ack.request_id===q.requestId&&integer(ack.applied_revision)&&integer(ack.observed_project_revision)&&Array.isArray(ack.entities),'저장 완료 응답을 확인하지 못했어. 같은 요청으로 다시 확인할게.');
+      for(const row of ack.entities) validEntity(row);
+      if((HASH.test(ack.game_source_fingerprint)&&ack.game_source_fingerprint!==this.bootstrap.game?.source_fingerprint)||(Array.isArray(ack.issues)&&ack.issues.length)) this.pendingRevision=Math.max(this.pendingRevision??0,ack.applied_revision);
+      if(ack.applied_revision>=this.bootstrap.project_revision) {
+        for(const row of ack.entities) {
+          const rows=this.bootstrap.authoring.entities,i=rows.findIndex(e=>key(e.entity_type,e.entity_id)===key(row.entity_type,row.entity_id));
+          if(row.deleted) { if(i>=0)rows.splice(i,1); } else if(i<0)rows.push(clone(row)); else rows[i]=clone(row);
+        }
+        this.bootstrap.project_revision=ack.applied_revision;
+      }
+      this.queue.shift();
+      for(const waiting of this.queue) if(waiting.type===q.type&&waiting.id===q.id&&!waiting.body&&waiting.baseVersion===q.baseVersion) { const row=this.getRow(q.type,q.id); waiting.baseVersion=row?.version??0; waiting.baseContent=clone(row?.content??{}); }
+      for(const resolve of Array.isArray(q.resolve)?q.resolve:[]) resolve(ack);
+      this.phase=this.queue.length?'pending':'ready'; this.error=null; this.failures=0; this.persist();
+    } catch(e) { if(generation===this.generation) { this.setError(e); this.failures++; } }
+    finally {
+      this.busy=false; this.emit();
+      if(this.queue.length&&this.phase!=='conflict') this.schedule(this.phase==='error'?Math.min(30000,1000*2**Math.min(this.failures,5)):0);
+      else this.scheduleIdleRefresh();
+    }
+  }
+  retry() { if(this.phase==='conflict')return; this.error=null; if(!this.started)return this.start().catch(e=>this.setError(e)); if(!this.bootstrap)return this.refresh(true).catch(e=>this.setError(e)); if(!this.queue.length&&this.pendingRevision!==null)return this.refresh().catch(e=>this.setError(e)); this.phase=this.queue.length?'pending':'ready'; this.schedule(0); this.emit(); }
+  resolveConflict(choice) {
+    need(this.phase==='conflict'&&this.queue.length,'충돌한 수정이 없어.'); const q=this.queue[0];
+    if(choice==='remote') { this.queue.shift(); for(const resolve of Array.isArray(q.resolve)?q.resolve:[]) resolve({discarded:true}); }
+    else { need(choice==='retry','충돌 처리 방법을 확인해줘.'); const row=this.getRow(q.type,q.id); q.baseVersion=row?.version??0; q.baseContent=clone(row?.content??{}); delete q.body; delete q.requestId; }
+    this.phase=this.queue.length?'pending':'ready'; this.error=null; this.persist(); this.emit(); this.schedule(0);
+  }
+  async archiveLegacy() {
+    for(const source_key of LEGACY_CREATION_KEYS039) {
+      let raw_json; try { raw_json=this.storage?.getItem(source_key); } catch { continue; }
+      if(!raw_json||new TextEncoder().encode(raw_json).length>4194304) continue;
+      const sha256=await digest(raw_json,this.crypto),id=await digest(source_key+'\n'+raw_json,this.crypto);
+      if(this.getRow('recovery_archive',id)||this.queue.some(q=>q.type==='recovery_archive'&&q.id===id))continue;
+      this.patch('recovery_archive',id,{source_key,sha256,raw_json,origin:'browser'},{operation:'create'});
+    }
+  }
+  async login(email) { const result=await this.client.auth.signInWithOtp({email:email.trim(),options:{emailRedirectTo:this.redirectUrl}}); if(result.error)throw result.error; }
+  async readRecovery(id) {
+    need(this.snapshot().canEdit&&HASH.test(id),'복구 자료를 열 권한을 확인해줘.');
+    const result=await this.client.rpc('poc_read_recovery039',{p_id:id}); if(result.error)throw result.error;
+    const row=result.data;need(object(row)&&LEGACY_CREATION_KEYS039.includes(row.source_key)&&typeof row.raw_json==='string'&&new TextEncoder().encode(row.raw_json).length<=4194304&&await digest(row.raw_json,this.crypto)===row.sha256&&await digest(row.source_key+'\n'+row.raw_json,this.crypto)===id,'복구 자료의 검증값이 다릅니다.');return row;
+  }
+  async logout() { this.persist(); const result=await this.client.auth.signOut(); if(result.error)throw result.error; await this.acceptSession(null); }
+  stop() { this.stopped=true; clearTimeout(this.timer); clearTimeout(this.idleTimer); clearInterval(this.poll); this.events.removeEventListener?.('online',this.online); this.authSubscription?.data?.subscription?.unsubscribe(); }
+}

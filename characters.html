@@ -1,33 +1,4 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>공용 캐릭터 편집 · YU-GI-OH CLASSIC</title><link rel="icon" href="assets/icon.svg"><link rel="stylesheet" href="style.css?v=20261007-49"><link rel="stylesheet" href="story.css?v=20261012-shared127"><script type="module" src="characters.js?v=20261012-shared127"></script></head><body>
-<header class="masthead"><a class="brand" href="./"><img src="assets/icon.svg" width="34" height="40" alt=""><span>YU-GI-OH CLASSIC<small>공용 캐릭터 편집</small></span></a><nav class="row-actions"><a class="ai-builder-link" href="story.html">시나리오 편집</a><a class="ai-builder-link" href="ai-decks.html">AI 덱 편집</a></nav></header>
-<main class="story-main"><h1>모든 시나리오에서 같은 캐릭터.</h1><p>이름·프로필·컷신·음성·특성 묶음을 여기서 저장해. 시나리오에서는 캐릭터를 불러와 전투에 연결해.</p>
-<div class="character-toolbar"><label>편집할 캐릭터<select id="character-select"></select></label><button id="new-character" type="button">+ 새 공용 캐릭터</button><button id="refresh-characters" type="button">공용 목록 새로고침</button></div>
-<p id="character-sync" role="status"></p><p id="status" role="status">자료를 불러오는 중…</p>
-<div class="story-toolbar"><button id="save-character" class="primary" type="button">이 캐릭터 온라인 저장</button><button id="load-character" type="button">온라인 저장본 불러오기</button><button id="export-character" type="button">캐릭터 JSON 내보내기</button><button id="import-character" type="button">캐릭터 JSON 불러오기</button><input id="character-file" type="file" accept=".json,application/json" hidden></div>
-<aside id="character-transfer" class="story-warning" hidden><p id="transfer-note"></p><button id="import-transfer" type="button">시나리오 특성 가져오기</button></aside>
-<section id="character-editor" class="story-box"></section><aside id="validation" aria-live="polite"></aside></main>
-<dialog id="card-picker" aria-labelledby="picker-title">
-  <div class="picker-head"><h2 id="picker-title">카드 고르기</h2><button id="close-picker" aria-label="닫기">×</button></div>
-  <input id="card-search" type="search" aria-label="카드 이름·효과·번호·태그 검색" placeholder="이름 · 효과 · 카드 번호 · 내 태그 검색" autocomplete="off">
-  <p id="picker-purpose"></p>
-  <details class="picker-advanced" open><summary>내 태그로 찾기</summary><div id="picker-tags" aria-label="보상 카드 태그 필터"></div><p id="picker-tag-status" role="status">도감에 저장한 태그를 불러오는 중…</p><button id="refresh-picker-tags" type="button">태그 새로 불러오기</button></details>
-  <div class="picker-filters">
-    <label for="picker-rarity">등급<select id="picker-rarity"><option value="">전체</option><option>L</option><option>UR</option><option>SR</option><option>R</option><option>N</option></select></label>
-    <label for="picker-type">카드 종류<select id="picker-type"></select></label>
-    <label for="picker-race">종족<select id="picker-race"></select></label>
-    <label for="picker-attribute">속성<select id="picker-attribute"></select></label>
-  </div>
-  <details class="picker-advanced"><summary>추가 필터 · 세부 종류·분류·능력치</summary>
-    <div class="picker-filters">
-      <label for="picker-subtype">세부 종류<select id="picker-subtype"></select></label>
-      <label for="picker-mechanic">효과 분류<select id="picker-mechanic"></select></label>
-      <label for="picker-group">카드 묶음<select id="picker-group"></select></label>
-    </div>
-    <div id="picker-stats" class="stat-filters"></div>
-  </details>
-  <div class="picker-tools"><label for="picker-sort">정렬<select id="picker-sort"><option value="rarity">등급순</option><option value="name">이름순</option><option value="attack">공격력 높은순</option><option value="level">레벨 높은순</option></select></label><button id="reset-picker" type="button">필터 초기화</button></div>
-  <p id="picker-empty" role="status" hidden>조건에 맞는 카드가 없어. 검색어나 필터를 줄여줘.</p>
-  <div id="picker-results"></div><div class="picker-footer"><p id="picker-selection" role="status" hidden></p><div class="picker-pages"><button id="prev-cards">이전</button><span id="picker-page"></span><button id="next-cards">다음</button></div><button id="finish-picker" class="primary" hidden>선택 완료</button></div>
-</dialog>
-
-</body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>원정 제작소로 이동</title><link rel="stylesheet" href="authoring039.css?v=20261026-039"></head><body><main class="au-loading"><h1>원정 제작소</h1><p>같은 DB를 사용하는 통합 제작 화면으로 이동합니다.</p><a href="index.html?section=characters">제작 화면 열기</a></main><script>
+const from=new URL(location.href),to=new URL('index.html',location.href),panels=new Set(['cards','decks','chapters','starters','characters','relics','events','shop','packs','balance','recovery']);
+let section='characters',hash=from.hash.slice(1);if(panels.has(hash))section=hash;if(hash==='settings')section='cards';if(from.searchParams.get('tab')==='events')section='events';if(from.searchParams.get('tab')==='shop')section='shop';to.searchParams.set('section',section);if(from.searchParams.has('deck'))to.searchParams.set('deck',from.searchParams.get('deck'));if(/^#card-\d+$/.test(from.hash))to.hash=from.hash;location.replace(to.pathname+to.search+to.hash);
+</script></body></html>
