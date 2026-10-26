@@ -34,3 +34,21 @@
   font-size: .85rem;
   line-height: 1.6;
 }
+.native-pending-settings {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid #b89a61;
+  border-radius: 8px;
+  background: #faf5e9;
+  overflow-wrap: anywhere;
+}
+.native-pending-settings h4 { margin: 0 0 10px; }
+.native-pending-settings p { line-height: 1.6; }
+.native-pending-settings ul { max-height: 220px; overflow-y: auto; padding-left: 20px; line-height: 1.7; }
+.native-pending-settings button { min-height: 44px; max-width: 100%; white-space: normal; margin: 4px 8px 4px 0; }
+.native-card-detail .review-editor { min-width: 0; }
+#download-review-recovery { white-space: normal; overflow-wrap: anywhere; }
+@media(max-width: 520px) {
+  .native-pending-settings { padding: 12px; }
+  .native-pending-settings button { display: block; width: 100%; margin: 8px 0 0; }
+}
