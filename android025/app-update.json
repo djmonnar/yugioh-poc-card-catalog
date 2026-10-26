@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.10",
-  "versionCode": 29,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.10/YGOClassicExpedition-0.18.10-arm64.apk",
-  "sizeBytes": 146465399,
-  "sha256": "7e992dc0b68e2b62376bb2c4a586032e547dbe3c8eb05f8991a26382cccc890e",
-  "releaseNotes": "신규 카드30종과 공통 AI 판단을 추가했습니다. Unity 원정 편집기의 시작 덱·적 편성·카드 제한을 연결하고 새 원정과 기존 원정의 규칙을 구분했습니다. 마루후지 료와 크로노스의 캐릭터 화면을 추가했습니다. 기존 저장과 다운로드한 미디어를 보존합니다."
+  "versionName": "0.18.11",
+  "versionCode": 30,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.11/YGOClassicExpedition-0.18.11-arm64.apk",
+  "sizeBytes": 146889941,
+  "sha256": "36980f32ca6d81e4637df9a04f03bf1f6351f07a05eaa26cbb0733dc79baf083",
+  "releaseNotes": "도감과 Unity 원정 제작 데이터를 한 DB로 통합했습니다. 적 덱·시작 덱·편성·유물·이벤트·상점 설정을 자동으로 연결합니다. 기존 원정과 카드함·포인트는 기기에 보존됩니다."
 }
