@@ -11,7 +11,8 @@
   <link rel="stylesheet" href="card-settings.css?v=20261006-14">
   <link rel="stylesheet" href="card-tags.css?v=20261011-tags">
   <link rel="stylesheet" href="card-packs.css?v=20261013-packs131">
-  <script type="module" src="app.js?v=20261013-packs131"></script>
+  <link rel="stylesheet" href="catalog-native035.css?v=20261026-036">
+  <script type="module" src="app.js?v=20261026-036"></script>
 </head>
 <body>
   <header class="masthead">
@@ -21,6 +22,7 @@
   <main>
     <section class="intro"><div><p class="eyebrow">THE COMPLETE CARD COLLECTION</p><h1>다음 카드풀을<br class="mobile-break"> 함께 골라보자.</h1><p class="intro-copy">전체 카드를 살펴보고, 등급 조정 · 교체 후보 · 제한 의견을 남겨줘.</p></div><div class="snapshot"><b id="total-count">…</b><span>전체 카드</span><small id="snapshot-date">카드 정보를 읽는 중</small></div></section>
     <div class="context-line"><span id="scope-count">현재 모드 기준</span><span>UR 300 · SR 200 · R 100 · N 50 골드</span><span>등급은 밸런스 검토용 초안</span></div>
+    <p id="native-catalog-status" role="status"></p>
     <section class="cloud-card-toolbar" aria-label="카드 등급과 상점 설정"><p id="card-cloud-status" role="status">온라인 카드 설정을 읽는 중…</p><a href="ai-decks.html#login">이메일 로그인</a><button id="refresh-card-settings" type="button">설정 새로 불러오기</button></section>
     <section id="new-cards-banner" class="catalog-updates" aria-label="새로 추가된 카드">
       <div><b>새로 추가된 카드</b><p id="new-cards-summary">추가 이력을 읽는 중…</p></div>
@@ -53,7 +55,7 @@
         <nav id="catalog-pages-bottom" class="pagination" aria-label="도감 아래쪽 페이지 이동"></nav>
       </section>
     </div>
-    <footer><p>게임에 설치된 이름·한국어 설명·능력치·제한을 읽은 도감이야. 공식 카드 이미지에 적힌 효과와 모드의 구현은 다를 수 있어.</p><p>카드 이미지와 원작 명칭의 권리는 각 권리자에게 있어. 비공식 팬 프로젝트 · <a href="data/cards.csv" download>전체 CSV 내려받기</a> · <a href="README.md">사용 안내</a></p></footer>
+    <footer><p>기존 게임 카드와 Unity 원정 추가 카드를 함께 볼 수 있어. 카드의 적용 게임과 효과는 상세 화면에서 확인해줘.</p><p>카드 이미지와 원작 명칭의 권리는 각 권리자에게 있어. 비공식 팬 프로젝트 · <a href="data/cards.csv" download>기존 카드 CSV 내려받기</a> · <a href="native035.html">Unity 원정 편집기</a> · <a href="README.md">사용 안내</a></p></footer>
   </main>
   <dialog id="card-dialog" aria-labelledby="detail-title"><button id="close-detail" class="dialog-close" aria-label="카드 상세 닫기">×</button><div id="detail-body"></div></dialog>
   <dialog id="export-dialog" aria-labelledby="export-title"><button id="close-export" class="dialog-close" aria-label="내보내기 닫기">×</button><div class="export-body"><p class="eyebrow">YOUR CARD REVIEW</p><h2 id="export-title">검토 의견 보내기</h2><p id="export-summary"></p><div id="export-stats" class="export-stats"></div><p class="muted">JSON 파일을 내려받아 이 채팅에 첨부해줘. 다시 불러오면 다른 기기에서도 검토를 이어갈 수 있어.</p><div class="export-buttons"><button id="download-json" class="primary">검토 JSON 내려받기</button><button id="download-md">메모 Markdown 내려받기</button><button id="copy-review">전달할 내용 복사</button></div><label for="review-preview">전달할 내용 미리보기</label><textarea id="review-preview" readonly rows="8"></textarea><div class="import-row"><button id="import-json">검토 JSON 불러오기</button><span>같은 카드의 의견만 합치며, 이전 의견은 백업해.</span><input id="import-file" type="file" accept="application/json,.json" hidden></div><p id="import-status" role="status"></p><button id="download-backup" class="text-button" hidden>불러오기 전 의견 백업 내려받기</button></div></dialog>

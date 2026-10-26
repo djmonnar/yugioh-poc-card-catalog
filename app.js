@@ -11,6 +11,7 @@ import {CardTagsUI} from './card-tags-ui.js?v=20261011-tags';
 import {subtypeMatches,fillSubtypeFilter} from './card-subtypes.js?v=20261011-tags';
 import {CardLimitsCloud,applyLimits,normalLimitName,speedLimitName,defaultLimitNames} from './card-limits.js?v=20261008-limits-labels';
 import {CatalogCardPacks} from './card-packs-catalog.js?v=20261013-packs131';
+import {mergeCatalogNative035, applyNativeCatalogSettings035} from './catalog-native035.js?v=20261026-036';
 
 const $ = id => document.getElementById(id);
 const PAGE_SIZE = 36;
@@ -23,14 +24,16 @@ narrowLayout.addEventListener('change', event => { $('advanced-filters').open = 
 let cards = [], meta = null, reviews = new Map(), unmatched = [], page = 1, rarity = '', view = 'all', selected = null, backup = null;
 let timer, resetBackup = null;
 let settingsCloud=null,limitsCloud=null,settingsAuth=null,catalogCanEdit=false,catalogAuthGeneration=0;
+let nativeRelease=null;
+const legacyCards=()=>cards.filter(card=>!card.nativeOnly);
 const statFilters = createStatFilters($('stat-filters'), () => {page = 1; render();});
-const tagUI=new CardTagsUI({cards:()=>cards,meta:()=>meta,canEdit:()=>catalogCanEdit,
+const tagUI=new CardTagsUI({cards:legacyCards,meta:()=>meta,canEdit:()=>catalogCanEdit,
   changed:({preservePage=false}={})=>{if(!preservePage)page=1;render();},reopen:()=>{if(selected){const top=$('card-dialog').scrollTop;openCard(selected.slot);$('card-dialog').scrollTop=top;}},
   showTag:name=>{if(selected)closeCard();view='all';resetFilters();tagUI.select(name);render();$('results').scrollIntoView({block:'start'});},toast});
-const packUI=new CatalogCardPacks({cards:()=>cards,meta:()=>meta,canEdit:()=>catalogCanEdit,
+const packUI=new CatalogCardPacks({cards:legacyCards,meta:()=>meta,canEdit:()=>catalogCanEdit,
   reopen:()=>{if(selected){const top=$('card-dialog').scrollTop;openCard(selected.slot);$('card-dialog').scrollTop=top;}},toast});
 function liveSettings(card,info){
-  if(card.special)return;
+  if(card.special||card.nativeOnly)return;
   const box=el('section',null,'review-editor live-card-settings');box.append(el('h3','게임 설정 바로 저장'));
   const ready=catalogCanEdit&&settingsCloud?.rows!==null&&settingsCloud;
   const expected=ready?settingsCloud.version(card):null;
@@ -47,13 +50,23 @@ function liveSettings(card,info){
   if(!ready){const login=el('a','이메일 로그인');login.href='ai-decks.html#login';box.append(login);}
   save.addEventListener('click',async()=>{
     const rarity=$('live-rarity').value,stocked=stock.checked;save.disabled=true;stock.disabled=draw.disabled=true;$('live-rarity').disabled=true;status.textContent='설정을 저장하는 중…';
-    try{const row=await settingsCloud.save(meta,card,rarity,stocked,expected,draw.checked);applySettings(cards,[row]);rarityButtons();render();const top=$('card-dialog').scrollTop;
+    try{const row=await settingsCloud.save(meta,card,rarity,stocked,expected,draw.checked);applySettings(legacyCards(),[row]);rarityButtons();render();const top=$('card-dialog').scrollTop;
       if(selected?.slot===card.slot){openCard(card.slot);$('card-dialog').scrollTop=top;$('live-setting-status').textContent='저장 완료 · 등급·상점·뽑기 설정을 반영했어.';}toast('카드 설정을 온라인에 저장했어.');
     }catch(error){status.textContent=error.message;save.disabled=false;if(selected?.slot===card.slot){$('live-rarity').disabled=false;applyLegendControls();}}
   });info.append(box);
 }
 async function refreshCardSettings(){
-  if(!settingsCloud)return;const rows=await settingsCloud.load();applySettings(cards,rows);applyLimits(cards,await limitsCloud.load());try{await tagUI.reload();$('category-status').textContent='';}catch(e){$('category-status').textContent='온라인 분류를 불러오지 못했어. 설정 새로 불러오기를 눌러줘.';}rarityButtons();render();if(selected)openCard(selected.slot);
+  if(!settingsCloud)return;const rows=await settingsCloud.load();applySettings(legacyCards(),rows);applyLimits(legacyCards(),await limitsCloud.load());
+  if(nativeRelease){
+    try{
+      const {data,error}=await settingsAuth.rpc('poc_load_native035_library');if(error)throw error;
+      applyNativeCatalogSettings035(cards,data);
+      $('native-catalog-status').textContent='Unity 원정 추가 카드 30장 · 온라인 등급·상점·보상 설정 반영';
+    }catch{
+      $('native-catalog-status').textContent='Unity 원정 추가 카드 30장 · 온라인 설정을 불러오지 못해 현재 표시를 유지하고 있어.';
+    }
+  }
+  try{await tagUI.reload();$('category-status').textContent='';}catch(e){$('category-status').textContent='온라인 분류를 불러오지 못했어. 설정 새로 불러오기를 눌러줘.';}rarityButtons();render();if(selected)openCard(selected.slot);
   try{await packUI.reload();if(selected)openCard(selected.slot);}catch{/* Independent pack API failures never block card settings. */}
 }
 async function initCardSettings(){
@@ -86,7 +99,7 @@ function limitName(limit) { return limit == null ? '특수' : limit === 0 ? '금
 function labelTier(tier) { return el('span', tier, `rarity ${tier}`); }
 function regularLimit(card) { return el('span', limitName(card.deck_limit), 'limit' + (card.deck_limit === 3 || card.special ? ' unlimited' : '')); }
 function liveLimits(card,info){
-  if(card.special)return;
+  if(card.special||card.nativeOnly)return;
   const box=el('section',null,'review-editor live-card-limits'),ready=catalogCanEdit&&limitsCloud?.rows!==null&&limitsCloud;
   const row=limitsCloud?.row(card),defaults=defaultLimitNames(card);box.append(el('h3','플레이어 금제 바로 저장'));
   box.append(selectControl('live-normal-limit','일반 듀얼',[['',`기본값 · ${defaults.normal}`],['0','금지 · 0장'],['1','제한 · 1장'],['2','준제한 · 2장'],['3','제한 없음 · 동명 3장']],row?.normal_limit??'',!ready));
@@ -96,7 +109,7 @@ function liveLimits(card,info){
   const status=el('p',ready?'저장 후 게임을 다시 실행하면 배지·추가 경고·덱 검사에도 반영돼.':'이메일 로그인 후 금제를 직접 바꿀 수 있어.','muted');status.setAttribute('role','status');box.append(button,status);
   button.addEventListener('click',async()=>{button.disabled=true;status.textContent='금제를 저장하는 중…';
     const value=id=>$(id).value===''?null:Number($(id).value);
-    try{await limitsCloud.save(meta,card,value('live-normal-limit'),value('live-speed-limit'));applyLimits(cards,limitsCloud.rows);render();const top=$('card-dialog').scrollTop;if(selected?.slot===card.slot){openCard(card.slot);$('card-dialog').scrollTop=top;}toast('플레이어 금제 저장 완료 · 게임 재실행 시 반영');}
+    try{await limitsCloud.save(meta,card,value('live-normal-limit'),value('live-speed-limit'));applyLimits(legacyCards(),limitsCloud.rows);render();const top=$('card-dialog').scrollTop;if(selected?.slot===card.slot){openCard(card.slot);$('card-dialog').scrollTop=top;}toast('플레이어 금제 저장 완료 · 게임 재실행 시 반영');}
     catch(e){status.textContent=e.message;button.disabled=false;}
   });info.append(box);
 }
@@ -162,7 +175,7 @@ function sortCards(rows) {
 function renderCard(card) {
   const b = el('button', null, 'catalog-card' + (reviews.has(card.identity_key) ? ' reviewed' : ''));
   b.type = 'button'; b.dataset.slot = String(card.slot);
-  b.setAttribute('aria-label', `${card.name_ko} · ${card.rarity} · ${limitName(card.deck_limit)} · 상세 및 검토`);
+  b.setAttribute('aria-label', `${card.name_ko} · ${card.rarity} · ${limitName(card.deck_limit)} · ${card.nativeOnly?'카드 정보':'상세 및 검토'}`);
   const image = document.createElement('img'); image.src = card.image; image.alt = ''; image.width = 200; image.height = 290; image.loading = 'lazy'; image.decoding = 'async';
   b.append(image);
   const addition = additions.byIdentity.get(card.identity_key);
@@ -172,6 +185,7 @@ function renderCard(card) {
   }
   if (reviews.has(card.identity_key)) b.append(el('span', '검토 작성', 'review-mark'));
   const metadata = el('div', null, 'card-meta'); metadata.append(labelTier(card.rarity), regularLimit(card)); b.append(metadata);
+  if(card.nativeOnly)b.append(el('span','Unity 원정','native-card-badge'));
   const name = el('h3', card.name_ko);
   if (card.review_note) { const dot = el('span', '', 'attention-dot'); dot.title = '효과·이름 검토 대상'; name.append(dot); }
   b.append(name, el('span', kind(card), 'kind'), el('span', statText(card), 'stats'));
@@ -265,7 +279,7 @@ function openCard(slot, updateHash = true) {
   art.append(image, el('div', `카드 #${String(card.slot).padStart(4,'0')} · ID ${card.internal_id}`, 'identity'));
   if (card.official_url) { const a = el('a', '공식 한국어 DB에서 보기 ↗'); a.href = card.official_url; a.target = '_blank'; a.rel = 'noopener'; art.append(a); }
   else art.append(el('p', '공식 카드 이름 매칭 미확인'));
-  art.append(el('p', '그림에 인쇄된 내용보다 오른쪽의 현재 모드 설명을 기준으로 의견을 남겨줘.'));
+  art.append(el('p', card.nativeOnly?'Unity 원정에서 사용할 수 있는 추가 카드야.':'그림에 인쇄된 내용보다 오른쪽의 현재 모드 설명을 기준으로 의견을 남겨줘.'));
   const info = el('div', null, 'detail-info'); const top = el('div'); top.append(labelTier(card.rarity), document.createTextNode(' '), regularLimit(card));
   const title = el('h2', card.name_ko); title.id = 'detail-title'; info.append(top, title, el('p', card.name_en, 'english-name'));
   const addition = additions.byIdentity.get(card.identity_key);
@@ -276,7 +290,15 @@ function openCard(slot, updateHash = true) {
     batch.addEventListener('click', () => showNewCards(addition.id)); note.append(batch); info.append(note);
   }
   const tags = el('div', null, 'detail-tags'); for (const t of [card.type, card.subtype, card.race, card.attribute, card.level == null ? '' : `LV ${card.level}`, card.atk == null ? '' : `ATK ${card.atk} / DEF ${card.def}`].filter(Boolean)) tags.append(el('span',t)); info.append(tags);
-  info.append(el('p', '현재 모드 설명', 'description-title'), el('div', card.description_ko || '별도의 카드 설명이 없는 토큰·특수 카드야.', 'description'));
+  info.append(el('p', card.nativeOnly?'카드 효과':'현재 모드 설명', 'description-title'), el('div', card.description_ko || '별도의 카드 설명이 없는 토큰·특수 카드야.', 'description'));
+  if(card.nativeOnly){
+    info.classList.add('native-card-detail');
+    top.append(el('span','Unity 원정','native-card-badge'));
+    const link=el('a','Unity 원정에서 덱·등급 편집','native-card-editor-link');link.href='native035.html';
+    info.append(el('p','시작 덱·적 덱 편성과 등급·상점·보상 설정은 Unity 원정 편집기에서 바꿀 수 있어.','muted'),link);
+    layout.append(art,info);$('detail-body').replaceChildren(layout);
+    if(!$('card-dialog').open)$('card-dialog').showModal();$('card-dialog').scrollTop=0;return;
+  }
   renderRelations(card, info);
   tagUI.detail(card,info,relatedLink);
   packUI.detail(card,info);
@@ -354,10 +376,26 @@ async function init() {
     const response=await fetch('./data/cards.json?v=20261006-7',{cache:'no-cache'});if(!response.ok)throw new Error('카드 자료를 가져오지 못했어.');
     const data=await response.json();meta=data.meta;cards=data.cards;
     if(cards.length!==meta.total||new Set(cards.map(c=>c.identity_key)).size!==cards.length)throw new Error('카드 자료를 확인할 수 없어.');
+    try{
+      const extensionResponse=await fetch('./data/native-expansion035.json?v=20261026-036',{cache:'no-cache'});
+      if(!extensionResponse.ok)throw new Error('추가 카드 없음');
+      const bytes=await extensionResponse.arrayBuffer();
+      const digest=[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(v=>v.toString(16).padStart(2,'0')).join('');
+      if(digest!=='77da9b2f053f360c71441b8a493d59ed1e3a6f4007129f4ece7b7f4b7b2b94c6')throw new Error('추가 카드 버전이 달라.');
+      const merged=mergeCatalogNative035(data,JSON.parse(new TextDecoder().decode(bytes)));cards=merged.cards;nativeRelease=merged.release;
+      $('native-catalog-status').textContent='Unity 원정 추가 카드 30장을 함께 볼 수 있어.';
+    }catch{
+      $('native-catalog-status').textContent='Unity 추가 카드 30장을 불러오지 못했어. 페이지를 새로고침해줘.';
+    }
     try {
-      const response = await fetch('./data/card-additions.json?v=20261008', {cache:'no-cache'});
-      if (!response.ok) throw new Error('추가 이력 없음');
-      additions = additionIndex(cards, await response.json());
+      let history={schema_version:1,releases:[]};
+      try{
+        const response=await fetch('./data/card-additions.json?v=20261008',{cache:'no-cache'});
+        if(!response.ok)throw new Error('추가 이력 없음');
+        history=await response.json();additionIndex(data.cards,history);
+      }catch{ /* New Unity cards remain discoverable if the older history is unavailable. */ }
+      if(nativeRelease)history={...history,releases:[nativeRelease,...history.releases]};
+      additions = additionIndex(cards,history);
       if (additions.latest) {
         $('new-cards-summary').textContent = `${additions.latest.date} · ${additions.latest.name} · ${additions.latest.count}장`;
         $('show-new-cards').textContent = `새 카드 ${additions.latest.count}장 보기`; $('show-new-cards').disabled = false;
@@ -369,14 +407,14 @@ async function init() {
     } catch {
       $('new-cards-summary').textContent = '추가 이력을 불러오지 못했어. 새로고침해줘.';
     }
-    for(const c of cards)c.searchText=[c.name_ko,c.name_en,c.description_ko,c.race,c.attribute,...(c.mechanics||[]).map(m=>m.name),...(c.card_groups||[]).map(g=>g.name),String(c.slot),String(c.internal_id)].join(' ').normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,'');
+    for(const c of cards)c.searchText=[c.name_ko,c.name_en,c.description_ko,c.race,c.attribute,...(c.searchAliases||[]),...(c.mechanics||[]).map(m=>m.name),...(c.card_groups||[]).map(g=>g.name),String(c.slot),String(c.internal_id),String(c.code??'')].join(' ').normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,'');
     for(const [id,rows] of [['mechanic-filter',meta.card_system?.mechanics||[]],['group-filter',meta.card_system?.groups||[]]])
       for(const row of rows){const option=el('option',row.name);option.value=row.id;$(id).append(option);}
-    $('total-count').textContent=fmt(cards.length);$('scope-count').textContent=`일반 카드 ${fmt(meta.regular_count)}장 · 토큰·특수 ${meta.special_count}종`;$('snapshot-date').textContent=meta.snapshot_date+' 기준';
+    $('total-count').textContent=fmt(cards.length);$('scope-count').textContent=`기존 카드 ${fmt(meta.total)}장${nativeRelease?' · Unity 원정 추가 30장':''}`;$('snapshot-date').textContent=nativeRelease?'2026-10-26 추가 반영':meta.snapshot_date+' 기준';
     fillFilter('type-filter',[...new Set(cards.map(c=>c.type))]);fillFilter('race-filter',[...new Set(cards.map(c=>c.race).filter(Boolean))].sort(collator.compare));fillFilter('attribute-filter',[...new Set(cards.map(c=>c.attribute).filter(Boolean))]);
     fillSubtypeFilter($('subtype-filter'));
     const levels=[...new Set(cards.map(c=>c.level).filter(v=>v!=null))].sort((a,b)=>a-b);fillFilter('level-min',levels);fillFilter('level-max',levels);
-    try {const stored=localStorage.getItem(STORAGE_KEY);if(stored){const parsed=parseImport(JSON.parse(stored),cards);reviews=new Map(parsed.valid.map(r=>[r.identity_key,r]));unmatched=parsed.unmatched;if(unmatched.length)toast(`카드가 바뀐 이전 의견 ${unmatched.length}건을 따로 보관했어.`);}backup=localStorage.getItem(STORAGE_KEY+'-before-import');}
+    try {const stored=localStorage.getItem(STORAGE_KEY);if(stored){const parsed=parseImport(JSON.parse(stored),legacyCards());reviews=new Map(parsed.valid.map(r=>[r.identity_key,r]));unmatched=parsed.unmatched;if(unmatched.length)toast(`카드가 바뀐 이전 의견 ${unmatched.length}건을 따로 보관했어.`);}backup=localStorage.getItem(STORAGE_KEY+'-before-import');}
     catch{toast('이전 의견을 읽지 못했어. 기존 저장 내용은 그대로 두었어.');}
     try { resetBackup = localStorage.getItem(RESET_BACKUP_KEY); } catch {}
     rarityButtons();render();
@@ -405,7 +443,7 @@ $('import-file').addEventListener('change',async()=>{
   const file=$('import-file').files?.[0];if(!file)return;
   try{
     if(file.size>12*1024*1024)throw new Error('파일이 너무 커. 이 도감의 검토 JSON을 골라줘.');
-    const incoming=parseImport(JSON.parse(await file.text()),cards);
+    const incoming=parseImport(JSON.parse(await file.text()),legacyCards());
     backup=JSON.stringify(currentPayload(),null,2)+'\n';
     // Back up before any merge. If storage is unavailable, keep a downloadable
     // in-memory backup and announce the limitation instead of hiding it.
@@ -436,7 +474,7 @@ $('download-reset-backup').addEventListener('click',()=>{if(resetBackup)download
 $('undo-reset').addEventListener('click',()=>{
   if(!resetBackup)return;
   try {
-    const parsed=parseImport(JSON.parse(resetBackup),cards);
+    const parsed=parseImport(JSON.parse(resetBackup),legacyCards());
     const merged=new Map(reviews);for(const row of parsed.valid)if(!merged.has(row.identity_key))merged.set(row.identity_key,row);
     const old=new Map(unmatched.map(r=>[r.identity_key,r]));for(const row of parsed.unmatched)if(!old.has(row.identity_key))old.set(row.identity_key,row);
     localStorage.setItem(STORAGE_KEY,JSON.stringify(exportPayload(meta,[...merged.values()],[...old.values()])));
