@@ -1,4 +1,4 @@
-import {AUTHORING_SECTIONS039,createAuthoringPanels039,normalizeCatalog039} from './authoring039-panels.js?v=20261027-041';
+import {AUTHORING_SECTIONS039,createAuthoringPanels039,normalizeCatalog039} from './authoring039-panels.js?v=20261028-043';
 
 export function route039(url){const parsed=url instanceof URL?url:new URL(url,'https://example.invalid/'),section=parsed.searchParams.get('section');return {section:AUTHORING_SECTIONS039.some(([key])=>key===section)?section:'cards',deck:parsed.searchParams.get('deck'),card:/^#card-(\d+)$/.exec(parsed.hash)?.[1]??null};}
 export function saveLabel039(snapshot){if(snapshot.phase==='loading'||!snapshot.bootstrap)return 'DB 자료를 불러오는 중…';if(snapshot.phase==='conflict')return '다른 곳의 변경과 충돌';if(snapshot.phase==='invalid')return '입력 확인 필요';if(snapshot.error)return '연결 확인 필요';if(snapshot.pending>0||snapshot.phase==='saving')return '자동 저장 중…';return snapshot.canEdit?'DB에 저장됨':'열람 중';}

@@ -34,13 +34,36 @@ export function deckReadiness041(entity,cards,{requireLimits=true}={}) {
 
 export function deckOptions041(decks,{query='',exclude=[],cards=[],characters=[]}={}) {
   const excluded=new Set(exclude),names=new Map(),q=normalized(query);
-  for(const deck of decks){const title=deck.content.deck_name||deck.content.name||'이름 없는 덱';names.set(title,(names.get(title)??0)+1);}
+  for(const deck of decks){const title=deck.content.deck_name||deck.content.name||'이름 없는 덱';if(!names.has(title))names.set(title,[]);names.get(title).push(deck);}
   return decks.filter(deck=>!excluded.has(deck.entity_id)).map(deck=>{
     const value=deck.content,title=value.deck_name||value.name||'이름 없는 덱',profile=characters.find(row=>row.profile_id===value.profile_id),name=value.name||profile?.profile?.name||'상대 미지정';
-    const counts=`메인 ${count(value.main)}장 · EX ${count(value.extra)}장`,sameName=names.get(title)>1;
+    const counts=`메인 ${count(value.main)}장 · EX ${count(value.extra)}장`,peers=names.get(title),sameName=peers.length>1,variant=deckVariant043(deck,peers,characters),displayTitle=variant?`${title} · ${variant}`:title;
     const prefix=/^ch([123])_(battle|elite|boss)_/.exec(deck.entity_id),idLabel=prefix?`${prefix[1]}장 ${{battle:'일반',elite:'엘리트',boss:'보스'}[prefix[2]]} · ${deck.entity_id.slice(-7)}`:`덱 ${deck.entity_id.slice(-7)}`;
     const detail=[name!==title?name:null,counts,sameName?idLabel:null].filter(Boolean).join(' · ');
     const readiness=deckReadiness041(deck,cards);
-    return {entity:deck,id:deck.entity_id,title,detail,readiness,search:normalized([title,name,value.profile_id,deck.entity_id].join(' '))};
+    return {entity:deck,id:deck.entity_id,title,displayTitle,variant,detail,readiness,search:normalized([title,name,variant,value.profile_id,deck.entity_id].join(' '))};
   }).filter(row=>!q||row.search.includes(q)).sort((a,b)=>a.title.localeCompare(b.title,'ko')||a.id.localeCompare(b.id));
+}
+
+// Labels describe differing settings; they never rename or merge a saved deck.
+function deckVariant043(deck,peers,characters) {
+  if(peers.length<2)return '';
+  const value=deck.content,labels=[],values=get=>[...new Set(peers.map(row=>JSON.stringify(canonical(get(row.content)))))].sort(),differs=get=>values(get).length>1;
+  const signed=n=>`${n>0?'+':''}${n.toLocaleString('ko-KR')}`;
+  if(differs(row=>row.lp_bonus??0))labels.push(`추가 LP ${signed(value.lp_bonus??0)}`);
+  if(differs(row=>row.opening_draw_bonus??0))labels.push(`시작 패 ${signed(value.opening_draw_bonus??0)}장`);
+  if(differs(row=>Boolean(row.banlist_enabled)))labels.push(value.banlist_enabled?'카드 제한 적용':'카드 제한 해제');
+  const traits=row=>({skills:row.skills??[],shared:row.use_shared_skills?{character:row.shared_character_id??null,profile:row.shared_skill_profile_id??null}:null});
+  if(differs(traits)){
+    const n=(value.skills??[]).length,base=value.use_shared_skills?`공용 특성${n?` + 개별 ${n}개`:''}`:n?`특성 ${n}개`:'특성 없음';
+    const sameLabel=peers.filter(row=>(row.content.skills??[]).length===n&&Boolean(row.content.use_shared_skills)===Boolean(value.use_shared_skills)),variants=[...new Set(sameLabel.map(row=>JSON.stringify(canonical(traits(row.content)))))].sort();
+    labels.push(variants.length>1?`${base} (구성 ${variants.indexOf(JSON.stringify(canonical(traits(value))))+1})`:base);
+  }
+  if(differs(row=>row.profile_id??'')){
+    const profile=characters.find(row=>row.profile_id===value.profile_id),profileName=profile?.profile?.name;
+    labels.push(profileName?`연출 ${profileName}`:`캐릭터 설정 ${values(row=>row.profile_id??'').indexOf(JSON.stringify(value.profile_id??''))+1}`);
+  }else if(differs(row=>row.art_key??''))labels.push(`이미지 설정 ${values(row=>row.art_key??'').indexOf(JSON.stringify(value.art_key??''))+1}`);
+  const composition=row=>({main:row.main??[],extra:row.extra??[]});
+  if(differs(composition))labels.push(`카드 구성 ${values(composition).indexOf(JSON.stringify(canonical(composition(value))))+1}`);
+  return labels.join(' · ');
 }
