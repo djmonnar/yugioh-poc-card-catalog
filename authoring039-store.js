@@ -26,6 +26,8 @@ const object = value => value !== null && typeof value === 'object' && !Array.is
 function need(ok,message) { if (!ok) throw new Error(message); }
 function explain(error) {
   const message=String(error?.message??error??'DB 연결을 확인해줘.');
+  if(/unified039_duplicate_deck/.test(message+' '+String(error?.details??'')))return '같은 카드 구성의 덱이 이미 있습니다. 기존 덱을 선택해 주세요.';
+  if(/unified039_encounter_settings_belong_to_chapter/.test(message+' '+String(error?.details??'')))return '상대 LP와 특성은 장별 적 편성에서 수정해 주세요. 화면을 새로고침하면 새 편집기를 사용할 수 있습니다.';
   if(/unified039_editor_required/.test(message))return '편집 권한을 확인하지 못했어. 편집 계정으로 다시 로그인해줘.';
   if(/unified039_(validation|invalid)/.test(message))return '입력값을 저장할 수 없어. 카드 매수와 항목의 허용 범위를 확인해줘.';
   return message;
@@ -50,6 +52,15 @@ export async function normalizeBootstrap039(raw,crypto=globalThis.crypto) {
   need(object(raw) && raw.schema === 1 && raw.kind === 'unified039-bootstrap' && raw.project_id === PROJECT039 && integer(raw.project_revision) && typeof raw.unchanged === 'boolean','통합 DB 응답을 확인할 수 없어.');
   need(object(raw.permissions) && typeof raw.permissions.can_edit === 'boolean','DB 편집 권한 응답이 올바르지 않아.');
   if (raw.unchanged) return clone(raw);
+  const graph=raw.authoring044;
+  if(graph!=null){
+    need(object(graph)&&graph.schema===1&&Array.isArray(graph.decks)&&graph.decks.length<=1536&&Array.isArray(graph.chapter_roles)&&graph.chapter_roles.length<=9,'공유 덱 자료의 형식을 확인할 수 없어.');
+    safe(graph);const ids=new Set();
+    for(const row of graph.decks){validEntity(row);need(row.entity_type==='deck'&&!row.deleted&&!ids.has(row.entity_id),'공유 덱 목록이 올바르지 않아.');ids.add(row.entity_id);}
+    const roles=new Set(),encounters=new Set();
+    for(const row of graph.chapter_roles){validEntity(row);need(row.entity_type==='chapter_role'&&!row.deleted&&!roles.has(row.entity_id)&&Array.isArray(row.content.entries),'장별 편성 자료가 올바르지 않아.');roles.add(row.entity_id);for(const entry of row.content.entries){need(ids.has(entry.deck_id)&&typeof entry.entry_id==='string'&&!encounters.has(entry.entry_id)&&object(entry.encounter),'장별 편성의 덱 연결이 올바르지 않아.');encounters.add(entry.entry_id);}}
+    validEntity(graph.starter_list);need(graph.starter_list.entity_type==='starter_list'&&!graph.starter_list.deleted&&Array.isArray(graph.starter_list.content.entries)&&graph.starter_list.content.entries.every(entry=>ids.has(entry.deck_id)),'시작 덱 연결이 올바르지 않아.');
+  }
   const env = raw.game;
   need(object(env) && env.schema === 1 && env.kind === 'poc-unified-game039' && integer(env.game_revision) && integer(env.authoring_revision) && /^\d+$/.test(env.metadata_revision) && HASH.test(env.source_fingerprint) && typeof env.payload_json === 'string','게임용 제작 데이터의 형식이 올바르지 않아.');
   need(env.authoring_revision<=raw.project_revision&&env.game_revision<=raw.project_revision&&Object.entries(IDENTITY039).every(([k,v])=>env.identity?.[k]===v),'제작 데이터의 게임 버전이 일치하지 않아.');

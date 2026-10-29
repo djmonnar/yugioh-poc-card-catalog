@@ -199,3 +199,32 @@
 }
 @media(min-width:431px) and (max-width:700px){.au-app .au-card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.au-app .au-card-tile strong{font-size:13px}}
 @media(prefers-reduced-motion:reduce){.au-app *, .au-card-dialog *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* Shared decks keep battle settings on each chapter encounter. */
+.au-assignment-settings{grid-column:1/-1;min-width:0;padding:14px 0 0;border-top:1px solid var(--au-line)}
+.au-assignment-settings>summary{cursor:pointer;min-height:44px;padding:9px 0;color:var(--au-gold);font-weight:600;line-height:1.7}
+.au-assignment-settings[open]>summary{margin-bottom:12px}
+.au-assignment-settings .au-form-grid{margin:10px 0}
+.au-assignment-settings .au-form-group{background:transparent}
+.au-encounter-traits h3{font-size:16px;margin:24px 0 12px;color:var(--au-cyan)}
+.au-encounter-summary{color:var(--au-gold)}
+.au-deck-card-name{min-width:0;display:grid;gap:6px}
+.au-limit-badges{display:flex;align-items:center;flex-wrap:wrap;gap:5px;min-width:0}
+.au-limit-badges:empty{display:none}
+.au-limit-badge{display:inline-flex;align-items:center;border:1px solid #997f50;border-radius:4px;padding:2px 5px;background:#302716;color:#f7de9d;font-size:11px;font-weight:700;line-height:1.6;white-space:normal;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.au-limit-forbidden{background:#3c1825;border-color:#a76373;color:#ffd1dc}
+.au-limit-limited{background:#3b2919;border-color:#a77e49;color:#ffe0ad}
+.au-limit-semilimited{background:#303018;border-color:#92914c;color:#f0eaaa}
+.au-limit-speed-limited{background:#153343;border-color:#568ba2;color:#bceafb}
+.au-limit-unrestricted{background:#152b3b;border-color:#41657a;color:#b6cfde;font-weight:500}
+.au-limit-unknown{background:#2d2639;border-color:#847196;color:#ded1ee}
+.au-card-detail>.au-limit-badges{margin:16px 0 0}
+.au-app .au-deck-row .au-limit-badge{font-size:11px}
+.au-limit-guide{margin:14px 0 18px}
+@media(max-width:700px){
+ .au-assignment-settings .au-form-grid{grid-template-columns:minmax(0,1fr)}
+ .au-assignment-settings>summary{font-size:15px}
+ .au-encounter-row .au-assignment-actions{display:flex;flex-wrap:wrap}
+ .au-encounter-row .au-assignment-actions button{flex:1 1 auto}
+ .au-app .au-card-tile .au-limit-badge,.au-app .au-deck-row .au-limit-badge{font-size:12px;padding:2px 5px}
+}
