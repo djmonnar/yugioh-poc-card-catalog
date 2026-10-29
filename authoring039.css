@@ -221,6 +221,10 @@
 .au-card-detail>.au-limit-badges{margin:16px 0 0}
 .au-app .au-deck-row .au-limit-badge{font-size:11px}
 .au-limit-guide{margin:14px 0 18px}
+.au-app .au-deck-row{grid-template-columns:42px minmax(0,1fr) auto}
+.au-app .au-deck-quantity{grid-template-columns:44px 24px 44px;gap:2px;margin-top:0;font-variant-numeric:tabular-nums}
+.au-app .au-deck-quantity button{min-width:44px;min-height:44px;padding:0;font-size:22px}
+.au-deck-counts{display:flex;flex-wrap:wrap;gap:6px 14px;margin:-6px 0 16px;color:var(--au-muted);font-size:14px;line-height:1.7;font-variant-numeric:tabular-nums}
 @media(max-width:700px){
  .au-assignment-settings .au-form-grid{grid-template-columns:minmax(0,1fr)}
  .au-assignment-settings>summary{font-size:15px}
