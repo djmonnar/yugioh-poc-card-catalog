@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.11",
-  "versionCode": 30,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.11/YGOClassicExpedition-0.18.11-arm64.apk",
-  "sizeBytes": 146889941,
-  "sha256": "36980f32ca6d81e4637df9a04f03bf1f6351f07a05eaa26cbb0733dc79baf083",
-  "releaseNotes": "도감과 Unity 원정 제작 데이터를 한 DB로 통합했습니다. 적 덱·시작 덱·편성·유물·이벤트·상점 설정을 자동으로 연결합니다. 기존 원정과 카드함·포인트는 기기에 보존됩니다."
+  "versionName": "0.18.12",
+  "versionCode": 31,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.12/YGOClassicExpedition-0.18.12-arm64.apk",
+  "sizeBytes": 146893609,
+  "sha256": "165649863669276984faf492373b506f91e25bebf5f04d2d4bdff6d88ba19c6c",
+  "releaseNotes": "모바일에서 필드 카드가 유물 버튼에 가려지던 문제를 수정했습니다. AI가 듀얼 몬스터의 재소환을 판단하고, 전투 준비 시 카드 스크립트를 중복으로 추출하지 않도록 개선했습니다."
 }
