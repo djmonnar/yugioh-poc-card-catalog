@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.12",
-  "versionCode": 31,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.12/YGOClassicExpedition-0.18.12-arm64.apk",
-  "sizeBytes": 146893609,
-  "sha256": "165649863669276984faf492373b506f91e25bebf5f04d2d4bdff6d88ba19c6c",
-  "releaseNotes": "모바일에서 필드 카드가 유물 버튼에 가려지던 문제를 수정했습니다. AI가 듀얼 몬스터의 재소환을 판단하고, 전투 준비 시 카드 스크립트를 중복으로 추출하지 않도록 개선했습니다."
+  "versionName": "0.18.13",
+  "versionCode": 32,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.13/YGOClassicExpedition-0.18.13-arm64.apk",
+  "sizeBytes": 146990841,
+  "sha256": "a99955c91f86befc162e3cadb1637bbf6f6bbafdda3f4d9f327fc08c27ffb87e",
+  "releaseNotes": "어드밴스 소환과 수비 배치 AI를 개선했습니다. 효과 코인 결과와 카운터 개수를 표시하고 배속 설정을 유지합니다. 강제 효과가 하나뿐이면 자동으로 진행합니다. 새 SR 유물 '발굴가의 나침반'과 상점·이벤트 카드의 누적 획득을 추가했습니다. 새 유물은 새 원정부터 등장하며 기존 진행 기록은 유지됩니다."
 }
