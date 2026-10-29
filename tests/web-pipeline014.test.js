@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {legacyEmbedRequested014,mountExpeditionEntry014} from '../roguelite-entry014.js';
+import {redirectAuthoring039} from './unified-route-helper039.js';
 
 const text = name => readFile(new URL(`../${name}`, import.meta.url),'utf8');
 function fixture() {
@@ -13,12 +14,10 @@ function fixture() {
   return {document,pane,classes};
 }
 
-test('catalog, AI deck, and battle editor expose the real chapter editor',async()=>{
-  for (const name of ['index.html','ai-decks.html','story.html']) {
-    const html=await text(name),header=html.match(/<header\b[\s\S]*?<\/header>/)[0];
-    assert.match(header,/<a\b[^>]*href="campaign164\.html"[^>]*>원정 제작 · 적 편성<\/a>/);
-    assert.doesNotMatch(header,/>스토리 원정<\/a>/);
-  }
+test('catalog and old AI deck links expose the unified chapter editor while battle editing remains reachable',async()=>{
+  const index=await text('index.html'),shell=await text('authoring039-panels.js');assert.match(index,/id="authoring-root"/);assert.match(shell,/\['chapters','장별 적 편성'\]/);
+  const target=redirectAuthoring039('ai-decks.html','?deck=deck-014#chapters');assert.equal(target.pathname,'/catalog/index.html');assert.equal(target.searchParams.get('section'),'chapters');assert.equal(target.searchParams.get('deck'),'deck-014');
+  const story=await text('story.html'),linked=/href="(ai-decks|campaign164)\.html"/.exec(story);assert.ok(linked);assert.equal(redirectAuthoring039(linked[1]+'.html','#chapters').searchParams.get('section'),'chapters');
 });
 test('normal web URLs never load the legacy game or any save handler',async()=>{
   for(const search of ['', '?v=20261017-159','?in_game=0','?in_game=01','?in_game=true','?session_id=old']) {
@@ -46,5 +45,6 @@ test('standalone doorway explains the snapshot/import steps and retains all tool
   assert.match(html,/id="new-run-dialog"/);
   const entry=await text('roguelite-entry014.js');
   assert.doesNotMatch(entry,/localStorage|sessionStorage|fetch\(|createClient|\.rpc\(/);
-  assert.match(await text('campaign164.html'),/온라인 불러오기/);
+  assert.equal(redirectAuthoring039('campaign164.html','?deck=deck-014#chapters').searchParams.get('section'),'chapters');
 });
+

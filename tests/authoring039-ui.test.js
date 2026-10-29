@@ -4,9 +4,9 @@ import fs from 'node:fs';
 import {fileURLToPath} from 'node:url';
 import {normalizeCatalog039,sourceId039,nativeExtra039,changeDeckCard039,validateInput039,fieldValue039,formSchema039,deckDisplayName039,createAuthoringPanels039,publicEntities039} from '../authoring039-panels.js';
 import {route039,saveLabel039,mountAuthoringShell039} from '../authoring039-shell.js';
+import {authoringFixtureData039} from './authoring-fixture039.js';
 
-const web=new URL('../',import.meta.url),workspace=new URL('../../../UnityExpeditionWork/Unified039/',import.meta.url),read=(path,base=workspace)=>JSON.parse(fs.readFileSync(new URL(path,base),'utf8'));
-const seed=read('Db/seed039.json'),catalog=read('Db/catalog-display039.json'),characters=read('Db/characters039.json'),fields=read('Db/entity-fields039.json').entities,traitForm=read('Runtime/Export/trait-form039.json');
+const web=new URL('../',import.meta.url),{seed,catalog,characters,fields,traitForm,shopRules}=authoringFixtureData039(),read=path=>{if(path==='Runtime/Export/shop-rules039.json')return structuredClone(shopRules);throw Error(`Unknown synthetic fixture ${path}`);};
 function fixture(){return {canEdit:true,phase:'ready',pending:0,bootstrap:{catalog:{cards:structuredClone(catalog)},characters:structuredClone(characters),capabilities:{entities:structuredClone(fields),form:seed.form,trait_form:traitForm},game:seed.payload},entities:structuredClone(seed.entities).map(e=>({...e,version:1,state:'saved',issues:[]}))};}
 function mainCard(cards){return cards.find(c=>c.source_id===0);}
 

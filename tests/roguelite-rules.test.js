@@ -38,9 +38,10 @@ test('random relic is stable on retry/reload, excludes all owned, handles exhaus
   const first=restOutcome(context,'relic');assert.deepEqual(restOutcome(structuredClone(context),'relic'),first);
   for(const missing of RELICS){const out=restOutcome({...context,relics:RELICS.filter(r=>r!==missing).map(r=>r.id)},'relic');assert.equal(out.relic_id,missing.id);}
   assert.throws(()=>restOutcome({...context,relics:RELICS.map(r=>r.id)},'relic'),/모두/);
-  assert.equal(restOutcome({...context,max_lp:MAX_RUN_LP-500},'max_lp').max_lp,MAX_RUN_LP);
-  assert.throws(()=>restOutcome({...context,max_lp:MAX_RUN_LP},'max_lp'),/한계/);
+  const growthEdge={...context,max_lp:MAX_RUN_LP-500},before=structuredClone(growthEdge);assert.equal(restOutcome(growthEdge,'max_lp').max_lp,MAX_RUN_LP);assert.deepEqual(growthEdge,before);
+  assert.throws(()=>restOutcome({...context,max_lp:MAX_RUN_LP-499},'max_lp'),/한계/);
   assert.throws(()=>restOutcome({...context,max_lp:MAX_RUN_LP+1},'max_lp'),/LP/);
+  assert.equal(restOutcome({...context,max_lp:MAX_RUN_LP},'heal').lp,MAX_RUN_LP);
   assert.throws(()=>restOutcome({...context,lp:4000},'heal'),/가득/);
   assert.throws(()=>restOutcome({...context,lp:0},'heal'),/LP/);
 });
