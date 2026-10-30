@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.16",
-  "versionCode": 35,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.16/YGOClassicExpedition-0.18.16-arm64.apk",
-  "sizeBytes": 209910104,
-  "sha256": "4cf22d3c0d4e005f47b1928996c413c3d0a9696ec478da15b74e0b86bd5ae610",
-  "releaseNotes": "맵 분포를 제작소에서 조절할 수 있습니다. 새 원정은 전투55%·이벤트20%·상점15%·휴식10%를 기본으로 사용합니다."
+  "versionName": "0.18.17",
+  "versionCode": 36,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.17/YGOClassicExpedition-0.18.17-arm64.apk",
+  "sizeBytes": 249668204,
+  "sha256": "9b3af8cf386319058150d6bc1d62c245c9ce9feb00bc1a3be6d92f52c5ecdb34",
+  "releaseNotes": "출발할 때 최신 제작 설정을 자동으로 불러옵니다. 네프티스·사이버 엔젤·사피라와 물 속성·그레퍼 지원 카드 51종을 추가하고 의식 소환 AI를 보완했습니다."
 }
