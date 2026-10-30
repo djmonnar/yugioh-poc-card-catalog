@@ -63,11 +63,11 @@ test('latest, previous and all addition batches share the same current catalog',
 });
 
 test('search, category and type intersect the addition scope without replacing the Korean input',t=>{
-  const m=mounted(t);button041(m.root,'최근 추가').click();const category=field041(m.root,'카테고리 필터'),type=field041(m.root,'종류');
-  category.value='테스트 추가';category.fire('change');type.value='일반 마법';type.fire('change');
+  const m=mounted(t);button041(m.root,'최근 추가').click();const category=field041(m.root,'테스트 추가'),type=field041(m.root,'종류');
+  category.checked=true;category.fire('change');type.value='일반 마법';type.fire('change');
   m.search.focus();m.search.fire('compositionstart');m.search.value='융합';m.search.fire('input',{isComposing:true});
   assert.equal(field041(m.root,'카드 검색'),m.search);assert.equal(m.document.activeElement,m.search);assert.ok(tiles(m).length>0);assert.ok(tiles(m).every(tile=>tile.querySelector('.au-card-kind').textContent==='일반 마법'));
-  assert.match(summary(m),/최근 추가/);assert.ok(m.root.querySelector('.au-filter-chips').textContent.includes('테스트 추가'));assert.equal(m.writes.length,0);
+  assert.match(summary(m),/최근 추가/);assert.ok(m.root.querySelector('.au-category-selected054').textContent.includes('테스트 추가'));assert.equal(m.writes.length,0);
 });
 
 test('search clear preserves addition selection, and empty-result reset restores the normal whole-catalog view',t=>{
@@ -92,7 +92,7 @@ test('deferred DB refresh discovers a future latest batch without resetting a li
 
 test('read-only viewers can combine recent additions with categories from that same public catalog',t=>{
   const state=state049();state.canEdit=false;state.entities=state.entities.filter(e=>e.entity_type!=='category');const m=mounted(t,{state});button041(m.root,'최근 추가').click();
-  const category=field041(m.root,'카테고리 필터');assert.ok(category.options.some(o=>o.value==='테스트 추가'));category.value='테스트 추가';category.fire('change');assert.match(summary(m),/^75종/);assert.equal(m.writes.length,0);
+  const category=field041(m.root,'테스트 추가');assert.ok(category);category.checked=true;category.fire('change');assert.match(summary(m),/^75종/);assert.equal(m.writes.length,0);
 });
 
 test('a catalog with no expansion cards keeps normal browsing and honestly disables recent additions',t=>{
