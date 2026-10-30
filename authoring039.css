@@ -299,3 +299,22 @@
 .au-group-archive055>summary{cursor:pointer;color:var(--au-muted);font-size:13px;line-height:1.7;min-height:44px;align-content:center}
 .au-group-archive055>button{margin:0 8px 8px 0;font-size:13px;line-height:1.6;white-space:normal;max-width:100%}
 @media(max-width:700px){.au-category-manager055{padding:10px 12px}.au-group-tools055{gap:9px}.au-group-tools055 select,.au-group-form055 input[type=text]{font-size:16px}.au-group-tools055>button{font-size:13px;padding:9px 12px}.au-group-member-list055{grid-template-columns:1fr;max-height:320px}.au-group-actions055>button{flex:1 1 135px}}
+
+.au-group-order056{margin:16px 0 22px;padding:0 0 18px;border-bottom:1px solid var(--au-line);min-width:0}
+.au-group-order056>summary{min-height:44px;align-content:center;color:var(--au-gold);font-size:14px;font-weight:700;cursor:pointer}
+.au-group-order056>.au-hint{margin:10px 0 14px;max-width:70ch}
+.au-group-order-list056{display:flex;flex-direction:column;list-style:none;margin:0;padding:0;max-height:430px;overflow:auto;overscroll-behavior:contain;scrollbar-color:#597b91 #081d2c;scrollbar-width:thin}
+.au-group-order-row056{display:grid;grid-template-columns:44px 22px minmax(0,1fr) 44px 44px;gap:8px;align-items:center;min-height:64px;padding:7px 4px;border-bottom:1px solid var(--au-line);color:var(--au-text)}
+.au-group-order-row056:last-child{border-bottom:0}
+.au-group-order-row056.is-dragging{background:#163b50;outline:1px solid var(--au-cyan);outline-offset:-1px}
+.au-group-order-grip056,.au-group-order-step056{min-width:44px!important;width:44px;min-height:44px;padding:8px!important;display:inline-flex;align-items:center;justify-content:center;font-size:12px;line-height:1.4}
+.au-group-order-grip056{color:var(--au-cyan);touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none}
+.au-group-order-grip056:active{cursor:grabbing}
+.au-group-order-grip056 svg{pointer-events:none;flex:none}
+.au-group-order-position056{font-size:12px;color:var(--au-muted);font-variant-numeric:tabular-nums;text-align:center}
+.au-group-order-label056{min-width:0;display:flex;flex-direction:column;gap:3px;line-height:1.5;overflow-wrap:anywhere}
+.au-group-order-label056 strong{font-size:14px;color:var(--au-text)}
+.au-group-order-label056 small{font-size:11px;color:var(--au-muted)}
+.au-group-order-live056{margin:8px 0 0;color:var(--au-cyan);font-size:12px;line-height:1.6}
+.au-group-order-live056:empty{display:none}
+@media(max-width:700px){.au-group-order-list056{max-height:360px}.au-group-order-row056{grid-template-columns:44px 18px minmax(0,1fr) 44px 44px;gap:4px;padding:7px 0}.au-group-order-label056 strong{font-size:13px}.au-group-order056 .au-group-actions055>button{flex:1 1 120px}}

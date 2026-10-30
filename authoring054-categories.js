@@ -1,8 +1,9 @@
 // Category membership belongs to authoring groups. Card tags remain flat,
 // so showing one category in two groups never adds a second tag to a card.
+import {effectiveCategoryGroupOrder056} from './authoring056-group-order.js?v=20261031-056';
 const ORDER054=['덱','면역','발동','소환','지원','파괴','효과'];
 const key054=value=>String(value??'').normalize('NFKC').toLocaleLowerCase('ko').replace(/\s+/g,'');
-export function groupCategories054(categories=[],selected=[],customGroups){
+export function groupCategories054(categories=[],selected=[],customGroups,orderIds){
   const known=new Map();
   for(const source of categories){const row=typeof source==='string'?{name:source}:source,name=row?.name;if(typeof name!=='string'||!name.trim()||known.has(name))continue;known.set(name,{name,aliases:[name,...(row.aliases??[]).filter(value=>typeof value==='string'&&value)].filter((value,index,all)=>all.indexOf(value)===index)});}
   const aliases=new Set([...known.values()].flatMap(row=>row.aliases));
@@ -12,7 +13,7 @@ export function groupCategories054(categories=[],selected=[],customGroups){
   if(Array.isArray(customGroups)){
     const lookup=new Map();for(const row of known.values())for(const alias of row.aliases)if(!lookup.has(alias))lookup.set(alias,row);
     const assigned=new Set(),ids=new Set(),groups=[];
-    for(const source of customGroups){
+    for(const source of Array.isArray(orderIds)?effectiveCategoryGroupOrder056(customGroups,orderIds):customGroups){
       const group=source?.content??source,id=source?.entity_id??group?.id,name=group?.name;
       if(typeof id!=='string'||!id||ids.has(id)||typeof name!=='string'||!name.trim()||group.archived)continue;ids.add(id);
       const members=new Map();for(const reference of group.categories??[]){const row=lookup.get(reference);if(row){members.set(row.name,{...row,label:row.name});assigned.add(row.name);}}
@@ -35,14 +36,14 @@ export function categoryMatcher054(categories=[]){
   return (tags=[],selected=[])=>{const known=new Set(tags.map(tag=>names.get(tag)??tag));return selected.every(tag=>known.has(names.get(tag)??tag));};
 }
 
-export function createCategoryPicker054({document:doc=globalThis.document,categories=[],groups:customGroups,selected=[],onChange=()=>{},onError=()=>{},memory={},editKey='categories',mode='edit',bindControl=()=>{}}={}){
+export function createCategoryPicker054({document:doc=globalThis.document,categories=[],groups:customGroups,groupOrder,selected=[],onChange=()=>{},onError=()=>{},memory={},editKey='categories',mode='edit',bindControl=()=>{}}={}){
   const el=(tag,text,cls)=>{const node=doc.createElement(tag);if(text!=null)node.textContent=String(text);if(cls)node.className=cls;return node;};
   const root=el('div',null,'au-category-picker054');root.dataset.mode=mode;
   const search=el('input');search.type='search';search.placeholder='카테고리 찾기';search.setAttribute('aria-label',mode==='filter'?'카테고리 필터 검색':'카테고리 검색');search.dataset.editKey=`${editKey}.search`;search.value=memory.query??'';bindControl(search);
   const help=el('p',mode==='filter'?'선택한 카테고리를 모두 포함한 카드를 찾습니다.':'묶음을 펼쳐 선택하세요. 같은 카테고리는 어느 묶음에서 골라도 함께 선택됩니다.','au-category-help054');
   const selectedHead=el('p',null,'au-category-selected-heading054'),selectedList=el('div',null,'au-category-selected054'),groupsRoot=el('div',null,'au-category-groups054'),empty=el('p','일치하는 카테고리가 없습니다.','au-category-empty054');
   selectedHead.setAttribute('role','status');selectedHead.setAttribute('aria-live','polite');selectedList.setAttribute('aria-label','선택한 카테고리');root.append(help,search,selectedHead,selectedList,groupsRoot,empty);
-  let values=new Set(selected),groups=groupCategories054(categories,selected,customGroups),controls=[],generation=0;
+  let values=new Set(selected),groups=groupCategories054(categories,selected,customGroups,groupOrder),controls=[],generation=0;
   if(!(memory.open instanceof Set))memory.open=new Set();
   const checked=row=>row.aliases.some(alias=>values.has(alias));
   function notify(before){
@@ -72,7 +73,7 @@ export function createCategoryPicker054({document:doc=globalThis.document,catego
     empty.hidden=matches>0;sync();
   }
   const searchChanged=()=>{memory.query=search.value;renderGroups();};search.oninput=searchChanged;search.oncompositionend=searchChanged;search.onsearch=searchChanged;
-  function setSelected(next){values=new Set(next);const merged=groupCategories054(categories,next,customGroups);if(JSON.stringify(merged)!==JSON.stringify(groups)){groups=merged;renderGroups();}else sync();}
+  function setSelected(next){values=new Set(next);const merged=groupCategories054(categories,next,customGroups,groupOrder);if(JSON.stringify(merged)!==JSON.stringify(groups)){groups=merged;renderGroups();}else sync();}
   renderGroups();
   return {root,setSelected,selected:()=>[...values]};
 }

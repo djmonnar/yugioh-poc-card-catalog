@@ -18,7 +18,7 @@ export const LEGACY_CREATION_KEYS039 = Object.freeze([
 ]);
 const HASH = /^[a-f0-9]{64}$/;
 const UUID = /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
-const KINDS = new Set(['card_display','card_setting','card_annotation','card_limit','category','category_group','character','deck','chapter_role','starter_list','relic','event','shop_rules','map_rules','meta_pack','meta_score','recovery_archive']);
+const KINDS = new Set(['card_display','card_setting','card_annotation','card_limit','category','category_group','category_group_order','character','deck','chapter_role','starter_list','relic','event','shop_rules','map_rules','meta_pack','meta_score','recovery_archive']);
 const clone = value => structuredClone(value);
 const equal = (a,b) => JSON.stringify(a) === JSON.stringify(b);
 const key = (type,id) => `${type}\n${id}`;
@@ -48,6 +48,10 @@ function validEntity(row) {
     const text=value=>typeof value==='string'&&value.length>=1&&value.length<=40&&value===value.trim()&&!/[\u0000-\u001f\u007f]/.test(value),value=row.content;
     need(/^category-group-[a-z0-9-]{1,64}$/.test(row.entity_id)&&row.deleted!==true&&object(value)&&Object.keys(value).length===3&&text(value.name)&&typeof value.archived==='boolean'&&Array.isArray(value.categories)&&value.categories.length<=128&&value.categories.every(text)&&new Set(value.categories).size===value.categories.length,'카테고리 묶음의 이름과 포함 항목을 확인해 주세요.');
   }
+  if(row.entity_type==='category_group_order'){
+    const value=row.content;
+    need(row.entity_id==='main'&&row.deleted!==true&&object(value)&&Object.keys(value).length===1&&Array.isArray(value.group_ids)&&value.group_ids.length<=64&&value.group_ids.every(id=>typeof id==='string'&&/^category-group-[a-z0-9-]{1,64}$/.test(id))&&new Set(value.group_ids).size===value.group_ids.length,'카테고리 묶음 순서를 확인해 주세요.');
+  }
   return safe(row);
 }
 // New entity kinds travel outside the legacy entities array so older web and
@@ -58,6 +62,13 @@ function categoryGroupRows055(envelope){
   const ids=new Set();
   for(const row of envelope.groups){validEntity(row);need(row.entity_type==='category_group'&&!ids.has(row.entity_id),'카테고리 묶음 목록이 중복되었습니다.');ids.add(row.entity_id);}
   return envelope.groups;
+}
+function categoryGroupOrderRows056(envelope){
+  if(envelope==null)return [];
+  need(object(envelope)&&Object.keys(envelope).length===2&&envelope.schema===1&&Object.hasOwn(envelope,'entity'),'카테고리 묶음 순서 응답을 확인할 수 없습니다.');
+  if(envelope.entity===null)return [];
+  validEntity(envelope.entity);need(envelope.entity.entity_type==='category_group_order','카테고리 묶음 순서 항목을 확인할 수 없습니다.');
+  return [envelope.entity];
 }
 async function digest(text,crypto) {
   const bytes = await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text));
@@ -72,7 +83,7 @@ export async function normalizeBootstrap039(raw,crypto=globalThis.crypto) {
     need(await digest(envelope.config_json,crypto)===envelope.sha256,'맵 분포의 검증값이 일치하지 않습니다.');
     mapRules052={schema:1,revision:envelope.revision,sha256:envelope.sha256,config:parseMapRules052(safe(JSON.parse(envelope.config_json)))};
   }
-  const categoryGroups055=categoryGroupRows055(raw.category_groups055);
+  const categoryGroups055=categoryGroupRows055(raw.category_groups055),categoryGroupOrder056=categoryGroupOrderRows056(raw.category_group_order056);
   if (raw.unchanged) return {...clone(raw),mapRules052};
   const graph=raw.authoring044;
   if(graph!=null){
@@ -91,12 +102,12 @@ export async function normalizeBootstrap039(raw,crypto=globalThis.crypto) {
   for (const field of ['catalog','deck_rules035','opponents','starters','content022','meta017','characters','shop_rules']) need(payload[field] !== undefined,`게임용 ${field} 데이터가 없어.`);
   const legacyRows = raw.authoring?.entities ?? [];
   need(Array.isArray(legacyRows),'제작 항목 목록이 올바르지 않아.');
-  const rows = [...legacyRows,...categoryGroups055];
+  const rows = [...legacyRows,...categoryGroups055,...categoryGroupOrder056];
   need(Array.isArray(rows),'제작 항목 목록이 올바르지 않아.');
   const seen = new Set();
   for (const row of rows) { validEntity(row); const k=key(row.entity_type,row.entity_id); need(!seen.has(k),'DB에 중복된 제작 항목이 있어.'); seen.add(k); }
   const normalized={...clone(raw),mapRules052,gameEnvelope:clone(env),gamePayload:payload,game:{...clone(env),...payload}};
-  if(raw.authoring||categoryGroups055.length)normalized.authoring={...(clone(raw.authoring)??{}),entities:clone(rows)};
+  if(raw.authoring||categoryGroups055.length||categoryGroupOrder056.length)normalized.authoring={...(clone(raw.authoring)??{}),entities:clone(rows)};
   return normalized;
 }
 
@@ -135,6 +146,7 @@ export class AuthoringStore039 {
       for(const q of data.items) {
         need(KINDS.has(q.type)&&typeof q.id==='string'&&q.id.length<=200&&['create','patch','delete'].includes(q.operation)&&object(q.fields)&&integer(q.baseVersion)&&object(q.baseContent),'outbox'); safe(q.fields);
         if(q.type==='map_rules'){need(q.id==='main'&&q.operation==='patch','outbox map rules');parseMapPatch052(q.fields);}
+        if(q.type==='category_group_order'){need(q.id==='main'&&q.operation==='patch','outbox category group order');validEntity({entity_type:q.type,entity_id:q.id,version:0,content:q.fields});}
         if(q.body) { need(UUID.test(q.requestId)&&q.body.request_id===q.requestId&&q.body.project_id===PROJECT039&&q.body.schema===1&&integer(q.body.expected_project_revision),'outbox'); const c=q.body.changes; need(c?.length===1&&c[0].entity_type===q.type&&c[0].entity_id===q.id&&c[0].operation===q.operation&&c[0].expected_entity_version===q.baseVersion&&equal(c[0].fields,q.fields),'outbox'); }
       }
       this.queue=data.items.map(q=>({...q,resolve:()=>{}}));
@@ -169,6 +181,7 @@ export class AuthoringStore039 {
   patch(type,id,fields,{operation='patch'}={}) {
     need(this.snapshot().canEdit,'편집자로 로그인해줘.'); need(KINDS.has(type)&&typeof id==='string'&&id.length>0&&id.length<=200&&object(fields)&&['create','patch','delete'].includes(operation),'저장할 항목을 확인해줘.'); safe(fields);
     if(type==='map_rules'){need(id==='main'&&operation==='patch','맵 분포는 기존 항목에서 변경해 주세요.');parseMapPatch052(fields);}
+    if(type==='category_group_order'){need(id==='main'&&operation==='patch','묶음 순서는 기존 설정에서 변경해 주세요.');validEntity({entity_type:type,entity_id:id,version:0,content:fields});}
     const row=this.getRow(type,id),tail=this.queue.at(-1),rejected=this.queue.find(q=>q.rejected&&q.type===type&&q.id===id&&q.operation!=='delete');
     need(operation==='create'||row||this.queue.some(q=>q.type===type&&q.id===id&&q.operation==='create'),'수정할 DB 항목을 찾을 수 없어.');
     let q;
@@ -214,7 +227,7 @@ export class AuthoringStore039 {
       }
       const ack=result.data;
       need(ack?.schema===1&&ack.kind==='unified039-write-ack'&&ack.request_id===q.requestId&&integer(ack.applied_revision)&&integer(ack.observed_project_revision)&&Array.isArray(ack.entities),'저장 완료 응답을 확인하지 못했어. 같은 요청으로 다시 확인할게.');
-      const ackRows=[...ack.entities,...categoryGroupRows055(ack.category_groups055)],ackKeys=new Set();
+      const ackRows=[...ack.entities,...categoryGroupRows055(ack.category_groups055),...categoryGroupOrderRows056(ack.category_group_order056)],ackKeys=new Set();
       for(const row of ackRows){validEntity(row);const id=key(row.entity_type,row.entity_id);need(!ackKeys.has(id),'저장 완료 항목이 중복되었습니다.');ackKeys.add(id);}
       if((HASH.test(ack.game_source_fingerprint)&&ack.game_source_fingerprint!==this.bootstrap.game?.source_fingerprint)||(Array.isArray(ack.issues)&&ack.issues.length)) this.pendingRevision=Math.max(this.pendingRevision??0,ack.applied_revision);
       if(ack.applied_revision>=this.bootstrap.project_revision) {

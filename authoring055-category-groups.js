@@ -1,3 +1,4 @@
+import {createCategoryGroupOrderEditor056,effectiveCategoryGroupOrder056} from './authoring056-group-order.js?v=20261031-056';
 const folded055=value=>String(value??'').trim().toLocaleLowerCase('ko').replace(/\s+/g,' ');
 const content055=row=>row?.content??row;
 const unique055=values=>[...new Set(values??[])];
@@ -6,6 +7,7 @@ const unique055=values=>[...new Set(values??[])];
 // owns persistence, version checks and recovery; this is not a second database.
 export function createCategoryGroupManager055({document:doc=globalThis.document,getState,onSave,onError=()=>{},bindControl=()=>{},newId=()=>`category-group-${globalThis.crypto.randomUUID()}`}={}){
   const drafts=new Map();let owner=null,selected='new',open=false,currentRoot=null,currentHost=null;
+  const orderEditor056=createCategoryGroupOrderEditor056({document:doc,getState,onSave,onError});
   const el=(tag,text,cls)=>{const node=doc.createElement(tag);if(text!=null)node.textContent=String(text);if(cls)node.className=cls;return node;};
   const stateNow=()=>{const state=getState();if(owner!==state.owner){owner=state.owner;drafts.clear();selected='new';open=false;}return state;};
   const makeDraft=row=>({name:content055(row)?.name??'',categories:unique055(content055(row)?.categories),baseVersion:row?.version??0,dirty:false,busy:false,error:'',query:''});
@@ -20,13 +22,14 @@ export function createCategoryGroupManager055({document:doc=globalThis.document,
     for(const draft of drafts.values())if(draft.busy&&write?.entityType==='category_group'&&write.entityId===draft.requestEntityId&&write.rejected&&write.phase==='invalid'){
       draft.busy=false;draft.ticket=(draft.ticket??0)+1;draft.serverRejected=true;draft.error=state.error??'묶음을 저장하지 못했습니다. 내용을 확인한 뒤 다시 저장해 주세요.';if(draft.pendingKind==='save')draft.dirty=true;
     }
-    const rows=rowsOf(state),active=rows.filter(row=>!content055(row).archived||row.pending&&row.entity_id===selected),archived=rows.filter(row=>content055(row).archived&&!active.includes(row));
+    const rows=state.order?effectiveCategoryGroupOrder056(rowsOf(state),state.order.content?.group_ids):rowsOf(state),active=rows.filter(row=>!content055(row).archived||row.pending&&row.entity_id===selected),archived=rows.filter(row=>content055(row).archived&&!active.includes(row));
     if(selected!=='new'&&!active.some(row=>row.entity_id===selected))selected=active[0]?.entity_id??'new';
     const row=selected==='new'?null:find(state,selected),draft=draftFor(state,selected),canWrite=state.canEdit===true&&state.canWrite!==false;
     const previous=currentRoot,focus=doc.activeElement?.dataset?.editKey,selection=focus&&typeof doc.activeElement.selectionStart==='number'?[doc.activeElement.selectionStart,doc.activeElement.selectionEnd]:null;
     const root=el('details',null,'au-category-manager055'),summary=el('summary','카테고리 묶음 관리');root.open=open;root.ontoggle=()=>{open=root.open;};root.append(summary);
     root.append(el('p','묶음 이름과 포함할 카테고리를 정하세요. 같은 카테고리를 여러 묶음에 넣을 수 있습니다.','au-hint'));
     if(!canWrite)root.append(el('p',state.canEdit?'묶음 편집 기능을 불러오지 못했습니다. 화면을 새로고침해 주세요.':'묶음을 편집하려면 편집 계정으로 로그인해 주세요.','au-hint'));
+    orderEditor056.render(root);
     const tools=el('div',null,'au-group-tools055'),selectLabel=el('label',null,'au-field'),select=el('select');select.setAttribute('aria-label','편집할 카테고리 묶음');select.dataset.editKey='category-groups055.select';
     const newOption=el('option','새 묶음 만들기');newOption.value='new';select.append(newOption);for(const item of active){const option=el('option',content055(item).name);option.value=item.entity_id;select.append(option);}select.value=selected;
     select.onchange=()=>{selected=select.value;open=true;redraw();};bindControl(select);selectLabel.append(el('span','편집할 묶음'),select);tools.append(selectLabel);
