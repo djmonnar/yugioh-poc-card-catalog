@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.13",
-  "versionCode": 32,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.13/YGOClassicExpedition-0.18.13-arm64.apk",
-  "sizeBytes": 146990841,
-  "sha256": "a99955c91f86befc162e3cadb1637bbf6f6bbafdda3f4d9f327fc08c27ffb87e",
-  "releaseNotes": "어드밴스 소환과 수비 배치 AI를 개선했습니다. 효과 코인 결과와 카운터 개수를 표시하고 배속 설정을 유지합니다. 강제 효과가 하나뿐이면 자동으로 진행합니다. 새 SR 유물 '발굴가의 나침반'과 상점·이벤트 카드의 누적 획득을 추가했습니다. 새 유물은 새 원정부터 등장하며 기존 진행 기록은 유지됩니다."
+  "versionName": "0.18.14",
+  "versionCode": 33,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.14/YGOClassicExpedition-0.18.14-arm64.apk",
+  "sizeBytes": 204925093,
+  "sha256": "6c003285522207edcd589ba1fbac43ca09a9726759154f70c541de0ce8ee528d",
+  "releaseNotes": "암흑계·젬나이트와 지원 카드 75종, 신규 융합 보급 세트를 추가했습니다. 카이바맨과 공격 대상 재선택 AI, 기생충 특성을 수정했습니다. 소환·세트 제한 사유를 표시하고, 묘지·제외 카드 목록과 카드 공개 연출을 개선했습니다. 새 원정은 장마다 12층이며 기존 원정 기록은 유지됩니다."
 }
