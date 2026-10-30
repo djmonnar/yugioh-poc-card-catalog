@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.14",
-  "versionCode": 33,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.14/YGOClassicExpedition-0.18.14-arm64.apk",
-  "sizeBytes": 204925093,
-  "sha256": "6c003285522207edcd589ba1fbac43ca09a9726759154f70c541de0ce8ee528d",
-  "releaseNotes": "암흑계·젬나이트와 지원 카드 75종, 신규 융합 보급 세트를 추가했습니다. 카이바맨과 공격 대상 재선택 AI, 기생충 특성을 수정했습니다. 소환·세트 제한 사유를 표시하고, 묘지·제외 카드 목록과 카드 공개 연출을 개선했습니다. 새 원정은 장마다 12층이며 기존 원정 기록은 유지됩니다."
+  "versionName": "0.18.15",
+  "versionCode": 34,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.15/YGOClassicExpedition-0.18.15-arm64.apk",
+  "sizeBytes": 209909232,
+  "sha256": "3187a1b7ebbdeda7329053471eb39bd483c12254baa2fa1d5375b1c2cda9d992",
+  "releaseNotes": "카이저와 크로노스의 원본 음성, 한국어 자막과 전용 소환·공격 연출을 추가했습니다."
 }
