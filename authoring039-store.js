@@ -1,5 +1,6 @@
 // One database snapshot and one serial, idempotent authoring queue.
 // Local storage holds only unfinished writes/recovery receipts, never a second catalog.
+import {parseMapRules052,parseMapPatch052} from './authoring052-map.js?v=20261030-052';
 export const PROJECT039 = 'ygoclassic-expedition';
 export const IDENTITY039 = Object.freeze({base_catalog_sha256:'b73dd51c78aeab8c9beebf936b46e4cac16040e70df3a7980dec38c40db21e09',catalog035_sha256:'b5f1e9749cec0c1497c5fdcbfb2dc9c64895dcd859f083ec0ec4014580f05308',native_manifest_sha256:'4674de031c9e3044c86b90fcd402d9533d9353347802f268863746bf3bd7e4d7'});
 export const LEGACY_CREATION_KEYS039 = Object.freeze([
@@ -17,7 +18,7 @@ export const LEGACY_CREATION_KEYS039 = Object.freeze([
 ]);
 const HASH = /^[a-f0-9]{64}$/;
 const UUID = /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
-const KINDS = new Set(['card_display','card_setting','card_annotation','card_limit','category','character','deck','chapter_role','starter_list','relic','event','shop_rules','meta_pack','meta_score','recovery_archive']);
+const KINDS = new Set(['card_display','card_setting','card_annotation','card_limit','category','character','deck','chapter_role','starter_list','relic','event','shop_rules','map_rules','meta_pack','meta_score','recovery_archive']);
 const clone = value => structuredClone(value);
 const equal = (a,b) => JSON.stringify(a) === JSON.stringify(b);
 const key = (type,id) => `${type}\n${id}`;
@@ -42,6 +43,7 @@ function safe(value,depth=0) {
 function validEntity(row) {
   need(object(row) && KINDS.has(row.entity_type) && typeof row.entity_id === 'string' && row.entity_id.length <= 200 && integer(row.version),'DB 항목의 식별자와 버전을 확인할 수 없어.');
   need(row.deleted === true || object(row.content),'DB 항목의 내용이 올바르지 않아.');
+  if(row.entity_type==='map_rules'){need(row.entity_id==='main'&&row.deleted!==true,'맵 분포 항목을 확인해 주세요.');parseMapRules052(row.content);}
   return safe(row);
 }
 async function digest(text,crypto) {
@@ -51,7 +53,13 @@ async function digest(text,crypto) {
 export async function normalizeBootstrap039(raw,crypto=globalThis.crypto) {
   need(object(raw) && raw.schema === 1 && raw.kind === 'unified039-bootstrap' && raw.project_id === PROJECT039 && integer(raw.project_revision) && typeof raw.unchanged === 'boolean','통합 DB 응답을 확인할 수 없어.');
   need(object(raw.permissions) && typeof raw.permissions.can_edit === 'boolean','DB 편집 권한 응답이 올바르지 않아.');
-  if (raw.unchanged) return clone(raw);
+  let mapRules052=null;
+  if(raw.map_rules052!==undefined){
+    const envelope=raw.map_rules052;need(object(envelope)&&Object.keys(envelope).length===4&&envelope.schema===1&&integer(envelope.revision)&&typeof envelope.config_json==='string'&&envelope.config_json.length<=2048&&HASH.test(envelope.sha256),'맵 분포 응답을 확인해 주세요.');
+    need(await digest(envelope.config_json,crypto)===envelope.sha256,'맵 분포의 검증값이 일치하지 않습니다.');
+    mapRules052={schema:1,revision:envelope.revision,sha256:envelope.sha256,config:parseMapRules052(safe(JSON.parse(envelope.config_json)))};
+  }
+  if (raw.unchanged) return {...clone(raw),mapRules052};
   const graph=raw.authoring044;
   if(graph!=null){
     need(object(graph)&&graph.schema===1&&Array.isArray(graph.decks)&&graph.decks.length<=1536&&Array.isArray(graph.chapter_roles)&&graph.chapter_roles.length<=9,'공유 덱 자료의 형식을 확인할 수 없어.');
@@ -71,7 +79,7 @@ export async function normalizeBootstrap039(raw,crypto=globalThis.crypto) {
   need(Array.isArray(rows),'제작 항목 목록이 올바르지 않아.');
   const seen = new Set();
   for (const row of rows) { validEntity(row); const k=key(row.entity_type,row.entity_id); need(!seen.has(k),'DB에 중복된 제작 항목이 있어.'); seen.add(k); }
-  return {...clone(raw),gameEnvelope:clone(env),gamePayload:payload,game:{...clone(env),...payload}};
+  return {...clone(raw),mapRules052,gameEnvelope:clone(env),gamePayload:payload,game:{...clone(env),...payload}};
 }
 
 export class AuthoringStore039 {
@@ -107,6 +115,7 @@ export class AuthoringStore039 {
       const data=JSON.parse(raw); need(data.schema===1&&Array.isArray(data.items)&&data.items.length<=1000,'outbox');
       for(const q of data.items) {
         need(KINDS.has(q.type)&&typeof q.id==='string'&&q.id.length<=200&&['create','patch','delete'].includes(q.operation)&&object(q.fields)&&integer(q.baseVersion)&&object(q.baseContent),'outbox'); safe(q.fields);
+        if(q.type==='map_rules'){need(q.id==='main'&&q.operation==='patch','outbox map rules');parseMapPatch052(q.fields);}
         if(q.body) { need(UUID.test(q.requestId)&&q.body.request_id===q.requestId&&q.body.project_id===PROJECT039&&q.body.schema===1&&integer(q.body.expected_project_revision),'outbox'); const c=q.body.changes; need(c?.length===1&&c[0].entity_type===q.type&&c[0].entity_id===q.id&&c[0].operation===q.operation&&c[0].expected_entity_version===q.baseVersion&&equal(c[0].fields,q.fields),'outbox'); }
       }
       this.queue=data.items.map(q=>({...q,resolve:()=>{}}));
@@ -134,12 +143,13 @@ export class AuthoringStore039 {
     if(result.error) throw result.error;
     const next=await normalizeBootstrap039(result.data,this.crypto); if(generation!==this.generation) return;
     if(!next.unchanged) { need(!this.bootstrap||next.project_revision>=this.bootstrap.project_revision,'이전 DB 개정이 도착했어. 다시 확인할게.'); this.bootstrap=next; this.fetchedRevision=next.project_revision; }
-    else { need(this.bootstrap,'DB가 첫 응답을 생략했어. 다시 연결해줘.'); this.bootstrap.permissions=clone(next.permissions); }
+    else { need(this.bootstrap,'DB가 첫 응답을 생략했어. 다시 연결해줘.'); this.bootstrap.permissions=clone(next.permissions);if(next.mapRules052){need(!this.bootstrap.mapRules052||next.mapRules052.revision>=this.bootstrap.mapRules052.revision,'이전 맵 분포가 도착했습니다. 다시 불러와 주세요.');this.bootstrap.mapRules052=clone(next.mapRules052);this.bootstrap.map_rules052=clone(next.map_rules052);} }
     if(this.pendingRevision!==null&&this.fetchedRevision>=this.pendingRevision) this.pendingRevision=null;
     if(!this.queue.length) { this.phase='ready'; this.error=null; } this.emit();
   }
   patch(type,id,fields,{operation='patch'}={}) {
     need(this.snapshot().canEdit,'편집자로 로그인해줘.'); need(KINDS.has(type)&&typeof id==='string'&&id.length>0&&id.length<=200&&object(fields)&&['create','patch','delete'].includes(operation),'저장할 항목을 확인해줘.'); safe(fields);
+    if(type==='map_rules'){need(id==='main'&&operation==='patch','맵 분포는 기존 항목에서 변경해 주세요.');parseMapPatch052(fields);}
     const row=this.getRow(type,id),tail=this.queue.at(-1),rejected=this.queue.find(q=>q.rejected&&q.type===type&&q.id===id&&q.operation!=='delete');
     need(operation==='create'||row||this.queue.some(q=>q.type===type&&q.id===id&&q.operation==='create'),'수정할 DB 항목을 찾을 수 없어.');
     let q;
