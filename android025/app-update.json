@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.15",
-  "versionCode": 34,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.15/YGOClassicExpedition-0.18.15-arm64.apk",
-  "sizeBytes": 209909232,
-  "sha256": "3187a1b7ebbdeda7329053471eb39bd483c12254baa2fa1d5375b1c2cda9d992",
-  "releaseNotes": "카이저와 크로노스의 원본 음성, 한국어 자막과 전용 소환·공격 연출을 추가했습니다."
+  "versionName": "0.18.16",
+  "versionCode": 35,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.16/YGOClassicExpedition-0.18.16-arm64.apk",
+  "sizeBytes": 209910104,
+  "sha256": "4cf22d3c0d4e005f47b1928996c413c3d0a9696ec478da15b74e0b86bd5ae610",
+  "releaseNotes": "맵 분포를 제작소에서 조절할 수 있습니다. 새 원정은 전투55%·이벤트20%·상점15%·휴식10%를 기본으로 사용합니다."
 }
