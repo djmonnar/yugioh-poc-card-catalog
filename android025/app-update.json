@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.17",
-  "versionCode": 36,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.17/YGOClassicExpedition-0.18.17-arm64.apk",
-  "sizeBytes": 249668204,
-  "sha256": "9b3af8cf386319058150d6bc1d62c245c9ce9feb00bc1a3be6d92f52c5ecdb34",
-  "releaseNotes": "출발할 때 최신 제작 설정을 자동으로 불러옵니다. 네프티스·사이버 엔젤·사피라와 물 속성·그레퍼 지원 카드 51종을 추가하고 의식 소환 AI를 보완했습니다."
+  "versionName": "0.18.18",
+  "versionCode": 37,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.18/YGOClassicExpedition-0.18.18-arm64.apk",
+  "sizeBytes": 264869010,
+  "sha256": "24ce02bbd5dd9f89d26ff5804282c58181ad31dfae6b65bf301655cb81c83cac",
+  "releaseNotes": "백룡·흑룡 타이틀과 원정 준비·설정·카드 도감을 새롭게 꾸몄습니다. 원정에서 패배하면 해당 저장 슬롯을 자동으로 비웁니다."
 }
