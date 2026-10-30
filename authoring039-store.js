@@ -18,7 +18,7 @@ export const LEGACY_CREATION_KEYS039 = Object.freeze([
 ]);
 const HASH = /^[a-f0-9]{64}$/;
 const UUID = /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
-const KINDS = new Set(['card_display','card_setting','card_annotation','card_limit','category','character','deck','chapter_role','starter_list','relic','event','shop_rules','map_rules','meta_pack','meta_score','recovery_archive']);
+const KINDS = new Set(['card_display','card_setting','card_annotation','card_limit','category','category_group','character','deck','chapter_role','starter_list','relic','event','shop_rules','map_rules','meta_pack','meta_score','recovery_archive']);
 const clone = value => structuredClone(value);
 const equal = (a,b) => JSON.stringify(a) === JSON.stringify(b);
 const key = (type,id) => `${type}\n${id}`;
@@ -44,7 +44,20 @@ function validEntity(row) {
   need(object(row) && KINDS.has(row.entity_type) && typeof row.entity_id === 'string' && row.entity_id.length <= 200 && integer(row.version),'DB 항목의 식별자와 버전을 확인할 수 없어.');
   need(row.deleted === true || object(row.content),'DB 항목의 내용이 올바르지 않아.');
   if(row.entity_type==='map_rules'){need(row.entity_id==='main'&&row.deleted!==true,'맵 분포 항목을 확인해 주세요.');parseMapRules052(row.content);}
+  if(row.entity_type==='category_group'){
+    const text=value=>typeof value==='string'&&value.length>=1&&value.length<=40&&value===value.trim()&&!/[\u0000-\u001f\u007f]/.test(value),value=row.content;
+    need(/^category-group-[a-z0-9-]{1,64}$/.test(row.entity_id)&&row.deleted!==true&&object(value)&&Object.keys(value).length===3&&text(value.name)&&typeof value.archived==='boolean'&&Array.isArray(value.categories)&&value.categories.length<=128&&value.categories.every(text)&&new Set(value.categories).size===value.categories.length,'카테고리 묶음의 이름과 포함 항목을 확인해 주세요.');
+  }
   return safe(row);
+}
+// New entity kinds travel outside the legacy entities array so older web and
+// Unity clients can keep reading the same bootstrap and category-rename ACKs.
+function categoryGroupRows055(envelope){
+  if(envelope==null)return [];
+  need(object(envelope)&&Object.keys(envelope).length===2&&envelope.schema===1&&Array.isArray(envelope.groups)&&envelope.groups.length<=64,'카테고리 묶음 응답을 확인할 수 없습니다.');
+  const ids=new Set();
+  for(const row of envelope.groups){validEntity(row);need(row.entity_type==='category_group'&&!ids.has(row.entity_id),'카테고리 묶음 목록이 중복되었습니다.');ids.add(row.entity_id);}
+  return envelope.groups;
 }
 async function digest(text,crypto) {
   const bytes = await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text));
@@ -59,6 +72,7 @@ export async function normalizeBootstrap039(raw,crypto=globalThis.crypto) {
     need(await digest(envelope.config_json,crypto)===envelope.sha256,'맵 분포의 검증값이 일치하지 않습니다.');
     mapRules052={schema:1,revision:envelope.revision,sha256:envelope.sha256,config:parseMapRules052(safe(JSON.parse(envelope.config_json)))};
   }
+  const categoryGroups055=categoryGroupRows055(raw.category_groups055);
   if (raw.unchanged) return {...clone(raw),mapRules052};
   const graph=raw.authoring044;
   if(graph!=null){
@@ -75,11 +89,15 @@ export async function normalizeBootstrap039(raw,crypto=globalThis.crypto) {
   need(await digest(env.payload_json,crypto) === env.source_fingerprint,'게임용 제작 데이터의 검증값이 일치하지 않아.');
   const payload = safe(JSON.parse(env.payload_json));
   for (const field of ['catalog','deck_rules035','opponents','starters','content022','meta017','characters','shop_rules']) need(payload[field] !== undefined,`게임용 ${field} 데이터가 없어.`);
-  const rows = raw.authoring?.entities ?? [];
+  const legacyRows = raw.authoring?.entities ?? [];
+  need(Array.isArray(legacyRows),'제작 항목 목록이 올바르지 않아.');
+  const rows = [...legacyRows,...categoryGroups055];
   need(Array.isArray(rows),'제작 항목 목록이 올바르지 않아.');
   const seen = new Set();
   for (const row of rows) { validEntity(row); const k=key(row.entity_type,row.entity_id); need(!seen.has(k),'DB에 중복된 제작 항목이 있어.'); seen.add(k); }
-  return {...clone(raw),mapRules052,gameEnvelope:clone(env),gamePayload:payload,game:{...clone(env),...payload}};
+  const normalized={...clone(raw),mapRules052,gameEnvelope:clone(env),gamePayload:payload,game:{...clone(env),...payload}};
+  if(raw.authoring||categoryGroups055.length)normalized.authoring={...(clone(raw.authoring)??{}),entities:clone(rows)};
+  return normalized;
 }
 
 export class AuthoringStore039 {
@@ -99,7 +117,8 @@ export class AuthoringStore039 {
       if(i<0) entities.push(next); else entities[i]=next;
     }
     const status=this.phase==='conflict'?'다른 창의 수정과 겹쳤어.':this.phase==='invalid'?'수정할 값을 확인해줘.':this.phase==='error'?'저장을 다시 시도할게.':this.busy?'저장 중…':this.queue.length?'변경 사항 저장 대기 중…':this.phase==='loading'?'제작 데이터 불러오는 중…':'자동 저장됨';
-    return {bootstrap:clone(this.bootstrap),entities,gamePayload:clone(this.bootstrap?.gamePayload??null),phase:this.phase,status,error:this.error,user:this.user?{id:this.user.id,email:this.user.email}:null,canEdit:!!this.user&&this.bootstrap?.permissions?.can_edit===true,pending:this.queue.length};
+    const head=this.queue[0],writeState=head?{entityType:head.type,entityId:head.id,operation:head.operation,phase:this.phase,rejected:head.rejected===true,uncertain:this.phase==='error'&&Boolean(head.body)}:null;
+    return {bootstrap:clone(this.bootstrap),entities,gamePayload:clone(this.bootstrap?.gamePayload??null),phase:this.phase,status,error:this.error,writeState,user:this.user?{id:this.user.id,email:this.user.email}:null,canEdit:!!this.user&&this.bootstrap?.permissions?.can_edit===true,pending:this.queue.length};
   }
   emit() { const snap=this.snapshot(); for(const fn of this.listeners) fn(snap); }
   getRow(type,id) { return this.bootstrap?.authoring?.entities?.find(e=>e.entity_type===type&&e.entity_id===id); }
@@ -195,10 +214,11 @@ export class AuthoringStore039 {
       }
       const ack=result.data;
       need(ack?.schema===1&&ack.kind==='unified039-write-ack'&&ack.request_id===q.requestId&&integer(ack.applied_revision)&&integer(ack.observed_project_revision)&&Array.isArray(ack.entities),'저장 완료 응답을 확인하지 못했어. 같은 요청으로 다시 확인할게.');
-      for(const row of ack.entities) validEntity(row);
+      const ackRows=[...ack.entities,...categoryGroupRows055(ack.category_groups055)],ackKeys=new Set();
+      for(const row of ackRows){validEntity(row);const id=key(row.entity_type,row.entity_id);need(!ackKeys.has(id),'저장 완료 항목이 중복되었습니다.');ackKeys.add(id);}
       if((HASH.test(ack.game_source_fingerprint)&&ack.game_source_fingerprint!==this.bootstrap.game?.source_fingerprint)||(Array.isArray(ack.issues)&&ack.issues.length)) this.pendingRevision=Math.max(this.pendingRevision??0,ack.applied_revision);
       if(ack.applied_revision>=this.bootstrap.project_revision) {
-        for(const row of ack.entities) {
+        for(const row of ackRows) {
           const rows=this.bootstrap.authoring.entities,i=rows.findIndex(e=>key(e.entity_type,e.entity_id)===key(row.entity_type,row.entity_id));
           if(row.deleted) { if(i>=0)rows.splice(i,1); } else if(i<0)rows.push(clone(row)); else rows[i]=clone(row);
         }
