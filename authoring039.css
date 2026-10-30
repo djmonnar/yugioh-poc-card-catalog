@@ -35,7 +35,17 @@
 .au-app .au-catalog-search>input{flex:1;min-width:0;width:0}
 .au-app .au-catalog-search>button{flex:none;min-width:44px;white-space:nowrap}
 .au-app .au-catalog-results{min-width:0}
+.au-app .au-catalog-browse{display:flex;align-items:end;flex-wrap:wrap;gap:12px;margin:0 0 16px}
+.au-app .au-catalog-modes{display:flex;gap:8px;flex:1 1 240px;min-width:0}
+.au-app .au-catalog-modes>button{flex:1;min-width:0;min-height:44px;line-height:1.5;white-space:normal}
+.au-app .au-catalog-modes>button[aria-pressed=true]{background:#173b50;border-color:var(--au-gold);color:var(--au-gold);font-weight:700}
+.au-app .au-catalog-order{display:flex;flex-direction:column;gap:6px;min-width:145px;max-width:100%;font-size:12px;color:var(--au-muted)}
+.au-app .au-catalog-order>select{min-height:44px;max-width:100%;width:100%}
+@media(max-width:700px){.au-app .au-catalog-browse{gap:10px}.au-app .au-catalog-modes{flex-basis:100%;width:100%}.au-app .au-catalog-order{flex:1 1 140px;min-width:0}.au-app .au-catalog-order>select{font-size:16px}.au-app .au-catalog-addition{flex-basis:210px}}
 .au-app .au-card-results-summary{font-size:14px;color:var(--au-muted);line-height:1.65;margin:12px 0}
+.au-app .au-card-categories{display:flex;flex-wrap:wrap;gap:5px;list-style:none;margin:0;padding:0;min-width:0;max-width:100%;color:var(--au-cyan);font-size:11px;line-height:1.6;text-align:left}
+.au-app .au-card-categories>li{max-width:100%;padding:2px 6px;border:1px solid var(--au-line);border-radius:4px;overflow-wrap:anywhere;word-break:keep-all}
+.au-app .au-card-detail>.au-card-categories{margin:16px 0;font-size:13px}
 .au-app .au-filter-chips:empty{display:none}
 .au-app .au-filter-chips button{min-height:44px;white-space:normal;line-height:1.5}
 .au-app .au-deck-settings{margin:16px 0 22px;border:1px solid var(--au-line);border-radius:10px;background:#0c2436;padding:14px 16px}
