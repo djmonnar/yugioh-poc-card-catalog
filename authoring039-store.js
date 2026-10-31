@@ -116,7 +116,7 @@ export class AuthoringStore039 {
   constructor({client,storage=globalThis.localStorage,crypto=globalThis.crypto,debounceMs=400,idleRefreshMs=400,pollMs=15000,redirectUrl=globalThis.location?.href,events=globalThis}={}) {
     need(client?.rpc && client?.auth,'DB 연결이 필요해.');
     Object.assign(this,{client,storage,crypto,debounceMs,idleRefreshMs,pollMs,redirectUrl,events});
-    this.listeners=new Set(); this.queue=[]; this.user=null; this.bootstrap=null; this.phase='loading'; this.error=null; this.pendingRevision=null; this.fetchedRevision=null; this.generation=0; this.busy=false; this.stopped=false; this.failures=0;
+    this.listeners=new Set(); this.queue=[]; this.user=null; this.bootstrap=null; this.phase='loading'; this.error=null; this.pendingRevision=null; this.fetchedRevision=null; this.generation=0; this.busy=false; this.stopped=false; this.failures=0; this.refreshTask=null; this.retryRequestId=null; this.retryNotBefore=0;
     this.online=()=>this.retry();
   }
   subscribe(fn) { this.listeners.add(fn); fn(this.snapshot()); return ()=>this.listeners.delete(fn); }
@@ -159,22 +159,47 @@ export class AuthoringStore039 {
     let result;try { result=await this.client.auth.getSession(); if(result.error) throw result.error; }
     catch(error) { this.setError(error); throw error; }
     await this.acceptSession(result.data?.session??null);
-    if(this.pollMs&&!this.poll) { this.poll=setInterval(()=>{if(!this.busy&&!this.queue.length)this.refresh().catch(e=>this.setError(e));},this.pollMs); this.poll.unref?.(); }
+    if(this.pollMs&&!this.poll) { this.poll=setInterval(()=>{const generation=this.generation;if(!this.busy&&!this.queue.length)this.refresh().catch(e=>{if(generation===this.generation)this.setError(e);});},this.pollMs); this.poll.unref?.(); }
     return this;
   }
   async acceptSession(session) {
     const id=session?.user?.id??null;
     if(this.started&&id===(this.user?.id??null)) return;
-    this.started=true; this.persist(); this.generation++; clearTimeout(this.idleTimer); this.pendingRevision=null; this.user=session?.user??null; this.queue=[]; this.bootstrap=null; this.fetchedRevision=null; this.phase='loading'; this.error=null; this.emit();
-    try { await this.refresh(true); if(this.snapshot().canEdit) { this.restore(); await this.archiveLegacy(); if(this.queue.length) this.schedule(0); } }
-    catch(e) { this.setError(e); throw e; }
+    this.started=true; this.persist(); this.generation++; const generation=this.generation; clearTimeout(this.idleTimer); this.pendingRevision=null; this.retryRequestId=null; this.retryNotBefore=0; this.user=session?.user??null; this.queue=[]; this.bootstrap=null; this.fetchedRevision=null; this.phase='loading'; this.error=null; this.emit();
+    try { await this.refresh(true); if(generation!==this.generation)return; if(this.snapshot().canEdit) { this.restore(); await this.archiveLegacy(); if(generation===this.generation&&this.queue.length) this.schedule(0); } }
+    catch(e) { if(generation===this.generation){this.setError(e);throw e;} }
   }
   async refresh(force=false) {
     const generation=this.generation;
+    if(this.stopped)return;
+    const active=this.refreshTask;
+    if(active){
+      if(active.generation===generation&&(!force||active.force))return active.promise;
+      // A forced read must still run after a conditional read fails. Requests
+      // made for a new account also wait for the old read without using it.
+      try{await active.promise;}catch{/* The follow-up has its own result. */}
+      if(generation!==this.generation||this.stopped)return;
+      return this.refresh(force||active.generation!==generation);
+    }
+    const task={generation,force,pendingAtStart:this.pendingRevision,canFollowAck:false,promise:null};this.refreshTask=task;
+    task.promise=this.refreshOnce(force,generation).then(()=>{task.canFollowAck=true;}).catch(e=>{if(e.code==='authoring039_stale_read')task.canFollowAck=true;if(generation===this.generation)throw e;}).finally(()=>{
+      if(this.refreshTask===task){
+        this.refreshTask=null;
+        // An idle read can have joined a request that began before its ACK.
+        // Follow that new revision after a valid or locally obsolete response,
+        // without looping server failures or repeatedly stale reads or
+        // bypassing a queued write's backoff.
+        if(task.canFollowAck&&generation===this.generation&&this.pendingRevision!==null&&this.pendingRevision>this.fetchedRevision&&this.pendingRevision>(task.pendingAtStart??0))this.scheduleIdleRefresh();
+      }
+    });
+    return task.promise;
+  }
+  async refreshOnce(force,generation) {
     const result=await this.client.rpc('poc_bootstrap039',{p_view:'authoring',p_known_revision:force?null:this.fetchedRevision});
+    if(generation!==this.generation)return;
     if(result.error) throw result.error;
     const next=await normalizeBootstrap039(result.data,this.crypto); if(generation!==this.generation) return;
-    if(!next.unchanged) { need(!this.bootstrap||next.project_revision>=this.bootstrap.project_revision,'이전 DB 개정이 도착했어. 다시 확인할게.'); this.bootstrap=next; this.fetchedRevision=next.project_revision; }
+    if(!next.unchanged) { if(this.bootstrap&&next.project_revision<this.bootstrap.project_revision){const error=Error('이전 DB 개정이 도착했어. 다시 확인할게.');error.code='authoring039_stale_read';throw error;} this.bootstrap=next; this.fetchedRevision=next.project_revision; }
     else { need(this.bootstrap,'DB가 첫 응답을 생략했어. 다시 연결해줘.'); this.bootstrap.permissions=clone(next.permissions);if(next.mapRules052){need(!this.bootstrap.mapRules052||next.mapRules052.revision>=this.bootstrap.mapRules052.revision,'이전 맵 분포가 도착했습니다. 다시 불러와 주세요.');this.bootstrap.mapRules052=clone(next.mapRules052);this.bootstrap.map_rules052=clone(next.map_rules052);} }
     if(this.pendingRevision!==null&&this.fetchedRevision>=this.pendingRevision) this.pendingRevision=null;
     if(!this.queue.length) { this.phase='ready'; this.error=null; } this.emit();
@@ -193,7 +218,7 @@ export class AuthoringStore039 {
     const promise=new Promise(resolve=>q.resolve.push(resolve));
     this.error=null; if(this.phase!=='conflict') this.phase=this.queue[0]?.rejected?'invalid':'pending'; this.persist(); this.emit(); this.schedule(); return promise;
   }
-  schedule(delay=this.debounceMs) { clearTimeout(this.timer); clearTimeout(this.idleTimer); if(!this.stopped&&!['conflict','invalid'].includes(this.phase)) this.timer=setTimeout(()=>this.drain(),delay); this.timer?.unref?.(); }
+  schedule(delay=this.debounceMs) { clearTimeout(this.timer); clearTimeout(this.idleTimer); const head=this.queue[0],retryWait=head?.body&&head.requestId===this.retryRequestId?Math.max(0,this.retryNotBefore-Date.now()):0; if(!this.stopped&&!['conflict','invalid'].includes(this.phase)) this.timer=setTimeout(()=>this.drain(),Math.max(delay,retryWait)); this.timer?.unref?.(); }
   scheduleIdleRefresh() {
     clearTimeout(this.idleTimer);
     if(this.stopped||this.busy||this.queue.length||this.pendingRevision===null) return;
@@ -241,15 +266,15 @@ export class AuthoringStore039 {
       this.queue.shift();
       for(const waiting of this.queue) if(waiting.type===q.type&&waiting.id===q.id&&!waiting.body&&waiting.baseVersion===q.baseVersion) { const row=this.getRow(q.type,q.id); waiting.baseVersion=row?.version??0; waiting.baseContent=clone(row?.content??{}); }
       for(const resolve of Array.isArray(q.resolve)?q.resolve:[]) resolve(ack);
-      this.phase=this.queue.length?'pending':'ready'; this.error=null; this.failures=0; this.persist();
-    } catch(e) { if(generation===this.generation) { this.setError(e); this.failures++; } }
+      this.phase=this.queue.length?'pending':'ready'; this.error=null; this.failures=0; this.retryRequestId=null; this.retryNotBefore=0; this.persist();
+    } catch(e) { if(generation===this.generation) { this.failures++; if(q.body){this.retryRequestId=q.requestId;this.retryNotBefore=Date.now()+Math.min(30000,1000*2**Math.min(this.failures,5));} this.setError(e); } }
     finally {
       this.busy=false; this.emit();
       if(this.queue.length&&this.phase!=='conflict') this.schedule(this.phase==='error'?Math.min(30000,1000*2**Math.min(this.failures,5)):0);
       else this.scheduleIdleRefresh();
     }
   }
-  retry() { if(this.phase==='conflict')return; this.error=null; if(!this.started)return this.start().catch(e=>this.setError(e)); if(!this.bootstrap)return this.refresh(true).catch(e=>this.setError(e)); if(!this.queue.length&&this.pendingRevision!==null)return this.refresh().catch(e=>this.setError(e)); this.phase=this.queue.length?'pending':'ready'; this.schedule(0); this.emit(); }
+  retry() { if(this.phase==='conflict')return; this.retryNotBefore=0; this.error=null; const generation=this.generation;if(!this.started)return this.start().catch(e=>{if(generation===this.generation)this.setError(e);}); if(!this.bootstrap)return this.refresh(true).catch(e=>{if(generation===this.generation)this.setError(e);}); if(!this.queue.length&&this.pendingRevision!==null)return this.refresh().catch(e=>{if(generation===this.generation)this.setError(e);}); this.phase=this.queue.length?'pending':'ready'; this.schedule(0); this.emit(); }
   resolveConflict(choice) {
     need(this.phase==='conflict'&&this.queue.length,'충돌한 수정이 없어.'); const q=this.queue[0];
     if(choice==='remote') { this.queue.shift(); for(const resolve of Array.isArray(q.resolve)?q.resolve:[]) resolve({discarded:true}); }

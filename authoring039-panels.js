@@ -2,12 +2,12 @@ import {builderCardMatches,builderSearchText,sortBuilderCards} from './ai-deck-f
 import {fillSubtypeFilter} from './card-subtypes.js?v=20261011-tags';
 import {createStatFilters} from './card-filters.js?v=20261007-44';
 import {deckReadiness041,deckOptions041,groupExactDecks041} from './authoring041-decks.js?v=20261028-043';
-import {createEditingGuard041} from './authoring041-editing.js?v=20261031-058';
+import {createEditingGuard041} from './authoring041-editing.js?v=20261031-059';
 import {cardLimitBadges044} from './authoring044-limits.js?v=20261029-044';
 import {catalogAdditions049,catalogAdditionMatches049,sortCatalogRegistered049} from './authoring049-recent.js?v=20261030-049';
 import {createMapPanel052} from './authoring052-map.js?v=20261030-052';
-import {createCategoryPicker054,categoryMatcher054} from './authoring054-categories.js?v=20261031-058';
-import {createCategoryGroupManager055} from './authoring055-category-groups.js?v=20261031-058';
+import {createCategoryPicker054,categoryMatcher054} from './authoring054-categories.js?v=20261031-059';
+import {createCategoryGroupManager055} from './authoring055-category-groups.js?v=20261031-059';
 
 export const AUTHORING_SECTIONS039=[['cards','카드 도감'],['decks','덱 만들기'],['chapters','장별 적 편성'],['map','맵 분포'],['starters','시작 덱'],['characters','캐릭터'],['relics','유물'],['events','이벤트'],['shop','상점'],['packs','카드팩'],['balance','점수·보상'],['recovery','이전 자료']];
 const clone=structuredClone,own=(o,k)=>Object.prototype.hasOwnProperty.call(o,k),text=v=>String(v??'');
