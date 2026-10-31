@@ -6,8 +6,8 @@ import {createEditingGuard041} from './authoring041-editing.js?v=20261027-041';
 import {cardLimitBadges044} from './authoring044-limits.js?v=20261029-044';
 import {catalogAdditions049,catalogAdditionMatches049,sortCatalogRegistered049} from './authoring049-recent.js?v=20261030-049';
 import {createMapPanel052} from './authoring052-map.js?v=20261030-052';
-import {createCategoryPicker054,categoryMatcher054} from './authoring054-categories.js?v=20261031-056';
-import {createCategoryGroupManager055} from './authoring055-category-groups.js?v=20261031-056';
+import {createCategoryPicker054,categoryMatcher054} from './authoring054-categories.js?v=20261031-057';
+import {createCategoryGroupManager055} from './authoring055-category-groups.js?v=20261031-057';
 
 export const AUTHORING_SECTIONS039=[['cards','카드 도감'],['decks','덱 만들기'],['chapters','장별 적 편성'],['map','맵 분포'],['starters','시작 덱'],['characters','캐릭터'],['relics','유물'],['events','이벤트'],['shop','상점'],['packs','카드팩'],['balance','점수·보상'],['recovery','이전 자료']];
 const clone=structuredClone,own=(o,k)=>Object.prototype.hasOwnProperty.call(o,k),text=v=>String(v??'');

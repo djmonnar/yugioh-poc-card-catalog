@@ -17,7 +17,7 @@ export function groupCategories054(categories=[],selected=[],customGroups,orderI
       const group=source?.content??source,id=source?.entity_id??group?.id,name=group?.name;
       if(typeof id!=='string'||!id||ids.has(id)||typeof name!=='string'||!name.trim()||group.archived)continue;ids.add(id);
       const members=new Map();for(const reference of group.categories??[]){const row=lookup.get(reference);if(row){members.set(row.name,{...row,label:row.name});assigned.add(row.name);}}
-      groups.push({key:`group:${id}`,label:name,items:[...members.values()].sort((a,b)=>a.label.localeCompare(b.label,'ko'))});
+      groups.push({key:`group:${id}`,label:name,items:[...members.values()]});
     }
     const remaining=[...known.values()].filter(row=>!assigned.has(row.name)).map(row=>({...row,label:row.name})).sort((a,b)=>a.label.localeCompare(b.label,'ko'));
     if(remaining.length)groups.push({key:'ungrouped',label:'미분류',items:remaining});return groups;
