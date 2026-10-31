@@ -1,7 +1,7 @@
 import {createClient} from './assets/cloud/supabase-client.js?v=2.117.2';
 import {validateCloudConfig} from './supabase-cloud.js?v=20261008-70';
-import {AuthoringStore039} from './authoring039-store.js?v=20261031-057';
-import {mountAuthoringShell039} from './authoring039-shell.js?v=20261031-057';
+import {AuthoringStore039} from './authoring039-store.js?v=20261031-058';
+import {mountAuthoringShell039} from './authoring039-shell.js?v=20261031-058';
 
 const root=document.getElementById('authoring-root');
 async function start(){

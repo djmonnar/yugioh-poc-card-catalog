@@ -210,7 +210,7 @@ test('group manager refuses duplicate names and preserves the recoverable draft 
 
 test('group manager detects remote version changes before overwriting a local draft and can reload the current DB group',()=>{
  const m=mountManager();selectGroup(m,'category-group-favorites');typeName(m,'내 초안');m.state.groups[0]=groupRow('category-group-favorites',2,{name:'다른 창의 이름',categories:['면역-파괴'],archived:false});m.manager.render(m.host);
- button041(m.host,'변경 사항 저장').click();assert.equal(m.writes.length,0);assert.equal(field041(m.host,'묶음 이름').value,'내 초안');assert.match(m.host.textContent,/다른 창/);
+ button041(m.host,'변경 사항 저장').click();assert.equal(m.writes.length,0);assert.equal(field041(m.host,'묶음 이름').value,'내 초안');assert.match(m.host.textContent,/저장 기준과 최신 내용/);
  button041(m.host,'최신 내용 불러오기').click();assert.equal(field041(m.host,'묶음 이름').value,'다른 창의 이름');assert.equal(field041(m.host,'묶음에 포함: 면역-파괴').checked,true);assert.equal(field041(m.host,'묶음에 포함: 덱-백룡').checked,false);
 });
 

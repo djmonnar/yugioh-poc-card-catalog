@@ -90,7 +90,7 @@ test('different groups retain independent unfinished orders and cancel restores 
 });
 
 test('remote group changes block an old local order until reloading and account switches discard private drafts',()=>{
- const m=managerFixture();byLabel(m.host,`${A} 카테고리 아래로 이동`).click();m.state.groups[0]=group('group-a','첫 묶음',[C,B,A],2);m.manager.render(m.host);button041(m.host,'변경 사항 저장').click();assert.equal(m.writes.length,0);assert.deepEqual(namesOf(m.host),[B,A,C]);assert.match(m.host.textContent,/다른 창/);
+ const m=managerFixture();byLabel(m.host,`${A} 카테고리 아래로 이동`).click();m.state.groups[0]=group('group-a','첫 묶음',[C,B,A],2);m.manager.render(m.host);button041(m.host,'변경 사항 저장').click();assert.equal(m.writes.length,0);assert.deepEqual(namesOf(m.host),[B,A,C]);assert.match(m.host.textContent,/저장 기준과 최신 내용/);
  button041(m.host,'최신 내용 불러오기').click();assert.deepEqual(namesOf(m.host),[C,B,A]);byLabel(m.host,`${C} 카테고리 아래로 이동`).click();m.state.owner='second-editor';m.manager.render(m.host);m.select('group-a');assert.deepEqual(namesOf(m.host),[C,B,A]);assert.equal(button041(m.host,'변경 사항 저장').disabled,true);
 });
 

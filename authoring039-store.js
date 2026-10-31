@@ -27,6 +27,7 @@ const object = value => value !== null && typeof value === 'object' && !Array.is
 function need(ok,message) { if (!ok) throw new Error(message); }
 function explain(error) {
   const message=String(error?.message??error??'DB 연결을 확인해줘.');
+  if(error?.code==='57014'||/statement timeout/i.test(message))return '서버 처리 시간이 초과됐습니다. 저장 요청은 보관되어 있으며 같은 요청으로 다시 확인합니다.';
   if(/unified039_duplicate_deck/.test(message+' '+String(error?.details??'')))return '같은 카드 구성의 덱이 이미 있습니다. 기존 덱을 선택해 주세요.';
   if(/unified039_encounter_settings_belong_to_chapter/.test(message+' '+String(error?.details??'')))return '상대 LP와 특성은 장별 적 편성에서 수정해 주세요. 화면을 새로고침하면 새 편집기를 사용할 수 있습니다.';
   if(/unified039_editor_required/.test(message))return '편집 권한을 확인하지 못했어. 편집 계정으로 다시 로그인해줘.';

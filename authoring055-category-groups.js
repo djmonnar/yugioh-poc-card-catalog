@@ -3,18 +3,20 @@ import {createCategoryMemberOrderEditor057} from './authoring057-member-order.js
 const folded055=value=>String(value??'').trim().toLocaleLowerCase('ko').replace(/\s+/g,' ');
 const content055=row=>row?.content??row;
 const unique055=values=>[...new Set(values??[])];
+const snapshotContent058=row=>{const value=content055(row);return value?{name:value.name??'',categories:unique055(value.categories),archived:value.archived===true}:null;};
+const sameContent058=(left,right)=>JSON.stringify(snapshotContent058(left))===JSON.stringify(snapshotContent058(right));
 
 // Drafts live only while this editor is open. The store's normal intent queue
 // owns persistence, version checks and recovery; this is not a second database.
-export function createCategoryGroupManager055({document:doc=globalThis.document,getState,onSave,onError=()=>{},bindControl=()=>{},newId=()=>`category-group-${globalThis.crypto.randomUUID()}`}={}){
+export function createCategoryGroupManager055({document:doc=globalThis.document,getState,onSave,onRetry=null,onError=()=>{},bindControl=()=>{},newId=()=>`category-group-${globalThis.crypto.randomUUID()}`}={}){
   const drafts=new Map();let owner=null,selected='new',open=false,currentRoot=null,currentHost=null;
   const orderEditor056=createCategoryGroupOrderEditor056({document:doc,getState,onSave,onError});
   const el=(tag,text,cls)=>{const node=doc.createElement(tag);if(text!=null)node.textContent=String(text);if(cls)node.className=cls;return node;};
   const stateNow=()=>{const state=getState();if(owner!==state.owner){owner=state.owner;drafts.clear();selected='new';open=false;}return state;};
-  const makeDraft=row=>({name:content055(row)?.name??'',categories:unique055(content055(row)?.categories),baseVersion:row?.version??0,dirty:false,busy:false,error:'',query:''});
+  const makeDraft=row=>({name:content055(row)?.name??'',categories:unique055(content055(row)?.categories),baseVersion:row?.version??0,baseContent:snapshotContent058(row),dirty:false,busy:false,error:'',query:''});
   const rowsOf=state=>(state.groups??[]).filter(row=>row&&!row.deleted);
   const find=(state,id)=>rowsOf(state).find(row=>row.entity_id===id);
-  function draftFor(state,id){const row=id==='new'?null:find(state,id);let draft=drafts.get(id);if(!draft){draft=makeDraft(row);drafts.set(id,draft);}else if(row&&!draft.dirty&&!draft.busy&&row.version!==draft.baseVersion){const query=draft.query;Object.assign(draft,makeDraft(row),{query});}return draft;}
+  function draftFor(state,id){const row=id==='new'?null:find(state,id);let draft=drafts.get(id);if(!draft){draft=makeDraft(row);drafts.set(id,draft);}else if(row&&!draft.dirty&&!draft.busy&&row.version>draft.baseVersion){const query=draft.query;Object.assign(draft,makeDraft(row),{query});}return draft;}
   function redraw(){if(currentHost?.isConnected!==false)render(currentHost);}
   function render(host){
     currentHost=host;const state=stateNow(),write=state.writeState;
@@ -41,10 +43,10 @@ export function createCategoryGroupManager055({document:doc=globalThis.document,
     const search=el('input');search.type='search';search.value=draft.query;search.placeholder='포함할 카테고리 찾기';search.setAttribute('aria-label','묶음에 넣을 카테고리 검색');search.dataset.editKey=`category-groups055.${selected}.search`;bindControl(search);form.append(search);
     const count=el('p',null,'au-group-member-count055'),choices=el('div',null,'au-group-member-list055'),preserved=el('div',null,'au-group-preserved055');choices.setAttribute('role','group');choices.setAttribute('aria-label','묶음에 넣을 카테고리');form.append(count,choices,preserved);
     const error=el('p',null,'au-group-error055'),status=el('p',null,'au-group-status055'),actions=el('div',null,'au-group-actions055');error.setAttribute('role','alert');status.setAttribute('role','status');status.setAttribute('aria-live','polite');
-    const currentRow=()=>selected==='new'?null:find(stateNow(),selected),conflicted=()=>{const latest=currentRow();return Boolean(row&&latest&&latest.version!==draft.baseVersion&&!draft.busy);};
+    const currentRow=()=>selected==='new'?null:find(stateNow(),selected),conflicted=()=>{const latest=currentRow();if(!row||!latest||latest.pending||latest.version<=draft.baseVersion||draft.busy)return false;if(sameContent058(latest,draft.baseContent)){draft.baseVersion=latest.version;return false;}return true;};
     const save=button(row?'변경 사항 저장':'묶음 만들기',async()=>{
       const latestState=stateNow(),latest=currentRow();if(latestState.canEdit!==true||latestState.canWrite===false||draft.busy)return;
-      if(conflicted()){draft.error='다른 창에서 이 묶음을 수정했습니다. 최신 내용을 불러온 뒤 다시 편집해 주세요.';updateStatus();return;}
+      if(conflicted()){draft.error='이 묶음의 저장 기준과 최신 내용이 달라졌습니다. 선택한 내용은 유지했습니다. 최신 내용을 불러온 뒤 다시 편집해 주세요.';updateStatus();return;}
       const nextName=name.value.trim(),signature=folded055(nextName);
       if(!nextName||nextName.length>40||/[\u0000-\u001f\u007f]/.test(nextName)){draft.error='묶음 이름은 1~40자로 입력해 주세요.';updateStatus();return;}
       const ownId=row?.entity_id??draft.id??selected;
@@ -54,19 +56,23 @@ export function createCategoryGroupManager055({document:doc=globalThis.document,
       if(draft.categories.some(category=>!activeNames.has(category)&&!existing.has(category))){draft.error='보관되거나 이름이 바뀐 카테고리가 있습니다. 최신 내용을 불러온 뒤 다시 선택해 주세요.';updateStatus();return;}
       const id=row?.entity_id??(draft.id??=newId()),requestOwner=owner,ticket=(draft.ticket??0)+1,rejected=latestState.writeState?.entityType==='category_group'&&latestState.writeState.entityId===id&&latestState.writeState.rejected;
       draft.name=nextName;draft.busy=true;draft.error='';draft.ticket=ticket;draft.requestEntityId=id;draft.pendingKind='save';draft.serverRejected=false;updateStatus();
-      try{const result=await onSave('category_group',id,{name:nextName,categories:unique055(draft.categories),archived:false},{operation:row||rejected?'patch':'create'});if(stateNow().owner!==requestOwner||ticket!==draft.ticket)return;draft.busy=false;if(result?.discarded){draft.dirty=true;draft.error='대기하던 변경을 취소했습니다. DB 내용을 확인한 뒤 다시 저장할 수 있습니다.';draft.baseVersion=find(stateNow(),id)?.version??0;redraw();return;}draft.dirty=false;draft.baseVersion=find(stateNow(),id)?.version??draft.baseVersion+1;if(!row){drafts.delete('new');drafts.set(id,draft);selected=id;}redraw();}
+      const submitted={name:nextName,categories:unique055(draft.categories),archived:false};
+      try{const result=await onSave('category_group',id,submitted,{operation:row||rejected?'patch':'create'});if(stateNow().owner!==requestOwner||ticket!==draft.ticket)return;draft.busy=false;if(result?.discarded){draft.dirty=true;draft.error='대기하던 변경을 취소했습니다. DB 내용을 확인한 뒤 다시 저장할 수 있습니다.';const latest=find(stateNow(),id);draft.baseVersion=latest?.version??0;draft.baseContent=snapshotContent058(latest);redraw();return;}const acknowledged=[...(result?.category_groups055?.groups??[]),...(result?.entities??[])].find(item=>item.entity_type==='category_group'&&item.entity_id===id&&!item.deleted),confirmed=acknowledged??find(stateNow(),id),saved=snapshotContent058(acknowledged??submitted);draft.dirty=false;draft.baseVersion=Math.max(draft.baseVersion,confirmed?.version??0);draft.baseContent=saved;draft.name=saved.name;draft.categories=[...saved.categories];if(!row){drafts.delete('new');drafts.set(id,draft);selected=id;}redraw();}
       catch(failure){if(stateNow().owner!==requestOwner||ticket!==draft.ticket)return;draft.busy=false;draft.error=failure.message??'묶음을 저장하지 못했습니다. 연결을 확인한 뒤 다시 저장해 주세요.';updateStatus();onError(failure);}
     },`category-groups055.${selected}.save`);save.className='au-primary';actions.append(save);
     const reset=button('편집 취소',()=>{drafts.set(selected,makeDraft(currentRow()));redraw();});actions.append(reset);
     const reload=button('최신 내용 불러오기',()=>{drafts.set(selected,makeDraft(currentRow()));redraw();});actions.append(reload);
     const archive=button('묶음 보관',()=>archiveChange(row,true));if(row)actions.append(archive);
     const retryFailed=button('저장 요청 다시 시도',()=>{const action=draft.pendingAction;if(action)return archiveChange(action.row,action.archived);});actions.append(retryFailed);
+    const retryPending=button('저장 결과 다시 확인',()=>{const now=stateNow();if(typeof onRetry!=='function'||now.canEdit!==true||now.canWrite===false||now.phase!=='error'||(!draft.busy&&!currentRow()?.pending))return;return onRetry();},'category-groups058.retry-pending'),retryArea=el('div',null,'au-group-actions055');retryArea.append(retryPending);
     function updateStatus(){
       const now=stateNow(),head=now.writeState,formId=row?.entity_id??draft.id,refused=head?.phase==='invalid'&&head.rejected===true,sameHead=head?.entityType==='category_group'&&head.entityId===formId,transportPending=Boolean(currentRow()?.pending)&&!(refused&&sameHead),headBlocked=['invalid','conflict'].includes(head?.phase)&&!sameHead;
       const locked=!canWrite||draft.busy||transportPending;memberOrder.setDisabled(locked);const moving=memberOrder.isDragging();name.disabled=locked;search.disabled=locked;select.disabled=draft.busy||transportPending||moving;save.disabled=locked||moving||headBlocked||Boolean(row&&!draft.dirty)||(!row&&rows.length>=64);reset.disabled=locked||moving||!draft.dirty||Boolean(currentRow()?.pending);newButton.disabled=locked||moving||rows.length>=64;archive.disabled=locked||moving||draft.dirty||headBlocked;archive.title=draft.dirty?'변경 사항을 저장하거나 취소한 뒤 보관해 주세요.':'';reload.hidden=!conflicted()||Boolean(currentRow()?.pending);reload.disabled=locked||moving;
       retryFailed.hidden=!draft.serverRejected||!draft.pendingAction||draft.pendingKind==='save';retryFailed.disabled=!canWrite||draft.busy;
-      const uncertain=now.phase==='error'&&(draft.busy||transportPending),conflict=now.phase==='conflict'&&(draft.busy||transportPending);error.textContent=draft.error||(conflict?'다른 창의 수정과 겹쳤습니다. 화면 위의 충돌 알림에서 처리 방법을 선택해 주세요.':uncertain?'저장 결과를 확인하지 못했습니다. 연결이 돌아오면 같은 요청으로 다시 확인합니다.':headBlocked?'먼저 저장 대기 중인 다른 항목의 오류를 해결해 주세요.':'');error.hidden=!error.textContent;
-      status.textContent=uncertain?'연결을 기다리는 중…':conflict?'충돌 처리 대기 중…':draft.busy||transportPending?'묶음을 DB에 저장하는 중…':draft.dirty?'저장하지 않은 변경 사항이 있습니다.':row?'DB에 저장됨':'이름과 카테고리를 정한 뒤 묶음을 만드세요.';for(const input of choices.querySelectorAll('input'))input.disabled=locked;count.textContent=`포함한 카테고리 ${draft.categories.length}개`;
+      const uncertain=now.phase==='error'&&(draft.busy||transportPending),conflict=now.phase==='conflict'&&(draft.busy||transportPending),priorWaiting=uncertain&&head&&!sameHead,stateError=typeof now.error==='string'?now.error:typeof now.error?.message==='string'?now.error.message:'',waitReason=priorWaiting?(`${head.entityType?.startsWith('card_')?'앞선 카드 편집':'앞선 편집'}의 저장 결과를 확인한 뒤 이 묶음을 저장합니다.`):'묶음 저장 결과를 확인하지 못했습니다. 같은 요청으로 다시 확인할 수 있습니다.';
+      error.textContent=draft.error||(conflict?'저장 대기 중인 수정과 최신 내용이 달라졌습니다. 선택한 내용은 유지됩니다. 화면 위의 알림에서 처리 방법을 선택해 주세요.':uncertain?waitReason+(stateError?'\n'+stateError:''):headBlocked?'먼저 저장 대기 중인 다른 항목의 오류를 해결해 주세요.':'');error.hidden=!error.textContent;
+      retryArea.hidden=!uncertain||typeof onRetry!=='function';retryPending.disabled=!canWrite||moving||!uncertain;
+      status.textContent=uncertain?(priorWaiting?'앞선 저장 결과 확인 중…':'묶음 저장 결과 확인 중…'):conflict?'저장 대기분이 최신 내용과 충돌했습니다.':draft.busy||transportPending?'묶음을 DB에 저장하는 중…':draft.dirty?'저장하지 않은 변경 사항이 있습니다.':row?'DB에 저장됨':'이름과 카테고리를 정한 뒤 묶음을 만드세요.';for(const input of choices.querySelectorAll('input'))input.disabled=locked;count.textContent=`포함한 카테고리 ${draft.categories.length}개`+(locked&&(draft.busy||transportPending)?' · 저장 확인 중에는 선택할 수 없습니다.':'');
     }
     function changed(){draft.name=name.value;draft.dirty=true;draft.error='';updateStatus();}
     function renderMembers(){
@@ -78,7 +84,7 @@ export function createCategoryGroupManager055({document:doc=globalThis.document,
     }
     async function archiveChange(item,archivedValue){const latestState=stateNow();if(!item||latestState.canEdit!==true||latestState.canWrite===false||draft.busy)return;const requestOwner=owner,ticket=(draft.ticket??0)+1;draft.busy=true;draft.error='';draft.ticket=ticket;draft.requestEntityId=item.entity_id;draft.pendingKind=archivedValue?'archive':'restore';draft.pendingAction={row:item,archived:archivedValue};draft.serverRejected=false;updateStatus();try{const result=await onSave('category_group',item.entity_id,{archived:archivedValue},{operation:'patch'});if(stateNow().owner!==requestOwner||ticket!==draft.ticket)return;draft.busy=false;if(result?.discarded){draft.error='대기하던 변경을 취소했습니다.';redraw();return;}drafts.delete(item.entity_id);if(archivedValue&&selected===item.entity_id)selected='new';redraw();}catch(failure){if(stateNow().owner!==requestOwner||ticket!==draft.ticket)return;draft.busy=false;draft.error=failure.message;updateStatus();onError(failure);}}
     name.oninput=changed;name.oncompositionend=changed;search.oninput=()=>{draft.query=search.value;renderMembers();};search.oncompositionend=search.oninput;search.onsearch=search.oninput;
-    form.append(error,actions,status);root.append(form);if(rows.length>=64)root.append(el('p','묶음은 보관한 항목을 포함해 64개까지 만들 수 있습니다.','au-hint'));
+    form.append(actions,status);form.insertBefore(error,count);form.insertBefore(retryArea,count);root.append(form);if(rows.length>=64)root.append(el('p','묶음은 보관한 항목을 포함해 64개까지 만들 수 있습니다.','au-hint'));
     if(archived.length){const archiveList=el('details',null,'au-group-archive055');archiveList.append(el('summary',`보관한 묶음 · ${archived.length}개`),el('p','묶음을 보관해도 카테고리와 카드의 분류는 유지됩니다.','au-hint'));for(const item of archived){const restore=button(`${content055(item).name} 복원`,()=>archiveChange(item,false));restore.disabled=!canWrite||draft.busy;archiveList.append(restore);}root.append(archiveList);}
     renderMembers();if(previous?.parentNode===host){host.insertBefore(root,previous);previous.remove();}else host.append(root);currentRoot=root;
     if(focus){const target=[...root.querySelectorAll('[data-edit-key]')].find(node=>node.dataset.editKey===focus);if(target){target.focus({preventScroll:true});if(selection&&target.setSelectionRange)try{target.setSelectionRange(...selection);}catch{}}}

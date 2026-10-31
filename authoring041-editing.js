@@ -40,7 +40,11 @@ export function createEditingGuard041({document:doc,getRoots,onEditingChange=()=
   return {
     defer(render,{force=false}={}){
       if(disposed)return false;
-      if(!force&&active()){pending=render;protectedControl=active();signal();return true;}
+      // A checkbox or its label is not a text editor, but still owns the
+      // pointer from touch-down until click/change completes. A background
+      // refresh must not replace that target in the middle of the gesture.
+      const target=active();
+      if(!force&&(pointerDown||target)){pending=render;protectedControl=target;signal();return true;}
       pending=null;protectedControl=null;cancel(timer);timer=null;return false;
     },
     bind(control){
