@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.18",
-  "versionCode": 37,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.18/YGOClassicExpedition-0.18.18-arm64.apk",
-  "sizeBytes": 264869010,
-  "sha256": "24ce02bbd5dd9f89d26ff5804282c58181ad31dfae6b65bf301655cb81c83cac",
-  "releaseNotes": "백룡·흑룡 타이틀과 원정 준비·설정·카드 도감을 새롭게 꾸몄습니다. 원정에서 패배하면 해당 저장 슬롯을 자동으로 비웁니다."
+  "versionName": "0.18.19",
+  "versionCode": 38,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.19/YGOClassicExpedition-0.18.19-arm64.apk",
+  "sizeBytes": 264871386,
+  "sha256": "05352db5fc72afb776b12e52dc436b7f01fe893e91a6babd23fb039cbf616cb4",
+  "releaseNotes": "첫 화면을 게임 시작·메뉴로 정리했습니다. 도감·설정과 세부 기능은 메뉴 안에서 열 수 있습니다."
 }
