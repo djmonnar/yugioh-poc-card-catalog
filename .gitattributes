@@ -4,3 +4,4 @@ content-packs/** -text
 content-packs/**/pack.json text eol=lf
 # Bundled upstream SDK contains whitespace inside template strings.
 assets/cloud/supabase-client.js -whitespace
+assets/authoring/app.js text eol=lf
