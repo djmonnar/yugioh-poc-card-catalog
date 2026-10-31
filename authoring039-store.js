@@ -20,10 +20,15 @@ const HASH = /^[a-f0-9]{64}$/;
 const UUID = /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
 const KINDS = new Set(['card_display','card_setting','card_annotation','card_limit','category','category_group','category_group_order','character','deck','chapter_role','starter_list','relic','event','shop_rules','map_rules','meta_pack','meta_score','recovery_archive']);
 const clone = value => structuredClone(value);
-const equal = (a,b) => JSON.stringify(a) === JSON.stringify(b);
+const equal = (a,b) => {
+  if(a===b)return true;
+  if(Array.isArray(a)||Array.isArray(b))return Array.isArray(a)&&Array.isArray(b)&&a.length===b.length&&a.every((value,i)=>equal(value,b[i]));
+  if(!object(a)||!object(b))return false;
+  const keys=Object.keys(a);return keys.length===Object.keys(b).length&&keys.every(name=>Object.hasOwn(b,name)&&equal(a[name],b[name]));
+};
 const key = (type,id) => `${type}\n${id}`;
 const integer = value => Number.isSafeInteger(value) && value >= 0;
-const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
+const object = value => value !== null && typeof value === 'object' && !Array.isArray(value) && [Object.prototype,null].includes(Object.getPrototypeOf(value));
 function need(ok,message) { if (!ok) throw new Error(message); }
 function explain(error) {
   const message=String(error?.message??error??'DB 연결을 확인해줘.');
@@ -116,7 +121,7 @@ export class AuthoringStore039 {
   constructor({client,storage=globalThis.localStorage,crypto=globalThis.crypto,debounceMs=400,idleRefreshMs=400,pollMs=15000,redirectUrl=globalThis.location?.href,events=globalThis}={}) {
     need(client?.rpc && client?.auth,'DB 연결이 필요해.');
     Object.assign(this,{client,storage,crypto,debounceMs,idleRefreshMs,pollMs,redirectUrl,events});
-    this.listeners=new Set(); this.queue=[]; this.user=null; this.bootstrap=null; this.phase='loading'; this.error=null; this.pendingRevision=null; this.fetchedRevision=null; this.generation=0; this.busy=false; this.stopped=false; this.failures=0; this.refreshTask=null; this.retryRequestId=null; this.retryNotBefore=0;
+    this.listeners=new Set(); this.queue=[]; this.user=null; this.bootstrap=null; this.phase='loading'; this.error=null; this.pendingRevision=null; this.fetchedRevision=null; this.generation=0; this.busy=false; this.stopped=false; this.failures=0; this.refreshTask=null; this.retryRequestId=null; this.retryNotBefore=0; this.conflictInfo=null;
     this.online=()=>this.retry();
   }
   subscribe(fn) { this.listeners.add(fn); fn(this.snapshot()); return ()=>this.listeners.delete(fn); }
@@ -128,8 +133,8 @@ export class AuthoringStore039 {
       const next={...(i<0?{entity_type:q.type,entity_id:q.id,version:0,state:'draft',issues:[]}:entities[i]),content:{...(entities[i]?.content??{}),...clone(q.fields)},pending:true};
       if(i<0) entities.push(next); else entities[i]=next;
     }
-    const status=this.phase==='conflict'?'다른 창의 수정과 겹쳤어.':this.phase==='invalid'?'수정할 값을 확인해줘.':this.phase==='error'?'저장을 다시 시도할게.':this.busy?'저장 중…':this.queue.length?'변경 사항 저장 대기 중…':this.phase==='loading'?'제작 데이터 불러오는 중…':'자동 저장됨';
-    const head=this.queue[0],writeState=head?{entityType:head.type,entityId:head.id,operation:head.operation,phase:this.phase,rejected:head.rejected===true,uncertain:this.phase==='error'&&Boolean(head.body)}:null;
+    const status=this.phase==='conflict'?'현재 DB와 저장 대기분을 확인해 주세요.':this.phase==='invalid'?'수정할 값을 확인해줘.':this.phase==='error'?'저장을 다시 시도할게.':this.busy?'저장 중…':this.queue.length?'변경 사항 저장 대기 중…':this.phase==='loading'?'제작 데이터 불러오는 중…':'자동 저장됨';
+    const head=this.queue[0],writeState=head?{entityType:head.type,entityId:head.id,operation:head.operation,phase:this.phase,rejected:head.rejected===true,uncertain:this.phase==='error'&&Boolean(head.body),...(this.phase==='conflict'&&this.conflictInfo?{conflict:clone(this.conflictInfo)}:{})}:null;
     return {bootstrap:clone(this.bootstrap),entities,gamePayload:clone(this.bootstrap?.gamePayload??null),phase:this.phase,status,error:this.error,writeState,user:this.user?{id:this.user.id,email:this.user.email}:null,canEdit:!!this.user&&this.bootstrap?.permissions?.can_edit===true,pending:this.queue.length};
   }
   emit() { const snap=this.snapshot(); for(const fn of this.listeners) fn(snap); }
@@ -165,7 +170,7 @@ export class AuthoringStore039 {
   async acceptSession(session) {
     const id=session?.user?.id??null;
     if(this.started&&id===(this.user?.id??null)) return;
-    this.started=true; this.persist(); this.generation++; const generation=this.generation; clearTimeout(this.idleTimer); this.pendingRevision=null; this.retryRequestId=null; this.retryNotBefore=0; this.user=session?.user??null; this.queue=[]; this.bootstrap=null; this.fetchedRevision=null; this.phase='loading'; this.error=null; this.emit();
+    this.started=true; this.persist(); this.generation++; const generation=this.generation; clearTimeout(this.idleTimer); this.pendingRevision=null; this.retryRequestId=null; this.retryNotBefore=0; this.conflictInfo=null; this.user=session?.user??null; this.queue=[]; this.bootstrap=null; this.fetchedRevision=null; this.phase='loading'; this.error=null; this.emit();
     try { await this.refresh(true); if(generation!==this.generation)return; if(this.snapshot().canEdit) { this.restore(); await this.archiveLegacy(); if(generation===this.generation&&this.queue.length) this.schedule(0); } }
     catch(e) { if(generation===this.generation){this.setError(e);throw e;} }
   }
@@ -238,11 +243,22 @@ export class AuthoringStore039 {
       const result=await this.client.rpc('poc_apply_intent039',{p_intent:clone(q.body)});
       if(generation!==this.generation) return;
       if(result.error) {
-        if(/unified039_conflict/.test(result.error.message??'')) {
+        if(result.error.code==='P0001'&&/^unified039_conflict(?:$|\b)/.test(result.error.message??'')) {
           await this.refresh(true); const row=this.getRow(q.type,q.id);
-          const compatible=q.operation==='create'?!row:q.operation==='delete'?row?.version===q.baseVersion:row&&Object.keys(q.fields).every(f=>equal(row.content[f],q.baseContent[f]));
-          if(compatible) { q.baseVersion=row?.version??0; q.baseContent=clone(row?.content??{}); delete q.body; delete q.requestId; this.phase='pending'; this.persist(); }
-          else { this.phase='conflict'; this.error='같은 항목이 다른 창에서 수정되었어. 저장 대기분을 보존했어.'; this.persist(); }
+          const fields=Object.keys(q.fields),alreadyCurrent=q.operation==='patch'?row&&fields.every(f=>equal(row.content[f],q.fields[f])):q.operation==='delete'&&!row;
+          if(alreadyCurrent){
+            this.queue.shift();
+            // A copied/restored predecessor may already be current. Advance
+            // only its own field baselines; retain the old version so later
+            // edits still check unrelated changes against their own baseline.
+            if(q.operation==='patch')for(const waiting of this.queue)if(waiting.type===q.type&&waiting.id===q.id&&!waiting.body&&waiting.baseVersion===q.baseVersion)for(const field of fields)waiting.baseContent[field]=clone(row.content[field]);
+            const outcome={kind:'already-current',alreadyCurrent:true,entityType:q.type,entityId:q.id,observedProjectRevision:this.bootstrap.project_revision,entity:row?clone(row):null};
+            for(const resolve of Array.isArray(q.resolve)?q.resolve:[])resolve(outcome);
+            this.phase=this.queue.length?'pending':'ready';this.error=null;this.failures=0;this.retryRequestId=null;this.retryNotBefore=0;this.conflictInfo=null;this.persist();return;
+          }
+          const compatible=q.operation==='create'?!row:q.operation==='delete'?row?.version===q.baseVersion:row&&fields.every(f=>equal(row.content[f],q.baseContent[f])||equal(row.content[f],q.fields[f]));
+          if(compatible) { q.baseVersion=row?.version??0; q.baseContent=clone(row?.content??{}); delete q.body; delete q.requestId; this.phase='pending'; this.conflictInfo=null; this.persist(); }
+          else { this.phase='conflict'; this.error='저장 기준과 현재 DB의 같은 항목이 달라졌습니다. 저장 대기분은 보관되어 있습니다.'; this.conflictInfo={baselineVersion:q.baseVersion,currentVersion:row?.version??null,currentMissing:!row,fields:fields.map(field=>({field,changedSinceBase:!row||!equal(row.content[field],q.baseContent[field]),alreadyDesired:!!row&&equal(row.content[field],q.fields[field])}))}; this.persist(); }
           return;
         }
         if(/unified039_(validation|invalid|forbidden|unauthorized|editor_required)/.test(result.error.message??'')) {
@@ -264,9 +280,20 @@ export class AuthoringStore039 {
         this.bootstrap.project_revision=ack.applied_revision;
       }
       this.queue.shift();
-      for(const waiting of this.queue) if(waiting.type===q.type&&waiting.id===q.id&&!waiting.body&&waiting.baseVersion===q.baseVersion) { const row=this.getRow(q.type,q.id); waiting.baseVersion=row?.version??0; waiting.baseContent=clone(row?.content??{}); }
+      const acknowledged=ackRows.find(row=>row.entity_type===q.type&&row.entity_id===q.id);
+      for(const waiting of this.queue)if(waiting.type===q.type&&waiting.id===q.id&&!waiting.body){
+        const row=this.getRow(q.type,q.id);
+        if(waiting.baseVersion===q.baseVersion&&(!acknowledged||acknowledged.deleted||row?.version===acknowledged.version)){
+          waiting.baseVersion=row?.version??0;waiting.baseContent=clone(row?.content??{});
+        }else if(acknowledged&&!acknowledged.deleted&&waiting.operation==='patch'&&waiting.baseVersion<=acknowledged.version){
+          // A predecessor may have rebased after this edit was queued, or a
+          // later snapshot may already contain unrelated changes. Carry only
+          // our committed fields forward and let CAS check the other fields.
+          for(const field of Object.keys(q.fields))waiting.baseContent[field]=clone(acknowledged.content[field]);
+        }
+      }
       for(const resolve of Array.isArray(q.resolve)?q.resolve:[]) resolve(ack);
-      this.phase=this.queue.length?'pending':'ready'; this.error=null; this.failures=0; this.retryRequestId=null; this.retryNotBefore=0; this.persist();
+      this.phase=this.queue.length?'pending':'ready'; this.error=null; this.failures=0; this.retryRequestId=null; this.retryNotBefore=0; this.conflictInfo=null; this.persist();
     } catch(e) { if(generation===this.generation) { this.failures++; if(q.body){this.retryRequestId=q.requestId;this.retryNotBefore=Date.now()+Math.min(30000,1000*2**Math.min(this.failures,5));} this.setError(e); } }
     finally {
       this.busy=false; this.emit();
@@ -279,7 +306,7 @@ export class AuthoringStore039 {
     need(this.phase==='conflict'&&this.queue.length,'충돌한 수정이 없어.'); const q=this.queue[0];
     if(choice==='remote') { this.queue.shift(); for(const resolve of Array.isArray(q.resolve)?q.resolve:[]) resolve({discarded:true}); }
     else { need(choice==='retry','충돌 처리 방법을 확인해줘.'); const row=this.getRow(q.type,q.id); q.baseVersion=row?.version??0; q.baseContent=clone(row?.content??{}); delete q.body; delete q.requestId; }
-    this.phase=this.queue.length?'pending':'ready'; this.error=null; this.persist(); this.emit(); this.schedule(0);
+    this.phase=this.queue.length?'pending':'ready'; this.error=null; this.conflictInfo=null; this.persist(); this.emit(); this.schedule(0);
   }
   async archiveLegacy() {
     for(const source_key of LEGACY_CREATION_KEYS039) {

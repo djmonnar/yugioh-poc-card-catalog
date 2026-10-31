@@ -14,9 +14,9 @@ function remote({rows=[row()],canEdit=true}={}){
   if(name==='poc_bootstrap039'){const data=wire(state.rows,state.revision);data.permissions.can_edit=state.canEdit;return {data};}
   if(state.once){const once=state.once;state.once=null;return once(name,args);}
   const body=args.p_intent;if(state.requests.has(body.request_id))return {data:{...clone(state.requests.get(body.request_id)),replayed:true}};
-  if(body.expected_project_revision!==state.revision)return {error:{message:'unified039_conflict'}};
+  if(body.expected_project_revision!==state.revision)return {error:{code:'P0001',message:'unified039_conflict'}};
   const change=body.changes[0],i=state.rows.findIndex(r=>r.entity_type===change.entity_type&&r.entity_id===change.entity_id),old=state.rows[i];
-  if((old?.version??0)!==change.expected_entity_version)return {error:{message:'unified039_conflict'}};
+  if((old?.version??0)!==change.expected_entity_version)return {error:{code:'P0001',message:'unified039_conflict'}};
   const next={entity_type:change.entity_type,entity_id:change.entity_id,version:(old?.version??0)+1,content:{...(old?.content??{}),...clone(change.fields)},state:'draft',issues:[]};
   if(change.operation==='delete'){state.rows.splice(i,1);next.deleted=true;}else if(i<0)state.rows.push(next);else state.rows[i]=next;
   state.revision++;const ack={schema:1,kind:'unified039-write-ack',request_id:body.request_id,applied_revision:state.revision,observed_project_revision:state.revision,replayed:false,entities:[clone(next)],game_revision:state.revision,game_source_fingerprint:'0'.repeat(64),state:'saved'};state.requests.set(body.request_id,ack);return {data:clone(ack)};

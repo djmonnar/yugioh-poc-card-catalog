@@ -337,3 +337,30 @@
 .au-member-order-live057{margin:8px 0 0;color:var(--au-cyan);font-size:12px;line-height:1.6}
 .au-member-order-live057:empty{display:none}
 @media(max-width:700px){.au-member-order-list057{max-height:320px}.au-member-order-row057{grid-template-columns:44px 18px minmax(0,1fr) 44px 44px;gap:4px;padding:6px 0}.au-member-order-label057{font-size:13px}}
+
+/* 060: explicit saving stays reachable while editing long forms. */
+.au-app.au-manual-mode060 .au-main{padding-bottom:180px}
+.au-manual-save060{position:fixed;inset-inline-end:24px;bottom:max(16px,env(safe-area-inset-bottom));z-index:35;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 18px;align-items:center;width:min(680px,calc(100vw - 48px));padding:14px 16px;background:#102438;border:1px solid #6a7e88;border-radius:12px;box-shadow:0 8px 26px #0006}
+.au-manual-message060{margin:0;min-width:0;font-size:14px;color:var(--au-text);line-height:1.65;overflow-wrap:anywhere}
+.au-manual-actions060{display:flex;gap:8px;flex-wrap:wrap}
+.au-manual-actions060>button{min-height:46px;white-space:normal;font-size:14px}
+.au-manual-conflicts060{grid-column:1/-1;max-height:200px;overflow:auto}
+.au-manual-conflicts060:empty{display:none}
+.au-manual-conflict060{padding:10px 0;border-top:1px solid var(--au-line)}
+.au-manual-conflict060 p{margin:0 0 8px;font-size:14px;line-height:1.6}
+.au-manual-conflict060 button{margin:0 8px 4px 0;font-size:14px}
+.au-write-subject060{color:var(--au-gold);font-weight:700}
+.au-card-save060{position:sticky;bottom:-20px;display:flex;align-items:center;justify-content:space-between;gap:12px;margin:24px -4px -4px;padding:14px 4px;background:#0b2132;border-top:1px solid var(--au-line)}
+.au-card-save060>span{color:var(--au-muted);font-size:14px;line-height:1.6}
+.au-card-save060>button{flex:none;min-height:46px;white-space:nowrap}
+.au-card-save060{flex-wrap:wrap}
+.au-card-save-choices060{display:flex;flex-wrap:wrap;gap:8px;flex-basis:100%}
+.au-app.au-manual-mode060 .au-toast{bottom:130px}
+@media(max-width:700px){
+ .au-manual-save060{inset-inline:0;bottom:0;width:100%;grid-template-columns:1fr;padding:10px max(14px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left));gap:8px;border-inline:0;border-bottom:0;border-radius:0;box-shadow:0 -6px 22px #0004}
+ .au-manual-actions060{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:10px}
+ .au-manual-actions060>button{width:100%;font-size:15px}
+ .au-manual-conflicts060{max-height:160px}
+ .au-card-save060{bottom:-15px;align-items:stretch;flex-direction:column;gap:8px;margin-inline:0;padding:12px 0}
+ .au-card-save060>button{width:100%;font-size:16px}
+}

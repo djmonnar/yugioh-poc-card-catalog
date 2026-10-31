@@ -113,7 +113,7 @@ async function storeFixture(t,{canEdit=true,rows=[groupRow()],legacyRows=[]}={})
   if(remote.once){const once=remote.once;remote.once=null;return once(name,args);}
   const intent=args.p_intent;if(remote.requests.has(intent.request_id))return {data:{...clone(remote.requests.get(intent.request_id)),replayed:true}};
   const change=intent.changes[0],index=remote.rows.findIndex(row=>row.entity_type===change.entity_type&&row.entity_id===change.entity_id),old=remote.rows[index];
-  if(intent.expected_project_revision!==remote.revision||(old?.version??0)!==change.expected_entity_version)return {error:{message:'unified039_conflict'}};
+  if(intent.expected_project_revision!==remote.revision||(old?.version??0)!==change.expected_entity_version)return {error:{code:'P0001',message:'unified039_conflict'}};
   const next={entity_type:change.entity_type,entity_id:change.entity_id,version:(old?.version??0)+1,state:'saved',issues:[],content:{...(old?.content??{}),...clone(change.fields)}};
   if(index<0)remote.rows.push(next);else remote.rows[index]=next;remote.revision++;
   const ack={schema:1,kind:'unified039-write-ack',request_id:intent.request_id,applied_revision:remote.revision,observed_project_revision:remote.revision,replayed:false,entities:[],category_groups055:{schema:1,groups:[clone(next)]},game_revision:1,game_source_fingerprint:hash(payloadText),state:'saved'};remote.requests.set(intent.request_id,ack);return {data:ack};

@@ -37,7 +37,7 @@ async function setup(t){
   remote.calls.push(clone({name,args}));if(name==='poc_bootstrap039')return {data:wire(remote.order,remote.groups,remote.revision)};
   if(remote.once){const once=remote.once;remote.once=null;return once(args);}
   const intent=args.p_intent;if(remote.requests.has(intent.request_id))return {data:clone(remote.requests.get(intent.request_id))};const c=intent.changes[0],old=c.entity_type==='category_group_order'?remote.order:remote.groups.find(row=>row.entity_id===c.entity_id);
-  if(intent.expected_project_revision!==remote.revision||c.expected_entity_version!==old.version)return {error:{message:'unified039_conflict'}};
+  if(intent.expected_project_revision!==remote.revision||c.expected_entity_version!==old.version)return {error:{code:'P0001',message:'unified039_conflict'}};
   const next={...old,content:{...old.content,...clone(c.fields)},version:++remote.revision};if(c.entity_type==='category_group_order')remote.order=next;else remote.groups[remote.groups.findIndex(row=>row.entity_id===c.entity_id)]=next;
   const ack={schema:1,kind:'unified039-write-ack',request_id:intent.request_id,applied_revision:remote.revision,observed_project_revision:remote.revision,entities:[],category_groups055:{schema:1,groups:c.entity_type==='category_group'?[clone(next)]:[]},category_group_order056:{schema:1,entity:c.entity_type==='category_group_order'?clone(next):null},game_revision:9,game_source_fingerprint:hash(payloadText)};remote.requests.set(intent.request_id,ack);return {data:ack};
  }};
