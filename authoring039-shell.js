@@ -1,9 +1,11 @@
 import {AUTHORING_SECTIONS039,createAuthoringPanels039,normalizeCatalog039} from './authoring039-panels.js?v=20261031-060';
 import {createAuthoringDrafts060} from './authoring060-drafts.js?v=20261031-060';
+import {completeCharacterTraits065} from './authoring065-errors.js?v=20261101-065';
 
 const MANUAL_KINDS060=['card_display','card_setting','card_annotation','card_limit','deck','chapter_role','starter_list','character','relic','event','shop_rules','meta_pack','meta_score'];
 const TYPE_NAMES060={card_display:'카드 정보',card_setting:'카드 등급·보상',card_annotation:'카드 카테고리·관련 카드',card_limit:'카드 제한',category:'카테고리',category_group:'카테고리 묶음',category_group_order:'묶음 순서',deck:'덱',chapter_role:'장별 적 편성',starter_list:'시작 덱',character:'캐릭터',relic:'유물',event:'이벤트',shop_rules:'상점',map_rules:'맵 분포',meta_pack:'카드팩',meta_score:'점수·보상',recovery_archive:'이전 자료'};
 const FIELD_NAMES060={name:'이름',deck_name:'덱 이름',name_english:'영문 이름',description:'설명',rarity:'등급',stock:'상점 판매',draw_enabled:'전투 보상',tags:'카테고리',links:'관련 카드',normal_limit:'일반 제한',speed_limit:'스피드 제한',main:'메인 덱',extra:'엑스트라 덱',banlist_enabled:'카드 제한 적용',entries:'편성',skills:'특성',profile:'프로필',lp_bonus:'추가 LP',opening_draw_bonus:'시작 패',categories:'포함 카테고리',group_ids:'묶음 순서'};
+Object.assign(FIELD_NAMES060,{portrait:'캐릭터 이미지',skill_profiles:'특성 묶음',shared_character_id:'공용 특성 연결',shared_skill_profile_id:'공용 특성 묶음'});
 export function writeSubject060(snapshot,{type,id,fields=[]}={}){
   const row=(snapshot.entities??[]).find(e=>e.entity_type===type&&e.entity_id===id),content=row?.content;
   const card=type?.startsWith('card_')?normalizeCatalog039(snapshot).find(c=>String(c.source_id)===String(id)):null;
@@ -42,10 +44,29 @@ export function mountAuthoringShell039({root,store,uploadAsset=null,manualSave=f
     const keys=scope.keys??(scope.id!=null?drafts060.summary().items.filter(item=>item.id===String(scope.id)&&(!scope.types||scope.types.includes(item.type))).map(item=>({type:item.type,id:item.id})):null);
     return drafts060.saveAll({keys});
   }
+  function openWrite065(head=state.writeState){
+    if(!head)return;
+    const type=head.entityType,id=head.entityId,fields=head.validation?.fields??head.fields??[],section=type.startsWith('card_')?'cards':({deck:'decks',chapter_role:'chapters',starter_list:'starters',character:'characters',relic:'relics',event:'events',shop_rules:'shop',map_rules:'map',meta_pack:'packs',meta_score:'balance',category:'cards',category_group:'cards',category_group_order:'cards'})[type];
+    if(!section)return;
+    panels.selectEntity065(section,id);navigate(section,type==='deck'?id:null);
+    if(type.startsWith('card_')){const card=normalizeCatalog039(state).find(card=>String(card.source_id)===String(id));if(card)panels.openCard(card);}
+    panels.revealFields065(type,id,fields);
+  }
+  function recoverWrite065(){
+    const record=store.getRejected065();
+    if(record.type==='character'){
+      const row=state.entities?.find(row=>row.entity_type===record.type&&row.entity_id===record.id);
+      record.fields=completeCharacterTraits065(row?.content??record.baseContent,record.fields);
+    }
+    // Persist the recoverable input before releasing a certified non-write.
+    drafts060.recoverRejected065(record);store.releaseRejected065({type:record.type,id:record.id});
+    openWrite065({entityType:record.type,entityId:record.id,fields:Object.keys(record.fields)});
+  }
   function renderDraftBar060(){
     if(!drafts060)return;const summary=drafts060.summary();saveBar060.hidden=!state.canEdit;
-    saveAll060.textContent=summary.saving?'저장 확인 중…':'변경 사항 저장';saveAll060.disabled=!state.canEdit||summary.saving||!summary.dirtyCount||Boolean(summary.blockedReason);cancelAll060.disabled=summary.saving||Boolean(summary.submittedCount)||!summary.dirtyCount;saveBar060.setAttribute('aria-busy',String(summary.saving));
-    draftMessage060.textContent=summary.storageError||summary.error||(summary.saving?'보낸 내용을 확인하고 있습니다.':summary.blockedReason||(summary.dirtyCount?`저장 전 변경 ${summary.dirtyCount}개 · 저장 버튼을 눌러 반영하세요.`:'저장할 변경이 없습니다.'));
+    const rejected=state.phase==='invalid'&&state.writeState?.rejected===true;
+    saveAll060.textContent=summary.saving&&!rejected?'저장 확인 중…':'변경 사항 저장';saveAll060.disabled=!state.canEdit||summary.saving||!summary.dirtyCount||Boolean(summary.blockedReason);cancelAll060.disabled=summary.saving||Boolean(summary.submittedCount)||!summary.dirtyCount;saveBar060.setAttribute('aria-busy',String(summary.saving&&!rejected));
+    draftMessage060.textContent=summary.storageError||(rejected?'저장이 거절됐습니다. 상단 안내에서 항목을 열거나 초안으로 돌려 수정해 주세요.':summary.error||(summary.saving?'보낸 내용을 확인하고 있습니다.':summary.blockedReason||(summary.dirtyCount?`저장 전 변경 ${summary.dirtyCount}개 · 저장 버튼을 눌러 반영하세요.`:'저장할 변경이 없습니다.')));
     draftConflicts060.replaceChildren();for(const item of summary.items.filter(item=>item.conflicts?.length)){
       const subject=writeSubject060(state,{type:item.type,id:item.id,fields:item.conflicts}),line=el('div',null,'au-manual-conflict060');line.append(el('p',`${subject.title} · ${subject.fields}의 DB 내용이 달라졌습니다.`),button('내 수정 유지',()=>drafts060.resolveConflicts({keys:[{type:item.type,id:item.id}],choice:'local'})),button('DB 내용 사용',()=>drafts060.resolveConflicts({keys:[{type:item.type,id:item.id}],choice:'remote'})));draftConflicts060.append(line);
     }
@@ -56,7 +77,7 @@ export function mountAuthoringShell039({root,store,uploadAsset=null,manualSave=f
   const panels=createAuthoringPanels039({document:doc,onRetryWrite:()=>store.retry(),onSaveDrafts060:manualSave?saveDrafts060:null,onResolveDrafts060:manualSave?(scope,choice)=>drafts060.resolveConflicts({keys:drafts060.summary().items.filter(item=>item.id===String(scope.id)&&(!scope.types||scope.types.includes(item.type))).map(item=>({type:item.type,id:item.id})),choice}):null,onChange:change060,onNavigate:navigate,onError:notify,onEditingChange:editing=>shell.classList.toggle('au-editing',editing),onUpload:uploadAsset??(store.uploadAsset?file=>store.uploadAsset(file):null),onRecoveryRead:async id=>{const row=await store.readRecovery(id),url=win.URL.createObjectURL(new Blob([row.raw_json],{type:'application/json;charset=utf-8'})),link=el('a');link.href=url;link.download=`이전자료_${row.source_key.replace(/[^A-Za-z0-9_-]/g,'_')}.json`;link.click();win.setTimeout(()=>win.URL.revokeObjectURL(url),10000);}});
   for(const [key,label] of AUTHORING_SECTIONS039){const b=button(label,()=>navigate(key));b.dataset.section=key;nav.append(b);}
   function render(snapshot){latestSnapshot060=snapshot;if(drafts060){drafts060.observe(snapshot);state={...drafts060.overlay(snapshot),manualSave060:true,manualDrafts060:drafts060.summary()};}else state=snapshot;saveStatus.textContent=saveLabel039(state);saveStatus.dataset.state=state.error?'error':state.pending?'saving':state.manualDrafts060?.dirtyCount?'draft':'saved';authButton.textContent=state.user?'로그아웃':'로그인';authButton.title=state.user?.email??'편집 계정으로 로그인';notice.replaceChildren();notice.hidden=true;renderDraftBar060();
-    if(state.error){notice.hidden=false;notice.append(el('strong',state.phase==='conflict'?'DB 내용과 저장 대기분이 다릅니다.':state.phase==='invalid'?'입력한 값을 확인해 주세요.':'DB에 저장하지 못했습니다.'));const head=state.writeState;if(head){const subject=writeSubject060(state,{type:head.entityType,id:head.entityId,fields:head.conflict?.fields?.filter(f=>f.changedSinceBase&&!f.alreadyDesired).map(f=>f.field)??[]});notice.append(el('p',subject.title+(subject.fields?` · ${subject.fields}`:''),'au-write-subject060'));}notice.append(el('p',state.error.message??state.error),...(state.phase==='invalid'||state.phase==='conflict'?[]:[button('다시 연결',()=>store.retry())]));if(state.phase==='conflict'&&store.resolveConflict){notice.append(button('DB 내용 사용',()=>store.resolveConflict('remote')),button('내 수정 적용',()=>store.resolveConflict('retry')));}}
+    if(state.error){notice.hidden=false;notice.append(el('strong',state.phase==='conflict'?'DB 내용과 저장 대기분이 다릅니다.':state.phase==='invalid'?'변경 내용을 저장하지 못했습니다.':'DB에 저장하지 못했습니다.'));const head=state.writeState;if(head){const subject=writeSubject060(state,{type:head.entityType,id:head.entityId,fields:head.validation?.fields??head.conflict?.fields?.filter(f=>f.changedSinceBase&&!f.alreadyDesired).map(f=>f.field)??head.fields??[]});notice.append(el('p',subject.title+(subject.fields?` · ${subject.fields}`:''),'au-write-subject060'));}notice.append(el('p',head?.validation?.message??state.error.message??state.error),...(state.phase==='invalid'||state.phase==='conflict'?[]:[button('다시 연결',()=>store.retry())]));if(state.phase==='invalid'&&head){notice.append(button('수정할 항목 열기',()=>openWrite065(head)));if(drafts060&&manualSet060.has(head.entityType)&&head.rejected&&['patch','create'].includes(head.operation)&&store.getRejected065&&store.releaseRejected065)notice.append(button('초안으로 돌려 수정',recoverWrite065,'au-primary'));}if(state.phase==='conflict'&&store.resolveConflict){notice.append(button('DB 내용 사용',()=>store.resolveConflict('remote')),button('내 수정 적용',()=>store.resolveConflict('retry')));}}
     for(const b of nav.children){b.classList.toggle('active',b.dataset.section===route.section);b.setAttribute('aria-current',b.dataset.section===route.section?'page':'false');}
     if(!state.bootstrap){content.replaceChildren(el('section','카드와 원정 제작 자료를 DB에서 불러오고 있습니다.','au-loading'));content.setAttribute('aria-busy','true');return;}
     content.setAttribute('aria-busy','false');if(!state.canEdit){notice.hidden=false;notice.append(el('p','저장된 자료를 보고 있습니다. 편집하려면 로그인해 주세요.'));}

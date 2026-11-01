@@ -1,6 +1,7 @@
 // One database snapshot and one serial, idempotent authoring queue.
 // Local storage holds only unfinished writes/recovery receipts, never a second catalog.
 import {parseMapRules052,parseMapPatch052} from './authoring052-map.js?v=20261030-052';
+import {rejectionReason065,validationInfo065} from './authoring065-errors.js?v=20261101-065';
 export const PROJECT039 = 'ygoclassic-expedition';
 export const IDENTITY039 = Object.freeze({base_catalog_sha256:'b73dd51c78aeab8c9beebf936b46e4cac16040e70df3a7980dec38c40db21e09',catalog035_sha256:'b5f1e9749cec0c1497c5fdcbfb2dc9c64895dcd859f083ec0ec4014580f05308',native_manifest_sha256:'4674de031c9e3044c86b90fcd402d9533d9353347802f268863746bf3bd7e4d7'});
 export const LEGACY_CREATION_KEYS039 = Object.freeze([
@@ -36,7 +37,7 @@ function explain(error) {
   if(/unified039_duplicate_deck/.test(message+' '+String(error?.details??'')))return '같은 카드 구성의 덱이 이미 있습니다. 기존 덱을 선택해 주세요.';
   if(/unified039_encounter_settings_belong_to_chapter/.test(message+' '+String(error?.details??'')))return '상대 LP와 특성은 장별 적 편성에서 수정해 주세요. 화면을 새로고침하면 새 편집기를 사용할 수 있습니다.';
   if(/unified039_editor_required/.test(message))return '편집 권한을 확인하지 못했어. 편집 계정으로 다시 로그인해줘.';
-  if(/unified039_(validation|invalid)/.test(message))return '입력값을 저장할 수 없어. 카드 매수와 항목의 허용 범위를 확인해줘.';
+  if(/unified039_(validation|invalid)/.test(message))return validationInfo065(rejectionReason065(error)).message;
   return message;
 }
 function safe(value,depth=0) {
@@ -134,7 +135,7 @@ export class AuthoringStore039 {
       if(i<0) entities.push(next); else entities[i]=next;
     }
     const status=this.phase==='conflict'?'현재 DB와 저장 대기분을 확인해 주세요.':this.phase==='invalid'?'수정할 값을 확인해줘.':this.phase==='error'?'저장을 다시 시도할게.':this.busy?'저장 중…':this.queue.length?'변경 사항 저장 대기 중…':this.phase==='loading'?'제작 데이터 불러오는 중…':'자동 저장됨';
-    const head=this.queue[0],writeState=head?{entityType:head.type,entityId:head.id,operation:head.operation,phase:this.phase,rejected:head.rejected===true,uncertain:this.phase==='error'&&Boolean(head.body),...(this.phase==='conflict'&&this.conflictInfo?{conflict:clone(this.conflictInfo)}:{})}:null;
+    const head=this.queue[0],writeState=head?{entityType:head.type,entityId:head.id,operation:head.operation,fields:Object.keys(head.fields),phase:this.phase,rejected:head.rejected===true,uncertain:this.phase==='error'&&Boolean(head.body),...(head.rejected?{validation:validationInfo065(head.rejectionReason,Object.keys(head.fields))}:{}),...(this.phase==='conflict'&&this.conflictInfo?{conflict:clone(this.conflictInfo)}:{})}:null;
     return {bootstrap:clone(this.bootstrap),entities,gamePayload:clone(this.bootstrap?.gamePayload??null),phase:this.phase,status,error:this.error,writeState,user:this.user?{id:this.user.id,email:this.user.email}:null,canEdit:!!this.user&&this.bootstrap?.permissions?.can_edit===true,pending:this.queue.length};
   }
   emit() { const snap=this.snapshot(); for(const fn of this.listeners) fn(snap); }
@@ -156,6 +157,7 @@ export class AuthoringStore039 {
         if(q.body) { need(UUID.test(q.requestId)&&q.body.request_id===q.requestId&&q.body.project_id===PROJECT039&&q.body.schema===1&&integer(q.body.expected_project_revision),'outbox'); const c=q.body.changes; need(c?.length===1&&c[0].entity_type===q.type&&c[0].entity_id===q.id&&c[0].operation===q.operation&&c[0].expected_entity_version===q.baseVersion&&equal(c[0].fields,q.fields),'outbox'); }
       }
       this.queue=data.items.map(q=>({...q,resolve:()=>{}}));
+      if(this.queue[0]?.rejected){this.phase='invalid';this.error=validationInfo065(this.queue[0].rejectionReason,Object.keys(this.queue[0].fields)).message;this.emit();}
     } catch { this.error='이전 저장 대기분을 자동으로 읽지 못했어. 원본은 보존되어 있어.'; }
   }
   async start() {
@@ -216,12 +218,12 @@ export class AuthoringStore039 {
     const row=this.getRow(type,id),tail=this.queue.at(-1),rejected=this.queue.find(q=>q.rejected&&q.type===type&&q.id===id&&q.operation!=='delete');
     need(operation==='create'||row||this.queue.some(q=>q.type===type&&q.id===id&&q.operation==='create'),'수정할 DB 항목을 찾을 수 없어.');
     let q;
-    if(operation==='patch'&&rejected) { q=rejected; q.fields={...q.fields,...clone(fields)}; q.rejected=false; }
+    if(operation==='patch'&&rejected) { q=rejected; q.fields={...q.fields,...clone(fields)}; q.rejected=false; delete q.rejectionReason; }
     else if(operation==='patch'&&tail&&tail.type===type&&tail.id===id&&!tail.body&&tail.operation!=='delete') { q=tail; q.fields={...q.fields,...clone(fields)}; }
     else { q={type,id,operation,fields:clone(fields),baseVersion:row?.version??0,baseContent:clone(row?.content??{}),resolve:[]}; this.queue.push(q); }
     if(!Array.isArray(q.resolve)) q.resolve=[];
     const promise=new Promise(resolve=>q.resolve.push(resolve));
-    this.error=null; if(this.phase!=='conflict') this.phase=this.queue[0]?.rejected?'invalid':'pending'; this.persist(); this.emit(); this.schedule(); return promise;
+    this.error=this.queue[0]?.rejected?validationInfo065(this.queue[0].rejectionReason,Object.keys(this.queue[0].fields)).message:null; if(this.phase!=='conflict') this.phase=this.queue[0]?.rejected?'invalid':'pending'; this.persist(); this.emit(); this.schedule(); return promise;
   }
   schedule(delay=this.debounceMs) { clearTimeout(this.timer); clearTimeout(this.idleTimer); const head=this.queue[0],retryWait=head?.body&&head.requestId===this.retryRequestId?Math.max(0,this.retryNotBefore-Date.now()):0; if(!this.stopped&&!['conflict','invalid'].includes(this.phase)) this.timer=setTimeout(()=>this.drain(),Math.max(delay,retryWait)); this.timer?.unref?.(); }
   scheduleIdleRefresh() {
@@ -263,7 +265,7 @@ export class AuthoringStore039 {
         }
         if(/unified039_(validation|invalid|forbidden|unauthorized|editor_required)/.test(result.error.message??'')) {
           // A typed server rejection certifies no mutation; a timeout does not.
-          delete q.body; delete q.requestId; q.rejected=true; this.phase='invalid'; this.error=explain(result.error); this.persist(); return;
+          delete q.body; delete q.requestId; q.rejected=true; q.rejectionReason=rejectionReason065(result.error); this.phase='invalid'; this.error=validationInfo065(q.rejectionReason,Object.keys(q.fields)).message; this.persist(); return;
         }
         throw result.error;
       }
@@ -301,7 +303,18 @@ export class AuthoringStore039 {
       else this.scheduleIdleRefresh();
     }
   }
-  retry() { if(this.phase==='conflict')return; this.retryNotBefore=0; this.error=null; const generation=this.generation;if(!this.started)return this.start().catch(e=>{if(generation===this.generation)this.setError(e);}); if(!this.bootstrap)return this.refresh(true).catch(e=>{if(generation===this.generation)this.setError(e);}); if(!this.queue.length&&this.pendingRevision!==null)return this.refresh().catch(e=>{if(generation===this.generation)this.setError(e);}); this.phase=this.queue.length?'pending':'ready'; this.schedule(0); this.emit(); }
+  getRejected065(){
+    const q=this.queue[0];
+    need(this.snapshot().canEdit&&this.phase==='invalid'&&!this.busy&&q?.rejected===true&&!q.body&&!q.requestId,'서버가 거절한 요청만 초안으로 돌릴 수 있습니다. 저장 결과를 확인 중인 요청은 유지됩니다.');
+    return clone({type:q.type,id:q.id,fields:q.fields,operation:q.operation,baseVersion:q.baseVersion,baseContent:q.baseContent});
+  }
+  releaseRejected065({type,id}={}){
+    const record=this.getRejected065();need(record.type===type&&record.id===id,'수정할 저장 요청이 바뀌었습니다. 다시 확인해 주세요.');
+    const q=this.queue.shift();for(const resolve of Array.isArray(q.resolve)?q.resolve:[])resolve({discarded:true});
+    this.phase=this.queue[0]?.rejected?'invalid':this.queue.length?'pending':'ready';this.error=this.phase==='invalid'?validationInfo065(this.queue[0].rejectionReason,Object.keys(this.queue[0].fields)).message:null;
+    this.persist();this.emit();this.schedule(0);return record;
+  }
+  retry() { if(this.phase==='conflict'||this.phase==='invalid')return; this.retryNotBefore=0; this.error=null; const generation=this.generation;if(!this.started)return this.start().catch(e=>{if(generation===this.generation)this.setError(e);}); if(!this.bootstrap)return this.refresh(true).catch(e=>{if(generation===this.generation)this.setError(e);}); if(!this.queue.length&&this.pendingRevision!==null)return this.refresh().catch(e=>{if(generation===this.generation)this.setError(e);}); this.phase=this.queue.length?'pending':'ready'; this.schedule(0); this.emit(); }
   resolveConflict(choice) {
     need(this.phase==='conflict'&&this.queue.length,'충돌한 수정이 없어.'); const q=this.queue[0];
     if(choice==='remote') { this.queue.shift(); for(const resolve of Array.isArray(q.resolve)?q.resolve:[]) resolve({discarded:true}); }

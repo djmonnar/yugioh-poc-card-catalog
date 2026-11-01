@@ -122,6 +122,7 @@ export class AuthoringDrafts060 {
   _keys(keys,bank){if(keys==null)return [...bank.records.keys()];need(Array.isArray(keys)||keys instanceof Set,'저장할 초안 범위를 확인해 주세요.');const selected=new Set();for(const value of keys){let key;if(typeof value==='string')key=value;else{need(object(value),'초안 항목을 확인해 주세요.');this._check(value.type??value.kind,value.id);key=this.key(value.type??value.kind,value.id);}if(bank.records.has(key))selected.add(key);}return [...bank.records.keys()].filter(key=>selected.has(key));}
   _blocked(bank=this._bank()){
     if(!this.owner||!this.state?.canEdit)return '편집 계정으로 로그인해 주세요.';
+    if(this.state.phase==='invalid')return '기존 저장 요청이 거절됐습니다. 상단 안내에서 초안으로 돌려 수정해 주세요.';
     if(this.state.pending>0)return '기존 저장 요청이 끝난 뒤 초안을 저장해 주세요. 대기 중인 요청은 그대로 유지됩니다.';
     if(['error','conflict','invalid','loading'].includes(this.state.phase)||this.state.error)return '먼저 기존 저장 오류나 DB 연결을 확인해 주세요.';
     if([...bank.records.values()].some(record=>record.submitted))return '이전 저장 결과를 확인하고 있습니다. 같은 요청의 확인이 끝난 뒤 저장해 주세요.';
@@ -171,6 +172,23 @@ export class AuthoringDrafts060 {
     this._emit(owner);return task.promise;
   }
   saveEntity(type,id){this._check(type,id);return this.saveAll({keys:[this.key(type,id)]});}
+  recoverRejected065(value){
+    const {type,id,operation,baseVersion,baseContent}=value;this._check(type,id);
+    need(this.owner&&this.state?.canEdit&&this.state.phase==='invalid'&&this.state.writeState?.rejected===true&&this.state.writeState.entityType===type&&this.state.writeState.entityId===id,'현재 거절된 요청만 초안으로 돌릴 수 있습니다.');
+    need(typeof this.storage?.getItem==='function'&&typeof this.storage?.setItem==='function','초안 보관소를 사용할 수 없어 기존 저장 요청을 유지합니다. 브라우저 저장 공간을 확인해 주세요.');
+    need(['patch','create'].includes(operation)&&validNumber(baseVersion)&&object(baseContent),'초안으로 돌릴 내용을 확인해 주세요.');safe(baseContent);const fields=this._fields(value.fields),bank=this._bank(),key=this.key(type,id),existing=bank.records.get(key);
+    need(existing||bank.records.size<this.maxItems,'보관할 수 있는 초안 수를 초과했습니다.');
+    const base=clone(baseContent);
+    // Local edits made after submission win. Keep their own CAS baselines.
+    if(existing)for(const field of Object.keys(existing.fields))copyField(base,field,existing.baseContent);
+    const record={type,id,operation,baseVersion,baseContent:base,fields:{...fields,...clone(existing?.fields??{})},submitted:null,history:[]};
+    bank.records.set(key,record);bank.error=null;this._persist();
+    if(this.storage&&(bank.storageBlocked||bank.storageError)){
+      if(existing)bank.records.set(key,existing);else bank.records.delete(key);
+      this._emit();throw Error('초안을 이 기기에 보관하지 못해 기존 저장 요청을 유지합니다. 저장 공간을 확인한 뒤 다시 시도해 주세요.');
+    }
+    this._emit();return {recovered:true,key};
+  }
   cancel({keys=null}={}){
     const bank=this._bank();if(!bank)return {cancelled:0};const selected=this._keys(keys,bank);need(!selected.some(key=>bank.records.get(key)?.submitted),'전송한 저장 요청은 여기서 취소할 수 없습니다. 저장 결과를 먼저 확인해 주세요.');for(const key of selected)bank.records.delete(key);bank.error=null;this._persist();this._emit();return {cancelled:selected.length};
   }

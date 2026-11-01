@@ -364,3 +364,5 @@
  .au-card-save060{bottom:-15px;align-items:stretch;flex-direction:column;gap:8px;margin-inline:0;padding:12px 0}
  .au-card-save060>button{width:100%;font-size:16px}
 }
+.au-error-target065{outline:2px solid var(--au-error);outline-offset:5px;scroll-margin-block:180px}
+.au-notice button{white-space:normal;overflow-wrap:anywhere;max-width:100%}
