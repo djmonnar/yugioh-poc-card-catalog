@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.19",
-  "versionCode": 38,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.19/YGOClassicExpedition-0.18.19-arm64.apk",
-  "sizeBytes": 264871386,
-  "sha256": "05352db5fc72afb776b12e52dc436b7f01fe893e91a6babd23fb039cbf616cb4",
-  "releaseNotes": "첫 화면을 게임 시작·메뉴로 정리했습니다. 도감·설정과 세부 기능은 메뉴 안에서 열 수 있습니다."
+  "versionName": "0.18.21",
+  "versionCode": 40,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.21/YGOClassicExpedition-0.18.21-arm64.apk",
+  "sizeBytes": 264907182,
+  "sha256": "732f3c33733c38c724e99bd80d3b26931c5ad42160e029fb9fd607d0053ade2e",
+  "releaseNotes": "웹에서 저장한 도감·공용 덱을 게임에 연결했습니다. 연습 시작 전 최신 덱 확인, 개인 사본 편집, 시작 덱 출처 표시와 AI 공격 순서 개선을 포함합니다."
 }
