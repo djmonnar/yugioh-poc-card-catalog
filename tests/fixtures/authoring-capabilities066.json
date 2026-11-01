@@ -1,0 +1,1925 @@
+{
+  "form": {
+    "kind": "unified039-content-form",
+    "events": [
+      {
+        "id": "healing_pool",
+        "name": "수호자의 샘",
+        "bounds": {
+          "gold": {
+            "max": 2000000000,
+            "min": 0
+          },
+          "heal": {
+            "max": 60000,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "life_inscription",
+        "name": "생명의 비문",
+        "bounds": {
+          "lp": {
+            "max": 60000,
+            "min": 1
+          },
+          "max_lp": {
+            "max": 60000,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "golden_idol",
+        "name": "황금 우상의 계약",
+        "bounds": {
+          "lp": {
+            "max": 60000,
+            "min": 1
+          },
+          "gold": {
+            "max": 2000000000,
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": "mirror_exchange",
+        "name": "가능성의 거울",
+        "bounds": {}
+      },
+      {
+        "id": "card_reforge",
+        "name": "봉인된 연성로",
+        "bounds": {
+          "gold": {
+            "max": 2000000000,
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": "relic_bargain",
+        "name": "잊힌 유물의 수집가",
+        "bounds": {
+          "lp": {
+            "max": 60000,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "card_duplication",
+        "name": "복제의 거울",
+        "bounds": {
+          "count": {
+            "max": 10,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "race_blessing",
+        "name": "종족의 수호 문장",
+        "bounds": {
+          "multiplier": {
+            "max": 100,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "challenge_duel",
+        "name": "선택받은 자의 결투",
+        "bounds": {
+          "choices": {
+            "max": 10,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "relic_recovery",
+        "name": "잊힌 제단의 공양",
+        "bounds": {}
+      },
+      {
+        "id": "twin_sacrifice",
+        "name": "쌍둥이 카드의 제단",
+        "bounds": {
+          "remove_count": {
+            "max": 2,
+            "min": 2
+          },
+          "reward_count": {
+            "max": 5,
+            "min": 5
+          }
+        }
+      },
+      {
+        "id": "relic_choice",
+        "name": "유물의 선택",
+        "bounds": {
+          "r_gold": {
+            "max": 2000000000,
+            "min": 0
+          },
+          "sr_gold": {
+            "max": 2000000000,
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": "card_choice",
+        "name": "카드의 선택",
+        "bounds": {
+          "choices": {
+            "max": 10,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "evolution",
+        "name": "진화",
+        "bounds": {
+          "levels": {
+            "max": 1,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "mana_furnace",
+        "name": "마나 용광로",
+        "bounds": {
+          "gold": {
+            "max": 2000000000,
+            "min": 0
+          },
+          "choices": {
+            "max": 10,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "deck_transform",
+        "name": "덱 변환",
+        "bounds": {
+          "count": {
+            "max": 3,
+            "min": 3
+          },
+          "remove_count": {
+            "max": 2,
+            "min": 2
+          }
+        }
+      },
+      {
+        "id": "card_enhancement",
+        "name": "카드 강화",
+        "bounds": {
+          "amount": {
+            "max": 9999,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "card_sealing",
+        "name": "카드 봉인",
+        "bounds": {
+          "atk": {
+            "max": 9999,
+            "min": 0
+          },
+          "def": {
+            "max": 9999,
+            "min": 0
+          },
+          "battles": {
+            "max": 3,
+            "min": 3
+          }
+        }
+      },
+      {
+        "id": "lost_deck_box",
+        "name": "분실된 덱 박스",
+        "bounds": {
+          "choices": {
+            "max": 10,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "fusion_workshop",
+        "name": "융합술사의 작업실",
+        "bounds": {
+          "count": {
+            "max": 1,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "ritual_altar",
+        "name": "의식의 제단",
+        "bounds": {
+          "count": {
+            "max": 1,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "guardian_trial",
+        "name": "수호자의 시험",
+        "bounds": {
+          "damage_limit": {
+            "max": 0,
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": "spellless_archive",
+        "name": "봉인된 마도서고",
+        "bounds": {
+          "choices": {
+            "max": 10,
+            "min": 1
+          },
+          "spell_limit": {
+            "max": 0,
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": "golden_duel_contract",
+        "name": "황금 결투 계약",
+        "bounds": {
+          "gold": {
+            "max": 2000000000,
+            "min": 0
+          },
+          "enemy_lp": {
+            "max": 60000,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "millennium_scales",
+        "name": "천년의 저울",
+        "bounds": {
+          "choices": {
+            "max": 10,
+            "min": 1
+          },
+          "max_lp_cost": {
+            "max": 60000,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "cursed_treasure",
+        "name": "저주받은 보물상자",
+        "bounds": {
+          "battles": {
+            "max": 100,
+            "min": 1
+          },
+          "opening_penalty": {
+            "max": 3,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "twin_mirror",
+        "name": "쌍둥이의 거울",
+        "bounds": {
+          "count": {
+            "max": 2,
+            "min": 2
+          }
+        }
+      },
+      {
+        "id": "glyph_reengraving",
+        "name": "문양 재각인",
+        "bounds": {
+          "def": {
+            "max": 9999,
+            "min": 1
+          },
+          "atk_cost": {
+            "max": 9999,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "ancient_training",
+        "name": "고대의 훈련장",
+        "bounds": {
+          "atk": {
+            "max": 9999,
+            "min": 1
+          },
+          "battles": {
+            "max": 100,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "suspicious_card_dealer",
+        "name": "수상한 카드 상인",
+        "bounds": {
+          "lp": {
+            "max": 60000,
+            "min": 1
+          },
+          "choices": {
+            "max": 10,
+            "min": 1
+          },
+          "ur_percent": {
+            "max": 100,
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": "inscribed_map",
+        "name": "지도에 새겨진 비문",
+        "bounds": {
+          "floors": {
+            "max": 15,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "relic_appraiser",
+        "name": "유물 감정사",
+        "bounds": {
+          "n_gold": {
+            "max": 2000000000,
+            "min": 0
+          },
+          "r_gold": {
+            "max": 2000000000,
+            "min": 0
+          },
+          "choices": {
+            "max": 10,
+            "min": 1
+          },
+          "sr_gold": {
+            "max": 2000000000,
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": "pharaoh_mission",
+        "name": "파라오의 밀명",
+        "bounds": {
+          "elite_wins": {
+            "max": 15,
+            "min": 1
+          }
+        }
+      }
+    ],
+    "relics": [
+      {
+        "id": "golden_scarab",
+        "name": "황금 풍뎅이",
+        "bounds": {
+          "gold": {
+            "max": 2000000000,
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": "restoring_ankh",
+        "name": "재생의 앙크",
+        "bounds": {
+          "lp": {
+            "max": 60000,
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": "card_slate",
+        "name": "카드의 석판",
+        "bounds": {
+          "extra_choices": {
+            "max": 5,
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": "merchant_seal",
+        "name": "상인의 인장",
+        "bounds": {
+          "discount_percent": {
+            "max": 100,
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": "life_fragment",
+        "name": "생명의 조각",
+        "bounds": {
+          "max_lp": {
+            "max": 60000,
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": "kuriboh_charm",
+        "name": "크리보의 부적",
+        "bounds": {}
+      },
+      {
+        "id": "destiny_draw",
+        "name": "운명의 패",
+        "bounds": {}
+      },
+      {
+        "id": "field_legacy",
+        "name": "태고의 지형",
+        "bounds": {}
+      },
+      {
+        "id": "draw_scroll",
+        "name": "드로우 두루마리",
+        "bounds": {
+          "draw": {
+            "max": 1,
+            "min": 1
+          },
+          "charges": {
+            "max": 10,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "draw_tome",
+        "name": "드로우 마도서",
+        "bounds": {
+          "draw": {
+            "max": 1,
+            "min": 1
+          },
+          "charges": {
+            "max": 10,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "healing_potion",
+        "name": "생명의 물약",
+        "bounds": {
+          "heal": {
+            "max": 60000,
+            "min": 1
+          },
+          "charges": {
+            "max": 10,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "greater_healing_potion",
+        "name": "상급 생명의 물약",
+        "bounds": {
+          "heal": {
+            "max": 60000,
+            "min": 1
+          },
+          "charges": {
+            "max": 10,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "rare_cache",
+        "name": "희귀 카드 보급함",
+        "bounds": {
+          "count": {
+            "max": 10,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "fusion_cache",
+        "name": "융합술사의 보급함",
+        "bounds": {
+          "material_copies": {
+            "max": 3,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "destruction_scroll",
+        "name": "파괴 주문서",
+        "bounds": {
+          "charges": {
+            "max": 10,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "flame_scroll",
+        "name": "화염 주문서",
+        "bounds": {
+          "damage": {
+            "max": 60000,
+            "min": 1
+          },
+          "charges": {
+            "max": 10,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "thorn_armor",
+        "name": "가시 갑옷",
+        "bounds": {
+          "damage": {
+            "max": 60000,
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": "golden_pot",
+        "name": "욕망의 항아리",
+        "bounds": {
+          "gold": {
+            "max": 2000000000,
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": "wise_burial",
+        "name": "현명한 매장",
+        "bounds": {}
+      },
+      {
+        "id": "prepared_trap",
+        "name": "준비된 함정",
+        "bounds": {}
+      },
+      {
+        "id": "prepared_spell",
+        "name": "준비된 마법",
+        "bounds": {}
+      },
+      {
+        "id": "prepared_monster",
+        "name": "준비된 괴수",
+        "bounds": {}
+      },
+      {
+        "id": "weak_power",
+        "name": "약자의 힘",
+        "bounds": {
+          "atk": {
+            "max": 9999,
+            "min": 0
+          },
+          "max_level": {
+            "max": 12,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "forge_attack",
+        "name": "카드 제련 (공격)",
+        "bounds": {
+          "atk": {
+            "max": 9999,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "forge_defense",
+        "name": "카드 제련 (수비)",
+        "bounds": {
+          "def": {
+            "max": 9999,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "dreamcatcher",
+        "name": "드림캐쳐",
+        "bounds": {
+          "choices": {
+            "max": 10,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "reload",
+        "name": "리로드",
+        "bounds": {
+          "count": {
+            "max": 1,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "tactics_manual",
+        "name": "병법서",
+        "bounds": {
+          "draw": {
+            "max": 1,
+            "min": 1
+          },
+          "threshold": {
+            "max": 1000,
+            "min": 2
+          }
+        }
+      },
+      {
+        "id": "lizard_tail",
+        "name": "도마뱀 꼬리",
+        "bounds": {
+          "charges": {
+            "max": 10,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "mystery_card",
+        "name": "물음표 카드",
+        "bounds": {
+          "count": {
+            "max": 1,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "lamb_charm",
+        "name": "어린 양",
+        "bounds": {
+          "count": {
+            "max": 1,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "white_dragon_eye",
+        "name": "백룡의 눈",
+        "bounds": {
+          "level": {
+            "max": 8,
+            "min": 8
+          },
+          "tributes": {
+            "max": 1,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "red_dragon_eye",
+        "name": "흑룡의 눈",
+        "bounds": {
+          "atk": {
+            "max": 9999,
+            "min": 0
+          },
+          "level": {
+            "max": 7,
+            "min": 7
+          }
+        }
+      },
+      {
+        "id": "magician_grimoire",
+        "name": "매지션의 마도서",
+        "bounds": {}
+      },
+      {
+        "id": "moon_book",
+        "name": "달의 서",
+        "bounds": {
+          "uses_per_battle": {
+            "max": 1,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "blood_book",
+        "name": "흡혈의 서",
+        "bounds": {}
+      },
+      {
+        "id": "bone",
+        "name": "말뼈",
+        "bounds": {
+          "max_lp": {
+            "max": 60000,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "gilded_card_case",
+        "name": "금박 카드 케이스",
+        "bounds": {
+          "skip_gold": {
+            "max": 2000000000,
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": "wanderer_coin",
+        "name": "방랑자의 주화",
+        "bounds": {
+          "free_refreshes": {
+            "max": 10,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "collector_seal",
+        "name": "수집가의 인장",
+        "bounds": {
+          "rerolls_per_reward": {
+            "max": 10,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "graveking_ledger",
+        "name": "도굴왕의 장부",
+        "bounds": {
+          "gold": {
+            "max": 2000000000,
+            "min": 0
+          },
+          "purchases": {
+            "max": 1000,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "seal_key",
+        "name": "봉인의 열쇠",
+        "bounds": {
+          "waivers_per_chapter": {
+            "max": 10,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "desert_canteen",
+        "name": "사막의 물통",
+        "bounds": {
+          "heal_bonus": {
+            "max": 60000,
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": "kings_collection",
+        "name": "왕의 수집함",
+        "bounds": {
+          "opening_draw": {
+            "max": 2,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "spirit_compass",
+        "name": "정령의 나침반",
+        "bounds": {
+          "multiplier": {
+            "max": 100,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "grave_candle",
+        "name": "묘지의 촛불",
+        "bounds": {
+          "max_heal": {
+            "max": 60000,
+            "min": 0
+          },
+          "heal_per_monster": {
+            "max": 60000,
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": "tribute_altar",
+        "name": "제물의 제단",
+        "bounds": {
+          "draw": {
+            "max": 3,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "reverse_mirror",
+        "name": "리버스의 거울",
+        "bounds": {
+          "heal": {
+            "max": 60000,
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": "trap_hunter",
+        "name": "함정 사냥꾼의 문장",
+        "bounds": {
+          "draw": {
+            "max": 3,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "mana_accumulator",
+        "name": "마력 축전석",
+        "bounds": {
+          "draw": {
+            "max": 3,
+            "min": 1
+          },
+          "threshold": {
+            "max": 1000,
+            "min": 2
+          }
+        }
+      },
+      {
+        "id": "ritual_incense",
+        "name": "의식의 향로",
+        "bounds": {
+          "draw": {
+            "max": 3,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "fusion_echo",
+        "name": "융합의 잔향",
+        "bounds": {
+          "count": {
+            "max": 3,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "dimensional_shard",
+        "name": "차원의 파편",
+        "bounds": {
+          "draw": {
+            "max": 3,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "guardian_statue",
+        "name": "수호자의 석상",
+        "bounds": {
+          "heal": {
+            "max": 60000,
+            "min": 0
+          }
+        }
+      },
+      {
+        "id": "kin_banner",
+        "name": "동족의 깃발",
+        "bounds": {
+          "atk": {
+            "max": 60000,
+            "min": 0
+          },
+          "count": {
+            "max": 3,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "blood_contract",
+        "name": "피의 계약서",
+        "bounds": {
+          "lp": {
+            "max": 60000,
+            "min": 1
+          },
+          "threshold": {
+            "max": 60000,
+            "min": 1
+          },
+          "opening_draw": {
+            "max": 2,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "pharaoh_hourglass",
+        "name": "파라오의 모래시계",
+        "bounds": {
+          "charges": {
+            "max": 1,
+            "min": 1
+          }
+        }
+      },
+      {
+        "id": "excavator_compass",
+        "name": "발굴가의 나침반",
+        "bounds": {}
+      }
+    ],
+    "schema": 1,
+    "constraints": {
+      "price_max": 2000000000,
+      "weight_max": 10000,
+      "blood_contract": "threshold >= lp",
+      "relic_name_max": 100,
+      "description_max": 4000,
+      "field_legacy_sources": [
+        329,
+        330,
+        331,
+        332,
+        333,
+        334
+      ]
+    }
+  },
+  "entities": {
+    "deck": {
+      "id": "stable current rich opponent.id or new editor ID,1..100 chars",
+      "fields": {
+        "main": {
+          "max": 30,
+          "row": {
+            "count": "1..3",
+            "source_id": "nonnegative integer",
+            "identity_key": "sha256"
+          },
+          "type": "card_refs"
+        },
+        "name": {
+          "max": 100,
+          "type": "text"
+        },
+        "extra": {
+          "max": 15,
+          "type": "card_refs"
+        },
+        "skills": {
+          "max": 8,
+          "type": "compiled_skills"
+        },
+        "art_key": {
+          "type": "packaged_character_art_ref"
+        },
+        "lp_bonus": {
+          "max": 8000,
+          "min": 0,
+          "type": "integer",
+          "restriction": "0 or100..8000"
+        },
+        "deck_name": {
+          "max": 100,
+          "type": "text"
+        },
+        "profile_id": {
+          "type": "packaged_character_ref"
+        },
+        "banlist_enabled": {
+          "type": "boolean"
+        },
+        "use_shared_skills": {
+          "type": "boolean"
+        },
+        "opening_draw_bonus": {
+          "max": 3,
+          "min": 0,
+          "type": "integer"
+        },
+        "shared_character_id": {
+          "type": "nullable_shared_character_ref"
+        },
+        "shared_skill_profile_id": {
+          "type": "nullable_shared_profile_ref"
+        }
+      },
+      "unready": "blank names / main0..19 save; game continues last-valid",
+      "operations": [
+        "create",
+        "patch",
+        "delete"
+      ],
+      "shared_merge": "Compiled shared kinds then inline override by kind; positive inline LP/opening override,0 inherits shared. Historical unbound inline unchanged."
+    },
+    "event": {
+      "id": "compiled event ID",
+      "fields": {
+        "name": {
+          "max": 100,
+          "type": "text"
+        },
+        "title": {
+          "max": 100,
+          "min": 1,
+          "type": "text"
+        },
+        "effect": {
+          "max": 1000,
+          "type": "multiline"
+        },
+        "params": {
+          "type": "bounded_parameters",
+          "boundsFile": "../Runtime/Export/content-form039.json"
+        },
+        "weight": {
+          "max": 10000,
+          "min": 0,
+          "type": "integer"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "description": {
+          "max": 4000,
+          "min": 1,
+          "type": "multiline"
+        }
+      },
+      "immutable": [
+        "kind",
+        "id",
+        "effect code",
+        "iconKey",
+        "encounterId",
+        "rewardRarity",
+        "supportStatus"
+      ],
+      "operations": [
+        "patch"
+      ]
+    },
+    "relic": {
+      "id": "compiled relic ID",
+      "fields": {
+        "name": {
+          "max": 100,
+          "min": 1,
+          "type": "text"
+        },
+        "price": {
+          "max": 2000000000,
+          "min": 0,
+          "type": "integer"
+        },
+        "params": {
+          "type": "bounded_parameters",
+          "boundsFile": "../Runtime/Export/content-form039.json"
+        },
+        "rarity": {
+          "type": "enum",
+          "values": [
+            "N",
+            "R",
+            "SR",
+            "UR"
+          ]
+        },
+        "weight": {
+          "max": 10000,
+          "min": 0,
+          "type": "integer"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "description": {
+          "max": 4000,
+          "min": 1,
+          "type": "multiline"
+        },
+        "shopEnabled": {
+          "type": "boolean"
+        }
+      },
+      "immutable": [
+        "kind",
+        "id",
+        "effect code",
+        "iconKey",
+        "fields",
+        "rewardRarity",
+        "supportStatus"
+      ],
+      "operations": [
+        "patch"
+      ]
+    },
+    "category": {
+      "id": "category name",
+      "delete": "archive with existing bindings; old category history preserved",
+      "fields": {
+        "name": {
+          "max": 40,
+          "min": 1,
+          "type": "text"
+        },
+        "archived": {
+          "type": "boolean",
+          "meaning": "patch false restores existing archived category + original bindings"
+        }
+      },
+      "rename": "patch.name; all existing tags updated atomically",
+      "restore": "patch fields{archived:false} at existing archived entity version",
+      "operations": [
+        "create",
+        "patch",
+        "delete"
+      ]
+    },
+    "character": {
+      "id": "existing shared character UUID string",
+      "fields": {
+        "name": {
+          "max": 80,
+          "min": 1,
+          "type": "text"
+        },
+        "skills": {
+          "type": "compiled_character_skills"
+        },
+        "portrait": {
+          "max": 2048,
+          "type": "text"
+        },
+        "skill_profiles": {
+          "type": "compiled_character_skill_profiles"
+        }
+      },
+      "immutable": [
+        "compiled profile_id",
+        "packaged art refs",
+        "new voice or effect code"
+      ],
+      "operations": [
+        "patch"
+      ]
+    },
+    "map_rules": {
+      "id": "main",
+      "fields": {
+        "rest_percent": {
+          "max": 100,
+          "min": 0,
+          "type": "integer"
+        },
+        "shop_percent": {
+          "max": 100,
+          "min": 0,
+          "type": "integer"
+        },
+        "elite_percent": {
+          "max": 100,
+          "min": 0,
+          "type": "integer"
+        },
+        "event_percent": {
+          "max": 100,
+          "min": 0,
+          "type": "integer"
+        },
+        "battle_percent": {
+          "max": 100,
+          "min": 0,
+          "type": "integer"
+        }
+      },
+      "immutable": [
+        "schema"
+      ],
+      "constraint": "battle_percent+event_percent+shop_percent+rest_percent=100",
+      "operations": [
+        "patch"
+      ]
+    },
+    "meta_pack": {
+      "id": "template ID",
+      "fields": {
+        "id": {
+          "max": 100,
+          "min": 1,
+          "type": "text"
+        },
+        "name": {
+          "max": 80,
+          "min": 1,
+          "type": "text"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "sourceIds": {
+          "max": 1450,
+          "type": "source_refs"
+        },
+        "description": {
+          "max": 1000,
+          "type": "multiline"
+        }
+      },
+      "operations": [
+        "create",
+        "patch",
+        "delete"
+      ]
+    },
+    "card_limit": {
+      "id": "decimal source_id",
+      "fields": {
+        "speed_limit": {
+          "max": 3,
+          "min": -1,
+          "type": "nullable_integer"
+        },
+        "normal_limit": {
+          "max": 3,
+          "min": 0,
+          "type": "nullable_integer"
+        }
+      },
+      "fallback": "null => frozen readonly default; speed -1 => no speed group",
+      "operations": [
+        "patch"
+      ],
+      "serverOwned": [
+        "frozen_normal_limit",
+        "frozen_speed_limit"
+      ]
+    },
+    "meta_score": {
+      "id": "main",
+      "fields": {
+        "nWeight": {
+          "max": 1000000,
+          "min": 0,
+          "type": "integer"
+        },
+        "rWeight": {
+          "max": 1000000,
+          "min": 0,
+          "type": "integer"
+        },
+        "srWeight": {
+          "max": 1000000,
+          "min": 0,
+          "type": "integer"
+        },
+        "urWeight": {
+          "max": 1000000,
+          "min": 0,
+          "type": "integer"
+        },
+        "bossScore": {
+          "max": 1000000,
+          "min": 0,
+          "type": "integer"
+        },
+        "packCards": {
+          "max": 10,
+          "min": 1,
+          "type": "integer"
+        },
+        "packPrice": {
+          "max": 1000000,
+          "min": 1,
+          "type": "integer"
+        },
+        "eliteScore": {
+          "max": 1000000,
+          "min": 0,
+          "type": "integer"
+        },
+        "floorScore": {
+          "max": 1000000,
+          "min": 0,
+          "type": "integer"
+        },
+        "battleScore": {
+          "max": 1000000,
+          "min": 0,
+          "type": "integer"
+        },
+        "ownershipMode": {
+          "type": "enum",
+          "values": [
+            0,
+            1
+          ]
+        },
+        "scorePerPoint": {
+          "max": 1000000,
+          "min": 1,
+          "type": "integer"
+        },
+        "completionScore": {
+          "max": 1000000,
+          "min": 0,
+          "type": "integer"
+        },
+        "chapterClearScore": {
+          "max": 1000000,
+          "min": 0,
+          "type": "integer"
+        },
+        "unlockedTypeCopies": {
+          "max": 3,
+          "min": 1,
+          "type": "integer"
+        }
+      },
+      "constraint": "urWeight+srWeight+rWeight+nWeight=100",
+      "operations": [
+        "patch"
+      ]
+    },
+    "shop_rules": {
+      "id": "main",
+      "fields": {
+        "relic_count": {
+          "max": 5,
+          "min": 0,
+          "type": "integer"
+        },
+        "reroll_base": {
+          "max": 1000000,
+          "min": 0,
+          "type": "integer"
+        },
+        "reroll_step": {
+          "max": 1000000,
+          "min": 0,
+          "type": "integer"
+        },
+        "fixed_source_ids": {
+          "max": "regular_card_count",
+          "type": "shop_card_refs",
+          "distinct": true
+        },
+        "regular_card_count": {
+          "max": 10,
+          "min": 1,
+          "type": "integer"
+        },
+        "fusion_pair_enabled": {
+          "type": "boolean"
+        },
+        "ritual_pair_enabled": {
+          "type": "boolean"
+        }
+      },
+      "immutable": [
+        "schema"
+      ],
+      "operations": [
+        "patch"
+      ]
+    },
+    "card_display": {
+      "id": "decimal source_id, including0",
+      "fields": {
+        "name": {
+          "max": 100,
+          "type": "text"
+        },
+        "description": {
+          "max": 12000,
+          "type": "multiline"
+        },
+        "name_english": {
+          "max": 160,
+          "type": "text"
+        }
+      },
+      "operations": [
+        "patch"
+      ]
+    },
+    "card_setting": {
+      "id": "decimal source_id",
+      "fields": {
+        "stock": {
+          "type": "boolean"
+        },
+        "rarity": {
+          "type": "enum",
+          "values": [
+            "L",
+            "N",
+            "R",
+            "SR",
+            "UR"
+          ],
+          "restriction": "L only existing base; forces stock=false/draw_enabled=false; added30 retain4tiers"
+        },
+        "draw_enabled": {
+          "type": "boolean"
+        }
+      },
+      "operations": [
+        "patch"
+      ]
+    },
+    "chapter_role": {
+      "id": "1:battle etc; nine fixed IDs",
+      "fields": {
+        "entries": {
+          "max": 100,
+          "row": {
+            "weight": "1..10000",
+            "deck_id": "shared composition deck ID",
+            "entry_id": "globally unique encounter ID,1..100 chars",
+            "encounter": {
+              "name": {
+                "max": 100,
+                "type": "text"
+              },
+              "skills": {
+                "max": 8,
+                "type": "compiled_skills"
+              },
+              "art_key": {
+                "type": "packaged_character_art_ref"
+              },
+              "lp_bonus": {
+                "max": 8000,
+                "min": 0,
+                "type": "integer",
+                "restriction": "0 or100..8000"
+              },
+              "deck_name": {
+                "max": 100,
+                "type": "text"
+              },
+              "profile_id": {
+                "type": "packaged_character_ref"
+              },
+              "banlist_enabled": {
+                "type": "boolean"
+              },
+              "use_shared_skills": {
+                "type": "boolean"
+              },
+              "opening_draw_bonus": {
+                "max": 3,
+                "min": 0,
+                "type": "integer"
+              },
+              "shared_character_id": {
+                "type": "nullable_shared_character_ref"
+              },
+              "shared_skill_profile_id": {
+                "type": "nullable_shared_profile_ref"
+              }
+            }
+          },
+          "type": "deck_weight_refs"
+        },
+        "lp_bonus": {
+          "max": 50000,
+          "min": -3000,
+          "type": "integer"
+        }
+      },
+      "unready": "empty entries or unready new dependency saves; keeps last-valid role",
+      "immutable": [
+        "chapter",
+        "role"
+      ],
+      "operations": [
+        "patch"
+      ]
+    },
+    "starter_list": {
+      "id": "main",
+      "fields": {
+        "entries": {
+          "max": 100,
+          "row": {
+            "name": "text max80",
+            "deck_id": "stable deck ID",
+            "starter_id": "stable lineage ID"
+          },
+          "type": "starter_refs"
+        }
+      },
+      "unready": "empty list or unready dependency saves; keeps last-valid list",
+      "operations": [
+        "patch"
+      ],
+      "serverOwned": [
+        "existing history and immutable lineage"
+      ]
+    },
+    "category_group": {
+      "id": "stable category-group ID",
+      "fields": {
+        "name": {
+          "max": 40,
+          "min": 1,
+          "type": "text"
+        },
+        "archived": {
+          "type": "boolean"
+        },
+        "categories": {
+          "max": 128,
+          "type": "category_refs"
+        }
+      },
+      "maximum": 64,
+      "operations": [
+        "create",
+        "patch"
+      ]
+    },
+    "card_annotation": {
+      "id": "decimal source_id",
+      "fields": {
+        "tags": {
+          "max": 12,
+          "type": "category_refs"
+        },
+        "links": {
+          "max": 20,
+          "row": {
+            "slot": "integer",
+            "identity_key": "sha256"
+          },
+          "type": "card_links"
+        }
+      },
+      "operations": [
+        "patch"
+      ]
+    },
+    "recovery_archive": {
+      "id": "SHA256(source_key+'\\n'+raw_json)",
+      "owner": "auth.uid() only; cannot be supplied",
+      "fields": {
+        "origin": {
+          "type": "enum",
+          "values": [
+            "browser"
+          ]
+        },
+        "sha256": {
+          "type": "sha256",
+          "meaning": "UTF8(raw_json)"
+        },
+        "raw_json": {
+          "type": "private_raw_text",
+          "maxBytes": 4194304
+        },
+        "source_key": {
+          "type": "allowlisted_legacy_local_key"
+        }
+      },
+      "bootstrap": "own summary only, never raw; no game projection; other owners not visible",
+      "operations": [
+        "create"
+      ],
+      "maxPerOwner": 128
+    },
+    "category_group_order": {
+      "id": "main",
+      "fields": {
+        "group_ids": {
+          "max": 64,
+          "type": "category_group_refs",
+          "distinct": true
+        }
+      },
+      "operations": [
+        "patch"
+      ],
+      "description": "Shared order only; omitted new groups append deterministically and archived IDs keep their positions."
+    }
+  },
+  "shop_form": {
+    "kind": "shop_rules",
+    "fields": {
+      "relic_count": {
+        "max": 5,
+        "min": 0
+      },
+      "reroll_base": {
+        "max": 1000000,
+        "min": 0
+      },
+      "reroll_step": {
+        "max": 1000000,
+        "min": 0
+      },
+      "fixed_source_ids": {
+        "max": "regular_card_count",
+        "type": "source-cards",
+        "filter": "playable-main; stock=true; current-rulebook-copylimit>0",
+        "distinct": true
+      },
+      "regular_card_count": {
+        "max": 10,
+        "min": 1
+      },
+      "fusion_pair_enabled": {
+        "type": "boolean"
+      },
+      "ritual_pair_enabled": {
+        "type": "boolean"
+      }
+    },
+    "prices": {
+      "N": 50,
+      "R": 100,
+      "SR": 200,
+      "UR": 300
+    },
+    "schema": 1,
+    "entity_id": "main",
+    "reroll_formula": "previous < freeRefreshes ? 0 : reroll_base + reroll_step * previous"
+  },
+  "trait_form": {
+    "kinds": [
+      {
+        "kind": "start_hand",
+        "label": "시작 패에 카드 추가",
+        "fields": {
+          "sourceId": {
+            "type": "source-card",
+            "filter": "playable-main"
+          }
+        },
+        "compiled": true
+      },
+      {
+        "kind": "start_field",
+        "label": "시작 마법·함정 배치",
+        "fields": {
+          "sourceId": {
+            "type": "source-card",
+            "filter": "playable-main-spell-trap"
+          }
+        },
+        "compiled": true
+      },
+      {
+        "kind": "start_monster",
+        "label": "시작 몬스터 배치",
+        "fields": {
+          "position": {
+            "type": "enum",
+            "labels": [
+              "공격 표시",
+              "수비 표시",
+              "뒷면 수비"
+            ],
+            "values": [
+              1,
+              4,
+              8
+            ]
+          },
+          "sourceId": {
+            "type": "source-card",
+            "filter": "playable-main-monster"
+          }
+        },
+        "compiled": true
+      },
+      {
+        "kind": "start_grave",
+        "label": "시작 묘지",
+        "fields": {
+          "entries": {
+            "type": "counted-source-cards",
+            "filter": "playable-main",
+            "max_rows": 12,
+            "min_rows": 1,
+            "count_max": 12,
+            "count_min": 1,
+            "total_max": 12,
+            "distinct_source": true
+          }
+        },
+        "compiled": true
+      },
+      {
+        "kind": "heal_once",
+        "label": "LP 회복 1회",
+        "fields": {
+          "value": {
+            "max": 8000,
+            "min": 100,
+            "type": "integer"
+          }
+        },
+        "compiled": true
+      },
+      {
+        "kind": "draw_once",
+        "label": "위기 드로우 1회",
+        "fields": {
+          "value": {
+            "max": 3,
+            "min": 1,
+            "type": "integer"
+          },
+          "threshold": {
+            "max": 16000,
+            "min": 100,
+            "type": "integer"
+          }
+        },
+        "compiled": true
+      },
+      {
+        "kind": "add_hand_once",
+        "label": "카드 추가 1회",
+        "fields": {
+          "sourceId": {
+            "type": "source-card",
+            "filter": "playable-main"
+          }
+        },
+        "compiled": true
+      },
+      {
+        "kind": "parasite_deck",
+        "label": "기생충 덱 삽입",
+        "fields": {},
+        "compiled": true
+      },
+      {
+        "kind": "lp_bonus",
+        "label": "추가 LP",
+        "fields": {
+          "value": {
+            "max": 8000,
+            "min": 100,
+            "type": "integer"
+          }
+        },
+        "compiled": false
+      },
+      {
+        "kind": "opening_draw",
+        "label": "시작 드로우 추가",
+        "fields": {
+          "value": {
+            "max": 3,
+            "min": 1,
+            "type": "integer"
+          }
+        },
+        "compiled": false
+      }
+    ],
+    "schema": 1,
+    "shared": {
+      "max_rows": 10,
+      "card_field": "card",
+      "distinct_kind": true,
+      "position_values": [
+        "attack",
+        "defense",
+        "set"
+      ],
+      "base_catalog_only": true,
+      "grave_entry_fields": [
+        "card",
+        "count"
+      ],
+      "card_reference_fields": [
+        "slot",
+        "internal_id",
+        "identity_key",
+        "name_ko"
+      ]
+    },
+    "source": [
+      "NativeRules/NativeOpponentRules.cs:ValidatePlan",
+      "Runtime/Native/NativeOpponentWire013.cs:Skill"
+    ],
+    "compiled": {
+      "defaults": {
+        "value": 0,
+        "entries": [],
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0
+      },
+      "max_rows": 8,
+      "all_fields": [
+        "kind",
+        "value",
+        "threshold",
+        "sourceId",
+        "position",
+        "entries"
+      ],
+      "distinct_kind": true
+    }
+  },
+  "recovery_keys": [
+    "poc-ai-decks-v1",
+    "poc-ai-native035-drafts-v1",
+    "poc-native035-draft-v1",
+    "poc-card-catalog-reviews-v1",
+    "poc-native035-card-catalog-reviews-v1",
+    "poc-ai-decks-v1-before-import",
+    "poc-ai-native035-drafts-v1-before-replace",
+    "poc-native035-before-load038",
+    "poc-card-catalog-reviews-before-import037",
+    "poc-card-catalog-reviews-before-reset037",
+    "poc-card-catalog-reviews-recovery037",
+    "poc-card-pack-drafts-v1",
+    "yugioh-classic-campaign164-draft",
+    "yugioh-classic-expedition-content166-draft",
+    "yugioh-classic-expedition-content163-draft",
+    "yugioh-classic-expedition-content159-draft",
+    "yugioh-classic-expedition-content158-draft",
+    "yugioh-classic-expedition-content157-draft",
+    "poc-character-editor-v1",
+    "poc-character-transfer-v1",
+    "poc-character-library-v1",
+    "poc-starting-deck-editor026",
+    "poc-starting-deck-backup026"
+  ],
+  "deck_compositions044": true
+}

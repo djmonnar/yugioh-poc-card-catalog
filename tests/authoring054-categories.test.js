@@ -62,7 +62,7 @@ function mountPanels(t,{canEdit=true}={}){
 test('card detail edits emit the existing typed annotation patch and retain independently selected groups after a DB refresh',t=>{
  const m=mountPanels(t),blue=normalizeCatalog039(m.state).find(card=>card.source_id===0);m.panels.openCard(blue);const detail=m.document.body.querySelector('.au-card-detail'),picker=detail.querySelector('.au-category-picker054'),group=picker.querySelector('details');group.open=true;group.fire('toggle');
  choose(picker,'효과-공격력 상승');choose(picker,'면역-파괴',false);
- assert.deepEqual(m.writes.at(-1),['card_annotation','0',{tags:['덱-백룡','효과-공격력 상승'],links:[]},{operation:'patch'}]);
+ assert.deepEqual(m.writes.at(-1),['card_annotation','0',{tags:['덱-백룡','효과-공격력 상승']},{operation:'patch'}]);
  m.state.entities.push({entity_type:'card_annotation',entity_id:'0',version:2,content:{tags:m.writes.at(-1)[2].tags,links:[]},state:'saved',issues:[]});m.panels.render('cards',m.root,m.state,{force:true});
  const next=m.document.body.querySelector('.au-card-detail').querySelector('.au-category-picker054');assert.equal(next.querySelector('details').open,true);assert.equal(checkbox(next,'효과-공격력 상승').checked,true);assert.equal(checkbox(next,'면역-파괴').checked,false);
 });

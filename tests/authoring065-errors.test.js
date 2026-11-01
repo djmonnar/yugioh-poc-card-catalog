@@ -45,7 +45,10 @@ async function harness(t,{section='chapters',manualSave=true,missingSkills=false
  return {store,client,remote,root,document,window,shell,storage,draftStorage,canonical(type,id){return remote.rows.find(item=>item.entity_type===type&&item.entity_id===id);}};
 }
 async function reject(m,fields={name:''},error={message:'unified039_validation',details:JSON.stringify({reason:'unified039_unknown_legacy_reason'})}){
- m.remote.rejectOnce=error;const done=m.store.patch('character','weevil',fields);await m.store.drain();await flush();assert.equal(m.store.phase,'invalid');return {done};
+ // Seed the shape of a pre-066 persisted intent. New edits now undergo local
+ // preflight; recovery must still handle older outboxes that contain bad data.
+ const saved=m.store.getRow('character','weevil'),queued={type:'character',id:'weevil',operation:'patch',fields:copy(fields),baseVersion:saved.version,baseContent:copy(saved.content),resolve:[]},done=new Promise(resolve=>queued.resolve.push(resolve));
+ m.store.queue.push(queued);m.store.phase='pending';m.store.error=null;m.store.persist();m.store.emit();m.remote.rejectOnce=error;await m.store.drain();await flush();assert.equal(m.store.phase,'invalid');return {done};
 }
 async function input(m,label,value){const control=field041(m.root,label);assert.ok(control,`Missing ${label}`);control.focus();control.value=String(value);control.fire('input');control.blur();await flush();}
 const footer=m=>m.root.querySelector('.au-manual-save060');

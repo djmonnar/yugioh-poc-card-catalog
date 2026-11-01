@@ -15,6 +15,7 @@ function fixture044(){
 }
 function mount(state){const doc=new Document041(),root=doc.createElement('main');doc.body.append(root);const changes=[],errors=[],navigations=[];const panels=createAuthoringPanels039({document:doc,onChange:(...args)=>{changes.push(args);return Promise.resolve();},onError:e=>errors.push(e.message),onNavigate:(...args)=>navigations.push(args)});return {doc,root,panels,changes,errors,navigations,state};}
 function input(node,value){node.value=String(value);node.fire('input');}
+function openEncounter(ui,index=0){ui.root.querySelectorAll('.au-entry-pick066')[index].click();return ui.root.querySelector('.au-encounter-editor066');}
 const flush=()=>new Promise(resolve=>setTimeout(resolve,0));
 
 test('shared deck editor has only card settings and synchronizes its neutral name',async()=>{
@@ -30,7 +31,7 @@ test('each encounter edits LP independently even when two entries share one deck
   const {state,role}=fixture044(),ui=mount(state);ui.panels.render('chapters',ui.root,state);
   const rows=ui.root.querySelectorAll('.au-encounter-row');assert.equal(rows.length,2);
   assert.equal(rows[0].dataset.deckId,rows[1].dataset.deckId);
-  input(field041(rows[0],'상대 추가 LP'),1500);await flush();
+  input(field041(openEncounter(ui),'상대 추가 LP'),1500);await flush();
   const [type,id,fields]=ui.changes[0];assert.equal(type,'chapter_role');assert.equal(id,'1:battle');
   assert.equal(fields.entries[0].encounter.lp_bonus,1500);assert.equal(fields.entries[1].encounter.lp_bonus,2000);
   assert.deepEqual(fields.entries[0].encounter.skills,role.content.entries[0].encounter.skills);
@@ -39,21 +40,21 @@ test('each encounter edits LP independently even when two entries share one deck
 
 test('weight and removal target encounter IDs rather than every use of a shared deck',async()=>{
   const {state}=fixture044(),ui=mount(state);ui.panels.render('chapters',ui.root,state);
-  const rows=ui.root.querySelectorAll('.au-encounter-row');input(field041(rows[1],'가중치'),9);await flush();
+  input(field041(openEncounter(ui,1),'가중치'),9);await flush();
   assert.deepEqual(ui.changes[0][2].entries.map(entry=>entry.weight),[1,9]);
-  button041(rows[0],'후보에서 제외').click();await flush();
+  button041(openEncounter(ui),'편성에서 제외').click();await flush();
   assert.deepEqual(ui.changes[1][2].entries.map(entry=>entry.entry_id),['enc-second']);
 });
 
 test('inline skill changes stay on one encounter and keep the other opponent untouched',async()=>{
   const {state,role}=fixture044(),skill=value=>({kind:'heal_once',value,threshold:0,sourceId:-1,position:0,entries:[]});role.content.entries[0].encounter.skills=[skill(1000)];role.content.entries[1].encounter.skills=[skill(1500)];
-  const ui=mount(state);ui.panels.render('chapters',ui.root,state);const rows=ui.root.querySelectorAll('.au-encounter-row');input(field041(rows[0],'LP 수치'),700);await flush();
+  const ui=mount(state);ui.panels.render('chapters',ui.root,state);input(field041(openEncounter(ui),'LP 수치'),700);await flush();
   const [type,id,fields]=ui.changes[0];assert.equal(type,'chapter_role');assert.equal(id,'1:battle');assert.equal(fields.entries[0].encounter.skills[0].value,700);assert.equal(fields.entries[1].encounter.skills[0].value,1500);assert.equal(ui.changes.some(row=>row[0]==='deck'),false);
 });
 
 test('another opponent gets a new encounter ID and reuses the existing deck and effects',async()=>{
   const {state}=fixture044(),ui=mount(state);ui.panels.render('chapters',ui.root,state);
-  button041(ui.root.querySelectorAll('.au-encounter-row')[0],'같은 덱으로 상대 추가').click();await flush();
+  button041(openEncounter(ui),'같은 덱으로 상대 추가').click();await flush();
   const [type,,fields]=ui.changes[0],entry=fields.entries.at(-1);assert.equal(type,'chapter_role');assert.equal(entry.deck_id,'shared-deck');assert.match(entry.entry_id,/^enc-/);
   assert.equal(new Set(fields.entries.map(row=>row.entry_id)).size,3);assert.deepEqual(entry.encounter,fields.entries[0].encounter);
   assert.equal(ui.changes.some(row=>row[0]==='deck'),false);

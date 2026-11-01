@@ -2,6 +2,7 @@
 // Local storage holds only unfinished writes/recovery receipts, never a second catalog.
 import {parseMapRules052,parseMapPatch052} from './authoring052-map.js?v=20261030-052';
 import {rejectionReason065,validationInfo065} from './authoring065-errors.js?v=20261101-065';
+import {completeEventText066,validateAuthoringChange066} from './authoring066-validation.js?v=20261101-066';
 export const PROJECT039 = 'ygoclassic-expedition';
 export const IDENTITY039 = Object.freeze({base_catalog_sha256:'b73dd51c78aeab8c9beebf936b46e4cac16040e70df3a7980dec38c40db21e09',catalog035_sha256:'b5f1e9749cec0c1497c5fdcbfb2dc9c64895dcd859f083ec0ec4014580f05308',native_manifest_sha256:'4674de031c9e3044c86b90fcd402d9533d9353347802f268863746bf3bd7e4d7'});
 export const LEGACY_CREATION_KEYS039 = Object.freeze([
@@ -212,7 +213,9 @@ export class AuthoringStore039 {
     if(!this.queue.length) { this.phase='ready'; this.error=null; } this.emit();
   }
   patch(type,id,fields,{operation='patch'}={}) {
-    need(this.snapshot().canEdit,'편집자로 로그인해줘.'); need(KINDS.has(type)&&typeof id==='string'&&id.length>0&&id.length<=200&&object(fields)&&['create','patch','delete'].includes(operation),'저장할 항목을 확인해줘.'); safe(fields);
+    const snapshot=this.snapshot();need(snapshot.canEdit,'편집자로 로그인해줘.'); need(KINDS.has(type)&&typeof id==='string'&&id.length>0&&id.length<=200&&object(fields)&&['create','patch','delete'].includes(operation),'저장할 항목을 확인해줘.'); safe(fields);
+    if(type==='event'&&operation!=='delete')fields=completeEventText066(snapshot.entities.find(row=>row.entity_type===type&&row.entity_id===id)?.content,fields);
+    validateAuthoringChange066(snapshot,type,id,fields,{operation});
     if(type==='map_rules'){need(id==='main'&&operation==='patch','맵 분포는 기존 항목에서 변경해 주세요.');parseMapPatch052(fields);}
     if(type==='category_group_order'){need(id==='main'&&operation==='patch','묶음 순서는 기존 설정에서 변경해 주세요.');validEntity({entity_type:type,entity_id:id,version:0,content:fields});}
     const row=this.getRow(type,id),tail=this.queue.at(-1),rejected=this.queue.find(q=>q.rejected&&q.type===type&&q.id===id&&q.operation!=='delete');
