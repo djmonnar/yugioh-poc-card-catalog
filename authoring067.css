@@ -1,0 +1,13 @@
+/* Addition batches and registration themes remain separate from editable categories. */
+.au-app .au-catalog-addition{flex-basis:330px}
+.au-addition-themes067{margin:0 0 20px;min-width:0}
+.au-addition-themes067 h2{font-size:16px;line-height:1.6;color:var(--au-gold);margin:0 0 8px}
+.au-addition-themes067>[role=group]{display:flex;flex-wrap:wrap;gap:8px}
+.au-addition-themes067 button{min-height:48px;padding:9px 12px;font-size:15px;line-height:1.5;white-space:normal;text-align:start;min-width:0}
+.au-addition-themes067 button[aria-pressed=true]{background:#173b50;border-color:var(--au-gold);color:var(--au-gold);font-weight:700}
+@media(max-width:700px){
+ .au-app .au-catalog-addition{flex:1 1 100%;width:100%}
+ .au-app .au-catalog-addition select{width:100%;min-width:0;font-size:16px;min-height:46px}
+ .au-addition-themes067>[role=group]{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .au-addition-themes067 button{font-size:16px;overflow-wrap:anywhere}
+}

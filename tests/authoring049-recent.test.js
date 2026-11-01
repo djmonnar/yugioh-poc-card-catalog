@@ -51,13 +51,13 @@ for(const section of ['cards','decks'])test(`${section}: latest additions are on
   const m=mounted(t,{section}),all=button041(m.root,'전체 카드'),recent=button041(m.root,'최근 추가');
   assert.equal(all.getAttribute('aria-pressed'),'true');assert.equal(recent.getAttribute('aria-pressed'),'false');assert.equal(field041(m.root,'카드 정렬').value,'name');
   recent.click();assert.equal(all.getAttribute('aria-pressed'),'false');assert.equal(recent.getAttribute('aria-pressed'),'true');assert.equal(field041(m.root,'카드 정렬').value,'registered');
-  assert.equal(firstName(m),expectedNewest(m));assert.match(summary(m),/^75종 · 최근 추가 · 최근 등록순/);assert.equal(tiles(m).length,24);
-  assert.equal(field041(m.root,'추가 묶음').selectedOptions[0].textContent,'최근 추가 · 75종');assert.equal(m.writes.length,0);
+  assert.equal(firstName(m),expectedNewest(m));assert.match(summary(m),/^75종 · 암흑계·젬나이트 추가 \(최근\) · 최근 등록순/);assert.equal(tiles(m).length,24);
+  assert.equal(field041(m.root,'추가 묶음').selectedOptions[0].textContent,'암흑계·젬나이트 추가 (최근) · 75종');assert.equal(m.writes.length,0);
 });
 
 test('latest, previous and all addition batches share the same current catalog',t=>{
   const m=mounted(t);button041(m.root,'최근 추가').click();const batch=field041(m.root,'추가 묶음');
-  batch.value='Cards035';batch.fire('change');assert.match(summary(m),/^30종 · 이전 추가/);assert.equal(firstName(m),normalizeCatalog039(m.state).find(c=>c.source_id===2419).name_ko);
+  batch.value='Cards035';batch.fire('change');assert.match(summary(m),/^30종 · 사이버·앤틱 기어 추가/);assert.equal(firstName(m),normalizeCatalog039(m.state).find(c=>c.source_id===2419).name_ko);
   batch.value='all';batch.fire('change');assert.match(summary(m),/^105종 · 추가 카드 전체/);assert.equal(firstName(m),expectedNewest(m));
   button041(m.root,'전체 카드').click();assert.match(summary(m),/^1,531종/);assert.equal(batch.parentElement.hidden,true);assert.equal(field041(m.root,'카드 정렬').value,'registered');assert.equal(m.writes.length,0);
 });
@@ -67,7 +67,7 @@ test('search, category and type intersect the addition scope without replacing t
   category.checked=true;category.fire('change');type.value='일반 마법';type.fire('change');
   m.search.focus();m.search.fire('compositionstart');m.search.value='융합';m.search.fire('input',{isComposing:true});
   assert.equal(field041(m.root,'카드 검색'),m.search);assert.equal(m.document.activeElement,m.search);assert.ok(tiles(m).length>0);assert.ok(tiles(m).every(tile=>tile.querySelector('.au-card-kind').textContent==='일반 마법'));
-  assert.match(summary(m),/최근 추가/);assert.ok(m.root.querySelector('.au-category-selected054').textContent.includes('테스트 추가'));assert.equal(m.writes.length,0);
+  assert.match(summary(m),/암흑계·젬나이트 추가/);assert.ok(m.root.querySelector('.au-category-selected054').textContent.includes('테스트 추가'));assert.equal(m.writes.length,0);
 });
 
 test('search clear preserves addition selection, and empty-result reset restores the normal whole-catalog view',t=>{
@@ -84,10 +84,10 @@ test('sorting and addition changes reset pagination while card dialogs still use
   const art=tiles(m)[0].querySelector('.au-card-art'),name=tiles(m)[0].querySelector('strong').textContent;art.click();const dialog=m.document.body.querySelector('dialog');assert.equal(dialog.open,true);assert.ok(dialog.textContent.includes(name));assert.equal(m.writes.length,0);
 });
 
-test('deferred DB refresh discovers a future latest batch without resetting a live search field',t=>{
+test('deferred DB refresh discovers a future batch while retaining the selected actual batch and live search field',t=>{
   const m=mounted(t);button041(m.root,'최근 추가').click();m.search.focus();m.search.fire('compositionstart');
   const next=structuredClone(m.state),template=next.bootstrap.catalog.cards.at(-1);next.bootstrap.catalog.cards.push({...template,source_id:2500,sourceId:2500,internal_id:2500,web_slot:1532,slot:1532,art_key:'Cards050/2500',artKey:'Cards050/2500',identity_key:'d'.repeat(64),name:'다음 추가 카드'});
-  assert.equal(m.panels.render('cards',m.root,next),false);assert.equal(field041(m.root,'카드 검색'),m.search);assert.equal(m.document.activeElement,m.search);assert.match(summary(m),/^1종 · 최근 추가/);assert.equal(firstName(m),'다음 추가 카드');assert.equal(m.writes.length,0);
+  assert.equal(m.panels.render('cards',m.root,next),false);assert.equal(field041(m.root,'카드 검색'),m.search);assert.equal(m.document.activeElement,m.search);assert.match(summary(m),/^75종 · 암흑계·젬나이트 추가/);assert.equal(field041(m.root,'추가 묶음').value,'Cards049');assert.equal(firstName(m),expectedNewest(m));assert.equal(m.writes.length,0);
 });
 
 test('read-only viewers can combine recent additions with categories from that same public catalog',t=>{
