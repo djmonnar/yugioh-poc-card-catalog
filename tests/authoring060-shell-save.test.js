@@ -36,12 +36,12 @@ async function harness(t,{section='decks',draftStorage=new DraftStorage060()}={}
   assert.equal(name,'poc_apply_intent039');const intent=copy(args.p_intent);remote.writes.push(intent);
   if(remote.holdWrite)await new Promise(resolve=>remote.gates.push(resolve));
   if(remote.requests.has(intent.request_id))return {data:{...copy(remote.requests.get(intent.request_id)),replayed:true}};
-  assert.equal(intent.changes.length,1);const change=intent.changes[0],key=`${change.entity_type}:${change.entity_id}`,old=remote.rows.get(key);
-  if(intent.expected_project_revision!==remote.revision||change.expected_entity_version!==(old?.version??0))return {error:{code:'P0001',message:'unified039_conflict',details:JSON.stringify({project_revision:remote.revision,entities:[{entity_type:change.entity_type,entity_id:change.entity_id,version:old?.version??0}]})}};
-  const next={...old,entity_type:change.entity_type,entity_id:change.entity_id,content:{...old?.content,...copy(change.fields)},version:++remote.revision,state:'saved',issues:[]};remote.rows.set(key,next);
-  const ack={schema:1,kind:'unified039-write-ack',request_id:intent.request_id,applied_revision:remote.revision,observed_project_revision:remote.revision,entities:[copy(next)],game_revision:1,game_source_fingerprint:hash(payload)};remote.requests.set(intent.request_id,copy(ack));return {data:ack};
+  assert.ok(intent.changes.length>=1&&intent.changes.length<=32);const current=intent.changes.map(change=>({change,key:`${change.entity_type}:${change.entity_id}`,old:remote.rows.get(`${change.entity_type}:${change.entity_id}`)}));
+  if(intent.expected_project_revision!==remote.revision||current.some(({change,old})=>change.expected_entity_version!==(old?.version??0)))return {error:{code:'P0001',message:'unified039_conflict',details:JSON.stringify({project_revision:remote.revision,entities:current.map(({change,old})=>({entity_type:change.entity_type,entity_id:change.entity_id,version:old?.version??0}))})}};
+  const revision=++remote.revision,next=current.map(({change,old,key})=>{const value={...old,entity_type:change.entity_type,entity_id:change.entity_id,content:{...old?.content,...copy(change.fields)},version:revision,state:'saved',issues:[]};remote.rows.set(key,value);return copy(value);});
+  const ack={schema:1,kind:'unified039-write-ack',request_id:intent.request_id,applied_revision:remote.revision,observed_project_revision:remote.revision,entities:next,game_revision:1,game_source_fingerprint:hash(payload)};remote.requests.set(intent.request_id,copy(ack));return {data:ack};
  }};
- const store=new AuthoringStore039({client,storage:null,crypto:webcrypto,events:{},debounceMs:2,idleRefreshMs:100000,pollMs:0});await store.start();
+ const store=new AuthoringStore039({client,storage:new DraftStorage060(),crypto:webcrypto,events:{},debounceMs:2,idleRefreshMs:100000,pollMs:0});await store.start();
  const document=new Document041(),root=document.createElement('main');document.body.append(root);
  const window={location:{href:`https://example.test/index.html?section=${section}`},history:{pushState(_state,_title,url){window.location.href=new URL(url,window.location.href).href;}},addEventListener(){},removeEventListener(){},setTimeout(fn,ms){const timer=setTimeout(fn,ms);timer.unref?.();return timer;},clearTimeout,scrollTo(){}};
  let shell;
@@ -58,7 +58,7 @@ function infoButton(root,name){return root.querySelectorAll('button').find(butto
 function quantityButton(m,name,verb){return m.root.querySelector('.au-deck-owned').querySelectorAll('button').find(button=>button.getAttribute('aria-label')===`${name} ${verb}`);}
 async function openCard(m,name){m.shell.navigate('cards');await flush();const button=infoButton(m.root,name);assert.ok(button,'Card information button is visible');button.click();await flush();return m.document.querySelector('.au-card-dialog');}
 
-test('typing and card count changes stay local until one explicit header save per edited deck',async t=>{
+test('typing and card count changes stay local until one atomic header save covers the edited decks',async t=>{
  const m=await harness(t);
  for(const name of ['수','수정','수정한 덱'])await input(m.root,'덱 이름',name);
  quantityButton(m,cards[0].name,'추가').click();await flush();quantityButton(m,cards[0].name,'추가').click();await flush();quantityButton(m,cards[0].name,'빼기').click();await flush();
@@ -66,8 +66,8 @@ test('typing and card count changes stay local until one explicit header save pe
  await new Promise(resolve=>setTimeout(resolve,15));
  assert.equal(m.remote.writes.length,0);assert.equal(m.store.queue.length,0);assert.equal(m.shell.drafts060.summary().dirtyCount,2);
  assert.equal(m.canonical('deck','a').content.main[0].count,1);assert.match(m.root.querySelector('.au-save-status').textContent,/저장 전 변경 2개/);
- saveButton(m).click();await until(()=>m.remote.writes.length===2&&!m.shell.drafts060.summary().saving,'Both deck saves finish');await flush();
- assert.deepEqual(m.remote.writes.map(intent=>intent.changes[0].entity_id),['a','b']);
+ saveButton(m).click();await until(()=>m.remote.writes.length===1&&!m.shell.drafts060.summary().saving,'Both deck changes finish in one request');await flush();
+ assert.deepEqual(m.remote.writes[0].changes.map(change=>change.entity_id),['a','b']);
  assert.equal(m.canonical('deck','a').content.deck_name,'수정한 덱');assert.equal(m.canonical('deck','a').content.main[0].count,2);
  assert.equal(m.canonical('deck','b').content.deck_name,'두 번째 덱 초안');assert.equal(m.shell.drafts060.summary().dirtyCount,0);assert.equal(m.store.queue.length,0);
 });

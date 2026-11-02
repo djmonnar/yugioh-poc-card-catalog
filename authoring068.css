@@ -1,0 +1,57 @@
+/* One compact deck setup, one explicitly selected opponent editor. */
+.au-deck-setup068{min-width:0;margin:18px 0 24px;padding:18px 0;border-block:1px solid var(--au-line)}
+.au-deck-setup-heading068{display:flex;gap:14px;justify-content:space-between;align-items:start}
+.au-deck-setup-heading068 h2{margin:0 0 5px;color:var(--au-gold);font-size:20px}
+.au-deck-setup-heading068 .au-hint{margin:0;max-width:65ch;font-size:14px}
+.au-setup-toggle068{flex:none;white-space:nowrap}
+.au-deck-setup068>.au-setup-purpose068{font-size:13px;line-height:1.7;margin:9px 0 0;max-width:65ch}
+.au-deck-setup068 :is(button,input,select,textarea){min-height:44px;font-size:16px;max-width:100%}
+.au-deck-setup068 input[type=checkbox]{min-height:21px}
+.au-setup-dirty068{color:var(--au-gold);white-space:nowrap}
+.au-deck-setup-save068{display:flex;align-items:center;gap:14px;margin-top:14px}
+.au-deck-setup-save068>.au-primary{flex:none}
+.au-deck-setup-save068>.au-hint{font-size:13px;margin:0}
+.au-setup-tools068{display:flex;gap:8px;margin:20px 0 14px}
+.au-setup-tools068>button{flex:1;max-width:220px}
+.au-setup-tools068>.au-setup-add068{color:var(--au-gold)}
+.au-deck-setup068>input[type=search]{display:block;width:100%;margin:0 0 10px}
+.au-setup-list068{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}
+.au-setup-placement068{display:grid;gap:3px;text-align:start;border:0;border-bottom:1px solid var(--au-line);border-radius:0;background:transparent;padding:13px 7px;min-width:0}
+.au-setup-placement068>strong{font-size:16px;color:var(--au-gold);line-height:1.5}
+.au-setup-placement068>span{font-size:15px;line-height:1.5;overflow-wrap:anywhere}
+.au-setup-placement068>small{font-size:13px;line-height:1.6;color:var(--au-muted);overflow-wrap:anywhere}
+.au-setup-placement068[aria-pressed=true]{background:#173b50}
+.au-setup-placement068:focus-visible{outline-offset:-2px}
+.au-setup-editor068{margin:20px 0 4px;min-width:0;scroll-margin-top:170px}
+.au-setup-editor068>h3{font-size:19px;line-height:1.5;color:var(--au-gold);margin:0 0 8px}
+.au-setup-editor068>.au-hint{font-size:14px;max-width:65ch;margin:8px 0 18px}
+.au-setup-editor068 .au-form-grid{margin:16px 0;gap:0 18px}
+.au-setup-editor068 .au-field{font-size:14px}
+.au-setup-editor068 :is(.au-shared-traits,.au-encounter-traits){min-width:0}
+.au-setup-editor068 .au-encounter-traits>h3{font-size:17px}
+.au-setup-editor068 .au-encounter-advanced068{margin:18px 0;border-top:1px solid var(--au-line);min-width:0}
+.au-setup-editor068 .au-encounter-advanced068>summary{min-height:44px;padding:11px 0;cursor:pointer;font-size:15px;line-height:1.5;color:var(--au-gold)}
+.au-setup-editor068 .au-encounter-advanced068[open]>summary{margin-bottom:8px}
+.au-setup-destination068{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0 8px}
+.au-setup-editor-actions068{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 10px}
+.au-setup-warning068{padding:14px 16px;margin:18px 0;background:#392c24;border:1px solid #a98753;border-radius:10px;color:var(--au-text)}
+.au-setup-warning068>p{margin:0 0 12px;font-size:14px}
+.au-setup-warning068>button{margin-right:8px}
+@media(max-width:767px){
+ .au-deck-setup068{margin:16px 0 22px;padding:16px 0}
+ .au-deck-setup-heading068{gap:10px;flex-wrap:wrap}
+ .au-deck-setup-heading068>div{flex:1 1 180px}
+ .au-deck-setup-heading068 h2{font-size:19px}
+ .au-deck-setup-heading068 .au-hint{font-size:13px}
+ .au-setup-toggle068{padding-inline:11px;font-size:14px}
+ .au-deck-setup-save068{display:block}
+ .au-deck-setup-save068>.au-primary{width:100%}
+ .au-deck-setup-save068>.au-hint{margin-top:8px}
+ .au-setup-list068{grid-template-columns:minmax(0,1fr)}
+ .au-setup-placement068{padding:12px 2px}
+ .au-setup-tools068>button{max-width:none}
+ .au-setup-editor068 .au-form-grid{grid-template-columns:minmax(0,1fr)}
+ .au-setup-destination068{gap:10px}
+ .au-setup-editor-actions068{display:grid;grid-template-columns:minmax(0,1fr)}
+ .au-setup-warning068>button{display:block;width:100%;margin:8px 0 0}
+}

@@ -4,6 +4,7 @@ import {parseMapRules052,parseMapPatch052} from './authoring052-map.js?v=2026103
 import {rejectionReason065,validationInfo065} from './authoring065-errors.js?v=20261101-065';
 import {completeEventText066,validateAuthoringChange066} from './authoring066-validation.js?v=20261101-066';
 import {gameIdentityMatches067} from './authoring067-identity.js?v=20261102-067';
+import {batchChanges068,batchFields068,batchWriteState068,restoreBatch068,enqueueBatch068,drainBatch068,getRejectedBatch068 as readRejectedBatch068,releaseRejectedBatch068 as releaseBatch068,resolveBatchConflict068} from './authoring068-batch.js?v=20261102-068';
 export const PROJECT039 = 'ygoclassic-expedition';
 export const IDENTITY039 = Object.freeze({base_catalog_sha256:'b73dd51c78aeab8c9beebf936b46e4cac16040e70df3a7980dec38c40db21e09',catalog035_sha256:'b5f1e9749cec0c1497c5fdcbfb2dc9c64895dcd859f083ec0ec4014580f05308',native_manifest_sha256:'4674de031c9e3044c86b90fcd402d9533d9353347802f268863746bf3bd7e4d7'});
 export const LEGACY_CREATION_KEYS039 = Object.freeze([
@@ -120,6 +121,8 @@ export async function normalizeBootstrap039(raw,crypto=globalThis.crypto) {
   return normalized;
 }
 
+const BATCH068={HASH,UUID,PROJECT039,clone,equal,key,integer,object,need,safe,validEntity,categoryGroupRows055,categoryGroupOrderRows056,validateAuthoringChange066,rejectionReason065,validationInfo065};
+
 export class AuthoringStore039 {
   constructor({client,storage=globalThis.localStorage,crypto=globalThis.crypto,debounceMs=400,idleRefreshMs=400,pollMs=15000,redirectUrl=globalThis.location?.href,events=globalThis}={}) {
     need(client?.rpc && client?.auth,'DB 연결이 필요해.');
@@ -130,14 +133,14 @@ export class AuthoringStore039 {
   subscribe(fn) { this.listeners.add(fn); fn(this.snapshot()); return ()=>this.listeners.delete(fn); }
   snapshot() {
     const entities=clone(this.bootstrap?.authoring?.entities ?? []);
-    for (const q of this.queue) {
+    for (const item of this.queue) for (const q of batchChanges068(item)) {
       const i=entities.findIndex(e=>key(e.entity_type,e.entity_id)===key(q.type,q.id));
       if(q.operation==='delete') { if(i>=0) entities.splice(i,1); continue; }
       const next={...(i<0?{entity_type:q.type,entity_id:q.id,version:0,state:'draft',issues:[]}:entities[i]),content:{...(entities[i]?.content??{}),...clone(q.fields)},pending:true};
       if(i<0) entities.push(next); else entities[i]=next;
     }
     const status=this.phase==='conflict'?'현재 DB와 저장 대기분을 확인해 주세요.':this.phase==='invalid'?'수정할 값을 확인해줘.':this.phase==='error'?'저장을 다시 시도할게.':this.busy?'저장 중…':this.queue.length?'변경 사항 저장 대기 중…':this.phase==='loading'?'제작 데이터 불러오는 중…':'자동 저장됨';
-    const head=this.queue[0],writeState=head?{entityType:head.type,entityId:head.id,operation:head.operation,fields:Object.keys(head.fields),phase:this.phase,rejected:head.rejected===true,uncertain:this.phase==='error'&&Boolean(head.body),...(head.rejected?{validation:validationInfo065(head.rejectionReason,Object.keys(head.fields))}:{}),...(this.phase==='conflict'&&this.conflictInfo?{conflict:clone(this.conflictInfo)}:{})}:null;
+    const head=this.queue[0],primary=head?batchChanges068(head)[0]:null,batchState=batchWriteState068(head),writeFields=batchFields068(head),writeState=head?{entityType:primary.type,entityId:primary.id,operation:primary.operation,fields:writeFields,phase:this.phase,rejected:head.rejected===true,uncertain:this.phase==='error'&&Boolean(head.body),...batchState,...(head.rejected?{validation:{...validationInfo065(head.rejectionReason,writeFields),...batchState}}:{}),...(this.phase==='conflict'&&this.conflictInfo?{conflict:clone(this.conflictInfo)}:{})}:null;
     return {bootstrap:clone(this.bootstrap),entities,gamePayload:clone(this.bootstrap?.gamePayload??null),phase:this.phase,status,error:this.error,writeState,user:this.user?{id:this.user.id,email:this.user.email}:null,canEdit:!!this.user&&this.bootstrap?.permissions?.can_edit===true,pending:this.queue.length};
   }
   emit() { const snap=this.snapshot(); for(const fn of this.listeners) fn(snap); }
@@ -153,13 +156,14 @@ export class AuthoringStore039 {
       const raw=this.storage?.getItem(this.outboxKey()); if(!raw) return;
       const data=JSON.parse(raw); need(data.schema===1&&Array.isArray(data.items)&&data.items.length<=1000,'outbox');
       for(const q of data.items) {
+        if(q.batch068===true){restoreBatch068(this,q,BATCH068);continue;}
         need(KINDS.has(q.type)&&typeof q.id==='string'&&q.id.length<=200&&['create','patch','delete'].includes(q.operation)&&object(q.fields)&&integer(q.baseVersion)&&object(q.baseContent),'outbox'); safe(q.fields);
         if(q.type==='map_rules'){need(q.id==='main'&&q.operation==='patch','outbox map rules');parseMapPatch052(q.fields);}
         if(q.type==='category_group_order'){need(q.id==='main'&&q.operation==='patch','outbox category group order');validEntity({entity_type:q.type,entity_id:q.id,version:0,content:q.fields});}
         if(q.body) { need(UUID.test(q.requestId)&&q.body.request_id===q.requestId&&q.body.project_id===PROJECT039&&q.body.schema===1&&integer(q.body.expected_project_revision),'outbox'); const c=q.body.changes; need(c?.length===1&&c[0].entity_type===q.type&&c[0].entity_id===q.id&&c[0].operation===q.operation&&c[0].expected_entity_version===q.baseVersion&&equal(c[0].fields,q.fields),'outbox'); }
       }
       this.queue=data.items.map(q=>({...q,resolve:()=>{}}));
-      if(this.queue[0]?.rejected){this.phase='invalid';this.error=validationInfo065(this.queue[0].rejectionReason,Object.keys(this.queue[0].fields)).message;this.emit();}
+      if(this.queue[0]?.rejected){this.phase='invalid';this.error=validationInfo065(this.queue[0].rejectionReason,batchFields068(this.queue[0])).message;this.emit();}
     } catch { this.error='이전 저장 대기분을 자동으로 읽지 못했어. 원본은 보존되어 있어.'; }
   }
   async start() {
@@ -174,7 +178,7 @@ export class AuthoringStore039 {
   async acceptSession(session) {
     const id=session?.user?.id??null;
     if(this.started&&id===(this.user?.id??null)) return;
-    this.started=true; this.persist(); this.generation++; const generation=this.generation; clearTimeout(this.idleTimer); this.pendingRevision=null; this.retryRequestId=null; this.retryNotBefore=0; this.conflictInfo=null; this.user=session?.user??null; this.queue=[]; this.bootstrap=null; this.fetchedRevision=null; this.phase='loading'; this.error=null; this.emit();
+    this.started=true; this.persist(); this.generation++; const generation=this.generation; clearTimeout(this.idleTimer); this.busy=false; this.pendingRevision=null; this.retryRequestId=null; this.retryNotBefore=0; this.conflictInfo=null; this.user=session?.user??null; this.queue=[]; this.bootstrap=null; this.fetchedRevision=null; this.phase='loading'; this.error=null; this.emit();
     try { await this.refresh(true); if(generation!==this.generation)return; if(this.snapshot().canEdit) { this.restore(); await this.archiveLegacy(); if(generation===this.generation&&this.queue.length) this.schedule(0); } }
     catch(e) { if(generation===this.generation){this.setError(e);throw e;} }
   }
@@ -220,15 +224,18 @@ export class AuthoringStore039 {
     if(type==='map_rules'){need(id==='main'&&operation==='patch','맵 분포는 기존 항목에서 변경해 주세요.');parseMapPatch052(fields);}
     if(type==='category_group_order'){need(id==='main'&&operation==='patch','묶음 순서는 기존 설정에서 변경해 주세요.');validEntity({entity_type:type,entity_id:id,version:0,content:fields});}
     const row=this.getRow(type,id),tail=this.queue.at(-1),rejected=this.queue.find(q=>q.rejected&&q.type===type&&q.id===id&&q.operation!=='delete');
-    need(operation==='create'||row||this.queue.some(q=>q.type===type&&q.id===id&&q.operation==='create'),'수정할 DB 항목을 찾을 수 없어.');
+    need(operation==='create'||row||this.queue.some(item=>batchChanges068(item).some(q=>q.type===type&&q.id===id&&q.operation==='create')),'수정할 DB 항목을 찾을 수 없어.');
     let q;
     if(operation==='patch'&&rejected) { q=rejected; q.fields={...q.fields,...clone(fields)}; q.rejected=false; delete q.rejectionReason; }
     else if(operation==='patch'&&tail&&tail.type===type&&tail.id===id&&!tail.body&&tail.operation!=='delete') { q=tail; q.fields={...q.fields,...clone(fields)}; }
     else { q={type,id,operation,fields:clone(fields),baseVersion:row?.version??0,baseContent:clone(row?.content??{}),resolve:[]}; this.queue.push(q); }
     if(!Array.isArray(q.resolve)) q.resolve=[];
     const promise=new Promise(resolve=>q.resolve.push(resolve));
-    this.error=this.queue[0]?.rejected?validationInfo065(this.queue[0].rejectionReason,Object.keys(this.queue[0].fields)).message:null; if(this.phase!=='conflict') this.phase=this.queue[0]?.rejected?'invalid':'pending'; this.persist(); this.emit(); this.schedule(); return promise;
+    this.error=this.queue[0]?.rejected?validationInfo065(this.queue[0].rejectionReason,batchFields068(this.queue[0])).message:null; if(this.phase!=='conflict') this.phase=this.queue[0]?.rejected?'invalid':'pending'; this.persist(); this.emit(); this.schedule(); return promise;
   }
+  patchTogether068(changes){return enqueueBatch068(this,changes,BATCH068);}
+  getRejectedBatch068(){return readRejectedBatch068(this,BATCH068);}
+  releaseRejectedBatch068(value){return releaseBatch068(this,value,BATCH068);}
   schedule(delay=this.debounceMs) { clearTimeout(this.timer); clearTimeout(this.idleTimer); const head=this.queue[0],retryWait=head?.body&&head.requestId===this.retryRequestId?Math.max(0,this.retryNotBefore-Date.now()):0; if(!this.stopped&&!['conflict','invalid'].includes(this.phase)) this.timer=setTimeout(()=>this.drain(),Math.max(delay,retryWait)); this.timer?.unref?.(); }
   scheduleIdleRefresh() {
     clearTimeout(this.idleTimer);
@@ -243,6 +250,7 @@ export class AuthoringStore039 {
   setError(error) { this.phase='error'; this.error=explain(error); this.emit(); }
   async drain() {
     if(this.busy||!this.queue.length||!this.snapshot().canEdit||['conflict','invalid'].includes(this.phase)||this.stopped) return;
+    if(this.queue[0].batch068===true)return drainBatch068(this,BATCH068);
     const q=this.queue[0],generation=this.generation; this.busy=true; this.emit();
     try {
       if(!q.body) { q.requestId=this.crypto.randomUUID(); q.body={schema:1,project_id:PROJECT039,request_id:q.requestId,expected_project_revision:this.bootstrap.project_revision,changes:[{entity_type:q.type,entity_id:q.id,expected_entity_version:q.baseVersion,operation:q.operation,fields:clone(q.fields)}]}; this.persist(); }
@@ -302,25 +310,28 @@ export class AuthoringStore039 {
       this.phase=this.queue.length?'pending':'ready'; this.error=null; this.failures=0; this.retryRequestId=null; this.retryNotBefore=0; this.conflictInfo=null; this.persist();
     } catch(e) { if(generation===this.generation) { this.failures++; if(q.body){this.retryRequestId=q.requestId;this.retryNotBefore=Date.now()+Math.min(30000,1000*2**Math.min(this.failures,5));} this.setError(e); } }
     finally {
-      this.busy=false; this.emit();
-      if(this.queue.length&&this.phase!=='conflict') this.schedule(this.phase==='error'?Math.min(30000,1000*2**Math.min(this.failures,5)):0);
-      else this.scheduleIdleRefresh();
+      if(generation===this.generation){
+        this.busy=false; this.emit();
+        if(this.queue.length&&this.phase!=='conflict') this.schedule(this.phase==='error'?Math.min(30000,1000*2**Math.min(this.failures,5)):0);
+        else this.scheduleIdleRefresh();
+      }
     }
   }
   getRejected065(){
     const q=this.queue[0];
-    need(this.snapshot().canEdit&&this.phase==='invalid'&&!this.busy&&q?.rejected===true&&!q.body&&!q.requestId,'서버가 거절한 요청만 초안으로 돌릴 수 있습니다. 저장 결과를 확인 중인 요청은 유지됩니다.');
+    need(this.snapshot().canEdit&&this.phase==='invalid'&&!this.busy&&q?.batch068!==true&&q?.rejected===true&&!q.body&&!q.requestId,'서버가 거절한 요청만 초안으로 돌릴 수 있습니다. 저장 결과를 확인 중인 요청은 유지됩니다.');
     return clone({type:q.type,id:q.id,fields:q.fields,operation:q.operation,baseVersion:q.baseVersion,baseContent:q.baseContent});
   }
   releaseRejected065({type,id}={}){
     const record=this.getRejected065();need(record.type===type&&record.id===id,'수정할 저장 요청이 바뀌었습니다. 다시 확인해 주세요.');
     const q=this.queue.shift();for(const resolve of Array.isArray(q.resolve)?q.resolve:[])resolve({discarded:true});
-    this.phase=this.queue[0]?.rejected?'invalid':this.queue.length?'pending':'ready';this.error=this.phase==='invalid'?validationInfo065(this.queue[0].rejectionReason,Object.keys(this.queue[0].fields)).message:null;
+    this.phase=this.queue[0]?.rejected?'invalid':this.queue.length?'pending':'ready';this.error=this.phase==='invalid'?validationInfo065(this.queue[0].rejectionReason,batchFields068(this.queue[0])).message:null;
     this.persist();this.emit();this.schedule(0);return record;
   }
   retry() { if(this.phase==='conflict'||this.phase==='invalid')return; this.retryNotBefore=0; this.error=null; const generation=this.generation;if(!this.started)return this.start().catch(e=>{if(generation===this.generation)this.setError(e);}); if(!this.bootstrap)return this.refresh(true).catch(e=>{if(generation===this.generation)this.setError(e);}); if(!this.queue.length&&this.pendingRevision!==null)return this.refresh().catch(e=>{if(generation===this.generation)this.setError(e);}); this.phase=this.queue.length?'pending':'ready'; this.schedule(0); this.emit(); }
   resolveConflict(choice) {
     need(this.phase==='conflict'&&this.queue.length,'충돌한 수정이 없어.'); const q=this.queue[0];
+    if(q.batch068===true)return resolveBatchConflict068(this,choice,BATCH068);
     if(choice==='remote') { this.queue.shift(); for(const resolve of Array.isArray(q.resolve)?q.resolve:[]) resolve({discarded:true}); }
     else { need(choice==='retry','충돌 처리 방법을 확인해줘.'); const row=this.getRow(q.type,q.id); q.baseVersion=row?.version??0; q.baseContent=clone(row?.content??{}); delete q.body; delete q.requestId; }
     this.phase=this.queue.length?'pending':'ready'; this.error=null; this.conflictInfo=null; this.persist(); this.emit(); this.schedule(0);

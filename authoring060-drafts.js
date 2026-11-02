@@ -24,12 +24,13 @@ function copyField(target,key,source){if(own(source,key))target[key]=clone(sourc
 export const draftKey060=(type,id)=>JSON.stringify([type,id]);
 
 export class AuthoringDrafts060 {
-  constructor({onSave,onChange=()=>{},storage=null,allowedKinds=['deck'],storagePrefix='poc-authoring060-drafts',maxItems=500,maxBytes=2000000}={}){
+  constructor({onSave,onSaveBatch=null,onChange=()=>{},storage=null,allowedKinds=['deck'],storagePrefix='poc-authoring060-drafts',maxItems=500,maxBytes=2000000}={}){
     need(typeof onSave==='function','초안을 저장할 연결이 필요합니다.');need(typeof onChange==='function','초안 변경 연결을 확인해 주세요.');
+    need(onSaveBatch===null||typeof onSaveBatch==='function','함께 저장할 연결을 확인해 주세요.');
     this.allowedKinds=new Set(allowedKinds);need(this.allowedKinds.size>0&&[...this.allowedKinds].every(kindValid),'초안 종류를 확인해 주세요.');
     need(typeof storagePrefix==='string'&&/^[A-Za-z0-9:_.-]{1,100}$/.test(storagePrefix),'초안 보관 키를 확인해 주세요.');
     need(Number.isSafeInteger(maxItems)&&maxItems>0&&maxItems<=1000&&Number.isSafeInteger(maxBytes)&&maxBytes>=1024&&maxBytes<=8000000,'초안 보관 한도를 확인해 주세요.');
-    Object.assign(this,{onSave,onChange,storage,storagePrefix,maxItems,maxBytes});this.owner=null;this.state=null;this.banks=new Map();
+    Object.assign(this,{onSave,onSaveBatch,onChange,storage,storagePrefix,maxItems,maxBytes});this.owner=null;this.state=null;this.banks=new Map();
   }
   key(type,id){return draftKey060(type,id);}
   storageKey(owner=this.owner){return owner?`${this.storagePrefix}:${encodeURIComponent(owner)}`:null;}
@@ -48,9 +49,10 @@ export class AuthoringDrafts060 {
       for(const row of data.items){
         this._check(row.type,row.id);need(['patch','create'].includes(row.operation)&&validNumber(row.baseVersion)&&object(row.baseContent)&&object(row.fields),'초안 내용');
         const key=this.key(row.type,row.id);need(!restored.has(key),'중복 초안');
-        let submitted=null;if(row.submitted){need(object(row.submitted)&&['patch','create'].includes(row.submitted.operation)&&object(row.submitted.fields)&&Object.keys(row.submitted.fields).length>0&&validNumber(row.submitted.baseVersion)&&object(row.submitted.baseContent),'저장 확인 중인 초안');submitted={operation:row.submitted.operation,fields:clone(row.submitted.fields),baseVersion:row.submitted.baseVersion,baseContent:clone(row.submitted.baseContent),uncertain:true};}
+        let submitted=null;if(row.submitted){need(object(row.submitted)&&['patch','create'].includes(row.submitted.operation)&&object(row.submitted.fields)&&Object.keys(row.submitted.fields).length>0&&validNumber(row.submitted.baseVersion)&&object(row.submitted.baseContent),'저장 확인 중인 초안');submitted={operation:row.submitted.operation,fields:clone(row.submitted.fields),baseVersion:row.submitted.baseVersion,baseContent:clone(row.submitted.baseContent),uncertain:true};if(row.submitted.batchKeys068!==undefined){const keys=row.submitted.batchKeys068;need(Array.isArray(keys)&&keys.length>0&&keys.length<=32&&new Set(keys).size===keys.length&&keys.every(key=>typeof key==='string'),'함께 저장 중인 초안');submitted.batchKeys068=clone(keys);}}
         restored.set(key,{type:row.type,id:row.id,operation:row.operation,baseVersion:row.baseVersion,baseContent:clone(row.baseContent),fields:clone(row.fields),submitted,history:[]});
       }
+      for(const [key,record] of restored){const keys=record.submitted?.batchKeys068;if(keys)need(keys.includes(key)&&keys.every(member=>same(restored.get(member)?.submitted?.batchKeys068,keys)),'함께 저장 중인 초안 항목');}
       bank.records=restored;
     }catch{bank.storageBlocked=true;bank.storageError='이전에 보관한 초안을 읽지 못했습니다. 원본은 유지되며 새 수정은 이 창에서 보관합니다.';}
     return bank;
@@ -58,7 +60,7 @@ export class AuthoringDrafts060 {
   _persist(owner=this.owner){
     const bank=this._bank(owner);if(!bank||!this.storage||bank.storageBlocked)return;
     try{
-      const items=[...bank.records.values()].map(({type,id,operation,baseVersion,baseContent,fields,submitted})=>({type,id,operation,baseVersion,baseContent,fields,submitted:submitted?{operation:submitted.operation,fields:submitted.fields,baseVersion:submitted.baseVersion,baseContent:submitted.baseContent}:null}));
+      const items=[...bank.records.values()].map(({type,id,operation,baseVersion,baseContent,fields,submitted})=>({type,id,operation,baseVersion,baseContent,fields,submitted:submitted?{operation:submitted.operation,fields:submitted.fields,baseVersion:submitted.baseVersion,baseContent:submitted.baseContent,...(submitted.batchKeys068?{batchKeys068:submitted.batchKeys068}:{})}:null}));
       const text=JSON.stringify({schema:1,owner,items});need(bytes(text)<=this.maxBytes,'보관 한도');
       if(items.length)this.storage.setItem(this.storageKey(owner),text);else this.storage.removeItem?.(this.storageKey(owner));bank.storageError=null;
     }catch{bank.storageError='이 기기에 초안을 보관하지 못했습니다. 저장이 끝날 때까지 이 창을 유지해 주세요.';}
@@ -76,7 +78,7 @@ export class AuthoringDrafts060 {
     if(record.operation==='patch'&&!row)return '이 항목이 DB에서 삭제되었습니다. 초안은 유지되며 자동으로 다시 만들지 않습니다.';
     return null;
   }
-  _finish(owner,record,submitted,row=null){
+  _finish(owner,record,submitted,row=null,{persist=true}={}){
     const bank=this._bank(owner),key=this.key(record.type,record.id);if(!bank||bank.records.get(key)!==record||record.submitted!==submitted)return;
     const oldBase=clone(record.baseContent);if(row&&validNumber(row.version)&&object(row.content)){const latest=bank.latest.get(key);if(!latest||row.version>=latest.version)bank.latest.set(key,clone(row));}
     const current=this._row(bank,record),basis=current?.content??row?.content??{...record.baseContent,...submitted.fields};record.baseContent=clone(basis);record.baseVersion=current?.version??row?.version??record.baseVersion;
@@ -85,7 +87,7 @@ export class AuthoringDrafts060 {
       else copyField(record.baseContent,field,row?.content??submitted.fields);
     }
     record.operation='patch';record.submitted=null;record.history=[];bank.error=null;
-    this._clean(bank,record);this._persist(owner);
+    this._clean(bank,record);if(persist)this._persist(owner);
   }
   _clean(bank,record){
     const key=this.key(record.type,record.id),row=this._row(bank,record);if(record.submitted)return;
@@ -97,7 +99,15 @@ export class AuthoringDrafts060 {
     if(nextOwner!==this.owner){const previous=this._bank();if(previous?.task)previous.task.leaveOwner();this._persist();this.owner=nextOwner;if(nextOwner&&!this.banks.has(nextOwner))this._load(nextOwner);}
     this.state=state;const bank=this._bank();if(!bank)return this.summary();
     const rows=state.bootstrap?.authoring?.entities;if(Array.isArray(rows)){bank.latest=new Map(rows.filter(row=>row&&!row.deleted&&kindValid(row.entity_type)&&idValid(row.entity_id)&&validNumber(row.version)&&object(row.content)).map(row=>[this.key(row.entity_type,row.entity_id),clone(row)]));bank.canonicalReady=true;}
-    for(const record of [...bank.records.values()]){const row=this._row(bank,record),submitted=record.submitted;if(submitted&&row&&Object.keys(submitted.fields).every(field=>same(row.content[field],submitted.fields[field])))this._finish(this.owner,record,submitted,row);else this._clean(bank,record);}
+    const checkedBatches=new Set();
+    for(const record of [...bank.records.values()]){
+      const row=this._row(bank,record),submitted=record.submitted,keys=submitted?.batchKeys068;
+      if(keys){
+        const group=JSON.stringify(keys);if(checkedBatches.has(group))continue;checkedBatches.add(group);
+        const members=keys.map(key=>bank.records.get(key));
+        if(members.every(member=>member&&same(member.submitted?.batchKeys068,keys)&&this._row(bank,member)&&Object.keys(member.submitted.fields).every(field=>same(this._row(bank,member).content[field],member.submitted.fields[field]))))for(const member of members)this._finish(this.owner,member,member.submitted,this._row(bank,member),{persist:false});
+      }else if(submitted&&row&&Object.keys(submitted.fields).every(field=>same(row.content[field],submitted.fields[field])))this._finish(this.owner,record,submitted,row);else this._clean(bank,record);
+    }
     this._persist();return this.summary();
   }
   stage(type,id,fields,{operation='patch'}={}){
@@ -171,7 +181,85 @@ export class AuthoringDrafts060 {
     }).finally(()=>{if(bank.task===task)bank.task=null;this._persist(owner);this._emit(owner);});
     this._emit(owner);return task.promise;
   }
+  _restoreTogether068(owner,plans,message){
+    const bank=this._bank(owner);if(!bank)return;
+    for(const {record,submitted,key} of plans){
+      if(bank.records.get(key)!==record||record.submitted!==submitted)continue;
+      record.fields={...clone(submitted.fields),...record.fields};record.operation=submitted.operation;record.submitted=null;record.baseContent=clone(submitted.baseContent);record.baseVersion=submitted.baseVersion;this._clean(bank,record);
+    }
+    bank.error=message;this._persist(owner);this._emit(owner);
+  }
+  saveTogether068({keys=null}={}){
+    const bank=this._bank();need(bank,'편집 계정으로 로그인해 주세요.');
+    if(bank.task){need(bank.task.atomic068,'기존 저장이 끝난 뒤 함께 저장해 주세요.');return bank.task.promise;}
+    need(typeof this.onSaveBatch==='function','덱과 편성을 함께 저장할 연결이 없습니다.');
+    const selected=this._keys(keys,bank);if(!selected.length)return Promise.resolve({success:true,atomic068:true,saved:0,alreadyCurrent:0});
+    need(selected.length<=32,'덱과 편성은 한 번에 32개까지 함께 저장할 수 있습니다. 저장 범위를 줄여 주세요.');need(!this._blocked(bank),this._blocked(bank));
+    const plans=[];let alreadyCurrent=0;
+    for(const key of selected){
+      const record=bank.records.get(key);need(record.type==='deck'&&['patch','create'].includes(record.operation)||record.type==='chapter_role'&&record.operation==='patch','함께 저장할 수 있는 항목은 덱과 기존 장별 편성입니다.');
+      const row=this._row(bank,record),structural=this._structural(bank,record,row);need(!structural,structural);need(!this._conflicts(record,row).length,'DB에서 같은 필드가 바뀌었습니다. 초안을 유지할지 DB 내용을 사용할지 선택해 주세요.');
+      plans.push({key,record,fields:clone(record.fields),operation:record.operation});
+    }
+    plans.sort((a,b)=>(a.record.type==='deck'?0:1)-(b.record.type==='deck'?0:1)||(a.record.id<b.record.id?-1:a.record.id>b.record.id?1:0));
+    const owner=this.owner;let leaveOwner;
+    const left=new Promise(resolve=>leaveOwner=()=>resolve({ownerChanged:true})),task={leaveOwner,promise:null,atomic068:true};bank.task=task;bank.error=null;
+    task.promise=Promise.resolve().then(async()=>{
+      if(this.owner!==owner||!this.state?.canEdit)return {success:false,atomic068:true,saved:0,alreadyCurrent,ownerChanged:true};
+      need(!this._blocked(bank),this._blocked(bank));const prepared=[];
+      // Validate every member before marking any member submitted or calling RPC.
+      for(const plan of plans){
+        const {record,key}=plan;need(bank.records.get(key)===record,'함께 저장할 초안이 바뀌었습니다. 현재 내용을 다시 확인해 주세요.');
+        const row=this._row(bank,record),structural=this._structural(bank,record,row);need(!structural,structural);
+        for(const [field,value] of Object.entries(plan.fields))need(!row||same(row.content[field],record.baseContent[field])||same(row.content[field],value),'DB에서 같은 필드가 바뀌었습니다. 초안을 확인해 주세요.');
+        const fields=plan.operation==='create'?clone(plan.fields):Object.fromEntries(Object.entries(plan.fields).filter(([field,value])=>!same(row.content[field],value)).map(([field,value])=>[field,clone(value)]));
+        if(!Object.keys(fields).length){alreadyCurrent++;continue;}
+        prepared.push({...plan,desired:this._desired(record,row),submitted:{operation:plan.operation,fields,baseVersion:row?.version??0,baseContent:clone(row?.content??{}),uncertain:false}});
+      }
+      if(!prepared.length){for(const plan of plans)this._clean(bank,plan.record);return {success:true,atomic068:true,saved:0,alreadyCurrent};}
+      const batchKeys068=prepared.map(plan=>plan.key);
+      for(const plan of prepared){
+        const {record,submitted,desired}=plan;submitted.batchKeys068=clone(batchKeys068);record.submitted=submitted;
+        for(const field of Object.keys(submitted.fields)){delete record.fields[field];if(own(desired,field)&&!same(desired[field],submitted.fields[field]))record.fields[field]=clone(desired[field]);}
+      }
+      this._persist(owner);this._emit(owner);
+      if(this.owner!==owner||!this.state?.canEdit){this._restoreTogether068(owner,prepared,null);return {success:false,atomic068:true,saved:0,alreadyCurrent,ownerChanged:true};}
+      let result;
+      try{result=this.onSaveBatch(prepared.map(({record,submitted})=>({type:record.type,id:record.id,fields:clone(submitted.fields),operation:submitted.operation,baseVersion:submitted.baseVersion,baseContent:clone(submitted.baseContent)})));}
+      catch(error){this._restoreTogether068(owner,prepared,error.message??String(error));throw error;}
+      const complete=Promise.resolve(result).then(ack=>{
+        if(ack?.discarded){this._restoreTogether068(owner,prepared,'함께 저장할 대기 요청은 취소됐으며 모든 로컬 초안은 유지됩니다.');return {success:false,atomic068:true,saved:0,alreadyCurrent,discarded:true};}
+        need(ack?.kind==='unified039-write-ack'||ack?.kind==='already-current-batch'&&ack.alreadyCurrent===true&&ack.batch068===true,'함께 저장한 결과를 확인하지 못했습니다. 기존 요청을 먼저 확인해 주세요.');
+        const rows=prepared.map(({record})=>(ack.entities??[]).find(row=>row.entity_type===record.type&&row.entity_id===record.id&&!row.deleted));
+        need(rows.every(row=>row&&validNumber(row.version)&&object(row.content)),'함께 저장한 모든 항목의 결과를 확인하지 못했습니다. 기존 요청을 먼저 확인해 주세요.');
+        prepared.forEach(({record,submitted},index)=>this._finish(owner,record,submitted,rows[index],{persist:false}));bank.error=null;this._persist(owner);this._emit(owner);
+        return ack.kind==='already-current-batch'?{success:true,atomic068:true,saved:0,alreadyCurrent:alreadyCurrent+prepared.length}:{success:true,atomic068:true,saved:prepared.length,alreadyCurrent};
+      }).catch(error=>{
+        const uncertain=prepared.filter(({key,record,submitted})=>bank.records.get(key)===record&&record.submitted===submitted);
+        if(uncertain.length){for(const {submitted} of uncertain)submitted.uncertain=true;bank.error='함께 저장한 결과를 확인하지 못했습니다. 기존 요청의 확인이 끝날 때까지 새 요청을 만들지 않습니다.';this._persist(owner);this._emit(owner);}throw error;
+      });
+      const outcome=await Promise.race([complete,left]);return outcome?.ownerChanged?{success:false,atomic068:true,saved:0,alreadyCurrent,ownerChanged:true}:outcome;
+    }).finally(()=>{if(bank.task===task)bank.task=null;this._persist(owner);this._emit(owner);});
+    this._emit(owner);return task.promise;
+  }
   saveEntity(type,id){this._check(type,id);return this.saveAll({keys:[this.key(type,id)]});}
+  recoverRejectedBatch068(value){
+    need(object(value)&&typeof value.batchId==='string'&&value.batchId.length>0&&Array.isArray(value.changes)&&value.changes.length>0&&value.changes.length<=32,'함께 저장한 요청을 확인해 주세요.');
+    need(this.owner&&this.state?.canEdit&&this.state.phase==='invalid'&&this.state.writeState?.rejected===true&&this.state.writeState.batch068===true&&this.state.writeState.batchId===value.batchId,'현재 거절된 함께 저장 요청만 초안으로 돌릴 수 있습니다.');
+    const expected=this.state.writeState.changes;need(Array.isArray(expected)&&expected.length===value.changes.length&&expected.every(item=>value.changes.some(change=>change.type===(item.type??item.entityType)&&change.id===(item.id??item.entityId))),'거절된 요청의 모든 항목을 함께 초안으로 돌려 주세요.');
+    need(typeof this.storage?.getItem==='function'&&typeof this.storage?.setItem==='function','초안 보관소를 사용할 수 없어 기존 저장 요청을 유지합니다. 브라우저 저장 공간을 확인해 주세요.');
+    const bank=this._bank(),replacements=[],keys=new Set();
+    for(const change of value.changes){
+      const {type,id,operation,baseVersion,baseContent}=change;this._check(type,id);need(type==='deck'&&['patch','create'].includes(operation)||type==='chapter_role'&&operation==='patch','함께 저장할 초안 종류를 확인해 주세요.');
+      need(validNumber(baseVersion)&&object(baseContent),'초안으로 돌릴 내용을 확인해 주세요.');safe(baseContent);const fields=this._fields(change.fields),key=this.key(type,id);need(!keys.has(key)&&Object.keys(fields).length>0,'함께 저장할 초안 항목을 확인해 주세요.');keys.add(key);
+      const existing=bank.records.get(key),base=clone(baseContent);if(existing)for(const field of Object.keys(existing.fields))copyField(base,field,existing.baseContent);
+      replacements.push({key,existing,record:{type,id,operation,baseVersion,baseContent:base,fields:{...fields,...clone(existing?.fields??{})},submitted:null,history:[]}});
+    }
+    need(bank.records.size+replacements.filter(row=>!row.existing).length<=this.maxItems,'보관할 수 있는 초안 수를 초과했습니다.');
+    const oldError=bank.error;for(const {key,record} of replacements)bank.records.set(key,record);bank.error=null;this._persist();
+    if(bank.storageBlocked||bank.storageError){for(const {key,existing} of replacements)if(existing)bank.records.set(key,existing);else bank.records.delete(key);bank.error=oldError;this._emit();throw Error('모든 초안을 이 기기에 보관하지 못해 기존 저장 요청을 유지합니다. 저장 공간을 확인한 뒤 다시 시도해 주세요.');}
+    this._emit();return {recovered:true,batchId:value.batchId,keys:[...keys]};
+  }
   recoverRejected065(value){
     const {type,id,operation,baseVersion,baseContent}=value;this._check(type,id);
     need(this.owner&&this.state?.canEdit&&this.state.phase==='invalid'&&this.state.writeState?.rejected===true&&this.state.writeState.entityType===type&&this.state.writeState.entityId===id,'현재 거절된 요청만 초안으로 돌릴 수 있습니다.');
