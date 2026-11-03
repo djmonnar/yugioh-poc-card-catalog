@@ -1,7 +1,8 @@
 // A short roster and one selected encounter editor share the canonical draft.
-export function renderChapters066({host,getState,entities,cards,characters,deckOptions,readiness,el,button,field,patch,onNavigate,onSaveDrafts,manualSaveControl,status,encounterDefaults,encounterForm,selected,filters,rerender}){
+export function renderChapters066({host,getState,entities,cards,characters,deckOptions,readiness,el,button,field,patch,onNavigate,onSaveDrafts,manualSaveControl,status,encounterDefaults,encounterForm,selected,filters,rerender,onBulkAssign}){
   const clone=structuredClone,state=getState(),all=entities(state),decks=all.filter(row=>row.entity_type==='deck'),roles=all.filter(row=>row.entity_type==='chapter_role'),roleNames={battle:'일반 전투',elite:'엘리트',boss:'보스'};
   host.classList.add('au-chapters066');host.append(el('h1','장별 적 편성'),el('p','상대를 눌러 설정하세요.','au-lead'));
+  if(onBulkAssign)host.append(button('여러 구역에 배치',()=>onBulkAssign(),'au-bulk-open071'));
   if(!roles.some(row=>row.entity_id===selected.get('chapters')))selected.set('chapters',roles[0]?.entity_id);
   const entity=roles.find(row=>row.entity_id===selected.get('chapters'));
   if(!entity){host.append(el('p','편집할 장별 편성 자료가 없습니다. 연결을 확인해 주세요.','au-empty'));return;}
@@ -38,7 +39,7 @@ export function renderChapters066({host,getState,entities,cards,characters,deckO
     else editor.append(el('p','연결된 덱을 찾을 수 없습니다. 다른 공유 덱으로 상대를 추가해 주세요.','au-empty'));
     const actions=el('details',null,'au-encounter-actions066');actions.append(el('summary','덱 편집·상대 복사·제외'));
     const edit=button('덱 편집',()=>onNavigate('decks',entry.deck_id)),another=button('같은 덱으로 상대 추가',()=>{const live=(latest().content.entries??[]).find(item=>entryKey(item)===id);return addEntry(summary.entity,live?.encounter);}),remove=button('편성에서 제외',()=>{filters.delete(selectedKey);filters.set(modeKey,'list');filters.set(revealKey,'list');return changeEntries(rows=>rows.filter(item=>entryKey(item)!==id));});
-    edit.disabled=!summary;another.disabled=!getState().canEdit||!summary||entries.length>=100;remove.disabled=!getState().canEdit;actions.append(edit,another,remove);editor.append(actions);
+    edit.disabled=!summary;another.disabled=!getState().canEdit||!summary||entries.length>=100;remove.disabled=!getState().canEdit;actions.append(edit,another,remove);if(onBulkAssign&&summary)actions.append(button('이 덱을 여러 구역에 배치',()=>onBulkAssign(entry.deck_id)));editor.append(actions);
     if(getState().manualSave060&&onSaveDrafts){const message=el('p',null,'au-hint'),save=button('이 구역 저장',()=>onSaveDrafts({id:entity.entity_id,types:['chapter_role']}),'au-primary');manualSaveControl({id:entity.entity_id,types:['chapter_role']},save,{message});editor.append(save,message);}else editor.append(status(latest()));
   };
   const displayAssigned=()=>{

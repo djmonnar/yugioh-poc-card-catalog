@@ -119,7 +119,19 @@ export class AuthoringDrafts060 {
       const anchor=record.submitted&&own(record.submitted.fields,field)?record.submitted.fields[field]:record.baseContent[field];
       if(record.operation==='patch'||record.submitted){if(same(value,anchor))delete record.fields[field];else record.fields[field]=clone(value);}else record.fields[field]=clone(value);
     }
-    this._clean(bank,record);if(![...bank.records.values()].some(item=>item.submitted))bank.error=null;this._persist();this._emit();return {staged:true,entityType:type,entityId:id,key};
+    this._clean(bank,record);if(![...bank.records.values()].some(item=>item.submitted))bank.error=null;if(!this.staging071){this._persist();this._emit();}return {staged:true,entityType:type,entityId:id,key};
+  }
+  stageTogether071(changes){
+    need(Array.isArray(changes)&&changes.length>0&&changes.length<=32,'함께 준비할 초안은 1~32개여야 합니다.');
+    need(!this.staging071,'초안을 준비하고 있습니다.');
+    const seen=new Set(),bank=this._bank();need(bank&&this.owner&&this.state?.canEdit,'편집 계정으로 로그인해 주세요.');
+    need(!bank.task&&![...bank.records.values()].some(record=>record.submitted),'기존 DB 저장 확인이 끝난 뒤 여러 구역의 초안을 준비해 주세요.');
+    for(const change of changes){this._check(change.type,change.id);const key=this.key(change.type,change.id);need(!seen.has(key),'같은 초안을 두 번 준비할 수 없습니다.');seen.add(key);this._fields(change.fields);}
+    const before=new Map([...bank.records].map(([key,value])=>[key,clone(value)])),error=bank.error;this.staging071=true;
+    try{for(const change of changes)this.stage(change.type,change.id,change.fields,{operation:change.operation??'patch'});}
+    catch(failure){bank.records=before;bank.error=error;throw failure;}
+    finally{this.staging071=false;}
+    this._persist();this._emit();return {staged:true,keys:changes.map(({type,id})=>({type,id}))};
   }
   overlay(state=this.state){
     if(!state)return state;const bank=this._bank();if(!bank||state.user?.id!==this.owner||!state.canEdit)return {...state};const entities=(state.entities??state.bootstrap?.authoring?.entities??[]).map(row=>clone(row));

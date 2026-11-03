@@ -29,7 +29,7 @@ export function patchDeckPlacement068(role,deckId,entryId,fields){
   return role.content.entries.map(entry=>entry.entry_id===entryId&&entry.deck_id===deckId?{...entry,encounter:{...entry.encounter,...copy(fields)}}:entry);
 }
 
-export function renderDeckSetup068({host,getState,entities,getCharacters,deckId,el,button,field,patch,renderEncounter,onNavigate,onSaveDrafts,manualSaveControl,registerSave068,filters,rerender}){
+export function renderDeckSetup068({host,getState,entities,getCharacters,deckId,el,button,field,patch,renderEncounter,onNavigate,onSaveDrafts,manualSaveControl,registerSave068,filters,rerender,onBulkAssign}){
   const initial=getState(),owner=owner068(initial),memoryKey=`deck-setup068:${JSON.stringify([owner,deckId])}`,ui=filters.get(memoryKey)??{mode:'summary',selected:null,query:'',page:1,add:null,remove:null};
   const all=()=>entities(getState()),latestDeck=()=>all().find(row=>row.entity_type==='deck'&&row.entity_id===deckId&&!row.deleted),latestRole=id=>all().find(row=>row.entity_type==='chapter_role'&&row.entity_id===id&&!row.deleted),placements=()=>deckPlacements068(all(),deckId);
   const deck=latestDeck();if(!deck)return;
@@ -68,6 +68,7 @@ export function renderDeckSetup068({host,getState,entities,getCharacters,deckId,
   const canonicalRoleIds=new Set(deckPlacements068(getState().canonicalEntities068??[],deckId).map(row=>row.role.entity_id));
   const dirty=hasLocal||list.some(row=>row.role.localDraft060||dirtyRoleIds.has(row.role.entity_id))||[...dirtyRoleIds].some(id=>canonicalRoleIds.has(id))||deck.localDraft060;
   if(dirty)summary.append(el('span',' · 저장 전 변경','au-setup-dirty068'));
+  if(onBulkAssign)root.append(button('여러 구역에 배치',()=>onBulkAssign(deckId),'au-bulk-open071'));
   if(ui.mode==='summary')return;
   const availableRoles=all().filter(row=>row.entity_type==='chapter_role'&&!row.deleted).sort((a,b)=>a.content.chapter-b.content.chapter||roles068.indexOf(a.content.role)-roles068.indexOf(b.content.role));
   const tools=el('div',null,'au-setup-tools068'),startAdd=()=>{
