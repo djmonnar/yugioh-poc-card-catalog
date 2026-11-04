@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.25",
-  "versionCode": 44,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.25/YGOClassicExpedition-0.18.25-arm64.apk",
-  "sizeBytes": 297288288,
-  "sha256": "fb08bdcbbc59a37b0a86550c9713346a3a5d6d0679e079217b8c359fa18c1240",
-  "releaseNotes": "묘지기 서치 AI, 엑스트라 덱 확인·소환 취소·한국어 안내를 보완했습니다. 속성 보상 선택과 선후공·손패·덱 예지 유물 6종을 추가하고 공식 한국어 설명 5건을 교정했습니다. 새 유물은 새 원정에 적용됩니다."
+  "versionName": "0.18.27",
+  "versionCode": 46,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.27/YGOClassicExpedition-0.18.27-arm64.apk",
+  "sizeBytes": 297301068,
+  "sha256": "034961759ef958805190f5a1a8c1e3e9225c7755b47eebeeb0955c9fb3003a77",
+  "releaseNotes": "배틀 선택창·상점·보상·이벤트의 카드를 길게 누르면 정보를 확인할 수 있습니다. 타이틀 진입 전 전투 스크립트 검사를 백그라운드로 옮기고 시작·도감 로딩을 개선했습니다. 가로 화면 카드 정보 배치도 보완했습니다."
 }
