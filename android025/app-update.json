@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.29",
-  "versionCode": 48,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.29/YGOClassicExpedition-0.18.29-arm64.apk",
-  "sizeBytes": 297859946,
-  "sha256": "14247f9ccfbf6113a2b60e30cd30f2749e6a1b59703ec902d2f96edd8c26aabd",
-  "releaseNotes": "필드 마법 상점·이벤트·SR/UR 유물 추가. UR 발동 시 서치·드로우 처리. AI 공격 기회·선봉대장 연계 개선. 새 콘텐츠는 새 원정에 적용됩니다."
+  "versionName": "0.18.30",
+  "versionCode": 49,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.30/YGOClassicExpedition-0.18.30-arm64.apk",
+  "sizeBytes": 297941750,
+  "sha256": "771b5b8ea5ba09ef680d87edc748363b27c476f8001254d4d8f636cd4bb3cb81",
+  "releaseNotes": "효과 선택 한국어 개선. AI 중복 함정·자기 효과 무효화 낭비 수정. 달의 서 리버스 재활용·동반 판단 개선. 천수 계열 대상 부족 안내와 보상 처리·오류 표시 추가."
 }
