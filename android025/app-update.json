@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.28",
-  "versionCode": 47,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.28/YGOClassicExpedition-0.18.28-arm64.apk",
-  "sizeBytes": 297322404,
-  "sha256": "f729d7bc1ee6c0b67b3fb8fb04263d640f02791f97af918ee2860882258165c5",
-  "releaseNotes": "새 유물 6종을 가진 기존 원정을 다시 열 때 저장 보호 상태로 전환되던 오류를 수정했습니다. 저장 당시 제작 자료로 검증하며, 보호된 원정과 오류 원인을 표시합니다. 기존 앱 위에 업데이트한 뒤 다시 실행해 주세요."
+  "versionName": "0.18.29",
+  "versionCode": 48,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.29/YGOClassicExpedition-0.18.29-arm64.apk",
+  "sizeBytes": 297859946,
+  "sha256": "14247f9ccfbf6113a2b60e30cd30f2749e6a1b59703ec902d2f96edd8c26aabd",
+  "releaseNotes": "필드 마법 상점·이벤트·SR/UR 유물 추가. UR 발동 시 서치·드로우 처리. AI 공격 기회·선봉대장 연계 개선. 새 콘텐츠는 새 원정에 적용됩니다."
 }
