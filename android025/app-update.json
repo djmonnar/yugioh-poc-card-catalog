@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.34",
-  "versionCode": 53,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.34/YGOClassicExpedition-0.18.34-arm64.apk",
-  "sizeBytes": 329434324,
-  "sha256": "9cf47748e268abbac46f3cbeed84f0d81d06f4ab528a020fdf3f49a811fd969d",
-  "releaseNotes": "아마조네스의 검사가 전투 데미지 반사를 고려해 표시 형식과 공격 대상을 고릅니다.\n더 강한 상대를 공격해 얻는 피해와 카드 손실을 비교하고, 아마조네스 여왕·투지 및 확인된 무효·피해 방지 효과도 반영합니다.\n아마조네스의 마을이 실제로 제시하는 합법적인 교체 소환과 후속 공격을 평가합니다."
+  "versionName": "0.18.35",
+  "versionCode": 54,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.35/YGOClassicExpedition-0.18.35-arm64.apk",
+  "sizeBytes": 352898870,
+  "sha256": "b616cf17624f556b7253fc7d42b01b16e23664f3de3fd4d47eb39483cc04f1f6",
+  "releaseNotes": "요청 카드 32종 반영: 신규 31종을 추가하고 기존 리츄얼 처치는 그대로 유지했습니다.\r\n발동 조건·비용·대상 선택과 미궁·듀얼·장착·함정 연계를 AI가 활용하도록 검수했습니다.\r\n기존 저장 기록과 이전 전투의 카드 풀, 소환 연출을 유지합니다."
 }
