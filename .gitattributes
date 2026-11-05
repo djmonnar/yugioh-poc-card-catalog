@@ -8,3 +8,4 @@ assets/authoring/app.js text eol=lf -whitespace
 # The067 catalog registry uses the exact native web-manifest byte hash.
 data/native-expansion067.json -text
 data/native-expansion081.json -text
+data/native-expansion084.json -text

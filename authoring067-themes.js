@@ -1,7 +1,8 @@
 import {ADDITION_BATCHES067} from './authoring067-batch-data.js?v=20261102-067';
 import {ADDITION_BATCHES081} from './authoring081-batch-data.js?v=20261105-082';
+import {ADDITION_BATCHES084} from './authoring084-batch-data.js?v=20261105-084';
 
-export function additionMetadata067(key,registry=[...ADDITION_BATCHES067,...ADDITION_BATCHES081]){return registry.find(batch=>batch.key===key)??{key,label:`추가 묶음 ${key.replace(/^Cards/,'')}`,themes:[]};}
+export function additionMetadata067(key,registry=[...ADDITION_BATCHES067,...ADDITION_BATCHES081,...ADDITION_BATCHES084]){return registry.find(batch=>batch.key===key)??{key,label:`추가 묶음 ${key.replace(/^Cards/,'')}`,themes:[]};}
 
 // A theme is registration metadata. User-edited category tags stay independent.
 export function additionThemes067(cards,scope,index){
