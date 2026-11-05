@@ -10,6 +10,7 @@ async function start(){
     const config=validateCloudConfig(await response.json()),client=createClient(config.url,config.publishable_key,{auth:{storageKey:'poc-ai-editor-auth-v1',persistSession:true,autoRefreshToken:true,detectSessionInUrl:true},global:{fetch:(url,options)=>fetch(url,{...options,signal:options?.signal||AbortSignal.timeout(20000)})}});
     let storage=null;try{storage=window.localStorage;}catch{/* Recovery storage is optional; the DB remains authoritative. */}
     const store=new AuthoringStore039({client,storage});
+    const loadingMessage=root.querySelector('.au-loading p');if(loadingMessage)loadingMessage.textContent='저장된 카드와 편집 자료를 불러오고 있습니다…';
     const uploadAsset=async image=>{if(!store.snapshot().canEdit)throw Error('편집 계정으로 로그인해 주세요.');if(!image||image.size>3*1024*1024||!['image/png','image/jpeg','image/webp'].includes(image.type))throw Error('PNG·JPEG·WebP, 3MB 이하 이미지를 골라 주세요.');const ext={'image/png':'png','image/jpeg':'jpg','image/webp':'webp'}[image.type],path=`portraits/${crypto.randomUUID()}.${ext}`,bucket=client.storage.from('poc-story-assets'),reply=await bucket.upload(path,image,{contentType:image.type,upsert:false});if(reply.error)throw reply.error;return bucket.getPublicUrl(path).data.publicUrl;};
     let draftStorage=null;try{draftStorage=window.sessionStorage;}catch{/* Unsaved edits remain in memory when session storage is unavailable. */}
     mountAuthoringShell039({root,store,uploadAsset,manualSave:true,draftStorage});await store.start();

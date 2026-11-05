@@ -128,10 +128,13 @@ export class AuthoringStore039 {
     need(client?.rpc && client?.auth,'DB 연결이 필요해.');
     Object.assign(this,{client,storage,crypto,debounceMs,idleRefreshMs,pollMs,redirectUrl,events});
     this.listeners=new Set(); this.queue=[]; this.user=null; this.bootstrap=null; this.phase='loading'; this.error=null; this.pendingRevision=null; this.fetchedRevision=null; this.generation=0; this.busy=false; this.stopped=false; this.failures=0; this.refreshTask=null; this.retryRequestId=null; this.retryNotBefore=0; this.conflictInfo=null;
+    this.checkedAt083=null;this.savedAt083=null;this.readError083=null;
     this.online=()=>this.retry();
   }
   subscribe(fn) { this.listeners.add(fn); fn(this.snapshot()); return ()=>this.listeners.delete(fn); }
+  canEdit083(){return !!this.user&&this.bootstrap?.permissions?.can_edit===true;}
   snapshot() {
+    if(this.refreshTask?.generation===this.generation)this.refreshTask.checkingExposed083=true;
     const entities=clone(this.bootstrap?.authoring?.entities ?? []);
     for (const item of this.queue) for (const q of batchChanges068(item)) {
       const i=entities.findIndex(e=>key(e.entity_type,e.entity_id)===key(q.type,q.id));
@@ -141,7 +144,8 @@ export class AuthoringStore039 {
     }
     const status=this.phase==='conflict'?'현재 DB와 저장 대기분을 확인해 주세요.':this.phase==='invalid'?'수정할 값을 확인해줘.':this.phase==='error'?'저장을 다시 시도할게.':this.busy?'저장 중…':this.queue.length?'변경 사항 저장 대기 중…':this.phase==='loading'?'제작 데이터 불러오는 중…':'자동 저장됨';
     const head=this.queue[0],primary=head?batchChanges068(head)[0]:null,batchState=batchWriteState068(head),writeFields=batchFields068(head),writeState=head?{entityType:primary.type,entityId:primary.id,operation:primary.operation,fields:writeFields,phase:this.phase,rejected:head.rejected===true,uncertain:this.phase==='error'&&Boolean(head.body),...batchState,...(head.rejected?{validation:{...validationInfo065(head.rejectionReason,writeFields),...batchState}}:{}),...(this.phase==='conflict'&&this.conflictInfo?{conflict:clone(this.conflictInfo)}:{})}:null;
-    return {bootstrap:clone(this.bootstrap),entities,gamePayload:clone(this.bootstrap?.gamePayload??null),phase:this.phase,status,error:this.error,writeState,user:this.user?{id:this.user.id,email:this.user.email}:null,canEdit:!!this.user&&this.bootstrap?.permissions?.can_edit===true,pending:this.queue.length};
+    return {bootstrap:clone(this.bootstrap),entities,gamePayload:clone(this.bootstrap?.gamePayload??null),phase:this.phase,status,error:this.error,writeState,user:this.user?{id:this.user.id,email:this.user.email}:null,canEdit:this.canEdit083(),pending:this.queue.length,
+      sync083:{checking:!!this.refreshTask&&this.refreshTask.generation===this.generation,checkedAt:this.checkedAt083,savedAt:this.savedAt083,readError:this.readError083}};
   }
   emit() { const snap=this.snapshot(); for(const fn of this.listeners) fn(snap); }
   getRow(type,id) { return this.bootstrap?.authoring?.entities?.find(e=>e.entity_type===type&&e.entity_id===id); }
@@ -178,8 +182,8 @@ export class AuthoringStore039 {
   async acceptSession(session) {
     const id=session?.user?.id??null;
     if(this.started&&id===(this.user?.id??null)) return;
-    this.started=true; this.persist(); this.generation++; const generation=this.generation; clearTimeout(this.idleTimer); this.busy=false; this.pendingRevision=null; this.retryRequestId=null; this.retryNotBefore=0; this.conflictInfo=null; this.user=session?.user??null; this.queue=[]; this.bootstrap=null; this.fetchedRevision=null; this.phase='loading'; this.error=null; this.emit();
-    try { await this.refresh(true); if(generation!==this.generation)return; if(this.snapshot().canEdit) { this.restore(); await this.archiveLegacy(); if(generation===this.generation&&this.queue.length) this.schedule(0); } }
+    this.started=true; this.persist(); this.generation++; const generation=this.generation; clearTimeout(this.idleTimer); this.busy=false; this.pendingRevision=null; this.retryRequestId=null; this.retryNotBefore=0; this.conflictInfo=null; this.checkedAt083=null;this.savedAt083=null;this.readError083=null;this.user=session?.user??null; this.queue=[]; this.bootstrap=null; this.fetchedRevision=null; this.phase='loading'; this.error=null; this.emit();
+    try { await this.refresh(true); if(generation!==this.generation)return; if(this.canEdit083()) { this.restore(); await this.archiveLegacy(); if(generation===this.generation&&this.queue.length) this.schedule(0); } }
     catch(e) { if(generation===this.generation){this.setError(e);throw e;} }
   }
   async refresh(force=false) {
@@ -194,10 +198,11 @@ export class AuthoringStore039 {
       if(generation!==this.generation||this.stopped)return;
       return this.refresh(force||active.generation!==generation);
     }
-    const task={generation,force,pendingAtStart:this.pendingRevision,canFollowAck:false,promise:null};this.refreshTask=task;
-    task.promise=this.refreshOnce(force,generation).then(()=>{task.canFollowAck=true;}).catch(e=>{if(e.code==='authoring039_stale_read')task.canFollowAck=true;if(generation===this.generation)throw e;}).finally(()=>{
+    const task={generation,force,pendingAtStart:this.pendingRevision,canFollowAck:false,changed:false,promise:null};this.refreshTask=task;
+    task.promise=this.refreshOnce(force,generation).then(changed=>{task.canFollowAck=true;task.changed=changed===true;}).catch(e=>{if(e.code==='authoring039_stale_read')task.canFollowAck=true;if(generation===this.generation){const message=explain(e);task.changed=this.readError083!==message;this.readError083=message;throw e;}}).finally(()=>{
       if(this.refreshTask===task){
         this.refreshTask=null;
+        if(generation===this.generation&&!this.stopped&&(force||task.changed||task.checkingExposed083))this.emit();
         // An idle read can have joined a request that began before its ACK.
         // Follow that new revision after a valid or locally obsolete response,
         // without looping server failures or repeatedly stale reads or
@@ -205,6 +210,7 @@ export class AuthoringStore039 {
         if(task.canFollowAck&&generation===this.generation&&this.pendingRevision!==null&&this.pendingRevision>this.fetchedRevision&&this.pendingRevision>(task.pendingAtStart??0))this.scheduleIdleRefresh();
       }
     });
+    if(force)this.emit();
     return task.promise;
   }
   async refreshOnce(force,generation) {
@@ -212,10 +218,12 @@ export class AuthoringStore039 {
     if(generation!==this.generation)return;
     if(result.error) throw result.error;
     const next=await normalizeBootstrap039(result.data,this.crypto); if(generation!==this.generation) return;
+    let changed=!next.unchanged||this.readError083!==null;
     if(!next.unchanged) { if(this.bootstrap&&next.project_revision<this.bootstrap.project_revision){const error=Error('이전 DB 개정이 도착했어. 다시 확인할게.');error.code='authoring039_stale_read';throw error;} this.bootstrap=next; this.fetchedRevision=next.project_revision; }
-    else { need(this.bootstrap,'DB가 첫 응답을 생략했어. 다시 연결해줘.'); this.bootstrap.permissions=clone(next.permissions);if(next.mapRules052){need(!this.bootstrap.mapRules052||next.mapRules052.revision>=this.bootstrap.mapRules052.revision,'이전 맵 분포가 도착했습니다. 다시 불러와 주세요.');this.bootstrap.mapRules052=clone(next.mapRules052);this.bootstrap.map_rules052=clone(next.map_rules052);} }
+    else { need(this.bootstrap,'DB가 첫 응답을 생략했어. 다시 연결해줘.');changed||=!equal(this.bootstrap.permissions,next.permissions);this.bootstrap.permissions=clone(next.permissions);if(next.mapRules052){need(!this.bootstrap.mapRules052||next.mapRules052.revision>=this.bootstrap.mapRules052.revision,'이전 맵 분포가 도착했습니다. 다시 불러와 주세요.');changed||=!equal(this.bootstrap.mapRules052,next.mapRules052);this.bootstrap.mapRules052=clone(next.mapRules052);this.bootstrap.map_rules052=clone(next.map_rules052);} }
     if(this.pendingRevision!==null&&this.fetchedRevision>=this.pendingRevision) this.pendingRevision=null;
-    if(!this.queue.length) { this.phase='ready'; this.error=null; } this.emit();
+    if(!this.queue.length) { changed||=this.phase!=='ready'||this.error!==null;this.phase='ready'; this.error=null; }
+    this.checkedAt083=Date.now();this.readError083=null;return changed;
   }
   patch(type,id,fields,{operation='patch'}={}) {
     const snapshot=this.snapshot();need(snapshot.canEdit,'편집자로 로그인해줘.'); need(KINDS.has(type)&&typeof id==='string'&&id.length>0&&id.length<=200&&object(fields)&&['create','patch','delete'].includes(operation),'저장할 항목을 확인해줘.'); safe(fields);
@@ -234,6 +242,9 @@ export class AuthoringStore039 {
     this.error=this.queue[0]?.rejected?validationInfo065(this.queue[0].rejectionReason,batchFields068(this.queue[0])).message:null; if(this.phase!=='conflict') this.phase=this.queue[0]?.rejected?'invalid':'pending'; this.persist(); this.emit(); this.schedule(); return promise;
   }
   patchTogether068(changes){return enqueueBatch068(this,changes,BATCH068);}
+  // Explicit manual Save can bypass typing debounce, while schedule still
+  // honors an uncertain request's retry backoff and all queue/CAS guards.
+  flushPending083(){if(this.queue.length)this.schedule(0);}
   getRejectedBatch068(){return readRejectedBatch068(this,BATCH068);}
   releaseRejectedBatch068(value){return releaseBatch068(this,value,BATCH068);}
   schedule(delay=this.debounceMs) { clearTimeout(this.timer); clearTimeout(this.idleTimer); const head=this.queue[0],retryWait=head?.body&&head.requestId===this.retryRequestId?Math.max(0,this.retryNotBefore-Date.now()):0; if(!this.stopped&&!['conflict','invalid'].includes(this.phase)) this.timer=setTimeout(()=>this.drain(),Math.max(delay,retryWait)); this.timer?.unref?.(); }
@@ -249,7 +260,7 @@ export class AuthoringStore039 {
   }
   setError(error) { this.phase='error'; this.error=explain(error); this.emit(); }
   async drain() {
-    if(this.busy||!this.queue.length||!this.snapshot().canEdit||['conflict','invalid'].includes(this.phase)||this.stopped) return;
+    if(this.busy||!this.queue.length||!this.canEdit083()||['conflict','invalid'].includes(this.phase)||this.stopped) return;
     if(this.queue[0].batch068===true)return drainBatch068(this,BATCH068);
     const q=this.queue[0],generation=this.generation; this.busy=true; this.emit();
     try {
@@ -285,6 +296,8 @@ export class AuthoringStore039 {
       need(ack?.schema===1&&ack.kind==='unified039-write-ack'&&ack.request_id===q.requestId&&integer(ack.applied_revision)&&integer(ack.observed_project_revision)&&Array.isArray(ack.entities),'저장 완료 응답을 확인하지 못했어. 같은 요청으로 다시 확인할게.');
       const ackRows=[...ack.entities,...categoryGroupRows055(ack.category_groups055),...categoryGroupOrderRows056(ack.category_group_order056)],ackKeys=new Set();
       for(const row of ackRows){validEntity(row);const id=key(row.entity_type,row.entity_id);need(!ackKeys.has(id),'저장 완료 항목이 중복되었습니다.');ackKeys.add(id);}
+      const confirmed=ackRows.find(row=>row.entity_type===q.type&&row.entity_id===q.id);
+      need(confirmed&&(q.operation==='delete'?confirmed.deleted===true:!confirmed.deleted),'저장한 항목을 확인하지 못했습니다. 같은 요청으로 다시 확인합니다.');
       if((HASH.test(ack.game_source_fingerprint)&&ack.game_source_fingerprint!==this.bootstrap.game?.source_fingerprint)||(Array.isArray(ack.issues)&&ack.issues.length)) this.pendingRevision=Math.max(this.pendingRevision??0,ack.applied_revision);
       if(ack.applied_revision>=this.bootstrap.project_revision) {
         for(const row of ackRows) {
@@ -294,6 +307,7 @@ export class AuthoringStore039 {
         this.bootstrap.project_revision=ack.applied_revision;
       }
       this.queue.shift();
+      this.savedAt083=Date.now();
       const acknowledged=ackRows.find(row=>row.entity_type===q.type&&row.entity_id===q.id);
       for(const waiting of this.queue)if(waiting.type===q.type&&waiting.id===q.id&&!waiting.body){
         const row=this.getRow(q.type,q.id);
@@ -319,7 +333,7 @@ export class AuthoringStore039 {
   }
   getRejected065(){
     const q=this.queue[0];
-    need(this.snapshot().canEdit&&this.phase==='invalid'&&!this.busy&&q?.batch068!==true&&q?.rejected===true&&!q.body&&!q.requestId,'서버가 거절한 요청만 초안으로 돌릴 수 있습니다. 저장 결과를 확인 중인 요청은 유지됩니다.');
+    need(this.canEdit083()&&this.phase==='invalid'&&!this.busy&&q?.batch068!==true&&q?.rejected===true&&!q.body&&!q.requestId,'서버가 거절한 요청만 초안으로 돌릴 수 있습니다. 저장 결과를 확인 중인 요청은 유지됩니다.');
     return clone({type:q.type,id:q.id,fields:q.fields,operation:q.operation,baseVersion:q.baseVersion,baseContent:q.baseContent});
   }
   releaseRejected065({type,id}={}){
@@ -347,7 +361,7 @@ export class AuthoringStore039 {
   }
   async login(email) { const result=await this.client.auth.signInWithOtp({email:email.trim(),options:{emailRedirectTo:this.redirectUrl}}); if(result.error)throw result.error; }
   async readRecovery(id) {
-    need(this.snapshot().canEdit&&HASH.test(id),'복구 자료를 열 권한을 확인해줘.');
+    need(this.canEdit083()&&HASH.test(id),'복구 자료를 열 권한을 확인해줘.');
     const result=await this.client.rpc('poc_read_recovery039',{p_id:id}); if(result.error)throw result.error;
     const row=result.data;need(object(row)&&LEGACY_CREATION_KEYS039.includes(row.source_key)&&typeof row.raw_json==='string'&&new TextEncoder().encode(row.raw_json).length<=4194304&&await digest(row.raw_json,this.crypto)===row.sha256&&await digest(row.source_key+'\n'+row.raw_json,this.crypto)===id,'복구 자료의 검증값이 다릅니다.');return row;
   }

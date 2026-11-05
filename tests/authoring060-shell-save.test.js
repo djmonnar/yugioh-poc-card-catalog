@@ -27,12 +27,12 @@ const cardRows=card=>[
 
 async function harness(t,{section='decks',draftStorage=new DraftStorage060()}={}){
  const initial=[deck('a',cards[0]),deck('b',cards[1]),...cards.flatMap(cardRows),row('category','지원-공용',{name:'지원-공용',archived:false})];
- const remote={revision:1,rows:new Map(initial.map(item=>[`${item.entity_type}:${item.entity_id}`,copy(item)])),writes:[],requests:new Map(),holdWrite:false,gates:[]};
+ const remote={revision:1,rows:new Map(initial.map(item=>[`${item.entity_type}:${item.entity_id}`,copy(item)])),writes:[],requests:new Map(),holdWrite:false,gates:[],bootstraps:0};
  const payload=JSON.stringify({catalog:cards,deck_rules035:{rows:[]},opponents:{opponents:[],chapters:[]},starters:{starters:[]},content022:{relics:[],events:[]},meta017:{},characters:[],shop_rules:{}});
  const capabilities={deck_compositions044:true,entities:{card_setting:{fields:{rarity:{type:'enum',values:['N','R','SR','UR']}}},card_limit:{fields:{normal_limit:{type:'nullable_integer',min:0,max:3},speed_limit:{type:'nullable_integer',min:-1,max:3}}},deck:{fields:{}},category:{fields:{name:{type:'text',min:1,max:40}}}}};
  const wire=()=>({schema:1,kind:'unified039-bootstrap',project_id:PROJECT039,view:'authoring',project_revision:remote.revision,unchanged:false,permissions:{can_edit:true},capabilities:copy(capabilities),catalog:{cards:copy(cards)},authoring:{entities:[...remote.rows.values()].map(copy)},game:{schema:1,kind:'poc-unified-game039',authoring_revision:remote.revision,game_revision:1,metadata_revision:'1',identity:IDENTITY039,source_fingerprint:hash(payload),payload_json:payload}});
  const client={auth:{getSession:async()=>({data:{session:{user:{id:'synthetic-editor'}}}}),onAuthStateChange:()=>({data:{subscription:{unsubscribe(){}}}})},rpc:async(name,args)=>{
-  if(name==='poc_bootstrap039')return {data:wire()};
+  if(name==='poc_bootstrap039'){remote.bootstraps++;return {data:wire()};}
   assert.equal(name,'poc_apply_intent039');const intent=copy(args.p_intent);remote.writes.push(intent);
   if(remote.holdWrite)await new Promise(resolve=>remote.gates.push(resolve));
   if(remote.requests.has(intent.request_id))return {data:{...copy(remote.requests.get(intent.request_id)),replayed:true}};
@@ -43,7 +43,8 @@ async function harness(t,{section='decks',draftStorage=new DraftStorage060()}={}
  }};
  const store=new AuthoringStore039({client,storage:new DraftStorage060(),crypto:webcrypto,events:{},debounceMs:2,idleRefreshMs:100000,pollMs:0});await store.start();
  const document=new Document041(),root=document.createElement('main');document.body.append(root);
- const window={location:{href:`https://example.test/index.html?section=${section}`},history:{pushState(_state,_title,url){window.location.href=new URL(url,window.location.href).href;}},addEventListener(){},removeEventListener(){},setTimeout(fn,ms){const timer=setTimeout(fn,ms);timer.unref?.();return timer;},clearTimeout,scrollTo(){}};
+ const events083=new Map();
+ const window={location:{href:`https://example.test/index.html?section=${section}`},history:{pushState(_state,_title,url){window.location.href=new URL(url,window.location.href).href;}},addEventListener(name,fn){if(!events083.has(name))events083.set(name,new Set());events083.get(name).add(fn);},removeEventListener(name,fn){events083.get(name)?.delete(fn);},fire083(name,event){for(const fn of events083.get(name)??[])fn(event);},setTimeout(fn,ms){const timer=setTimeout(fn,ms);timer.unref?.();return timer;},clearTimeout,scrollTo(){}};
  let shell;
  const mount=()=>shell=mountAuthoringShell039({root,store,manualSave:true,draftStorage,document,window});mount();
  t.after(async()=>{shell?.destroy();store.stop();for(const release of remote.gates.splice(0))release();await flush();});
@@ -146,4 +147,25 @@ test('save status and write subjects describe local work and the affected fields
  assert.match(saveLabel039(snapshot),/저장 전 변경 1개/);assert.equal(saveLabel039({...snapshot,phase:'conflict'}),'저장 기준 확인 필요');
  const subject=writeSubject060(snapshot,{type:'card_annotation',id:'1',fields:['tags','links','tags']});
  assert.match(subject.title,/검증용 흑룡/);assert.equal(subject.fields,'카테고리, 관련 카드');assert.equal(m.remote.writes.length,0);
+});
+
+test('083 explicit reload confirms current data without saving or discarding a local draft',async t=>{
+ const m=await harness(t);await input(m.root,'덱 이름','아직 저장하지 않은 이름');
+ const before=m.remote.bootstraps,reload=button041(m.root,'새로 불러오기');assert.ok(reload);reload.click();
+ await until(()=>m.remote.bootstraps>before&&!reload.disabled,'Explicit reload completes');await flush();
+ assert.equal(m.remote.writes.length,0);assert.equal(m.shell.drafts060.summary().dirtyCount,1);
+ assert.equal(field041(m.root,'덱 이름').value,'아직 저장하지 않은 이름');
+ assert.match(m.root.querySelector('.au-sync-detail083').textContent,/최근 확인/);
+});
+
+test('083 Ctrl-S uses the same save flow, ignores composition, and waits for confirmed ACK before saved time',async t=>{
+ const m=await harness(t);await input(m.root,'덱 이름','단축키로 저장할 이름');m.remote.holdWrite=true;
+ const composing={key:'s',ctrlKey:true,isComposing:true,preventDefault(){assert.fail('Composition must not be interrupted');}};m.window.fire083('keydown',composing);assert.equal(m.remote.writes.length,0);
+ let prevented=false;m.window.fire083('keydown',{key:'s',ctrlKey:true,preventDefault(){prevented=true;}});assert.equal(prevented,true);
+ await until(()=>m.remote.writes.length===1,'Shortcut submits one typed request');
+ assert.match(m.root.querySelector('.au-save-status').textContent,/저장 중/);assert.doesNotMatch(m.root.querySelector('.au-sync-detail083').textContent,/최근 저장/);
+ const bootstraps=m.remote.bootstraps;button041(m.root,'새로 불러오기').click();await flush();assert.equal(m.remote.bootstraps,bootstraps);
+ m.remote.gates.splice(0).forEach(release=>release());await until(()=>!m.shell.drafts060.summary().saving,'ACK is confirmed');await flush();
+ assert.equal(m.canonical('deck','a').content.deck_name,'단축키로 저장할 이름');assert.equal(m.shell.drafts060.summary().dirtyCount,0);
+ assert.match(m.root.querySelector('.au-sync-detail083').textContent,/최근 저장/);
 });

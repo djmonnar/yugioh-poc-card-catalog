@@ -105,7 +105,7 @@ export async function drainBatch068(store,c){
     }
     advanceWaiting(store,item.changes,rows,next.authoring.entities,c);persist(store,store.queue.slice(1),c);
     if(c.HASH.test(ack.game_source_fingerprint)&&ack.game_source_fingerprint!==store.bootstrap.game?.source_fingerprint||Array.isArray(ack.issues)&&ack.issues.length)store.pendingRevision=Math.max(store.pendingRevision??0,ack.applied_revision);
-    store.bootstrap=next;store.queue.shift();for(const resolve of Array.isArray(item.resolve)?item.resolve:[])resolve(ack);reset(store);
+    store.bootstrap=next;store.queue.shift();store.savedAt083=Date.now();for(const resolve of Array.isArray(item.resolve)?item.resolve:[])resolve(ack);reset(store);
   }catch(error){if(owns()){
     if(item.rejected||store.phase==='conflict'){store.phase=item.rejected?'invalid':'conflict';store.error=error.message??String(error);store.emit();}
     else{store.failures++;if(item.body){store.retryRequestId=item.requestId;store.retryNotBefore=Date.now()+Math.min(30000,1000*2**Math.min(store.failures,5));}store.setError(error);}
@@ -113,7 +113,7 @@ export async function drainBatch068(store,c){
   finally{if(generation===store.generation){store.busy=false;store.emit();if(store.queue.length&&store.phase!=='conflict')store.schedule(store.phase==='error'?Math.min(30000,1000*2**Math.min(store.failures,5)):0);else store.scheduleIdleRefresh();}}
 }
 export function getRejectedBatch068(store,c){
-  const item=store.queue[0];c.need(store.snapshot().canEdit&&store.phase==='invalid'&&!store.busy&&item?.batch068===true&&item.owner068===store.user?.id&&item.rejected===true&&!item.body&&!item.requestId,'서버가 거절한 함께 저장 요청만 초안으로 돌릴 수 있습니다.');
+  const item=store.queue[0];c.need(store.canEdit083()&&store.phase==='invalid'&&!store.busy&&item?.batch068===true&&item.owner068===store.user?.id&&item.rejected===true&&!item.body&&!item.requestId,'서버가 거절한 함께 저장 요청만 초안으로 돌릴 수 있습니다.');
   return c.clone({batchId:item.batchId,changes:item.changes});
 }
 export function releaseRejectedBatch068(store,{batchId}={},c){

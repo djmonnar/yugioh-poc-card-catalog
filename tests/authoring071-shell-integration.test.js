@@ -27,7 +27,9 @@ async function setup(t){
     const next=copy(remote.rows),revision=remote.revision+1,changed=[];for(const c of intent.changes){const index=next.findIndex(r=>r.entity_type===c.entity_type&&r.entity_id===c.entity_id),value=row(c.entity_type,c.entity_id,{...(next[index]?.content??{}),...c.fields},revision);if(index<0)next.push(value);else next[index]=value;changed.push(copy(value));}remote.rows=next;remote.revision=revision;remote.commits++;
     const ack={schema:1,kind:'unified039-write-ack',request_id:intent.request_id,applied_revision:revision,observed_project_revision:revision,entities:changed,game_revision:1,game_source_fingerprint:hash(payload),issues:[]};remote.requests.set(intent.request_id,copy(ack));return {data:ack};
   }};
-  const store=new AuthoringStore039({client,storage:new Storage068(),crypto:webcrypto,events:{},debounceMs:100000,idleRefreshMs:100000,pollMs:0});await store.start();const document=new Document041(),root=document.createElement('main');document.body.append(root);
+  const store=new AuthoringStore039({client,storage:new Storage068(),crypto:webcrypto,events:{},debounceMs:100000,idleRefreshMs:100000,pollMs:0});await store.start();
+  store.flushPending083=()=>{}; // This fixture inspects the durable queue before explicitly draining it.
+  const document=new Document041(),root=document.createElement('main');document.body.append(root);
   const window={location:{href:'https://example.test/index.html?section=decks&deck=deck-a'},history:{pushState(_state,_title,url){window.location.href=new URL(url,window.location.href).href;}},addEventListener(){},removeEventListener(){},setTimeout(fn,ms){const timer=setTimeout(fn,ms);timer.unref?.();return timer;},clearTimeout,scrollTo(){}};
   const draftStorage=new Storage068(),shell=mountAuthoringShell039({root,store,manualSave:true,draftStorage,document,window});t.after(()=>{shell.destroy();store.stop();});
   return {store,shell,root,document,window,remote,draftStorage,canonical:(type,id)=>remote.rows.find(r=>r.entity_type===type&&r.entity_id===id),async refresh(){await store.refresh(true);await flush();}};

@@ -150,7 +150,9 @@ async function storeHarness066(t){
   for(const {change,item} of changes){item.content={...item.content,...clone(change.fields)};item.version=remote.revision;}
   return {data:{schema:1,kind:'unified039-write-ack',request_id:intent.request_id,applied_revision:remote.revision,observed_project_revision:remote.revision,entities:changes.map(({item})=>clone(item)),game_revision:1,game_source_fingerprint:hash(payload)}};
  }};
- const outbox=new Map(),storage={getItem:key=>outbox.get(key)??null,setItem:(key,value)=>outbox.set(key,String(value)),removeItem:key=>outbox.delete(key)};const store=new AuthoringStore039({client,storage,crypto:webcrypto,events:{},debounceMs:100000,idleRefreshMs:100000,pollMs:0});await store.start();t.after(()=>store.stop());return {store,remote,recoveryId};
+ const outbox=new Map(),storage={getItem:key=>outbox.get(key)??null,setItem:(key,value)=>outbox.set(key,String(value)),removeItem:key=>outbox.delete(key)};const store=new AuthoringStore039({client,storage,crypto:webcrypto,events:{},debounceMs:100000,idleRefreshMs:100000,pollMs:0});await store.start();
+ store.flushPending083=()=>{}; // This fixture verifies submitted state before manually sending its queued intent.
+ t.after(()=>store.stop());return {store,remote,recoveryId};
 }
 const menuWrites066=[
  ['카드 도감','card_display','1',{name:'바꾼 합성 카드'}],['카드 등급','card_setting','1',{rarity:'R'}],['카드 분류','card_annotation','1',{tags:['합성 분류']}],['카드 제한','card_limit','1',{normal_limit:1}],
