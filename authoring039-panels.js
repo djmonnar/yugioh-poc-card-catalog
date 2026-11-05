@@ -17,6 +17,7 @@ import {renderEnemyRoutes071,createRouteSession071,routesMemory071} from './auth
 import {draftScope068} from './authoring068-scope.js?v=20261103-071';
 import {characterChoice068,changeCharacter068,traitChoices068,changeTrait068} from './authoring068-character.js?v=20261103-071';
 import {portraitUrl081} from './authoring081-assets.js?v=20261105-082';
+import {traitCardMatches089} from './authoring089-traits.js?v=20261106-089';
 
 export const AUTHORING_SECTIONS039=[['cards','카드 도감'],['decks','덱 만들기'],['chapters','장별 적 편성'],['map','맵 분포'],['starters','시작 덱'],['characters','캐릭터'],['relics','유물'],['events','이벤트'],['shop','상점'],['packs','카드팩'],['balance','점수·보상'],['recovery','이전 자료']];
 const clone=structuredClone,own=(o,k)=>Object.prototype.hasOwnProperty.call(o,k),text=v=>String(v??'');
@@ -80,7 +81,7 @@ export function formSchema039(state,entity){
     else if(d.type==='boolean')spec={...spec,type:'boolean'};
     else if(d.type==='bounded_parameters'){const group=entity.entity_type==='relic'?'relics':'events',bounds=cap.form?.[group]?.find(r=>r.id===entity.entity_id)?.bounds??{};spec={...spec,type:'object',properties:Object.fromEntries(Object.entries(bounds).map(([k,b])=>[k,{title:PARAM_LABELS039[k]??k,type:'integer',minimum:b.min,maximum:b.max}]))};}
     else if(['source_refs','shop_card_refs'].includes(d.type))spec={...spec,title:d.type==='shop_card_refs'?'항상 진열할 카드':'수록 카드',type:'array',widget:'card_sources',maxItems:typeof d.max==='number'?d.max:undefined,maxItemsFrom:typeof d.max==='string'?d.max:undefined,filter:d.type==='shop_card_refs'?'shop':entity.entity_type==='meta_pack'?'pack':null};
-    else if(['compiled_skills','compiled_character_skills','compiled_character_skill_profiles'].includes(d.type))spec={...spec,title:key==='skill_profiles'?'특성 묶음':'특성',type:'array',widget:'skills',maxItems:d.max??24,variant:d.type};
+    else if(['compiled_skills','compiled_character_skills','compiled_character_skill_profiles'].includes(d.type))spec={...spec,title:d.type==='compiled_character_skill_profiles'?'전투별 특성 묶음':d.type==='compiled_character_skills'?'기본 특성':'특성',type:'array',widget:'skills',maxItems:d.max??24,variant:d.type};
     else continue;
     properties[key]=spec;
   }
@@ -181,11 +182,24 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     }
     host.append(box);
   }
-  function chooseCard(host,selectedId,onSelect,key,filter=()=>true){const box=el('div',null,'au-card-picker'),input=el('input'),results=el('div',null,'au-card-picker-results');input.type='search';input.placeholder='카드 이름으로 찾기';input.setAttribute('aria-label','대상 카드 검색');input.dataset.editKey=key;const display=()=>{const q=input.value.normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,''),rows=currentCards.filter(c=>!c.special&&c.playable!==false&&filter(c)&&(!q||c.searchText.includes(q))).slice(0,30);results.replaceChildren(...rows.map(c=>{const b=button(`${c.name_ko}${c.source_id===selectedId?' ✓':''}`,()=>onSelect(c),'au-card-pick');const img=picture(c);img.alt='';b.prepend(img);b.disabled=!currentState.canEdit;return b;}));};input.oninput=display;box.append(input,results);host.append(box);display();}
+  function chooseCard(host,selectedId,onSelect,key,filter=()=>true){
+    const box=el('div',null,'au-card-picker'),input=el('input'),results=el('div',null,'au-card-picker-results'),count=el('p',null,'au-hint');
+    let visible=30;
+    input.type='search';input.placeholder='카드 이름으로 찾기';input.setAttribute('aria-label','대상 카드 검색');input.dataset.editKey=key;
+    count.setAttribute('role','status');
+    const more=button('카드 더 보기',()=>{visible+=30;display();},'au-text-button');
+    const display=()=>{
+      const q=input.value.normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,''),matches=currentCards.filter(c=>!c.special&&c.playable!==false&&filter(c)&&(!q||c.searchText.includes(q))),rows=matches.slice(0,visible);
+      results.replaceChildren(...rows.map(c=>{const b=button(`${c.name_ko}${c.source_id===selectedId?' ✓':''}`,()=>onSelect(c),'au-card-pick');const img=picture(c);img.alt='';b.prepend(img);b.disabled=!currentState.canEdit;return b;}));
+      count.textContent=matches.length?`${matches.length.toLocaleString('ko-KR')}종 중 ${rows.length.toLocaleString('ko-KR')}종 표시`:'일치하는 카드가 없습니다.';
+      more.hidden=rows.length>=matches.length;
+    };
+    input.oninput=()=>{visible=30;display();};box.append(input,count,results,more);host.append(box);display();
+  }
   function skillFields(host,rows,onRows,key,shared=false,getRows=()=>rows){
     const form=currentState.bootstrap?.capabilities?.trait_form,definitions=(form?.kinds??[]).filter(k=>shared||k.compiled);
     if(!definitions.length){host.append(el('p',`설정된 특성 ${rows.length}개 · 특성 편집 자료를 확인하는 중입니다.`,'au-hint'));return;}
-    const baseCard=c=>!nativeExtra039(c)&&(!shared||c.source_id<2390),cardRef=c=>({slot:c.slot,internal_id:c.source_id,identity_key:c.identity_key,name_ko:c.name_ko});
+    const mainCard=c=>traitCardMatches089(c),cardRef=c=>({slot:c.slot,internal_id:c.source_id,identity_key:c.identity_key,name_ko:c.name_ko});
     const liveRows=()=>getRows()??[];
     const replace=(kind,update)=>{
       const latest=liveRows(),current=latest.find(row=>row.kind===kind);
@@ -206,7 +220,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
         if(spec.type==='source-card'){
           const selectedId=shared?row.card?.internal_id:row.sourceId,card=currentCards.find(c=>c.source_id===selectedId);
           box.append(el('p',`선택한 카드: ${card?.name_ko??'카드를 선택하세요'}`,'au-hint'));
-          chooseCard(box,selectedId,card=>replace(row.kind,live=>shared?{...live,card:cardRef(card)}:{...live,sourceId:card.source_id}),`${key}.${index}.card`,card=>baseCard(card)&&(!spec.filter.endsWith('-monster')||card.type.includes('몬스터'))&&(!spec.filter.endsWith('-spell-trap')||['마법','함정'].includes(card.type)));
+          chooseCard(box,selectedId,card=>replace(row.kind,live=>shared?{...live,card:cardRef(card)}:{...live,sourceId:card.source_id}),`${key}.${index}.card`,card=>traitCardMatches089(card,spec.filter));
         }
         if(spec.type==='counted-source-cards'){
           const entryId=entry=>shared?entry.card?.internal_id:entry.sourceId,total=(row.entries??[]).reduce((n,r)=>n+r.count,0);
@@ -215,7 +229,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
             const id=entryId(entry),card=currentCards.find(c=>c.source_id===id),line=el('div',null,'au-toolbar');
             line.append(el('span',card?.name_ko??'카드'),field('매수',entry.count,{type:'integer',minimum:1,maximum:12},count=>replace(row.kind,live=>({...live,entries:live.entries.map(item=>entryId(item)===id?{...item,count}:item)})),`${key}.${index}.grave.${j}`),button('빼기',()=>replace(row.kind,live=>({...live,entries:live.entries.filter(item=>entryId(item)!==id)}))));box.append(line);
           }
-          chooseCard(box,null,card=>replace(row.kind,live=>live.entries.some(item=>entryId(item)===card.source_id)?live:{...live,entries:[...live.entries,shared?{card:cardRef(card),count:1}:{sourceId:card.source_id,count:1}]}),`${key}.${index}.grave.add`,card=>{const latest=liveRows().find(item=>item.kind===row.kind);return latest&&(latest.entries??[]).reduce((n,r)=>n+r.count,0)<12&&baseCard(card)&&!latest.entries.some(item=>entryId(item)===card.source_id);});
+          chooseCard(box,null,card=>replace(row.kind,live=>live.entries.some(item=>entryId(item)===card.source_id)?live:{...live,entries:[...live.entries,shared?{card:cardRef(card),count:1}:{sourceId:card.source_id,count:1}]}),`${key}.${index}.grave.add`,card=>{const latest=liveRows().find(item=>item.kind===row.kind);return latest&&(latest.entries??[]).reduce((n,r)=>n+r.count,0)<12&&mainCard(card)&&!latest.entries.some(item=>entryId(item)===card.source_id);});
         }
       }
       host.append(box);
@@ -227,7 +241,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
         const definition=definitions.find(kind=>kind.kind===select.value),latest=liveRows();
         if(!definition||latest.some(row=>row.kind===definition.kind))throw Error('이미 추가된 특성입니다. 현재 목록에서 수정해 주세요.');
         if(latest.length>=maximum)throw Error(`특성은 ${maximum}개까지 추가할 수 있습니다.`);
-        const source=Object.values(definition.fields).find(spec=>spec.type==='source-card'),first=currentCards.find(card=>!card.special&&card.playable!==false&&baseCard(card)&&(!source?.filter?.endsWith('-monster')||card.type.includes('몬스터'))&&(!source?.filter?.endsWith('-spell-trap')||['마법','함정'].includes(card.type)));
+        const source=Object.values(definition.fields).find(spec=>spec.type==='source-card'),first=currentCards.find(card=>traitCardMatches089(card,source?.filter));
         let next=shared?{kind:definition.kind}:{kind:definition.kind,...clone(form.compiled.defaults)};
         for(const [fieldKey,spec] of Object.entries(definition.fields)){
           if(spec.type==='integer')next[fieldKey]=spec.min;
@@ -263,6 +277,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
       if(spec.widget==='skills'){
         const group=el('fieldset',null,'au-form-group');group.append(el('legend',label));
         if(spec.variant==='compiled_character_skill_profiles'){
+          group.append(el('p','초급·보스·덱 테마처럼 이름을 붙여 저장하세요. 전투에서 묶음 이름을 선택하면 그 묶음만 적용됩니다. 기본 특성과 자동으로 합쳐지지 않습니다.','au-hint'));
           for(const profile of val??[]){
             const box=el('section',null,'au-panel'),profileNow=()=>latest()?.find(item=>item.profile_id===profile.profile_id);
             const update=fields=>{if(!profileNow())throw Error('이 특성 묶음이 변경됐습니다. 현재 목록을 확인해 주세요.');return change({[key]:(latest()??[]).map(item=>item.profile_id===profile.profile_id?{...item,...fields}:item)});};
@@ -272,7 +287,10 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
           }
           const add=button('특성 묶음 추가',()=>{const current=latest()??[];if(current.length>=10)throw Error('특성 묶음은 10개까지 추가할 수 있습니다.');return change({[key]:[...current,{profile_id:`profile-${crypto.randomUUID()}`,name:'새 특성 묶음',skills:[]}]});});add.disabled=!currentState.canEdit||(val??[]).length>=10;group.append(add);
           if((val??[]).length>=10)group.append(el('p','특성 묶음은 10개까지 설정할 수 있습니다.','au-hint'));
-        }else skillFields(group,val??[],rows=>change({[key]:rows}),`${prefix}.${key}`,spec.variant==='compiled_character_skills',()=>latest()??[]);
+        }else{
+          if(spec.variant==='compiled_character_skills')group.append(el('p','전투에서 ‘기본 특성’을 선택할 때 적용됩니다. 이 기본값의 이름은 고정이며, 이름을 붙일 구성은 아래 ‘전투별 특성 묶음’에 추가하세요.','au-hint'));
+          skillFields(group,val??[],rows=>change({[key]:rows}),`${prefix}.${key}`,spec.variant==='compiled_character_skills',()=>latest()??[]);
+        }
         host.append(group);continue;
       }
       if(spec.type==='array'){

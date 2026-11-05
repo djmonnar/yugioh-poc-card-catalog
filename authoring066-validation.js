@@ -1,3 +1,4 @@
+import {traitCardMatches089,sharedTraitRefMatches089} from './authoring089-traits.js?v=20261106-089';
 // Local preflight explains known server contracts. The server remains authoritative.
 const own=(value,key)=>Object.prototype.hasOwnProperty.call(value??{},key);
 const object=value=>value!==null&&typeof value==='object'&&!Array.isArray(value);
@@ -68,14 +69,14 @@ export function validateAuthoringChange066(snapshot,type,id,fields,{operation='p
         if(spec.type==='enum')check((shared?['attack','defense','set']:spec.values).includes(row.position),keys,`${kind.label}의 표시 형식을 다시 선택해 주세요.`);
         if(spec.type==='source-card'&&cards.length){
           const ref=shared?row.card:null,card=bySource.get(shared?ref?.internal_id:row.sourceId);
-          check(playable(card)&&!extra(card)&&(!shared||source(card)<2390&&slot(card)===ref?.slot&&card.identity_key===ref?.identity_key),keys,`${kind.label}의 대상 카드를 다시 선택해 주세요.`);
-          if(spec.filter?.endsWith('-monster'))check(Boolean((card.native_type??card.type)&1),keys,`${kind.label}에는 몬스터 카드를 선택해 주세요.`);
-          if(spec.filter?.endsWith('-spell-trap'))check(Boolean((card.native_type??card.type)&6),keys,`${kind.label}에는 마법·함정 카드를 선택해 주세요.`);
+          check(traitCardMatches089(card)&&(!shared||sharedTraitRefMatches089(card,ref)),keys,`${kind.label}의 대상 카드를 다시 선택해 주세요.`);
+          if(spec.filter?.endsWith('-monster'))check(traitCardMatches089(card,spec.filter),keys,`${kind.label}에는 몬스터 카드를 선택해 주세요.`);
+          if(spec.filter?.endsWith('-spell-trap'))check(traitCardMatches089(card,spec.filter),keys,`${kind.label}에는 마법·함정 카드를 선택해 주세요.`);
         }
         if(spec.type==='counted-source-cards'){
           const entries=row.entries??[],ids=entries.map(entry=>shared?entry.card?.internal_id:entry.sourceId);
           check(entries.length>0&&entries.length<=12&&new Set(ids).size===ids.length&&entries.every(entry=>Number.isSafeInteger(entry.count)&&entry.count>=1&&entry.count<=12)&&entries.reduce((sum,entry)=>sum+entry.count,0)<=12,keys,'시작 묘지는 중복 카드 없이 합계 1~12장으로 설정해 주세요.');
-          if(cards.length)for(const entry of entries){const ref=shared?entry.card:null,card=bySource.get(shared?ref?.internal_id:entry.sourceId);check(playable(card)&&!extra(card)&&(!shared||source(card)<2390&&slot(card)===ref?.slot&&card.identity_key===ref?.identity_key),keys,'시작 묘지의 대상 카드를 다시 선택해 주세요.');}
+          if(cards.length)for(const entry of entries){const ref=shared?entry.card:null,card=bySource.get(shared?ref?.internal_id:entry.sourceId);check(traitCardMatches089(card)&&(!shared||sharedTraitRefMatches089(card,ref)),keys,'시작 묘지의 대상 카드를 다시 선택해 주세요.');}
         }
       }
     }
