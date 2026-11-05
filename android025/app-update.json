@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.30",
-  "versionCode": 49,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.30/YGOClassicExpedition-0.18.30-arm64.apk",
-  "sizeBytes": 297941750,
-  "sha256": "771b5b8ea5ba09ef680d87edc748363b27c476f8001254d4d8f636cd4bb3cb81",
-  "releaseNotes": "효과 선택 한국어 개선. AI 중복 함정·자기 효과 무효화 낭비 수정. 달의 서 리버스 재활용·동반 판단 개선. 천수 계열 대상 부족 안내와 보상 처리·오류 표시 추가."
+  "versionName": "0.18.31",
+  "versionCode": 50,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.31/YGOClassicExpedition-0.18.31-arm64.apk",
+  "sizeBytes": 313746382,
+  "sha256": "af9d8e97ab55a44bfcce8ff8cc5126452feb36da05894f7acdc15b68cdd29bb7",
+  "releaseNotes": "에스퍼 로바와 한국어 음성·컷인, 인조인간 테마 신규 카드 13장, 의식마인 디저즈·데몰릿셔를 추가했습니다. 기존 원정은 저장된 구성으로 이어집니다."
 }
