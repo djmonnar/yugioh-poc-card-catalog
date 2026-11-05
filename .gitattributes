@@ -9,3 +9,5 @@ assets/authoring/app.js text eol=lf -whitespace
 data/native-expansion067.json -text
 data/native-expansion081.json -text
 data/native-expansion084.json -text
+# Native registry files use exact byte hashes on every platform.
+data/native-*.json -text
