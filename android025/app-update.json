@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.31",
-  "versionCode": 50,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.31/YGOClassicExpedition-0.18.31-arm64.apk",
-  "sizeBytes": 313746382,
-  "sha256": "af9d8e97ab55a44bfcce8ff8cc5126452feb36da05894f7acdc15b68cdd29bb7",
-  "releaseNotes": "에스퍼 로바와 한국어 음성·컷인, 인조인간 테마 신규 카드 13장, 의식마인 디저즈·데몰릿셔를 추가했습니다. 기존 원정은 저장된 구성으로 이어집니다."
+  "versionName": "0.18.32",
+  "versionCode": 51,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.32/YGOClassicExpedition-0.18.32-arm64.apk",
+  "sizeBytes": 329226954,
+  "sha256": "3dc094afa10f9e8067bab97e7f84ff6a1adaf13fcf6301bc4ef65e34c4736911",
+  "releaseNotes": "신규 카드 20장과 한국어 효과 선택 문구를 추가했습니다. 기존 코트 오브 저스티스를 포함한 21장의 AI 사용을 보완했습니다. 웹 도감은 084로 반영됐으며, 기존 원정은 저장된 카드 목록과 덱 규칙으로 이어집니다."
 }
