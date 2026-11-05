@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.32",
-  "versionCode": 51,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.32/YGOClassicExpedition-0.18.32-arm64.apk",
-  "sizeBytes": 329226954,
-  "sha256": "3dc094afa10f9e8067bab97e7f84ff6a1adaf13fcf6301bc4ef65e34c4736911",
-  "releaseNotes": "신규 카드 20장과 한국어 효과 선택 문구를 추가했습니다. 기존 코트 오브 저스티스를 포함한 21장의 AI 사용을 보완했습니다. 웹 도감은 084로 반영됐으며, 기존 원정은 저장된 카드 목록과 덱 규칙으로 이어집니다."
+  "versionName": "0.18.33",
+  "versionCode": 52,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.33/YGOClassicExpedition-0.18.33-arm64.apk",
+  "sizeBytes": 329415620,
+  "sha256": "8bf3bb65cd089fe4968ce4e086379003f3e18b2f1056f53654a9e85dc1d28f0d",
+  "releaseNotes": "소환 방식별 전용 연출을 추가했습니다.\n• 특수 소환: 푸른 균열 포털과 파편\n• 묘지에서 특수 소환: 보랏빛 혼불과 귀환 연출\n• 1장 릴리즈: 금빛 단일 기둥\n• 2장 이상 릴리즈: 적금빛 쌍기둥과 왕관 충격파\n실제 릴리즈한 카드 수로 구분하며, 기존 1·2·4배속과 융합·의식 소환 연출을 유지합니다.\n레벨 5~6은 묵직하게, 7 이상은 더 강한 저음·착지 충격파와 먼지로 무게감을 더했습니다. 묘지 소환에는 전용 귀환 효과음을 추가했습니다."
 }
