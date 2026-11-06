@@ -26,6 +26,10 @@ export function cardQueryTokens091(query){
     .trim().split(/\s+/u).filter(Boolean);
 }
 export function cardQueryMatches091(card,query,tokens=cardQueryTokens091(query)){
+  // A card name can contain an attribute word, such as ‘은혜의 바람’.
+  // An exact name remains searchable before interpreting metadata keywords.
+  const wanted=normalize(query);
+  if(wanted&&[card.name_ko,card.name_en,card.name,card.nameEnglish].some(name=>normalize(name)===wanted))return true;
   const searchable=normalize(card.searchText??[card.name_ko,card.name_en,card.name,card.nameEnglish,card.description_ko,card.description,card.type,card.subtype,card.race,card.attribute,...(card.tags??[]),...(card.search_aliases??[]),card.slot,card.source_id,card.code].join(' '));
   return tokens.every(token=>{
     if(races.includes(token))return raceMatches(card,token);
