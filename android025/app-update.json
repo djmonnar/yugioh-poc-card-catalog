@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.37",
-  "versionCode": 56,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.37/YGOClassicExpedition-0.18.37-arm64.apk",
-  "sizeBytes": 364830957,
-  "sha256": "6b8019d95d7ceb6be04b8627f4370a97bbf617a33f2c353278f106c994d300f1",
-  "releaseNotes": "공격력·수비력·레벨의 높은 순/낮은 순 정렬을 웹 도감과 게임 도감·덱 편성에 추가했습니다.\n여러 검색어를 함께 적용하고 필터를 복수 선택할 수 있습니다.\n기존 카드·캐릭터·효과·저장 기록을 유지합니다."
+  "versionName": "0.18.38",
+  "versionCode": 57,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.38/YGOClassicExpedition-0.18.38-arm64.apk",
+  "sizeBytes": 365504670,
+  "sha256": "9f68c027e49c89b7b0685d890756094d6e04728d750b887470bda1d5612295eb",
+  "releaseNotes": "유희 얼굴 앱 아이콘을 적용했습니다.\n새 원정 시작 시 온라인 제작 자료가 용량 제한으로 거절되던 오류를 수정했습니다.\n변경분만 받아 기존 APK와 결합하는 차등 업데이트 기능을 추가했습니다. 이 기능을 설치하는 이번 업데이트는 전체 다운로드가 필요하며 다음 지원 패치부터 다운로드량을 줄입니다.\n기존 저장 기록과 카드·캐릭터·전투 효과는 유지됩니다."
 }
