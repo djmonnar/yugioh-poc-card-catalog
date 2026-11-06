@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.36",
-  "versionCode": 55,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.36/YGOClassicExpedition-0.18.36-arm64.apk",
-  "sizeBytes": 364750533,
-  "sha256": "2826ecf3ec82ff86cac49869e0b24e710e645be68dbef94bda11418757240f5c",
-  "releaseNotes": "미궁형제·전우혁 추가: 원본 한국어 음성 29개, 캐릭터 이미지 6개와 컷신 자막을 반영했습니다.\n프리드·전사 지원·게이트 가디언·악몽의 미궁 등 카드 8종을 추가하고 AI 사용을 검수했습니다.\n기존 저장 기록과 이전 전투의 카드 풀을 유지합니다."
+  "versionName": "0.18.37",
+  "versionCode": 56,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.37/YGOClassicExpedition-0.18.37-arm64.apk",
+  "sizeBytes": 364830957,
+  "sha256": "6b8019d95d7ceb6be04b8627f4370a97bbf617a33f2c353278f106c994d300f1",
+  "releaseNotes": "공격력·수비력·레벨의 높은 순/낮은 순 정렬을 웹 도감과 게임 도감·덱 편성에 추가했습니다.\n여러 검색어를 함께 적용하고 필터를 복수 선택할 수 있습니다.\n기존 카드·캐릭터·효과·저장 기록을 유지합니다."
 }
