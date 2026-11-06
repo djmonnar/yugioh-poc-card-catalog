@@ -1,13 +1,18 @@
 // A short roster and one selected encounter editor share the canonical draft.
+import {placementId095,selectedPlacements095,excludePlacements095} from './authoring095-chapter-selection.js?v=20261107-095';
 export function renderChapters066({host,getState,entities,cards,characters,deckOptions,readiness,el,button,field,patch,onNavigate,onSaveDrafts,manualSaveControl,status,encounterDefaults,encounterForm,selected,filters,rerender,onBulkAssign}){
   const clone=structuredClone,state=getState(),all=entities(state),decks=all.filter(row=>row.entity_type==='deck'),roles=all.filter(row=>row.entity_type==='chapter_role'),roleNames={battle:'일반 전투',elite:'엘리트',boss:'보스'};
-  host.classList.add('au-chapters066');host.append(el('h1','장별 적 편성'),el('p','상대를 눌러 설정하세요.','au-lead'));
+  host.classList.add('au-chapters066');host.append(el('h1','장별 적 편성'),el('p','체크한 상대는 한꺼번에 제외하고, 이름을 누르면 개별 설정을 엽니다.','au-lead'));
   if(onBulkAssign)host.append(button('여러 구역에 배치',()=>onBulkAssign(),'au-bulk-open071'));
   if(!roles.some(row=>row.entity_id===selected.get('chapters')))selected.set('chapters',roles[0]?.entity_id);
   const entity=roles.find(row=>row.entity_id===selected.get('chapters'));
   if(!entity){host.append(el('p','편집할 장별 편성 자료가 없습니다. 연결을 확인해 주세요.','au-empty'));return;}
   const value=entity.content,contextName=`${value.chapter}장 · ${roleNames[value.role]}`,latest=()=>entities(getState()).find(row=>row.entity_type==='chapter_role'&&row.entity_id===entity.entity_id)??entity;
   const changeEntries=fn=>patch(latest(),{entries:fn(latest().content.entries??[])}),entryKey=entry=>entry.entry_id??entry.deck_id;
+  const bulkKey='chapter-bulk095',owner=state.user?.id??null;
+  let bulk=filters.get(bulkKey);
+  if(!bulk||bulk.owner!==owner||bulk.roleId!==entity.entity_id){bulk={owner,roleId:entity.entity_id,ids:new Set(),pending:null,message:''};filters.set(bulkKey,bulk);}
+  const writableBulk=()=>{if(!getState().canEdit||(getState().user?.id??null)!==owner)throw Error('편집 계정과 현재 구역을 다시 확인해 주세요.');if(filters.get(bulkKey)!==bulk)throw Error('현재 구역에서 상대를 다시 선택해 주세요.');};
   const tabs=el('nav',null,'au-chapter-tabs'),roleTabs=el('nav',null,'au-role-tabs');tabs.setAttribute('aria-label','편집할 장');roleTabs.setAttribute('aria-label','전투 종류');
   const navigate=(chapter,role)=>{const next=roles.find(row=>row.content.chapter===chapter&&row.content.role===role)??roles.find(row=>row.content.chapter===chapter);if(next){selected.set('chapters',next.entity_id);rerender();}};
   for(const chapter of [1,2,3]){const b=button(`${chapter}장`,()=>navigate(chapter,value.role));b.setAttribute('aria-pressed',String(value.chapter===chapter));b.disabled=!roles.some(row=>row.content.chapter===chapter);tabs.append(b);}
@@ -22,7 +27,24 @@ export function renderChapters066({host,getState,entities,cards,characters,deckO
   const modeTabs=el('nav',null,'au-chapter-modes066'),workspace=el('section',null,'au-chapter-workspace066'),pool=el('section',null,'au-pool-selected au-assigned066'),editor=el('section',null,'au-encounter-editor066'),available=el('section',null,'au-pool-candidates au-add066');workspace.setAttribute('aria-label',`${contextName} 편집`);
   const setMode=mode=>{filters.set(modeKey,mode);workspace.dataset.mode=mode;for(const tab of modeTabs.children)tab.setAttribute('aria-pressed',String(tab.dataset.mode===(mode==='add'?'add':'list')));};
   for(const [mode,label] of [['list','편성된 상대'],['add','상대 추가']]){const tab=button(label,()=>setMode(mode));tab.dataset.mode=mode;modeTabs.append(tab);}host.append(modeTabs,workspace,settings);workspace.append(pool,editor,available);pool.setAttribute('aria-label','편성된 상대');
-  const assignedQuery=el('input'),assignedRows=el('div',null,'au-assigned-list'),assignedPager=el('div',null,'au-pagination');assignedQuery.type='search';assignedQuery.placeholder='상대 이름·덱 이름으로 찾기';assignedQuery.setAttribute('aria-label','편성된 덱 검색');assignedQuery.className='au-candidate-search';assignedQuery.dataset.editKey=assignedKey;assignedQuery.value=filters.get(assignedKey)??'';pool.append(assignedQuery,assignedRows,assignedPager);
+  const assignedQuery=el('input'),assignedRows=el('div',null,'au-assigned-list'),assignedPager=el('div',null,'au-pagination');assignedQuery.type='search';assignedQuery.placeholder='상대 이름·덱 이름으로 찾기';assignedQuery.setAttribute('aria-label','편성된 덱 검색');assignedQuery.className='au-candidate-search';assignedQuery.dataset.editKey=assignedKey;assignedQuery.value=filters.get(assignedKey)??'';
+  let visibleEntries=[],matchingEntries=[];
+  const bulkTools=el('section',null,'au-bulk095'),bulkCount=el('p',null,'au-bulk-count095'),bulkHint=el('p','선택은 검색·페이지 이동 중 유지됩니다. 장·전투 종류를 바꾸면 해제됩니다.','au-hint'),bulkMessage=el('p',null,'au-bulk-message095');bulkTools.setAttribute('aria-label',`${contextName} 일괄 편성 제외`);bulkCount.setAttribute('role','status');bulkMessage.setAttribute('role','status');
+  const selectPage=button('현재 페이지 선택',()=>{writableBulk();if(bulk.pending)return;for(const entry of visibleEntries){const id=placementId095(entry);if(id!==null)bulk.ids.add(id);}bulk.message='';refreshBulk();}),clearSelection=button('선택 해제',()=>{writableBulk();if(bulk.pending)return;bulk.ids.clear();bulk.message='';refreshBulk();});
+  const excludeSelected=button('선택한 상대 편성 제외',()=>{
+    writableBulk();if(bulk.pending)return bulk.pending;const chosen=[...bulk.ids];
+    const pending=Promise.resolve().then(()=>{writableBulk();const live=entities(getState()).find(row=>row.entity_type==='chapter_role'&&row.entity_id===entity.entity_id&&!row.deleted);if(!live)throw Error('편성 자료가 변경됐습니다. 구역을 다시 확인해 주세요.');const current=live.content.entries??[],ids=selectedPlacements095(current,chosen);const next=excludePlacements095(current,chosen);return Promise.resolve(patch(live,{entries:next})).then(()=>ids.length);}).then(count=>{bulk.ids.clear();bulk.message=`${count}명을 편성 제외 초안에 반영했습니다. 저장하면 적용됩니다.`;if(chosen.includes(filters.get(selectedKey)))filters.delete(selectedKey);filters.set(modeKey,'list');},error=>{bulk.message='편성 제외를 반영하지 못했습니다. 선택과 기존 초안은 유지됩니다.';throw error;}).finally(()=>{bulk.pending=null;if(filters.get(bulkKey)===bulk)rerender();});
+    bulk.pending=pending;refreshBulk();return pending;
+  },'au-bulk-remove095');
+  const bulkActions=el('div',null,'au-bulk-actions095');bulkActions.append(selectPage,clearSelection,excludeSelected);bulkTools.append(bulkCount,bulkActions,bulkHint,bulkMessage);pool.append(assignedQuery,bulkTools,assignedRows,assignedPager);
+  function refreshBulk(){
+    const current=latest().content.entries??[];bulk.ids=new Set(selectedPlacements095(current,bulk.ids));const matches=new Set(matchingEntries.map(placementId095)),outside=[...bulk.ids].filter(id=>!matches.has(id)).length,count=bulk.ids.size,busy=Boolean(bulk.pending),editable=getState().canEdit;
+    bulkTools.hidden=!editable;bulkCount.textContent=`${contextName} · 선택 ${count}명${outside?` · 검색 밖 ${outside}명 포함`:''}`;
+    selectPage.disabled=!editable||busy||!visibleEntries.some(entry=>placementId095(entry)!==null&&!bulk.ids.has(placementId095(entry)));clearSelection.disabled=!editable||busy||!count;
+    excludeSelected.textContent=busy?'초안에 반영 중…':`선택한 ${count}명 편성 제외`;excludeSelected.disabled=!editable||busy||!count;
+    bulkMessage.textContent=bulk.message||(count&&count===current.length?'모두 제외하면 새 상대를 추가할 때까지 마지막 유효 편성이 게임에 유지됩니다.':'이 구역의 편성만 초안에서 제외합니다. 저장 전에는 변경 취소로 되돌릴 수 있습니다.');
+    const validIds=new Set(current.map(placementId095).filter(id=>id!==null));for(const row of assignedRows.children){const id=row.dataset.entryId,input=row.querySelector('input[type=checkbox]')??row.querySelector('input');if(!input)continue;input.checked=bulk.ids.has(id);input.disabled=!editable||busy||!validIds.has(id);row.dataset.bulkSelected=String(input.checked);}
+  }
   const showList=()=>{setMode('list');if(globalThis.innerWidth<768)pool.scrollIntoView?.({block:'start',behavior:'instant'});};
   const openEntry=id=>{filters.set(selectedKey,id);setMode('editor');displayAssigned();editor.querySelector('h2')?.focus?.({preventScroll:true});if(globalThis.innerWidth<768)editor.scrollIntoView?.({block:'start',behavior:'instant'});};
   const addEntry=(deck,encounter)=>{
@@ -44,13 +66,14 @@ export function renderChapters066({host,getState,entities,cards,characters,deckO
   };
   const displayAssigned=()=>{
     const liveEntries=latest().content.entries??[],q=assignedQuery.value.normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,''),matches=liveEntries.filter(entry=>!q||`${entry.encounter?.name??''} ${entry.encounter?.deck_name??''} ${byId.get(entry.deck_id)?.search??''}`.normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,'').includes(q)),pages=Math.max(1,Math.ceil(matches.length/6));let page=Math.min(filters.get(`${assignedKey}.page`)??1,pages);filters.set(`${assignedKey}.page`,page);assignedRows.replaceChildren();assignedPager.replaceChildren();
+    matchingEntries=matches;visibleEntries=matches.slice((page-1)*6,page*6);
     if(!matches.length)assignedRows.append(el('p',q?'일치하는 상대가 없습니다.':'상대 추가에서 공유 덱을 골라 편성하세요.','au-empty'));
-    for(const entry of matches.slice((page-1)*6,page*6)){
+    for(const entry of visibleEntries){
       const summary=byId.get(entry.deck_id),id=entryKey(entry),encounter=entry.encounter??{},row=el('article',null,'au-encounter-row au-entry066'),pick=button('',()=>openEntry(id),'au-entry-pick066');row.dataset.deckId=entry.deck_id;row.dataset.entryId=id;pick.setAttribute('aria-label',`${encounter.name||summary?.title||'상대'} 상대 설정`);pick.setAttribute('aria-pressed',String(filters.get(selectedKey)===id));
-      pick.append(el('strong',encounter.name||summary?.title||'연결된 덱을 찾을 수 없습니다.'),el('span',summary?.title??entry.deck_id,'au-entry-deck066'),el('span',`LP +${(encounter.lp_bonus??0).toLocaleString('ko-KR')} · 특성 ${(encounter.skills??[]).length}개 · ${(entry.weight/Math.max(1,totalWeight)*100).toLocaleString('ko-KR',{maximumFractionDigits:1})}%`,'au-entry-meta066'),el('span',filters.get(selectedKey)===id?'선택됨 · 상대 설정':'상대 설정','au-entry-action066'));
-      row.append(pick);assignedRows.append(row);
+      pick.append(el('strong',encounter.name||summary?.title||'연결된 덱을 찾을 수 없습니다.'),el('span',summary?.title??entry.deck_id,'au-entry-deck066'),el('span',`LP +${(encounter.lp_bonus??0).toLocaleString('ko-KR')} · 특성 ${(encounter.skills??[]).length}개 · ${(entry.weight/Math.max(1,totalWeight)*100).toLocaleString('ko-KR',{maximumFractionDigits:1})}%`,'au-entry-meta066'),el('span',filters.get(selectedKey)===id?'설정 열림':'상대 설정','au-entry-action066'));
+      const choose=el('label',null,'au-entry-check095'),check=el('input');check.type='checkbox';check.setAttribute('aria-label',`${encounter.name||summary?.title||'상대'} · 배치 ${id} 일괄 제외 선택`);check.checked=bulk.ids.has(id);check.disabled=!getState().canEdit||Boolean(bulk.pending)||placementId095(entry)===null;check.onchange=()=>{writableBulk();if(bulk.pending)return;if(check.checked)bulk.ids.add(id);else bulk.ids.delete(id);bulk.message='';refreshBulk();};choose.append(check);row.append(choose,pick);assignedRows.append(row);
     }
-    if(pages>1){for(const [label,next] of [['이전',page-1],['다음',page+1]]){const b=button(label,()=>{filters.set(`${assignedKey}.page`,next);displayAssigned();});b.disabled=next<1||next>pages;assignedPager.append(b);}assignedPager.insertBefore(el('span',`${page} / ${pages} · ${matches.length}명`),assignedPager.lastChild);}displayEditor();
+    if(pages>1){for(const [label,next] of [['이전',page-1],['다음',page+1]]){const b=button(label,()=>{filters.set(`${assignedKey}.page`,next);displayAssigned();});b.disabled=next<1||next>pages;assignedPager.append(b);}assignedPager.insertBefore(el('span',`${page} / ${pages} · ${matches.length}명`),assignedPager.lastChild);}refreshBulk();displayEditor();
   };
   assignedQuery.oninput=()=>{filters.set(assignedKey,assignedQuery.value);filters.set(`${assignedKey}.page`,1);displayAssigned();};assignedQuery.addEventListener('compositionend',displayAssigned);displayAssigned();
   const query=el('input'),results=el('div',null,'au-candidate-list'),pager=el('div',null,'au-pagination'),include=el('label',null,'au-duplicate-toggle'),showUsed=el('input'),count=el('p',null,'au-candidate-count');available.append(button('편성 목록으로',()=>setMode('list'),'au-editor-back066'),el('h2','공유 덱으로 상대 추가'),el('p',`${contextName}에 추가합니다. 카드 구성은 연결한 덱과 함께 사용합니다.`,'au-hint'));query.type='search';query.placeholder='덱 이름으로 찾기';query.setAttribute('aria-label','후보 덱 검색');query.className='au-candidate-search';query.dataset.editKey='chapter.deckquery';query.value=filters.get('chapter-query')??'';showUsed.type='checkbox';showUsed.checked=filters.get('chapter-show-used044')===true;showUsed.setAttribute('aria-label','편성된 덱도 보기');include.append(showUsed,el('span','편성된 덱도 보기'));available.append(query,include,count,results,pager);
