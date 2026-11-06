@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.39",
-  "versionCode": 58,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.39/YGOClassicExpedition-0.18.39-arm64.apk",
-  "sizeBytes": 402463371,
-  "sha256": "541df96aa917a4fd289c0095751c0cf9ff7d19d878b7e24f8583006681251dc9",
-  "releaseNotes": "아로마를 포함한 카드 40종, 본체 무토 유우기와 컷신·효과음, 배틀 음악 4곡을 추가했습니다. 보스 승리 시 LP를 전부 회복하며, 다음 장으로 갈수록 상점·카드 보상 등급이 좋아집니다. 어둠의 게임과 전용 N·R·SR·UR 유물 4종을 추가하고, 자연 발생한 어둠의 게임은 지도에 보라색 효과와 이름으로 표시합니다. 게임 화면의 글 여백·모바일 줄맞춤과 도감 저장 지연도 개선했습니다. 0.18.38에서는 변경분 업데이트를 사용합니다."
+  "versionName": "0.18.40",
+  "versionCode": 59,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.40/YGOClassicExpedition-0.18.40-arm64.apk",
+  "sizeBytes": 402466099,
+  "sha256": "181434d3a730b6b59f6491f23bab9dbdfd0f7527e2485b005d4691e648cc38cf",
+  "releaseNotes": "기존 원정 저장 기록이 버전 차이로 보호되어 이어하기가 막히던 문제를 수정했습니다. 저장 기록과 카드·유물·덱은 유지됩니다."
 }
