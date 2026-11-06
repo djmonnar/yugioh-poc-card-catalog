@@ -57,7 +57,8 @@ test('search clear returns focus and keeps the selected rarity filter during Kor
   enter(m,'붉은',{isComposing:true});expectCards(m,[RED]);
   const clear=button041(m.root,'검색 지우기');assert.equal(clear.hidden,false);clear.click();
   // The DOM fixture does not clamp selection when a click handler clears value.
-  expectCards(m,[RED,FLAME,TRAP]);expectEditing(m,'',null);assert.equal(rarity.value,'SR');
+  expectCards(m,[RED,FLAME,TRAP]);expectEditing(m,'',null);assert.equal(rarity.value,'');
+  assert.ok(button041(m.root,'SR 해제'),'The selected rarity remains visible as a removable selection.');
   assert.equal(field041(m.root,'등급'),rarity,'Clearing a query must preserve the filter controls.');
 });
 

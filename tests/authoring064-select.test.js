@@ -94,7 +94,7 @@ test('a selected enum commits its dependent fields while focus remains on that s
 test('changing a local filter applies it and releases the latest deferred body refresh',async t=>{
   const m=await mounted(t),select=control(m,'등급');select.focus();await m.refresh({deck_name:'선택 완료 뒤 표시할 최신 덱'});
   select.value='UR';select.fire('change');await settle();
-  assert.equal(control(m,'등급').value,'UR');assert.equal(control(m,'덱 이름').value,'선택 완료 뒤 표시할 최신 덱');
+  assert.equal(control(m,'등급').value,'');assert.ok(m.root.querySelectorAll('button').some(b=>b.getAttribute('aria-label')==='등급 UR 해제'));assert.equal(control(m,'덱 이름').value,'선택 완료 뒤 표시할 최신 덱');
   const cards=m.root.querySelector('.au-catalog-results').querySelectorAll('.au-rarity');assert.ok(cards.length);assert.ok(cards.every(card=>card.textContent==='UR'));
 });
 
