@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.43",
-  "versionCode": 62,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.43/YGOClassicExpedition-0.18.43-arm64.apk",
-  "sizeBytes": 402536139,
-  "sha256": "f47611c5a4417c863f12b2c5893f9a2d5fe8b1c1b674cf45be110d60471272ed",
-  "releaseNotes": "공개됐던 리버스 몬스터의 효과까지 기억해 공격을 판단합니다. 공통 마법·함정의 내성 대상, 체인 제거·무효화와 드로우 판단을 개선했습니다."
+  "versionName": "0.18.44",
+  "versionCode": 63,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.44/YGOClassicExpedition-0.18.44-arm64.apk",
+  "sizeBytes": 402600903,
+  "sha256": "3b7be4982e183d53f6429a3d173cee1ccd1706b0b54b1c339202dadf529f4dc7",
+  "releaseNotes": "마법·장착·함정 68종의 공통 AI 활용을 추가했습니다. 발동 조건·코스트·대상 선택과 불필요한 카드 낭비를 검수했습니다."
 }

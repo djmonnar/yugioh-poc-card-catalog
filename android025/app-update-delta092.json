@@ -3,19 +3,19 @@
   "format": "YGODLT92",
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.43",
-  "versionCode": 62,
-  "sha256": "f47611c5a4417c863f12b2c5893f9a2d5fe8b1c1b674cf45be110d60471272ed",
-  "sizeBytes": 402536139,
+  "versionName": "0.18.44",
+  "versionCode": 63,
+  "sha256": "3b7be4982e183d53f6429a3d173cee1ccd1706b0b54b1c339202dadf529f4dc7",
+  "sizeBytes": 402600903,
   "patches": [
     {
-      "baseVersionName": "0.18.42",
-      "baseVersionCode": 61,
-      "baseSizeBytes": 402505763,
-      "baseSha256": "487818e2b2fe5c9fda520caac56532d41a09f157b59a3091a89fb975bd8095ed",
-      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.43/YGOClassicExpedition-0.18.42-to-0.18.43-arm64.delta092.gz",
-      "patchSizeBytes": 19098394,
-      "patchSha256": "6d8f349ab2512243f5f5716222e9dfc227da3103f73abebe363d2107e61765e6"
+      "baseVersionName": "0.18.43",
+      "baseVersionCode": 62,
+      "baseSizeBytes": 402536139,
+      "baseSha256": "f47611c5a4417c863f12b2c5893f9a2d5fe8b1c1b674cf45be110d60471272ed",
+      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.44/YGOClassicExpedition-0.18.43-to-0.18.44-arm64.delta092.gz",
+      "patchSizeBytes": 19159453,
+      "patchSha256": "95ec7ad46775bef81c25e07f278edd94dd2522e1a01786fe9e6dab915665bb99"
     }
   ]
 }
