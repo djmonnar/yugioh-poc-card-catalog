@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.41",
-  "versionCode": 60,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.41/YGOClassicExpedition-0.18.41-arm64.apk",
-  "sizeBytes": 402488355,
-  "sha256": "39a719e3216e60972d606fac015ae557485d3d80f221d0d7d771b5286b7f59bf",
-  "releaseNotes": "쌍둥이 제단에서 보유 카드 2장을 바칠 수 있습니다. 어둠의 게임은 도착 뒤에 표시합니다. 필드 20종의 능력치 계산을 모든 덱의 공통 규칙으로 통합하고, 중복 보정·조건·면역·수비력 판단과 함정 AI를 개선했습니다."
+  "versionName": "0.18.42",
+  "versionCode": 61,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.42/YGOClassicExpedition-0.18.42-arm64.apk",
+  "sizeBytes": 402505763,
+  "sha256": "487818e2b2fe5c9fda520caac56532d41a09f157b59a3091a89fb975bd8095ed",
+  "releaseNotes": "공개됐던 상대 몬스터가 뒷면이 되어도 AI가 기억해 공격을 판단합니다. 이전 저장과 전투 기록 이어하기를 검증했습니다."
 }
