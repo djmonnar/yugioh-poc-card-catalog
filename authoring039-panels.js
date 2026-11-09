@@ -12,8 +12,9 @@ import {createCategoryGroupManager055} from './authoring055-category-groups.js?v
 import {completeCharacterTraits065} from './authoring065-errors.js?v=20261101-065';
 import {completeEventText066,authoringFieldNames066} from './authoring066-validation.js?v=20261101-066';
 import {renderChapters066} from './authoring066-chapters.js?v=20261101-066';
-import {renderDeckSetup068} from './authoring068-deck-setup.js?v=20261103-071';
-import {renderEnemyRoutes071,createRouteSession071,routesMemory071} from './authoring071-deck-routes.js?v=20261103-071';
+import {renderDeckSetup068} from './authoring068-deck-setup.js?v=20261110-101';
+import {renderEnemyRoutes071,createRouteSession071,routesMemory071} from './authoring071-deck-routes.js?v=20261110-101';
+import {deckPlacementSelection101} from './authoring101-deck-placements.js?v=20261110-101';
 import {draftScope068} from './authoring068-scope.js?v=20261103-071';
 import {characterChoice068,changeCharacter068,traitChoices068,changeTrait068} from './authoring068-character.js?v=20261103-071';
 import {portraitUrl081} from './authoring081-assets.js?v=20261105-082';
@@ -430,7 +431,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     }
     const settings=el('details',null,'au-deck-settings');settings.open=filters.get(`deck-settings:${deck.entity_id}`)??!(value.main??[]).length;settings.ontoggle=()=>filters.set(`deck-settings:${deck.entity_id}`,settings.open);settings.append(el('summary',composition?'덱 설정 · 이름·카드 제한':'덱 설정 · 이름·상대·전투 특성'),props);host.append(settings,status(deck));
     if(!composition){sharedTraitsPreview051(settings,value,characters);const traits=el('details',null,'au-trait-editor');traits.append(el('summary',`이 덱의 전투 특성 · ${(value.skills??[]).length}개`));skillFields(traits,value.skills??[],skills=>patch(deck,{skills}),`${deck.entity_id}.skills`,false,()=>entities039(currentState).find(row=>row.entity_type==='deck'&&row.entity_id===deck.entity_id)?.content.skills??[]);settings.append(traits);}
-    if(composition)renderDeckSetup068({host,getState:latestState068,entities:entities039,getCharacters:()=>characterProfiles(latestState068()),deckId:deck.entity_id,onBulkAssign:openEnemyRoutes071,el,button,field,patch,renderEncounter:encounterForm068,onNavigate,onSaveDrafts:onSaveDrafts060,manualSaveControl:manualSaveControl060,filters,registerSave068:setup=>{localDeckSetup068=setup;onPrepareDeckSetup068(setup);},rerender:({force=false}={})=>render('decks',currentRoot,latestState068(),{force})});
+    if(composition)renderDeckSetup068({host,getState:latestState068,entities:entities039,getCharacters:()=>characterProfiles(latestState068()),deckId:deck.entity_id,onBulkAssign:(id,options)=>openEnemyRoutes071(id,{...options,fromDeck101:true}),el,button,field,patch,stageMany:onStageMany071,renderEncounter:encounterForm068,onNavigate,onSaveDrafts:onSaveDrafts060,manualSaveControl:manualSaveControl060,filters,registerSave068:setup=>{localDeckSetup068=setup;onPrepareDeckSetup068(setup);},rerender:({force=false}={})=>render('decks',currentRoot,latestState068(),{force})});
     host.append(el('p','카드에 금지·제한·준제한과 스피드 제한을 표시합니다. 스피드 제한은 같은 숫자의 카드 전체를 합산합니다.','au-hint au-limit-guide'));
     const split=el('div',null,'au-deck-workspace'),owned=el('section',null,'au-deck-owned'),catalog=el('section',null,'au-deck-catalog'),tabs=el('div',null,'au-deck-tabs');tabs.setAttribute('aria-label','덱 카드 보기');const activeView=filters.get(`deck-view:${deck.entity_id}`)??'cards';split.dataset.mobileView=activeView;for(const [mode,label] of [['deck',`내 덱 · ${(value.main??[]).reduce((n,r)=>n+r.count,0)}장`],['cards','카드 찾기']]){const tab=button(label,()=>{filters.set(`deck-view:${deck.entity_id}`,mode);split.dataset.mobileView=mode;for(const b of tabs.children)b.setAttribute('aria-pressed',String(b.dataset.mode===mode));});tab.dataset.mode=mode;tab.setAttribute('aria-pressed',String(mode===activeView));tabs.append(tab);}host.append(tabs);
     function displayOwned(){
@@ -470,13 +471,24 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     host.append(props);sharedTraitsPreview051(host,value,characters);host.append(el('p','이 상대의 LP·특성·캐릭터는 이 구역에서만 바뀝니다. 카드 구성은 연결된 덱을 함께 사용합니다.','au-hint'));
     const traits=el('div',null,'au-encounter-traits');traits.append(el('h3',`이 상대에게 직접 설정한 특성 · ${(value.skills??[]).length}개`));skillFields(traits,value.skills??[],skills=>change({skills}),`${key}.skills`,false,()=>getEntry()?.encounter?.skills??[]);host.append(traits);
   }
-  async function openEnemyRoutes071(deckId=null){
+  async function openEnemyRoutes071(deckId=null,options101={}){
+    const owner=latestState068().user?.id??null;
     if(localDeckSetup068?.hasLocal)await localDeckSetup068.prepare();
-    filters.set(routesMemory071(latestState068()),createRouteSession071(deckId));onNavigate('chapters');
+    if((latestState068().user?.id??null)!==owner)throw Error('로그인 계정이 바뀌었습니다. 현재 계정에서 배치를 다시 선택해 주세요.');
+    const session=createRouteSession071(deckId),keys=options101.keys??[];
+    if(keys.length){
+      const chosen=deckPlacementSelection101(entities039(latestState068()),deckId,keys);
+      if(chosen.length!==keys.length)throw Error('선택한 배치가 변경됐습니다. 덱에서 다시 선택해 주세요.');
+      session.targets=Object.fromEntries(chosen.map(row=>[row.key,{roleId:row.role.entity_id,entryId:row.entry.entry_id,create:false,encounter:{}}]));
+      session.stagedKeys=[...new Set(chosen.map(row=>row.role.entity_id))].map(id=>({type:'chapter_role',id}));
+      session.active=chosen[0].key;
+    }
+    session.fromDeck101=options101.fromDeck101===true;
+    filters.set(routesMemory071(latestState068()),session);onNavigate('chapters');
   }
   function chaptersCompositionPanel044(host){
     const memory=routesMemory071(latestState068()),session=filters.get(memory);
-    if(session?.open){renderEnemyRoutes071({host,session,getState:latestState068,entities:entities039,getCharacters:()=>characterProfiles(latestState068()),deckOptions:deckOptions041,el,button,field,renderEncounter:encounterForm068,stageMany:changes=>{if(!onStageMany071)throw Error('여러 구역 초안 연결을 준비하지 못했습니다.');return onStageMany071(changes);},onSaveDrafts:onSaveDrafts060,manualSaveControl:manualSaveControl060,registerSave:setup=>{localDeckSetup068=setup;onPrepareDeckSetup068(setup);},isInvalid:prefix=>[...invalidFields041.keys()].some(key=>key.startsWith(prefix)),persist:()=>filters.set(memory,session),rerender:({force=false}={})=>render('chapters',currentRoot,latestState068(),{force}),onClose:()=>{session.open=false;render('chapters',currentRoot,latestState068(),{force:true});},getReadiness:row=>deckReadiness041(row,currentCards,{requireLimits:false})});return;}
+    if(session?.open){renderEnemyRoutes071({host,session,getState:latestState068,entities:entities039,getCharacters:()=>characterProfiles(latestState068()),deckOptions:deckOptions041,el,button,field,renderEncounter:encounterForm068,stageMany:changes=>{if(!onStageMany071)throw Error('여러 구역 초안 연결을 준비하지 못했습니다.');return onStageMany071(changes);},onSaveDrafts:onSaveDrafts060,manualSaveControl:manualSaveControl060,registerSave:setup=>{localDeckSetup068=setup;onPrepareDeckSetup068(setup);},isInvalid:prefix=>[...invalidFields041.keys()].some(key=>key.startsWith(prefix)),persist:()=>filters.set(memory,session),rerender:({force=false}={})=>render('chapters',currentRoot,latestState068(),{force}),onClose:()=>{session.open=false;if(session.fromDeck101)onNavigate('decks',session.deckId);else render('chapters',currentRoot,latestState068(),{force:true});},getReadiness:row=>deckReadiness041(row,currentCards,{requireLimits:false})});return;}
     renderChapters066({host,onBulkAssign:openEnemyRoutes071,getState:()=>currentState,entities:entities039,cards:currentCards,characters:characterProfiles(),deckOptions:deckOptions041,readiness:deckReadiness041,el,button,field,patch,onNavigate,onSaveDrafts:onSaveDrafts060,manualSaveControl:manualSaveControl060,status,encounterDefaults:encounterDefaults044,encounterForm:encounterForm044,selected,filters,rerender:()=>render('chapters',currentRoot,currentState,{force:true})});
   }
   function chaptersPanel(host){

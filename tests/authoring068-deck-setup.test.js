@@ -9,8 +9,8 @@ const deck={entity_type:'deck',entity_id:'deck-a',content:{name:'공유 덱',dec
 const encounter=(name='첫 상대')=>({...defaultDeckEncounter068(deck,profiles),name,unknownEncounter:{keep:true}});
 const entry=(id='entry-a',deckId='deck-a')=>({entry_id:id,deck_id:deckId,weight:2,encounter:encounter(id),unknownEntry:{keep:true}});
 const role=(chapter=1,kind='battle',entries=[entry()])=>({entity_type:'chapter_role',entity_id:`${chapter}:${kind}`,content:{chapter,role:kind,lp_bonus:700,entries,unknownRole:{keep:true}}});
-function harness(t,{placements=[role()],canEdit=true}={}){
-  const document=new Document041(),host=document.createElement('main');document.body.append(host);const state={user:{id:'owner-a'},canEdit,entities:[copy(deck),...copy(placements)],manualSave060:true,manualDrafts060:{items:[]},canonicalEntities068:[copy(deck),...copy(placements)]},filters=new Map(),writes=[],saves=[],errors=[],renders=[],registrations=[];
+function harness(t,{placements=[role()],canEdit=true,bulk=false}={}){
+  const document=new Document041(),host=document.createElement('main');document.body.append(host);const state={user:{id:'owner-a'},canEdit,entities:[copy(deck),...copy(placements)],manualSave060:true,manualDrafts060:{items:[]},canonicalEntities068:[copy(deck),...copy(placements)]},filters=new Map(),writes=[],saves=[],errors=[],renders=[],registrations=[],batches=[],routes=[];
   const el=(tag,text,cls)=>{const node=document.createElement(tag);if(text!=null)node.textContent=text;if(cls)node.className=cls;return node;};
   const button=(text,fn,cls)=>{const node=el('button',text,cls);node.onclick=()=>{try{Promise.resolve(fn()).catch(error=>errors.push(error.message));}catch(error){errors.push(error.message);}};return node;};
   const field=(label,value,spec,change,key)=>{const wrap=el('label',null,'au-field'),control=el(spec.enum?'select':'input');control.setAttribute('aria-label',label);control.dataset.editKey=key;control.disabled=!state.canEdit;if(spec.enum)for(const [i,value] of spec.enum.entries()){const option=el('option',spec.enumNames?.[i]??value);option.value=value;control.append(option);}control.value=value??'';const commit=()=>{try{const next=spec.enum?spec.enum.find(value=>String(value)===control.value):spec.type==='integer'?Number(control.value):control.value;Promise.resolve(change(next)).catch(error=>errors.push(error.message));}catch(error){errors.push(error.message);}};control[spec.enum?'onchange':'oninput']=commit;wrap.append(el('span',label),control);return wrap;};
@@ -19,7 +19,8 @@ function harness(t,{placements=[role()],canEdit=true}={}){
     const direct=button('특성 하나 추가',()=>change({skills:[...(getEntry()?.encounter?.skills??[]),{kind:'opening_draw',amount:1}]}));direct.disabled=!state.canEdit;host.append(direct);
   };
   const patch=(entity,fields)=>{writes.push(copy({type:entity.entity_type,id:entity.entity_id,fields}));const row=state.entities.find(row=>row.entity_type===entity.entity_type&&row.entity_id===entity.entity_id);row.content={...row.content,...copy(fields)};row.localDraft060=true;return {staged:true};};
-  const draw=options=>{renders.push(options);host.replaceChildren();renderDeckSetup068({host,getState:()=>state,entities:state=>state.entities,getCharacters:()=>profiles,deckId:'deck-a',el,button,field,patch,renderEncounter,onNavigate(){},onSaveDrafts:scope=>{saves.push(copy(scope));return {success:true};},manualSaveControl:(scope,save,{message})=>{save.disabled=!state.canEdit||!(scope.localDirty068||state.entities.some(row=>row.localDraft060));message.textContent='초안 저장';},registerSave068:registration=>registrations.push(registration),filters,rerender:draw});};draw();return {state,document,host,filters,writes,saves,errors,renders,registrations,draw,role:id=>state.entities.find(row=>row.entity_id===id)};
+  const stageMany=changes=>{batches.push(copy(changes));for(const change of changes)patch(state.entities.find(row=>row.entity_type===change.type&&row.entity_id===change.id),change.fields);};
+  const draw=options=>{renders.push(options);host.replaceChildren();renderDeckSetup068({host,getState:()=>state,entities:state=>state.entities,getCharacters:()=>profiles,deckId:'deck-a',el,button,field,patch,stageMany,onBulkAssign:bulk?(id,options)=>routes.push(copy({id,options})):undefined,renderEncounter,onNavigate(){},onSaveDrafts:scope=>{saves.push(copy(scope));return {success:true};},manualSaveControl:(scope,save,{message})=>{save.disabled=!state.canEdit||!(scope.localDirty068||state.entities.some(row=>row.localDraft060));message.textContent='초안 저장';},registerSave068:registration=>registrations.push(registration),filters,rerender:draw});};draw();return {state,document,host,filters,writes,saves,errors,renders,registrations,batches,routes,draw,role:id=>state.entities.find(row=>row.entity_id===id)};
 }
 const click=(m,label)=>{const node=button041(m.host,label);assert.ok(node,`Missing button ${label}`);node.click();return node;};
 const input=(m,label,value,event='input')=>{const control=field041(m.host,label);assert.ok(control,`Missing field ${label}`);control.value=String(value);control.fire(event);return control;};
@@ -79,4 +80,60 @@ test('changing account isolates unfinished local creation and rejects callbacks 
 });
 test('viewers can inspect one placement and empty-deck save remains present but cannot mutate',async t=>{
   const m=harness(t,{canEdit:false});openFirst(m);assert.equal(button041(m.host,'이 배치 제외').disabled,true);assert.equal(button041(m.host,'배치 추가').disabled,true);assert.equal(button041(m.host,'덱과 배치 저장').disabled,true);assert.equal(field041(m.host,'추가 LP').disabled,true);assert.equal(m.writes.length,0);const empty=harness(t,{placements:[]});assert.ok(button041(empty.host,'덱과 배치 저장'));
+});
+
+const selectPlacement101=(m,roleId,id,checked=true)=>{
+  const control=m.host.querySelectorAll('input').find(node=>node.dataset.placementKey===JSON.stringify([roleId,id]));
+  assert.ok(control,'Visible placement checkbox '+id);control.focus();control.checked=checked;control.fire('change');return control;
+};
+
+test('101 deck summary exposes chapters and battle roles before opening settings without changing data',t=>{
+  const m=harness(t,{placements:[role(1,'battle',[entry('a'),entry('b')]),role(2,'boss',[entry('c')])]}),before=copy(m.state);
+  assert.match(m.host.querySelector('.au-setup-chapters101').textContent,/1장 · 일반 전투 2곳/);
+  assert.match(m.host.querySelector('.au-setup-chapters101').textContent,/2장 · 보스 1곳/);
+  assert.equal(m.writes.length,0);assert.deepEqual(m.state,before);
+});
+
+test('101 selection survives search and paging while preserving checkbox keyboard focus',t=>{
+  const m=harness(t,{placements:[role(1,'battle',Array.from({length:7},(_,i)=>entry('e'+i))),role(2,'boss',[entry('boss')])]});
+  click(m,'배치 설정');const first=selectPlacement101(m,'1:battle','e0');
+  assert.equal(m.document.activeElement,first);assert.ok(first.isConnected);
+  click(m,'다음');selectPlacement101(m,'2:boss','boss');
+  input(m,'이 덱의 배치 검색','e0');assert.match(m.host.querySelector('.au-setup-selection101').textContent,/선택 2곳/);
+  assert.equal(m.host.querySelectorAll('input').find(node=>node.dataset.placementKey).checked,true);
+  click(m,'선택 해제');assert.match(m.host.querySelector('.au-setup-selection101').textContent,/선택 0곳/);
+  assert.equal(m.writes.length,0);
+});
+
+test('101 multi exclusion requires confirmation, stages once across roles and preserves the shared deck',async t=>{
+  const m=harness(t,{placements:[role(1,'battle',[entry('a'),entry('sibling'),entry('other','deck-other')]),role(2,'boss',[entry('b')])]});
+  click(m,'배치 설정');selectPlacement101(m,'1:battle','a');selectPlacement101(m,'2:boss','b');
+  click(m,'선택 배치 제외');assert.equal(m.batches.length,0);assert.match(m.host.textContent,/덱과 카드 구성은 유지/);assert.match(m.host.textContent,/마지막 유효 편성/);
+  click(m,'배치 유지');assert.equal(m.host.querySelector('.au-setup-exclusion101'),null);assert.equal(m.writes.length,0);
+  click(m,'선택 배치 제외');const confirm=click(m,'2곳 배치 제외');confirm.click();await flush();
+  assert.equal(m.batches.length,1);assert.deepEqual(m.batches[0].map(row=>row.id),['1:battle','2:boss']);
+  assert.deepEqual(m.role('1:battle').content.entries.map(row=>row.entry_id),['sibling','other']);assert.deepEqual(m.role('2:boss').content.entries,[]);
+  assert.equal(m.role('1:battle').content.lp_bonus,700);assert.deepEqual(m.role('1:battle').content.unknownRole,{keep:true});
+  assert.deepEqual(m.state.entities.find(row=>row.entity_type==='deck').content,deck.content);
+  assert.match(m.host.querySelector('.au-setup-selection101').textContent,/선택 0곳/);assert.equal(button041(m.host,'검색 결과 전체 선택').disabled,false);
+});
+
+test('101 a changed selected placement rejects the entire exclusion and retains the selection',async t=>{
+  const m=harness(t,{placements:[role(1,'battle',[entry('a'),entry('b')])]});click(m,'배치 설정');selectPlacement101(m,'1:battle','a');selectPlacement101(m,'1:battle','b');
+  click(m,'선택 배치 제외');m.role('1:battle').content.entries[1].deck_id='deck-other';click(m,'2곳 배치 제외');await flush();
+  assert.equal(m.batches.length,0);assert.equal(m.writes.length,0);assert.equal(m.role('1:battle').content.entries.length,2);assert.ok(m.errors.length);
+});
+
+test('101 selected placements seed the existing shared edit route by exact compound identity',t=>{
+  const m=harness(t,{bulk:true,placements:[role(1,'battle',[entry('same')]),role(2,'boss',[entry('same')])]});click(m,'배치 설정');
+  selectPlacement101(m,'1:battle','same');selectPlacement101(m,'2:boss','same');click(m,'선택 배치 함께 수정');
+  assert.deepEqual(m.routes,[{id:'deck-a',options:{keys:[JSON.stringify(['1:battle','same']),JSON.stringify(['2:boss','same'])]}}]);assert.equal(m.writes.length,0);
+});
+
+test('101 viewer and stale-account exclusion callbacks cannot stage any selected placement',async t=>{
+  const viewer=harness(t,{canEdit:false});click(viewer,'배치 설정');
+  assert.equal(viewer.host.querySelectorAll('input').find(node=>node.type==='checkbox').disabled,true);
+  assert.equal(button041(viewer.host,'선택 배치 제외').disabled,true);
+  const m=harness(t);click(m,'배치 설정');selectPlacement101(m,'1:battle','entry-a');click(m,'선택 배치 제외');const stale=button041(m.host,'1곳 배치 제외');
+  m.state.user={id:'owner-b'};stale.onclick();await flush();assert.equal(m.batches.length,0);assert.ok(m.errors.some(message=>message.includes('계정이 바뀌')));
 });

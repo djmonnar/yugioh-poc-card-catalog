@@ -1,4 +1,4 @@
-import {AUTHORING_SECTIONS039,createAuthoringPanels039,normalizeCatalog039} from './authoring039-panels.js?v=20261103-071';
+import {AUTHORING_SECTIONS039,createAuthoringPanels039,normalizeCatalog039} from './authoring039-panels.js?v=20261110-101';
 import {createAuthoringDrafts060} from './authoring060-drafts.js?v=20261103-071';
 import {completeCharacterTraits065} from './authoring065-errors.js?v=20261101-065';
 import {authoringFieldNames066,validateAuthoringChange066} from './authoring066-validation.js?v=20261101-066';
@@ -51,7 +51,7 @@ export function mountAuthoringShell039({root,store,uploadAsset=null,manualSave=f
     if(state.phase==='conflict'&&store.resolveConflict)notice.append(button('DB 내용 사용',()=>store.resolveConflict('remote')),button('내 수정 적용',()=>store.resolveConflict('retry')));
   }
   const manualSet060=new Set(manualKinds),drafts060=manualSave?createAuthoringDrafts060({storage:draftStorage,allowedKinds:manualKinds,onSave:(...args)=>{const result=savePatch066(...args);store.flushPending083?.();return result;},onSaveBatch:(...args)=>{const result=saveBatch068(...args);store.flushPending083?.();return result;},onChange:()=>{if(destroyed060||draftRenderQueued060)return;draftRenderQueued060=true;queueMicrotask(()=>{draftRenderQueued060=false;if(!destroyed060)render(latestSnapshot060);});}}):null;
-  const shell=el('div',null,'au-app'),header=el('header',null,'au-top'),brand=el('a',null,'au-brand');brand.href='index.html?v=20261107-095';const icon=el('img');icon.src='assets/icon.svg';icon.alt='';icon.width=35;icon.height=43;brand.append(icon,el('span','YU-GI-OH CLASSIC'),el('small','원정 제작소 · 095'));
+  const shell=el('div',null,'au-app'),header=el('header',null,'au-top'),brand=el('a',null,'au-brand');brand.href='index.html?v=20261110-101';const icon=el('img');icon.src='assets/icon.svg';icon.alt='';icon.width=35;icon.height=43;brand.append(icon,el('span','YU-GI-OH CLASSIC'),el('small','원정 제작소 · 101'));
   const saveStatus=el('span',null,'au-save-status');saveStatus.setAttribute('role','status');saveStatus.setAttribute('aria-live','polite');
   const syncControls083=el('div',null,'au-sync083'),syncText083=el('span',null,'au-sync-detail083'),reload083=button('새로 불러오기',reloadLatest083,'au-reload083');
   reload083.title='최신 저장 내용을 확인합니다. 편집 중인 변경은 유지됩니다.';syncControls083.append(saveStatus,reload083,syncText083);

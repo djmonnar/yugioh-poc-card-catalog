@@ -49,6 +49,73 @@ const viewRows=m=>m.shell.drafts060.overlay(m.store.snapshot()).entities;
 function selectedEntry(m,roleId,id){return viewRows(m).find(row=>row.entity_id===roleId).content.entries.find(entry=>entry.entry_id===id);}
 async function pickRoute(m,roleName){const pick=routes(m).querySelectorAll('.au-route-selected-row071').find(row=>row.textContent.includes(roleName));assert.ok(pick,roleName);pick.click();await flush();}
 
+async function selectDeckPlacement101(m,roleId,id){
+ const checkbox=m.root.querySelectorAll('input').find(node=>node.dataset.placementKey===JSON.stringify([roleId,id]));assert.ok(checkbox,'Deck placement '+id);
+ checkbox.checked=true;checkbox.fire('change');await flush();
+}
+
+test('101 deck-side multi exclusion saves exact roles and renamed deck atomically, preserving sibling decks and metadata',async t=>{
+ const m=await setup(t),first=m.canonical('chapter_role','1:battle'),second=m.canonical('chapter_role','2:boss');
+ first.content.entries=[entry('remove-a'),entry('keep-a'),entry('other','deck-b')];first.content.entries[1].encounter.lp_bonus=800;first.content.lp_bonus=500;
+ second.content.entries=[entry('remove-b')];second.content.lp_bonus=1200;await m.refresh();
+ assert.match(m.root.querySelector('.au-setup-chapters101').textContent,/1장 · 일반 전투 2곳/);
+ click(m,'배치 설정');await flush();await selectDeckPlacement101(m,'1:battle','remove-a');await selectDeckPlacement101(m,'2:boss','remove-b');
+ click(m,'선택 배치 제외');await flush();assert.equal(m.remote.writes.length,0);click(m,'2곳 배치 제외');await flush();
+ assert.equal(m.remote.writes.length,0);assert.equal(m.shell.drafts060.summary().dirtyCount,2);await input(m,'덱 이름','배치 함께 저장');
+ click(m,'덱과 배치 저장');await drain(m);assert.equal(m.remote.commits,1);
+ assert.deepEqual(m.remote.writes[0].changes.map(row=>[row.entity_type,row.entity_id]),[['deck','deck-a'],['chapter_role','1:battle'],['chapter_role','2:boss']]);
+ assert.deepEqual(first.content.entries.map(row=>row.entry_id),['remove-a','keep-a','other'],'The held old snapshot is not mutated');
+ assert.deepEqual(m.canonical('chapter_role','1:battle').content.entries.map(row=>row.entry_id),['keep-a','other']);
+ assert.equal(m.canonical('chapter_role','1:battle').content.entries[0].encounter.lp_bonus,800);
+ assert.equal(m.canonical('chapter_role','1:battle').content.entries[1].deck_id,'deck-b');
+ assert.equal(m.canonical('chapter_role','1:battle').content.lp_bonus,500);assert.equal(m.canonical('chapter_role','2:boss').content.lp_bonus,1200);
+ assert.deepEqual(m.canonical('chapter_role','2:boss').content.entries,[]);assert.equal(m.canonical('deck','deck-a').content.deck_name,'배치 함께 저장');
+ assert.equal(m.remote.rows.filter(row=>row.entity_type==='deck').length,2);assert.equal(m.shell.drafts060.summary().dirtyCount,0);
+});
+
+test('101 selected deck placements open the shared route editor and return to the same deck after one atomic common edit',async t=>{
+ const m=await setup(t);m.canonical('chapter_role','1:battle').content.entries=[entry('same-a'),entry('untouched')];m.canonical('chapter_role','3:elite').content.entries=[entry('same-b')];await m.refresh();
+ click(m,'배치 설정');await flush();await selectDeckPlacement101(m,'1:battle','same-a');await selectDeckPlacement101(m,'3:elite','same-b');click(m,'선택 배치 함께 수정');await flush();
+ assert.match(routes(m).querySelector('h1').textContent,/이 덱의 배치 관리/);assert.equal(routes(m).querySelectorAll('.au-route-selected-row071').length,2);
+ assert.equal(routes(m).querySelector('.au-route-existing071').open,true);assert.equal(m.remote.writes.length,0);
+ await input(m,'상대 추가 LP',1600,'input',common(m));click(m,'선택한 2개 배치에 공통 설정 적용');await flush();click(m,'선택한 구역과 덱 저장');await drain(m);
+ assert.deepEqual(m.remote.writes[0].changes.map(row=>row.entity_id),['1:battle','3:elite']);
+ assert.equal(m.canonical('chapter_role','1:battle').content.entries[0].encounter.lp_bonus,1600);assert.equal(m.canonical('chapter_role','1:battle').content.entries[1].encounter.lp_bonus,0);
+ assert.equal(m.canonical('chapter_role','3:elite').content.entries[0].encounter.lp_bonus,1600);
+ click(m,'덱으로');await flush();assert.equal(m.root.querySelector('.au-routes071'),null);assert.ok(m.root.querySelector('.au-deck-setup068'));assert.match(m.window.location.href,/deck=deck-a/);
+});
+
+test('101 global cancel discards multi exclusions without RPC or losing either placement',async t=>{
+ const m=await setup(t);m.canonical('chapter_role','1:battle').content.entries=[entry('keep-one')];m.canonical('chapter_role','2:boss').content.entries=[entry('keep-two')];await m.refresh();
+ click(m,'배치 설정');await flush();await selectDeckPlacement101(m,'1:battle','keep-one');await selectDeckPlacement101(m,'2:boss','keep-two');click(m,'선택 배치 제외');await flush();click(m,'2곳 배치 제외');await flush();
+ assert.equal(m.shell.drafts060.summary().dirtyCount,2);click(m,'변경 취소',footer(m));await flush();
+ assert.equal(m.remote.writes.length,0);assert.equal(m.shell.drafts060.summary().dirtyCount,0);
+ assert.equal(viewRows(m).find(row=>row.entity_id==='1:battle').content.entries[0].entry_id,'keep-one');assert.equal(viewRows(m).find(row=>row.entity_id==='2:boss').content.entries[0].entry_id,'keep-two');
+});
+
+test('101 selected edit includes pre-existing drafts in selected roles and excludes unrelated drafts',async t=>{
+ const m=await setup(t);m.canonical('chapter_role','1:battle').content.entries=[entry('selected')];m.canonical('chapter_role','2:boss').content.entries=[entry('unselected')];await m.refresh();
+ m.shell.drafts060.stage('chapter_role','1:battle',{lp_bonus:900});m.shell.drafts060.stage('chapter_role','2:boss',{lp_bonus:1700});await flush();
+ click(m,'배치 설정');await flush();await selectDeckPlacement101(m,'1:battle','selected');click(m,'선택 배치 함께 수정');await flush();
+ assert.equal(button041(routes(m),'선택한 구역과 덱 저장').disabled,false);
+ click(m,'선택한 구역과 덱 저장');await drain(m);
+ assert.deepEqual(m.remote.writes[0].changes.map(row=>row.entity_id),['1:battle']);assert.equal(m.canonical('chapter_role','1:battle').content.lp_bonus,900);
+ assert.equal(m.canonical('chapter_role','2:boss').content.lp_bonus,0);assert.deepEqual(m.shell.drafts060.summary().items.filter(row=>row.dirty).map(row=>row.id),['2:boss']);
+});
+
+test('101 a concurrent change blocks the entire queued multi exclusion and retains every requested role',async t=>{
+ const m=await setup(t);m.canonical('chapter_role','1:battle').content.entries=[entry('one')];m.canonical('chapter_role','2:boss').content.entries=[entry('two')];await m.refresh();
+ click(m,'배치 설정');await flush();await selectDeckPlacement101(m,'1:battle','one');await selectDeckPlacement101(m,'2:boss','two');click(m,'선택 배치 제외');await flush();click(m,'2곳 배치 제외');await flush();
+ click(m,'덱과 배치 저장');await flush();assert.equal(m.store.queue.length,1);
+ m.canonical('chapter_role','1:battle').content.entries.push(entry('new-remote','deck-b'));m.canonical('chapter_role','1:battle').version=++m.remote.revision;
+ m.remote.rejectOnce={code:'P0001',message:'unified039_conflict'};await m.store.drain();await flush();
+ assert.equal(m.remote.commits,0);assert.equal(m.store.phase,'conflict');assert.equal(m.store.queue.length,1);
+ assert.deepEqual(m.store.queue[0].changes.map(row=>row.id),['1:battle','2:boss']);
+ assert.deepEqual(m.canonical('chapter_role','1:battle').content.entries.map(row=>row.entry_id),['one','new-remote']);
+ assert.deepEqual(m.canonical('chapter_role','2:boss').content.entries.map(row=>row.entry_id),['two']);
+ assert.match(m.root.textContent,/초안|변경/);
+});
+
 test('071 mounted deck entry chooses multiple pools once and commits their independent LP in one exact-scope intent',async t=>{
  const m=await setup(t);await openBulk(m);
  await selectNew(m,'1장 · 일반 전투에 새 배치 추가');await input(m,'상대 추가 LP',700,'input',editor(m));
