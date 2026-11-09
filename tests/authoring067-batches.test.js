@@ -19,7 +19,7 @@ function mounted(t,{section='cards',state=fixture067()}={}){
 const summary=m=>m.root.querySelector('.au-card-results-summary').textContent,tiles=m=>m.root.querySelector('.au-catalog-results').querySelectorAll('.au-card-tile');
 const theme=(m,key)=>m.root.querySelector('.au-addition-themes067').querySelectorAll('button').find(button=>button.dataset.theme===key);
 function batch(m,key){const select=field041(m.root,'추가 묶음');select.value=key;select.fire('change');return select;}
-function futureCard(state){const original=state.bootstrap.catalog.cards.at(-1);return {...original,source_id:9000,sourceId:9000,internal_id:9000,web_slot:9999,slot:9999,identity_key:'f'.repeat(64),art_key:'Cards099/9000',artKey:'Cards099/9000',name:'미래 합성 추가 카드'};}
+function futureCard(state){const original=state.bootstrap.catalog.cards.at(-1);return {...original,source_id:9000,sourceId:9000,internal_id:9000,web_slot:9999,slot:9999,identity_key:'f'.repeat(64),art_key:'Cards999/9000',artKey:'Cards999/9000',name:'미래 합성 추가 카드'};}
 
 test('all three earlier batches retain meaningful stable names and identity-pinned themes',()=>{
   const cards=normalizeCatalog039(fixture067()),before=JSON.stringify(cards),metadata=JSON.stringify(ADDITION_BATCHES067),index=catalogAdditions049(cards);
@@ -42,12 +42,12 @@ for(const section of ['cards','decks'])test(`${section}: named previous batches 
 
 test('a new catalog batch cannot replace an unfinished selected batch, theme or Korean IME node',t=>{
   const m=mounted(t);button041(m.root,'최근 추가').click();batch(m,'Cards049');theme(m,'암흑계').click();const search=field041(m.root,'카드 검색');search.focus();search.fire('compositionstart');const next=clone(m.state);next.bootstrap.catalog.cards.push(futureCard(next));
-  assert.equal(m.panels.render('cards',m.root,next),false);assert.equal(field041(m.root,'카드 검색'),search);assert.equal(m.document.activeElement,search);assert.equal(field041(m.root,'추가 묶음').value,'Cards049');assert.equal(theme(m,'암흑계').getAttribute('aria-pressed'),'true');assert.match(summary(m),/^29종 · 암흑계·젬나이트 추가/);assert.ok(field041(m.root,'추가 묶음').options.some(option=>option.value==='Cards099'));assert.equal(m.writes.length,0);
+  assert.equal(m.panels.render('cards',m.root,next),false);assert.equal(field041(m.root,'카드 검색'),search);assert.equal(m.document.activeElement,search);assert.equal(field041(m.root,'추가 묶음').value,'Cards049');assert.equal(theme(m,'암흑계').getAttribute('aria-pressed'),'true');assert.match(summary(m),/^29종 · 암흑계·젬나이트 추가/);assert.ok(field041(m.root,'추가 묶음').options.some(option=>option.value==='Cards999'));assert.equal(m.writes.length,0);
 });
 
 test('the explicit recent action resolves to one actual batch rather than a moving latest alias',t=>{
   const m=mounted(t);button041(m.root,'최근 추가').click();const next=clone(m.state);next.bootstrap.catalog.cards.push(futureCard(next));m.panels.render('cards',m.root,next,{force:true});assert.equal(field041(m.root,'추가 묶음').value,'Cards053');assert.match(summary(m),/^51종/);
-  button041(m.root,'최근 추가').click();assert.equal(field041(m.root,'추가 묶음').value,'Cards099');assert.match(summary(m),/^1종 · 추가 묶음 099/);assert.ok(theme(m,'unclassified'));assert.equal(m.writes.length,0);
+  button041(m.root,'최근 추가').click();assert.equal(field041(m.root,'추가 묶음').value,'Cards999');assert.match(summary(m),/^1종 · 추가 묶음 999/);assert.ok(theme(m,'unclassified'));assert.equal(m.writes.length,0);
 });
 
 test('theme, text, card type and editable category filters intersect without changing any tag',t=>{
