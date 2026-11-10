@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.47",
-  "versionCode": 66,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.47/YGOClassicExpedition-0.18.47-arm64.apk",
-  "sizeBytes": 418826473,
-  "sha256": "92d489b4ec8e61221206ee94cee48a2b328f0f648e24be11e555eb97e2a8d8fa",
-  "releaseNotes": "장마다 지도와 배경 음악을 다르게 구성했습니다. 3장은 어둡고 황폐한 분위기로 바뀝니다.\nLP와 피해 숫자를 빠르게 세어 보여주고, 공격 뒤 데미지 연출의 대기 간격을 줄였습니다.\n유물과 상대 특성이 실제로 발동한 내용에 맞춰 전투 알림과 효과를 표시합니다.\n이벤트에서 카드함의 카드도 선택할 수 있습니다. 카드 판매는 상점에서 여러 장을 골라 한 번에 진행합니다.\n덱의 몬스터·마법·함정 장수를 표시합니다.\n만능지뢰 회색안개의 AI 발동 판단과 동률 처리, 중복 발동 판단을 개선했습니다.\n의식 소재 선택에 필요한 레벨과 선택한 합계를 표시하고, 의식 마법 발동 전 확인·취소를 추가했습니다.\n의식의 제단과 새 상점 의식 카드 묶음은 전용·카드군 의식 마법을 우선 연결합니다.\n지금 발동할 수 있는 마법카드는 은은한 테두리로 표시합니다.\nAI가 타이푼을 이미 해결 중인 일반 효과에 낭비하거나 같은 대상에 중복 사용하는 판단을 수정했습니다. 은막의 거울벽의 발동과 유지비 판단도 개선했습니다.\n초고대 티라노 등 검수된 5종의 릴리즈 감소 소환 조건을 공통 AI가 계산하도록 수정했습니다."
+  "versionName": "0.18.48",
+  "versionCode": 67,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.48/YGOClassicExpedition-0.18.48-arm64.apk",
+  "sizeBytes": 428544451,
+  "sha256": "bef9bbb1f06e846040307acc31c384161457b907d4b617c23b576ce43fe6e7ea",
+  "releaseNotes": "지도에서 적 덱을 미리 확인할 수 있으며, 새 지도에서 같은 적 덱이 반복되지 않습니다. 같은 필드 마법의 불필요한 재발동 판단을 개선했습니다. 의식·융합 지원 카드 15종과 카드 사용 AI를 추가하고 다크 제로이드 설명을 바로잡았습니다."
 }
