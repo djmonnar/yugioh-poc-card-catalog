@@ -3,7 +3,7 @@
 import {parseMapRules052,parseMapPatch052} from './authoring052-map.js?v=20261030-052';
 import {rejectionReason065,validationInfo065} from './authoring065-errors.js?v=20261101-065';
 import {completeEventText066,validateAuthoringChange066} from './authoring066-validation.js?v=20261101-066';
-import {gameIdentityMatches099} from './authoring099-identity.js?v=20261109-099';
+import {gameIdentityMatches103} from './authoring103-identity.js?v=20261111-103';
 import {batchChanges068,batchFields068,batchWriteState068,restoreBatch068,enqueueBatch068,drainBatch068,getRejectedBatch068 as readRejectedBatch068,releaseRejectedBatch068 as releaseBatch068,resolveBatchConflict068} from './authoring068-batch.js?v=20261102-068';
 export const PROJECT039 = 'ygoclassic-expedition';
 export const IDENTITY039 = Object.freeze({base_catalog_sha256:'b73dd51c78aeab8c9beebf936b46e4cac16040e70df3a7980dec38c40db21e09',catalog035_sha256:'b5f1e9749cec0c1497c5fdcbfb2dc9c64895dcd859f083ec0ec4014580f05308',native_manifest_sha256:'4674de031c9e3044c86b90fcd402d9533d9353347802f268863746bf3bd7e4d7'});
@@ -106,7 +106,7 @@ export async function normalizeBootstrap039(raw,crypto=globalThis.crypto) {
   }
   const env = raw.game;
   need(object(env) && env.schema === 1 && env.kind === 'poc-unified-game039' && integer(env.game_revision) && integer(env.authoring_revision) && /^\d+$/.test(env.metadata_revision) && HASH.test(env.source_fingerprint) && typeof env.payload_json === 'string','게임용 제작 데이터의 형식이 올바르지 않아.');
-  need(env.authoring_revision<=raw.project_revision&&env.game_revision<=raw.project_revision&&gameIdentityMatches099(env.identity),'제작 데이터의 게임 버전이 일치하지 않아.');
+  need(env.authoring_revision<=raw.project_revision&&env.game_revision<=raw.project_revision&&gameIdentityMatches103(env.identity),'제작 데이터의 게임 버전이 일치하지 않아.');
   need(await digest(env.payload_json,crypto) === env.source_fingerprint,'게임용 제작 데이터의 검증값이 일치하지 않아.');
   const payload = safe(JSON.parse(env.payload_json));
   for (const field of ['catalog','deck_rules035','opponents','starters','content022','meta017','characters','shop_rules']) need(payload[field] !== undefined,`게임용 ${field} 데이터가 없어.`);

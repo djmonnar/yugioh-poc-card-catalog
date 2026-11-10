@@ -65,7 +65,7 @@ test('099 update leaves an existing093 web session and its unfinished draft inta
  // Reconstruct the exact previous shipped store from its two identity-hook
  // changes, then bind its original SHA before executing that actual code.
  const url=new URL('../authoring039-store.js',import.meta.url);
- let oldSource=fs.readFileSync(url,'utf8').replaceAll('\r\n','\n').replaceAll('gameIdentityMatches099','gameIdentityMatches093').replaceAll('./authoring099-identity.js?v=20261109-099','./authoring093-identity.js?v=20261106-093');
+ let oldSource=fs.readFileSync(url,'utf8').replaceAll('\r\n','\n').replaceAll('gameIdentityMatches103','gameIdentityMatches093').replaceAll('./authoring103-identity.js?v=20261111-103','./authoring093-identity.js?v=20261106-093');
  assert.equal(sha(oldSource),'5bdd1c504a0b1ee965d6c226f34a964b5543db762525e439e8861652849b41de');
  oldSource=oldSource.replace(/from (['"])(\.\/[^'"]+)\1/g,(_all,quote,path)=>`from ${quote}${new URL(path,url).href}${quote}`);
  const {AuthoringStore039:OldStore093}=await import('data:text/javascript;base64,'+Buffer.from(oldSource).toString('base64'));

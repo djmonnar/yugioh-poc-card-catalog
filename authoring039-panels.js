@@ -382,7 +382,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     const clear=button('검색 지우기',()=>{search.value='';state.query='';state.page=1;display();search.focus({preventScroll:true});},'au-search-clear');clear.hidden=!state.query;searchRow.append(search,clear);toolbar.append(searchRow);
     // Refresh only the results, preserving the input node and its live IME session.
     // Android may keep a Korean word composing until space, Enter or blur.
-    const updateSearch=()=>{state.query=search.value;state.page=1;display();};
+    const updateSearch=()=>{if(state.query===search.value)return;state.query=search.value;state.page=1;display();};
     search.oninput=updateSearch;search.oncompositionend=updateSearch;search.onsearch=updateSearch;search.onchange=updateSearch;
     const choices=[['type','종류',[...new Set(currentCards.map(c=>c.type).filter(Boolean))]],['tier','등급',['N','R','SR','UR','L']],['race','종족',[...new Set(currentCards.map(c=>c.race).filter(Boolean))]],['attribute','속성',[...new Set(currentCards.map(c=>c.attribute).filter(Boolean))]],['limit','일반 금제',['0','1','2','3']],['speedLimit','스피드 금제',['0','1','2','3','unrestricted']],['status','판매·보상',['stock','reward']]];
     const details=el('details',null,'au-filter-details au-filter091'),filterSummary=el('summary','카드 필터'),filterControls=new Map();details.open=filters.get(`${key}.filter-open`)??false;details.ontoggle=()=>filters.set(`${key}.filter-open`,details.open);details.append(filterSummary);
