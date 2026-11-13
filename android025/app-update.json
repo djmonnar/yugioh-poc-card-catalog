@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.52",
-  "versionCode": 71,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.52/YGOClassicExpedition-0.18.52-arm64.apk",
-  "sizeBytes": 444610403,
-  "sha256": "53f7190dd01685bddf8b30466a93ad501729bd9867fdf8e5f062a1245ab07195",
-  "releaseNotes": "데몬의 도끼, 악마의 키스, 불타는 창을 공통 장착 AI에 연결했습니다. 남은 공격 기회와 장착 전후의 전투 결과를 비교합니다. 메인 화면의 이름을 원정 선택으로 바꾸고 제목과 주요 버튼의 한글 글꼴을 다듬었습니다. 시작 덱 편집에서 대표 카드를 골라 저장할 수 있습니다."
+  "versionName": "0.18.53",
+  "versionCode": 72,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.53/YGOClassicExpedition-0.18.53-arm64.apk",
+  "sizeBytes": 444612347,
+  "sha256": "6f71a7e59c2f157847a0c04c0f8055ff8a64fb4286a153b931fd9f685f9d2386",
+  "releaseNotes": "웹 제작소에 추가된 카드 21장과 제물봉인 가면 1장 제한을 게임에 연결했습니다. 웹에서 편집한 새 카드의 시작 덱·상대 덱·캐릭터 특성을 불러올 수 있습니다."
 }
