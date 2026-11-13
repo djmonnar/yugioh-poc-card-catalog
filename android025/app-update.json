@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.50",
-  "versionCode": 69,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.50/YGOClassicExpedition-0.18.50-arm64.apk",
-  "sizeBytes": 438874305,
-  "sha256": "c277c4dacb16d60990d4e1ef658a5484e65cb308846ba6daaaadb730008d5b85",
-  "releaseNotes": "조이 덱의 천년룡과 붉은 눈의 흑인룡 융합 소환 판단을 수정했습니다. 공격 뒤 LP 표시가 더 빨리 이어지도록 조정했습니다. 신규 카드 9종과 카드 AI 개선을 적용했습니다. 방랑자가 새 주인공으로 등장하며, 방랑자와 무토 유우기에 한국어 대사를 추가했습니다."
+  "versionName": "0.18.51",
+  "versionCode": 70,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.51/YGOClassicExpedition-0.18.51-arm64.apk",
+  "sizeBytes": 444577065,
+  "sha256": "532c5f33e4cff5d49676d04352c475f65086e3470f55f8ba57672d4d135d545c",
+  "releaseNotes": "방랑자와 무토 유우기의 합성 음성을 제거했습니다. 설정에서 배경음악과 효과음을 따로 켜거나 끄고 각각의 음량을 조절할 수 있습니다. 새 카드 12종을 추가했고, 새 원정과 개인 연습 덱에 제물봉인 가면 1장 제한을 적용했습니다. 사이버 레이더가 장착 카드 파괴와 재장착의 이득을 비교하도록 수정했습니다."
 }
