@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.53",
-  "versionCode": 72,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.53/YGOClassicExpedition-0.18.53-arm64.apk",
-  "sizeBytes": 444612347,
-  "sha256": "6f71a7e59c2f157847a0c04c0f8055ff8a64fb4286a153b931fd9f685f9d2386",
-  "releaseNotes": "웹 제작소에 추가된 카드 21장과 제물봉인 가면 1장 제한을 게임에 연결했습니다. 웹에서 편집한 새 카드의 시작 덱·상대 덱·캐릭터 특성을 불러올 수 있습니다."
+  "versionName": "0.18.54",
+  "versionCode": 73,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.54/YGOClassicExpedition-0.18.54-arm64.apk",
+  "sizeBytes": 444632999,
+  "sha256": "7c3157b655feb6ac55d6d0e495b64d307396939f99c4c68bdc4be62e2a4e0df4",
+  "releaseNotes": "몬스터 공격에서 LP 반영까지의 대기 시간을 줄였습니다. AI는 범골의 의지와 보급 부대, 생환의 패, 보충 부대의 사용 조건을 판단합니다. 새로 생성되는 지도에서 휴식과 상점이 한 경로에 연달아 나오지 않습니다. 방랑자 결과 화면의 상대 대사를 정리했고, 앱 업데이트는 변경분 안내를 재시도하며 전체 앱이 필요한 이유를 표시합니다."
 }
