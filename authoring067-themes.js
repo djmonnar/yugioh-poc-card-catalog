@@ -6,8 +6,9 @@ import {ADDITION_BATCHES090} from './authoring090-batch-data.js?v=20261106-090';
 import {ADDITION_BATCHES093} from './authoring093-batch-data.js?v=20261106-093';
 import {ADDITION_BATCHES099} from './authoring099-batch-data.js?v=20261109-099';
 import {ADDITION_BATCHES103} from './authoring103-batch-data.js?v=20261111-103';
+import {ADDITION_BATCHES109} from './authoring109-batch-data.js?v=20261114-109';
 
-export function additionMetadata067(key,registry=[...ADDITION_BATCHES067,...ADDITION_BATCHES081,...ADDITION_BATCHES084,...ADDITION_BATCHES088,...ADDITION_BATCHES090,...ADDITION_BATCHES093,...ADDITION_BATCHES099,...ADDITION_BATCHES103]){return registry.find(batch=>batch.key===key)??{key,label:`추가 묶음 ${key.replace(/^Cards/,'')}`,themes:[]};}
+export function additionMetadata067(key,registry=[...ADDITION_BATCHES067,...ADDITION_BATCHES081,...ADDITION_BATCHES084,...ADDITION_BATCHES088,...ADDITION_BATCHES090,...ADDITION_BATCHES093,...ADDITION_BATCHES099,...ADDITION_BATCHES103,...ADDITION_BATCHES109]){return registry.find(batch=>batch.key===key)??{key,label:`추가 묶음 ${key.replace(/^Cards/,'')}`,themes:[]};}
 
 // A theme is registration metadata. User-edited category tags stay independent.
 export function additionThemes067(cards,scope,index){
