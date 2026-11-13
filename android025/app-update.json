@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.48",
-  "versionCode": 67,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.48/YGOClassicExpedition-0.18.48-arm64.apk",
-  "sizeBytes": 428544451,
-  "sha256": "bef9bbb1f06e846040307acc31c384161457b907d4b617c23b576ce43fe6e7ea",
-  "releaseNotes": "지도에서 적 덱을 미리 확인할 수 있으며, 새 지도에서 같은 적 덱이 반복되지 않습니다. 같은 필드 마법의 불필요한 재발동 판단을 개선했습니다. 의식·융합 지원 카드 15종과 카드 사용 AI를 추가하고 다크 제로이드 설명을 바로잡았습니다."
+  "versionName": "0.18.49",
+  "versionCode": 68,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.49/YGOClassicExpedition-0.18.49-arm64.apk",
+  "sizeBytes": 428727263,
+  "sha256": "d7078939bb9500e20d5d7a2184e0f35b1573a344491d6567693ae9703d90b91a",
+  "releaseNotes": "의식 소환과 카드 연계 판단을 개선했습니다. AI는 자체 특수 소환의 릴리스 비용을 비교하고, 잠시 빼앗은 몬스터를 가능한 비용에 활용합니다. 시작 유물에 간파의 눈을 추가하고 카드 상세와 첫 패 교환 안내를 수정했습니다."
 }
