@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.54",
-  "versionCode": 73,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.54/YGOClassicExpedition-0.18.54-arm64.apk",
-  "sizeBytes": 444632999,
-  "sha256": "7c3157b655feb6ac55d6d0e495b64d307396939f99c4c68bdc4be62e2a4e0df4",
-  "releaseNotes": "몬스터 공격에서 LP 반영까지의 대기 시간을 줄였습니다. AI는 범골의 의지와 보급 부대, 생환의 패, 보충 부대의 사용 조건을 판단합니다. 새로 생성되는 지도에서 휴식과 상점이 한 경로에 연달아 나오지 않습니다. 방랑자 결과 화면의 상대 대사를 정리했고, 앱 업데이트는 변경분 안내를 재시도하며 전체 앱이 필요한 이유를 표시합니다."
+  "versionName": "0.18.55",
+  "versionCode": 74,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.55/YGOClassicExpedition-0.18.55-arm64.apk",
+  "sizeBytes": 444644871,
+  "sha256": "5408fe08345feb97a8537a39ca882eae1edc468c72aae1121724496ea483573b",
+  "releaseNotes": "샤인 스파크 등 필드 마법을 쓸 때 표시 변경, 소환 가능 여부, 전투 결과를 함께 판단합니다. 길라사우루스의 묘지 특수 소환, 아쿠에리어의 스탠바이 페이즈 효과, 화염을 지배하는 자 등 2장분 릴리스 판단을 수정했습니다. 소환과 효과 연출 중 반복하던 화면 배치 계산과 중복 대기를 줄였습니다."
 }
