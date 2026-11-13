@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.51",
-  "versionCode": 70,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.51/YGOClassicExpedition-0.18.51-arm64.apk",
-  "sizeBytes": 444577065,
-  "sha256": "532c5f33e4cff5d49676d04352c475f65086e3470f55f8ba57672d4d135d545c",
-  "releaseNotes": "방랑자와 무토 유우기의 합성 음성을 제거했습니다. 설정에서 배경음악과 효과음을 따로 켜거나 끄고 각각의 음량을 조절할 수 있습니다. 새 카드 12종을 추가했고, 새 원정과 개인 연습 덱에 제물봉인 가면 1장 제한을 적용했습니다. 사이버 레이더가 장착 카드 파괴와 재장착의 이득을 비교하도록 수정했습니다."
+  "versionName": "0.18.52",
+  "versionCode": 71,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.52/YGOClassicExpedition-0.18.52-arm64.apk",
+  "sizeBytes": 444610403,
+  "sha256": "53f7190dd01685bddf8b30466a93ad501729bd9867fdf8e5f062a1245ab07195",
+  "releaseNotes": "데몬의 도끼, 악마의 키스, 불타는 창을 공통 장착 AI에 연결했습니다. 남은 공격 기회와 장착 전후의 전투 결과를 비교합니다. 메인 화면의 이름을 원정 선택으로 바꾸고 제목과 주요 버튼의 한글 글꼴을 다듬었습니다. 시작 덱 편집에서 대표 카드를 골라 저장할 수 있습니다."
 }
