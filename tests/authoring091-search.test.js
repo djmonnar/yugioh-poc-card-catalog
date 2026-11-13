@@ -34,6 +34,18 @@ test('091 facets OR within a field, AND across fields, and metadata subtypes wor
  assert.equal(cardFiltersMatch091({type:'필드 마법',subtype:'필드',native_type:0x80002},{type:['마법'],subtype:['마법:필드']}),true);
  assert.equal(cardFiltersMatch091({type:'몬스터',race:'전사족',attribute:'빛'},{race:['전사족'],attribute:['물']}),false);
 });
+test('race query includes spell and trap effect text; the race filter stays exact',()=>{
+ const spell=rows.find(c=>c.name_ko==='야성 해방'),trap=rows.find(c=>c.name_ko==='환상수의 뿔');
+ assert(spell);assert(trap);
+ for(const query of ['야수족','야수 족']){
+  assert(cardQueryMatches091(spell,query));assert(cardQueryMatches091(trap,query));
+ }
+ assert(cardQueryMatches091(spell,'마법 야수족'));
+ assert(cardQueryMatches091(trap,'야수족 함정'));
+ assert.equal(cardFiltersMatch091(trap,{race:['야수족'],query:'야수족'}),false);
+ assert.equal(cardQueryMatches091({type:'마법',description_ko:'비행야수족 또는 환신 야수족 몬스터를 고른다.'},'야수족'),false);
+ assert(cardQueryMatches091({type:'몬스터',race:'야수족'},'야수족 몬스터'));
+});
 for(const section of ['cards','decks'])test(section+':091 real UI sorts all results before pagination; multi selections survive ordering/search and never edit decks',t=>{
  const m=mounted(t,section),select=field041(m.root,'카드 정렬'),eligible=rows.filter(c=>section==='cards'||!c.special&&c.playable!==false);
  assert.deepEqual(select.options.map(o=>o.value),CARD_SORTS091.map(([v])=>v));

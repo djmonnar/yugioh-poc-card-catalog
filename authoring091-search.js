@@ -12,6 +12,7 @@ const races=['전사족','마법사족','천사족','악마족','언데드족','
 const attributes={땅:1,물:2,화염:4,바람:8,빛:16,어둠:32,신:64};
 const fields=['type','tier','race','attribute','subtype','limit','speedLimit','status'];
 const spacedRace=new RegExp('('+races.map(r=>r.slice(0,-1)).join('|')+')\\s+족','g');
+const writtenRace=new RegExp(`(?<![가-힣])(${races.map(race=>race.replace(/^(비행|환신)(?=야수)/u,'$1\\s*').replace(/족$/u,'\\s*족')).join('|')})`,'gu');
 export function filterValues091(value){return [...new Set((Array.isArray(value)?value:value==null||value===''?[]:[value]).map(String).filter(Boolean))];}
 function nativeType(card){const value=card.native_type??card.nativeType035??card.native?.type;return Number.isSafeInteger(value)?value:null;}
 function monster(card){const type=nativeType(card);return type===null?String(card.type??'').includes('몬스터'):Boolean(type&1);}
@@ -31,8 +32,16 @@ export function cardQueryMatches091(card,query,tokens=cardQueryTokens091(query))
   const wanted=normalize(query);
   if(wanted&&[card.name_ko,card.name_en,card.name,card.nameEnglish].some(name=>normalize(name)===wanted))return true;
   const searchable=normalize(card.searchText??[card.name_ko,card.name_en,card.name,card.nameEnglish,card.description_ko,card.description,card.type,card.subtype,card.race,card.attribute,...(card.tags??[]),...(card.search_aliases??[]),card.slot,card.source_id,card.code].join(' '));
+  const monsterConditions=tokens.some(token=>token==='몬스터'||Object.hasOwn(attributes,token.replace(/속성$/,'')));
+  let mentionedRaces;
   return tokens.every(token=>{
-    if(races.includes(token))return raceMatches(card,token);
+    if(races.includes(token)){
+      if(raceMatches(card,token))return true;
+      if(monsterConditions)return false;
+      const text=[card.name_ko??card.name,card.description_ko??card.description].join(' ').normalize('NFKC');
+      mentionedRaces??=new Set(Array.from(text.matchAll(writtenRace),match=>normalize(match[1])));
+      return mentionedRaces.has(token);
+    }
     if(Object.hasOwn(attributes,token.replace(/속성$/,'')))return attributeMatches(card,token);
     if(['몬스터','마법','함정'].includes(token))return typeMatches(card,token);
     return searchable.includes(normalize(token));
