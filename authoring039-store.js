@@ -34,6 +34,13 @@ const key = (type,id) => `${type}\n${id}`;
 const integer = value => Number.isSafeInteger(value) && value >= 0;
 const object = value => value !== null && typeof value === 'object' && !Array.isArray(value) && [Object.prototype,null].includes(Object.getPrototypeOf(value));
 function need(ok,message) { if (!ok) throw new Error(message); }
+function categoryRename039(change){
+  return change.type==='category'&&change.operation==='patch'&&typeof change.fields.name==='string'&&
+    change.fields.name!==change.id ? change.fields.name : null;
+}
+function renameCategoryReferences039(names,from,to){
+  return [...new Set(names.map(name=>name===from?to:name))];
+}
 function explain(error) {
   const message=String(error?.message??error??'DB 연결을 확인해줘.');
   if(error?.code==='57014'||/statement timeout/i.test(message))return '서버 처리 시간이 초과됐습니다. 저장 요청은 보관되어 있으며 같은 요청으로 다시 확인합니다.';
@@ -296,9 +303,16 @@ export class AuthoringStore039 {
       need(ack?.schema===1&&ack.kind==='unified039-write-ack'&&ack.request_id===q.requestId&&integer(ack.applied_revision)&&integer(ack.observed_project_revision)&&Array.isArray(ack.entities),'저장 완료 응답을 확인하지 못했어. 같은 요청으로 다시 확인할게.');
       const ackRows=[...ack.entities,...categoryGroupRows055(ack.category_groups055),...categoryGroupOrderRows056(ack.category_group_order056)],ackKeys=new Set();
       for(const row of ackRows){validEntity(row);const id=key(row.entity_type,row.entity_id);need(!ackKeys.has(id),'저장 완료 항목이 중복되었습니다.');ackKeys.add(id);}
-      const confirmed=ackRows.find(row=>row.entity_type===q.type&&row.entity_id===q.id);
-      need(confirmed&&(q.operation==='delete'?confirmed.deleted===true:!confirmed.deleted),'저장한 항목을 확인하지 못했습니다. 같은 요청으로 다시 확인합니다.');
+      const original=ackRows.find(row=>row.entity_type===q.type&&row.entity_id===q.id),renamed=categoryRename039(q);
+      const confirmed=renamed===null?original:ackRows.find(row=>row.entity_type==='category'&&row.entity_id===renamed);
+      const matched=renamed===null
+        ? confirmed&&(q.operation==='delete'?confirmed.deleted===true:!confirmed.deleted)
+        : original?.deleted===true&&original.version===ack.applied_revision&&confirmed&&!confirmed.deleted&&
+          confirmed.version===ack.applied_revision&&confirmed.content.name===renamed&&confirmed.content.archived===false;
+      need(matched,'저장한 항목을 확인하지 못했습니다. 같은 요청으로 다시 확인합니다.');
       if((HASH.test(ack.game_source_fingerprint)&&ack.game_source_fingerprint!==this.bootstrap.game?.source_fingerprint)||(Array.isArray(ack.issues)&&ack.issues.length)) this.pendingRevision=Math.max(this.pendingRevision??0,ack.applied_revision);
+      if(renamed!==null&&ack.observed_project_revision>this.bootstrap.project_revision)
+        this.pendingRevision=Math.max(this.pendingRevision??0,ack.observed_project_revision);
       if(ack.applied_revision>=this.bootstrap.project_revision) {
         for(const row of ackRows) {
           const rows=this.bootstrap.authoring.entities,i=rows.findIndex(e=>key(e.entity_type,e.entity_id)===key(row.entity_type,row.entity_id));
@@ -308,16 +322,16 @@ export class AuthoringStore039 {
       }
       this.queue.shift();
       this.savedAt083=Date.now();
-      const acknowledged=ackRows.find(row=>row.entity_type===q.type&&row.entity_id===q.id);
-      for(const waiting of this.queue)if(waiting.type===q.type&&waiting.id===q.id&&!waiting.body){
+      if(renamed!==null)this.followCategoryRename039(q,confirmed,ackRows);
+      else for(const waiting of this.queue)if(waiting.type===q.type&&waiting.id===q.id&&!waiting.body){
         const row=this.getRow(q.type,q.id);
-        if(waiting.baseVersion===q.baseVersion&&(!acknowledged||acknowledged.deleted||row?.version===acknowledged.version)){
+        if(waiting.baseVersion===q.baseVersion&&(confirmed.deleted||row?.version===confirmed.version)){
           waiting.baseVersion=row?.version??0;waiting.baseContent=clone(row?.content??{});
-        }else if(acknowledged&&!acknowledged.deleted&&waiting.operation==='patch'&&waiting.baseVersion<=acknowledged.version){
+        }else if(!confirmed.deleted&&waiting.operation==='patch'&&waiting.baseVersion<=confirmed.version){
           // A predecessor may have rebased after this edit was queued, or a
           // later snapshot may already contain unrelated changes. Carry only
           // our committed fields forward and let CAS check the other fields.
-          for(const field of Object.keys(q.fields))waiting.baseContent[field]=clone(acknowledged.content[field]);
+          for(const field of Object.keys(q.fields))waiting.baseContent[field]=clone(confirmed.content[field]);
         }
       }
       for(const resolve of Array.isArray(q.resolve)?q.resolve:[]) resolve(ack);
@@ -328,6 +342,32 @@ export class AuthoringStore039 {
         this.busy=false; this.emit();
         if(this.queue.length&&this.phase!=='conflict') this.schedule(this.phase==='error'?Math.min(30000,1000*2**Math.min(this.failures,5)):0);
         else this.scheduleIdleRefresh();
+      }
+    }
+  }
+  followCategoryRename039(sent,confirmed,rows){
+    const from=sent.id,to=confirmed.entity_id;
+    // A newer snapshot may have renamed this category again. The receipt
+    // settles the old operation but cannot identify the new destination.
+    if(!this.getRow('category',to))return;
+    for(const waiting of this.queue){
+      if(waiting.body)continue;
+      if(waiting.type==='category'&&waiting.id===from&&waiting.operation==='patch'&&waiting.baseVersion===sent.baseVersion){
+        waiting.id=to;
+        waiting.baseVersion=confirmed.version;
+        waiting.baseContent=clone(confirmed.content);
+        continue;
+      }
+      const field=waiting.type==='category_group'?'categories':waiting.type==='card_annotation'?'tags':null;
+      if(!field||waiting.operation==='delete')continue;
+      for(const content of [waiting.fields,waiting.baseContent]){
+        if(Array.isArray(content[field]))content[field]=renameCategoryReferences039(content[field],from,to);
+      }
+      const acknowledged=rows.find(row=>row.entity_type===waiting.type&&row.entity_id===waiting.id);
+      const current=this.getRow(waiting.type,waiting.id);
+      if(acknowledged&&!acknowledged.deleted&&current?.version===acknowledged.version&&equal(current.content,waiting.baseContent)){
+        waiting.baseVersion=current.version;
+        waiting.baseContent=clone(current.content);
       }
     }
   }

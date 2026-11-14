@@ -106,12 +106,12 @@ test('group bootstrap envelope rejects malformed kinds, duplicate identities and
 });
 
 class MemoryStorage055{constructor(){this.values=new Map();}getItem(key){return this.values.get(key)??null;}setItem(key,value){this.values.set(key,String(value));}}
-async function storeFixture(t,{canEdit=true,rows=[groupRow()],legacyRows=[]}={}){
- const remote={revision:1,rows:clone(rows),legacyRows:clone(legacyRows),calls:[],once:null,requests:new Map()},storage=new MemoryStorage055();
+async function storeFixture(t,{canEdit=true,rows=[groupRow()],legacyRows=[],revision=1,storage=new MemoryStorage055(),requests=new Map()}={}){
+ const remote={revision,rows:clone(rows),legacyRows:clone(legacyRows),calls:[],once:null,requests};
  const client={auth:{getSession:async()=>({data:{session:{user:{id:'groups-editor',email:'groups@example.test'}}}}),onAuthStateChange:()=>({data:{subscription:{unsubscribe(){}}}})},rpc:async(name,args)=>{
   remote.calls.push(clone({name,args}));if(name==='poc_bootstrap039'){const result=wire(remote.rows,remote.revision,remote.legacyRows);result.permissions.can_edit=canEdit;return {data:result};}
   if(remote.once){const once=remote.once;remote.once=null;return once(name,args);}
-  const intent=args.p_intent;if(remote.requests.has(intent.request_id))return {data:{...clone(remote.requests.get(intent.request_id)),replayed:true}};
+  const intent=args.p_intent;if(remote.requests.has(intent.request_id))return {data:{...clone(remote.requests.get(intent.request_id)),replayed:true,observed_project_revision:remote.revision}};
   const change=intent.changes[0],index=remote.rows.findIndex(row=>row.entity_type===change.entity_type&&row.entity_id===change.entity_id),old=remote.rows[index];
   if(intent.expected_project_revision!==remote.revision||(old?.version??0)!==change.expected_entity_version)return {error:{code:'P0001',message:'unified039_conflict'}};
   const next={entity_type:change.entity_type,entity_id:change.entity_id,version:(old?.version??0)+1,state:'saved',issues:[],content:{...(old?.content??{}),...clone(change.fields)}};
@@ -162,19 +162,89 @@ test('read-only accounts cannot enqueue group edits and validation failures reta
  assert.equal(m.store.phase,'invalid');assert.equal(m.store.snapshot().entities[0].content.name,'오류 이름');assert.equal(m.remote.rows[0].content.name,'즐겨찾기');assert.ok(m.storage.getItem('poc-authoring039-outbox:groups-editor').includes('category_group'));
 });
 
-test('a legacy category rename acknowledgement updates affected groups through its optional envelope and their new CAS versions',async t=>{
- const category={entity_type:'category',entity_id:'덱-백룡',version:1,content:{name:'덱-백룡',archived:false},state:'saved',issues:[]};
- const m=await storeFixture(t,{legacyRows:[category]});
- m.remote.once=(_name,args)=>{
-  m.remote.legacyRows[0]={...category,version:2,content:{name:'덱-푸른눈',archived:false}};
-  m.remote.rows[0]=groupRow('category-group-favorites',2,{name:'즐겨찾기',categories:['덱-푸른눈'],archived:false});m.remote.revision++;
-  return {data:{schema:1,kind:'unified039-write-ack',request_id:args.p_intent.request_id,applied_revision:m.remote.revision,observed_project_revision:m.remote.revision,entities:clone(m.remote.legacyRows),category_groups055:{schema:1,groups:clone(m.remote.rows)},game_revision:1,game_source_fingerprint:hash(payloadText),state:'saved'}};
+const fromRename='효과-리크루터', toRename='소환-덱리크루터', recruiterGroup='category-group-recruiters';
+function categoryRow(name,version=1){return {entity_type:'category',entity_id:name,version,content:{name,archived:false},state:'saved',issues:[]};}
+function renameAck(intent,from,to,revision,groups=[]){
+ return {schema:1,kind:'unified039-write-ack',request_id:intent.request_id,applied_revision:revision,observed_project_revision:revision,
+  entities:[{entity_type:'category',entity_id:from,version:revision,deleted:true},categoryRow(to,revision)],
+  category_groups055:{schema:1,groups:clone(groups)},game_revision:1,game_source_fingerprint:hash(payloadText),state:'saved'};
+}
+test('a category rename ACK applies the old tombstone, new ID and affected group CAS before queued membership saves',async t=>{
+ const member=groupRow(recruiterGroup,1,{name:'소환',categories:[fromRename,'소환-묘지'],archived:false});
+ const m=await storeFixture(t,{legacyRows:[categoryRow(fromRename)],rows:[member]});
+ m.remote.once=(_name,{p_intent})=>{
+  m.remote.legacyRows=[categoryRow(toRename,2)];
+  m.remote.rows[0]=groupRow(recruiterGroup,2,{...member.content,categories:[toRename,'소환-묘지']});
+  m.remote.revision=2;
+  return {data:renameAck(p_intent,fromRename,toRename,2,m.remote.rows)};
  };
- const renamed=m.store.patch('category','덱-백룡',{name:'덱-푸른눈'});await m.store.drain();await renamed;
- assert.equal(m.store.getRow('category_group','category-group-favorites').version,2);assert.deepEqual(m.store.getRow('category_group','category-group-favorites').content.categories,['덱-푸른눈']);
- const edited=m.store.patch('category_group','category-group-favorites',{name:'새 묶음 이름'});await m.store.drain();await edited;
+ const renamed=m.store.patch('category',fromRename,{name:toRename});
+ const edited=m.store.patch('category_group',recruiterGroup,{categories:['면역-파괴',fromRename,'소환-묘지']});
+ await m.store.drain();await renamed;
+ assert.equal(m.store.getRow('category',fromRename),undefined);
+ assert.equal(m.store.getRow('category',toRename).version,2);
+ assert.equal(m.store.getRow('category_group',recruiterGroup).version,2);
+ await m.store.drain();await edited;
  const last=m.remote.calls.filter(call=>call.name==='poc_apply_intent039').at(-1).args.p_intent;
- assert.equal(last.changes[0].expected_entity_version,2);assert.deepEqual(m.remote.rows[0].content.categories,['덱-푸른눈']);
+ assert.equal(last.changes[0].expected_entity_version,2);
+ assert.deepEqual(last.changes[0].fields.categories,['면역-파괴',toRename,'소환-묘지']);
+ assert.deepEqual(m.remote.rows[0].content.categories,['면역-파괴',toRename,'소환-묘지']);
+ assert.equal(m.store.queue.length,0);
+});
+
+test('partial rename confirmations preserve the serialized request and retry its exact ID',async t=>{
+ const m=await storeFixture(t,{legacyRows:[categoryRow(fromRename)]});
+ const last=()=>m.remote.calls.filter(call=>call.name==='poc_apply_intent039').at(-1).args.p_intent;
+ m.remote.once=(_name,{p_intent})=>{
+  const ack=renameAck(p_intent,fromRename,toRename,2);
+  m.remote.requests.set(p_intent.request_id,ack);
+  m.remote.revision=2;m.remote.legacyRows=[categoryRow(toRename,2)];
+  return {data:{...ack,entities:[ack.entities[0],categoryRow('관련 없는 이름',2)]}};
+ };
+ const renamed=m.store.patch('category',fromRename,{name:toRename});await m.store.drain();
+ assert.equal(m.store.phase,'error');assert.equal(m.store.getRow('category',fromRename).entity_id,fromRename);
+ const retained=clone(last());assert.deepEqual(m.store.queue[0].body,retained);
+ await m.store.drain();await renamed;assert.deepEqual(last(),retained);
+ assert.equal(m.store.getRow('category',toRename).version,2);assert.equal(m.store.queue.length,0);
+});
+
+test('a restored pre-fix rename receipt drains without resurrecting a destination renamed again',async t=>{
+ const badName='-리크루터',storage=new MemoryStorage055(),requests=new Map();
+ const before=await storeFixture(t,{legacyRows:[categoryRow(fromRename)],storage,requests});
+ before.remote.once=(_name,{p_intent})=>{
+  requests.set(p_intent.request_id,renameAck(p_intent,fromRename,badName,2));
+  return {error:{message:'response interrupted'}};
+ };
+ before.store.patch('category',fromRename,{name:badName});await before.store.drain();
+ assert.equal(before.store.phase,'error');
+ const originalBody=clone(before.store.queue[0].body);before.store.stop();
+ const after=await storeFixture(t,{legacyRows:[categoryRow(toRename,3)],revision:3,storage,requests});
+ await after.store.drain();
+ assert.equal(after.store.snapshot().pending,0);
+ assert.equal(after.store.phase,'ready');
+ assert.equal(after.store.getRow('category',fromRename),undefined);
+ assert.equal(after.store.getRow('category',badName),undefined);
+ assert.equal(after.store.getRow('category',toRename).version,3);
+ const request=after.remote.calls.find(call=>call.name==='poc_apply_intent039').args.p_intent;
+ assert.deepEqual(request,originalBody);
+ assert.deepEqual(JSON.parse(storage.getItem('poc-authoring039-outbox:groups-editor')).items,[]);
+});
+
+test('category rename waits for an explicit save through deletions, Korean input composition and blur',async t=>{
+ const document=new Document041(),root=document.createElement('main'),state=fixture041(),writes=[];
+ document.body.append(root);state.entities.push(categoryRow(fromRename));
+ const panels=createAuthoringPanels039({document,onChange:(...args)=>{writes.push(args);}});t.after(()=>panels.destroy());
+ panels.render('cards',root,state);
+ const name=root.querySelectorAll('input').find(input=>input.dataset.editKey===`category.${fromRename}.name`);
+ const save=root.querySelector(`[aria-label="${fromRename} 이름 저장"]`);
+ name.focus();name.value='-리크루터';name.fire('input',{inputType:'deleteContentBackward'});
+ name.fire('compositionstart');name.value='소-리크루터';name.fire('input',{isComposing:true});
+ assert.equal(save.disabled,true);
+ name.fire('compositionend');name.blur();
+ assert.deepEqual(writes,[]);
+ name.focus();name.fire('compositionstart');name.value=toRename;name.fire('input',{isComposing:true});name.fire('compositionend');
+ assert.equal(save.disabled,false);save.click();await flush();
+ assert.deepEqual(writes,[['category',fromRename,{name:toRename},{operation:'patch'}]]);
 });
 
 function mountManager({canEdit=true,canWrite=true,onSave}={}){

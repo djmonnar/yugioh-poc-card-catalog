@@ -100,7 +100,7 @@ export function formSchema039(state,entity){
 
 export function createAuthoringPanels039({document:doc=globalThis.document,onChange,onNavigate=()=>{},onError=()=>{},onUpload=null,onRecoveryRead=null,onRetryWrite=null,onSaveDrafts060=null,onResolveDrafts060=null,getLatestState068=null,onPrepareDeckSetup068=()=>{},onStageMany071=null,onEditingChange=()=>{}}={}){
   const selected=new Map(),filters=new Map(),statWidgets=new Map(),categoryStates054=new Map(),manualControls060=new Map();let dialog=null,currentState=null,currentCards=[],currentRoot=null,refreshCatalog041=null,localDeckSetup068=null;
-  const categoryEditor056={owner:null,open:false,archivedOpen:false,name:''};
+  const categoryEditor056={owner:null,open:false,archivedOpen:false,name:'',renames:new Map()};
   // A metadata ACK may rebuild this surface while its category editor is far
   // down the page. Capture the current position at render time, after the IME
   // guard has released it, rather than at the earlier network request.
@@ -374,10 +374,48 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
   function cardGrid(host,cards,{deck=null}={}){const grid=el('div',null,'au-card-grid');for(const card of cards){const tile=el('article',null,'au-card-tile'),art=button('',()=>openCard(currentCards.find(c=>c.source_id===card.source_id)??card),'au-card-art');art.setAttribute('aria-label',`${card.name_ko} 카드 정보`);art.append(picture(card));tile.append(art);const categoryLabels=cardCategoryLabels049(card);if(categoryLabels)tile.append(categoryLabels);tile.append(el('strong',card.name_ko),el('span',card.rarity,'au-rarity'),el('small',card.type,'au-card-kind'),limitBadges(card));if(deck){tile.append(deckQuantity046(card,deck));tile.draggable=true;tile.ondragstart=e=>e.dataTransfer.setData('application/x-authoring039-card',JSON.stringify({source_id:card.source_id,deck_id:deck.entity_id}));}grid.append(tile);}host.append(grid);}
   function categoryManager(host){
     const owner=currentState.user?.id??(currentState.canEdit?'editor':'public');
-    if(categoryEditor056.owner!==owner)Object.assign(categoryEditor056,{owner,open:false,archivedOpen:false,name:''});
+    if(categoryEditor056.owner!==owner)Object.assign(categoryEditor056,{owner,open:false,archivedOpen:false,name:'',renames:new Map()});
     const categorySpec=formSchema039(currentState,{entity_type:'category'}).properties.name??{type:'string',minLength:1,maxLength:40},box=el('details',null,'au-trait-editor'),summary=el('summary','카테고리 관리');
     box.dataset.editKey='category056.management';summary.dataset.editKey='category056.management.summary';box.open=categoryEditor056.open;box.ontoggle=()=>{categoryEditor056.open=box.open;};box.append(summary);
-    for(const category of categories()){const row=el('div',null,'au-toolbar');row.append(field('카테고리 이름',category.name,categorySpec,name=>patch(category.entity,{name}),`category.${category.entity.entity_id}.name`),button('보관',()=>patch(category.entity,{},'delete')));box.append(row);}
+    for(const category of categories()){
+      const row=el('div',null,'au-toolbar'),id=category.entity.entity_id,renames=categoryEditor056.renames;
+      const draft=renames.get(id)??{name:category.name,busy:false};
+      const write=currentState.writeState,rejected=write?.entityType==='category'&&write.entityId===id&&write.rejected===true;
+      if(rejected)draft.busy=false;
+      const label=el('label',null,'au-field'),rename=el('input'),archive=button('보관',()=>patch(category.entity,{},'delete'));
+      rename.value=draft.name;rename.maxLength=categorySpec.maxLength;
+      rename.setAttribute('aria-label','카테고리 이름');rename.dataset.editKey=`category.${id}.name`;
+      label.append(el('span','카테고리 이름'),rename);
+      editing041.bind(rename);
+      const save=button('이름 저장',async()=>{
+        if(!currentState.canEdit||draft.busy||category.entity.pending&&!rejected||editing041.isComposing(rename))return;
+        const name=validateInput039(categorySpec,rename.value.trim());
+        if(!rejected&&name===category.name)return;
+        const duplicate=entities039(currentState).find(entity=>entity.entity_type==='category'&&entity.entity_id!==id&&entity.content.name===name);
+        if(duplicate)throw Error(duplicate.content.archived?'보관한 카테고리 이름입니다.':'같은 이름의 카테고리가 있습니다.');
+        draft.busy=true;renames.set(id,draft);updateButtons();
+        try{
+          const result=await patch(category.entity,{name});
+          if(result?.discarded)draft.busy=false;
+          else renames.delete(id);
+        }catch(error){draft.busy=false;throw error;}
+        finally{updateButtons();}
+      });
+      save.setAttribute('aria-label',`${id} 이름 저장`);
+      function updateButtons(){
+        rename.disabled=!currentState.canEdit||draft.busy||Boolean(category.entity.pending&&!rejected);
+        save.disabled=rename.disabled||!rename.value.trim()||!rejected&&rename.value.trim()===category.name||editing041.isComposing(rename);
+        archive.disabled=rename.disabled||rename.value.trim()!==category.name;
+      }
+      rename.oninput=rename.oncompositionend=()=>{
+        draft.name=rename.value;
+        if(draft.name===category.name)renames.delete(id);
+        else renames.set(id,draft);
+        updateButtons();
+      };
+      rename.oncompositionstart=()=>{save.disabled=true;};
+      updateButtons();row.append(label,save,archive);box.append(row);
+    }
     const input=el('input');input.placeholder='새 카테고리 이름';input.maxLength=categorySpec.maxLength;input.value=categoryEditor056.name;input.setAttribute('aria-label','새 카테고리 이름');input.dataset.editKey='category056.new-name';editing041.bind(input);
     input.oninput=input.oncompositionend=()=>{categoryEditor056.name=input.value;};
     const add=button('카테고리 추가',()=>{
