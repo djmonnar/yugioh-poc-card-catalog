@@ -28,11 +28,11 @@ export function groupCardCount(deck,key,group) {
   if(!GROUPS.includes(group))fail('덱 위치를 확인할 수 없어.');
   return deck.groups[group].filter(row=>row.identity_key===key).reduce((sum,row)=>sum+row.count,0);
 }
-export function copiedDeckName(name,existingNames=[]) {
-  const base=text(name,80).trim()||'AI 덱',used=new Set(existingNames);
+export function copiedDeckName(name,existingNames=[],{maxLength=80,fallback='AI 덱'}={}) {
+  const base=Array.from(text(name,maxLength*2).trim()||fallback),used=new Set(existingNames);
   for(let number=1;;number++) {
     const suffix=number===1?' 복사본':` 복사본 (${number})`;
-    const candidate=base.slice(0,80-suffix.length)+suffix;
+    const candidate=base.slice(0,maxLength-suffix.length).join('')+suffix;
     if(!used.has(candidate))return candidate;
   }
 }

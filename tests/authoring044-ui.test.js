@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {createAuthoringPanels039,publicEntities039,compositionMode044,deckCompositionKey044,normalizeCatalog039} from '../authoring039-panels.js';
+import {createAuthoringPanels039,publicEntities039,compositionMode044,normalizeCatalog039} from '../authoring039-panels.js';
 import {Document041,fixture041,field041,button041} from './authoring041-test-dom.js';
 
 const clone=structuredClone;
@@ -22,7 +22,7 @@ test('shared deck editor has only card settings and synchronizes its neutral nam
   const {state}=fixture044(),ui=mount(state);ui.panels.render('decks',ui.root,state);
   assert.equal(compositionMode044(state),true);
   for(const label of ['상대 이름','덱의 추가 LP','상대 추가 LP','연출 캐릭터','시작 패 추가 장수','공용 특성 연결'])assert.equal(field041(ui.root,label),undefined,label);
-  assert.equal(button041(ui.root,'덱 복사'),undefined);
+  assert.equal(button041(ui.root,'덱 복사').disabled,false);
   input(field041(ui.root,'덱 이름'),'새 공유 덱');await flush();
   assert.deepEqual(ui.changes[0].slice(0,3),['deck','shared-deck',{deck_name:'새 공유 덱',name:'새 공유 덱'}]);
 });
@@ -80,15 +80,42 @@ test('restriction labels appear on catalog cards, owned cards and card details',
   ui.panels.openCard(card);const dialog=ui.doc.querySelector('dialog');assert.ok(dialog.textContent.includes('스피드 제한 2'));assert.ok(dialog.textContent.includes('제한'));
 });
 
-test('same compositions compare card identities and counts while ignoring encounter metadata',()=>{
-  const {deck}=fixture044(),other=clone(deck.content);other.lp_bonus=8000;other.skills=[{kind:'draw_once'}];other.main.reverse();
-  assert.equal(deckCompositionKey044(deck.content),deckCompositionKey044(other));other.main[0].count++;
-  assert.notEqual(deckCompositionKey044(deck.content),deckCompositionKey044(other));
+test('copy creates an independent deck with both card zones, cover and a distinct name',async()=>{
+  const {state,deck,role,starter}=fixture044();
+  deck.content.management_title='관리 이름';
+  deck.content.banlist_enabled=true;
+  deck.content.representative_source_id=deck.content.main[0].source_id;
+  deck.content.extra=[{source_id:42,identity_key:'extra-example',count:1}];
+  const before=clone({deck,role,starter}),ui=mount(state);
+  ui.panels.render('decks',ui.root,state);
+  const copyButton=button041(ui.root,'덱 복사');
+  assert.equal(copyButton.parentNode,button041(ui.root,'새 덱').parentNode);
+  copyButton.click();await flush();
+  assert.equal(ui.changes.length,1);
+  const [type,id,content,options]=ui.changes[0];
+  assert.equal(type,'deck');assert.match(id,/^deck-[\da-f-]{36}$/);
+  assert.deepEqual(options,{operation:'create'});
+  assert.deepEqual(content,{...before.deck.content,name:'공유 덱 복사본',deck_name:'공유 덱 복사본',management_title:'관리 이름 복사본'});
+  assert.deepEqual(ui.navigations,[['decks',id]]);
+  state.entities.push({...deck,entity_id:id,content});
+  ui.panels.render('decks',ui.root,state,{force:true});
+  button041(ui.root,'덱 복사').click();await flush();
+  assert.notEqual(ui.changes[1][1],id);
+  assert.equal(ui.changes[1][2].deck_name,'공유 덱 복사본 (2)');
+  assert.equal(ui.changes[1][2].management_title,'관리 이름 복사본 (2)');
+  content.main[0].count--;
+  assert.deepEqual({deck,role,starter},before);
+  assert.deepEqual(ui.errors,[]);
 });
 
-test('recreating an existing full composition is stopped before a deck write',async()=>{
+test('editing a deck can restore a card composition shared by another deck',async()=>{
   const {state,deck}=fixture044(),draft=clone(deck);draft.entity_id='other-deck';draft.content.deck_name='편집 중인 덱';const removed=draft.content.main[0];removed.count--;const source=removed.source_id;if(!removed.count)draft.content.main.shift();state.entities.push(draft);
   const ui=mount(state);ui.panels.selectDeck(draft.entity_id);ui.panels.render('decks',ui.root,state);
   const card=normalizeCatalog039(state).find(row=>row.source_id===source);ui.panels.openCard(card);button041(ui.doc.querySelector('dialog'),'「편집 중인 덱」에 추가').click();await flush();
-  assert.equal(ui.changes.length,0);assert.ok(ui.errors.some(message=>message.includes('같은 카드 구성')));
+  assert.equal(ui.changes.length,1);
+  const [type,id,fields,options]=ui.changes[0];
+  assert.deepEqual([type,id,options],['deck','other-deck',{operation:'patch'}]);
+  const order=rows=>rows.toSorted((a,b)=>a.source_id-b.source_id);
+  assert.deepEqual(order(fields.main),order(deck.content.main));
+  assert.deepEqual(ui.errors,[]);
 });
