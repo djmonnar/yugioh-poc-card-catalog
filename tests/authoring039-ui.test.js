@@ -71,9 +71,53 @@ test('starter registration displays the management title in the picker and defau
   const m=mounted('starters',state),select=find(m.root,'추가할 시작 덱');
   assert.match(select.options.find(option=>option.value===deck.entity_id).textContent,/듀얼몬스터 중급/);
   select.value=deck.entity_id;select.fire('change');
-  assert.equal(find(m.root,'등록할 시작 덱 이름').value,'듀얼몬스터');
+  assert.equal(find(m.root,'등록할 게임 표시 이름').value,'듀얼몬스터');
 });
-test('starter rename retains the exact lineage and submits entries without server-owned history',()=>{const m=mounted('starters'),entity=m.state.entities.find(e=>e.entity_type==='starter_list'),id=entity.content.entries[0].starter_id,input=find(m.root,'시작 덱 이름');input.value='시작 덱 이름 변경';input.fire('input');assert.equal(m.writes[0][0],'starter_list');assert.equal(m.writes[0][2].entries[0].starter_id,id);assert.equal(m.writes[0][2].history,undefined);});
+test('starter name fields identify and edit the game label and the linked deck management title independently',()=>{
+  const state=fixture(),starters=state.entities.find(row=>row.entity_type==='starter_list'),entry=starters.content.entries[0];
+  const deck=state.entities.find(row=>row.entity_type==='deck'&&row.entity_id===entry.deck_id);
+  entry.name='게임 선택창 이름';
+  Object.assign(deck.content,{deck_name:'원본 덱 이름',management_title:'제작소 관리 제목'});
+  const m=mounted('starters',state),row=m.root.querySelector('.au-starter-row');
+  assert.equal(row.querySelector('h3').textContent,'게임 선택창 이름');
+  assert.match(row.textContent,/관리용 제목 · 제작소 관리 제목/);
+  const game=find(row,'게임 표시 이름'),management=find(row,'관리용 제목');
+  assert.equal(game.value,entry.name);assert.equal(management.value,deck.content.management_title);
+  game.value='수정한 게임 표시 이름';game.fire('input');
+  management.value='  수정한 관리 제목  ';management.fire('input');
+  assert.deepEqual(m.writes[0].slice(0,3),['starter_list',starters.entity_id,{entries:starters.content.entries.map(item=>item===entry?{...item,name:'수정한 게임 표시 이름'}:item)}]);
+  assert.deepEqual(m.writes[1].slice(0,3),['deck',entry.deck_id,{management_title:'수정한 관리 제목'}]);
+  assert.equal(deck.content.deck_name,'원본 덱 이름');
+  state.canEdit=false;state.entities=[];state.gamePayload=state.bootstrap.game;
+  const reader=mounted('starters',state),publicRow=reader.root.querySelector('.au-starter-row');
+  assert.equal(find(publicRow,'게임 표시 이름').disabled,true);assert.equal(find(publicRow,'관리용 제목').disabled,true);
+  assert.equal(reader.writes.length,0);
+});
+test('shared deck cover switches to a single member and clears on its last copy removal',async()=>{
+  const state=fixture(),deck=state.entities.find(row=>row.entity_type==='deck');
+  state.bootstrap.capabilities.entities.deck.fields.representative_source_id={type:'nullable_integer',min:0};
+  const cards=normalizeCatalog039(state);
+  const [first,second]=deck.content.main.slice(0,2).map(ref=>cards.find(card=>card.source_id===ref.source_id));
+  assert(first&&second);
+  deck.content.representative_source_id=first.source_id;
+  const m=mounted('decks',state),cover=(card)=>find(m.root,`${card.name_ko}를 시작 덱 대표 카드로 지정`);
+  assert.equal(cover(first).checked,true);
+  assert.equal(cover(second).checked,false);
+  cover(second).checked=true;
+  await cover(second).onchange();
+  assert.deepEqual(m.writes.at(-1).slice(0,3),['deck',deck.entity_id,{representative_source_id:second.source_id}]);
+  deck.content.representative_source_id=second.source_id;
+  const ref=deck.content.main.find(row=>row.source_id===second.source_id);
+  ref.count=1;
+  m.panels.render('decks',m.root,state);
+  assert.equal(cover(first).checked,false);
+  assert.equal(cover(second).checked,true);
+  m.root.querySelector('.au-deck-owned').querySelectorAll('button').find(
+    button=>button.getAttribute('aria-label')===`${second.name_ko} 빼기`).click();
+  const patch=m.writes.at(-1)[2];
+  assert.equal(patch.representative_source_id,null);
+  assert(!patch.main.some(row=>row.source_id===second.source_id));
+});
 test('relic and event views expose actual runtime parameter controls instead of raw JSON editors',()=>{for(const section of ['relics','events']){const m=mounted(section);assert.ok(m.root.querySelectorAll('input').some(n=>n.type==='number'));assert.ok(m.root.querySelectorAll('textarea').length>=1);assert.equal(m.root.querySelectorAll('textarea').some(n=>n.value.startsWith('{')),false);}});
 test('new pack action uses the actual017 template shape and global price/count settings stay separate',()=>{const m=mounted('packs');button(m.root,'새 카드팩').click();const [type,id,content]=m.writes[0];assert.equal(type,'meta_pack');assert.equal(content.id,id);assert.deepEqual(content.sourceIds,[]);assert.equal(content.price,undefined);assert.equal(content.cardsPerPack,undefined);});
 test('pending zero-card deck says the DB write is pending and game application needs completion',()=>{const state=fixture(),deck=state.entities.find(e=>e.entity_type==='deck');deck.content.main=[];deck.pending=true;deck.state='draft';const m=mounted('decks',state);assert.ok(m.root.textContent.includes('DB에 저장 중'));assert.ok(m.root.textContent.includes('0/20장'));assert.ok(m.root.textContent.includes('완성하면 게임에 반영'));});
@@ -88,8 +132,8 @@ test('null overrides inherit exact DB frozen limits while -1 clears speed, witho
 test('inherited speed group still prevents an illegal second copy in the actual deck editor policy',()=>{const state=fixture();for(const source of [197,1449])state.entities.push({entity_type:'card_limit',entity_id:String(source),content:{normal_limit:null,speed_limit:null,frozen_normal_limit:3,frozen_speed_limit:2}});const cards=normalizeCatalog039(state),a=cards.find(c=>c.source_id===197),b=cards.find(c=>c.source_id===1449),deck={main:[{source_id:a.source_id,identity_key:a.identity_key,count:2}],extra:[],banlist_enabled:true};assert.throws(()=>changeDeckCard039(deck,b,1,cards),/제한 2/);});
 test('deck LP and opening controls use reviewed deck bounds, not chapter-role bounds',()=>{const m=mounted('decks'),lp=find(m.root,'덱의 추가 LP'),opening=find(m.root,'시작 패 추가 장수');assert.equal(lp.min,0);assert.equal(lp.max,8000);assert.equal(opening.max,3);lp.value='1';lp.fire('input');opening.value='4';opening.fire('input');assert.equal(m.writes.length,0);lp.value='100';lp.fire('input');opening.value='3';opening.fire('input');assert.equal(m.writes.length,2);assert.deepEqual(m.writes[0][2],{lp_bonus:100});assert.deepEqual(m.writes[1][2],{opening_draw_bonus:3});});
 test('category inputs take the actual 40-character DB cap and reject programmatic over-limit input',()=>{assert.equal(fields.category.fields.name.max,40);const m=mounted('cards'),input=find(m.root,'새 카테고리 이름');assert.equal(input.maxLength,40);input.value='가'.repeat(41);button(m.root,'카테고리 추가').click();assert.equal(m.writes.length,0);assert.equal(m.errors.length,1);input.value='가'.repeat(40);button(m.root,'카테고리 추가').click();assert.equal(m.writes.length,1);});
-test('starter names stop at80 while list cardinality follows the actual100-entry DB capability',()=>{assert.equal(fields.starter_list.fields.entries.max,100);const m=mounted('starters'),name=find(m.root,'시작 덱 이름');assert.equal(name.maxLength,80);name.value='가'.repeat(81);name.fire('input');assert.equal(m.writes.length,0);name.value='가'.repeat(80);name.fire('input');assert.equal(m.writes.length,1);const state=fixture(),entity=state.entities.find(e=>e.entity_type==='starter_list');state.bootstrap.capabilities.entities.starter_list.fields.entries.max=entity.content.entries.length;const bounded=mounted('starters',state);assert.equal(button(bounded.root,'시작 덱 등록').disabled,true);button(bounded.root,'시작 덱 등록').click();assert.equal(bounded.writes.length,0);});
-test('registering a100-character deck keeps its full name and asks for a separate valid starter label',()=>{const state=fixture(),entity=state.entities.find(e=>e.entity_type==='starter_list'),deck=state.entities.find(e=>e.entity_type==='deck'&&!entity.content.entries.some(r=>r.deck_id===e.entity_id));assert.ok(deck);deck.content.banlist_enabled=true;deck.content.deck_name='가'.repeat(100);const m=mounted('starters',state),select=find(m.root,'추가할 시작 덱');select.value=deck.entity_id;select.fire('change');const label=find(m.root,'등록할 시작 덱 이름');assert.equal(label.value.length,100);button(m.root,'시작 덱 등록').click();assert.equal(m.writes.length,0);label.value='별도의 시작 덱 이름';button(m.root,'시작 덱 등록').click();assert.equal(m.writes[0][2].entries.at(-1).name,label.value);assert.equal(deck.content.deck_name.length,100);});
+test('starter names stop at80 while list cardinality follows the actual100-entry DB capability',()=>{assert.equal(fields.starter_list.fields.entries.max,100);const m=mounted('starters'),name=find(m.root,'게임 표시 이름');assert.equal(name.maxLength,80);name.value='가'.repeat(81);name.fire('input');assert.equal(m.writes.length,0);name.value='가'.repeat(80);name.fire('input');assert.equal(m.writes.length,1);const state=fixture(),entity=state.entities.find(e=>e.entity_type==='starter_list');state.bootstrap.capabilities.entities.starter_list.fields.entries.max=entity.content.entries.length;const bounded=mounted('starters',state);assert.equal(button(bounded.root,'시작 덱 등록').disabled,true);button(bounded.root,'시작 덱 등록').click();assert.equal(bounded.writes.length,0);});
+test('registering a100-character deck keeps its full name and asks for a separate valid starter label',()=>{const state=fixture(),entity=state.entities.find(e=>e.entity_type==='starter_list'),deck=state.entities.find(e=>e.entity_type==='deck'&&!entity.content.entries.some(r=>r.deck_id===e.entity_id));assert.ok(deck);deck.content.banlist_enabled=true;deck.content.deck_name='가'.repeat(100);const m=mounted('starters',state),select=find(m.root,'추가할 시작 덱');select.value=deck.entity_id;select.fire('change');const label=find(m.root,'등록할 게임 표시 이름');assert.equal(label.value.length,100);button(m.root,'시작 덱 등록').click();assert.equal(m.writes.length,0);label.value='별도의 시작 덱 이름';button(m.root,'시작 덱 등록').click();assert.equal(m.writes[0][2].entries.at(-1).name,label.value);assert.equal(deck.content.deck_name.length,100);});
 test('start-grave entries allow twelve per row while enforcing the current twelve-card total',()=>{const state=fixture(),deck=state.entities.find(e=>e.entity_type==='deck');deck.content.skills=[{kind:'start_grave',value:0,threshold:0,sourceId:-1,position:0,entries:[{sourceId:0,count:7},{sourceId:22,count:5}]}];const m=mounted('decks',state),counts=m.root.querySelectorAll('input').filter(n=>n.getAttribute('aria-label')==='매수');assert.equal(counts.length,2);assert.equal(counts[0].max,12);assert.equal(counts[1].max,12);counts[0].value='8';counts[0].fire('input');assert.equal(m.writes.length,0);assert.equal(counts[0].getAttribute('aria-invalid'),'true');assert.match(counts[0].parentElement.textContent,/12/);const trait=m.root.querySelectorAll('details').find(n=>n.textContent.includes('시작 묘지 · 12/12장'));assert.ok(trait);assert.equal(trait.querySelectorAll('.au-card-pick').length,0);counts[0].value='6';counts[0].fire('input');assert.equal(m.writes[0][2].skills[0].entries.reduce((n,r)=>n+r.count,0),11);});
 
 

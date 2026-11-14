@@ -1,5 +1,5 @@
 import {traitCardMatches089,sharedTraitRefMatches089} from './authoring089-traits.js?v=20261106-089';
-import {cardMetadata120} from './authoring120-catalog.js?v=20261115-120';
+import {cardMetadata122} from './authoring122-catalog.js?v=20261115-flip-cards';
 // Local preflight explains known server contracts. The server remains authoritative.
 const own=(value,key)=>Object.prototype.hasOwnProperty.call(value??{},key);
 const object=value=>value!==null&&typeof value==='object'&&!Array.isArray(value);
@@ -43,7 +43,7 @@ export function validateAuthoringChange066(snapshot,type,id,fields,{operation='p
   const cards=Array.isArray(raw)?raw:[],source=card=>card.source_id??card.sourceId??card.internal_id,slot=card=>card.web_slot??card.slot,extra=card=>Boolean((card.native_type??card.type??0)&(0x40|0x2000|0x800000|0x4000000)),playable=card=>card&&card.playable!==false&&!card.token&&!card.special;
   const bySource=new Map(cards.map(card=>[source(card),card])),bySlot=new Map(cards.map(card=>[slot(card),card]));
   if(type==='card_limit'||type==='card_setting'){
-    const card=bySource.get(Number(id)),maximum=cardMetadata120(source(card??{}),card?.identity_key)?.maximumNormalLimit;
+    const card=bySource.get(Number(id)),maximum=cardMetadata122(source(card??{}),card?.identity_key)?.maximumNormalLimit;
     if(maximum===0){
       if(type==='card_limit')check(!own(fields,'normal_limit')&&!own(fields,'speed_limit'),Object.keys(fields),'효과로 생성되는 토큰에는 덱 제한을 설정할 수 없습니다.');
       else check(fields.stock!==true&&fields.draw_enabled!==true,['stock','draw_enabled'],'효과로 생성되는 토큰은 판매하거나 보상으로 지급할 수 없습니다.');
@@ -102,7 +102,14 @@ export function validateAuthoringChange066(snapshot,type,id,fields,{operation='p
       for(const profile of profiles){check(typeof profile.profile_id==='string'&&/^[A-Za-z0-9_-]{1,100}$/.test(profile.profile_id),['skill_profiles'],'특성 묶음의 식별자를 확인해 주세요.');check(typeof profile.name==='string'&&profile.name.trim().length>0&&length(profile.name.trim())<=100,['skill_profiles'],'특성 묶음 이름은 1~100자로 입력해 주세요.');validateSkills(profile.skills,true,['skill_profiles']);}
     }
   }
-  if(type==='deck'&&own(content,'skills'))validateSkills(content.skills,false,['skills']);
+  if(type==='deck'){
+    if(own(content,'skills'))validateSkills(content.skills,false,['skills']);
+    if(content.representative_source_id!=null){
+      const id=content.representative_source_id;
+      check((content.main??[]).concat(content.extra??[]).some(ref=>ref.source_id===id),
+        ['representative_source_id'],'대표 카드는 이 덱에 담긴 카드 중에서 선택해 주세요.');
+    }
+  }
   if(type==='chapter_role')for(const entry of content.entries??[])if(entry.encounter){
     try{validateSkills(entry.encounter.skills??[],false,['entries']);}
     catch(error){if(error.authoringIssue066){error.message=`${entry.encounter.name||'편성된 상대'} · ${error.message}`;error.authoringIssue066={...error.authoringIssue066,entryId:entry.entry_id,message:error.message};}throw error;}

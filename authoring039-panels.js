@@ -46,13 +46,13 @@ export function deckDisplayName039(state,deck,displayTitle){const all=entities03
 export function sourceId039(card){const id=card?.source_id??card?.sourceId??card?.internal_id;return Number.isSafeInteger(id)&&id>=0?id:null;}
 export function fieldValue039(value,path,next){const parts=Array.isArray(path)?path:[path];if(!parts.length||parts.some(k=>['__proto__','prototype','constructor'].includes(k)))throw Error('편집할 항목을 확인해 주세요.');const result=clone(value),first=parts[0];let node=result;for(const k of parts.slice(0,-1)){if(!node[k]||typeof node[k]!=='object'||Array.isArray(node[k]))node[k]={};node=node[k];}node[parts.at(-1)]=next;return {[first]:result[first]};}
 import {cardMetadata109} from './authoring109-catalog.js?v=20261114-109';
-import {cardMetadata120} from './authoring120-catalog.js?v=20261115-120';
+import {cardMetadata122} from './authoring122-catalog.js?v=20261115-flip-cards';
 
 export function normalizeCatalog039(state){
   const boot=state.bootstrap??{},game=state.gamePayload??boot.game_payload??boot.game??{},raw=boot.catalog?.cards??boot.catalog??game.catalog?.cards??game.catalog??[],rows=Array.isArray(raw)?raw:[],all=entities039(state),lookup=new Map();
   for(const e of all){const id=sourceId039(e.content)??(e.entity_type.startsWith('card_')&&/^\d+$/.test(e.entity_id)?Number(e.entity_id):null);if(id!==null)lookup.set(entityKey039(e.entity_type,id),e.content);}
   const normalized=rows.map(raw=>{const id=sourceId039(raw);if(id===null)throw Error('카드 자료의 번호가 올바르지 않습니다.');const display=lookup.get(entityKey039('card_display',id))??{},setting=lookup.get(entityKey039('card_setting',id))??{},annotation=lookup.get(entityKey039('card_annotation',id))??{},limit=lookup.get(entityKey039('card_limit',id))??{};
-    const metadata120=cardMetadata120(id,raw.identity_key),maximumNormalLimit=metadata120?.maximumNormalLimit,fixedToken=maximumNormalLimit===0;
+    const metadata120=cardMetadata122(id,raw.identity_key),maximumNormalLimit=metadata120?.maximumNormalLimit,fixedToken=maximumNormalLimit===0;
     const inherited=(key,frozen,fallback)=>{if(!own(limit,key))return fallback;if(limit[key]!==null)return limit[key];if(!own(limit,frozen))throw Error('카드 제한의 기본 자료를 다시 확인해 주세요.');return limit[frozen];};
     const storedNormalLimit=inherited('normal_limit','frozen_normal_limit',raw.normal_limit??raw.deck_limit??raw.maxCopies??3);
     const normalLimit=maximumNormalLimit==null?storedNormalLimit:Math.min(maximumNormalLimit,storedNormalLimit),speedLimit=inherited('speed_limit','frozen_speed_limit',raw.speed_limit??null);
@@ -321,7 +321,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     body.append(limitBadges(card,{includeUnrestricted:true}),description);
     if(currentState.canEdit){
       const forms=el('div',null,'au-form-grid'),allowed=(currentState.bootstrap?.capabilities?.entities?.card_setting?.fields?.rarity?.values??['N','R','SR','UR']).filter(r=>r!=='L'||card.source_id<2390),rarities=[...new Set([...allowed,...(card.source_id<2390?['L']:[]),card.rarity])];
-      const maximumNormalLimit=cardMetadata120(card.source_id,card.identity_key)?.maximumNormalLimit;
+      const maximumNormalLimit=cardMetadata122(card.source_id,card.identity_key)?.maximumNormalLimit;
       const effectToken=maximumNormalLimit===0,stockReadOnly=card.rarity==='L'||effectToken;
       forms.append(field('카드 이름',card.name_ko,{type:'string',maxLength:100},v=>cardPatch('card_display',card,{name:v}),`card.${card.source_id}.name`),field('영문 이름',card.name_en,{type:'string',maxLength:160},v=>cardPatch('card_display',card,{name_english:v}),`card.${card.source_id}.english`),field('카드 설명',card.description_ko,{type:'string',multiline:true,maxLength:12000},v=>cardPatch('card_display',card,{description:v}),`card.${card.source_id}.description`),field('등급',card.rarity,{type:'string',enum:rarities,readOnlyValues:card.source_id<2390?[]:rarities.filter(v=>!allowed.includes(v))},v=>cardPatch('card_setting',card,v==='L'?{rarity:v,stock:false,draw_enabled:false}:{rarity:v}),`card.${card.source_id}.rarity`),field('상점 판매',card.stock,{type:'boolean',readOnly:stockReadOnly},v=>cardPatch('card_setting',card,{stock:v}),`card.${card.source_id}.stock`),field('전투 보상',card.draw_enabled!==false,{type:'boolean',readOnly:stockReadOnly},v=>cardPatch('card_setting',card,{draw_enabled:v}),`card.${card.source_id}.draw`));body.append(forms,el('small','설명을 바꾸어도 카드의 실제 효과 처리 규칙은 바뀌지 않습니다.','au-hint'));
       if(!effectToken){
@@ -362,7 +362,14 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
   function deckQuantity046(card,deck,{owned=false}={}){
     const live=()=>entities039(currentState).find(e=>e.entity_type==='deck'&&e.entity_id===deck.entity_id)??deck;
     const content=live().content,quantity=[...(content.main??[]),...(content.extra??[])].find(row=>row.source_id===card.source_id)?.count??0;
-    const change=delta=>{const entity=live(),next=changeDeckCard039(entity.content,card,delta,currentCards);return patch(entity,{main:next.main,extra:next.extra});};
+    const change=delta=>{
+      const entity=live(),next=changeDeckCard039(entity.content,card,delta,currentCards);
+      const fields={main:next.main,extra:next.extra};
+      if (entity.content.representative_source_id===card.source_id &&
+          ![...next.main,...next.extra].some(row=>row.source_id===card.source_id))
+        fields.representative_source_id=null;
+      return patch(entity,fields);
+    };
     const controls=el('div',null,`au-quantity${owned?' au-deck-quantity':''}`),minus=button('−',()=>change(-1)),plus=button('＋',()=>change(1));
     controls.setAttribute('role','group');controls.setAttribute('aria-label',`${card.name_ko} 매수`);
     minus.setAttribute('aria-label',`${card.name_ko} 빼기`);plus.setAttribute('aria-label',`${card.name_ko} 추가`);
@@ -370,6 +377,26 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     let reason='';try{changeDeckCard039(content,card,1,currentCards);}catch(error){reason=error.message;}
     plus.disabled=!currentState.canEdit||Boolean(reason);plus.title=currentState.canEdit?reason:'편집하려면 로그인해 주세요.';
     const count=el('span',quantity);count.setAttribute('aria-label',`${quantity}장`);controls.append(minus,count,plus);return controls;
+  }
+  function deckCoverCheckbox(deck,card){
+    const label=el('label',null,'au-deck-cover'),input=el('input');
+    input.type='checkbox';
+    input.checked=deck.content.representative_source_id===card.source_id;
+    input.disabled=!currentState.canEdit;
+    input.setAttribute('aria-label',`${card.name_ko}를 시작 덱 대표 카드로 지정`);
+    input.dataset.editKey=`deck.${deck.entity_id}.cover.${card.source_id}`;
+    input.onchange=async()=>{
+      const live=entities039(currentState).find(row=>row.entity_type==='deck'&&row.entity_id===deck.entity_id);
+      if (!live || !currentState.canEdit) return;
+      const representative_source_id=input.checked ? card.source_id : null;
+      try { await patch(live,{representative_source_id}); }
+      catch(error){
+        input.checked=live.content.representative_source_id===card.source_id;
+        onError(error);
+      }
+    };
+    label.append(input,el('span','대표 카드'));
+    return label;
   }
   function cardGrid(host,cards,{deck=null}={}){const grid=el('div',null,'au-card-grid');for(const card of cards){const tile=el('article',null,'au-card-tile'),art=button('',()=>openCard(currentCards.find(c=>c.source_id===card.source_id)??card),'au-card-art');art.setAttribute('aria-label',`${card.name_ko} 카드 정보`);art.append(picture(card));tile.append(art);const categoryLabels=cardCategoryLabels049(card);if(categoryLabels)tile.append(categoryLabels);tile.append(el('strong',card.name_ko),el('span',card.rarity,'au-rarity'),el('small',card.type,'au-card-kind'),limitBadges(card));if(deck){tile.append(deckQuantity046(card,deck));tile.draggable=true;tile.ondragstart=e=>e.dataTransfer.setData('application/x-authoring039-card',JSON.stringify({source_id:card.source_id,deck_id:deck.entity_id}));}grid.append(tile);}host.append(grid);}
   function categoryManager(host){
@@ -533,9 +560,21 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     function displayOwned(){
       const live=entities039(currentState).find(e=>e.entity_type==='deck'&&e.entity_id===deck.entity_id)??deck,index=new Map(currentCards.map(c=>[c.source_id,c]));
       owned.replaceChildren();const total=(live.content.main??[]).reduce((n,row)=>n+row.count,0),deckTab=[...tabs.children].find(b=>b.dataset.mode==='deck');if(deckTab)deckTab.textContent=`내 덱 · ${total}장`;
+      const canSetCover=Boolean(currentState.bootstrap?.capabilities?.entities?.deck?.fields?.representative_source_id);
       for(const zone of ['main','extra']){const rows=live.content[zone]??[],box=el('div',null,'au-deck-zone');box.append(el('h2',`${zone==='main'?'메인':'EX'} · ${rows.reduce((n,r)=>n+r.count,0)} / ${zone==='main'?'20~30':'15'}장`));
         if(zone==='main'){const counts={monster:0,spell:0,trap:0};for(const row of rows){const c=index.get(row.source_id);if(!c)continue;const type=c.native_type??c.nativeType035??c.native?.type;if(Number.isSafeInteger(type)){if(type&1)counts.monster+=row.count;else if(type&2)counts.spell+=row.count;else if(type&4)counts.trap+=row.count;}else if(c.type?.includes('몬스터'))counts.monster+=row.count;else if(c.type==='마법')counts.spell+=row.count;else if(c.type==='함정')counts.trap+=row.count;}const summary=el('div',null,'au-deck-counts');summary.setAttribute('role','status');summary.setAttribute('aria-label','메인 덱 카드 구성');for(const [key,label] of [['monster','몬스터'],['spell','마법'],['trap','함정']])summary.append(el('span',`${label} ${counts[key]}장`));box.append(summary);}
-        for(const row of rows){const c=index.get(row.source_id);if(!c)continue;const line=el('div',null,'au-deck-row'),art=button('',()=>openCard(currentCards.find(card=>card.source_id===c.source_id)??c));art.setAttribute('aria-label',`${c.name_ko} 카드 정보`);art.append(picture(c));const cardName=el('div',null,'au-deck-card-name');cardName.append(el('strong',c.name_ko),limitBadges(c));line.append(art,cardName,deckQuantity046(c,live,{owned:true}));box.append(line);}
+        if(zone==='main'&&canSetCover&&total>0)box.append(el('p','대표 카드로 고른 한 장이 시작 덱 썸네일에 표시됩니다.','au-hint'));
+        for(const row of rows){
+          const c=index.get(row.source_id);if(!c)continue;
+          const line=el('div',null,'au-deck-row'),art=button('',()=>openCard(currentCards.find(card=>card.source_id===c.source_id)??c));
+          art.setAttribute('aria-label',`${c.name_ko} 카드 정보`);
+          art.append(picture(c));
+          const cardName=el('div',null,'au-deck-card-name');
+          cardName.append(el('strong',c.name_ko),limitBadges(c));
+          if(canSetCover && c.playable!==false && !c.special)cardName.append(deckCoverCheckbox(live,c));
+          line.append(art,cardName,deckQuantity046(c,live,{owned:true}));
+          box.append(line);
+        }
         box.ondragover=e=>e.preventDefault();box.ondrop=e=>{e.preventDefault();try{const raw=JSON.parse(e.dataTransfer.getData('application/x-authoring039-card')),c=currentCards.find(c=>c.source_id===raw.source_id);if(!c||nativeExtra039(c)!==(zone==='extra'))throw Error('카드의 덱 위치를 확인해 주세요.');const entity=entities039(currentState).find(e=>e.entity_type==='deck'&&e.entity_id===deck.entity_id)??deck,next=changeDeckCard039(entity.content,c,1,currentCards);Promise.resolve(patch(entity,{main:next.main,extra:next.extra})).catch(onError);}catch(e){onError(e);}};owned.append(box);
       }
     }
@@ -642,7 +681,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     const form=el('section',null,'au-starter-register'),controls=el('div',null,'au-starter-form'),pick=el('label',null,'au-field'),select=el('select'),notice=el('div',null,'au-readiness');form.append(el('h2','시작 덱 추가'));pick.append(el('span','등록할 덱'));select.setAttribute('aria-label','추가할 시작 덱');select.dataset.editKey='starter.register.deck';
     if(!candidates.length){const option=el('option','등록할 수 있는 새 덱이 없습니다.');option.value='';select.append(option);select.disabled=true;}
     for(const row of candidates){const option=el('option',`${row.displayTitle} · ${row.detail} · ${row.readiness.ready?'등록 가능':row.readiness.limitsEnabled?'구성 확인':'카드 제한 꺼짐'}`);option.value=row.id;select.append(option);}select.value=draft.deckId;select.disabled=select.disabled||!currentState.canEdit;pick.append(select);controls.append(pick);
-    const nameField=field('등록할 시작 덱 이름',draft.name,{type:'string',maxLength:80},name=>{draft.name=name;updateRegistration();},'starter.register.name'),starterName=nameField.querySelector('input');controls.append(nameField,notice);
+    const nameField=field('등록할 게임 표시 이름',draft.name,{type:'string',maxLength:80},name=>{draft.name=name;updateRegistration();},'starter.register.name'),starterName=nameField.querySelector('input');controls.append(nameField,notice);
     const openSelected=()=>{if(!draft.deckId)return;selected.set('decks',draft.deckId);onNavigate('decks',draft.deckId);},edit=button('선택한 덱 편집',openSelected),enableLimits=button('카드 제한 켜기',()=>{const live=entities039(currentState).find(row=>row.entity_type==='deck'&&row.entity_id===draft.deckId);if(live)return patch(live,{banlist_enabled:true});}),add=button('시작 덱 등록',()=>{
       const live=latest(),liveEntries=live.content.entries??[];if(liveEntries.length>=maxEntries)throw Error(`시작 덱은 ${maxEntries}개까지 등록할 수 있습니다.`);
       const deck=entities039(currentState).find(row=>row.entity_type==='deck'&&row.entity_id===draft.deckId);if(!deck)return;
@@ -655,7 +694,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
       if(!chosen){notice.append(el('p','덱 만들기에서 새 덱을 만든 뒤 여기에서 등록하세요.'));}
       else if(readiness.ready){notice.append(el('p',`메인 ${readiness.mainCount}장 · EX ${readiness.extraCount}장 · 등록할 수 있습니다.`));}
       else{notice.append(el('p','이 덱은 아직 시작 덱으로 등록할 수 없습니다.'));for(const issue of readiness.issues)notice.append(el('p',issue.message));if(!readiness.limitsEnabled)notice.append(el('p',compositionMode044(currentState)?'시작 덱으로 등록하려면 카드 제한을 켜 주세요. 적 편성의 제한 적용 여부는 바뀌지 않습니다.':'카드 제한을 켜면 같은 덱을 사용하는 적 편성에도 적용됩니다.'));}
-      if(chosen&&!validName)notice.append(el('p','시작 덱 이름을 1~80자로 입력해 주세요.'));
+      if(chosen&&!validName)notice.append(el('p','게임 표시 이름을 1~80자로 입력해 주세요.'));
       if(entries.length>=maxEntries)notice.append(el('p',`시작 덱은 ${maxEntries}개까지 등록할 수 있습니다.`));
       add.disabled=!currentState.canEdit||!chosen||!readiness?.ready||!validName||entries.length>=maxEntries;edit.disabled=!chosen;starterName.disabled=!chosen||!currentState.canEdit;enableLimits.hidden=!chosen||readiness?.limitsEnabled===true;enableLimits.disabled=!currentState.canEdit;
     }
@@ -663,8 +702,25 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     const list=el('section',null,'au-starter-list');list.append(el('h2',`등록된 시작 덱 ${entries.length}개`));if(!entries.length)list.append(el('p','아직 등록된 시작 덱이 없습니다. 위에서 덱을 추가하세요.','au-empty'));
     const summaries=new Map(deckOptions041(decks,{cards:currentCards,characters}).map(row=>[row.id,row]));
     for(const entry of entries){
-      const summary=summaries.get(entry.deck_id),row=el('article',null,'au-starter-row'),info=el('div',null,'au-starter-summary'),actions=el('div',null,'au-starter-actions'),rename=el('details',null,'au-starter-edit');info.append(el('h3',entry.name));if(summary){info.append(el('small',`${summary.displayTitle!==entry.name?`연결 덱: ${summary.displayTitle} · `:''}메인 ${summary.readiness.mainCount}장 · EX ${summary.readiness.extraCount}장`,'au-hint'));if(!summary.readiness.ready)info.append(el('small',`${summary.readiness.message} · 완성 전에는 기존 시작 덱을 사용합니다.`,'au-readiness'));}else info.append(el('small','연결된 덱을 확인해 주세요.','au-readiness'));
-      rename.append(el('summary','이름 변경'),field('시작 덱 이름',entry.name,{type:'string',maxLength:80},name=>{const live=latest();return patch(live,{entries:(live.content.entries??[]).map(r=>r.starter_id===entry.starter_id?{...r,name}:r)});},`starter.${entry.starter_id}.name`));
+      const summary=summaries.get(entry.deck_id),row=el('article',null,'au-starter-row'),info=el('div',null,'au-starter-summary'),actions=el('div',null,'au-starter-actions'),rename=el('details',null,'au-starter-edit');
+      const names=el('div'),renameKey=`starter.rename:${entry.starter_id}`;
+      names.append(el('h3',entry.name));
+      if(summary)names.append(el('small',`관리용 제목 · ${summary.title}`,'au-hint'));
+      info.append(names);
+      if(summary){
+        info.append(el('small',`메인 ${summary.readiness.mainCount}장 · EX ${summary.readiness.extraCount}장`,'au-hint'));
+        if(!summary.readiness.ready)names.append(el('small',`${summary.readiness.message} · 완성 전에는 기존 시작 덱을 사용합니다.`,'au-readiness'));
+      }else names.append(el('small','연결된 덱을 확인해 주세요.','au-readiness'));
+      rename.open=filters.get(renameKey)===true;
+      rename.ontoggle=()=>filters.set(renameKey,rename.open);
+      rename.append(el('summary','이름 편집'),field('게임 표시 이름',entry.name,{type:'string',minLength:1,maxLength:80},name=>{
+        const live=latest();return patch(live,{entries:(live.content.entries??[]).map(r=>r.starter_id===entry.starter_id?{...r,name}:r)});
+      },`starter.${entry.starter_id}.name`));
+      if(summary)rename.append(field('관리용 제목',summary.entity.content.management_title??'',{type:'string',maxLength:100,
+        description:'제작 화면에서 연결된 덱을 구분하는 이름입니다. 비워 두면 덱 이름을 표시합니다.'},name=>{
+        const deck=entities039(currentState).find(item=>item.entity_type==='deck'&&item.entity_id===entry.deck_id);
+        if(deck)return patch(deck,{management_title:name.trim()});
+      },`starter.${entry.starter_id}.management_title`));
       const edit=button('덱 편집',()=>{selected.set('decks',entry.deck_id);onNavigate('decks',entry.deck_id);}),remove=button('목록에서 제외',()=>{const live=latest();return patch(live,{entries:(live.content.entries??[]).filter(r=>r.starter_id!==entry.starter_id)});});edit.disabled=!summary;remove.disabled=!currentState.canEdit;actions.append(edit,remove);row.append(info,actions,rename);list.append(row);
     }host.append(list,status(entity));
   }
