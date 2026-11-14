@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.56",
-  "versionCode": 75,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.56/YGOClassicExpedition-0.18.56-arm64.apk",
-  "sizeBytes": 444655343,
-  "sha256": "e5335ff67669d1bbe3629c25d94bb5caaddf92ffe14d8a944352759976456f12",
-  "releaseNotes": "• 마두귀는 메인 페이즈에 내 묘지의 카드 상세에서 직접 발동할 수 있습니다.\n• AI가 쥬라게도·크리보·어니스트를 전투 상황에 맞춰 사용합니다. 스탬핑 크러시의 대상 선택과 공격력 동률 맞교환 판단을 개선했습니다.\n• 필수 효과가 포함된 체인에서 먼저 발동할 효과를 고른다는 안내와 필수 표시를 추가했습니다."
+  "versionName": "0.18.57",
+  "versionCode": 76,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.57/YGOClassicExpedition-0.18.57-arm64.apk",
+  "sizeBytes": 444678815,
+  "sha256": "6c574fdc4dececf1cd7c6aa1da413ef4f5e8ca5b975ba8f0ace788259ce34b5f",
+  "releaseNotes": "• AI가 빅 피스 골렘과 비슷한 몬스터의 무릴리스 일반 소환 조건을 확인하고, 소환 뒤 능력치와 제한을 평가합니다.\n• AI가 모쟈를 앞면으로 소환해 킹 오브 비스트를 특수 소환하는 연계를 사용합니다.\n• 기사의 칭호와 구속해제의 발동 및 릴리스 판단을 개선했습니다."
 }
