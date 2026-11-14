@@ -2,7 +2,7 @@ import {traitCardMatches089,sharedTraitRefMatches089} from './authoring089-trait
 // Local preflight explains known server contracts. The server remains authoritative.
 const own=(value,key)=>Object.prototype.hasOwnProperty.call(value??{},key);
 const object=value=>value!==null&&typeof value==='object'&&!Array.isArray(value);
-const labels={name:'이름',title:'제목',portrait:'캐릭터 이미지',description:'설명',effect:'선택 결과 설명',tags:'카테고리',links:'관련 카드',skills:'특성',skill_profiles:'특성 묶음',params:'효과 수치',fixed_source_ids:'항상 진열할 카드',regular_card_count:'일반 카드 진열 수',sourceIds:'수록 카드',urWeight:'UR 확률',srWeight:'SR 확률',rWeight:'R 확률',nWeight:'N 확률'};
+const labels={name:'이름',title:'제목',management_title:'관리용 제목',portrait:'캐릭터 이미지',description:'설명',effect:'선택 결과 설명',tags:'카테고리',links:'관련 카드',skills:'특성',skill_profiles:'특성 묶음',params:'효과 수치',fixed_source_ids:'항상 진열할 카드',regular_card_count:'일반 카드 진열 수',sourceIds:'수록 카드',urWeight:'UR 확률',srWeight:'SR 확률',rWeight:'R 확률',nWeight:'N 확률'};
 export const authoringFieldNames066=Object.freeze(labels);
 export function completeEventText066(content,fields){return content?.effect==null&&!own(fields,'effect')?{...fields,effect:''}:fields;}
 export function validateAuthoringChange066(snapshot,type,id,fields,{operation='patch'}={}){

@@ -47,6 +47,32 @@ test('actual Native card grade input emits one typed DB target and does not tran
 test('actual base legend grade remains selectable and atomically turns stock/reward off',async()=>{const m=mounted('cards'),card=normalizeCatalog039(m.state).find(c=>c.source_id<2390&&!c.special);m.panels.openCard(card);const rarity=find(m.document.body.querySelector('dialog'),'등급');assert.ok(rarity.options.find(o=>o.value==='L'&&!o.disabled));rarity.value='L';rarity.fire('change');await Promise.resolve();assert.deepEqual(m.writes[0].slice(0,3),['card_setting',String(card.source_id),{rarity:'L',stock:false,draw_enabled:false}]);});
 test('new deck action creates the reviewed rich authoring shape with zero cards and no old-engine fields',()=>{const m=mounted('decks');button(m.root,'새 덱').click();const [type,id,value,options]=m.writes[0];assert.equal(type,'deck');assert.ok(id.startsWith('deck-'));assert.deepEqual(value.main,[]);assert.equal(value.deck_name,'새 덱');assert.equal(value.opening_draw_bonus,0);assert.equal(value.profile_id,characters[0].profile_id);for(const forbidden of ['ruleset','source_recipe','groups','side','strategy','character_id','deck_id'])assert.equal(value[forbidden],undefined);assert.equal(options.operation,'create');});
 test('editing a rich deck name emits only its changed field and preserves original inline skills',()=>{const state=fixture(),deck=state.entities.find(e=>e.entity_type==='deck'),original=JSON.stringify(deck.content.skills),m=mounted('decks',state),name=find(m.root,'덱 이름');name.value='새 이름';name.fire('input');assert.deepEqual(m.writes[0].slice(0,3),['deck',deck.entity_id,{deck_name:'새 이름'}]);assert.equal(JSON.stringify(deck.content.skills),original);assert.ok(m.root.textContent.includes('전투 특성'));});
+test('the deck editor searches by management title and edits it independently of the game name',()=>{
+  const state=fixture(),[first,second]=state.entities.filter(row=>row.entity_type==='deck');
+  Object.assign(first.content,{deck_name:'듀얼몬스터',management_title:'듀얼몬스터 초급'});
+  Object.assign(second.content,{deck_name:'듀얼몬스터',management_title:'듀얼몬스터 중급'});
+  const m=mounted('decks',state),management=find(m.root,'관리용 제목'),game=find(m.root,'덱 이름');
+  assert.equal(management.value,'듀얼몬스터 초급');assert.equal(game.value,'듀얼몬스터');
+  management.value='  듀얼몬스터 상급  ';management.fire('input');
+  assert.deepEqual(m.writes[0].slice(0,3),['deck',first.entity_id,{management_title:'듀얼몬스터 상급'}]);
+  management.value='';management.fire('input');
+  assert.deepEqual(m.writes[1].slice(0,3),['deck',first.entity_id,{management_title:''}]);
+  const search=find(m.root,'편집할 덱 검색'),select=find(m.root,'편집할 덱');
+  search.value='듀얼 몬스터 중급';search.fire('input');
+  assert.deepEqual(select.options.filter(option=>!option.disabled).map(option=>option.value),[second.entity_id]);
+  assert.match(select.options.find(option=>option.value===second.entity_id).textContent,/듀얼몬스터 중급/);
+  search.value='듀얼몬스터';search.fire('input');
+  assert.ok(select.options.some(option=>option.value===first.entity_id&&!option.disabled));
+});
+test('starter registration displays the management title in the picker and defaults to the game deck name',()=>{
+  const state=fixture(),starters=state.entities.find(row=>row.entity_type==='starter_list');
+  const deck=state.entities.find(row=>row.entity_type==='deck'&&!starters.content.entries.some(entry=>entry.deck_id===row.entity_id));
+  Object.assign(deck.content,{deck_name:'듀얼몬스터',management_title:'듀얼몬스터 중급'});
+  const m=mounted('starters',state),select=find(m.root,'추가할 시작 덱');
+  assert.match(select.options.find(option=>option.value===deck.entity_id).textContent,/듀얼몬스터 중급/);
+  select.value=deck.entity_id;select.fire('change');
+  assert.equal(find(m.root,'등록할 시작 덱 이름').value,'듀얼몬스터');
+});
 test('starter rename retains the exact lineage and submits entries without server-owned history',()=>{const m=mounted('starters'),entity=m.state.entities.find(e=>e.entity_type==='starter_list'),id=entity.content.entries[0].starter_id,input=find(m.root,'시작 덱 이름');input.value='시작 덱 이름 변경';input.fire('input');assert.equal(m.writes[0][0],'starter_list');assert.equal(m.writes[0][2].entries[0].starter_id,id);assert.equal(m.writes[0][2].history,undefined);});
 test('relic and event views expose actual runtime parameter controls instead of raw JSON editors',()=>{for(const section of ['relics','events']){const m=mounted(section);assert.ok(m.root.querySelectorAll('input').some(n=>n.type==='number'));assert.ok(m.root.querySelectorAll('textarea').length>=1);assert.equal(m.root.querySelectorAll('textarea').some(n=>n.value.startsWith('{')),false);}});
 test('new pack action uses the actual017 template shape and global price/count settings stay separate',()=>{const m=mounted('packs');button(m.root,'새 카드팩').click();const [type,id,content]=m.writes[0];assert.equal(type,'meta_pack');assert.equal(content.id,id);assert.deepEqual(content.sourceIds,[]);assert.equal(content.price,undefined);assert.equal(content.cardsPerPack,undefined);});

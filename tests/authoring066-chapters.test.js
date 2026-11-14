@@ -54,6 +54,26 @@ test('adding a searched shared deck creates one new encounter and opens it witho
   assert.equal(m.writes.length,1);assert.equal(m.writes[0].type,'chapter_role');const entry=m.role().content.entries.at(-1);assert.equal(entry.deck_id,deckId);assert.match(entry.entry_id,/^enc-/);assert.equal(workspace(m).dataset.mode,'editor');assert.equal(editor(m).dataset.entryId,entry.entry_id);assert.equal(m.state.entities.filter(row=>row.entity_type==='deck').length,9);
 });
 
+test('candidate and assigned lists find management titles without using them as encounter names',async t=>{
+  const m=panelHarness(t),deck=m.state.entities.filter(row=>row.entity_type==='deck').at(-1);
+  Object.assign(deck.content,{deck_name:'듀얼몬스터',management_title:'듀얼몬스터 상급'});
+  m.panels.render('chapters',m.root,m.state,{force:true});
+  button041(m.root.querySelector('.au-chapter-modes066'),'상대 추가').click();
+  await input(field041(m.root,'후보 덱 검색'),'듀얼몬스터 상급');
+  const candidate=m.root.querySelector('.au-add066').querySelector('.au-assignment-row');
+  assert.equal(candidate.dataset.deckId,deck.entity_id);
+  assert.match(candidate.querySelector('strong').textContent,/듀얼몬스터 상급/);
+  button041(candidate,'상대 추가').click();await flush();
+  const added=m.role().content.entries.at(-1);
+  assert.equal(added.encounter.deck_name,'듀얼몬스터');
+  button041(editor(m),'편성 목록으로').click();
+  await input(field041(m.root,'편성된 덱 검색'),'듀얼몬스터 상급');
+  const assigned=m.root.querySelectorAll('.au-entry066');
+  assert.equal(assigned.length,1);
+  assert.equal(assigned[0].dataset.entryId,added.entry_id);
+  assert.match(assigned[0].querySelector('.au-entry-deck066').textContent,/듀얼몬스터 상급/);
+});
+
 test('same shared deck remains independently configurable and removing one encounter preserves its siblings',async t=>{
   const m=panelHarness(t);open(m);button041(editor(m),'같은 덱으로 상대 추가').click();await flush();const entry=m.role().content.entries.at(-1),first=m.role().content.entries[0];assert.equal(entry.deck_id,first.deck_id);assert.notEqual(entry.entry_id,first.entry_id);
   await input(field041(editor(m),'상대 추가 LP'),2100);assert.equal(m.role().content.entries[0].encounter.lp_bonus,0);button041(editor(m),'편성에서 제외').click();await flush();assert.equal(workspace(m).dataset.mode,'list');assert.ok(m.role().content.entries.some(row=>row.entry_id===first.entry_id));assert.ok(!m.role().content.entries.some(row=>row.entry_id===entry.entry_id));

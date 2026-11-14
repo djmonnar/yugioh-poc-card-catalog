@@ -4,6 +4,7 @@ import {completeCharacterTraits065} from './authoring065-errors.js?v=20261101-06
 import {authoringFieldNames066,validateAuthoringChange066} from './authoring066-validation.js?v=20261101-066';
 import {draftScope068} from './authoring068-scope.js?v=20261103-071';
 import {draftLabel083,syncDetail083} from './authoring083-status.js?v=20261105-083';
+import {deckManagementTitle041} from './authoring041-decks.js?v=20261028-043';
 
 const MANUAL_KINDS060=['card_display','card_setting','card_annotation','card_limit','deck','chapter_role','starter_list','character','relic','event','shop_rules','meta_pack','meta_score'];
 const TYPE_NAMES060={card_display:'카드 정보',card_setting:'카드 등급·보상',card_annotation:'카드 카테고리·관련 카드',card_limit:'카드 제한',category:'카테고리',category_group:'카테고리 묶음',category_group_order:'묶음 순서',deck:'덱',chapter_role:'장별 적 편성',starter_list:'시작 덱',character:'캐릭터',relic:'유물',event:'이벤트',shop_rules:'상점',map_rules:'맵 분포',meta_pack:'카드팩',meta_score:'점수·보상',recovery_archive:'이전 자료'};
@@ -13,7 +14,7 @@ Object.assign(FIELD_NAMES060,authoringFieldNames066);
 export function writeSubject060(snapshot,{type,id,fields=[]}={}){
   const row=(snapshot.entities??[]).find(e=>e.entity_type===type&&e.entity_id===id),content=row?.content;
   const card=type?.startsWith('card_')?normalizeCatalog039(snapshot).find(c=>String(c.source_id)===String(id)):null;
-  const name=type==='chapter_role'&&content?`${content.chapter}장 · ${{battle:'일반 전투',elite:'엘리트',boss:'보스'}[content.role]??content.role}`:card?.name_ko??content?.deck_name??content?.name??content?.profile?.name;
+  const name=type==='chapter_role'&&content?`${content.chapter}장 · ${{battle:'일반 전투',elite:'엘리트',boss:'보스'}[content.role]??content.role}`:type==='deck'&&content?deckManagementTitle041(content):card?.name_ko??content?.name??content?.profile?.name;
   return {title:[TYPE_NAMES060[type]??'편집 항목',typeof name==='string'?name:''].filter(Boolean).join(' · '),fields:[...new Set(fields.map(f=>FIELD_NAMES060[f]??'편집 내용'))].join(', ')};
 }
 

@@ -32,16 +32,25 @@ export function deckReadiness041(entity,cards,{requireLimits=true}={}) {
     message:issues[0]?.message??'시작 덱으로 등록할 수 있습니다.'};
 }
 
+export function deckManagementTitle041(content,fallback='이름 없는 덱') {
+  return content.management_title?.trim()||content.deck_name||content.name||fallback;
+}
+
 export function deckOptions041(decks,{query='',exclude=[],cards=[],characters=[]}={}) {
   const excluded=new Set(exclude),names=new Map(),q=normalized(query);
-  for(const deck of decks){const title=deck.content.deck_name||deck.content.name||'이름 없는 덱';if(!names.has(title))names.set(title,[]);names.get(title).push(deck);}
+  for(const deck of decks){
+    const title=deckManagementTitle041(deck.content);
+    if(!names.has(title))names.set(title,[]);
+    names.get(title).push(deck);
+  }
   return decks.filter(deck=>!excluded.has(deck.entity_id)).map(deck=>{
-    const value=deck.content,title=value.deck_name||value.name||'이름 없는 덱',profile=characters.find(row=>row.profile_id===value.profile_id),name=value.name||profile?.profile?.name||'상대 미지정';
+    const value=deck.content,title=deckManagementTitle041(value),gameTitle=value.deck_name||value.name||'';
+    const profile=characters.find(row=>row.profile_id===value.profile_id),name=value.name||profile?.profile?.name||'상대 미지정';
     const counts=`메인 ${count(value.main)}장 · EX ${count(value.extra)}장`,peers=names.get(title),sameName=peers.length>1,variant=deckVariant043(deck,peers,characters),displayTitle=variant?`${title} · ${variant}`:title;
     const prefix=/^ch([123])_(battle|elite|boss)_/.exec(deck.entity_id),idLabel=prefix?`${prefix[1]}장 ${{battle:'일반',elite:'엘리트',boss:'보스'}[prefix[2]]} · ${deck.entity_id.slice(-7)}`:`덱 ${deck.entity_id.slice(-7)}`;
-    const detail=[name!==title?name:null,counts,sameName?idLabel:null].filter(Boolean).join(' · ');
+    const detail=[gameTitle!==title?gameTitle:null,name!==title&&name!==gameTitle?name:null,counts,sameName?idLabel:null].filter(Boolean).join(' · ');
     const readiness=deckReadiness041(deck,cards);
-    return {entity:deck,id:deck.entity_id,title,displayTitle,variant,detail,readiness,search:normalized([title,name,variant,value.profile_id,deck.entity_id].join(' '))};
+    return {entity:deck,id:deck.entity_id,title,gameTitle,displayTitle,variant,detail,readiness,search:normalized([title,gameTitle,name,variant,value.profile_id,deck.entity_id].join(' '))};
   }).filter(row=>!q||row.search.includes(q)).sort((a,b)=>a.title.localeCompare(b.title,'ko')||a.id.localeCompare(b.id));
 }
 
