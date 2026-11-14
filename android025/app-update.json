@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.62",
-  "versionCode": 81,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.62/YGOClassicExpedition-0.18.62-arm64.apk",
-  "sizeBytes": 459731977,
-  "sha256": "276fa5d03d4fbdfaa3c1ea1daab5aca39fa0f5f289967a6d165f6351ca6d67a9",
-  "releaseNotes": "흑룡강림 등 의식 소환에서 소재 목록이 가려져 선택할 수 없던 문제를 수정했습니다.\r\n붉은 눈의 철기사－기어프리드, 전선복귀, 왕립 마법도서관 등 카드 24종과 효과로 생성되는 토큰 2종을 추가했습니다. 왕립 마법도서관은 새 덱에서 1장까지 넣을 수 있습니다."
+  "versionName": "0.18.63",
+  "versionCode": 82,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.63/YGOClassicExpedition-0.18.63-arm64.apk",
+  "sizeBytes": 475072149,
+  "sha256": "655761483c01b51cd68339dddb4e79aa17e5bf2cbabb2dc0584c510882620b63",
+  "releaseNotes": "개기일식의 서, 태양의 서, 쓰쿠요미, 펭귄 첩자, 금기의 항아리 등 카드 25종을 추가했습니다. 개기일식의 서는 덱에 3장까지 넣을 수 있습니다.\nAI가 리버스 효과를 쓸 수 있는 몬스터의 표시 형식과 공격 기회를 함께 판단합니다. 달의 서, 개기일식의 서, 태양의 서, 쓰쿠요미, 펭귄 첩자가 내 몬스터의 효과를 다시 쓰거나 상대 공격을 막는 데 활용됩니다.\n웹 제작소의 덱 만들기에서 지정한 대표 카드가 시작 덱 썸네일에 표시됩니다."
 }

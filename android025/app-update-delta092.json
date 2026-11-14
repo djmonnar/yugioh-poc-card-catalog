@@ -3,28 +3,28 @@
   "format": "YGODLT92",
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.62",
-  "versionCode": 81,
-  "sha256": "276fa5d03d4fbdfaa3c1ea1daab5aca39fa0f5f289967a6d165f6351ca6d67a9",
-  "sizeBytes": 459731977,
+  "versionName": "0.18.63",
+  "versionCode": 82,
+  "sha256": "655761483c01b51cd68339dddb4e79aa17e5bf2cbabb2dc0584c510882620b63",
+  "sizeBytes": 475072149,
   "patches": [
+    {
+      "baseVersionName": "0.18.62",
+      "baseVersionCode": 81,
+      "baseSizeBytes": 459731977,
+      "baseSha256": "276fa5d03d4fbdfaa3c1ea1daab5aca39fa0f5f289967a6d165f6351ca6d67a9",
+      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.63/YGOClassicExpedition-0.18.62-to-0.18.63-arm64.delta092.gz",
+      "patchSizeBytes": 35169935,
+      "patchSha256": "44cd7c60514e515b40a64663f044386fdb4e83b7b8fb4105421c99327a948fef"
+    },
     {
       "baseVersionName": "0.18.61",
       "baseVersionCode": 80,
       "baseSizeBytes": 444725959,
       "baseSha256": "9f99bf3b65d5efaa80635fc2bfbb08eb9b93896cd9cf19c6161ee85fef6fa0c9",
-      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.62/YGOClassicExpedition-0.18.61-to-0.18.62-arm64.delta092.gz",
-      "patchSizeBytes": 34815901,
-      "patchSha256": "c5f19ecf80d51e6d75e3d4285528c84861435a7444383af310b41c9618e5ac7e"
-    },
-    {
-      "baseVersionName": "0.18.60",
-      "baseVersionCode": 79,
-      "baseSizeBytes": 444694115,
-      "baseSha256": "22d94881c2557370434515d5b9ba0b6e21fc0abd790327a4337b3826e54e0476",
-      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.62/YGOClassicExpedition-0.18.60-to-0.18.62-arm64.delta092.gz",
-      "patchSizeBytes": 34815900,
-      "patchSha256": "e2ea2888cd3fd68f75a5a8453cd2da024c3d3d81eb0d6f57a4505794a695e14d"
+      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.63/YGOClassicExpedition-0.18.61-to-0.18.63-arm64.delta092.gz",
+      "patchSizeBytes": 50091936,
+      "patchSha256": "ce1fd7031ac5544b256e1bf8040d0024773bcd955e9d91d12cd25fb6e0b234db"
     }
   ]
 }
