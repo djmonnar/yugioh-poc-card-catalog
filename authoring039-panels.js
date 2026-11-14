@@ -83,7 +83,9 @@ export function validateInput039(spec,input){
 }
 export function formSchema039(state,entity){
   const cap=state.bootstrap?.capabilities??{},defs=cap.entities?.[entity.entity_type]?.fields??{},properties={};
-  for(const [key,d] of Object.entries(defs)){if(key==='id')continue;const label=names[key]??PARAM_LABELS039[key]??key;let spec={title:label};
+  for(const [key,d] of Object.entries(defs)){
+    if(key==='id'||entity.entity_type==='deck'&&key==='representative_source_id')continue;
+    const label=names[key]??PARAM_LABELS039[key]??key;let spec={title:label};
     if(['text','multiline'].includes(d.type))spec={...spec,type:'string',maxLength:entity.entity_type==='character'&&key==='portrait'?Math.min(d.max??1000,1000):d.max??6000,minLength:['card_display','event'].includes(entity.entity_type)&&key==='name'?Math.max(d.min??0,1):d.min??0,multiline:d.type==='multiline'};
     else if(d.type==='enum')spec={...spec,type:'string',enum:d.values,enumNames:key==='ownershipMode'?['장수별 보유','종류 해금']:d.values};
     else if(d.type==='integer')spec={...spec,type:'integer',minimum:d.min,maximum:d.max,...(entity.entity_type==='deck'&&key==='lp_bonus'?{zeroOrMinimum:100,description:'0 또는 100~8,000 LP'}:{})};

@@ -95,7 +95,7 @@ test('starter name fields identify and edit the game label and the linked deck m
 });
 test('shared deck cover switches to a single member and clears on its last copy removal',async()=>{
   const state=fixture(),deck=state.entities.find(row=>row.entity_type==='deck');
-  state.bootstrap.capabilities.entities.deck.fields.representative_source_id={type:'nullable_integer',min:0};
+  state.bootstrap.capabilities.entities.deck.fields.representative_source_id={type:'nullable_integer',min:0,max:2147483647};
   const cards=normalizeCatalog039(state);
   const [first,second]=deck.content.main.slice(0,2).map(ref=>cards.find(card=>card.source_id===ref.source_id));
   assert(first&&second);
