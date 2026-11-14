@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.58",
-  "versionCode": 77,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.58/YGOClassicExpedition-0.18.58-arm64.apk",
-  "sizeBytes": 444680923,
-  "sha256": "ba9c2a3715688292701e8782c48b86b3b288d10956ede8c817402bc0cf5acaad",
-  "releaseNotes": "슈퍼바이스로 거인 고글 등 듀얼 몬스터의 효과를 얻는 이득을 AI가 계산합니다.\n메인 메뉴에서 원정과 관련 메뉴를 더 쉽게 찾을 수 있도록 정리했습니다."
+  "versionName": "0.18.59",
+  "versionCode": 78,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.59/YGOClassicExpedition-0.18.59-arm64.apk",
+  "sizeBytes": 444684383,
+  "sha256": "6f6b4d3edbae07f4fdd16f423c50330e7b7e7f06358171c9f95be2314c70de2a",
+  "releaseNotes": "• AI가 가란돌프를 의식 소환할 때 파괴 효과로 남을 몬스터와 공격력 상승을 계산해 표시 형식을 고릅니다."
 }
