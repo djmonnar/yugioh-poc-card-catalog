@@ -147,8 +147,23 @@ async function storeHarness066(t){
   if(name==='poc_bootstrap039')return {data:wire()};if(name==='poc_read_recovery039'){assert.equal(args.p_id,recoveryId);return {data:clone(recovery)};}
   assert.equal(name,'poc_apply_intent039');const intent=clone(args.p_intent);remote.writes.push(intent);assert.equal(intent.expected_project_revision,remote.revision);assert.ok(intent.changes.length>=1&&intent.changes.length<=32);
   const changes=intent.changes.map(change=>{const item=remote.rows.find(item=>item.entity_type===change.entity_type&&item.entity_id===change.entity_id);assert.ok(item);assert.equal(change.expected_entity_version,item.version);return {change,item};});remote.revision++;
-  for(const {change,item} of changes){item.content={...item.content,...clone(change.fields)};item.version=remote.revision;}
-  return {data:{schema:1,kind:'unified039-write-ack',request_id:intent.request_id,applied_revision:remote.revision,observed_project_revision:remote.revision,entities:changes.map(({item})=>clone(item)),game_revision:1,game_source_fingerprint:hash(payload)}};
+  const entities=[];
+  for(const {change,item} of changes){
+   const content={...item.content,...clone(change.fields)};
+   item.version=remote.revision;
+   if(change.entity_type==='category'&&content.name!==item.entity_id){
+    const source=item.entity_id,destination={...item,entity_id:content.name,content};
+    remote.rows.splice(remote.rows.indexOf(item),1,destination);
+    entities.push({...clone(item),deleted:true},clone(destination));
+    for(const member of remote.rows){
+     const field=member.entity_type==='category_group'?'categories':member.entity_type==='card_annotation'?'tags':null;
+     if(!field||!member.content[field]?.includes(source))continue;
+     member.content[field]=member.content[field].map(name=>name===source?content.name:name);
+     member.version=remote.revision;entities.push(clone(member));
+    }
+   }else{item.content=content;entities.push(clone(item));}
+  }
+  return {data:{schema:1,kind:'unified039-write-ack',request_id:intent.request_id,applied_revision:remote.revision,observed_project_revision:remote.revision,entities,game_revision:1,game_source_fingerprint:hash(payload)}};
  }};
  const outbox=new Map(),storage={getItem:key=>outbox.get(key)??null,setItem:(key,value)=>outbox.set(key,String(value)),removeItem:key=>outbox.delete(key)};const store=new AuthoringStore039({client,storage,crypto:webcrypto,events:{},debounceMs:100000,idleRefreshMs:100000,pollMs:0});await store.start();
  store.flushPending083=()=>{}; // This fixture verifies submitted state before manually sending its queued intent.
@@ -162,7 +177,11 @@ const menuWrites066=[
 ];
 for(const [menu,type,id,fields] of menuWrites066)test(`${menu}: supported changes traverse the real queue and synthetic ACK once`,async t=>{
  const {store,remote}=await storeHarness066(t);const before=clone(store.getRow(type,id).content),done=store.patch(type,id,fields);assert.equal(remote.writes.length,0);assert.equal(store.queue.length,1);assert.deepEqual(store.queue[0].fields,fields);
- await store.drain();await done;assert.equal(remote.writes.length,1);assert.equal(store.queue.length,0);assert.equal(store.phase,'ready');const canonical=remote.rows.find(item=>item.entity_type===type&&item.entity_id===id).content;assert.deepEqual(canonical,{...before,...fields});assert.deepEqual(store.getRow(type,id).content,canonical);
+ await store.drain();assert.equal(store.queue.length,0,store.error);await done;
+ assert.equal(remote.writes.length,1);assert.equal(store.phase,'ready');
+ const savedId=type==='category'?fields.name:id,canonical=remote.rows.find(item=>item.entity_type===type&&item.entity_id===savedId).content;
+ assert.deepEqual(canonical,{...before,...fields});assert.deepEqual(store.getRow(type,savedId).content,canonical);
+ if(savedId!==id)assert.equal(store.getRow(type,id),undefined);
 });
 
 test('이전 자료: reading preserved content verifies its hash and never becomes a write',async t=>{
