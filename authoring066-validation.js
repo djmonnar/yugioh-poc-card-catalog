@@ -1,4 +1,5 @@
 import {traitCardMatches089,sharedTraitRefMatches089} from './authoring089-traits.js?v=20261106-089';
+import {cardMetadata120} from './authoring120-catalog.js?v=20261115-120';
 // Local preflight explains known server contracts. The server remains authoritative.
 const own=(value,key)=>Object.prototype.hasOwnProperty.call(value??{},key);
 const object=value=>value!==null&&typeof value==='object'&&!Array.isArray(value);
@@ -41,6 +42,15 @@ export function validateAuthoringChange066(snapshot,type,id,fields,{operation='p
   const raw=snapshot.bootstrap?.catalog?.cards??snapshot.bootstrap?.catalog??snapshot.gamePayload?.catalog?.cards??snapshot.gamePayload?.catalog??snapshot.bootstrap?.game?.catalog?.cards??snapshot.bootstrap?.game?.catalog??[];
   const cards=Array.isArray(raw)?raw:[],source=card=>card.source_id??card.sourceId??card.internal_id,slot=card=>card.web_slot??card.slot,extra=card=>Boolean((card.native_type??card.type??0)&(0x40|0x2000|0x800000|0x4000000)),playable=card=>card&&card.playable!==false&&!card.token&&!card.special;
   const bySource=new Map(cards.map(card=>[source(card),card])),bySlot=new Map(cards.map(card=>[slot(card),card]));
+  if(type==='card_limit'||type==='card_setting'){
+    const card=bySource.get(Number(id)),maximum=cardMetadata120(source(card??{}),card?.identity_key)?.maximumNormalLimit;
+    if(maximum===0){
+      if(type==='card_limit')check(!own(fields,'normal_limit')&&!own(fields,'speed_limit'),Object.keys(fields),'효과로 생성되는 토큰에는 덱 제한을 설정할 수 없습니다.');
+      else check(fields.stock!==true&&fields.draw_enabled!==true,['stock','draw_enabled'],'효과로 생성되는 토큰은 판매하거나 보상으로 지급할 수 없습니다.');
+    }else if(type==='card_limit'&&maximum!=null&&fields.normal_limit!=null){
+      check(fields.normal_limit<=maximum,['normal_limit'],`이 카드는 덱에 최대 ${maximum}장까지만 넣을 수 있습니다.`);
+    }
+  }
   if(type==='card_annotation'){
     check(Array.isArray(content.tags)&&content.tags.length<=(defs.tags?.max??12),['tags'],`카테고리는 ${defs.tags?.max??12}개까지 선택할 수 있습니다.`);
     check(Array.isArray(content.links)&&content.links.length<=(defs.links?.max??20),['links'],`관련 카드는 ${defs.links?.max??20}개까지 연결할 수 있습니다.`);
