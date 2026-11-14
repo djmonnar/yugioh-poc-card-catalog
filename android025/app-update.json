@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.59",
-  "versionCode": 78,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.59/YGOClassicExpedition-0.18.59-arm64.apk",
-  "sizeBytes": 444684383,
-  "sha256": "6f6b4d3edbae07f4fdd16f423c50330e7b7e7f06358171c9f95be2314c70de2a",
-  "releaseNotes": "• AI가 가란돌프를 의식 소환할 때 파괴 효과로 남을 몬스터와 공격력 상승을 계산해 표시 형식을 고릅니다."
+  "versionName": "0.18.60",
+  "versionCode": 79,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.60/YGOClassicExpedition-0.18.60-arm64.apk",
+  "sizeBytes": 444694115,
+  "sha256": "22d94881c2557370434515d5b9ba0b6e21fc0abd790327a4337b3826e54e0476",
+  "releaseNotes": "듀얼 기록에 공개된 카드 이름, 소환 표시 형식, 체인, 공격과 파괴 내역을 표시합니다."
 }
