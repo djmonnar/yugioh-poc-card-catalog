@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.60",
-  "versionCode": 79,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.60/YGOClassicExpedition-0.18.60-arm64.apk",
-  "sizeBytes": 444694115,
-  "sha256": "22d94881c2557370434515d5b9ba0b6e21fc0abd790327a4337b3826e54e0476",
-  "releaseNotes": "듀얼 기록에 공개된 카드 이름, 소환 표시 형식, 체인, 공격과 파괴 내역을 표시합니다."
+  "versionName": "0.18.61",
+  "versionCode": 80,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.61/YGOClassicExpedition-0.18.61-arm64.apk",
+  "sizeBytes": 444725959,
+  "sha256": "9f99bf3b65d5efaa80635fc2bfbb08eb9b93896cd9cf19c6161ee85fef6fa0c9",
+  "releaseNotes": "AI가 다크 제로이드의 소환 시 공격력 감소를 계산해 소환 표시와 공격 대상을 고릅니다.\n이중소환으로 듀얼 스콜피온을 릴리스해 헬카이저 드래곤을 소환하는 등, 유리한 추가 일반 소환을 배틀 전에 검토합니다.\n앤틱 기어 캐슬을 카운터를 얻을 수 있는 일반 소환이나 몬스터 세트보다 먼저 발동합니다.\r\n네크로밸리의 옥좌, 젬나이트 네피림, 카운터 게이트로 일반 소환할 때 후보와 릴리스 비용을 계산합니다."
 }
