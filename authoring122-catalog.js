@@ -30,7 +30,7 @@ const entries = {
 
 export function cardMetadata122(sourceId,identityKey) {
   const entry = Object.hasOwn(entries,sourceId) ? entries[sourceId] : null;
-  if (entry?.[0] === identityKey)
+  if (entry && entry[0] === identityKey)
     return {image:`assets/native122/cards/${sourceId}.jpg`,searchAliases:entry[1]};
   return cardMetadata120(sourceId,identityKey);
 }
