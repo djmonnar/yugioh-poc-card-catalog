@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.57",
-  "versionCode": 76,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.57/YGOClassicExpedition-0.18.57-arm64.apk",
-  "sizeBytes": 444678815,
-  "sha256": "6c574fdc4dececf1cd7c6aa1da413ef4f5e8ca5b975ba8f0ace788259ce34b5f",
-  "releaseNotes": "• AI가 빅 피스 골렘과 비슷한 몬스터의 무릴리스 일반 소환 조건을 확인하고, 소환 뒤 능력치와 제한을 평가합니다.\n• AI가 모쟈를 앞면으로 소환해 킹 오브 비스트를 특수 소환하는 연계를 사용합니다.\n• 기사의 칭호와 구속해제의 발동 및 릴리스 판단을 개선했습니다."
+  "versionName": "0.18.58",
+  "versionCode": 77,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.58/YGOClassicExpedition-0.18.58-arm64.apk",
+  "sizeBytes": 444680923,
+  "sha256": "ba9c2a3715688292701e8782c48b86b3b288d10956ede8c817402bc0cf5acaad",
+  "releaseNotes": "슈퍼바이스로 거인 고글 등 듀얼 몬스터의 효과를 얻는 이득을 AI가 계산합니다.\n메인 메뉴에서 원정과 관련 메뉴를 더 쉽게 찾을 수 있도록 정리했습니다."
 }
