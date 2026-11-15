@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.64",
-  "versionCode": 83,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.64/YGOClassicExpedition-0.18.64-arm64.apk",
-  "sizeBytes": 475079713,
-  "sha256": "55bb38b33faf5fc91c43e376266258c1c07ea5835def07399e20b6120f8148f3",
-  "releaseNotes": "마법·함정·몬스터를 세트할 칸을 고르는 중에는 세트 취소로 패로 돌아갈 수 있어요."
+  "versionName": "0.18.65",
+  "versionCode": 84,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.65/YGOClassicExpedition-0.18.65-arm64.apk",
+  "sizeBytes": 488680073,
+  "sha256": "73859d0f5f8a8d8657baa335ad41f8fe363da2c04233bae76afbb89348fdc4d5",
+  "releaseNotes": "에일리언·파충류 카드 23종을 추가했어요.\nAI가 A 카운터의 전투 약화, 컨트롤 탈취, 제거 효과를 고려해요."
 }
