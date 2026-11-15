@@ -60,6 +60,18 @@ test('old deck aliases find the merged support tag and effect roles stay indepen
  assert.equal(categoryMatcher054(categories)([effect],[cost]),false);
 });
 
+test('spell immunity, spell negation and effect targeting protection have independent filters',()=>{
+ const immune='면역-마법',negate='무효-마법',protect='보호-효과 대상 제외';
+ const categories=[immune,negate,protect],groups=[{id:'immune',name:'면역',categories:[immune]},
+  {id:'negate',name:'무효',categories:[negate]},{id:'protect',name:'보호',categories:[protect]}];
+ const m=mountPicker({categories,groups});
+ assert.match(m.root.textContent,/특정 효과를 받지 않거나/);assert.match(m.root.textContent,/발동된 효과를 무효/);
+ assert.match(m.root.textContent,/효과의 대상 지정과 파괴/);
+ choose(m.root,immune);assert.equal(checkbox(m.root,negate).checked,false);
+ const match=categoryMatcher054(categories);
+ assert.equal(match([negate],[immune]),false);assert.equal(match([protect],[negate]),false);
+});
+
 test('removing a selected chip restores focus after a synchronous owner render replaces the picker',()=>{
  const document=new Document041(),memory={};let current;
  const render=selected=>{const next=createCategoryPicker054({document,categories:['덱-백룡'],selected,memory,onChange:render});document.body.replaceChildren(next.root);current=next;};

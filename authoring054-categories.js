@@ -6,7 +6,10 @@ const ORDER054=['덱','면역','발동','소환','지원','파괴','효과'];
 const GROUP_HELP={
   발동:'발동할 때 내는 코스트와 효과의 발동 조건을 찾습니다.',
   효과:'효과가 해결될 때 실제로 일어나는 일을 찾습니다.',
-  지원:'관련 카드군, 종족, 소환 방식으로 카드를 찾습니다.'
+  지원:'관련 카드군, 속성, 종족, 소환 방식으로 카드를 찾습니다.',
+  면역:'특정 효과를 받지 않거나, 전투 파괴와 소환 무효를 막는 분류입니다.',
+  무효:'선언된 소환·공격이나 발동된 효과를 무효로 하는 분류입니다.',
+  보호:'효과의 대상 지정과 파괴를 막거나, 피해를 줄이거나 파괴를 대신하는 분류입니다.'
 };
 const key054=value=>String(value??'').normalize('NFKC').toLocaleLowerCase('ko').replace(/\s+/g,'');
 export function groupCategories054(categories=[],selected=[],customGroups,orderIds){
