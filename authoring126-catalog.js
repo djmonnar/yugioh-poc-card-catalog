@@ -203,6 +203,7 @@ const entries = {
 export function cardMetadata126(sourceId,identityKey) {
   const entry = Object.hasOwn(entries,sourceId) ? entries[sourceId] : null;
   if (entry && entry[0] === identityKey)
-    return {image:'assets/native126/cards/' + sourceId + '.jpg',searchAliases:entry[1]};
+    return {image:'assets/native126/cards/' + sourceId + '.jpg',searchAliases:entry[1],
+      ...(Number(sourceId)===2845?{maximumSpeedLimit:1}:{})};
   return cardMetadata125(sourceId,identityKey);
 }

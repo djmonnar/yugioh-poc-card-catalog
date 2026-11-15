@@ -323,7 +323,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     body.append(limitBadges(card,{includeUnrestricted:true}),description);
     if(currentState.canEdit){
       const forms=el('div',null,'au-form-grid'),allowed=(currentState.bootstrap?.capabilities?.entities?.card_setting?.fields?.rarity?.values??['N','R','SR','UR']).filter(r=>r!=='L'||card.source_id<2390),rarities=[...new Set([...allowed,...(card.source_id<2390?['L']:[]),card.rarity])];
-      const maximumNormalLimit=cardMetadata126(card.source_id,card.identity_key)?.maximumNormalLimit;
+      const {maximumNormalLimit,maximumSpeedLimit}=cardMetadata126(card.source_id,card.identity_key)??{};
       const effectToken=maximumNormalLimit===0,stockReadOnly=card.rarity==='L'||effectToken;
       forms.append(field('카드 이름',card.name_ko,{type:'string',maxLength:100},v=>cardPatch('card_display',card,{name:v}),`card.${card.source_id}.name`),field('영문 이름',card.name_en,{type:'string',maxLength:160},v=>cardPatch('card_display',card,{name_english:v}),`card.${card.source_id}.english`),field('카드 설명',card.description_ko,{type:'string',multiline:true,maxLength:12000},v=>cardPatch('card_display',card,{description:v}),`card.${card.source_id}.description`),field('등급',card.rarity,{type:'string',enum:rarities,readOnlyValues:card.source_id<2390?[]:rarities.filter(v=>!allowed.includes(v))},v=>cardPatch('card_setting',card,v==='L'?{rarity:v,stock:false,draw_enabled:false}:{rarity:v}),`card.${card.source_id}.rarity`),field('상점 판매',card.stock,{type:'boolean',readOnly:stockReadOnly},v=>cardPatch('card_setting',card,{stock:v}),`card.${card.source_id}.stock`),field('전투 보상',card.draw_enabled!==false,{type:'boolean',readOnly:stockReadOnly},v=>cardPatch('card_setting',card,{draw_enabled:v}),`card.${card.source_id}.draw`));body.append(forms,el('small','설명을 바꾸어도 카드의 실제 효과 처리 규칙은 바뀌지 않습니다.','au-hint'));
       if(!effectToken){
@@ -333,6 +333,13 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
           const admitted=normal.enum.map((value,index)=>({value,label:normal.enumNames[index]})).filter(({value})=>value==null||value<=maximumNormalLimit);
           normal.enum=admitted.map(option=>option.value);
           normal.enumNames=admitted.map(option=>option.label);
+        }
+        const speed=schema.properties.speed_limit;
+        if(maximumSpeedLimit!=null&&speed?.enum){
+          const admitted=speed.enum.map((value,index)=>({value,label:speed.enumNames[index]}))
+            .filter(({value})=>value==null||value>=0&&value<=maximumSpeedLimit);
+          speed.enum=admitted.map(option=>option.value);
+          speed.enumNames=admitted.map(option=>option.label);
         }
         schemaForm(limits,schema,{normal_limit:card.normal_limit_setting,speed_limit:card.speed_limit_setting},fields=>cardPatch('card_limit',card,fields),`card.${card.source_id}.limit`);body.append(limits);
       }

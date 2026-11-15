@@ -43,13 +43,16 @@ export function validateAuthoringChange066(snapshot,type,id,fields,{operation='p
   const cards=Array.isArray(raw)?raw:[],source=card=>card.source_id??card.sourceId??card.internal_id,slot=card=>card.web_slot??card.slot,extra=card=>Boolean((card.native_type??card.type??0)&(0x40|0x2000|0x800000|0x4000000)),playable=card=>card&&card.playable!==false&&!card.token&&!card.special;
   const bySource=new Map(cards.map(card=>[source(card),card])),bySlot=new Map(cards.map(card=>[slot(card),card]));
   if(type==='card_limit'||type==='card_setting'){
-    const card=bySource.get(Number(id)),maximum=cardMetadata126(source(card??{}),card?.identity_key)?.maximumNormalLimit;
+    const card=bySource.get(Number(id)),metadata=cardMetadata126(source(card??{}),card?.identity_key),maximum=metadata?.maximumNormalLimit;
     if(maximum===0){
       if(type==='card_limit')check(!own(fields,'normal_limit')&&!own(fields,'speed_limit'),Object.keys(fields),'효과로 생성되는 토큰에는 덱 제한을 설정할 수 없습니다.');
       else check(fields.stock!==true&&fields.draw_enabled!==true,['stock','draw_enabled'],'효과로 생성되는 토큰은 판매하거나 보상으로 지급할 수 없습니다.');
     }else if(type==='card_limit'&&maximum!=null&&fields.normal_limit!=null){
       check(fields.normal_limit<=maximum,['normal_limit'],`이 카드는 덱에 최대 ${maximum}장까지만 넣을 수 있습니다.`);
     }
+    if(type==='card_limit'&&metadata?.maximumSpeedLimit!=null&&fields.speed_limit!=null)
+      check(fields.speed_limit>=0&&fields.speed_limit<=metadata.maximumSpeedLimit,['speed_limit'],
+        `이 카드는 스피드 제한 ${metadata.maximumSpeedLimit}까지 설정할 수 있습니다.`);
   }
   if(type==='card_annotation'){
     check(Array.isArray(content.tags)&&content.tags.length<=(defs.tags?.max??12),['tags'],`카테고리는 ${defs.tags?.max??12}개까지 선택할 수 있습니다.`);

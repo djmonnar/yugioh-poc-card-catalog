@@ -10,6 +10,7 @@ import {changeDeckCard039,normalizeCatalog039} from '../authoring039-panels.js';
 import {catalogAdditions049} from '../authoring049-recent.js';
 import {additionThemes067} from '../authoring067-themes.js';
 import {cardQueryMatches091} from '../authoring091-search.js';
+import {validateAuthoringChange066} from '../authoring066-validation.js';
 import {fixture041} from './authoring041-test-dom.js';
 
 const dataPath=new URL('../data/native-expansion126.json',import.meta.url);
@@ -47,6 +48,11 @@ test('New cards keep exact identity, category, aliases, image and deck restricti
   }
   const rainbow=cards.find(card=>card.source_id===2845);
   assert(cardQueryMatches091(rainbow,'레인보우라이프'));
+  const snapshot={bootstrap:{catalog:sourceCards,capabilities:{entities:{card_limit:{
+    fields:{speed_limit:{type:'nullable_integer',min:-1,max:3}}
+  }}}}};
+  for(const speed_limit of [-1,2,3])assert.throws(()=>validateAuthoringChange066(snapshot,'card_limit','2845',{speed_limit}),/제한 1/);
+  for(const speed_limit of [null,0,1])assert.doesNotThrow(()=>validateAuthoringChange066(snapshot,'card_limit','2845',{speed_limit}));
   const empty={banlist_enabled:true,main:[],extra:[]};
   const one=changeDeckCard039(empty,rainbow,1,cards);
   assert.throws(()=>changeDeckCard039(one,rainbow,1,cards),/제한 1/);
