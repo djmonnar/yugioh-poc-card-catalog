@@ -13,8 +13,9 @@ import {ADDITION_BATCHES122} from './authoring122-batch-data.js?v=20261115-flip-
 
 import {ADDITION_BATCHES125} from './authoring125-batch-data.js?v=20261115-alien-reptiles';
 import {ADDITION_BATCHES126} from './authoring126-batch-data.js?v=20261115-exodia-trap-monsters';
+import {ADDITION_BATCHES130} from './authoring130-batch-data.js?v=20261115-roid-vehicles';
 
-export function additionMetadata067(key,registry=[...ADDITION_BATCHES067,...ADDITION_BATCHES081,...ADDITION_BATCHES084,...ADDITION_BATCHES088,...ADDITION_BATCHES090,...ADDITION_BATCHES093,...ADDITION_BATCHES099,...ADDITION_BATCHES103,...ADDITION_BATCHES109,...ADDITION_BATCHES120,...ADDITION_BATCHES122,...ADDITION_BATCHES125,...ADDITION_BATCHES126]){return registry.find(batch=>batch.key===key)??{key,label:`추가 묶음 ${key.replace(/^Cards/,'')}`,themes:[]};}
+export function additionMetadata067(key,registry=[...ADDITION_BATCHES067,...ADDITION_BATCHES081,...ADDITION_BATCHES084,...ADDITION_BATCHES088,...ADDITION_BATCHES090,...ADDITION_BATCHES093,...ADDITION_BATCHES099,...ADDITION_BATCHES103,...ADDITION_BATCHES109,...ADDITION_BATCHES120,...ADDITION_BATCHES122,...ADDITION_BATCHES125,...ADDITION_BATCHES126,...ADDITION_BATCHES130]){return registry.find(batch=>batch.key===key)??{key,label:`추가 묶음 ${key.replace(/^Cards/,'')}`,themes:[]};}
 
 // A theme is registration metadata. User-edited category tags stay independent.
 export function additionThemes067(cards,scope,index){
