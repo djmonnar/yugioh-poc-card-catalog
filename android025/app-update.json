@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.68",
-  "versionCode": 87,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.68/YGOClassicExpedition-0.18.68-arm64.apk",
-  "sizeBytes": 511351530,
-  "sha256": "f0193416e764845dcdd230b6c1728f74448e4d40a52979592cdd2bb2bdfd02ec",
-  "releaseNotes": "AI가 천둥과 화톳불로 카드를 찾고, 천둥의 소환 제한을 고려해 가져올 카드를 고릅니다.\nAI가 지속 파괴 내성을 판단합니다. 듀얼 기록에 무효와 파괴 실패 사유가 표시됩니다."
+  "versionName": "0.18.69",
+  "versionCode": 88,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.69/YGOClassicExpedition-0.18.69-arm64.apk",
+  "sizeBytes": 511399802,
+  "sha256": "0c8424482ef1a4033134c2d2260b2efc14d7352da2af56c33a6321bb7ad65393",
+  "releaseNotes": "듀얼 중 카드 상세에서 공격력과 수비력의 변동을 확인할 수 있습니다.\n공개된 카드의 보호 효과는 필드와 카드 상세에 표시됩니다."
 }
