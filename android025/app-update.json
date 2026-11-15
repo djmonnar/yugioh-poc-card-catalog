@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.72",
-  "versionCode": 91,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.72/YGOClassicExpedition-0.18.72-arm64.apk",
-  "sizeBytes": 532059334,
-  "sha256": "36178d9cc41016c11dc4912de50ddc28a578fb91d06ff96dfdf80b15c7512e48",
-  "releaseNotes": "신비한 차고의 파괴 후 특수 소환을 AI가 계산합니다.\n싸이크론·더블 싸이크론·메가로이드 시티로 유리한 파괴 대상을 고릅니다."
+  "versionName": "0.18.73",
+  "versionCode": 92,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.73/YGOClassicExpedition-0.18.73-arm64.apk",
+  "sizeBytes": 532124930,
+  "sha256": "2f5950b012117ec7ac8f231d4770ed86648e8a67d5cdaee3885bb500bf2941c7",
+  "releaseNotes": "묘지기의 마법이 여러 장이면 같은 공격 비용을 자동으로 처리합니다.\n공격 비용으로 덱에서 묘지로 간 카드와 원인을 표시합니다.\nAI가 7 카드와 다른 장착 마법의 대상과 효과를 비교하고, 용기사 가이아 등 일반 융합 소재를 인식합니다.\n전투 화면에서 상대 엑스트라 덱의 남은 장수를 볼 수 있습니다."
 }
