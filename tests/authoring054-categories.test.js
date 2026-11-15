@@ -46,6 +46,20 @@ test('name and legacy ID filters share one category while AND still requires eve
  assert.equal(matches(['category-blue','protected'],['덱-백룡','면역-파괴']),true);assert.equal(matches(['덱-백룡','면역-파괴'],['old-blue','protected']),true);assert.equal(matches(['category-blue'],['덱-백룡','면역-파괴']),false);assert.equal(matches(['category-blue'],['전혀 다른 분류']),false);
 });
 
+test('old deck aliases find the merged support tag and effect roles stay independent',()=>{
+ const cost='발동-묘지로 보내기',effect='효과-묘지로 보내기',support='지원-푸른눈';
+ const groups=[{id:'activation',name:'발동',categories:[cost]},{id:'effect',name:'효과',categories:[effect]},{id:'support',name:'지원',categories:[support]}];
+ const categories=[cost,effect,{name:support,aliases:['덱-푸른눈']}];
+ const m=mountPicker({categories,groups});
+ const search=field041(m.root,'카테고리 검색');search.value='덱-푸른눈';search.fire('input');
+ assert.equal(m.root.querySelectorAll('input').filter(node=>node.type==='checkbox').length,1);
+ choose(m.root,support);assert.deepEqual(m.selected(),[support]);
+ search.value='묘지로 보내기';search.fire('input');
+ assert.match(m.root.textContent,/발동할 때 내는 코스트/);assert.match(m.root.textContent,/효과가 해결될 때/);
+ choose(m.root,cost);assert.equal(checkbox(m.root,effect).checked,false);
+ assert.equal(categoryMatcher054(categories)([effect],[cost]),false);
+});
+
 test('removing a selected chip restores focus after a synchronous owner render replaces the picker',()=>{
  const document=new Document041(),memory={};let current;
  const render=selected=>{const next=createCategoryPicker054({document,categories:['덱-백룡'],selected,memory,onChange:render});document.body.replaceChildren(next.root);current=next;};

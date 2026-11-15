@@ -1,11 +1,20 @@
 // Category membership belongs to authoring groups. Card tags remain flat,
 // so showing one category in two groups never adds a second tag to a card.
 import {effectiveCategoryGroupOrder056} from './authoring056-group-order.js?v=20261031-056';
+import {legacyCategoryAliases131} from './authoring131-category-aliases.js?v=20261116-card-taxonomy';
 const ORDER054=['덱','면역','발동','소환','지원','파괴','효과'];
+const GROUP_HELP={
+  발동:'발동할 때 내는 코스트와 효과의 발동 조건을 찾습니다.',
+  효과:'효과가 해결될 때 실제로 일어나는 일을 찾습니다.',
+  지원:'관련 카드군, 종족, 소환 방식으로 카드를 찾습니다.'
+};
 const key054=value=>String(value??'').normalize('NFKC').toLocaleLowerCase('ko').replace(/\s+/g,'');
 export function groupCategories054(categories=[],selected=[],customGroups,orderIds){
   const known=new Map();
-  for(const source of categories){const row=typeof source==='string'?{name:source}:source,name=row?.name;if(typeof name!=='string'||!name.trim()||known.has(name))continue;known.set(name,{name,aliases:[name,...(row.aliases??[]).filter(value=>typeof value==='string'&&value)].filter((value,index,all)=>all.indexOf(value)===index)});}
+  for(const source of categories){const row=typeof source==='string'?{name:source}:source,name=row?.name;if(typeof name!=='string'||!name.trim()||known.has(name))continue;
+    const aliases=[name,...(row.aliases??[]),...(legacyCategoryAliases131.get(name)??[])];
+    known.set(name,{name,aliases:[...new Set(aliases.filter(value=>typeof value==='string'&&value))]});
+  }
   const aliases=new Set([...known.values()].flatMap(row=>row.aliases));
   // Archived/unresolved tags remain visible and removable, never silently
   // discarded merely because they are absent from the active category list.
@@ -62,10 +71,11 @@ export function createCategoryPicker054({document:doc=globalThis.document,catego
   function renderGroups(){
     groupsRoot.replaceChildren();controls=[];const query=key054(search.value);let matches=0;
     for(const group of groups){
-      const groupMatches=query&&key054(group.label).includes(query),found=group.items.filter(row=>!query||groupMatches||key054(row.name).includes(query));if(!found.length&&(query&&!groupMatches||group.items.length))continue;matches++;
+      const groupMatches=query&&key054(group.label).includes(query),found=group.items.filter(row=>!query||groupMatches||row.aliases.some(alias=>key054(alias).includes(query)));if(!found.length&&(query&&!groupMatches||group.items.length))continue;matches++;
       const details=el('details',null,'au-category-group054'),summary=el('summary'),label=el('span',group.label),count=el('small');summary.dataset.group=group.key;summary.append(label,count);details.append(summary);details.open=query.length>0||memory.open.has(group.key);
       const searchExpanded=query.length>0;details.ontoggle=()=>{if(!searchExpanded){if(details.open)memory.open.add(group.key);else memory.open.delete(group.key);}};
       const options=el('div',null,'au-category-options054');
+      if(found.length&&Object.hasOwn(GROUP_HELP,group.label))options.append(el('p',GROUP_HELP[group.label],'au-category-help054'));
       for(const item of found){const wrap=el('label',null,'au-category-option054'),input=el('input');input.type='checkbox';input.checked=checked(item);input.setAttribute('aria-label',item.name);input.dataset.editKey=`${editKey}.tag.${group.key}.${item.name}`;input.onchange=()=>toggle(item,input.checked);bindControl(input);const name=el('span',item.label);name.title=item.name;wrap.append(input,name);options.append(wrap);controls.push({input,item});}
       if(!found.length)options.append(el('p','아직 포함된 카테고리가 없습니다.','au-category-empty054'));
       details.append(options);groupsRoot.append(details);
