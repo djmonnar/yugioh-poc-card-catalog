@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.67",
-  "versionCode": 86,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.67/YGOClassicExpedition-0.18.67-arm64.apk",
-  "sizeBytes": 511347818,
-  "sha256": "056d0fbb24caccb3679f559a8824d6f76095a1561600612869eb2b403316c3ea",
-  "releaseNotes": "마법·함정 카드를 놓을 칸을 고르는 중에 취소하고 원래 선택지로 돌아갈 수 있습니다.\n아직 필드에 놓지 않은 카드가 패에 남고, 카드 세트 위치를 다시 고를 수 있습니다."
+  "versionName": "0.18.68",
+  "versionCode": 87,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.68/YGOClassicExpedition-0.18.68-arm64.apk",
+  "sizeBytes": 511351530,
+  "sha256": "f0193416e764845dcdd230b6c1728f74448e4d40a52979592cdd2bb2bdfd02ec",
+  "releaseNotes": "AI가 천둥과 화톳불로 카드를 찾고, 천둥의 소환 제한을 고려해 가져올 카드를 고릅니다.\nAI가 지속 파괴 내성을 판단합니다. 듀얼 기록에 무효와 파괴 실패 사유가 표시됩니다."
 }
