@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.66",
-  "versionCode": 85,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.66/YGOClassicExpedition-0.18.66-arm64.apk",
-  "sizeBytes": 511340722,
-  "sha256": "ed30053d43857081634c0f6b9ef528ae5f97dd0ffe00286f1fbe404dde1af554",
-  "releaseNotes": "리시드와 카이바 고자부로가 등장합니다. 리시드는 원본 영어 음성과 한국어 자막을 사용하고, 고자부로는 엑조디아 네크로스 전용 컷신과 효과음이 있습니다.\n엑조디아·아포피스·셀케트 지원 카드 28종과 레인보우 라이프의 스피드 제한 1을 적용했습니다.\n함정 몬스터가 발동할 타이밍과 표시 형식을 AI가 판단하고, 달의 서와 사이코 쇼커가 적용될 때 실제 존 이동을 확인할 수 있습니다."
+  "versionName": "0.18.67",
+  "versionCode": 86,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.67/YGOClassicExpedition-0.18.67-arm64.apk",
+  "sizeBytes": 511347818,
+  "sha256": "056d0fbb24caccb3679f559a8824d6f76095a1561600612869eb2b403316c3ea",
+  "releaseNotes": "마법·함정 카드를 놓을 칸을 고르는 중에 취소하고 원래 선택지로 돌아갈 수 있습니다.\n아직 필드에 놓지 않은 카드가 패에 남고, 카드 세트 위치를 다시 고를 수 있습니다."
 }
