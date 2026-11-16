@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.77",
-  "versionCode": 96,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.77/YGOClassicExpedition-0.18.77-arm64.apk",
-  "sizeBytes": 592325228,
-  "sha256": "bd951bcf74c0acd657318b0af13edd667fd75dad55996d5a979ab10428d4928e",
-  "releaseNotes": "AI가 육망성의 저주로 상대 몬스터의 공격과 표시 변경을 막도록 판단을 개선했습니다."
+  "versionName": "0.18.78",
+  "versionCode": 97,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.78/YGOClassicExpedition-0.18.78-arm64.apk",
+  "sizeBytes": 592362504,
+  "sha256": "b6f7cfe6cc51543ea43c0e14e4313997dcb99e8bb1c7125eaa6417a08ebf9366",
+  "releaseNotes": "얼루어 퀸, 프레데터 플랜츠, 에일리언의 카드 연계와 장착·탈취 효과를 AI가 더 잘 사용하도록 개선했습니다."
 }
