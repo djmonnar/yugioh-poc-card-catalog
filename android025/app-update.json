@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.80",
-  "versionCode": 99,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.80/YGOClassicExpedition-0.18.80-arm64.apk",
-  "sizeBytes": 592378764,
-  "sha256": "89055cad1723934243a1445c2cbfd765da5f7e7d8a2340aa6abc0cfd576a2bff",
-  "releaseNotes": "환창의 미세라사우루스가 보호하는 공룡족에 보호 표시가 뜹니다.\n내 메인 페이즈에는 궁극의 전도 티라노를 카드에서 직접 발동하기 쉬워집니다."
+  "versionName": "0.18.81",
+  "versionCode": 100,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.81/YGOClassicExpedition-0.18.81-arm64.apk",
+  "sizeBytes": 592381612,
+  "sha256": "422cbc8f492b073af0fae3eaf59a31c52c9b62fcd70c45a98eaf8db93cbd4514",
+  "releaseNotes": "AI가 릴리스할 몬스터의 반전 효과로 이득을 볼 수 있으면 먼저 사용합니다."
 }
