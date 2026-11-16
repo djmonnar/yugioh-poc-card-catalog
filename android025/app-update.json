@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.79",
-  "versionCode": 98,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.79/YGOClassicExpedition-0.18.79-arm64.apk",
-  "sizeBytes": 592370856,
-  "sha256": "c8accd2d78bc6df85f56fd336ab15b92e53c4154b2c15816cf12aea81ee49707",
-  "releaseNotes": "AI가 쥬락 임팩트로 양쪽 필드가 받을 피해를 비교하고, 데블리언 송으로 상대 레벨을 낮출 때 생기는 이득을 계산합니다."
+  "versionName": "0.18.80",
+  "versionCode": 99,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.80/YGOClassicExpedition-0.18.80-arm64.apk",
+  "sizeBytes": 592378764,
+  "sha256": "89055cad1723934243a1445c2cbfd765da5f7e7d8a2340aa6abc0cfd576a2bff",
+  "releaseNotes": "환창의 미세라사우루스가 보호하는 공룡족에 보호 표시가 뜹니다.\n내 메인 페이즈에는 궁극의 전도 티라노를 카드에서 직접 발동하기 쉬워집니다."
 }
