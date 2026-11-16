@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.81",
-  "versionCode": 100,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.81/YGOClassicExpedition-0.18.81-arm64.apk",
-  "sizeBytes": 592381612,
-  "sha256": "422cbc8f492b073af0fae3eaf59a31c52c9b62fcd70c45a98eaf8db93cbd4514",
-  "releaseNotes": "AI가 릴리스할 몬스터의 반전 효과로 이득을 볼 수 있으면 먼저 사용합니다."
+  "versionName": "0.18.82",
+  "versionCode": 101,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.82/YGOClassicExpedition-0.18.82-arm64.apk",
+  "sizeBytes": 627424420,
+  "sha256": "d6509b9ce99129a3bc7d059c4078f2d4f5b5aec5e358a069ff3f85d2df195907",
+  "releaseNotes": "해황·머메일, 가루라·도로곤 등 새 카드 22장을 도감과 덱 편집에 추가했습니다.\n사이버 드래곤 등 몬스터 7종의 소환 연출과 마법·함정 14종의 발동 연출을 추가했습니다."
 }
