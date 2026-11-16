@@ -267,6 +267,10 @@
 .au-category-empty054{font-size:13px;line-height:1.7;color:var(--au-muted);margin:8px 0}
 .au-filter-details .au-category-editor054{grid-column:1/-1;margin:0}
 .au-category-picker054[data-mode=filter] .au-category-groups054{grid-template-columns:1fr}
+.au-category-modes054{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,8rem),1fr));gap:8px;max-width:22rem;margin:0 0 10px}
+.au-category-modes054>.au-category-option054{border:1px solid var(--au-line)}
+.au-category-modes054>.au-category-option054:has(input:checked){border-color:var(--au-cyan)}
+.au-category-modes054 input[type=radio]{width:18px;height:18px;min-height:18px;margin:0;padding:0;accent-color:var(--au-cyan)}
 @media(max-width:700px){.au-category-groups054{grid-template-columns:1fr}.au-form-group.au-category-editor054:has(input[type=checkbox]){padding:12px}.au-category-selected054 button{min-height:44px}.au-category-group054>summary{min-height:50px}.au-category-option054{min-height:46px}}
 
 /* 055: group editing stays inline, while its member list is a bounded selector. */

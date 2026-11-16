@@ -45,16 +45,21 @@ export function groupCategories054(categories=[],selected=[],customGroups,orderI
 export function categoryMatcher054(categories=[]){
   const rows=groupCategories054(categories).flatMap(group=>group.items),names=new Map(rows.map(row=>[row.name,row.name]));
   for(const row of rows)for(const alias of row.aliases)if(!names.has(alias))names.set(alias,row.name);
-  return (tags=[],selected=[])=>{const known=new Set(tags.map(tag=>names.get(tag)??tag));return selected.every(tag=>known.has(names.get(tag)??tag));};
+  return (tags=[],selected=[],mode='all')=>{
+    if(!selected.length)return true;
+    const known=new Set(tags.map(tag=>names.get(tag)??tag));
+    const hasTag=tag=>known.has(names.get(tag)??tag);
+    return mode==='any'?selected.some(hasTag):selected.every(hasTag);
+  };
 }
 
 export function createCategoryPicker054({document:doc=globalThis.document,categories=[],groups:customGroups,groupOrder,selected=[],onChange=()=>{},onError=()=>{},memory={},editKey='categories',mode='edit',bindControl=()=>{}}={}){
   const el=(tag,text,cls)=>{const node=doc.createElement(tag);if(text!=null)node.textContent=String(text);if(cls)node.className=cls;return node;};
   const root=el('div',null,'au-category-picker054');root.dataset.mode=mode;
   const search=el('input');search.type='search';search.placeholder='카테고리 찾기';search.setAttribute('aria-label',mode==='filter'?'카테고리 필터 검색':'카테고리 검색');search.dataset.editKey=`${editKey}.search`;search.value=memory.query??'';bindControl(search);
-  const help=el('p',mode==='filter'?'선택한 카테고리를 모두 포함한 카드를 찾습니다.':'묶음을 펼쳐 선택하세요. 같은 카테고리는 어느 묶음에서 골라도 함께 선택됩니다.','au-category-help054');
+  if(mode!=='filter')root.append(el('p','묶음을 펼쳐 선택하세요. 같은 카테고리는 어느 묶음에서 골라도 함께 선택됩니다.','au-category-help054'));
   const selectedHead=el('p',null,'au-category-selected-heading054'),selectedList=el('div',null,'au-category-selected054'),groupsRoot=el('div',null,'au-category-groups054'),empty=el('p','일치하는 카테고리가 없습니다.','au-category-empty054');
-  selectedHead.setAttribute('role','status');selectedHead.setAttribute('aria-live','polite');selectedList.setAttribute('aria-label','선택한 카테고리');root.append(help,search,selectedHead,selectedList,groupsRoot,empty);
+  selectedHead.setAttribute('role','status');selectedHead.setAttribute('aria-live','polite');selectedList.setAttribute('aria-label','선택한 카테고리');root.append(search,selectedHead,selectedList,groupsRoot,empty);
   let values=new Set(selected),groups=groupCategories054(categories,selected,customGroups,groupOrder),controls=[],generation=0;
   if(!(memory.open instanceof Set))memory.open=new Set();
   const checked=row=>row.aliases.some(alias=>values.has(alias));

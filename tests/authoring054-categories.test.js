@@ -44,6 +44,9 @@ test('category names render as plain text and aliases never become a second chec
 test('name and legacy ID filters share one category while AND still requires every selected group',()=>{
  const matches=categoryMatcher054([{name:'덱-백룡',aliases:['category-blue','old-blue']},{name:'면역-파괴',aliases:['protected']}]);
  assert.equal(matches(['category-blue','protected'],['덱-백룡','면역-파괴']),true);assert.equal(matches(['덱-백룡','면역-파괴'],['old-blue','protected']),true);assert.equal(matches(['category-blue'],['덱-백룡','면역-파괴']),false);assert.equal(matches(['category-blue'],['전혀 다른 분류']),false);
+ assert.equal(matches(['category-blue'],['덱-백룡','면역-파괴'],'any'),true);
+ assert.equal(matches(['category-blue'],['protected','전혀 다른 분류'],'any'),false);
+ assert.equal(matches([],[],'any'),true);
 });
 
 test('old deck aliases find the merged support tag and effect roles stay independent',()=>{
@@ -82,6 +85,7 @@ function mountPanels(t,{canEdit=true}={}){
  const state=fixture041(),document=new Document041(),root=document.createElement('main'),writes=[];state.canEdit=canEdit;document.body.append(root);
  for(const name of ['덱-백룡','효과-공격력 상승','면역-파괴'])state.entities.push({entity_type:'category',entity_id:name,version:1,content:{name},state:'saved',issues:[]});
  const blue=state.bootstrap.catalog.cards.find(card=>card.source_id===0);blue.categories=['덱-백룡','면역-파괴'];
+ const elf=state.bootstrap.catalog.cards.find(card=>card.source_id===1);elf.categories=['면역-파괴'];
  const panels=createAuthoringPanels039({document,onChange:(...args)=>writes.push(args),onError:error=>{throw error;}});panels.render('cards',root,state);t.after(()=>panels.destroy());return {state,document,root,writes,panels};
 }
 
@@ -93,10 +97,27 @@ test('card detail edits emit the existing typed annotation patch and retain inde
  const next=m.document.body.querySelector('.au-card-detail').querySelector('.au-category-picker054');assert.equal(next.querySelector('details').open,true);assert.equal(checkbox(next,'효과-공격력 상승').checked,true);assert.equal(checkbox(next,'면역-파괴').checked,false);
 });
 
-test('public category filters combine groups with AND semantics, remove selected chips and reset without a DB write',t=>{
- const m=mountPanels(t,{canEdit:false});choose(m.root,'덱-백룡');choose(m.root,'면역-파괴');assert.match(m.root.querySelector('.au-card-results-summary').textContent,/^1종/);assert.equal(m.writes.length,0);
- button041(m.root,'덱-백룡 ×').click();assert.equal(checkbox(m.root,'덱-백룡').checked,false);assert.equal(checkbox(m.root,'면역-파괴').checked,true);
- button041(m.root,'필터 초기화').click();assert.equal(checkbox(m.root,'면역-파괴').checked,false);assert.equal(m.writes.length,0);
+test('public category mode switches results, preserves chosen categories and resets without a DB write',t=>{
+ const m=mountPanels(t,{canEdit:false}),summary=()=>m.root.querySelector('.au-card-results-summary').textContent;
+ const all=field041(m.root,'모두 포함'),any=field041(m.root,'하나라도 포함'),unfiltered=summary();
+ assert.equal(all.checked,true);
+ choose(m.root,'덱-백룡');choose(m.root,'면역-파괴');
+ assert.match(summary(),/^1종/);
+ any.checked=true;any.fire('change');
+ assert.equal(all.checked,false);assert.match(summary(),/^2종/);
+ assert.equal(checkbox(m.root,'덱-백룡').checked,true);
+ const search=field041(m.root,'카드 검색');search.value='홀리 엘프';search.fire('input');
+ assert.match(summary(),/^1종/);
+ all.checked=true;all.fire('change');
+ assert.match(summary(),/^0종/);
+ button041(m.root,'덱-백룡 ×').click();
+ assert.equal(checkbox(m.root,'덱-백룡').checked,false);
+ assert.equal(checkbox(m.root,'면역-파괴').checked,true);assert.match(summary(),/^1종/);
+ any.checked=true;any.fire('change');
+ button041(m.root,'필터 초기화').click();
+ assert.equal(all.checked,true);assert.equal(any.checked,false);
+ assert.equal(checkbox(m.root,'면역-파괴').checked,false);
+ assert.equal(summary(),unfiltered);assert.equal(m.writes.length,0);
 });
 
 test('the actual catalog finds legacy category-ID annotations under the named checkbox without rewriting stored tags',t=>{
