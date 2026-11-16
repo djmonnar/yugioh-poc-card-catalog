@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.78",
-  "versionCode": 97,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.78/YGOClassicExpedition-0.18.78-arm64.apk",
-  "sizeBytes": 592362504,
-  "sha256": "b6f7cfe6cc51543ea43c0e14e4313997dcb99e8bb1c7125eaa6417a08ebf9366",
-  "releaseNotes": "얼루어 퀸, 프레데터 플랜츠, 에일리언의 카드 연계와 장착·탈취 효과를 AI가 더 잘 사용하도록 개선했습니다."
+  "versionName": "0.18.79",
+  "versionCode": 98,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.79/YGOClassicExpedition-0.18.79-arm64.apk",
+  "sizeBytes": 592370856,
+  "sha256": "c8accd2d78bc6df85f56fd336ab15b92e53c4154b2c15816cf12aea81ee49707",
+  "releaseNotes": "AI가 쥬락 임팩트로 양쪽 필드가 받을 피해를 비교하고, 데블리언 송으로 상대 레벨을 낮출 때 생기는 이득을 계산합니다."
 }
