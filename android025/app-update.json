@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.84",
-  "versionCode": 103,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.84/YGOClassicExpedition-0.18.84-arm64.apk",
-  "sizeBytes": 650803312,
-  "sha256": "9333aa1685aaa82620df63f4fa5e984e6219e194366819326f07966d69f240ab",
-  "releaseNotes": "카드 여러 장을 한 선택창에서 고르고 확정할 수 있습니다. 보스 바로 앞 길에 휴식 칸을 배치했습니다.\n데블도우저의 소환을 반복해서 취소하던 문제와 레이어 와이어의 발동 판단을 고쳤습니다. 레벨 몬스터의 교대 소환과 크리보 계열의 패 방어 판단을 조정했습니다."
+  "versionName": "0.18.85",
+  "versionCode": 104,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.85/YGOClassicExpedition-0.18.85-arm64.apk",
+  "sizeBytes": 650892972,
+  "sha256": "d689ba452c14758846781f5a63b98760dbf1d4fb7d5bffe8ed34a31ab5dc27b5",
+  "releaseNotes": "초진화의 고치와 완전체 그레이트 인섹트, 무장봉기, 트랜스턴의 AI 발동 및 선택 판단을 조정했습니다."
 }
