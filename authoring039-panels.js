@@ -46,13 +46,13 @@ export function deckDisplayName039(state,deck,displayTitle){const all=entities03
 export function sourceId039(card){const id=card?.source_id??card?.sourceId??card?.internal_id;return Number.isSafeInteger(id)&&id>=0?id:null;}
 export function fieldValue039(value,path,next){const parts=Array.isArray(path)?path:[path];if(!parts.length||parts.some(k=>['__proto__','prototype','constructor'].includes(k)))throw Error('편집할 항목을 확인해 주세요.');const result=clone(value),first=parts[0];let node=result;for(const k of parts.slice(0,-1)){if(!node[k]||typeof node[k]!=='object'||Array.isArray(node[k]))node[k]={};node=node[k];}node[parts.at(-1)]=next;return {[first]:result[first]};}
 import {cardMetadata109} from './authoring109-catalog.js?v=20261114-109';
-import {cardMetadata144} from './authoring144-catalog.js?v=20261117-insects';
+import {cardMetadata152} from './authoring152-catalog.js?v=20261117-ritual-dark-magician';
 
 export function normalizeCatalog039(state){
   const boot=state.bootstrap??{},game=state.gamePayload??boot.game_payload??boot.game??{},raw=boot.catalog?.cards??boot.catalog??game.catalog?.cards??game.catalog??[],rows=Array.isArray(raw)?raw:[],all=entities039(state),lookup=new Map();
   for(const e of all){const id=sourceId039(e.content)??(e.entity_type.startsWith('card_')&&/^\d+$/.test(e.entity_id)?Number(e.entity_id):null);if(id!==null)lookup.set(entityKey039(e.entity_type,id),e.content);}
   const normalized=rows.map(raw=>{const id=sourceId039(raw);if(id===null)throw Error('카드 자료의 번호가 올바르지 않습니다.');const display=lookup.get(entityKey039('card_display',id))??{},setting=lookup.get(entityKey039('card_setting',id))??{},annotation=lookup.get(entityKey039('card_annotation',id))??{},limit=lookup.get(entityKey039('card_limit',id))??{};
-    const metadata120=cardMetadata144(id,raw.identity_key),maximumNormalLimit=metadata120?.maximumNormalLimit,fixedToken=maximumNormalLimit===0;
+    const metadata120=cardMetadata152(id,raw.identity_key),maximumNormalLimit=metadata120?.maximumNormalLimit,fixedToken=maximumNormalLimit===0;
     const inherited=(key,frozen,fallback)=>{if(!own(limit,key))return fallback;if(limit[key]!==null)return limit[key];if(!own(limit,frozen))throw Error('카드 제한의 기본 자료를 다시 확인해 주세요.');return limit[frozen];};
     const storedNormalLimit=inherited('normal_limit','frozen_normal_limit',raw.normal_limit??raw.deck_limit??raw.maxCopies??3);
     const normalLimit=maximumNormalLimit==null?storedNormalLimit:Math.min(maximumNormalLimit,storedNormalLimit),speedLimit=inherited('speed_limit','frozen_speed_limit',raw.speed_limit??null);
@@ -323,7 +323,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     body.append(limitBadges(card,{includeUnrestricted:true}),description);
     if(currentState.canEdit){
       const forms=el('div',null,'au-form-grid'),allowed=(currentState.bootstrap?.capabilities?.entities?.card_setting?.fields?.rarity?.values??['N','R','SR','UR']).filter(r=>r!=='L'||card.source_id<2390),rarities=[...new Set([...allowed,...(card.source_id<2390?['L']:[]),card.rarity])];
-      const {maximumNormalLimit,maximumSpeedLimit}=cardMetadata144(card.source_id,card.identity_key)??{};
+      const {maximumNormalLimit,maximumSpeedLimit}=cardMetadata152(card.source_id,card.identity_key)??{};
       const effectToken=maximumNormalLimit===0,stockReadOnly=card.rarity==='L'||effectToken;
       forms.append(field('카드 이름',card.name_ko,{type:'string',maxLength:100},v=>cardPatch('card_display',card,{name:v}),`card.${card.source_id}.name`),field('영문 이름',card.name_en,{type:'string',maxLength:160},v=>cardPatch('card_display',card,{name_english:v}),`card.${card.source_id}.english`),field('카드 설명',card.description_ko,{type:'string',multiline:true,maxLength:12000},v=>cardPatch('card_display',card,{description:v}),`card.${card.source_id}.description`),field('등급',card.rarity,{type:'string',enum:rarities,readOnlyValues:card.source_id<2390?[]:rarities.filter(v=>!allowed.includes(v))},v=>cardPatch('card_setting',card,v==='L'?{rarity:v,stock:false,draw_enabled:false}:{rarity:v}),`card.${card.source_id}.rarity`),field('상점 판매',card.stock,{type:'boolean',readOnly:stockReadOnly},v=>cardPatch('card_setting',card,{stock:v}),`card.${card.source_id}.stock`),field('전투 보상',card.draw_enabled!==false,{type:'boolean',readOnly:stockReadOnly},v=>cardPatch('card_setting',card,{draw_enabled:v}),`card.${card.source_id}.draw`));body.append(forms,el('small','설명을 바꾸어도 카드의 실제 효과 처리 규칙은 바뀌지 않습니다.','au-hint'));
       if(!effectToken){
