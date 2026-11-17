@@ -407,6 +407,33 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     label.append(input,el('span','대표 카드'));
     return label;
   }
+  function deckMonsterStats(card){
+    const type=card.native_type??card.nativeType035??card.native?.type;
+    if(Number.isSafeInteger(type)?!(type&1):!card.type.includes('몬스터'))return null;
+
+    const rank=Boolean(type&0x800000),link=Boolean(type&0x4000000);
+    const levelLabel=rank?'랭크':link?'링크':'레벨';
+    const level=rank?card.rank??card.level:link?card.link_rating??card.level:card.level;
+    const stat=value=>value<0?'?':value;
+    const identity=[
+      Number.isFinite(level)&&level>0?`${levelLabel} ${level}`:null,
+      card.race||null,
+      card.attribute||null
+    ].filter(Boolean);
+    const combat=[
+      Number.isFinite(card.atk)?`공격력 ${stat(card.atk)}`:null,
+      !link&&Number.isFinite(card.def)?`수비력 ${stat(card.def)}`:null
+    ].filter(Boolean);
+    if(!identity.length&&!combat.length)return null;
+
+    const details=el('div',null,'au-deck-monster-stats');
+    for(const fields of [identity,combat].filter(line=>line.length)){
+      const line=el('div',null,'au-deck-stat-line');
+      line.append(...fields.map(value=>el('small',value)));
+      details.append(line);
+    }
+    return details;
+  }
   function cardGrid(host,cards,{deck=null}={}){const grid=el('div',null,'au-card-grid');for(const card of cards){const tile=el('article',null,'au-card-tile'),art=button('',()=>openCard(currentCards.find(c=>c.source_id===card.source_id)??card),'au-card-art');art.setAttribute('aria-label',`${card.name_ko} 카드 정보`);art.append(picture(card));tile.append(art);const categoryLabels=cardCategoryLabels049(card);if(categoryLabels)tile.append(categoryLabels);tile.append(el('strong',card.name_ko),el('span',card.rarity,'au-rarity'),el('small',card.type,'au-card-kind'),limitBadges(card));if(deck){tile.append(deckQuantity046(card,deck));tile.draggable=true;tile.ondragstart=e=>e.dataTransfer.setData('application/x-authoring039-card',JSON.stringify({source_id:card.source_id,deck_id:deck.entity_id}));}grid.append(tile);}host.append(grid);}
   function categoryManager(host){
     const owner=currentState.user?.id??(currentState.canEdit?'editor':'public');
@@ -627,6 +654,8 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
           art.append(picture(c));
           const cardName=el('div',null,'au-deck-card-name');
           cardName.append(el('strong',c.name_ko),limitBadges(c));
+          const stats=deckMonsterStats(c);
+          if(stats)cardName.append(stats);
           if(canSetCover && c.playable!==false && !c.special)cardName.append(deckCoverCheckbox(live,c));
           line.append(art,cardName,deckQuantity046(c,live,{owned:true}));
           box.append(line);

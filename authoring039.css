@@ -219,6 +219,16 @@
 .au-encounter-traits h3{font-size:16px;margin:24px 0 12px;color:var(--au-cyan)}
 .au-encounter-summary{color:var(--au-gold)}
 .au-deck-card-name{min-width:0;display:grid;gap:6px}
+.au-deck-monster-stats{
+ display:grid;
+ gap:2px;
+ color:var(--au-muted);
+ font-size:13px;
+ line-height:1.45;
+ font-variant-numeric:tabular-nums;
+}
+.au-deck-stat-line{display:flex;flex-wrap:wrap;gap:2px 8px}
+.au-deck-stat-line small{font:inherit;white-space:nowrap}
 .au-limit-badges{display:flex;align-items:center;flex-wrap:wrap;gap:5px;min-width:0}
 .au-limit-badges:empty{display:none}
 .au-limit-badge{display:inline-flex;align-items:center;border:1px solid #997f50;border-radius:4px;padding:2px 5px;background:#302716;color:#f7de9d;font-size:11px;font-weight:700;line-height:1.6;white-space:normal;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}

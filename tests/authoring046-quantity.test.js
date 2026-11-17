@@ -135,6 +135,20 @@ test('main composition counters count copies by native card kind and exclude ext
   expectCounts(m,3,3,1);expectTotal(m,7);assert.ok(m.root.querySelectorAll('.au-deck-zone').find(zone=>zone.querySelector('h2').textContent==='EX · 2 / 15장'));
 });
 
+test('owned deck rows show monster stats without empty rows for spells and traps',async t=>{
+  const m=await mounted(t,{
+    main:[[BLUE,1],[SPELL,1],[TRAP,1]],ex:[[FUSION,1]],small:true,
+    configure:({byName})=>{byName(BLUE).attack=0;byName(BLUE).defense=-2;}
+  });
+  const stats=name=>ownRow(m,name).querySelector('.au-deck-monster-stats');
+  assert.deepEqual(stats(BLUE).querySelectorAll('small').map(item=>item.textContent),
+    ['레벨 8','드래곤족','빛','공격력 0','수비력 ?']);
+  assert.deepEqual(stats(FUSION).querySelectorAll('small').map(item=>item.textContent),
+    ['레벨 12','드래곤족','빛','공격력 4500','수비력 3800']);
+  assert.equal(stats(SPELL),null);
+  assert.equal(stats(TRAP),null);
+});
+
 test('composition counters, rows and both quantities update immediately through removal and readdition',async t=>{
   const m=await mounted(t,{main:[[BLUE,1],[SPELL,1],[TRAP,1]],ex:[[FUSION,1]],small:true});m.search.focus();
   expectCounts(m,1,1,1);control(m,BLUE,'minus','search').fire('click');assert.equal(ownRow(m,BLUE),undefined);
