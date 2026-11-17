@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.85",
-  "versionCode": 104,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.85/YGOClassicExpedition-0.18.85-arm64.apk",
-  "sizeBytes": 650892972,
-  "sha256": "d689ba452c14758846781f5a63b98760dbf1d4fb7d5bffe8ed34a31ab5dc27b5",
-  "releaseNotes": "초진화의 고치와 완전체 그레이트 인섹트, 무장봉기, 트랜스턴의 AI 발동 및 선택 판단을 조정했습니다."
+  "versionName": "0.18.86",
+  "versionCode": 105,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.86/YGOClassicExpedition-0.18.86-arm64.apk",
+  "sizeBytes": 650897176,
+  "sha256": "9b428a4c4f72dfaef619c2a138d9c9844aac99b52a83a39b6023c62a86a35d94",
+  "releaseNotes": "AI가 전투로 뒤집힌 재빠른 빅햄스터 등 리버스 리쿠르터의 합법적인 특수 소환을 확인하도록 수정했습니다."
 }
