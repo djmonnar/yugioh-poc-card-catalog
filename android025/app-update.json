@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.90",
-  "versionCode": 109,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.90/YGOClassicExpedition-0.18.90-arm64.apk",
-  "sizeBytes": 675075282,
-  "sha256": "dfed69eb68285039ac12a41cbe03b3321de6bc2d4e8e0b57758ca998404abc40",
-  "releaseNotes": "첫 선물의 제목과 설명을 읽기 쉽게 정리했습니다.\n방랑자가 탑 지도의 맨 아래 출발 지점에서 걷기 시작합니다.\n기존 테마의 배경과 버튼으로 원정 메뉴의 배치를 다듬었습니다.\nAI가 샤크라켄 소환에 쓸 물 속성 몬스터와 바다에서 전설의 어부가 얻는 보호를 고려합니다.\nAI가 빛의 봉인검으로 위험한 공격을 막거나 뒷면 몬스터를 공개할 기회를 고려합니다."
+  "versionName": "0.18.91",
+  "versionCode": 110,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.91/YGOClassicExpedition-0.18.91-arm64.apk",
+  "sizeBytes": 675077730,
+  "sha256": "a97b73142b7e631448f01838304c671bd9958a6ff4416470458ae026064867da",
+  "releaseNotes": "날개 크리보, 라의 익신룡, 오벨리스크의 거신병, 오시리스의 천공룡, 초융합, 엘리멘틀 히어로 프리즈마의 설명을 정정했습니다."
 }
