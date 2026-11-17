@@ -18,12 +18,15 @@ function character(state,skills=[],skill_profiles=[]){
   const row={entity_type:'character',entity_id:CHAR,version:17,state:'saved',issues:[],content:{name:'사용자가 저장한 캐릭터 이름',portrait:'',skills,skill_profiles}};
   state.entities.push(row);return row;
 }
-function mounted(t,state,section='characters',id=CHAR){
+function mounted(t,state,section='characters',id=CHAR,{openTraits=true}={}){
   const document=new Document041(),root=document.createElement('main'),writes=[],errors=[];document.body.append(root);
   const panels=createAuthoringPanels039({document,onChange:(...args)=>writes.push(structuredClone(args)),onError:error=>errors.push(error)});
   panels.selectEntity065(section,id);if(section==='decks')panels.selectDeck(id);panels.render(section,root,state);t.after(()=>panels.destroy());
-  return {root,writes,errors};
+  if(section==='characters'&&openTraits)for(const panel of root.querySelectorAll('.au-character-traits'))open(panel);
+  if(section==='characters'&&openTraits)for(const profile of root.querySelectorAll('.au-character-trait-profile'))open(profile);
+  return {root,writes,errors,panels};
 }
+function open(disclosure){disclosure.open=true;disclosure.fire('toggle',{bubbles:false});}
 function picker(root,key){const input=root.querySelectorAll('input').find(node=>node.dataset.editKey===key);assert(input,`missing picker ${key}`);return input.parentElement;}
 function searchCard(box,query){const input=field041(box,'대상 카드 검색');input.value=query;input.fire('input');return box.querySelectorAll('.au-card-pick');}
 function pick(box,card,query=card.name_ko){const found=searchCard(box,query).find(node=>node.textContent.replace(/ ✓$/,'')===card.name_ko);assert(found,`missing selectable ${card.name_ko}`);assert.equal(found.disabled,false);found.click();}
@@ -31,6 +34,67 @@ function unchanged(state,before,ui){assert.equal(JSON.stringify(state),before);a
 function validate(state,skills,profiles=[]){return validateAuthoringChange066(state,'character',CHAR,{skills,skill_profiles:profiles});}
 function profile(skills){return {profile_id:PROFILE,name:'사용자가 저장한 묶음',skills};}
 const eligible=card=>card.playable!==false&&!card.special&&!card.token&&Number.isSafeInteger(card.native_type)&&Boolean(card.native_type&7)&&!(card.native_type&(0x40|0x2000|0x800000|0x4000000|0x4000));
+
+test('character traits start closed and remember only the panels opened while editing',t=>{
+  const state=fixture089();
+  character(state,[{kind:'heal_once',value:800}],[profile([{kind:'heal_once',value:1000}])]);
+  const {root,panels,writes}=mounted(t,state,'characters',CHAR,{openTraits:false});
+  const sections=()=>root.querySelectorAll('.au-character-traits');
+  const profileRow=()=>root.querySelector('.au-character-trait-profile');
+  assert.deepEqual(sections().map(row=>row.open),[false,false]);
+  assert.equal(root.querySelectorAll('.au-folded-form-content').length,0);
+  open(sections()[1]);
+  assert.equal(profileRow().open,false);
+  assert.equal(field041(root,'특성 묶음 이름'),undefined);
+  open(profileRow());
+  assert.equal(field041(root,'특성 묶음 이름').value,'사용자가 저장한 묶음');
+  panels.render('characters',root,state,{force:true});
+  assert.deepEqual(sections().map(row=>row.open),[false,true]);
+  assert.equal(profileRow().open,true);
+  assert.deepEqual(writes,[]);
+});
+
+test('starter settings edit only the selected starter and preserve saved settings across edits',async t=>{
+  const state=fixture089();
+  const starters=state.entities.find(row=>row.entity_type==='starter_list'),first=starters.content.entries[0];
+  const otherEntries=structuredClone(starters.content.entries.slice(1));
+  const {root,panels,writes}=mounted(t,state,'starters',starters.entity_id);
+  assert.equal(root.querySelector('.au-starter-loadout'),null);
+  state.bootstrap.capabilities.starter_loadout={lp_max:1000000,gold_max:1000000,relics_max:70};
+  state.entities.push({entity_id:'sight-test',entity_type:'relic',content:{id:'sight-test',name:'간파의 눈'}});
+  panels.render('starters',root,state,{force:true});
+  const findConfig=()=>root.querySelector('.au-starter-loadout');
+  const sync=()=>{
+    const [type,id,fields]=writes.at(-1);
+    assert.deepEqual([type,id],['starter_list',starters.entity_id]);
+    validateAuthoringChange066(state,type,id,fields);
+    starters.content={...starters.content,...fields};
+    panels.render('starters',root,state,{force:true});
+    return fields.entries.find(row=>row.starter_id===first.starter_id).start_loadout;
+  };
+  assert.equal(findConfig().open,false);
+  open(findConfig());
+  const lp=field041(findConfig(),'시작 LP');
+  assert.equal(lp.value,'4000');
+  lp.value='5200';lp.fire('input');
+  assert.deepEqual(sync(),{lp:5200,gold:0,traits:[],relic_ids:[]});
+  const gold=field041(findConfig(),'시작 골드');gold.value='250';gold.fire('input');
+  assert.equal(sync().gold,250);
+  const relic=field041(findConfig(),'추가할 시작 유물');relic.value='sight-test';relic.fire('change');
+  button041(findConfig(),'시작 유물 추가').click();
+  await tick();
+  assert.deepEqual(sync().relic_ids,['sight-test']);
+  const trait=field041(findConfig(),'추가할 특성');
+  assert(!trait.options.some(option=>option.value==='lp_bonus'));
+  trait.value='opening_draw';button041(findConfig(),'특성 추가').click();
+  await tick();
+  const latest=sync();
+  assert.deepEqual(latest,{lp:5200,gold:250,relic_ids:['sight-test'],traits:[{kind:'opening_draw',value:1}]});
+  assert.deepEqual(starters.content.entries.slice(1),otherEntries);
+  assert.throws(()=>validateAuthoringChange066(state,'starter_list',starters.entity_id,{
+    entries:[{...first,start_loadout:{...latest,relic_ids:['sight-test','sight-test']}}]
+  }),/시작 유물/);
+});
 
 test('089 trait type gates use numeric metadata, including source zero, independent of display labels',()=>{
   const state=fixture089(),cards=normalizeCatalog039(state),blue=cards.find(c=>c.source_id===0),town=cards.find(c=>c.source_id===2404),shard=cards.find(c=>c.source_id===2623);

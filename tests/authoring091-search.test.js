@@ -46,8 +46,20 @@ test('race query includes spell and trap effect text; the race filter stays exac
  assert.equal(cardQueryMatches091({type:'마법',description_ko:'비행야수족 또는 환신 야수족 몬스터를 고른다.'},'야수족'),false);
  assert(cardQueryMatches091({type:'몬스터',race:'야수족'},'야수족 몬스터'));
 });
+test('relevance ranks complete names, exact aliases, prefixes and effect-only results in that order',()=>{
+ const cards=[
+  {source_id:1,name_ko:'가나다',description_ko:'푸른 눈의 백룡을 패에 넣는다.'},
+  {source_id:2,name_ko:'수호의 푸른 눈의 백룡'},
+  {source_id:3,name_ko:'푸른 눈의 백룡－강림'},
+  {source_id:4,name_ko:'백룡의 다른 표기',search_aliases:['푸른 눈의 백룡']},
+  {source_id:5,name_ko:'푸른 눈의 백룡'}
+ ];
+ assert.deepEqual(sortCards091(cards,'relevance','  푸른 눈의백룡 ').map(card=>card.source_id),[5,4,3,2,1]);
+ assert.deepEqual(cards.map(card=>card.source_id),[1,2,3,4,5]);
+});
 for(const section of ['cards','decks'])test(section+':091 real UI sorts all results before pagination; multi selections survive ordering/search and never edit decks',t=>{
  const m=mounted(t,section),select=field041(m.root,'카드 정렬'),eligible=rows.filter(c=>section==='cards'||!c.special&&c.playable!==false);
+ assert.equal(select.value,'relevance');
  assert.deepEqual(select.options.map(o=>o.value),CARD_SORTS091.map(([v])=>v));
  for(const [sort] of CARD_SORTS091){choose(m,'카드 정렬',sort);const sorted=sortCards091(eligible,sort);assert.deepEqual(names(m),sorted.slice(0,24).map(c=>c.name_ko));button041(m.root,'다음').click();assert.deepEqual(names(m),sorted.slice(24,48).map(c=>c.name_ko));}
  choose(m,'종족','전사족');choose(m,'종족','마법사족');choose(m,'속성','빛');choose(m,'속성','어둠');choose(m,'등급','SR');choose(m,'등급','UR');
@@ -58,5 +70,6 @@ for(const section of ['cards','decks'])test(section+':091 real UI sorts all resu
  assert.equal(m.document.activeElement,input);assert.deepEqual(names(m),sortCards091(filtered.filter(c=>c.race==='전사족'&&c.attribute==='빛'),'defense-asc').slice(0,24).map(c=>c.name_ko));assert(button041(m.root,'마법사족 해제'));
  button041(m.root,'검색 지우기').click();button041(m.root,'마법사족 해제').click();assert.equal(m.document.activeElement,field041(m.root,'종족'));assert(!button041(m.root,'마법사족 해제'));assert(button041(m.root,'전사족 해제'));
  button041(m.root,'종족 선택 해제').click();assert(!button041(m.root,'전사족 해제'));assert(button041(m.root,'빛 해제'));
- button041(m.root,'필터 초기화').click();assert.equal(field041(m.root,'카드 정렬').value,'name');assert.deepEqual(names(m),sortCards091(eligible).slice(0,24).map(c=>c.name_ko));assert.equal(m.writes.length,0);assert.equal(JSON.stringify(m.state),m.before);
+ button041(m.root,'필터 초기화').click();assert.equal(field041(m.root,'카드 정렬').value,'relevance');assert.deepEqual(names(m),sortCards091(eligible).slice(0,24).map(c=>c.name_ko));
+ input.value='푸른 눈의 백룡';input.fire('input');assert.equal(names(m)[0],'푸른 눈의 백룡');assert.equal(m.writes.length,0);assert.equal(JSON.stringify(m.state),m.before);
 });

@@ -21,6 +21,7 @@ import {characterChoice068,changeCharacter068,traitChoices068,changeTrait068} fr
 import {portraitUrl081} from './authoring081-assets.js?v=20261105-082';
 import {traitCardMatches089} from './authoring089-traits.js?v=20261106-089';
 import {CARD_SORTS091,filterValues091,cardQueryTokens091,cardFiltersMatch091,sortCards091} from './authoring091-search.js?v=20261106-091';
+import {deckDeletionBlocks153,deckDeletionChanges153,openDeckDeletion153} from './authoring153-deck-delete.js';
 
 export const AUTHORING_SECTIONS039=[['cards','카드 도감'],['decks','덱 만들기'],['chapters','장별 적 편성'],['map','맵 분포'],['starters','시작 덱'],['characters','캐릭터'],['relics','유물'],['events','이벤트'],['shop','상점'],['packs','카드팩'],['balance','점수·보상'],['recovery','이전 자료']];
 const clone=structuredClone,own=(o,k)=>Object.prototype.hasOwnProperty.call(o,k),text=v=>String(v??'');
@@ -100,7 +101,8 @@ export function formSchema039(state,entity){
   return {type:'object',properties};
 }
 
-export function createAuthoringPanels039({document:doc=globalThis.document,onChange,onNavigate=()=>{},onError=()=>{},onUpload=null,onRecoveryRead=null,onRetryWrite=null,onSaveDrafts060=null,onResolveDrafts060=null,getLatestState068=null,onPrepareDeckSetup068=()=>{},onStageMany071=null,onEditingChange=()=>{}}={}){
+export function createAuthoringPanels039({document:doc=globalThis.document,onChange,onNavigate=()=>{},onError=()=>{},onUpload=null,onRecoveryRead=null,onRetryWrite=null,onSaveDrafts060=null,onResolveDrafts060=null,getLatestState068=null,onPrepareDeckSetup068=()=>{},onStageMany071=null,onDeleteDecks153=null,onEditingChange=()=>{}}={}){
+  let deckDeletionDialog153;
   const selected=new Map(),filters=new Map(),statWidgets=new Map(),categoryStates054=new Map(),manualControls060=new Map();let dialog=null,currentState=null,currentCards=[],currentRoot=null,refreshCatalog041=null,localDeckSetup068=null;
   const categoryEditor056={owner:null,open:false,archivedOpen:false,name:'',renames:new Map()};
   // A metadata ACK may rebuild this surface while its category editor is far
@@ -201,15 +203,15 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     count.setAttribute('role','status');
     const more=button('카드 더 보기',()=>{visible+=30;display();},'au-text-button');
     const display=()=>{
-      const q=input.value.normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,''),matches=currentCards.filter(c=>!c.special&&c.playable!==false&&filter(c)&&(!q||c.searchText.includes(q))),rows=matches.slice(0,visible);
+      const q=input.value.normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,''),matches=currentCards.filter(c=>!c.special&&c.playable!==false&&filter(c)&&(!q||c.searchText.includes(q))),rows=(q?sortCards091(matches,'relevance',input.value):matches).slice(0,visible);
       results.replaceChildren(...rows.map(c=>{const b=button(`${c.name_ko}${c.source_id===selectedId?' ✓':''}`,()=>onSelect(c),'au-card-pick');const img=picture(c);img.alt='';b.prepend(img);b.disabled=!currentState.canEdit;return b;}));
       count.textContent=matches.length?`${matches.length.toLocaleString('ko-KR')}종 중 ${rows.length.toLocaleString('ko-KR')}종 표시`:'일치하는 카드가 없습니다.';
       more.hidden=rows.length>=matches.length;
     };
     input.oninput=()=>{visible=30;display();};box.append(input,count,results,more);host.append(box);display();
   }
-  function skillFields(host,rows,onRows,key,shared=false,getRows=()=>rows){
-    const form=currentState.bootstrap?.capabilities?.trait_form,definitions=(form?.kinds??[]).filter(k=>shared||k.compiled);
+  function skillFields(host,rows,onRows,key,shared=false,getRows=()=>rows,allowed=()=>true){
+    const form=currentState.bootstrap?.capabilities?.trait_form,definitions=(form?.kinds??[]).filter(k=>(shared||k.compiled)&&allowed(k.kind));
     if(!definitions.length){host.append(el('p',`설정된 특성 ${rows.length}개 · 특성 편집 자료를 확인하는 중입니다.`,'au-hint'));return;}
     const mainCard=c=>traitCardMatches089(c),cardRef=c=>({slot:c.slot,internal_id:c.source_id,identity_key:c.identity_key,name_ko:c.name_ko});
     const liveRows=()=>getRows()??[];
@@ -268,6 +270,29 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
       });add.disabled=!currentState.canEdit;host.append(select,add);
     }
   }
+  function foldForm(host,label,key,renderContent,className){
+    const disclosure=el('details',null,className);
+    const stateKey=`form-open:${currentState.user?.id??''}:${key}`;
+    disclosure.append(el('summary',label));
+    disclosure.open=filters.get(stateKey)===true;
+    let content=null;
+    const showContent=()=>{
+      if(content)return;
+      content=el('div',null,'au-folded-form-content');
+      renderContent(content);
+      disclosure.append(content);
+    };
+    if(disclosure.open)showContent();
+    disclosure.addEventListener('toggle',event=>{
+      if(event.target!==disclosure||!disclosure.isConnected)return;
+      if(disclosure.open){filters.set(stateKey,true);showContent();}
+      else filters.delete(stateKey);
+    });
+    host.append(disclosure);
+  }
+  function characterTraitDisclosure(host,label,key,renderContent,profile=false){
+    foldForm(host,label,key,renderContent,profile?'au-category-group054 au-character-trait-profile':'au-trait-editor au-character-traits');
+  }
   function schemaForm(host,schema,value,change,prefix,getValue=()=>value){
     for(const [key,spec] of Object.entries(schema?.properties??{})){
       if(spec.readOnly||spec.hidden)continue;
@@ -287,22 +312,32 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
         },`${prefix}.${key}`,card=>spec.filter==='shop'?card.stock&&!nativeExtra039(card)&&card.effective_copy_limit>0:spec.filter==='pack'?['N','R','SR','UR'].includes(card.rarity):true);host.append(group);continue;
       }
       if(spec.widget==='skills'){
-        const group=el('fieldset',null,'au-form-group');group.append(el('legend',label));
         if(spec.variant==='compiled_character_skill_profiles'){
-          group.append(el('p','초급·보스·덱 테마처럼 이름을 붙여 저장하세요. 전투에서 묶음 이름을 선택하면 그 묶음만 적용됩니다. 기본 특성과 자동으로 합쳐지지 않습니다.','au-hint'));
-          for(const profile of val??[]){
-            const box=el('section',null,'au-panel'),profileNow=()=>latest()?.find(item=>item.profile_id===profile.profile_id);
-            const update=fields=>{if(!profileNow())throw Error('이 특성 묶음이 변경됐습니다. 현재 목록을 확인해 주세요.');return change({[key]:(latest()??[]).map(item=>item.profile_id===profile.profile_id?{...item,...fields}:item)});};
-            box.append(field('특성 묶음 이름',profile.name,{type:'string',minLength:1,maxLength:100},name=>update({name}),`${prefix}.profile.${profile.profile_id}.name`));
-            skillFields(box,profile.skills??[],skills=>update({skills}),`${prefix}.profile.${profile.profile_id}`,true,()=>profileNow()?.skills??[]);
-            box.append(button('특성 묶음 제거',()=>change({[key]:(latest()??[]).filter(item=>item.profile_id!==profile.profile_id)})));group.append(box);
-          }
-          const add=button('특성 묶음 추가',()=>{const current=latest()??[];if(current.length>=10)throw Error('특성 묶음은 10개까지 추가할 수 있습니다.');return change({[key]:[...current,{profile_id:`profile-${crypto.randomUUID()}`,name:'새 특성 묶음',skills:[]}]});});add.disabled=!currentState.canEdit||(val??[]).length>=10;group.append(add);
-          if((val??[]).length>=10)group.append(el('p','특성 묶음은 10개까지 설정할 수 있습니다.','au-hint'));
-        }else{
-          if(spec.variant==='compiled_character_skills')group.append(el('p','전투에서 ‘기본 특성’을 선택할 때 적용됩니다. 이 기본값의 이름은 고정이며, 이름을 붙일 구성은 아래 ‘전투별 특성 묶음’에 추가하세요.','au-hint'));
-          skillFields(group,val??[],rows=>change({[key]:rows}),`${prefix}.${key}`,spec.variant==='compiled_character_skills',()=>latest()??[]);
+          characterTraitDisclosure(host,`${label} · ${(val??[]).length}개`,`${prefix}.${key}`,group=>{
+            group.append(el('p','전투 설정에서 이름을 고르면 선택한 묶음의 특성이 적용됩니다.','au-hint'));
+            for(const profile of val??[]){
+              const profileKey=`${prefix}.profile.${profile.profile_id}`;
+              const profileNow=()=>latest()?.find(item=>item.profile_id===profile.profile_id);
+              const update=fields=>{if(!profileNow())throw Error('이 특성 묶음이 변경됐습니다. 현재 목록을 확인해 주세요.');return change({[key]:(latest()??[]).map(item=>item.profile_id===profile.profile_id?{...item,...fields}:item)});};
+              characterTraitDisclosure(group,`${profile.name} · ${(profile.skills??[]).length}개`,profileKey,box=>{
+                box.append(field('특성 묶음 이름',profile.name,{type:'string',minLength:1,maxLength:100},name=>update({name}),`${profileKey}.name`));
+                skillFields(box,profile.skills??[],skills=>update({skills}),profileKey,true,()=>profileNow()?.skills??[]);
+                box.append(button('특성 묶음 제거',()=>change({[key]:(latest()??[]).filter(item=>item.profile_id!==profile.profile_id)})));
+              },true);
+            }
+            const add=button('특성 묶음 추가',()=>{const current=latest()??[];if(current.length>=10)throw Error('특성 묶음은 10개까지 추가할 수 있습니다.');return change({[key]:[...current,{profile_id:`profile-${crypto.randomUUID()}`,name:'새 특성 묶음',skills:[]}]});});
+            add.disabled=!currentState.canEdit||(val??[]).length>=10;group.append(add);
+            if((val??[]).length>=10)group.append(el('p','특성 묶음은 10개까지 설정할 수 있습니다.','au-hint'));
+          });continue;
         }
+        if(spec.variant==='compiled_character_skills'){
+          characterTraitDisclosure(host,`기본 특성 · ${(val??[]).length}개`,`${prefix}.${key}`,group=>{
+            group.append(el('p','전투 설정에서 ‘기본 특성’을 선택할 때 적용됩니다.','au-hint'));
+            skillFields(group,val??[],rows=>change({[key]:rows}),`${prefix}.${key}`,true,()=>latest()??[]);
+          });continue;
+        }
+        const group=el('fieldset',null,'au-form-group');group.append(el('legend',label));
+        skillFields(group,val??[],rows=>change({[key]:rows}),`${prefix}.${key}`,false,()=>latest()??[]);
         host.append(group);continue;
       }
       if(spec.type==='array'){
@@ -496,11 +531,11 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
   }
   function cardsPanel(host,{deck=null}={}){
     if(!deck&&currentState.canEdit)categoryManager055.render(host);
-    const key=deck?'deck-cards':'cards',state=filters.get(key)??{query:'',type:'',tier:'',race:'',attribute:'',subtype:'',page:1,tags:[],categoryMatch:'all',statConditions:[],status:'',limit:'',speedLimit:'',browse:'all',addition:'latest',additionTheme:'all',sort:'name'};filters.set(key,state);
+    const key=deck?'deck-cards':'cards',state=filters.get(key)??{query:'',type:'',tier:'',race:'',attribute:'',subtype:'',page:1,tags:[],categoryMatch:'all',statConditions:[],status:'',limit:'',speedLimit:'',browse:'all',addition:'latest',additionTheme:'all',sort:null};filters.set(key,state);
     const browse=el('div',null,'au-catalog-browse'),modes=el('div',null,'au-catalog-modes');modes.setAttribute('role','group');modes.setAttribute('aria-label','카드 보기');
-    const allCards=button('전체 카드',()=>{state.browse='all';state.page=1;display();}),recentCards=button('최근 추가',()=>{state.browse='recent';state.addition=catalogAdditions049(currentCards).latest?.key??'latest';state.additionTheme='all';state.sort='registered';state.page=1;display();});modes.append(allCards,recentCards);browse.append(modes);
+    const allCards=button('전체 카드',()=>{state.browse='all';state.page=1;display();}),recentCards=button('최근 추가',()=>{state.browse='recent';state.addition=catalogAdditions049(currentCards).latest?.key??'latest';state.additionTheme='all';state.sort=null;state.page=1;display();});modes.append(allCards,recentCards);browse.append(modes);
     const additionField=el('label',null,'au-catalog-order au-catalog-addition'),additionSelect=el('select');additionField.append(el('span','추가 묶음'),additionSelect);additionSelect.setAttribute('aria-label','추가 묶음');additionSelect.onchange=()=>{state.addition=additionSelect.value;state.additionTheme='all';state.page=1;display();};browse.append(additionField);
-    const orderField=el('label',null,'au-catalog-order'),order=el('select');orderField.append(el('span','정렬'),order);order.setAttribute('aria-label','카드 정렬');for(const [value,label] of CARD_SORTS091){const option=el('option',label);option.value=value;order.append(option);}order.value=state.sort;order.onchange=()=>{state.sort=order.value;state.page=1;display();};browse.append(orderField);host.append(browse);
+    const orderField=el('label',null,'au-catalog-order'),order=el('select');orderField.append(el('span','정렬'),order);order.setAttribute('aria-label','카드 정렬');for(const [value,label] of CARD_SORTS091){const option=el('option',label);option.value=value;order.append(option);}order.value=displaySort();order.onchange=()=>{state.sort=order.value;state.page=1;display();};browse.append(orderField);host.append(browse);
     const themeField=el('section',null,'au-addition-themes067'),themeLabel=el('h2','추가 카드 분류'),themeButtons=el('div');themeButtons.setAttribute('role','group');themeButtons.setAttribute('aria-label','추가 카드 분류');themeField.append(themeLabel,themeButtons);host.append(themeField);
     const toolbar=el('div',null,'au-catalog-tools au-catalog-toolbar'),searchRow=el('div',null,'au-catalog-search'),search=el('input');search.type='search';search.placeholder='이름·효과·조건 검색 (예: 전사족 빛속성)';search.setAttribute('aria-label','카드 검색');search.value=state.query;search.dataset.editKey=`${key}.search`;
     const clear=button('검색 지우기',()=>{search.value='';state.query='';state.page=1;display();search.focus({preventScroll:true});},'au-search-clear');clear.hidden=!state.query;searchRow.append(search,clear);toolbar.append(searchRow);
@@ -544,16 +579,17 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     categoryField.append(el('legend','카테고리 필터'),categoryModes,categoryPicker.root);
     details.append(categoryField);
     let stat=statWidgets.get(key);if(!stat){const root=el('section',null,'stat-filters');stat={root,api:createStatFilters(root,()=>stat.onChange?.())};const oldHeading=root.querySelector('h3');if(oldHeading){root.insertBefore(el('h2',oldHeading.textContent),oldHeading);oldHeading.remove();}statWidgets.set(key,stat);}stat.onChange=()=>{for(const n of stat.root.querySelectorAll('input,select'))n.dataset.editKey=`${key}.stat.${n.id||n.getAttribute('aria-label')||n.value}`;state.statConditions=stat.api.values();state.page=1;display();};details.append(stat.root);
-    const reset=()=>{Object.assign(state,{query:'',type:[],tier:[],race:[],attribute:[],subtype:[],page:1,tags:[],categoryMatch:'all',statConditions:[],status:[],limit:[],speedLimit:[],browse:'all',addition:'latest',additionTheme:'all',sort:'name'});search.value='';for(const control of filterControls.values())control.select.value='';categoryPicker.setSelected([]);stat.api.reset();display();};details.append(button('필터 초기화',reset));toolbar.append(details);host.append(toolbar);
+    const reset=()=>{Object.assign(state,{query:'',type:[],tier:[],race:[],attribute:[],subtype:[],page:1,tags:[],categoryMatch:'all',statConditions:[],status:[],limit:[],speedLimit:[],browse:'all',addition:'latest',additionTheme:'all',sort:null});search.value='';for(const control of filterControls.values())control.select.value='';categoryPicker.setSelected([]);stat.api.reset();display();};details.append(button('필터 초기화',reset));toolbar.append(details);host.append(toolbar);
     const results=el('section',null,'au-catalog-results');results.setAttribute('aria-label','카드 검색 결과');host.append(results);
+    function displaySort(){return state.sort??(state.browse==='recent'&&!state.query.trim()?'registered':'relevance');}
     function display(){
-      const additions=catalogAdditions049(currentCards);if(!CARD_SORTS091.some(([value])=>value===state.sort))state.sort='name';if(state.browse==='recent'&&!additions.latest)state.browse='all';
+      const additions=catalogAdditions049(currentCards);if(state.sort&&!CARD_SORTS091.some(([value])=>value===state.sort))state.sort=null;if(state.browse==='recent'&&!additions.latest)state.browse='all';
       allCards.setAttribute('aria-pressed',String(state.browse!=='recent'));recentCards.setAttribute('aria-pressed',String(state.browse==='recent'));recentCards.disabled=!additions.latest;recentCards.title=additions.latest?`최근에 추가된 ${additions.latest.count.toLocaleString('ko-KR')}종 보기`:'아직 추가된 카드가 없습니다.';
-      additionField.hidden=state.browse!=='recent';additionSelect.replaceChildren();for(const [index,group] of additions.groups.entries()){const option=el('option',`${group.label}${index===0?' (최근)':''} · ${group.count.toLocaleString('ko-KR')}종`);option.value=group.key;additionSelect.append(option);}if(additions.groups.length>1){const option=el('option',`추가 카드 전체 · ${additions.count.toLocaleString('ko-KR')}종`);option.value='all';additionSelect.append(option);}if(state.addition==='latest'||state.addition!=='all'&&!additions.groups.some(group=>group.key===state.addition))state.addition=additions.latest?.key??'latest';additionSelect.value=state.addition;order.value=state.sort;
+      additionField.hidden=state.browse!=='recent';additionSelect.replaceChildren();for(const [index,group] of additions.groups.entries()){const option=el('option',`${group.label}${index===0?' (최근)':''} · ${group.count.toLocaleString('ko-KR')}종`);option.value=group.key;additionSelect.append(option);}if(additions.groups.length>1){const option=el('option',`추가 카드 전체 · ${additions.count.toLocaleString('ko-KR')}종`);option.value='all';additionSelect.append(option);}if(state.addition==='latest'||state.addition!=='all'&&!additions.groups.some(group=>group.key===state.addition))state.addition=additions.latest?.key??'latest';additionSelect.value=state.addition;order.value=displaySort();
       const themes=additionThemes067(currentCards,state.addition,additions);if(!themes.some(theme=>theme.key===state.additionTheme))state.additionTheme='all';themeField.hidden=state.browse!=='recent';themeButtons.replaceChildren();for(const theme of [{key:'all',label:'분류 전체',count:themes.reduce((sum,row)=>sum+row.count,0)},...themes]){const choose=button(`${theme.label} · ${theme.count.toLocaleString('ko-KR')}종`,()=>{state.additionTheme=theme.key;state.page=1;display();});choose.dataset.theme=theme.key;choose.setAttribute('aria-pressed',String(state.additionTheme===theme.key));themeButtons.append(choose);}
       for(const input of categoryModeInputs)input.checked=input.value===state.categoryMatch;
       clear.hidden=!state.query;categoryPicker.setSelected(state.tags);for(const control of filterControls.values())control.refresh();const active=[...choices.map(([fieldKey])=>fieldKey),'subtype'].reduce((n,fieldKey)=>n+filterValues091(state[fieldKey]).length,0)+state.tags.length+(state.statConditions?.length??0);filterSummary.textContent=active?`카드 필터 · ${active}개 적용`:'카드 필터';
-      const matchesCategories=categoryMatcher054(categoryRows054()),tokens=cardQueryTokens091(state.query),liveDeck=deck?(entities039(currentState).find(e=>e.entity_type==='deck'&&e.entity_id===deck.entity_id)??deck):null,pool=currentCards.filter(c=>(!deck||!c.special&&c.playable!==false)&&(state.browse!=='recent'||catalogAdditionMatches049(c,state.addition,additions)&&additionThemeMatches067(c,state.additionTheme,additions))&&matchesCategories(c.tags,state.tags,state.categoryMatch)&&cardFiltersMatch091({...c,special:deck?c.special:false},{...state,tags:[]},tokens)),rows=sortCards091(pool,state.sort),pageSize=24,pages=Math.max(1,Math.ceil(rows.length/pageSize));state.page=Math.min(state.page,pages);results.replaceChildren();const summary=el('p',`${rows.length.toLocaleString('ko-KR')}종${state.browse==='recent'?` · ${additionSelect.selectedOptions[0]?.textContent.split(' · ')[0]??'최근 추가'}${state.additionTheme!=='all'?` · ${themes.find(theme=>theme.key===state.additionTheme)?.label??''}`:''}`:''}${state.sort!=='name'?` · ${CARD_SORTS091.find(([value])=>value===state.sort)?.[1]??''}`:''}${deck?' · 카드 터치: 정보 / ＋: 덱에 추가':''}`,'au-card-results-summary');summary.setAttribute('role','status');results.append(summary);
+      const matchesCategories=categoryMatcher054(categoryRows054()),tokens=cardQueryTokens091(state.query),liveDeck=deck?(entities039(currentState).find(e=>e.entity_type==='deck'&&e.entity_id===deck.entity_id)??deck):null,pool=currentCards.filter(c=>(!deck||!c.special&&c.playable!==false)&&(state.browse!=='recent'||catalogAdditionMatches049(c,state.addition,additions)&&additionThemeMatches067(c,state.additionTheme,additions))&&matchesCategories(c.tags,state.tags,state.categoryMatch)&&cardFiltersMatch091({...c,special:deck?c.special:false},{...state,tags:[]},tokens)),rows=sortCards091(pool,displaySort(),state.query),pageSize=24,pages=Math.max(1,Math.ceil(rows.length/pageSize));state.page=Math.min(state.page,pages);results.replaceChildren();const summary=el('p',`${rows.length.toLocaleString('ko-KR')}종${state.browse==='recent'?` · ${additionSelect.selectedOptions[0]?.textContent.split(' · ')[0]??'최근 추가'}${state.additionTheme!=='all'?` · ${themes.find(theme=>theme.key===state.additionTheme)?.label??''}`:''}`:''}${displaySort()!=='name'&&(displaySort()!=='relevance'||Boolean(state.query.trim()))?` · ${CARD_SORTS091.find(([value])=>value===displaySort())?.[1]??''}`:''}${deck?' · 카드 터치: 정보 / ＋: 덱에 추가':''}`,'au-card-results-summary');summary.setAttribute('role','status');results.append(summary);
       const pager=()=>{const nav=el('nav',null,'au-pagination');nav.setAttribute('aria-label','카드 페이지');for(const [label,next] of [['이전',state.page-1],['다음',state.page+1]]){const b=button(label,()=>{state.page=next;display();});b.disabled=next<1||next>pages;nav.append(b);}nav.insertBefore(el('span',`${state.page} / ${pages}`),nav.lastChild);return nav;};if(rows.length>pageSize)results.append(pager());if(rows.length)cardGrid(results,rows.slice((state.page-1)*pageSize,state.page*pageSize),{deck:liveDeck});else{const empty=el('div',null,'au-empty');empty.append(el('p',state.browse==='recent'?'추가된 카드 중 검색 조건에 맞는 카드가 없습니다. 이름이나 필터를 바꿔 보세요.':'검색 결과가 없습니다. 이름이나 필터를 바꿔 보세요.'),button('필터 초기화',reset));results.append(empty);}if(rows.length>pageSize)results.append(pager());
     }
     refreshCatalog041=display;display();if(!deck&&currentState.canEdit)categoryManager(host);
@@ -666,7 +702,28 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     displayOwned();catalog.append(el('h2','카드 찾기'));split.append(owned,catalog);host.append(split);cardsPanel(catalog,{deck});
     const refreshCards=refreshCatalog041;refreshCatalog041=()=>{displayOwned();refreshCards?.();};
     const actions=el('div',null,'au-toolbar au-deck-actions');
-    actions.append(button('장별 편성에서 사용',()=>onNavigate('chapters')),button('시작 덱에서 사용',()=>{const live=entities039(currentState).find(e=>e.entity_type==='deck'&&e.entity_id===deck.entity_id)??deck;filters.set('starter-register',{deckId:deck.entity_id,name:live.content.deck_name||live.content.name||''});onNavigate('starters');}));const used=entities039(currentState).some(e=>['chapter_role','starter_list'].includes(e.entity_type)&&e.content.entries?.some(r=>r.deck_id===deck.entity_id)),remove=button('덱 삭제',()=>patch(deck,{},'delete'));remove.disabled=!currentState.canEdit||used||Boolean(localDeckSetup068?.hasLocal);remove.title=localDeckSetup068?.hasLocal?'설정 중인 새 배치를 저장하거나 취소한 뒤 삭제해 주세요.':used?'장별 편성과 시작 덱에서 먼저 제외해 주세요.':'';actions.append(remove);host.append(actions);
+    actions.append(button('장별 편성에서 사용',()=>onNavigate('chapters')),button('시작 덱에서 사용',()=>{const live=entities039(currentState).find(e=>e.entity_type==='deck'&&e.entity_id===deck.entity_id)??deck;filters.set('starter-register',{deckId:deck.entity_id,name:live.content.deck_name||live.content.name||''});onNavigate('starters');}));host.append(actions);
+    if(onDeleteDecks153){
+      const deletionRows=state=>[...(state.canonicalEntities068??[]),...entities039(state)];
+      const remove=button('덱 삭제',()=>{
+        const snapshot=latestState068(),owner=snapshot.user?.id;
+        if(!snapshot.canEdit||!owner)throw Error('편집 계정으로 로그인해 주세요.');
+        if(snapshot.pending||snapshot.manualDrafts060?.saving)throw Error('진행 중인 저장이 끝난 뒤 삭제해 주세요.');
+        if(localDeckSetup068?.hasLocal)throw Error('설정 중인 배치를 저장하거나 취소한 뒤 삭제해 주세요.');
+        const rows=deckOptions041(entities039(snapshot).filter(row=>row.entity_type==='deck'&&!row.deleted),{cards:currentCards,characters})
+          .map(row=>({id:row.id,title:row.displayTitle,detail:row.detail,search:row.search,version:row.entity.version}));
+        deckDeletionDialog153=openDeckDeletion153({document:doc,el,button,rows,trigger:remove,
+          getBlocks:()=>{const live=latestState068();return deckDeletionBlocks153(deletionRows(live),live.manualDrafts060?.items);},
+          onDelete:choices=>{
+            const live=latestState068();
+            if(!live.canEdit||live.user?.id!==owner)throw Error('로그인 계정이 바뀌었습니다. 덱을 다시 선택해 주세요.');
+            if(localDeckSetup068?.hasLocal)throw Error('설정 중인 배치를 저장하거나 취소한 뒤 삭제해 주세요.');
+            return onDeleteDecks153(deckDeletionChanges153(choices,deletionRows(live),live.manualDrafts060?.items));
+          }});
+      });
+      remove.disabled=!currentState.canEdit||Boolean(currentState.pending)||Boolean(currentState.manualDrafts060?.saving);
+      tools.append(remove);
+    }
   }
   function encounterDefaults044(deck){const c=characterProfiles().find(row=>row.profile_id==='yugi')??characterProfiles()[0];return {name:c?.profile?.name??'새 상대',deck_name:deck.content.deck_name??'새 덱',profile_id:c?.profile_id??'yugi',art_key:c?.art_key??'CharacterPresentation012/images/yugi/start',banlist_enabled:false,lp_bonus:0,opening_draw_bonus:0,skills:[],shared_character_id:null,shared_skill_profile_id:null,use_shared_skills:false};}
   function encounterForm068(host,entry,deck,change,key,getEntry=()=>entry,{prominentLp=false}={}){
@@ -750,6 +807,58 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
       if(pages>1){for(const [label,next] of [['이전',page-1],['다음',page+1]]){const b=button(label,()=>{filters.set('chapter-page',next);displayCandidates();});b.disabled=next<1||next>pages;pager.append(b);}pager.insertBefore(el('span',`${page} / ${pages} · ${groups.length}개 구성`),pager.lastChild);}
     };query.oninput=()=>{filters.set('chapter-query',query.value);filters.set('chapter-page',1);displayCandidates();};query.addEventListener('compositionend',displayCandidates);showCopies.onchange=()=>{filters.set('chapter-show-copies',showCopies.checked);filters.set('chapter-page',1);displayCandidates();};displayCandidates();
   }
+  function starterLoadoutForm(host,entry,latest,capability){
+    const prefix=`starter.${entry.starter_id}.loadout`;
+    const empty={lp:4000,gold:0,traits:[],relic_ids:[]};
+    const read=()=>latest().content.entries?.find(row=>row.starter_id===entry.starter_id)?.start_loadout??empty;
+    const save=fields=>{
+      const live=latest(),rows=live.content.entries??[];
+      const attached=rows.find(row=>row.starter_id===entry.starter_id);
+      if(!attached)throw Error('시작 덱 목록이 바뀌었습니다. 다시 선택해 주세요.');
+      return patch(live,{entries:rows.map(row=>row===attached?{...row,start_loadout:{...empty,...row.start_loadout,...fields}}:row)});
+    };
+    const config={...empty,...entry.start_loadout};
+    const label=`원정 시작 설정 · ${config.lp.toLocaleString('ko-KR')} LP · ${config.gold.toLocaleString('ko-KR')} G`;
+    foldForm(host,label,prefix,content=>{
+      const numbers=el('div',null,'au-form-grid');
+      numbers.append(
+        field('시작 LP',config.lp,{type:'integer',minimum:1,maximum:capability.lp_max},lp=>save({lp}),`${prefix}.lp`),
+        field('시작 골드',config.gold,{type:'integer',minimum:0,maximum:capability.gold_max},gold=>save({gold}),`${prefix}.gold`));
+      content.append(numbers);
+      const relics=entities039(currentState).filter(row=>row.entity_type==='relic').map(row=>({
+        id:row.content.id??row.entity_id,name:row.content.name??row.entity_id,enabled:row.content.enabled!==false
+      }));
+      const relicGroup=el('fieldset',null,'au-form-group');
+      relicGroup.append(el('legend',`시작 유물 · ${config.relic_ids.length}개`));
+      for(const id of config.relic_ids){
+        const name=relics.find(relic=>relic.id===id)?.name??id;
+        const remove=button(`${name} 빼기`,()=>save({relic_ids:(read().relic_ids??[]).filter(value=>value!==id)}));
+        remove.disabled=!currentState.canEdit;
+        relicGroup.append(remove);
+      }
+      const available=relics.filter(relic=>relic.enabled&&!config.relic_ids.includes(relic.id));
+      if(available.length&&(capability.relics_max==null||config.relic_ids.length<capability.relics_max)){
+        const pick=el('select'),placeholder=el('option','추가할 유물 선택');
+        placeholder.value='';pick.setAttribute('aria-label','추가할 시작 유물');pick.append(placeholder);
+        for(const relic of available){const option=el('option',relic.name);option.value=relic.id;pick.append(option);}
+        pick.disabled=!currentState.canEdit;
+        const add=button('시작 유물 추가',()=>{
+          const ids=read().relic_ids??[],id=pick.value;
+          if(!available.some(relic=>relic.id===id)||ids.includes(id))return;
+          if(capability.relics_max!=null&&ids.length>=capability.relics_max)throw Error('추가할 수 있는 시작 유물 수를 확인해 주세요.');
+          return save({relic_ids:[...ids,id]});
+        });
+        add.disabled=true;pick.onchange=()=>{add.disabled=!currentState.canEdit||!pick.value;};
+        const controls=el('div',null,'au-toolbar');controls.append(pick,add);relicGroup.append(controls);
+      }
+      content.append(relicGroup);
+      const traits=el('fieldset',null,'au-form-group');
+      traits.append(el('legend',`시작 특성 · ${config.traits.length}개`),
+        el('p','이 시작 덱으로 연 원정의 듀얼마다 적용됩니다.','au-hint'));
+      skillFields(traits,config.traits,rows=>save({traits:rows}),`${prefix}.traits`,true,()=>read().traits??[],kind=>kind!=='lp_bonus');
+      content.append(traits);
+    },'au-starter-edit au-starter-loadout');
+  }
   function startersPanel(host){
     title(host,'시작 덱','새 원정을 시작할 때 고를 수 있는 덱을 등록하세요.');
     const all=entities039(currentState),entity=all.find(e=>e.entity_type==='starter_list'),decks=all.filter(e=>e.entity_type==='deck'),characters=characterProfiles();
@@ -799,7 +908,10 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
         const deck=entities039(currentState).find(item=>item.entity_type==='deck'&&item.entity_id===entry.deck_id);
         if(deck)return patch(deck,{management_title:name.trim()});
       },`starter.${entry.starter_id}.management_title`));
-      const edit=button('덱 편집',()=>{selected.set('decks',entry.deck_id);onNavigate('decks',entry.deck_id);}),remove=button('목록에서 제외',()=>{const live=latest();return patch(live,{entries:(live.content.entries??[]).filter(r=>r.starter_id!==entry.starter_id)});});edit.disabled=!summary;remove.disabled=!currentState.canEdit;actions.append(edit,remove);row.append(info,actions,rename);list.append(row);
+      const edit=button('덱 편집',()=>{selected.set('decks',entry.deck_id);onNavigate('decks',entry.deck_id);}),remove=button('목록에서 제외',()=>{const live=latest();return patch(live,{entries:(live.content.entries??[]).filter(r=>r.starter_id!==entry.starter_id)});});edit.disabled=!summary;remove.disabled=!currentState.canEdit;actions.append(edit,remove);row.append(info,actions,rename);
+      const loadout=currentState.bootstrap?.capabilities?.starter_loadout;
+      if(loadout)starterLoadoutForm(row,entry,latest,loadout);
+      list.append(row);
     }host.append(list,status(entity));
   }
   function genericPanel(host,section){
@@ -812,7 +924,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     if(section==='characters'){const picture=el('img');picture.className='au-character-picture';if(value.portrait)picture.src=portraitUrl081(value.portrait);else picture.hidden=true;picture.alt=value.name??'';box.prepend(picture);if(onUpload){const input=el('input');input.type='file';input.accept='image/png,image/jpeg,image/webp';input.setAttribute('aria-label','캐릭터 이미지 업로드');input.disabled=!currentState.canEdit;input.onchange=async()=>{const file=input.files?.[0];if(!file)return;input.disabled=true;try{const portrait=await onUpload(file);await patch(entity,{portrait});}catch(e){onError(e);}finally{input.value='';input.disabled=!currentState.canEdit;}};box.append(input);}}if(!Object.keys(schema.properties).length)box.append(el('p','편집 항목의 범위를 확인하는 중입니다.','au-hint'));host.append(box);
     if(section==='packs'){const remove=button('카드팩 삭제',()=>patch(entity,{},'delete'));remove.disabled=!currentState.canEdit;host.append(remove);}if(section==='shop')host.append(button('판매 카드 관리',()=>onNavigate('cards')),button('판매 유물 관리',()=>onNavigate('relics')));
   }
-  function render(section,root,state,{force=false}={}){const previousRoot=currentRoot,previousSection=currentState?.section,previousEditability=currentState?.canEdit,previousOwner=currentState?.user?.id;currentRoot=root;currentState={...state,section};currentCards=normalizeCatalog039(state);refreshManualControls060();if(editing041.defer(()=>render(section,root,currentState,{force:true}),{force:force||previousRoot!==root||previousSection!==section||previousEditability!==state.canEdit||previousOwner!==state.user?.id})){if(!editing041.isSelecting())refreshCatalog041?.();return false;}const scrollPositions056=previousRoot===root&&previousSection===section&&previousEditability===state.canEdit&&previousOwner===state.user?.id?scrollSnapshot056(root):[];const openCardId=dialog?.open?Number(dialog.dataset.source):null,active=doc.activeElement,editKey=active?.dataset?.editKey,range=editKey&&typeof active.selectionStart==='number'?[active.selectionStart,active.selectionEnd]:null;refreshCatalog041=null;localDeckSetup068=null;onPrepareDeckSetup068(null);root.replaceChildren();const host=el('div',null,'au-view');root.append(host);if(section==='cards'){title(host,'카드 도감','카드 정보를 확인하고 등급·판매·보상·카테고리를 편집하세요.');cardsPanel(host);}else if(section==='decks')deckPanel(host);else if(section==='chapters')chaptersPanel(host);else if(section==='starters')startersPanel(host);else if(section==='recovery'){title(host,'이전 자료','예전 기기에 남은 편집본은 복구 보관소에 보존됩니다. 자동으로 게임 설정을 바꾸지 않습니다.');for(const item of state.recoveries??entities039(state).filter(e=>e.entity_type==='recovery_archive').map(e=>({id:e.entity_id,name:e.content.source_key?.includes('starter')?'이전 시작 덱':e.content.source_key?.includes('character')?'이전 캐릭터 자료':e.content.source_key?.includes('review')?'이전 카드 검토':e.content.source_key?.includes('content')?'이전 원정 콘텐츠':'이전 덱·편집본',status:`DB 복구 보관소 · ${Math.ceil((e.content.bytes??0)/1024)}KB`,download:onRecoveryRead?()=>onRecoveryRead(e.entity_id):null}))){const row=el('section',null,'au-panel');row.append(el('h2',item.name??'이전 편집본'),el('p',item.status??'보관됨'));if(item.download)row.append(button('원문 내려받기',item.download));host.append(row);}}else genericPanel(host,section);if(openCardId!==null){const card=currentCards.find(c=>c.source_id===openCardId);if(card)openCard(card);}if(editKey){const target=[...root.querySelectorAll('[data-edit-key]'),...(dialog?.open?dialog.querySelectorAll('[data-edit-key]'):[])].find(n=>n.dataset.editKey===editKey);if(target){target.focus({preventScroll:true});if(range&&target.setSelectionRange&&target.type!=='number')try{target.setSelectionRange(...range);}catch{}}}restoreScroll056(scrollPositions056);editing041.refreshSignal();return true;}
+  function render(section,root,state,{force=false}={}){if(deckDeletionDialog153?.open&&(section!=='decks'||!state.canEdit||state.user?.id!==currentState?.user?.id))deckDeletionDialog153.close();const previousRoot=currentRoot,previousSection=currentState?.section,previousEditability=currentState?.canEdit,previousOwner=currentState?.user?.id;currentRoot=root;currentState={...state,section};currentCards=normalizeCatalog039(state);refreshManualControls060();if(editing041.defer(()=>render(section,root,currentState,{force:true}),{force:force||previousRoot!==root||previousSection!==section||previousEditability!==state.canEdit||previousOwner!==state.user?.id})){if(!editing041.isSelecting())refreshCatalog041?.();return false;}const scrollPositions056=previousRoot===root&&previousSection===section&&previousEditability===state.canEdit&&previousOwner===state.user?.id?scrollSnapshot056(root):[];const openCardId=dialog?.open?Number(dialog.dataset.source):null,active=doc.activeElement,editKey=active?.dataset?.editKey,range=editKey&&typeof active.selectionStart==='number'?[active.selectionStart,active.selectionEnd]:null;refreshCatalog041=null;localDeckSetup068=null;onPrepareDeckSetup068(null);root.replaceChildren();const host=el('div',null,'au-view');root.append(host);if(section==='cards'){title(host,'카드 도감','카드 정보를 확인하고 등급·판매·보상·카테고리를 편집하세요.');cardsPanel(host);}else if(section==='decks')deckPanel(host);else if(section==='chapters')chaptersPanel(host);else if(section==='starters')startersPanel(host);else if(section==='recovery'){title(host,'이전 자료','예전 기기에 남은 편집본은 복구 보관소에 보존됩니다. 자동으로 게임 설정을 바꾸지 않습니다.');for(const item of state.recoveries??entities039(state).filter(e=>e.entity_type==='recovery_archive').map(e=>({id:e.entity_id,name:e.content.source_key?.includes('starter')?'이전 시작 덱':e.content.source_key?.includes('character')?'이전 캐릭터 자료':e.content.source_key?.includes('review')?'이전 카드 검토':e.content.source_key?.includes('content')?'이전 원정 콘텐츠':'이전 덱·편집본',status:`DB 복구 보관소 · ${Math.ceil((e.content.bytes??0)/1024)}KB`,download:onRecoveryRead?()=>onRecoveryRead(e.entity_id):null}))){const row=el('section',null,'au-panel');row.append(el('h2',item.name??'이전 편집본'),el('p',item.status??'보관됨'));if(item.download)row.append(button('원문 내려받기',item.download));host.append(row);}}else genericPanel(host,section);if(openCardId!==null){const card=currentCards.find(c=>c.source_id===openCardId);if(card)openCard(card);}if(editKey){const target=[...root.querySelectorAll('[data-edit-key]'),...(dialog?.open?dialog.querySelectorAll('[data-edit-key]'):[])].find(n=>n.dataset.editKey===editKey);if(target){target.focus({preventScroll:true});if(range&&target.setSelectionRange&&target.type!=='number')try{target.setSelectionRange(...range);}catch{}}}restoreScroll056(scrollPositions056);editing041.refreshSignal();return true;}
   return {render,openCard,prepareSave068(scope={}){if(localDeckSetup068&&(scope.deckSetup068===localDeckSetup068.deckId||scope.routes071!=null&&scope.routes071===localDeckSetup068.scope071||scope.id==null&&!scope.keys&&!scope.types))return localDeckSetup068.prepare?.();},cancelLocalSetup068(){return localDeckSetup068?.cancel?.();},selectDeck(id){selected.set('decks',id);const picker=currentRoot?.querySelector('[aria-label="편집할 덱"]');if(picker)picker.value=id;},selectEntity065(section,id,entryId){selected.set(section,id);if(section==='chapters'&&entryId){filters.set(`chapter-selected066:${id}`,entryId);filters.set(`chapter-mode066:${id}`,'editor');}},revealFields065(type,id,fields=[]){
     const prefix=entityKey039(type,id),roots=type.startsWith('card_')&&dialog?.open?[dialog]:[currentRoot],labels=fields.map(key=>names[key]??authoringFieldNames066[key]??key),controls=roots.flatMap(root=>[...root.querySelectorAll('[data-edit-key]')]);
     let target=controls.find(node=>fields.some(key=>node.dataset.editKey===`${prefix}.${key}`||node.dataset.editKey.startsWith(`${prefix}.${key}.`)));

@@ -5,7 +5,7 @@ import {webcrypto,createHash} from 'node:crypto';
 import {createAuthoringPanels039,normalizeCatalog039} from '../authoring039-panels.js';
 import {AuthoringStore039,PROJECT039,IDENTITY039} from '../authoring039-store.js';
 import {mountAuthoringShell039,writeSubject060} from '../authoring039-shell.js';
-import {Document041,fixture041,field041,button041} from './authoring041-test-dom.js';
+import {Document041,fixture041,field041,button041,openCharacterTraits041} from './authoring041-test-dom.js';
 
 const clone=structuredClone,tick=()=>new Promise(resolve=>setImmediate(resolve));
 const hash=value=>createHash('sha256').update(value).digest('hex');
@@ -16,7 +16,9 @@ function mounted(t,section,{state=fixture041(),id=null}={}){
  const panels=createAuthoringPanels039({document,onError:error=>errors.push(error),onChange:(type,id,fields,options)=>{
   writes.push({type,id,fields:clone(fields),options:clone(options)});const item=state.entities.find(item=>item.entity_type===type&&item.entity_id===id);assert.ok(item,`Synthetic entity ${type}:${id} exists`);item.content={...item.content,...clone(fields)};panels.render(section,root,state);return Promise.resolve({kind:'synthetic-local-stage'});
  }});
- if(id)panels.selectEntity065(section,id);panels.render(section,root,state);t.after(()=>panels.destroy());
+ if(id)panels.selectEntity065(section,id);panels.render(section,root,state);
+ if(section==='characters')openCharacterTraits041(root);
+ t.after(()=>panels.destroy());
  return {state,document,root,panels,writes,errors,entity(type,id){return state.entities.find(item=>item.entity_type===type&&item.entity_id===id);}};
 }
 function control(m,key){const node=m.root.querySelectorAll('[data-edit-key]').find(node=>node.dataset.editKey===key);assert.ok(node,`Missing edit control: ${key}`);return node;}

@@ -2,7 +2,7 @@ import {builderCardMatches} from './ai-deck-filters.js';
 import {sortCatalogRegistered049} from './authoring049-recent.js';
 
 export const CARD_SORTS091=Object.freeze([
-  ['name','이름순'],['name-desc','이름 역순'],['registered','최근 등록순'],['registered-asc','오래된 등록순'],
+  ['relevance','관련도순'],['name','이름순'],['name-desc','이름 역순'],['registered','최근 등록순'],['registered-asc','오래된 등록순'],
   ['attack-desc','공격력 높은 순'],['attack-asc','공격력 낮은 순'],
   ['defense-desc','수비력 높은 순'],['defense-asc','수비력 낮은 순'],
   ['level-desc','레벨(별) 높은 순'],['level-asc','레벨(별) 낮은 순']
@@ -66,7 +66,29 @@ export function cardFiltersMatch091(card,filters={},tokens=cardQueryTokens091(fi
 function stat(card,field){if(!monster(card))return null;const value=field==='atk'?card.atk??card.attack:field==='def'?card.def??card.defense:card.level;return Number.isFinite(value)&&value>=0&&(field!=='level'||value>0)?value:null;}
 const collator=new Intl.Collator('ko');
 function tie(a,b){return collator.compare(a.name_ko??a.name??'',b.name_ko??b.name??'')||(a.source_id??a.internal_id??a.slot??0)-(b.source_id??b.internal_id??b.slot??0)||(a.slot??0)-(b.slot??0);}
-export function sortCards091(cards,sort='name'){
+function relevance(card,phrase,tokens){
+  const names=[card.name_ko,card.name_en,card.name_english,card.name,card.nameEnglish].filter(Boolean).map(normalize);
+  const aliases=(Array.isArray(card.search_aliases)?card.search_aliases:[]).map(normalize);
+  if(names.includes(phrase))return 0;
+  if(aliases.includes(phrase))return 1;
+  if(/^\d+$/.test(phrase)&&[card.code,card.source_id,card.internal_id,card.slot,card.web_slot].some(id=>String(id)===phrase))return 2;
+  if(names.some(name=>name.startsWith(phrase)))return 3;
+  if(aliases.some(name=>name.startsWith(phrase)))return 4;
+  if(names.some(name=>name.includes(phrase)))return 5;
+  if(aliases.some(name=>name.includes(phrase)))return 6;
+  const bestNameHits=names.reduce((most,name)=>Math.max(most,tokens.filter(token=>name.includes(token)).length),0);
+  const metadataHits=tokens.filter(token=>races.includes(token)?raceMatches(card,token):
+    Object.hasOwn(attributes,token.replace(/속성$/,''))?attributeMatches(card,token):
+      ['몬스터','마법','함정'].includes(token)&&typeMatches(card,token)).length;
+  return 8-(bestNameHits+metadataHits*.5)/tokens.length;
+}
+export function sortCards091(cards,sort='relevance',query=''){
+  const phrase=sort==='relevance'?normalize(query):'';
+  if(phrase){
+    const tokens=cardQueryTokens091(query).map(normalize);
+    return cards.map(card=>({card,rank:relevance(card,phrase,tokens)}))
+      .sort((a,b)=>a.rank-b.rank||tie(a.card,b.card)).map(row=>row.card);
+  }
   if(sort==='registered')return sortCatalogRegistered049(cards);
   if(sort==='registered-asc')return [...cards].sort((a,b)=>{const av=a.web_slot??a.slot,bv=b.web_slot??b.slot,ak=Number.isSafeInteger(av)&&av>0,bk=Number.isSafeInteger(bv)&&bv>0;return ak!==bk?ak?-1:1:ak&&av!==bv?av-bv:tie(a,b);});
   const field=sort.startsWith('attack-')?'atk':sort.startsWith('defense-')?'def':sort.startsWith('level-')?'level':null,ascending=sort.endsWith('-asc');

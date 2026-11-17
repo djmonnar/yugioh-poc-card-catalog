@@ -49,7 +49,7 @@ test('registration sorting uses catalog append order and never card-name or edit
 
 for(const section of ['cards','decks'])test(`${section}: latest additions are one action away, selected, counted and newest first`,t=>{
   const m=mounted(t,{section}),all=button041(m.root,'전체 카드'),recent=button041(m.root,'최근 추가');
-  assert.equal(all.getAttribute('aria-pressed'),'true');assert.equal(recent.getAttribute('aria-pressed'),'false');assert.equal(field041(m.root,'카드 정렬').value,'name');
+  assert.equal(all.getAttribute('aria-pressed'),'true');assert.equal(recent.getAttribute('aria-pressed'),'false');assert.equal(field041(m.root,'카드 정렬').value,'relevance');
   recent.click();assert.equal(all.getAttribute('aria-pressed'),'false');assert.equal(recent.getAttribute('aria-pressed'),'true');assert.equal(field041(m.root,'카드 정렬').value,'registered');
   assert.equal(firstName(m),expectedNewest(m));assert.match(summary(m),/^75종 · 암흑계·젬나이트 추가 \(최근\) · 최근 등록순/);assert.equal(tiles(m).length,24);
   assert.equal(field041(m.root,'추가 묶음').selectedOptions[0].textContent,'암흑계·젬나이트 추가 (최근) · 75종');assert.equal(m.writes.length,0);
@@ -59,7 +59,7 @@ test('latest, previous and all addition batches share the same current catalog',
   const m=mounted(t);button041(m.root,'최근 추가').click();const batch=field041(m.root,'추가 묶음');
   batch.value='Cards035';batch.fire('change');assert.match(summary(m),/^30종 · 사이버·앤틱 기어 추가/);assert.equal(firstName(m),normalizeCatalog039(m.state).find(c=>c.source_id===2419).name_ko);
   batch.value='all';batch.fire('change');assert.match(summary(m),/^105종 · 추가 카드 전체/);assert.equal(firstName(m),expectedNewest(m));
-  button041(m.root,'전체 카드').click();assert.match(summary(m),/^1,531종/);assert.equal(batch.parentElement.hidden,true);assert.equal(field041(m.root,'카드 정렬').value,'registered');assert.equal(m.writes.length,0);
+  button041(m.root,'전체 카드').click();assert.match(summary(m),/^1,531종/);assert.equal(batch.parentElement.hidden,true);assert.equal(field041(m.root,'카드 정렬').value,'relevance');assert.equal(m.writes.length,0);
 });
 
 test('search, category and type intersect the addition scope without replacing the Korean input',t=>{
@@ -75,7 +75,7 @@ test('search clear preserves addition selection, and empty-result reset restores
   assert.equal(tiles(m).length,0);assert.match(m.root.querySelector('.au-empty').textContent,/추가된 카드 중/);assert.match(summary(m),/^0종/);
   button041(m.root,'검색 지우기').click();assert.equal(field041(m.root,'카드 검색'),m.search);assert.equal(m.document.activeElement,m.search);assert.match(summary(m),/^75종/);assert.equal(button041(m.root,'최근 추가').getAttribute('aria-pressed'),'true');
   m.search.value='없는카드제목ZZZ';m.search.fire('input');m.root.querySelector('.au-empty').querySelector('button').click();
-  assert.equal(m.search.value,'');assert.equal(button041(m.root,'전체 카드').getAttribute('aria-pressed'),'true');assert.equal(field041(m.root,'카드 정렬').value,'name');assert.match(summary(m),/^1,531종/);
+  assert.equal(m.search.value,'');assert.equal(button041(m.root,'전체 카드').getAttribute('aria-pressed'),'true');assert.equal(field041(m.root,'카드 정렬').value,'relevance');assert.match(summary(m),/^1,531종/);
 });
 
 test('sorting and addition changes reset pagination while card dialogs still use the same identity',t=>{

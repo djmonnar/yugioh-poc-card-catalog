@@ -32,3 +32,10 @@ export class Document041 extends Node041 {
 }
 export const field041=(root,label)=>root.querySelectorAll('input,select,textarea').find(node=>node.getAttribute('aria-label')===label);
 export const button041=(root,label)=>root.querySelectorAll('button').find(node=>node.textContent===label);
+export function openCharacterTraits041(root){
+  for(const selector of ['.au-character-traits','.au-character-trait-profile']){
+    for(const disclosure of root.querySelectorAll(selector)){
+      disclosure.open=true;disclosure.fire('toggle',{bubbles:false});
+    }
+  }
+}

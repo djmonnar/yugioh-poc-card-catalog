@@ -113,6 +113,19 @@ export function validateAuthoringChange066(snapshot,type,id,fields,{operation='p
         ['representative_source_id'],'대표 카드는 이 덱에 담긴 카드 중에서 선택해 주세요.');
     }
   }
+  if(type==='starter_list')for(const entry of content.entries??[]){
+    if(!own(entry,'start_loadout'))continue;
+    const config=entry.start_loadout,rule=capabilities.starter_loadout,keys=['entries'];
+    check(rule&&object(config),keys,'원정 시작 설정을 사용할 수 없습니다. 제작소를 새로 불러와 주세요.');
+    check(Number.isSafeInteger(config.lp)&&config.lp>=1&&config.lp<=rule.lp_max,keys,`시작 LP는 1~${rule.lp_max.toLocaleString('ko-KR')}로 설정해 주세요.`);
+    check(Number.isSafeInteger(config.gold)&&config.gold>=0&&config.gold<=rule.gold_max,keys,`시작 골드는 0~${rule.gold_max.toLocaleString('ko-KR')}로 설정해 주세요.`);
+    const owned=entities.filter(row=>row.entity_type==='relic'&&!row.deleted);
+    const relicIds=new Set(owned.map(row=>row.content.id??row.entity_id));
+    check(Array.isArray(config.relic_ids)&&config.relic_ids.length<=rule.relics_max&&
+      new Set(config.relic_ids).size===config.relic_ids.length&&config.relic_ids.every(id=>relicIds.has(id)),keys,'시작 유물 목록을 확인해 주세요.');
+    check(Array.isArray(config.traits)&&config.traits.every(trait=>object(trait)&&trait.kind!=='lp_bonus'),keys,'시작 특성의 종류를 확인해 주세요.');
+    validateSkills(config.traits,true,keys);
+  }
   if(type==='chapter_role')for(const entry of content.entries??[])if(entry.encounter){
     try{validateSkills(entry.encounter.skills??[],false,['entries']);}
     catch(error){if(error.authoringIssue066){error.message=`${entry.encounter.name||'편성된 상대'} · ${error.message}`;error.authoringIssue066={...error.authoringIssue066,entryId:entry.entry_id,message:error.message};}throw error;}

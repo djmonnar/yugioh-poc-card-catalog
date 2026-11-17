@@ -12,7 +12,7 @@ import { traitCardMatches089, sharedTraitRefMatches089 } from '../authoring089-t
 import { catalogAdditions049 } from '../authoring049-recent.js';
 import { additionThemes067 } from '../authoring067-themes.js';
 import { CARD_SORTS091, sortCards091, cardQueryMatches091 } from '../authoring091-search.js';
-import { Document041, fixture041, field041, button041 } from './authoring041-test-dom.js';
+import { Document041, fixture041, field041, button041, openCharacterTraits041 } from './authoring041-test-dom.js';
 
 const read = file => readFileSync(new URL(file, import.meta.url));
 const sha = value => createHash('sha256').update(value).digest('hex');
@@ -55,6 +55,7 @@ function mount(t, state, section, id) {
   if (id) panels.selectEntity065(section, id);
   if (section === 'decks') panels.selectDeck(id);
   panels.render(section, root, state);
+  if (section === 'characters') openCharacterTraits041(root);
   t.after(() => panels.destroy());
   return { root, panels, writes, errors };
 }

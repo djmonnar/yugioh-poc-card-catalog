@@ -11,7 +11,7 @@ import {traitCardMatches089,sharedTraitRefMatches089} from '../authoring089-trai
 import {catalogAdditions049} from '../authoring049-recent.js';
 import {additionThemes067} from '../authoring067-themes.js';
 import {CARD_SORTS091,sortCards091,cardQueryMatches091,cardFiltersMatch091} from '../authoring091-search.js';
-import {Document041,fixture041,field041,button041} from './authoring041-test-dom.js';
+import {Document041,fixture041,field041,button041,openCharacterTraits041} from './authoring041-test-dom.js';
 const read=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url),'utf8'));
 const manifest=read('../data/native-expansion103.json'),sha=b=>createHash('sha256').update(b).digest('hex'),CHAR='traits103-character';
 const ref=c=>({slot:c.slot,internal_id:c.source_id,identity_key:c.identity_key,name_ko:c.name_ko});
@@ -20,7 +20,7 @@ function wire(identity,revision,state=current103(identity===GAME_IDENTITY103)){
  const payload=JSON.stringify({catalog:state.bootstrap.catalog.cards,deck_rules035:{},opponents:{},starters:{},content022:{},meta017:{},characters:state.bootstrap.characters,shop_rules:{}});
  return {schema:1,kind:'unified039-bootstrap',project_id:PROJECT039,view:'authoring',project_revision:revision,unchanged:false,permissions:{can_edit:true},authoring:{entities:[{entity_type:'deck',entity_id:'draft103',version:615,content:{name:'기존 덱',main:[]},state:'draft',issues:[]}]},game:{schema:1,kind:'poc-unified-game039',game_revision:revision,authoring_revision:revision,metadata_revision:String(revision),identity,payload_json:payload,source_fingerprint:sha(payload)}};
 }
-function mount(t,state,section='characters',id=CHAR){const document=new Document041(),root=document.createElement('main'),writes=[],errors=[];document.body.append(root);const panels=createAuthoringPanels039({document,onChange:(...a)=>writes.push(structuredClone(a)),onError:e=>errors.push(e)});panels.selectEntity065(section,id);if(section==='decks')panels.selectDeck(id);panels.render(section,root,state);t.after(()=>panels.destroy());return {root,panels,writes,errors};}
+function mount(t,state,section='characters',id=CHAR){const document=new Document041(),root=document.createElement('main'),writes=[],errors=[];document.body.append(root);const panels=createAuthoringPanels039({document,onChange:(...a)=>writes.push(structuredClone(a)),onError:e=>errors.push(e)});panels.selectEntity065(section,id);if(section==='decks')panels.selectDeck(id);panels.render(section,root,state);if(section==='characters')openCharacterTraits041(root);t.after(()=>panels.destroy());return {root,panels,writes,errors};}
 function pick(root,key,target){const input=root.querySelectorAll('input').find(n=>n.dataset.editKey===key);assert(input,`picker ${key}`);const box=input.parentElement,search=field041(box,'대상 카드 검색');search.value=target.name_ko;search.fire('input');const button=box.querySelectorAll('.au-card-pick').find(n=>n.textContent.replace(/ ✓$/,'')===target.name_ko);assert(button,`select ${target.source_id}`);assert.equal(button.disabled,false);button.click();}
 function character(state,skills,profiles=[]){state.entities.push({entity_type:'character',entity_id:CHAR,version:1,state:'saved',issues:[],content:{name:'기존 사용자 캐릭터',portrait:'',skills,skill_profiles:profiles}});}
 

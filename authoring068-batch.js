@@ -2,14 +2,15 @@
 export const batchChanges068=item=>item?.batch068===true?item.changes:[item];
 export const batchFields068=item=>[...new Set(batchChanges068(item).flatMap(change=>Object.keys(change?.fields??{})))];
 export const batchWriteState068=item=>item?.batch068===true?{batch068:true,batchId:item.batchId,changes:item.changes.map(change=>({type:change.type,id:change.id,operation:change.operation,fields:Object.keys(change.fields)}))}:{};
-const allowed=change=>['deck','chapter_role'].includes(change.type)&&['create','patch'].includes(change.operation)&&!(change.type==='chapter_role'&&change.operation!=='patch');
+const allowed=change=>change.type==='deck'&&['create','patch','delete'].includes(change.operation)||change.type==='chapter_role'&&change.operation==='patch';
+const deleting=changes=>changes[0]?.operation==='delete';
 const ordered=changes=>[...changes].sort((a,b)=>(a.type==='deck'?0:1)-(b.type==='deck'?0:1)||(a.id<b.id?-1:a.id>b.id?1:0));
 const wire=change=>({entity_type:change.type,entity_id:change.id,expected_entity_version:change.baseVersion,operation:change.operation,fields:structuredClone(change.fields)});
 function checkChanges(changes,c){
   c.need(Array.isArray(changes)&&changes.length>=1&&changes.length<=32,'함께 저장할 항목은 1~32개여야 합니다.');
   const seen=new Set();
   for(const change of changes){
-    c.need(c.object(change)&&allowed(change)&&typeof change.id==='string'&&change.id.length>=1&&change.id.length<=200&&!/[\u0000-\u001f\u007f]/.test(change.id)&&c.object(change.fields)&&Object.keys(change.fields).length>0&&c.integer(change.baseVersion)&&c.object(change.baseContent),'함께 저장할 덱과 편성을 확인해 주세요.');
+    c.need(c.object(change)&&allowed(change)&&typeof change.id==='string'&&change.id.length>=1&&change.id.length<=200&&!/[\u0000-\u001f\u007f]/.test(change.id)&&c.object(change.fields)&&(deleting(changes)?change.operation==='delete'&&Object.keys(change.fields).length===0:change.operation!=='delete'&&Object.keys(change.fields).length>0)&&c.integer(change.baseVersion)&&c.object(change.baseContent),'함께 저장할 덱과 편성을 확인해 주세요.');
     c.safe(change.fields);c.safe(change.baseContent);const key=c.key(change.type,change.id);c.need(!seen.has(key),'같은 항목을 두 번 함께 저장할 수 없습니다.');seen.add(key);
   }
 }
@@ -40,6 +41,7 @@ export function enqueueBatch068(store,input,c){
     const baseVersion=value.baseVersion??row?.version??0,baseContent=value.baseContent??row?.content??{};
     c.need(c.integer(baseVersion)&&c.object(baseContent)&&c.object(fields),'함께 저장할 기준을 확인해 주세요.');
     if(operation==='patch')c.need(Object.keys(fields).every(field=>c.equal(row.content[field],baseContent[field])||c.equal(row.content[field],fields[field])),'DB에서 같은 필드가 바뀌었습니다. 초안은 유지됩니다.');
+    if(operation==='delete')c.need(row.version===baseVersion,'선택한 덱의 DB 내용이 바뀌었습니다. 덱을 다시 확인해 주세요.');
     return {type,id,operation,fields:c.clone(fields),baseVersion:row?.version??0,baseContent:c.clone(row?.content??{})};
   }));
   checkChanges(changes,c);
@@ -47,6 +49,7 @@ export function enqueueBatch068(store,input,c){
   for(const change of changes){
     c.validateAuthoringChange066(preview,change.type,change.id,change.fields,{operation:change.operation});
     const index=preview.entities.findIndex(row=>row.entity_type===change.type&&row.entity_id===change.id),row=index<0?{entity_type:change.type,entity_id:change.id,version:0,content:{}}:preview.entities[index];
+    if(change.operation==='delete'){if(index>=0)preview.entities.splice(index,1);continue;}
     const next={...row,content:{...row.content,...c.clone(change.fields)}};if(index<0)preview.entities.push(next);else preview.entities[index]=next;
   }
   const item={batch068:true,batchId:store.crypto.randomUUID(),owner068:store.user.id,changes,resolve:[]};
@@ -54,8 +57,8 @@ export function enqueueBatch068(store,input,c){
   const promise=new Promise(resolve=>item.resolve.push(resolve));store.phase='pending';store.error=null;store.conflictInfo=null;store.emit();store.schedule();return promise;
 }
 function rowFor(store,change){return store.getRow(change.type,change.id);}
-function alreadyCurrent(store,change,c){const row=rowFor(store,change);return row&&Object.keys(change.fields).every(field=>c.equal(row.content[field],change.fields[field]));}
-function compatible(store,change,c){const row=rowFor(store,change);return change.operation==='create'?!row:row&&Object.keys(change.fields).every(field=>c.equal(row.content[field],change.baseContent[field])||c.equal(row.content[field],change.fields[field]));}
+function alreadyCurrent(store,change,c){const row=rowFor(store,change);return change.operation==='delete'?!row:row&&Object.keys(change.fields).every(field=>c.equal(row.content[field],change.fields[field]));}
+function compatible(store,change,c){const row=rowFor(store,change);if(change.operation==='delete')return row?.version===change.baseVersion;return change.operation==='create'?!row:row&&Object.keys(change.fields).every(field=>c.equal(row.content[field],change.baseContent[field])||c.equal(row.content[field],change.fields[field]));}
 function reset(store){store.error=null;store.failures=0;store.retryRequestId=null;store.retryNotBefore=0;store.conflictInfo=null;store.phase=store.queue.length?'pending':'ready';}
 function advanceWaiting(store,committed,rows,entities,c){
   for(const waitingItem of store.queue.slice(1))for(const waiting of batchChanges068(waitingItem))for(const sent of committed){
@@ -85,11 +88,13 @@ export async function drainBatch068(store,c){
           for(const change of item.changes){const row=rowFor(store,change);change.baseVersion=row?.version??0;change.baseContent=c.clone(row?.content??{});}delete item.body;delete item.requestId;store.phase='pending';store.conflictInfo=null;persist(store,store.queue,c);
         }else{
           const changes=item.changes.map(change=>{const row=rowFor(store,change);return {type:change.type,id:change.id,baselineVersion:change.baseVersion,currentVersion:row?.version??null,currentMissing:!row,fields:Object.keys(change.fields).map(field=>({field,changedSinceBase:!row||!c.equal(row.content[field],change.baseContent[field]),alreadyDesired:!!row&&c.equal(row.content[field],change.fields[field])}))};});
-          store.phase='conflict';store.error='DB에서 덱 또는 편성의 같은 필드가 바뀌었습니다. 함께 저장할 초안 전체를 확인해 주세요.';store.conflictInfo={batch068:true,changes,fields:changes.flatMap(change=>change.fields.map(field=>({...field,type:change.type,id:change.id})))};persist(store,store.queue,c);
+          store.phase='conflict';store.error=deleting(item.changes)?'선택한 덱의 DB 내용이 바뀌었습니다. 이 삭제 요청을 취소하고 덱을 다시 선택해 주세요.':'DB에서 덱 또는 편성의 같은 필드가 바뀌었습니다. 함께 저장할 초안 전체를 확인해 주세요.';store.conflictInfo={batch068:true,changes,fields:changes.flatMap(change=>change.fields.map(field=>({...field,type:change.type,id:change.id})))};persist(store,store.queue,c);
         }return;
       }
       if(/unified039_(validation|invalid|forbidden|unauthorized|editor_required)/.test(result.error.message??'')){
-        delete item.body;delete item.requestId;item.rejected=true;item.rejectionReason=c.rejectionReason065(result.error);store.phase='invalid';store.error=c.validationInfo065(item.rejectionReason,item.changes.flatMap(change=>Object.keys(change.fields))).message;persist(store,store.queue,c);return;
+        delete item.body;delete item.requestId;item.rejected=true;item.rejectionReason=c.rejectionReason065(result.error);store.phase='invalid';store.error=deleting(item.changes)?
+          item.rejectionReason==='unified039_deck_in_use'?'선택한 덱이 장별 편성이나 시작 덱에 사용 중입니다. 모든 덱이 유지됐습니다.':'서버가 덱 삭제를 거절했습니다. 모든 덱이 유지됐습니다.':
+          c.validationInfo065(item.rejectionReason,item.changes.flatMap(change=>Object.keys(change.fields))).message;persist(store,store.queue,c);return;
       }throw result.error;
     }
     const ack=result.data;
@@ -98,7 +103,7 @@ export async function drainBatch068(store,c){
     for(const row of rows){c.validEntity(row);const key=c.key(row.entity_type,row.entity_id);c.need(!seen.has(key),'함께 저장한 응답에 중복 항목이 있습니다.');seen.add(key);}
     // The server can normalize accepted metadata. Its complete versioned ACK
     // is authoritative; field equality is reserved for no-write CAS proofs.
-    for(const change of item.changes){const row=rows.find(row=>row.entity_type===change.type&&row.entity_id===change.id);c.need(row&&!row.deleted&&row.version===ack.applied_revision,'함께 저장한 항목 전체를 확인하지 못했습니다. 같은 요청으로 다시 확인합니다.');}
+    for(const change of item.changes){const row=rows.find(row=>row.entity_type===change.type&&row.entity_id===change.id);c.need(row&&Boolean(row.deleted)===(change.operation==='delete')&&row.version===ack.applied_revision,'함께 저장한 항목 전체를 확인하지 못했습니다. 같은 요청으로 다시 확인합니다.');}
     const next=c.clone(store.bootstrap);
     if(ack.applied_revision>=next.project_revision){
       for(const row of rows){const index=next.authoring.entities.findIndex(value=>value.entity_type===row.entity_type&&value.entity_id===row.entity_id);if(row.deleted){if(index>=0)next.authoring.entities.splice(index,1);}else if(index<0)next.authoring.entities.push(c.clone(row));else next.authoring.entities[index]=c.clone(row);}next.project_revision=ack.applied_revision;
@@ -124,6 +129,7 @@ export function resolveBatchConflict068(store,choice,c){
   const item=store.queue[0];c.need(store.phase==='conflict'&&item?.batch068===true&&item.owner068===store.user?.id,'충돌한 함께 저장 요청을 확인해 주세요.');
   if(choice==='remote'){persist(store,store.queue.slice(1),c);store.queue.shift();for(const resolve of Array.isArray(item.resolve)?item.resolve:[])resolve({discarded:true,batch068:true,batchId:item.batchId});}
   else{
+    c.need(!deleting(item.changes),'이 삭제 요청을 취소하고 덱을 다시 선택해 주세요.');
     c.need(choice==='retry','충돌 처리 방법을 확인해 주세요.');for(const change of item.changes){const row=rowFor(store,change);c.need(change.operation==='create'?!row:!!row,'항목이 생성되거나 삭제됐습니다. 초안을 먼저 확인해 주세요.');}
     for(const change of item.changes){const row=rowFor(store,change);change.baseVersion=row?.version??0;change.baseContent=c.clone(row?.content??{});}delete item.body;delete item.requestId;persist(store,store.queue,c);
   }reset(store);store.emit();store.schedule(0);

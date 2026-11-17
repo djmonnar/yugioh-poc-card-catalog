@@ -9,11 +9,11 @@ const initial=()=>[row('deck','deck',{name:'Original',deck_name:'Original',main:
 const entry=id=>({entry_id:id,deck_id:'deck',weight:1,encounter:{name:id,skills:[]}});
 const changes=()=>[{type:'chapter_role',id:'2:elite',fields:{entries:[entry('e2')]}},{type:'deck',id:'deck',fields:{name:'Changed',deck_name:'Changed'}},{type:'chapter_role',id:'1:battle',fields:{entries:[entry('e1')]}}];
 class Storage{constructor(){this.values=new Map();this.fail=false;}getItem(key){return this.values.get(key)??null;}setItem(key,value){if(this.fail)throw Error('quota');this.values.set(key,String(value));}}
-async function setup(t,{storage=new Storage(),existing=null}={}){
- const remote=existing??{revision:1,rows:initial(),calls:[],requests:new Map(),commits:0,nextError:null,user:'owner',hold:null};
+async function setup(t,{storage=new Storage(),existing=null,rows=initial()}={}){
+ const remote=existing??{revision:1,rows,calls:[],requests:new Map(),commits:0,nextError:null,user:'owner',hold:null};
  const client={auth:{getSession:async()=>({data:{session:{user:{id:remote.user}}}}),onAuthStateChange:()=>({data:{subscription:{unsubscribe(){}}}})},rpc:async(name,args)=>{
   remote.calls.push({name,args:clone(args),user:remote.user});
-  if(name==='poc_bootstrap039')return {data:{schema:1,kind:'unified039-bootstrap',project_id:PROJECT039,view:'authoring',project_revision:remote.revision,unchanged:false,permissions:{can_edit:true},capabilities:{entities:{deck:{operations:['create','patch'],fields:{}},chapter_role:{operations:['patch'],fields:{}}},trait_form:{kinds:[{kind:'heal_once',compiled:true,fields:{value:{type:'integer',min:100,max:8000}}}]}},authoring:{entities:clone(remote.rows)},game:{schema:1,kind:'poc-unified-game039',authoring_revision:remote.revision,game_revision:remote.revision,metadata_revision:String(remote.revision),identity:IDENTITY039,payload_json:gameText,source_fingerprint:hash(gameText)}}};
+  if(name==='poc_bootstrap039')return {data:{schema:1,kind:'unified039-bootstrap',project_id:PROJECT039,view:'authoring',project_revision:remote.revision,unchanged:false,permissions:{can_edit:true},capabilities:{entities:{deck:{operations:['create','patch','delete'],fields:{}},chapter_role:{operations:['patch'],fields:{}}},trait_form:{kinds:[{kind:'heal_once',compiled:true,fields:{value:{type:'integer',min:100,max:8000}}}]}},authoring:{entities:clone(remote.rows)},game:{schema:1,kind:'poc-unified-game039',authoring_revision:remote.revision,game_revision:remote.revision,metadata_revision:String(remote.revision),identity:IDENTITY039,payload_json:gameText,source_fingerprint:hash(gameText)}}};
   if(remote.hold){const hold=remote.hold;remote.hold=null;await hold;}
   if(remote.nextError){const error=remote.nextError;remote.nextError=null;return {error};}
   const intent=args.p_intent;if(remote.requests.has(intent.request_id))return {data:{...clone(remote.requests.get(intent.request_id)),replayed:true}};
@@ -21,7 +21,18 @@ async function setup(t,{storage=new Storage(),existing=null}={}){
   // Validate every CAS before preparing any mutation, as the actual transaction does.
   for(const change of intent.changes){const old=remote.rows.find(x=>x.entity_type===change.entity_type&&x.entity_id===change.entity_id);if((old?.version??0)!==change.expected_entity_version||change.operation==='create'&&old)return {error:{code:'P0001',message:'unified039_conflict'}};}
   const revision=remote.revision+1,next=clone(remote.rows),ackRows=[];
-  for(const change of intent.changes){const index=next.findIndex(x=>x.entity_type===change.entity_type&&x.entity_id===change.entity_id),old=next[index],updated=row(change.entity_type,change.entity_id,{...(old?.content??{}),...clone(change.fields)},revision);if(index<0)next.push(updated);else next[index]=updated;ackRows.push(clone(updated));}
+  for(const change of intent.changes){
+    const index=next.findIndex(x=>x.entity_type===change.entity_type&&x.entity_id===change.entity_id);
+    if(change.operation==='delete'){
+      if(next.some(r=>['chapter_role','starter_list'].includes(r.entity_type)&&r.content.entries.some(e=>e.deck_id===change.entity_id)))
+        return {error:{code:'P0001',message:'unified039_validation',details:JSON.stringify({reason:'unified039_deck_in_use'})}};
+      next.splice(index,1);
+      ackRows.push({entity_type:change.entity_type,entity_id:change.entity_id,deleted:true,version:revision});
+      continue;
+    }
+    const old=next[index],updated=row(change.entity_type,change.entity_id,{...(old?.content??{}),...clone(change.fields)},revision);
+    if(index<0)next.push(updated);else next[index]=updated;ackRows.push(clone(updated));
+  }
   remote.rows=next;remote.revision=revision;remote.commits++;
   const ack={schema:1,kind:'unified039-write-ack',request_id:intent.request_id,applied_revision:revision,observed_project_revision:revision,entities:ackRows,game_source_fingerprint:hash(gameText),issues:[]};remote.requests.set(intent.request_id,clone(ack));return {data:ack};
  }};
@@ -36,6 +47,40 @@ test('one durable item sends deck first and every selected role in one atomic re
  assert.equal(m.store.queue.length,1);assert.equal(m.store.snapshot().writeState.changes.length,3);assert.equal(m.store.snapshot().entities[0].content.name,'Changed');assert.equal(m.store.bootstrap.authoring.entities[0].content.name,'Original');
  const durable=JSON.parse(m.storage.getItem(m.store.outboxKey()));assert.equal(durable.schema,1);assert.equal(durable.items.length,1);assert.equal(durable.items[0].changes.length,3);assert.equal(JSON.stringify(durable).includes('payload_json'),false);
  await m.store.drain();const ack=await done;assert.equal(m.writes().length,1);assert.equal(m.remote.commits,1);assert.equal(ack.entities.length,3);assert.deepEqual(m.writes()[0].args.p_intent.changes.map(x=>[x.entity_type,x.entity_id]),[['deck','deck'],['chapter_role','1:battle'],['chapter_role','2:elite']]);assert.equal(m.store.queue.length,0);
+});
+
+const deleteRows=()=>[...initial(),row('deck','spare',{name:'Spare',deck_name:'Spare',main:[],extra:[]})];
+const deletes=()=>['deck','spare'].map(id=>({type:'deck',id,operation:'delete',fields:{},baseVersion:1}));
+
+test('two deletes use one versioned atomic RPC and check both tombstones after a lost acknowledgment',async t=>{
+ const m=await setup(t,{rows:deleteRows()}),real=m.client.rpc;let lost=true;
+ m.client.rpc=async(name,args)=>{const result=await real(name,args);if(name==='poc_apply_intent039'&&lost){lost=false;throw Error('lost');}return result;};
+ const done=m.store.patchTogether068(deletes());await m.store.drain();
+ assert.equal(m.remote.commits,1);assert.equal(m.store.phase,'error');assert.equal(m.store.queue.length,1);
+ await m.store.drain();const ack=await done;
+ assert.equal(ack.replayed,true);assert.equal(m.remote.commits,1);
+ assert.deepEqual(m.writes().map(call=>call.args.p_intent),[m.writes()[0].args.p_intent,m.writes()[0].args.p_intent]);
+ assert.deepEqual(ack.entities.map(row=>[row.entity_id,row.deleted]),[['deck',true],['spare',true]]);
+ assert.equal(m.store.snapshot().entities.some(row=>row.entity_type==='deck'),false);
+ assert.equal(m.store.snapshot().entities.filter(row=>row.entity_type==='chapter_role').length,2);
+});
+
+test('a deck edit during deletion requires fresh selection and cannot force-retry',async t=>{
+ const m=await setup(t,{rows:deleteRows()}),done=m.store.patchTogether068(deletes());
+ m.edit('deck','deck',{name:'Edited in another browser'});await m.store.drain();
+ assert.equal(m.store.phase,'conflict');assert.equal(m.remote.commits,0);
+ assert.throws(()=>m.store.resolveConflict('retry'),/다시 선택/);
+ m.store.resolveConflict('remote');assert.equal((await done).discarded,true);
+ assert.equal(m.remote.rows.some(r=>r.entity_id==='spare'),true);
+});
+
+test('a server rejection because one deck is a starter keeps the whole batch',async t=>{
+ const rows=deleteRows();rows.push(row('starter_list','main',{entries:[{starter_id:'lineage',deck_id:'spare',name:'Spare'}]}));
+ const m=await setup(t,{rows}),done=m.store.patchTogether068(deletes());await m.store.drain();
+ assert.equal(m.store.phase,'invalid');assert.match(m.store.error,/사용 중/);
+ assert.equal(m.remote.commits,0);assert.equal(m.remote.rows.filter(r=>r.entity_type==='deck').length,2);
+ const rejected=m.store.getRejectedBatch068();m.store.releaseRejectedBatch068({batchId:rejected.batchId});
+ assert.equal((await done).discarded,true);
 });
 test('a new deck and its dependent role are submitted together with zero create CAS and deck first',async t=>{
  const m=await setup(t),input=[{type:'chapter_role',id:'1:battle',fields:{entries:[{...entry('new'),deck_id:'new-deck'}]}},{type:'deck',id:'new-deck',operation:'create',fields:{name:'New',deck_name:'New',main:[],extra:[]}}],done=m.store.patchTogether068(input);

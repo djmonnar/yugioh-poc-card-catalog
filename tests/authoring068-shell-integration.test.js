@@ -24,7 +24,19 @@ async function setup(t){
   const client={auth:{getSession:async()=>({data:{session:{user:{id:'synthetic068-editor'}}}}),onAuthStateChange:()=>({data:{subscription:{unsubscribe(){}}}})},rpc:async(name,args)=>{
     if(name==='poc_bootstrap039')return {data:wire()};assert.equal(name,'poc_apply_intent039');const intent=copy(args.p_intent);remote.writes.push(intent);if(remote.requests.has(intent.request_id))return {data:copy(remote.requests.get(intent.request_id))};if(remote.rejectOnce){const error=remote.rejectOnce;remote.rejectOnce=null;return {error};}
     assert.equal(intent.expected_project_revision,remote.revision);assert.ok(intent.changes.length<=32);for(const c of intent.changes){const before=remote.rows.find(r=>r.entity_type===c.entity_type&&r.entity_id===c.entity_id);assert.equal(c.expected_entity_version,before?.version??0);}
-    const next=copy(remote.rows),revision=remote.revision+1,changed=[];for(const c of intent.changes){const index=next.findIndex(r=>r.entity_type===c.entity_type&&r.entity_id===c.entity_id),value=row(c.entity_type,c.entity_id,{...(next[index]?.content??{}),...c.fields},revision);if(index<0)next.push(value);else next[index]=value;changed.push(copy(value));}remote.rows=next;remote.revision=revision;remote.commits++;
+    const next=copy(remote.rows),revision=remote.revision+1,changed=[];
+    for(const c of intent.changes){
+      const index=next.findIndex(r=>r.entity_type===c.entity_type&&r.entity_id===c.entity_id);
+      if(c.operation==='delete'){
+        next.splice(index,1);
+        changed.push({entity_type:c.entity_type,entity_id:c.entity_id,deleted:true,version:revision});
+        continue;
+      }
+      const value=row(c.entity_type,c.entity_id,{...(next[index]?.content??{}),...c.fields},revision);
+      if(index<0)next.push(value);else next[index]=value;
+      changed.push(copy(value));
+    }
+    remote.rows=next;remote.revision=revision;remote.commits++;
     const ack={schema:1,kind:'unified039-write-ack',request_id:intent.request_id,applied_revision:revision,observed_project_revision:revision,entities:changed,game_revision:1,game_source_fingerprint:hash(payload),issues:[]};remote.requests.set(intent.request_id,copy(ack));return {data:ack};
   }};
   const store=new AuthoringStore039({client,storage:new Storage068(),crypto:webcrypto,events:{},debounceMs:100000,idleRefreshMs:100000,pollMs:0});await store.start();
@@ -40,6 +52,30 @@ const setupEditor=m=>m.root.querySelector('.au-setup-editor068');
 const footer=m=>m.root.querySelector('.au-manual-save060');
 async function openAdd(m){click(m,'배치 설정');await flush();click(m,'배치 추가');await flush();return setupEditor(m);}
 async function drain(m){await flush();assert.equal(m.store.queue.length,1,'One atomic outbox item must contain the whole save');await m.store.drain();await flush();}
+
+test('confirming deck deletion sends only that deck and leaves unrelated local drafts unsaved',async t=>{
+  const m=await setup(t);
+  await input(m,'덱 이름','편집 중 이름');
+  assert.equal(m.shell.drafts060.summary().dirtyCount,1);
+  click(m,'덱 삭제');
+  const dialog=m.document.querySelector('.au-deck-delete153');
+  assert.ok(dialog?.open);
+  const rows=dialog.querySelectorAll('.au-deck-delete-row153');
+  const draft=rows.find(row=>row.textContent.includes('편집 중 이름'));
+  assert.equal(draft.querySelector('input').disabled,true);
+  click(m,'검색 결과 선택',dialog);
+  click(m,'선택 확인',dialog);
+  click(m,'1개 삭제',dialog);
+  await drain(m);
+  assert.deepEqual(m.remote.writes[0].changes.map(({entity_id,operation})=>[entity_id,operation]),[['deck-b','delete']]);
+  assert.equal(m.canonical('deck','deck-b'),undefined);
+  assert.equal(m.canonical('deck','deck-a').content.deck_name,'deck-a');
+  assert.equal(m.shell.drafts060.summary().dirtyCount,1);
+  assert.equal(button041(footer(m),'변경 사항 저장').disabled,false);
+  click(m,'변경 사항 저장',footer(m));await drain(m);
+  assert.equal(m.canonical('deck','deck-a').content.deck_name,'편집 중 이름');
+  assert.equal(m.shell.drafts060.summary().dirtyCount,0);
+});
 
 test('a fully configured local Add enables the global footer and saves character, named traits and renamed deck in one intent',async t=>{
   const m=await setup(t);await openAdd(m);await input(m,'배치할 장',2,'change');await input(m,'전투 종류','boss','change');await input(m,'캐릭터','character-kaiba','change');const traits=field041(setupEditor(m),'특성');assert.ok(traits);const duplicateLabels=traits.children.filter(option=>option.textContent.includes('같은 이름 특성'));assert.equal(duplicateLabels.length,2);assert.notEqual(duplicateLabels[0].textContent,duplicateLabels[1].textContent);

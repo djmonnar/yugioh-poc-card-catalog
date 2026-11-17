@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {webcrypto,createHash} from 'node:crypto';
 import {AuthoringStore039,PROJECT039,IDENTITY039} from '../authoring039-store.js';
 import {mountAuthoringShell039} from '../authoring039-shell.js';
-import {Document041,field041,button041} from './authoring041-test-dom.js';
+import {Document041,field041,button041,openCharacterTraits041} from './authoring041-test-dom.js';
 
 // Synthetic editor, content and RPC only. No session, drafts or DB from a user.
 const copy=structuredClone,hash=value=>createHash('sha256').update(value).digest('hex');
@@ -160,6 +160,7 @@ test('an uncertain network result never offers draft conversion or changes its r
 
 test('editing a legacy character skill includes its missing companion profile array in one explicit save',async t=>{
  const m=await harness(t,{section:'characters',missingSkills:true});const picker=field041(m.root,'캐릭터 선택');picker.value='weevil';picker.fire('change');await flush();
+ openCharacterTraits041(m.root);
  button041(m.root,'특성 추가').click();await flush();assert.equal(m.remote.writes.length,0);
  const draft=m.shell.drafts060.summary().items.find(item=>item.id==='weevil');assert.ok(draft);assert.deepEqual(draft.fields.skill_profiles,[]);assert.deepEqual(draft.fields.skills,[{kind:'lp_bonus',value:100}]);
  save(m).click();await flush();await m.store.drain();await until(()=>!m.shell.drafts060.summary().saving,'Legacy skills save completes');
@@ -169,6 +170,7 @@ test('editing a legacy character skill includes its missing companion profile ar
 
 test('editing a legacy character profile includes missing base skills and preserves existing profiles on later changes',async t=>{
  const m=await harness(t,{section:'characters',missingSkills:true});const picker=field041(m.root,'캐릭터 선택');picker.value='weevil';picker.fire('change');await flush();
+ openCharacterTraits041(m.root);
  button041(m.root,'특성 묶음 추가').click();await flush();const draft=m.shell.drafts060.summary().items.find(item=>item.id==='weevil');assert.ok(draft);assert.deepEqual(draft.fields.skills,[]);assert.equal(draft.fields.skill_profiles.length,1);
  const profileId=draft.fields.skill_profiles[0].profile_id;save(m).click();await flush();await m.store.drain();await until(()=>!m.shell.drafts060.summary().saving,'Legacy profile save completes');await flush();
  assert.equal(m.remote.writes.length,1);assert.deepEqual(m.remote.writes[0].changes[0].fields.skills,[]);assert.equal(m.canonical('character','weevil').content.skill_profiles[0].profile_id,profileId);
