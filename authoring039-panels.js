@@ -826,30 +826,51 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
         field('시작 골드',config.gold,{type:'integer',minimum:0,maximum:capability.gold_max},gold=>save({gold}),`${prefix}.gold`));
       content.append(numbers);
       const relics=entities039(currentState).filter(row=>row.entity_type==='relic').map(row=>({
-        id:row.content.id??row.entity_id,name:row.content.name??row.entity_id,enabled:row.content.enabled!==false
+        id:row.content.id??row.entity_id,name:row.content.name??row.entity_id,
+        description:row.content.description?.trim(),enabled:row.content.enabled!==false
       }));
-      const relicGroup=el('fieldset',null,'au-form-group');
+      const relicGroup=el('fieldset',null,'au-form-group au-starter-relics');
       relicGroup.append(el('legend',`시작 유물 · ${config.relic_ids.length}개`));
+      const relicRow=(relic,action)=>{
+        const row=el('li',null,'au-starter-relic-row'),info=el('div');
+        info.append(el('strong',relic.name),el('p',relic.description||'등록된 효과 설명이 없습니다.','au-hint'));
+        action.setAttribute('aria-label',`${relic.name} ${action.textContent}`);
+        action.disabled=!currentState.canEdit;
+        row.append(info,action);
+        return row;
+      };
+      const selectedRelics=el('ul',null,'au-starter-relic-list');
       for(const id of config.relic_ids){
-        const name=relics.find(relic=>relic.id===id)?.name??id;
-        const remove=button(`${name} 빼기`,()=>save({relic_ids:(read().relic_ids??[]).filter(value=>value!==id)}));
-        remove.disabled=!currentState.canEdit;
-        relicGroup.append(remove);
+        const relic=relics.find(relic=>relic.id===id)??{name:id};
+        selectedRelics.append(relicRow(relic,button('빼기',()=>save({relic_ids:(read().relic_ids??[]).filter(value=>value!==id)}))));
       }
+      if(config.relic_ids.length)relicGroup.append(selectedRelics);
       const available=relics.filter(relic=>relic.enabled&&!config.relic_ids.includes(relic.id));
       if(available.length&&(capability.relics_max==null||config.relic_ids.length<capability.relics_max)){
-        const pick=el('select'),placeholder=el('option','추가할 유물 선택');
-        placeholder.value='';pick.setAttribute('aria-label','추가할 시작 유물');pick.append(placeholder);
-        for(const relic of available){const option=el('option',relic.name);option.value=relic.id;pick.append(option);}
-        pick.disabled=!currentState.canEdit;
-        const add=button('시작 유물 추가',()=>{
-          const ids=read().relic_ids??[],id=pick.value;
-          if(!available.some(relic=>relic.id===id)||ids.includes(id))return;
-          if(capability.relics_max!=null&&ids.length>=capability.relics_max)throw Error('추가할 수 있는 시작 유물 수를 확인해 주세요.');
-          return save({relic_ids:[...ids,id]});
-        });
-        add.disabled=true;pick.onchange=()=>{add.disabled=!currentState.canEdit||!pick.value;};
-        const controls=el('div',null,'au-toolbar');controls.append(pick,add);relicGroup.append(controls);
+        const pickerKey=`${prefix}.relic-picker`,searchKey=`${pickerKey}.search`;
+        foldForm(relicGroup,'시작 유물 고르기',pickerKey,picker=>{
+          const search=el('input'),matches=el('ul',null,'au-starter-relic-list'),empty=el('p','검색 결과가 없습니다.','au-empty');
+          const normalize=value=>value.normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,'');
+          search.type='search';search.placeholder='유물 이름 또는 효과 검색';search.setAttribute('aria-label',search.placeholder);
+          search.dataset.editKey=searchKey;search.value=filters.get(searchKey)??'';
+          const options=available.map(relic=>({
+            searchText:normalize(`${relic.name} ${relic.description??''}`),
+            row:relicRow(relic,button('추가',()=>{
+              const ids=read().relic_ids??[];
+              if(ids.includes(relic.id))return;
+              if(capability.relics_max!=null&&ids.length>=capability.relics_max)throw Error('추가할 수 있는 시작 유물 수를 확인해 주세요.');
+              return save({relic_ids:[...ids,relic.id]});
+            }))
+          }));
+          const update=()=>{
+            const query=normalize(search.value);
+            const filtered=options.filter(option=>option.searchText.includes(query)).map(option=>option.row);
+            matches.replaceChildren(...filtered);
+            empty.hidden=filtered.length>0;
+          };
+          search.addEventListener('input',()=>{filters.set(searchKey,search.value);update();});
+          update();picker.append(search,matches,empty);
+        },'au-starter-relic-picker');
       }
       content.append(relicGroup);
       const traits=el('fieldset',null,'au-form-group');

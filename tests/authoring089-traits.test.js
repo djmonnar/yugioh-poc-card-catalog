@@ -61,7 +61,8 @@ test('starter settings edit only the selected starter and preserve saved setting
   const {root,panels,writes}=mounted(t,state,'starters',starters.entity_id);
   assert.equal(root.querySelector('.au-starter-loadout'),null);
   state.bootstrap.capabilities.starter_loadout={lp_max:1000000,gold_max:1000000,relics_max:70};
-  state.entities.push({entity_id:'sight-test',entity_type:'relic',content:{id:'sight-test',name:'간파의 눈'}});
+  const effect='첫 턴에 상대 패를 확인합니다.';
+  state.entities.push({entity_id:'sight-test',entity_type:'relic',content:{id:'sight-test',name:'간파의 눈',description:effect}});
   panels.render('starters',root,state,{force:true});
   const findConfig=()=>root.querySelector('.au-starter-loadout');
   const sync=()=>{
@@ -80,10 +81,15 @@ test('starter settings edit only the selected starter and preserve saved setting
   assert.deepEqual(sync(),{lp:5200,gold:0,traits:[],relic_ids:[]});
   const gold=field041(findConfig(),'시작 골드');gold.value='250';gold.fire('input');
   assert.equal(sync().gold,250);
-  const relic=field041(findConfig(),'추가할 시작 유물');relic.value='sight-test';relic.fire('change');
-  button041(findConfig(),'시작 유물 추가').click();
+  const relicPicker=findConfig().querySelector('.au-starter-relic-picker');
+  open(relicPicker);
+  const relicSearch=field041(relicPicker,'유물 이름 또는 효과 검색');relicSearch.value='상대패';relicSearch.fire('input');
+  const relicOption=relicPicker.querySelector('.au-starter-relic-row');
+  assert.equal(relicOption.querySelector('p').textContent,effect);
+  button041(relicOption,'추가').click();
   await tick();
   assert.deepEqual(sync().relic_ids,['sight-test']);
+  assert.equal(findConfig().querySelector('.au-starter-relic-row').querySelector('p').textContent,effect);
   const trait=field041(findConfig(),'추가할 특성');
   assert(!trait.options.some(option=>option.value==='lp_bonus'));
   trait.value='opening_draw';button041(findConfig(),'특성 추가').click();
