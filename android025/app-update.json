@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.86",
-  "versionCode": 105,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.86/YGOClassicExpedition-0.18.86-arm64.apk",
-  "sizeBytes": 650897176,
-  "sha256": "9b428a4c4f72dfaef619c2a138d9c9844aac99b52a83a39b6023c62a86a35d94",
-  "releaseNotes": "AI가 전투로 뒤집힌 재빠른 빅햄스터 등 리버스 리쿠르터의 합법적인 특수 소환을 확인하도록 수정했습니다."
+  "versionName": "0.18.87",
+  "versionCode": 106,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.87/YGOClassicExpedition-0.18.87-arm64.apk",
+  "sizeBytes": 650969304,
+  "sha256": "7b1a2c2e1a9163bd5a376b0de53a77f8c04d52b6e742aa046499ae77d382f441",
+  "releaseNotes": "자주 조정하는 AI 판단 기준을 게임 안에서 별도로 내려받을 수 있습니다. 새 기준은 다음 결투에 적용됩니다."
 }
