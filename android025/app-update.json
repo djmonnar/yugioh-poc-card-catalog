@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.82",
-  "versionCode": 101,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.82/YGOClassicExpedition-0.18.82-arm64.apk",
-  "sizeBytes": 627424420,
-  "sha256": "d6509b9ce99129a3bc7d059c4078f2d4f5b5aec5e358a069ff3f85d2df195907",
-  "releaseNotes": "해황·머메일, 가루라·도로곤 등 새 카드 22장을 도감과 덱 편집에 추가했습니다.\n사이버 드래곤 등 몬스터 7종의 소환 연출과 마법·함정 14종의 발동 연출을 추가했습니다."
+  "versionName": "0.18.83",
+  "versionCode": 102,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.83/YGOClassicExpedition-0.18.83-arm64.apk",
+  "sizeBytes": 650766252,
+  "sha256": "92da2167570eedc5988d8907810580403c92316007e65549a2d5b8db30ba7f8d",
+  "releaseNotes": "공진충, 궁극변이체 곤충 여왕 등 곤충 카드 24장과 토큰 2종을 추가했습니다.\n전투와 원정 화면의 글자에 여백을 주고 일부 전투 이펙트를 바꿨습니다. 곤충 몬스터 전용 소환 연출 6종을 추가했습니다."
 }
