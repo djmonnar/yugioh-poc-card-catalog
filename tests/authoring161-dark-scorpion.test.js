@@ -75,3 +75,19 @@ test('recognizes prior web identity and rejects a forged scorpion catalog identi
   await assert.rejects(normalizeBootstrap039(bootstrap([],{...GAME_IDENTITY161,native_manifest161_sha256:'0'.repeat(64)}),webcrypto),/게임 버전/);
   await normalizeBootstrap039(bootstrap([],GAME_IDENTITY152),webcrypto);
 });
+
+test('a newer card pack in the database does not stop the studio', async () => {
+  const {gameIdentityAccepts161} = await import('../authoring161-identity.js');
+  const hex = 'a'.repeat(64);
+  assert(gameIdentityAccepts161(GAME_IDENTITY161));
+  assert(gameIdentityAccepts161(GAME_IDENTITY152));
+  assert(gameIdentityAccepts161({...GAME_IDENTITY161, catalog170_sha256: hex, native_manifest170_sha256: hex}));
+  assert(!gameIdentityAccepts161({...GAME_IDENTITY161, catalog161_sha256: '0'.repeat(64), catalog170_sha256: hex}), 'known keys must still match');
+  assert(!gameIdentityAccepts161({...GAME_IDENTITY161, extra: hex}), 'only pack fingerprint keys may be added');
+  assert(!gameIdentityAccepts161({...GAME_IDENTITY161, catalog170_sha256: 'x'}), 'added keys must be sha256');
+  assert(!gameIdentityAccepts161({...GAME_IDENTITY161, catalog150_sha256: hex}), 'added packs must be newer than 161');
+  const {catalog161_sha256, ...missing} = GAME_IDENTITY161;
+  assert(!gameIdentityAccepts161({...missing, catalog170_sha256: hex}), 'a known key cannot be dropped');
+  assert(!gameIdentityAccepts161(null));
+  assert(!gameIdentityAccepts161([]));
+});

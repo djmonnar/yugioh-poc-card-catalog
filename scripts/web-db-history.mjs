@@ -1,7 +1,9 @@
 // 공개 게임 자료를 항목별 JSON 파일로 나눠 기록한다 (web-db-history 브랜치).
-// 앱과 같은 공개 조회(poc_bootstrap153, view=game)와 공개 키만 쓴다. DB는 바꾸지 않는다.
+// 앱과 같은 최신 공개 조회(poc_bootstrapNNN, view=game)와 공개 키만 쓴다. DB는 바꾸지 않는다.
+// 카드팩 배포로 새 경로가 생기면 이전 경로는 옛 앱용으로 고정된다(161 적용 뒤 153 이하는 개정 876에 고정).
+// 그래서 RPC_FLOOR 위쪽 번호부터 찾아, 있는 것 중 가장 높은 경로를 읽는다.
 //
-//   node scripts/web-db-history.mjs <기록 폴더> [--from <저장된 응답 JSON>] [--message <커밋 메시지 파일>]
+//   node scripts/web-db-history.mjs <기록 폴더> [--from <저장된 응답 JSON> [--route <경로 이름>]] [--message <커밋 메시지 파일>]
 //
 // 기록 폴더의 이전 파일과 비교해 바뀐 파일만 쓰고, 사라진 항목은 지운다.
 // 바뀐 항목 요약을 LATEST.md와 커밋 메시지 파일에 남긴다.
@@ -9,7 +11,11 @@ import { readFile, writeFile, mkdir, readdir, rm } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
-export const RPC = 'poc_bootstrap153';
+export const RPC_FLOOR = 161;
+export const RPC_PROBE_AHEAD = 30;
+export const RPC = `poc_bootstrap${RPC_FLOOR}`;
+export const routeCandidates = (floor = RPC_FLOOR, ahead = RPC_PROBE_AHEAD) =>
+  Array.from({ length: ahead + 1 }, (_, i) => `poc_bootstrap${floor + ahead - i}`);
 const ID_KEYS = ['source_id', 'sourceId', 'id', 'profile_id', 'code', 'slot'];
 const KEEP = new Set(['README.md', 'LATEST.md', '.git']);
 const LABELS = {
@@ -64,12 +70,13 @@ function splitInto(files, base, value) {
 }
 
 /** 공개 응답 하나를 { 상대 경로 → 파일 내용 } 으로 바꾼다. */
-export function snapshotFiles(bootstrap) {
+export function snapshotFiles(bootstrap, route = null) {
   if (bootstrap?.kind !== 'unified039-bootstrap' || bootstrap.view !== 'game') throw new Error('공개 게임 조회 응답이 아닙니다.');
   const files = new Map();
   const game = bootstrap.game ?? {};
   const practice = bootstrap.practice_decks063 ?? null;
   files.set('revision.json', pretty({
+    ...(route ? { route } : {}),
     project_id: bootstrap.project_id,
     project_revision: bootstrap.project_revision,
     game_revision: game.game_revision,
@@ -149,16 +156,24 @@ async function readTree(root, prefix = '') {
   return files;
 }
 
-async function fetchBootstrap(repoRoot) {
-  const config = JSON.parse(await readFile(path.join(repoRoot, 'data', 'cloud-config.json'), 'utf8'));
-  const response = await fetch(`${config.url}/rest/v1/rpc/${RPC}`, {
-    method: 'POST',
-    headers: { apikey: config.publishable_key, Authorization: `Bearer ${config.publishable_key}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ p_view: 'game', p_known_revision: null }),
-    signal: AbortSignal.timeout(60000),
-  });
-  if (!response.ok) throw new Error(`공개 조회 실패: HTTP ${response.status}`);
-  return response.json();
+// 경로가 없으면 PostgREST가 404와 PGRST202를 돌려준다. 그때만 다음(낮은) 번호로 넘어간다.
+export async function fetchBootstrap(config, fetchImpl = fetch) {
+  for (const rpc of routeCandidates()) {
+    const response = await fetchImpl(`${config.url}/rest/v1/rpc/${rpc}`, {
+      method: 'POST',
+      headers: { apikey: config.publishable_key, Authorization: `Bearer ${config.publishable_key}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ p_view: 'game', p_known_revision: null }),
+      signal: AbortSignal.timeout(60000),
+    });
+    if (response.status === 404) {
+      let code = null;
+      try { code = (await response.json())?.code ?? null; } catch {}
+      if (code === 'PGRST202') continue;
+    }
+    if (!response.ok) throw new Error(`공개 조회 실패: ${rpc} HTTP ${response.status}`);
+    return { route: rpc, bootstrap: await response.json() };
+  }
+  throw new Error('공개 조회 경로를 찾지 못했습니다.');
 }
 
 async function main(argv) {
@@ -166,8 +181,12 @@ async function main(argv) {
   if (!out) throw new Error('usage: node scripts/web-db-history.mjs <기록 폴더> [--from <응답 JSON>] [--message <파일>]');
   const option = name => { const i = argv.indexOf(name); return i > 0 ? argv[i + 1] : null; };
   const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-  const bootstrap = option('--from') ? JSON.parse(await readFile(option('--from'), 'utf8')) : await fetchBootstrap(repoRoot);
-  const after = snapshotFiles(bootstrap);
+  const config = JSON.parse(await readFile(path.join(repoRoot, 'data', 'cloud-config.json'), 'utf8'));
+  const fetched = option('--from')
+    ? { route: option('--route'), bootstrap: JSON.parse(await readFile(option('--from'), 'utf8')) }
+    : await fetchBootstrap(config);
+  const bootstrap = fetched.bootstrap;
+  const after = snapshotFiles(bootstrap, fetched.route);
   const before = await readTree(out);
   let previous = null;
   try { previous = JSON.parse(before.get('revision.json')).project_revision; } catch {}
@@ -180,15 +199,15 @@ async function main(argv) {
     await writeFile(path.join(out, file), content);
   }
   if (summary.length) await writeFile(path.join(out, 'LATEST.md'), `# 최근 변경\n\n${text}`);
-  await writeFile(path.join(out, 'README.md'), README);
+  await writeFile(path.join(out, 'README.md'), readme(fetched.route ?? RPC));
   await writeFile(option('--message') ?? path.join(out, '..', 'history-message.txt'), text);
   process.stdout.write(summary.length ? text : '변경 없음\n');
 }
 
-const README = `# 웹 DB 공개 변경 기록
+const readme = route => `# 웹 DB 공개 변경 기록
 
 이 브랜치는 제작소 DB의 공개 게임 자료를 항목별 파일로 나눠 보관한다.
-GitHub Actions(\`Record web DB history\`)가 한 시간마다 앱과 같은 공개 조회(\`${RPC}\`, view=game)를 읽고,
+GitHub Actions(\`Record web DB history\`)가 한 시간마다 앱과 같은 최신 공개 조회(지금은 \`${route}\`, view=game)를 읽고,
 바뀐 것이 있을 때만 커밋한다. DB는 바꾸지 않고, 공개 키 외의 비밀은 쓰지 않는다.
 
 - 최근 변경 요약: [LATEST.md](LATEST.md)

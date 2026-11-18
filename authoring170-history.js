@@ -103,8 +103,9 @@ export function historyDate170(value){
 }
 
 // Panel rendering is self-contained so a store refresh never re-fetches.
-export function renderHistoryPanel170({host,doc,el,button,source,onShowCards=null}){
+export function renderHistoryPanel170({host,doc,el,button,source,onShowCards=null,db=null}){
   host.append(el('h1','변경 이력'),el('p','웹 DB의 공개 게임 자료를 한 시간마다 기록한 내용입니다. 읽기 전용이며 DB를 바꾸지 않습니다.','au-lead'));
+  if(db)renderDbHistory171({host,el,button,db});
   const status=el('p',null,'au-hint au-history-status170'),list=el('div',null,'au-history-list170'),tools=el('div',null,'au-toolbar');status.setAttribute('role','status');
   const reload=button('다시 불러오기',()=>load(true));tools.append(reload);
   if(source?.links?.branch){const all=el('a','GitHub에서 전체 기록 보기');all.href=source.links.branch;all.target='_blank';all.rel='noopener noreferrer';tools.append(all);}
@@ -134,4 +135,58 @@ export function renderHistoryPanel170({host,doc,el,button,source,onShowCards=nul
   }
   const cached=source.peekCommits();if(cached)draw(cached);
   load(false);
+}
+
+// 제작소 저장 기록 (DB, 편집자 전용). poc_load_history039가 개정마다
+// 작성자·바꾼 항목·필드 이름을 돌려준다. 공개 기록(GitHub)과 달리 누가 저장했는지 보인다.
+const ENTITY_LABELS171={card_display:'카드 표시',card_setting:'카드 설정',card_annotation:'카드 분류',card_limit:'카드 제한',category:'분류',category_group:'분류 묶음',category_group_order:'분류 순서',character:'캐릭터',deck:'덱',chapter_role:'장별 편성',starter_list:'시작 덱',relic:'유물',event:'이벤트',shop_rules:'상점',map_rules:'맵 분포',meta_pack:'카드팩',meta_score:'점수·보상',recovery_archive:'이전 자료'};
+const OPERATION_LABELS171={create:'추가',patch:'수정',delete:'삭제'};
+export function describeDbHistoryRow171(row){
+  const revision=Number(row?.revision),items=Array.isArray(row?.items)?row.items:[];
+  const who=typeof row?.actor==='string'&&row.actor?row.actor:'작성자 기록 없음';
+  const lines=[];
+  if(row?.kind==='studio'){
+    const groups=new Map();
+    for(const item of items){const key=`${item?.entity_type}|${item?.operation}`,group=groups.get(key)??{type:item?.entity_type,operation:item?.operation,ids:[],fields:new Set()};group.ids.push(String(item?.entity_id??''));for(const field of Array.isArray(item?.fields)?item.fields:[])group.fields.add(String(field));groups.set(key,group);}
+    for(const group of groups.values()){const ids=group.ids.slice(0,6).join(', ')+(group.ids.length>6?` 외 ${group.ids.length-6}개`:''),fields=[...group.fields].sort();lines.push(`${ENTITY_LABELS171[group.type]??group.type} ${OPERATION_LABELS171[group.operation]??group.operation} ${group.ids.length.toLocaleString('ko-KR')}개 · ${ids}${fields.length?` · ${fields.join(', ')}`:''}`);}
+  } else lines.push(`관리 반영 · ${String(row?.kind??'management')}`);
+  return {revision:Number.isSafeInteger(revision)?revision:null,title:Number.isSafeInteger(revision)?`개정 ${revision.toLocaleString('ko-KR')}`:'개정 번호 없음',when:historyDate170(row?.created_at),who,lines};
+}
+export function renderDbHistory171({host,el,button,db,pageSize=50}){
+  const box=el('section',null,'au-panel au-history-db171');
+  box.append(el('h2','제작소 저장 기록'),el('p','누가 언제 무엇을 저장했는지 DB에 남은 기록입니다. 편집자에게만 보이고, 읽기만 합니다.','au-hint'));
+  const status=el('p',null,'au-hint');status.setAttribute('role','status');
+  const list=el('div',null,'au-history-list170'),more=button('이전 기록 더 보기',()=>load(oldest));more.hidden=true;
+  box.append(status,list,more);host.append(box);
+  let oldest=null,count=0;
+  function drawRow(row){
+    const info=describeDbHistoryRow171(row),item=el('article',null,'au-history-item170'),head=el('div',null,'au-history-head170');
+    head.append(el('h3',info.title),el('small',[info.when,info.who].filter(Boolean).join(' · ')));item.append(head);
+    const ul=el('ul',null,'au-history-sections170');for(const line of info.lines)ul.append(el('li',line));item.append(ul);
+    if(info.revision!==null&&db.detail){
+      const pre=el('pre',null,'au-history-detail171');pre.hidden=true;
+      const toggle=button('저장 내용 보기',async()=>{
+        if(!pre.hidden){pre.hidden=true;toggle.textContent='저장 내용 보기';return;}
+        toggle.disabled=true;
+        try{const detail=await db.detail(info.revision);pre.textContent=JSON.stringify(detail?.changes??detail,null,2);pre.hidden=false;toggle.textContent='저장 내용 닫기';}
+        catch(error){pre.textContent=error?.message??'저장 내용을 불러오지 못했습니다.';pre.hidden=false;}
+        finally{toggle.disabled=false;}
+      });
+      const actions=el('div',null,'au-history-actions170');actions.append(toggle);item.append(actions,pre);
+    }
+    list.append(item);
+  }
+  async function load(before=null){
+    more.disabled=true;status.textContent='저장 기록을 불러오는 중…';
+    try{
+      const rows=await db.list(before);
+      for(const row of rows)drawRow(row);
+      count+=rows.length;
+      const last=rows.at(-1);oldest=last?Number(last.revision):oldest;
+      more.hidden=rows.length<pageSize;
+      status.textContent=count?`저장 기록 ${count.toLocaleString('ko-KR')}개`:'아직 저장 기록이 없습니다.';
+    }catch(error){status.textContent=`${error?.message??'저장 기록을 불러오지 못했습니다.'} 제작소 편집에는 영향이 없습니다.`;}
+    finally{more.disabled=false;}
+  }
+  load(null);
 }

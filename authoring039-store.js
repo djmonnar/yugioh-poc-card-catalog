@@ -3,7 +3,7 @@
 import {parseMapRules052,parseMapPatch052} from './authoring052-map.js?v=20261030-052';
 import {rejectionReason065,validationInfo065} from './authoring065-errors.js?v=20261101-065';
 import {completeEventText066,validateAuthoringChange066} from './authoring066-validation.js?v=20261101-066';
-import {gameIdentityMatches161} from './authoring161-identity.js?v=20261119-dark-scorpion161';
+import {gameIdentityAccepts161} from './authoring161-identity.js?v=20261119-dark-scorpion161';
 import {batchChanges068,batchFields068,batchWriteState068,restoreBatch068,enqueueBatch068,drainBatch068,getRejectedBatch068 as readRejectedBatch068,releaseRejectedBatch068 as releaseBatch068,resolveBatchConflict068} from './authoring068-batch.js?v=20261102-068';
 export const PROJECT039 = 'ygoclassic-expedition';
 export const IDENTITY039 = Object.freeze({base_catalog_sha256:'b73dd51c78aeab8c9beebf936b46e4cac16040e70df3a7980dec38c40db21e09',catalog035_sha256:'b5f1e9749cec0c1497c5fdcbfb2dc9c64895dcd859f083ec0ec4014580f05308',native_manifest_sha256:'4674de031c9e3044c86b90fcd402d9533d9353347802f268863746bf3bd7e4d7'});
@@ -113,7 +113,7 @@ export async function normalizeBootstrap039(raw,crypto=globalThis.crypto) {
   }
   const env = raw.game;
   need(object(env) && env.schema === 1 && env.kind === 'poc-unified-game039' && integer(env.game_revision) && integer(env.authoring_revision) && /^\d+$/.test(env.metadata_revision) && HASH.test(env.source_fingerprint) && typeof env.payload_json === 'string','게임용 제작 데이터의 형식이 올바르지 않아.');
-  need(env.authoring_revision<=raw.project_revision&&env.game_revision<=raw.project_revision&&gameIdentityMatches161(env.identity),'제작 데이터의 게임 버전이 일치하지 않아.');
+  need(env.authoring_revision<=raw.project_revision&&env.game_revision<=raw.project_revision&&gameIdentityAccepts161(env.identity),'제작 데이터의 게임 버전이 일치하지 않아.');
   need(await digest(env.payload_json,crypto) === env.source_fingerprint,'게임용 제작 데이터의 검증값이 일치하지 않아.');
   const payload = safe(JSON.parse(env.payload_json));
   for (const field of ['catalog','deck_rules035','opponents','starters','content022','meta017','characters','shop_rules']) need(payload[field] !== undefined,`게임용 ${field} 데이터가 없어.`);
@@ -131,12 +131,13 @@ export async function normalizeBootstrap039(raw,crypto=globalThis.crypto) {
 const BATCH068={HASH,UUID,PROJECT039,clone,equal,key,integer,object,need,safe,validEntity,categoryGroupRows055,categoryGroupOrderRows056,validateAuthoringChange066,rejectionReason065,validationInfo065};
 
 export class AuthoringStore039 {
-  constructor({client,storage=globalThis.localStorage,crypto=globalThis.crypto,debounceMs=400,idleRefreshMs=400,pollMs=15000,redirectUrl=globalThis.location?.href,events=globalThis}={}) {
+  constructor({client,storage=globalThis.localStorage,crypto=globalThis.crypto,debounceMs=400,idleRefreshMs=400,pollMs=15000,redirectUrl=globalThis.location?.href,events=globalThis,visibility=globalThis.document}={}) {
     need(client?.rpc && client?.auth,'DB 연결이 필요해.');
-    Object.assign(this,{client,storage,crypto,debounceMs,idleRefreshMs,pollMs,redirectUrl,events});
+    Object.assign(this,{client,storage,crypto,debounceMs,idleRefreshMs,pollMs,redirectUrl,events,visibility});
     this.listeners=new Set(); this.queue=[]; this.user=null; this.bootstrap=null; this.phase='loading'; this.error=null; this.pendingRevision=null; this.fetchedRevision=null; this.generation=0; this.busy=false; this.stopped=false; this.failures=0; this.refreshTask=null; this.retryRequestId=null; this.retryNotBefore=0; this.conflictInfo=null;
     this.checkedAt083=null;this.savedAt083=null;this.readError083=null;
     this.online=()=>this.retry();
+    this.visible170=()=>{if(!this.hidden170())this.pollOnce170();};
   }
   subscribe(fn) { this.listeners.add(fn); fn(this.snapshot()); return ()=>this.listeners.delete(fn); }
   canEdit083(){return !!this.user&&this.bootstrap?.permissions?.can_edit===true;}
@@ -151,7 +152,10 @@ export class AuthoringStore039 {
     }
     const status=this.phase==='conflict'?'현재 DB와 저장 대기분을 확인해 주세요.':this.phase==='invalid'?'수정할 값을 확인해줘.':this.phase==='error'?'저장을 다시 시도할게.':this.busy?'저장 중…':this.queue.length?'변경 사항 저장 대기 중…':this.phase==='loading'?'제작 데이터 불러오는 중…':'자동 저장됨';
     const head=this.queue[0],primary=head?batchChanges068(head)[0]:null,batchState=batchWriteState068(head),writeFields=batchFields068(head),writeState=head?{entityType:primary.type,entityId:primary.id,operation:primary.operation,fields:writeFields,phase:this.phase,rejected:head.rejected===true,uncertain:this.phase==='error'&&Boolean(head.body),...batchState,...(head.rejected?{validation:{...validationInfo065(head.rejectionReason,writeFields),...batchState}}:{}),...(this.phase==='conflict'&&this.conflictInfo?{conflict:clone(this.conflictInfo)}:{})}:null;
-    return {bootstrap:clone(this.bootstrap),entities,gamePayload:clone(this.bootstrap?.gamePayload??null),phase:this.phase,status,error:this.error,writeState,user:this.user?{id:this.user.id,email:this.user.email}:null,canEdit:this.canEdit083(),pending:this.queue.length,
+    // One copy of the game payload per snapshot: bootstrap.game already shares
+    // these objects with bootstrap.gamePayload, and readers only read them.
+    const bootstrap=clone(this.bootstrap);
+    return {bootstrap,entities,gamePayload:bootstrap?.gamePayload??null,phase:this.phase,status,error:this.error,writeState,user:this.user?{id:this.user.id,email:this.user.email}:null,canEdit:this.canEdit083(),pending:this.queue.length,
       sync083:{checking:!!this.refreshTask&&this.refreshTask.generation===this.generation,checkedAt:this.checkedAt083,savedAt:this.savedAt083,readError:this.readError083}};
   }
   emit() { const snap=this.snapshot(); for(const fn of this.listeners) fn(snap); }
@@ -183,8 +187,17 @@ export class AuthoringStore039 {
     let result;try { result=await this.client.auth.getSession(); if(result.error) throw result.error; }
     catch(error) { this.setError(error); throw error; }
     await this.acceptSession(result.data?.session??null);
-    if(this.pollMs&&!this.poll) { this.poll=setInterval(()=>{const generation=this.generation;if(!this.busy&&!this.queue.length)this.refresh().catch(e=>{if(generation===this.generation)this.setError(e);});},this.pollMs); this.poll.unref?.(); }
+    if(this.pollMs&&!this.poll) { this.poll=setInterval(()=>this.pollOnce170(),this.pollMs); this.poll.unref?.(); this.visibility?.addEventListener?.('visibilitychange',this.visible170); }
     return this;
+  }
+  // The periodic check is a conditional read (p_known_revision): an unchanged
+  // DB answers without entities or game payload. Hidden tabs skip it and check
+  // once as soon as they are shown again.
+  hidden170(){return this.visibility?.hidden===true;}
+  pollOnce170(){
+    const generation=this.generation;
+    if(this.stopped||this.busy||this.queue.length||this.hidden170())return;
+    this.refresh().catch(e=>{if(generation===this.generation)this.setError(e);});
   }
   async acceptSession(session) {
     const id=session?.user?.id??null;
@@ -405,6 +418,16 @@ export class AuthoringStore039 {
     const result=await this.client.rpc('poc_read_recovery039',{p_id:id}); if(result.error)throw result.error;
     const row=result.data;need(object(row)&&LEGACY_CREATION_KEYS039.includes(row.source_key)&&typeof row.raw_json==='string'&&new TextEncoder().encode(row.raw_json).length<=4194304&&await digest(row.raw_json,this.crypto)===row.sha256&&await digest(row.source_key+'\n'+row.raw_json,this.crypto)===id,'복구 자료의 검증값이 다릅니다.');return row;
   }
+  async loadHistory039({before=null,limit=50}={}) {
+    need(this.canEdit083()&&(before===null||Number.isSafeInteger(before))&&Number.isSafeInteger(limit)&&limit>0&&limit<=200,'편집자로 로그인해야 저장 기록을 볼 수 있어.');
+    const result=await this.client.rpc('poc_load_history039',{p_before:before,p_limit:limit}); if(result.error)throw result.error;
+    need(object(result.data)&&Array.isArray(result.data.rows),'저장 기록 응답을 확인하지 못했어.'); return result.data.rows;
+  }
+  async loadHistoryRevision039(revision) {
+    need(this.canEdit083()&&Number.isSafeInteger(revision)&&revision>0,'편집자로 로그인해야 저장 기록을 볼 수 있어.');
+    const result=await this.client.rpc('poc_load_history_revision039',{p_revision:revision}); if(result.error)throw result.error;
+    need(object(result.data),'저장 기록 응답을 확인하지 못했어.'); return result.data;
+  }
   async logout() { this.persist(); const result=await this.client.auth.signOut(); if(result.error)throw result.error; await this.acceptSession(null); }
-  stop() { this.stopped=true; clearTimeout(this.timer); clearTimeout(this.idleTimer); clearInterval(this.poll); this.events.removeEventListener?.('online',this.online); this.authSubscription?.data?.subscription?.unsubscribe(); }
+  stop() { this.stopped=true; clearTimeout(this.timer); clearTimeout(this.idleTimer); clearInterval(this.poll); this.events.removeEventListener?.('online',this.online); this.visibility?.removeEventListener?.('visibilitychange',this.visible170); this.authSubscription?.data?.subscription?.unsubscribe(); }
 }

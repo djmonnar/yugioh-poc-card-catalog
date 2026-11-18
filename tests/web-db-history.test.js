@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { snapshotFiles, summarize, describe } from '../scripts/web-db-history.mjs';
+import { snapshotFiles, summarize, describe, routeCandidates, fetchBootstrap, RPC_FLOOR } from '../scripts/web-db-history.mjs';
 
 function bootstrap(revision, cards, relicLp) {
   return {
@@ -53,4 +53,34 @@ test('같은 자료면 바뀐 것이 없다', () => {
 
 test('게임 공개 조회가 아닌 응답은 거절한다', () => {
   assert.throws(() => snapshotFiles({ kind: 'unified039-bootstrap', view: 'authoring' }));
+});
+
+test('최신 공개 경로부터 찾는다 (고정된 옛 경로를 읽지 않는다)', async () => {
+  const list = routeCandidates();
+  assert.equal(list[list.length - 1], `poc_bootstrap${RPC_FLOOR}`);
+  assert.ok(RPC_FLOOR >= 161, '161 적용 뒤 153 이하는 개정 876에 고정되어 있다');
+  for (let i = 1; i < list.length; i++) assert.ok(Number(list[i - 1].slice(13)) > Number(list[i].slice(13)));
+  const asked = [];
+  const reply = (status, body) => ({ status, ok: status >= 200 && status < 300, json: async () => body });
+  const fake = async url => {
+    const rpc = url.split('/').pop();
+    asked.push(rpc);
+    if (rpc === `poc_bootstrap${RPC_FLOOR + 3}`) return reply(200, { kind: 'unified039-bootstrap', view: 'game', project_revision: 900 });
+    return reply(404, { code: 'PGRST202', message: `Could not find the function public.${rpc}` });
+  };
+  const found = await fetchBootstrap({ url: 'https://example.invalid', publishable_key: 'k' }, fake);
+  assert.equal(found.route, `poc_bootstrap${RPC_FLOOR + 3}`);
+  assert.equal(found.bootstrap.project_revision, 900);
+  assert.equal(asked[0], list[0]);
+  const floorOnly = await fetchBootstrap({ url: 'https://example.invalid', publishable_key: 'k' },
+    async url => url.endsWith(`poc_bootstrap${RPC_FLOOR}`) ? reply(200, { project_revision: 1 }) : reply(404, { code: 'PGRST202' }));
+  assert.equal(floorOnly.route, `poc_bootstrap${RPC_FLOOR}`);
+  await assert.rejects(() => fetchBootstrap({ url: 'https://example.invalid', publishable_key: 'k' }, async () => reply(500, {})), /HTTP 500/);
+  await assert.rejects(() => fetchBootstrap({ url: 'https://example.invalid', publishable_key: 'k' }, async () => reply(404, { code: 'PGRST116' })), /HTTP 404/);
+});
+
+test('기록에 읽은 경로를 남긴다', () => {
+  const files = snapshotFiles(bootstrap(10, [{ source_id: 1, name: '가', code: 4 }], 200), 'poc_bootstrap161');
+  assert.equal(JSON.parse(files.get('revision.json')).route, 'poc_bootstrap161');
+  assert.equal(JSON.parse(snapshotFiles(bootstrap(10, [], 200)).get('revision.json')).route, undefined);
 });

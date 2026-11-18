@@ -49,6 +49,9 @@
 .au-app .au-history-head170 small{color:var(--au-muted);font-variant-numeric:tabular-nums}
 .au-app .au-history-sections170{margin:6px 0 12px;padding-left:20px;line-height:1.8;font-size:14px}
 .au-app .au-history-actions170{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
+.au-app .au-history-db171{margin:0 0 20px}
+.au-app .au-history-db171 h3{margin:0 0 6px;font-size:16px}
+.au-app .au-history-detail171{max-height:320px;overflow:auto;margin:8px 0 0;padding:10px;border-radius:6px;background:var(--au-surface-2,rgba(0,0,0,.25));font-size:12px;white-space:pre-wrap;word-break:break-all}
 @media(max-width:700px){
  .au-app .au-pagination{gap:6px}
  .au-app .au-pagination button{min-width:48px;padding:8px 10px}
