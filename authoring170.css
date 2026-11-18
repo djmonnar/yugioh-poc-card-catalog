@@ -1,0 +1,63 @@
+/* 170 usability batch: paging, list conditions, bulk edit, deck list, badges, conflict view, history. */
+.au-app .au-pagination{flex-wrap:wrap;gap:10px}
+.au-app .au-pagination button{min-width:64px}
+.au-app .au-pagination .au-page-edge170{min-width:56px}
+.au-app .au-page-jump170{display:inline-flex;align-items:center;gap:6px;color:var(--au-muted)}
+.au-app .au-page-jump170 input{width:78px;text-align:center;font-variant-numeric:tabular-nums}
+.au-app .au-flags170{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}
+.au-app .au-flag170{display:inline-flex;align-items:center;gap:7px;min-height:40px;padding:6px 12px;border:1px solid #3c6079;border-radius:20px;background:#0b2131;font-size:14px;cursor:pointer}
+.au-app .au-flag170:has(input:checked){border-color:var(--au-cyan);background:#123a4c;color:var(--au-cyan)}
+.au-app .au-recent-error170{display:flex;flex-wrap:wrap;align-items:center;gap:8px;color:var(--au-error)}
+.au-app .au-bulk170{margin:0 0 16px;display:flex;flex-direction:column;gap:10px}
+.au-app .au-bulk170:has(.au-bulk-count170){padding:14px 16px;border:1px solid #4f7a91;border-radius:12px;background:#0c2232}
+.au-app .au-bulk-toggle170{align-self:flex-start}
+.au-app .au-bulk-count170{margin:0;color:var(--au-cyan);font-weight:700}
+.au-app .au-bulk-tools170{display:flex;flex-wrap:wrap;gap:8px}
+.au-app .au-bulk-rarity170{max-width:260px}
+.au-app .au-bulk-categories170{margin:0}
+.au-app .au-bulk-check170{position:absolute;top:12px;left:12px;z-index:2;width:26px;height:26px;min-height:26px;box-shadow:0 0 0 3px #061322cc;border-radius:5px}
+.au-app .au-card-tile.au-selected170{border-color:var(--au-cyan);box-shadow:0 0 0 2px #89d9e455}
+.au-app .au-deck-picker170{display:flex;flex-direction:column;gap:8px;margin:0 0 16px}
+.au-app .au-deck-picker170 .au-catalog-tools{margin:0}
+.au-app .au-deck-current170{margin:0;color:var(--au-gold);font-weight:700;overflow-wrap:anywhere}
+.au-app .au-deck-count170{margin:0}
+.au-app .au-deck-list170{display:flex;flex-direction:column;gap:4px;max-height:280px;overflow:auto;padding:6px;border:1px solid #31506b;border-radius:10px;background:#081b29;overscroll-behavior:contain}
+.au-app .au-deck-option170{width:100%;min-height:40px;padding:7px 11px;text-align:left;background:transparent;border-color:transparent;font-size:14px;line-height:1.5;overflow-wrap:anywhere}
+.au-app .au-deck-option170:hover{background:#133349}
+.au-app .au-deck-option170.active{background:#173c52;border-color:#706b4e;color:var(--au-gold)}
+.au-app .au-deck-import170{border-color:#4f7a91}
+.au-app .au-game-status170{align-self:flex-start;display:inline-block;margin-top:2px;padding:3px 10px;border-radius:14px;border:1px solid;font-size:12px;font-weight:700;letter-spacing:.02em}
+.au-app .au-game-live170{color:#9fe3b4;border-color:#3f8a5c;background:#10301f}
+.au-app .au-game-waiting170{color:#e2c783;border-color:#8a7440;background:#2c2512}
+.au-app .au-game-stale170{color:#ffc3b8;border-color:#9b4c4c;background:#341a1a}
+.au-app .au-game-unused170{color:#b7c9dc;border-color:#4a6c84;background:#0f2332}
+.au-app .au-entity-status .au-game-detail170{color:var(--au-muted)}
+.au-app .au-conflict-table170{width:100%;margin:8px 0 10px;border-collapse:collapse;font-size:13px;line-height:1.6}
+.au-app .au-conflict-table170 caption{text-align:left;color:var(--au-muted);padding:0 0 6px}
+.au-app .au-conflict-table170 th,.au-app .au-conflict-table170 td{padding:7px 9px;border:1px solid #3a5a72;vertical-align:top;text-align:left;overflow-wrap:anywhere}
+.au-app .au-conflict-table170 tr:first-child th{background:#0e2a3c;color:var(--au-gold)}
+.au-app .au-conflict-mine170{background:#10283a}
+.au-app .au-conflict-db170{background:#1d2633}
+.au-app .au-conflict-table170 small{display:block;margin-top:4px;color:var(--au-cyan)}
+.au-app .au-restore170{max-width:1800px;margin:14px auto 0;padding:14px 18px;border:1px solid #a98753;border-radius:10px;background:#392c24;display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.au-app .au-restore170 strong{flex-basis:100%}
+.au-app .au-restore170 p{flex-basis:100%;margin:0}
+.au-app .au-preview170{margin:0;padding:8px 25px;background:#2c2512;color:var(--au-gold);border-bottom:1px solid #8a7440;font-size:13px;line-height:1.6}
+.au-app .au-history-status170{margin:0 0 14px}
+.au-app .au-history-head170{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 14px}
+.au-app .au-history-head170 h2{margin:0 0 6px;font-size:18px}
+.au-app .au-history-head170 small{color:var(--au-muted);font-variant-numeric:tabular-nums}
+.au-app .au-history-sections170{margin:6px 0 12px;padding-left:20px;line-height:1.8;font-size:14px}
+.au-app .au-history-actions170{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
+@media(max-width:700px){
+ .au-app .au-pagination{gap:6px}
+ .au-app .au-pagination button{min-width:48px;padding:8px 10px}
+ .au-app .au-page-jump170{flex-basis:100%;justify-content:center}
+ .au-app .au-deck-list170{max-height:240px}
+ .au-app .au-restore170{margin:10px 12px 0}
+ .au-app .au-preview170{padding:8px 13px}
+ .au-app .au-conflict-table170{font-size:12px}
+}
+.au-app .au-bulk-category-details170{border:1px solid #31506b;border-radius:10px;padding:8px 12px;background:#0a1d2b}
+.au-app .au-bulk-category-details170>summary{cursor:pointer;min-height:36px;display:flex;align-items:center;color:var(--au-gold);font-weight:700}
+.au-app .au-bulk-category-details170[open]>summary{margin-bottom:8px}

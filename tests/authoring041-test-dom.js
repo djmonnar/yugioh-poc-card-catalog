@@ -39,3 +39,11 @@ export function openCharacterTraits041(root){
     }
   }
 }
+// 170 deck picker: a searchable button list replaces the long native dropdown.
+export const deckOptions170=root=>root.querySelectorAll('button').filter(node=>node.classList.contains('au-deck-option170'));
+export const activeDeck170=root=>deckOptions170(root).find(node=>node.getAttribute('aria-current')==='true')?.getAttribute('data-deck-id')??null;
+export function deckOption170(root,id){
+  const find=()=>deckOptions170(root).find(node=>node.getAttribute('data-deck-id')===id);
+  if(!find()){const search=field041(root,'편집할 덱 검색');if(search){search.value=id;search.fire('input');}}
+  return find();
+}

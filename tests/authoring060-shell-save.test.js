@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {webcrypto,createHash} from 'node:crypto';
 import {AuthoringStore039,PROJECT039,IDENTITY039} from '../authoring039-store.js';
 import {mountAuthoringShell039,saveLabel039,writeSubject060} from '../authoring039-shell.js';
-import {Document041,field041,button041} from './authoring041-test-dom.js';
+import {Document041,field041,button041,deckOption170} from './authoring041-test-dom.js';
 
 const copy=value=>structuredClone(value),hash=text=>createHash('sha256').update(text).digest('hex');
 const tick=()=>new Promise(resolve=>setImmediate(resolve));
@@ -53,7 +53,7 @@ async function harness(t,{section='decks',draftStorage=new DraftStorage060()}={}
 async function input(root,label,value,event='input'){
  const target=field041(root,label);assert.ok(target,`Missing control: ${label}`);target.focus();target.value=String(value);target.fire(event);target.blur();await flush();
 }
-async function chooseDeck(m,id){await input(m.root,'편집할 덱',id,'change');}
+async function chooseDeck(m,id){const option=deckOption170(m.root,id);assert.ok(option,`Missing deck option: ${id}`);option.click();await flush();}
 function saveButton(m){const bar=m.root.querySelector('.au-manual-save060');return button041(bar,'변경 사항 저장')??button041(bar,'저장 확인 중…');}
 function infoButton(root,name){return root.querySelectorAll('button').find(button=>button.getAttribute('aria-label')===`${name} 카드 정보`);}
 function quantityButton(m,name,verb){return m.root.querySelector('.au-deck-owned').querySelectorAll('button').find(button=>button.getAttribute('aria-label')===`${name} ${verb}`);}

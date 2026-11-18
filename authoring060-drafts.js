@@ -38,22 +38,26 @@ export class AuthoringDrafts060 {
   _emit(owner=this.owner){if(owner===this.owner)this.onChange(this.summary());}
   _check(type,id){need(this.allowedKinds.has(type)&&idValid(id),'편집할 초안 항목을 확인해 주세요.');}
   _fields(fields){need(object(fields),'초안 필드를 확인해 주세요.');safe(fields);return clone(fields);}
+  // Shared by the tab's own storage and an explicit restore from a closed tab.
+  _parseStored(raw,owner){
+    need(typeof raw==='string'&&bytes(raw)<=this.maxBytes,'초안 보관 한도');const data=JSON.parse(raw);safe(data);
+    need(data.schema===1&&data.owner===owner&&Array.isArray(data.items)&&data.items.length<=this.maxItems,'초안 계정 또는 형식');
+    const restored=new Map();
+    for(const row of data.items){
+      this._check(row.type,row.id);need(['patch','create'].includes(row.operation)&&validNumber(row.baseVersion)&&object(row.baseContent)&&object(row.fields),'초안 내용');
+      const key=this.key(row.type,row.id);need(!restored.has(key),'중복 초안');
+      let submitted=null;if(row.submitted){need(object(row.submitted)&&['patch','create'].includes(row.submitted.operation)&&object(row.submitted.fields)&&Object.keys(row.submitted.fields).length>0&&validNumber(row.submitted.baseVersion)&&object(row.submitted.baseContent),'저장 확인 중인 초안');submitted={operation:row.submitted.operation,fields:clone(row.submitted.fields),baseVersion:row.submitted.baseVersion,baseContent:clone(row.submitted.baseContent),uncertain:true};if(row.submitted.batchKeys068!==undefined){const keys=row.submitted.batchKeys068;need(Array.isArray(keys)&&keys.length>0&&keys.length<=32&&new Set(keys).size===keys.length&&keys.every(key=>typeof key==='string'),'함께 저장 중인 초안');submitted.batchKeys068=clone(keys);}}
+      restored.set(key,{type:row.type,id:row.id,operation:row.operation,baseVersion:row.baseVersion,baseContent:clone(row.baseContent),fields:clone(row.fields),submitted,history:[]});
+    }
+    for(const [key,record] of restored){const keys=record.submitted?.batchKeys068;if(keys)need(keys.includes(key)&&keys.every(member=>same(restored.get(member)?.submitted?.batchKeys068,keys)),'함께 저장 중인 초안 항목');}
+    return restored;
+  }
   _load(owner){
     const bank={records:new Map(),latest:new Map(),canonicalReady:false,task:null,error:null,storageError:null,storageBlocked:false};
     this.banks.set(owner,bank);let raw;
     try{
       raw=this.storage?.getItem(this.storageKey(owner));if(!raw)return bank;
-      need(typeof raw==='string'&&bytes(raw)<=this.maxBytes,'초안 보관 한도');const data=JSON.parse(raw);safe(data);
-      need(data.schema===1&&data.owner===owner&&Array.isArray(data.items)&&data.items.length<=this.maxItems,'초안 계정 또는 형식');
-      const restored=new Map();
-      for(const row of data.items){
-        this._check(row.type,row.id);need(['patch','create'].includes(row.operation)&&validNumber(row.baseVersion)&&object(row.baseContent)&&object(row.fields),'초안 내용');
-        const key=this.key(row.type,row.id);need(!restored.has(key),'중복 초안');
-        let submitted=null;if(row.submitted){need(object(row.submitted)&&['patch','create'].includes(row.submitted.operation)&&object(row.submitted.fields)&&Object.keys(row.submitted.fields).length>0&&validNumber(row.submitted.baseVersion)&&object(row.submitted.baseContent),'저장 확인 중인 초안');submitted={operation:row.submitted.operation,fields:clone(row.submitted.fields),baseVersion:row.submitted.baseVersion,baseContent:clone(row.submitted.baseContent),uncertain:true};if(row.submitted.batchKeys068!==undefined){const keys=row.submitted.batchKeys068;need(Array.isArray(keys)&&keys.length>0&&keys.length<=32&&new Set(keys).size===keys.length&&keys.every(key=>typeof key==='string'),'함께 저장 중인 초안');submitted.batchKeys068=clone(keys);}}
-        restored.set(key,{type:row.type,id:row.id,operation:row.operation,baseVersion:row.baseVersion,baseContent:clone(row.baseContent),fields:clone(row.fields),submitted,history:[]});
-      }
-      for(const [key,record] of restored){const keys=record.submitted?.batchKeys068;if(keys)need(keys.includes(key)&&keys.every(member=>same(restored.get(member)?.submitted?.batchKeys068,keys)),'함께 저장 중인 초안 항목');}
-      bank.records=restored;
+      bank.records=this._parseStored(raw,owner);
     }catch{bank.storageBlocked=true;bank.storageError='이전에 보관한 초안을 읽지 못했습니다. 원본은 유지되며 새 수정은 이 창에서 보관합니다.';}
     return bank;
   }
@@ -291,6 +295,22 @@ export class AuthoringDrafts060 {
   }
   cancel({keys=null}={}){
     const bank=this._bank();if(!bank)return {cancelled:0};const selected=this._keys(keys,bank);need(!selected.some(key=>bank.records.get(key)?.submitted),'전송한 저장 요청은 여기서 취소할 수 없습니다. 저장 결과를 먼저 확인해 주세요.');for(const key of selected)bank.records.delete(key);bank.error=null;this._persist();this._emit();return {cancelled:selected.length};
+  }
+  canUndo(type,id){const record=this._bank()?.records.get(this.key(type,id));return Boolean(record&&!record.submitted&&record.history.length);}
+  // Re-stage drafts kept from a closed tab. Requests that tab had sent but not
+  // confirmed become ordinary unsaved fields again (as _restoreSent does), so
+  // the editor reviews and saves them explicitly; CAS baselines are retained.
+  adoptBackup170(raw){
+    const bank=this._bank();need(bank&&this.owner&&this.state?.canEdit,'편집 계정으로 로그인해 주세요.');
+    need(!bank.task&&bank.records.size===0,'현재 변경을 저장하거나 취소한 뒤 복원해 주세요.');
+    let restored;try{restored=this._parseStored(raw,this.owner);}catch{throw Error('보관한 초안의 형식을 확인하지 못해 복원하지 않았습니다.');}
+    for(const record of restored.values()){
+      const submitted=record.submitted;
+      if(submitted){record.fields={...clone(submitted.fields),...record.fields};record.operation=submitted.operation;record.baseContent=clone(submitted.baseContent);record.baseVersion=submitted.baseVersion;record.submitted=null;}
+      record.history=[];
+    }
+    bank.records=restored;bank.error=null;for(const record of [...restored.values()])this._clean(bank,record);
+    this._persist();this._emit();return {restored:bank.records.size};
   }
   undo(type,id){this._check(type,id);const bank=this._bank(),record=bank?.records.get(this.key(type,id));if(!record)return false;need(!record.submitted,'저장 결과를 확인한 뒤 되돌려 주세요.');if(!record.history.length)return false;const previous=record.history.pop();if(previous===null)bank.records.delete(this.key(type,id));else{record.fields=previous;this._clean(bank,record);}this._persist();this._emit();return true;}
   resolveConflicts({keys=null,choice}={}){

@@ -56,7 +56,7 @@ test('Deck Builder exposes deletion beside the normal deck controls',()=>{
   const panels=createAuthoringPanels039({document:doc,onChange:()=>{},onDeleteDecks153:rows=>writes.push(rows)});
   panels.render('decks',root,state);
   const entry=button041(root,'덱 삭제');
-  assert.equal(entry.closest('.au-toolbar').contains(field041(root,'편집할 덱')),true);
+  assert.equal(entry.closest('.au-toolbar').contains(button041(root,'새 덱')),true);
   entry.click();
   assert.equal(doc.querySelector('.au-deck-delete153').open,true);
   panels.render('decks',root,{...state,canEdit:false,user:null});

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {webcrypto,createHash} from 'node:crypto';
 import {AuthoringStore039,PROJECT039,IDENTITY039} from '../authoring039-store.js';
 import {mountAuthoringShell039} from '../authoring039-shell.js';
-import {Document041,fixture041,field041,button041} from './authoring041-test-dom.js';
+import {Document041,fixture041,field041,button041,deckOptions170,activeDeck170} from './authoring041-test-dom.js';
 
 // The existing DOM boundary models ordinary browser events and node identity.
 // These tests do not claim to open an Android OS picker or emulate its events.
@@ -109,11 +109,11 @@ test('cancelling by blur applies only the newest pending refresh once without ch
 });
 
 test('explicit deck navigation renders the chosen deck immediately instead of waiting for blur',async t=>{
-  const m=await mounted(t),select=control(m,'편집할 덱'),next=select.options.find(option=>option.value!==select.value);assert.ok(next);
-  const wanted=m.store.snapshot().entities.find(row=>row.entity_type==='deck'&&row.entity_id===next.value);
-  select.focus();await m.refresh({lp_bonus:100});select.value=next.value;select.fire('change');
-  assert.equal(control(m,'편집할 덱').value,next.value);assert.equal(control(m,'덱 이름').value,wanted.content.deck_name);
-  assert.equal(select.isConnected,false);assert.equal(m.shell.drafts060.summary().dirtyCount,0);
+  const m=await mounted(t),search=control(m,'편집할 덱 검색'),current=activeDeck170(m.root),next=deckOptions170(m.root).find(option=>option.getAttribute('data-deck-id')!==current);assert.ok(next);
+  const id=next.getAttribute('data-deck-id'),wanted=m.store.snapshot().entities.find(row=>row.entity_type==='deck'&&row.entity_id===id);
+  search.focus();await m.refresh({lp_bonus:100});assert.equal(next.isConnected,true,'The focused search defers the background refresh.');next.click();
+  assert.equal(activeDeck170(m.root),id);assert.equal(control(m,'덱 이름').value,wanted.content.deck_name);
+  assert.equal(next.isConnected,false);assert.equal(m.shell.drafts060.summary().dirtyCount,0);
 });
 
 test('explicit section navigation remains immediate while a focused picker has a deferred refresh',async t=>{
