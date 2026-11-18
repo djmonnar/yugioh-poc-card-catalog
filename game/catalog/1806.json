@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 16,
   "categories": [
-    "면역-전투"
+    "보호-공격 대상 제외",
+    "지원-번개족"
   ],
   "code": 55401221,
   "defense": 1900,

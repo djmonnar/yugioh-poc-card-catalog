@@ -4,7 +4,8 @@
   "attack": 100,
   "attribute": 1,
   "categories": [
-    "면역-마법"
+    "무효-마법",
+    "보호-효과 대상 제외"
   ],
   "code": 8102334,
   "defense": 2000,

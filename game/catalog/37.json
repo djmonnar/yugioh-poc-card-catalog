@@ -3,7 +3,9 @@
   "art_key": "Cards/37",
   "attack": 2300,
   "attribute": 1,
-  "categories": [],
+  "categories": [
+    "지원-가이아"
+  ],
   "code": 6368038,
   "defense": 2100,
   "description": "바람보다도 빠른 말을 탄\n기사. 돌진 공격에 주의.",

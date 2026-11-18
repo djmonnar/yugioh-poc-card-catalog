@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "지원-필드"
+    "지원-필드",
+    "발동-제외"
   ],
   "code": 77584012,
   "defense": 0,

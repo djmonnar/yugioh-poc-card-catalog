@@ -4,7 +4,8 @@
   "attack": 2500,
   "attribute": 1,
   "categories": [
-    "덱-젬나이트"
+    "지원-젬나이트",
+    "발동-릴리즈"
   ],
   "code": 76614340,
   "defense": 1300,

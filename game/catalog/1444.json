@@ -3,7 +3,9 @@
   "art_key": "Cards/1444",
   "attack": 850,
   "attribute": 16,
-  "categories": [],
+  "categories": [
+    "발동-릴리즈"
+  ],
   "code": 84080939,
   "defense": 2000,
   "description": "앞면의 이 카드를 릴리스하고,\n이 턴에 전투로 파괴된 자신의\n몬스터 1장을 패로 되돌린다.",

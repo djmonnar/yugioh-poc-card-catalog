@@ -3,7 +3,9 @@
   "art_key": "Cards/326",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-비행야수족"
+  ],
   "code": 98252586,
   "defense": 0,
   "description": "이 카드를 장착한 비행야수족\n몬스터의 공격력과 수비력을\n300 올린다.",

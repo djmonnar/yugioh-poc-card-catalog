@@ -3,7 +3,9 @@
   "art_key": "Cards/512",
   "attack": 1650,
   "attribute": 16,
-  "categories": [],
+  "categories": [
+    "지원-가디언"
+  ],
   "code": 47879985,
   "defense": 1600,
   "description": "왕실을 보호하는 근위병 로봇.\n적중시킬 때까지 계속 뒤쫓는\n미사일을 발사한다.",

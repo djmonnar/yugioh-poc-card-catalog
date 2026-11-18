@@ -34,11 +34,26 @@
             "kind": "start_field"
           }
         ]
+      },
+      {
+        "name": "듀얼아카데미",
+        "profile_id": "profile-e2c92abf-c3a6-4db2-9fb1-aaa91588232a",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "a409aedc875eb50f9374b5ec6756fef5a043810729e47fc4f725a0c1e9f616dd",
+              "internal_id": 2968,
+              "name_ko": "듀얼 아카데미",
+              "slot": 2000
+            },
+            "kind": "start_field"
+          }
+        ]
       }
     ],
     "skills": []
   },
   "profile_id": "crowler",
-  "updated_at": "2026-11-06T01:03:35.990899+00:00",
-  "version": 3855
+  "updated_at": "2026-11-16T23:12:05.861827+00:00",
+  "version": 5864
 }

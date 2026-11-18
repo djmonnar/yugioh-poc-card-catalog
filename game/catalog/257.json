@@ -3,10 +3,13 @@
   "art_key": "Cards/257",
   "attack": 1700,
   "attribute": 16,
-  "categories": [],
+  "categories": [
+    "발동-묘지로 보내기",
+    "지원-엘리멘틀 히어로"
+  ],
   "code": 89312388,
   "defense": 1100,
-  "description": "이 카드를 융합 소재 몬스터\n1장 대신 사용할 수 있다.\n같은 융합에서 다른 융합\n소재까지 대체할 수는 없다.",
+  "description": "1턴에 1번, 자신의 엑스트라 덱에 있는 융합 몬스터 1장을 상대에게 공개하고, 그 카드에 이름이 명시된 융합 소재 몬스터 1장을 덱에서 묘지로 보내어 발동할 수 있다. 이 카드는 엔드 페이즈까지 묘지로 보낸 몬스터와 같은 이름으로 취급한다.",
   "draw_enabled": true,
   "identity_key": "d41b594662a97e87340583a68bfc994e36e6ab11e8d1f513f5e9a35cab8bfa98",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0679.webp",

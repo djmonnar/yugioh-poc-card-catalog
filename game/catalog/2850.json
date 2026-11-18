@@ -30,7 +30,7 @@
     "Verdict of Anubis"
   ],
   "source_id": 2850,
-  "speed_limit": null,
+  "speed_limit": 1,
   "stock": true,
   "token": false,
   "type_name": "카운터 함정",

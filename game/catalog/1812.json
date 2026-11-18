@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "소환-덱리크루터"
+    "소환-덱리크루터",
+    "발동-릴리즈"
   ],
   "code": 80280737,
   "defense": 0,

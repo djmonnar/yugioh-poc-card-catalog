@@ -1,0 +1,69 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-a3cc0c79-dc16-4ea0-a348-98df61d9bad2",
+  "main": [
+    {
+      "count": 1,
+      "identity_key": "1b5d0b886c0ae244fdcf1304fe0efd616178cc61bb76ae94a72ede0f07f37046",
+      "source_id": 3002
+    },
+    {
+      "count": 3,
+      "identity_key": "d3cc850238536c8b59fa14f6c3a82759f410f78124ec47690a3c1914f3e5c0a2",
+      "source_id": 2999
+    },
+    {
+      "count": 1,
+      "identity_key": "4653acf17f8caf8f4036d0b45fe7ddbe3955022a4aa27ce0f99eeeecd29ad332",
+      "source_id": 2998
+    },
+    {
+      "count": 2,
+      "identity_key": "235f00f50759f599bc6610b0ded188b4784a1806ec03101c5b85a20e367cd03e",
+      "source_id": 2985
+    },
+    {
+      "count": 2,
+      "identity_key": "480f86c33d0b88c28cca84540b292fd883a2732bd03599f038969d95e4629f70",
+      "source_id": 2992
+    },
+    {
+      "count": 1,
+      "identity_key": "8880a92158b5d5a94a15e304f3c88f60c74342b4a2b0a9fd64493fb07d081352",
+      "source_id": 1869
+    },
+    {
+      "count": 2,
+      "identity_key": "42155c28cf76409f52010ad1e7160ab26c1caefec67a813f070aa73211d5fbf7",
+      "source_id": 1858
+    },
+    {
+      "count": 2,
+      "identity_key": "cb5dfb4c0ec5f31913f41837595585e8990733d12b4c526d7bd7838416e33138",
+      "source_id": 304
+    },
+    {
+      "count": 1,
+      "identity_key": "f57735d759d84c2f500a6702fd3f356d0d17fb7782646081e1f11c003d1ef969",
+      "source_id": 329
+    },
+    {
+      "count": 2,
+      "identity_key": "d5bd969701a421b8a8e9520202a00969264aac72d447e64132004df14d084135",
+      "source_id": 1857
+    },
+    {
+      "count": 2,
+      "identity_key": "38a0e3aa865b7b4de1c304d29b3cf720ac1381978c4598142441e2ebe0db222a",
+      "source_id": 2807
+    },
+    {
+      "count": 1,
+      "identity_key": "71db51531173c4c5d42aaed396486cc80612d5db632f28cbbad092aaeea7c36f",
+      "source_id": 1318
+    }
+  ],
+  "name": "사도식충",
+  "version": 820
+}

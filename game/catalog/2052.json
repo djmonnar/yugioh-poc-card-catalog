@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "효과-묘지보내기"
+    "발동-묘지로 보내기",
+    "지원-식물족"
   ],
   "code": 38568567,
   "defense": 0,

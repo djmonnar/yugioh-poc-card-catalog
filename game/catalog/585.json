@@ -3,7 +3,10 @@
   "art_key": "Cards/585",
   "attack": 2400,
   "attribute": 1,
-  "categories": [],
+  "categories": [
+    "발동-소환 시",
+    "지원-드래곤족"
+  ],
   "code": 10097168,
   "defense": 1800,
   "description": "리버스: 필드의 뒷면 마법 /\n함정 카드 2장을 선택하여\n파괴한다.",

@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/roamer_leon/start",
+  "banlistEnabled": false,
+  "deckName": "에일리언",
+  "extra": [],
+  "id": "enc-88699b9c-8e60-4b28-ace7-ba4f3701c2f5",
+  "lpBonus": 0,
+  "main": [
+    2835,
+    525,
+    525,
+    525,
+    2818,
+    2818,
+    2818,
+    149,
+    149,
+    149,
+    2816,
+    2816,
+    2820,
+    2820,
+    2830,
+    2830,
+    2827,
+    2827,
+    2829,
+    2829
+  ],
+  "name": "방랑 듀얼리스트 레온",
+  "openingDrawBonus": 0,
+  "profileId": "roamer_leon",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2832,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-88699b9c-8e60-4b28-ace7-ba4f3701c2f5",
+  "usesNativeRules035": true
+}

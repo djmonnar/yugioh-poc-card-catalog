@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 32,
   "categories": [
-    "면역-전투"
+    "발동-리버스",
+    "효과-공격 제한"
   ],
   "code": 38247752,
   "defense": 1400,

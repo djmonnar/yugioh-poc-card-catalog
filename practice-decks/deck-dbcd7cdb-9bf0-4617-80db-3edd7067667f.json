@@ -1,0 +1,49 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-dbcd7cdb-9bf0-4617-80db-3edd7067667f",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "1f9737028fd42867fb3bf39a9eee7037532805d090aba08b8f90cfaea493aa2a",
+      "source_id": 2782
+    },
+    {
+      "count": 3,
+      "identity_key": "c5ab34a932a374d6402179c1d3bdadc72f7139cba6e0413771cee4e40d7fba3e",
+      "source_id": 2783
+    },
+    {
+      "count": 3,
+      "identity_key": "0b73a7d3c955928583f0a21c6c8bae461887734da4a81d119491e24b1a724d50",
+      "source_id": 2670
+    },
+    {
+      "count": 3,
+      "identity_key": "49f6935556c45573209be707572f3db27fd4e46335f508bc8f9d9c5eec447f0b",
+      "source_id": 2624
+    },
+    {
+      "count": 2,
+      "identity_key": "afd4aa615a4eaf3b835d7c96460d68b08c84728ff726b6036dddbe0d275a78e3",
+      "source_id": 1248
+    },
+    {
+      "count": 2,
+      "identity_key": "37eac914ffaeb3ad292797b67d2be12cc66d8ad3cda2ffc919dff9ccefdffb1b",
+      "source_id": 2787
+    },
+    {
+      "count": 2,
+      "identity_key": "3a1aba1642ddca25ba3c4076c14113cf56d13756cd1f1940974230767b6848ae",
+      "source_id": 1944
+    },
+    {
+      "count": 2,
+      "identity_key": "f38b527b2ce6bda8083030df9cda09df153f824a6c384df50e2f6f50143a16d2",
+      "source_id": 2626
+    }
+  ],
+  "name": "번개제왕",
+  "version": 800
+}

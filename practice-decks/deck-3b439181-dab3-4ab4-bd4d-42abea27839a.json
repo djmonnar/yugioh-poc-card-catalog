@@ -1,0 +1,54 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-3b439181-dab3-4ab4-bd4d-42abea27839a",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "38a0e3aa865b7b4de1c304d29b3cf720ac1381978c4598142441e2ebe0db222a",
+      "source_id": 2807
+    },
+    {
+      "count": 3,
+      "identity_key": "cc0928edd72880757ae1e8761251c65f4ee85fbb0d7c9dae2e505b25b2313418",
+      "source_id": 2797
+    },
+    {
+      "count": 3,
+      "identity_key": "8acea80540453e77f6fc965fd03375928e84cc36c373eb9d77659c27c712aa10",
+      "source_id": 2796
+    },
+    {
+      "count": 2,
+      "identity_key": "2714b01ee7af544683e04ac12ec7154e65b8db2b9842ad0ba19a8d12f62fc278",
+      "source_id": 2805
+    },
+    {
+      "count": 3,
+      "identity_key": "44bbb661fda4760f12fcbfd0644d53d65e5679b90fca00991e6988a30a1c1645",
+      "source_id": 2798
+    },
+    {
+      "count": 1,
+      "identity_key": "fa2d6d0e87993b5ed6c38707a752b96ae948a3b9ffb2a01c6075424298b7f505",
+      "source_id": 2803
+    },
+    {
+      "count": 2,
+      "identity_key": "60e35f535dd5d99446ffa1b9158db6d9a3585dc04e9c7a10bfb1f781f582dd1b",
+      "source_id": 1159
+    },
+    {
+      "count": 2,
+      "identity_key": "a09ce1f6382e785c2f4f1e5e18ec2aab1e57f3c3d8ca9a9f4e62547bdd153a70",
+      "source_id": 2815
+    },
+    {
+      "count": 1,
+      "identity_key": "6a708381c382bf7ebf77b64431d364cdf3e5399fa9a05c60f544c38d5853895b",
+      "source_id": 521
+    }
+  ],
+  "name": "리버스",
+  "version": 751
+}

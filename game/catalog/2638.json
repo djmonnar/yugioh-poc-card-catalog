@@ -5,7 +5,7 @@
   "attribute": 0,
   "categories": [
     "무효-마법",
-    "발동-버리기",
+    "발동-패 버리기",
     "파괴-함정",
     "효과-데미지"
   ],
@@ -30,7 +30,7 @@
     "Judgment of Anubis"
   ],
   "source_id": 2638,
-  "speed_limit": null,
+  "speed_limit": 2,
   "stock": true,
   "token": false,
   "type_name": "카운터 함정",

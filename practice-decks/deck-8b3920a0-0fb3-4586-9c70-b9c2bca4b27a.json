@@ -1,0 +1,54 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-8b3920a0-0fb3-4586-9c70-b9c2bca4b27a",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "8dd3cfa6244c94aa4be9b35c452670aee896228908c2ec3bd3fc98b387b0ee11",
+      "source_id": 2910
+    },
+    {
+      "count": 1,
+      "identity_key": "254e8c8303d404d2fa90d6aaaa19826d382806e177261d359e852edc02fd1218",
+      "source_id": 1532
+    },
+    {
+      "count": 3,
+      "identity_key": "3ba23b1428ef54afed5b66ff7aac445988c7d7678d50b070ab755fbcb40dc825",
+      "source_id": 225
+    },
+    {
+      "count": 3,
+      "identity_key": "89180a0b52e45309d52a40df61ecb0427ad3403b7be947df15a97510053aa7d2",
+      "source_id": 2911
+    },
+    {
+      "count": 2,
+      "identity_key": "fa110fa4ecf126e45c1218b4ecd12f41441c809df3f9fbf87e1733ab129c4b9f",
+      "source_id": 197
+    },
+    {
+      "count": 3,
+      "identity_key": "ee6538158f35801509bf6117928db59ec89beb43d9e63606cca58d712d99bd7d",
+      "source_id": 137
+    },
+    {
+      "count": 2,
+      "identity_key": "2a0aa1b913533be3e014cfc97fe8de579078a26c7fe02fa81462d19750a6b819",
+      "source_id": 2909
+    },
+    {
+      "count": 2,
+      "identity_key": "90c257c09a13be5c08dde46feb5430c8094a96ccb3e70d8540d72d4661d99a67",
+      "source_id": 1948
+    },
+    {
+      "count": 1,
+      "identity_key": "ddfc09b1a9ca157b355d3a2eaab55fcbabdcf3b49f358c86a0f5d55f0700d30a",
+      "source_id": 2908
+    }
+  ],
+  "name": "디노 인피니티",
+  "version": 766
+}

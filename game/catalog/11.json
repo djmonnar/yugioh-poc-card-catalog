@@ -3,7 +3,9 @@
   "art_key": "Cards/11",
   "attack": 1700,
   "attribute": 1,
-  "categories": [],
+  "categories": [
+    "지원-아마조네스"
+  ],
   "code": 47480070,
   "defense": 300,
   "description": "①: 이 카드의 공격력은, 자신\n필드의 \"아마조네스\" 몬스터의\n수 × 100 올린다.",

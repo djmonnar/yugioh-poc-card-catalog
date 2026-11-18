@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/weevil/start",
+  "banlistEnabled": false,
+  "deckName": "궁극변이체 곤충여왕",
+  "extra": [],
+  "id": "enc-9d2ab156-7bf1-4efc-828e-92f12329c012",
+  "lpBonus": 0,
+  "main": [
+    2988,
+    2988,
+    2988,
+    2981,
+    2990,
+    2990,
+    2990,
+    1859,
+    1859,
+    1859,
+    1856,
+    2985,
+    2985,
+    1352,
+    1352,
+    2987,
+    1145,
+    1145,
+    1548,
+    1548
+  ],
+  "name": "사마준",
+  "openingDrawBonus": 0,
+  "profileId": "weevil",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_monster",
+      "position": 8,
+      "sourceId": 402,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-9d2ab156-7bf1-4efc-828e-92f12329c012",
+  "usesNativeRules035": true
+}

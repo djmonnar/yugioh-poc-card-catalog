@@ -3,7 +3,9 @@
   "art_key": "Cards/1252",
   "attack": 2200,
   "attribute": 2,
-  "categories": [],
+  "categories": [
+    "지원-식물족"
+  ],
   "code": 45425051,
   "defense": 1500,
   "description": "이 카드가 앞면 수비 표시로\n존재하는 동안, 자신의 필드에\n있는 모든 식물족 몬스터의\n공격력과 수비력을 500\n올린다.",

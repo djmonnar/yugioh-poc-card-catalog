@@ -4,7 +4,8 @@
   "attack": 3300,
   "attribute": 16,
   "categories": [
-    "효과-데미지"
+    "효과-데미지",
+    "발동-릴리즈"
   ],
   "code": 85520851,
   "defense": 1400,
@@ -22,7 +23,7 @@
   "race": 65536,
   "rarity": "SR",
   "source_id": 1432,
-  "speed_limit": null,
+  "speed_limit": 2,
   "stock": true,
   "token": false,
   "type_name": "효과 몬스터",

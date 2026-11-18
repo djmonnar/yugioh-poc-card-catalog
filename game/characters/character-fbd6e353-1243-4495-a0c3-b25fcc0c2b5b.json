@@ -34,11 +34,26 @@
             "kind": "start_field"
           }
         ]
+      },
+      {
+        "name": "레벨다운",
+        "profile_id": "profile-ca41c325-3d3c-4218-8306-d1f2b84d9892",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "09cf014d79f376f16411bbdf0e63bf6d67f4b7e757fc61e04e31caea0139361c",
+              "internal_id": 2955,
+              "name_ko": "데블리언 송",
+              "slot": 1987
+            },
+            "kind": "start_field"
+          }
+        ]
       }
     ],
     "skills": []
   },
   "profile_id": "akiza",
-  "updated_at": "2026-11-06T09:47:09.177059+00:00",
-  "version": 3872
+  "updated_at": "2026-11-16T05:39:55.012258+00:00",
+  "version": 5842
 }

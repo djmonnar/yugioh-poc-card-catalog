@@ -1,0 +1,49 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-02c44b2c-b95f-419b-ae23-2c722568cd73",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "71b9e0472c89be9e6b72d1d0ff7220907629691a28a18c6b5e5808cf5427d030",
+      "source_id": 614
+    },
+    {
+      "count": 3,
+      "identity_key": "01b37b99be59df323ee2b41c42a7b0570a96a816c6de2f0468c9b122fdccbea2",
+      "source_id": 2719
+    },
+    {
+      "count": 2,
+      "identity_key": "6a708381c382bf7ebf77b64431d364cdf3e5399fa9a05c60f544c38d5853895b",
+      "source_id": 521
+    },
+    {
+      "count": 3,
+      "identity_key": "8763558c2d9b44edd23608cfb17b6ed874a0d41cbc6777be9e553d5c544b4c9e",
+      "source_id": 615
+    },
+    {
+      "count": 3,
+      "identity_key": "0a6bfcbb90b1857fd1ab17e602d557c33e59c36ffd0b0166b1b598b612eacc14",
+      "source_id": 1930
+    },
+    {
+      "count": 3,
+      "identity_key": "a03ee5b2bbca79f20c8fd37519cf7e7118ffe23f534b72d8b2d36291ccc8976d",
+      "source_id": 2708
+    },
+    {
+      "count": 1,
+      "identity_key": "925e8a7745b34deb543a7dd2f8d3d0995da9baca63261b1b83afa1acda0d0858",
+      "source_id": 1914
+    },
+    {
+      "count": 2,
+      "identity_key": "e10c1ad46e25782dcdf9d6e0d90ecc00aa0735452d399af7a7248d28fd8df76f",
+      "source_id": 2710
+    }
+  ],
+  "name": "펠그란트 드래곤",
+  "version": 793
+}

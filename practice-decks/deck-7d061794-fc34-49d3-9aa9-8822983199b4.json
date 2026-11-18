@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-7d061794-fc34-49d3-9aa9-8822983199b4",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "cb604ce511a57f43f44b14f4b96d8425dca242900703613851650427e06a3252",
+      "source_id": 3000
+    },
+    {
+      "count": 3,
+      "identity_key": "881d05accc3d3861d77689daddbb1fe523520ce9f0558db92f9280dcfd3ab05f",
+      "source_id": 2984
+    },
+    {
+      "count": 3,
+      "identity_key": "cfd53d108a2fefaa9c8145579e9e7875505587e0b1dfe7d4d80e02808b677488",
+      "source_id": 3003
+    },
+    {
+      "count": 2,
+      "identity_key": "868a7903825981b484f745446c05bd19d2be94d0c2d4359b07ea016837bd78c6",
+      "source_id": 650
+    },
+    {
+      "count": 2,
+      "identity_key": "2d596aa30588fce68a2318a8f9e27577a15d8e94d4c73d1e3ee21c0834230a75",
+      "source_id": 2661
+    },
+    {
+      "count": 2,
+      "identity_key": "b70a3040bf8ce1f7eff3e395fc1cbdff503dbdc7d47389712d89b32becc8b16b",
+      "source_id": 1177
+    },
+    {
+      "count": 1,
+      "identity_key": "235f00f50759f599bc6610b0ded188b4784a1806ec03101c5b85a20e367cd03e",
+      "source_id": 2985
+    },
+    {
+      "count": 2,
+      "identity_key": "7019832552aa60957353fdfa5b7878cfe665aefc865580ef942f513cb7aba8bb",
+      "source_id": 2860
+    },
+    {
+      "count": 2,
+      "identity_key": "71db51531173c4c5d42aaed396486cc80612d5db632f28cbbad092aaeea7c36f",
+      "source_id": 1318
+    },
+    {
+      "count": 1,
+      "identity_key": "eb3713e4c520e2986c8063646f73e1b88b884bfd5e05acacac1b951b99042067",
+      "source_id": 2981
+    }
+  ],
+  "name": "세이버 비틀",
+  "version": 813
+}

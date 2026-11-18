@@ -1,0 +1,70 @@
+{
+  "banlist_enabled": true,
+  "extra": [
+    {
+      "count": 2,
+      "identity_key": "ce12cb1e917241ccb4b9ddd093bb1827cabd4be05f500f28f9124dfb89ed19cb",
+      "source_id": 3036
+    }
+  ],
+  "id": "deck-22c8c486-ff57-452d-bcf5-a843e96d18f9",
+  "main": [
+    {
+      "count": 1,
+      "identity_key": "d6619d82eb7f6996b2ed39e66fdf3aeb2c93923388dfba885b3044fbad86dd50",
+      "source_id": 3035
+    },
+    {
+      "count": 3,
+      "identity_key": "1b9077aeac6cf3d35fd62e05e34fea9eab86b21b05132660bc569234f88b1893",
+      "source_id": 759
+    },
+    {
+      "count": 3,
+      "identity_key": "528942fb07c4a7e2e64c88eead2ee50f9fb9130062276f04d482b85bcf05cc98",
+      "source_id": 3032
+    },
+    {
+      "count": 2,
+      "identity_key": "3384f0b53f117eef67de1e9e45cb7496ade1cc324f1747b7a280c5d7f8cc3b27",
+      "source_id": 3033
+    },
+    {
+      "count": 1,
+      "identity_key": "cd5485e55f92ebf4bce52d23e4cee801ed2a600534083a3a779ea199390902ce",
+      "source_id": 3037
+    },
+    {
+      "count": 2,
+      "identity_key": "e59839abbcfb0aeca99b2305a17c4280aaa98be82be82bcdf349e6a1d8c6aa0b",
+      "source_id": 1924
+    },
+    {
+      "count": 1,
+      "identity_key": "90cd09a547286e36ff59308f3af2dadf4e3a4245ecbfc70f9dc72c255cffc369",
+      "source_id": 3038
+    },
+    {
+      "count": 2,
+      "identity_key": "cc43ed9978e9a88cc6f159884ff0432c4df10988fde0ef0ce20e13938d113b8c",
+      "source_id": 1525
+    },
+    {
+      "count": 2,
+      "identity_key": "49c27b12b46eeb5bb3c5df51f6c3dbde7ac9664bd4d7991709d53e1ead1dafcf",
+      "source_id": 2843
+    },
+    {
+      "count": 2,
+      "identity_key": "3f68a1964d51d24d255a75dce5a5f92fc8a787f7b9a6b5975b0558a2e3892a48",
+      "source_id": 2603
+    },
+    {
+      "count": 1,
+      "identity_key": "2f19aca0217a15bdc61b9bc07bd838dce271f8aa45df6b5e29c4a614f0eafbc3",
+      "source_id": 2669
+    }
+  ],
+  "name": "블랙 매지션 걸",
+  "version": 845
+}

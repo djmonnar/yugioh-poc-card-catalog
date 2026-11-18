@@ -8,29 +8,38 @@
   "main": [
     149,
     149,
-    149,
-    525,
-    525,
-    525,
     93,
     93,
     639,
     639,
-    129,
-    129,
-    1043,
-    1043,
-    1213,
-    1213,
-    1548,
-    1548,
-    1415,
-    1415
+    2832,
+    2832,
+    2838,
+    2838,
+    2836,
+    2836,
+    2831,
+    2831,
+    2816,
+    2816,
+    252,
+    252,
+    252,
+    2825
   ],
   "name": "방랑 듀얼리스트 레온",
   "openingDrawBonus": 0,
   "profileId": "roamer_leon",
-  "skills": [],
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2832,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
   "templateId": "unified039:enc-9f08a285-31b0-4a28-b355-1ab668a0150d",
   "usesNativeRules035": true
 }

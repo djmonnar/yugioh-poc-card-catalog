@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/marik/start",
+  "banlistEnabled": false,
+  "deckName": "데미스",
+  "extra": [],
+  "id": "enc-ab89c4ab-694c-4f61-b1c2-04025ba0e8e3",
+  "lpBonus": 0,
+  "main": [
+    3006,
+    3006,
+    2535,
+    521,
+    521,
+    1856,
+    1856,
+    253,
+    253,
+    2729,
+    2729,
+    1122,
+    2732,
+    2533,
+    1109,
+    716,
+    716,
+    49,
+    49,
+    49
+  ],
+  "name": "어둠의 마리크",
+  "openingDrawBonus": 0,
+  "profileId": "marik",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 2535,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-ab89c4ab-694c-4f61-b1c2-04025ba0e8e3",
+  "usesNativeRules035": true
+}

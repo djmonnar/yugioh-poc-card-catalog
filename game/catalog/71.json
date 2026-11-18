@@ -3,7 +3,9 @@
   "art_key": "Cards/71",
   "attack": 0,
   "attribute": 1,
-  "categories": [],
+  "categories": [
+    "효과-묘지로 보내기"
+  ],
   "code": 40240595,
   "defense": 2000,
   "description": "이 카드를 필드의 앞면 \"꼬마\n모스\"에 장착 마법 카드로\n장착할 수 있다. 장착된 \"꼬마\n모스\"의 공격력과 수비력은\n\"진화의 고치\"와 같아진다.",

@@ -49,11 +49,31 @@
             "kind": "start_hand"
           }
         ]
+      },
+      {
+        "name": "묘지드래곤",
+        "profile_id": "profile-a9fc621f-550c-4fb9-ab0a-3116c20967ad",
+        "skills": [
+          {
+            "entries": [
+              {
+                "card": {
+                  "identity_key": "a922b4dbdb7983de97acbcbec11bc1aa8bbf0f26c81fa946d5b832ae223161ae",
+                  "internal_id": 210,
+                  "name_ko": "라비 드래곤",
+                  "slot": 343
+                },
+                "count": 1
+              }
+            ],
+            "kind": "start_grave"
+          }
+        ]
       }
     ],
     "skills": []
   },
   "profile_id": "kaiba",
-  "updated_at": "2026-11-09T19:49:39.713234+00:00",
-  "version": 3918
+  "updated_at": "2026-11-16T19:32:20.278254+00:00",
+  "version": 5861
 }

@@ -6,7 +6,7 @@
   "categories": [],
   "code": 48130397,
   "defense": 0,
-  "description": "융합 소재 몬스터 2장 이상을\n융합하여 새로운 융합\n몬스터를 만든다.",
+  "description": "패 1장을 버리고 발동할 수 있다. 양쪽 필드의 몬스터 중 필요한 융합 소재를 골라, 자신의 엑스트라 덱에서 융합 몬스터 1장을 융합 소환한다. 어느 플레이어도 이 카드의 발동에 체인할 수 없다.",
   "draw_enabled": true,
   "identity_key": "5a2c7365e35f2614ef395c7972a205900b472d91d2dc2fc7bde8e4b425949160",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1027.webp",

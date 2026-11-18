@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "지원-장착"
+    "지원-장착",
+    "효과-제외"
   ],
   "code": 61127349,
   "defense": 0,

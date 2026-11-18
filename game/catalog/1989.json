@@ -3,7 +3,10 @@
   "art_key": "Cards/1989",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "발동-소환 시",
+    "지원-공룡족"
+  ],
   "code": 11925569,
   "defense": 0,
   "description": "상대 필드 위에 몬스터가 특수\n소환되었을 때 발동할 수\n있다. 패에서 공룡족 몬스터\n1장을 특수 소환한다.",

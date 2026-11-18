@@ -3,7 +3,9 @@
   "art_key": "Cards/295",
   "attack": 1000,
   "attribute": 8,
-  "categories": [],
+  "categories": [
+    "지원-엘리멘틀 히어로"
+  ],
   "code": 21844576,
   "defense": 1000,
   "description": "하늘을 가르며 바람을\n조종하는 날개 달린 엘리멘틀\n히어로.",

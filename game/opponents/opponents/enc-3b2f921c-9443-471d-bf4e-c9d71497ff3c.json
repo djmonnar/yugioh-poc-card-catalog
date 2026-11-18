@@ -1,0 +1,45 @@
+{
+  "artKey": "DuelUi011/legacy/joey_intro",
+  "banlistEnabled": false,
+  "deckName": "스피드 워리어",
+  "extra": [],
+  "id": "enc-3b2f921c-9443-471d-bf4e-c9d71497ff3c",
+  "lpBonus": 0,
+  "main": [
+    2884,
+    2884,
+    2884,
+    2885,
+    2885,
+    2885,
+    1940,
+    1940,
+    1927,
+    573,
+    2609,
+    2713,
+    2713,
+    47,
+    47,
+    139,
+    139,
+    139,
+    2606,
+    2606
+  ],
+  "name": "조이",
+  "openingDrawBonus": 0,
+  "profileId": "joey",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 2884,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-3b2f921c-9443-471d-bf4e-c9d71497ff3c",
+  "usesNativeRules035": true
+}

@@ -1,0 +1,49 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-1f069e67-9b0b-438f-a0ba-a70007787277",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "f4f3ff415bb3b2cc7170e4069e483f830f08df58eee01747835cf2e407c0be7e",
+      "source_id": 2864
+    },
+    {
+      "count": 3,
+      "identity_key": "a95dfff565800ba6619f2f640cfa39419718eef0983e53579a021978cae06426",
+      "source_id": 2862
+    },
+    {
+      "count": 3,
+      "identity_key": "61c53cb1d0b0dc348d3a2dae0412a3bd8d09a98bafb6e32993e036a7f40678fe",
+      "source_id": 2849
+    },
+    {
+      "count": 3,
+      "identity_key": "4622607701a32bb375bb9f780aae02feeab399c3eb802a189ce2a3cebe296713",
+      "source_id": 2848
+    },
+    {
+      "count": 3,
+      "identity_key": "860ac9a49c1b377b5215fcfccaa1296531191e349739b855089a2490a66f04b5",
+      "source_id": 2851
+    },
+    {
+      "count": 1,
+      "identity_key": "30767dc711bb3cd04de6ad25afd2c70580d0627e3113567b84493430bc31d8af",
+      "source_id": 2850
+    },
+    {
+      "count": 2,
+      "identity_key": "b5fc4428a667d2e28276286a0de0c82243e2fe3548863209ed3afd1d5a898591",
+      "source_id": 1135
+    },
+    {
+      "count": 2,
+      "identity_key": "052d12733536f2810904ede8341e8ae08ad50c256e2a4c5a6c70046134ca7886",
+      "source_id": 689
+    }
+  ],
+  "name": "왕가의 신전",
+  "version": 735
+}

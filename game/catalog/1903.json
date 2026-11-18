@@ -3,10 +3,13 @@
   "art_key": "Cards/1903",
   "attack": 4000,
   "attribute": 64,
-  "categories": [],
+  "categories": [
+    "발동-릴리즈",
+    "효과-묘지로 보내기"
+  ],
   "code": 10000000,
   "defense": 4000,
-  "description": "이 강력한 생물의 강림은\n불타는 바람과 뒤틀린 대지를\n통해 예고될 것입니다. 그리고\n이 공포가 다가옴에 따라 숨을\n쉬는 자들은 영원한 잠의\n진정한 의미를 알게 될\n것입니다.",
+  "description": "몬스터 3장을 릴리스해야 일반 소환할 수 있으며, 일반 세트는 할 수 없다. 이 카드의 일반 소환은 무효화되지 않고, 소환 성공 시 양쪽 모두 카드 효과를 발동할 수 없다.\n양쪽 모두 필드의 이 카드를 효과의 대상으로 지정할 수 없다.\n자신 필드의 몬스터 2장을 릴리스해 상대 필드의 몬스터를 모두 파괴할 수 있다. 이 효과를 발동하는 턴에는 이 카드로 공격을 선언할 수 없다.\n특수 소환된 이 카드는 엔드 페이즈에 효과로 묘지에 보내진다.",
   "draw_enabled": true,
   "identity_key": "337213df540dec98882fbc21e172d37973afd81b5faeb50409bcdc635f12fdba",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1108.webp",

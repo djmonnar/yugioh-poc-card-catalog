@@ -4,7 +4,8 @@
   "attack": 800,
   "attribute": 2,
   "categories": [
-    "효과-직접공격"
+    "효과-직접공격",
+    "지원-로이드"
   ],
   "code": 99861526,
   "defense": 1800,

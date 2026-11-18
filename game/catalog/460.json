@@ -3,7 +3,9 @@
   "art_key": "Cards/460",
   "attack": 1100,
   "attribute": 2,
-  "categories": [],
+  "categories": [
+    "지원-펭귄"
+  ],
   "code": 48531733,
   "defense": 800,
   "description": "양팔이 전기 채찍으로 되어\n있다. 전기 충격으로 적을\n마비시킨다.",

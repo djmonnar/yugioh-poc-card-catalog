@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/rex/start",
+  "banlistEnabled": false,
+  "deckName": "쥬락",
+  "extra": [],
+  "id": "enc-9586d0f8-453e-4a46-9b3f-1584b16969fe",
+  "lpBonus": 0,
+  "main": [
+    2922,
+    2922,
+    2923,
+    2923,
+    2919,
+    2919,
+    2918,
+    2918,
+    2918,
+    2915,
+    2915,
+    197,
+    197,
+    2914,
+    2916,
+    2916,
+    2924,
+    2924,
+    2417,
+    2417
+  ],
+  "name": "다이노소어 용만",
+  "openingDrawBonus": 0,
+  "profileId": "rex",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2916,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-9586d0f8-453e-4a46-9b3f-1584b16969fe",
+  "usesNativeRules035": true
+}

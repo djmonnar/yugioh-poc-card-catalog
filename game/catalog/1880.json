@@ -4,7 +4,8 @@
   "attack": 1500,
   "attribute": 2,
   "categories": [
-    "지원-릴리즈"
+    "지원-릴리즈",
+    "지원-물 속성"
   ],
   "code": 92084010,
   "defense": 1600,

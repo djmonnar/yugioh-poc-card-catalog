@@ -4,7 +4,7 @@
   "id": "starter-template-921623cdee2d0afa25e771bdace4731f",
   "main": [
     {
-      "count": 3,
+      "count": 2,
       "identity_key": "dc819ac4bfd64a44d876fe0f75bfe97cb0e24e9dfa20e1cb23e5a9d0b52f5724",
       "source_id": 962
     },
@@ -29,12 +29,12 @@
       "source_id": 387
     },
     {
-      "count": 3,
+      "count": 2,
       "identity_key": "f404ba133372b351606334cc3284cc4e1ec47fb7adc423f12092ccf32146f581",
       "source_id": 685
     },
     {
-      "count": 3,
+      "count": 2,
       "identity_key": "05b26a45d30cc9f5293e3a00bbc51ea03b2be6d45d06fc37eb468717bccba07f",
       "source_id": 657
     },
@@ -49,11 +49,16 @@
       "source_id": 123
     },
     {
-      "count": 1,
+      "count": 2,
       "identity_key": "2e5b09e8cbb003a78a38101064462aeb0d78745bbca28fb850e2f1911f497552",
       "source_id": 1079
+    },
+    {
+      "count": 2,
+      "identity_key": "fd444b62b7cf876f9257c857e42753635ba00b864a1a90ce56a4c6df8f03571d",
+      "source_id": 2415
     }
   ],
-  "name": "밴디트키스 중급(가제트)",
-  "version": 37
+  "name": "가제트",
+  "version": 699
 }

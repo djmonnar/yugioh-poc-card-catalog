@@ -4,7 +4,8 @@
   "attack": 800,
   "attribute": 8,
   "categories": [
-    "파괴-몬스터"
+    "파괴-몬스터",
+    "발동-리버스"
   ],
   "code": 83994646,
   "defense": 1200,

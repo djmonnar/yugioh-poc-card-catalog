@@ -4,7 +4,8 @@
   "attack": 1800,
   "attribute": 1,
   "categories": [
-    "발동-묘지"
+    "발동-파괴 시",
+    "지원-에일리언"
   ],
   "code": 98719226,
   "defense": 1000,

@@ -3,7 +3,9 @@
   "art_key": "Cards/416",
   "attack": 800,
   "attribute": 4,
-  "categories": [],
+  "categories": [
+    "발동-릴리즈"
+  ],
   "code": 70138455,
   "defense": 900,
   "description": "자신의 스탠바이 페이즈에\n앞면의 이 카드를 릴리스하고\n공격력 1000 이하의 앞면\n몬스터 2장을 파괴한다.",

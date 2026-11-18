@@ -3,7 +3,9 @@
   "art_key": "Cards/311",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-천사족"
+  ],
   "code": 1557499,
   "defense": 0,
   "description": "이 카드를 장착한 천사족\n몬스터의 공격력과 수비력을\n300 올린다.",

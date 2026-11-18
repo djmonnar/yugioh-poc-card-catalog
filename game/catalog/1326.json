@@ -3,7 +3,9 @@
   "art_key": "Cards/1326",
   "attack": 1850,
   "attribute": 2,
-  "categories": [],
+  "categories": [
+    "지원-바다"
+  ],
   "code": 3643300,
   "defense": 1600,
   "description": "필드에 \"바다\"가 앞면 표시로\n존재하는 한, 이 카드는 모든\n마법 카드의 효과를 받지\n않으며 상대 몬스터의 공격\n대상이 되지 않는다.",

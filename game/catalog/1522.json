@@ -4,7 +4,8 @@
   "attack": 1600,
   "attribute": 16,
   "categories": [
-    "면역-전투"
+    "보호-공격 대상 제외",
+    "지원-마법사"
   ],
   "code": 80304126,
   "defense": 1800,

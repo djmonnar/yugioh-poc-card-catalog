@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "면역-전투"
+    "면역-전투",
+    "보호-전투 데미지 방지"
   ],
   "code": 12607053,
   "defense": 0,

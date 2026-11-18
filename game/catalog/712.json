@@ -3,7 +3,9 @@
   "art_key": "Cards/712",
   "attack": 3500,
   "attribute": 4,
-  "categories": [],
+  "categories": [
+    "지원-붉은눈"
+  ],
   "code": 90660762,
   "defense": 2000,
   "description": "\"붉은 눈의 흑룡\" + \"메테오\n드래곤\"",

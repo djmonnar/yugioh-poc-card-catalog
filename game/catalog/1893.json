@@ -4,8 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "면역-효과",
-    "발동-lp지불"
+    "발동-LP 지불",
+    "무효-몬스터효과"
   ],
   "code": 82732705,
   "defense": 0,

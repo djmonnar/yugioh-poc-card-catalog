@@ -1,0 +1,45 @@
+{
+  "artKey": "Character090/images/paradox_brothers/start",
+  "banlistEnabled": false,
+  "deckName": "풍마신 휴가",
+  "extra": [],
+  "id": "enc-fc6008ba-a44f-4a02-af82-9b0176a3ab94",
+  "lpBonus": 0,
+  "main": [
+    2642,
+    2642,
+    2642,
+    2775,
+    2775,
+    1243,
+    2631,
+    2631,
+    2631,
+    2608,
+    1120,
+    1120,
+    1220,
+    2103,
+    2103,
+    2646,
+    1949,
+    1949,
+    1177,
+    1177
+  ],
+  "name": "미궁형제",
+  "openingDrawBonus": 0,
+  "profileId": "paradox_brothers",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_monster",
+      "position": 4,
+      "sourceId": 180,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-fc6008ba-a44f-4a02-af82-9b0176a3ab94",
+  "usesNativeRules035": true
+}

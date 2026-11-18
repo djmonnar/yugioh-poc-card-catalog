@@ -50,11 +50,26 @@
             "kind": "start_hand"
           }
         ]
+      },
+      {
+        "name": "고등의식",
+        "profile_id": "profile-1086d67e-e1c4-4565-bb50-6159f2d24ad5",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "0c0fca9eecf4ebb26ce38df84553098bc60c86bce9d33d62124bd0bf26560f95",
+              "internal_id": 2535,
+              "name_ko": "고등의식술",
+              "slot": 1567
+            },
+            "kind": "start_hand"
+          }
+        ]
       }
     ],
     "skills": []
   },
   "profile_id": "marik",
-  "updated_at": "2026-11-09T21:03:12.283618+00:00",
-  "version": 3920
+  "updated_at": "2026-11-17T23:12:05.270018+00:00",
+  "version": 5907
 }

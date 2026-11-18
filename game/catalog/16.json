@@ -3,7 +3,9 @@
   "art_key": "Cards/16",
   "attack": 200,
   "attribute": 32,
-  "categories": [],
+  "categories": [
+    "지원-엑조디아"
+  ],
   "code": 8124921,
   "defense": 300,
   "description": "마법으로 봉인된 금지된\n오른쪽 다리. 이 봉인을 깨는\n사람은 누구든지 무한한 힘을\n알게 될 것입니다.",

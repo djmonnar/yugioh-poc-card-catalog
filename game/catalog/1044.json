@@ -4,12 +4,14 @@
   "attack": 300,
   "attribute": 16,
   "categories": [
-    "면역-전투",
-    "발동-묘지"
+    "발동-묘지로 보내졌을 때",
+    "발동-파괴 시",
+    "보호-전투 데미지 방지",
+    "지원-크리보"
   ],
   "code": 57116033,
   "defense": 200,
-  "description": "이 카드가 전투로 묘지로\n보내졌을 때, 그 턴의 배틀\n페이즈를 즉시 종료한다.",
+  "description": "이 카드가 필드에서 파괴되어 묘지로 보내지면 발동한다. 이 효과가 처리된 뒤부터 턴 종료까지 자신이 받는 전투 데미지는 0이 된다.",
   "draw_enabled": true,
   "identity_key": "09cb0f23c3e62db5c3b626165a6dd18feac6562108e4123e55913564c2f6f5aa",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0718.webp",

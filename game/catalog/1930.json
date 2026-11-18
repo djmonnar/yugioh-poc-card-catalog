@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "효과-데미지"
+    "효과-데미지",
+    "지원-드래곤족"
   ],
   "code": 81385346,
   "defense": 0,

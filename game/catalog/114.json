@@ -3,7 +3,9 @@
   "art_key": "Cards/114",
   "attack": 1300,
   "attribute": 32,
-  "categories": [],
+  "categories": [
+    "지원-카오스"
+  ],
   "code": 41544074,
   "defense": 1100,
   "description": "\"홀리 엘프\" ＋ \"흑마족의\n커튼\"",

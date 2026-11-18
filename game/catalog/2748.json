@@ -4,7 +4,8 @@
   "attack": 1600,
   "attribute": 16,
   "categories": [
-    "소환-패,덱"
+    "소환-패에서",
+    "발동-릴리즈"
   ],
   "code": 97093037,
   "defense": 1500,

@@ -1,0 +1,45 @@
+{
+  "artKey": "DuelUi011/legacy/kaiba_intro",
+  "banlistEnabled": false,
+  "deckName": "라비 드래곤",
+  "extra": [],
+  "id": "enc-ad457704-929a-4e77-b4bc-5c3ede2c3a9b",
+  "lpBonus": 0,
+  "main": [
+    210,
+    210,
+    196,
+    196,
+    196,
+    1930,
+    1930,
+    189,
+    189,
+    2711,
+    1914,
+    2752,
+    194,
+    194,
+    194,
+    710,
+    710,
+    2505,
+    2847,
+    2847
+  ],
+  "name": "카이바",
+  "openingDrawBonus": 0,
+  "profileId": "kaiba",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 331,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-ad457704-929a-4e77-b4bc-5c3ede2c3a9b",
+  "usesNativeRules035": true
+}

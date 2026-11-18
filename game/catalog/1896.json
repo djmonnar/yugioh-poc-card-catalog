@@ -5,7 +5,8 @@
   "attribute": 0,
   "categories": [
     "소환-제외",
-    "효과-제외"
+    "효과-제외",
+    "발동-LP 지불"
   ],
   "code": 27174286,
   "defense": 0,

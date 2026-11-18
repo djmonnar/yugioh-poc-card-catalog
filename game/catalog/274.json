@@ -3,7 +3,9 @@
   "art_key": "Cards/274",
   "attack": 1200,
   "attribute": 1,
-  "categories": [],
+  "categories": [
+    "발동-리버스"
+  ],
   "code": 42009836,
   "defense": 1300,
   "description": "①: 이 카드가 리버스했을 경우에 발동한다. 필드의 특수 소환된 몬스터를 전부 파괴한다. ②: 이 카드가 몬스터 존에 존재하는 한, 서로 몬스터를 특수 소환할 수 없다.",

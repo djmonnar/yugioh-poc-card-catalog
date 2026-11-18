@@ -4,7 +4,8 @@
   "attack": 1800,
   "attribute": 1,
   "categories": [
-    "지원-듀얼"
+    "지원-듀얼",
+    "지원-앤틱 기어"
   ],
   "code": 39303359,
   "defense": 500,

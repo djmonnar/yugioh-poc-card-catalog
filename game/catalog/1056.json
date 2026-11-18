@@ -4,8 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "면역-전투",
-    "파괴-몬스터"
+    "파괴-몬스터",
+    "지원-전투"
   ],
   "code": 44095762,
   "defense": 0,

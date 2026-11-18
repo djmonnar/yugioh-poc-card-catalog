@@ -3,7 +3,9 @@
   "art_key": "Cards/36",
   "attack": 2600,
   "attribute": 8,
-  "categories": [],
+  "categories": [
+    "지원-가이아"
+  ],
   "code": 66889139,
   "defense": 2100,
   "description": "\"암흑 기사 가이아\" ＋ \"커스\n오브 드래곤\"",

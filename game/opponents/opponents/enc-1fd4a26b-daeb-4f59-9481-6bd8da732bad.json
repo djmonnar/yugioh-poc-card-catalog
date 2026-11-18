@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/mako/start",
+  "banlistEnabled": false,
+  "deckName": "해황",
+  "extra": [],
+  "id": "enc-1fd4a26b-daeb-4f59-9481-6bd8da732bad",
+  "lpBonus": 0,
+  "main": [
+    2978,
+    2978,
+    2978,
+    2977,
+    2977,
+    2977,
+    2979,
+    2979,
+    2972,
+    2972,
+    2972,
+    2976,
+    2976,
+    1886,
+    1886,
+    1882,
+    2040,
+    2040,
+    2904,
+    2904
+  ],
+  "name": "마해룡",
+  "openingDrawBonus": 0,
+  "profileId": "mako",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2040,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-1fd4a26b-daeb-4f59-9481-6bd8da732bad",
+  "usesNativeRules035": true
+}

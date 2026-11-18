@@ -3,7 +3,9 @@
   "art_key": "Cards/964",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "효과-제외"
+  ],
   "code": 49587034,
   "defense": 0,
   "description": "상대의 패에서 무작위로 카드\n1장을 선택하여 뒷면 상태로\n필드 밖에 둔다. 상대의 4번째\n턴 스탠바이 페이즈에 그\n카드를 상대의 패로 되돌린다.",

@@ -3,7 +3,9 @@
   "art_key": "Cards/641",
   "attack": 1100,
   "attribute": 16,
-  "categories": [],
+  "categories": [
+    "지원-사이버 드래곤"
+  ],
   "code": 26439287,
   "defense": 600,
   "description": "이 카드는 몬스터 존에 앞면\n표시로 존재하는 한, 카드명을\n\"사이버 드래곤\"으로\n취급한다.",

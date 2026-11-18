@@ -3,7 +3,9 @@
   "art_key": "Cards/56",
   "attack": 2600,
   "attribute": 1,
-  "categories": [],
+  "categories": [
+    "소환-릴리즈 코스트"
+  ],
   "code": 14141448,
   "defense": 2500,
   "description": "이 몬스터는 \"진화의 고치\"를\n장착한 \"꼬마 모스\"를, 장착\n후 자신의 4번째 턴에\n릴리스했을 경우에만 특수\n소환할 수 있다.",

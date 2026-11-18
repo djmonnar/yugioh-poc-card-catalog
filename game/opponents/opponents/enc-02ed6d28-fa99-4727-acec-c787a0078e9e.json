@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/weevil/start",
+  "banlistEnabled": false,
+  "deckName": "세이버 비틀",
+  "extra": [],
+  "id": "enc-02ed6d28-fa99-4727-acec-c787a0078e9e",
+  "lpBonus": 0,
+  "main": [
+    3000,
+    3000,
+    2984,
+    2984,
+    2984,
+    3003,
+    3003,
+    3003,
+    650,
+    650,
+    2661,
+    2661,
+    1177,
+    1177,
+    2985,
+    2860,
+    2860,
+    1318,
+    1318,
+    2981
+  ],
+  "name": "사마준",
+  "openingDrawBonus": 0,
+  "profileId": "weevil",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 329,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-02ed6d28-fa99-4727-acec-c787a0078e9e",
+  "usesNativeRules035": true
+}

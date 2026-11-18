@@ -15,16 +15,11 @@
     },
     {
       "count": 2,
-      "identity_key": "803a201ac142d155aad9a0754e701d685ec66bc628b827141b48fccef3daa322",
-      "source_id": 2119
-    },
-    {
-      "count": 1,
       "identity_key": "0055baeeba8df234a97ecff259dabf614873650b5678a740bd36b056842fdeb0",
       "source_id": 2123
     },
     {
-      "count": 1,
+      "count": 2,
       "identity_key": "7a1b792cab5bdd2c2fe81530c1355ee25bc81a7fcb53a7fecf3f035c5fe7358f",
       "source_id": 2128
     },
@@ -54,11 +49,16 @@
       "source_id": 1949
     },
     {
-      "count": 2,
-      "identity_key": "509f1d451d9ae3e444ffd5b9c35c0f14cefc51e0d0517b28062f5f5e22c9c453",
-      "source_id": 1244
+      "count": 1,
+      "identity_key": "53e18ab94e0454d41dcf5186a875b0477a50fab5a21758c219767eec9f510979",
+      "source_id": 2126
+    },
+    {
+      "count": 1,
+      "identity_key": "803a201ac142d155aad9a0754e701d685ec66bc628b827141b48fccef3daa322",
+      "source_id": 2119
     }
   ],
   "name": "안개골짜기 중급",
-  "version": 684
+  "version": 790
 }

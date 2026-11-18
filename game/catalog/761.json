@@ -4,7 +4,8 @@
   "attack": 2200,
   "attribute": 1,
   "categories": [
-    "소환-토큰"
+    "소환-토큰",
+    "지원-곤충"
   ],
   "code": 91512835,
   "defense": 2400,

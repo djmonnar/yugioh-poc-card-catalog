@@ -4,7 +4,8 @@
   "attack": 2800,
   "attribute": 16,
   "categories": [
-    "파괴-몬스터"
+    "파괴-몬스터",
+    "발동-소환 시"
   ],
   "code": 36354007,
   "defense": 1400,

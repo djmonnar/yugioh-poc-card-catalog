@@ -1,14 +1,13 @@
 {
   "artKey": "CharacterPresentation012/images/keith/start",
   "banlistEnabled": false,
-  "deckName": "밴디트키스 중급(가제트)",
+  "deckName": "가제트",
   "extra": [],
   "id": "enc044_1_elite_ch1_elite_0c05ae8cb19f5866d631e9be",
   "lpBonus": 500,
   "main": [
     962,
     962,
-    962,
     589,
     589,
     89,
@@ -19,13 +18,14 @@
     387,
     685,
     685,
-    685,
-    657,
     657,
     657,
     628,
     123,
-    1079
+    1079,
+    1079,
+    2415,
+    2415
   ],
   "name": "밴디트키스",
   "openingDrawBonus": 0,
@@ -41,5 +41,5 @@
     }
   ],
   "templateId": "installed-story:sc-a6c8e9fe511882ce-bb5d64e8b9bd2a8080c5c3bd5df90f97",
-  "usesNativeRules035": false
+  "usesNativeRules035": true
 }

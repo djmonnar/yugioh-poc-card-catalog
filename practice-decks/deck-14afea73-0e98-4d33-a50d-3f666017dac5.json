@@ -1,0 +1,64 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-14afea73-0e98-4d33-a50d-3f666017dac5",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "f81f7ec5663edae9dd76667bffeb11bec26a9dc1b3ee41203e2148d73c69b2f5",
+      "source_id": 2098
+    },
+    {
+      "count": 2,
+      "identity_key": "ee8f9c4f3e37384d485c5695a78ebfcb44bafab1798bb1797a522ef340c726a2",
+      "source_id": 2117
+    },
+    {
+      "count": 1,
+      "identity_key": "9a950d467b21525f75348d120ef5f58bd4aea4c831b1a818049771bd8b03b406",
+      "source_id": 2112
+    },
+    {
+      "count": 2,
+      "identity_key": "7f6ea51117f2d1f9acb474978a566e9ead6bdbe7d9af12a9c324896ce7214a6e",
+      "source_id": 1954
+    },
+    {
+      "count": 2,
+      "identity_key": "d0628519a37f3c68e4af6f66733de78aa0afd13bf4467f919ef0cf27968007c5",
+      "source_id": 2095
+    },
+    {
+      "count": 3,
+      "identity_key": "d3d35d362343dfdc7217deb4a0aab9b28b969051a25a1d72b99c9794b0740166",
+      "source_id": 143
+    },
+    {
+      "count": 2,
+      "identity_key": "2efa468fbbcaee28d45d696615341968ac1535fe942c8bb72fa0e964ca45975b",
+      "source_id": 2101
+    },
+    {
+      "count": 2,
+      "identity_key": "2153fff00bb802ab602d36339b5aaf2411c4f02121b9de92643cf8be7352463e",
+      "source_id": 2634
+    },
+    {
+      "count": 2,
+      "identity_key": "8b3b45e753ed851101f7265bb0742a6f236cef943540740ebd1390ecaabc1f4b",
+      "source_id": 2102
+    },
+    {
+      "count": 1,
+      "identity_key": "8da7d19c50a02f5d0850b9a7ee5a0ad9ef08d7816a8a3a534cd7c7af60a70cd2",
+      "source_id": 2635
+    },
+    {
+      "count": 1,
+      "identity_key": "eac884873ccf55a0a5fa682da4611a6887c499b69fb3c0135a24ca9b5e7869c3",
+      "source_id": 2788
+    }
+  ],
+  "name": "화염+듀얼",
+  "version": 839
+}

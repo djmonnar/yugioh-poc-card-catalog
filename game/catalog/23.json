@@ -3,7 +3,9 @@
   "art_key": "Cards/23",
   "attack": 1600,
   "attribute": 16,
-  "categories": [],
+  "categories": [
+    "지원-엘리멘틀 히어로"
+  ],
   "code": 20721928,
   "defense": 1400,
   "description": "다양한 무기를 휘두르는\n엘리멘틀 히어로이자 전사.",

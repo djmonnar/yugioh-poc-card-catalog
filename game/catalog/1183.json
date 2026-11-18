@@ -3,7 +3,9 @@
   "art_key": "Cards/1183",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "발동-LP 지불"
+  ],
   "code": 97809599,
   "defense": 0,
   "description": "자신의 LP를 1000 지불하고\n상대의 모든 뒷면 카드를\n앞면으로 뒤집는다. 확인한 후\n원래의 표시 형식으로\n되돌린다. 카드의 효과는\n발동하지 않는다.",

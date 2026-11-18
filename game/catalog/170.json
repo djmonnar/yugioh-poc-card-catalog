@@ -3,7 +3,9 @@
   "art_key": "Cards/170",
   "attack": 1200,
   "attribute": 32,
-  "categories": [],
+  "categories": [
+    "발동-리버스"
+  ],
   "code": 16768387,
   "defense": 1000,
   "description": "리버스: 자신의 덱 맨 위의\n카드 5장을 확인하고 원하는\n순서로 배열하여 덱 맨 위에\n되돌려 놓는다.",

@@ -10,11 +10,6 @@
     },
     {
       "count": 2,
-      "identity_key": "7e5184751796a88db124dbc28ddcb4d7772f74a755a7f26bc5aa9dff360396a9",
-      "source_id": 1999
-    },
-    {
-      "count": 2,
       "identity_key": "213154da06d5229af4a68a0d57c221c31f67ca7b48ba86ea70761b89f57ae67d",
       "source_id": 1972
     },
@@ -24,7 +19,7 @@
       "source_id": 1989
     },
     {
-      "count": 3,
+      "count": 2,
       "identity_key": "1606189c59fad766b10bbffded84651244251ff913ebbe39c20604ed2bc2dc70",
       "source_id": 1973
     },
@@ -52,8 +47,18 @@
       "count": 2,
       "identity_key": "f3f27c7e51578a2a9ba9a8a9963f554467a27c8d8e42470d49b7a5109cf832c7",
       "source_id": 1971
+    },
+    {
+      "count": 2,
+      "identity_key": "513343a524e3abe1d8a307e7eaf54026604852fff5b19160e429bc669cac6089",
+      "source_id": 102
+    },
+    {
+      "count": 1,
+      "identity_key": "fa110fa4ecf126e45c1218b4ecd12f41441c809df3f9fbf87e1733ab129c4b9f",
+      "source_id": 197
     }
   ],
   "name": "용만 상급",
-  "version": 467
+  "version": 755
 }

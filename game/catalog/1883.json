@@ -4,7 +4,8 @@
   "attack": 1700,
   "attribute": 2,
   "categories": [
-    "소환-패,덱"
+    "소환-패에서",
+    "지원-물 속성"
   ],
   "code": 17201174,
   "defense": 1500,

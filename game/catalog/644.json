@@ -4,7 +4,8 @@
   "attack": 1600,
   "attribute": 4,
   "categories": [
-    "덱-호루스"
+    "지원-호루스",
+    "발동-묘지로 보내기"
   ],
   "code": 75830094,
   "defense": 1000,

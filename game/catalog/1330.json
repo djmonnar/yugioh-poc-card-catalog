@@ -3,7 +3,9 @@
   "art_key": "Cards/1330",
   "attack": 500,
   "attribute": 32,
-  "categories": [],
+  "categories": [
+    "발동-리버스"
+  ],
   "code": 50122883,
   "defense": 300,
   "description": "리버스 : 앞면 표시 몬스터\n1장의 표시 형식을\n변경한다(뒷면 표시로는 할 수\n없다).",

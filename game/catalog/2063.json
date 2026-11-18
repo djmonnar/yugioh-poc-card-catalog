@@ -3,7 +3,9 @@
   "art_key": "Cards/2063",
   "attack": 1400,
   "attribute": 32,
-  "categories": [],
+  "categories": [
+    "지원-제넥스"
+  ],
   "code": 68505803,
   "defense": 1200,
   "description": "친구들과 마음을 소통할 수\n있는, 흔하지 않은 제넥스 중\n하나. 다양한 엘리멘트의 힘을\n컨트롤할 수 있다.",

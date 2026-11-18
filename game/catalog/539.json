@@ -4,7 +4,8 @@
   "attack": 900,
   "attribute": 16,
   "categories": [
-    "효과-드로우"
+    "효과-드로우",
+    "발동-리버스"
   ],
   "code": 60694662,
   "defense": 400,

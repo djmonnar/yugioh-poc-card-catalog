@@ -34,11 +34,26 @@
             "kind": "start_field"
           }
         ]
+      },
+      {
+        "name": "에일리언",
+        "profile_id": "profile-219b5317-82a6-40b9-88ba-64d196828cf4",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "31331a2f54fb6e6f86c336e6d33d888da25c9e5a45c886a6b0827a49e3267a91",
+              "internal_id": 2832,
+              "name_ko": "이계공간－A 존",
+              "slot": 1864
+            },
+            "kind": "start_field"
+          }
+        ]
       }
     ],
     "skills": []
   },
   "profile_id": "roamer_leon",
-  "updated_at": "2026-10-14T17:51:16.792926+00:00",
-  "version": 2907
+  "updated_at": "2026-11-15T01:37:33.223861+00:00",
+  "version": 4149
 }

@@ -3,7 +3,9 @@
   "art_key": "Cards/308",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-물 속성"
+  ],
   "code": 2370081,
   "defense": 0,
   "description": "물 속성 몬스터에만 장착\n가능. 장착 몬스터의 공격력은\n400 포인트 올리고, 수비력은\n200 포인트 내린다.",

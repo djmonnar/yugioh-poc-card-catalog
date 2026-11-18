@@ -8,7 +8,7 @@
     "지원-왕가의 신전",
     "지원-전투",
     "효과-제외",
-    "발동-파괴"
+    "발동-파괴 시"
   ],
   "code": 89194033,
   "defense": 2000,
@@ -24,7 +24,7 @@
   "normal_limit": 3,
   "playable": true,
   "race": 4,
-  "rarity": "SR",
+  "rarity": "R",
   "search_aliases": [
     "신성한 몬스터 셀케트",
     "Mystical Beast of Serket"

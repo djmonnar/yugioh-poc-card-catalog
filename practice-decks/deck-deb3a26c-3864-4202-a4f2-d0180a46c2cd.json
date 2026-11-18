@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-deb3a26c-3864-4202-a4f2-d0180a46c2cd",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "bc8d0206ddee4fb5c9fad1659a07d96023df31370fd43aee1ed29b25702f33d8",
+      "source_id": 2922
+    },
+    {
+      "count": 2,
+      "identity_key": "b836702bdd947d4f5d9428a97a0ab8107a0d47cbc2062712cdeddb8d90c9090c",
+      "source_id": 2923
+    },
+    {
+      "count": 2,
+      "identity_key": "1632e5a57a28faba068785c35b3ec26a7512cae34ed0384c94f6dc2218ae7adf",
+      "source_id": 2919
+    },
+    {
+      "count": 3,
+      "identity_key": "1fc5d41438468218ed1c5ab528de4b8ffabbe9951ed893175affc141712adee7",
+      "source_id": 2918
+    },
+    {
+      "count": 2,
+      "identity_key": "8e874290ecd849a798ba499769cd1fe6377cb9f67f43bc6c6eb87e0f816a18f5",
+      "source_id": 2915
+    },
+    {
+      "count": 2,
+      "identity_key": "fa110fa4ecf126e45c1218b4ecd12f41441c809df3f9fbf87e1733ab129c4b9f",
+      "source_id": 197
+    },
+    {
+      "count": 1,
+      "identity_key": "aaadf300f9fd4e0eeed1a8bab10c0982f23a037fb6b0ab5ff4cb9b50c44143ae",
+      "source_id": 2914
+    },
+    {
+      "count": 2,
+      "identity_key": "8e93ed10a61f3127572825c6da0ebf978a56ea093d600f001b64ad80b0d4be20",
+      "source_id": 2916
+    },
+    {
+      "count": 2,
+      "identity_key": "159fd619fa3f25fb385c7396017ea434e29ecd06e95f4543ac6bcbda66ad168a",
+      "source_id": 2924
+    },
+    {
+      "count": 2,
+      "identity_key": "f206c5a0ed34556536bccbdecb54745c2576ca62cec262e6933eb42fd6c0248f",
+      "source_id": 2417
+    }
+  ],
+  "name": "쥬락",
+  "version": 785
+}

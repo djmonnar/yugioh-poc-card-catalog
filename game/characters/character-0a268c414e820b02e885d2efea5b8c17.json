@@ -19,11 +19,41 @@
             "kind": "start_hand"
           }
         ]
+      },
+      {
+        "name": "달의서",
+        "profile_id": "profile-5dd2ec55-4ee6-4c2c-b616-688f8cb57084",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "62d49484afd4ee81dcd0521bcd53aaf0f39dad042b7bfe2f914362639620f07b",
+              "internal_id": 1888,
+              "name_ko": "달의 서",
+              "slot": 1215
+            },
+            "kind": "start_hand"
+          }
+        ]
+      },
+      {
+        "name": "디클레어러",
+        "profile_id": "profile-1758da63-429f-4a88-8cc4-9c74d2fefcd8",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "12118f68ceb00e50f4fe71f9c8e281bb42fc6f9dbddc4bbde33a14ee21ce4a02",
+              "internal_id": 675,
+              "name_ko": "디클레어러의 프로퍼시",
+              "slot": 122
+            },
+            "kind": "start_hand"
+          }
+        ]
       }
     ],
     "skills": []
   },
   "profile_id": "ishizu",
-  "updated_at": "2026-11-05T22:25:33.450023+00:00",
-  "version": 3834
+  "updated_at": "2026-11-17T23:54:10.056917+00:00",
+  "version": 5908
 }

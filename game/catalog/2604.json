@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "지원-카운터·무효"
+    "지원-카운터·무효",
+    "발동-패 버리기"
   ],
   "code": 38891741,
   "defense": 0,

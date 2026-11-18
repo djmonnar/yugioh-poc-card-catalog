@@ -1,0 +1,48 @@
+{
+  "artKey": "CharacterPresentation012/images/weevil/start",
+  "banlistEnabled": false,
+  "deckName": "곤충족 일반몬스터",
+  "extra": [
+    2989,
+    2989
+  ],
+  "id": "enc-80eb8469-55da-4e21-8036-509fe55ecfce",
+  "lpBonus": 0,
+  "main": [
+    2996,
+    2996,
+    49,
+    49,
+    49,
+    136,
+    136,
+    136,
+    2992,
+    2992,
+    2985,
+    2985,
+    2985,
+    2983,
+    2983,
+    2983,
+    1856,
+    1856,
+    2013,
+    2013
+  ],
+  "name": "사마준",
+  "openingDrawBonus": 0,
+  "profileId": "weevil",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 329,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-80eb8469-55da-4e21-8036-509fe55ecfce",
+  "usesNativeRules035": true
+}

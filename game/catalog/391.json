@@ -4,7 +4,8 @@
   "attack": 3000,
   "attribute": 32,
   "categories": [
-    "소환제약"
+    "소환제약",
+    "소환-릴리즈 코스트"
   ],
   "code": 50705071,
   "defense": 2300,

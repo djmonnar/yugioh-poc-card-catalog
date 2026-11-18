@@ -49,11 +49,26 @@
             "kind": "start_hand"
           }
         ]
+      },
+      {
+        "name": "엔디미온",
+        "profile_id": "profile-919835a1-5347-4ae9-8c02-80a24e7a616a",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "c9473ebf7b4b79e7672af8b567d6585722b15522bdffd60ac8f0bcc26724b842",
+              "internal_id": 420,
+              "name_ko": "마법 도시 엔디미온",
+              "slot": 310
+            },
+            "kind": "start_field"
+          }
+        ]
       }
     ],
     "skills": []
   },
   "profile_id": "yugi",
-  "updated_at": "2026-11-09T21:13:52.990794+00:00",
-  "version": 3921
+  "updated_at": "2026-11-17T09:21:47.91906+00:00",
+  "version": 5885
 }

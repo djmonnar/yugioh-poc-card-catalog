@@ -3,10 +3,13 @@
   "art_key": "Cards/1911",
   "attack": -2,
   "attribute": 64,
-  "categories": [],
+  "categories": [
+    "발동-소환 시",
+    "효과-묘지로 보내기"
+  ],
   "code": 10000020,
   "defense": -2,
-  "description": "하늘이 뒤틀리고 천둥소리가\n울려 퍼지면서 이 고대 생물의\n도래와 진정한 힘의 시작을\n알립니다.",
+  "description": "몬스터 3장을 릴리스해야 일반 소환할 수 있으며, 일반 세트는 할 수 없다. 이 카드의 일반 소환은 무효화되지 않고, 소환 성공 시 양쪽 모두 카드 효과를 발동할 수 없다.\n자신의 패 1장당 이 카드의 공격력과 수비력이 1,000 오른다.\n상대 필드에 몬스터가 공격 표시로 일반 소환되거나 특수 소환되면, 그 몬스터의 공격력을 2,000 내린다. 이 효과로 공격력이 0이 된 몬스터는 파괴된다.\n특수 소환된 이 카드는 엔드 페이즈에 효과로 묘지에 보내진다.",
   "draw_enabled": true,
   "identity_key": "2178700891b903d91949920884ba774e2cb562b877f06b40fd3fb3f83d597302",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1109.webp",

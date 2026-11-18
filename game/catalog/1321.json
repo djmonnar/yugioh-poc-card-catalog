@@ -4,8 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "효과-버리기",
-    "면역-마법"
+    "효과-패 버리기",
+    "무효-마법"
   ],
   "code": 59344077,
   "defense": 0,

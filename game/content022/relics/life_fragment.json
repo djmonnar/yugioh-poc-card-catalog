@@ -1,5 +1,5 @@
 {
-  "description": "획득 즉시 최대 LP +250. 현재 LP는 그대로야.",
+  "description": "획득 즉시 최대 LP +500. 현재 LP는 그대로야.",
   "enabled": true,
   "fields": [],
   "iconIndex": 4,
@@ -8,7 +8,7 @@
   "kind": "life_fragment",
   "name": "생명의 조각",
   "params": {
-    "max_lp": 250
+    "max_lp": 500
   },
   "price": 75,
   "rarity": "N",

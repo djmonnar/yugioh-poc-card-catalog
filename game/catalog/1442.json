@@ -3,7 +3,9 @@
   "art_key": "Cards/1442",
   "attack": 1800,
   "attribute": 16,
-  "categories": [],
+  "categories": [
+    "발동-릴리즈"
+  ],
   "code": 21297224,
   "defense": 500,
   "description": "자신의 필드 몬스터 2장을\n릴리스하고 자신의 LP를 1000\n회복한다. 어드밴스 소환이나\n다른 카드 효과로 릴리스한\n몬스터는 포함하지 않는다.",

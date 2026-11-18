@@ -3,7 +3,9 @@
   "art_key": "Cards/386",
   "attack": 800,
   "attribute": 1,
-  "categories": [],
+  "categories": [
+    "발동-LP 지불"
+  ],
   "code": 30190809,
   "defense": 2200,
   "description": "메인 페이즈 1에만 발동할 수\n있다. 800 라이프 포인트를\n지불한다. 이 턴, 이 카드는\n상대 플레이어에게 직접\n공격을 할 수 있다.",

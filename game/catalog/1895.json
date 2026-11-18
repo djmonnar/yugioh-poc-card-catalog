@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "소환-제외"
+    "소환-제외",
+    "발동-LP 지불"
   ],
   "code": 23557835,
   "defense": 0,

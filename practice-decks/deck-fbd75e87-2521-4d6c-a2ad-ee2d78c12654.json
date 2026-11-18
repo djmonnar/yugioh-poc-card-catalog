@@ -1,0 +1,70 @@
+{
+  "banlist_enabled": true,
+  "extra": [
+    {
+      "count": 2,
+      "identity_key": "2d81fd0d2e526286deb3fe2a75bd7cf6f2b0bcfcec66c9d1352106612dc2649e",
+      "source_id": 2479
+    },
+    {
+      "count": 2,
+      "identity_key": "6f393204753e3ff2898d19b1acacc2a50ca1c3e08d62e3a9d573f19ddccad216",
+      "source_id": 2459
+    }
+  ],
+  "id": "deck-fbd75e87-2521-4d6c-a2ad-ee2d78c12654",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "fbed888acabc0416a9ed3b0d0f5e06207e5123688f00a8c871e520bd47d57510",
+      "source_id": 2030
+    },
+    {
+      "count": 3,
+      "identity_key": "9a8963325063837f23a61d469e734a1aa6e7f110fc04fac63a94ff56b449ca81",
+      "source_id": 2469
+    },
+    {
+      "count": 3,
+      "identity_key": "283726017a6a9f50a06335c3d5578e7a98c5c53755671c820d115ea5e99fabc9",
+      "source_id": 2477
+    },
+    {
+      "count": 2,
+      "identity_key": "cb97509b20bc9239c3ebfe4d7e43fbd5c7b01df6b91c654e6665f733f03055ef",
+      "source_id": 2622
+    },
+    {
+      "count": 2,
+      "identity_key": "0a3da1b24f0dd5e682b113cb56acc71333a91b2960c01881ba6f5f7d049a7558",
+      "source_id": 484
+    },
+    {
+      "count": 2,
+      "identity_key": "41148609d6513d683e3379523262f4e11e4144e2732c838b88901b49b28941bd",
+      "source_id": 2085
+    },
+    {
+      "count": 2,
+      "identity_key": "ab3992dcdabd64bf7b2d045e7d9a3f44854f6fb42c4fb51e3033c66719abb4ae",
+      "source_id": 1431
+    },
+    {
+      "count": 1,
+      "identity_key": "2bb812c13957a22ae4f7ef0a3c54fb87fe8ce6480a60a08051d5c87e8a07403f",
+      "source_id": 2472
+    },
+    {
+      "count": 1,
+      "identity_key": "131659ff6e4aa5aa2e574dc4ff608957278bef9daa86193a892ea514284d6157",
+      "source_id": 2483
+    },
+    {
+      "count": 2,
+      "identity_key": "77da1b9e3ab109f0be6b782abdba8e401815cc79f0ff2c5f97408b1a0ad59cc2",
+      "source_id": 1031
+    }
+  ],
+  "name": "젬나이트 천사",
+  "version": 827
+}

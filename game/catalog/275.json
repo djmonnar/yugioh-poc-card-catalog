@@ -3,7 +3,9 @@
   "art_key": "Cards/275",
   "attack": 1500,
   "attribute": 1,
-  "categories": [],
+  "categories": [
+    "지원-천사족"
+  ],
   "code": 82108372,
   "defense": 1800,
   "description": "자신의 묘지에 존재하는 천사족 몬스터 1장당, 이 카드의 공격력은 200 포인트 올린다.",

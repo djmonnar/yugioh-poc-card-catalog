@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-aa276d8a-9070-4a86-942d-a63ae0e46ac9",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "71506a2e48dd6efe446b058c015386f03c1ab05b53b343aada040053485d3a9c",
+      "source_id": 2988
+    },
+    {
+      "count": 1,
+      "identity_key": "eb3713e4c520e2986c8063646f73e1b88b884bfd5e05acacac1b951b99042067",
+      "source_id": 2981
+    },
+    {
+      "count": 3,
+      "identity_key": "edf31a2540f9b6b8976be4ec76c6e683e4bb51a1aa23953463c3687789f41f2c",
+      "source_id": 2990
+    },
+    {
+      "count": 3,
+      "identity_key": "a16462f1a6d6be3b2bc206c0437c13a6cc62435a331abb5b27ecabd61c5bdda2",
+      "source_id": 1859
+    },
+    {
+      "count": 1,
+      "identity_key": "e0702d912a9490eb5f0904584a5f04c4bb8a36329a212d3e6db1658577d52a35",
+      "source_id": 1856
+    },
+    {
+      "count": 2,
+      "identity_key": "235f00f50759f599bc6610b0ded188b4784a1806ec03101c5b85a20e367cd03e",
+      "source_id": 2985
+    },
+    {
+      "count": 2,
+      "identity_key": "56566cf6038b66750d99032d77fe5925c303f118831c5e855ded5a28f979803b",
+      "source_id": 1352
+    },
+    {
+      "count": 1,
+      "identity_key": "c9fe6eae6c16f81ce784889a8eff06ef094c9c8eddda708792d4b1de7b7713b0",
+      "source_id": 2987
+    },
+    {
+      "count": 2,
+      "identity_key": "33c8e88dbbcb1071c03a444a56298336f0e7a3bda63e7d321952c0d8f9801ee1",
+      "source_id": 1145
+    },
+    {
+      "count": 2,
+      "identity_key": "fdc78a4b1b8cf43d8279e9b22b011e9ce522dd9c2df88d5bddd7dccd96886bcd",
+      "source_id": 1548
+    }
+  ],
+  "name": "궁극변이체 곤충여왕",
+  "version": 807
+}

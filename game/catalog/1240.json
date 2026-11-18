@@ -3,7 +3,10 @@
   "art_key": "Cards/1240",
   "attack": 1400,
   "attribute": 32,
-  "categories": [],
+  "categories": [
+    "발동-반전 소환 시",
+    "발동-소환 시"
+  ],
   "code": 77207191,
   "defense": 1800,
   "description": "이 카드가 소환되었을 때(특수\n소환 제외), 자신의 덱에서\n\"환상수왕 가젤\" 1장을 패에\n넣을 수 있다.",

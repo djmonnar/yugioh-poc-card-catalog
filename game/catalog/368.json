@@ -4,7 +4,8 @@
   "attack": 3500,
   "attribute": 16,
   "categories": [
-    "면역-마법"
+    "면역-마법",
+    "지원-사일런트 매지션"
   ],
   "code": 72443568,
   "defense": 1000,

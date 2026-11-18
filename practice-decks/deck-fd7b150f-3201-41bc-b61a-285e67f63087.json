@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-fd7b150f-3201-41bc-b61a-285e67f63087",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "9a8f8c1fa79a4746317ec61f4d7fa9445f607eb59275e65fe5dba9098bd2aa0d",
+      "source_id": 2930
+    },
+    {
+      "count": 2,
+      "identity_key": "6eba4caec6089cabb29fed233338acdd73cd0b7194753ec336662307c9863ff7",
+      "source_id": 1809
+    },
+    {
+      "count": 2,
+      "identity_key": "93df8723808aa6324b0241d798ab6ae1a80a22ad5e91041d104e024b468129e1",
+      "source_id": 1810
+    },
+    {
+      "count": 2,
+      "identity_key": "06df8bf4c31d1b6ea5d6e178337284362ac553144f0591148fffd5f1a5359d32",
+      "source_id": 1811
+    },
+    {
+      "count": 2,
+      "identity_key": "b31a4339bf9e1fccb23326d8cd1cd329f100e27f63cc9ebc73cdaecba0e4ccea",
+      "source_id": 2929
+    },
+    {
+      "count": 2,
+      "identity_key": "f5623b8c86522a50df4783abac77e888b46d67399b657c7e0df5d60cfce04c44",
+      "source_id": 2927
+    },
+    {
+      "count": 2,
+      "identity_key": "09cf014d79f376f16411bbdf0e63bf6d67f4b7e757fc61e04e31caea0139361c",
+      "source_id": 2955
+    },
+    {
+      "count": 2,
+      "identity_key": "041d8d21594daa7bd2396d86f7428e9ccc0925dcc9134d696594b24779b9a9e8",
+      "source_id": 2956
+    },
+    {
+      "count": 2,
+      "identity_key": "b482beab867b0c803ccb221abe29cf81edb1d5c9a784bada5872ce08cd0bcfaa",
+      "source_id": 2954
+    },
+    {
+      "count": 2,
+      "identity_key": "c085b2a31ca1e1394f0c09e1f89ae7acd26cfa74e1f465c95bf662c0b7182d38",
+      "source_id": 2933
+    }
+  ],
+  "name": "얼루어 퀸",
+  "version": 758
+}

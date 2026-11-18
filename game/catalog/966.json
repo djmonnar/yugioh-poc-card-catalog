@@ -3,7 +3,9 @@
   "art_key": "Cards/966",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-드래곤족"
+  ],
   "code": 43973174,
   "defense": 0,
   "description": "자신의 필드에 앞면 \"로드\n오브 드래곤－드래곤의\n지배자\"가 있을 때, 이 카드를\n사용하여 패의 드래곤족\n몬스터를 최대 2장까지 특수\n소환할 수 있다.",

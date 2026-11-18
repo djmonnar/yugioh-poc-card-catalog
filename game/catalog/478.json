@@ -4,7 +4,8 @@
   "attack": 1700,
   "attribute": 8,
   "categories": [
-    "효과-바운스"
+    "효과-바운스",
+    "발동-파괴 시"
   ],
   "code": 87523462,
   "defense": 1200,

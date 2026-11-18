@@ -3,7 +3,9 @@
   "art_key": "Cards/488",
   "attack": 2400,
   "attribute": 16,
-  "categories": [],
+  "categories": [
+    "지원-카오스"
+  ],
   "code": 72630549,
   "defense": 1900,
   "description": "이 카드를 대상으로 하는\n몬스터 카드의 효과를 무효로\n한다.",

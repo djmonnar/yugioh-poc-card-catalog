@@ -3,7 +3,9 @@
   "art_key": "Cards/1921",
   "attack": 300,
   "attribute": 32,
-  "categories": [],
+  "categories": [
+    "지원-크리보"
+  ],
   "code": 40703223,
   "defense": 200,
   "description": "",

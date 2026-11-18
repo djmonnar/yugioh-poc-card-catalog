@@ -1,0 +1,45 @@
+{
+  "artKey": "DuelUi011/legacy/yugi_intro",
+  "banlistEnabled": false,
+  "deckName": "엔디미온",
+  "extra": [],
+  "id": "enc-ff555633-c9a2-424d-85f1-11753af4d1af",
+  "lpBonus": 0,
+  "main": [
+    2772,
+    2772,
+    2772,
+    627,
+    1525,
+    1525,
+    420,
+    420,
+    420,
+    2770,
+    529,
+    529,
+    109,
+    109,
+    109,
+    1952,
+    1450,
+    1450,
+    2960,
+    2960
+  ],
+  "name": "엔디미온",
+  "openingDrawBonus": 0,
+  "profileId": "yugi",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 420,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-ff555633-c9a2-424d-85f1-11753af4d1af",
+  "usesNativeRules035": true
+}

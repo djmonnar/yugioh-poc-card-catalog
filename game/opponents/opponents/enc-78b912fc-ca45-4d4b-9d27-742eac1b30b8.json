@@ -1,0 +1,50 @@
+{
+  "artKey": "CharacterPresentation012/images/rex/start",
+  "banlistEnabled": false,
+  "deckName": "디노 인피니티",
+  "extra": [],
+  "id": "enc-78b912fc-ca45-4d4b-9d27-742eac1b30b8",
+  "lpBonus": 0,
+  "main": [
+    2910,
+    2910,
+    2910,
+    1532,
+    225,
+    225,
+    225,
+    2911,
+    2911,
+    2911,
+    197,
+    197,
+    137,
+    137,
+    137,
+    2909,
+    2909,
+    1948,
+    1948,
+    2908
+  ],
+  "name": "다이노소어 용만",
+  "openingDrawBonus": 0,
+  "profileId": "rex",
+  "skills": [
+    {
+      "entries": [
+        {
+          "count": 1,
+          "sourceId": 2911
+        }
+      ],
+      "kind": "start_grave",
+      "position": 0,
+      "sourceId": -1,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-78b912fc-ca45-4d4b-9d27-742eac1b30b8",
+  "usesNativeRules035": true
+}

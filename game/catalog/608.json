@@ -3,7 +3,10 @@
   "art_key": "Cards/608",
   "attack": 1300,
   "attribute": 8,
-  "categories": [],
+  "categories": [
+    "지원-바람 속성",
+    "지원-해피"
+  ],
   "code": 91932350,
   "defense": 1400,
   "description": "이 카드의 카드명은 \"해피\n레이디\"로 취급한다. 이\n카드가 필드 위에 앞면 표시로\n존재하는 한, 바람 속성\n몬스터의 공격력은 300 포인트\n올린다.",

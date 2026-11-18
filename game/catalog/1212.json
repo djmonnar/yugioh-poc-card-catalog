@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "덱-블랙매지션"
+    "지원-블랙매지션",
+    "발동-LP 지불"
   ],
   "code": 99789342,
   "defense": 0,

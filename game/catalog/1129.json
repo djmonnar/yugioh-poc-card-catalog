@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "지원-필드"
+    "지원-필드",
+    "지원-빛 속성"
   ],
   "code": 81777047,
   "defense": 0,

@@ -3,7 +3,10 @@
   "art_key": "Cards/463",
   "attack": 2500,
   "attribute": 16,
-  "categories": [],
+  "categories": [
+    "지원-네오스",
+    "지원-엘리멘틀 히어로"
+  ],
   "code": 89943723,
   "defense": 2000,
   "description": "네오스페이스에서 온 새로운\n엘리멘틀 히어로. 네오\n스페이시언과 콘택트 융합하여\n미지의 힘을 발휘한다.",

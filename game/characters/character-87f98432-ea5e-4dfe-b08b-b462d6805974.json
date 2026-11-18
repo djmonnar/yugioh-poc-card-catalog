@@ -64,11 +64,95 @@
             "kind": "start_hand"
           }
         ]
+      },
+      {
+        "name": "모케모케",
+        "profile_id": "profile-6f8a992b-e928-4461-bc66-d2bf35a8c6e3",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "0a088d26832dc0210aa5313df528e781a19d1f16fa8ff2c2142459c9799cea5e",
+              "internal_id": 2021,
+              "name_ko": "분노 모케모케",
+              "slot": 1324
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "거성 발할라",
+        "profile_id": "profile-c2ab4230-5b6f-46e7-91cb-a9fd89a28dd4",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "fbed888acabc0416a9ed3b0d0f5e06207e5123688f00a8c871e520bd47d57510",
+              "internal_id": 2030,
+              "name_ko": "신의 거성－발할라",
+              "slot": 1333
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "블매걸",
+        "profile_id": "profile-842f5b47-e44e-4429-b8cf-5c7375fb22ed",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "1b9077aeac6cf3d35fd62e05e34fea9eab86b21b05132660bc569234f88b1893",
+              "internal_id": 759,
+              "name_ko": "블랙 매지션 걸",
+              "slot": 806
+            },
+            "kind": "start_hand"
+          }
+        ]
+      },
+      {
+        "name": "모케모케",
+        "profile_id": "profile-5e01e123-a52b-4264-badd-e7a322a825bb",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "874dfb5efff31e8b937bafadd8a78d8bc18c8ad178a9375f02cf277106db7fc0",
+              "internal_id": 219,
+              "name_ko": "모케모케",
+              "slot": 174
+            },
+            "kind": "start_hand"
+          },
+          {
+            "entries": [
+              {
+                "card": {
+                  "identity_key": "874dfb5efff31e8b937bafadd8a78d8bc18c8ad178a9375f02cf277106db7fc0",
+                  "internal_id": 219,
+                  "name_ko": "모케모케",
+                  "slot": 174
+                },
+                "count": 1
+              }
+            ],
+            "kind": "start_grave"
+          },
+          {
+            "card": {
+              "identity_key": "874dfb5efff31e8b937bafadd8a78d8bc18c8ad178a9375f02cf277106db7fc0",
+              "internal_id": 219,
+              "name_ko": "모케모케",
+              "slot": 174
+            },
+            "kind": "start_monster",
+            "position": "attack"
+          }
+        ]
       }
     ],
     "skills": []
   },
   "profile_id": "tea",
-  "updated_at": "2026-11-09T22:20:21.267445+00:00",
-  "version": 3925
+  "updated_at": "2026-11-17T12:29:13.856271+00:00",
+  "version": 5905
 }

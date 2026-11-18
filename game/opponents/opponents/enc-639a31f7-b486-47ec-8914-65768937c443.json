@@ -1,0 +1,45 @@
+{
+  "artKey": "Character035/crowler",
+  "banlistEnabled": false,
+  "deckName": "번개제왕",
+  "extra": [],
+  "id": "enc-639a31f7-b486-47ec-8914-65768937c443",
+  "lpBonus": 0,
+  "main": [
+    2782,
+    2782,
+    2782,
+    2783,
+    2783,
+    2783,
+    2670,
+    2670,
+    2670,
+    2624,
+    2624,
+    2624,
+    1248,
+    1248,
+    2787,
+    2787,
+    1944,
+    1944,
+    2626,
+    2626
+  ],
+  "name": "크로노스 데 메디치",
+  "openingDrawBonus": 0,
+  "profileId": "crowler",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2968,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-639a31f7-b486-47ec-8914-65768937c443",
+  "usesNativeRules035": true
+}

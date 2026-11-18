@@ -3,7 +3,10 @@
   "art_key": "Cards/372",
   "attack": 2800,
   "attribute": 16,
-  "categories": [],
+  "categories": [
+    "발동-소환 시",
+    "효과-제외"
+  ],
   "code": 84565800,
   "defense": 1800,
   "description": "이 카드를 공격하는 상대\n몬스터의 공격력을 0으로\n한다. 이 효과는 한 번만\n사용할 수 있다. 이 카드의\n주인이 효과를 발동할 시점을\n선택한다.",

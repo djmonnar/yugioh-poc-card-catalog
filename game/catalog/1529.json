@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "면역-전투"
+    "무효-공격",
+    "효과-공격 대상 변경"
   ],
   "code": 93599951,
   "defense": 0,

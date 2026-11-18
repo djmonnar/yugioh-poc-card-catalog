@@ -3,7 +3,9 @@
   "art_key": "Cards/440",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-공룡족"
+  ],
   "code": 10080320,
   "defense": 0,
   "description": "필드 위에 앞면 표시로\n존재하는 공룡족 몬스터는\n공격력과 수비력을 300 포인트\n올린다.",

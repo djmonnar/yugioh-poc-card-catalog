@@ -3,7 +3,9 @@
   "art_key": "Cards/380",
   "attack": 800,
   "attribute": 2,
-  "categories": [],
+  "categories": [
+    "지원-툰"
+  ],
   "code": 59383041,
   "defense": 1600,
   "description": "미국 코믹 세계에서 나타난\n악어 몬스터.",

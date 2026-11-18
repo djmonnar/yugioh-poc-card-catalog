@@ -3,7 +3,9 @@
   "art_key": "Cards/1125",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-땅 속성"
+  ],
   "code": 56594520,
   "defense": 0,
   "description": "모든 땅 속성 몬스터의\n공격력을 500 올리고 수비력을\n400 내린다.",

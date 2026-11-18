@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/ishizu/start",
+  "banlistEnabled": false,
+  "deckName": "퍼펙트 디클레어러",
+  "extra": [],
+  "id": "enc-3bd45ac9-cfe9-4656-9f07-0e3563b81ace",
+  "lpBonus": 0,
+  "main": [
+    3028,
+    3029,
+    3030,
+    3030,
+    700,
+    700,
+    2514,
+    2514,
+    2085,
+    2085,
+    2622,
+    2622,
+    482,
+    588,
+    588,
+    1109,
+    2535,
+    2533,
+    2730,
+    2730
+  ],
+  "name": "이시즈 이슈타르",
+  "openingDrawBonus": 0,
+  "profileId": "ishizu",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 675,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-3bd45ac9-cfe9-4656-9f07-0e3563b81ace",
+  "usesNativeRules035": true
+}

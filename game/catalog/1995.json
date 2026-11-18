@@ -4,7 +4,8 @@
   "attack": 2000,
   "attribute": 1,
   "categories": [
-    "발동-묘지"
+    "발동-파괴 시",
+    "발동-소환 시"
   ],
   "code": 97000273,
   "defense": 1000,

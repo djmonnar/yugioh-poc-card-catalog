@@ -3,7 +3,9 @@
   "art_key": "Cards/1857",
   "attack": 450,
   "attribute": 1,
-  "categories": [],
+  "categories": [
+    "발동-리버스"
+  ],
   "code": 54652250,
   "defense": 600,
   "description": "리버스 : 필드 위의 몬스터\n1장을 선택하여 파괴한다.",

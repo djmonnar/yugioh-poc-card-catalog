@@ -35,11 +35,61 @@
             "position": "defense"
           }
         ]
+      },
+      {
+        "name": "암즈콜(장착)",
+        "profile_id": "profile-45b30841-b55f-4fe6-8a66-b2206ec501d6",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "ebf78cd059912197884f99148c63936c10852933456034bee25a7c6c85197c17",
+              "internal_id": 2713,
+              "name_ko": "암즈 콜",
+              "slot": 1745
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "리버스",
+        "profile_id": "profile-117ee83d-7387-487b-b703-2b9b562e8e27",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "44bbb661fda4760f12fcbfd0644d53d65e5679b90fca00991e6988a30a1c1645",
+              "internal_id": 2798,
+              "name_ko": "선셋 비트",
+              "slot": 1830
+            },
+            "kind": "start_field"
+          },
+          {
+            "kind": "opening_draw",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "name": "미궁출현",
+        "profile_id": "profile-dd3a5a32-67c4-4b89-9e3d-36378352c81c",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "e926fb71bd9ef4246e7c1f3966ed98d30ca128a5702052ac1f6d0dc24158d100",
+              "internal_id": 180,
+              "name_ko": "미궁출현－래버린스 월－",
+              "slot": 509
+            },
+            "kind": "start_monster",
+            "position": "defense"
+          }
+        ]
       }
     ],
     "skills": []
   },
   "profile_id": "paradox_brothers",
-  "updated_at": "2026-11-06T01:06:57.578361+00:00",
-  "version": 3857
+  "updated_at": "2026-11-17T15:35:09.739516+00:00",
+  "version": 5906
 }

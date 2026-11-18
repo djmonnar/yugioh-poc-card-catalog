@@ -4,8 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "면역-마법",
-    "파괴-함정"
+    "파괴-함정",
+    "무효-마법"
   ],
   "code": 61740673,
   "defense": 0,

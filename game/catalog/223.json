@@ -4,7 +4,8 @@
   "attack": 500,
   "attribute": 1,
   "categories": [
-    "파괴-함정"
+    "파괴-함정",
+    "발동-리버스"
   ],
   "code": 46461247,
   "defense": 1100,

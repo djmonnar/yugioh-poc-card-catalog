@@ -4,7 +4,8 @@
   "attack": 2900,
   "attribute": 1,
   "categories": [
-    "덱-젬나이트"
+    "지원-젬나이트",
+    "지원-암석족"
   ],
   "code": 8692301,
   "defense": 2500,

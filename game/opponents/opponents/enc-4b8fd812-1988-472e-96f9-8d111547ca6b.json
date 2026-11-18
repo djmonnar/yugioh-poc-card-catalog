@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/rex/start",
+  "banlistEnabled": false,
+  "deckName": "파충류족",
+  "extra": [],
+  "id": "enc-4b8fd812-1988-472e-96f9-8d111547ca6b",
+  "lpBonus": 0,
+  "main": [
+    2823,
+    2823,
+    2822,
+    2822,
+    2821,
+    2821,
+    2829,
+    2829,
+    190,
+    190,
+    1437,
+    1437,
+    1437,
+    562,
+    562,
+    226,
+    2744,
+    2744,
+    1082,
+    1082
+  ],
+  "name": "다이노소어 용만",
+  "openingDrawBonus": 0,
+  "profileId": "rex",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 330,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-4b8fd812-1988-472e-96f9-8d111547ca6b",
+  "usesNativeRules035": true
+}

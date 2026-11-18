@@ -3,7 +3,9 @@
   "art_key": "Cards/1126",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-물 속성"
+  ],
   "code": 82999629,
   "defense": 0,
   "description": "모든 물 속성 몬스터의\n공격력을 500 올리고 수비력을\n400 내린다.",

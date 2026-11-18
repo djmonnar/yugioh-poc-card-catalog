@@ -3,7 +3,10 @@
   "art_key": "Cards/954",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "발동-LP 지불",
+    "지원-툰"
+  ],
   "code": 15259703,
   "defense": 0,
   "description": "라이프 포인트를 1000\n지불하여 이 카드를 발동한다.",

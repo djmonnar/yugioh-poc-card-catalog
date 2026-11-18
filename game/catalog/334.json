@@ -3,7 +3,10 @@
   "art_key": "Cards/334",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-마법사",
+    "지원-악마족"
+  ],
   "code": 59197169,
   "defense": 0,
   "description": "모든 악마족과 마법사족\n몬스터의 공격력과 수비력을\n200 올린다. 모든 천사족\n몬스터의 공격력과 수비력을\n200 내린다.",

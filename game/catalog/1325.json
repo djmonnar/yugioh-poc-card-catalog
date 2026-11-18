@@ -3,7 +3,9 @@
   "art_key": "Cards/1325",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "발동-소환 시"
+  ],
   "code": 58621589,
   "defense": 0,
   "description": "상대가 몬스터 카드를 뒷면\n수비 표시로 세트했을 때, 그\n카드를 앞면 공격 표시로\n한다. 그 몬스터 카드에\n리버스 효과가 있어도\n발동하지 않는다.",

@@ -3,7 +3,9 @@
   "art_key": "Cards/122",
   "attack": 1900,
   "attribute": 32,
-  "categories": [],
+  "categories": [
+    "지원-데몬"
+  ],
   "code": 49881766,
   "defense": 1500,
   "description": "크랙 악마부대에 소속된\n전투의 전문가.",

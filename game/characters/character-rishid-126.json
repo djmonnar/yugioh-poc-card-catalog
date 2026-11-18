@@ -4,10 +4,56 @@
   "profile": {
     "name": "리시드",
     "portrait": "assets/actors/native126/rishid/start.png",
-    "skill_profiles": [],
+    "skill_profiles": [
+      {
+        "name": "왕가의신전",
+        "profile_id": "profile-dfcbf98e-d77d-46dc-a113-9f02bb0faef3",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "61c53cb1d0b0dc348d3a2dae0412a3bd8d09a98bafb6e32993e036a7f40678fe",
+              "internal_id": 2849,
+              "name_ko": "왕가의 신전",
+              "slot": 1881
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "왕의유산을모시는성역",
+        "profile_id": "profile-ef360356-3f13-4a38-a43e-d65d04c5a8f4",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "e0702dbdf72abe8914f6080f9bed64c2cca1b8ee22d7e34dc2468672cf66882f",
+              "internal_id": 2856,
+              "name_ko": "왕의 유산을 모시는 성역",
+              "slot": 1888
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "아포피스",
+        "profile_id": "profile-e744954c-8c95-4816-b07d-3501cb028ad1",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "4622607701a32bb375bb9f780aae02feeab399c3eb802a189ce2a3cebe296713",
+              "internal_id": 2848,
+              "name_ko": "아포피스의 화신",
+              "slot": 1880
+            },
+            "kind": "start_field"
+          }
+        ]
+      }
+    ],
     "skills": []
   },
   "profile_id": "rishid",
-  "updated_at": null,
-  "version": 718
+  "updated_at": "2026-11-15T03:30:24.283537+00:00",
+  "version": 4155
 }

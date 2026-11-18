@@ -1,0 +1,45 @@
+{
+  "artKey": "Character035/crowler",
+  "banlistEnabled": false,
+  "deckName": "화염+듀얼",
+  "extra": [],
+  "id": "enc-799bcade-3b4b-4716-9427-98aa4f5d7789",
+  "lpBonus": 0,
+  "main": [
+    2098,
+    2098,
+    2117,
+    2117,
+    2112,
+    1954,
+    1954,
+    2095,
+    2095,
+    143,
+    143,
+    143,
+    2101,
+    2101,
+    2634,
+    2634,
+    2102,
+    2102,
+    2635,
+    2788
+  ],
+  "name": "크로노스 데 메디치",
+  "openingDrawBonus": 0,
+  "profileId": "crowler",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2968,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-799bcade-3b4b-4716-9427-98aa4f5d7789",
+  "usesNativeRules035": true
+}

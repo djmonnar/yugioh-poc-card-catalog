@@ -3,7 +3,10 @@
   "art_key": "Cards/1254",
   "attack": 1900,
   "attribute": 8,
-  "categories": [],
+  "categories": [
+    "발동-리버스",
+    "발동-파괴 시"
+  ],
   "code": 78636495,
   "defense": 400,
   "description": "리버스: 이 카드의 공격력과\n수비력을 500 올린다. 이\n카드를 파괴한 몬스터의\n공격력과 수비력을 500\n내린다.",
@@ -20,7 +23,7 @@
   "race": 8,
   "rarity": "SR",
   "source_id": 1254,
-  "speed_limit": 3,
+  "speed_limit": null,
   "stock": true,
   "token": false,
   "type_name": "효과 몬스터",

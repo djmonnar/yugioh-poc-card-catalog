@@ -3,7 +3,12 @@
   "art_key": "Cards/636",
   "attack": 2800,
   "attribute": 32,
-  "categories": [],
+  "categories": [
+    "발동-LP 지불",
+    "발동-묘지로 보내졌을 때",
+    "발동-파괴 시",
+    "발동-패 버리기"
+  ],
   "code": 34004470,
   "defense": 2200,
   "description": "패 또는 덱에서 특수 소환할\n수 없다.",

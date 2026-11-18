@@ -1,0 +1,48 @@
+{
+  "artKey": "CharacterPresentation012/images/tea/start",
+  "banlistEnabled": false,
+  "deckName": "블랙 매지션 걸",
+  "extra": [
+    3036,
+    3036
+  ],
+  "id": "enc-72210e92-fdc1-4461-891e-38d80015d3bf",
+  "lpBonus": 0,
+  "main": [
+    3035,
+    759,
+    759,
+    759,
+    3032,
+    3032,
+    3032,
+    3033,
+    3033,
+    3037,
+    1924,
+    1924,
+    3038,
+    1525,
+    1525,
+    2843,
+    2843,
+    2603,
+    2603,
+    2669
+  ],
+  "name": "안수진",
+  "openingDrawBonus": 0,
+  "profileId": "tea",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 759,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-72210e92-fdc1-4461-891e-38d80015d3bf",
+  "usesNativeRules035": true
+}

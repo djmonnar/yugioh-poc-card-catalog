@@ -4,8 +4,8 @@
   "attack": 0,
   "attribute": 32,
   "categories": [
-    "면역-전투",
-    "지원-장착"
+    "지원-장착",
+    "보호-파괴 대체"
   ],
   "code": 64631466,
   "defense": 0,

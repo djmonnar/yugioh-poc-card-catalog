@@ -3,7 +3,9 @@
   "art_key": "Cards/1433",
   "attack": 1500,
   "attribute": 4,
-  "categories": [],
+  "categories": [
+    "발동-릴리즈"
+  ],
   "code": 28358902,
   "defense": 1200,
   "description": "앞면 표시의 이 카드를 제물로\n바친다. 이 턴에 전투에\n의해서 파괴되어 자신의\n묘지로 보내진 몬스터 1장을\n덱의 맨 아래로 되돌린다.",

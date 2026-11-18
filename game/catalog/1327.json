@@ -3,7 +3,9 @@
   "art_key": "Cards/1327",
   "attack": 1700,
   "attribute": 32,
-  "categories": [],
+  "categories": [
+    "발동-파괴 시"
+  ],
   "code": 84055227,
   "defense": 0,
   "description": "이 카드가 전투에 의해서 상대\n몬스터를 파괴했을 경우, 이\n카드에 마력 카운터를 1개\n놓는다. 이 카드의 공격력은\n이 카드에 얹혀 있는 마력\n카운터의 수 × 200 포인트\n올린다.",

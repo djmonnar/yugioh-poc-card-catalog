@@ -3,7 +3,9 @@
   "art_key": "Cards/410",
   "attack": 1500,
   "attribute": 8,
-  "categories": [],
+  "categories": [
+    "지원-안개 골짜기"
+  ],
   "code": 29054481,
   "defense": 1900,
   "description": "파수꾼을 맡은 가문의 후예.",

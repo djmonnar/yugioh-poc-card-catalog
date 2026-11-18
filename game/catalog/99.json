@@ -3,7 +3,9 @@
   "art_key": "Cards/99",
   "attack": 800,
   "attribute": 1,
-  "categories": [],
+  "categories": [
+    "지원-엘리멘틀 히어로"
+  ],
   "code": 84327329,
   "defense": 2000,
   "description": "튼튼한 점토 몸체를 지닌\n영웅입니다.",

@@ -1,0 +1,50 @@
+{
+  "artKey": "CharacterPresentation012/images/tea/start",
+  "banlistEnabled": false,
+  "deckName": "젬나이트 천사",
+  "extra": [
+    2479,
+    2479,
+    2459,
+    2459
+  ],
+  "id": "enc-63feab47-e2fd-444c-a4cf-af1adf09a786",
+  "lpBonus": 0,
+  "main": [
+    2030,
+    2030,
+    2469,
+    2469,
+    2469,
+    2477,
+    2477,
+    2477,
+    2622,
+    2622,
+    484,
+    484,
+    2085,
+    2085,
+    1431,
+    1431,
+    2472,
+    2483,
+    1031,
+    1031
+  ],
+  "name": "안수진",
+  "openingDrawBonus": 0,
+  "profileId": "tea",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2030,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-63feab47-e2fd-444c-a4cf-af1adf09a786",
+  "usesNativeRules035": true
+}

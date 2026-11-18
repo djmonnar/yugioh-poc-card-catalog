@@ -3,7 +3,11 @@
   "art_key": "Cards/331",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-드래곤족",
+    "지원-번개족",
+    "지원-비행야수족"
+  ],
   "code": 50913601,
   "defense": 0,
   "description": "모든 드래곤족 / 비행야수족 /\n번개족 몬스터의 공격력과\n수비력을 200 올린다.",

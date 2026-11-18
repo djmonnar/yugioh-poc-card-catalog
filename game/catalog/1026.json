@@ -3,7 +3,9 @@
   "art_key": "Cards/1026",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "효과-묘지로 보내기"
+  ],
   "code": 78637313,
   "defense": 0,
   "description": "\"죽은 자의 소생\"으로\n되살아난 몬스터를 모두\n묘지로 보낸다. 이 카드가\n필드에 존재하는 동안 \"죽은\n자의 소생\"은 사용할 수 없다.",

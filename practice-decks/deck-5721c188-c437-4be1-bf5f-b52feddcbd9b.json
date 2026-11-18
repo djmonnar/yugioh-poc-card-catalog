@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-5721c188-c437-4be1-bf5f-b52feddcbd9b",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "183d6a42ab7a9ac6f3a4ea871fb7820aec6dc704421eed88e77a79001efccf3c",
+      "source_id": 2772
+    },
+    {
+      "count": 1,
+      "identity_key": "7221ec1128ae3df5880bf08a1ce239a624e9c656b3942744cea3d8c26b8eb7f7",
+      "source_id": 627
+    },
+    {
+      "count": 2,
+      "identity_key": "cc43ed9978e9a88cc6f159884ff0432c4df10988fde0ef0ce20e13938d113b8c",
+      "source_id": 1525
+    },
+    {
+      "count": 3,
+      "identity_key": "c9473ebf7b4b79e7672af8b567d6585722b15522bdffd60ac8f0bcc26724b842",
+      "source_id": 420
+    },
+    {
+      "count": 1,
+      "identity_key": "54d691a3f3720a788ada51026c3b1576fa11284522ca95032d0d55f3dbe4eb73",
+      "source_id": 2770
+    },
+    {
+      "count": 2,
+      "identity_key": "d287996877cb2cd88e6d1f710ceeb9780f8d16e12c569cce6ff1e1437ea016d9",
+      "source_id": 529
+    },
+    {
+      "count": 3,
+      "identity_key": "efe2cca00a012cfb25e938b0c0c265fd5a4fdb4bda8b17bafbbb74d30cf84647",
+      "source_id": 109
+    },
+    {
+      "count": 1,
+      "identity_key": "95d18603a0ca6ce675cac605d9c55144e80d889d2bcb79283471a33ed29464e3",
+      "source_id": 1952
+    },
+    {
+      "count": 2,
+      "identity_key": "d2c01cb64e03976bb7e6b09227171d7ee68de146ef4c13f508a92758f2bc74be",
+      "source_id": 1450
+    },
+    {
+      "count": 2,
+      "identity_key": "db70835d9fbd4da30c3525738302005b28cd35f055138c02d6655320ff96628c",
+      "source_id": 2960
+    }
+  ],
+  "name": "엔디미온",
+  "version": 828
+}

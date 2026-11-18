@@ -3,7 +3,9 @@
   "art_key": "Cards/1048",
   "attack": 1500,
   "attribute": 16,
-  "categories": [],
+  "categories": [
+    "발동-리버스"
+  ],
   "code": 87557188,
   "defense": 1200,
   "description": "리버스: 필드의 모든 뒷면\n카드를 앞면으로 뒤집은 후\n원래의 표시 형식으로\n되돌린다. 뒤집을 때 카드의\n효과는 발동하지 않는다.",

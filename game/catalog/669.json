@@ -3,7 +3,9 @@
   "art_key": "Cards/669",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-카오스"
+  ],
   "code": 55761792,
   "defense": 0,
   "description": "\"카오스 솔저\"의 의식 소환에\n사용한다. 패 또는 필드에서\n레벨 합계가 8 이상인\n몬스터를 릴리스해야 한다.",

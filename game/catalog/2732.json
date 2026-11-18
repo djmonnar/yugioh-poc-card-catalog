@@ -4,7 +4,8 @@
   "attack": 300,
   "attribute": 32,
   "categories": [
-    "지원-의식"
+    "지원-의식",
+    "지원-어둠 속성"
   ],
   "code": 34334692,
   "defense": 300,

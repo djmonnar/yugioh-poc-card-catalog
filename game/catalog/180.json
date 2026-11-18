@@ -3,7 +3,9 @@
   "art_key": "Cards/180",
   "attack": 0,
   "attribute": 1,
-  "categories": [],
+  "categories": [
+    "지원-게이트가디언"
+  ],
   "code": 67284908,
   "defense": 3000,
   "description": "필드에 벽을 출현시켜, 출구가\n없는 미궁을 만든다.",

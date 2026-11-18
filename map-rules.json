@@ -1,13 +1,13 @@
 {
   "config": {
     "battle_percent": 60,
-    "elite_percent": 26,
+    "elite_percent": 30,
     "event_percent": 20,
     "rest_percent": 10,
     "schema": 1,
     "shop_percent": 10
   },
-  "revision": 619,
+  "revision": 858,
   "schema": 1,
-  "sha256": "5f8fbb5a83123e11f95fdeff8efb1f42b8b1e71b388d94def372c2e313254d7a"
+  "sha256": "aa209e158c19701f999485c4e3632432b3607ed3fca8bc0a254f21f80453b92e"
 }

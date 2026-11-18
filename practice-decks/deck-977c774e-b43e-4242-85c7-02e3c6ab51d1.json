@@ -1,0 +1,55 @@
+{
+  "banlist_enabled": true,
+  "extra": [
+    {
+      "count": 2,
+      "identity_key": "09f95359af2842374a7aec047c9639d228cc5c8eb3335ed49c30b3b83f6ec0c4",
+      "source_id": 2989
+    }
+  ],
+  "id": "deck-977c774e-b43e-4242-85c7-02e3c6ab51d1",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "dc3c79e3a174c1186d05dd550a0f6d0b33b17bb025a06cd6dce55e9e0153421e",
+      "source_id": 2996
+    },
+    {
+      "count": 3,
+      "identity_key": "5213ed37b8937d167b843b6fae136b404cd95980b49b5d909a118170d251434f",
+      "source_id": 49
+    },
+    {
+      "count": 3,
+      "identity_key": "32b9a942ec5a80e22314dbdb73c6405c6886a35291b5a4e1bb0fcfbacae26830",
+      "source_id": 136
+    },
+    {
+      "count": 2,
+      "identity_key": "480f86c33d0b88c28cca84540b292fd883a2732bd03599f038969d95e4629f70",
+      "source_id": 2992
+    },
+    {
+      "count": 3,
+      "identity_key": "235f00f50759f599bc6610b0ded188b4784a1806ec03101c5b85a20e367cd03e",
+      "source_id": 2985
+    },
+    {
+      "count": 3,
+      "identity_key": "8f4e770ce0e09b83aa5c1e219dd85a9864815e2060b65e67ced372a69e4c29a7",
+      "source_id": 2983
+    },
+    {
+      "count": 2,
+      "identity_key": "e0702d912a9490eb5f0904584a5f04c4bb8a36329a212d3e6db1658577d52a35",
+      "source_id": 1856
+    },
+    {
+      "count": 2,
+      "identity_key": "e84d94a4fae01c996a8987182984fb3ffa213f361b0ab853eb512074b855dd20",
+      "source_id": 2013
+    }
+  ],
+  "name": "곤충족 일반몬스터",
+  "version": 811
+}

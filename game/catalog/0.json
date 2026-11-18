@@ -3,7 +3,9 @@
   "art_key": "Cards/0",
   "attack": 3000,
   "attribute": 16,
-  "categories": [],
+  "categories": [
+    "지원-푸른눈"
+  ],
   "code": 89631139,
   "defense": 2500,
   "description": "강력한 파괴력을 지닌 전설의\n드래곤. 거의 무적에\n가까우며, 이 무시무시한\n존재와 맞서 살아 돌아온 자는\n드물다.",

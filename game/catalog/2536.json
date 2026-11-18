@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "지원-의식"
+    "지원-의식",
+    "발동-제외"
   ],
   "code": 38844957,
   "defense": 0,

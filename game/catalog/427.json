@@ -4,7 +4,8 @@
   "attack": 300,
   "attribute": 16,
   "categories": [
-    "효과-묘지샐비지"
+    "효과-묘지샐비지",
+    "발동-리버스"
   ],
   "code": 31560081,
   "defense": 400,

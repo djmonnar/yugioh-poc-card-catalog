@@ -1,0 +1,45 @@
+{
+  "artKey": "Character090/images/paradox_brothers/start",
+  "banlistEnabled": false,
+  "deckName": "리버스",
+  "extra": [],
+  "id": "enc-a57511e8-14c1-492c-9c96-90cf0d904f2a",
+  "lpBonus": 0,
+  "main": [
+    2807,
+    2807,
+    2807,
+    2805,
+    2798,
+    1159,
+    1159,
+    1254,
+    1254,
+    1254,
+    1116,
+    2799,
+    2804,
+    2804,
+    1888,
+    1888,
+    2815,
+    2815,
+    521,
+    1220
+  ],
+  "name": "미궁형제",
+  "openingDrawBonus": 1,
+  "profileId": "paradox_brothers",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2798,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-a57511e8-14c1-492c-9c96-90cf0d904f2a",
+  "usesNativeRules035": true
+}

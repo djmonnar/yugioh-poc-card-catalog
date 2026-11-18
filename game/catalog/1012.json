@@ -3,7 +3,9 @@
   "art_key": "Cards/1012",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-화염 속성"
+  ],
   "code": 18937875,
   "defense": 0,
   "description": "이 카드를 장착한 화염 속성\n몬스터의 공격력을 400 올리고\n수비력을 200 내린다.",

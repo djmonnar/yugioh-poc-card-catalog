@@ -1,0 +1,45 @@
+{
+  "artKey": "Character090/images/paradox_brothers/start",
+  "banlistEnabled": false,
+  "deckName": "더블어택",
+  "extra": [],
+  "id": "enc-6d933816-c9b4-4b2f-801f-c00a84927f3d",
+  "lpBonus": 0,
+  "main": [
+    2883,
+    2883,
+    2883,
+    2753,
+    2753,
+    2615,
+    2615,
+    2609,
+    1160,
+    2713,
+    1957,
+    1957,
+    2768,
+    303,
+    597,
+    597,
+    143,
+    143,
+    2625,
+    1449
+  ],
+  "name": "미궁형제",
+  "openingDrawBonus": 0,
+  "profileId": "paradox_brothers",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2713,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-6d933816-c9b4-4b2f-801f-c00a84927f3d",
+  "usesNativeRules035": true
+}

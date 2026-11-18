@@ -1,5 +1,5 @@
 {
-  "description": "전투 승리 시 LP 200 회복.",
+  "description": "전투 승리 시 LP 500 회복.",
   "enabled": true,
   "fields": [],
   "iconIndex": 1,
@@ -8,7 +8,7 @@
   "kind": "restoring_ankh",
   "name": "재생의 앙크",
   "params": {
-    "lp": 200
+    "lp": 500
   },
   "price": 125,
   "rarity": "R",

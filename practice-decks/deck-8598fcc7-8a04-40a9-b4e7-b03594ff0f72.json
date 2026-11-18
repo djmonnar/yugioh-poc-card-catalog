@@ -1,0 +1,70 @@
+{
+  "banlist_enabled": true,
+  "extra": [
+    {
+      "count": 1,
+      "identity_key": "287ec4a6044185bc2da6056a309b198e749b0d0b456098a3eb6e62382b91de94",
+      "source_id": 2031
+    }
+  ],
+  "id": "deck-8598fcc7-8a04-40a9-b4e7-b03594ff0f72",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "868ff1ad87e5a0c45d222ce4cf1bf7fce016c2ebf770835c45ae106f9800a17b",
+      "source_id": 2058
+    },
+    {
+      "count": 3,
+      "identity_key": "874dfb5efff31e8b937bafadd8a78d8bc18c8ad178a9375f02cf277106db7fc0",
+      "source_id": 219
+    },
+    {
+      "count": 3,
+      "identity_key": "0a088d26832dc0210aa5313df528e781a19d1f16fa8ff2c2142459c9799cea5e",
+      "source_id": 2021
+    },
+    {
+      "count": 1,
+      "identity_key": "f20c109a9c087b033ebcfbace806be90c4b1d9e4398de8d3e52c79a26276b6ea",
+      "source_id": 2038
+    },
+    {
+      "count": 1,
+      "identity_key": "fe5b09048c9aa961b49ecde4f3d979adb8a7f113ff11842bf3a7a4705bd01140",
+      "source_id": 2007
+    },
+    {
+      "count": 1,
+      "identity_key": "809c42069b5ec06dd7b3a663063aaa0d8cda2a8c5470431c3d9edc097ac3fcaa",
+      "source_id": 2006
+    },
+    {
+      "count": 1,
+      "identity_key": "6049d6ff21cae261e6b826a4856dc70f0f160b42f83f308a0a52507bed448a15",
+      "source_id": 1929
+    },
+    {
+      "count": 1,
+      "identity_key": "1bb00c252253384f69a533f9e9a97ebde3e0636296d0757f59cf869e5db1872b",
+      "source_id": 2492
+    },
+    {
+      "count": 3,
+      "identity_key": "41148609d6513d683e3379523262f4e11e4144e2732c838b88901b49b28941bd",
+      "source_id": 2085
+    },
+    {
+      "count": 2,
+      "identity_key": "ae2adcf2c2d48a033019caecd0183939a734f7d5c0535b65a87b3098fbe3b5c4",
+      "source_id": 3016
+    },
+    {
+      "count": 1,
+      "identity_key": "6e88143a6d19b63d51f9f78d79264941a106691798fb78f1579481304fad7560",
+      "source_id": 1003
+    }
+  ],
+  "name": "모케모케",
+  "version": 851
+}

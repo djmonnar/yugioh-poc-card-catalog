@@ -3,7 +3,9 @@
   "art_key": "Cards/1024",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "효과-제외"
+  ],
   "code": 5758500,
   "defense": 0,
   "description": "자신 또는 상대 묘지에서\n카드를 최대 5장까지 선택하여\n이번 듀얼에서 제외한다.",

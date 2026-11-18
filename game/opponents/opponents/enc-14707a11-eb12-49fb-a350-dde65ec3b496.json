@@ -1,0 +1,68 @@
+{
+  "artKey": "CharacterPresentation012/images/tea/start",
+  "banlistEnabled": false,
+  "deckName": "모케모케",
+  "extra": [
+    2031
+  ],
+  "id": "enc-14707a11-eb12-49fb-a350-dde65ec3b496",
+  "lpBonus": 0,
+  "main": [
+    2058,
+    2058,
+    2058,
+    219,
+    219,
+    219,
+    2021,
+    2021,
+    2021,
+    2038,
+    2007,
+    2006,
+    1929,
+    2492,
+    2085,
+    2085,
+    2085,
+    3016,
+    3016,
+    1003
+  ],
+  "name": "안수진",
+  "openingDrawBonus": 0,
+  "profileId": "tea",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 219,
+      "threshold": 0,
+      "value": 0
+    },
+    {
+      "entries": [
+        {
+          "count": 1,
+          "sourceId": 219
+        }
+      ],
+      "kind": "start_grave",
+      "position": 0,
+      "sourceId": -1,
+      "threshold": 0,
+      "value": 0
+    },
+    {
+      "entries": [],
+      "kind": "start_monster",
+      "position": 1,
+      "sourceId": 219,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-14707a11-eb12-49fb-a350-dde65ec3b496",
+  "usesNativeRules035": true
+}

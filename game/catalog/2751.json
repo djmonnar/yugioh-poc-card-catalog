@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "효과-회복"
+    "효과-회복",
+    "발동-릴리즈"
   ],
   "code": 80161395,
   "defense": 0,

@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/akiza/start",
+  "banlistEnabled": false,
+  "deckName": "얼루어 퀸",
+  "extra": [],
+  "id": "enc-b8e2afcd-e5d7-4154-b517-11876b924fe1",
+  "lpBonus": 0,
+  "main": [
+    2930,
+    2930,
+    1809,
+    1809,
+    1810,
+    1810,
+    1811,
+    1811,
+    2929,
+    2929,
+    2927,
+    2927,
+    2955,
+    2955,
+    2956,
+    2956,
+    2954,
+    2954,
+    2933,
+    2933
+  ],
+  "name": "아나트 아키",
+  "openingDrawBonus": 0,
+  "profileId": "akiza",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2955,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-b8e2afcd-e5d7-4154-b517-11876b924fe1",
+  "usesNativeRules035": true
+}

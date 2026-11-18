@@ -27,7 +27,7 @@
     "Royal Magical Library"
   ],
   "source_id": 2770,
-  "speed_limit": null,
+  "speed_limit": 1,
   "stock": true,
   "token": false,
   "type_name": "효과 몬스터",

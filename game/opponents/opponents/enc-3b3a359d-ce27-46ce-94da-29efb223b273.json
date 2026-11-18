@@ -1,0 +1,49 @@
+{
+  "artKey": "Character093/images/yugi_muto/start",
+  "banlistEnabled": false,
+  "deckName": "로이드",
+  "extra": [
+    2869,
+    2889,
+    2890
+  ],
+  "id": "enc-3b3a359d-ce27-46ce-94da-29efb223b273",
+  "lpBonus": 0,
+  "main": [
+    2877,
+    2877,
+    2877,
+    2892,
+    2892,
+    2886,
+    2886,
+    2888,
+    2888,
+    2887,
+    2887,
+    2887,
+    2879,
+    2879,
+    2879,
+    2414,
+    2414,
+    2872,
+    2872,
+    2872
+  ],
+  "name": "무토 유우기",
+  "openingDrawBonus": 0,
+  "profileId": "yugi_muto",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 2395,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-3b3a359d-ce27-46ce-94da-29efb223b273",
+  "usesNativeRules035": true
+}

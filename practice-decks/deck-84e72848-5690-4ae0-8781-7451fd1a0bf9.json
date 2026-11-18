@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": false,
+  "extra": [],
+  "id": "deck-84e72848-5690-4ae0-8781-7451fd1a0bf9",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "6e370f1cd538e45698822beb38008047e6ce4ba951c2b2ba905eb49bd2296ad3",
+      "source_id": 2643
+    },
+    {
+      "count": 1,
+      "identity_key": "36d9bf9e187aa9eaa86c4feb8c3b9c30db1a4a34a2fc6dd3bd2e4d44c0b50fd6",
+      "source_id": 2015
+    },
+    {
+      "count": 3,
+      "identity_key": "6411ed6e26bf8596a9bf00fdb95c63863046f17823917295634cc38c9b274c09",
+      "source_id": 1936
+    },
+    {
+      "count": 2,
+      "identity_key": "9c5f7b9c240e531754f44903f987288dacb55f1a4ec1bcb51a4e28de2e88ae17",
+      "source_id": 601
+    },
+    {
+      "count": 2,
+      "identity_key": "141013b47560caffde27ab0aba8c8e31cb44f767484c35ef4f0598858c56931c",
+      "source_id": 2809
+    },
+    {
+      "count": 3,
+      "identity_key": "7341256371bb51ebb64315d92ec728919936d0ad41b80e53c0fe63d15fb84eb6",
+      "source_id": 2040
+    },
+    {
+      "count": 2,
+      "identity_key": "37245dbae34ade2542b3c1f7a7e74fd68734a2f57b8fc15a40b8d1b93cb1052f",
+      "source_id": 1423
+    },
+    {
+      "count": 2,
+      "identity_key": "ac17a03283f97f84ff434fcb5c7248d9ba116fbfcb2cb8beeb97609e0c89f347",
+      "source_id": 2904
+    },
+    {
+      "count": 1,
+      "identity_key": "cbe0e33213e57d0ed06644870c78ed20f657913b6c0f283a9a91492ad3230c28",
+      "source_id": 2959
+    },
+    {
+      "count": 1,
+      "identity_key": "0a9aff4e154654edbe7aee2ee5827aa90d0eaad8293694c3a17560baa00bdbe5",
+      "source_id": 1953
+    }
+  ],
+  "name": "수마신 스가",
+  "version": 856
+}

@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "지원-필드"
+    "지원-필드",
+    "지원-언데드"
   ],
   "code": 4064256,
   "defense": 0,

@@ -3,7 +3,11 @@
   "art_key": "Cards/330",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-공룡족",
+    "지원-암석족",
+    "지원-언데드"
+  ],
   "code": 23424603,
   "defense": 0,
   "description": "모든 공룡족 / 언데드족 /\n암석족 몬스터의 공격력과\n수비력을 200 올린다.",

@@ -3,7 +3,10 @@
   "art_key": "Cards/1246",
   "attack": 0,
   "attribute": 16,
-  "categories": [],
+  "categories": [
+    "발동-반전 소환 시",
+    "발동-소환 시"
+  ],
   "code": 26376390,
   "defense": 0,
   "description": "이 카드가 소환되었을 때(특수\n소환 포함), 상대 몬스터\n1장의 원래 공격력과 수비력을\n이 카드의 공격력과\n수비력으로 한다.",

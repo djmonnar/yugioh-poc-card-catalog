@@ -40,11 +40,27 @@
             "position": "defense"
           }
         ]
+      },
+      {
+        "name": "공명충",
+        "profile_id": "profile-75d88069-1fc5-411a-bfc2-958a8d5fb4f0",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "6b6c7e0aaaa169972d36ed61c1573a0f2cc99aa4944e6d8055336c625dee8ecb",
+              "internal_id": 402,
+              "name_ko": "공명충",
+              "slot": 1079
+            },
+            "kind": "start_monster",
+            "position": "set"
+          }
+        ]
       }
     ],
     "skills": []
   },
   "profile_id": "weevil",
-  "updated_at": "2026-11-06T06:29:26.433238+00:00",
-  "version": 3865
+  "updated_at": "2026-11-17T02:27:15.979574+00:00",
+  "version": 5879
 }

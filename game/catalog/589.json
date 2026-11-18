@@ -3,7 +3,9 @@
   "art_key": "Cards/589",
   "attack": 0,
   "attribute": 1,
-  "categories": [],
+  "categories": [
+    "지원-가제트"
+  ],
   "code": 13316346,
   "defense": 2000,
   "description": "자신의 필드에 \"가제트\"\n몬스터가 있으면, 이 카드의\n공격력은 2000 올라간다.",

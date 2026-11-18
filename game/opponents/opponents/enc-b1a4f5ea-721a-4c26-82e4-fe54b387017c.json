@@ -1,0 +1,45 @@
+{
+  "artKey": "Character090/images/paradox_brothers/start",
+  "banlistEnabled": false,
+  "deckName": "수마신 스가",
+  "extra": [],
+  "id": "enc-b1a4f5ea-721a-4c26-82e4-fe54b387017c",
+  "lpBonus": 0,
+  "main": [
+    2643,
+    2643,
+    2643,
+    2015,
+    1936,
+    1936,
+    1936,
+    601,
+    601,
+    2809,
+    2809,
+    2040,
+    2040,
+    2040,
+    1423,
+    1423,
+    2904,
+    2904,
+    2959,
+    1953
+  ],
+  "name": "미궁형제",
+  "openingDrawBonus": 0,
+  "profileId": "paradox_brothers",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_monster",
+      "position": 4,
+      "sourceId": 180,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-b1a4f5ea-721a-4c26-82e4-fe54b387017c",
+  "usesNativeRules035": true
+}

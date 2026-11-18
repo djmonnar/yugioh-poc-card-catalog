@@ -3,7 +3,10 @@
   "art_key": "Cards/332",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-야수전사족",
+    "지원-전사족"
+  ],
   "code": 86318356,
   "defense": 0,
   "description": "모든 야수전사족과 전사족\n몬스터의 공격력과 수비력을\n200 올린다.",

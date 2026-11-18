@@ -3,7 +3,9 @@
   "art_key": "Cards/288",
   "attack": 2400,
   "attribute": 32,
-  "categories": [],
+  "categories": [
+    "지원-데몬"
+  ],
   "code": 11761845,
   "defense": 2150,
   "description": "핀드들 중 검의 괴물만이\n탈와르를 쥐는 것이\n허용됩니다.",

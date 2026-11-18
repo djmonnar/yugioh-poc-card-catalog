@@ -3,7 +3,9 @@
   "art_key": "Cards/360",
   "attack": 1200,
   "attribute": 2,
-  "categories": [],
+  "categories": [
+    "지원-펭귄"
+  ],
   "code": 5628232,
   "defense": 1000,
   "description": "귀처럼 보이는 머리에 달린\n날개로 하늘을 날아다니는\n신기한 펭귄.",

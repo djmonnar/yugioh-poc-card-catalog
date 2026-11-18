@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "덱-묘지기"
+    "지원-묘지기",
+    "효과-패 버리기"
   ],
   "code": 72405967,
   "defense": 0,

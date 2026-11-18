@@ -5,7 +5,7 @@
   "attribute": 32,
   "categories": [
     "효과-덱샐비지",
-    "발동-묘지"
+    "발동-묘지로 보내졌을 때"
   ],
   "code": 26202165,
   "defense": 600,
@@ -18,7 +18,7 @@
   "name": "크리터",
   "name_english": "Sangan",
   "native_type": 33,
-  "normal_limit": 1,
+  "normal_limit": 3,
   "playable": true,
   "race": 8,
   "rarity": "UR",

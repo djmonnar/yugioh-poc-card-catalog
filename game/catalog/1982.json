@@ -4,8 +4,7 @@
   "attack": 400,
   "attribute": 1,
   "categories": [
-    "면역-마법",
-    "면역-함정"
+    "효과-발동봉쇄"
   ],
   "code": 61049315,
   "defense": 1700,

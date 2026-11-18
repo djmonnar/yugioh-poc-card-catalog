@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-e53094a5-02ef-4643-977d-b5ad397d5cf7",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "74045356d1f15e4043e0fae173764bcb3b21066e94c729a9fa9c84efaa67d08c",
+      "source_id": 2823
+    },
+    {
+      "count": 2,
+      "identity_key": "da7eea471bc4bc7c0df10cf09ce45588a25a510d73fff2f2d3f831d78604ada2",
+      "source_id": 2822
+    },
+    {
+      "count": 2,
+      "identity_key": "2af5a14a90f28ad1ff630b733e346855fc27e574a9305366c66394bc118215a3",
+      "source_id": 2821
+    },
+    {
+      "count": 2,
+      "identity_key": "0c33e035671289d791fe07757f92d3305011586a2a23343d3add93415e82a087",
+      "source_id": 2829
+    },
+    {
+      "count": 2,
+      "identity_key": "499731fa7be39302fe35182888480246d81b770ee76e4e3cd7775a65e14614f9",
+      "source_id": 190
+    },
+    {
+      "count": 3,
+      "identity_key": "e0d3ed35a494545a4a9f93bbe25aa49c5308c06fadb7b2aca201cdd3f328f1d7",
+      "source_id": 1437
+    },
+    {
+      "count": 2,
+      "identity_key": "5b92c2a265e313de2040238c9bfdd6497b9e31104e8dc6d4c811622818dea5e3",
+      "source_id": 562
+    },
+    {
+      "count": 1,
+      "identity_key": "b17f8fc899491eacea4a30e41f1c6de5c503a4a8f495a26b4d37fb259dbaf78e",
+      "source_id": 226
+    },
+    {
+      "count": 2,
+      "identity_key": "b7ea1f8ec993f2b03ab8e95cac7c1791702647e0c6973cbd13b8c8047b88e331",
+      "source_id": 2744
+    },
+    {
+      "count": 2,
+      "identity_key": "476b54206a0549b20154716af9dfc84e68ee919e41546f75beb1c38f52fc60e7",
+      "source_id": 1082
+    }
+  ],
+  "name": "파충류족",
+  "version": 716
+}

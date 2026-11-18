@@ -3,7 +3,9 @@
   "art_key": "Cards/511",
   "attack": 1400,
   "attribute": 32,
-  "categories": [],
+  "categories": [
+    "발동-릴리즈"
+  ],
   "code": 11384280,
   "defense": 1300,
   "description": "자신의 필드 몬스터 1장을\n릴리스하고 상대에게 500 직접\n데미지를 준다. 어드밴스\n소환이나 다른 카드 효과로\n릴리스한 몬스터는 포함하지\n않는다.",

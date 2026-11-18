@@ -4,7 +4,8 @@
   "attack": 2300,
   "attribute": 32,
   "categories": [
-    "소환-묘지"
+    "소환-묘지",
+    "지원-에일리언"
   ],
   "code": 24104865,
   "defense": 1500,

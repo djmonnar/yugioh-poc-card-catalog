@@ -1,0 +1,48 @@
+{
+  "artKey": "DuelUi011/legacy/kaiba_intro",
+  "banlistEnabled": false,
+  "deckName": "푸른눈의 백룡",
+  "extra": [
+    379,
+    379
+  ],
+  "id": "enc-6bae9001-b64e-47cd-bd0d-9dc92d3ea7a4",
+  "lpBonus": 0,
+  "main": [
+    1916,
+    0,
+    0,
+    0,
+    471,
+    471,
+    1908,
+    1908,
+    710,
+    710,
+    1914,
+    1301,
+    1301,
+    2000,
+    2627,
+    2627,
+    2627,
+    521,
+    1079,
+    1079
+  ],
+  "name": "카이바",
+  "openingDrawBonus": 0,
+  "profileId": "kaiba",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 0,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-6bae9001-b64e-47cd-bd0d-9dc92d3ea7a4",
+  "usesNativeRules035": true
+}

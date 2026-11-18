@@ -3,7 +3,9 @@
   "art_key": "Cards/1547",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "효과-제외"
+  ],
   "code": 33550694,
   "defense": 0,
   "description": "이 카드가 필드에 앞면으로\n존재하는 동안 \"융합\" 없이\n융합 몬스터를 특수 소환할 수\n있다. 사용한 융합 소재\n몬스터는 묘지로 보내지 않고\n제외한다.",

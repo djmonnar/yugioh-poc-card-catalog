@@ -4,7 +4,8 @@
   "attack": 300,
   "attribute": 1,
   "categories": [
-    "면역-전투"
+    "보호-공격 대상 제외",
+    "지원-곤충"
   ],
   "code": 91559748,
   "defense": 2000,

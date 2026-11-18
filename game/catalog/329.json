@@ -3,7 +3,12 @@
   "art_key": "Cards/329",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-곤충",
+    "지원-식물족",
+    "지원-야수전사족",
+    "지원-야수족"
+  ],
   "code": 87430998,
   "defense": 0,
   "description": "모든 곤충족 / 야수족 /\n식물족 / 야수전사족 몬스터의\n공격력과 수비력을 200\n올린다.",

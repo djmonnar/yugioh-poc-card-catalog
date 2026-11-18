@@ -3,7 +3,9 @@
   "art_key": "Cards/17",
   "attack": 200,
   "attribute": 32,
-  "categories": [],
+  "categories": [
+    "지원-엑조디아"
+  ],
   "code": 44519536,
   "defense": 300,
   "description": "마법으로 봉인된 금지된 왼쪽\n다리. 이 봉인을 깨는 사람은\n누구든지 무한한 힘을 알게 될\n것입니다.",

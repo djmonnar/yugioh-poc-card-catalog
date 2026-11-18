@@ -1,0 +1,69 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-568eb0dd-efde-454d-a74e-acb0f5272d19",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "38a0e3aa865b7b4de1c304d29b3cf720ac1381978c4598142441e2ebe0db222a",
+      "source_id": 2807
+    },
+    {
+      "count": 1,
+      "identity_key": "2714b01ee7af544683e04ac12ec7154e65b8db2b9842ad0ba19a8d12f62fc278",
+      "source_id": 2805
+    },
+    {
+      "count": 1,
+      "identity_key": "44bbb661fda4760f12fcbfd0644d53d65e5679b90fca00991e6988a30a1c1645",
+      "source_id": 2798
+    },
+    {
+      "count": 2,
+      "identity_key": "60e35f535dd5d99446ffa1b9158db6d9a3585dc04e9c7a10bfb1f781f582dd1b",
+      "source_id": 1159
+    },
+    {
+      "count": 3,
+      "identity_key": "0ebc381df550b33554881ad29db274e9ba600c495b1e65393db07672c37c7aaa",
+      "source_id": 1254
+    },
+    {
+      "count": 1,
+      "identity_key": "0a1c7c01afe36265e4c67d3f39e1e359dd1463ab3d240b8a2a090f00868c8b2b",
+      "source_id": 1116
+    },
+    {
+      "count": 1,
+      "identity_key": "c13f36209aeefa6ef852147f126c5f9f47b3fd53aacddc5b1612f3637ab5c9e5",
+      "source_id": 2799
+    },
+    {
+      "count": 2,
+      "identity_key": "734398136884a75193a228f8de8ac70543215902dd22a4da538d106946318668",
+      "source_id": 2804
+    },
+    {
+      "count": 2,
+      "identity_key": "62d49484afd4ee81dcd0521bcd53aaf0f39dad042b7bfe2f914362639620f07b",
+      "source_id": 1888
+    },
+    {
+      "count": 2,
+      "identity_key": "a09ce1f6382e785c2f4f1e5e18ec2aab1e57f3c3d8ca9a9f4e62547bdd153a70",
+      "source_id": 2815
+    },
+    {
+      "count": 1,
+      "identity_key": "6a708381c382bf7ebf77b64431d364cdf3e5399fa9a05c60f544c38d5853895b",
+      "source_id": 521
+    },
+    {
+      "count": 1,
+      "identity_key": "8fdba67eb686ecfa60afc175239f19193acbe9da9b586db53f44c527a068e050",
+      "source_id": 1220
+    }
+  ],
+  "name": "리버스",
+  "version": 837
+}

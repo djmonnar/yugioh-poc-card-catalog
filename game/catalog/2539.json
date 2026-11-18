@@ -4,7 +4,8 @@
   "attack": 3000,
   "attribute": 4,
   "categories": [
-    "덱-네프티스"
+    "지원-네프티스",
+    "발동-묘지에서"
   ],
   "code": 24175232,
   "defense": 1000,

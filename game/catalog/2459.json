@@ -4,7 +4,8 @@
   "attack": 2300,
   "attribute": 1,
   "categories": [
-    "덱-젬나이트"
+    "지원-젬나이트",
+    "지원-빛 속성"
   ],
   "code": 3113836,
   "defense": 1400,

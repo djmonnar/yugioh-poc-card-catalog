@@ -4,7 +4,8 @@
   "attack": 1700,
   "attribute": 32,
   "categories": [
-    "지원-릴리즈"
+    "지원-릴리즈",
+    "지원-어둠 속성"
   ],
   "code": 44436472,
   "defense": 1650,

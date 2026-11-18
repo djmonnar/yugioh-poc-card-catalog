@@ -1,6 +1,6 @@
 {
   "extra": [],
-  "id": "unified039_64632c40ebcd424602eb0013fc9484affa5c7ba4",
+  "id": "unified039_5b19929323fe00ddfc55d13023f55df5ae41a347",
   "main": [
     399,
     399,
@@ -9,7 +9,6 @@
     1165,
     1165,
     1165,
-    1979,
     1980,
     1997,
     1997,
@@ -21,8 +20,10 @@
     175,
     175,
     2394,
-    2394
+    2394,
+    1976
   ],
-  "name": "해골수스 중급",
+  "name": "언데드월드",
+  "representativeSourceId": 399,
   "sourceId": "unified039:ch2_battle_087a104b911f0803e614a8c1"
 }

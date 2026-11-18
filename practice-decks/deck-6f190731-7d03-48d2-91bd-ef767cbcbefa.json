@@ -1,0 +1,74 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-6f190731-7d03-48d2-91bd-ef767cbcbefa",
+  "main": [
+    {
+      "count": 1,
+      "identity_key": "509321f13a0450614092d770f9aca708859833e4baa77ee6f891bbe68d368f36",
+      "source_id": 3028
+    },
+    {
+      "count": 1,
+      "identity_key": "cd6fcad07b62e691edd62654bdd3928589fa01572e06cacc2b44675d27e0b0c6",
+      "source_id": 3029
+    },
+    {
+      "count": 2,
+      "identity_key": "6e997952df4eef474a7fafe22e8b33bfe7281ac40060c522b7467015bf71f3c1",
+      "source_id": 3030
+    },
+    {
+      "count": 2,
+      "identity_key": "ce4a710a4ae3593bf5670593e906f93d28e805fc166b8206ca46925137fe7c17",
+      "source_id": 700
+    },
+    {
+      "count": 2,
+      "identity_key": "ff47fa80b245704063d82cfcd0da7f3bd735a3f33970e023dc0abf5026da164d",
+      "source_id": 2514
+    },
+    {
+      "count": 2,
+      "identity_key": "41148609d6513d683e3379523262f4e11e4144e2732c838b88901b49b28941bd",
+      "source_id": 2085
+    },
+    {
+      "count": 2,
+      "identity_key": "cb97509b20bc9239c3ebfe4d7e43fbd5c7b01df6b91c654e6665f733f03055ef",
+      "source_id": 2622
+    },
+    {
+      "count": 1,
+      "identity_key": "7afbc2f5f643a24005f9bdfd033973600c03a087497bc6adf593d116f07b55a7",
+      "source_id": 482
+    },
+    {
+      "count": 2,
+      "identity_key": "5c23a64be23e36b8072aa512c7844beec310bd51e167a26ed9a86ccefc5f5e49",
+      "source_id": 588
+    },
+    {
+      "count": 1,
+      "identity_key": "f6af26ef01e7ab92d998dbb441ac6c0fec4fb78c7dcf7983e43c76ceda7f3bf0",
+      "source_id": 1109
+    },
+    {
+      "count": 1,
+      "identity_key": "0c0fca9eecf4ebb26ce38df84553098bc60c86bce9d33d62124bd0bf26560f95",
+      "source_id": 2535
+    },
+    {
+      "count": 1,
+      "identity_key": "1494580adefbb4c738709d918798dbea0315314fcd46144f2c037a33294d9f0b",
+      "source_id": 2533
+    },
+    {
+      "count": 2,
+      "identity_key": "455887ca4ad127c9f516c90a09821bb2f6aef16933d8cd720b84e87adce1981e",
+      "source_id": 2730
+    }
+  ],
+  "name": "퍼펙트 디클레어러",
+  "version": 867
+}

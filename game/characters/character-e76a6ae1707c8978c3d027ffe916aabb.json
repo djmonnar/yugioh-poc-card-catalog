@@ -34,11 +34,61 @@
             "kind": "start_field"
           }
         ]
+      },
+      {
+        "name": "로스트월드",
+        "profile_id": "profile-577ac705-bdf8-4cb5-836b-45fa9e3653e3",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "32a68e6466f7d097ac59d0173b3f195dbdfc8a3d81cba614966799f0a9c7e80e",
+              "internal_id": 2900,
+              "name_ko": "로스트월드",
+              "slot": 1932
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "쥐라기 파워",
+        "profile_id": "profile-bacd9b20-b8e1-42cf-9aac-53f125c57d7f",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "8e93ed10a61f3127572825c6da0ebf978a56ea093d600f001b64ad80b0d4be20",
+              "internal_id": 2916,
+              "name_ko": "쥐라기 파워",
+              "slot": 1948
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "인피니티 다이노",
+        "profile_id": "profile-456862c2-127c-455e-8f5b-3497cbb73f48",
+        "skills": [
+          {
+            "entries": [
+              {
+                "card": {
+                  "identity_key": "89180a0b52e45309d52a40df61ecb0427ad3403b7be947df15a97510053aa7d2",
+                  "internal_id": 2911,
+                  "name_ko": "환창의 미세라사우루스",
+                  "slot": 1943
+                },
+                "count": 1
+              }
+            ],
+            "kind": "start_grave"
+          }
+        ]
       }
     ],
     "skills": []
   },
   "profile_id": "rex",
-  "updated_at": "2026-11-05T18:23:57.817914+00:00",
-  "version": 3810
+  "updated_at": "2026-11-16T10:41:23.298186+00:00",
+  "version": 5851
 }

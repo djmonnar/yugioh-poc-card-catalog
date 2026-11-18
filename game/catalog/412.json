@@ -3,7 +3,9 @@
   "art_key": "Cards/412",
   "attack": 2000,
   "attribute": 4,
-  "categories": [],
+  "categories": [
+    "지원-제넥스"
+  ],
   "code": 53944920,
   "defense": 1300,
   "description": "자신의 필드에 \"제넥스\n컨트롤러\"가 있으면 릴리스\n없이 이 카드를 일반\n소환한다.",

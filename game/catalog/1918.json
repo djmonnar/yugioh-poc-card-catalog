@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "소환-덱리크루터"
+    "소환-덱리크루터",
+    "지원-블랙매지션"
   ],
   "code": 13604200,
   "defense": 0,

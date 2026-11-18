@@ -4,8 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "면역-전투",
-    "효과-회복"
+    "효과-회복",
+    "무효-공격"
   ],
   "code": 43250041,
   "defense": 0,

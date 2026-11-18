@@ -3,9 +3,27 @@
   "id": "character-b19c810bfbd9e665ef965a19990c27d9",
   "profile": {
     "name": "조이",
-    "portrait": "https://mjrvbxjmnnzjhwjyqjhc.supabase.co/storage/v1/object/public/poc-story-assets/portraits/ab47b6a4-1aaf-469e-81c4-0945ea89411b.webp"
+    "portrait": "https://mjrvbxjmnnzjhwjyqjhc.supabase.co/storage/v1/object/public/poc-story-assets/portraits/ab47b6a4-1aaf-469e-81c4-0945ea89411b.webp",
+    "skill_profiles": [
+      {
+        "name": "스피드워리어",
+        "profile_id": "profile-2cfa27d4-febf-4688-acc5-5c66707096a9",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "d660b5cd6a3d01b7c5c9e75928288b8d1573c52d0f0604bfa75175c2e45a68a3",
+              "internal_id": 2884,
+              "name_ko": "스피드 워리어",
+              "slot": 1916
+            },
+            "kind": "start_hand"
+          }
+        ]
+      }
+    ],
+    "skills": []
   },
   "profile_id": "joey",
-  "updated_at": "2026-10-10T10:50:45.481177+00:00",
-  "version": 1025
+  "updated_at": "2026-11-16T08:18:34.945673+00:00",
+  "version": 5849
 }

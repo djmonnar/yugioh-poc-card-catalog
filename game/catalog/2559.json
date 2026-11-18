@@ -4,7 +4,8 @@
   "attack": 1500,
   "attribute": 32,
   "categories": [
-    "덱-묘지기"
+    "지원-묘지기",
+    "지원-마법사"
   ],
   "code": 58657303,
   "defense": 1500,

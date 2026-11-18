@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "효과-회복"
+    "효과-회복",
+    "발동-피해 발생 시"
   ],
   "code": 2130625,
   "defense": 0,

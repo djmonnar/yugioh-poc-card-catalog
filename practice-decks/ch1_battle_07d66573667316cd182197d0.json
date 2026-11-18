@@ -1,5 +1,5 @@
 {
-  "banlist_enabled": false,
+  "banlist_enabled": true,
   "extra": [
     {
       "count": 1,
@@ -70,6 +70,6 @@
       "source_id": 657
     }
   ],
-  "name": "조이 흑룡 초급",
-  "version": 383
+  "name": "붉은눈의흑룡과 천년용",
+  "version": 733
 }

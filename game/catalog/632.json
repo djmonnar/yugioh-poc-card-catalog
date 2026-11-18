@@ -3,7 +3,9 @@
   "art_key": "Cards/632",
   "attack": 1600,
   "attribute": 16,
-  "categories": [],
+  "categories": [
+    "발동-LP 지불"
+  ],
   "code": 64734921,
   "defense": 0,
   "description": "[천사족] ①: 500 LP를\n지불하고 발동할 수 있다.\n자신의 패 / 덱에서 \"신성한\n구체\" 1장을 특수 소환한다.",

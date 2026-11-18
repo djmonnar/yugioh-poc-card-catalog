@@ -4,7 +4,8 @@
   "attack": 2700,
   "attribute": 16,
   "categories": [
-    "면역-효과"
+    "발동-소환 시",
+    "보호-효과 파괴 방지"
   ],
   "code": 61757117,
   "defense": 1200,

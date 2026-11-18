@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "소환-패,덱"
+    "소환-추가 일반 소환",
+    "발동-LP 지불"
   ],
   "code": 80604092,
   "defense": 0,

@@ -1,0 +1,45 @@
+{
+  "artKey": "Character090/images/tristan/start",
+  "banlistEnabled": false,
+  "deckName": "야수전사",
+  "extra": [],
+  "id": "enc-03505d0a-93ce-4c08-ac93-4e70807a94d9",
+  "lpBonus": 0,
+  "main": [
+    2663,
+    2663,
+    2663,
+    2744,
+    2062,
+    2062,
+    744,
+    744,
+    1893,
+    2665,
+    2665,
+    2664,
+    2664,
+    2664,
+    1506,
+    1506,
+    1985,
+    1985,
+    415,
+    415
+  ],
+  "name": "전우혁",
+  "openingDrawBonus": 0,
+  "profileId": "tristan",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 329,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-03505d0a-93ce-4c08-ac93-4e70807a94d9",
+  "usesNativeRules035": true
+}

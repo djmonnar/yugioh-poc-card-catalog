@@ -1,0 +1,65 @@
+{
+  "banlist_enabled": true,
+  "extra": [
+    {
+      "count": 1,
+      "identity_key": "35c2904f0b33aec238db12ef668db15ac2a5c7cd8f2b7eb1648d9c5904d131af",
+      "source_id": 2858
+    }
+  ],
+  "id": "deck-dccea2f1-ee9a-4064-9aef-1e3bc66b57bf",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "f4f3ff415bb3b2cc7170e4069e483f830f08df58eee01747835cf2e407c0be7e",
+      "source_id": 2864
+    },
+    {
+      "count": 2,
+      "identity_key": "ddfce2dd4b0135a6bdb73cfe27cb61673c73e3e9e3ddec565decb6d05e8343e4",
+      "source_id": 2859
+    },
+    {
+      "count": 2,
+      "identity_key": "b6e098a65d6e1a7afbbce2792724b2fdbed913a54ad6f918258ae8680c1fc176",
+      "source_id": 2863
+    },
+    {
+      "count": 3,
+      "identity_key": "e0702dbdf72abe8914f6080f9bed64c2cca1b8ee22d7e34dc2468672cf66882f",
+      "source_id": 2856
+    },
+    {
+      "count": 2,
+      "identity_key": "2723bdec40ce7492977a25b448c7b055d75ae70837bce86cb3290bca3d960875",
+      "source_id": 2852
+    },
+    {
+      "count": 2,
+      "identity_key": "860ac9a49c1b377b5215fcfccaa1296531191e349739b855089a2490a66f04b5",
+      "source_id": 2851
+    },
+    {
+      "count": 2,
+      "identity_key": "4622607701a32bb375bb9f780aae02feeab399c3eb802a189ce2a3cebe296713",
+      "source_id": 2848
+    },
+    {
+      "count": 1,
+      "identity_key": "30767dc711bb3cd04de6ad25afd2c70580d0627e3113567b84493430bc31d8af",
+      "source_id": 2850
+    },
+    {
+      "count": 2,
+      "identity_key": "b5fc4428a667d2e28276286a0de0c82243e2fe3548863209ed3afd1d5a898591",
+      "source_id": 1135
+    },
+    {
+      "count": 1,
+      "identity_key": "1bb559a41a170a4f994ac9f5d8bd964e4f445249db739f4057470cd0dbeeab75",
+      "source_id": 2800
+    }
+  ],
+  "name": "왕가의신전",
+  "version": 736
+}

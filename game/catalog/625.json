@@ -3,7 +3,9 @@
   "art_key": "Cards/625",
   "attack": 1600,
   "attribute": 16,
-  "categories": [],
+  "categories": [
+    "발동-소환 시"
+  ],
   "code": 64788463,
   "defense": 1400,
   "description": "자신의 필드에 \"퀸즈\n나이트\"가 있으면 \"잭스\n나이트\"를 특수 소환할 수\n있다.",

@@ -3,7 +3,9 @@
   "art_key": "Cards/1253",
   "attack": 1350,
   "attribute": 1,
-  "categories": [],
+  "categories": [
+    "지원-전사족"
+  ],
   "code": 79853073,
   "defense": 1800,
   "description": "이 카드가 전사족 몬스터와\n전투할 경우, 데미지\n계산시에만 이 몬스터의\n공격력과 수비력을 2000\n올린다.",

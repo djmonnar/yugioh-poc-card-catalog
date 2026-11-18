@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "면역-함정"
+    "발동-LP 지불",
+    "무효-함정"
   ],
   "code": 3819470,
   "defense": 0,

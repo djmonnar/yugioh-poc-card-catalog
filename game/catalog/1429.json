@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "효과-드로우"
+    "효과-드로우",
+    "발동-소환 시"
   ],
   "code": 57953380,
   "defense": 0,

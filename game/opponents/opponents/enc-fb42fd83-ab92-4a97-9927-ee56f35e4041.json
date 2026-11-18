@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/weevil/start",
+  "banlistEnabled": false,
+  "deckName": "사도식충",
+  "extra": [],
+  "id": "enc-fb42fd83-ab92-4a97-9927-ee56f35e4041",
+  "lpBonus": 0,
+  "main": [
+    3002,
+    2999,
+    2999,
+    2999,
+    2998,
+    2985,
+    2985,
+    2992,
+    2992,
+    1869,
+    1858,
+    1858,
+    304,
+    304,
+    329,
+    1857,
+    1857,
+    2807,
+    2807,
+    1318
+  ],
+  "name": "사마준",
+  "openingDrawBonus": 0,
+  "profileId": "weevil",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 329,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-fb42fd83-ab92-4a97-9927-ee56f35e4041",
+  "usesNativeRules035": true
+}

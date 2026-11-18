@@ -1,0 +1,45 @@
+{
+  "artKey": "DuelUi011/legacy/kaiba_intro",
+  "banlistEnabled": false,
+  "deckName": "펠그란트 드래곤",
+  "extra": [],
+  "id": "enc-72b970ba-0e0d-48ca-b3b0-7c69487a1a2c",
+  "lpBonus": 0,
+  "main": [
+    614,
+    614,
+    614,
+    2719,
+    2719,
+    2719,
+    521,
+    521,
+    615,
+    615,
+    615,
+    1930,
+    1930,
+    1930,
+    2708,
+    2708,
+    2708,
+    1914,
+    2710,
+    2710
+  ],
+  "name": "카이바",
+  "openingDrawBonus": 0,
+  "profileId": "kaiba",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 331,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-72b970ba-0e0d-48ca-b3b0-7c69487a1a2c",
+  "usesNativeRules035": true
+}

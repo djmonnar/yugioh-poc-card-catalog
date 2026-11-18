@@ -1,0 +1,64 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-ab52f7dd-a79d-4e74-afa8-6b3841601a05",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "a922b4dbdb7983de97acbcbec11bc1aa8bbf0f26c81fa946d5b832ae223161ae",
+      "source_id": 210
+    },
+    {
+      "count": 3,
+      "identity_key": "7cde00742ed7fec275902625795471075b4ec45aac30f63546334a86f670d5f7",
+      "source_id": 196
+    },
+    {
+      "count": 2,
+      "identity_key": "0a6bfcbb90b1857fd1ab17e602d557c33e59c36ffd0b0166b1b598b612eacc14",
+      "source_id": 1930
+    },
+    {
+      "count": 2,
+      "identity_key": "ba216e605e559ac253b265797b7825e066e6f95f4f3788a4c3b03ba76d4593ac",
+      "source_id": 189
+    },
+    {
+      "count": 1,
+      "identity_key": "cd6643f38f02c5d8fdc7e897e3554caeee5e86b61f38c74b24205ce2d34f942c",
+      "source_id": 2711
+    },
+    {
+      "count": 1,
+      "identity_key": "925e8a7745b34deb543a7dd2f8d3d0995da9baca63261b1b83afa1acda0d0858",
+      "source_id": 1914
+    },
+    {
+      "count": 1,
+      "identity_key": "cffcb6bd726660938bc915b9d18711875550e30241c885237d7b83cf424c2b75",
+      "source_id": 2752
+    },
+    {
+      "count": 3,
+      "identity_key": "2916818ee0d98071e644c8662cf3b6f803fa3cbc74313390da72936930275c6e",
+      "source_id": 194
+    },
+    {
+      "count": 2,
+      "identity_key": "0e91a136403c3bdbf11bb7568bef5c5585b64141d67626d74b9a240ea8f59690",
+      "source_id": 710
+    },
+    {
+      "count": 1,
+      "identity_key": "bfac1ae3670d6cb5cc3b188084e5f18d93938a0d45a026302ca94e035e818a9a",
+      "source_id": 2505
+    },
+    {
+      "count": 2,
+      "identity_key": "14ed19ca22d444a2c0c191e14c53b736907be0e6610c18cc5665837175ce974b",
+      "source_id": 2847
+    }
+  ],
+  "name": "라비 드래곤",
+  "version": 798
+}

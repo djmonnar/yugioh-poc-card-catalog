@@ -3,7 +3,10 @@
   "art_key": "Cards/67",
   "attack": 1200,
   "attribute": 8,
-  "categories": [],
+  "categories": [
+    "발동-묘지로 보내기",
+    "지원-암드 드래곤"
+  ],
   "code": 980973,
   "defense": 900,
   "description": "①: 자신 스탠바이 페이즈에\n필드의 이 카드를 묘지로\n보내고 발동할 수 있다. 패 /\n덱에서 \"암드 드래곤 LV5\"\n1장을 특수 소환한다.",

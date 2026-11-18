@@ -3,11 +3,14 @@
   "art_key": "Cards/1912",
   "attack": -2,
   "attribute": 64,
-  "categories": [],
+  "categories": [
+    "발동-LP 지불",
+    "발동-소환 시"
+  ],
   "code": 10000010,
   "defense": -2,
-  "description": "영혼들은 신비한 모든 것을\n다스리는 강력한 생물에 대해\n노래합니다.",
-  "draw_enabled": true,
+  "description": "이 카드는 특수 소환할 수 없다. 몬스터 3장을 릴리스해야 일반 소환할 수 있으며, 일반 세트는 할 수 없다. 이 카드의 일반 소환은 무효화되지 않고, 소환 성공 시 양쪽 모두 다른 카드의 효과를 발동할 수 없다.\n이 카드를 일반 소환했을 때 자신의 LP가 100이 될 때까지 지불할 수 있다. 그만큼 이 카드의 공격력과 수비력이 오른다.\nLP 1,000을 지불하고 필드의 몬스터 1장을 대상으로 지정해 파괴할 수 있다.",
+  "draw_enabled": false,
   "identity_key": "8b3723b9b335cf9e8b37a4b6ac5376ee316527bd078f05f3e114922ff7ba2d20",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1110.webp",
   "level": 10,
@@ -21,7 +24,7 @@
   "rarity": "SR",
   "source_id": 1912,
   "speed_limit": null,
-  "stock": true,
+  "stock": false,
   "token": false,
   "type_name": "의식 몬스터",
   "web_slot": 1110

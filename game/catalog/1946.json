@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "효과-버리기"
+    "발동-패 버리기",
+    "효과-제외"
   ],
   "code": 70231910,
   "defense": 0,

@@ -4,7 +4,8 @@
   "attack": 100,
   "attribute": 4,
   "categories": [
-    "효과-직접공격"
+    "효과-직접공격",
+    "발동-피해 발생 시"
   ],
   "code": 90810762,
   "defense": 200,

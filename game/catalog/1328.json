@@ -3,7 +3,9 @@
   "art_key": "Cards/1328",
   "attack": 1100,
   "attribute": 1,
-  "categories": [],
+  "categories": [
+    "발동-피해 발생 시"
+  ],
   "code": 88733579,
   "defense": 200,
   "description": "이 카드가 상대에게 데미지를\n주었을 때, 자신의 덱에서\n\"기생충 파라사이드\" 1장을\n골라 덱을 셔플한 뒤, 그\n\"기생충 파라사이드\"를 덱 맨\n위에 뒷면 표시로 놓을 수\n있다.",

@@ -3,7 +3,10 @@
   "art_key": "Cards/1435",
   "attack": 1500,
   "attribute": 4,
-  "categories": [],
+  "categories": [
+    "발동-리버스",
+    "발동-제외"
+  ],
   "code": 90147755,
   "defense": 1000,
   "description": "리버스: 자신의 덱 맨 위의\n카드 3장을 제외하고 상대에게\n800 직접 데미지를 준다.",

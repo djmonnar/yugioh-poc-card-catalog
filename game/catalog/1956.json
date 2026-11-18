@@ -4,7 +4,8 @@
   "attack": 1000,
   "attribute": 1,
   "categories": [
-    "파괴-몬스터"
+    "파괴-몬스터",
+    "발동-릴리즈"
   ],
   "code": 74131780,
   "defense": 1000,

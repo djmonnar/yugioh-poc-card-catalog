@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-3f5fa9c2-a5fb-4472-a17d-6f8736c6fae8",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "c977fcd91f84aff8dd28e8e3b0f582b51ce1252a2377e155da06b2be6a92bf10",
+      "source_id": 2644
+    },
+    {
+      "count": 1,
+      "identity_key": "c2007a6356336ab8e25dd182caad19304bb5a4bf52a19f44791e42c614ec9395",
+      "source_id": 22
+    },
+    {
+      "count": 1,
+      "identity_key": "d403d9f3ffa0e2c7c61797d4f8f74e594348a039c432239c249582ee17813afa",
+      "source_id": 2786
+    },
+    {
+      "count": 3,
+      "identity_key": "66efcb35a0fc1288350f90c38bb51cf06efa2cc1c064b4ed165803c6e72787b1",
+      "source_id": 2785
+    },
+    {
+      "count": 2,
+      "identity_key": "090854d50f273efeafdecb25f6d26d76d92b4c447eb8d3f7e3c277a1d86d71a5",
+      "source_id": 647
+    },
+    {
+      "count": 2,
+      "identity_key": "37eac914ffaeb3ad292797b67d2be12cc66d8ad3cda2ffc919dff9ccefdffb1b",
+      "source_id": 2787
+    },
+    {
+      "count": 2,
+      "identity_key": "f1fff46c0e7ac3963ff8fff9b228ae40118dcb71705d500004a9bbea36ee1032",
+      "source_id": 2709
+    },
+    {
+      "count": 2,
+      "identity_key": "90c257c09a13be5c08dde46feb5430c8094a96ccb3e70d8540d72d4661d99a67",
+      "source_id": 1948
+    },
+    {
+      "count": 2,
+      "identity_key": "0b73a7d3c955928583f0a21c6c8bae461887734da4a81d119491e24b1a724d50",
+      "source_id": 2670
+    },
+    {
+      "count": 2,
+      "identity_key": "27057a437812b2034db198f5fd7393e9136643d4bd477d917ec5d36678c17f31",
+      "source_id": 2122
+    }
+  ],
+  "name": "번개마신 썬가",
+  "version": 861
+}

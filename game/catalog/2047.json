@@ -4,7 +4,9 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "소환-묘지"
+    "소환-묘지",
+    "발동-파괴 시",
+    "지원-식물족"
   ],
   "code": 54451023,
   "defense": 0,

@@ -1,6 +1,6 @@
 {
   "extra": [],
-  "id": "unified039_88e858609cf802cb9e9e5b0f7b8370930df09844",
+  "id": "unified039_8ada66f7929efbcfccd9fa84ca2e9a8fc40217bd",
   "main": [
     960,
     960,
@@ -23,6 +23,7 @@
     1135,
     1135
   ],
-  "name": "카이바 푸른눈 중급",
+  "name": "푸른눈의 백룡",
+  "representativeSourceId": 0,
   "sourceId": "b09a505f-eb26-47cd-a50c-9443344c3606"
 }

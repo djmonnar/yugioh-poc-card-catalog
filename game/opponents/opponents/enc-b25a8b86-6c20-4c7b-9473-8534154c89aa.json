@@ -1,0 +1,45 @@
+{
+  "artKey": "Character126/images/rishid/start",
+  "banlistEnabled": false,
+  "deckName": "왕가의 신전",
+  "extra": [],
+  "id": "enc-b25a8b86-6c20-4c7b-9473-8534154c89aa",
+  "lpBonus": 0,
+  "main": [
+    2864,
+    2864,
+    2864,
+    2862,
+    2862,
+    2862,
+    2849,
+    2849,
+    2849,
+    2848,
+    2848,
+    2848,
+    2851,
+    2851,
+    2851,
+    2850,
+    1135,
+    1135,
+    689,
+    689
+  ],
+  "name": "리시드",
+  "openingDrawBonus": 0,
+  "profileId": "rishid",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2849,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-b25a8b86-6c20-4c7b-9473-8534154c89aa",
+  "usesNativeRules035": true
+}

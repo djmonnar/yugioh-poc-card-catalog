@@ -3,7 +3,9 @@
   "art_key": "Cards/602",
   "attack": 2100,
   "attribute": 16,
-  "categories": [],
+  "categories": [
+    "지원-사이버 드래곤"
+  ],
   "code": 70095154,
   "defense": 1600,
   "description": "상대 필드에만 몬스터가\n존재할 경우, 이 카드는\n패에서 특수 소환할 수 있다.",

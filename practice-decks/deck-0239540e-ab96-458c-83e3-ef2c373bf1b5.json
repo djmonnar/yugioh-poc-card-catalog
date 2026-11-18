@@ -1,0 +1,54 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-0239540e-ab96-458c-83e3-ef2c373bf1b5",
+  "main": [
+    {
+      "count": 1,
+      "identity_key": "6294e4a8c5ce2de0c13dd097e5f79768fac61867c23cf2304d0c69d28cac03f9",
+      "source_id": 2835
+    },
+    {
+      "count": 3,
+      "identity_key": "2af88bce57ba1ddb4d526a6d030c3310146cb78b8680bc139caa54b4b9c7188d",
+      "source_id": 525
+    },
+    {
+      "count": 3,
+      "identity_key": "5dc8137918de979678aeafdfd4714988cd7c1218574fbd6b4505506eb993283d",
+      "source_id": 2818
+    },
+    {
+      "count": 3,
+      "identity_key": "97e1c1758328808c10e48ec949c1dab128fd4be3c2730fe9aeadbeced561bb7d",
+      "source_id": 149
+    },
+    {
+      "count": 2,
+      "identity_key": "c662f0c2203c59482124b08a7cb0c02888e854dc500216f4774d087b30721243",
+      "source_id": 2816
+    },
+    {
+      "count": 2,
+      "identity_key": "5f4a6ab66fe2ceb135eab10622ed364654653f4e0b483a106ee1029c268a9741",
+      "source_id": 2820
+    },
+    {
+      "count": 2,
+      "identity_key": "e4e22ea3dc178ef8c0e2bd82da827954dd4017448c128dd4f6a28092856eb549",
+      "source_id": 2830
+    },
+    {
+      "count": 2,
+      "identity_key": "8c55a00f23035a46163dc7fe2e2f08c9c9869470acca2fd55fc283335d013fa3",
+      "source_id": 2827
+    },
+    {
+      "count": 2,
+      "identity_key": "0c33e035671289d791fe07757f92d3305011586a2a23343d3add93415e82a087",
+      "source_id": 2829
+    }
+  ],
+  "name": "에일리언",
+  "version": 715
+}

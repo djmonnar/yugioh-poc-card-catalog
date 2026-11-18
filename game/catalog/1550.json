@@ -3,7 +3,9 @@
   "art_key": "Cards/1550",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-전사족"
+  ],
   "code": 32437102,
   "defense": 0,
   "description": "전사족만 장착 가능. 장착\n몬스터는 드래곤족이 되어,\n공격력/수비력은 각각 500\n포인트 올린다.",

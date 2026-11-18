@@ -1,7 +1,7 @@
 {
   "artKey": "CharacterPresentation012/images/bonz/start",
   "banlistEnabled": true,
-  "deckName": "해골수스 중급",
+  "deckName": "언데드월드",
   "extra": [],
   "id": "enc044_3_battle_ch2_battle_087a104b911f0803e614a8c1",
   "lpBonus": 0,
@@ -13,7 +13,6 @@
     1165,
     1165,
     1165,
-    1979,
     1980,
     1997,
     1997,
@@ -25,7 +24,8 @@
     175,
     175,
     2394,
-    2394
+    2394,
+    1976
   ],
   "name": "해골수스",
   "openingDrawBonus": 0,

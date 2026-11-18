@@ -4,9 +4,7 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "면역-마법",
-    "면역-함정",
-    "면역-소환"
+    "소환제약"
   ],
   "code": 79323590,
   "defense": 0,

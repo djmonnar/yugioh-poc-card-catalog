@@ -44,16 +44,16 @@
       "source_id": 1966
     },
     {
-      "count": 1,
-      "identity_key": "5bff08ef4a400039889bf6e769f04614f986af068c099a668d5acb3ccb526b54",
-      "source_id": 626
-    },
-    {
       "count": 2,
       "identity_key": "f12b3b5d9e2e69e42fba96684f891648d89469671e7b092e80eb13fe52aa16d2",
       "source_id": 2606
+    },
+    {
+      "count": 1,
+      "identity_key": "5166924ae5a3f0815f4e5ef4a463fe22a5b2eca168ff278ff7f932c91d659b1a",
+      "source_id": 1043
     }
   ],
-  "name": "조이 흑룡 중급",
-  "version": 382
+  "name": "붉은눈의 흑룡",
+  "version": 749
 }

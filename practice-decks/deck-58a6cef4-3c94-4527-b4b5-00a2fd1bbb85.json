@@ -1,5 +1,5 @@
 {
-  "banlist_enabled": false,
+  "banlist_enabled": true,
   "extra": [],
   "id": "deck-58a6cef4-3c94-4527-b4b5-00a2fd1bbb85",
   "main": [
@@ -55,5 +55,5 @@
     }
   ],
   "name": "이차원-중급",
-  "version": 647
+  "version": 791
 }

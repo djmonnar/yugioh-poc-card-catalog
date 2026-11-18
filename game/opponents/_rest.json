@@ -110,6 +110,22 @@
           {
             "opponentId": "enc-9f08a285-31b0-4a28-b355-1ab668a0150d",
             "weight": 1
+          },
+          {
+            "opponentId": "enc-b25a8b86-6c20-4c7b-9473-8534154c89aa",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-3b3a359d-ce27-46ce-94da-29efb223b273",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-ef45528e-2b47-4229-b625-78fa56109d78",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-e87a6c6d-9ecd-4e8e-9e2d-3c3db62188e7",
+            "weight": 1
           }
         ],
         "lpBonus": 0
@@ -173,7 +189,47 @@
             "weight": 1
           },
           {
-            "opponentId": "enc-51f4ef83-4777-4a04-906c-0c4dd06924eb",
+            "opponentId": "enc-fa94e888-fcd0-41f1-b9c6-41e4a78cd591",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-a76b0a45-f26d-47c5-9a0e-d46a427ea6b6",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-a90cb821-f1bc-439b-8d1a-3db00f63e376",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-9586d0f8-453e-4a46-9b3f-1584b16969fe",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-80eb8469-55da-4e21-8036-509fe55ecfce",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-3dbb6fbf-df06-4c1f-8ac6-4bd10e037037",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-ddd780e0-a8da-4d70-a0cd-3489c96ad831",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-799bcade-3b4b-4716-9427-98aa4f5d7789",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-16e625b1-cb3f-4ba0-b63a-c760ff2bf990",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-a0ae4747-717a-404c-90cc-eedfba7d4131",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-fc6008ba-a44f-4a02-af82-9b0176a3ab94",
             "weight": 1
           }
         ],
@@ -213,10 +269,6 @@
           },
           {
             "opponentId": "enc044_1_elite_ch1_elite_087a104b911f0803e614a8c1",
-            "weight": 1
-          },
-          {
-            "opponentId": "enc044_1_elite_ch1_elite_ec1e83bb126ffcc0c2265779",
             "weight": 1
           },
           {
@@ -282,6 +334,26 @@
           {
             "opponentId": "enc-44027a23-f42e-4850-8b2c-ce24b88d8c2d",
             "weight": 1
+          },
+          {
+            "opponentId": "enc-4b8fd812-1988-472e-96f9-8d111547ca6b",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-4e808042-2e5c-46bf-a842-d1c6d3cded6c",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-02ed6d28-fa99-4727-acec-c787a0078e9e",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-7ba78a00-e674-4d83-8cf2-380b5477d4b8",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-da897120-77ee-4f83-bcef-022456323fab",
+            "weight": 1
           }
         ],
         "lpBonus": 0
@@ -325,19 +397,11 @@
             "weight": 1
           },
           {
-            "opponentId": "enc044_2_battle_ch2_battle_ec1e83bb126ffcc0c2265779",
-            "weight": 1
-          },
-          {
             "opponentId": "enc044_2_battle_ch2_battle_78189e0173633857a1db759c",
             "weight": 1
           },
           {
             "opponentId": "enc044_2_battle_ch2_battle_e1b5adfee3fd0a027e34a7ff",
-            "weight": 1
-          },
-          {
-            "opponentId": "enc044_2_battle_ch2_battle_8c6dd52b0c4459f2415f21c7",
             "weight": 1
           },
           {
@@ -398,6 +462,34 @@
           },
           {
             "opponentId": "enc-3f94e596-00d6-4167-859f-a5eb0982ccb3",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-bbcd9c97-b5c4-4485-89b9-cdbd9f268f57",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-33ef5a80-97d4-44f6-b671-1d6fdddf395d",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-72b970ba-0e0d-48ca-b3b0-7c69487a1a2c",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-035ac936-2c22-4439-8242-7ebc3fadd4bd",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-fb42fd83-ab92-4a97-9927-ee56f35e4041",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-14707a11-eb12-49fb-a350-dde65ec3b496",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-72210e92-fdc1-4461-891e-38d80015d3bf",
             "weight": 1
           }
         ],
@@ -463,6 +555,38 @@
           },
           {
             "opponentId": "enc-bcd1f19e-2026-445c-9fa1-b2b7bb25f1f0",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-bd6b0517-b515-46f9-81f5-da896c09263c",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-03505d0a-93ce-4c08-ac93-4e70807a94d9",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-ab3cadab-6424-47cb-9154-36dbe0d32b35",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-1fd4a26b-daeb-4f59-9481-6bd8da732bad",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-ad457704-929a-4e77-b4bc-5c3ede2c3a9b",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-639a31f7-b486-47ec-8914-65768937c443",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-ab89c4ab-694c-4f61-b1c2-04025ba0e8e3",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-cfdc01e2-241e-43c1-ac4e-ca68b51df682",
             "weight": 1
           }
         ],
@@ -541,7 +665,59 @@
             "weight": 1
           },
           {
+            "opponentId": "enc-7480772f-716c-47a7-9d13-f28d8c42e762",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-6f281355-7eb7-400d-b87f-38d72fbd3af8",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-bfd47c94-766b-4cf8-baa3-3d410459b914",
+            "weight": 1
+          },
+          {
             "opponentId": "enc126_2_elite_rishid",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-8ff615b9-b328-4d0d-85ac-4fbd2929a85b",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-097c388a-c0b8-412f-b86b-8596c8ddcc7c",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-3b2f921c-9443-471d-bf4e-c9d71497ff3c",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-7411fe8c-548a-4f44-9e4f-6c463b435680",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-f8314ad5-31c2-4e54-a47f-efb3950c1957",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-4999a6ce-2411-4195-be5a-5a6e26b1fd2f",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-60dd1eae-7ceb-477d-972e-8cba617233b6",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-748953a8-4128-4209-8478-6f9e94c803a2",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-b1a4f5ea-721a-4c26-82e4-fe54b387017c",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-7d0a8ae6-152c-49b3-959c-4f2295c7d519",
             "weight": 1
           }
         ],
@@ -583,10 +759,6 @@
           },
           {
             "opponentId": "enc044_3_battle_ch2_battle_087a104b911f0803e614a8c1",
-            "weight": 1
-          },
-          {
-            "opponentId": "enc044_3_battle_ch2_battle_ec1e83bb126ffcc0c2265779",
             "weight": 1
           },
           {
@@ -656,6 +828,50 @@
           {
             "opponentId": "enc-1defd0bb-24ae-4a4d-8a4a-2d573b49d2b0",
             "weight": 1
+          },
+          {
+            "opponentId": "enc-860849b9-db61-4aca-8595-05587769f2f8",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-418e664d-b52d-4042-8c39-6195202768c5",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-6d933816-c9b4-4b2f-801f-c00a84927f3d",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-b8e2afcd-e5d7-4154-b517-11876b924fe1",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-cd2212b1-d075-46be-a185-cabd81aa80ee",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-63feab47-e2fd-444c-a4cf-af1adf09a786",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-e6cabde2-7675-4aae-a853-2c4454878ee8",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-023dd881-a6f3-486c-9f5e-85f8985f7b1c",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-9a8c6cf0-4c8b-4871-880a-8e8e01c53b3e",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-11b55978-ec17-4111-9f76-d924f9040d42",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-917f0909-481b-4264-b3d3-f7063cee8bfb",
+            "weight": 1
           }
         ],
         "lpBonus": 1000
@@ -688,6 +904,34 @@
           },
           {
             "opponentId": "enc-938aad37-9ce5-4c17-ab56-3ff2c18a6ed5",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-88699b9c-8e60-4b28-ace7-ba4f3701c2f5",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-ffc9f01b-6a84-48fb-85f7-104b4b450eef",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-15fb78f8-750f-4b0d-a0bd-f5575bc3e11a",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-6bae9001-b64e-47cd-bd0d-9dc92d3ea7a4",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-9d2ab156-7bf1-4efc-828e-92f12329c012",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-ff555633-c9a2-424d-85f1-11753af4d1af",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-a57511e8-14c1-492c-9c96-90cf0d904f2a",
             "weight": 1
           }
         ],
@@ -763,6 +1007,38 @@
           },
           {
             "opponentId": "enc126_3_elite_gozaburo_kaiba",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-0e864c77-5697-4e46-8210-41e9fb166e42",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-7315460e-7b45-45f4-98a1-19b26eaaa4a1",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-78b912fc-ca45-4d4b-9d27-742eac1b30b8",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-729bcfb0-4e34-48cb-9963-725e3668e804",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-2038358c-20b6-457a-bac5-1203cd435bdd",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-ed2efafa-5302-4081-a9fe-c089a51b9fe4",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-8c512107-8723-4fc3-88a8-fbc9f034d362",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-3bd45ac9-cfe9-4656-9f07-0e3563b81ace",
             "weight": 1
           }
         ],
@@ -1158,7 +1434,7 @@
         "alias": 0,
         "code": 26202165,
         "identityKey": "277ac88e644e6f8e793cb9d937d52ff78ed6cdeb4b16ad33831c2e6b46bb35d8",
-        "normalLimit": 1,
+        "normalLimit": 3,
         "sourceId": 47,
         "speedLimit": 2
       },
@@ -8264,7 +8540,7 @@
         "identityKey": "0ebc381df550b33554881ad29db274e9ba600c495b1e65393db07672c37c7aaa",
         "normalLimit": 3,
         "sourceId": 1254,
-        "speedLimit": 3
+        "speedLimit": null
       },
       {
         "alias": 0,
@@ -8968,7 +9244,7 @@
         "identityKey": "4248e33821c5cbc681eefe853492d05a3780780fa88d8348cafbc0934506a7e0",
         "normalLimit": 3,
         "sourceId": 1432,
-        "speedLimit": null
+        "speedLimit": 2
       },
       {
         "alias": 0,
@@ -14088,7 +14364,7 @@
         "identityKey": "ab779655d2603ad9fc87f61a6b74a833a6d61529fd509fd639a5ac1b487941bc",
         "normalLimit": 3,
         "sourceId": 2638,
-        "speedLimit": null
+        "speedLimit": 2
       },
       {
         "alias": 0,
@@ -15128,7 +15404,7 @@
         "identityKey": "54d691a3f3720a788ada51026c3b1576fa11284522ca95032d0d55f3dbe4eb73",
         "normalLimit": 1,
         "sourceId": 2770,
-        "speedLimit": null
+        "speedLimit": 1
       },
       {
         "alias": 0,
@@ -15752,7 +16028,7 @@
         "identityKey": "30767dc711bb3cd04de6ad25afd2c70580d0627e3113567b84493430bc31d8af",
         "normalLimit": 3,
         "sourceId": 2850,
-        "speedLimit": null
+        "speedLimit": 1
       },
       {
         "alias": 0,
@@ -17220,8 +17496,8 @@
       }
     ],
     "schema": 1,
-    "sha256": "d68d6a5374099ba5c737e69b7b8a45fa2d4afaa8b811320da8ded1834e9c9415",
-    "sourceSha256": "83154c9b0ac2da9f20379cc148ba90f25d107ae190979d635a90333c8940fff2"
+    "sha256": "8c033bf53ae8331a2a3725fe9d0326ec7e034d5514e9094e160387478fc74fdd",
+    "sourceSha256": "70baf1e979ce166aa8082797b380aa31c6080a9303f5845fc1e5272345eda8e1"
   },
   "schema": 2,
   "source": "native035",

@@ -3,7 +3,9 @@
   "art_key": "Cards/406",
   "attack": 2200,
   "attribute": 1,
-  "categories": [],
+  "categories": [
+    "지원-기계족"
+  ],
   "code": 46700124,
   "defense": 2000,
   "description": "필드의 앞면 기계족 몬스터\n1장당 이 카드의 공격력을 100\n올린다.",

@@ -4,7 +4,8 @@
   "attack": 1500,
   "attribute": 4,
   "categories": [
-    "지원-릴리즈"
+    "지원-릴리즈",
+    "지원-화염 속성"
   ],
   "code": 41089128,
   "defense": 1600,

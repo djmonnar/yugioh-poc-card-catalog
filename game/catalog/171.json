@@ -3,7 +3,9 @@
   "art_key": "Cards/171",
   "attack": 1200,
   "attribute": 4,
-  "categories": [],
+  "categories": [
+    "지원-엘리멘틀 히어로"
+  ],
   "code": 58932615,
   "defense": 800,
   "description": "최초의 엘리멘틀 히어로\n여성이었던 화염 조종자.",

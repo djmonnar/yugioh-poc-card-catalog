@@ -3,7 +3,9 @@
   "art_key": "Cards/1066",
   "attack": 1400,
   "attribute": 32,
-  "categories": [],
+  "categories": [
+    "지원-데몬"
+  ],
   "code": 14430063,
   "defense": 1600,
   "description": "이 카드가 필드에 앞면으로\n존재하는 동안 양쪽\n플레이어는 공격하는 몬스터\n1장당 500 LP를 지불해야\n한다.",

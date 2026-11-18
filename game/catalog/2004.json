@@ -4,7 +4,9 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "지원-필드"
+    "지원-필드",
+    "지원-천공",
+    "지원-천사족"
   ],
   "code": 56433456,
   "defense": 0,

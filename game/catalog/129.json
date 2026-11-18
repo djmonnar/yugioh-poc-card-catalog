@@ -3,7 +3,9 @@
   "art_key": "Cards/129",
   "attack": 1900,
   "attribute": 1,
-  "categories": [],
+  "categories": [
+    "지원-에일리언"
+  ],
   "code": 97127906,
   "defense": 800,
   "description": "외계인은 신비한 생물학적\n물질을 사용하여 군인을\n만들었습니다.",

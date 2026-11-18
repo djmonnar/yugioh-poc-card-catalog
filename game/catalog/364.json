@@ -4,7 +4,8 @@
   "attack": 2400,
   "attribute": 1,
   "categories": [
-    "효과-데미지"
+    "효과-데미지",
+    "발동-피해 발생 시"
   ],
   "code": 84385264,
   "defense": 1800,

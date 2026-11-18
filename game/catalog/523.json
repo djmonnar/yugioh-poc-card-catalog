@@ -3,7 +3,11 @@
   "art_key": "Cards/523",
   "attack": 1300,
   "attribute": 2,
-  "categories": [],
+  "categories": [
+    "지원-물족",
+    "지원-어류족",
+    "지원-해룡족"
+  ],
   "code": 42463414,
   "defense": 0,
   "description": "이 카드가 필드에 앞면으로\n존재하는 동안 모든 물 속성\n몬스터의 공격력을 500\n올리고, 모든 화염 속성\n몬스터의 공격력을 400\n내린다.",

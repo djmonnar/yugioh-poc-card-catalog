@@ -9,12 +9,7 @@
       "source_id": 1249
     },
     {
-      "count": 1,
-      "identity_key": "b0daa89e310e3ddfa61b168952f9866e0ae524ec8528737a4a42981d1a2190af",
-      "source_id": 671
-    },
-    {
-      "count": 2,
+      "count": 3,
       "identity_key": "14ef34dddf99754c0eae2578fc9f5635584f61b1ff8672d65b4bef854f78776d",
       "source_id": 2068
     },
@@ -30,21 +25,11 @@
     },
     {
       "count": 2,
-      "identity_key": "da56931d80e7a521bbdfb3377b5af0f3bc83a1aa16cd15dc3cc13ae2944802f9",
-      "source_id": 1134
-    },
-    {
-      "count": 2,
-      "identity_key": "a9c7bbd43d33d1cc596c8d65533331e28bfe5eed176a61aff3acf7dfac03d1a2",
-      "source_id": 1325
-    },
-    {
-      "count": 1,
       "identity_key": "b70a3040bf8ce1f7eff3e395fc1cbdff503dbdc7d47389712d89b32becc8b16b",
       "source_id": 1177
     },
     {
-      "count": 1,
+      "count": 2,
       "identity_key": "5afdc90cfe458eca0397da71908a2cf6e72fda9ad733a2c5452a1b684c235a34",
       "source_id": 320
     },
@@ -57,8 +42,13 @@
       "count": 3,
       "identity_key": "9cbb703e9751611a56ce5f22c8b305e9f9e9d3511898432edf8cd6b0e5520319",
       "source_id": 1833
+    },
+    {
+      "count": 2,
+      "identity_key": "9e58dd19cf0ab615fc902ccfd104dc9230b9e5d88658764af070d1c573d14e88",
+      "source_id": 2393
     }
   ],
-  "name": "메이 중급",
-  "version": 83
+  "name": "해피의 사냥터",
+  "version": 703
 }

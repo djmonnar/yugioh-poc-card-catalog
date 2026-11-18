@@ -1,7 +1,7 @@
 {
   "artKey": "DuelUi011/legacy/joey_intro",
   "banlistEnabled": false,
-  "deckName": "조이 흑룡 중급",
+  "deckName": "붉은눈의 흑룡",
   "extra": [],
   "id": "enc044_2_battle_ch2_battle_e3b181b2920812cfceac863e",
   "lpBonus": 0,
@@ -23,9 +23,9 @@
     1965,
     1966,
     1966,
-    626,
     2606,
-    2606
+    2606,
+    1043
   ],
   "name": "조이",
   "openingDrawBonus": 0,

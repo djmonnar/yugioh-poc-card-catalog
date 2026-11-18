@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "무효-몬스터효과"
+    "무효-몬스터효과",
+    "효과-발동봉쇄"
   ],
   "code": 33950246,
   "defense": 0,

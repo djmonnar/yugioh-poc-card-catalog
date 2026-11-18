@@ -3,7 +3,10 @@
   "art_key": "Cards/1436",
   "attack": 1000,
   "attribute": 4,
-  "categories": [],
+  "categories": [
+    "발동-리버스",
+    "발동-제외"
+  ],
   "code": 27132350,
   "defense": 1500,
   "description": "리버스: 자신의 패에서 카드\n2장을 무작위로 선택하여\n제외하고 상대에게 800 직접\n데미지를 준다.",

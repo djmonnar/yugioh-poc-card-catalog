@@ -20,11 +20,6 @@
     },
     {
       "count": 1,
-      "identity_key": "1fb1d0436c0264d0b1932c1a3ad9b4d51d08c9bc7923e77f63ff136d100685e0",
-      "source_id": 1979
-    },
-    {
-      "count": 1,
       "identity_key": "45a513c1b1ffd4171b1ef905366b94a2812c4babc9fa91684d70848878e96663",
       "source_id": 1980
     },
@@ -57,8 +52,13 @@
       "count": 2,
       "identity_key": "2648bcd0ab58c5ebb05a1d0aae0a1020880f2247e3482f462d4df1ccd27ef1dc",
       "source_id": 2394
+    },
+    {
+      "count": 1,
+      "identity_key": "03a20d640181f88c02b06b03dcacf08bef18ca9b8198e2124d050b2f8c51bd72",
+      "source_id": 1976
     }
   ],
-  "name": "해골수스 중급",
-  "version": 50
+  "name": "언데드월드",
+  "version": 701
 }

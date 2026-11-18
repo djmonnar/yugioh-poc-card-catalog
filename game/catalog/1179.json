@@ -3,7 +3,9 @@
   "art_key": "Cards/1179",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "발동-피해 발생 시"
+  ],
   "code": 22537443,
   "defense": 0,
   "description": "자신의 몬스터가 상대에게\n직접 데미지를 주었을 때\n발동할 수 있다. 상대에게 준\n직접 데미지만큼 자신의 LP를\n회복한다.",

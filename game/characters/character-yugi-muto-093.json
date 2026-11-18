@@ -4,10 +4,41 @@
   "profile": {
     "name": "무토 유우기",
     "portrait": "assets/actors/native093/yugi_muto/start.png",
-    "skill_profiles": [],
+    "skill_profiles": [
+      {
+        "name": "기계복제",
+        "profile_id": "profile-a450c4fc-4ad0-4f7c-9353-aa01fa20c381",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "94534509177830485186df1f2107db0be2330ad33bf846505dd0323d236c5bcc",
+              "internal_id": 2395,
+              "name_ko": "기계 복제술",
+              "slot": 1432
+            },
+            "kind": "start_hand"
+          }
+        ]
+      },
+      {
+        "name": "메가시티",
+        "profile_id": "profile-81433a18-4614-4d64-8875-e94706cc1abe",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "e4a94aedf061ba98193b0649de1bc12590d2e6e5ceee3501dce6fe6272901987",
+              "internal_id": 2886,
+              "name_ko": "메가로이드 시티",
+              "slot": 1918
+            },
+            "kind": "start_field"
+          }
+        ]
+      }
+    ],
     "skills": []
   },
   "profile_id": "yugi_muto",
-  "updated_at": "2026-11-06T12:09:11.718664+00:00",
-  "version": 506
+  "updated_at": "2026-11-15T20:56:34.795261+00:00",
+  "version": 5828
 }

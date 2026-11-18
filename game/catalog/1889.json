@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "효과-컨트롤"
+    "효과-컨트롤",
+    "발동-LP 지불"
   ],
   "code": 87910978,
   "defense": 0,

@@ -1,6 +1,6 @@
 {
   "extra": [],
-  "id": "unified039_fd002606c433d2ab53bb4787d693722843a48d14",
+  "id": "unified039_f36d3c66ea0e763484801a0f93cf5ca347658199",
   "main": [
     1884,
     1884,
@@ -23,6 +23,7 @@
     476,
     476
   ],
-  "name": "마해룡 중급",
+  "name": "아틀란티스",
+  "representativeSourceId": 2040,
   "sourceId": "unified039:ch2_battle_78189e0173633857a1db759c"
 }

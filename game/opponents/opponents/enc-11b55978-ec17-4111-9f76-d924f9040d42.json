@@ -1,0 +1,45 @@
+{
+  "artKey": "Character090/images/paradox_brothers/start",
+  "banlistEnabled": false,
+  "deckName": "번개마신 썬가",
+  "extra": [],
+  "id": "enc-11b55978-ec17-4111-9f76-d924f9040d42",
+  "lpBonus": 0,
+  "main": [
+    2644,
+    2644,
+    2644,
+    22,
+    2786,
+    2785,
+    2785,
+    2785,
+    647,
+    647,
+    2787,
+    2787,
+    2709,
+    2709,
+    1948,
+    1948,
+    2670,
+    2670,
+    2122,
+    2122
+  ],
+  "name": "미궁형제",
+  "openingDrawBonus": 0,
+  "profileId": "paradox_brothers",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_monster",
+      "position": 4,
+      "sourceId": 180,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-11b55978-ec17-4111-9f76-d924f9040d42",
+  "usesNativeRules035": true
+}

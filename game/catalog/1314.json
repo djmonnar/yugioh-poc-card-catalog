@@ -3,7 +3,9 @@
   "art_key": "Cards/1314",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-기계족"
+  ],
   "code": 23171610,
   "defense": 0,
   "description": "발동 당시 자신의 필드에 있는\n모든 기계족 몬스터의\n공격력을 두 배로 한다. 이 턴\n종료시에 이 효과를 받은\n몬스터를 모두 파괴한다.",

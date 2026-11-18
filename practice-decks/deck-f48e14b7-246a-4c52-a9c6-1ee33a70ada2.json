@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-f48e14b7-246a-4c52-a9c6-1ee33a70ada2",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "d660b5cd6a3d01b7c5c9e75928288b8d1573c52d0f0604bfa75175c2e45a68a3",
+      "source_id": 2884
+    },
+    {
+      "count": 3,
+      "identity_key": "e32a251decac47a746a10f61dea3e255756d16595656c11bac98508369524a25",
+      "source_id": 2885
+    },
+    {
+      "count": 2,
+      "identity_key": "45d860d25b85638ceddfaeb743ab74b99d71467e48c4e8f1bc8ca3060872695f",
+      "source_id": 1940
+    },
+    {
+      "count": 1,
+      "identity_key": "40ed81512aa2831063fbd3657650e782d98ca30484242fbd0883454014eea624",
+      "source_id": 1927
+    },
+    {
+      "count": 1,
+      "identity_key": "f0e154f94ffe8a7a28abd997fe418c42a175c0b7ca6d113f4252d590c74d4968",
+      "source_id": 573
+    },
+    {
+      "count": 1,
+      "identity_key": "5981acc8fa5c0e62cabcaf5b34aa2847d57cca2685232d917d58a63aff77112a",
+      "source_id": 2609
+    },
+    {
+      "count": 2,
+      "identity_key": "ebf78cd059912197884f99148c63936c10852933456034bee25a7c6c85197c17",
+      "source_id": 2713
+    },
+    {
+      "count": 2,
+      "identity_key": "277ac88e644e6f8e793cb9d937d52ff78ed6cdeb4b16ad33831c2e6b46bb35d8",
+      "source_id": 47
+    },
+    {
+      "count": 3,
+      "identity_key": "0e6025257a4a4d6d957b3e6f59556d1819cd3160bf62875e993c8cb1c61372e0",
+      "source_id": 139
+    },
+    {
+      "count": 2,
+      "identity_key": "f12b3b5d9e2e69e42fba96684f891648d89469671e7b092e80eb13fe52aa16d2",
+      "source_id": 2606
+    }
+  ],
+  "name": "스피드 워리어",
+  "version": 773
+}

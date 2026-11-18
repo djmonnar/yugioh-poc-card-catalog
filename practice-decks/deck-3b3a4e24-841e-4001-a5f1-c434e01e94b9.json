@@ -1,0 +1,65 @@
+{
+  "banlist_enabled": true,
+  "extra": [
+    {
+      "count": 2,
+      "identity_key": "70ef0605146cd656fb70ed0f65944da6410509d9c411d4094986920c7c8600be",
+      "source_id": 2957
+    }
+  ],
+  "id": "deck-3b3a4e24-841e-4001-a5f1-c434e01e94b9",
+  "main": [
+    {
+      "count": 1,
+      "identity_key": "1632e5a57a28faba068785c35b3ec26a7512cae34ed0384c94f6dc2218ae7adf",
+      "source_id": 2919
+    },
+    {
+      "count": 2,
+      "identity_key": "8e874290ecd849a798ba499769cd1fe6377cb9f67f43bc6c6eb87e0f816a18f5",
+      "source_id": 2915
+    },
+    {
+      "count": 2,
+      "identity_key": "fa110fa4ecf126e45c1218b4ecd12f41441c809df3f9fbf87e1733ab129c4b9f",
+      "source_id": 197
+    },
+    {
+      "count": 1,
+      "identity_key": "aaadf300f9fd4e0eeed1a8bab10c0982f23a037fb6b0ab5ff4cb9b50c44143ae",
+      "source_id": 2914
+    },
+    {
+      "count": 2,
+      "identity_key": "8e93ed10a61f3127572825c6da0ebf978a56ea093d600f001b64ad80b0d4be20",
+      "source_id": 2916
+    },
+    {
+      "count": 2,
+      "identity_key": "f206c5a0ed34556536bccbdecb54745c2576ca62cec262e6933eb42fd6c0248f",
+      "source_id": 2417
+    },
+    {
+      "count": 3,
+      "identity_key": "417ef453595ca185c2d4b3aaa1d473ef94fffc43dd037b22805e2fbfe1ed2760",
+      "source_id": 2917
+    },
+    {
+      "count": 3,
+      "identity_key": "03afa8da095bd3eee9767289048da546b1852f325cb5c5e3265617cea82eb7a4",
+      "source_id": 2920
+    },
+    {
+      "count": 2,
+      "identity_key": "a8ebed545104f23834af41b0a95d2c450718fe9e222b508e531e74e7d2186e1c",
+      "source_id": 2926
+    },
+    {
+      "count": 2,
+      "identity_key": "f3f27c7e51578a2a9ba9a8a9963f554467a27c8d8e42470d49b7a5109cf832c7",
+      "source_id": 1971
+    }
+  ],
+  "name": "쥬락",
+  "version": 786
+}

@@ -3,7 +3,9 @@
   "art_key": "Cards/305",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-곤충"
+  ],
   "code": 3492538,
   "defense": 0,
   "description": "이 카드를 장착한 곤충족\n몬스터의 공격력을 700\n올린다.",
