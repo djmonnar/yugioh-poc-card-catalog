@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards130/2884",
+  "attack": 900,
+  "attribute": 8,
+  "categories": [
+    "지원-전사족",
+    "지원-전투"
+  ],
+  "code": 9365703,
+  "defense": 400,
+  "description": "①: 이 카드의 일반 소환에 성공한 턴의 배틀 스텝에 발동할 수 있다. 이 카드의 공격력은 배틀 페이즈 종료시까지 원래 공격력의 배가 된다.",
+  "draw_enabled": true,
+  "identity_key": "d660b5cd6a3d01b7c5c9e75928288b8d1573c52d0f0604bfa75175c2e45a68a3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native130/cards/2884.jpg",
+  "level": 2,
+  "links": [],
+  "name": "스피드 워리어",
+  "name_english": "Speed Warrior",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "N",
+  "search_aliases": [
+    "스피드 워리어",
+    "Speed Warrior"
+  ],
+  "source_id": 2884,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1916
+}

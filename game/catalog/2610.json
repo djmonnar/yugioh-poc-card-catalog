@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards084/2610",
+  "attack": 1500,
+  "attribute": 16,
+  "categories": [
+    "지원-바이론",
+    "효과-제외-묘지",
+    "지원-장착",
+    "효과-제외샐비지"
+  ],
+  "code": 5237827,
+  "defense": 200,
+  "description": "일반 소환에 성공하면 자신의 묘지에 있는 장착 마법 카드 1장을 대상으로 하여 앞면으로 제외한다. 그 카드가 제외된 상태로 남아 있으면 다음 자신의 스탠바이 페이즈에 패로 되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "1f28a7a5fe517b9a492492fc9627bf44d01464dc4d5b8ea10a6c0841bfd5e1a4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2610.jpg",
+  "level": 4,
+  "links": [],
+  "name": "바이론 옴",
+  "name_english": "Vylon Ohm",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "R",
+  "search_aliases": [
+    "바이론옴",
+    "바이론 옴",
+    "Vylon Ohm"
+  ],
+  "source_id": 2610,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1642
+}

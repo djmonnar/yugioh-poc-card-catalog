@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards099/2718",
+  "attack": 2500,
+  "attribute": 1,
+  "categories": [
+    "지원-가디언",
+    "소환-패,덱"
+  ],
+  "code": 47150851,
+  "defense": 1000,
+  "description": "\"중력의 도끼－그랄\"이 자신의 필드 위에 존재할 때만, 이 카드는 일반 소환/반전 소환/특수 소환할 수 있다. 패에 이 카드가 1장밖에 없을 경우, 패에서 이 카드를 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "e60e95c15d9f6c4de3f0580b974969368b074c1aa9071bfc89f0dcebead9e070",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native099/cards/2718.jpg",
+  "level": 5,
+  "links": [],
+  "name": "가디언 그랄",
+  "name_english": "Guardian Grarl",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "R",
+  "search_aliases": [
+    "가디언그랄",
+    "가디언 그랄",
+    "Guardian Grarl"
+  ],
+  "source_id": 2718,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1750
+}

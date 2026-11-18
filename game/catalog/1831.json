@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1831",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-푸른눈"
+  ],
+  "code": 9786492,
+  "defense": 0,
+  "description": "\"백룡의 성기사\"의 의식\n소환에 필요. 필드나 패에서,\n레벨 4 이상이 되도록 제물을\n바쳐야 한다.\n[안내] 패에서(또는 세트한\n다음 턴부터) 발동하면 의식\n소환 창이 열린다. 패와\n필드의 몬스터를 레벨 합계 4\n이상이 되게 골라 릴리스하고,\n패의 \"나이트 오브 화이트\n드래곤\"을 의식 소환한다.\n몬스터 존이 가득 차 있으면\n필드의 몬스터를 재료로\n골라야 한다.",
+  "draw_enabled": true,
+  "identity_key": "b41c745f047ff13852b281890f4be14314cae6592489aca75333d9513ae9ac62",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1270.webp",
+  "level": 0,
+  "links": [
+    {
+      "identity_key": "30bfd3541ad8aa466442ad2e900a6f2f3c80984cbcfa638bfdece70f8b1a72a9",
+      "slot": 1269
+    }
+  ],
+  "name": "백룡강림",
+  "name_english": "White Dragon Ritual",
+  "native_type": 130,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1831,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1270
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/355",
+  "attack": 2700,
+  "attribute": 16,
+  "categories": [
+    "면역-효과"
+  ],
+  "code": 61757117,
+  "defense": 1200,
+  "description": "\"구세의 의식\"에 의해 의식\n소환. 이 카드가 의식 소환에\n성공했을 때, 이 카드의 의식\n소환에 사용한 몬스터의\n수만큼, 이 카드 이외의 필드\n위에 앞면 표시로 존재하는\n카드를 선택하고 발동한다.\n선택한 카드가 필드 위에 앞면\n표시로 존재하는 한, 이\n카드는 카드의 효과로는\n파괴되지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "7da4bbd3da1f6c7802bccd20b5720761feeb3bde5db962a1d6d8cf88f65265fa",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0433.webp",
+  "level": 7,
+  "links": [],
+  "name": "구세의 미의 신 노스웸코",
+  "name_english": "Divine Grace - Northwemko",
+  "native_type": 161,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "source_id": 355,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "의식 몬스터",
+  "web_slot": 433
+}

@@ -1,0 +1,64 @@
+{
+  "banlist_enabled": false,
+  "extra": [],
+  "id": "ch1_battle_89e0ac8db53ae8a5c0ab6389",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "c3fa06a9d06fadf7799f0f7e3f92836f7733c7ff57e0128887d9bb916569bdfc",
+      "source_id": 8
+    },
+    {
+      "count": 2,
+      "identity_key": "e6fb6de67c6bf7634070a7a3231fb2c61a71f6680839c7d9b9c26adbe69e2e88",
+      "source_id": 440
+    },
+    {
+      "count": 2,
+      "identity_key": "513343a524e3abe1d8a307e7eaf54026604852fff5b19160e429bc669cac6089",
+      "source_id": 102
+    },
+    {
+      "count": 2,
+      "identity_key": "fa110fa4ecf126e45c1218b4ecd12f41441c809df3f9fbf87e1733ab129c4b9f",
+      "source_id": 197
+    },
+    {
+      "count": 2,
+      "identity_key": "97ec3d0a386c623b1626d1d27d3b5344ca1f4e5d7950107c7422740f07303f65",
+      "source_id": 1001
+    },
+    {
+      "count": 2,
+      "identity_key": "ea4cb63a2f5b4442f3286cd894bc918277c53244436ce839f8bfe3ef173a8285",
+      "source_id": 1002
+    },
+    {
+      "count": 2,
+      "identity_key": "d97f656e6005215ecd87240e736b41af44734ba0f03be3d399d1772d58f1e1e6",
+      "source_id": 443
+    },
+    {
+      "count": 1,
+      "identity_key": "85e012f38aa72e6f7690019829ab241ad55ae8d9775f983c1ac11ba9c6093d9f",
+      "source_id": 1010
+    },
+    {
+      "count": 1,
+      "identity_key": "2e5b09e8cbb003a78a38101064462aeb0d78745bbca28fb850e2f1911f497552",
+      "source_id": 1079
+    },
+    {
+      "count": 2,
+      "identity_key": "94bef6b97b015d09dc930e530725ae19025c846a25d59af45e2236b32a71a79b",
+      "source_id": 1520
+    },
+    {
+      "count": 2,
+      "identity_key": "eb56bda135722818f0033a4d349f3dfefbcefab6b0812888dd729d8fb0798f6a",
+      "source_id": 1987
+    }
+  ],
+  "name": "스피드 · 난이도 1 · 상대 덱 000",
+  "version": 37
+}

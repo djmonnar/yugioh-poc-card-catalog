@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1817",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-툰",
+    "효과-덱샐비지"
+  ],
+  "code": 89997728,
+  "defense": 0,
+  "description": "①: 덱에서 \"툰\" 카드 1장을\n패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "42e707296ec5840626bc380ba4ab75fa644307669b04928f578a51cb39952633",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1282.webp",
+  "level": 0,
+  "links": [
+    {
+      "identity_key": "7cbccf2a12c77db61a2efc820f8b92ce18fb6ab47dc0c4c5898734cfdd049285",
+      "slot": 623
+    }
+  ],
+  "name": "툰 목차",
+  "name_english": "Toon Table of Contents",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1817,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1282
+}

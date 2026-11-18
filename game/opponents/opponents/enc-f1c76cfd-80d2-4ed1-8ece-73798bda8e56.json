@@ -1,0 +1,48 @@
+{
+  "artKey": "DuelUi011/legacy/yugi_intro",
+  "banlistEnabled": false,
+  "deckName": "가이아 초급",
+  "extra": [
+    36,
+    36
+  ],
+  "id": "enc-f1c76cfd-80d2-4ed1-8ece-73798bda8e56",
+  "lpBonus": 0,
+  "main": [
+    37,
+    37,
+    1250,
+    1250,
+    2572,
+    2572,
+    2572,
+    38,
+    38,
+    2582,
+    2582,
+    1927,
+    1940,
+    332,
+    332,
+    2575,
+    2575,
+    1003,
+    1003,
+    2419
+  ],
+  "name": "어둠의 유희",
+  "openingDrawBonus": 0,
+  "profileId": "yugi",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 332,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-f1c76cfd-80d2-4ed1-8ece-73798bda8e56",
+  "usesNativeRules035": true
+}

@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3025",
+  "attack": 700,
+  "attribute": 32,
+  "categories": [
+    "지원-타락천사",
+    "발동-소환 시",
+    "효과-덱에서 묘지로 보내기"
+  ],
+  "code": 92807548,
+  "defense": 1000,
+  "description": "\"타락천사 유코백\"의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 이 카드가 일반 소환 / 특수 소환에 성공했을 경우에 발동할 수 있다. 덱에서 \"타락천사\" 카드 1장을 묘지로 보낸다.",
+  "draw_enabled": true,
+  "identity_key": "58928f03301554bf6356161833edb5e55db3cefdc22b484a0ffa5bc317939c32",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3025.jpg",
+  "level": 3,
+  "links": [],
+  "name": "타락천사 유코백",
+  "name_english": "Darklord Ukoback",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "R",
+  "search_aliases": [
+    "타락천사 유코백",
+    "Darklord Ukoback"
+  ],
+  "source_id": 3025,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2057
+}

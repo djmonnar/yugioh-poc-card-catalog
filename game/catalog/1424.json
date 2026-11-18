@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1424",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "면역-전투",
+    "발동-동전(코인)"
+  ],
+  "code": 21598948,
+  "defense": 0,
+  "description": "상대 몬스터가 공격할 때마다\n동전의 면을 선언하고 동전을\n던진다. 맞히면 그 배틀\n페이즈 동안 공격 몬스터의\n공격력을 0으로 한다. 자신의\n스탠바이 페이즈마다 500 LP를\n지불한다. 지불할 수 없으면\n이 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "57d0cc425bd7bb2d96bcdb39315956e00e39285290b82e9fca36c3ef707a0aee",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0999.webp",
+  "level": 0,
+  "links": [],
+  "name": "몬스터 BOX",
+  "name_english": "Fairy Box",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1424,
+  "speed_limit": 2,
+  "stock": false,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 999
+}

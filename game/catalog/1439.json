@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1439",
+  "attack": 1300,
+  "attribute": 16,
+  "categories": [
+    "발동-소환",
+    "효과-바운스"
+  ],
+  "code": 21672573,
+  "defense": 2200,
+  "description": "①: 자신이 몬스터를 어드밴스\n소환했을 때 발동할 수 있다.\n자신 묘지의 카드 1장을\n대상으로 하며, 상대도 상대\n묘지의 카드 1장을 대상으로\n할 수 있다. 이 카드가 앞면\n표시로 존재하는 한, 대상\n카드를 각각 주인의 덱 맨\n위로 되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "23bf4cad62c98051596c9a09c9c33eed3ced06b2790f8853c764de6b6163bea2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0744.webp",
+  "level": 4,
+  "links": [],
+  "name": "엠페러 스토움",
+  "name_english": "Emperor Sem",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "source_id": 1439,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 744
+}

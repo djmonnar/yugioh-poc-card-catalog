@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2069",
+  "attack": 400,
+  "attribute": 2,
+  "categories": [
+    "발동-소환",
+    "소환-덱리크루터"
+  ],
+  "code": 68353324,
+  "defense": 100,
+  "description": "①: 이 카드를 일반 소환했을 때에 발동할 수 있다. 자신의 덱 / 묘지에서 레벨 3 이하의 \"재빠른\" 몬스터 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "224a6c9a6a6378fd615982599caa84e3415a3a912c4c8c48f8951c97aaeb626e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1367.webp",
+  "level": 2,
+  "links": [],
+  "name": "재빠른 비버",
+  "name_english": "Nimble Beaver",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "SR",
+  "source_id": 2069,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1367
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2091",
+  "attack": 1300,
+  "attribute": 1,
+  "categories": [
+    "효과-바운스"
+  ],
+  "code": 25773409,
+  "defense": 1800,
+  "description": "수비 표시의 이 카드와 전투를 실행한 몬스터는 데미지 스텝 종료시에 주인의 덱의 맨 위로 되돌아간다.",
+  "draw_enabled": true,
+  "identity_key": "a0f9834d220ce9d2cc1ef1b9950094e71d76da1fd8417788f202c298bed501a1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1389.webp",
+  "level": 3,
+  "links": [],
+  "name": "전설의 유술가",
+  "name_english": "Legendary Jujitsu Master",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "SR",
+  "source_id": 2091,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1389
+}

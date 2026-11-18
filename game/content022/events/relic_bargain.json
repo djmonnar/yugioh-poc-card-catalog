@@ -1,0 +1,17 @@
+{
+  "description": "방랑하는 수집가가 아직 손에 넣지 못한 유물 하나를 펼쳐 보인다. 그는 동전 대신 생명력을 원한다.",
+  "effect": "현재 LP -800 · 아직 보유하지 않은 유물 1개 획득",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "relic_bargain",
+  "kind": "relic_bargain",
+  "name": "LP 800을 바치고 미보유 유물 획득",
+  "params": {
+    "lp": 800
+  },
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "잊힌 유물의 수집가",
+  "weight": 1
+}

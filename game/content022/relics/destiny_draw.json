@@ -1,0 +1,17 @@
+{
+  "description": "지정한 메인 덱 카드 1장이 처음 받는 4장 안에 반드시 들어와. 패 매수는 늘어나지 않아.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 6,
+  "iconKey": "Relics/atlas160",
+  "id": "destiny_draw",
+  "kind": "destiny_draw",
+  "name": "운명의 패",
+  "params": {},
+  "price": 300,
+  "rarity": "UR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

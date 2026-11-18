@@ -1,0 +1,20 @@
+{
+  "description": "누적 10장 드로우마다 1장을 더 뽑아. 전투가 끝나도 진행 수치를 유지하고, 추가로 뽑은 카드도 포함해.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 27,
+  "iconKey": "Relics/atlas163",
+  "id": "tactics_manual",
+  "kind": "tactics_manual",
+  "name": "병법서",
+  "params": {
+    "draw": 1,
+    "threshold": 10
+  },
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards109/2753",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착",
+    "효과-파괴",
+    "발동-파괴"
+  ],
+  "code": 98239899,
+  "defense": 0,
+  "description": "발동 후, 이 카드는 공격력 500 포인트 올리는 장착 카드가 되어, 자신 필드 위의 몬스터 1장에 장착한다. 장착 카드가 된 이 카드가 카드의 효과에 의해서 파괴되었을 때, 필드 위의 카드 1장을 선택하고 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "ed190dee2874ec322edcf8a4a72a1e0ee4a002d3b2db84ab2cd6354d4284361f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native109/cards/2753.jpg",
+  "level": 0,
+  "links": [],
+  "name": "쇠사슬 폭탄",
+  "name_english": "Blast with Chain",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "쇠사슬폭탄",
+    "쇠사슬 폭탄",
+    "Blast with Chain"
+  ],
+  "source_id": 2753,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1785
+}

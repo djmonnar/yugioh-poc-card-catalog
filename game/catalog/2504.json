@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2504",
+  "attack": 1600,
+  "attribute": 2,
+  "categories": [
+    "지원-바다",
+    "발동-묘지",
+    "소환-토큰"
+  ],
+  "code": 83239739,
+  "defense": 200,
+  "description": "이 카드가 전투로 파괴된 경우 이외의 방법으로 필드에서 묘지로 보내졌을 경우, 자신 필드에 \"오이스터 토큰\" 1장을 특수 소환한다. 토큰은 어류족 / 물 속성 / 레벨 1 / 공격력 0 / 수비력 0이다.",
+  "draw_enabled": true,
+  "identity_key": "ff00d7b584abc418266554eb78330042f5009aafc77776b920815a9f2493cd65",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2504.jpg",
+  "level": 3,
+  "links": [],
+  "name": "오이스터 마이스터",
+  "name_english": "Oyster Meister",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 131072,
+  "rarity": "R",
+  "source_id": 2504,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1536
+}

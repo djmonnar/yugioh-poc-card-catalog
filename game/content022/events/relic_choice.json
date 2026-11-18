@@ -1,0 +1,18 @@
+{
+  "description": "상인은 세 개의 상자를 연다. 가벼운 유물은 선물이고, 더 강한 힘에는 동전이 필요하다.",
+  "effect": "N 유물 무료 · 금화 50으로 R 유물 · 금화 100으로 SR 유물 · 하나만 선택",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "relic_choice",
+  "kind": "relic_choice",
+  "name": "원하는 등급의 무작위 미보유 유물 선택",
+  "params": {
+    "r_gold": 50,
+    "sr_gold": 100
+  },
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "유물의 선택",
+  "weight": 1
+}

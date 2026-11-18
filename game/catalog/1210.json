@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1210",
+  "attack": 1900,
+  "attribute": 32,
+  "categories": [
+    "덱-블랙매지션",
+    "소환-묘지",
+    "소환-패,덱"
+  ],
+  "code": 73752131,
+  "defense": 1700,
+  "description": "①: 이 카드가 몬스터 존에\n존재하는 한, 자신 또는\n상대가 마법 카드를 발동할\n때마다, 이 카드에 마력\n카운터를 1개 놓는다(최대\n3개까지). ②: 마력 카운터가\n3개 놓여 있는 이 카드를\n릴리스하고 발동할 수 있다.\n자신의 패 / 덱 / 묘지에서\n\"블랙 매지션\" 1장을 고르고\n특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "dcd6222115d919762b6c0055a05b858b4473c90a8588ac6932fe52c0079d1b76",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0805.webp",
+  "level": 4,
+  "links": [
+    {
+      "identity_key": "a850b8cd0e118c301dde50e7dcabc13ebb54f1506ec19fbe0694955bba7dfd67",
+      "slot": 803
+    }
+  ],
+  "name": "숙련된 흑마술사",
+  "name_english": "Skilled Dark Magician",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "UR",
+  "source_id": 1210,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 805
+}

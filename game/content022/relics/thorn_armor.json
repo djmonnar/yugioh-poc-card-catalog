@@ -1,0 +1,19 @@
+{
+  "description": "듀얼 중 LP 피해를 받으면 상대에게 피해 200을 돌려줘. LP 지불 비용에는 발동하지 않아.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 16,
+  "iconKey": "Relics/atlas160",
+  "id": "thorn_armor",
+  "kind": "thorn_armor",
+  "name": "가시 갑옷",
+  "params": {
+    "damage": 200
+  },
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

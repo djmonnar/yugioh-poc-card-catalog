@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards/471",
+  "attack": 200,
+  "attribute": 16,
+  "categories": [
+    "덱-푸른눈",
+    "소환-패,덱"
+  ],
+  "code": 34627841,
+  "defense": 700,
+  "description": "이 카드를 릴리스하고 발동할\n수 있다. 패에서 \"푸른 눈의\n백룡\" 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "e240dab4568e70743c89e3a2c2ea540a03c92316d5a928efe7dcfb7e06d74ad2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0090.webp",
+  "level": 3,
+  "links": [
+    {
+      "identity_key": "1b35a77b57322b756f47b453317628046ce9d712cc2933185cd2fb61bf8e1c33",
+      "slot": 816
+    }
+  ],
+  "name": "정의의 아군 카이바맨",
+  "name_english": "Kaibaman",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "source_id": 471,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 90
+}

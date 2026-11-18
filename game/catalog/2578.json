@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards067/2578",
+  "attack": 2300,
+  "attribute": 16,
+  "categories": [
+    "덱-가이아",
+    "소환-패,덱",
+    "소환-묘지",
+    "발동-소환"
+  ],
+  "code": 34130561,
+  "defense": 2100,
+  "description": "항상 ‘암흑 기사 가이아’ 카드로도 취급한다. 자신에게 몬스터가 없거나 상대에게 공격력 2300 이상의 몬스터가 있으면 릴리스 없이 일반 소환할 수 있다. 일반 소환·특수 소환 시 패나 묘지의 레벨 5 드래곤족 몬스터 1장을 수비 표시로 특수 소환할 수 있다. 같은 이름의 이 효과는 한 턴에 한 번만 사용할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "9063dd91e7655ec9f3a49a8df615b013c68aa258ac23a983b6442892e2bb892d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2578.jpg",
+  "level": 7,
+  "links": [],
+  "name": "마방 기사 가이아",
+  "name_english": "Gaia the Magical Knight",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "UR",
+  "source_id": 2578,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1610
+}

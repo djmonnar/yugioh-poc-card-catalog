@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards/127",
+  "attack": 2500,
+  "attribute": 1,
+  "categories": [
+    "소환-묘지",
+    "소환-패,덱"
+  ],
+  "code": 67757079,
+  "defense": 800,
+  "description": "자신 필드 위에 앞면 표시로 존재하는 \"모쟈\" 1장을 릴리스하고 발동한다. 이 카드를 패 또는 묘지에서 특수 소환한다. \"킹 오브 비스트\"는 필드 위에 1장밖에 앞면 표시로 존재할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "683d4c8d14def8397769d2e926e66938c3361d101144d24ca84f04a803ac7880",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1050.webp",
+  "level": 7,
+  "links": [
+    {
+      "identity_key": "0b94b4ee091fe31e345e7eba1aaacacb5594eb069200e63c0e18ddd7456dfaa9",
+      "slot": 193
+    }
+  ],
+  "name": "킹 오브 비스트",
+  "name_english": "King of the Beasts",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "N",
+  "source_id": 127,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1050
+}

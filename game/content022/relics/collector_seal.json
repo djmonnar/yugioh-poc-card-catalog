@@ -1,0 +1,19 @@
+{
+  "description": "전투 카드 보상 후보 한 장을 같은 등급의 다른 카드로 교체해. 보상마다 1번, SR·UR 천장은 다시 계산하지 않아.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 39,
+  "iconKey": "Relics/Content022/atlas022",
+  "id": "collector_seal",
+  "kind": "collector_seal",
+  "name": "수집가의 인장",
+  "params": {
+    "rerolls_per_reward": 1
+  },
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-controller022",
+  "weight": 1
+}

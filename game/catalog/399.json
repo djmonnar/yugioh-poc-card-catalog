@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/399",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-필드"
+  ],
+  "code": 4064256,
+  "defense": 0,
+  "description": "①: 필드의 앞면 표시 몬스터\n및 묘지의 몬스터는\n언데드족이 된다. ②: 양쪽\n플레이어는 언데드족\n몬스터밖에 어드밴스 소환할\n수 없다.",
+  "draw_enabled": true,
+  "identity_key": "949912aa2bae61aa966a2de76bc06c86b2ff6064b9e88a8365c6d1f25172558d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0431.webp",
+  "level": 0,
+  "links": [],
+  "name": "언데드 월드",
+  "name_english": "Zombie World",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 399,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 431
+}

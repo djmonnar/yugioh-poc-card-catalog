@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/172",
+  "attack": 0,
+  "attribute": 1,
+  "categories": [
+    "지원-융합",
+    "효과-덱샐비지",
+    "지원-젬나이트"
+  ],
+  "code": 64734090,
+  "defense": 2000,
+  "description": "①: 이 카드가 리버스했을 경우에 발동할 수 있다. 덱에서 \"젬나이트 퓨전\" 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "0aeaf3d81f0868a05aab225c040eb321a84feaea72e11cfa6c19089bbd17da11",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0518.webp",
+  "level": 4,
+  "links": [],
+  "name": "젬터틀",
+  "name_english": "Gem-Turtle",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "R",
+  "source_id": 172,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 518
+}

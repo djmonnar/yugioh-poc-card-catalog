@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards088/2626",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "무효-몬스터효과",
+    "발동-버리기"
+  ],
+  "code": 49010598,
+  "defense": 0,
+  "description": "패를 1장 버리고 발동한다. 효과 몬스터의 효과 발동을 무효로 하고 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "f38b527b2ce6bda8083030df9cda09df153f824a6c384df50e2f6f50143a16d2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native088/cards/2626.jpg",
+  "level": 0,
+  "links": [],
+  "name": "천벌",
+  "name_english": "Divine Wrath",
+  "native_type": 1048580,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "천벌",
+    "Divine Wrath"
+  ],
+  "source_id": 2626,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "카운터 함정",
+  "web_slot": 1658
+}

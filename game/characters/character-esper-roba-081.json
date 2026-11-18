@@ -1,0 +1,13 @@
+{
+  "art_key": "Character081/images/esper_roba/start",
+  "id": "character-esper-roba-081",
+  "profile": {
+    "name": "에스퍼 로바",
+    "portrait": "assets/actors/esper-roba081/start.png",
+    "skill_profiles": [],
+    "skills": []
+  },
+  "profile_id": "esper_roba",
+  "updated_at": "2026-11-05T02:48:19.728822+00:00",
+  "version": 332
+}

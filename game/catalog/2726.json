@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards099/2726",
+  "attack": 1000,
+  "attribute": 2,
+  "categories": [
+    "지원-가디언",
+    "면역-마법"
+  ],
+  "code": 9633505,
+  "defense": 1800,
+  "description": "\"정적의 로드－케이스트\"가 자신의 필드 위에 존재할 때만, 이 카드는 일반 소환/반전 소환/특수 소환할 수 있다. 이 카드는 마법의 효과를 받지 않는다. 또한 상대 몬스터로부터 공격 대상이 되지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "ba1d682ec3ecd3481902c3f77b4af2048adbd0f816b7fca735b87fcf6c544de8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native099/cards/2726.jpg",
+  "level": 4,
+  "links": [],
+  "name": "가디언 케이스트",
+  "name_english": "Guardian Kay'est",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 262144,
+  "rarity": "R",
+  "search_aliases": [
+    "가디언케이스트",
+    "가디언 케이스트",
+    "Guardian Kay'est"
+  ],
+  "source_id": 2726,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1758
+}

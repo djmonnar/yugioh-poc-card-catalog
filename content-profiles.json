@@ -1,0 +1,91 @@
+{
+  "content_profile073": {
+    "relic_set": "sight073",
+    "schema": 1
+  },
+  "content_profile079": {
+    "field_set": "field079",
+    "schema": 1
+  },
+  "content_profile081": {
+    "character_set": "esper-jinzo081",
+    "schema": 1
+  },
+  "content_profile084": {
+    "card_set": "requested084",
+    "schema": 1
+  },
+  "content_profile088": {
+    "card_set": "requested088",
+    "schema": 1
+  },
+  "content_profile090": {
+    "card_set": "warrior-labyrinth090",
+    "character_set": "paradox-tristan090",
+    "schema": 1
+  },
+  "content_profile093": {
+    "card_set": "requested-aroma093",
+    "character_set": "yugi-muto093",
+    "schema": 1
+  },
+  "content_profile099": {
+    "card_set": "tribute-guardian099",
+    "schema": 1
+  },
+  "content_profile103": {
+    "card_set": "ritual-fusion103",
+    "schema": 1
+  },
+  "content_profile109": {
+    "card_set": "requested-cards108-109",
+    "schema": 1
+  },
+  "content_profile120": {
+    "card_set": "requested-cards120",
+    "schema": 1
+  },
+  "content_profile122": {
+    "card_set": "flip-cards122",
+    "schema": 1
+  },
+  "content_profile125": {
+    "card_set": "alien-counters125",
+    "schema": 1
+  },
+  "content_profile126": {
+    "card_set": "trap-monsters126",
+    "schema": 1
+  },
+  "content_profile130": {
+    "card_set": "roid-vehicles130",
+    "schema": 1
+  },
+  "content_profile135": {
+    "card_set": "dinosaur-paleozoic-allure135",
+    "schema": 1
+  },
+  "content_profile136": {
+    "card_set": "predaplant-fusion-meteor136",
+    "schema": 1
+  },
+  "content_profile143": {
+    "card_set": "atlantean-fusion-spells143",
+    "schema": 1
+  },
+  "content_profile144": {
+    "card_set": "insects144",
+    "schema": 1
+  },
+  "content_profile152": {
+    "card_set": "ritual-dark-magician152",
+    "schema": 1
+  },
+  "content_shadow093": {
+    "relic_set": "shadow093",
+    "schema": 1
+  },
+  "content_starter153": {
+    "schema": 1
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards136/2947",
+  "attack": 2000,
+  "attribute": 32,
+  "categories": [
+    "지원-프레데터 플랜츠",
+    "포식 카운터",
+    "효과-레벨다운",
+    "지원-튜너",
+    "소환-릴리즈 코스트",
+    "소환-패에서",
+    "발동-묘지로 보내졌을 때"
+  ],
+  "code": 22138839,
+  "defense": 100,
+  "description": "①: 이 카드는 상대 필드의 포식 카운터가 놓여진 몬스터 1장을 릴리스했을 경우에 패에서 특수 소환할 수 있다. ②: 이 카드가 필드에서 묘지로 보내졌을 경우에 발동한다. 상대 필드의 앞면 표시 몬스터 전부에 포식 카운터를 1개씩 놓는다. 포식 카운터가 놓여진 레벨 2 이상의 몬스터 레벨은 1 이 된다.",
+  "draw_enabled": true,
+  "identity_key": "3f87ea4d2b45a8787d766cd75b763dcd8aefde6e170fd6d46e5450d8e8e49a68",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native136/cards/2947.jpg",
+  "level": 6,
+  "links": [],
+  "name": "프레데터 플랜츠 뱅크셔오우거",
+  "name_english": "Predaplant Banksiogre",
+  "native_type": 4129,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "SR",
+  "search_aliases": [
+    "프레데터 플랜츠 뱅크셔오우거",
+    "Predaplant Banksiogre"
+  ],
+  "source_id": 2947,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "튜너 몬스터",
+  "web_slot": 1979
+}

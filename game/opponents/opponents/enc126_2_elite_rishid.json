@@ -1,0 +1,39 @@
+{
+  "artKey": "Character126/images/rishid/start",
+  "banlistEnabled": true,
+  "deckName": "아포피스와 함정 몬스터",
+  "extra": [
+    2858,
+    2861
+  ],
+  "id": "enc126_2_elite_rishid",
+  "lpBonus": 0,
+  "main": [
+    2848,
+    2848,
+    2848,
+    2851,
+    2851,
+    2852,
+    2852,
+    2849,
+    2849,
+    2853,
+    2853,
+    2855,
+    2855,
+    2862,
+    2863,
+    2857,
+    2860,
+    2864,
+    2057,
+    2850
+  ],
+  "name": "리시드",
+  "openingDrawBonus": 0,
+  "profileId": "rishid",
+  "skills": [],
+  "templateId": "unified039:enc126_2_elite_rishid",
+  "usesNativeRules035": true
+}

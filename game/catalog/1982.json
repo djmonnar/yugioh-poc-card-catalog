@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1982",
+  "attack": 400,
+  "attribute": 1,
+  "categories": [
+    "면역-마법",
+    "면역-함정"
+  ],
+  "code": 61049315,
+  "defense": 1700,
+  "description": "이 카드가 필드 위에 앞면\n표시로 존재하는 한, 상대\n플레이어는 1턴에 1번밖에\n마법/함정 카드를 발동할 수\n없다.",
+  "draw_enabled": true,
+  "identity_key": "520e8f4df3cd3373a49129bc8f1db9578f9994a379a2353936600f3b59052f2b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1125.webp",
+  "level": 3,
+  "links": [],
+  "name": "나츄르 로즈윕",
+  "name_english": "Naturia Rosewhip",
+  "native_type": 4129,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "R",
+  "source_id": 1982,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1125
+}

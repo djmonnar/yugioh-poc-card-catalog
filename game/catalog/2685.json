@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards093/2685",
+  "attack": 2900,
+  "attribute": 32,
+  "categories": [
+    "덱-데몬",
+    "소환-묘지",
+    "면역-효과"
+  ],
+  "code": 31766317,
+  "defense": 2100,
+  "description": "이 카드 이외의 필드 위에 앞면 표시로 존재하는 악마족 / 어둠 속성 몬스터 1장이 파괴될 경우, 대신에 자신의 묘지에 존재하는 악마족 / 어둠 속성 몬스터 1장을 게임에서 제외할 수 있다. 또한, 필드 위에 존재하는 이 카드가 파괴되어 묘지로 보내졌을 때, \"헬 임프레스 데몬\" 이외의 자신의 묘지에 존재하는 악마족 / 어둠 속성 / 레벨 6 이상의 몬스터 1장을 선택하고 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "04655567665ec137c01cc7f30ea8a3b821df80b515fcd2858de9d9ac6f46d782",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native093/cards/2685.jpg",
+  "level": 8,
+  "links": [],
+  "name": "헬 임프레스 데몬",
+  "name_english": "Archfiend Empress",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "UR",
+  "search_aliases": [
+    "헬임프레스데몬",
+    "헬 임프레스 데몬",
+    "Archfiend Empress"
+  ],
+  "source_id": 2685,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1717
+}

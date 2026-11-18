@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/522",
+  "attack": 2400,
+  "attribute": 1,
+  "categories": [
+    "효과-한데스",
+    "효과-드로우"
+  ],
+  "code": 77252217,
+  "defense": 0,
+  "description": "이 카드가 상대에게 데미지를\n주었을 때, 상대는 자신의\n덱에서 2장 드로우해야 한다.",
+  "draw_enabled": true,
+  "identity_key": "d58aeaba652cfefa9a8985dc8eecb399c69e9d8f19da70cead8f017cec3f5206",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0595.webp",
+  "level": 4,
+  "links": [],
+  "name": "체인소우 인섹트",
+  "name_english": "Chainsaw Insect",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "SR",
+  "source_id": 522,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 595
+}

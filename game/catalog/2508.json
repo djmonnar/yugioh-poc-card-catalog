@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2508",
+  "attack": 1700,
+  "attribute": 32,
+  "categories": [
+    "효과-버리기",
+    "소환-패,덱",
+    "효과-묘지보내기",
+    "덱-그레퍼"
+  ],
+  "code": 14536035,
+  "defense": 1600,
+  "description": "①: 패의 레벨 5 이상 어둠 속성 몬스터 1장을 버리고, 이 카드를 패에서 특수 소환할 수 있다.\n②: 1턴에 1번, 패의 어둠 속성 몬스터 1장을 버리고 발동할 수 있다. 덱의 어둠 속성 몬스터 1장을 묘지로 보낸다.",
+  "draw_enabled": true,
+  "identity_key": "565e29eed64f40bc79c93a6654458e02ac02e83385ef1d60cd953effb4fe1dca",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2508.jpg",
+  "level": 4,
+  "links": [],
+  "name": "다크 그레퍼",
+  "name_english": "Dark Grepher",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "source_id": 2508,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1540
+}

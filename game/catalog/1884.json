@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1884",
+  "attack": 1600,
+  "attribute": 2,
+  "categories": [
+    "효과-제외-묘지"
+  ],
+  "code": 40916023,
+  "defense": 1200,
+  "description": "이 카드는 통상 소환할 수\n없다. 자신 묘지에서 물 속성\n몬스터 1장을 제외했을 경우에\n특수 소환할 수 있다. ①: 상대\n스탠바이 페이즈에 상대\n필드의 앞면 표시 몬스터\n1장을 대상으로 하고 발동할\n수 있다. 그 상대의 앞면 표시\n몬스터의 표시 형식을\n변경한다. 이 턴에 그\n몬스터는 표시 형식을 변경할\n수 없다.\n[안내] 패의 이 카드를 눌러\n\"특수 소환\"을 고른다. ②는\n상대의 스탠바이 페이즈에\n사용할지 묻는다.",
+  "draw_enabled": true,
+  "identity_key": "7d3679087cfd67fcb206dde9a15fb2a6353cebe98012039aafc8f1c36982bda1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1211.webp",
+  "level": 4,
+  "links": [],
+  "name": "물의 정령 아쿠에리어",
+  "name_english": "Aqua Spirit",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "R",
+  "source_id": 1884,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1211
+}

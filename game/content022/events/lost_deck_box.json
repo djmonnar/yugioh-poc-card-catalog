@@ -1,0 +1,17 @@
+{
+  "description": "주인을 잃은 카드함에서 결투사의 기억이 깨어난다. 잠시 힘을 빌릴 동료를 고르자.",
+  "effect": "SR 몬스터 3장 중 1장을 다음 실제 전투에서만 추가 시작 패로 대여",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/background",
+  "id": "lost_deck_box",
+  "kind": "lost_deck_box",
+  "name": "SR 몬스터 3장 중 1장을 다음 실제 전투에서만 추가 시작 패로 대여",
+  "params": {
+    "choices": 3
+  },
+  "rewardRarity": null,
+  "supportStatus": "verified-controller022",
+  "title": "분실된 덱 박스",
+  "weight": 1
+}

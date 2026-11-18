@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/197",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-덱샐비지"
+  ],
+  "code": 47325505,
+  "defense": 0,
+  "description": "덱에서 레벨 6 이하의 공룡족\n몬스터 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "fa110fa4ecf126e45c1218b4ecd12f41441c809df3f9fbf87e1733ab129c4b9f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0720.webp",
+  "level": 0,
+  "links": [],
+  "name": "화석조사",
+  "name_english": "Fossil Dig",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 197,
+  "speed_limit": 2,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 720
+}

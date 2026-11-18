@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/313",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "발동-묘지"
+  ],
+  "code": 64047146,
+  "defense": 0,
+  "description": "장착 몬스터의 공격력과\n수비력을 700 올린다. 이\n카드가 필드에서 묘지로\n보내졌을 때 자신의 덱 맨\n위로 되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "181177be7d86bb18709c08ed51d929718950d7d63a65f3b733068a322361faec",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0053.webp",
+  "level": 0,
+  "links": [],
+  "name": "유니콘의 뿔",
+  "name_english": "Horn of the Unicorn",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 313,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 53
+}

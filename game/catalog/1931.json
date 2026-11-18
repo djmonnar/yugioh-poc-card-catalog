@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1931",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 33767325,
+  "defense": 0,
+  "description": "상대 라이프에 1000 포인트\n데미지를 준다. 상대 라이프가\n3000 포인트 이하일 경우, 이\n카드는 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "944aa3c2135f15a3966da004f7540d70f99bf191743ac5818bd0734d94b0ad03",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1180.webp",
+  "level": 0,
+  "links": [],
+  "name": "데스 메테오",
+  "name_english": "Meteor of Destruction",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "source_id": 1931,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1180
+}

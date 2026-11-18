@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/517",
+  "attack": 1800,
+  "attribute": 8,
+  "categories": [
+    "발동-묘지",
+    "소환-덱리크루터"
+  ],
+  "code": 75252099,
+  "defense": 1500,
+  "description": "필드 위에 앞면 공격 표시로\n존재하는 이 카드가 상대\n몬스터의 공격에 의해서\n파괴되어 묘지로 보내졌을 때,\n자신의 덱에서 식물족 튜너\n2장을 자신 필드 위에 앞면\n수비 표시로 특수 소환할 수\n있다.",
+  "draw_enabled": true,
+  "identity_key": "94bfe388295720bbc0bfaf97895684f023965a8d00f9927b4c17c9f620867717",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0185.webp",
+  "level": 4,
+  "links": [],
+  "name": "로지즈 버드",
+  "name_english": "Bird of Roses",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "SR",
+  "source_id": 517,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 185
+}

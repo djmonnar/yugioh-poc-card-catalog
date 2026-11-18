@@ -1,0 +1,17 @@
+{
+  "description": "매 전투에서 상대 패의 모든 카드를 계속 확인할 수 있다.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 1,
+  "iconKey": "Relics/Content073/all_seeing_eye",
+  "id": "all_seeing_eye",
+  "kind": "all_seeing_eye",
+  "name": "간파의 눈",
+  "params": {},
+  "price": 300,
+  "rarity": "UR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-native073",
+  "weight": 1
+}

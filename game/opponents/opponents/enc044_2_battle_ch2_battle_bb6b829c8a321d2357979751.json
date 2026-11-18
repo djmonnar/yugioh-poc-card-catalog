@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/rex/start",
+  "banlistEnabled": false,
+  "deckName": "스피드 · 난이도 1 · 상대 덱 0013",
+  "extra": [],
+  "id": "enc044_2_battle_ch2_battle_bb6b829c8a321d2357979751",
+  "lpBonus": 0,
+  "main": [
+    102,
+    102,
+    102,
+    197,
+    197,
+    440,
+    440,
+    8,
+    8,
+    8,
+    1079,
+    1079,
+    1079,
+    1002,
+    1002,
+    447,
+    447,
+    1520,
+    1520,
+    1520
+  ],
+  "name": "다이노소어 용만",
+  "openingDrawBonus": 0,
+  "profileId": "rex",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 440,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "installed-story:cab0957a-e239-4a11-a7f8-d19ae20aa123",
+  "usesNativeRules035": true
+}

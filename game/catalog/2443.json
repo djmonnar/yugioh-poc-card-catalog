@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2443",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-암흑계"
+  ],
+  "code": 76672730,
+  "defense": 0,
+  "description": "이 카드명의 각 효과는 각각 1턴에 1번만 사용할 수 있다. ①: 자신 메인 페이즈에 발동할 수 있다. 패에서 \"암흑계\" 몬스터 1장을 골라 버린다. 버렸다면 현재 자신 필드의 \"암흑계\" 몬스터들의 공격력은 턴 종료시까지 그 몬스터의 패에서의 레벨 × 100 오른다. ②: 원래 종족이 악마족인 몬스터가 \"암흑계\" 카드의 효과나 상대 효과로 자신의 패에서 버려졌을 경우 발동할 수 있다(데미지 스텝에도 가능). 자신의 패에서 카드 1장을 골라 버린 후, 덱에서 2장 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "7a1b0c930fa43edc2bec6829fdeb550c5469e6a9bf9d082061da8ac578c9f599",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2443.jpg",
+  "level": 0,
+  "links": [],
+  "name": "암흑계의 문전",
+  "name_english": "Dark World Archives",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2443,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 1480
+}

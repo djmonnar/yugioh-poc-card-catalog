@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1823",
+  "attack": 1500,
+  "attribute": 32,
+  "categories": [
+    "파괴-함정",
+    "파괴-마법",
+    "파괴-몬스터"
+  ],
+  "code": 30213599,
+  "defense": 1200,
+  "description": "이 카드 이외의 자신 필드\n위에 앞면 표시로 존재하는\n\"묘지기의\"라는 이름이 붙은\n몬스터 1장을 릴리스하고\n발동한다. 상대 필드 위에\n존재하는 카드 1장을\n파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "d6e7f990fd9282c3e00bc77ff3ecaad52afefa8ff4e3a39cb9d6cba7a5afe2b3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1272.webp",
+  "level": 4,
+  "links": [],
+  "name": "묘지기의 후예",
+  "name_english": "Gravekeeper's Descendant",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 1823,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1272
+}

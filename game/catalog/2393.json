@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards035/2393",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "발동-묘지",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 47766694,
+  "defense": 0,
+  "description": "마법 & 함정 존의 앞면 표시 카드 1장을 대상으로 하여 발동할 수 있다. 그 카드를 파괴한다. 그 후, 파괴된 카드의 컨트롤러는 패에서 마법 / 함정 카드 1장을 세트할 수 있다.\n세트된 이 카드가 파괴되어 묘지로 보내졌을 때, 필드의 앞면 표시 카드 1장을 대상으로 하여 발동한다. 그 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "9e58dd19cf0ab615fc902ccfd104dc9230b9e5d88658764af070d1c573d14e88",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native035/cards/2393.jpg",
+  "level": 0,
+  "links": [],
+  "name": "황야의 토네이도",
+  "name_english": "Wild Tornado",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2393,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1430
+}

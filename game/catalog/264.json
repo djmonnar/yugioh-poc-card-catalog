@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/264",
+  "attack": 1400,
+  "attribute": 2,
+  "categories": [
+    "소환-덱리크루터"
+  ],
+  "code": 71829750,
+  "defense": 2000,
+  "description": "필드에서 자신의 덱으로\n되돌아갔을 때, 덱에서 레벨 3\n몬스터 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "f2deb7fcda00f0a4b3af08259c5ee05ebc034159595d5e59511215d52712f984",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0041.webp",
+  "level": 4,
+  "links": [],
+  "name": "뱀공주",
+  "name_english": "Serpentine Princess",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 524288,
+  "rarity": "R",
+  "source_id": 264,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 41
+}

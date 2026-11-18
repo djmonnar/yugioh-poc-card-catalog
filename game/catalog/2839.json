@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards126/2839",
+  "attack": -2,
+  "attribute": 32,
+  "categories": [
+    "지원-엑조디아",
+    "소환-패,덱",
+    "발동-릴리즈",
+    "면역-효과",
+    "효과-묘지샐비지",
+    "효과-드로우"
+  ],
+  "code": 58604027,
+  "defense": 0,
+  "description": "이 카드는 통상 소환할 수 없다. 자신 필드의 \"봉인된\" 몬스터 1장을 릴리스했을 경우에만 특수 소환할 수 있다. ①: 이 카드의 공격력은, 자신 묘지의 \"봉인된\" 몬스터의 수 × 1000 올린다. ②: 필드의 이 카드는 다른 카드의 효과를 받지 않는다. ③: 자신 엔드 페이즈에 발동한다. 자신 묘지에서 \"봉인된\" 몬스터 1장을 패에 넣는다. ④: 이 카드가 전투로 파괴되어 묘지로 보내졌을 때에 발동할 수 있다. 패의 \"봉인된\" 몬스터를 임의의 수만큼 상대에게 보여주고, 보여준 수만큼 자신은 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "7c93231216065ab98c97591c4bcd552e5c57851d932de7cae341e2ada8c915c0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native126/cards/2839.jpg",
+  "level": 10,
+  "links": [],
+  "name": "소환신 엑조디아",
+  "name_english": "The Legendary Exodia Incarnate",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "UR",
+  "search_aliases": [
+    "소환신 엑조디아",
+    "The Legendary Exodia Incarnate"
+  ],
+  "source_id": 2839,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "특수 소환 몬스터",
+  "web_slot": 1871
+}

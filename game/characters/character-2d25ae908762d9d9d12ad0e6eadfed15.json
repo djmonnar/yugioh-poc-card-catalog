@@ -1,0 +1,29 @@
+{
+  "art_key": "CharacterPresentation012/images/pegasus/start",
+  "id": "character-2d25ae908762d9d9d12ad0e6eadfed15",
+  "profile": {
+    "name": "페가수스",
+    "portrait": "assets/actors/shared-pegasus.png",
+    "skill_profiles": [
+      {
+        "name": "툰",
+        "profile_id": "profile-87f697aa-a9ba-49a2-aee5-43fb9a5351c2",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "7cbccf2a12c77db61a2efc820f8b92ce18fb6ab47dc0c4c5898734cfdd049285",
+              "internal_id": 954,
+              "name_ko": "툰 월드",
+              "slot": 623
+            },
+            "kind": "start_field"
+          }
+        ]
+      }
+    ],
+    "skills": []
+  },
+  "profile_id": "pegasus",
+  "updated_at": "2026-11-06T06:36:57.655998+00:00",
+  "version": 3870
+}

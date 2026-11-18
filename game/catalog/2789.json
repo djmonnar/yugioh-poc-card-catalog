@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards120/2789",
+  "attack": 1100,
+  "attribute": 32,
+  "categories": [
+    "소환-토큰",
+    "효과-데미지"
+  ],
+  "code": 12958919,
+  "defense": 800,
+  "description": "①: 이 카드가 일반 소환 / 반전 소환에 성공했을 때에 발동할 수 있다. 자신 필드의 몬스터의 수까지, 자신 필드에 \"총사 토큰\"(악마족 / 어둠 / 레벨 4 / 공 500 / 수 500)을 특수 소환한다. ②: 자신 스탠바이 페이즈에 발동할 수 있다. 자신 필드의 \"총사\" 몬스터의 수 × 300 데미지를 상대에게 준다. 이 효과를 발동하는 턴에, 자신의 \"총사\" 몬스터는 공격 선언할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "ddce2ae645deaeb7105317cb692c356ca14dc0b691533ff4d7b8f8f56ca6d92b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native120/cards/2789.jpg",
+  "level": 4,
+  "links": [],
+  "name": "환상의 총사",
+  "name_english": "Phantom Skyblaster",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "search_aliases": [
+    "환상의총사",
+    "환상의 총사",
+    "Phantom Skyblaster"
+  ],
+  "source_id": 2789,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1821
+}

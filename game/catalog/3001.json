@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards144/3001",
+  "attack": 2300,
+  "attribute": 32,
+  "categories": [
+    "지원-곤충",
+    "소환-묘지로 보내기",
+    "소환-패에서"
+  ],
+  "code": 17021204,
+  "defense": 1200,
+  "description": "자신의 묘지에 존재하는 몬스터가 곤충족뿐일 경우, 이 카드는 상대 필드 위에 앞면 수비 표시로 존재하는 몬스터 2장을 묘지로 보내고, 패에서 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "dd3c92b545b5460db3b0831306eee43f753d662f1b6b5504a1945f33f68ba6d7",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native144/cards/3001.jpg",
+  "level": 6,
+  "links": [],
+  "name": "마더 스파이더",
+  "name_english": "Mother Spider",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "SR",
+  "search_aliases": [
+    "마더스파이더",
+    "마더 스파이더",
+    "Mother Spider"
+  ],
+  "source_id": 3001,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2033
+}

@@ -1,0 +1,31 @@
+{
+  "alias": 27911549,
+  "art_key": "Cards/762",
+  "attack": 500,
+  "attribute": 1,
+  "categories": [
+    "효과-데미지",
+    "소환-상대필드"
+  ],
+  "code": 27911550,
+  "defense": 300,
+  "description": "리버스: 이 카드를 상대 덱에\n앞면으로 넣고 셔플한다.\n상대가 이 카드를 드로우하면\n즉시 상대 필드에 앞면 수비\n표시로 특수 소환하고\n상대에게 1000 직접 데미지를\n준다. 이후 이 카드가 필드에\n앞면으로 존재하는 동안 상대\n필드의 모든 앞면 몬스터는\n곤충족으로 취급한다.",
+  "draw_enabled": true,
+  "identity_key": "530eb76de34229e52e935269a89186d76042611b4e81d1480699af58a41c9217",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0197.webp",
+  "level": 2,
+  "links": [],
+  "name": "기생충 파라사이드",
+  "name_english": "Parasite Paracide",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "R",
+  "source_id": 762,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 197
+}

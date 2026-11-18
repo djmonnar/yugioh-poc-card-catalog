@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards035/2392",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-버리기",
+    "파괴-함정",
+    "파괴-마법"
+  ],
+  "code": 43898403,
+  "defense": 0,
+  "description": "패를 1장 버리고, 필드의 마법 / 함정 카드를 2장까지 대상으로 하여 발동할 수 있다. 그 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "9f67744e6f64d112fdfc42401dad7ae2277c29c2377236a94e47147f351a68bb",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native035/cards/2392.jpg",
+  "level": 0,
+  "links": [],
+  "name": "트윈트위스터",
+  "name_english": "Twin Twisters",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2392,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 1429
+}

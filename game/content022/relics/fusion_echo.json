@@ -1,0 +1,19 @@
+{
+  "description": "첫 융합 소환에 실제 사용했고 아직 묘지에 있는 소재 중 1장을 골라 패로 회수해. 전투당 한 번이야.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 51,
+  "iconKey": "Relics/Content022/atlas022",
+  "id": "fusion_echo",
+  "kind": "fusion_echo",
+  "name": "융합의 잔향",
+  "params": {
+    "count": 1
+  },
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-native022",
+  "weight": 1
+}

@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards144/2995",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-곤충",
+    "발동-릴리즈",
+    "소환-토큰",
+    "소환제약"
+  ],
+  "code": 22493811,
+  "defense": 0,
+  "description": "자신 필드 위의 곤충족 몬스터 1장을 제물로 바치고 발동한다. 자신 필드 위에 \"병사개미 토큰\"(곤충족/땅 속성/레벨 4/공격력 500/수비력 1200)을 2장 특수 소환한다(제물 소환을 위한 제물로는 할 수 없다).",
+  "draw_enabled": true,
+  "identity_key": "883beda8dad3b63bb46baa9de14ef1a3a39b1720ceb86d876ebf4805ef4aa38e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native144/cards/2995.jpg",
+  "level": 0,
+  "links": [],
+  "name": "개미 증식",
+  "name_english": "Multiplication of Ants",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "개미 증식",
+    "Multiplication of Ants"
+  ],
+  "source_id": 2995,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 2027
+}

@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/310",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-데미지",
+    "지원-장착",
+    "발동-묘지"
+  ],
+  "code": 65169794,
+  "defense": 0,
+  "description": "장착 몬스터의 공격력을 500\n올린다. 이 카드가 필드에서\n묘지로 보내졌을 때 상대에게\n500 직접 데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "f7d413d578038d44d364ea336be971806a6bdf98629eba3dc87f31b624ecb821",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0801.webp",
+  "level": 0,
+  "links": [],
+  "name": "검은 펜던트",
+  "name_english": "Black Pendant",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 310,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 801
+}

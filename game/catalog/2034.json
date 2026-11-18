@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2034",
+  "attack": 2500,
+  "attribute": 32,
+  "categories": [
+    "덱-블랙매지션",
+    "효과-데미지"
+  ],
+  "code": 29436665,
+  "defense": 2100,
+  "description": "이 카드는 일반 소환/세트할\n수 없다. 자신 필드 위에\n존재하는 \"블랙 매지션\" 1장을\n제물로 바친 경우에만 특수\n소환할 수 있다. 이 카드가\n필드 위에 앞면 표시로\n존재하는 한, 양쪽 플레이어가\n일반 마법 카드를 발동할\n때마다, 상대 라이프에 1000\n포인트 데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "e8535ab55342b0485ab113f9e9d5ab373df1a971acf3fb04a0e8fb30c61f5392",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0804.webp",
+  "level": 7,
+  "links": [
+    {
+      "identity_key": "a850b8cd0e118c301dde50e7dcabc13ebb54f1506ec19fbe0694955bba7dfd67",
+      "slot": 803
+    }
+  ],
+  "name": "흑마도의 집행관",
+  "name_english": "Dark Eradicator Warlock",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "N",
+  "source_id": 2034,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 804
+}

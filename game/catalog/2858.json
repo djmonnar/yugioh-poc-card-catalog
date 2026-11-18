@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards126/2858",
+  "attack": 2800,
+  "attribute": 1,
+  "categories": [
+    "지원-아포피스",
+    "지원-왕가의 신전",
+    "지원-융합",
+    "지원-함정",
+    "지원-릴리즈",
+    "파괴-몬스터",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 97800311,
+  "defense": 2600,
+  "description": "\"왕가의 신전\"의 카드명이 쓰여진 몬스터 × 2<br>이 카드는 융합 소환 및 이하의 방법으로만 특수 소환할 수 있다. ●자신 필드의 \"아포피스\" 몬스터 2장을 릴리스했을 경우에 엑스트라 덱에서 특수 소환할 수 있다. ①: 1턴에 1번, 자신 묘지의 \"아포피스\" 함정 카드를 3장까지 대상으로 하고 발동할 수 있다(같은 이름의 카드는 1장까지). 그 카드를 자신 필드에 세트한다. ②: 1턴에 1번, 함정 카드가 발동했을 경우, 상대 필드의 카드 1장을 대상으로 하고 발동할 수 있다. 그 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "35c2904f0b33aec238db12ef668db15ac2a5c7cd8f2b7eb1648d9c5904d131af",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native126/cards/2858.jpg",
+  "level": 6,
+  "links": [],
+  "name": "성신사 아포피스",
+  "name_english": "Divine Serpent Apophis",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 524288,
+  "rarity": "UR",
+  "search_aliases": [
+    "성신사 아포피스",
+    "Divine Serpent Apophis"
+  ],
+  "source_id": 2858,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 1890
+}

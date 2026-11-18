@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2048",
+  "attack": 1500,
+  "attribute": 2,
+  "categories": [
+    "소환-묘지"
+  ],
+  "code": 40320754,
+  "defense": 1000,
+  "description": "이 카드가 전투에 의해서 파괴되어 묘지로 보내졌을 때, 자신의 묘지에 존재하는 \"로드 포이즌\" 이외의 식물족 몬스터 1장을 자신 필드 위에 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "180fb28b08087708a5df9362a0451802b0b2e4e29565d4dea4d40d5126fd44ac",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1348.webp",
+  "level": 4,
+  "links": [],
+  "name": "로드 포이즌",
+  "name_english": "Lord Poison",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "R",
+  "source_id": 2048,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1348
+}

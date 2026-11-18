@@ -1,0 +1,54 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-1f3f70bb-af74-4b82-89d9-a25116de821e",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "a902fd7ff228ad2c3f298ad6dcec79da90f3236f39d6aa67398ba7aa8e57e5e6",
+      "source_id": 21
+    },
+    {
+      "count": 3,
+      "identity_key": "e4b2aeb4368b9ab6c3bdc697caf16a5888d43b96be1c287c558789aaa148755f",
+      "source_id": 122
+    },
+    {
+      "count": 2,
+      "identity_key": "a4112aaf2827abdc99b52fc6d3a1ee01aea218cf19b51dfd0f0c59cc45f5f35d",
+      "source_id": 2679
+    },
+    {
+      "count": 3,
+      "identity_key": "ef65c5f333c14c6afe2abee0fcf3548b069ec6ac2206e6d577897b5cb9ac21a6",
+      "source_id": 2684
+    },
+    {
+      "count": 2,
+      "identity_key": "79afd9a513cafb26fcb6152dab8473c6cacb76214ce63fe65a384a63ea47a805",
+      "source_id": 1840
+    },
+    {
+      "count": 2,
+      "identity_key": "f9c15b67a23a8e9c9c25d93916d213d5c94f72a36c02433ec22125314e9b6468",
+      "source_id": 2104
+    },
+    {
+      "count": 2,
+      "identity_key": "2648bcd0ab58c5ebb05a1d0aae0a1020880f2247e3482f462d4df1ccd27ef1dc",
+      "source_id": 2394
+    },
+    {
+      "count": 1,
+      "identity_key": "afd4aa615a4eaf3b835d7c96460d68b08c84728ff726b6036dddbe0d275a78e3",
+      "source_id": 1248
+    },
+    {
+      "count": 2,
+      "identity_key": "1411fb82022714d7d71b0b79cad8170f89cde392d7b9e0bcf0a5f148cfb76901",
+      "source_id": 2682
+    }
+  ],
+  "name": "바쿠라 -악마 중급 데몬소환",
+  "version": 540
+}

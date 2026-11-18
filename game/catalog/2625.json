@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards088/2625",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착"
+  ],
+  "code": 61127349,
+  "defense": 0,
+  "description": "장착 몬스터 1장의 공격력은 400 포인트 올린다. 수비 표시 몬스터를 공격했을 때, 그 수비력을 공격력이 넘었으면, 그 수치만큼 상대 라이프에 전투 데미지를 준다. 이 카드가 필드에서 벗어났을 경우, 장착 몬스터를 게임에서 제외한다.",
+  "draw_enabled": true,
+  "identity_key": "af14e572b64d62675175b0c1cf85bf2980502a5643a0c3aa9a33ab59f13984fb",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native088/cards/2625.jpg",
+  "level": 0,
+  "links": [],
+  "name": "빅뱅 슛",
+  "name_english": "Big Bang Shot",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "빅뱅슛",
+    "빅뱅 슛",
+    "Big Bang Shot"
+  ],
+  "source_id": 2625,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 1657
+}

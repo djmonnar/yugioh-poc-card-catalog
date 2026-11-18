@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2431",
+  "attack": 2300,
+  "attribute": 32,
+  "categories": [
+    "덱-암흑계",
+    "발동-묘지",
+    "소환-묘지"
+  ],
+  "code": 32619583,
+  "defense": 1400,
+  "description": "①: 이 카드가 효과로 패에서 묘지로 버려졌을 경우 발동한다. 이 카드를 특수 소환한다. 상대 효과로 버려졌다면 추가로 상대는 자신의 패에서 정확히 2장을 골라 원하는 순서로 덱 맨 아래에 되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "ddf741709a5b6c43daede18bf0e3732e23a5c21a4b961c47da56b2b7eb2f853e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2431.jpg",
+  "level": 5,
+  "links": [],
+  "name": "암흑계의 군신 실바",
+  "name_english": "Sillva, Warlord of Dark World",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "source_id": 2431,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1468
+}

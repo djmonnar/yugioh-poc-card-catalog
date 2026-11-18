@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1905",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-융합"
+  ],
+  "code": 37630732,
+  "defense": 0,
+  "description": "①: 자신의 패 / 필드의\n몬스터를 융합 소재로 하고,\n기계족 융합 몬스터 1장을\n융합 소환한다. 이 효과로\n특수 소환한 몬스터의\n공격력은, 그 원래 공격력만큼\n올린다. 이 카드를 발동한\n턴의 엔드 페이즈에 자신은 이\n효과로 올린 수치만큼의\n데미지를 받는다.\n[차이] 융합 소재 대용\n몬스터는 소재로 쓸 수 없다.\n\"유에프오로이드 파이터\",\n\"앤틱 기어 얼티미트 골렘\"은\n이 카드로 융합 소환할 수\n없다.",
+  "draw_enabled": true,
+  "identity_key": "32d464c0d207ed70f9813c36cb59b2d11fd9e82d364780043c326c9ac4daf5b2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1228.webp",
+  "level": 0,
+  "links": [],
+  "name": "파워 본드",
+  "name_english": "Power Bond",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1905,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1228
+}

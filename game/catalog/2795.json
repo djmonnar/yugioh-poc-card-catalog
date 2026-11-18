@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards122/2795",
+  "attack": 1700,
+  "attribute": 1,
+  "categories": [
+    "효과-뒷면표시",
+    "파괴-몬스터",
+    "지원-전투"
+  ],
+  "code": 78266168,
+  "defense": 2000,
+  "description": "이 카드는 1턴에 1번만 뒷면 수비 표시로 할 수 있다. 뒷면 수비 표시의 이 카드를 공격한 몬스터의 공격력이 이 카드의 수비력보다 낮을 경우, 공격 몬스터는 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "89dac433725a26fb07c5a629d0fa0fc2076d83ead052eec809c3609aaf7b6269",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native122/cards/2795.jpg",
+  "level": 5,
+  "links": [],
+  "name": "자이언트 미라",
+  "name_english": "Giant Axe Mummy",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "R",
+  "search_aliases": [
+    "자이언트미라",
+    "자이언트 미라",
+    "Giant Axe Mummy"
+  ],
+  "source_id": 2795,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1827
+}

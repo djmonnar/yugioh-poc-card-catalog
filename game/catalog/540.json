@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/540",
+  "attack": 1150,
+  "attribute": 32,
+  "categories": [
+    "효과-바운스"
+  ],
+  "code": 35209994,
+  "defense": 1850,
+  "description": "리버스 : 상대 필드 위에 앞면\n표시로 존재하는 카드 1장을\n선택하고 주인의 패로\n되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "bd25ef5c438d7872b7fc804a6812d56517c060db1375ba67d5bbba307b5963ea",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0723.webp",
+  "level": 4,
+  "links": [],
+  "name": "벨즈 프레이스",
+  "name_english": "Evilswarm Hraesvelg",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "R",
+  "source_id": 540,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 723
+}

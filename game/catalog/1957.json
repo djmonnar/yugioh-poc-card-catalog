@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1957",
+  "attack": 1200,
+  "attribute": 1,
+  "categories": [
+    "면역-전투",
+    "소환-패,덱"
+  ],
+  "code": 2460565,
+  "defense": 400,
+  "description": "①: 이 카드가 일반 소환에\n성공했을 때에 발동할 수\n있다. 패에서 레벨 4 이하의\n몬스터 1장을 특수 소환한다.\n②: 이 카드가 몬스터 존에\n존재하는 한, 상대는 다른\n전사족 몬스터를 공격\n대상으로 선택할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "7f4a69749834c9d67bc83bf88ac1032074234f16b595401ae090a5b5a5532b93",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1173.webp",
+  "level": 3,
+  "links": [],
+  "name": "선봉 대장",
+  "name_english": "Marauding Captain",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "source_id": 1957,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1173
+}

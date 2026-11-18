@@ -1,0 +1,19 @@
+{
+  "description": "실제 같은 이름으로 취급하는 카드가 메인 덱에 한 장씩만 있으면 시작 패가 1장 증가해.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 43,
+  "iconKey": "Relics/Content022/atlas022",
+  "id": "kings_collection",
+  "kind": "kings_collection",
+  "name": "왕의 수집함",
+  "params": {
+    "opening_draw": 1
+  },
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-controller022",
+  "weight": 1
+}

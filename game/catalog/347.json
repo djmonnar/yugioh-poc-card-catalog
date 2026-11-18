@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/347",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "면역-전투"
+  ],
+  "code": 72302403,
+  "defense": 0,
+  "description": "상대 턴부터 세어 상대는\n자신의 3턴 동안 몬스터로\n공격할 수 없다. 이 카드를\n발동했을 때 상대의 뒷면\n몬스터를 앞면으로 뒤집지만\n수비 표시는 유지한다. 그\n몬스터의 효과는 즉시\n발동한다.",
+  "draw_enabled": true,
+  "identity_key": "2f70e4fb1fdba621566962e8968fe8fec261fd5f1cf4c0705f1ad2c48cfabcff",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0740.webp",
+  "level": 0,
+  "links": [],
+  "name": "빛의 봉인검",
+  "name_english": "Swords of Revealing Light",
+  "native_type": 2,
+  "normal_limit": 2,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 347,
+  "speed_limit": 2,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 740
+}

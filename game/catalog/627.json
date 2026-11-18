@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/627",
+  "attack": 1700,
+  "attribute": 32,
+  "categories": [
+    "효과-버리기",
+    "효과-한데스"
+  ],
+  "code": 45462639,
+  "defense": 2200,
+  "description": "이 카드가 일반 소환에\n성공했을 때, 이 카드에 마력\n카운터를 2개 얹는다. 자신\n또는 상대가 마법 카드를\n발동할 때마다, 이 카드에\n마력 카운터를 1개 얹는다. 이\n카드에 얹혀 있는 마력 카운터\n1개당, 이 카드의 공격력은\n300 포인트 올린다. 또한, 이\n카드에 얹혀 있는 마력\n카운터를 2개 제거하는\n것으로, 상대의 패를 무작위로\n1장 버린다. 이 효과는 1턴에\n1번밖에 사용할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "7221ec1128ae3df5880bf08a1ce239a624e9c656b3942744cea3d8c26b8eb7f7",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0942.webp",
+  "level": 6,
+  "links": [],
+  "name": "다크 레드 인챈터",
+  "name_english": "Dark Red Enchanter",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "source_id": 627,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 942
+}

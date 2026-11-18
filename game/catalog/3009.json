@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3009",
+  "attack": 100,
+  "attribute": 2,
+  "categories": [
+    "지원-개구리",
+    "발동-묘지에서",
+    "발동-스탠바이 페이즈 시",
+    "소환-묘지"
+  ],
+  "code": 12538374,
+  "defense": 100,
+  "description": "①: 이 카드가 묘지에 존재하고, 자신 필드에 \"황천 개구리\"가 존재하지 않을 경우, 자신 스탠바이 페이즈에 발동할 수 있다(이 효과는 자신 필드에 마법 / 함정 카드가 존재하지 않을 경우에 발동과 처리를 할 수 있다). 이 카드를 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "1943f64005f7efd3dd4621fb6a29e94ddd8237fb9e6ac9d827c95d05c8f1729e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3009.jpg",
+  "level": 1,
+  "links": [],
+  "name": "황천 개구리",
+  "name_english": "Treeborn Frog",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "SR",
+  "search_aliases": [
+    "황천 개구리",
+    "Treeborn Frog"
+  ],
+  "source_id": 3009,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2041
+}

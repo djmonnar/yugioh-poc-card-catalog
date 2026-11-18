@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1426",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-토큰",
+    "소환제약"
+  ],
+  "code": 21770260,
+  "defense": 0,
+  "description": "자신의 스탠바이 페이즈마다\n자신의 필드에 \"슬라임 토큰\"\n1장을 특수 소환한다. 앞면\n공격 표시 / 물족 / 물 속성 /\n레벨 1 / 공격력 500 / 수비력\n500이다. 이 카드가 필드에\n앞면으로 존재하는 동안 다른\n몬스터는 소환할 수 없다.\n반전 소환과 특수 소환도\n포함한다.",
+  "draw_enabled": true,
+  "identity_key": "4a0f2c217f052992c2e1dfb38defd25aa158bf495bbfb4faee930303d727ff2e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0457.webp",
+  "level": 0,
+  "links": [],
+  "name": "슬라임 증식로",
+  "name_english": "Jam Breeding Machine",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1426,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 457
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/535",
+  "attack": 2450,
+  "attribute": 1,
+  "categories": [
+    "덱-젬나이트"
+  ],
+  "code": 76908448,
+  "defense": 1950,
+  "description": "크리스탈 파워를 최적화해\n힘을 얻은 고위 \"젬나이트\".",
+  "draw_enabled": true,
+  "identity_key": "1f8bf500b99dce1e179a0740f3f93aefe8ce44654e432225ffa306eae3352499",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0967.webp",
+  "level": 7,
+  "links": [],
+  "name": "젬나이트 크리스타",
+  "name_english": "Gem-Knight Crystal",
+  "native_type": 17,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "N",
+  "source_id": 535,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 몬스터",
+  "web_slot": 967
+}

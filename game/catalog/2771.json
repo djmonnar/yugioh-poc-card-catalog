@@ -1,0 +1,34 @@
+{
+  "alias": 0,
+  "art_key": "Cards120/2771",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-필드"
+  ],
+  "code": 77584012,
+  "defense": 0,
+  "description": "①: 1턴에 1번, 자신의 묘지에서 필드 마법 카드 1장을 제외하고 발동할 수 있다. 엔드 페이즈까지, 이 카드는 제외한 카드와 같은 이름의 카드로 취급하고, 같은 효과를 얻는다.",
+  "draw_enabled": true,
+  "identity_key": "803d108a44bdeb42344d236c2c39db05a1bfd5c10415075e37d08749e9f1a77a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native120/cards/2771.jpg",
+  "level": 0,
+  "links": [],
+  "name": "유사공간",
+  "name_english": "Pseudo Space",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "유사공간",
+    "Pseudo Space"
+  ],
+  "source_id": 2771,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "필드 마법",
+  "web_slot": 1803
+}

@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/tea/start",
+  "banlistEnabled": false,
+  "deckName": "안수진 기계천사 중급",
+  "extra": [],
+  "id": "enc-6884b5a8-8c18-4b6b-8112-175af04300b1",
+  "lpBonus": 0,
+  "main": [
+    2523,
+    2523,
+    2523,
+    2524,
+    2524,
+    2520,
+    2520,
+    2515,
+    2515,
+    2515,
+    2516,
+    2516,
+    2514,
+    1109,
+    1109,
+    2667,
+    2667,
+    2417,
+    2417,
+    2390
+  ],
+  "name": "안수진",
+  "openingDrawBonus": 0,
+  "profileId": "tea",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 2521,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-6884b5a8-8c18-4b6b-8112-175af04300b1",
+  "usesNativeRules035": true
+}

@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1825",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-묘지기",
+    "소환-묘지"
+  ],
+  "code": 30450531,
+  "defense": 0,
+  "description": "지정한 자신의 묘지의\n\"묘지기의\"라는 이름이 붙은\n몬스터 카드 1장을 특수\n소환한다. 이 카드의 발동은\n\"왕가의\n골짜기－네크로밸리\"에\n의해서는 제한받지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "cd25dbadd1f45fb9fda4fcc2ee7c2a1574f44d36584b495a80db699c3c951de4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1274.webp",
+  "level": 0,
+  "links": [],
+  "name": "강령의 의식",
+  "name_english": "Rite of Spirit",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1825,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1274
+}

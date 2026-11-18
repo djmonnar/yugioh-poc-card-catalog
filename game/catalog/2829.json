@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards125/2829",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-파충류",
+    "발동-파괴",
+    "소환-패,덱"
+  ],
+  "code": 81791932,
+  "defense": 0,
+  "description": "자신 필드 위에 존재하는 파충류족 몬스터가 파괴되었을 때 발동할 수 있다. 자신의 덱에서 레벨 4 이하의 파충류족 몬스터 1장을 자신 필드 위에 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "0c33e035671289d791fe07757f92d3305011586a2a23343d3add93415e82a087",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native125/cards/2829.jpg",
+  "level": 0,
+  "links": [],
+  "name": "스네이크 휘슬",
+  "name_english": "Snake Whistle",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "스네이크 휘슬",
+    "Snake Whistle"
+  ],
+  "source_id": 2829,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1861
+}

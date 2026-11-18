@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1434",
+  "attack": 1600,
+  "attribute": 32,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 6337436,
+  "defense": 1200,
+  "description": "이 카드가 필드 위에 앞면\n표시로 존재하는 한, 자신이\n일반 마법을 발동할 때마다,\n상대 라이프에 400 포인트\n데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "d9d45a60e30dfb5adaa4e5d6dde2a6e2f0951d06b54584e87af6d04eb6932f7a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0749.webp",
+  "level": 4,
+  "links": [],
+  "name": "연속탄의 마술사",
+  "name_english": "Rapid-Fire Magician",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 1434,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 749
+}

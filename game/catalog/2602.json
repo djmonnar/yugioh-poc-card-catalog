@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards081/2602",
+  "attack": 1500,
+  "attribute": 32,
+  "categories": [
+    "지원-의식마인",
+    "지원-의식"
+  ],
+  "code": 33145233,
+  "defense": 600,
+  "description": "의식 소재가 필요할 때 묘지의 이 카드를 제외하여 소재로 쓸 수 있습니다. 이 카드가 소재였던 의식 소환 몬스터를 상대는 카드 효과의 대상으로 고를 수 없습니다.",
+  "draw_enabled": true,
+  "identity_key": "f6b7e64af99c980eea0c15c6b80a71b9ce399881892d186d9aa3e288d112e274",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native081/cards/2602.jpg",
+  "level": 3,
+  "links": [],
+  "name": "의식마인 데몰릿셔",
+  "name_english": "Djinn Demolisher of Rituals",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "source_id": 2602,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1634
+}

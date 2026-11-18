@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1316",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-바운스",
+    "효과-드로우"
+  ],
+  "code": 93108433,
+  "defense": 0,
+  "description": "자신의 필드 몬스터 1장을\n자신의 덱에 넣는다. 동시에\n패도 덱에 넣고 셔플한다. 그\n후 원래 패의 매수만큼\n드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "dcb3cbda63f5637c0c97a54e8004b96f8c932d728e6db70e75b17b1df198b2bf",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0996.webp",
+  "level": 0,
+  "links": [],
+  "name": "몬스터 회수",
+  "name_english": "Monster Recovery",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1316,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 996
+}

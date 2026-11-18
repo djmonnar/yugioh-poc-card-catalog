@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/243",
+  "attack": 1200,
+  "attribute": 16,
+  "categories": [
+    "소환-덱리크루터",
+    "발동-파괴"
+  ],
+  "code": 7602840,
+  "defense": 1200,
+  "description": "이 카드가 전투로 파괴되었을\n때, 덱에서 공격력 1500의\n기계족 몬스터 1장을 특수\n소환한다.",
+  "draw_enabled": true,
+  "identity_key": "8d661fab8a61d1425c715c84a38815a88842a8827a107dee94278d556b167031",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0888.webp",
+  "level": 6,
+  "links": [],
+  "name": "유에프오로이드",
+  "name_english": "UFOroid",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "N",
+  "source_id": 243,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 888
+}

@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/115",
+  "attack": 1800,
+  "attribute": 1,
+  "categories": [
+    "효과-버리기",
+    "효과-덱샐비지"
+  ],
+  "code": 50893987,
+  "defense": 800,
+  "description": "이 카드는 융합 소재 몬스터로\n사용할 수 없다. 이 카드가\n\"검투수\"라는 이름이 붙은\n몬스터의 효과에 의해서 특수\n소환에 성공했을 때, 패에서\n\"검투수\"라는 이름이 붙은\n카드 1장을 버리는 것으로,\n자신의 덱에서 \"검투수\"라는\n이름이 붙은 몬스터 1장을\n패에 넣는다.\n[안내] 필드의 이 카드를\n선택하여 발동하면 자신\n필드의 \"검투수\" 몬스터\n2장(\"검투수 티겔\" 제외)을\n덱으로 되돌리고 엑스트라\n덱의 \"검투수 에세다리\"를\n특수 소환할 수 있다(체인이\n발생한다).",
+  "draw_enabled": true,
+  "identity_key": "1d5984ccb0d6422a9b7aa8b2c2116cb4545b3d938eb2c4bd10bdbbce4f8eb802",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0667.webp",
+  "level": 4,
+  "links": [],
+  "name": "검투수 티겔",
+  "name_english": "Gladiator Beast Tygerius",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "R",
+  "source_id": 115,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 667
+}

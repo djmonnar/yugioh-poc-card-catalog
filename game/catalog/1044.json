@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1044",
+  "attack": 300,
+  "attribute": 16,
+  "categories": [
+    "면역-전투",
+    "발동-묘지"
+  ],
+  "code": 57116033,
+  "defense": 200,
+  "description": "이 카드가 전투로 묘지로\n보내졌을 때, 그 턴의 배틀\n페이즈를 즉시 종료한다.",
+  "draw_enabled": true,
+  "identity_key": "09cb0f23c3e62db5c3b626165a6dd18feac6562108e4123e55913564c2f6f5aa",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0718.webp",
+  "level": 1,
+  "links": [],
+  "name": "날개 크리보",
+  "name_english": "Winged Kuriboh",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "SR",
+  "source_id": 1044,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 718
+}

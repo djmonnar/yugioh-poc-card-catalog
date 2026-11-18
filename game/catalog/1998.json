@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1998",
+  "attack": 1800,
+  "attribute": 4,
+  "categories": [
+    "소환-패,덱",
+    "효과-바운스"
+  ],
+  "code": 78868776,
+  "defense": 400,
+  "description": "이 카드가 \"검투수\"라는\n이름이 붙은 몬스터의 효과에\n의해서 특수 소환에 성공했을\n경우, 이 카드의 원래\n공격력은 2100 이 된다. 이\n카드가 전투를 실행한 배틀\n페이즈 종료시에 이 카드를\n덱으로 되돌리는 것으로,\n덱에서 \"검투수 라크엘\"\n이외의 \"검투수\"라는 이름이\n붙은 몬스터 1장을 자신 필드\n위에 특수 소환한다.\n[안내] 필드의 이 카드를\n선택하여 발동하면 자신\n필드의 \"검투수\" 몬스터\n2장(\"검투수 티겔\" 제외)을\n덱으로 되돌리고 엑스트라\n덱의 \"검투수 에세다리\"를\n특수 소환할 수 있다(체인이\n발생한다).",
+  "draw_enabled": true,
+  "identity_key": "29ab88756ffd4a4c0e6f2913b6d9511139f200d9fe245bfe48789a899befe76f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1123.webp",
+  "level": 4,
+  "links": [],
+  "name": "검투수 라크엘",
+  "name_english": "Gladiator Beast Laquari",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "SR",
+  "source_id": 1998,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1123
+}

@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2440",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-암흑계",
+    "소환-묘지"
+  ],
+  "code": 61623148,
+  "defense": 0,
+  "description": "①: 자신 엔드 페이즈에 패의 매수 제한 때문에 몬스터를 묘지로 버렸을 경우, 그중 몬스터 1장을 대상으로 발동할 수 있다. 그 몬스터를 자신 필드에 특수 소환한다. 패 매수 제한에 의한 버리기는 카드 효과로 버리는 처리와 다르다.",
+  "draw_enabled": true,
+  "identity_key": "a1e7afcaa58cf1553de51b1e96c40decfc50a2b740b87cfe705193e649aa2a91",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2440.jpg",
+  "level": 0,
+  "links": [],
+  "name": "암흑계의 서적",
+  "name_english": "Dark World Grimoire",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "source_id": 2440,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 1477
+}

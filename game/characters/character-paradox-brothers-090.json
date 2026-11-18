@@ -1,0 +1,45 @@
+{
+  "art_key": "Character090/images/paradox_brothers/start",
+  "id": "character-paradox-brothers-090",
+  "profile": {
+    "name": "미궁형제",
+    "portrait": "assets/actors/native090/paradox_brothers/start.png",
+    "skill_profiles": [
+      {
+        "name": "게이트가디언",
+        "profile_id": "profile-a5519af0-17d3-41e6-8dba-7c09cd8751e9",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "09239c69c7b4cf7bafbcc1b598d3dae39b190f63dfa30414e9ccd25cb9a01601",
+              "internal_id": 2660,
+              "name_ko": "게이트 가디언",
+              "slot": 1692
+            },
+            "kind": "start_hand"
+          }
+        ]
+      },
+      {
+        "name": "미궁",
+        "profile_id": "profile-34e0d19b-eb3c-48b1-b1b7-2523a9028ec1",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "e926fb71bd9ef4246e7c1f3966ed98d30ca128a5702052ac1f6d0dc24158d100",
+              "internal_id": 180,
+              "name_ko": "미궁출현－래버린스 월－",
+              "slot": 509
+            },
+            "kind": "start_monster",
+            "position": "defense"
+          }
+        ]
+      }
+    ],
+    "skills": []
+  },
+  "profile_id": "paradox_brothers",
+  "updated_at": "2026-11-06T01:06:57.578361+00:00",
+  "version": 3857
+}

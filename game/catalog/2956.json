@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards136/2956",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-레벨다운",
+    "지원-전투"
+  ],
+  "code": 34815282,
+  "defense": 0,
+  "description": "필드 위에 앞면 표시로 존재하는 원래 공격력이 1000 보다 높은 몬스터 1장을 선택하고 발동한다. 선택한 몬스터의 레벨을 1개 내리고, 공격력은 1000 포인트 내린다. 그 몬스터가 필드 위에 존재하지 않게 되었을 때, 이 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "041d8d21594daa7bd2396d86f7428e9ccc0925dcc9134d696594b24779b9a9e8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native136/cards/2956.jpg",
+  "level": 0,
+  "links": [],
+  "name": "미니어처 라이즈",
+  "name_english": "Miniaturize",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "미니어처 라이즈",
+    "Miniaturize"
+  ],
+  "source_id": 2956,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 1988
+}

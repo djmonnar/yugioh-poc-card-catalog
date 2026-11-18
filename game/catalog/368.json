@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/368",
+  "attack": 3500,
+  "attribute": 16,
+  "categories": [
+    "면역-마법"
+  ],
+  "code": 72443568,
+  "defense": 1000,
+  "description": "이 카드는 통상 소환할 수\n없으며, \"사일런트 매지션\nLV4\"의 효과로만 특수 소환할\n수 있다. ①: 이 카드는 몬스터\n존에 존재하는 한, 상대의\n마법 카드의 효과를 받지\n않는다.",
+  "draw_enabled": true,
+  "identity_key": "68b05df658038176ea90390a7479e4e1fbf6580a6eda1a56ec08471cc13cdc78",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0080.webp",
+  "level": 8,
+  "links": [],
+  "name": "사일런트 매지션 LV8",
+  "name_english": "Silent Magician LV8",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "UR",
+  "source_id": 368,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 80
+}

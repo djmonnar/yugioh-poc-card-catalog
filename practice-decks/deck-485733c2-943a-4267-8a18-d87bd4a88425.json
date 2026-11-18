@@ -1,0 +1,49 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-485733c2-943a-4267-8a18-d87bd4a88425",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "424143f93d03ef36cdfff096683bf844948649f4c616d5e0fcf80cb54de3ca27",
+      "source_id": 2001
+    },
+    {
+      "count": 3,
+      "identity_key": "27cb6ed2dc9f4725400770ec776f376b5c712362aefc3f6abacafa829c51b0a3",
+      "source_id": 2666
+    },
+    {
+      "count": 3,
+      "identity_key": "68ba1320ede183c9612f42646fa2a5865e93240aa358a49c4c1324cced4008da",
+      "source_id": 242
+    },
+    {
+      "count": 3,
+      "identity_key": "1f980e36db465ec426456f64291b6aea9ce1ceee0d4376a36a7d4c1b8ad1a7bb",
+      "source_id": 1801
+    },
+    {
+      "count": 2,
+      "identity_key": "a61ec797c2097c5c7a998b119474c78a0c6e2c78952dcb4495ce6212581bc2bf",
+      "source_id": 2081
+    },
+    {
+      "count": 2,
+      "identity_key": "1b270817c951ccfdba7a3a987b9204f212cc5489c86eea3f030179fa7e413961",
+      "source_id": 2012
+    },
+    {
+      "count": 2,
+      "identity_key": "e84d94a4fae01c996a8987182984fb3ffa213f361b0ab853eb512074b855dd20",
+      "source_id": 2013
+    },
+    {
+      "count": 3,
+      "identity_key": "90c257c09a13be5c08dde46feb5430c8094a96ccb3e70d8540d72d4661d99a67",
+      "source_id": 1948
+    }
+  ],
+  "name": "해골수스 하인 중급",
+  "version": 529
+}

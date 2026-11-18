@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards144/2982",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-레벨·소환",
+    "지원-종족",
+    "지원-속성",
+    "발동-묘지로 보내기",
+    "소환-덱리크루터"
+  ],
+  "code": 5288597,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 자신 필드의 앞면 표시 몬스터 1장을 묘지로 보내고 발동할 수 있다. 묘지의 그 몬스터와 종족 / 속성이 같고, 레벨이 1개 높은 몬스터 1장을 덱에서 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "bde4fb774b04c28505e36abecb9e94853e5a45c3a5408b704b215cbe49f892ea",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native144/cards/2982.jpg",
+  "level": 0,
+  "links": [],
+  "name": "트랜스턴",
+  "name_english": "Transmodify",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "트랜스턴",
+    "Transmodify"
+  ],
+  "source_id": 2982,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 2014
+}

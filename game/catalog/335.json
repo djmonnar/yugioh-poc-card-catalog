@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/335",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "파괴-몬스터"
+  ],
+  "code": 53129443,
+  "defense": 0,
+  "description": "필드의 모든 몬스터를\n파괴합니다.",
+  "draw_enabled": true,
+  "identity_key": "0014364187b6ea67fc6202c60c371b8ad569fe234b1213af412f6a818ab0a215",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0802.webp",
+  "level": 0,
+  "links": [],
+  "name": "블랙홀",
+  "name_english": "Dark Hole",
+  "native_type": 2,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 335,
+  "speed_limit": 1,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 802
+}

@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards120/2781",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-듀얼",
+    "효과-파괴",
+    "발동-파괴"
+  ],
+  "code": 67045174,
+  "defense": 0,
+  "description": "①: 1번 더 일반 소환된 상태의 듀얼 몬스터가 전투로 파괴되었을 때에 발동할 수 있다. 상대 필드의 몬스터를 전부 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "325cd883d1eaadc8471818e8a0f6897d6f36278f5a4ab0cace851ecbb33c3240",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native120/cards/2781.jpg",
+  "level": 0,
+  "links": [],
+  "name": "이중의 함정 속으로",
+  "name_english": "Gemini Trap Hole",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "search_aliases": [
+    "이중의 함정속으로",
+    "이중의 함정 속으로",
+    "Gemini Trap Hole"
+  ],
+  "source_id": 2781,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1813
+}

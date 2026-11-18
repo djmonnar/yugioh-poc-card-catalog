@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards143/2971",
+  "attack": 0,
+  "attribute": 2,
+  "categories": [
+    "지원-해황",
+    "지원-물 속성",
+    "지원-해룡족",
+    "지원-저레벨",
+    "소환-추가 일반 소환",
+    "발동-묘지로 보내졌을 때",
+    "효과-파괴"
+  ],
+  "code": 37104630,
+  "defense": 1600,
+  "description": "①: 이 카드가 몬스터 존에 존재하는 한, 자신은 통상 소환 외에도 1번만, 자신 메인 페이즈에 레벨 4 이하의 해룡족 몬스터 1장을 일반 소환할 수 있다. ②: 이 카드가 물 속성 몬스터의 효과를 발동하기 위해 묘지로 보내졌을 경우, 상대 필드의 앞면 표시의 카드 1장을 대상으로 하고 발동한다. 그 상대의 앞면 표시의 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "6a53c56f43de1df2d7fd8c4ec955de5a98f591dfc533ef38c1a99a9fbb5badcd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native143/cards/2971.jpg",
+  "level": 2,
+  "links": [],
+  "name": "해황의 중장병",
+  "name_english": "Atlantean Heavy Infantry",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 262144,
+  "rarity": "R",
+  "search_aliases": [
+    "해황의 중장병",
+    "Atlantean Heavy Infantry"
+  ],
+  "source_id": 2971,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2003
+}

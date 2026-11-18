@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards125/2832",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-에일리언",
+    "지원-필드",
+    "지원-전투"
+  ],
+  "code": 60946968,
+  "defense": 0,
+  "description": "상대 몬스터가 자신 필드 위에 존재하는 \"에일리언\"이라는 이름이 붙은 몬스터와 전투할 경우, 상대 몬스터의 공격력과 수비력은 데미지 계산시에만 300 포인트 내린다.",
+  "draw_enabled": true,
+  "identity_key": "31331a2f54fb6e6f86c336e6d33d888da25c9e5a45c886a6b0827a49e3267a91",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native125/cards/2832.jpg",
+  "level": 0,
+  "links": [],
+  "name": "이계공간－A 존",
+  "name_english": "Otherworld - The \"A\" Zone",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "이계공간 A존",
+    "이계공간－A 존",
+    "Otherworld - The \"A\" Zone"
+  ],
+  "source_id": 2832,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "필드 마법",
+  "web_slot": 1864
+}

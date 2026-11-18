@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1545",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "무효-함정"
+  ],
+  "code": 7165085,
+  "defense": 0,
+  "description": "뒷면 함정 카드 1장의 발동을\n강제한다. 발동 타이밍이\n올바르지 않으면 효과를\n무효로 하고 파괴한다. 함정\n카드가 아니면 원래 표시\n형식으로 되돌린다. 발동 후\n이 카드는 묘지로 보내지 않고\n덱에 넣고 셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "ea7e74fb3ffd5d74be739b4ed091b6495c4f7950a6b2ca3165903fa7f468d4e5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0123.webp",
+  "level": 0,
+  "links": [],
+  "name": "저주 인형",
+  "name_english": "Bait Doll",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1545,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 123
+}

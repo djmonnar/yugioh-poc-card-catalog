@@ -1,0 +1,48 @@
+{
+  "artKey": "DuelUi011/legacy/joey_intro",
+  "banlistEnabled": false,
+  "deckName": "조이 흑룡 초급",
+  "extra": [
+    68,
+    1970
+  ],
+  "id": "enc044_1_battle_ch1_battle_07d66573667316cd182197d0",
+  "lpBonus": 0,
+  "main": [
+    626,
+    626,
+    81,
+    81,
+    1965,
+    1967,
+    710,
+    1166,
+    77,
+    77,
+    77,
+    15,
+    15,
+    3,
+    3,
+    1003,
+    1003,
+    1003,
+    657,
+    657
+  ],
+  "name": "조이",
+  "openingDrawBonus": 1,
+  "profileId": "joey",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "draw_once",
+      "position": 0,
+      "sourceId": -1,
+      "threshold": 1000,
+      "value": 1
+    }
+  ],
+  "templateId": "installed-story:sc-ca68062bd2df2926-fa7c7b1b01c0d069efe54df0eef2de3a",
+  "usesNativeRules035": true
+}

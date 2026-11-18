@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2528",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-의식"
+  ],
+  "code": 95658967,
+  "defense": 0,
+  "description": "각 효과는 카드명당 1턴에 1번만 사용할 수 있다. ① 패의 마법 1장을 버리고, 덱의 빛 속성 의식 몬스터 또는 의식 마법 1장을 패에 넣을 수 있다. ② 묘지의 마법을 원하는 수만큼 덱으로 되돌리고, 그 수와 레벨이 같은 자신 묘지의 빛 속성·천사족 몬스터 1장을 대상으로 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "f3fc460f7d950d403686b1e72e4bd3eb0682f72d5be63b0b32c1c299a1a1c599",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2528.jpg",
+  "level": 0,
+  "links": [],
+  "name": "축복의 교회－리츄얼 처치",
+  "name_english": "Ritual Sanctuary",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2528,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "필드 마법",
+  "web_slot": 1560
+}

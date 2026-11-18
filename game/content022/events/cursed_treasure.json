@@ -1,0 +1,18 @@
+{
+  "description": "상자 안의 보물은 눈부시다. 그러나 뚜껑의 봉인은 앞으로의 세 결투에서 힘을 앗아가겠다고 속삭인다.",
+  "effect": "UR 유물 획득 · 다음 완료 전투 3회 동안 시작 패 -1",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/background",
+  "id": "cursed_treasure",
+  "kind": "cursed_treasure",
+  "name": "UR 유물 획득 · 다음 완료 전투 3회 동안 시작 패 -1",
+  "params": {
+    "battles": 3,
+    "opening_penalty": 1
+  },
+  "rewardRarity": null,
+  "supportStatus": "verified-controller022",
+  "title": "저주받은 보물상자",
+  "weight": 1
+}

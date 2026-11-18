@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1508",
+  "attack": 2400,
+  "attribute": 32,
+  "categories": [
+    "덱-붉은눈",
+    "덱-툰",
+    "소환-패,덱",
+    "효과-직접공격"
+  ],
+  "code": 31733941,
+  "defense": 2000,
+  "description": "①: 이 카드는 일반 소환 / 반전 소환 / 특수 소환한 턴에는 공격할 수 없다. ②: 자신 필드에 \"툰 월드\"가 존재하고, 상대 필드에 툰 몬스터가 존재하지 않을 경우, 이 카드는 직접 공격할 수 있다. ③: 1턴에 1번, 자신 메인 페이즈에 발동할 수 있다. 패에서 \"붉은 눈의 툰 드래곤\" 이외의 툰 몬스터 1장을 소환 조건을 무시하고 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "a6d7b78da9fe60b086014c947c497ec6824b14411e317ad817def59693090095",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0456.webp",
+  "level": 7,
+  "links": [],
+  "name": "붉은 눈의 툰 드래곤",
+  "name_english": "Red-Eyes Toon Dragon",
+  "native_type": 4194337,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "source_id": 1508,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 456
+}

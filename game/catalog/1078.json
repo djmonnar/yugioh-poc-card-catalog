@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1078",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "면역-마법",
+    "면역-함정",
+    "면역-소환"
+  ],
+  "code": 79323590,
+  "defense": 0,
+  "description": "이 카드가 필드에 앞면으로\n존재하는 동안 양쪽\n플레이어는 패에서 카드를\n사용하거나 세트할 때마다\n카드 1장당 500 LP를 지불해야\n한다.",
+  "draw_enabled": true,
+  "identity_key": "4dc7ab96796f5250b48bff34237bcc26cbdfdbee269bd5dbc6d0dfa75ee15055",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0921.webp",
+  "level": 0,
+  "links": [],
+  "name": "마력의 족쇄",
+  "name_english": "Chain Energy",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1078,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 921
+}

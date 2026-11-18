@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/345",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 19523799,
+  "defense": 0,
+  "description": "상대에게 800 직접 데미지를\n준다.",
+  "draw_enabled": true,
+  "identity_key": "d1983c08a13912d0f54a6cb66ff62b20518dcd19b89ae74a9cbb7e1c66fc68d4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0557.webp",
+  "level": 0,
+  "links": [],
+  "name": "대화재",
+  "name_english": "Ookazi",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 345,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 557
+}

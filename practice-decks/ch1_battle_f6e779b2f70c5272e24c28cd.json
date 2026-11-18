@@ -1,0 +1,74 @@
+{
+  "banlist_enabled": false,
+  "extra": [],
+  "id": "ch1_battle_f6e779b2f70c5272e24c28cd",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "5bf8930ebf2bbfae69589b389e31bb6ba563996d98ac073333a950a2e27e410a",
+      "source_id": 1050
+    },
+    {
+      "count": 2,
+      "identity_key": "a850b8cd0e118c301dde50e7dcabc13ebb54f1506ec19fbe0694955bba7dfd67",
+      "source_id": 34
+    },
+    {
+      "count": 3,
+      "identity_key": "b7d229e6b322789d796b87346183da14ce2823b07245c7e7ea64510aeda54061",
+      "source_id": 1
+    },
+    {
+      "count": 1,
+      "identity_key": "bb23adbc9b15351db086e73ddcff5854a1d7e156093b80599ea356f01f014c76",
+      "source_id": 1211
+    },
+    {
+      "count": 1,
+      "identity_key": "e7a0ae4a02cc970faa1d456a1b3332ccb2402e49fc8c92ea125aff18e54ec19d",
+      "source_id": 1212
+    },
+    {
+      "count": 2,
+      "identity_key": "1b9077aeac6cf3d35fd62e05e34fea9eab86b21b05132660bc569234f88b1893",
+      "source_id": 759
+    },
+    {
+      "count": 1,
+      "identity_key": "d2c01cb64e03976bb7e6b09227171d7ee68de146ef4c13f508a92758f2bc74be",
+      "source_id": 1450
+    },
+    {
+      "count": 1,
+      "identity_key": "0e91a136403c3bdbf11bb7568bef5c5585b64141d67626d74b9a240ea8f59690",
+      "source_id": 710
+    },
+    {
+      "count": 1,
+      "identity_key": "7c91bc02916e6d4ddc8f520910d4106d0533dfdaa62e0e743ceb7b66e18fad69",
+      "source_id": 1166
+    },
+    {
+      "count": 2,
+      "identity_key": "2e5b09e8cbb003a78a38101064462aeb0d78745bbca28fb850e2f1911f497552",
+      "source_id": 1079
+    },
+    {
+      "count": 1,
+      "identity_key": "cc43ed9978e9a88cc6f159884ff0432c4df10988fde0ef0ce20e13938d113b8c",
+      "source_id": 1525
+    },
+    {
+      "count": 1,
+      "identity_key": "7ab0d1cad6193baa7f779cf81ee04d9a377f6583b8baf25ee742220662eaf193",
+      "source_id": 1926
+    },
+    {
+      "count": 1,
+      "identity_key": "389828818d18ff9751e6883c28e1159288f287f3285a8a895ff6ff9febebd6f6",
+      "source_id": 1917
+    }
+  ],
+  "name": "유희 -블랙매지션 초급",
+  "version": 37
+}

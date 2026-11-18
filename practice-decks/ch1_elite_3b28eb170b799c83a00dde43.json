@@ -1,0 +1,75 @@
+{
+  "banlist_enabled": true,
+  "extra": [
+    {
+      "count": 1,
+      "identity_key": "14ea01ead9ceb3ea3f3b9567ebf92ac23e5acf7688860bec4312c67618621e7c",
+      "source_id": 441
+    },
+    {
+      "count": 1,
+      "identity_key": "16ea8930a02643a82da6343d97f433ff1485a597d048dfb84fe0ee8de9f32790",
+      "source_id": 426
+    }
+  ],
+  "id": "ch1_elite_3b28eb170b799c83a00dde43",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "4ee7da1607ec6bac05c5cb186ca2a8b4bf5337490734f05276fe43575087f4c7",
+      "source_id": 602
+    },
+    {
+      "count": 2,
+      "identity_key": "89fe7de99a997327f4633681def247bc7c4e2fa951b80ddda43351f0893b1bda",
+      "source_id": 1350
+    },
+    {
+      "count": 2,
+      "identity_key": "aca619113f31bb396e2779a8bb9501d44710c905fc0868744ea53d441b6601ad",
+      "source_id": 641
+    },
+    {
+      "count": 2,
+      "identity_key": "9a22eb17c39ac8582c6dd846f9eb6b40ec418073631f9b9aed493044afff53df",
+      "source_id": 392
+    },
+    {
+      "count": 1,
+      "identity_key": "85d11ddcb9dfd8b58640fc1b38c81f18d0055ae8edffc1d4202f8702b8618f96",
+      "source_id": 1314
+    },
+    {
+      "count": 2,
+      "identity_key": "6e88143a6d19b63d51f9f78d79264941a106691798fb78f1579481304fad7560",
+      "source_id": 1003
+    },
+    {
+      "count": 1,
+      "identity_key": "83176f3fabd5a8b57f264142b6caa0dbbe26b214c8f9702d8cdce70ee66af99a",
+      "source_id": 1524
+    },
+    {
+      "count": 1,
+      "identity_key": "d5aca276e7b69ac580d1a4b4e11863f0713b0832bc9009dca6092e485522aa4f",
+      "source_id": 13
+    },
+    {
+      "count": 2,
+      "identity_key": "05b26a45d30cc9f5293e3a00bbc51ea03b2be6d45d06fc37eb468717bccba07f",
+      "source_id": 657
+    },
+    {
+      "count": 2,
+      "identity_key": "5349c07bb3874169f6339512131cedfe6f1738b0de781c72c986b3f1dad27839",
+      "source_id": 1947
+    },
+    {
+      "count": 2,
+      "identity_key": "dc819ac4bfd64a44d876fe0f75bfe97cb0e24e9dfa20e1cb23e5a9d0b52f5724",
+      "source_id": 962
+    }
+  ],
+  "name": "사이버드래곤 중급",
+  "version": 86
+}

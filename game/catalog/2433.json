@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2433",
+  "attack": 1600,
+  "attribute": 32,
+  "categories": [
+    "덱-암흑계",
+    "발동-묘지",
+    "소환-묘지"
+  ],
+  "code": 33731070,
+  "defense": 1300,
+  "description": "①: 이 카드가 효과로 패에서 묘지로 버려졌을 경우 발동한다. 이 카드를 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "a39d442a23b30860ecd7be464cf114ffd35401b76f2138dc80e70f97f0fa839b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2433.jpg",
+  "level": 4,
+  "links": [],
+  "name": "암흑계의 첨병 베이지",
+  "name_english": "Beiige, Vanguard of Dark World",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "N",
+  "source_id": 2433,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1470
+}

@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards122/2801",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-덱으로되돌리기",
+    "효과-드로우"
+  ],
+  "code": 85852291,
+  "defense": 0,
+  "description": "자신의 패를 임의의 매수만큼 선택하여, 덱에 넣고 셔플한다. 그 후, 덱에 넣은 매수만큼의 카드를 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "5b8b8386a775fb4db7e3974f5822753abcd53c357e2d30929c264f406ec95785",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native122/cards/2801.jpg",
+  "level": 0,
+  "links": [],
+  "name": "요술망치",
+  "name_english": "Magical Mallet",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "요술망치",
+    "Magical Mallet"
+  ],
+  "source_id": 2801,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1833
+}

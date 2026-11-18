@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2114",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "발동-릴리즈",
+    "효과-데미지"
+  ],
+  "code": 42945701,
+  "defense": 0,
+  "description": "①: 자신 필드의 화염 속성 몬스터 1장을 릴리스하고 발동할 수 있다. 릴리스한 몬스터의 원래 공격력만큼의 데미지를 상대에게 준다.",
+  "draw_enabled": true,
+  "identity_key": "6333010a0c989ec29a4ce118fda69a9f71f0f4efb008a97a8bb68372529306c0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1412.webp",
+  "level": 0,
+  "links": [],
+  "name": "화령술－「홍」",
+  "name_english": "Spiritual Fire Art - Kurenai",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2114,
+  "speed_limit": 2,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1412
+}

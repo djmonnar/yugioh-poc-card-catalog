@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/751",
+  "attack": 2400,
+  "attribute": 32,
+  "categories": [
+    "면역-함정"
+  ],
+  "code": 77585513,
+  "defense": 1500,
+  "description": "이 카드가 필드에 앞면으로\n존재하는 동안 함정 카드를\n발동할 수 없다. 모든 앞면\n함정 카드의 효과도 무효로\n한다.",
+  "draw_enabled": false,
+  "identity_key": "874ea894086d0542a721f8754d5e5ad625e4a83fc137f61584e74e0880a548d1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0428.webp",
+  "level": 6,
+  "links": [],
+  "name": "인조인간 －사이코 쇼커－",
+  "name_english": "Jinzo",
+  "native_type": 33,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 32,
+  "rarity": "L",
+  "source_id": 751,
+  "speed_limit": 3,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 428
+}

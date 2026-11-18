@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards109/2755",
+  "attack": 1000,
+  "attribute": 16,
+  "categories": [
+    "지원-저레벨",
+    "효과-덱샐비지"
+  ],
+  "code": 44364207,
+  "defense": 1800,
+  "description": "이 카드가 필드 위에 앞면 공격 표시로 존재하는 한, 자신 필드 위의 공격력 1200 이하의 기계족 몬스터는 함정 카드의 효과로는 파괴되지 않는다. 필드 위에 앞면 표시로 존재하는 이 카드가 전투에 의해서 파괴되어 묘지로 보내졌을 때, 덱에서 기계족 / 빛 속성 / 레벨 4 몬스터 1장을 패에 넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "30c9fa819950994cc639026859c7413fb279269da32b3cb285017c76ef51ad24",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native109/cards/2755.jpg",
+  "level": 4,
+  "links": [],
+  "name": "제이드 나이트",
+  "name_english": "Jade Knight",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "search_aliases": [
+    "제이드나이트",
+    "제이드 나이트",
+    "Jade Knight"
+  ],
+  "source_id": 2755,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1787
+}

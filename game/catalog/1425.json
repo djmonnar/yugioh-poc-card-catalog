@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1425",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "파괴-몬스터"
+  ],
+  "code": 53582587,
+  "defense": 0,
+  "description": "몬스터가 소환되었을 때\n발동할 수 있다. 반전 소환과\n특수 소환도 포함한다. 필드의\n모든 몬스터를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "c51c42e077307214d72caf782530d70314944df10145a9da4a38ee0450d2d162",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0272.webp",
+  "level": 0,
+  "links": [],
+  "name": "격류장",
+  "name_english": "Torrential Tribute",
+  "native_type": 4,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1425,
+  "speed_limit": 1,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 272
+}

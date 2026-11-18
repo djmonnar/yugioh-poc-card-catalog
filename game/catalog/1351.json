@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1351",
+  "attack": 1800,
+  "attribute": 1,
+  "categories": [
+    "지원-장착",
+    "파괴-마법",
+    "지원-기어프리드"
+  ],
+  "code": 423705,
+  "defense": 1600,
+  "description": "이 카드에 장착된 장착 카드는\n자동으로 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "79e18285d3a5b9a059ed2294139b2fffb07a63ca10c3ce82ef795bc100d2a700",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0591.webp",
+  "level": 4,
+  "links": [],
+  "name": "철의 기사 기어프리드",
+  "name_english": "Gearfried the Iron Knight",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "source_id": 1351,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 591
+}

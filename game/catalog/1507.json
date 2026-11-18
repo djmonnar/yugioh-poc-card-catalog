@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1507",
+  "attack": 2800,
+  "attribute": 16,
+  "categories": [
+    "면역-마법"
+  ],
+  "code": 37267041,
+  "defense": 1000,
+  "description": "이 카드는 통상 소환할 수\n없다. \"사일런트 스워드맨\nLV5\"의 효과로만 특수 소환할\n수 있다. ①: 이 카드가 몬스터\n존에 존재하는 한, 필드의\n마법 카드의 효과는\n무효화된다.",
+  "draw_enabled": true,
+  "identity_key": "2df858f1a5cc1e3d51bff48648852aa193833f0b88043a04819aebbb864272a6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0825.webp",
+  "level": 7,
+  "links": [],
+  "name": "사일런트 스워드맨 LV7",
+  "name_english": "Silent Swordsman LV7",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "UR",
+  "source_id": 1507,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 825
+}

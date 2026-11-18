@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2004",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-필드"
+  ],
+  "code": 56433456,
+  "defense": 0,
+  "description": "①: 이 카드가 필드 존에 존재하는 한, 천사족 몬스터의 전투로 발생하는 그 컨트롤러에게로의 전투 데미지는 0 이 된다.",
+  "draw_enabled": true,
+  "identity_key": "e256dd5bfd39ab06196f61db51794a8e14143e3c30922f799a6cea000cf001a5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1308.webp",
+  "level": 0,
+  "links": [
+    {
+      "identity_key": "1ffec6c1ccc750081216a9426282fe6416b0a0f84fb420e378f52c48870d4406",
+      "slot": 1335
+    }
+  ],
+  "name": "천공의 성역",
+  "name_english": "The Sanctuary in the Sky",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2004,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1308
+}

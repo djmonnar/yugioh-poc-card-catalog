@@ -1,0 +1,20 @@
+{
+  "description": "승리 시 자기 묘지 몬스터 1장당 LP 50을 회복해. 최대 회복량은 300이야.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 45,
+  "iconKey": "Relics/Content022/atlas022",
+  "id": "grave_candle",
+  "kind": "grave_candle",
+  "name": "묘지의 촛불",
+  "params": {
+    "heal_per_monster": 50,
+    "max_heal": 300
+  },
+  "price": 75,
+  "rarity": "N",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-native022",
+  "weight": 1
+}

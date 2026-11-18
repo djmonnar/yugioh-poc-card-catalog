@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1157",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "파괴-몬스터",
+    "효과-제외"
+  ],
+  "code": 71044499,
+  "defense": 0,
+  "description": "뒷면 몬스터 1장을 파괴하고\n제외한다. 그 몬스터가 리버스\n효과를 가지고 있으면, 양쪽\n플레이어는 각각 자신의\n덱에서 같은 이름의 몬스터\n카드를 모두 제외한다. 그 후\n덱을 셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "09f061b21191cbb3cb919822f36065269d43d28b1a4697a82084ccd32a484680",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0906.webp",
+  "level": 0,
+  "links": [],
+  "name": "말살의 사도",
+  "name_english": "Nobleman of Crossout",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1157,
+  "speed_limit": 3,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 906
+}

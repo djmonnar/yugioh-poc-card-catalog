@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/61",
+  "attack": 1300,
+  "attribute": 8,
+  "categories": [
+    "덱-해피"
+  ],
+  "code": 76812113,
+  "defense": 1400,
+  "description": "인간의 몸에 날개가 자라난\n몬스터. 아름답고 화려하게\n춤을 추며 날카롭게 공격한다.",
+  "draw_enabled": true,
+  "identity_key": "db1ff316e58be2c1639de645fed006611c3b86f251876154a87806f92c680002",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0696.webp",
+  "level": 4,
+  "links": [],
+  "name": "해피 레이디",
+  "name_english": "Harpie Lady",
+  "native_type": 17,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "N",
+  "source_id": 61,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 몬스터",
+  "web_slot": 696
+}

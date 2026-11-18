@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2488",
+  "attack": 600,
+  "attribute": 1,
+  "categories": [
+    "덱-젬나이트",
+    "발동-묘지",
+    "지원-일반몬스터",
+    "효과-묘지샐비지"
+  ],
+  "code": 81846636,
+  "defense": 100,
+  "description": "효과로 이 카드가 묘지로 보내지면, 자신 묘지의 일반 몬스터 1장을 대상으로 패에 넣을 수 있다. 비용으로 묘지로 보냈을 때에는 발동하지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "78251c290fe8d651edb0b88d156b5b001aacaecffc3ed445aa5a01410392c2c2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2488.jpg",
+  "level": 1,
+  "links": [],
+  "name": "젬나이트 라줄리",
+  "name_english": "Gem-Knight Lazuli",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "SR",
+  "source_id": 2488,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1525
+}

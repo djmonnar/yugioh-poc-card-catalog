@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2064",
+  "attack": 800,
+  "attribute": 1,
+  "categories": [
+    "파괴-몬스터",
+    "소환-묘지"
+  ],
+  "code": 69529567,
+  "defense": 600,
+  "description": "자신의 메인 페이즈시, 이 카드의 공격력보다도 높은 공격력을 가진 몬스터가 상대 필드 위에 앞면 표시로 존재할 경우, 필드 위에 존재하는 이 카드를 파괴할 수 있다. 또한, 자신의 스텐바이 페이즈시, 이 카드의 효과로 파괴된 이 카드를 묘지에서 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "9a6eb7ebecf4b89ef0d4f0db187a5e407d0ec8d9e3f03f9558cc909b5d2be735",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1363.webp",
+  "level": 2,
+  "links": [],
+  "name": "시치미 떼는 주머니쥐",
+  "name_english": "Playful Possum",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "R",
+  "source_id": 2064,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1363
+}

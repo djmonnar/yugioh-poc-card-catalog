@@ -1,0 +1,69 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "starter-template-f0b56bfed2007c8552b6139e07b48133",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "33c8e88dbbcb1071c03a444a56298336f0e7a3bda63e7d321952c0d8f9801ee1",
+      "source_id": 1145
+    },
+    {
+      "count": 2,
+      "identity_key": "56566cf6038b66750d99032d77fe5925c303f118831c5e855ded5a28f979803b",
+      "source_id": 1352
+    },
+    {
+      "count": 2,
+      "identity_key": "fab18c6524493e1a9505d0e0783453814c3a98d330fd080e9a99b8d97c5509b7",
+      "source_id": 1868
+    },
+    {
+      "count": 2,
+      "identity_key": "6b6c7e0aaaa169972d36ed61c1573a0f2cc99aa4944e6d8055336c625dee8ecb",
+      "source_id": 402
+    },
+    {
+      "count": 2,
+      "identity_key": "d9cacb582fdec1203791a0c40d4924107978dab8b3be9c1bd243ca9bbe8e6a9a",
+      "source_id": 1335
+    },
+    {
+      "count": 2,
+      "identity_key": "a16462f1a6d6be3b2bc206c0437c13a6cc62435a331abb5b27ecabd61c5bdda2",
+      "source_id": 1859
+    },
+    {
+      "count": 2,
+      "identity_key": "d5bd969701a421b8a8e9520202a00969264aac72d447e64132004df14d084135",
+      "source_id": 1857
+    },
+    {
+      "count": 2,
+      "identity_key": "2e5b09e8cbb003a78a38101064462aeb0d78745bbca28fb850e2f1911f497552",
+      "source_id": 1079
+    },
+    {
+      "count": 1,
+      "identity_key": "99eb671aef76f7730b5f1fc19f4448228a2189fc01ba46b5cad0db24b2811e00",
+      "source_id": 1030
+    },
+    {
+      "count": 1,
+      "identity_key": "4f17e332940a371c7b3b2e845f0f7d687e3481e51e6449a42f0ea8117d6b2d9a",
+      "source_id": 1029
+    },
+    {
+      "count": 1,
+      "identity_key": "71db51531173c4c5d42aaed396486cc80612d5db632f28cbbad092aaeea7c36f",
+      "source_id": 1318
+    },
+    {
+      "count": 1,
+      "identity_key": "e5a059da2916118ccae21b984cde7d0c34873566338c1c4a7419b3f8a4f1ff88",
+      "source_id": 182
+    }
+  ],
+  "name": "사마준",
+  "version": 694
+}

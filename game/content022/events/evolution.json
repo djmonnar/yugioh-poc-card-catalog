@@ -1,0 +1,17 @@
+{
+  "description": "성소의 빛이 몬스터 카드의 별을 하나 더 비춘다. 익숙한 동료와 작별하면 새로운 동료가 나타난다.",
+  "effect": "선택한 덱 몬스터 1매 제거 · 정확히 레벨 +1인 무작위 몬스터 1매 획득",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "evolution",
+  "kind": "evolution",
+  "name": "덱의 몬스터 1장을 레벨이 하나 높은 무작위 몬스터로 교환",
+  "params": {
+    "levels": 1
+  },
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "진화",
+  "weight": 1
+}

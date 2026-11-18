@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1159",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-묘지"
+  ],
+  "code": 43434803,
+  "defense": 0,
+  "description": "양쪽 플레이어는 각각 자신의\n묘지에서 몬스터 1장을\n선택하여 필드에 뒷면 수비\n표시로 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "60e35f535dd5d99446ffa1b9158db6d9a3585dc04e9c7a10bfb1f781f582dd1b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0022.webp",
+  "level": 0,
+  "links": [],
+  "name": "얕은 무덤",
+  "name_english": "The Shallow Grave",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1159,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 22
+}

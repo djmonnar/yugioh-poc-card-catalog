@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1532",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-제외-묘지",
+    "파괴-몬스터"
+  ],
+  "code": 6733059,
+  "defense": 0,
+  "description": "자신의 묘지에서 원하는 수의\n몬스터를 제외한다. 제외한\n매수와 같은 레벨을 가진\n필드의 앞면 몬스터 1장을\n파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "254e8c8303d404d2fa90d6aaaa19826d382806e177261d359e852edc02fd1218",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0415.webp",
+  "level": 0,
+  "links": [],
+  "name": "사령의 소굴",
+  "name_english": "Skull Lair",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1532,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 415
+}

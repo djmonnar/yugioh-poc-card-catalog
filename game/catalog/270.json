@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/270",
+  "attack": 1700,
+  "attribute": 16,
+  "categories": [
+    "지원-필드",
+    "효과-묘지샐비지",
+    "발동-묘지"
+  ],
+  "code": 47929865,
+  "defense": 1000,
+  "description": "이 카드가 마법사족 몬스터의 싱크로 소환에 사용되어 묘지로 보내졌을 경우, 자신의 묘지에 존재하는 필드 마법 카드 1장을 선택하고 패에 넣을 수 있다.\n[미지원] 싱크로 소환은 현재 게임에서 지원하지 않습니다. 기존의 다른 조건 드로우/회수 효과는 제거합니다.",
+  "draw_enabled": true,
+  "identity_key": "e347ab4c98b7735a5258aa034a9aa3b15b7ecc674eb7b2ce12d339c8329cede2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0968.webp",
+  "level": 4,
+  "links": [],
+  "name": "매지도그",
+  "name_english": "Magidog",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 270,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 968
+}

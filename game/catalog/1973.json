@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1973",
+  "attack": 1800,
+  "attribute": 32,
+  "categories": [
+    "효과-묘지보내기",
+    "효과-덱샐비지",
+    "파괴-몬스터",
+    "소환-묘지"
+  ],
+  "code": 44335251,
+  "defense": 500,
+  "description": "이 카드명의 ①②의 효과는 각각\n1턴에 1번밖에 사용할 수\n없다. ①: 이 카드를 일반 소환\n/ 특수 소환했을 경우에\n발동할 수 있다. 덱에서\n공룡족 몬스터 1장을 고르고,\n패에 넣거나 묘지로 보낸다.\n②: 필드의 다른 레벨 4 이하의\n공룡족 몬스터 1장을 대상으로\n하고 발동할 수 있다. 그\n몬스터를 파괴한다. 그 후,\n자신 묘지에서 공룡족 몬스터\n1장을 수비 표시로 특수\n소환한다.\n[안내] ②는 필드의 이 카드를\n선택하여 발동하며, 파괴할\n몬스터는 발동할 때 선택한다.\n[차이] ①로 덱에서 패에 넣는\n카드는 상대에게 공개된다.",
+  "draw_enabled": true,
+  "identity_key": "1606189c59fad766b10bbffded84651244251ff913ebbe39c20604ed2bc2dc70",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1136.webp",
+  "level": 4,
+  "links": [],
+  "name": "영혼을 먹는 오비랍토르",
+  "name_english": "Souleating Oviraptor",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "UR",
+  "source_id": 1973,
+  "speed_limit": 3,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1136
+}

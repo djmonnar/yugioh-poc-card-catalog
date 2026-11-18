@@ -1,0 +1,20 @@
+{
+  "description": "원정 중 원하는 듀얼에서 사용할 수 있는 드로우 1회분.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 8,
+  "iconKey": "Relics/atlas160",
+  "id": "draw_scroll",
+  "kind": "draw_scroll",
+  "name": "드로우 두루마리",
+  "params": {
+    "charges": 1,
+    "draw": 1
+  },
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

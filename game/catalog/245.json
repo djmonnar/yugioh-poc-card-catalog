@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards/245",
+  "attack": 2500,
+  "attribute": 32,
+  "categories": [
+    "소환-묘지",
+    "효과-제외-묘지",
+    "발동-묘지"
+  ],
+  "code": 56174248,
+  "defense": 1200,
+  "description": "이 카드가 묘지에 존재할\n경우, 자신 묘지의\n\"마도서\"라는 이름이 붙은\n마법 카드 3장을 게임에서\n제외하고 발동할 수 있다. 이\n카드를 묘지에서 특수\n소환한다.\n[안내] 묘지의 이 카드의\n효과는 자신의 메인 페이즈\n1·2가 시작될 때 발동할지\n묻는다.",
+  "draw_enabled": true,
+  "identity_key": "c63f65459089c62d7135f9b0a770372c98f1f25c451a871a334a4f94fb055e2b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0540.webp",
+  "level": 6,
+  "links": [
+    {
+      "identity_key": "b1d844d40d803bd9a5bc5ab462ff1f88fd2b0c0223deb50ef692b2f1ee026168",
+      "slot": 1118
+    },
+    {
+      "identity_key": "590ebbfd869bc3fd0b77820167c95ac7e84aca64e1c8602339630cbabf8311d1",
+      "slot": 1119
+    }
+  ],
+  "name": "마도귀사 디아르",
+  "name_english": "Prophecy Destroyer",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 245,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 540
+}

@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards135/2922",
+  "attack": 1700,
+  "attribute": 4,
+  "categories": [
+    "지원-쥬락",
+    "지원-전투",
+    "효과-바운스"
+  ],
+  "code": 71106375,
+  "defense": 700,
+  "description": "이 카드가 전투에 의해서 상대 몬스터를 파괴한 경우 상대 필드 위에 세트된 카드 1장을 패로 되돌릴 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "bc8d0206ddee4fb5c9fad1659a07d96023df31370fd43aee1ed29b25702f33d8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native135/cards/2922.jpg",
+  "level": 4,
+  "links": [],
+  "name": "쥬락 이구아논",
+  "name_english": "Jurrac Iguanon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "R",
+  "search_aliases": [
+    "쥬락 이구아논",
+    "Jurrac Iguanon"
+  ],
+  "source_id": 2922,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1954
+}

@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2007",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-일반몬스터",
+    "지원-저레벨",
+    "파괴-몬스터"
+  ],
+  "code": 32298781,
+  "defense": 0,
+  "description": "자신 필드 위에 앞면 표시로 존재하는, 모든 레벨 1 일반 몬스터(토큰 이외)의 원래 공격력과 수비력은 2000 포인트 올린다. 엔드 페이즈시에 자신 필드 위에 존재하는 레벨 1 일반 몬스터를 전부 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "fe5b09048c9aa961b49ecde4f3d979adb8a7f113ff11842bf3a7a4705bd01140",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1311.webp",
+  "level": 0,
+  "links": [],
+  "name": "트라이앵글 파워",
+  "name_english": "Triangle Power",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2007,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1311
+}

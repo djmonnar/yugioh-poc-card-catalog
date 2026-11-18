@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1520",
+  "attack": 1400,
+  "attribute": 1,
+  "categories": [
+    "소환-패,덱",
+    "소환-묘지"
+  ],
+  "code": 45894482,
+  "defense": 400,
+  "description": "이 카드의 일반 소환을 특수\n소환으로 취급할 수 있다.\n특수 소환을 선택하면 상대는\n자신의 묘지의 몬스터 1장을\n선택하여 필드에 특수 소환할\n수 있다.",
+  "draw_enabled": true,
+  "identity_key": "94bef6b97b015d09dc930e530725ae19025c846a25d59af45e2236b32a71a79b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0405.webp",
+  "level": 3,
+  "links": [],
+  "name": "길라사우루스",
+  "name_english": "Gilasaurus",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "SR",
+  "source_id": 1520,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 405
+}

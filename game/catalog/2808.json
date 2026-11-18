@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards122/2808",
+  "attack": 1100,
+  "attribute": 32,
+  "categories": [
+    "발동-소환",
+    "발동-리버스",
+    "지원-리버스",
+    "효과-뒷면표시"
+  ],
+  "code": 34853266,
+  "defense": 1400,
+  "description": "이 카드는 특수 소환할 수 없다. ①: 이 카드가 일반 소환 / 리버스했을 경우, 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동한다. 그 몬스터를 뒷면 수비 표시로 한다. ②: 이 카드가 일반 소환 / 리버스한 턴의 엔드 페이즈에 발동한다. 이 카드를 주인의 패로 되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "b80a3a8abcd68fc894421c7cbe9ed705105959a063d4c1f88005e21ea75a6a58",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native122/cards/2808.jpg",
+  "level": 4,
+  "links": [],
+  "name": "쓰쿠요미",
+  "name_english": "Tsukuyomi",
+  "native_type": 545,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "search_aliases": [
+    "쓰쿠요미",
+    "Tsukuyomi"
+  ],
+  "source_id": 2808,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "스피릿 몬스터",
+  "web_slot": 1840
+}

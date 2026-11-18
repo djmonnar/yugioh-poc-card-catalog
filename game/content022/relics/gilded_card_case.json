@@ -1,0 +1,19 @@
+{
+  "description": "전투 카드 보상을 건너뛸 때 추가 금화 25를 받아. 기본 50골드와 합쳐 75골드야.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 37,
+  "iconKey": "Relics/Content022/atlas022",
+  "id": "gilded_card_case",
+  "kind": "gilded_card_case",
+  "name": "금박 카드 케이스",
+  "params": {
+    "skip_gold": 25
+  },
+  "price": 75,
+  "rarity": "N",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-controller022",
+  "weight": 1
+}

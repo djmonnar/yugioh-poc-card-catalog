@@ -1,0 +1,30 @@
+{
+  "alias": 73134081,
+  "art_key": "Cards/344",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 73134082,
+  "defense": 0,
+  "description": "상대에게 600 직접 데미지를\n준다.",
+  "draw_enabled": true,
+  "identity_key": "46efeb490f98a63d5c7f50c760709df6bced0a02bc881615ec3dd406b819dcb6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0738.webp",
+  "level": 0,
+  "links": [],
+  "name": "화형",
+  "name_english": "Final Flame",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "source_id": 344,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 738
+}

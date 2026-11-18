@@ -1,0 +1,17 @@
+{
+  "description": "두 장의 카드를 비추면 한쪽의 운명이 다른 쪽에 겹친다. 어느 카드가 남을지는 알 수 없다.",
+  "effect": "카드 2매 선택 · 무작위 1매 제거, 남은 1매 복제",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/background",
+  "id": "twin_mirror",
+  "kind": "twin_mirror",
+  "name": "카드 2매 선택 · 무작위 1매 제거, 남은 1매 복제",
+  "params": {
+    "count": 2
+  },
+  "rewardRarity": null,
+  "supportStatus": "verified-controller022",
+  "title": "쌍둥이의 거울",
+  "weight": 1
+}

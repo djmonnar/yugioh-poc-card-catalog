@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards088/2643",
+  "attack": 2500,
+  "attribute": 2,
+  "categories": [
+    "지원-게이트가디언",
+    "지원-바다"
+  ],
+  "code": 98434877,
+  "defense": 2400,
+  "description": "①: 이 카드가 필드에 앞면 표시로 존재하는 한 1번만, 이 카드가 공격받은 데미지 계산시에, 공격 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 공격 몬스터의 공격력을 그 데미지 계산시에만 0 으로 한다.",
+  "draw_enabled": true,
+  "identity_key": "6e370f1cd538e45698822beb38008047e6ce4ba951c2b2ba905eb49bd2296ad3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native088/cards/2643.jpg",
+  "level": 7,
+  "links": [],
+  "name": "수 마신－스가",
+  "name_english": "Suijin",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "SR",
+  "search_aliases": [
+    "풍마신,수마신,번개마신 시리즈",
+    "수 마신－스가",
+    "수마신－스가",
+    "Suijin"
+  ],
+  "source_id": 2643,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1675
+}

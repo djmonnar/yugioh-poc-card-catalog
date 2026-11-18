@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1878",
+  "attack": 0,
+  "attribute": 2,
+  "categories": [
+    "소환-덱리크루터",
+    "효과-제외"
+  ],
+  "code": 6625096,
+  "defense": 0,
+  "description": "이 카드명의 효과는 1턴에\n1번밖에 사용할 수 없다. ①:\n이 카드가 일반 소환 / 특수\n소환에 성공했을 때, 이\n카드를 제외하고 발동할 수\n있다. 덱에서 \"꼬마민어 공주\"\n이외의 레벨 4 이하의 어류족\n몬스터 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "04c4280f9e6f4053393ce32d35b3c3a8cb921a501c8992434436eb943b4ead51",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1205.webp",
+  "level": 1,
+  "links": [],
+  "name": "꼬마민어 공주",
+  "name_english": "Beautunaful Princess",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 131072,
+  "rarity": "R",
+  "source_id": 1878,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1205
+}

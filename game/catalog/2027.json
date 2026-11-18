@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2027",
+  "attack": 1400,
+  "attribute": 32,
+  "categories": [
+    "효과-드로우"
+  ],
+  "code": 87621407,
+  "defense": 1000,
+  "description": "리버스 : 카드를 1장 드로우한다. 자신 필드 위에 \"마화물차량 보코이치\"가 앞면 표시로 존재할 경우, 다시 그 매수만큼 카드를 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "93a585816dbf82d2293506b928e866c322b7e304dba0edf281759d0863c0e079",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1330.webp",
+  "level": 4,
+  "links": [],
+  "name": "마장기관차 데코이치",
+  "name_english": "Dekoichi the Battlechanted Locomotive",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "source_id": 2027,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1330
+}

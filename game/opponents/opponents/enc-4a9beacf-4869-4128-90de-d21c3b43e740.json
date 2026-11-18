@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/ishizu/start",
+  "banlistEnabled": false,
+  "deckName": "이시즈 이슈타르 · 20장",
+  "extra": [],
+  "id": "enc-4a9beacf-4869-4128-90de-d21c3b43e740",
+  "lpBonus": 0,
+  "main": [
+    1307,
+    1307,
+    1822,
+    1822,
+    1822,
+    1823,
+    1823,
+    1829,
+    1829,
+    1935,
+    1935,
+    1826,
+    2389,
+    2389,
+    1824,
+    1824,
+    1825,
+    1825,
+    1888,
+    1888
+  ],
+  "name": "이시즈 이슈타르",
+  "openingDrawBonus": 0,
+  "profileId": "ishizu",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 2389,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-4a9beacf-4869-4128-90de-d21c3b43e740",
+  "usesNativeRules035": true
+}

@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1904",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-융합",
+    "효과-제외",
+    "효과-제외-묘지"
+  ],
+  "code": 71490127,
+  "defense": 0,
+  "description": "①: 자신의 필드 / 묘지에서,\n드래곤족의 융합 몬스터\n카드에 기재된 융합 소재\n몬스터를 제외하고, 그 융합\n몬스터 1장을 엑스트라 덱에서\n융합 소환한다.\n[차이] 융합 소재 대용\n몬스터는 소재로 쓸 수 없다.\n\"붉은 눈의 흑인룡\"은 이\n카드로 융합 소환할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "847c0f75550778e6ac35148031c74605cc98328541d728a4dadb8d6546011fb1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1227.webp",
+  "level": 0,
+  "links": [],
+  "name": "용의 거울",
+  "name_english": "Dragon's Mirror",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1904,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1227
+}

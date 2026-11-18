@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards084/2613",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-기어프리드",
+    "소환-패,덱"
+  ],
+  "code": 75417459,
+  "defense": 0,
+  "description": "자신 필드의 ‘철의 기사 기어프리드’ 1장을 릴리스하고 발동한다. 패 또는 덱에서 ‘검성－네이킷 기어프리드’ 1장을 특수 소환한다.",
+  "draw_enabled": false,
+  "identity_key": "ae00232eb9c5f9e657dace7ef6f6c3e2941c596334eee0e84ac69213260a3f3d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2613.jpg",
+  "level": 0,
+  "links": [],
+  "name": "구속 해제",
+  "name_english": "Release Restraint",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "구속해제",
+    "구속 해제",
+    "Release Restraint"
+  ],
+  "source_id": 2613,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1645
+}

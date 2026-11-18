@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1065",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-드로우",
+    "효과-회복"
+  ],
+  "code": 70368879,
+  "defense": 0,
+  "description": "자신의 덱에서 카드를 1장\n드로우한다. 상대의 LP를 1000\n회복한다.",
+  "draw_enabled": true,
+  "identity_key": "15cb6e10174623dc5f1da0c9a45d392ab96fb7ced1976febd3e05c99b4d4188f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0672.webp",
+  "level": 0,
+  "links": [],
+  "name": "갑부 고블린",
+  "name_english": "Upstart Goblin",
+  "native_type": 2,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1065,
+  "speed_limit": 2,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 672
+}

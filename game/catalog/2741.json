@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards103/2741",
+  "attack": 1000,
+  "attribute": 1,
+  "categories": [
+    "지원-융합"
+  ],
+  "code": 88696724,
+  "defense": 1600,
+  "description": "이 카드를 융합 소재 몬스터 1장 대신에 사용할 수 있다. 그때, 다른 융합 소재 몬스터는 규정한 것이어야 한다. 자신 필드 위에 존재하는 이 카드를 포함하는 융합 소재 몬스터를 릴리스하는 것으로, 땅 속성의 융합 몬스터 1장을 엑스트라 덱에서 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "79bb2bb3e8c934f6beccbdc1fcf82751995fa2781c853af345cea16a7e0dc395",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native103/cards/2741.jpg",
+  "level": 3,
+  "links": [],
+  "name": "융합 주술봉인 생물－땅",
+  "name_english": "The Earth - Hex-Sealed Fusion",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "R",
+  "search_aliases": [
+    "융합 주술봉인 생물－땅",
+    "융합주술봉인생물－땅",
+    "The Earth - Hex-Sealed Fusion"
+  ],
+  "source_id": 2741,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1773
+}

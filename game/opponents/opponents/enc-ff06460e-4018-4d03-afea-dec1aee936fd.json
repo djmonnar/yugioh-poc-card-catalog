@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/bakura/start",
+  "banlistEnabled": false,
+  "deckName": "바쿠라 -악마 중급 데몬소환",
+  "extra": [],
+  "id": "enc-ff06460e-4018-4d03-afea-dec1aee936fd",
+  "lpBonus": 0,
+  "main": [
+    21,
+    21,
+    21,
+    122,
+    122,
+    122,
+    2679,
+    2679,
+    2684,
+    2684,
+    2684,
+    1840,
+    1840,
+    2104,
+    2104,
+    2394,
+    2394,
+    1248,
+    2682,
+    2682
+  ],
+  "name": "어둠의 바쿠라",
+  "openingDrawBonus": 0,
+  "profileId": "bakura",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 1840,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-ff06460e-4018-4d03-afea-dec1aee936fd",
+  "usesNativeRules035": true
+}

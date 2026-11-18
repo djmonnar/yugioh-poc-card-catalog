@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2087",
+  "attack": -2,
+  "attribute": 1,
+  "categories": [
+    "효과-제외-묘지",
+    "소환-패,덱"
+  ],
+  "code": 71544954,
+  "defense": -2,
+  "description": "이 카드는 일반 소환/세트할 수 없다. 자신의 묘지에 존재하는 암석족 몬스터를 제외하는 것으로만 특수 소환할 수 있다. 이 카드의 원래 공격력과 수비력은 특수 소환시에 제외한 암석족 몬스터의 수 × 700 포인트의 수치가 된다.",
+  "draw_enabled": true,
+  "identity_key": "6c78caa08b3890ec67c03d3cc61bb84a19bb6b787cd011f939f0f1387054d966",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1385.webp",
+  "level": 7,
+  "links": [],
+  "name": "메가록 드래곤",
+  "name_english": "Megarock Dragon",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "SR",
+  "source_id": 2087,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1385
+}

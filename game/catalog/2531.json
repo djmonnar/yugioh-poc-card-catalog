@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2531",
+  "attack": 100,
+  "attribute": 4,
+  "categories": [
+    "덱-호루스",
+    "면역-마법",
+    "면역-함정",
+    "면역-효과"
+  ],
+  "code": 9264485,
+  "defense": 100,
+  "description": "자신 필드에 앞면으로 존재하는 동안, 상대는 자신 필드의 앞면 호루스의 흑염룡 몬스터를 마법·함정·몬스터 효과의 대상으로 할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "ad4695c1e47094e05816026de2e8d718f1ff6a6332dd1a72bc9974d2662859c3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2531.jpg",
+  "level": 1,
+  "links": [],
+  "name": "호루스의 사도",
+  "name_english": "Horus' Servant",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "N",
+  "source_id": 2531,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1563
+}

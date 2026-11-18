@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards136/2946",
+  "attack": 2500,
+  "attribute": 32,
+  "categories": [
+    "지원-프레데터 플랜츠",
+    "포식 카운터",
+    "지원-융합",
+    "지원-어둠 속성",
+    "지원-전투",
+    "효과-제외",
+    "발동-묘지로 보내졌을 때",
+    "효과-덱샐비지"
+  ],
+  "code": 25586143,
+  "defense": 2000,
+  "description": "\"프레데터 플랜츠\" 몬스터 ＋ 어둠 속성 몬스터\n①: 1턴에 1번, 이 카드의 레벨 이하의 레벨을 가지는 필드의 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 제외한다. ②: 이 카드가 상대의 앞면 표시 몬스터와 전투를 실행하는 공격 선언시에 발동할 수 있다. 턴 종료시까지, 그 상대 몬스터의 공격력은 1000 내리고, 이 카드의 공격력은 1000 올린다. ③: 이 카드가 묘지로 보내졌을 경우, 다음 스탠바이 페이즈에 발동할 수 있다. 덱에서 \"융합\" 마법 카드 또는 \"퓨전\" 마법 카드 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "38d9ad715d855d24fb92782d31dbfcf15927d79f3f09e11a9860a121c3af1792",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native136/cards/2946.jpg",
+  "level": 7,
+  "links": [],
+  "name": "프레데터 플랜츠 키메라플레시아",
+  "name_english": "Predaplant Chimerafflesia",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "SR",
+  "search_aliases": [
+    "프레데터 플랜츠 키메라플레시아",
+    "Predaplant Chimerafflesia"
+  ],
+  "source_id": 2946,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 1978
+}

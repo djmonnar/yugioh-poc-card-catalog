@@ -1,0 +1,19 @@
+{
+  "description": "획득 즉시 무작위 R 카드 2장을 원정 카드함에 받아.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 12,
+  "iconKey": "Relics/atlas160",
+  "id": "rare_cache",
+  "kind": "rare_cache",
+  "name": "희귀 카드 보급함",
+  "params": {
+    "count": 2
+  },
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": "R",
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

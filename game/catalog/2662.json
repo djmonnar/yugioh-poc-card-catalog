@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards093/2662",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-전투",
+    "효과-드로우"
+  ],
+  "code": 94561645,
+  "defense": 0,
+  "description": "①: 상대 몬스터의 직접 공격 선언시에 발동할 수 있다. 그 공격을 무효로 하고, 자신은 1장 드로우한다. 그 드로우한 카드가 몬스터였을 경우, 그 몬스터의 통상 소환을 공격 표시로 실행할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "a91f082f2093fb1e75c466d02a50fa5c3f0d105c0e9ca14f0e4c0858d0217106",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native093/cards/2662.jpg",
+  "level": 0,
+  "links": [],
+  "name": "카운터 게이트",
+  "name_english": "Counter Gate",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "카운터게이트",
+    "카운터 게이트",
+    "Counter Gate"
+  ],
+  "source_id": 2662,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1694
+}

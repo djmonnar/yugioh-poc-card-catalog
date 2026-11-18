@@ -1,0 +1,54 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-1e5be25d-86c1-475a-ae22-90de194f0365",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "e15ed14a8c7a5dad643760cbf4de53e2f3763a728c7a1291dc33f7af655b979a",
+      "source_id": 1892
+    },
+    {
+      "count": 2,
+      "identity_key": "09f061b21191cbb3cb919822f36065269d43d28b1a4697a82084ccd32a484680",
+      "source_id": 1157
+    },
+    {
+      "count": 2,
+      "identity_key": "06a7534b1e918ce2df8cd0ce5a667b406f1b862a17e561c2c4e52341b16a4032",
+      "source_id": 1158
+    },
+    {
+      "count": 2,
+      "identity_key": "fbb7bedc53740d491118336884be8c1349f614f88fc1799e428eff9ff57e8753",
+      "source_id": 1946
+    },
+    {
+      "count": 2,
+      "identity_key": "326ec7211293443b43d618e86c4d1790d473f0ade94b71a4a8bf1a6cc0f2f957",
+      "source_id": 1511
+    },
+    {
+      "count": 3,
+      "identity_key": "1667cae2a5e47b33533f00befbd7cc2160f6cb16e814fd1522790c2b9a6785a0",
+      "source_id": 255
+    },
+    {
+      "count": 2,
+      "identity_key": "d4050ab620226c6914918df362b7641732dc6eb6436e1a8de04b53d0b5802400",
+      "source_id": 1959
+    },
+    {
+      "count": 3,
+      "identity_key": "0663afd289a8de85ee3ae494ac2df0938d593d86c35cd0aec29d2b97ee648245",
+      "source_id": 480
+    },
+    {
+      "count": 2,
+      "identity_key": "17c600367139fbd24a9c5774252aa2739700130791fa9eafebadaa55d92a584d",
+      "source_id": 1897
+    }
+  ],
+  "name": "카오스소서러-제외",
+  "version": 587
+}

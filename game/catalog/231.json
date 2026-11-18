@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/231",
+  "attack": 1850,
+  "attribute": 1,
+  "categories": [
+    "소환-패,덱",
+    "효과-묘지보내기"
+  ],
+  "code": 31887905,
+  "defense": 1500,
+  "description": "①: 이 카드는 자신 필드의\n앞면 표시의, \"지령사 아우스\"\n1장과 땅 속성 몬스터 1장을\n묘지로 보내고, 패 / 덱에서\n특수 소환할 수 있다. ②: 이\n카드의 ①의 방법으로 특수\n소환한 이 카드가 수비 표시\n몬스터를 공격했을 경우, 그\n수비력을 공격력이 넘은\n만큼만 상대에게 전투\n데미지를 준다.\n[안내] 덱에 있는 이 카드는\n필드의 대응하는 령사를\n선택하여 발동해서 특수\n소환한다(체인이 발생한다).",
+  "draw_enabled": true,
+  "identity_key": "b8b83a0c91db4c7f4bb0649f11a65658918c9f66e03bef9e0d2f796b2789aa88",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0900.webp",
+  "level": 4,
+  "links": [],
+  "name": "빙의장착－아우스",
+  "name_english": "Familiar-Possessed - Aussa",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 231,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 900
+}

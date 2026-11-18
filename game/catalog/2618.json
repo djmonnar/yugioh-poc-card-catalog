@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards084/2618",
+  "attack": 1600,
+  "attribute": 1,
+  "categories": [
+    "지원-릴리즈"
+  ],
+  "code": 38479725,
+  "defense": 1200,
+  "description": "땅 속성 몬스터를 어드밴스 소환하기 위해 릴리스할 때, 이 몬스터 1장을 릴리스 2장 몫으로 사용할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "b9cf4b42ad473e1a6864720b17aa72f8a9225c121ea8e0d5cf337df9d238861d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2618.jpg",
+  "level": 4,
+  "links": [],
+  "name": "트로이 목마",
+  "name_english": "The Trojan Horse",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "R",
+  "search_aliases": [
+    "트로이목마",
+    "트로이 목마",
+    "The Trojan Horse"
+  ],
+  "source_id": 2618,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1650
+}

@@ -1,0 +1,17 @@
+{
+  "description": "빛을 비추자 지도 위 물음표 아래에 숨겨진 기록이 드러난다.",
+  "effect": "앞으로 4층 이벤트의 제목과 원래 선택지 미리 보기",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/background",
+  "id": "inscribed_map",
+  "kind": "inscribed_map",
+  "name": "앞으로 4층 이벤트의 제목과 원래 선택지 미리 보기",
+  "params": {
+    "floors": 4
+  },
+  "rewardRarity": null,
+  "supportStatus": "verified-controller022",
+  "title": "지도에 새겨진 비문",
+  "weight": 1
+}

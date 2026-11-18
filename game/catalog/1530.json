@@ -1,0 +1,30 @@
+{
+  "alias": 76812113,
+  "art_key": "Cards/1530",
+  "attack": 1300,
+  "attribute": 8,
+  "categories": [
+    "덱-해피"
+  ],
+  "code": 27927359,
+  "defense": 1400,
+  "description": "이 카드의 카드명은 \"해피\n레이디\"로 취급한다. 이\n몬스터가 전투에 의해서\n파괴한 리버스 효과 몬스터의\n효과는 무효화된다.",
+  "draw_enabled": true,
+  "identity_key": "0d37ab500ff5b7ef146ce3dea6796ab6ed6e3d3ec8027a70f581246ac6623163",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0108.webp",
+  "level": 4,
+  "links": [],
+  "name": "해피 레이디2",
+  "name_english": "Harpie Lady 2",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "R",
+  "source_id": 1530,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 108
+}

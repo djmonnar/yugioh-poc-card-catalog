@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1930",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 81385346,
+  "defense": 0,
+  "description": "자신 필드 위에 앞면 표시의\n드래곤족 몬스터가 존재할\n때만 발동할 수 있다. 필드\n위의 마법/함정 카드 1장을\n파괴하여, 그 컨트롤러에게\n500 포인트 데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "0a6bfcbb90b1857fd1ab17e602d557c33e59c36ffd0b0166b1b598b612eacc14",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1179.webp",
+  "level": 0,
+  "links": [],
+  "name": "스탬핑 크러시",
+  "name_english": "Stamping Destruction",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1930,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1179
+}

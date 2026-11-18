@@ -1,0 +1,19 @@
+{
+  "description": "전투마다 처음 의식 소환에 성공하면 카드 1장을 드로우해.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 50,
+  "iconKey": "Relics/Content022/atlas022",
+  "id": "ritual_incense",
+  "kind": "ritual_incense",
+  "name": "의식의 향로",
+  "params": {
+    "draw": 1
+  },
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-native022",
+  "weight": 1
+}

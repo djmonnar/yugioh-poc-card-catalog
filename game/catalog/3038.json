@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3038",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-블랙매지션",
+    "지원-융합",
+    "효과-덱으로 되돌리기",
+    "소환-엑스트라 덱에서",
+    "효과-제외",
+    "발동-엔드 페이즈 시"
+  ],
+  "code": 22283204,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 자신의 필드 / 묘지의 \"블랙 매지션\"이나 \"블랙 매지션 걸\" 1장을 대상으로 하고 발동할 수 있다. 그 몬스터 1장만을 융합 소재로서 덱으로 되돌리고, 그 카드명이 융합 소재로서 쓰여진 융합 몬스터 1장을 \"티마이오스의 눈\"의 효과로 취급하여 융합 소환한다. 이 효과로 특수 소환한 몬스터는 다음 턴의 엔드 페이즈에 제외된다.",
+  "draw_enabled": true,
+  "identity_key": "90cd09a547286e36ff59308f3af2dadf4e3a4245ecbfc70f9dc72c255cffc369",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3038.jpg",
+  "level": 0,
+  "links": [],
+  "name": "티마이오스의 안광",
+  "name_english": "The Gaze of Timaeus",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "search_aliases": [
+    "티마이오스의 안광",
+    "The Gaze of Timaeus"
+  ],
+  "source_id": 3038,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 2070
+}

@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2056",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "파괴-몬스터",
+    "효과-드로우"
+  ],
+  "code": 69584564,
+  "defense": 0,
+  "description": "①: 필드의 식물족 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 식물족 몬스터를 파괴하고, 자신은 덱에서 1장 드로우한다. 그 드로우한 카드가 식물족 몬스터였을 경우, 추가로 그 카드를 서로 확인하고 자신은 덱에서 1장 드로우할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "f85b48f717f59cf0db8e2ecb406325ddf2ead6884702ccc7e20e18ef24cdaa51",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1356.webp",
+  "level": 0,
+  "links": [],
+  "name": "프레이그런스 스톰",
+  "name_english": "Fragrance Storm",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2056,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1356
+}

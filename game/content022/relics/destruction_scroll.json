@@ -1,0 +1,19 @@
+{
+  "description": "듀얼 중 양쪽 필드의 카드 1장을 골라 파괴해. 발동에 체인할 수 없고, 파괴 면역과 파괴 대체는 정상 적용돼.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 14,
+  "iconKey": "Relics/atlas160",
+  "id": "destruction_scroll",
+  "kind": "destruction_scroll",
+  "name": "파괴 주문서",
+  "params": {
+    "charges": 1
+  },
+  "price": 75,
+  "rarity": "N",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

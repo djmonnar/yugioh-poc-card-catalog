@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/roamer_leon/start",
+  "banlistEnabled": false,
+  "deckName": "암석족",
+  "extra": [],
+  "id": "enc-3f94e596-00d6-4167-859f-a5eb0982ccb3",
+  "lpBonus": 0,
+  "main": [
+    2089,
+    2089,
+    287,
+    2090,
+    2090,
+    2091,
+    2091,
+    139,
+    139,
+    1955,
+    1955,
+    1950,
+    1950,
+    1949,
+    1949,
+    1539,
+    1539,
+    967,
+    967,
+    967
+  ],
+  "name": "방랑 듀얼리스트 레온",
+  "openingDrawBonus": 0,
+  "profileId": "roamer_leon",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 330,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-3f94e596-00d6-4167-859f-a5eb0982ccb3",
+  "usesNativeRules035": true
+}

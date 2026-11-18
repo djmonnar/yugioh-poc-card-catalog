@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards084/2617",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-바운스",
+    "효과-데미지",
+    "파괴-몬스터"
+  ],
+  "code": 32854013,
+  "defense": 0,
+  "description": "자신의 앞면 야수족 몬스터 1장과 상대 필드의 몬스터 1장을 대상으로 하여 발동한다. 자신의 야수족 몬스터를 파괴하고, 실제로 파괴했다면 상대 몬스터를 덱으로 되돌려 섞는다.",
+  "draw_enabled": true,
+  "identity_key": "e18bfa84cfdffbc5f7680ba291d125d138abf433d20bbe968c71b5d2dec49ab8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2617.jpg",
+  "level": 0,
+  "links": [],
+  "name": "맹돌진",
+  "name_english": "Super Rush Recklessly",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "맹돌진",
+    "Super Rush Recklessly"
+  ],
+  "source_id": 2617,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1649
+}

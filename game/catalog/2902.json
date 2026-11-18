@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards135/2902",
+  "attack": 1200,
+  "attribute": 2,
+  "categories": [
+    "지원-버제스토마",
+    "발동-묘지에서",
+    "소환-묘지",
+    "소환-함정 몬스터",
+    "면역-효과",
+    "효과-제외",
+    "지원-전투"
+  ],
+  "code": 2376209,
+  "defense": 0,
+  "description": "①: 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터의 공격력 / 수비력은 턴 종료시까지 500 올린다. ②: 필드의 함정 카드가 발동했을 때, 그 발동에 체인하고 이 효과를 묘지에서 발동할 수 있다. 이 카드는 일반 몬스터(물족 / 물 / 레벨 2 / 공 1200 / 수 0)가 되고, 몬스터 존에 특수 소환한다(함정 카드로는 취급하지 않는다). 이 효과로 특수 소환한 이 카드는 몬스터의 효과를 받지 않으며, 필드에서 벗어났을 경우에 제외된다.",
+  "draw_enabled": true,
+  "identity_key": "7176c41a260fef554ad5ee3a8a6808c3564bc3cc192aa491e20220b46e1dba59",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native135/cards/2902.jpg",
+  "level": 2,
+  "links": [],
+  "name": "버제스토마 엘도니아",
+  "name_english": "Paleozoic Eldonia",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "N",
+  "search_aliases": [
+    "버제스토마 엘도니아",
+    "Paleozoic Eldonia"
+  ],
+  "source_id": 2902,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1934
+}

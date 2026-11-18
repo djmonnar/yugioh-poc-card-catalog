@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1512",
+  "attack": 800,
+  "attribute": 16,
+  "categories": [
+    "소환-패,덱",
+    "지원-융합"
+  ],
+  "code": 14644902,
+  "defense": 900,
+  "description": "리버스: 이 카드 이외의\n자신의 필드 몬스터 1장을\n릴리스한다. 융합 덱의 융합\n몬스터 1장을 특수 소환한다.\n그 몬스터는 이 효과를 발동한\n턴 종료시에 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "b46d9135304acbe5d794ad4bb620640065852d2d421a266e51359004fbf29b04",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0278.webp",
+  "level": 3,
+  "links": [],
+  "name": "환상소환사",
+  "name_english": "Summoner of Illusions",
+  "native_type": 2097185,
+  "normal_limit": 2,
+  "playable": true,
+  "race": 2,
+  "rarity": "UR",
+  "source_id": 1512,
+  "speed_limit": 1,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 278
+}

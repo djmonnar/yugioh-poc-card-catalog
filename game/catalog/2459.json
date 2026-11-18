@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2459",
+  "attack": 2300,
+  "attribute": 1,
+  "categories": [
+    "덱-젬나이트"
+  ],
+  "code": 3113836,
+  "defense": 1400,
+  "description": "젬나이트 몬스터 + 빛 속성 몬스터. 융합 소환으로 먼저 소환해야 한다. 몬스터 존에 존재하는 동안, 자신 메인 페이즈에 통상적인 일반 소환 외에 한 번 더 일반 소환할 수 있다. 이 추가 소환은 세라피를 여러 장 제어해도 1번만 적용한다.",
+  "draw_enabled": true,
+  "identity_key": "6f393204753e3ff2898d19b1acacc2a50ca1c3e08d62e3a9d573f19ddccad216",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2459.jpg",
+  "level": 5,
+  "links": [],
+  "name": "젬나이트 세라피",
+  "name_english": "Gem-Knight Seraphinite",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "SR",
+  "source_id": 2459,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 / 효과 몬스터",
+  "web_slot": 1496
+}

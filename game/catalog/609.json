@@ -1,0 +1,30 @@
+{
+  "alias": 76812113,
+  "art_key": "Cards/609",
+  "attack": 1300,
+  "attribute": 8,
+  "categories": [
+    "덱-해피"
+  ],
+  "code": 54415063,
+  "defense": 1400,
+  "description": "이 카드의 카드명은 \"해피\n레이디\"로 취급한다. 이\n카드와 전투를 실행한 상대\n몬스터는, 상대 턴에서 세어서\n2턴 동안 공격 선언을 할 수\n없게 된다.",
+  "draw_enabled": true,
+  "identity_key": "3ab47eb186a4e5509281afa08e5fca54ed48a6006d56cb5eae87d942dce69024",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0606.webp",
+  "level": 4,
+  "links": [],
+  "name": "해피 레이디3",
+  "name_english": "Harpie Lady 3",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "N",
+  "source_id": 609,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 606
+}

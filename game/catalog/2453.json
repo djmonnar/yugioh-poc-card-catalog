@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2453",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-암흑계",
+    "발동-lp지불",
+    "면역-마법"
+  ],
+  "code": 65824822,
+  "defense": 0,
+  "description": "①: 상대가 일반 마법 카드를 발동했을 때, 1000 LP를 지불하고 발동할 수 있다. 상대가 발동한 그 일반 마법의 효과는 \"상대의 패에서 무작위로 카드 1장을 골라 버린다\"가 된다.",
+  "draw_enabled": true,
+  "identity_key": "251a8cd935df839f7c8ad2c387863a0d276baa98c7748c416e6d61895704a283",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2453.jpg",
+  "level": 0,
+  "links": [],
+  "name": "어둠의 거래",
+  "name_english": "Dark Deal",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2453,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1490
+}

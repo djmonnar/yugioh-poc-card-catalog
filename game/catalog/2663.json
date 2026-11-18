@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards093/2663",
+  "attack": 3000,
+  "attribute": 1,
+  "categories": [
+    "지원-릴리즈",
+    "파괴-몬스터",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 78651105,
+  "defense": 1200,
+  "description": "①: 이 카드는 릴리스 없이 통상 소환할 수 있다. ②: 이 카드의 ①의 방법으로 통상 소환한 이 카드의 원래 공격력은 1900 이 된다. ③: 이 카드는 몬스터 3장을 릴리스하고 일반 소환할 수도 있다. ④: 이 카드가 이 카드의 ③의 방법으로 일반 소환에 성공했을 경우에 발동한다. 상대 필드의 카드를 전부 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "419f296974f9315b733561714f952cf9bd6e709d8648de44d8be75ee3646b756",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native093/cards/2663.jpg",
+  "level": 8,
+  "links": [],
+  "name": "신수왕 바르바로스",
+  "name_english": "Beast King Barbaros",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "UR",
+  "search_aliases": [
+    "신수왕바르바로스",
+    "신수왕 바르바로스",
+    "Beast King Barbaros"
+  ],
+  "source_id": 2663,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1695
+}

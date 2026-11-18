@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2067",
+  "attack": 1100,
+  "attribute": 1,
+  "categories": [
+    "소환-덱리크루터"
+  ],
+  "code": 5220687,
+  "defense": 1800,
+  "description": "리버스 : 자신의 덱에서 레벨 3 이하의 야수족 몬스터 1장을 뒷면 수비 표시로 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "19aaaa77edd48098f585413f87dade04d3715ed373bfa5ae3e11fc27ef7875b0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1366.webp",
+  "level": 4,
+  "links": [],
+  "name": "재빠른 빅햄스터",
+  "name_english": "Super-Nimble Mega Hamster",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "SR",
+  "source_id": 2067,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1366
+}

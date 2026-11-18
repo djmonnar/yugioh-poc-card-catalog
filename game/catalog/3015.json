@@ -1,0 +1,34 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3015",
+  "attack": 400,
+  "attribute": 2,
+  "categories": [
+    "지원-대혁명"
+  ],
+  "code": 58538870,
+  "defense": 2000,
+  "description": "언젠가 자유를 얻을 수 있을 거라고 믿고 하루하루 생활을 견디고 있다.",
+  "draw_enabled": true,
+  "identity_key": "c52901a321dc4ae74dd686c57b2255058d2ef3653ac2caf06ddeaecc7f2b75a8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3015.jpg",
+  "level": 1,
+  "links": [],
+  "name": "탄압받는 시민",
+  "name_english": "Oppressed People",
+  "native_type": 17,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "N",
+  "search_aliases": [
+    "탄압받는 시민",
+    "Oppressed People"
+  ],
+  "source_id": 3015,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 몬스터",
+  "web_slot": 2047
+}

@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards143/2972",
+  "attack": 1400,
+  "attribute": 2,
+  "categories": [
+    "지원-해황",
+    "지원-해룡족",
+    "지원-어류족",
+    "지원-물족"
+  ],
+  "code": 8078366,
+  "defense": 0,
+  "description": "자신 필드 위에 이 카드 이외의 어류족 / 해룡족 / 물족 몬스터가 존재할 경우, 이 카드의 공격력은 800 포인트 올린다.",
+  "draw_enabled": true,
+  "identity_key": "dbcc591948e6bc940d9484fcb0800a151381e2c7054f7c1d0a86a4c30f6b1c27",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native143/cards/2972.jpg",
+  "level": 3,
+  "links": [],
+  "name": "해황의 돌격병",
+  "name_english": "Atlantean Attack Squad",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 262144,
+  "rarity": "R",
+  "search_aliases": [
+    "해황의 돌격병",
+    "Atlantean Attack Squad"
+  ],
+  "source_id": 2972,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2004
+}

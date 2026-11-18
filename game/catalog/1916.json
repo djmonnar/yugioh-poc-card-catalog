@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1916",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-푸른눈",
+    "지원-융합"
+  ],
+  "code": 71143015,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에\n1장밖에 발동할 수 없다. ①:\n자신 / 상대의 메인 페이즈에\n발동할 수 있다. 자신의 패 /\n필드 / 묘지의 몬스터를 융합\n소재로서 덱으로 되돌리고,\n\"푸른 눈의 백룡\"이나 \"궁극의\n푸른 눈의 백룡\"을 융합\n소재로 하는 융합 몬스터\n1장을 융합 소환한다. 그 후,\n그 융합 소재로 한 필드의\n\"푸른 눈의 백룡\" \"궁극의\n푸른 눈의 백룡\"의 수까지,\n상대 필드의 앞면 표시 카드를\n파괴할 수 있다.\n[안내] 이 게임에서 이 카드로\n융합 소환할 수 있는 몬스터는\n\"궁극의 푸른 눈의\n백룡\"뿐이다. 소재와 파괴할\n카드는 창에서 한 장씩\n고른다.\n[차이] 융합 소재 대용\n몬스터는 소재로 쓸 수 없다.\n컴퓨터는 자신의 메인\n페이즈에만 발동한다.",
+  "draw_enabled": true,
+  "identity_key": "05162f6740ec23960625cae410c4330e55f38b11544da804e475179c75f5179d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1192.webp",
+  "level": 0,
+  "links": [
+    {
+      "identity_key": "1b35a77b57322b756f47b453317628046ce9d712cc2933185cd2fb61bf8e1c33",
+      "slot": 816
+    },
+    {
+      "identity_key": "6485fc919b766b9a7690cd4baf711f0e9884396352b673e6155701205634e6da",
+      "slot": 814
+    }
+  ],
+  "name": "궁극 융합",
+  "name_english": "Ultimate Fusion",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1916,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1192
+}

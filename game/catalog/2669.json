@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards093/2669",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-덱샐비지",
+    "효과-제외"
+  ],
+  "code": 75500286,
+  "defense": 0,
+  "description": "①: 덱에서 카드 1장을 고르고 제외한다. 이 카드의 발동 후 2회째의 자신 스탠바이 페이즈에, 이 효과로 제외되어 있는 카드를 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "2f19aca0217a15bdc61b9bc07bd838dce271f8aa45df6b5e29c4a614f0eafbc3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native093/cards/2669.jpg",
+  "level": 0,
+  "links": [],
+  "name": "봉인의 황금궤",
+  "name_english": "Gold Sarcophagus",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "search_aliases": [
+    "봉인의황금궤",
+    "봉인의 황금궤",
+    "Gold Sarcophagus"
+  ],
+  "source_id": 2669,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1701
+}

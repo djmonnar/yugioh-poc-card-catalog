@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2001",
+  "attack": 300,
+  "attribute": 32,
+  "categories": [],
+  "code": 32274490,
+  "defense": 200,
+  "description": "어디에서나 출현하는 해골 요괴. 공격력은 약하지만 집단으로 모이면 큰 힘을 발휘한다.",
+  "draw_enabled": true,
+  "identity_key": "424143f93d03ef36cdfff096683bf844948649f4c616d5e0fcf80cb54de3ca27",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1305.webp",
+  "level": 1,
+  "links": [
+    {
+      "identity_key": "68ba1320ede183c9612f42646fa2a5865e93240aa358a49c4c1324cced4008da",
+      "slot": 77
+    },
+    {
+      "identity_key": "1f980e36db465ec426456f64291b6aea9ce1ceee0d4376a36a7d4c1b8ad1a7bb",
+      "slot": 1288
+    }
+  ],
+  "name": "저주받은 하인",
+  "name_english": "Skull Servant",
+  "native_type": 17,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "N",
+  "source_id": 2001,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 몬스터",
+  "web_slot": 1305
+}

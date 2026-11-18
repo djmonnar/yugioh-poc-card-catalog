@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards136/2954",
+  "attack": 1800,
+  "attribute": 32,
+  "categories": [
+    "지원-프레데터 플랜츠",
+    "포식 카운터",
+    "효과-레벨다운",
+    "발동-소환 시",
+    "지원-전투",
+    "소환-덱리크루터"
+  ],
+  "code": 52792430,
+  "defense": 0,
+  "description": "①: 이 카드가 일반 소환 / 특수 소환에 성공했을 경우, 상대 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터에 포식 카운터를 1개 놓는다. 포식 카운터가 놓여진 레벨 2 이상의 몬스터 레벨은 1 이 된다. ②: 이 카드가 이 카드의 레벨 이하의 레벨을 가지는 몬스터와 전투를 실행한 데미지 계산 후에 발동할 수 있다. 덱에서 \"프레데터 플랜츠 스피노 디오네아\" 이외의 \"프레데터 플랜츠\" 몬스터 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "b482beab867b0c803ccb221abe29cf81edb1d5c9a784bada5872ce08cd0bcfaa",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native136/cards/2954.jpg",
+  "level": 4,
+  "links": [],
+  "name": "프레데터 플랜츠 스피노 디오네아",
+  "name_english": "Predaplant Spinodionaea",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "R",
+  "search_aliases": [
+    "프레데터 플랜츠 스피노 디오네아",
+    "Predaplant Spinodionaea"
+  ],
+  "source_id": 2954,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1986
+}

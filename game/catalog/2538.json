@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2538",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-네프티스"
+  ],
+  "code": 23459650,
+  "defense": 0,
+  "description": "패·필드에서 의식 몬스터의 레벨 이상이 되도록 몬스터를 릴리스하고, 패의 네프티스 의식 몬스터 1장을 의식 소환한다. 네프티스의 모시는 손 또는 네프티스의 창황신을 소재로 릴리스했다면, 이어서 필드의 카드 1장을 골라 파괴할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "caf9878c5ed66b133c00c17ad2dd98c56a516de0ee113d10a3360665b1cf9fc4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2538.jpg",
+  "level": 0,
+  "links": [],
+  "name": "네프티스의 윤회",
+  "name_english": "Rebirth of Nephthys",
+  "native_type": 130,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2538,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1570
+}

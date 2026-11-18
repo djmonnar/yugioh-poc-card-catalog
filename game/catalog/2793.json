@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards122/2793",
+  "attack": 1100,
+  "attribute": 1,
+  "categories": [
+    "효과-뒷면표시",
+    "지원-전투"
+  ],
+  "code": 45159319,
+  "defense": 2000,
+  "description": "이 카드는 1턴에 1번만 뒷면 수비 표시로 할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "90833914d313aa7921a1c59c8ecac03938773fb6fa86561c60b6c7e22755dc8b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native122/cards/2793.jpg",
+  "level": 4,
+  "links": [],
+  "name": "모아이 요격포",
+  "name_english": "Moai Interceptor Cannons",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "R",
+  "search_aliases": [
+    "모아이요격표",
+    "모아이 요격포",
+    "Moai Interceptor Cannons"
+  ],
+  "source_id": 2793,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1825
+}

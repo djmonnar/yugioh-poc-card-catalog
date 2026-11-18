@@ -1,0 +1,49 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-81ad2be0-b818-4711-bada-f40172e420fb",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "aac98651b3838f865c1f92716a4fb64994e90cc08151209029c8cb30e9394c75",
+      "source_id": 2404
+    },
+    {
+      "count": 3,
+      "identity_key": "75a02a07c6b5b5e5fdfd07c6534a3ab3fa0afe65b66ca1c50ee115bce1058df0",
+      "source_id": 2413
+    },
+    {
+      "count": 2,
+      "identity_key": "5c56156fe10a118e4716336ca135fc86e40d35c4d68b082798a91944a9951131",
+      "source_id": 148
+    },
+    {
+      "count": 3,
+      "identity_key": "65d5bdc7d1406bc151024e130bb32408358a8fc9aba292a435e24fe65ed66c51",
+      "source_id": 559
+    },
+    {
+      "count": 2,
+      "identity_key": "10dcdaf072e6210dbbe771a636fcf71d5e59fe22348d33211eb428508e1b610d",
+      "source_id": 2412
+    },
+    {
+      "count": 3,
+      "identity_key": "a26f45cd4208f0475c296998778440632fa8aef3657250da4c288553f579118a",
+      "source_id": 2410
+    },
+    {
+      "count": 2,
+      "identity_key": "2648bcd0ab58c5ebb05a1d0aae0a1020880f2247e3482f462d4df1ccd27ef1dc",
+      "source_id": 2394
+    },
+    {
+      "count": 2,
+      "identity_key": "74a069d59834d2f4623ae0e9196fdc6c02405ebc3779f06d26618aa0b8fde06a",
+      "source_id": 2406
+    }
+  ],
+  "name": "앤틱기어 중급",
+  "version": 101
+}

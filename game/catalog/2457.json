@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2457",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-젬나이트",
+    "발동-릴리즈",
+    "소환-묘지",
+    "덱-젬나이트"
+  ],
+  "code": 41777,
+  "defense": 0,
+  "description": "자신 필드의 젬나이트 몬스터 1장을 릴리스하고, 자신 묘지의 젬나이트 몬스터 1장을 대상으로 발동한다. 대상 몬스터를 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "bb93b7f65270f105b7e2f9d81446d35ddcb1b4d514f0a471d842b610ad6bd750",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2457.jpg",
+  "level": 0,
+  "links": [],
+  "name": "젬 인한스",
+  "name_english": "Gem-Enhancement",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2457,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1494
+}

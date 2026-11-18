@@ -1,0 +1,24 @@
+{
+  "description": "획득한 뒤 허용된 지형 중 하나를 고르면 이후 듀얼을 그 필드 마법과 함께 시작해.",
+  "enabled": true,
+  "fields": [
+    331,
+    332,
+    334,
+    333,
+    329,
+    330
+  ],
+  "iconIndex": 7,
+  "iconKey": "Relics/atlas160",
+  "id": "field_legacy",
+  "kind": "field_legacy",
+  "name": "태고의 지형",
+  "params": {},
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

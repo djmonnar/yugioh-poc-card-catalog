@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2465",
+  "attack": 3400,
+  "attribute": 1,
+  "categories": [
+    "덱-젬나이트",
+    "효과-묘지보내기",
+    "지원-융합"
+  ],
+  "code": 19355597,
+  "defense": 2000,
+  "description": "젬나이트 몬스터 3장. 지정 소재의 융합 소환으로 먼저 소환해야 하며, 이 카드명은 1턴에 1번만 특수 소환할 수 있다. 1턴에 1번, 자신 필드의 앞면 젬나이트 몬스터 1장을 묘지로 보내고, 엑스트라 덱의 젬나이트 융합 몬스터 1장을 소환 조건을 무시하여 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "7f7ce1aad64e75939f0a6922a1660c4e5bf9164b02509c1b4f59c229c72d2d85",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2465.jpg",
+  "level": 10,
+  "links": [],
+  "name": "젬나이트 레이디 브릴리언트 다이아",
+  "name_english": "Gem-Knight Lady Brilliant Diamond",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "UR",
+  "source_id": 2465,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 / 효과 몬스터",
+  "web_slot": 1502
+}

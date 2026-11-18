@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2515",
+  "attack": 2700,
+  "attribute": 16,
+  "categories": [
+    "덱-사이버 엔젤",
+    "지원-의식",
+    "효과-묘지샐비지"
+  ],
+  "code": 39618799,
+  "defense": 2400,
+  "description": "기계천사의 의식 등으로 의식 소환한다. ① 의식 소환되었을 경우, 상대가 자기 필드의 몬스터 1장을 골라 묘지로 보내게 할 수 있다. 대상을 지정하거나 파괴하는 효과가 아니다. ② 자신의 의식 몬스터는 관통 전투 데미지를 준다. ③ 자신의 엔드 페이즈에 1번, 자신 묘지의 의식 몬스터 또는 기계천사의 의식 1장을 대상으로 패에 넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "bf48aa17ed2bb86961c7c667b67921b4a5fc664364a99394595eaf21132d467a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2515.jpg",
+  "level": 8,
+  "links": [],
+  "name": "사이버 엔젤－다키니－",
+  "name_english": "Cyber Angel Dakini",
+  "native_type": 161,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "SR",
+  "source_id": 2515,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "의식 / 효과 몬스터",
+  "web_slot": 1547
+}

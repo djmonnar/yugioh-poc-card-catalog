@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards084/2615",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "파괴-마법",
+    "파괴-함정",
+    "지원-장착"
+  ],
+  "code": 98847704,
+  "defense": 0,
+  "description": "자신 필드의 앞면 장착 카드 1장을 대상으로 하여 발동한다. 그 카드와 상대 필드에 세트된 마법·함정 카드를 전부 함께 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "db5b4da7b369739dfb61840c029d6783be1a54dd4f346c5d15dbfd367212a3b0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2615.jpg",
+  "level": 0,
+  "links": [],
+  "name": "구속해방파",
+  "name_english": "Release Restraint Wave",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "구속해방파",
+    "Release Restraint Wave"
+  ],
+  "source_id": 2615,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1647
+}

@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards109/2760",
+  "attack": 1800,
+  "attribute": 32,
+  "categories": [
+    "지원-제외",
+    "소환-제외"
+  ],
+  "code": 48092532,
+  "defense": 200,
+  "description": "자신 필드 위에 앞면 표시로 존재하는 이 카드가 게임에서 제외되었을 경우, 이 카드는 엔드 페이즈시에 필드 위에 특수 소환된다.",
+  "draw_enabled": true,
+  "identity_key": "56915bb7040839bf86da578d290aca108036bb5dfc4af2b1b7eabc82953f11d2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native109/cards/2760.jpg",
+  "level": 4,
+  "links": [],
+  "name": "이차원의 생환자",
+  "name_english": "D.D. Survivor",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "이차원의생환자",
+    "이차원의 생환자",
+    "D.D. Survivor"
+  ],
+  "source_id": 2760,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1792
+}

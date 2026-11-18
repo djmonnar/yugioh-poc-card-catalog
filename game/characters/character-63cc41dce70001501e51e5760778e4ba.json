@@ -1,0 +1,59 @@
+{
+  "art_key": "CharacterPresentation012/images/mai/start",
+  "id": "character-63cc41dce70001501e51e5760778e4ba",
+  "profile": {
+    "name": "메이 쿠자쿠",
+    "portrait": "assets/actors/shared-mai.png",
+    "skill_profiles": [
+      {
+        "name": "아마조네스",
+        "profile_id": "profile-9f8a90b8-901f-4bb8-8dbd-615df55ed2bf",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "e9a12b768656b3a2fce3653ce06837096df7754a8282ffd08d3598c9ebde5df2",
+              "internal_id": 1852,
+              "name_ko": "아마조네스의 마을",
+              "slot": 1265
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "해피의 사냥터",
+        "profile_id": "profile-f36aeb7e-944f-4c6e-a26d-df957c1b73be",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "14ef34dddf99754c0eae2578fc9f5635584f61b1ff8672d65b4bef854f78776d",
+              "internal_id": 2068,
+              "name_ko": "해피의 사냥터",
+              "slot": 328
+            },
+            "kind": "start_hand"
+          }
+        ]
+      },
+      {
+        "name": "안개골짜기",
+        "profile_id": "profile-80387341-32c3-42c1-b594-a102eb74e49d",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "7a1b792cab5bdd2c2fe81530c1355ee25bc81a7fcb53a7fecf3f035c5fe7358f",
+              "internal_id": 2128,
+              "name_ko": "안개 골짜기의 제단",
+              "slot": 1426
+            },
+            "kind": "start_field"
+          }
+        ]
+      }
+    ],
+    "skills": []
+  },
+  "profile_id": "mai",
+  "updated_at": "2026-11-09T21:56:36.506178+00:00",
+  "version": 3922
+}

@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards093/2691",
+  "attack": 500,
+  "attribute": 8,
+  "categories": [
+    "지원-아로마",
+    "효과-회복"
+  ],
+  "code": 21452275,
+  "defense": 400,
+  "description": "①: 리버스한 이 카드가 몬스터 존에 앞면 표시로 존재하는 한, 이 카드는 전투로는 파괴되지 않는다. ②: 리버스한 이 카드가 몬스터 존에 앞면 표시로 존재할 경우, 서로의 엔드 페이즈마다 발동한다. 자신은 500 LP 회복한다.",
+  "draw_enabled": true,
+  "identity_key": "bbc61c2746cd6ec80f8bef48f85e33812c0fc78a1aa7e37e91c81ce2752d79bf",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native093/cards/2691.jpg",
+  "level": 1,
+  "links": [],
+  "name": "아로마포트",
+  "name_english": "Aroma Jar",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "R",
+  "search_aliases": [
+    "아로마 카드군",
+    "아로마포트",
+    "Aroma Jar"
+  ],
+  "source_id": 2691,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "리버스 효과 몬스터",
+  "web_slot": 1723
+}

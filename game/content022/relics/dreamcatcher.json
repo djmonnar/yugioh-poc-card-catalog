@@ -1,0 +1,19 @@
+{
+  "description": "휴식 선택 후 카드 보상을 한 번 더 받아. 구역 확률과 SR·UR 천장을 적용한 후보 중 1장을 골라.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 25,
+  "iconKey": "Relics/atlas163",
+  "id": "dreamcatcher",
+  "kind": "dreamcatcher",
+  "name": "드림캐쳐",
+  "params": {
+    "choices": 5
+  },
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

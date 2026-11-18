@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1944",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-버리기",
+    "파괴-몬스터"
+  ],
+  "code": 69162969,
+  "defense": 0,
+  "description": "①: 패를 1장 버리고 발동할 수\n있다. 상대 필드의 앞면 표시\n몬스터를 전부 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "3a1aba1642ddca25ba3c4076c14113cf56d13756cd1f1940974230767b6848ae",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1160.webp",
+  "level": 0,
+  "links": [],
+  "name": "라이트닝 보텍스",
+  "name_english": "Lightning Vortex",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1944,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1160
+}

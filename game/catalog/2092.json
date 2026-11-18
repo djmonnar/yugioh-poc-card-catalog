@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2092",
+  "attack": 1000,
+  "attribute": 1,
+  "categories": [
+    "발동-릴리즈",
+    "소환-묘지"
+  ],
+  "code": 72580321,
+  "defense": 1500,
+  "description": "자신 묘지의 몬스터가 땅 속성뿐일 경우, 이 카드를 릴리스하고 발동할 수 있다. 자신의 묘지에서 \"블록 골렘\" 이외의 암석족 / 레벨 4 이하의 몬스터 2장을 선택하고 특수 소환한다. 이 턴에 이 효과로 특수 소환한 몬스터는, 필드 위에서 발동하는 효과를 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "44424e8cb647f8b0671685ce17556a97e10455eb6bbeac2bcce65a9900e4027b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1390.webp",
+  "level": 3,
+  "links": [],
+  "name": "블록 골렘",
+  "name_english": "Block Golem",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "SR",
+  "source_id": 2092,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1390
+}

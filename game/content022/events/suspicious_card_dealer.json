@@ -1,0 +1,19 @@
+{
+  "description": "상인은 보이는 카드와 보이지 않는 카드를 늘어놓는다. 확실한 보상과 위험한 기대 중 무엇을 택할까?",
+  "effect": "공개된 R 후보 선택 또는 LP 500을 내고 무작위 SR·UR 카드 획득",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/background",
+  "id": "suspicious_card_dealer",
+  "kind": "suspicious_card_dealer",
+  "name": "공개된 R 후보 선택 또는 LP 500을 내고 무작위 SR·UR 카드 획득",
+  "params": {
+    "choices": 3,
+    "lp": 500,
+    "ur_percent": 25
+  },
+  "rewardRarity": null,
+  "supportStatus": "verified-controller022",
+  "title": "수상한 카드 상인",
+  "weight": 1
+}

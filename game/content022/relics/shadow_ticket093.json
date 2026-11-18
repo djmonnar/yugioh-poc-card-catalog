@@ -1,0 +1,19 @@
+{
+  "description": "일반 전투에서 어둠의 게임을 한 번 제안합니다. 이 유물로 보장된 제안을 수락해 전투를 시작하면 소모됩니다. 자연 발생한 어둠의 게임이나 어둠의 지배자가 있으면 소모되지 않습니다.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 8,
+  "iconKey": "Relics/atlas160",
+  "id": "shadow_ticket093",
+  "kind": "shadow_ticket093",
+  "name": "어둠의 초대장",
+  "params": {
+    "charges": 1
+  },
+  "price": 75,
+  "rarity": "N",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

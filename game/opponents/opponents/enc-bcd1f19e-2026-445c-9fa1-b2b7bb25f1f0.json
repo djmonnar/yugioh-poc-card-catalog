@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/roamer_sera/start",
+  "banlistEnabled": false,
+  "deckName": "이차원-중급",
+  "extra": [],
+  "id": "enc-bcd1f19e-2026-445c-9fa1-b2b7bb25f1f0",
+  "lpBonus": 0,
+  "main": [
+    2760,
+    2760,
+    2760,
+    255,
+    255,
+    255,
+    1896,
+    1959,
+    1959,
+    1959,
+    2749,
+    2749,
+    1946,
+    1946,
+    2678,
+    1549,
+    1897,
+    1897,
+    2761,
+    2761
+  ],
+  "name": "방랑 듀얼리스트 세라",
+  "openingDrawBonus": 0,
+  "profileId": "roamer_sera",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_monster",
+      "position": 4,
+      "sourceId": 480,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-bcd1f19e-2026-445c-9fa1-b2b7bb25f1f0",
+  "usesNativeRules035": true
+}

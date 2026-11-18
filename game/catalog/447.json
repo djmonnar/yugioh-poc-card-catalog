@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/447",
+  "attack": 2700,
+  "attribute": 1,
+  "categories": [
+    "효과-드로우",
+    "지원-릴리즈"
+  ],
+  "code": 6849042,
+  "defense": 1400,
+  "description": "이 카드는 공룡족 몬스터\n1장을 릴리스하고 앞면 공격\n표시로 어드밴스 소환할 수\n있다. ①: 이 카드가 몬스터\n존에 존재하고, 자신 묘지에서\n공룡족 몬스터가 특수\n소환되었을 때에 발동할 수\n있다. 자신은 덱에서 1장\n드로우한다.\n[안내] 컴퓨터도 공룡족 1장\n릴리스 소환을 쓸 수 있으면\n쓰며, 이 카드보다 공격력이\n낮은 몬스터만 릴리스한다.",
+  "draw_enabled": true,
+  "identity_key": "bcf4c5406d009dcfefcbec9e9dbc378f987cb915b7c4c90f9e0ad75f93df8439",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0451.webp",
+  "level": 8,
+  "links": [],
+  "name": "초고대 티라노",
+  "name_english": "Super-Ancient Dinobeast",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "SR",
+  "source_id": 447,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 451
+}

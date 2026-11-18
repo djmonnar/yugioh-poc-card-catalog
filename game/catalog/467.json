@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards/467",
+  "attack": 1700,
+  "attribute": 1,
+  "categories": [
+    "면역-전투"
+  ],
+  "code": 71411377,
+  "defense": 1200,
+  "description": "이 카드가 자신 필드 위에 앞면 표시로 존재하는 한, 자신 필드 위에 존재하는 \"얼루어 퀸\"이라는 이름이 붙은 몬스터를 공격 대상으로 선택할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "8a9d0a34d1c172fcdf3b8d6b2f6fa759ee36893e8dd9d7dc85dd04a8aaf7db14",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0233.webp",
+  "level": 4,
+  "links": [
+    {
+      "identity_key": "6eba4caec6089cabb29fed233338acdd73cd0b7194753ec336662307c9863ff7",
+      "slot": 1296
+    },
+    {
+      "identity_key": "93df8723808aa6324b0241d798ab6ae1a80a22ad5e91041d104e024b468129e1",
+      "slot": 1297
+    },
+    {
+      "identity_key": "06df8bf4c31d1b6ea5d6e178337284362ac553144f0591148fffd5f1a5359d32",
+      "slot": 1298
+    }
+  ],
+  "name": "여왕 친위대",
+  "name_english": "Queen's Bodyguard",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "source_id": 467,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 233
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/483",
+  "attack": 300,
+  "attribute": 2,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 95174353,
+  "defense": 350,
+  "description": "필드에 앞면 표시로 존재하는\n이 카드의 컨트롤이 상대에게\n넘어갔을 때, 상대에게 2000\n데미지를 준다. 이 효과는 이\n카드가 앞면 표시로 존재하는\n동안 1번만 사용할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "d1064eabce89083c97e8fbe9042a36305abdb032c5a1ac17185888abbe38d215",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0028.webp",
+  "level": 1,
+  "links": [],
+  "name": "아메바",
+  "name_english": "Ameba",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "N",
+  "source_id": 483,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 28
+}

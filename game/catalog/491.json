@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/491",
+  "attack": 1400,
+  "attribute": 16,
+  "categories": [
+    "발동-동전(코인)"
+  ],
+  "code": 61175706,
+  "defense": 1400,
+  "description": "①: 이 카드를 일반 소환 /\n반전 소환 / 특수 소환했을\n경우에 발동한다. 코인 토스를\n1회 실행하고, 그 앞뒷면에\n따라 이 카드는 이하의 효과를\n얻는다. ●앞: 자신 필드의\n\"아르카나 포스\" 몬스터의\n공격력은 500 올린다. ●뒤:\n자신 필드의 \"아르카나 포스\"\n몬스터의 공격력은 500\n내린다.",
+  "draw_enabled": true,
+  "identity_key": "7335f0b0b0922f381d4b377771c60489aca4d1c2fbd7a3be4df78861107d63f8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0434.webp",
+  "level": 4,
+  "links": [],
+  "name": "아르카나 포스 Ⅳ－디 엠페러",
+  "name_english": "Arcana Force IV - The Emperor",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "R",
+  "source_id": 491,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 434
+}

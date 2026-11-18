@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1522",
+  "attack": 1600,
+  "attribute": 16,
+  "categories": [
+    "면역-전투"
+  ],
+  "code": 80304126,
+  "defense": 1800,
+  "description": "①: 이 카드가 몬스터 존에\n존재하는 한, 상대는 다른\n마법사족 몬스터를 공격\n대상으로 할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "f58e74d971c58e3b1fd5d796015396edfa900f16fa1e91ab845224cf0b42ac67",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0274.webp",
+  "level": 4,
+  "links": [],
+  "name": "매지션즈 발키리어",
+  "name_english": "Magician's Valkyria",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "source_id": 1522,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 274
+}

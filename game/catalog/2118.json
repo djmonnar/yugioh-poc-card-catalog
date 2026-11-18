@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2118",
+  "attack": 100,
+  "attribute": 4,
+  "categories": [
+    "효과-직접공격"
+  ],
+  "code": 90810762,
+  "defense": 200,
+  "description": "이 카드는 상대 플레이어에게 직접 공격할 수 있다. 이 카드가 직접 공격에 의해서 상대 라이프에 전투 데미지를 주었을 때, 이 카드의 공격력은 1000 포인트 올린다.",
+  "draw_enabled": true,
+  "identity_key": "2066e47de2542a1e077d6b5ca5708a1dfeab4dd79c8e52de393e8495fa1c2b0e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1416.webp",
+  "level": 3,
+  "links": [],
+  "name": "솟아오르는 화염의 정령",
+  "name_english": "Raging Flame Sprite",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 128,
+  "rarity": "R",
+  "source_id": 2118,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1416
+}

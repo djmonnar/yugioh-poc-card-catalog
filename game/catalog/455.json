@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards/455",
+  "attack": 1850,
+  "attribute": 1,
+  "categories": [
+    "소환-덱리크루터",
+    "효과-버리기"
+  ],
+  "code": 21362970,
+  "defense": 400,
+  "description": "패를 1장 버리고 발동한다. 자신의 덱에서 \"모쟈\" 1장을 특수 소환한다. 이 효과는 1턴에 1번밖에 사용할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "af851f6492593a9e7c37e0516b499614955d5475a5e5937a77a0f6f8de611bac",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0064.webp",
+  "level": 4,
+  "links": [
+    {
+      "identity_key": "0b94b4ee091fe31e345e7eba1aaacacb5594eb069200e63c0e18ddd7456dfaa9",
+      "slot": 193
+    }
+  ],
+  "name": "비스트라이커",
+  "name_english": "Beast Striker",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "R",
+  "source_id": 455,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 64
+}

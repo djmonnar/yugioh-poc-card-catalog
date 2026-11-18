@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/381",
+  "attack": 2400,
+  "attribute": 32,
+  "categories": [
+    "덱-붉은눈",
+    "지원-릴리즈",
+    "소환-묘지"
+  ],
+  "code": 5186893,
+  "defense": 2000,
+  "description": "이 카드는 언데드족 몬스터\n1장을 릴리스하고 공격 표시로\n어드밴스 소환할 수 있다. ①:\n이 카드가 전투로 언데드족\n몬스터를 파괴하고 묘지로\n보냈을 때에 발동할 수 있다.\n그 언데드족 몬스터를 자신\n필드에 특수 소환한다.\n[안내] 컴퓨터도 언데드족 1장\n릴리스 소환을 쓸 수 있으면\n쓰며, 이 카드보다 공격력이\n낮은 몬스터만 릴리스한다.",
+  "draw_enabled": true,
+  "identity_key": "80180ae741222676ea7ff60475effa2b5edaf7d47ff0779c4ceb2008c1ae3fa6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1070.webp",
+  "level": 7,
+  "links": [],
+  "name": "붉은 눈의 불사룡",
+  "name_english": "Red-Eyes Zombie Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "SR",
+  "source_id": 381,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1070
+}

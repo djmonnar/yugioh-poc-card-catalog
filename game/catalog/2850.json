@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards126/2850",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-왕가의 신전",
+    "무효-마법",
+    "무효-함정",
+    "파괴-몬스터",
+    "효과-데미지"
+  ],
+  "code": 59576447,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 자신 필드에 다른 마법 / 함정 카드가 3장 이상 존재하고, 상대가 마법 / 함정 카드를 발동했을 때에 발동할 수 있다. 그 발동을 무효로 하고 파괴한다. 자신 필드에 \"왕가의 신전\"이 존재할 경우, 추가로 상대 필드의 몬스터를 전부 파괴할 수 있다. 그 경우, 추가로 파괴한 몬스터의 원래 공격력을 합계한 수치 절반의 데미지를 상대에게 준다.",
+  "draw_enabled": true,
+  "identity_key": "30767dc711bb3cd04de6ad25afd2c70580d0627e3113567b84493430bc31d8af",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native126/cards/2850.jpg",
+  "level": 0,
+  "links": [],
+  "name": "아누비스의 판결",
+  "name_english": "Verdict of Anubis",
+  "native_type": 1048580,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "search_aliases": [
+    "아누비스의 판결",
+    "Verdict of Anubis"
+  ],
+  "source_id": 2850,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "카운터 함정",
+  "web_slot": 1882
+}

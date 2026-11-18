@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards088/2642",
+  "attack": 2400,
+  "attribute": 8,
+  "categories": [
+    "지원-게이트가디언"
+  ],
+  "code": 62340868,
+  "defense": 2200,
+  "description": "①: 이 카드가 필드에 앞면 표시로 존재하는 한 1번만, 이 카드가 공격받은 데미지 계산시에, 공격 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 공격 몬스터의 공격력을 그 데미지 계산시에만 0 으로 한다.",
+  "draw_enabled": true,
+  "identity_key": "caa8e0ade98a181fe9466d259058c05351ba9f01107e683190b6ce8e2b2e0862",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native088/cards/2642.jpg",
+  "level": 7,
+  "links": [],
+  "name": "풍 마신－휴가",
+  "name_english": "Kazejin",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "search_aliases": [
+    "풍마신,수마신,번개마신 시리즈",
+    "풍 마신－휴가",
+    "풍마신－휴가",
+    "Kazejin"
+  ],
+  "source_id": 2642,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1674
+}

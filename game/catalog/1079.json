@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1079",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "파괴-함정",
+    "파괴-마법"
+  ],
+  "code": 5318639,
+  "defense": 0,
+  "description": "필드의 마법 / 함정 카드\n1장을 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "2e5b09e8cbb003a78a38101064462aeb0d78745bbca28fb850e2f1911f497552",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0316.webp",
+  "level": 0,
+  "links": [],
+  "name": "싸이크론",
+  "name_english": "Mystical Space Typhoon",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1079,
+  "speed_limit": 3,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 316
+}

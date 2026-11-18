@@ -1,0 +1,64 @@
+{
+  "banlist_enabled": false,
+  "extra": [],
+  "id": "ch2_battle_b3e3255a8f140b8c58203be0",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "6b6c7e0aaaa169972d36ed61c1573a0f2cc99aa4944e6d8055336c625dee8ecb",
+      "source_id": 402
+    },
+    {
+      "count": 2,
+      "identity_key": "a16462f1a6d6be3b2bc206c0437c13a6cc62435a331abb5b27ecabd61c5bdda2",
+      "source_id": 1859
+    },
+    {
+      "count": 2,
+      "identity_key": "d5bd969701a421b8a8e9520202a00969264aac72d447e64132004df14d084135",
+      "source_id": 1857
+    },
+    {
+      "count": 2,
+      "identity_key": "46ec6929e8e4645989f7d2dd9b6fd6fb97598c4e3f8c7da3c0e51cd506ec4ab4",
+      "source_id": 1865
+    },
+    {
+      "count": 2,
+      "identity_key": "155d928e7de5bb62ff056e5e89a3fce23297a171b381bc1f52b4dd96d4201ca2",
+      "source_id": 1866
+    },
+    {
+      "count": 1,
+      "identity_key": "80142ca35139c49aaf31a365fd75052a6960c1fccd052738b8ddfa4f5d5e4ab1",
+      "source_id": 1867
+    },
+    {
+      "count": 2,
+      "identity_key": "b9c971ec38eabb323d384d7d1e2909bde3052044003ba87bccdd0436a512509e",
+      "source_id": 990
+    },
+    {
+      "count": 2,
+      "identity_key": "ea4cb63a2f5b4442f3286cd894bc918277c53244436ce839f8bfe3ef173a8285",
+      "source_id": 1002
+    },
+    {
+      "count": 2,
+      "identity_key": "87065b1e82110395b12c231c79ac2545181950bbab068295d5489d5ffbac426e",
+      "source_id": 651
+    },
+    {
+      "count": 1,
+      "identity_key": "71db51531173c4c5d42aaed396486cc80612d5db632f28cbbad092aaeea7c36f",
+      "source_id": 1318
+    },
+    {
+      "count": 2,
+      "identity_key": "2d32723e05325c462bd6991969607f23079c63e389bc937ba4ede1d70b29b9d5",
+      "source_id": 1933
+    }
+  ],
+  "name": "사마준 상급",
+  "version": 37
+}

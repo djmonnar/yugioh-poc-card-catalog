@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards099/2715",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착",
+    "효과-컨트롤",
+    "발동-제외"
+  ],
+  "code": 45247637,
+  "defense": 0,
+  "description": "자신 묘지에서 식물족 몬스터 1장을 제외하고, 상대 필드의 앞면 표시 몬스터 1장을 대상으로 하여 이 카드를 발동할 수 있다. ①: 장착 몬스터의 컨트롤을 얻는다. ②: 자신 엔드 페이즈에 발동한다. 이 카드의 ①의 효과는 다음 자신 스탠바이 페이즈까지 무효가 된다.",
+  "draw_enabled": true,
+  "identity_key": "baada29bcf543d87515d568dbe6fbedb5e78458f543403a07996a7a3b98b4407",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native099/cards/2715.jpg",
+  "level": 0,
+  "links": [],
+  "name": "장미의 각인",
+  "name_english": "Mark of the Rose",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "장미의각인",
+    "장미의 각인",
+    "Mark of the Rose"
+  ],
+  "source_id": 2715,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1747
+}

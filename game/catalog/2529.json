@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2529",
+  "attack": 2500,
+  "attribute": 16,
+  "categories": [
+    "지원-의식",
+    "지원-사피라"
+  ],
+  "code": 56350972,
+  "defense": 2400,
+  "description": "축도의 성가 등으로 의식 소환한다. 의식 소환한 턴의 엔드 페이즈, 또는 앞면인 이 카드가 있는 동안 패·덱에서 빛 속성 몬스터가 묘지로 보내진 턴의 엔드 페이즈에 다음 중 하나를 선택할 수 있다. ● 2장 드로우하고 패 1장을 버린다. ● 상대 패 1장을 무작위로 버린다. ● 자신 묘지의 빛 속성 몬스터 1장을 골라 패에 넣는다. 이 카드명의 효과는 1턴에 한 번, 한 종류만 사용할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "6fa8d551241b152b1bb9f348a0829179d65d7f772e9777c7d7b1b0021c6115ad",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2529.jpg",
+  "level": 6,
+  "links": [],
+  "name": "용희신 사피라",
+  "name_english": "Saffira, Queen of Dragons",
+  "native_type": 161,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "UR",
+  "source_id": 2529,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "의식 / 효과 몬스터",
+  "web_slot": 1561
+}

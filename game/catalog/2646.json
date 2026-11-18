@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards088/2646",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-고레벨",
+    "소환-패,덱"
+  ],
+  "code": 2903036,
+  "defense": 0,
+  "description": "자신 필드 위 몬스터를 1장 제물로 바치고 발동한다. 패에서 일반 소환 가능한 레벨 7의 몬스터 1장을 특수 소환한다. 그 몬스터는 이 턴에는 공격할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "68d5b8e47f7a9d14fbffe5abb70d8df97cdd1b9f3b15618c708221353585a1d6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native088/cards/2646.jpg",
+  "level": 0,
+  "links": [],
+  "name": "제물 인형",
+  "name_english": "Tribute Doll",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "제물인형",
+    "제물 인형",
+    "Tribute Doll"
+  ],
+  "source_id": 2646,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1678
+}

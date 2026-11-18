@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards090/2656",
+  "attack": 2300,
+  "attribute": 32,
+  "categories": [
+    "무효-마법",
+    "효과-덱샐비지",
+    "소환제약"
+  ],
+  "code": 70676581,
+  "defense": 1700,
+  "description": "이 카드는 특수 소환할 수 없다. 자신 필드의 앞면 표시 어둠 속성 몬스터를 대상으로 하는 마법 카드의 효과를 무효로 하고 그 카드를 파괴한다. 자신 드로우 페이즈의 일반 드로우 대신, 덱에서 레벨 4인 어둠 속성 몬스터 1장을 골라 패에 넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "1124d113a88d1a3e36c6c57c4d6e135d0609272bda6e55e7ed25bca2f7f31828",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native090/cards/2656.jpg",
+  "level": 5,
+  "links": [],
+  "name": "다크 제너럴 프리드",
+  "name_english": "Dark General Freed",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "search_aliases": [
+    "다크제네럴프리드",
+    "다크 제너럴 프리드",
+    "다크제너럴프리드",
+    "Dark General Freed"
+  ],
+  "source_id": 2656,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1688
+}

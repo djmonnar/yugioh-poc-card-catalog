@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1524",
+  "attack": 800,
+  "attribute": 1,
+  "categories": [
+    "효과-바운스"
+  ],
+  "code": 6480253,
+  "defense": 1200,
+  "description": "리버스: 융합 소환에 사용되어\n묘지로 보내진 융합 소재\n몬스터 2장을 자신의 패로\n되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "83176f3fabd5a8b57f264142b6caa0dbbe26b214c8f9702d8cdce70ee66af99a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0793.webp",
+  "level": 3,
+  "links": [],
+  "name": "프렌도그",
+  "name_english": "Wroughtweiler",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "source_id": 1524,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 793
+}

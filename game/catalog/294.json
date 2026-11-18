@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/294",
+  "attack": 2100,
+  "attribute": 2,
+  "categories": [
+    "지원-릴리즈"
+  ],
+  "code": 32393580,
+  "defense": 2000,
+  "description": "자신 필드 위에 물 속성\n몬스터가 앞면 표시로 존재할\n경우, 이 카드는 릴리스 없이\n일반 소환할 수 있다.\n[안내] 컴퓨터도 자신 필드에\n앞면 표시의 물 속성 몬스터가\n있으면 릴리스 없이 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "299115cc5b20a9a8868b8288936d4d15f25b7da3b2e313b8d5d044a29ed2438f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0701.webp",
+  "level": 5,
+  "links": [],
+  "name": "사이버 샤크",
+  "name_english": "Cyber Shark",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 131072,
+  "rarity": "SR",
+  "source_id": 294,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 701
+}

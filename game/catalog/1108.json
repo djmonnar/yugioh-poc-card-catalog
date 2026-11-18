@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1108",
+  "attack": 1400,
+  "attribute": 1,
+  "categories": [
+    "소환-덱리크루터",
+    "발동-묘지"
+  ],
+  "code": 97017120,
+  "defense": 1450,
+  "description": "이 카드가 전투로 묘지로\n보내졌을 때, 자신의 덱에서\n공격력 1500 이하의 땅 속성\n몬스터 1장을 선택하여 필드에\n특수 소환할 수 있다(레벨 5\n이상도 릴리스 불필요). 그 후\n덱을 셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "acf4f999fb88d03df7baa3682e6d2e1fb0a08d863de8229a89ae543f80a11990",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0218.webp",
+  "level": 4,
+  "links": [],
+  "name": "거대쥐",
+  "name_english": "Giant Rat",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "SR",
+  "source_id": 1108,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 218
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1308",
+  "attack": 1850,
+  "attribute": 32,
+  "categories": [
+    "파괴-몬스터"
+  ],
+  "code": 3536537,
+  "defense": 850,
+  "description": "이 카드가 파괴되었을 때,\n특수 소환된 레벨 5 몬스터\n1장을 대상으로 하여 그\n몬스터를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "7302b7c44e7522d1a8af1a71badb06c2fb268af451de8ea080da5c908b661859",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0514.webp",
+  "level": 4,
+  "links": [],
+  "name": "벨즈 자하크",
+  "name_english": "Evilswarm Zahak",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "R",
+  "source_id": 1308,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 514
+}

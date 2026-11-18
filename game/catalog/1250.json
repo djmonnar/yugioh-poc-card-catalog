@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1250",
+  "attack": 2300,
+  "attribute": 32,
+  "categories": [
+    "지원-릴리즈"
+  ],
+  "code": 16589042,
+  "defense": 2100,
+  "description": "자신의 패가 이 카드 한\n장뿐이면 릴리스 없이 앞면\n공격 표시로 소환할 수 있다.\n이는 일반 소환으로 취급한다.",
+  "draw_enabled": true,
+  "identity_key": "4f1fd929af0b3e748e3333dade001152ebf6868f8f6974033b594d0358cd50d3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0365.webp",
+  "level": 7,
+  "links": [],
+  "name": "질풍의 암흑 기사 가이아",
+  "name_english": "Swift Gaia the Fierce Knight",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "source_id": 1250,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 365
+}

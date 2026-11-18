@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3028",
+  "attack": 300,
+  "attribute": 16,
+  "categories": [
+    "지원-천사족",
+    "지원-카운터·무효",
+    "발동-패에서",
+    "발동-묘지로 보내기",
+    "무효-몬스터효과",
+    "효과-파괴"
+  ],
+  "code": 17266660,
+  "defense": 500,
+  "description": "①: 상대가 몬스터의 효과를 발동했을 때, 패에서 이 카드와 천사족 몬스터 1장을 묘지로 보내고 발동할 수 있다. 그 발동을 무효로 하고 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "509321f13a0450614092d770f9aca708859833e4baa77ee6f891bbe68d368f36",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3028.jpg",
+  "level": 2,
+  "links": [],
+  "name": "버밀리온 디클레어러",
+  "name_english": "Herald of Orange Light",
+  "native_type": 4129,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "UR",
+  "search_aliases": [
+    "버밀리온 디클레어러",
+    "Herald of Orange Light"
+  ],
+  "source_id": 3028,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "튜너 몬스터",
+  "web_slot": 2060
+}

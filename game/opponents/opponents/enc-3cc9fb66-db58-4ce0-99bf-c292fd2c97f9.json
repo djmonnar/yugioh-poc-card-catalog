@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/marik/start",
+  "banlistEnabled": false,
+  "deckName": "마리크 가면마수",
+  "extra": [],
+  "id": "enc-3cc9fb66-db58-4ce0-99bf-c292fd2c97f9",
+  "lpBonus": 0,
+  "main": [
+    1257,
+    1257,
+    1257,
+    1410,
+    1410,
+    1410,
+    1411,
+    1411,
+    1416,
+    1416,
+    1258,
+    2606,
+    2606,
+    2417,
+    2417,
+    1122,
+    1122,
+    2534,
+    1109,
+    1220
+  ],
+  "name": "어둠의 마리크",
+  "openingDrawBonus": 0,
+  "profileId": "marik",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_monster",
+      "position": 1,
+      "sourceId": 1412,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-3cc9fb66-db58-4ce0-99bf-c292fd2c97f9",
+  "usesNativeRules035": true
+}

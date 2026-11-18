@@ -1,0 +1,20 @@
+{
+  "description": "듀얼 중 상대에게 효과 피해 500을 줘. 원정 전체에서 2번 사용해.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 15,
+  "iconKey": "Relics/atlas160",
+  "id": "flame_scroll",
+  "kind": "flame_scroll",
+  "name": "화염 주문서",
+  "params": {
+    "charges": 2,
+    "damage": 500
+  },
+  "price": 75,
+  "rarity": "N",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/442",
+  "attack": 1000,
+  "attribute": 2,
+  "categories": [
+    "지원-융합"
+  ],
+  "code": 99426834,
+  "defense": 1100,
+  "description": "이 카드는 융합 몬스터에\n카드명이 기재된 융합 소재\n몬스터 1장 대신 사용할 수\n있다. 이때 다른 융합 소재\n몬스터는 올바른 소재여야\n한다.",
+  "draw_enabled": true,
+  "identity_key": "47a61b3b2a3813046a135a907e3659e45423ec73f379f0299c49e8b2cbe4e4c8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0351.webp",
+  "level": 4,
+  "links": [],
+  "name": "늪지대의 마수왕",
+  "name_english": "Beastking of the Swamps",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "R",
+  "source_id": 442,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 351
+}

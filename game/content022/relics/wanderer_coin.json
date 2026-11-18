@@ -1,0 +1,19 @@
+{
+  "description": "각 상점의 첫 새로고침이 무료야. 무료 새로고침도 횟수에 포함되고, 다음은 원래 두 번째 가격이야.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 38,
+  "iconKey": "Relics/Content022/atlas022",
+  "id": "wanderer_coin",
+  "kind": "wanderer_coin",
+  "name": "방랑자의 주화",
+  "params": {
+    "free_refreshes": 1
+  },
+  "price": 75,
+  "rarity": "N",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-controller022",
+  "weight": 1
+}

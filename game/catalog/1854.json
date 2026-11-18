@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1854",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-덱리크루터",
+    "덱-아마조네스",
+    "소환-패,덱"
+  ],
+  "code": 58477767,
+  "defense": 0,
+  "description": "자신 필드 위에 존재하는\n\"아마조네스\"라는 이름이 붙은\n몬스터가 전투에 의해서 상대\n몬스터를 파괴하고 묘지로\n보냈을 때 발동할 수 있다.\n자신의 덱에서 레벨 4 이하의\n\"아마조네스\"라는 이름이 붙은\n몬스터 1장을 특수 소환한다.\n[안내] 세트한 다음 턴부터,\n자신의 \"아마조네스\" 몬스터가\n전투로 상대 몬스터를\n파괴하고 묘지로 보냈을 때\n\"체인하시겠습니까?\" 질문에서\n발동한다(서로 파괴된 경우도\n포함). 덱의 레벨 4 이하\n\"아마조네스\" 몬스터를 고르고\n표시 형식을 정해 특수\n소환한다. 앞면의\n아마조네스의 애완호랑이가\n있으면 덱의 애완호랑이는\n고를 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "1c076f9af40f515797bfdba448d30aa7f468c0cd7195047fd3b11322b8e59a9c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1267.webp",
+  "level": 0,
+  "links": [],
+  "name": "여왕의 선택",
+  "name_english": "Queen's Pawn",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1854,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1267
+}

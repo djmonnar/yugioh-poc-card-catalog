@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "ch2_battle_78189e0173633857a1db759c",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "7d3679087cfd67fcb206dde9a15fb2a6353cebe98012039aafc8f1c36982bda1",
+      "source_id": 1884
+    },
+    {
+      "count": 2,
+      "identity_key": "299115cc5b20a9a8868b8288936d4d15f25b7da3b2e313b8d5d044a29ed2438f",
+      "source_id": 294
+    },
+    {
+      "count": 2,
+      "identity_key": "6c0478800ca751c783ffee5c3f77c5f95834a4a22c08a90fda4041462b8b6c98",
+      "source_id": 1886
+    },
+    {
+      "count": 2,
+      "identity_key": "7341256371bb51ebb64315d92ec728919936d0ad41b80e53c0fe63d15fb84eb6",
+      "source_id": 2040
+    },
+    {
+      "count": 2,
+      "identity_key": "98bcc1c4a6a5fafd4c449c99095c0a7354bf74dc70790330b065f32ce4e29c37",
+      "source_id": 1882
+    },
+    {
+      "count": 1,
+      "identity_key": "b781c54ef02789ecc1ca8b98fc91db18c49bdfbd9af4d65e5e1e1da2e0a9fb87",
+      "source_id": 1875
+    },
+    {
+      "count": 2,
+      "identity_key": "ee83093aa95575a98eb192164a229211e33903fda610caf9ab06ca569825c0cc",
+      "source_id": 289
+    },
+    {
+      "count": 2,
+      "identity_key": "9cc91f5bc4ba8c34de8d8387128cc634883356abc20f4482a25248b00defc6db",
+      "source_id": 1874
+    },
+    {
+      "count": 3,
+      "identity_key": "6063fab758e38acf2e1fac1848121c594dba59ca54f39c32999a82a752405aab",
+      "source_id": 1119
+    },
+    {
+      "count": 2,
+      "identity_key": "21b226757705f1071769bc769936ffff2020d8f2f57d1da36d21ff32d38630c1",
+      "source_id": 476
+    }
+  ],
+  "name": "마해룡 중급",
+  "version": 252
+}

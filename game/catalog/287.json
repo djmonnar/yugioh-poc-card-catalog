@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/287",
+  "attack": 0,
+  "attribute": 1,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 55737443,
+  "defense": 4000,
+  "description": "이 카드는 일반 소환 / 세트할\n수 없다. 자신 필드 위에\n존재하는 \"스핑크스\"라는\n이름이 붙은 몬스터 1장을\n릴리스했을 경우에만 특수\n소환할 수 있다. 이 카드가\n필드 위에 앞면 표시로\n존재하는 한, 땅 속성\n몬스터가 반전 소환에\n성공했을 때, 상대 라이프에\n1000 포인트 데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "9da543a696490e35c2ab7d6266d71a058cbe4473a198f7ef64cb16eb05067026",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0503.webp",
+  "level": 8,
+  "links": [],
+  "name": "수호신 엑조드",
+  "name_english": "Exxod, Master of The Guard",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "N",
+  "source_id": 287,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 503
+}

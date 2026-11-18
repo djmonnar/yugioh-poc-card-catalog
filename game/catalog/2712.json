@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards099/2712",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착",
+    "효과-덱샐비지",
+    "효과-묘지샐비지",
+    "소환제약"
+  ],
+  "code": 52105192,
+  "defense": 0,
+  "description": "이 카드를 발동하는 턴에, 자신은 통상 소환할 수 없다. ①: 덱 맨 위의 카드를 묘지로 보내고 발동할 수 있다. 자신의 덱 / 묘지에서 장착 마법 카드 1장을 고르고 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "5cd27602651180a1a22e356e53bc25e151de5f7fbbb7c8a1b8379c9786d8c882",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native099/cards/2712.jpg",
+  "level": 0,
+  "links": [],
+  "name": "암즈 홀",
+  "name_english": "Hidden Armory",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "암즈홀",
+    "암즈 홀",
+    "Hidden Armory"
+  ],
+  "source_id": 2712,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1744
+}

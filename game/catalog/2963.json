@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards143/2963",
+  "attack": 1900,
+  "attribute": 2,
+  "categories": [
+    "지원-융합",
+    "보호-효과 대상",
+    "효과-속성 변경"
+  ],
+  "code": 54757758,
+  "defense": 1600,
+  "description": "속성이 같고 종족이 서로 다른 몬스터 2장\n① 이 카드가 몬스터 존에 있는 동안 상대는 이 카드와 같은 속성인 필드의 몬스터 및 이 카드를 효과의 대상으로 삼을 수 없다.\n② 턴당 한 번, 어느 쪽 턴에든 속성 하나를 선언할 수 있다. 턴이 끝날 때까지 이 카드의 속성을 선언한 것으로 바꾼다.",
+  "draw_enabled": true,
+  "identity_key": "dc1e19c6583e8b193e88f6342717605517c5566f2839b06bbb7d9f75fb02b4fb",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native143/cards/2963.jpg",
+  "level": 4,
+  "links": [],
+  "name": "늪지의 도로곤",
+  "name_english": "Mudragon of the Swamp",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8388608,
+  "rarity": "SR",
+  "search_aliases": [
+    "늪지의 도로곤",
+    "Mudragon of the Swamp"
+  ],
+  "source_id": 2963,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 1995
+}

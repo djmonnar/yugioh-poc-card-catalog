@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "starter-template-921623cdee2d0afa25e771bdace4731f",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "dc819ac4bfd64a44d876fe0f75bfe97cb0e24e9dfa20e1cb23e5a9d0b52f5724",
+      "source_id": 962
+    },
+    {
+      "count": 2,
+      "identity_key": "001b36590286f19be1c864c15c8bd45f45e2bc9e424a0c93ce94bb17421529cd",
+      "source_id": 589
+    },
+    {
+      "count": 2,
+      "identity_key": "9006184879d06f98f210ce674116304ddf71becc5f9445ac0d42379d555781ae",
+      "source_id": 89
+    },
+    {
+      "count": 2,
+      "identity_key": "3d9ebe75b1ca9934067f5047c8fbf60bf4eb02f8852a110c7db3638783cc57d7",
+      "source_id": 2387
+    },
+    {
+      "count": 2,
+      "identity_key": "db67f454eadaf709a44ac04e48a14619eb93f8f61982d0f6b80c2761ec7cece1",
+      "source_id": 387
+    },
+    {
+      "count": 3,
+      "identity_key": "f404ba133372b351606334cc3284cc4e1ec47fb7adc423f12092ccf32146f581",
+      "source_id": 685
+    },
+    {
+      "count": 3,
+      "identity_key": "05b26a45d30cc9f5293e3a00bbc51ea03b2be6d45d06fc37eb468717bccba07f",
+      "source_id": 657
+    },
+    {
+      "count": 1,
+      "identity_key": "cea13664a9e98e9530443b6f6d4c626373430b6fa376f0b580401c9ff2aba41c",
+      "source_id": 628
+    },
+    {
+      "count": 1,
+      "identity_key": "78486ecd82422d0aea7f012dbdecd08467b2923bf3759dd24e6d67290415eb23",
+      "source_id": 123
+    },
+    {
+      "count": 1,
+      "identity_key": "2e5b09e8cbb003a78a38101064462aeb0d78745bbca28fb850e2f1911f497552",
+      "source_id": 1079
+    }
+  ],
+  "name": "밴디트키스 중급(가제트)",
+  "version": 37
+}

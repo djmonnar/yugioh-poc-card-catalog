@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/57",
+  "attack": 300,
+  "attribute": 32,
+  "categories": [
+    "효과-패트랩"
+  ],
+  "code": 40640057,
+  "defense": 200,
+  "description": "패의 이 카드를 묘지로\n버리고, 상대 몬스터 1장이\n자신에게 주는 데미지를 0으로\n한다. 상대의 배틀 페이즈에\n발동해야 한다.",
+  "draw_enabled": true,
+  "identity_key": "3b4c4c590f1a20bc917eb2f7e2463798d591d0f87520a19a9ba57f855e59600c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0251.webp",
+  "level": 1,
+  "links": [],
+  "name": "크리보",
+  "name_english": "Kuriboh",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "source_id": 57,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 251
+}

@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/402",
+  "attack": 1200,
+  "attribute": 1,
+  "categories": [
+    "소환-덱리크루터",
+    "발동-묘지"
+  ],
+  "code": 93107608,
+  "defense": 1300,
+  "description": "이 카드가 전투에 의해서\n파괴되어 묘지로 보내졌을 때,\n덱에서 공격력 1500 이하의\n곤충족 몬스터 1장을 자신\n필드 위에 특수 소환할 수\n있다. 그 후, 덱을 셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "6b6c7e0aaaa169972d36ed61c1573a0f2cc99aa4944e6d8055336c625dee8ecb",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1079.webp",
+  "level": 3,
+  "links": [],
+  "name": "공명충",
+  "name_english": "Howling Insect",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "SR",
+  "source_id": 402,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1079
+}

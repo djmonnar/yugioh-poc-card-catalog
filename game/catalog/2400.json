@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards035/2400",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-묘지",
+    "소환-패,덱",
+    "면역-효과"
+  ],
+  "code": 33041277,
+  "defense": 0,
+  "description": "자신의 패 / 묘지에서 \"사이버 드래곤\" 1장을 골라 특수 소환한다. 이 효과로 특수 소환한 몬스터는 효과로는 파괴되지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "06a00eb9749b0d83422a7e2d01e061dc74bba978d756b5316bf929c83dad2cdd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native035/cards/2400.jpg",
+  "level": 0,
+  "links": [],
+  "name": "사이버 레브시스템",
+  "name_english": "Cyber Revsystem",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2400,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1437
+}

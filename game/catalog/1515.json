@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1515",
+  "attack": 3000,
+  "attribute": 16,
+  "categories": [
+    "소환-패,덱",
+    "효과-제외-묘지"
+  ],
+  "code": 72989439,
+  "defense": 2500,
+  "description": "이 카드는 통상 소환할 수\n없다. 자신 묘지에서 빛\n속성과 어둠 속성 몬스터를\n1장씩 제외했을 경우에 특수\n소환할 수 있다. 이 카드의\n①②의 효과는 1턴에 1번, 어느\n쪽이든 1개밖에 사용할 수\n없다. ①: 필드의 몬스터 1장을\n대상으로 하고 발동할 수\n있다. 그 몬스터를 제외한다.\n이 효과를 발동하는 턴에, 이\n카드는 공격할 수 없다. ②: 이\n카드의 공격으로 상대\n몬스터를 파괴했을 때에\n발동할 수 있다. 이 카드는\n1번만 더 이어서 공격할 수\n있다.",
+  "draw_enabled": true,
+  "identity_key": "5ae192b9483526307dc77c0fc689274471e7ae62e72672e6ae4d42021a88934d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0844.webp",
+  "level": 8,
+  "links": [],
+  "name": "카오스 솔저 －개벽－",
+  "name_english": "Black Luster Soldier - Envoy of the Beginning",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "UR",
+  "source_id": 1515,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 844
+}

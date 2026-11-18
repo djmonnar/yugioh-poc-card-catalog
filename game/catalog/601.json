@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/601",
+  "attack": 750,
+  "attribute": 2,
+  "categories": [
+    "효과-바운스"
+  ],
+  "code": 93920745,
+  "defense": 500,
+  "description": "리버스: 필드의 몬스터를 최대\n2장까지 주인의 패로 되돌릴\n수 있다.",
+  "draw_enabled": true,
+  "identity_key": "9c5f7b9c240e531754f44903f987288dacb55f1a4ec1bcb51a4e28de2e88ae17",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0839.webp",
+  "level": 2,
+  "links": [],
+  "name": "펭귄 솔저",
+  "name_english": "Penguin Soldier",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "SR",
+  "source_id": 601,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 839
+}

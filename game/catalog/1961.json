@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1961",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-붉은눈",
+    "효과-묘지보내기",
+    "효과-덱샐비지"
+  ],
+  "code": 92353449,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에\n1장밖에 발동할 수 없다. ①:\n패 / 덱에서 \"붉은 눈\" 몬스터\n1장을 묘지로 보내고 발동할\n수 있다. 덱에서 \"붉은 눈\n인사이트\" 이외의 \"붉은 눈\"\n마법 / 함정 카드 1장을 패에\n넣는다.\n[안내] 코스트로 보낼 \"붉은\n눈\" 몬스터를 패와 덱을 합친\n창에서 고른다. 덱에 \"붉은\n눈\" 마법 / 함정 카드(지금은\n\"붉은 눈 스피릿\")가 없으면\n발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "6f0407c61e1df4385486b2d994e9bc339ef0fa8b2ec6a1415b426e4fd5fbb4ad",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1144.webp",
+  "level": 0,
+  "links": [],
+  "name": "붉은 눈 인사이트",
+  "name_english": "Red-Eyes Insight",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1961,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1144
+}

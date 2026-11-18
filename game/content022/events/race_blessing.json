@@ -1,0 +1,17 @@
+{
+  "description": "오래된 문장이 여러 종족의 모습으로 바뀐다. 앞으로 함께할 몬스터의 종족을 골라보자.",
+  "effect": "선택 종족의 몬스터 카드 보상 가중치 상승 · 새 선택으로 이전 선택 교체",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "race_blessing",
+  "kind": "race_blessing",
+  "name": "종족을 고르고 이후 몬스터 카드 보상에서 더 자주 만나기",
+  "params": {
+    "multiplier": 3
+  },
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "종족의 수호 문장",
+  "weight": 1
+}

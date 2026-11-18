@@ -1,0 +1,48 @@
+{
+  "artKey": "DuelUi011/legacy/yugi_intro",
+  "banlistEnabled": false,
+  "deckName": "가이아",
+  "extra": [
+    2574,
+    2569
+  ],
+  "id": "enc-7e03b3ac-b821-4e72-af8a-a91503b60543",
+  "lpBonus": 500,
+  "main": [
+    2581,
+    2581,
+    2587,
+    2587,
+    2578,
+    2578,
+    2586,
+    2586,
+    2582,
+    2582,
+    2582,
+    2570,
+    2570,
+    2570,
+    1948,
+    1948,
+    1967,
+    1967,
+    2579,
+    2579
+  ],
+  "name": "가이아 중급",
+  "openingDrawBonus": 0,
+  "profileId": "yugi",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 37,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-7e03b3ac-b821-4e72-af8a-a91503b60543",
+  "usesNativeRules035": true
+}

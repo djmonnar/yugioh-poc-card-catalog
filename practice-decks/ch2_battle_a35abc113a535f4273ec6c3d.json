@@ -1,0 +1,74 @@
+{
+  "banlist_enabled": false,
+  "extra": [],
+  "id": "ch2_battle_a35abc113a535f4273ec6c3d",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "a850b8cd0e118c301dde50e7dcabc13ebb54f1506ec19fbe0694955bba7dfd67",
+      "source_id": 34
+    },
+    {
+      "count": 3,
+      "identity_key": "dcd6222115d919762b6c0055a05b858b4473c90a8588ac6932fe52c0079d1b76",
+      "source_id": 1210
+    },
+    {
+      "count": 3,
+      "identity_key": "cc43ed9978e9a88cc6f159884ff0432c4df10988fde0ef0ce20e13938d113b8c",
+      "source_id": 1525
+    },
+    {
+      "count": 1,
+      "identity_key": "0e91a136403c3bdbf11bb7568bef5c5585b64141d67626d74b9a240ea8f59690",
+      "source_id": 710
+    },
+    {
+      "count": 1,
+      "identity_key": "d2c01cb64e03976bb7e6b09227171d7ee68de146ef4c13f508a92758f2bc74be",
+      "source_id": 1450
+    },
+    {
+      "count": 2,
+      "identity_key": "2e5b09e8cbb003a78a38101064462aeb0d78745bbca28fb850e2f1911f497552",
+      "source_id": 1079
+    },
+    {
+      "count": 1,
+      "identity_key": "4f17e332940a371c7b3b2e845f0f7d687e3481e51e6449a42f0ea8117d6b2d9a",
+      "source_id": 1029
+    },
+    {
+      "count": 2,
+      "identity_key": "bb23adbc9b15351db086e73ddcff5854a1d7e156093b80599ea356f01f014c76",
+      "source_id": 1211
+    },
+    {
+      "count": 1,
+      "identity_key": "e7a0ae4a02cc970faa1d456a1b3332ccb2402e49fc8c92ea125aff18e54ec19d",
+      "source_id": 1212
+    },
+    {
+      "count": 1,
+      "identity_key": "b95e23efbf7f92b0782f5396650a928bfac919b8dda9f064d9d3e45839013a39",
+      "source_id": 1919
+    },
+    {
+      "count": 1,
+      "identity_key": "e59839abbcfb0aeca99b2305a17c4280aaa98be82be82bcdf349e6a1d8c6aa0b",
+      "source_id": 1924
+    },
+    {
+      "count": 1,
+      "identity_key": "7ab0d1cad6193baa7f779cf81ee04d9a377f6583b8baf25ee742220662eaf193",
+      "source_id": 1926
+    },
+    {
+      "count": 1,
+      "identity_key": "27bf0a25dc6d4ff751576acc2f70ea53b416840321345203ce7623441c791fcf",
+      "source_id": 334
+    }
+  ],
+  "name": "유희 블랙매지션 중급",
+  "version": 37
+}

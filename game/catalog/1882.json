@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1882",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-드로우"
+  ],
+  "code": 22123627,
+  "defense": 0,
+  "description": "①: 패의 물 속성 몬스터 2장을\n덱으로 되돌리고 셔플한다. 그\n후, 자신은 덱에서 3장\n드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "98bcc1c4a6a5fafd4c449c99095c0a7354bf74dc70790330b065f32ce4e29c37",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1209.webp",
+  "level": 0,
+  "links": [],
+  "name": "욕망의 곰치",
+  "name_english": "Moray of Greed",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1882,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1209
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1876",
+  "attack": 800,
+  "attribute": 2,
+  "categories": [
+    "발동-묘지"
+  ],
+  "code": 51534754,
+  "defense": 1400,
+  "description": "①: 이 카드가 전투로 파괴되어\n묘지로 보내졌을 경우에\n발동한다. 이 카드를 파괴한\n몬스터를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "81d9d8980c8c7048f4809d505ef2fb1d8bb049d732779428c68bf8701699ebd7",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1203.webp",
+  "level": 3,
+  "links": [],
+  "name": "황천으로 건너는 배",
+  "name_english": "Yomi Ship",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "R",
+  "source_id": 1876,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1203
+}

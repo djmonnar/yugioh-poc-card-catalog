@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1844",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-패,덱"
+  ],
+  "code": 94145683,
+  "defense": 0,
+  "description": "①: 자신 필드의 앞면 표시의\n비행야수족 몬스터 1장을\n릴리스하고 발동할 수 있다.\n릴리스한 몬스터와 같은\n레벨의 비행야수족 몬스터\n1장을 덱에서 특수 소환한다.\n[안내] 속공 마법이다: 자신\n턴에 패에서, 세트하면 상대\n턴에도 발동할 수 있다(CPU는\n자신의 메인 페이즈에만\n쓴다). 릴리스할 몬스터와\n소환할 몬스터를 창에서\n고른다.\n[차이] 특수 소환한 몬스터는\n앞면 공격 표시로만 소환된다.",
+  "draw_enabled": true,
+  "identity_key": "82fa152a314b6f3434da63d8cc6e091ba616918f597d926d87255d12691ba6d5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1258.webp",
+  "level": 0,
+  "links": [],
+  "name": "스왈로즈 네스트",
+  "name_english": "Swallow's Nest",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1844,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1258
+}

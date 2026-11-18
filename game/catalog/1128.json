@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1128",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-필드"
+  ],
+  "code": 45778932,
+  "defense": 0,
+  "description": "모든 바람 속성 몬스터의\n공격력을 500 올리고 수비력을\n400 내린다.",
+  "draw_enabled": true,
+  "identity_key": "0992e179b7c0c349f69a764bb1073bdd635d4153941b066fd596e75c783a70a2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0584.webp",
+  "level": 0,
+  "links": [],
+  "name": "데저트 스톰",
+  "name_english": "Rising Air Current",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1128,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 584
+}

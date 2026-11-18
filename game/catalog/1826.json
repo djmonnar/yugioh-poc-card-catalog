@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1826",
+  "attack": 1400,
+  "attribute": 32,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 99877698,
+  "defense": 1200,
+  "description": "자신의 필드 위의\n\"묘지기의\"라는 이름이 붙은\n몬스터 카드 1장을 제물로\n바칠 때마다, 상대에게 700\n포인트 데미지를 준다. 이\n경우, \"묘지기의 대포병\"을\n제물로 바칠 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "513b0f2e788710c3ca8e10bfda266cae824d66000487a9b3a7a0d5b81f57e73f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1275.webp",
+  "level": 4,
+  "links": [],
+  "name": "묘지기의 대포병",
+  "name_english": "Gravekeeper's Cannonholder",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "N",
+  "source_id": 1826,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1275
+}

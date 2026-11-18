@@ -1,0 +1,34 @@
+{
+  "alias": 0,
+  "art_key": "Cards108/2747",
+  "attack": 2300,
+  "attribute": 16,
+  "categories": [
+    "소환-묘지"
+  ],
+  "code": 61505339,
+  "defense": 3000,
+  "description": "자신의 묘지에서 몬스터를 1장 선택한다. 패를 1장 묘지로 보내, 선택한 몬스터 1장을 특수 소환한다. 이 효과는 1턴에 1번밖에 사용할 수 없다. 이 카드는 묘지에서의 특수 소환은 할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "38732c2dc17e0f99d1df2769578af7154db864496c1e6818440c5b4230544e30",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native108/cards/2747.jpg",
+  "level": 8,
+  "links": [],
+  "name": "창세신",
+  "name_english": "The Creator",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4096,
+  "rarity": "SR",
+  "search_aliases": [
+    "창세신",
+    "The Creator"
+  ],
+  "source_id": 2747,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1779
+}

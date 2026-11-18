@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards108/2751",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-회복"
+  ],
+  "code": 80161395,
+  "defense": 0,
+  "description": "자신 필드 위의 몬스터 1장을 제물로 바친다. 제물로 바친 몬스터의 공격력이나 수비력을 선택하여, 그 수치만큼 자신의 라이프 포인트를 회복한다.",
+  "draw_enabled": true,
+  "identity_key": "73eb69faa5c7071a5ee3bd586a6440d30260518c82fcb898f456ef7b81ddc30d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native108/cards/2751.jpg",
+  "level": 0,
+  "links": [],
+  "name": "신비의 중화냄비",
+  "name_english": "Mystik Wok",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "신비의 중화냄비",
+    "신비의중화냄비",
+    "Mystik Wok"
+  ],
+  "source_id": 2751,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1783
+}

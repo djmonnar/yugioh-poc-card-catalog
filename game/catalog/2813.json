@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards122/2813",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-발동봉쇄"
+  ],
+  "code": 76515293,
+  "defense": 0,
+  "description": "필드 위에 세트된 마법 / 함정 카드를 2장 선택하고 발동한다. 이 카드가 필드 위에 존재하는 한, 선택된 마법 / 함정 카드는 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "eb837c2fa322aabe0838de67b0856ab65b3984a704c7a72a6ebd0c0a8107ea51",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native122/cards/2813.jpg",
+  "level": 0,
+  "links": [],
+  "name": "씽쩐후",
+  "name_english": "Xing Zhen Hu",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "씽전후",
+    "씽쩐후",
+    "Xing Zhen Hu"
+  ],
+  "source_id": 2813,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 1845
+}

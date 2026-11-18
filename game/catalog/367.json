@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/367",
+  "attack": 2400,
+  "attribute": 32,
+  "categories": [
+    "덱-붉은눈",
+    "소환제약"
+  ],
+  "code": 96561011,
+  "defense": 2000,
+  "description": "이 카드는 일반 소환/세트할\n수 없다. 자신 필드 위에\n존재하는 \"붉은 눈의 흑룡\"\n1장을 제물로 바친 경우에만\n특수 소환할 수 있다. 이\n카드의 공격력은 자신의\n묘지의 드래곤족 몬스터 1장당\n300 포인트 올린다.",
+  "draw_enabled": true,
+  "identity_key": "9d841c4ee1464f996bfec3791989ec099bcd94273b7e84251cbe0ba345f926a3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0395.webp",
+  "level": 9,
+  "links": [],
+  "name": "붉은 눈의 암룡",
+  "name_english": "Red-Eyes Darkness Dragon",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "R",
+  "source_id": 367,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 395
+}

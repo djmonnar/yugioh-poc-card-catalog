@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards067/2566",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-묘지기"
+  ],
+  "code": 98715423,
+  "defense": 0,
+  "description": "자신의 묘지에 ‘현세와 명계의 역전’이 있으면 상대는 묘지의 카드 효과를 발동하거나 묘지에서 몬스터를 특수 소환할 수 없다. 같은 이름의 다음 효과는 각각 한 턴에 한 번만 사용할 수 있다. ● 메인 페이즈에 패 1장을 버리고, 덱에서 ‘묘지기’ 몬스터 또는 땅 속성 천사족 몬스터 1장을 패에 넣을 수 있다. ● 상대 드로우 페이즈의 통상 드로우 전에 이 카드가 이미 앞면 표시라면 카드 이름 하나를 선언한다. 통상 드로우한 카드를 확인하고 선언한 카드였다면 묘지로 보낸다.",
+  "draw_enabled": true,
+  "identity_key": "e69c7cbbb80fc3e00d0372a81ed10770e747940a93cced17ea6a392cefde2fdd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2566.jpg",
+  "level": 0,
+  "links": [],
+  "name": "묘지기의 함정",
+  "name_english": "Gravekeeper's Trap",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2566,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 1598
+}

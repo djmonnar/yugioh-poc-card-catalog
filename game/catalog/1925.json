@@ -1,0 +1,45 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1925",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-블랙매지션",
+    "소환-패,덱",
+    "효과-덱샐비지"
+  ],
+  "code": 60709218,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에\n1장밖에 발동할 수 없다. ①:\n자신 필드에 \"블랙 매지션\"이\n존재할 경우에 발동할 수\n있다. 자신의 패 / 덱 /\n묘지에서 \"블랙 매지션 걸\"\n1장을 고르고 특수 소환한다.\n그 후, 덱에서 \"흑·마·도\"\n\"흑·마·도·폭·열·파\"\n\"흑·폭·열·파·마·도\"\n\"흑·마·도·연·탄\" 중 어느\n1장을 골라 자신의 마법 &\n함정 존에 세트할 수 있다.\n[안내] 이 게임에서 덱에서\n세트할 수 있는 카드는\n\"흑·마·도\"뿐이다.",
+  "draw_enabled": true,
+  "identity_key": "8a96c1c8818cfc0823a7527a2bb44e1ddc9f0c11a2b5f82ee8b1a7e9cacfb9ba",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1197.webp",
+  "level": 0,
+  "links": [
+    {
+      "identity_key": "a850b8cd0e118c301dde50e7dcabc13ebb54f1506ec19fbe0694955bba7dfd67",
+      "slot": 803
+    },
+    {
+      "identity_key": "1b9077aeac6cf3d35fd62e05e34fea9eab86b21b05132660bc569234f88b1893",
+      "slot": 806
+    },
+    {
+      "identity_key": "e59839abbcfb0aeca99b2305a17c4280aaa98be82be82bcdf349e6a1d8c6aa0b",
+      "slot": 1196
+    }
+  ],
+  "name": "사제의 연",
+  "name_english": "Bond Between Teacher and Student",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1925,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1197
+}

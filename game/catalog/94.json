@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/94",
+  "attack": 1350,
+  "attribute": 32,
+  "categories": [
+    "효과-바운스"
+  ],
+  "code": 93889755,
+  "defense": 1400,
+  "description": "이 카드가 수비 표시에서 공격\n표시로 변경되었을 때, 상대\n필드의 몬스터 1장을 주인의\n패로 되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "d4e6f801bd89eaa928e70252486de94bbfce50745806d0c13cee62e4cd7f6e0f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0873.webp",
+  "level": 4,
+  "links": [],
+  "name": "머더 서커스",
+  "name_english": "Crass Clown",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "source_id": 94,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 873
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/990",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "면역-전투"
+  ],
+  "code": 96008713,
+  "defense": 0,
+  "description": "상대가 공격을 선언했을 때\n발동할 수 있다. 상대 필드의\n앞면 수비 표시 몬스터 1장을\n선택하여 공격 대상으로 한다.",
+  "draw_enabled": true,
+  "identity_key": "b9c971ec38eabb323d384d7d1e2909bde3052044003ba87bccdd0436a512509e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0892.webp",
+  "level": 0,
+  "links": [],
+  "name": "매직 암 실드",
+  "name_english": "Magic-Arm Shield",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 990,
+  "speed_limit": 3,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 892
+}

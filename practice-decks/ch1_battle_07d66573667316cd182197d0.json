@@ -1,0 +1,75 @@
+{
+  "banlist_enabled": false,
+  "extra": [
+    {
+      "count": 1,
+      "identity_key": "e966a421c33e5e82f5cb7a4d1570f012411badb0058f8f4c6cd452f3646622a8",
+      "source_id": 68
+    },
+    {
+      "count": 1,
+      "identity_key": "6c194d1444ee4f9e7b2c4fa0cb3de200a1cc2186b108e8549f1207633f76cb18",
+      "source_id": 1970
+    }
+  ],
+  "id": "ch1_battle_07d66573667316cd182197d0",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "5bff08ef4a400039889bf6e769f04614f986af068c099a668d5acb3ccb526b54",
+      "source_id": 626
+    },
+    {
+      "count": 2,
+      "identity_key": "4f5d25d2b41d47dc24f115bf7ad5f413fb7dd2c6962ef9e24a56ba14b2c8e4d3",
+      "source_id": 81
+    },
+    {
+      "count": 1,
+      "identity_key": "33cc22a983e08c6f5a9b6c2d25dc4a64b707e4de12052e1d29f4408c1aaaee1e",
+      "source_id": 1965
+    },
+    {
+      "count": 1,
+      "identity_key": "185cdc87e8f2a4d63f7820cd314d9d96c41fbe7032edd38c95f77f444482d067",
+      "source_id": 1967
+    },
+    {
+      "count": 1,
+      "identity_key": "0e91a136403c3bdbf11bb7568bef5c5585b64141d67626d74b9a240ea8f59690",
+      "source_id": 710
+    },
+    {
+      "count": 1,
+      "identity_key": "7c91bc02916e6d4ddc8f520910d4106d0533dfdaa62e0e743ceb7b66e18fad69",
+      "source_id": 1166
+    },
+    {
+      "count": 3,
+      "identity_key": "f87f76039fed18cf8cc63f3586ad047d774a0a7bec2865407276c08b895e22b8",
+      "source_id": 77
+    },
+    {
+      "count": 2,
+      "identity_key": "418484ead41f5acba84c6cd8d84354378d53e56df9fb2d4d8da1d13f63526587",
+      "source_id": 15
+    },
+    {
+      "count": 2,
+      "identity_key": "b517438f8764976b8b11021b4eddeadfe14c87b2368aff0ecc41b27421f04e11",
+      "source_id": 3
+    },
+    {
+      "count": 3,
+      "identity_key": "6e88143a6d19b63d51f9f78d79264941a106691798fb78f1579481304fad7560",
+      "source_id": 1003
+    },
+    {
+      "count": 2,
+      "identity_key": "05b26a45d30cc9f5293e3a00bbc51ea03b2be6d45d06fc37eb468717bccba07f",
+      "source_id": 657
+    }
+  ],
+  "name": "조이 흑룡 초급",
+  "version": 383
+}

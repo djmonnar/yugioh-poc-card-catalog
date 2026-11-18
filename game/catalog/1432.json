@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1432",
+  "attack": 3300,
+  "attribute": 16,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 85520851,
+  "defense": 1400,
+  "description": "1턴에 1번, 자신 필드의\n몬스터 1장을 릴리스하고\n발동할 수 있다. 상대에게\n1000 데미지를 준다. 이\n효과를 발동하는 턴에, 이\n카드는 공격 선언할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "4248e33821c5cbc681eefe853492d05a3780780fa88d8348cafbc0934506a7e0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0026.webp",
+  "level": 8,
+  "links": [],
+  "name": "초전도 티라노",
+  "name_english": "Super Conductor Tyranno",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "SR",
+  "source_id": 1432,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 26
+}

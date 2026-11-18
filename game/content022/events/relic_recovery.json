@@ -1,0 +1,15 @@
+{
+  "description": "제단이 네 유물 하나를 요구한다. 그 힘을 돌려주면 지친 생명력을 모두 되찾을 수 있다.",
+  "effect": "선택 유물 1개 영구 제거 · LP를 최대 LP까지 회복",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "relic_recovery",
+  "kind": "relic_recovery",
+  "name": "보유 유물 1개를 잃고 LP 전부 회복",
+  "params": {},
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "잊힌 제단의 공양",
+  "weight": 1
+}

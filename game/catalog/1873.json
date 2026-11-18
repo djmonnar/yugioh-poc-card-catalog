@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1873",
+  "attack": 2900,
+  "attribute": 2,
+  "categories": [
+    "소환-패,덱",
+    "효과-묘지보내기",
+    "덱-아틀란티스"
+  ],
+  "code": 10485110,
+  "defense": 1600,
+  "description": "이 카드는 일반 소환/세트할\n수 없다. 자신 필드 위에\n존재하는 \"해룡－다이달로스\"\n1장을 제물로 바친 경우에만\n특수 소환할 수 있다. 자신\n필드 위에 존재하는 \"바다\"를\n묘지로 보내는 것으로, 이\n카드 이외의 서로의 패와 필드\n위의 카드를 전부 묘지로\n보낸다.\n[안내] 패의 이 카드를 눌러\n\"특수 소환\"을 고른 뒤,\n릴리스할\n\"해룡－다이달로스\"를\n클릭한다. 코스트의 \"바다\"는\n\"해룡－다이달로스\"와 같다.\n[차이] 뒷면 표시의\n\"해룡－다이달로스\"는\n릴리스할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "6378eb1b6e277e92109a100dd73d985a43cfab3de04718c9933ce330e2ff803c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1200.webp",
+  "level": 8,
+  "links": [],
+  "name": "해룡신－네오다이달로스",
+  "name_english": "Ocean Dragon Lord - Neo-Daedalus",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 262144,
+  "rarity": "SR",
+  "source_id": 1873,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1200
+}

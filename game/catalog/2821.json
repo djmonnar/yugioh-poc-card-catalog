@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards125/2821",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-파충류",
+    "효과-파괴"
+  ],
+  "code": 93217231,
+  "defense": 0,
+  "description": "①: 자신 필드의 파충류족 몬스터 1장과, 상대 필드의 카드 2장을 대상으로 하고 발동할 수 있다. 그 자신의 파충류족 몬스터 1장과, 그 상대의 카드 2장을 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "2af5a14a90f28ad1ff630b733e346855fc27e574a9305366c66394bc118215a3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native125/cards/2821.jpg",
+  "level": 0,
+  "links": [],
+  "name": "독사의 공물",
+  "name_english": "Offering to the Snake Deity",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "독사의공물",
+    "독사의 공물",
+    "Offering to the Snake Deity"
+  ],
+  "source_id": 2821,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1853
+}

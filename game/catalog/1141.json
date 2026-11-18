@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1141",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-드로우"
+  ],
+  "code": 48539234,
+  "defense": 0,
+  "description": "상대가 드로우 페이즈 이외에\n카드를 드로우했을 때 발동할\n수 있다. 발동 후, 상대가\n드로우 페이즈 이외에 카드를\n드로우할 때마다 자신의\n덱에서 카드를 2장\n드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "4b6c20b040b5f70a252f5fff6fb0ef58b639df1fba9848c171bb5489cd654575",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0763.webp",
+  "level": 0,
+  "links": [],
+  "name": "편승",
+  "name_english": "Appropriate",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1141,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 763
+}

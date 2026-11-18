@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1006",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-회복"
+  ],
+  "code": 20871001,
+  "defense": 0,
+  "description": "400 포인트만큼 LP를\n늘려보세요.",
+  "draw_enabled": true,
+  "identity_key": "fa84f4a5ba5a5ba0598c1fd17c875cd8cadf5042259e8a078cad4645a48ac218",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0820.webp",
+  "level": 0,
+  "links": [],
+  "name": "블루 포션",
+  "name_english": "Blue Medicine",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1006,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 820
+}

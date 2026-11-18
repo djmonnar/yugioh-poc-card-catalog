@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/576",
+  "attack": 3000,
+  "attribute": 4,
+  "categories": [
+    "면역-마법",
+    "덱-호루스"
+  ],
+  "code": 48229808,
+  "defense": 1800,
+  "description": "이 카드는 통상 소환할 수\n없으며, \"호루스의 흑염룡\nLV6\"의 효과로만 특수 소환할\n수 있다. ①: 마법 카드가\n발동했을 때에 발동할 수\n있다. 이 카드가 자신 필드에\n앞면 표시로 존재할 경우, 그\n발동을 무효로 하고 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "c342d58d6c7d81e6b653914c3a0498b8a70bee71cd86609e65a16edf9c6080b3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0176.webp",
+  "level": 8,
+  "links": [],
+  "name": "호루스의 흑염룡 LV8",
+  "name_english": "Horus the Black Flame Dragon LV8",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "UR",
+  "source_id": 576,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 176
+}

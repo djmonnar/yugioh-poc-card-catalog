@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1870",
+  "attack": 300,
+  "attribute": 1,
+  "categories": [
+    "면역-전투"
+  ],
+  "code": 91559748,
+  "defense": 2000,
+  "description": "상대는 이 카드를 파괴하지\n않는 한, 곤충족 몬스터를\n공격할 수 없다. 이 카드와\n전투를 실행한 몬스터는\n데미지 스텝 종료시에 수비\n표시가 된다.\n[안내] 이 카드가 그 전투로\n파괴되어도 전투한 몬스터는\n수비 표시가 된다.\n[차이] 수비 표시로 바꾸는\n효과는 체인을 만들지 않고\n데미지 스텝 종료시에 바로\n적용된다.",
+  "draw_enabled": true,
+  "identity_key": "3d9594b63ef011a1724d570ee7f2c5319a67576b3fa42ae54a1857e6546c5465",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1245.webp",
+  "level": 4,
+  "links": [],
+  "name": "가시의 요정",
+  "name_english": "Prickle Fairy",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "SR",
+  "source_id": 1870,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1245
+}

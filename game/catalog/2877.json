@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards130/2877",
+  "attack": 300,
+  "attribute": 1,
+  "categories": [
+    "지원-로이드",
+    "효과-묘지샐비지",
+    "소환-패,덱"
+  ],
+  "code": 36378213,
+  "defense": 1200,
+  "description": "\"로이드\"라는 이름이 붙은 몬스터가 자신의 묘지에서 패에 넣어졌을 때, 그 몬스터를 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "8a79b6512e7fae9889fb7bce5134730784fb31234e58d2a9e62b12fbebfd9fdd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native130/cards/2877.jpg",
+  "level": 3,
+  "links": [],
+  "name": "구급로이드",
+  "name_english": "Ambulanceroid",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "search_aliases": [
+    "구급로이드",
+    "Ambulanceroid"
+  ],
+  "source_id": 2877,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1909
+}

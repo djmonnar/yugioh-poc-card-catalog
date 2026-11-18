@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards144/2999",
+  "attack": 800,
+  "attribute": 1,
+  "categories": [
+    "지원-곤충",
+    "발동-파괴 시",
+    "효과-덱샐비지"
+  ],
+  "code": 14472500,
+  "defense": 800,
+  "description": "이 카드가 전투에 의해서 파괴되어 묘지로 보내졌을 때, 덱에서 공격력 1500 이하의 곤충족 몬스터 1장을 패에 넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "d3cc850238536c8b59fa14f6c3a82759f410f78124ec47690a3c1914f3e5c0a2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native144/cards/2999.jpg",
+  "level": 2,
+  "links": [],
+  "name": "고키폰",
+  "name_english": "Gokipon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "N",
+  "search_aliases": [
+    "고키폰",
+    "Gokipon"
+  ],
+  "source_id": 2999,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2031
+}

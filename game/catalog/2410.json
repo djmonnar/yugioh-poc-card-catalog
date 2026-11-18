@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards035/2410",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-릴리즈"
+  ],
+  "code": 92001300,
+  "defense": 0,
+  "description": "양쪽 필드의 \"앤틱 기어\" 몬스터의 공격력은 300 올린다.\n양쪽 플레이어가 몬스터를 일반 소환 / 세트할 때마다, 이 카드에 카운터를 1개 놓는다.\n\"앤틱 기어\" 몬스터를 어드밴스 소환할 경우, 필요한 릴리스 수 이상의 카운터가 놓여 있는 이 카드를 릴리스하여 필요한 릴리스를 대신할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "a26f45cd4208f0475c296998778440632fa8aef3657250da4c288553f579118a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native035/cards/2410.jpg",
+  "level": 0,
+  "links": [],
+  "name": "앤틱 기어 캐슬",
+  "name_english": "Ancient Gear Castle",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2410,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 1447
+}

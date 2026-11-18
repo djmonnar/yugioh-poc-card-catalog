@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1110",
+  "attack": 1400,
+  "attribute": 4,
+  "categories": [
+    "소환-덱리크루터",
+    "발동-묘지"
+  ],
+  "code": 60806437,
+  "defense": 1200,
+  "description": "이 카드가 전투로 묘지로\n보내졌을 때, 자신의 덱에서\n공격력 1500 이하의 화염 속성\n몬스터 1장을 선택하여 앞면\n공격 표시로 특수 소환할 수\n있다(레벨 5 이상도 릴리스\n불필요). 그 후 덱을\n셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "fc8d5928975eff41c7099c7814d21102d0b494c6a9d8f0db465a16a0e738bf54",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1030.webp",
+  "level": 4,
+  "links": [],
+  "name": "UFO 터틀",
+  "name_english": "UFO Turtle",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "SR",
+  "source_id": 1110,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1030
+}

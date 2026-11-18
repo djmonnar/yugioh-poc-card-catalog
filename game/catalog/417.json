@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/417",
+  "attack": 1900,
+  "attribute": 2,
+  "categories": [
+    "지원-필드",
+    "효과-버리기",
+    "효과-덱샐비지",
+    "덱-아틀란티스"
+  ],
+  "code": 43797906,
+  "defense": 1200,
+  "description": "이 카드를 패에서 묘지에\n버리고 발동할 수 있다.\n덱에서 \"전설의 도시\n아틀란티스\" 1장을 패에\n넣는다.\n[안내] 패의 이 카드를 선택해\n효과를 발동한다(자신의 메인\n페이즈). 덱에 \"전설의 도시\n아틀란티스\"가 없으면 발동할\n수 없고, 가져온 카드는\n상대에게 공개한 뒤 덱을\n섞는다.",
+  "draw_enabled": true,
+  "identity_key": "721d89f926e31f4f495d75fc6ff8470a1c6d6d3a1e25498a6e015319a7fd6de9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0311.webp",
+  "level": 4,
+  "links": [],
+  "name": "아틀란티스의 전사",
+  "name_english": "Warrior of Atlantis",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "SR",
+  "source_id": 417,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 311
+}

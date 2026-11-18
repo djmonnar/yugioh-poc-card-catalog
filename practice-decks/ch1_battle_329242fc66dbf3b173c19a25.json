@@ -1,0 +1,64 @@
+{
+  "banlist_enabled": false,
+  "extra": [],
+  "id": "ch1_battle_329242fc66dbf3b173c19a25",
+  "main": [
+    {
+      "count": 1,
+      "identity_key": "04981e6ba985879308a7d883855b0fee488c907edd697bb32d2df4e997aa8225",
+      "source_id": 259
+    },
+    {
+      "count": 2,
+      "identity_key": "ab5b13055ae4bd8aa410f8d7d92a4b6647759e3f7546f4403a54359f413193df",
+      "source_id": 303
+    },
+    {
+      "count": 2,
+      "identity_key": "1f676121bc372c9fc8f7b54de971237cbd64bc0c1d90d7e5e9da551be7d250fd",
+      "source_id": 1422
+    },
+    {
+      "count": 2,
+      "identity_key": "2c26a093bfcfef4b10433e905f720083619ed0e38e9aaf522e1d394330ecb4db",
+      "source_id": 1231
+    },
+    {
+      "count": 2,
+      "identity_key": "1667cae2a5e47b33533f00befbd7cc2160f6cb16e814fd1522790c2b9a6785a0",
+      "source_id": 255
+    },
+    {
+      "count": 2,
+      "identity_key": "c5e88fff3a9170f394d1700d48ea86f9dcb404abdad0501242b4b8f1d6cc182c",
+      "source_id": 223
+    },
+    {
+      "count": 2,
+      "identity_key": "7f4a69749834c9d67bc83bf88ac1032074234f16b595401ae090a5b5a5532b93",
+      "source_id": 1957
+    },
+    {
+      "count": 1,
+      "identity_key": "5981acc8fa5c0e62cabcaf5b34aa2847d57cca2685232d917d58a63aff77112a",
+      "source_id": 2609
+    },
+    {
+      "count": 2,
+      "identity_key": "45d860d25b85638ceddfaeb743ab74b99d71467e48c4e8f1bc8ca3060872695f",
+      "source_id": 1940
+    },
+    {
+      "count": 2,
+      "identity_key": "04b71cb7cb31a159ab082f31fb041432db24d4e6301e0be644518f44be897e3b",
+      "source_id": 415
+    },
+    {
+      "count": 2,
+      "identity_key": "2fc0411822fedd8614e206bcfd89681d80bb23998a4790eb45adbc4ec800878f",
+      "source_id": 2390
+    }
+  ],
+  "name": "조이 전사덱",
+  "version": 386
+}

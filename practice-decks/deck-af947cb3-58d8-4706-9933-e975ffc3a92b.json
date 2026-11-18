@@ -1,0 +1,54 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-af947cb3-58d8-4706-9933-e975ffc3a92b",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "c81886fc0f0a43bf27619067a5d82f9141ce84b993e678f42014c05a90939881",
+      "source_id": 202
+    },
+    {
+      "count": 3,
+      "identity_key": "a9aa7e4588fcca348af07bee8f0673c6eccacc3b9ef5bbbd6fc9e3710135bdda",
+      "source_id": 2124
+    },
+    {
+      "count": 2,
+      "identity_key": "5d2f5425c5c4ca0f5da3e3bf5aa7cf556f6a963d2c98fa9386f619c8e2e1ca95",
+      "source_id": 2107
+    },
+    {
+      "count": 3,
+      "identity_key": "66c9ecf34284dcd4f922e1b6d826414325aa8c4b4033e308ce288026f0bb44ea",
+      "source_id": 1802
+    },
+    {
+      "count": 2,
+      "identity_key": "f6caec55f310145b0eaa9b2ae39d247f3bf3a600d12a46466fd7302c61b5212b",
+      "source_id": 1803
+    },
+    {
+      "count": 3,
+      "identity_key": "3020114321ff2db5e5fdb5f5ca4d2794fc80c362110e97f79c29512e0c6a9ce5",
+      "source_id": 2105
+    },
+    {
+      "count": 1,
+      "identity_key": "6a3c77735e326d28769214d37e2ad2746df4b71aeb7aaf6d911438cb023c6fcc",
+      "source_id": 2125
+    },
+    {
+      "count": 1,
+      "identity_key": "9a950d467b21525f75348d120ef5f58bd4aea4c831b1a818049771bd8b03b406",
+      "source_id": 2112
+    },
+    {
+      "count": 2,
+      "identity_key": "5322bd47dbe75184a786983dee49d7d9d5c0641cef2ee938722e3f98e923f78f",
+      "source_id": 2391
+    }
+  ],
+  "name": "볼캐닉 중급",
+  "version": 624
+}

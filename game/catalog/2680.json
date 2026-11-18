@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards093/2680",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-데몬",
+    "효과-드로우"
+  ],
+  "code": 22796548,
+  "defense": 0,
+  "description": "①: 1턴에 1번, 500 LP를 지불하고, 카드명을 1개 선언하여 발동할 수 있다. 자신의 덱 맨 위의 카드를 넘기고, 선언한 카드였을 경우, 그 카드를 패에 넣는다. 다를 경우, 넘긴 카드를 묘지로 보낸다.",
+  "draw_enabled": true,
+  "identity_key": "82e45b89154f42e92d0d8c2b0b042c7c2ec5e38a9547d5ab0a6bd0c5ba96c3f2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native093/cards/2680.jpg",
+  "level": 0,
+  "links": [],
+  "name": "데몬의 선고",
+  "name_english": "Archfiend's Oath",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "데몬의선고",
+    "데몬의 선고",
+    "Archfiend's Oath"
+  ],
+  "source_id": 2680,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1712
+}

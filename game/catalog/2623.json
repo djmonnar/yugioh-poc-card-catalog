@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards088/2623",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-드로우",
+    "마력카운터"
+  ],
+  "code": 33904024,
+  "defense": 0,
+  "description": "자신의 드로우 페이즈시에 일반 드로우할 때마다, 이 카드에 욕망 카운터를 1개 놓는다. 욕망 카운터가 2개 이상 얹혀 있는 이 카드를 묘지로 보내는 것으로, 자신의 덱에서 카드를 2장 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "dc8040bc7fa6d79eb4473846fc07c415dc8e2a1b3ff2530ef57141be3dcb5215",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native088/cards/2623.jpg",
+  "level": 0,
+  "links": [],
+  "name": "욕망의 조각",
+  "name_english": "Shard of Greed",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "욕망의조각",
+    "욕망의 조각",
+    "Shard of Greed"
+  ],
+  "source_id": 2623,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 1655
+}

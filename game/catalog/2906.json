@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards135/2906",
+  "attack": 2700,
+  "attribute": 32,
+  "categories": [
+    "지원-공룡족",
+    "지원-진화약",
+    "소환-덱 복귀 코스트",
+    "발동-묘지로 보내졌을 때",
+    "무효-마법",
+    "무효-함정",
+    "효과-덱샐비지"
+  ],
+  "code": 41782653,
+  "defense": 2100,
+  "description": "이 카드는 통상 소환할 수 없다. 자신의 제외 상태인 공룡족 몬스터 5장을 덱으로 되돌렸을 경우에만 특수 소환할 수 있다. 이 카드명의 ②의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 1턴에 1번, 상대가 마법 / 함정 카드를 발동했을 때에 발동할 수 있다. 자신의 패 / 필드(앞면 표시)의 공룡족 몬스터 1장을 파괴하고, 그 발동을 무효로 하여 파괴한다. ②: 이 카드가 효과로 묘지로 보내졌을 경우에 발동할 수 있다. 덱에서 \"진화약\" 마법 카드 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "a3b5daf442e188279f9f1fd9bde41e07fe73835f7f85ee9fd2de15f1dd7a0af4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native135/cards/2906.jpg",
+  "level": 7,
+  "links": [],
+  "name": "오버텍스 고아틀루스",
+  "name_english": "Overtex Qoatlus",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "SR",
+  "search_aliases": [
+    "오버텍스 고아틀루스",
+    "Overtex Qoatlus"
+  ],
+  "source_id": 2906,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "특수 소환 몬스터",
+  "web_slot": 1938
+}

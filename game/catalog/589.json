@@ -1,0 +1,49 @@
+{
+  "alias": 0,
+  "art_key": "Cards/589",
+  "attack": 0,
+  "attribute": 1,
+  "categories": [],
+  "code": 13316346,
+  "defense": 2000,
+  "description": "자신의 필드에 \"가제트\"\n몬스터가 있으면, 이 카드의\n공격력은 2000 올라간다.",
+  "draw_enabled": true,
+  "identity_key": "001b36590286f19be1c864c15c8bd45f45e2bc9e424a0c93ce94bb17421529cd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0238.webp",
+  "level": 4,
+  "links": [
+    {
+      "identity_key": "9006184879d06f98f210ce674116304ddf71becc5f9445ac0d42379d555781ae",
+      "slot": 202
+    },
+    {
+      "identity_key": "db67f454eadaf709a44ac04e48a14619eb93f8f61982d0f6b80c2761ec7cece1",
+      "slot": 809
+    },
+    {
+      "identity_key": "3d9ebe75b1ca9934067f5047c8fbf60bf4eb02f8852a110c7db3638783cc57d7",
+      "slot": 810
+    },
+    {
+      "identity_key": "cea13664a9e98e9530443b6f6d4c626373430b6fa376f0b580401c9ff2aba41c",
+      "slot": 1040
+    },
+    {
+      "identity_key": "78486ecd82422d0aea7f012dbdecd08467b2923bf3759dd24e6d67290415eb23",
+      "slot": 5
+    }
+  ],
+  "name": "기동병사 데드 리볼버",
+  "name_english": "Boot-Up Soldier - Dread Dynamo",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "source_id": 589,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 238
+}

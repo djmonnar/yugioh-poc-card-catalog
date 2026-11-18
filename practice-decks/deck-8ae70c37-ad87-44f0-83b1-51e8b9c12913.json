@@ -1,0 +1,64 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-8ae70c37-ad87-44f0-83b1-51e8b9c12913",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "981ba8eb7b7be3a9efba57cc33bf5247cfb7a84efc2976957bf381939bfe2b33",
+      "source_id": 541
+    },
+    {
+      "count": 2,
+      "identity_key": "96faff172cb397385a477ffe177840a1f27390747807cc7a6860e182c91a1fa6",
+      "source_id": 2120
+    },
+    {
+      "count": 2,
+      "identity_key": "803a201ac142d155aad9a0754e701d685ec66bc628b827141b48fccef3daa322",
+      "source_id": 2119
+    },
+    {
+      "count": 1,
+      "identity_key": "0055baeeba8df234a97ecff259dabf614873650b5678a740bd36b056842fdeb0",
+      "source_id": 2123
+    },
+    {
+      "count": 1,
+      "identity_key": "7a1b792cab5bdd2c2fe81530c1355ee25bc81a7fcb53a7fecf3f035c5fe7358f",
+      "source_id": 2128
+    },
+    {
+      "count": 2,
+      "identity_key": "27057a437812b2034db198f5fd7393e9136643d4bd477d917ec5d36678c17f31",
+      "source_id": 2122
+    },
+    {
+      "count": 2,
+      "identity_key": "5c3da29305041d4d90caedf287fce054c06fe737e1a0fb69e44ee517261529fd",
+      "source_id": 2127
+    },
+    {
+      "count": 2,
+      "identity_key": "691d649364d49611e4014848081feb8564a260847bc5e8cadac25995d7ce5802",
+      "source_id": 2121
+    },
+    {
+      "count": 2,
+      "identity_key": "700fde8859d973fdcefb68a64de41c7e6f6619025b1309c4e06bba58da071b22",
+      "source_id": 1832
+    },
+    {
+      "count": 2,
+      "identity_key": "59d2eeb4510631822483357e45dd52235c268a83ee173b8ec311bf9993209514",
+      "source_id": 1949
+    },
+    {
+      "count": 2,
+      "identity_key": "509f1d451d9ae3e444ffd5b9c35c0f14cefc51e0d0517b28062f5f5e22c9c453",
+      "source_id": 1244
+    }
+  ],
+  "name": "안개골짜기 중급",
+  "version": 684
+}

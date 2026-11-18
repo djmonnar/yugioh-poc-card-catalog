@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2544",
+  "attack": 1400,
+  "attribute": 8,
+  "categories": [
+    "덱-네프티스"
+  ],
+  "code": 51782995,
+  "defense": 200,
+  "description": "각 효과는 카드명당 1턴에 1번만 사용할 수 있다. ① 메인 페이즈에 패 1장을 효과로 파괴하고, 파괴했다면 패에서 같은 이름 이외의 레벨 4 이하 네프티스 몬스터 1장을 특수 소환할 수 있다. ② 효과로 파괴되어 묘지로 보내지면, 다음 자신의 스탠바이 페이즈에 덱에서 같은 이름 이외의 네프티스 몬스터 1장을 골라 파괴할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "d7b9b5e2af1e3ec0bc818b96fcb911849c83d8053e20b52a5006b4a22f6cb3eb",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2544.jpg",
+  "level": 2,
+  "links": [],
+  "name": "네프티스의 지키는 손",
+  "name_english": "Defender of Nephthys",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 2544,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1576
+}

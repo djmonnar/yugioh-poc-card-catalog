@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "ch2_elite_942cfb36ed45d49ff8761be4",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "0817007f585fe352c1d5832bd7ba045b1bdb912424c98c8b02ef64cd6e9171ac",
+      "source_id": 2016
+    },
+    {
+      "count": 3,
+      "identity_key": "36d9bf9e187aa9eaa86c4feb8c3b9c30db1a4a34a2fc6dd3bd2e4d44c0b50fd6",
+      "source_id": 2015
+    },
+    {
+      "count": 2,
+      "identity_key": "9c5f7b9c240e531754f44903f987288dacb55f1a4ec1bcb51a4e28de2e88ae17",
+      "source_id": 601
+    },
+    {
+      "count": 2,
+      "identity_key": "a278bf33414a5dd14541b37f9332c3ce76becb4037067a7a0f39ed5b6c1109c2",
+      "source_id": 2022
+    },
+    {
+      "count": 2,
+      "identity_key": "8c8ab3be9c415f4216ce255663adcc8cb672e5677ec60997021938a67d3a35ef",
+      "source_id": 1900
+    },
+    {
+      "count": 2,
+      "identity_key": "09ae25ba611ab0efa07634059c0a7dfadc28855699e598c28d12b7376292024e",
+      "source_id": 1881
+    },
+    {
+      "count": 1,
+      "identity_key": "1b270817c951ccfdba7a3a987b9204f212cc5489c86eea3f030179fa7e413961",
+      "source_id": 2012
+    },
+    {
+      "count": 2,
+      "identity_key": "da56931d80e7a521bbdfb3377b5af0f3bc83a1aa16cd15dc3cc13ae2944802f9",
+      "source_id": 1134
+    },
+    {
+      "count": 2,
+      "identity_key": "e84d94a4fae01c996a8987182984fb3ffa213f361b0ab853eb512074b855dd20",
+      "source_id": 2013
+    },
+    {
+      "count": 1,
+      "identity_key": "98bcc1c4a6a5fafd4c449c99095c0a7354bf74dc70790330b065f32ce4e29c37",
+      "source_id": 1882
+    }
+  ],
+  "name": "습지초원",
+  "version": 323
+}

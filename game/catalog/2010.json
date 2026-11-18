@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2010",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-드로우",
+    "지원-일반몬스터"
+  ],
+  "code": 35762283,
+  "defense": 0,
+  "description": "드로우 페이즈에 드로우한 카드가 일반 몬스터였을 경우, 그 카드를 상대에게 보여주는 것으로, 자신은 카드를 1장 더 드로우할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "051a68d46e73f712b6ddcde1be027a0d95caced1e8dd561297017bd2e246b759",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1314.webp",
+  "level": 0,
+  "links": [],
+  "name": "범골의 의지",
+  "name_english": "Heart of the Underdog",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2010,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1314
+}

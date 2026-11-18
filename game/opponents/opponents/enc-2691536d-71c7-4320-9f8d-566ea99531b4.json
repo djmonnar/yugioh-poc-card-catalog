@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/bonz/start",
+  "banlistEnabled": false,
+  "deckName": "해골수스 최상급",
+  "extra": [],
+  "id": "enc-2691536d-71c7-4320-9f8d-566ea99531b4",
+  "lpBonus": 0,
+  "main": [
+    1997,
+    1997,
+    381,
+    381,
+    399,
+    404,
+    404,
+    1975,
+    1975,
+    1165,
+    1165,
+    1974,
+    1960,
+    1977,
+    1944,
+    1029,
+    1023,
+    1023,
+    1008,
+    1095
+  ],
+  "name": "해골수스",
+  "openingDrawBonus": 0,
+  "profileId": "bonz",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 399,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-2691536d-71c7-4320-9f8d-566ea99531b4",
+  "usesNativeRules035": true
+}

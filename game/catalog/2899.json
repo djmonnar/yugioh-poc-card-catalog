@@ -1,0 +1,34 @@
+{
+  "alias": 0,
+  "art_key": "Cards135/2899",
+  "attack": 0,
+  "attribute": 1,
+  "categories": [
+    "소환-토큰"
+  ],
+  "code": 17228909,
+  "defense": 0,
+  "description": "「로스트월드」의 효과로 특수 소환된다.",
+  "draw_enabled": true,
+  "identity_key": "d1756bd1bb44d6617f30cd1ba35f53b4c6cd9cf16117a37363a5f15cde939c5c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native135/cards/2899.jpg",
+  "level": 1,
+  "links": [],
+  "name": "쥐라에그 토큰",
+  "name_english": "Jurraegg Token",
+  "native_type": 16401,
+  "normal_limit": 0,
+  "playable": false,
+  "race": 65536,
+  "rarity": "N",
+  "search_aliases": [
+    "쥐라에그 토큰",
+    "Jurraegg Token"
+  ],
+  "source_id": 2899,
+  "speed_limit": null,
+  "stock": true,
+  "token": true,
+  "type_name": "토큰",
+  "web_slot": 1931
+}

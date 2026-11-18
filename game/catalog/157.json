@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/157",
+  "attack": 1800,
+  "attribute": 8,
+  "categories": [
+    "효과-버리기",
+    "효과-컨트롤"
+  ],
+  "code": 56514812,
+  "defense": 1000,
+  "description": "이 카드의 컨트롤이\n변경되었을 때, 상대는 카드\n1장을 버린다.",
+  "draw_enabled": true,
+  "identity_key": "b36deadfbc45f4414e047f1946d654da5f85e58d57f678e8366f4d32ef9bb101",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0925.webp",
+  "level": 4,
+  "links": [],
+  "name": "쿠노이치 워리어",
+  "name_english": "Kunoichi",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "source_id": 157,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 925
+}

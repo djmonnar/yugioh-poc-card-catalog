@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1895",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-제외"
+  ],
+  "code": 23557835,
+  "defense": 0,
+  "description": "2000 라이프 포인트를\n지불한다. 서로 제외된\n몬스터를 각각의 필드 위에\n가능한 만큼 특수 소환한다.\n[차이] 공격 표시로만 특수\n소환된다.",
+  "draw_enabled": true,
+  "identity_key": "e9ff351334b0907f819c281a306f59c7c4062bc20383dfe58c3d73f51d39db0e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1222.webp",
+  "level": 0,
+  "links": [],
+  "name": "차원 융합",
+  "name_english": "Dimension Fusion",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1895,
+  "speed_limit": 3,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1222
+}

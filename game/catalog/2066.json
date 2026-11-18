@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2066",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-드로우",
+    "발동-피해"
+  ],
+  "code": 28486799,
+  "defense": 0,
+  "description": "①: 상대 몬스터의 공격 또는 상대 효과로 자신이 1000 이상의 데미지를 받을 때마다 발동한다. 그 데미지 1000 당 1장, 자신은 덱에서 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "2e4847d2832e3429885d9ff38739fb5236c22728d0b0ef3c7f217ba0323ddcbe",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1365.webp",
+  "level": 0,
+  "links": [],
+  "name": "보충 부대",
+  "name_english": "Backup Squad",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2066,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1365
+}

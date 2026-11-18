@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards120/2776",
+  "attack": 1000,
+  "attribute": 16,
+  "categories": [
+    "지원-튜너",
+    "소환-패,덱",
+    "효과-덱샐비지"
+  ],
+  "code": 42280216,
+  "defense": 2000,
+  "description": "①: 상대 필드에만 몬스터가 존재할 경우, 이 카드는 패에서 특수 소환할 수 있다. ②: 필드의 이 카드가 파괴되어 묘지로 보내졌을 때에 발동할 수 있다. 덱에서 \"붉은 개미 아스카톨\"이나 \"수파이\" 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "60d7a09b408ac1e20af292121e8d832991409243b58b1966277671f9e8fa28df",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native120/cards/2776.jpg",
+  "level": 5,
+  "links": [],
+  "name": "태양의 신관",
+  "name_english": "Oracle of the Sun",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "search_aliases": [
+    "태양의 신관",
+    "Oracle of the Sun"
+  ],
+  "source_id": 2776,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1808
+}

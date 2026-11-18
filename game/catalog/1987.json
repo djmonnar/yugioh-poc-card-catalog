@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1987",
+  "attack": 2600,
+  "attribute": 1,
+  "categories": [
+    "효과-직접공격"
+  ],
+  "code": 38670435,
+  "defense": 1800,
+  "description": "상대 필드 위에 수비 표시\n몬스터밖에 존재하지 않을\n경우, 이 카드는 상대\n플레이어에게 직접 공격할 수\n있다.",
+  "draw_enabled": true,
+  "identity_key": "eb56bda135722818f0033a4d349f3dfefbcefab6b0812888dd729d8fb0798f6a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1130.webp",
+  "level": 7,
+  "links": [],
+  "name": "블랙 티라노",
+  "name_english": "Black Tyranno",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "R",
+  "source_id": 1987,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1130
+}

@@ -1,0 +1,20 @@
+{
+  "config": {
+    "battleScore": 50,
+    "bossScore": 500,
+    "chapterClearScore": 300,
+    "completionScore": 1000,
+    "eliteScore": 150,
+    "floorScore": 20,
+    "nWeight": 50,
+    "ownershipMode": 0,
+    "packCards": 5,
+    "packPrice": 100,
+    "rWeight": 42,
+    "scorePerPoint": 10,
+    "srWeight": 6,
+    "unlockedTypeCopies": 3,
+    "urWeight": 2
+  },
+  "packs": []
+}

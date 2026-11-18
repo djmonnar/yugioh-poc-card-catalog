@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/47",
+  "attack": 1000,
+  "attribute": 32,
+  "categories": [
+    "효과-덱샐비지",
+    "발동-묘지"
+  ],
+  "code": 26202165,
+  "defense": 600,
+  "description": "이 카드가 필드에서 묘지로\n보내졌을 때, 자신의 덱에서\n공격력 1500 이하의 몬스터\n1장을 패에 넣고 덱을\n셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "277ac88e644e6f8e793cb9d937d52ff78ed6cdeb4b16ad33831c2e6b46bb35d8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0248.webp",
+  "level": 3,
+  "links": [],
+  "name": "크리터",
+  "name_english": "Sangan",
+  "native_type": 33,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 8,
+  "rarity": "UR",
+  "source_id": 47,
+  "speed_limit": 2,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 248
+}

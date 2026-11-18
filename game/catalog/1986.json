@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1986",
+  "attack": 1000,
+  "attribute": 8,
+  "categories": [
+    "발동-묘지",
+    "효과-묘지샐비지"
+  ],
+  "code": 90654356,
+  "defense": 500,
+  "description": "이 카드가 전투에 의해서\n파괴되는 것 이외의 방법으로\n필드 위에서 묘지로 보내졌을\n때, 이 카드는 주인의 패로\n되돌아간다.",
+  "draw_enabled": true,
+  "identity_key": "14731e34f0fd21f670680848e9d5a1a95d715191d55ff333db1f42ff905d025d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1129.webp",
+  "level": 3,
+  "links": [],
+  "name": "블랙 프테라",
+  "name_english": "Black Ptera",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "R",
+  "source_id": 1986,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1129
+}

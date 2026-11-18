@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards144/2987",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-곤충",
+    "지원-장착",
+    "효과-릴리즈",
+    "소환-덱리크루터",
+    "발동-묘지에서",
+    "발동-제외",
+    "효과-덱으로 되돌리기",
+    "효과-드로우"
+  ],
+  "code": 77840540,
+  "defense": 0,
+  "description": "이 카드명의 ②의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 장착 카드를 장착한 자신 / 상대 필드의 곤충족 몬스터 1장을 릴리스하고, 덱에서 곤충족 몬스터 1장을 소환 조건을 무시하여 특수 소환한다. ②: 자신 메인 페이즈에 묘지의 이 카드를 제외하고, 자신 묘지의 곤충족 몬스터 1장을 대상으로 하여 발동할 수 있다. 그 몬스터를 덱에 넣고 셔플한다. 그 후, 자신은 덱에서 1장 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "c9fe6eae6c16f81ce784889a8eff06ef094c9c8eddda708792d4b1de7b7713b0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native144/cards/2987.jpg",
+  "level": 0,
+  "links": [],
+  "name": "초진화의 고치",
+  "name_english": "Cocoon of Ultra Evolution",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "search_aliases": [
+    "초진화의 고치",
+    "Cocoon of Ultra Evolution"
+  ],
+  "source_id": 2987,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 2019
+}

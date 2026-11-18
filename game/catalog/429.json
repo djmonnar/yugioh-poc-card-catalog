@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/429",
+  "attack": 1500,
+  "attribute": 32,
+  "categories": [
+    "파괴-몬스터"
+  ],
+  "code": 78613627,
+  "defense": 1700,
+  "description": "공격 몬스터의 공격력이 이\n카드의 수비력보다 낮을 경우,\n그 공격 몬스터를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "c965c25867bd66042d471be2da9bf26e361c1d04d3e6c771ba1b344aeeb0a261",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0936.webp",
+  "level": 4,
+  "links": [],
+  "name": "데스 캥거루",
+  "name_english": "Des Kangaroo",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "R",
+  "source_id": 429,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 936
+}

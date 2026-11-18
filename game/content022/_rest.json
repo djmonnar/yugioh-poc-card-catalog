@@ -1,0 +1,82 @@
+{
+  "compatRelics": [
+    {
+      "description": "이번 원정의 내 몬스터 공격력+100.",
+      "enabled": true,
+      "fields": [],
+      "iconIndex": 0,
+      "iconKey": "Art/relics",
+      "id": "bronze_blade",
+      "kind": "bronze_blade",
+      "name": "고대의 검",
+      "params": {
+        "atk": 100
+      },
+      "price": 75,
+      "rarity": "N",
+      "rewardRarity": null,
+      "shopEnabled": false,
+      "supportStatus": "retained_0.9_implemented",
+      "weight": 0
+    },
+    {
+      "description": "이번 원정의 내 몬스터 수비력+100.",
+      "enabled": true,
+      "fields": [],
+      "iconIndex": 1,
+      "iconKey": "Art/relics",
+      "id": "bronze_shield",
+      "kind": "bronze_shield",
+      "name": "고대의 방패",
+      "params": {
+        "def": 100
+      },
+      "price": 75,
+      "rarity": "N",
+      "rewardRarity": null,
+      "shopEnabled": false,
+      "supportStatus": "retained_0.9_implemented",
+      "weight": 0
+    },
+    {
+      "description": "매 전투의 첫 패를1장 더 받는다.",
+      "enabled": true,
+      "fields": [],
+      "iconIndex": 3,
+      "iconKey": "Art/relics",
+      "id": "opening_draw",
+      "kind": "opening_draw",
+      "name": "준비된 손패",
+      "params": {
+        "count": 1
+      },
+      "price": 125,
+      "rarity": "R",
+      "rewardRarity": null,
+      "shopEnabled": false,
+      "supportStatus": "retained_0.9_implemented",
+      "weight": 0
+    },
+    {
+      "description": "최대LP가500늘어난다.",
+      "enabled": true,
+      "fields": [],
+      "iconIndex": 5,
+      "iconKey": "Art/relics",
+      "id": "bone_charm",
+      "kind": "bone_charm",
+      "name": "말뼈",
+      "params": {
+        "max_lp": 500
+      },
+      "price": 200,
+      "rarity": "SR",
+      "rewardRarity": null,
+      "shopEnabled": false,
+      "supportStatus": "retained_0.9_implemented",
+      "weight": 0
+    }
+  ],
+  "schema": 1,
+  "version": "unity-expedition-content-022+sight073+field079"
+}

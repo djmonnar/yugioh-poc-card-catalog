@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1306",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 65830223,
+  "defense": 0,
+  "description": "카드가 묘지로 보내질 때마다\n그 카드의 주인에게 카드\n1장당 300 직접 데미지를\n준다.",
+  "draw_enabled": true,
+  "identity_key": "8d4f5545eaf6ed3f126ff8917650c7909d7708e0dd5aa5d3581342089b9d6d6a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0414.webp",
+  "level": 0,
+  "links": [],
+  "name": "관장수",
+  "name_english": "Coffin Seller",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1306,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 414
+}

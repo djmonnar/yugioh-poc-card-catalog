@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1881",
+  "attack": 300,
+  "attribute": 2,
+  "categories": [
+    "효과-드로우",
+    "발동-묘지"
+  ],
+  "code": 60161788,
+  "defense": 500,
+  "description": "①: 이 카드가 전투로 파괴되어\n묘지로 보내졌을 경우에\n발동한다. 자신은 1장\n드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "09ae25ba611ab0efa07634059c0a7dfadc28855699e598c28d12b7376292024e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1208.webp",
+  "level": 1,
+  "links": [],
+  "name": "빙결계의 파수꾼 블리즈드",
+  "name_english": "Blizzed, Defender of the Ice Barrier",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "R",
+  "source_id": 1881,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1208
+}

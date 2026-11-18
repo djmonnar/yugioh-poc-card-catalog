@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1995",
+  "attack": 2000,
+  "attribute": 1,
+  "categories": [
+    "발동-묘지"
+  ],
+  "code": 97000273,
+  "defense": 1000,
+  "description": "이 카드가 일반 소환에\n성공했을 때, 이 카드를\n파괴한다. 이 카드가\n\"스크랩\"이라는 이름이 붙은\n카드의 효과에 의해서\n파괴되어 묘지로 보내졌을\n경우, \"스크랩 콩\" 이외의\n자신의 묘지에 존재하는\n\"스크랩\"이라는 이름이 붙은\n몬스터 1장을 선택하여 패에\n넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "40fe19da25a33221e6e411461336045daf621428298e8c68e20308e96419e5fc",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1120.webp",
+  "level": 4,
+  "links": [],
+  "name": "스크랩 콩",
+  "name_english": "Scrap Kong",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "R",
+  "source_id": 1995,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1120
+}

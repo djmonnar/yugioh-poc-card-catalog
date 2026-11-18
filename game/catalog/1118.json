@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1118",
+  "attack": 3500,
+  "attribute": 32,
+  "categories": [
+    "소환제약"
+  ],
+  "code": 85605684,
+  "defense": 0,
+  "description": "이 카드는 일반 소환/세트할 수 없다. \"데몬과의 거래\"의 효과로만 특수 소환이 가능. 상대 필드 위의 모든 몬스터에 1번씩 공격이 가능. 자신의 턴의 엔드 페이즈마다 이 카드의 공격력은 500 포인트 내린다.",
+  "draw_enabled": true,
+  "identity_key": "93d10a6abaeae0a47ae2ace7169c5425239ef0e8f3632dfb739b085a5f5183a2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0841.webp",
+  "level": 8,
+  "links": [],
+  "name": "버서크 데드 드래곤",
+  "name_english": "Berserk Dragon",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "R",
+  "source_id": 1118,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 841
+}

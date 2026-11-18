@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1029",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-버리기",
+    "면역-마법"
+  ],
+  "code": 77414722,
+  "defense": 0,
+  "description": "패의 카드 1장을 묘지로\n버리고 마법 카드의 발동을\n무효로 하여 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "4f17e332940a371c7b3b2e845f0f7d687e3481e51e6449a42f0ea8117d6b2d9a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0893.webp",
+  "level": 0,
+  "links": [],
+  "name": "매직 재머",
+  "name_english": "Magic Jammer",
+  "native_type": 1048580,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1029,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 893
+}

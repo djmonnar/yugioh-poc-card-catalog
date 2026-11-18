@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/615",
+  "attack": 1400,
+  "attribute": 4,
+  "categories": [
+    "소환-덱리크루터",
+    "발동-묘지"
+  ],
+  "code": 39191307,
+  "defense": 1100,
+  "description": "①: 이 카드가 전투로 파괴되어\n묘지로 보내졌을 때에 발동할\n수 있다. 덱에서 공격력 1500\n이하의 드래곤족 몬스터 1장을\n특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "8763558c2d9b44edd23608cfb17b6ed874a0d41cbc6777be9e553d5c544b4c9e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1025.webp",
+  "level": 3,
+  "links": [],
+  "name": "가면룡",
+  "name_english": "Masked Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "source_id": 615,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1025
+}

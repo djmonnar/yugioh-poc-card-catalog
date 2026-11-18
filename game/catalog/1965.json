@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1965",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-붉은눈",
+    "소환-묘지"
+  ],
+  "code": 44397496,
+  "defense": 0,
+  "description": "①: 자신 묘지의 \"붉은 눈\"\n몬스터 1장을 대상으로 하고\n발동할 수 있다. 그 몬스터를\n특수 소환한다.\n[안내] 발동할 때 묘지의\n\"붉은 눈\" 몬스터를 창에서\n고르고, 특수 소환할 때 수비\n표시로 할지 묻는다.\n[차이] 컴퓨터는 자신의 메인\n페이즈에만 발동한다.",
+  "draw_enabled": true,
+  "identity_key": "33cc22a983e08c6f5a9b6c2d25dc4a64b707e4de12052e1d29f4408c1aaaee1e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1148.webp",
+  "level": 0,
+  "links": [],
+  "name": "붉은 눈 스피릿",
+  "name_english": "Red-Eyes Spirit",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1965,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1148
+}

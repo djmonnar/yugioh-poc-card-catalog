@@ -1,0 +1,83 @@
+{
+  "alias": 0,
+  "art_key": "Cards035/2413",
+  "attack": 100,
+  "attribute": 1,
+  "categories": [
+    "소환-패,덱"
+  ],
+  "code": 31557782,
+  "defense": 800,
+  "description": "자신 필드에 \"앤틱 기어\"가 앞면 표시로 존재할 경우, 이 카드는 패에서 앞면 공격 표시로 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "75a02a07c6b5b5e5fdfd07c6534a3ab3fa0afe65b66ca1c50ee115bce1058df0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native035/cards/2413.jpg",
+  "level": 2,
+  "links": [
+    {
+      "identity_key": "78486ecd82422d0aea7f012dbdecd08467b2923bf3759dd24e6d67290415eb23",
+      "slot": 5
+    },
+    {
+      "identity_key": "65d5bdc7d1406bc151024e130bb32408358a8fc9aba292a435e24fe65ed66c51",
+      "slot": 45
+    },
+    {
+      "identity_key": "5868cde393ea236e64cd9a1f67133ad0be7e3889475c35134606ca4d083420d2",
+      "slot": 493
+    },
+    {
+      "identity_key": "cea13664a9e98e9530443b6f6d4c626373430b6fa376f0b580401c9ff2aba41c",
+      "slot": 1040
+    },
+    {
+      "identity_key": "5c56156fe10a118e4716336ca135fc86e40d35c4d68b082798a91944a9951131",
+      "slot": 1053
+    },
+    {
+      "identity_key": "37deeb3a67d1385838c4e9252e9d3db9038e174d99f20d139679e9d7e6414cf2",
+      "slot": 1442
+    },
+    {
+      "identity_key": "74a069d59834d2f4623ae0e9196fdc6c02405ebc3779f06d26618aa0b8fde06a",
+      "slot": 1443
+    },
+    {
+      "identity_key": "0c9341f11c662062a8de97accc86fbe83a16a0dca55ddd57cd05856ed74a6733",
+      "slot": 1444
+    },
+    {
+      "identity_key": "2f316cd56428a53342086a46bc71522eb322277ffae90980bad6054bf499a4c5",
+      "slot": 1446
+    },
+    {
+      "identity_key": "a56cf922e50a1f4088a573ed9e0d679d164e4013ce7c4d9c103814f204e0c7d0",
+      "slot": 1445
+    },
+    {
+      "identity_key": "a26f45cd4208f0475c296998778440632fa8aef3657250da4c288553f579118a",
+      "slot": 1447
+    },
+    {
+      "identity_key": "379dd9797383bc2fa825e58092d8838329f57c3f4ef19fca04c814b2b33b7063",
+      "slot": 1448
+    },
+    {
+      "identity_key": "10dcdaf072e6210dbbe771a636fcf71d5e59fe22348d33211eb428508e1b610d",
+      "slot": 1449
+    }
+  ],
+  "name": "앤틱 기어",
+  "name_english": "Ancient Gear",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "N",
+  "source_id": 2413,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1450
+}

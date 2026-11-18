@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1003",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-융합"
+  ],
+  "code": 24094653,
+  "defense": 0,
+  "description": "융합 소재 몬스터 2장 이상을\n융합하여 새로운 융합\n몬스터를 만든다.",
+  "draw_enabled": true,
+  "identity_key": "6e88143a6d19b63d51f9f78d79264941a106691798fb78f1579481304fad7560",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1026.webp",
+  "level": 0,
+  "links": [],
+  "name": "융합",
+  "name_english": "Polymerization",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1003,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1026
+}

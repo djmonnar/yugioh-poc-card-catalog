@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards108/2748",
+  "attack": 1600,
+  "attribute": 16,
+  "categories": [
+    "소환-패,덱"
+  ],
+  "code": 97093037,
+  "defense": 1500,
+  "description": "이 카드를 릴리스하고 발동한다. 패에서 \"창세신\" 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "139de0cd3c43d8d0c03ba6c33ee9310124ea99271a397356b33c9a5231ec594e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native108/cards/2748.jpg",
+  "level": 4,
+  "links": [],
+  "name": "창세자의 화신",
+  "name_english": "The Creator Incarnate",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "N",
+  "search_aliases": [
+    "창세자의 화신",
+    "창세자의화신",
+    "The Creator Incarnate"
+  ],
+  "source_id": 2748,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1780
+}

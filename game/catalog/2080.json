@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2080",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-제외"
+  ],
+  "code": 84962466,
+  "defense": 0,
+  "description": "자신 필드 위에 앞면 표시로 존재하는 야수족 또는 야수전사족 몬스터 1장을 게임에서 제외하는 것으로, 자신 필드 위에 앞면 표시로 존재하는 야수족 또는 야수전사족 몬스터 1장의 공격력은 이 효과를 발동하기 위해 제외한 몬스터의 원래 공격력만큼 올린다. 이 효과는 1턴에 1번밖에 사용할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "f1caeafcd92bec95dc4b63369825d84b2e3e2ed9bc7c979aea463722dfb3fa69",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1378.webp",
+  "level": 0,
+  "links": [],
+  "name": "비스트라이저",
+  "name_english": "Beast Rising",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2080,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1378
+}

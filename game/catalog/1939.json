@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1939",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-묘지보내기"
+  ],
+  "code": 81439173,
+  "defense": 0,
+  "description": "①: 덱에서 몬스터 1장을\n묘지로 보낸다.",
+  "draw_enabled": true,
+  "identity_key": "912cf13c207613b87e6a7afc37682e73795f77fe5341b285e7bce0137f7192bd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1155.webp",
+  "level": 0,
+  "links": [],
+  "name": "어리석은 매장",
+  "name_english": "Foolish Burial",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1939,
+  "speed_limit": 3,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1155
+}

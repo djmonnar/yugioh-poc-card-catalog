@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/710",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-일반몬스터",
+    "소환-패,덱",
+    "지원-고레벨"
+  ],
+  "code": 10667321,
+  "defense": 0,
+  "description": "패에서 레벨 5 이상의 일반\n몬스터 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "0e91a136403c3bdbf11bb7568bef5c5585b64141d67626d74b9a240ea8f59690",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0256.webp",
+  "level": 0,
+  "links": [],
+  "name": "고대의 룰",
+  "name_english": "Ancient Rules",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 710,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 256
+}

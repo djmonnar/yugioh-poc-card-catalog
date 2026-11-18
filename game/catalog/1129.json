@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1129",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-필드"
+  ],
+  "code": 81777047,
+  "defense": 0,
+  "description": "모든 빛 속성 몬스터의\n공격력을 500 올리고 수비력을\n400 내린다.",
+  "draw_enabled": true,
+  "identity_key": "51b5740d10ab23899643b847205bb7969dc3badfabee63b633b5f7128610b832",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0387.webp",
+  "level": 0,
+  "links": [],
+  "name": "샤인 스파크",
+  "name_english": "Luminous Spark",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1129,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 387
+}

@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards135/2920",
+  "attack": 1700,
+  "attribute": 4,
+  "categories": [
+    "지원-쥬락",
+    "지원-공룡족",
+    "효과-파괴",
+    "효과-덱에서 묘지로 보내기",
+    "소환-패에서",
+    "소환-덱리크루터",
+    "소환제약",
+    "효과-바운스"
+  ],
+  "code": 20568404,
+  "defense": 900,
+  "description": "이 카드명의 ①의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 자신 메인 페이즈에 발동할 수 있다. 자신 필드의 카드 1장을 파괴하고, 덱에서 공룡족 몬스터 1장을 묘지로 보낸다. 그 후, 레벨의 합계가 덱에서 묘지로 보낸 몬스터와 같아지도록, 패 / 덱에서 \"쥬락 스티고\" 이외의 \"쥬락\" 몬스터를 소환 조건을 무시하고 특수 소환할 수 있다. 이 턴에, 자신은 공룡족 몬스터밖에 특수 소환할 수 없다. ②: 이 카드가 전투로 파괴되었을 때에 발동할 수 있다. 필드의 앞면 표시 카드 1장을 패로 되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "03afa8da095bd3eee9767289048da546b1852f325cb5c5e3265617cea82eb7a4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native135/cards/2920.jpg",
+  "level": 4,
+  "links": [],
+  "name": "쥬락 스티고",
+  "name_english": "Jurrac Stego",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "SR",
+  "search_aliases": [
+    "쥬락 스티고",
+    "Jurrac Stego"
+  ],
+  "source_id": 2920,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1952
+}

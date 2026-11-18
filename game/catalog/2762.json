@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards109/2762",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "무효-몬스터효과"
+  ],
+  "code": 33950246,
+  "defense": 0,
+  "description": "모든 리버스 효과 몬스터의 발동과 효과를 무효로 한다.",
+  "draw_enabled": true,
+  "identity_key": "5c1701f0225d230aa40e60056b6118c62dfae30f275bbec21a7e6f27c77bc1a5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native109/cards/2762.jpg",
+  "level": 0,
+  "links": [],
+  "name": "왕궁의 호령",
+  "name_english": "Royal Command",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "왕궁의호령",
+    "왕궁의 호령",
+    "Royal Command"
+  ],
+  "source_id": 2762,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1794
+}

@@ -1,0 +1,13 @@
+{
+  "art_key": "Character126/images/rishid/start",
+  "id": "character-rishid-126",
+  "profile": {
+    "name": "리시드",
+    "portrait": "assets/actors/native126/rishid/start.png",
+    "skill_profiles": [],
+    "skills": []
+  },
+  "profile_id": "rishid",
+  "updated_at": null,
+  "version": 718
+}

@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/766",
+  "attack": 3000,
+  "attribute": 16,
+  "categories": [
+    "덱-툰",
+    "효과-직접공격"
+  ],
+  "code": 53183600,
+  "defense": 2500,
+  "description": "필드에 \"툰 월드\"가 없으면\n소환할 수 없다. 소환한\n턴에는 공격할 수 없다.\n공격할 때마다 500 LP를\n지불한다. \"툰 월드\"가\n파괴되면 이 카드도 파괴된다.\n상대 필드에 툰 몬스터가\n없으면 상대에게 직접 공격할\n수 있다. 상대 필드에 툰\n몬스터가 있으면 그 몬스터를\n공격 대상으로 해야 한다.",
+  "draw_enabled": true,
+  "identity_key": "ae798a300fa389ed9a4ce438a8d7bf05f5787e3bfc3cdc42e025a19422050612",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0815.webp",
+  "level": 8,
+  "links": [],
+  "name": "푸른 눈의 툰 드래곤",
+  "name_english": "Blue-Eyes Toon Dragon",
+  "native_type": 37748769,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "source_id": 766,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 815
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1001",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "파괴-몬스터"
+  ],
+  "code": 66788016,
+  "defense": 0,
+  "description": "상대의 앞면 몬스터 중\n공격력이 가장 낮은 몬스터\n1장을 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "97ec3d0a386c623b1626d1d27d3b5344ca1f4e5d7950107c7422740f07303f65",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0419.webp",
+  "level": 0,
+  "links": [],
+  "name": "갈라진 대지",
+  "name_english": "Fissure",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1001,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 419
+}

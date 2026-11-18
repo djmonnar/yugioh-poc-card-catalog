@@ -1,0 +1,17 @@
+{
+  "description": "매 전투에서 자신의 덱 맨 위 카드 1장을 계속 확인할 수 있다.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 4,
+  "iconKey": "Relics/Content073/foresight_orb",
+  "id": "foresight_orb",
+  "kind": "foresight_orb",
+  "name": "예지의 수정",
+  "params": {},
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-native073",
+  "weight": 1
+}

@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1972",
+  "attack": 500,
+  "attribute": 1,
+  "categories": [
+    "소환-덱리크루터",
+    "발동-묘지"
+  ],
+  "code": 82946847,
+  "defense": 500,
+  "description": "①: 이 카드가 효과로 파괴되어\n묘지로 보내졌을 경우에\n발동한다. 덱에서 레벨 4\n이상의 공룡족 몬스터 1장을\n특수 소환한다. 이 효과로\n특수 소환한 몬스터는 이 턴에\n공격할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "213154da06d5229af4a68a0d57c221c31f67ca7b48ba86ea70761b89f57ae67d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1135.webp",
+  "level": 2,
+  "links": [],
+  "name": "쁘띠라노돈",
+  "name_english": "Petiteranodon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "SR",
+  "source_id": 1972,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1135
+}

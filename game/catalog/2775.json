@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards120/2775",
+  "attack": 2000,
+  "attribute": 8,
+  "categories": [
+    "소환-패,덱",
+    "발동-버리기"
+  ],
+  "code": 14778250,
+  "defense": 1200,
+  "description": "①: 이 카드는 패를 1장 버리고, 패에서 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "e9d81ea7dcf7f8c19aad1e6f8710c422f3959f0f71d6b586dd9d398532b9c2eb",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native120/cards/2775.jpg",
+  "level": 5,
+  "links": [],
+  "name": "더 트릭키",
+  "name_english": "The Tricky",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "search_aliases": [
+    "더 트릭키",
+    "The Tricky"
+  ],
+  "source_id": 2775,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1807
+}

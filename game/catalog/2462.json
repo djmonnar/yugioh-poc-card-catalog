@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2462",
+  "attack": 1400,
+  "attribute": 1,
+  "categories": [
+    "덱-젬나이트",
+    "발동-묘지",
+    "효과-바운스"
+  ],
+  "code": 13108445,
+  "defense": 2600,
+  "description": "젬나이트 사피아 + 젬나이트 몬스터. 지정된 소재로 융합 소환하여 먼저 소환해야 한다. ① 공격했다면 배틀 페이즈 종료시에 수비 표시가 된다. ② 필드에서 묘지로 보내졌을 때, 상대 필드의 카드 1장을 대상으로 패로 되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "61488cc26a57f352bb4a55df286f1b0b853284b10d6a49ab687f3f89cbe85467",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2462.jpg",
+  "level": 6,
+  "links": [],
+  "name": "젬나이트 아쿠아마리나",
+  "name_english": "Gem-Knight Aquamarine",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "R",
+  "source_id": 2462,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 / 효과 몬스터",
+  "web_slot": 1499
+}

@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/191",
+  "attack": 1100,
+  "attribute": 4,
+  "categories": [
+    "효과-덱샐비지",
+    "소환-덱리크루터",
+    "발동-묘지"
+  ],
+  "code": 93751476,
+  "defense": 2000,
+  "description": "이 카드가 카드의 효과에\n의해서 파괴되어 묘지로\n보내진 턴의 엔드 페이즈시,\n덱에서 \"맹염성－텐레이\"\n이외의 \"염성\"이라는 이름이\n붙은 레벨 4 몬스터 1장을\n특수 소환할 수 있다. 이\n카드가 \"염성\"이라는 이름이\n붙은 싱크로 몬스터의 싱크로\n소환에 사용되어 묘지로\n보내졌을 경우, 덱에서\n\"염무\"라는 이름이 붙은 마법\n카드 1장을 고르고 자신 필드\n위에 세트할 수 있다.\n[안내] 이 게임에는 싱크로\n소환이 없어 ②의 효과(싱크로\n소환의 소재가 되었을 경우)는\n쓸 일이 없다.",
+  "draw_enabled": true,
+  "identity_key": "0f09d858cefab7fe203525025cfe6dfa98076753d92cd9c6907d36b10263ea0f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0190.webp",
+  "level": 4,
+  "links": [],
+  "name": "맹염성－텐레이",
+  "name_english": "Brotherhood of the Fire Fist - Caribou",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "R",
+  "source_id": 191,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 190
+}

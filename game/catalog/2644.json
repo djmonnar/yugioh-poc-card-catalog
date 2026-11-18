@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards088/2644",
+  "attack": 2600,
+  "attribute": 16,
+  "categories": [
+    "지원-게이트가디언"
+  ],
+  "code": 25955164,
+  "defense": 2200,
+  "description": "①: 이 카드가 필드에 앞면 표시로 존재하는 한 1번만, 이 카드가 공격받은 데미지 계산시에, 공격 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 공격 몬스터의 공격력을 그 데미지 계산시에만 0 으로 한다.",
+  "draw_enabled": true,
+  "identity_key": "c977fcd91f84aff8dd28e8e3b0f582b51ce1252a2377e155da06b2be6a92bf10",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native088/cards/2644.jpg",
+  "level": 7,
+  "links": [],
+  "name": "번개 마신－썬가",
+  "name_english": "Sanga of the Thunder",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4096,
+  "rarity": "SR",
+  "search_aliases": [
+    "풍마신,수마신,번개마신 시리즈",
+    "번개 마신－썬가",
+    "번개마신－썬가",
+    "Sanga of the Thunder"
+  ],
+  "source_id": 2644,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1676
+}

@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1329",
+  "attack": 2100,
+  "attribute": 2,
+  "categories": [
+    "지원-필드",
+    "효과-바운스"
+  ],
+  "code": 67964209,
+  "defense": 1500,
+  "description": "이 카드 이외의 자신 필드\n위에 앞면 표시로 존재하는 물\n속성 몬스터 1장을\n릴리스하고, 자신의 묘지에\n존재하는 지속 마법 또는 필드\n마법 카드 1장을 선택하여\n발동한다. 선택한 카드를\n자신의 묘지에서 덱의 맨 위로\n되돌린다. 이 효과는 1턴에\n1번밖에 사용할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "7d1f5b9ead1befbb754ea59595e3bc3595670d6a7f86b7034274a066823985f4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0423.webp",
+  "level": 5,
+  "links": [],
+  "name": "신룡 아쿠아바자르",
+  "name_english": "Divine Dragon Aquabizarre",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 262144,
+  "rarity": "R",
+  "source_id": 1329,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 423
+}

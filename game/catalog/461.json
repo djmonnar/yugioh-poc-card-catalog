@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/461",
+  "attack": 1500,
+  "attribute": 16,
+  "categories": [
+    "효과-회복",
+    "발동-묘지"
+  ],
+  "code": 84926738,
+  "defense": 1300,
+  "description": "리버스: 자신의 LP를 3000\n회복한다. 뒤집힌 이 카드가\n필드에서 묘지로 보내졌을 때\n자신의 LP를 5000 잃는다.",
+  "draw_enabled": true,
+  "identity_key": "7c585bf53f6dc8bbb1da21dc7cc32807870cbc7d5327eeffd2c67c8eea65ae1c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0164.webp",
+  "level": 4,
+  "links": [],
+  "name": "번개 신선",
+  "name_english": "The Immortal of Thunder",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4096,
+  "rarity": "R",
+  "source_id": 461,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 164
+}

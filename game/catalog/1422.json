@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1422",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착"
+  ],
+  "code": 55226821,
+  "defense": 0,
+  "description": "전사족 몬스터에게만 장착할\n수 있다. 장착 몬스터의\n공격력을 800 올리고 필드의\n모든 물 속성 몬스터의\n공격력을 500 내린다.",
+  "draw_enabled": true,
+  "identity_key": "1f676121bc372c9fc8f7b54de971237cbd64bc0c1d90d7e5e9da551be7d250fd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0054.webp",
+  "level": 0,
+  "links": [],
+  "name": "번개검",
+  "name_english": "Lightning Blade",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1422,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 54
+}

@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards067/2585",
+  "attack": 2000,
+  "attribute": 32,
+  "categories": [
+    "덱-가이아",
+    "발동-소환",
+    "효과-묘지샐비지"
+  ],
+  "code": 72064891,
+  "defense": 1500,
+  "description": "융합 소재: 전사족 몬스터 1장 + 레벨 5 이상 드래곤족 몬스터 1장. 레벨 7 드래곤족 융합 몬스터를 융합 소환할 때 자신의 묘지의 몬스터도 제외하여 소재로 사용할 수 있다. 융합 소환 시 자신의 묘지에서 ‘용기사 가이아’라는 카드 이름이 적힌 마법·함정 1장을 대상으로 패에 넣을 수 있다. 같은 이름의 이 효과는 한 턴에 한 번만 사용할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "474641c865b6acba331091e6dd5291a5d3de366b32b3181b480a8e02de3db0f7",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2585.jpg",
+  "level": 5,
+  "links": [],
+  "name": "마방 기룡 커스 오브 드래곤",
+  "name_english": "Curse of Dragon, the Magical Knight Dragon",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "UR",
+  "source_id": 2585,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 / 효과 몬스터",
+  "web_slot": 1617
+}

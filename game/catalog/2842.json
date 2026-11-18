@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards126/2842",
+  "attack": 1800,
+  "attribute": 32,
+  "categories": [
+    "지원-엑조디아",
+    "면역-마법",
+    "면역-함정",
+    "면역-전투",
+    "소환제약"
+  ],
+  "code": 12600382,
+  "defense": 0,
+  "description": "이 카드는 통상 소환할 수 없다. \"엑조디아와의 계약\"의 효과로만 특수 소환할 수 있다. ①: 이 카드는 전투 및 마법 / 함정 카드의 효과로는 파괴되지 않는다. ②: 자신 스탠바이 페이즈에 발동한다. 이 카드의 공격력은 500 올린다. ③: 자신의 묘지에 \"봉인된 엑조디아\" \"봉인된 자의 오른쪽 팔\" \"봉인된 자의 왼쪽 팔\" \"봉인된 자의 오른쪽 다리\" \"봉인된 자의 왼쪽 다리\" 중 어느 것이 존재하지 않을 경우에 이 카드는 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "597c178da5baf948723a73719b6ada7dc63ec880873cb3642647e42e3d70739e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native126/cards/2842.jpg",
+  "level": 4,
+  "links": [],
+  "name": "엑조디아 네크로스",
+  "name_english": "Exodia Necross",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "UR",
+  "search_aliases": [
+    "엑조디아 네크로스",
+    "Exodia Necross"
+  ],
+  "source_id": 2842,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "특수 소환 몬스터",
+  "web_slot": 1874
+}

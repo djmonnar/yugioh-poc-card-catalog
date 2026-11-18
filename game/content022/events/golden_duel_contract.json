@@ -1,0 +1,18 @@
+{
+  "description": "황금 가면의 심판이 더 강한 적과의 결투를 제안한다. 승리의 값은 동전으로 치러진다.",
+  "effect": "다음 적의 LP +1000 · 승리 시 추가 150골드",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/background",
+  "id": "golden_duel_contract",
+  "kind": "golden_duel_contract",
+  "name": "다음 적의 LP +1000 · 승리 시 추가 150골드",
+  "params": {
+    "enemy_lp": 1000,
+    "gold": 150
+  },
+  "rewardRarity": null,
+  "supportStatus": "verified-controller022",
+  "title": "황금 결투 계약",
+  "weight": 1
+}

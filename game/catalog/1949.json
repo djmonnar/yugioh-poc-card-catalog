@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1949",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-버리기",
+    "효과-바운스"
+  ],
+  "code": 63356631,
+  "defense": 0,
+  "description": "①: 패를 1장 버리고, 상대\n필드의 카드 1장을 대상으로\n하여 발동할 수 있다. 그\n상대의 카드를 주인의 덱 맨\n위로 되돌린다.\n[안내] 대상 카드를 먼저\n고르고, 그다음에 버릴 패를\n고른다.",
+  "draw_enabled": true,
+  "identity_key": "59d2eeb4510631822483357e45dd52235c268a83ee173b8ec311bf9993209514",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1165.webp",
+  "level": 0,
+  "links": [],
+  "name": "봉황날개의 폭풍",
+  "name_english": "Phoenix Wing Wind Blast",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1949,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1165
+}

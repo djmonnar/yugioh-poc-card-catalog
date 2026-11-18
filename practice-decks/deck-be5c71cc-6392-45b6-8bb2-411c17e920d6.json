@@ -1,0 +1,54 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-be5c71cc-6392-45b6-8bb2-411c17e920d6",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "d9935b1c271a9e148c579afde61dd46bec91d4aecc8a17894ee1fd75cfb1e494",
+      "source_id": 678
+    },
+    {
+      "count": 3,
+      "identity_key": "471c3513e33bc83a9824388da05ff9aa99a7658883690fa3511148cdf2526438",
+      "source_id": 703
+    },
+    {
+      "count": 1,
+      "identity_key": "e977528ee8be625bd9d30444d35911d0236c48142f509dbb20f3e87267828b78",
+      "source_id": 2534
+    },
+    {
+      "count": 2,
+      "identity_key": "f6af26ef01e7ab92d998dbb441ac6c0fec4fb78c7dcf7983e43c76ceda7f3bf0",
+      "source_id": 1109
+    },
+    {
+      "count": 1,
+      "identity_key": "1494580adefbb4c738709d918798dbea0315314fcd46144f2c037a33294d9f0b",
+      "source_id": 2533
+    },
+    {
+      "count": 2,
+      "identity_key": "d592f7c61e4718937e523e1cd32c335c9b5fa4e0fbc1a7ea74f2a4dc10878155",
+      "source_id": 1122
+    },
+    {
+      "count": 2,
+      "identity_key": "185cdc87e8f2a4d63f7820cd314d9d96c41fbe7032edd38c95f77f444482d067",
+      "source_id": 1967
+    },
+    {
+      "count": 3,
+      "identity_key": "f6b7e64af99c980eea0c15c6b80a71b9ce399881892d186d9aa3e288d112e274",
+      "source_id": 2602
+    },
+    {
+      "count": 3,
+      "identity_key": "2ac39810a2ca3419aeb526e10e37565ef7fec083e59eddd80a14e98f9fcd7442",
+      "source_id": 1066
+    }
+  ],
+  "name": "가란돌프 의식",
+  "version": 607
+}

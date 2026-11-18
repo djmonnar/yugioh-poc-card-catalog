@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/578",
+  "attack": 2300,
+  "attribute": 32,
+  "categories": [
+    "소환-묘지"
+  ],
+  "code": 24104865,
+  "defense": 1500,
+  "description": "이 카드가 전투에 의해서 A\n카운터가 얹힌 몬스터를\n파괴하고 묘지로 보냈을 경우,\n그 배틀 페이즈 종료시에\n발동한다. 파괴한 그 몬스터를\n자신 필드 위에 특수\n소환한다. 이 효과로 특수\n소환한 몬스터는 이 카드가\n필드 위에서 벗어났을 경우,\n전부 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "c524d3a66ddd8612c607fc5e10a1a9acc12b7672ad4f956a9daf5c7434248c20",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0420.webp",
+  "level": 6,
+  "links": [],
+  "name": "에일리언 마더",
+  "name_english": "Alien Mother",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 524288,
+  "rarity": "SR",
+  "source_id": 578,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 420
+}

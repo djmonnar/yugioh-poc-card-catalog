@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards099/2721",
+  "attack": 1700,
+  "attribute": 4,
+  "categories": [
+    "지원-가디언",
+    "지원-장착",
+    "파괴-몬스터"
+  ],
+  "code": 10755153,
+  "defense": 1400,
+  "description": "\"유성의 활－실\"이 자신의 필드 위에 존재할 때만, 이 카드는 일반 소환/반전 소환/특수 소환할 수 있다. 이 카드에 장착된 자신의 장착 카드 1장을 묘지로 보내는 것으로, 상대 필드 위의 몬스터 1장을 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "57ba5add482fb77d0926db9ff19f68cc389cbe9691db131e8c32de8989c6bbef",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native099/cards/2721.jpg",
+  "level": 4,
+  "links": [],
+  "name": "가디언 실",
+  "name_english": "Guardian Ceal",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 128,
+  "rarity": "SR",
+  "search_aliases": [
+    "가디언실",
+    "가디언 실",
+    "Guardian Ceal"
+  ],
+  "source_id": 2721,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1753
+}

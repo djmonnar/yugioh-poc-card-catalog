@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2527",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-사이버 엔젤",
+    "지원-의식"
+  ],
+  "code": 91946859,
+  "defense": 0,
+  "description": "① 자신의 사이버 엔젤 의식 몬스터는 전투로 파괴되지 않는다. ② 전투 또는 상대 효과로 자신이 데미지를 받았을 때, 패·필드의 사이버 엔젤 의식 몬스터 1장을 릴리스하고, 패의 사이버 엔젤 의식 몬스터 1장을 의식 소환으로 취급하여 특수 소환할 수 있다. ②는 카드명당 1턴에 1번만 사용할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "3a7f1b57f5d7f6c11350199556a765ba843f6c87737a4e2c2729403c2c568884",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2527.jpg",
+  "level": 0,
+  "links": [],
+  "name": "응신의 기계천사",
+  "name_english": "Incarnated Machine Angel",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2527,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 1559
+}

@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards109/2758",
+  "attack": -2,
+  "attribute": 32,
+  "categories": [
+    "지원-릴리즈"
+  ],
+  "code": 8794435,
+  "defense": 0,
+  "description": "이 카드의 공격력은 제물 소환시에 제물로 바친 2장의 몬스터의 원래 공격력을 합계한 수치가 된다.",
+  "draw_enabled": true,
+  "identity_key": "85f2c22b3acac70e02149aea25f48e15eb707fd773149c27378161ec4146affc",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native109/cards/2758.jpg",
+  "level": 7,
+  "links": [],
+  "name": "합성마수 가젯트",
+  "name_english": "Maju Garzett",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "search_aliases": [
+    "합성마수가젯트",
+    "합성마수 가젯트",
+    "Maju Garzett"
+  ],
+  "source_id": 2758,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1790
+}

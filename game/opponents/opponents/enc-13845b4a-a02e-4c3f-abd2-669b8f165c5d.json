@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/ishizu/start",
+  "banlistEnabled": false,
+  "deckName": "묘지기 중급",
+  "extra": [],
+  "id": "enc-13845b4a-a02e-4c3f-abd2-669b8f165c5d",
+  "lpBonus": 0,
+  "main": [
+    2389,
+    2389,
+    1825,
+    1825,
+    2565,
+    2565,
+    2552,
+    2552,
+    2552,
+    1822,
+    1822,
+    1822,
+    1307,
+    1307,
+    1307,
+    2555,
+    2555,
+    153,
+    153,
+    153
+  ],
+  "name": "이시즈 이슈타르",
+  "openingDrawBonus": 0,
+  "profileId": "ishizu",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 2389,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-13845b4a-a02e-4c3f-abd2-669b8f165c5d",
+  "usesNativeRules035": true
+}

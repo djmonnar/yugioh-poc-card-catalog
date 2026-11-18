@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1446",
+  "attack": 1700,
+  "attribute": 32,
+  "categories": [
+    "발동-묘지",
+    "효과-회복"
+  ],
+  "code": 57579381,
+  "defense": 1200,
+  "description": "이 카드가 자신의 묘지에\n존재하는 동안, 자신의\n스탠바이 페이즈마다 LP를 200\n회복한다.",
+  "draw_enabled": true,
+  "identity_key": "1c1481b13d86bb6aa4c6fb3b5c888cf6c666e7c114bf55ff62ac4159213fef1c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0537.webp",
+  "level": 5,
+  "links": [],
+  "name": "타락천사 마리",
+  "name_english": "Marie the Fallen One",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "source_id": 1446,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 537
+}

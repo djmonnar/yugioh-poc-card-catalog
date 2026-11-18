@@ -1,0 +1,65 @@
+{
+  "banlist_enabled": true,
+  "extra": [
+    {
+      "count": 3,
+      "identity_key": "040823bee603d5e85963c4b23a598eefecc7e48a6eacd5b1a2d24742ec590caa",
+      "source_id": 612
+    },
+    {
+      "count": 2,
+      "identity_key": "3a4d65431714d857b10a8e0619a5a5545edb3d9945f7e7f79ea8b29621092d31",
+      "source_id": 1526
+    }
+  ],
+  "id": "deck-bcd8d6f6-026b-4907-8d9d-33ef42f87ce9",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "c3ffc4c0abf2ba0b5ad45a04d76060a8f2af643f71fc513655327cb20da7ad94",
+      "source_id": 424
+    },
+    {
+      "count": 2,
+      "identity_key": "47a61b3b2a3813046a135a907e3659e45423ec73f379f0299c49e8b2cbe4e4c8",
+      "source_id": 442
+    },
+    {
+      "count": 1,
+      "identity_key": "531ba62a67086586f9a3d3054c11bd910a5974257019605cec0b2fa7f0af93c6",
+      "source_id": 574
+    },
+    {
+      "count": 3,
+      "identity_key": "6e88143a6d19b63d51f9f78d79264941a106691798fb78f1579481304fad7560",
+      "source_id": 1003
+    },
+    {
+      "count": 2,
+      "identity_key": "05b29e463364e57c9dfa8c71ba4f2e4a78e3fb4757e0f8bc155ca6f3983fcc6d",
+      "source_id": 2419
+    },
+    {
+      "count": 2,
+      "identity_key": "4870b88043392e9c6a12d6417188a370d887f14b7ace7f45142bad77f9a54d6e",
+      "source_id": 2418
+    },
+    {
+      "count": 2,
+      "identity_key": "83176f3fabd5a8b57f264142b6caa0dbbe26b214c8f9702d8cdce70ee66af99a",
+      "source_id": 1524
+    },
+    {
+      "count": 3,
+      "identity_key": "90ab53aee3f7317ac93b083912a9a6620fd8ccf80a751ee794c2cf28472fc39d",
+      "source_id": 1523
+    },
+    {
+      "count": 2,
+      "identity_key": "13cf47fe6278cb806d7b6700f0d6d4d08456bc6a0535116f54620bf5d685cbcb",
+      "source_id": 2628
+    }
+  ],
+  "name": "융합 썬더드래곤",
+  "version": 579
+}

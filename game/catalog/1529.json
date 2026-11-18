@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1529",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "면역-전투"
+  ],
+  "code": 93599951,
+  "defense": 0,
+  "description": "상대의 배틀 스텝에만 발동할\n수 있다. 몬스터 1장의 공격을\n무효로 하고, 상대의 다른\n앞면 몬스터 1장을 선택하여\n공격하게 한다. 새로 공격할\n몬스터가 앞면 수비 표시이면\n공격 표시로 변경한다.",
+  "draw_enabled": true,
+  "identity_key": "6c26606e001b3e665e6f8907e3cefd999e5734bde2c9ed6af5b51c6ef86efb15",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0561.webp",
+  "level": 0,
+  "links": [],
+  "name": "침묵의 사악령",
+  "name_english": "Dark Spirit of the Silent",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1529,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 561
+}

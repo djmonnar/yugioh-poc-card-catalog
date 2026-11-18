@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards136/2942",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-프레데터 플랜츠",
+    "지원-저레벨",
+    "발동-LP 지불",
+    "소환-패에서",
+    "소환-묘지",
+    "무효-몬스터효과"
+  ],
+  "code": 88069597,
+  "defense": 0,
+  "description": "이 카드의 컨트롤러는, 자신 스탠바이 페이즈마다 800 LP를 지불한다. 또는 LP를 지불하지 않고 이 카드를 파괴한다. ①: 1턴에 1번, 자신 메인 페이즈에 발동할 수 있다. 자신의 패 / 묘지에서 레벨 4 이하의 \"프레데터 플랜츠\" 몬스터 1장을 고르고 특수 소환한다. 이 효과로 특수 소환한 몬스터의 효과는 무효화된다.",
+  "draw_enabled": true,
+  "identity_key": "b90a5cc087e48e1ddd17d7b9145ccccc46aa15e36ea7b7c77b7b55bf3346cf97",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native136/cards/2942.jpg",
+  "level": 0,
+  "links": [],
+  "name": "프레데터 플랜터",
+  "name_english": "Predaponics",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "프레데터 플랜터",
+    "Predaponics"
+  ],
+  "source_id": 2942,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 1974
+}

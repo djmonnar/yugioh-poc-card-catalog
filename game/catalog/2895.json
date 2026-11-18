@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards135/2895",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-진화약",
+    "지원-공룡족",
+    "지원-고레벨",
+    "발동-제외",
+    "소환-패에서",
+    "소환-덱리크루터"
+  ],
+  "code": 38179121,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 자신의 패 / 묘지에서 공룡족 몬스터 1장과 공룡족 이외의 몬스터 1장을 제외하고 발동할 수 있다. 패 / 덱에서 레벨 7 이상의 공룡족 몬스터 1장을 소환 조건을 무시하고 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "a6dc090a11e234848986db26761827c83de3a634cce715bfd85b21d84cfe30a2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native135/cards/2895.jpg",
+  "level": 0,
+  "links": [],
+  "name": "궁극진화약",
+  "name_english": "Double Evolution Pill",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "궁극진화약",
+    "Double Evolution Pill"
+  ],
+  "source_id": 2895,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1927
+}

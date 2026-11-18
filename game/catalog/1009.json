@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1009",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "파괴-마법"
+  ],
+  "code": 19159413,
+  "defense": 0,
+  "description": "필드의 마법 카드 1장을\n파괴한다. 대상이 뒷면이면\n앞면으로 뒤집어 확인한다.\n마법 카드이면 파괴하고,\n아니면 뒷면으로 되돌린다.\n뒤집은 카드의 효과는\n발동하지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "4fef1f6035e9981d3219710bd2a122195c67bcd50610c5a985e3f61f54ba6fc8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0916.webp",
+  "level": 0,
+  "links": [],
+  "name": "마법 제거",
+  "name_english": "De-Spell",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1009,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 916
+}

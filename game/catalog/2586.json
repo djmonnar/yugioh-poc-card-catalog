@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards067/2586",
+  "attack": 2300,
+  "attribute": 1,
+  "categories": [
+    "덱-가이아",
+    "무효-몬스터효과",
+    "효과-묘지보내기",
+    "파괴-몬스터"
+  ],
+  "code": 73129314,
+  "defense": 2100,
+  "description": "룰상 ‘밀레니엄’ 카드로도 취급한다. 필드에 레벨 5 이상 몬스터 카드가 있으면 릴리스 없이 일반 소환할 수 있다. 자신의 몬스터 존에 있는 동안 상대가 공격 표시로 일반 소환·특수 소환한 몬스터의 레벨은 7 오른다. 상대의 몬스터 효과 발동 시 다른 자신의 앞면 표시 레벨 5 이상 몬스터 카드 1장을 묘지로 보내고, 발동을 무효로 하여 그 카드를 파괴할 수 있다. 같은 이름의 이 효과는 한 턴에 한 번만 사용할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "37add55c1bdf2f1f2442d65dfa18b89bb500dca2e3d12cd4098dc3b401dd36b0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2586.jpg",
+  "level": 6,
+  "links": [],
+  "name": "영혼이 깃든 암흑 기사 가이아",
+  "name_english": "Heart of Gaia",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "UR",
+  "source_id": 2586,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1618
+}

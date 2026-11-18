@@ -1,0 +1,74 @@
+{
+  "art_key": "CharacterPresentation012/images/tea/start",
+  "id": "character-87f98432-ea5e-4dfe-b08b-b462d6805974",
+  "profile": {
+    "name": "안수진",
+    "portrait": "assets/actors/shared-tea114.png",
+    "skill_profiles": [
+      {
+        "name": "천공의성역",
+        "profile_id": "profile-27a5981a-fc8c-4d8c-a346-636ac45526a4",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "e256dd5bfd39ab06196f61db51794a8e14143e3c30922f799a6cea000cf001a5",
+              "internal_id": 2004,
+              "name_ko": "천공의 성역",
+              "slot": 1308
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "샤인스파크",
+        "profile_id": "profile-b00f3233-3d1d-44dc-aa93-d0d7d59c7d11",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "51b5740d10ab23899643b847205bb7969dc3badfabee63b633b5f7128610b832",
+              "internal_id": 1129,
+              "name_ko": "샤인 스파크",
+              "slot": 387
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "신의은총회복",
+        "profile_id": "profile-15b44640-5b4a-4331-8e2d-3d603eca9fde",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "a839e96734b1fb214ab791e2a37455f2fae889fce41d19b42d4b179c3ee28768",
+              "internal_id": 1305,
+              "name_ko": "신의 은총",
+              "slot": 167
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "기계천사-사이버에그엔젤",
+        "profile_id": "profile-caba530e-c760-4de7-8696-c68146f2486e",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "8ad0e0453fd0e77cc528ea672ba9142813fbd6cc55a77715cf28b553f4af623c",
+              "internal_id": 2521,
+              "name_ko": "사이버 에그 엔젤",
+              "slot": 1553
+            },
+            "kind": "start_hand"
+          }
+        ]
+      }
+    ],
+    "skills": []
+  },
+  "profile_id": "tea",
+  "updated_at": "2026-11-09T22:20:21.267445+00:00",
+  "version": 3925
+}

@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards125/2820",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-에일리언",
+    "지원-파충류",
+    "발동-파괴",
+    "효과-컨트롤"
+  ],
+  "code": 17490535,
+  "defense": 0,
+  "description": "자신 필드 위에 존재하는 파충류족 몬스터가 상대 몬스터의 공격에 의해 파괴되어 묘지로 보내졌을 때 발동할 수 있다. 그때 공격을 실행한 상대 몬스터의 컨트롤을 얻어, 그 몬스터를 파충류족으로 취급한다.",
+  "draw_enabled": true,
+  "identity_key": "5f4a6ab66fe2ceb135eab10622ed364654653f4e0b483a106ee1029c268a9741",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native125/cards/2820.jpg",
+  "level": 0,
+  "links": [],
+  "name": "에일리언 브레인",
+  "name_english": "Alien Brain",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "에일리언브레인",
+    "에일리언 브레인",
+    "Alien Brain"
+  ],
+  "source_id": 2820,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1852
+}

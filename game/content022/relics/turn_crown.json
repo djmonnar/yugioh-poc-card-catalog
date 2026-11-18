@@ -1,0 +1,17 @@
+{
+  "description": "매 전투 시작 때 토큰 추첨 없이 선공 또는 후공을 직접 고른다.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 0,
+  "iconKey": "Relics/Content073/turn_crown",
+  "id": "turn_crown",
+  "kind": "turn_crown",
+  "name": "선택의 왕관",
+  "params": {},
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-native073",
+  "weight": 1
+}

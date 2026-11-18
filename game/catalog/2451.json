@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2451",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-암흑계",
+    "효과-묘지보내기",
+    "효과-드로우",
+    "효과-제외"
+  ],
+  "code": 1475311,
+  "defense": 0,
+  "description": "①: 덱에서 2장 드로우한다. 그 후, 패에 어둠 속성 몬스터가 있으면 그중 1장을 골라 제외한다. 없다면 자신의 패를 전부 묘지로 보낸다. 제외나 묘지로 보내는 처리는 \"버린다\"로 취급하지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "4e511f5d8466784df68f99d7997941e3f9da84899ca4e1f42510269d1797168c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2451.jpg",
+  "level": 0,
+  "links": [],
+  "name": "어둠의 유혹",
+  "name_english": "Allure of Darkness",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2451,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1488
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2541",
+  "attack": 300,
+  "attribute": 8,
+  "categories": [
+    "덱-네프티스"
+  ],
+  "code": 25397880,
+  "defense": 1200,
+  "description": "각 효과는 카드명당 1턴에 1번만 사용할 수 있다. ① 같은 이름 이외의 자신 묘지의 네프티스 카드 1장을 대상으로 발동할 수 있다. 패 1장을 효과로 파괴하고, 파괴했다면 대상을 패에 넣는다. ② 효과로 파괴되어 묘지로 보내지면, 다음 자신의 스탠바이 페이즈에 같은 이름 이외의 네프티스 카드 1장을 묘지에서 골라 패에 넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "dee4edece802a8de51d11503eb3ffdf4db5b3e17a1538856cf1e91bbb59a3af1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2541.jpg",
+  "level": 2,
+  "links": [],
+  "name": "네프티스의 말하는 손",
+  "name_english": "Chronicler of Nephthys",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 2541,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1573
+}

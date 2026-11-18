@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/420",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-엔디미온",
+    "면역-효과",
+    "면역-함정",
+    "면역-마법"
+  ],
+  "code": 39910367,
+  "defense": 0,
+  "description": "①: 이 카드가 필드 존에\n존재하는 한, 자신 또는\n상대가 마법 카드를 발동할\n때마다, 이 카드에 마력\n카운터를 1개 놓는다. ②: 마력\n카운터가 놓여 있는 카드가\n파괴되었을 경우에 그 카드에\n놓여 있던 마력 카운터의\n수만큼, 이 카드에 마력\n카운터를 놓는다. ③: 1턴에\n1번, 자신이 카드 효과를\n발동하기 위해 자신 필드의\n마력 카운터를 제거할 경우,\n대신에 이 카드에서 제거할 수\n있다. ④: 이 카드가 파괴될\n경우, 대신에 이 카드의 마력\n카운터를 1개 제거할 수 있다.\n[차이] ④의 효과는 가능하면\n항상 적용된다.",
+  "draw_enabled": true,
+  "identity_key": "c9473ebf7b4b79e7672af8b567d6585722b15522bdffd60ac8f0bcc26724b842",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0310.webp",
+  "level": 0,
+  "links": [],
+  "name": "마법 도시 엔디미온",
+  "name_english": "Magical Citadel of Endymion",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 420,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 310
+}

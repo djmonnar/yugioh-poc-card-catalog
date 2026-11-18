@@ -1,0 +1,30 @@
+{
+  "alias": 46986414,
+  "art_key": "Cards/34",
+  "attack": 2500,
+  "attribute": 32,
+  "categories": [
+    "덱-블랙매지션"
+  ],
+  "code": 46986420,
+  "defense": 2100,
+  "description": "마법사 중에서 공격력 /\n수비력이 동시에 가장 높은\n계급.",
+  "draw_enabled": true,
+  "identity_key": "a850b8cd0e118c301dde50e7dcabc13ebb54f1506ec19fbe0694955bba7dfd67",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0803.webp",
+  "level": 7,
+  "links": [],
+  "name": "블랙 매지션",
+  "name_english": "Dark Magician",
+  "native_type": 17,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "UR",
+  "source_id": 34,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 몬스터",
+  "web_slot": 803
+}

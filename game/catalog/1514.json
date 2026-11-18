@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1514",
+  "attack": 2200,
+  "attribute": 32,
+  "categories": [
+    "지원-장착",
+    "효과-제외-묘지",
+    "소환-패,덱",
+    "효과-컨트롤"
+  ],
+  "code": 31829185,
+  "defense": 2800,
+  "description": "자신의 묘지의 악마족 몬스터\n3장을 제외한 경우에만 특수\n소환할 수 있다. 전투 또는\n상대의 카드 효과로 이 카드가\n파괴되면 턴 종료시에 장착\n마법 카드로 취급하여 상대\n몬스터 1장에 장착한다. 이\n카드가 장착된 동안 그\n몬스터의 컨트롤을 얻는다.",
+  "draw_enabled": false,
+  "identity_key": "acf8b07a9dc7ceb0ed4c8e3a4e74be6ae5373042e1e54230ed0db340051c9ef2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0513.webp",
+  "level": 8,
+  "links": [],
+  "name": "다크 네크로피어",
+  "name_english": "Dark Necrofear",
+  "native_type": 33554465,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 8,
+  "rarity": "L",
+  "source_id": 1514,
+  "speed_limit": 1,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 513
+}

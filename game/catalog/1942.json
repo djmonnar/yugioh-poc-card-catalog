@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1942",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "파괴-몬스터"
+  ],
+  "code": 97169186,
+  "defense": 0,
+  "description": "①: 상대 필드의 수비력이 가장\n높은 몬스터 1장을 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "2f3d9696714ab0240e21754af8c9eab7061ed8c10ea4abfa162660ba79508d03",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1158.webp",
+  "level": 0,
+  "links": [],
+  "name": "대지 분쇄",
+  "name_english": "Smashing Ground",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1942,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1158
+}

@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1860",
+  "attack": 500,
+  "attribute": 1,
+  "categories": [
+    "발동-묘지",
+    "효과-회복"
+  ],
+  "code": 64306248,
+  "defense": 1500,
+  "description": "이 카드가 묘지로 보내졌을\n때, 자신은 1000 라이프\n포인트를 회복한다.",
+  "draw_enabled": true,
+  "identity_key": "4e1e0ede1d0f983d111f81ab6cde7674794b87e41a8faccc19636c384352956c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1235.webp",
+  "level": 4,
+  "links": [],
+  "name": "해골 무당벌레",
+  "name_english": "Skull-Mark Ladybug",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "N",
+  "source_id": 1860,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1235
+}

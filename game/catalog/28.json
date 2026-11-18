@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/28",
+  "attack": 1900,
+  "attribute": 1,
+  "categories": [
+    "덱-젬나이트"
+  ],
+  "code": 91731841,
+  "defense": 0,
+  "description": "가넷의 영혼을 지닌 보석기사\n전사.",
+  "draw_enabled": true,
+  "identity_key": "92a2c418d05f42b14bec87fff1fc1a68612d86c225d9af10c937fbd3db24e131",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0875.webp",
+  "level": 4,
+  "links": [],
+  "name": "젬나이트 가넷",
+  "name_english": "Gem-Knight Garnet",
+  "native_type": 17,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 128,
+  "rarity": "SR",
+  "source_id": 28,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 몬스터",
+  "web_slot": 875
+}

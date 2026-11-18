@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards035/2405",
+  "attack": 1300,
+  "attribute": 1,
+  "categories": [
+    "면역-마법",
+    "면역-함정"
+  ],
+  "code": 56094445,
+  "defense": 1300,
+  "description": "이 카드가 공격할 경우, 상대는 데미지 스텝 종료시까지 마법 / 함정 카드를 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "37deeb3a67d1385838c4e9252e9d3db9038e174d99f20d139679e9d7e6414cf2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native035/cards/2405.jpg",
+  "level": 4,
+  "links": [],
+  "name": "앤틱 기어 솔저",
+  "name_english": "Ancient Gear Soldier",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "N",
+  "source_id": 2405,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1442
+}

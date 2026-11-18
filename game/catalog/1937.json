@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1937",
+  "attack": 1800,
+  "attribute": 1,
+  "categories": [
+    "효과-버리기",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 16956455,
+  "defense": 1000,
+  "description": "1턴에 1번, 패에서 마법 카드\n1장을 버리고 발동할 수 있다.\n상대 필드 위의 마법 / 함정\n카드 1장을 선택하고\n파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "f2689223b9219d762bf88ee30db9568eca4c7e5ca2f9a667abcd22fc99f81927",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1186.webp",
+  "level": 4,
+  "links": [],
+  "name": "현자 케이론",
+  "name_english": "Chiron the Mage",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "SR",
+  "source_id": 1937,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1186
+}

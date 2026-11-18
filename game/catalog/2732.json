@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards103/2732",
+  "attack": 300,
+  "attribute": 32,
+  "categories": [
+    "지원-의식"
+  ],
+  "code": 34334692,
+  "defense": 300,
+  "description": "어둠 속성의 의식 몬스터를 특수 소환할 경우, 이 카드 1장으로 의식 소환을 위한 제물로 사용할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "2d36016e436f66fefcb616fc56824d48f4c45052f18754dcfeb6c4abd0c44522",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native103/cards/2732.jpg",
+  "level": 1,
+  "links": [],
+  "name": "의식의 공물",
+  "name_english": "Ritual Raven",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "search_aliases": [
+    "의식의공물",
+    "의식의 공물",
+    "Ritual Raven"
+  ],
+  "source_id": 2732,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1764
+}

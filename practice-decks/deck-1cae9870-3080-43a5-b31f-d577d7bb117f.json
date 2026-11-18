@@ -1,0 +1,54 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-1cae9870-3080-43a5-b31f-d577d7bb117f",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "e926fb71bd9ef4246e7c1f3966ed98d30ca128a5702052ac1f6d0dc24158d100",
+      "source_id": 180
+    },
+    {
+      "count": 2,
+      "identity_key": "37bc82455411d8d6dce52c360d37c2ea8ab72ecbe6ca818a7c335a34a56317b3",
+      "source_id": 967
+    },
+    {
+      "count": 3,
+      "identity_key": "caa8e0ade98a181fe9466d259058c05351ba9f01107e683190b6ce8e2b2e0862",
+      "source_id": 2642
+    },
+    {
+      "count": 3,
+      "identity_key": "80bb317de95917ed10879ee3ca06a82214baa55350f17b78383ae0ed355d07cf",
+      "source_id": 2647
+    },
+    {
+      "count": 2,
+      "identity_key": "8fdba67eb686ecfa60afc175239f19193acbe9da9b586db53f44c527a068e050",
+      "source_id": 1220
+    },
+    {
+      "count": 2,
+      "identity_key": "10ea3cb3e7ca9ce12f88d8bc1f0fa80dd3e4e59dd82b7fe2fbec0152013321c1",
+      "source_id": 2103
+    },
+    {
+      "count": 2,
+      "identity_key": "0e6025257a4a4d6d957b3e6f59556d1819cd3160bf62875e993c8cb1c61372e0",
+      "source_id": 139
+    },
+    {
+      "count": 2,
+      "identity_key": "852fe5889e1239390ea2bb7b75d0ab4c7221c1253f1c1d2d954ce9820561a8cc",
+      "source_id": 2650
+    },
+    {
+      "count": 1,
+      "identity_key": "610b12ad148194bc5f6b3e3e5458f716b532a44cb8a468aa40520d282be212fc",
+      "source_id": 2651
+    }
+  ],
+  "name": "미궁형제 중급",
+  "version": 464
+}

@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards084/2611",
+  "attack": 1000,
+  "attribute": 16,
+  "categories": [
+    "지원-바이론",
+    "지원-장착"
+  ],
+  "code": 13220032,
+  "defense": 1000,
+  "description": "자신 필드의 앞면 빛 속성 몬스터 전부의 공격력을 이 카드에 장착된 장착 카드의 수 × 300 올린다.",
+  "draw_enabled": true,
+  "identity_key": "409f9582269e3eb1d1ed3fb00403337a55895007bd88043c000d47f4e96421af",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2611.jpg",
+  "level": 4,
+  "links": [],
+  "name": "바이론 차저",
+  "name_english": "Vylon Charger",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "R",
+  "search_aliases": [
+    "바이론차저",
+    "바이론 차저",
+    "Vylon Charger"
+  ],
+  "source_id": 2611,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1643
+}

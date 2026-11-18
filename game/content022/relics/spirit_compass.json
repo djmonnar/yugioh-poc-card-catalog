@@ -1,0 +1,19 @@
+{
+  "description": "속성을 하나 지정해. 이후 몬스터 카드 보상에서 해당 속성의 등장 비중이 3배가 돼. 종족 선호와 함께 적용해.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 44,
+  "iconKey": "Relics/Content022/atlas022",
+  "id": "spirit_compass",
+  "kind": "spirit_compass",
+  "name": "정령의 나침반",
+  "params": {
+    "multiplier": 3
+  },
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-controller022",
+  "weight": 1
+}

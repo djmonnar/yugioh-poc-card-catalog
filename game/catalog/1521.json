@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1521",
+  "attack": 1100,
+  "attribute": 8,
+  "categories": [
+    "효과-바운스"
+  ],
+  "code": 71283180,
+  "defense": 1000,
+  "description": "리버스: 필드의 마법 / 함정\n카드 2장을 주인의 패로\n되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "3a66400dee0649122b0d697cf831156852930b9244bf0b280965b2d4a78bb2bd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0660.webp",
+  "level": 4,
+  "links": [],
+  "name": "토네이도 버드",
+  "name_english": "Tornado Bird",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "R",
+  "source_id": 1521,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 660
+}

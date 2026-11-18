@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2060",
+  "attack": 2600,
+  "attribute": 1,
+  "categories": [
+    "발동-lp지불",
+    "소환-묘지",
+    "소환-패,덱",
+    "발동-묘지"
+  ],
+  "code": 46668237,
+  "defense": 1800,
+  "description": "①: 이 카드가 패 / 묘지에 존재하고, 자신 필드의 앞면 표시의 야수족 몬스터가 효과로 파괴되어 묘지로 보내졌을 때, 1000 LP를 지불하고 발동할 수 있다. 이 카드를 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "2d215a8650c95ba95426e0abeaabfd00264dc40eb052560f5a484cc77e66d401",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1360.webp",
+  "level": 7,
+  "links": [],
+  "name": "숲의 파수꾼 그린 바분",
+  "name_english": "Green Baboon, Defender of the Forest",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "UR",
+  "source_id": 2060,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1360
+}

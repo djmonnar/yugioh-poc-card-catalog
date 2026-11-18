@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards099/2713",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착",
+    "효과-덱샐비지"
+  ],
+  "code": 38960450,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 덱에서 장착 마법 카드 1장을 패에 넣는다. 그 후, 그 카드를 장착 가능한 자신 필드의 몬스터 1장에 장착할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "ebf78cd059912197884f99148c63936c10852933456034bee25a7c6c85197c17",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native099/cards/2713.jpg",
+  "level": 0,
+  "links": [],
+  "name": "암즈 콜",
+  "name_english": "Armory Call",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "암즈콜",
+    "암즈 콜",
+    "Armory Call"
+  ],
+  "source_id": 2713,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1745
+}

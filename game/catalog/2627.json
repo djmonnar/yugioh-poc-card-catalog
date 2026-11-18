@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards088/2627",
+  "attack": 1500,
+  "attribute": 8,
+  "categories": [
+    "지원-일반몬스터",
+    "발동-묘지",
+    "효과-덱샐비지",
+    "덱-블랙매지션",
+    "덱-푸른눈",
+    "덱-붉은눈"
+  ],
+  "code": 55969226,
+  "defense": 600,
+  "description": "①: 이 카드가 필드에서 묘지로 보내졌을 경우에 발동할 수 있다. 덱에서 드래곤족 / 전사족 / 마법사족의 일반 몬스터 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "1f978dd63382808b13c195c4d2f2d3639f1dfc72b62a3d6d89f21d8c8690d649",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native088/cards/2627.jpg",
+  "level": 4,
+  "links": [],
+  "name": "청룡의 소환사",
+  "name_english": "Blue Dragon Summoner",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "search_aliases": [
+    "청룡의 소환사",
+    "청룡의소환사",
+    "Blue Dragon Summoner"
+  ],
+  "source_id": 2627,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1659
+}

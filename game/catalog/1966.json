@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1966",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-붉은눈",
+    "효과-드로우",
+    "효과-묘지보내기"
+  ],
+  "code": 32566831,
+  "defense": 0,
+  "description": "\"홍옥의 패\"는 1턴에 1장밖에\n발동할 수 없다. ①: 패에서\n레벨 7 의 \"붉은 눈\" 몬스터\n1장을 묘지로 보내고 발동할\n수 있다. 자신은 덱에서 2장\n드로우한다. 그 후, 덱에서\n레벨 7 의 \"붉은 눈\" 몬스터\n1장을 묘지로 보낼 수 있다.\n[안내] 2장을 드로우한 뒤에\n덱의 레벨 7 \"붉은 눈\"\n몬스터를 묘지로 보낼지\n묻는다.",
+  "draw_enabled": true,
+  "identity_key": "663c53641dd92b60cd43ebbc2ae4fdb609853e74d2a52558a9bc03aeead79dd8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1149.webp",
+  "level": 0,
+  "links": [],
+  "name": "홍옥의 패",
+  "name_english": "Cards of the Red Stone",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1966,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1149
+}

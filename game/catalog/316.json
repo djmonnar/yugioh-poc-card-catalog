@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/316",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-해피"
+  ],
+  "code": 63224564,
+  "defense": 0,
+  "description": "\"해피 레이디\" 또는 \"해피\n레이디 세자매\"의 공격력을\n500 올린다.",
+  "draw_enabled": true,
+  "identity_key": "b649182f44f5152f0576ef8983d31bab86bb979410bade331259f0c688bdd563",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0321.webp",
+  "level": 0,
+  "links": [],
+  "name": "사이버 실드",
+  "name_english": "Cyber Shield",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "source_id": 316,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 321
+}

@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards136/2937",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-프레데터 플랜츠",
+    "포식 카운터",
+    "지원-융합",
+    "발동-필드를 벗어났을 때",
+    "효과-덱샐비지",
+    "발동-묘지에서",
+    "발동-제외",
+    "소환-엑스트라 덱에서",
+    "효과-묘지로 보내기"
+  ],
+  "code": 51858200,
+  "defense": 0,
+  "description": "\"프레데터 플래닛\"의 ①의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 이 카드가 마법 / 함정 존에 존재하고, 포식 카운터가 놓여 있는 몬스터가 필드에서 벗어났을 경우에 발동한다. 덱에서 \"프레데터\" 카드 1장을 패에 넣는다. ②: 묘지의 이 카드를 제외하고 발동할 수 있다. 자신의 패 / 필드에서, 융합 몬스터 카드에 기재된 융합 소재 몬스터를 묘지로 보내고, 그 융합 몬스터 1장을 엑스트라 덱에서 융합 소환한다. 이 효과로 융합 소환할 경우, \"프레데터 플랜츠\" 몬스터밖에 융합 소재로 할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "d379f96cc2d37f7c6e2803204d813dbf6567d8bfc707e0ffe21e01018dd57394",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native136/cards/2937.jpg",
+  "level": 0,
+  "links": [],
+  "name": "프레데터 플래닛",
+  "name_english": "Predaplanet",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "프레데터 플래닛",
+    "Predaplanet"
+  ],
+  "source_id": 2937,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 1969
+}

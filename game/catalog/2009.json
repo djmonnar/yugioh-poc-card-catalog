@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2009",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-일반몬스터",
+    "지원-저레벨",
+    "소환-덱리크루터"
+  ],
+  "code": 30353551,
+  "defense": 0,
+  "description": "각 턴의 엔드 페이즈시, 그 턴에 전투에 의해서 파괴된 자신의 레벨 2 이하의 일반 몬스터의 수만큼, 덱에서 레벨 2 이하의 일반 몬스터를 선택하고 자신 필드 위에 특수 소환한다. 그 후 덱을 셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "93c4c528eaebe4a5a60965d99b230932719f38e5a2b7f3d29ff559c3476e8687",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1313.webp",
+  "level": 0,
+  "links": [],
+  "name": "인해전술",
+  "name_english": "Human-Wave Tactics",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2009,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1313
+}

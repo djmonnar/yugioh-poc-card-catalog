@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3007",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-의식",
+    "효과-릴리즈",
+    "소환-패에서"
+  ],
+  "code": 8198712,
+  "defense": 0,
+  "description": "\"파멸의 여신 루인\" \"종언의 왕 데미스\"의 의식 소환에 사용할 수 있다. 필드나 패에서 의식 소환하는 몬스터와 같은 레벨이 되도록 제물을 바쳐야 한다.",
+  "draw_enabled": true,
+  "identity_key": "295d2285f5d284bb8e27f30dd6dddfaf9ef86e6cad65edbf9cc0ddb51fb28c0e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3007.jpg",
+  "level": 0,
+  "links": [],
+  "name": "엔드 오브 더 월드",
+  "name_english": "End of the World",
+  "native_type": 130,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "엔드 오브 더 월드",
+    "End of the World"
+  ],
+  "source_id": 3007,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "의식 마법",
+  "web_slot": 2039
+}

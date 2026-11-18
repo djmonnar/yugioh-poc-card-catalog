@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2089",
+  "attack": 1700,
+  "attribute": 1,
+  "categories": [
+    "효과-바운스",
+    "발동-소환"
+  ],
+  "code": 40659562,
+  "defense": 2400,
+  "description": "이 카드는 1턴에 1번만 뒷면 수비 표시로 할 수 있다. 이 카드가 반전 소환에 성공했을 때, 상대 필드 위의 몬스터는 전부 주인의 패로 되돌아간다.",
+  "draw_enabled": true,
+  "identity_key": "1a7b9a9cb2e196f128565435e7b0303dca167b67e71af570e0f0696ad5427876",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1387.webp",
+  "level": 5,
+  "links": [],
+  "name": "가디언 스핑크스",
+  "name_english": "Guardian Sphinx",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "SR",
+  "source_id": 2089,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1387
+}

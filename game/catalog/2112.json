@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2112",
+  "attack": 1700,
+  "attribute": 4,
+  "categories": [
+    "발동-소환",
+    "효과-묘지샐비지",
+    "효과-드로우"
+  ],
+  "code": 54040221,
+  "defense": 1200,
+  "description": "①: 이 카드를 일반 소환했을 경우, 자신 묘지의 화염족 몬스터 4장을 대상으로 하고 발동한다. 그 몬스터 4장을 덱으로 되돌린다. 그 후, 자신은 2장 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "9a950d467b21525f75348d120ef5f58bd4aea4c831b1a818049771bd8b03b406",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1410.webp",
+  "level": 4,
+  "links": [],
+  "name": "화염 제왕 근위병",
+  "name_english": "Royal Firestorm Guards",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 128,
+  "rarity": "SR",
+  "source_id": 2112,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1410
+}

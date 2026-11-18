@@ -1,0 +1,69 @@
+{
+  "banlist_enabled": false,
+  "extra": [],
+  "id": "ch2_battle_c5e5c6374bca114ec9211af7",
+  "main": [
+    {
+      "count": 1,
+      "identity_key": "e23fc23c35d87b96b9c223f03780d16a275d3efc2040063a077fd78a800cc76f",
+      "source_id": 1302
+    },
+    {
+      "count": 3,
+      "identity_key": "79712a3b5771cdacfc37669cc25e7f4228160a49b7ca6ce48a8d5497d81f4760",
+      "source_id": 1304
+    },
+    {
+      "count": 3,
+      "identity_key": "69d85e6a0e15901e5e02efc5ab79b84cbaa3a232f38f3ff799a74a24bd89cf03",
+      "source_id": 1932
+    },
+    {
+      "count": 1,
+      "identity_key": "7f6ea51117f2d1f9acb474978a566e9ead6bdbe7d9af12a9c324896ce7214a6e",
+      "source_id": 1954
+    },
+    {
+      "count": 3,
+      "identity_key": "c6106a4882ec3c5e1f5d9fd85e16a5e894ebba711fa5eeb7bb425e2d23cf41d6",
+      "source_id": 1114
+    },
+    {
+      "count": 2,
+      "identity_key": "7558ec74781803edab6353a676f8a997705bae39bb28fada3bfaf6983fe1a0b0",
+      "source_id": 1419
+    },
+    {
+      "count": 2,
+      "identity_key": "f7d413d578038d44d364ea336be971806a6bdf98629eba3dc87f31b624ecb821",
+      "source_id": 310
+    },
+    {
+      "count": 1,
+      "identity_key": "37f1f2e9cf23e9689e3b225ee0b124d8d21e800a559dd7fce343f8219fa7d3dc",
+      "source_id": 489
+    },
+    {
+      "count": 1,
+      "identity_key": "cdf0342ed4d925c7b6df71e9b8537023f277e230889b073a1e08096fca9a39b0",
+      "source_id": 1311
+    },
+    {
+      "count": 1,
+      "identity_key": "d9d45a60e30dfb5adaa4e5d6dde2a6e2f0951d06b54584e87af6d04eb6932f7a",
+      "source_id": 1434
+    },
+    {
+      "count": 1,
+      "identity_key": "fa9da2310da79383a11b392643a139935f0f45272a8ea60689d37f9137d9c0eb",
+      "source_id": 1032
+    },
+    {
+      "count": 1,
+      "identity_key": "02d5242015819fc994205f03b2df3f1719434411e1cf4f38b79cc118b4da4f96",
+      "source_id": 1230
+    }
+  ],
+  "name": "번덱",
+  "version": 37
+}

@@ -1,0 +1,59 @@
+{
+  "art_key": "Character090/images/tristan/start",
+  "id": "character-tristan-090",
+  "profile": {
+    "name": "전우혁",
+    "portrait": "assets/actors/native090/tristan/start.png",
+    "skill_profiles": [
+      {
+        "name": "용기의 깃발",
+        "profile_id": "profile-ab2412a8-5d88-498d-895c-3d1bc7395b90",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "6b77f41eb62e5ff9dd3ce7a9bbf1eb7504fe0a0955ef4bd308140b077bcaf36f",
+              "internal_id": 2619,
+              "name_ko": "용기의 깃발",
+              "slot": 1651
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "연합군",
+        "profile_id": "profile-df91497c-f44e-4ec4-9c3a-418638c0163a",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "e2b30b2ce7010e2966ad4a88a832877712f9a4ab1e38e835412a7bbbc541e51d",
+              "internal_id": 2659,
+              "name_ko": "연합군",
+              "slot": 1691
+            },
+            "kind": "start_hand"
+          }
+        ]
+      },
+      {
+        "name": "숲(야수)",
+        "profile_id": "profile-9606bc95-427a-4992-8d1a-4224afc408b9",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "f57735d759d84c2f500a6702fd3f356d0d17fb7782646081e1f11c003d1ef969",
+              "internal_id": 329,
+              "name_ko": "숲",
+              "slot": 990
+            },
+            "kind": "start_field"
+          }
+        ]
+      }
+    ],
+    "skills": []
+  },
+  "profile_id": "tristan",
+  "updated_at": "2026-11-10T14:18:29.098769+00:00",
+  "version": 3926
+}

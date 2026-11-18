@@ -1,0 +1,48 @@
+{
+  "artKey": "CharacterPresentation012/images/roamer_leon/start",
+  "banlistEnabled": false,
+  "deckName": "암석족 초급",
+  "extra": [
+    408,
+    408
+  ],
+  "id": "enc044_1_battle_ch1_battle_58151655f052944dcfe92bd1",
+  "lpBonus": 0,
+  "main": [
+    556,
+    556,
+    556,
+    560,
+    560,
+    560,
+    572,
+    572,
+    572,
+    330,
+    330,
+    2094,
+    2094,
+    1003,
+    1003,
+    1040,
+    1816,
+    1816,
+    2093,
+    2093
+  ],
+  "name": "방랑 듀얼리스트 레온",
+  "openingDrawBonus": 0,
+  "profileId": "roamer_leon",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 330,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "453f8cd2-e49c-4f49-b119-eda953d1c2d5:8b4113b3-5ad4-4605-bc47-0a34f2660dbd",
+  "usesNativeRules035": false
+}

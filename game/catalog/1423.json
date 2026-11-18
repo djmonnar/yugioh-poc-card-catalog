@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1423",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [],
+  "code": 18605135,
+  "defense": 0,
+  "description": "필드에 \"바다\"가 적용되어\n있을 때만 발동할 수 있다.\n\"바다\"가 앞면으로 존재하는\n동안 자신이 받는 모든\n데미지를 0으로 한다.\n\"바다\"가 파괴되거나 필드에서\n벗어나면 이 카드도 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "37245dbae34ade2542b3c1f7a7e74fd68734a2f57b8fc15a40b8d1b93cb1052f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0659.webp",
+  "level": 0,
+  "links": [
+    {
+      "identity_key": "6961a3507f2f54f2a8a88248bd6bc7db81dcf9198375c486d4d48ac12e3c6896",
+      "slot": 86
+    },
+    {
+      "identity_key": "7341256371bb51ebb64315d92ec728919936d0ad41b80e53c0fe63d15fb84eb6",
+      "slot": 98
+    },
+    {
+      "identity_key": "339b4eaa677c67989ded9c942a01f578cf97c0054c26791765f9e024653c8fb4",
+      "slot": 1212
+    }
+  ],
+  "name": "회오리 해류벽",
+  "name_english": "Tornado Wall",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1423,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 659
+}

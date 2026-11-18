@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards135/2924",
+  "attack": 500,
+  "attribute": 4,
+  "categories": [
+    "지원-쥬락",
+    "발동-파괴 시",
+    "소환-토큰",
+    "지원-릴리즈"
+  ],
+  "code": 48411996,
+  "defense": 400,
+  "description": "이 카드가 전투에 의해서 파괴되었을 경우, 자신 필드 위에 \"쥬락 토큰\"(공룡족/화염 속성/레벨 1/공격력 0/수비력 0) 2장을 수비 표시로 특수 소환한다. 이 토큰은 \"쥬락\"이라는 이름이 붙은 몬스터 이외의 어드밴스 소환을 위해서는 릴리스할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "159fd619fa3f25fb385c7396017ea434e29ecd06e95f4543ac6bcbda66ad168a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native135/cards/2924.jpg",
+  "level": 2,
+  "links": [],
+  "name": "쥬락 스타우리코",
+  "name_english": "Jurrac Stauriko",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "R",
+  "search_aliases": [
+    "쥬락 스타우리코",
+    "Jurrac Stauriko"
+  ],
+  "source_id": 2924,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1956
+}

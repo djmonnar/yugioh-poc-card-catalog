@@ -1,0 +1,34 @@
+{
+  "alias": 0,
+  "art_key": "Cards103/2737",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-의식"
+  ],
+  "code": 65450690,
+  "defense": 0,
+  "description": "1000 라이프 포인트를 지불하고 발동할 수 있다. 패에서 의식 몬스터 1장을 특수 소환한다. 이 효과로 특수 소환한 몬스터는 공격할 수 없으며, 엔드 페이즈시에 파괴된다. \"한정해제\"는 1턴에 1장밖에 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "bba86d80c6136bec91a2a8eabf4ac887fa72dc65dc1b345d9190ab014ca18142",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native103/cards/2737.jpg",
+  "level": 0,
+  "links": [],
+  "name": "한정해제",
+  "name_english": "Ritual Foregone",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "한정해제",
+    "Ritual Foregone"
+  ],
+  "source_id": 2737,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1769
+}

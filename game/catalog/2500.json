@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2500",
+  "attack": 2350,
+  "attribute": 2,
+  "categories": [
+    "덱-바다"
+  ],
+  "code": 46290741,
+  "defense": 2150,
+  "description": "①: 이 카드가 패 또는 묘지에 있을 경우, 자신 필드의 물 속성 몬스터 2장을 릴리스하고 발동할 수 있다. 이 카드를 특수 소환한다. 이 카드명의 이 효과는 1턴에 1번만 사용할 수 있다.\n②: 이 카드가 특수 소환되었을 경우에 발동할 수 있다. 덱에서 \"씨 스텔스 어택\" 1장을 세트한다.\n③: 1턴에 1번, 자신 필드의 물 속성 몬스터 1장만을 대상으로 하는 상대의 카드 또는 효과가 발동했을 때에 발동할 수 있다. 그 발동을 무효로 하고 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "ca982b3d41228d2f6623afbdcf4638b173a9282de99d7169611e0c80fcd67da5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2500.jpg",
+  "level": 7,
+  "links": [],
+  "name": "성새 고래",
+  "name_english": "Citadel Whale",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 131072,
+  "rarity": "UR",
+  "source_id": 2500,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1532
+}

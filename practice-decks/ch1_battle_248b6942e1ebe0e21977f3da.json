@@ -1,0 +1,64 @@
+{
+  "banlist_enabled": false,
+  "extra": [],
+  "id": "ch1_battle_248b6942e1ebe0e21977f3da",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "4e1e0ede1d0f983d111f81ab6cde7674794b87e41a8faccc19636c384352956c",
+      "source_id": 1860
+    },
+    {
+      "count": 2,
+      "identity_key": "e5a059da2916118ccae21b984cde7d0c34873566338c1c4a7419b3f8a4f1ff88",
+      "source_id": 182
+    },
+    {
+      "count": 1,
+      "identity_key": "71db51531173c4c5d42aaed396486cc80612d5db632f28cbbad092aaeea7c36f",
+      "source_id": 1318
+    },
+    {
+      "count": 2,
+      "identity_key": "d5bd969701a421b8a8e9520202a00969264aac72d447e64132004df14d084135",
+      "source_id": 1857
+    },
+    {
+      "count": 3,
+      "identity_key": "f00308a84168fceb18b5a1a5e4dcbf57983fd8485f34bded1c24f54c8f56e3a2",
+      "source_id": 1173
+    },
+    {
+      "count": 2,
+      "identity_key": "4b399f8ff3cf5ab54eea680e85d0bf7d11d965f20a271d0e5610ecf1d393b79c",
+      "source_id": 305
+    },
+    {
+      "count": 2,
+      "identity_key": "6b6c7e0aaaa169972d36ed61c1573a0f2cc99aa4944e6d8055336c625dee8ecb",
+      "source_id": 402
+    },
+    {
+      "count": 2,
+      "identity_key": "ab1768b89185de3acb4e10c8a60c2b4f38451f875a979487088d3cc764f70d7b",
+      "source_id": 1415
+    },
+    {
+      "count": 2,
+      "identity_key": "99c9effe61e61c41855eb47f60f9b10a32460ce1defef0cb63330fc228817402",
+      "source_id": 1015
+    },
+    {
+      "count": 1,
+      "identity_key": "f57735d759d84c2f500a6702fd3f356d0d17fb7782646081e1f11c003d1ef969",
+      "source_id": 329
+    },
+    {
+      "count": 1,
+      "identity_key": "27562a90d2dcf5c1d764469333ca00d4a8883ef191ae324fb22770e492806ace",
+      "source_id": 1059
+    }
+  ],
+  "name": "사마준 초급",
+  "version": 37
+}

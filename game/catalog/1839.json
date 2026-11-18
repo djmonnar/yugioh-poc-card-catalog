@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1839",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-해피",
+    "효과-데미지",
+    "파괴-몬스터"
+  ],
+  "code": 86308219,
+  "defense": 0,
+  "description": "이 카드를 발동하는 턴에,\n자신은 덱 / 엑스트라 덱에서\n몬스터를 특수 소환할 수\n없으며, 배틀 페이즈를 실행할\n수 없다. ①: 자신 필드에\n\"해피 레이디\" \"해피 레이디\n세자매\"가 합계 3장 이상\n존재할 경우, 그 수까지\n가능한 한 상대 필드의\n몬스터를 대상으로 하고\n발동할 수 있다. 대상\n몬스터를 파괴하고, 파괴한\n몬스터 중에서, 원래 공격력이\n가장 높은 몬스터의 그\n수치만큼의 데미지를 상대에게\n준다.\n[안내] 메인 페이즈 1에만, 이\n턴에 덱에서 특수 소환한 적이\n없을 때만 발동할 수 있다.\n상대 몬스터 수가 해피 레이디\n수 이하이면 전부 자동으로\n대상이 된다.\n[미지원] 이 턴의 덱·융합 덱\n특수 소환 금지는 해피\n채널러와 스왈로즈 네스트에만\n적용된다. 다른 카드의 덱\n특수 소환·융합 소환은 막지\n못한다.",
+  "draw_enabled": true,
+  "identity_key": "e4f488e3398bbe7fc892b8c9bb98fdef7e4f763694f11660c054601a9a7a1e5f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1254.webp",
+  "level": 0,
+  "links": [],
+  "name": "해피 레이디 －봉황의 진－",
+  "name_english": "Harpie Lady Phoenix Formation",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1839,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1254
+}

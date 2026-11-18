@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1890",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-컨트롤"
+  ],
+  "code": 37520316,
+  "defense": 0,
+  "description": "①: 상대 필드의 몬스터 1장을\n대상으로 하고 발동할 수\n있다. 그 몬스터의 컨트롤을\n엔드 페이즈까지 얻는다. 이\n효과로 컨트롤을 얻은\n몬스터는 공격 선언할 수\n없으며, 릴리스할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "3deec948113c7208b292c6a765a9895d923260b55138c92083b37a2658770373",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1217.webp",
+  "level": 0,
+  "links": [],
+  "name": "정신조작",
+  "name_english": "Mind Control",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1890,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1217
+}

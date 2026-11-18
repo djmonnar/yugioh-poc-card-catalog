@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards084/2614",
+  "attack": 2600,
+  "attribute": 16,
+  "categories": [
+    "지원-기어프리드",
+    "지원-장착",
+    "파괴-몬스터"
+  ],
+  "code": 57046845,
+  "defense": 2200,
+  "description": "일반 소환·세트할 수 없으며 ‘구속 해제’의 효과로만 특수 소환할 수 있다. 이 카드에 장착 카드가 장착되면 상대 필드의 몬스터 1장을 대상으로 하여 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "50e3cc3f6e91edf1154c81d96fa049c37968900d050e5f791f74f66fa5db842e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2614.jpg",
+  "level": 7,
+  "links": [],
+  "name": "검성－네이킷 기어프리드",
+  "name_english": "Gearfried the Swordmaster",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "search_aliases": [
+    "검성 네이킷 기어프리드",
+    "검성－네이킷 기어프리드",
+    "검성－네이킷기어프리드",
+    "Gearfried the Swordmaster"
+  ],
+  "source_id": 2614,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "특수 소환 / 효과 몬스터",
+  "web_slot": 1646
+}

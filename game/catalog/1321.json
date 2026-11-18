@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1321",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-버리기",
+    "면역-마법"
+  ],
+  "code": 59344077,
+  "defense": 0,
+  "description": "상대가 마법 카드를 발동했을\n때 발동할 수 있다. 상대가\n즉시 패에서 마법 카드 1장을\n버리지 못하면, 그 마법\n카드의 발동을 무효로 하고\n파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "e4fba1c01bc769c67d4b1a034ed34579ccbc628f08a7b9ba5ca18f4f6a231d6f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0895.webp",
+  "level": 0,
+  "links": [],
+  "name": "매직 드레인",
+  "name_english": "Magic Drain",
+  "native_type": 1048580,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1321,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 895
+}

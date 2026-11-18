@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1849",
+  "attack": 1500,
+  "attribute": 1,
+  "categories": [
+    "덱-아마조네스",
+    "효과-한데스",
+    "발동-묘지"
+  ],
+  "code": 29654737,
+  "defense": 1300,
+  "description": "①: 이 카드가 전투로 파괴되어\n묘지로 보내졌을 때, 1500\nLP를 지불하고 발동할 수\n있다. 상대의 패를 확인하고,\n그 중에서 몬스터 1장을 골라\n자신의 패에 넣는다.\n[안내] 전투로 파괴되어\n묘지로 보내지면 사용 여부를\n묻는다(자신의 LP가 1500\n이상이어야 한다).\n[차이] 선택 창에는 상대 패의\n몬스터만 표시된다(마법 /\n함정 카드는 보이지 않는다).",
+  "draw_enabled": true,
+  "identity_key": "455a7bd3ffaa3711deea284e83642a93d61d34c32da0899bc44c300c698c10af",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1263.webp",
+  "level": 4,
+  "links": [],
+  "name": "아마조네스의 사슬 전사",
+  "name_english": "Amazoness Chain Master",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "source_id": 1849,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1263
+}

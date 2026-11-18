@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1960",
+  "attack": 300,
+  "attribute": 32,
+  "categories": [
+    "효과-버리기",
+    "면역-전투",
+    "효과-한데스"
+  ],
+  "code": 23205979,
+  "defense": 200,
+  "description": "이 카드는 전투에 의해서는\n파괴되지 않는다.\n마법/함정/효과 몬스터의\n효과의 대상이 되었을 때, 이\n카드를 파괴한다. 이 카드가\n상대 플레이어에게로의 직접\n공격에 성공했을 경우, 상대는\n무작위로 패를 1장 버린다.\n[차이] 데미지 스텝 중에\n대상이 된 경우에도, 그\n효과가 처리된 직후에\n파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "f3b58da3235b3c692c8559605e61ea018331bfb49e7648d399635cb9c7d323de",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1176.webp",
+  "level": 3,
+  "links": [],
+  "name": "영혼을 깎는 사령",
+  "name_english": "Spirit Reaper",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "SR",
+  "source_id": 1960,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1176
+}

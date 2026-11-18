@@ -1,0 +1,54 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-87ec52f0-c3e7-420a-ab5a-42a95bb4a541",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "227e146740dfa0e03d458238d47c25ae019ed47bfc50c891a97e949c40d6acdf",
+      "source_id": 2654
+    },
+    {
+      "count": 2,
+      "identity_key": "51b5740d10ab23899643b847205bb7969dc3badfabee63b633b5f7128610b832",
+      "source_id": 1129
+    },
+    {
+      "count": 3,
+      "identity_key": "444e9cba41b5c5e85c2712da0b57f0ae3a1a434989b10822ef6101e12986f605",
+      "source_id": 2655
+    },
+    {
+      "count": 1,
+      "identity_key": "45d860d25b85638ceddfaeb743ab74b99d71467e48c4e8f1bc8ca3060872695f",
+      "source_id": 1940
+    },
+    {
+      "count": 2,
+      "identity_key": "e2b30b2ce7010e2966ad4a88a832877712f9a4ab1e38e835412a7bbbc541e51d",
+      "source_id": 2659
+    },
+    {
+      "count": 2,
+      "identity_key": "5322bd47dbe75184a786983dee49d7d9d5c0641cef2ee938722e3f98e923f78f",
+      "source_id": 2391
+    },
+    {
+      "count": 3,
+      "identity_key": "ac3c7b5fe4ebc475adb12aa0b6f0d243a905fcd1f9bede2835e56964b76dc1ac",
+      "source_id": 509
+    },
+    {
+      "count": 2,
+      "identity_key": "2c26a093bfcfef4b10433e905f720083619ed0e38e9aaf522e1d394330ecb4db",
+      "source_id": 1231
+    },
+    {
+      "count": 2,
+      "identity_key": "5349c07bb3874169f6339512131cedfe6f1738b0de781c72c986b3f1dad27839",
+      "source_id": 1947
+    }
+  ],
+  "name": "전우혁 프리드 중급",
+  "version": 461
+}

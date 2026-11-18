@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards099/2709",
+  "attack": 1700,
+  "attribute": 16,
+  "categories": [
+    "지원-천사족",
+    "지원-릴리즈",
+    "면역-전투"
+  ],
+  "code": 11662742,
+  "defense": 0,
+  "description": "①: 천사족 / 빛 속성 몬스터를 어드밴스 소환할 경우, 이 카드는 2장만큼의 릴리스로 할 수 있다. ②: 이 카드는 전투로는 파괴되지 않는다. ③: 자신이 전투 / 효과로 데미지를 받았을 경우에 발동한다. 필드의 앞면 표시의 이 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "f1fff46c0e7ac3963ff8fff9b228ae40118dcb71705d500004a9bbea36ee1032",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native099/cards/2709.jpg",
+  "level": 4,
+  "links": [],
+  "name": "젤엔듀오",
+  "name_english": "Gellenduo",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "SR",
+  "search_aliases": [
+    "젤엔듀오",
+    "Gellenduo"
+  ],
+  "source_id": 2709,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1741
+}

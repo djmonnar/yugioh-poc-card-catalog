@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/709",
+  "attack": 3300,
+  "attribute": 16,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 86327225,
+  "defense": 3000,
+  "description": "\"기적의 방주\"에 의해 의식\n소환. 필드나 패에서, 레벨이\n8 이상이 되도록 카드를\n제물로 바쳐야 한다. 이\n카드가 상대의 수비 표시\n몬스터를 전투에 의해서\n파괴하여 묘지로 보냈을 때,\n파괴한 몬스터의 원래\n공격력만큼의 데미지를 상대\n라이프에 준다.",
+  "draw_enabled": true,
+  "identity_key": "23eb5bb457b92ed3a3afb1da36e9d97ce5b48c09e78fa0b08b6651cf3472b30e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0245.webp",
+  "level": 8,
+  "links": [],
+  "name": "천계왕 시나토",
+  "name_english": "Shinato, King of a Higher Plane",
+  "native_type": 161,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "SR",
+  "source_id": 709,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "의식 몬스터",
+  "web_slot": 245
+}

@@ -1,0 +1,20 @@
+{
+  "description": "덱의 레벨 8 몬스터 1매를 선택해 어드밴스 소환 릴리스를 1장으로 줄여. 대상이 없으면 푸른 눈의 백룡 1장을 받아. 받은 카드는 자동 강화되지 않아.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 31,
+  "iconKey": "Relics/white_dragon_eye",
+  "id": "white_dragon_eye",
+  "kind": "white_dragon_eye",
+  "name": "백룡의 눈",
+  "params": {
+    "level": 8,
+    "tributes": 1
+  },
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

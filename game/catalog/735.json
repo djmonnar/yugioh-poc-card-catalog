@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/735",
+  "attack": 1400,
+  "attribute": 32,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 26302522,
+  "defense": 1400,
+  "description": "상대가 뒷면 수비 표시의 이\n몬스터를 공격했을 때, 이\n카드를 장착 카드로 취급하여\n공격한 몬스터에 장착한다.\n데미지 계산은 하지 않는다.\n상대의 다음 스탠바이\n페이즈에 장착된 몬스터와 이\n카드를 파괴하고, 상대는 그\n몬스터의 공격력만큼 직접\n데미지를 받는다.",
+  "draw_enabled": true,
+  "identity_key": "6420778a841b9b252ddd7f031379113cd72461982956a6a9af9becba1b3c31c0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0455.webp",
+  "level": 4,
+  "links": [],
+  "name": "구체 시한폭탄",
+  "name_english": "Blast Sphere",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "source_id": 735,
+  "speed_limit": 1,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 455
+}

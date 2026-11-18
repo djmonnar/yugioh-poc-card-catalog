@@ -1,0 +1,30 @@
+{
+  "alias": 76812113,
+  "art_key": "Cards/1249",
+  "attack": 1800,
+  "attribute": 8,
+  "categories": [
+    "덱-해피"
+  ],
+  "code": 80316585,
+  "defense": 1300,
+  "description": "이 카드명은 룰상 \"해피\n레이디\"로 취급한다.",
+  "draw_enabled": true,
+  "identity_key": "ba261ad5d7299c19808d5425047365d4395340f7d1717cdad9c0ecefb69ba864",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0697.webp",
+  "level": 4,
+  "links": [],
+  "name": "해피 레이디·SB",
+  "name_english": "Cyber Harpie Lady",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "R",
+  "source_id": 1249,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 697
+}

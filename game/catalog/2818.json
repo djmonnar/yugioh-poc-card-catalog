@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards125/2818",
+  "attack": 1700,
+  "attribute": 16,
+  "categories": [
+    "지원-에일리언",
+    "A 카운터",
+    "발동-묘지로보내기",
+    "효과-제외-묘지",
+    "효과-파괴"
+  ],
+  "code": 58066722,
+  "defense": 1500,
+  "description": "이 카드명의 ①②의 효과는 각각 1턴에 1번밖에 사용할 수 없다. ①: 이 카드가 묘지로 보내졌을 경우, 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터에 A 카운터를 2개 놓는다. ②: 묘지의 이 카드를 제외하고, A 카운터가 놓여 있는 카드 1장을 대상으로 하여 발동할 수 있다. 그 카드를 파괴한다. 이 효과는 이 카드가 묘지로 보내진 턴에는 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "5dc8137918de979678aeafdfd4714988cd7c1218574fbd6b4505506eb993283d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native125/cards/2818.jpg",
+  "level": 4,
+  "links": [],
+  "name": "에일리언 버스터",
+  "name_english": "Alien Stealthbuster",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 524288,
+  "rarity": "SR",
+  "search_aliases": [
+    "에일리언버스터",
+    "에일리언 버스터",
+    "Alien Stealthbuster"
+  ],
+  "source_id": 2818,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1850
+}

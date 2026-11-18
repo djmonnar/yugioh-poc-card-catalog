@@ -1,0 +1,49 @@
+{
+  "alias": 0,
+  "art_key": "Cards/433",
+  "attack": 2700,
+  "attribute": 1,
+  "categories": [
+    "발동-소환",
+    "발동-릴리즈",
+    "파괴-함정"
+  ],
+  "code": 73333463,
+  "defense": 2000,
+  "description": "\"로이드\"를 릴리스하여\n어드밴스 소환했을 때 모든\n함정을 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "f5346370866abe6094ecf2bbbbfd96b5d26819a49829882efdc0e1d01bba63d2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0082.webp",
+  "level": 8,
+  "links": [
+    {
+      "identity_key": "0ff2569dd88fe904504f6a821204b2b2a8a9b8c4df6bae2755e84b9dfa6b7055",
+      "slot": 1075
+    },
+    {
+      "identity_key": "8d661fab8a61d1425c715c84a38815a88842a8827a107dee94278d556b167031",
+      "slot": 888
+    },
+    {
+      "identity_key": "7884bb1bce148bd792a537d36d7e9fe7f5101f0977470e8f456a70c2ce5ec81a",
+      "slot": 824
+    },
+    {
+      "identity_key": "2ac6fb7840efe08868d498ae9caa0a4d33f128bd53e937f79165d4196244acf6",
+      "slot": 454
+    }
+  ],
+  "name": "아머로이드 가이덴고",
+  "name_english": "Armoroid",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "N",
+  "source_id": 433,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 82
+}

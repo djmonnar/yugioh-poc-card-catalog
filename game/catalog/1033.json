@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1033",
+  "attack": 3200,
+  "attribute": 32,
+  "categories": [
+    "면역-함정",
+    "파괴-함정"
+  ],
+  "code": 88619463,
+  "defense": 2800,
+  "description": "이 카드는 통상 소환할 수\n없다. 자신 필드의 레벨 6\n이상의 마법사족 몬스터 2장을\n릴리스했을 경우에만 특수\n소환할 수 있다. ①: 함정\n카드가 발동했을 때에 발동할\n수 있다. 이 카드가 필드에\n앞면 표시로 존재할 경우, 그\n발동을 무효로 하고 파괴한다.\n[차이] 같은 체인에서 이\n카드의 효과를 2번 이상\n발동할 수는 없다.",
+  "draw_enabled": true,
+  "identity_key": "f1d7225d9c871f8a156a765553f0889d8be546b4b5ff361633cae1b5ce8422f9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0107.webp",
+  "level": 9,
+  "links": [],
+  "name": "어둠의 마법신관",
+  "name_english": "Sorcerer of Dark Magic",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 1033,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 107
+}

@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards108/2745",
+  "attack": 300,
+  "attribute": 4,
+  "categories": [
+    "지원-드래곤족",
+    "소환-묘지",
+    "지원-고레벨"
+  ],
+  "code": 2732323,
+  "defense": 200,
+  "description": "①: 이 카드가 공격 대상으로 선택되었을 경우, 자신 묘지의 레벨 7 이상의 드래곤족 몬스터 1장을 대상으로 하고 발동한다. 그 몬스터를 특수 소환하여, 공격 대상을 그 몬스터에 옮기고 데미지 계산을 실행한다.",
+  "draw_enabled": true,
+  "identity_key": "5ae4640bb54247dfa5366a65104d9de5f5f370a16be37803adcda4ef36cd1c28",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native108/cards/2745.jpg",
+  "level": 2,
+  "links": [],
+  "name": "데코이 드래곤",
+  "name_english": "Decoy Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "R",
+  "search_aliases": [
+    "데코이 드래곤",
+    "데코이드래곤",
+    "Decoy Dragon"
+  ],
+  "source_id": 2745,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1777
+}

@@ -1,0 +1,21 @@
+{
+  "description": "전투 시작 LP가 1000을 초과하면 LP 500을 비용으로 지불하고 시작 패를 1장 더 받아. 피해 방어로 비용을 막을 수 없어.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 55,
+  "iconKey": "Relics/Content022/atlas022",
+  "id": "blood_contract",
+  "kind": "blood_contract",
+  "name": "피의 계약서",
+  "params": {
+    "lp": 500,
+    "opening_draw": 1,
+    "threshold": 1000
+  },
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-native022",
+  "weight": 1
+}

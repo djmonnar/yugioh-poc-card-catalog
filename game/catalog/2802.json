@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards122/2802",
+  "attack": 100,
+  "attribute": 32,
+  "categories": [
+    "발동-리버스",
+    "발동-파괴",
+    "소환-패,덱"
+  ],
+  "code": 64977888,
+  "defense": 1500,
+  "description": "①: 이 카드가 리버스했을 경우에 발동할 수 있다. 패에서 몬스터 1장을 특수 소환한다. ②: 이 카드가 전투 / 효과로 파괴되어 묘지로 보내졌을 경우에 발동할 수 있다. 패에서 몬스터 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "3aba8ed83a3015de185a1c44f22794c11a597e65d99d9a76a22a193f666c205b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native122/cards/2802.jpg",
+  "level": 2,
+  "links": [],
+  "name": "견습 마적사",
+  "name_english": "Apprentice Piper",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "search_aliases": [
+    "견습마적사",
+    "견습 마적사",
+    "Apprentice Piper"
+  ],
+  "source_id": 2802,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "리버스 몬스터",
+  "web_slot": 1834
+}

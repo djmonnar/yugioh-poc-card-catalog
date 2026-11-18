@@ -1,0 +1,20 @@
+{
+  "description": "어둠의 게임 시작 시 첫 패를 1장 더 받고 LP를 500 회복합니다. 최대 LP를 넘지 않습니다. 같은 장소에서 전투를 다시 시작해도 회복은 한 번만 적용됩니다.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 10,
+  "iconKey": "Relics/atlas160",
+  "id": "shadow_blessing093",
+  "kind": "shadow_blessing093",
+  "name": "어둠의 축복",
+  "params": {
+    "heal": 500,
+    "opening_draw": 1
+  },
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

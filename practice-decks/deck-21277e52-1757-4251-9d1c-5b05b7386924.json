@@ -1,0 +1,70 @@
+{
+  "banlist_enabled": true,
+  "extra": [
+    {
+      "count": 2,
+      "identity_key": "bfce9664e15a9a8d70bef559c568ca2254bbf243319b1d89b761e033e76bedbe",
+      "source_id": 2564
+    }
+  ],
+  "id": "deck-21277e52-1757-4251-9d1c-5b05b7386924",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "041c968db1757f43f6f0ffac93b382e86eb2843978841e4362df61c056bb2133",
+      "source_id": 2559
+    },
+    {
+      "count": 2,
+      "identity_key": "2e1f4db61fe961f6b71927b982071f93389fc0b6222cd2c110ee8cc8ae6e0422",
+      "source_id": 2556
+    },
+    {
+      "count": 2,
+      "identity_key": "e62a17908ade5fe79499ece28be07e92f42563251a792661ebb945f548d4e9da",
+      "source_id": 2555
+    },
+    {
+      "count": 2,
+      "identity_key": "4d21ad16a83adcb72f9ee960b5d48e381fb2377a1035d072c57419f593d1043b",
+      "source_id": 2389
+    },
+    {
+      "count": 2,
+      "identity_key": "38c7ceed929684624aeb70d2b736465d99d7adabddb16d0b3bac9e35c8c317c1",
+      "source_id": 153
+    },
+    {
+      "count": 2,
+      "identity_key": "d6e7f990fd9282c3e00bc77ff3ecaad52afefa8ff4e3a39cb9d6cba7a5afe2b3",
+      "source_id": 1823
+    },
+    {
+      "count": 2,
+      "identity_key": "e69b2fea567e1e3fe0e2e79b538ce705c0e8505ec0b932105aeff4d1a40bf81a",
+      "source_id": 1307
+    },
+    {
+      "count": 2,
+      "identity_key": "cd25dbadd1f45fb9fda4fcc2ee7c2a1574f44d36584b495a80db699c3c951de4",
+      "source_id": 1825
+    },
+    {
+      "count": 1,
+      "identity_key": "dfe0fdf9b0d3ac09c4299de2fe5c42f56ce63e08eb19022b9c46ce0cf6c80e0f",
+      "source_id": 1824
+    },
+    {
+      "count": 1,
+      "identity_key": "30fbd2833146a6ada1cb8cfd16c86daa7e1dc86d15bcf8a726ccb1b73d5c0997",
+      "source_id": 2557
+    },
+    {
+      "count": 2,
+      "identity_key": "01e9f3db52bb41c99cde0bfdcbfa92bbce497d8fea6303f8b7f344ad9b33f478",
+      "source_id": 2554
+    }
+  ],
+  "name": "묘지기 상급",
+  "version": 319
+}

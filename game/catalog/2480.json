@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2480",
+  "attack": 500,
+  "attribute": 16,
+  "categories": [
+    "덱-젬나이트",
+    "효과-버리기",
+    "소환-패,덱",
+    "효과-묘지보내기"
+  ],
+  "code": 61011438,
+  "defense": 500,
+  "description": "룰상 젬나이트 카드로도 취급한다. ① 패의 다른 젬나이트 또는 환주 카드 1장을 버리고 이 카드를 특수 소환할 수 있다. 이 효과는 카드명당 1턴에 1번. ② 1턴에 1번 엑스트라 덱의 젬나이트 또는 환주 몬스터 1장을 묘지로 보내고, 턴 종료시까지 이 카드의 이름·종족·속성을 보낸 몬스터의 원래 정보와 같게 할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "50d23c4c84d6194969133f9c406ee9f666f4834f1e69e9dcee88e6e7485c3405",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2480.jpg",
+  "level": 2,
+  "links": [],
+  "name": "브릴리언트 로즈",
+  "name_english": "Brilliant Rose",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "R",
+  "source_id": 2480,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1517
+}

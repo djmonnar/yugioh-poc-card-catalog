@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2494",
+  "attack": 1200,
+  "attribute": 1,
+  "categories": [
+    "덱-젬나이트"
+  ],
+  "code": 99645428,
+  "defense": 100,
+  "description": "암석족의 젬나이트 일반 몬스터. 젬나이트 레이디 라피스라줄리의 지정 융합 소재.",
+  "draw_enabled": true,
+  "identity_key": "b349ab8ce73433337dad6318d9de3f447e4da99dff5847ab0aef870e674ecea5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2494.jpg",
+  "level": 3,
+  "links": [],
+  "name": "젬나이트 라피스",
+  "name_english": "Gem-Knight Lapis",
+  "native_type": 17,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "N",
+  "source_id": 2494,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 몬스터",
+  "web_slot": 1531
+}

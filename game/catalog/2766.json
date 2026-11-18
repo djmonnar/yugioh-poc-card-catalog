@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards120/2766",
+  "attack": 2400,
+  "attribute": 32,
+  "categories": [
+    "덱-붉은눈",
+    "지원-듀얼",
+    "효과-데미지"
+  ],
+  "code": 30079770,
+  "defense": 2000,
+  "description": "①: 이 카드는 필드 / 묘지에 존재하는 한, 일반 몬스터로 취급한다. ②: 필드의 일반 몬스터 취급의 이 카드를 통상 소환으로서 1번 더 일반 소환할 수 있다. 그 경우 이 카드는 효과 몬스터로 취급되며, 이하의 효과를 얻는다.<br>●이 카드가 전투를 실행한 배틀 페이즈 종료시에 발동할 수 있다. 이 카드의 원래 공격력만큼의 데미지를 상대에게 준다. \"붉은 눈의 흑염룡\"의 이 효과는 1턴에 1번밖에 사용할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "8c4db8a7a94ea6e465ac9a010ebc4daa40cc47b7b812fb5eac5cb4854a516c93",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native120/cards/2766.jpg",
+  "level": 7,
+  "links": [],
+  "name": "붉은 눈의 흑염룡",
+  "name_english": "Red-Eyes Black Flare Dragon",
+  "native_type": 2081,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "search_aliases": [
+    "붉은 눈의 흑염룡",
+    "Red-Eyes Black Flare Dragon"
+  ],
+  "source_id": 2766,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "듀얼 몬스터",
+  "web_slot": 1798
+}

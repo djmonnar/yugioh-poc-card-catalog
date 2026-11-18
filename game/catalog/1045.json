@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1045",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-버리기",
+    "효과-한데스"
+  ],
+  "code": 88279736,
+  "defense": 0,
+  "description": "자신의 몬스터 1장이 상대에게\n데미지를 줄 때마다 상대의\n패에서 무작위로 카드 1장을\n선택하여 묘지로 버린다.",
+  "draw_enabled": true,
+  "identity_key": "23a49307c4d51477d9e6c3fc0c5a10eefc3a3b57385a696f5fe086ab75ea7b03",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0106.webp",
+  "level": 0,
+  "links": [],
+  "name": "로빈 고블린",
+  "name_english": "Robbin' Goblin",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1045,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 106
+}

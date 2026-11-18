@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": false,
+  "extra": [],
+  "id": "ch2_battle_73cca432921d0ae49cedde85",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "94bef6b97b015d09dc930e530725ae19025c846a25d59af45e2236b32a71a79b",
+      "source_id": 1520
+    },
+    {
+      "count": 2,
+      "identity_key": "7e5184751796a88db124dbc28ddcb4d7772f74a755a7f26bc5aa9dff360396a9",
+      "source_id": 1999
+    },
+    {
+      "count": 2,
+      "identity_key": "213154da06d5229af4a68a0d57c221c31f67ca7b48ba86ea70761b89f57ae67d",
+      "source_id": 1972
+    },
+    {
+      "count": 1,
+      "identity_key": "2f457513c48e2ee0e034ae7e508d84ec54b1f58c5d36a1ba1c495de7031eb4af",
+      "source_id": 1989
+    },
+    {
+      "count": 3,
+      "identity_key": "1606189c59fad766b10bbffded84651244251ff913ebbe39c20604ed2bc2dc70",
+      "source_id": 1973
+    },
+    {
+      "count": 2,
+      "identity_key": "e6fb6de67c6bf7634070a7a3231fb2c61a71f6680839c7d9b9c26adbe69e2e88",
+      "source_id": 440
+    },
+    {
+      "count": 2,
+      "identity_key": "bcf4c5406d009dcfefcbec9e9dbc378f987cb915b7c4c90f9e0ad75f93df8439",
+      "source_id": 447
+    },
+    {
+      "count": 2,
+      "identity_key": "97ec3d0a386c623b1626d1d27d3b5344ca1f4e5d7950107c7422740f07303f65",
+      "source_id": 1001
+    },
+    {
+      "count": 2,
+      "identity_key": "3853f067a84dd61b64a0028e9eccc0f2cb9f8013dbc600bb0cd4b61485e5ebf4",
+      "source_id": 1990
+    },
+    {
+      "count": 2,
+      "identity_key": "f3f27c7e51578a2a9ba9a8a9963f554467a27c8d8e42470d49b7a5109cf832c7",
+      "source_id": 1971
+    }
+  ],
+  "name": "용만 상급",
+  "version": 467
+}

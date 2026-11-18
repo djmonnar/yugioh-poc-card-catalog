@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1885",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-제외",
+    "효과-제외"
+  ],
+  "code": 43889633,
+  "defense": 0,
+  "description": "이 카드가 필드 위에 존재하는\n한, 이 카드의 카드명은\n\"바다\"로 취급한다. 1턴에\n1번, 자신 필드 위의 레벨 4\n이하의 어류족 / 해룡족 /\n물족 몬스터 1장을 선택하고\n게임에서 제외할 수 있다.\n자신의 엔드 페이즈시, 이\n효과로 제외한 몬스터를 특수\n소환한다.\n[안내] 이름만 \"바다\"가 되며,\n\"바다\"의 공격력 / 수비력\n변화는 없다. 상대 턴에\n제외한 몬스터는 자신의 다음\n엔드 페이즈에 돌아온다.\n[차이] 상대가 공격을\n선언했을 때에는 쓸 수 없고,\n메인 페이즈나 체인으로\n쓴다(컴퓨터는 공격 선언 때\n쓴다).",
+  "draw_enabled": true,
+  "identity_key": "339b4eaa677c67989ded9c942a01f578cf97c0054c26791765f9e024653c8fb4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1212.webp",
+  "level": 0,
+  "links": [],
+  "name": "망각의 해저신전",
+  "name_english": "Forgotten Temple of the Deep",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1885,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1212
+}

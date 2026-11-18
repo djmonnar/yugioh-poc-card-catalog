@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards130/2874",
+  "attack": 1000,
+  "attribute": 2,
+  "categories": [
+    "지원-로이드",
+    "발동-버리기",
+    "무효-마법",
+    "무효-함정",
+    "지원-카운터·무효"
+  ],
+  "code": 46848859,
+  "defense": 800,
+  "description": "상대가 자신 필드 위의 마법/함정 카드를 대상으로 \"필드 위의 마법/함정 카드를 파괴한다\"는 효과를 가진 카드를 발동했을 때, 패를 1장 버리는 것으로 그 카드의 발동과 효과를 무효로 하고 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "7aa330a7e9f90952ab42d517048685f00c1cda6517b514c8f208246f2a642367",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native130/cards/2874.jpg",
+  "level": 4,
+  "links": [],
+  "name": "네이비로이드",
+  "name_english": "Carrierroid",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "search_aliases": [
+    "네이비로이드",
+    "Carrierroid"
+  ],
+  "source_id": 2874,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1906
+}

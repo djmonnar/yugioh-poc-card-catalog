@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/521",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-버리기",
+    "효과-드로우",
+    "지원-고레벨"
+  ],
+  "code": 38120068,
+  "defense": 0,
+  "description": "①: 패에서 레벨 8 몬스터\n1장을 버리고 발동할 수 있다.\n자신은 2장 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "6a708381c382bf7ebf77b64431d364cdf3e5399fa9a05c60f544c38d5853895b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0217.webp",
+  "level": 0,
+  "links": [],
+  "name": "트레이드 인",
+  "name_english": "Trade-In",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 521,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 217
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1025",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-암흑계"
+  ],
+  "code": 41142615,
+  "defense": 0,
+  "description": "패의 몬스터 카드를 최대\n3장까지 묘지로 버릴 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "2909d510f8a8e8849aeab49483655c009aa38353fcf27807a1fc9b0c7215f246",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1034.webp",
+  "level": 0,
+  "links": [],
+  "name": "유쾌한 장의사",
+  "name_english": "The Cheerful Coffin",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1025,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1034
+}

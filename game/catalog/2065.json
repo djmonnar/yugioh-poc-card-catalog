@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2065",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "발동-파괴",
+    "효과-드로우"
+  ],
+  "code": 17626381,
+  "defense": 0,
+  "description": "①: 1턴에 1번, 자신 필드의 몬스터가 전투 / 효과로 파괴되었을 경우에 발동한다. 자신은 1장 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "ecdfd296882c318c3dc7c1010d715874f950a7590d9aead00715c60c6a1f7067",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1364.webp",
+  "level": 0,
+  "links": [],
+  "name": "보급 부대",
+  "name_english": "Supply Squad",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2065,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1364
+}

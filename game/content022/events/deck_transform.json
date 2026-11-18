@@ -1,0 +1,18 @@
+{
+  "description": "세 전설의 그림자가 제단 위에 나타난다. 지금 덱의 일부를 내어주고 한 전설의 힘을 받아보자.",
+  "effect": "덱 카드 정확히 2매 제거 · 붉은 눈/푸른 눈/블랙 매지션 중 선택한 테마의 무작위 카드 3매 획득 · 메인 최소 20장 유지",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "deck_transform",
+  "kind": "deck_transform",
+  "name": "덱 카드 2장을 바치고 테마 카드 3장 획득",
+  "params": {
+    "count": 3,
+    "remove_count": 2
+  },
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "덱 변환",
+  "weight": 1
+}

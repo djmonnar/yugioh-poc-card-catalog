@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2074",
+  "attack": 1150,
+  "attribute": 1,
+  "categories": [
+    "지원-융합"
+  ],
+  "code": 30451366,
+  "defense": 900,
+  "description": "이 카드를 융합 소재 몬스터 1장 대신에 사용할 수 있다. 그 때, 다른 융합 소재 몬스터는 규정한 것이어야 한다.",
+  "draw_enabled": true,
+  "identity_key": "f8fc3a63e54cccb01ee9b7c8848645de32fb714e3356be6b7d0558a73361acf0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1372.webp",
+  "level": 3,
+  "links": [],
+  "name": "일루전 시프",
+  "name_english": "Mystical Sheep #1",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "N",
+  "source_id": 2074,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1372
+}

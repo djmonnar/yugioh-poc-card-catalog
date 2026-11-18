@@ -1,0 +1,51 @@
+{
+  "artKey": "DuelUi011/legacy/kaiba_intro",
+  "banlistEnabled": false,
+  "deckName": "융합 썬더드래곤",
+  "extra": [
+    612,
+    612,
+    612,
+    1526,
+    1526
+  ],
+  "id": "enc-046cc80c-c45d-4669-9437-fcb0d134187a",
+  "lpBonus": 0,
+  "main": [
+    424,
+    424,
+    424,
+    442,
+    442,
+    574,
+    1003,
+    1003,
+    1003,
+    2419,
+    2419,
+    2418,
+    2418,
+    1524,
+    1524,
+    1523,
+    1523,
+    1523,
+    2628,
+    2628
+  ],
+  "name": "카이바",
+  "openingDrawBonus": 0,
+  "profileId": "kaiba",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 108,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-046cc80c-c45d-4669-9437-fcb0d134187a",
+  "usesNativeRules035": true
+}

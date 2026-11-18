@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/320",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "발동-묘지",
+    "지원-장착",
+    "효과-바운스"
+  ],
+  "code": 99597615,
+  "defense": 0,
+  "description": "장착 몬스터의 공격력을 700\n올린다. 이 카드가 필드에서\n묘지로 보내졌을 때, 500 LP를\n지불하고 자신의 덱 맨 위에\n놓을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "5afdc90cfe458eca0397da71908a2cf6e72fda9ad733a2c5452a1b684c235a34",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0015.webp",
+  "level": 0,
+  "links": [],
+  "name": "악마의 키스",
+  "name_english": "Malevolent Nuzzler",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 320,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 15
+}

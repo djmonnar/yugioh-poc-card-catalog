@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards125/2834",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-에일리언",
+    "A 카운터"
+  ],
+  "code": 34541863,
+  "defense": 0,
+  "description": "자신의 스텐바이 페이즈시, 상대 필드 위에 앞면 표시로 존재하는 몬스터 1장을 선택하고, A 카운터를 1개 놓는다.",
+  "draw_enabled": true,
+  "identity_key": "fec128bd4b28a56dccf722e1a2afda7f46fa4190efd0a48f89a99093c6662c97",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native125/cards/2834.jpg",
+  "level": 0,
+  "links": [],
+  "name": "\"A\" 세포 증식 장치",
+  "name_english": "\"A\" Cell Breeding Device",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "search_aliases": [
+    "\"A\" 세포 증식 장치",
+    "\"A\" Cell Breeding Device"
+  ],
+  "source_id": 2834,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 1866
+}

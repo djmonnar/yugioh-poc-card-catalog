@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1898",
+  "attack": 3000,
+  "attribute": 4,
+  "categories": [
+    "효과-데미지",
+    "소환제약",
+    "소환-상대필드"
+  ],
+  "code": 102380,
+  "defense": 2500,
+  "description": "이 카드는 통상 소환할 수\n없다. 상대 필드의 몬스터\n2장을 릴리스했을 경우에 상대\n필드에 특수 소환할 수 있다.\n이 카드를 특수 소환하는\n턴에, 자신은 통상 소환할 수\n없다. ①: 자신 스탠바이\n페이즈에 발동한다. 자신은\n1000 데미지를 받는다.\n[안내] 패의 이 카드를 눌러\n\"특수 소환\"을 고르고,\n릴리스할 상대 몬스터 2장을\n차례로 클릭한다.\n[차이] 이 카드의 특수\n소환에는 \"신의 심판\" 등\n소환을 무효로 하는 카드를\n발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "8eb7b0b13cdaed21967f28dfb5ad23c6708fd6cbcc0315189c250126baf10b02",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1225.webp",
+  "level": 8,
+  "links": [],
+  "name": "용암 마신 라바 골렘",
+  "name_english": "Lava Golem",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "UR",
+  "source_id": 1898,
+  "speed_limit": 2,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1225
+}

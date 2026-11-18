@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1906",
+  "attack": 2900,
+  "attribute": 32,
+  "categories": [
+    "덱-블랙매지션",
+    "효과-버리기",
+    "면역-마법",
+    "파괴-마법"
+  ],
+  "code": 98502113,
+  "defense": 2400,
+  "description": "\"블랙 매지션\" ＋ \"버스터\n블레이더\"\n이 카드는 융합 소환으로밖에\n특수 소환할 수 없다. ①: 이\n카드의 공격력은, 서로의 필드\n/ 묘지의 드래곤족 몬스터의\n수 × 500 올린다. ②: 마법\n카드가 발동했을 때, 패를 1장\n버리고 발동할 수 있다. 이\n카드가 필드에 앞면 표시로\n존재할 경우, 그 발동을\n무효로 하고 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "97d0c76de1b1087ac3c8494e36dc4acd2e3a8ab929f4577c6f8cb085ab50b975",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1229.webp",
+  "level": 8,
+  "links": [
+    {
+      "identity_key": "a850b8cd0e118c301dde50e7dcabc13ebb54f1506ec19fbe0694955bba7dfd67",
+      "slot": 803
+    },
+    {
+      "identity_key": "f0d959e022143fa3bb82fc15ca28ca7a75985b5a6b45ff245f8afb403be46b22",
+      "slot": 716
+    }
+  ],
+  "name": "초마도검사 블랙 파라딘",
+  "name_english": "Dark Paladin",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 1906,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 1229
+}

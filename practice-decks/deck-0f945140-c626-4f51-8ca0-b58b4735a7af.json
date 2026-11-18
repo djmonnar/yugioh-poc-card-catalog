@@ -1,0 +1,49 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-0f945140-c626-4f51-8ca0-b58b4735a7af",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "ad1ab15d4306e87c333e14e84805bb6b231fc7318f50d77c938eddeab5f85c76",
+      "source_id": 266
+    },
+    {
+      "count": 3,
+      "identity_key": "e03516c5ceb34a16a986ed505a9cdff70b1b9d55d82d3c7e48e8c6267eb603a4",
+      "source_id": 1800
+    },
+    {
+      "count": 3,
+      "identity_key": "7a003194a45c237deedfd66918540f3f4054041f90c60fd75b49d45fdca1e8ca",
+      "source_id": 1256
+    },
+    {
+      "count": 2,
+      "identity_key": "64028f7acd32daba0282d5dfa5416908fa5319002420a5960913701a28f55e32",
+      "source_id": 637
+    },
+    {
+      "count": 3,
+      "identity_key": "d4bc6486e9905c4b8ab39ec7d91179797ee89af2bad92ed89204edd7255584dd",
+      "source_id": 618
+    },
+    {
+      "count": 2,
+      "identity_key": "f57735d759d84c2f500a6702fd3f356d0d17fb7782646081e1f11c003d1ef969",
+      "source_id": 329
+    },
+    {
+      "count": 2,
+      "identity_key": "5fdc58a7f4a2a6120dc749446ceec3c3836a0b58423a2ebda696ce8d62e5bbdd",
+      "source_id": 2047
+    },
+    {
+      "count": 2,
+      "identity_key": "2fc0411822fedd8614e206bcfd89681d80bb23998a4790eb45adbc4ec800878f",
+      "source_id": 2390
+    }
+  ],
+  "name": "아키 식물 초급",
+  "version": 488
+}

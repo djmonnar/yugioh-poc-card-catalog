@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards130/2873",
+  "attack": 1000,
+  "attribute": 8,
+  "categories": [
+    "지원-로이드",
+    "효과-제외",
+    "소환-제외",
+    "효과-데미지",
+    "지원-전투"
+  ],
+  "code": 10449150,
+  "defense": 1200,
+  "description": "이 카드가 공격 대상으로 선택되었을 때, 이 카드를 제외할 수 있다. 이 효과로 제외된 경우, 다음 자신의 스탠바이 페이즈에 이 카드를 특수 소환하고 상대에게 1000 데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "6affc07caccd5194bc74f2cb2190884568913a0a4c4c15120d978bac52988bb9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native130/cards/2873.jpg",
+  "level": 4,
+  "links": [],
+  "name": "셔틀로이드",
+  "name_english": "Shuttleroid",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "SR",
+  "search_aliases": [
+    "셔틀로이드",
+    "Shuttleroid"
+  ],
+  "source_id": 2873,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1905
+}

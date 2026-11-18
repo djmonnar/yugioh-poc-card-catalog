@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards099/2727",
+  "attack": 0,
+  "attribute": 32,
+  "categories": [
+    "소환-토큰",
+    "지원-릴리즈"
+  ],
+  "code": 46173680,
+  "defense": 0,
+  "description": "「종언의 화염」의 효과로 특수 소환된다. 이 토큰은 어드밴스 소환을 위해 릴리스할 경우, 어둠 속성 몬스터의 어드밴스 소환을 위해서만 릴리스할 수 있다.",
+  "draw_enabled": false,
+  "identity_key": "7a980ec1ac3f3ebb5abcdb5fd7373dcfc91eb6400dfaa996ffd9b6203c1edd7d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native099/cards/2727.jpg",
+  "level": 1,
+  "links": [],
+  "name": "흑염 토큰 1",
+  "name_english": "Doomsday Token",
+  "native_type": 16401,
+  "normal_limit": 0,
+  "playable": false,
+  "race": 8,
+  "rarity": "N",
+  "search_aliases": [
+    "종언의화염(흑염토큰)",
+    "흑염 토큰 1",
+    "흑염토큰1",
+    "Doomsday Token"
+  ],
+  "source_id": 2727,
+  "speed_limit": null,
+  "stock": false,
+  "token": true,
+  "type_name": "일반 몬스터 토큰",
+  "web_slot": 1759
+}

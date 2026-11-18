@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/403",
+  "attack": 1900,
+  "attribute": 8,
+  "categories": [
+    "효과-버리기",
+    "지원-필드",
+    "덱-해피"
+  ],
+  "code": 75064463,
+  "defense": 1200,
+  "description": "①: 이 카드의 카드명은, 필드\n/ 묘지에 존재하는 한 \"해피\n레이디\"로 취급한다. ②: 이\n카드를 패에서 묘지로 버리고\n발동할 수 있다. 덱에서\n\"해피의 사냥터\" 1장을 패에\n넣는다.",
+  "draw_enabled": true,
+  "identity_key": "2e168a76d266646266cac0e53f728bf2bc176f6056ab030a73457f6a9c7eb404",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0353.webp",
+  "level": 4,
+  "links": [],
+  "name": "해피 퀸",
+  "name_english": "Harpie Queen",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "UR",
+  "source_id": 403,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 353
+}

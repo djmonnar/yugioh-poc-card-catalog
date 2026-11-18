@@ -1,0 +1,45 @@
+{
+  "art_key": "CharacterPresentation012/images/keith/start",
+  "id": "character-aa9db1e3-c599-4759-8e1b-2844e1a2faf6",
+  "profile": {
+    "name": "밴디트키스",
+    "portrait": "assets/actors/shared-keith126.png",
+    "skill_profiles": [
+      {
+        "name": "새 난이도 특성",
+        "profile_id": "268be1f8-180c-4a76-834c-c88d521f66b2",
+        "skills": []
+      },
+      {
+        "name": "위기회피",
+        "profile_id": "1bb5b947-1e5d-4c37-b8b0-4414799d5b6c",
+        "skills": [
+          {
+            "kind": "draw_once",
+            "threshold": 2000,
+            "value": 1
+          }
+        ]
+      },
+      {
+        "name": "볼캐닉",
+        "profile_id": "profile-bae6f350-e433-401c-aa3d-9c16facbb89e",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "66c9ecf34284dcd4f922e1b6d826414325aa8c4b4033e308ce288026f0bb44ea",
+              "internal_id": 1802,
+              "name_ko": "브레이즈 캐논",
+              "slot": 1289
+            },
+            "kind": "start_field"
+          }
+        ]
+      }
+    ],
+    "skills": []
+  },
+  "profile_id": "keith",
+  "updated_at": "2026-11-11T23:15:25.337845+00:00",
+  "version": 3927
+}

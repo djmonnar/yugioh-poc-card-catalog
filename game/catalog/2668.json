@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards093/2668",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-저레벨",
+    "소환-패,덱"
+  ],
+  "code": 20065322,
+  "defense": 0,
+  "description": "①: 덱에서 \"크리보\" 또는 \"날개 크리보\" 1장을 고르고, 패에 넣거나 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "80e4564840d478e757208a3aaf8e31eeb3daa5cbbd123c705d30aba49fe58fb7",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native093/cards/2668.jpg",
+  "level": 0,
+  "links": [],
+  "name": "크리보를 부르는 피리",
+  "name_english": "The Flute of Summoning Kuriboh",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "크리보를 부르는 피리",
+    "크리보를부르는피리",
+    "The Flute of Summoning Kuriboh"
+  ],
+  "source_id": 2668,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1700
+}

@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": false,
+  "extra": [],
+  "id": "ch1_battle_1c51dd0009e1f4e21e01e50e",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "e69b2fea567e1e3fe0e2e79b538ce705c0e8505ec0b932105aeff4d1a40bf81a",
+      "source_id": 1307
+    },
+    {
+      "count": 3,
+      "identity_key": "dbaf42f889935cae91b4090f8c249a4ebab5a9af22394288c56e47e842c60267",
+      "source_id": 1822
+    },
+    {
+      "count": 2,
+      "identity_key": "d6e7f990fd9282c3e00bc77ff3ecaad52afefa8ff4e3a39cb9d6cba7a5afe2b3",
+      "source_id": 1823
+    },
+    {
+      "count": 2,
+      "identity_key": "b9165ddc34db4f34904dcf646fd737d2770b95080484adb417844ac99503cc14",
+      "source_id": 1829
+    },
+    {
+      "count": 2,
+      "identity_key": "900003f145b33f2790d4dcf4b19234c46abd2ebc940072c875c3e0ae35384714",
+      "source_id": 1935
+    },
+    {
+      "count": 1,
+      "identity_key": "513b0f2e788710c3ca8e10bfda266cae824d66000487a9b3a7a0d5b81f57e73f",
+      "source_id": 1826
+    },
+    {
+      "count": 2,
+      "identity_key": "4d21ad16a83adcb72f9ee960b5d48e381fb2377a1035d072c57419f593d1043b",
+      "source_id": 2389
+    },
+    {
+      "count": 2,
+      "identity_key": "dfe0fdf9b0d3ac09c4299de2fe5c42f56ce63e08eb19022b9c46ce0cf6c80e0f",
+      "source_id": 1824
+    },
+    {
+      "count": 2,
+      "identity_key": "cd25dbadd1f45fb9fda4fcc2ee7c2a1574f44d36584b495a80db699c3c951de4",
+      "source_id": 1825
+    },
+    {
+      "count": 2,
+      "identity_key": "62d49484afd4ee81dcd0521bcd53aaf0f39dad042b7bfe2f914362639620f07b",
+      "source_id": 1888
+    }
+  ],
+  "name": "이시즈 이슈타르 · 20장",
+  "version": 471
+}

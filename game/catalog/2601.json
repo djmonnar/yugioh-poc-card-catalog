@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards081/2601",
+  "attack": 200,
+  "attribute": 32,
+  "categories": [
+    "지원-의식마인",
+    "지원-의식"
+  ],
+  "code": 30492798,
+  "defense": 200,
+  "description": "의식 소재가 필요할 때 묘지의 이 카드를 제외하여 소재로 쓸 수 있습니다. 이 카드를 소재로 의식 소환한 몬스터에는 함정 효과가 적용되지 않습니다.",
+  "draw_enabled": true,
+  "identity_key": "f2d92f116ad6d20f267775af80f4fd47335a156d171905a24df2ad68e82d90e9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native081/cards/2601.jpg",
+  "level": 1,
+  "links": [],
+  "name": "의식마인 디저즈",
+  "name_english": "Djinn Disserere of Rituals",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "source_id": 2601,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1633
+}

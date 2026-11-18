@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/276",
+  "attack": 1600,
+  "attribute": 1,
+  "categories": [
+    "덱-젬나이트"
+  ],
+  "code": 54620698,
+  "defense": 1800,
+  "description": "그는 신비로운 에너지를\n전달하여 이를 전투력으로\n바꿉니다.",
+  "draw_enabled": true,
+  "identity_key": "4eb599ea6885b1fb5294cfbe68e87c2066d33589886ec24d66aa67fc82f1a882",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0292.webp",
+  "level": 4,
+  "links": [],
+  "name": "젬나이트 르말린",
+  "name_english": "Gem-Knight Tourmaline",
+  "native_type": 17,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4096,
+  "rarity": "N",
+  "source_id": 276,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 몬스터",
+  "web_slot": 292
+}

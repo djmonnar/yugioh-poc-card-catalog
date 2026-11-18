@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards109/2759",
+  "attack": 0,
+  "attribute": 32,
+  "categories": [
+    "지원-릴리즈"
+  ],
+  "code": 47942531,
+  "defense": 0,
+  "description": "이 카드의 공격력은 제물 소환시에 제물로 바친 몬스터 1장의 원래 공격력을 배로 한 수치가 된다.",
+  "draw_enabled": true,
+  "identity_key": "1e75ab31ef121b6f085fac82c8d4ea0494fda228ee619dcec882467e359d7737",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native109/cards/2759.jpg",
+  "level": 6,
+  "links": [],
+  "name": "위대한 마수 가젯트",
+  "name_english": "Great Maju Garzett",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "search_aliases": [
+    "위대한마수가젯트",
+    "위대한 마수 가젯트",
+    "Great Maju Garzett"
+  ],
+  "source_id": 2759,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1791
+}

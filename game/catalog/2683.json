@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards093/2683",
+  "attack": 2500,
+  "attribute": 32,
+  "categories": [
+    "덱-데몬",
+    "소환-묘지"
+  ],
+  "code": 68371799,
+  "defense": 1200,
+  "description": "이 카드명의 ①의 방법에 의한 특수 소환은 1턴에 1번밖에 할 수 없다. ①: 자신 필드에 \"데몬\" 카드가 존재할 경우, 이 카드는 패에서 특수 소환할 수 있다. 이 턴에, 이 카드는 공격할 수 없다. ②: 이 카드의 ①의 방법으로 특수 소환에 성공했을 경우, 자신 필드의 \"데몬\" 카드 1장을 대상으로 하고 발동한다. 그 자신의 \"데몬\" 카드를 파괴한다. ③: 이 카드가 어드밴스 소환에 성공했을 때, 자신 묘지의 레벨 6 의 \"데몬\" 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 수비 표시로 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "647f460bb6ee21a6141c72d9d673be80ede0d973ac46eaa0cee83b6d49cdecba",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native093/cards/2683.jpg",
+  "level": 6,
+  "links": [],
+  "name": "데몬의 장성",
+  "name_english": "Archfiend Commander",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "search_aliases": [
+    "데몬의장성",
+    "데몬의 장성",
+    "Archfiend Commander"
+  ],
+  "source_id": 2683,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1715
+}

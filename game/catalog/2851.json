@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards126/2851",
+  "attack": 1600,
+  "attribute": 1,
+  "categories": [
+    "소환-함정 몬스터",
+    "지원-아포피스",
+    "지원-파충류",
+    "지원-함정",
+    "효과-덱샐비지"
+  ],
+  "code": 95561146,
+  "defense": 1800,
+  "description": "이 카드명의 ①②의 효과는 각각 1턴에 1번밖에 사용할 수 없다. ①: 이 카드는 발동 후, 일반 몬스터(파충류족 / 땅 / 레벨 4 / 공 1600 / 수 1800)가 되고, 몬스터 존에 특수 소환한다(함정 카드로도 취급한다). 그 후, 덱에서 \"아포피스의 사신\" 이외의 \"아포피스\" 함정 카드 1장을 자신 필드에 세트할 수 있다. 이 효과로 세트한 카드는 세트한 턴에도 발동할 수 있다. ②: 이 카드가 묘지로 보내졌을 경우에 발동할 수 있다. 덱에서 \"아포피스의 화신\" 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "860ac9a49c1b377b5215fcfccaa1296531191e349739b855089a2490a66f04b5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native126/cards/2851.jpg",
+  "level": 4,
+  "links": [],
+  "name": "아포피스의 사신",
+  "name_english": "Apophis the Serpent",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 524288,
+  "rarity": "SR",
+  "search_aliases": [
+    "아포피스의 사신",
+    "Apophis the Serpent"
+  ],
+  "source_id": 2851,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 1883
+}

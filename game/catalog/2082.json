@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2082",
+  "attack": 2300,
+  "attribute": 16,
+  "categories": [
+    "발동-릴리즈",
+    "소환-패,덱",
+    "효과-드로우",
+    "덱-천공"
+  ],
+  "code": 12510878,
+  "defense": 2000,
+  "description": "①: 이 카드는 자신 필드의 \"천공기사 파샤스\" 1장을 릴리스하고 패에서 특수 소환할 수 있다. ②: 필드에 \"천공의 성역\"이 존재하고, 자신의 LP가 상대보다 많을 경우, 이 카드의 공격력 / 수비력은 그 차의 수치만큼 올린다. ③: 이 카드가 수비 표시 몬스터를 공격했을 경우, 그 수비력을 공격력이 넘은 만큼만 전투 데미지를 준다. ④: 이 카드가 상대에게 전투 데미지를 주었을 경우에 발동한다. 자신은 덱에서 1장 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "84fdf374562c5c486b67cd56147a498442bca51b2dbc5373e20a56b57b356311",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1380.webp",
+  "level": 7,
+  "links": [
+    {
+      "identity_key": "e256dd5bfd39ab06196f61db51794a8e14143e3c30922f799a6cea000cf001a5",
+      "slot": 1308
+    }
+  ],
+  "name": "천공용사 네오파샤스",
+  "name_english": "Neo-Parshath, the Sky Paladin",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "UR",
+  "source_id": 2082,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1380
+}

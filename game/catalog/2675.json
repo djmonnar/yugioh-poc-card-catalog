@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards093/2675",
+  "attack": 200,
+  "attribute": 16,
+  "categories": [
+    "지원-천사족",
+    "소환-패,덱"
+  ],
+  "code": 87774234,
+  "defense": 300,
+  "description": "이 카드가 마법/함정/몬스터의 효과에 의해서 자신의 덱에서 패에 넣어졌을 경우, 이 카드를 자신 필드 위에 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "5112d64150d4e2021a9b6abdf1f702a470884bab8fbfce22d7985be5a8aa2052",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native093/cards/2675.jpg",
+  "level": 1,
+  "links": [],
+  "name": "와타폰",
+  "name_english": "Watapon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "N",
+  "search_aliases": [
+    "와타폰",
+    "Watapon"
+  ],
+  "source_id": 2675,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1707
+}

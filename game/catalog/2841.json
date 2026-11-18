@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards126/2841",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-묘지샐비지",
+    "지원-공용"
+  ],
+  "code": 81191584,
+  "defense": 0,
+  "description": "①: 자신 묘지의 수비력 0 의 어둠 속성 몬스터 2장을 대상으로 하고 발동할 수 있다. 그 어둠 속성 몬스터를 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "937333b73d6a67daec3cbec6be2849d793ff9ab15353bdb9c2c89de627d45d69",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native126/cards/2841.jpg",
+  "level": 0,
+  "links": [],
+  "name": "악몽 재발",
+  "name_english": "Recurring Nightmare",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "악몽 재발",
+    "Recurring Nightmare"
+  ],
+  "source_id": 2841,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1873
+}

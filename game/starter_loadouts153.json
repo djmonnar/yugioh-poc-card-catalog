@@ -1,0 +1,20 @@
+{
+  "unified039_fd32f65886586ea650a3284e708a3f52dfd48f1a": {
+    "gold": 120,
+    "lp": 5200,
+    "openingDrawBonus": 2,
+    "relicIds": [
+      "restoring_ankh"
+    ],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_hand",
+        "position": 0,
+        "sourceId": 0,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  }
+}

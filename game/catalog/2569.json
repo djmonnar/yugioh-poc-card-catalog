@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards067/2569",
+  "attack": 2600,
+  "attribute": 8,
+  "categories": [
+    "덱-가이아"
+  ],
+  "code": 2519690,
+  "defense": 2100,
+  "description": "융합 소재: ‘암흑 기사 가이아’ 몬스터 1장 + 드래곤족 몬스터 1장. 몬스터 존에 있는 동안 카드 이름을 ‘용기사 가이아’로 취급한다. 특수 소환 시 덱이나 묘지의 ‘나선창살’ 1장을 패에 넣을 수 있다. 상대 몬스터에 공격을 선언할 때 그 상대 몬스터의 표시 형식을 변경할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "de04e8932d4e720bbf33b425317688271363b31e78219d0a769209e68c512369",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2569.jpg",
+  "level": 7,
+  "links": [],
+  "name": "천상의 용기사 가이아",
+  "name_english": "Sky Galloping Gaia the Dragon Champion",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "UR",
+  "source_id": 2569,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 / 효과 몬스터",
+  "web_slot": 1601
+}

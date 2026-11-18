@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1850",
+  "attack": 1000,
+  "attribute": 2,
+  "categories": [
+    "덱-아틀란티스",
+    "면역-마법"
+  ],
+  "code": 90337190,
+  "defense": 1000,
+  "description": "\"바다\"가 필드 위에 존재하는 한, 이 카드는 마법의 효과를 받지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "953cccf6308079c3270771d1bbe83de6000671fe82f4200a1ae33f91fd974068",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1302.webp",
+  "level": 3,
+  "links": [
+    {
+      "identity_key": "038b1238360753e7d6d9988dbcff3bcc304c4620d9cf10f587b5430ff1a4452d",
+      "slot": 1078
+    }
+  ],
+  "name": "어뢰어",
+  "name_english": "Torpedo Fish",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 131072,
+  "rarity": "R",
+  "source_id": 1850,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1302
+}

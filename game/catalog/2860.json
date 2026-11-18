@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards126/2860",
+  "attack": 2000,
+  "attribute": 1,
+  "categories": [
+    "지원-전투",
+    "발동-파괴"
+  ],
+  "code": 82482194,
+  "defense": 1800,
+  "description": "이 카드가 상대 필드 위 몬스터 1장을 전투에 의해서 파괴하여 묘지로 보낼 때마다, 이 카드의 공격력은 500 포인트 올린다.",
+  "draw_enabled": true,
+  "identity_key": "7019832552aa60957353fdfa5b7878cfe665aefc865580ef942f513cb7aba8bb",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native126/cards/2860.jpg",
+  "level": 5,
+  "links": [],
+  "name": "밀레니엄 스콜피온",
+  "name_english": "Millennium Scorpion",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "R",
+  "search_aliases": [
+    "밀레니엄 스콜피온",
+    "Millennium Scorpion"
+  ],
+  "source_id": 2860,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1892
+}

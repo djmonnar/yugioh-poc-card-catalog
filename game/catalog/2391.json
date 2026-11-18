@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards035/2391",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "발동-lp지불",
+    "파괴-함정",
+    "파괴-마법"
+  ],
+  "code": 45939841,
+  "defense": 0,
+  "description": "500 LP를 지불하고, 필드의 앞면 표시 마법 / 함정 카드 1장을 대상으로 하여 발동할 수 있다. 그 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "5322bd47dbe75184a786983dee49d7d9d5c0641cef2ee938722e3f98e923f78f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native035/cards/2391.jpg",
+  "level": 0,
+  "links": [],
+  "name": "트위스터",
+  "name_english": "Twister",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "source_id": 2391,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 1428
+}

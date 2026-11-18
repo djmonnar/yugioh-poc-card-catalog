@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/279",
+  "attack": 1400,
+  "attribute": 2,
+  "categories": [
+    "효과-바운스",
+    "효과-드로우"
+  ],
+  "code": 65984457,
+  "defense": 400,
+  "description": "이 카드가 \"검투수\"라는\n이름이 붙은 몬스터의 효과에\n의해서 특수 소환에 성공했을\n경우, 이 카드가 전투를\n실행한 배틀 페이즈 종료시에\n이 카드를 덱으로 되돌리는\n것으로, 덱에서 카드를 1장\n드로우한다.\n[안내] 필드의 이 카드를\n선택하여 발동하면 자신\n필드의 \"검투수\" 몬스터\n2장(\"검투수 티겔\" 제외)을\n덱으로 되돌리고 엑스트라\n덱의 \"검투수 에세다리\"를\n특수 소환할 수 있다(체인이\n발생한다).",
+  "draw_enabled": true,
+  "identity_key": "08f89ec88ca52bcba63897dd3e834912c5e1adc36cbf5c58e6fa4476af2b995b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0110.webp",
+  "level": 3,
+  "links": [],
+  "name": "검투수 트라케스",
+  "name_english": "Gladiator Beast Torax",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 131072,
+  "rarity": "N",
+  "source_id": 279,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 110
+}

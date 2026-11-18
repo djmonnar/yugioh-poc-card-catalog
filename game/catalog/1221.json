@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1221",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-버리기",
+    "효과-드로우",
+    "지원-암흑계"
+  ],
+  "code": 72892473,
+  "defense": 0,
+  "description": "양쪽 플레이어는 패를 모두\n버리고, 버린 매수만큼 각각\n자신의 덱에서 드로우한다.",
+  "draw_enabled": false,
+  "identity_key": "eec7eeec7f90a1aa1fd18b001257e041d76440ae1692f893f51279f17c72132e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0603.webp",
+  "level": 0,
+  "links": [],
+  "name": "카드 파괴",
+  "name_english": "Card Destruction",
+  "native_type": 2,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "L",
+  "source_id": 1221,
+  "speed_limit": 1,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 603
+}

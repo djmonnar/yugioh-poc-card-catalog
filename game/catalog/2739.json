@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards103/2739",
+  "attack": 1000,
+  "attribute": 32,
+  "categories": [
+    "지원-융합"
+  ],
+  "code": 52101615,
+  "defense": 1600,
+  "description": "이 카드를 융합 소재 몬스터 1장 대신에 사용할 수 있다. 그때, 다른 융합 소재 몬스터는 규정한 것이어야 한다. 자신 필드 위에 존재하는 이 카드를 포함하는 융합 소재 몬스터를 릴리스하는 것으로, 어둠 속성의 융합 몬스터 1장을 엑스트라 덱에서 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "92c407b19462a5b66da924a75b7385a2f879f0bad6d0584aa796b4453afa23f9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native103/cards/2739.jpg",
+  "level": 3,
+  "links": [],
+  "name": "융합 주술봉인 생물－어둠",
+  "name_english": "The Dark - Hex-Sealed Fusion",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "R",
+  "search_aliases": [
+    "융합 주술봉인 생물－어둠",
+    "융합주술봉인생물－어둠",
+    "The Dark - Hex-Sealed Fusion"
+  ],
+  "source_id": 2739,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1771
+}

@@ -1,0 +1,45 @@
+{
+  "artKey": "Character090/images/tristan/start",
+  "banlistEnabled": false,
+  "deckName": "기어프리드-중급",
+  "extra": [],
+  "id": "enc-eb68ebc4-f319-4147-b3ee-d709ce65cb4e",
+  "lpBonus": 0,
+  "main": [
+    1351,
+    1351,
+    1351,
+    2614,
+    2613,
+    2753,
+    2753,
+    2753,
+    2713,
+    2664,
+    2615,
+    2609,
+    370,
+    492,
+    492,
+    492,
+    1450,
+    1450,
+    1957,
+    1957
+  ],
+  "name": "전우혁",
+  "openingDrawBonus": 0,
+  "profileId": "tristan",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 2659,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-eb68ebc4-f319-4147-b3ee-d709ce65cb4e",
+  "usesNativeRules035": true
+}

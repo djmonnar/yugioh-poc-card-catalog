@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards081/2590",
+  "attack": 2600,
+  "attribute": 32,
+  "categories": [
+    "지원-인조인간",
+    "파괴-함정",
+    "무효-함정",
+    "효과-데미지"
+  ],
+  "code": 35803249,
+  "defense": 1600,
+  "description": "통상 소환할 수 없다. 자신의 앞면 표시 ‘인조인간 －사이코 쇼커－’ 1장을 묘지로 보내고 패에서 특수 소환한다. 필드의 함정 발동과 효과를 봉쇄한다. 1턴에 1번, 필드의 앞면 함정을 모두 파괴하고 파괴한 수 × 300 데미지를 상대에게 준다.",
+  "draw_enabled": true,
+  "identity_key": "6738d7e1508c08a42ec2a54ec45af53fa80760ce9e9716f83d7399ed989bc573",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native081/cards/2590.jpg",
+  "level": 8,
+  "links": [],
+  "name": "인조인간－사이코 로드",
+  "name_english": "Jinzo - Lord",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "source_id": 2590,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "특수 소환 / 효과 몬스터",
+  "web_slot": 1622
+}

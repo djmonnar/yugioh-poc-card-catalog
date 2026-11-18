@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/391",
+  "attack": 3000,
+  "attribute": 32,
+  "categories": [
+    "소환제약"
+  ],
+  "code": 50705071,
+  "defense": 2300,
+  "description": "이 몬스터는 \"메탈화\n마법반사장갑\"을 장착한\n\"조아\"를 릴리스했을\n경우에만, 자신의 덱에서\n자신의 필드로 특수 소환할 수\n있다.",
+  "draw_enabled": true,
+  "identity_key": "b78a332395add590ab004b37f7fcba988a07c2b141c51c78fd7f4419471ef4ec",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0975.webp",
+  "level": 8,
+  "links": [],
+  "name": "메탈 데블 조아",
+  "name_english": "Metalzoa",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "source_id": 391,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 975
+}

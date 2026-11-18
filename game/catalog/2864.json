@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards126/2864",
+  "attack": 1000,
+  "attribute": 1,
+  "categories": [
+    "지원-왕가의 신전",
+    "지원-아포피스",
+    "발동-소환",
+    "효과-덱샐비지",
+    "효과-묘지보내기",
+    "면역-전투",
+    "면역-효과"
+  ],
+  "code": 97522863,
+  "defense": 1000,
+  "description": "이 카드명의 ①의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 이 카드를 일반 소환 / 특수 소환했을 경우에 발동할 수 있다. \"왕가의 신전\" 또는 그 카드명이 쓰여진 마법 / 함정 카드 1장을 덱에서 고르고, 패에 넣거나 묘지로 보낸다. ②: 자신 필드에 \"왕가의 신전\"이 존재하는 한, 이 카드 및 자신 필드의 \"아포피스\" 몬스터는 전투 / 효과로는 파괴되지 않는다. ③: 이 카드가 몬스터 존에 존재하는 한, 자신 필드의 \"왕가의 신전\"은 효과로는 파괴되지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "f4f3ff415bb3b2cc7170e4069e483f830f08df58eee01747835cf2e407c0be7e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native126/cards/2864.jpg",
+  "level": 4,
+  "links": [],
+  "name": "각인을 가진 자",
+  "name_english": "The Man with the Mark",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "search_aliases": [
+    "각인을 가진 자",
+    "The Man with the Mark"
+  ],
+  "source_id": 2864,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1896
+}

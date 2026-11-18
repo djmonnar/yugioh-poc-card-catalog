@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2043",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "발동-릴리즈",
+    "소환-덱리크루터"
+  ],
+  "code": 28529976,
+  "defense": 0,
+  "description": "①: 자신 필드의 레벨 2 이하의 식물족 몬스터 1장을 릴리스하고 이 카드를 발동할 수 있다. 릴리스한 몬스터의 레벨 ＋ 3 이하의 레벨을 가지는 식물족 몬스터 1장을, 패 / 덱에서 특수 소환한다. 이 카드가 필드에서 벗어났을 때에 그 몬스터는 파괴된다. 그 몬스터가 필드에서 벗어났을 때에 이 카드는 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "b2144721d4f1aa41748a566fae0de29806007e8253b367143c1e877b14da98c6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1343.webp",
+  "level": 0,
+  "links": [],
+  "name": "초영양태양",
+  "name_english": "Super Solar Nutrient",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2043,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1343
+}

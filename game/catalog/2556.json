@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards067/2556",
+  "attack": 1800,
+  "attribute": 32,
+  "categories": [
+    "덱-묘지기",
+    "면역-마법",
+    "면역-소환",
+    "면역-함정"
+  ],
+  "code": 46955770,
+  "defense": 1500,
+  "description": "필드에 ‘왕가의 골짜기－네크로밸리’가 있으면, 필드의 이 카드는 다른 모든 카드의 효과를 받지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "2e1f4db61fe961f6b71927b982071f93389fc0b6222cd2c110ee8cc8ae6e0422",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2556.jpg",
+  "level": 4,
+  "links": [],
+  "name": "묘지기의 이단자",
+  "name_english": "Gravekeeper's Heretic",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 2556,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1588
+}

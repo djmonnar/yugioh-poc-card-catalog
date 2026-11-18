@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1990",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-릴리즈"
+  ],
+  "code": 84808313,
+  "defense": 0,
+  "description": "자신 필드의 공룡족 몬스터\n1장을 릴리스하고 이 카드를\n발동할 수 있다. 이 카드는\n발동 후, 필드에 계속해서\n남고, 상대 턴에서 세어서\n3턴째의 상대 엔드 페이즈에\n파괴된다. ①: 이 카드가 마법\n& 함정 존에 존재하는 한,\n자신은 레벨 5 이상의 공룡족\n몬스터를 일반 소환할 경우에\n필요한 릴리스를 없앨 수\n있다.\n[차이] 남은 턴 수는 화면에\n표시되지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "3853f067a84dd61b64a0028e9eccc0f2cb9f8013dbc600bb0cd4b61485e5ebf4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1133.webp",
+  "level": 0,
+  "links": [],
+  "name": "대진화약",
+  "name_english": "Big Evolution Pill",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1990,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1133
+}

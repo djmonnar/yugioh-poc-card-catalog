@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1109",
+  "attack": 1400,
+  "attribute": 16,
+  "categories": [
+    "지원-의식",
+    "효과-덱샐비지",
+    "지원-사이버 엔젤"
+  ],
+  "code": 23401839,
+  "defense": 1000,
+  "description": "이 카드가 필드에 소환되었을\n때(특수 소환 제외), 자신의\n덱에서 의식 몬스터 카드\n1장을 패에 넣을 수 있다. 그\n후 덱을 셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "f6af26ef01e7ab92d998dbb441ac6c0fec4fb78c7dcf7983e43c76ceda7f3bf0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0485.webp",
+  "level": 4,
+  "links": [],
+  "name": "천수의 신",
+  "name_english": "Senju of the Thousand Hands",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "SR",
+  "source_id": 1109,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 485
+}

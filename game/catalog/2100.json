@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2100",
+  "attack": 2700,
+  "attribute": 32,
+  "categories": [
+    "효과-묘지보내기",
+    "파괴-마법",
+    "파괴-함정",
+    "지원-듀얼"
+  ],
+  "code": 57662975,
+  "defense": 2500,
+  "description": "①: 이 카드는 필드 / 묘지에 존재하는 한, 일반 몬스터로 취급한다. ②: 필드의 일반 몬스터 취급의 이 카드를 통상 소환으로서 1번 더 일반 소환할 수 있다. 그 경우 이 카드는 효과 몬스터로 취급되어 이하의 효과를 얻는다.\n●1턴에 1번, 자신 필드의 앞면 표시의 마법 / 함정 카드 1장을 묘지로 보내고 발동할 수 있다. 필드의 마법 / 함정 카드를 전부 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "f3a8103576c6b2be3ef295a23bdcd68eb7d9025a372cceb9747f055ea93c43f9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1398.webp",
+  "level": 8,
+  "links": [],
+  "name": "다크스톰 드래곤",
+  "name_english": "Darkstorm Dragon",
+  "native_type": 2081,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "source_id": 2100,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1398
+}

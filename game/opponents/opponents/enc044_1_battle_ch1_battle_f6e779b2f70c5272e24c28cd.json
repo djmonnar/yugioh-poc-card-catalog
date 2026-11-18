@@ -1,0 +1,45 @@
+{
+  "artKey": "DuelUi011/legacy/yugi_intro",
+  "banlistEnabled": false,
+  "deckName": "유희 -블랙매지션 초급",
+  "extra": [],
+  "id": "enc044_1_battle_ch1_battle_f6e779b2f70c5272e24c28cd",
+  "lpBonus": 0,
+  "main": [
+    1050,
+    1050,
+    1050,
+    34,
+    34,
+    1,
+    1,
+    1,
+    1211,
+    1212,
+    759,
+    759,
+    1450,
+    710,
+    1166,
+    1079,
+    1079,
+    1525,
+    1926,
+    1917
+  ],
+  "name": "어둠의 유희",
+  "openingDrawBonus": 0,
+  "profileId": "yugi",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 34,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "398f0499-f074-418f-971d-e78fb1faab4f:104c3fdb-e0f2-4969-9e54-2a4903c39ea5",
+  "usesNativeRules035": false
+}

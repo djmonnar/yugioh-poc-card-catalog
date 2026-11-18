@@ -1,0 +1,94 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "gozaburo_kaiba126",
+  "main": [
+    {
+      "count": 1,
+      "identity_key": "6e1bae4aedbc2757af43e7300cb3df015a922512eabe78d5c3701cbf9d946aa3",
+      "source_id": 16
+    },
+    {
+      "count": 1,
+      "identity_key": "5e9d97a1b2e812b44c07c04812e2c1626c19a10b057a6a0f8a208a7dab64d0f0",
+      "source_id": 17
+    },
+    {
+      "count": 1,
+      "identity_key": "f8bc9f3281cc05fb56680a044359b8e21e38a1267e4b84b09b2545a13b94aa0c",
+      "source_id": 18
+    },
+    {
+      "count": 1,
+      "identity_key": "ae16c0564d992c6b845676870ffdf7c0134562b19df4cc8d1709abe44c48d0db",
+      "source_id": 19
+    },
+    {
+      "count": 1,
+      "identity_key": "933d1ef045582e3b5760594b2951f82272d32316eae1763016b9d7afe0eb184d",
+      "source_id": 20
+    },
+    {
+      "count": 2,
+      "identity_key": "597c178da5baf948723a73719b6ada7dc63ec880873cb3642647e42e3d70739e",
+      "source_id": 2842
+    },
+    {
+      "count": 2,
+      "identity_key": "d6dbe57dac0fe3deb3c39291d8c3f467e69fa6d4ace202618c296bca37b20f8a",
+      "source_id": 2865
+    },
+    {
+      "count": 1,
+      "identity_key": "835def346ab103af40eecf0990b36ecfd16ad487feb789e2d3a70770b6d7a9e7",
+      "source_id": 2507
+    },
+    {
+      "count": 1,
+      "identity_key": "912cf13c207613b87e6a7afc37682e73795f77fe5341b285e7bce0137f7192bd",
+      "source_id": 1939
+    },
+    {
+      "count": 2,
+      "identity_key": "487a2f9665c6c773fc03381d9488bf5fb3b9dd3949c2ef8100dc0258aaab7e2c",
+      "source_id": 2442
+    },
+    {
+      "count": 1,
+      "identity_key": "937333b73d6a67daec3cbec6be2849d793ff9ab15353bdb9c2c89de627d45d69",
+      "source_id": 2841
+    },
+    {
+      "count": 1,
+      "identity_key": "49c27b12b46eeb5bb3c5df51f6c3dbde7ac9664bd4d7991709d53e1ead1dafcf",
+      "source_id": 2843
+    },
+    {
+      "count": 1,
+      "identity_key": "49b5e17e8325a76c2663cffe9be29a0b6498de500c004ad52790b4dd235e8ffd",
+      "source_id": 2844
+    },
+    {
+      "count": 1,
+      "identity_key": "7c93231216065ab98c97591c4bcd552e5c57851d932de7cae341e2ada8c915c0",
+      "source_id": 2839
+    },
+    {
+      "count": 1,
+      "identity_key": "1bb559a41a170a4f994ac9f5d8bd964e4f445249db739f4057470cd0dbeeab75",
+      "source_id": 2800
+    },
+    {
+      "count": 1,
+      "identity_key": "7991d6d5e38d71e4798c42e353ad6848528fe061f073bf2252c920afc4960c32",
+      "source_id": 2665
+    },
+    {
+      "count": 1,
+      "identity_key": "168db3f16deb0abb90230f26dccf91acb79927e7aad83d7638dec640883db3f6",
+      "source_id": 2846
+    }
+  ],
+  "name": "엑조디아와의 계약",
+  "version": 718
+}

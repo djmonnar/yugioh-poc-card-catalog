@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/584",
+  "attack": 3000,
+  "attribute": 32,
+  "categories": [
+    "소환-묘지"
+  ],
+  "code": 66214679,
+  "defense": 1800,
+  "description": "이 카드가 필드 위에 앞면\n표시로 존재하는 한, 상대의\n메인 페이즈시에 마법 카드가\n발동되었을 경우, 자신의\n묘지에서 레벨 4의 어둠 속성\n몬스터 1장을 특수 소환할 수\n있다. 이 효과는 1턴에\n1번밖에 사용할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "dbe1ba4a8d8ca5cfd02353a06f0984f76658a1ac7b3e89997fdf56e6a7d686c3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0964.webp",
+  "level": 8,
+  "links": [],
+  "name": "다크 호루스 드래곤",
+  "name_english": "Dark Horus",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "source_id": 584,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 964
+}

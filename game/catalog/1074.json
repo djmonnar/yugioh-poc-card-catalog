@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1074",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착"
+  ],
+  "code": 43641473,
+  "defense": 0,
+  "description": "이미 장착되어 있는 장착 카드\n1장을 선택하여, 장착 가능한\n다른 대상으로 옮긴다.",
+  "draw_enabled": true,
+  "identity_key": "fac2739aab30a8517f37a780408a538685bb5c742c47b2e49228d6e524a56f5b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0084.webp",
+  "level": 0,
+  "links": [],
+  "name": "변덕스런 재단사",
+  "name_english": "Tailor of the Fickle",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1074,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 84
+}

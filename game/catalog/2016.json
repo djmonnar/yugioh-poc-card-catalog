@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2016",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-저레벨"
+  ],
+  "code": 2084239,
+  "defense": 0,
+  "description": "모든 물족/물 속성/레벨 2 이하 몬스터의 공격력은 1200 포인트 올린다.",
+  "draw_enabled": true,
+  "identity_key": "0817007f585fe352c1d5832bd7ba045b1bdb912424c98c8b02ef64cd6e9171ac",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1319.webp",
+  "level": 0,
+  "links": [],
+  "name": "습지초원",
+  "name_english": "Wetlands",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2016,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1319
+}

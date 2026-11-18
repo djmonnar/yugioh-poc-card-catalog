@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards136/2944",
+  "attack": 2200,
+  "attribute": 32,
+  "categories": [
+    "지원-프레데터 플랜츠",
+    "포식 카운터",
+    "지원-융합",
+    "지원-저레벨",
+    "소환-릴리즈 코스트",
+    "소환-엑스트라 덱에서",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 82370493,
+  "defense": 1500,
+  "description": "\"프레데터 플랜츠\" 몬스터 ＋ 레벨 1 몬스터\n이 카드는 융합 소환과 이하의 방법으로만 엑스트라 덱에서 특수 소환할 수 있다.\n●자신 필드의 \"프레데터 플랜츠\" 몬스터 1장과 자신 또는 상대 필드의 포식 카운터가 놓인 몬스터 1장을 릴리스했을 경우에 특수 소환할 수 있다.\n이 카드명의 효과는 1턴에 1번밖에 사용할 수 없다.\n①: 이 카드가 특수 소환된 자신 / 상대 턴의 메인 페이즈에, 포식 카운터가 놓인 몬스터의 수까지 필드의 마법 / 함정 카드를 대상으로 하고 발동할 수 있다. 그 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "5e2d7cf0596b29e085be173995d8bf1a9e276cd487cd418332ab61ae1ef26fa3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native136/cards/2944.jpg",
+  "level": 6,
+  "links": [],
+  "name": "프레데터 플랜츠 데아데블",
+  "name_english": "Predaplant Daredevil",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "UR",
+  "search_aliases": [
+    "프레데터 플랜츠 데아데블",
+    "Predaplant Daredevil"
+  ],
+  "source_id": 2944,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 1976
+}

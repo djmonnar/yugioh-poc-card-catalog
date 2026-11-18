@@ -1,0 +1,49 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "starter-template-fe3ce983a1b837fb1b43f9a98a522f75",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "acf4f999fb88d03df7baa3682e6d2e1fb0a08d863de8229a89ae543f80a11990",
+      "source_id": 1108
+    },
+    {
+      "count": 2,
+      "identity_key": "f0821962c3b0944a72d41ae0f1b7c6d951d261185ca520a42af642be36cf2f6f",
+      "source_id": 2059
+    },
+    {
+      "count": 2,
+      "identity_key": "a51136374017d7d6e1bf6afdafb3fd52fb6c80a02f573d5f90e13643099273a0",
+      "source_id": 2078
+    },
+    {
+      "count": 2,
+      "identity_key": "683d4c8d14def8397769d2e926e66938c3361d101144d24ca84f04a803ac7880",
+      "source_id": 127
+    },
+    {
+      "count": 3,
+      "identity_key": "0b94b4ee091fe31e345e7eba1aaacacb5594eb069200e63c0e18ddd7456dfaa9",
+      "source_id": 407
+    },
+    {
+      "count": 3,
+      "identity_key": "af851f6492593a9e7c37e0516b499614955d5475a5e5937a77a0f6f8de611bac",
+      "source_id": 455
+    },
+    {
+      "count": 3,
+      "identity_key": "bbc53e2ec11776db7deb7f5d291e80c8a89562722630ee4c45933a5bdc87e7f4",
+      "source_id": 2075
+    },
+    {
+      "count": 2,
+      "identity_key": "e18bfa84cfdffbc5f7680ba291d125d138abf433d20bbe968c71b5d2dec49ab8",
+      "source_id": 2617
+    }
+  ],
+  "name": "야수족",
+  "version": 693
+}

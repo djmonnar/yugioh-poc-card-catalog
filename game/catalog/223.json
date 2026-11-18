@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/223",
+  "attack": 500,
+  "attribute": 1,
+  "categories": [
+    "파괴-함정"
+  ],
+  "code": 46461247,
+  "defense": 1100,
+  "description": "리버스: 필드의 함정 카드\n1장을 파괴한다. 대상이\n뒷면이면 앞면으로 뒤집어\n확인한다. 함정 카드이면\n파괴하고, 아니면 뒷면으로\n되돌린다. 뒤집은 카드의\n효과는 발동하지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "c5e88fff3a9170f394d1700d48ea86f9dcb404abdad0501242b4b8f1d6cc182c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0655.webp",
+  "level": 3,
+  "links": [],
+  "name": "함정술사",
+  "name_english": "Trap Master",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "source_id": 223,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 655
+}

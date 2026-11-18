@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards135/2897",
+  "attack": 0,
+  "attribute": 16,
+  "categories": [
+    "지원-진화약",
+    "지원-공룡족",
+    "지원-파충류",
+    "지원-해룡족",
+    "지원-비행야수족",
+    "발동-소환 시",
+    "파괴-몬스터",
+    "효과-덱샐비지"
+  ],
+  "code": 98022050,
+  "defense": 0,
+  "description": "이 카드명의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 이 카드가 일반 소환 / 특수 소환에 성공했을 경우에 발동할 수 있다. 패 및 자신 필드의 앞면 표시 몬스터 중에서, \"주옥수－아르고사우르스\" 이외의 공룡족 몬스터 1장을 고르고 파괴한다. 그 후, 원래의 레벨이 그 파괴된 몬스터와 같아지는 파충류족 / 해룡족 / 비행야수족 몬스터 1장 또는 \"진화약\" 마법 카드 1장을 덱에서 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "735a593705c0aea7167d7530e32b966568ac43f2aca055afc59cfa900dc2525b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native135/cards/2897.jpg",
+  "level": 1,
+  "links": [],
+  "name": "주옥수－아르고사우르스",
+  "name_english": "Animadorned Archosaur",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "SR",
+  "search_aliases": [
+    "주옥수－아르고사우르스",
+    "Animadorned Archosaur"
+  ],
+  "source_id": 2897,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1929
+}

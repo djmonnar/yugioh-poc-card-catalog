@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1112",
+  "attack": 1600,
+  "attribute": 16,
+  "categories": [
+    "면역-함정"
+  ],
+  "code": 15960641,
+  "defense": 600,
+  "description": "①: 이 카드가 몬스터 존에\n존재하는 한, 상대는 배틀\n페이즈에 함정 카드를 발동할\n수 없다.",
+  "draw_enabled": true,
+  "identity_key": "86a8cab516758502258f73e58a02a6cbef2925d4c9f0ff6725668c673ccff36d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0178.webp",
+  "level": 4,
+  "links": [],
+  "name": "미라지 드래곤",
+  "name_english": "Mirage Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "source_id": 1112,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 178
+}

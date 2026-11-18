@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1819",
+  "attack": 1500,
+  "attribute": 32,
+  "categories": [
+    "덱-묘지기"
+  ],
+  "code": 25262697,
+  "defense": 1500,
+  "description": "\"왕가의\n골짜기－네크로밸리\"가 필드\n위에 존재하지 않으면 발동할\n수 없다. 이 카드의 공격\n선언시, 상대 앞면 표시\n몬스터의 표시 형식을 변경할\n수 있다.",
+  "draw_enabled": true,
+  "identity_key": "866b89cc4b0821ce50754784e7222445742e50a7b68fb4be4e4a76bd6bb0843f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1284.webp",
+  "level": 4,
+  "links": [],
+  "name": "묘지기의 암살자",
+  "name_english": "Gravekeeper's Assailant",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 1819,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1284
+}

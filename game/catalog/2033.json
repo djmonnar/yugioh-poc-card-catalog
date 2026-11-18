@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2033",
+  "attack": 1400,
+  "attribute": 16,
+  "categories": [
+    "발동-묘지",
+    "소환-덱리크루터"
+  ],
+  "code": 48783998,
+  "defense": 800,
+  "description": "①: 이 카드가 전투로 파괴되어 묘지로 보내졌을 때에 발동할 수 있다. 덱에서 공격력 1500 이하의 천사족 / 빛 속성 몬스터 1장을 특수 소환한다. 필드에 \"천공의 성역\"이 존재할 경우, 대신에 \"천공기사 파샤스\" 1장을 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "00378e2157a55b7f266438e3a0bacb027d271da4d58acead4a2fb887bec92be1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1336.webp",
+  "level": 4,
+  "links": [
+    {
+      "identity_key": "e256dd5bfd39ab06196f61db51794a8e14143e3c30922f799a6cea000cf001a5",
+      "slot": 1308
+    },
+    {
+      "identity_key": "d0e0c1f5939df608f7a1850b2a47e3216c40b309d376d0c670a77e6eebdb23fa",
+      "slot": 1337
+    }
+  ],
+  "name": "콜링 노바",
+  "name_english": "Nova Summoner",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "R",
+  "source_id": 2033,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1336
+}

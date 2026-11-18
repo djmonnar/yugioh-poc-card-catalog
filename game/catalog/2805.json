@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards122/2805",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-리버스",
+    "효과-앞면표시"
+  ],
+  "code": 38699854,
+  "defense": 0,
+  "description": "①: 필드의 뒷면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 뒷면 표시 몬스터를 앞면 공격 표시로 한다.",
+  "draw_enabled": true,
+  "identity_key": "2714b01ee7af544683e04ac12ec7154e65b8db2b9842ad0ba19a8d12f62fc278",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native122/cards/2805.jpg",
+  "level": 0,
+  "links": [],
+  "name": "태양의 서",
+  "name_english": "Book of Taiyou",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "태양의서",
+    "태양의 서",
+    "Book of Taiyou"
+  ],
+  "source_id": 2805,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1837
+}

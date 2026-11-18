@@ -1,0 +1,45 @@
+{
+  "artKey": "DuelUi011/legacy/kaiba_intro",
+  "banlistEnabled": false,
+  "deckName": "카이바 푸른눈 초급",
+  "extra": [],
+  "id": "enc044_1_battle_ch1_battle_1adf68770a55120185756404",
+  "lpBonus": 0,
+  "main": [
+    471,
+    471,
+    0,
+    0,
+    1913,
+    1908,
+    1908,
+    710,
+    1166,
+    1915,
+    331,
+    1930,
+    1930,
+    9,
+    9,
+    9,
+    713,
+    603,
+    603,
+    960
+  ],
+  "name": "카이바",
+  "openingDrawBonus": 0,
+  "profileId": "kaiba",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 331,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "installed-story:sc-2a9546bc3b4669bf-c11c10be2a7802b6b97554d85b4807fe",
+  "usesNativeRules035": false
+}

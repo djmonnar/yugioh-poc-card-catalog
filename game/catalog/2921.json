@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards135/2921",
+  "attack": 1700,
+  "attribute": 4,
+  "categories": [
+    "지원-쥬락",
+    "발동-파괴 시",
+    "소환-덱리크루터"
+  ],
+  "code": 59312550,
+  "defense": 1000,
+  "description": "①: 자신 필드의 공격 표시의 이 카드가 전투로 파괴되어 묘지로 보내졌을 때에 발동할 수 있다. 덱에서 공격력 1700 이하의 \"쥬락\" 몬스터 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "d5d32ddea9f996d59b44c83e164e450a7e7a4234b8ad3d1c4354c30840550441",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native135/cards/2921.jpg",
+  "level": 4,
+  "links": [],
+  "name": "쥬락 벨로",
+  "name_english": "Jurrac Velo",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "R",
+  "search_aliases": [
+    "쥬락 벨로",
+    "Jurrac Velo"
+  ],
+  "source_id": 2921,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1953
+}

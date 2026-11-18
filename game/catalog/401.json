@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards/401",
+  "attack": 250,
+  "attribute": 32,
+  "categories": [
+    "효과-묘지샐비지",
+    "지원-융합"
+  ],
+  "code": 84133008,
+  "defense": 350,
+  "description": "1000 LP를 지불하고 묘지의\n\"융합\"을 패로 되돌릴 수\n있다.",
+  "draw_enabled": true,
+  "identity_key": "72024d17a5f03c9f854b2dc9db240a92f1fb799ca0912f92b358e113abca301f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0994.webp",
+  "level": 1,
+  "links": [
+    {
+      "identity_key": "6e88143a6d19b63d51f9f78d79264941a106691798fb78f1579481304fad7560",
+      "slot": 1026
+    }
+  ],
+  "name": "몬스터 아이",
+  "name_english": "Monster Eye",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "source_id": 401,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 994
+}

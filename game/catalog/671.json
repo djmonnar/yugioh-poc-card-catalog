@@ -1,0 +1,32 @@
+{
+  "alias": 18144506,
+  "art_key": "Cards/671",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-해피",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 18144507,
+  "defense": 0,
+  "description": "상대 필드의 모든 마법 / 함정\n카드를 파괴한다.",
+  "draw_enabled": false,
+  "identity_key": "b0daa89e310e3ddfa61b168952f9866e0ae524ec8528737a4a42981d1a2190af",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0695.webp",
+  "level": 0,
+  "links": [],
+  "name": "해피의 깃털",
+  "name_english": "Harpie's Feather Duster",
+  "native_type": 2,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "L",
+  "source_id": 671,
+  "speed_limit": 1,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 695
+}

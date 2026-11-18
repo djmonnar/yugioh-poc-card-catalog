@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards/560",
+  "attack": 1600,
+  "attribute": 1,
+  "categories": [
+    "소환-덱리크루터"
+  ],
+  "code": 58843503,
+  "defense": 0,
+  "description": "자신 필드 위에 \"빅 피스\n골렘\"이 앞면 표시로 존재할\n경우에 이 카드가 일반\n소환/반전 소환/특수 소환에\n성공했을 때, 자신의 덱에서\n\"스몰 피스 골렘\" 1장을 특수\n소환할 수 있다. 이 효과로\n특수 소환한 몬스터의 효과는\n무효화된다.",
+  "draw_enabled": true,
+  "identity_key": "f15691e6340530088b02195d9d6a0902a967e79a043eb9d0b82befac1e1933a2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1081.webp",
+  "level": 4,
+  "links": [
+    {
+      "identity_key": "168645363e004c88b0ec234ac4124c488ae45cdd3028c6341012b7cd219fab29",
+      "slot": 833
+    },
+    {
+      "identity_key": "42ba20e9a1cc59a7cebaec4c7f50299f0a219352e5395504df076a12f5e33bf7",
+      "slot": 286
+    },
+    {
+      "identity_key": "ac12ea0260ca83241a3f31c07b1aa80e27beaa9c00545e92f1693d4d663f0dc4",
+      "slot": 976
+    }
+  ],
+  "name": "미드 피스 골렘",
+  "name_english": "Medium Piece Golem",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "R",
+  "source_id": 560,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1081
+}

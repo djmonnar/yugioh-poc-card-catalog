@@ -1,0 +1,19 @@
+{
+  "description": "덱의 몬스터 카드 1매를 골라 이번 원정 동안 공격력을 올려. 유물을 잃어도 강화는 남고, 해당 카드를 팔거나 제거하면 사라져.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 23,
+  "iconKey": "Relics/atlas163",
+  "id": "forge_attack",
+  "kind": "forge_attack",
+  "name": "카드 제련 (공격)",
+  "params": {
+    "atk": 100
+  },
+  "price": 75,
+  "rarity": "N",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

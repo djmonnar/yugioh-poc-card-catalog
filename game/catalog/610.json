@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/610",
+  "attack": 650,
+  "attribute": 32,
+  "categories": [
+    "효과-드로우",
+    "효과-버리기"
+  ],
+  "code": 81863068,
+  "defense": 500,
+  "description": "리버스: 상대는 카드를 3장\n드로우한다. 양쪽 플레이어가\n그 카드를 확인하고, 그중\n마법 카드는 즉시 묘지로\n버려야 한다.",
+  "draw_enabled": true,
+  "identity_key": "e074d49f7c509c323d307adf01a57fd25e84f4cbe62f4645f52629a8a07c3b74",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0018.webp",
+  "level": 2,
+  "links": [],
+  "name": "악마의 정찰자",
+  "name_english": "Hiro's Shadow Scout",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "source_id": 610,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 18
+}

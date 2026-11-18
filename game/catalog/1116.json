@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1116",
+  "attack": 500,
+  "attribute": 32,
+  "categories": [
+    "소환-묘지",
+    "발동-묘지"
+  ],
+  "code": 58551308,
+  "defense": 500,
+  "description": "리버스: 뒤집힌 이 카드가\n묘지로 보내졌을 때, 양쪽\n플레이어는 각각 자신의\n묘지에서 몬스터 1장을\n선택하여 앞면 공격 표시 또는\n뒷면 수비 표시로 특수\n소환한다. 레벨 5 이상\n몬스터도 릴리스는 필요 없다.",
+  "draw_enabled": true,
+  "identity_key": "0a1c7c01afe36265e4c67d3f39e1e359dd1463ab3d240b8a2a090f00868c8b2b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0516.webp",
+  "level": 2,
+  "links": [],
+  "name": "다크 패밀리어",
+  "name_english": "Spear Cretin",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "source_id": 1116,
+  "speed_limit": 1,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 516
+}

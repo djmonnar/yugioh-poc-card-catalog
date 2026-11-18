@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards084/2619",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-전투"
+  ],
+  "code": 10012614,
+  "defense": 0,
+  "description": "자신의 배틀 페이즈 동안 자신 필드의 몬스터 전부의 공격력을 200 올린다.",
+  "draw_enabled": true,
+  "identity_key": "6b77f41eb62e5ff9dd3ce7a9bbf1eb7504fe0a0955ef4bd308140b077bcaf36f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2619.jpg",
+  "level": 0,
+  "links": [],
+  "name": "용기의 깃발",
+  "name_english": "Banner of Courage",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "search_aliases": [
+    "용기의깃발",
+    "용기의 깃발",
+    "Banner of Courage"
+  ],
+  "source_id": 2619,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 1651
+}

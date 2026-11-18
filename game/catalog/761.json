@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/761",
+  "attack": 2200,
+  "attribute": 1,
+  "categories": [
+    "소환-토큰"
+  ],
+  "code": 91512835,
+  "defense": 2400,
+  "description": "자신의 필드 몬스터 1장을\n릴리스하지 않으면 공격할 수\n없다. 필드의 곤충족 몬스터\n1장당 이 카드의 공격력을 200\n올린다. 이 카드가 상대\n몬스터를 파괴했을 때, 자신의\n턴 종료시에 \"곤충 몬스터\n토큰\"을 필드에 놓을 수 있다.\n앞면 공격 표시 / 곤충족 / 땅\n속성 / 레벨 1 / 공격력 100 /\n수비력 100이다.",
+  "draw_enabled": true,
+  "identity_key": "7873904f58350767d1bb4873e3897f3cc660f1217b95742074bcc0e4ebcef07c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0066.webp",
+  "level": 7,
+  "links": [],
+  "name": "곤충 여왕",
+  "name_english": "Insect Queen",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "N",
+  "source_id": 761,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 66
+}

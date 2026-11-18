@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/427",
+  "attack": 300,
+  "attribute": 16,
+  "categories": [
+    "효과-묘지샐비지"
+  ],
+  "code": 31560081,
+  "defense": 400,
+  "description": "리버스: 자신의 묘지의 마법\n카드 1장을 선택하여 패로\n되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "29cc3b1fa1a5539660230cf0e7af41d3e1ca173a7d0ee4514c6a74b7dce8f090",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0471.webp",
+  "level": 1,
+  "links": [],
+  "name": "성스러운 마술사",
+  "name_english": "Magician of Faith",
+  "native_type": 2097185,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 2,
+  "rarity": "UR",
+  "source_id": 427,
+  "speed_limit": 1,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 471
+}

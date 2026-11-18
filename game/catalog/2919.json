@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards135/2919",
+  "attack": 2300,
+  "attribute": 4,
+  "categories": [
+    "지원-쥬락",
+    "발동-파괴 시",
+    "소환-패에서",
+    "소환-묘지"
+  ],
+  "code": 16111820,
+  "defense": 1500,
+  "description": "자신 필드 위에 수비 표시로 존재하는 \"쥬락 헤레라\" 이외의 \"쥬락\"이라는 이름이 붙은 몬스터가 전투에 의해서 파괴되어 묘지로 보내졌을 때, 이 카드를 패 또는 묘지에서 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "1632e5a57a28faba068785c35b3ec26a7512cae34ed0384c94f6dc2218ae7adf",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native135/cards/2919.jpg",
+  "level": 6,
+  "links": [],
+  "name": "쥬락 헤레라",
+  "name_english": "Jurrac Herra",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "R",
+  "search_aliases": [
+    "쥬락 헤레라",
+    "Jurrac Herra"
+  ],
+  "source_id": 2919,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1951
+}

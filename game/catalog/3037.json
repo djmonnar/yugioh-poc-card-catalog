@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3037",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-블랙매지션",
+    "지원-융합",
+    "소환-엑스트라 덱에서"
+  ],
+  "code": 1784686,
+  "defense": 0,
+  "description": "이 카드명은 룰상 \"전설의 용 티마이오스\"로도 취급한다. 이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 자신 필드의 \"블랙 매지션\" 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터 1장만을 융합 소재로 하고, 그 카드명이 융합 소재로서 쓰여진 융합 몬스터 1장을 융합 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "cd5485e55f92ebf4bce52d23e4cee801ed2a600534083a3a779ea199390902ce",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3037.jpg",
+  "level": 0,
+  "links": [],
+  "name": "티마이오스의 눈",
+  "name_english": "The Eye of Timaeus",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "티마이오스의 눈",
+    "The Eye of Timaeus"
+  ],
+  "source_id": 3037,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 2069
+}

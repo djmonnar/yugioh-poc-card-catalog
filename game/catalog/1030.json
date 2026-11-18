@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1030",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "면역-함정"
+  ],
+  "code": 3819470,
+  "defense": 0,
+  "description": "자신의 LP를 1000 지불하고\n함정 카드의 발동을 무효로\n하여 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "99eb671aef76f7730b5f1fc19f4448228a2189fc01ba46b5cad0db24b2811e00",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0624.webp",
+  "level": 0,
+  "links": [],
+  "name": "도적의 7가지 도구",
+  "name_english": "Seven Tools of the Bandit",
+  "native_type": 1048580,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1030,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 624
+}

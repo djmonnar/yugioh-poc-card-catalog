@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1926",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-블랙매지션",
+    "면역-함정",
+    "면역-마법",
+    "소환-패,덱"
+  ],
+  "code": 7922915,
+  "defense": 0,
+  "description": "①: 패에서 \"블랙 매지션\"\n1장을 특수 소환한다. 그 후,\n덱에서 레벨 7 이하의\n마법사족 / 어둠 속성 몬스터\n1장을 특수 소환한다. ②: 자신\n필드에 \"블랙 매지션\"이\n존재할 경우, 이 턴에 묘지로\n보내져 있지 않은 이 카드를\n묘지에서 제외하고, 상대\n필드의 앞면 표시의 마법 /\n함정 카드 1장을 대상으로\n하여 발동할 수 있다. 그\n카드의 효과를 턴 종료시까지\n무효로 한다.\n[차이] ②는 자신의 메인\n페이즈 1과 2가 시작될 때에만\n쓸 수 있다(그때 사용할지\n묻는다). ①은 덱에 소환할\n몬스터가 없어도 발동할 수\n있으며, 그 경우 \"블랙\n매지션\"만 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "7ab0d1cad6193baa7f779cf81ee04d9a377f6583b8baf25ee742220662eaf193",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1198.webp",
+  "level": 0,
+  "links": [
+    {
+      "identity_key": "e59839abbcfb0aeca99b2305a17c4280aaa98be82be82bcdf349e6a1d8c6aa0b",
+      "slot": 1196
+    },
+    {
+      "identity_key": "a850b8cd0e118c301dde50e7dcabc13ebb54f1506ec19fbe0694955bba7dfd67",
+      "slot": 803
+    }
+  ],
+  "name": "매지션즈 내비게이트",
+  "name_english": "Magician Navigation",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1926,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1198
+}

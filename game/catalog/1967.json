@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1967",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-드로우",
+    "효과-제외",
+    "지원-고레벨",
+    "발동-제외"
+  ],
+  "code": 45725480,
+  "defense": 0,
+  "description": "\"칠성의 보도\"는 1턴에\n1장밖에 발동할 수 없다. ①:\n패 또는 자신 필드의 앞면\n표시 몬스터 중에서, 레벨 7\n몬스터 1장을 제외하고 발동할\n수 있다. 자신은 덱에서 2장\n드로우한다.\n[안내] 제외할 레벨 7\n몬스터를 패와 자신 필드의\n앞면 표시 몬스터를 합친\n창에서 고른다.\n[차이] 컴퓨터는 필드의\n몬스터를 제외하지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "185cdc87e8f2a4d63f7820cd314d9d96c41fbe7032edd38c95f77f444482d067",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1150.webp",
+  "level": 0,
+  "links": [],
+  "name": "칠성의 보도",
+  "name_english": "Sacred Sword of Seven Stars",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1967,
+  "speed_limit": 2,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1150
+}

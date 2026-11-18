@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1806",
+  "attack": 0,
+  "attribute": 16,
+  "categories": [
+    "면역-전투"
+  ],
+  "code": 55401221,
+  "defense": 1900,
+  "description": "이 카드가 자신 필드 위에 앞면 표시로 존재하는 한, 상대는 자신 필드 위에 존재하는 \"전지맨－D\" 이외의 번개족 몬스터를 공격 대상으로 선택할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "6970778e6b0be53e8b02f53756e3825199874ad44664c723a4f2378b5d14c0c2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1293.webp",
+  "level": 1,
+  "links": [
+    {
+      "identity_key": "5f5fb443127ccf3877c6e5493e812001fca42d6fda6371e60f46c37fd2c17e99",
+      "slot": 1291
+    },
+    {
+      "identity_key": "2fc82a4e337009e06ad5db2a9dcc3aabe117b2ec0666badb4f7db18c7f029e6e",
+      "slot": 1292
+    }
+  ],
+  "name": "전지맨－D",
+  "name_english": "Batteryman D",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4096,
+  "rarity": "R",
+  "source_id": 1806,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1293
+}

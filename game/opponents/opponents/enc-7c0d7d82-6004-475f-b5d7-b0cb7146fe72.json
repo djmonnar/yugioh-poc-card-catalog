@@ -1,0 +1,45 @@
+{
+  "artKey": "Character090/images/tristan/start",
+  "banlistEnabled": false,
+  "deckName": "야수족",
+  "extra": [],
+  "id": "enc-7c0d7d82-6004-475f-b5d7-b0cb7146fe72",
+  "lpBonus": 0,
+  "main": [
+    1108,
+    1108,
+    1108,
+    2059,
+    2059,
+    2078,
+    2078,
+    127,
+    127,
+    407,
+    407,
+    407,
+    455,
+    455,
+    455,
+    2075,
+    2075,
+    2075,
+    2617,
+    2617
+  ],
+  "name": "전우혁",
+  "openingDrawBonus": 0,
+  "profileId": "tristan",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 330,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-7c0d7d82-6004-475f-b5d7-b0cb7146fe72",
+  "usesNativeRules035": true
+}

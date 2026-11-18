@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2421",
+  "attack": 300,
+  "attribute": 32,
+  "categories": [
+    "덱-암흑계",
+    "발동-묘지",
+    "소환-묘지",
+    "소환-패,덱"
+  ],
+  "code": 3289027,
+  "defense": 100,
+  "description": "이 카드명의 효과는 1턴에 1번만 사용할 수 있다. ①: 이 카드가 효과로 패에서 묘지로 버려졌을 경우, 자신 묘지의 \"암흑계의 은둔자 파알\" 이외의 \"암흑계\" 몬스터 1장을 대상으로 발동할 수 있다. 그 몬스터를 자신이나 상대 필드에 특수 소환한다. 상대 효과로 버려졌다면 추가로 자신의 패 / 묘지 / 제외 상태의 악마족 몬스터 1장을 골라 자신이나 상대 필드에 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "8865a1ec84294ef4fdc39ba5666dc70a77f9d6d8001db78741af96c8cf59b6d3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2421.jpg",
+  "level": 1,
+  "links": [],
+  "name": "암흑계의 은둔자 파알",
+  "name_english": "Parl, Hermit of Dark World",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "source_id": 2421,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1458
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1099",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "면역-전투"
+  ],
+  "code": 22359980,
+  "defense": 0,
+  "description": "상대의 모든 공격 몬스터의\n공격력을 절반으로 한다.\n자신의 스탠바이 페이즈마다\n2000 LP를 지불해야 한다.\n지불할 수 없으면 이 카드를\n파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "21da5fd9360a7623664f1cf6338c56fc90c3917c5e9d7885ac86d925d961af78",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0232.webp",
+  "level": 0,
+  "links": [],
+  "name": "은막의 거울벽",
+  "name_english": "Mirror Wall",
+  "native_type": 131076,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1099,
+  "speed_limit": 2,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 232
+}

@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/297",
+  "attack": 1800,
+  "attribute": 4,
+  "categories": [
+    "발동-묘지",
+    "소환-묘지",
+    "효과-제외-묘지"
+  ],
+  "code": 50903514,
+  "defense": 1600,
+  "description": "①: 1턴에 1번, 자신 / 상대의\n배틀 페이즈에, 이 카드\n이외의 자신 필드의 전사족\n몬스터 1장을 대상으로 하고\n발동할 수 있다. 이 카드의\n공격력을 600 내리고, 대상\n몬스터의 공격력을 600\n올린다. ②: 필드의 이 카드가\n상대에 의해 파괴되어 묘지로\n보내졌을 때, 묘지의 이\n카드를 제외하고, 자신 묘지의\n전사족 / 화염 속성 몬스터\n1장을 대상으로 하여 발동할\n수 있다. 그 전사족 / 화염\n속성 몬스터를 특수 소환한다.\n[미확인] ①의 효과를 체인\n없이 상대 배틀 페이즈에\n발동할 수 있는지는 확인되지\n않았다.",
+  "draw_enabled": true,
+  "identity_key": "49deab04b52ee5e79c74c018a1ce386865f6714d51df126d6219a5a8914f197f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0911.webp",
+  "level": 4,
+  "links": [],
+  "name": "푸른 화염의 검사",
+  "name_english": "Blue Flame Swordsman",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "source_id": 297,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 911
+}

@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2422",
+  "attack": 500,
+  "attribute": 32,
+  "categories": [
+    "덱-암흑계",
+    "발동-파괴",
+    "효과-덱샐비지"
+  ],
+  "code": 5498296,
+  "defense": 500,
+  "description": "①: 이 카드가 전투로 파괴되어 묘지로 보내졌을 경우 발동한다. 덱에서 레벨 4 이하의 \"암흑계\" 몬스터 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "eb0ee376f6f37b5af032262e26f69d6645cbc3783958a0cf8207f197b2ce4dcc",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2422.jpg",
+  "level": 2,
+  "links": [],
+  "name": "암흑계의 척후 스카아",
+  "name_english": "Scarr, Scout of Dark World",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "N",
+  "source_id": 2422,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1459
+}

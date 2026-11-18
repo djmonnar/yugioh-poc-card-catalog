@@ -1,0 +1,89 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "ch2_battle_24d1d7a377142361d7ff489a",
+  "main": [
+    {
+      "count": 1,
+      "identity_key": "933d1ef045582e3b5760594b2951f82272d32316eae1763016b9d7afe0eb184d",
+      "source_id": 20
+    },
+    {
+      "count": 1,
+      "identity_key": "6e1bae4aedbc2757af43e7300cb3df015a922512eabe78d5c3701cbf9d946aa3",
+      "source_id": 16
+    },
+    {
+      "count": 1,
+      "identity_key": "f8bc9f3281cc05fb56680a044359b8e21e38a1267e4b84b09b2545a13b94aa0c",
+      "source_id": 18
+    },
+    {
+      "count": 1,
+      "identity_key": "5e9d97a1b2e812b44c07c04812e2c1626c19a10b057a6a0f8a208a7dab64d0f0",
+      "source_id": 17
+    },
+    {
+      "count": 1,
+      "identity_key": "ae16c0564d992c6b845676870ffdf7c0134562b19df4cc8d1709abe44c48d0db",
+      "source_id": 19
+    },
+    {
+      "count": 3,
+      "identity_key": "f2e9c24667c1c8dbb4b3a014be2442b4f64bb588d8abd7df477e228541d7f0a6",
+      "source_id": 1447
+    },
+    {
+      "count": 1,
+      "identity_key": "15cb6e10174623dc5f1da0c9a45d392ab96fb7ced1976febd3e05c99b4d4188f",
+      "source_id": 1065
+    },
+    {
+      "count": 1,
+      "identity_key": "e9b6df0aa21892c7ef9a7f318a62057e335da893dfcdd068550f54500aa169af",
+      "source_id": 1147
+    },
+    {
+      "count": 3,
+      "identity_key": "09ae25ba611ab0efa07634059c0a7dfadc28855699e598c28d12b7376292024e",
+      "source_id": 1881
+    },
+    {
+      "count": 3,
+      "identity_key": "1f978dd63382808b13c195c4d2f2d3639f1dfc72b62a3d6d89f21d8c8690d649",
+      "source_id": 2627
+    },
+    {
+      "count": 2,
+      "identity_key": "051a68d46e73f712b6ddcde1be027a0d95caced1e8dd561297017bd2e246b759",
+      "source_id": 2010
+    },
+    {
+      "count": 1,
+      "identity_key": "54d691a3f3720a788ada51026c3b1576fa11284522ca95032d0d55f3dbe4eb73",
+      "source_id": 2770
+    },
+    {
+      "count": 3,
+      "identity_key": "dc8040bc7fa6d79eb4473846fc07c415dc8e2a1b3ff2530ef57141be3dcb5215",
+      "source_id": 2623
+    },
+    {
+      "count": 1,
+      "identity_key": "2f70e4fb1fdba621566962e8968fe8fec261fd5f1cf4c0705f1ad2c48cfabcff",
+      "source_id": 347
+    },
+    {
+      "count": 1,
+      "identity_key": "2e4847d2832e3429885d9ff38739fb5236c22728d0b0ef3c7f217ba0323ddcbe",
+      "source_id": 2066
+    },
+    {
+      "count": 1,
+      "identity_key": "09cb0f23c3e62db5c3b626165a6dd18feac6562108e4123e55913564c2f6f5aa",
+      "source_id": 1044
+    }
+  ],
+  "name": "엑조디아",
+  "version": 680
+}

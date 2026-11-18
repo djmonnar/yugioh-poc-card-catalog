@@ -1,0 +1,29 @@
+{
+  "art_key": "CharacterPresentation012/images/ishizu/start",
+  "id": "character-0a268c414e820b02e885d2efea5b8c17",
+  "profile": {
+    "name": "이시즈 이슈타르",
+    "portrait": "assets/actors/shared-ishizu.png",
+    "skill_profiles": [
+      {
+        "name": "네크로밸리",
+        "profile_id": "profile-53d899f1-9632-4acb-8e66-8ab9c363f75d",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "4d21ad16a83adcb72f9ee960b5d48e381fb2377a1035d072c57419f593d1043b",
+              "internal_id": 2389,
+              "name_ko": "왕가의 골짜기－네크로밸리",
+              "slot": 575
+            },
+            "kind": "start_hand"
+          }
+        ]
+      }
+    ],
+    "skills": []
+  },
+  "profile_id": "ishizu",
+  "updated_at": "2026-11-05T22:25:33.450023+00:00",
+  "version": 3834
+}

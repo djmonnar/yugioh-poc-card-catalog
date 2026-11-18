@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2426",
+  "attack": 1500,
+  "attribute": 32,
+  "categories": [
+    "덱-암흑계",
+    "발동-묘지",
+    "소환-묘지"
+  ],
+  "code": 15667446,
+  "defense": 2400,
+  "description": "①: 이 카드가 효과로 패에서 묘지로 버려졌을 경우 발동한다. 이 카드를 특수 소환한다. 상대 효과로 버려졌다면 발동 시 필드의 악마족 몬스터 1장을 대상으로 지정하며, 이 카드를 특수 소환한 후 그 대상의 공격력을 500 올린다.",
+  "draw_enabled": true,
+  "identity_key": "ddf5ceacfda14071ae2c879ba2427bbcdc0a5209dc23beb8ac615e305918b4ed",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2426.jpg",
+  "level": 6,
+  "links": [],
+  "name": "암흑계의 투신 라티나",
+  "name_english": "Latinum, Exarch of Dark World",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "source_id": 2426,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1463
+}

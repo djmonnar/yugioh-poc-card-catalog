@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1340",
+  "attack": 2400,
+  "attribute": 32,
+  "categories": [
+    "소환-묘지"
+  ],
+  "code": 81919143,
+  "defense": 1500,
+  "description": "이 카드가 파괴한 몬스터를\n배틀 페이즈 종료시에 자신의\n필드에 앞면 공격 표시 또는\n앞면 수비 표시로 특수 소환할\n수 있다.",
+  "draw_enabled": true,
+  "identity_key": "db35466bdf1a0f0cda3e0e88a3f1dfddf78a7ad9bec04458323d50569c05737a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0772.webp",
+  "level": 7,
+  "links": [],
+  "name": "브레인 크러셔",
+  "name_english": "Brain Crusher",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "SR",
+  "source_id": 1340,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 772
+}

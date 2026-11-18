@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/727",
+  "attack": 1900,
+  "attribute": 1,
+  "categories": [
+    "덱-툰"
+  ],
+  "code": 42386471,
+  "defense": 900,
+  "description": "①: 이 카드는 일반 소환 / 반전 소환 / 특수 소환한 턴에는 공격할 수 없다. ②: 자신 필드에 \"툰 월드\"가 존재하고, 상대 필드에 툰 몬스터가 존재하지 않을 경우, 이 카드는 직접 공격할 수 있다. ③: 이 카드가 상대에게 전투 데미지를 주었을 때에 발동할 수 있다. 상대의 패를 무작위로 1장 버린다. ④: 필드의 \"툰 월드\"가 파괴될 때에 이 카드는 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "f2141a10381933dcf14e20eedd51349121a35806cccaccd4bf17257f08ff44d4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0622.webp",
+  "level": 4,
+  "links": [],
+  "name": "툰 쌍둥이 자매 엘프",
+  "name_english": "Toon Gemini Elf",
+  "native_type": 4194337,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "source_id": 727,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 622
+}

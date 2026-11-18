@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/266",
+  "attack": 1700,
+  "attribute": 1,
+  "categories": [
+    "소환-덱리크루터"
+  ],
+  "code": 46571052,
+  "defense": 1000,
+  "description": "이 카드가 일반 소환에 성공했을 때, 패에서 \"데스 덴들\" 1장을 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "ad1ab15d4306e87c333e14e84805bb6b231fc7318f50d77c938eddeab5f85c76",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0013.webp",
+  "level": 4,
+  "links": [],
+  "name": "블러드 오키스",
+  "name_english": "Vampiric Orchis",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "R",
+  "source_id": 266,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 13
+}

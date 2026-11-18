@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/370",
+  "attack": 2600,
+  "attribute": 1,
+  "categories": [
+    "지원-장착"
+  ],
+  "code": 69933858,
+  "defense": 2000,
+  "description": "이 카드는 특수 소환할 수\n없다. 이 카드가 일반 소환에\n성공했을 때, 자신의 묘지에\n존재하는 장착 마법 카드를\n가능한 한 자신 필드 위의\n전사족 몬스터에 장착할 수\n있다.\n[차이] 묘지의 장착 마법\n카드는 묘지에 있는 순서대로\n한 장씩 패를 거쳐 마법 &\n함정 존에 앞면으로 놓인 뒤\n장착된다(순서는 고를 수\n없다). 빈 마법 & 함정 존의\n수까지만 장착하며, 장착할 수\n있는 전사족이 둘 이상이면\n카드마다 장착할 몬스터를\n고른다(컴퓨터는 공격력이\n가장 높은 전사족).",
+  "draw_enabled": true,
+  "identity_key": "32623c54e142f5785751955197eeee7937a904db9945c7caa96530125e900ceb",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1048.webp",
+  "level": 8,
+  "links": [],
+  "name": "전설의 길포드",
+  "name_english": "Gilford the Legend",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "source_id": 370,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1048
+}

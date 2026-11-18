@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2025",
+  "attack": 1700,
+  "attribute": 32,
+  "categories": [
+    "발동-동전(코인)",
+    "파괴-마법",
+    "파괴-몬스터",
+    "파괴-함정"
+  ],
+  "code": 70050374,
+  "defense": 200,
+  "description": "이 카드가 일반 소환/반전 소환/특수 소환에 성공했을 때, 상대 필드 위에 존재하는 카드 1장을 선택하고 발동한다. 코인 토스를 2회 실행하고, 2회 모두 앞면이었을 경우, 선택한 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "d61cf20cdac1800b1c3c1c6d44cc142579ba1be08ab9d0287c3619127c6642bc",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1328.webp",
+  "level": 4,
+  "links": [],
+  "name": "트윈배럴 드래곤",
+  "name_english": "Twin-Barrel Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "source_id": 2025,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1328
+}

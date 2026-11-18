@@ -1,0 +1,79 @@
+{
+  "banlist_enabled": false,
+  "extra": [],
+  "id": "ch1_battle_ef78381916401c1be19704b1",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "2d6820c46b2e5a167340dd51d08d4653bcd40b6b69169fa306a1a1cf49d736c7",
+      "source_id": 1837
+    },
+    {
+      "count": 1,
+      "identity_key": "53388ce7cb9044f650d95938c4808fec22d461c09e7b06728d2794a215823c35",
+      "source_id": 1834
+    },
+    {
+      "count": 2,
+      "identity_key": "e9a12b768656b3a2fce3653ce06837096df7754a8282ffd08d3598c9ebde5df2",
+      "source_id": 1852
+    },
+    {
+      "count": 2,
+      "identity_key": "7c900a217a9ae58ff028100977f57fb0fa3733624a2c029331a3c1379e617e53",
+      "source_id": 1853
+    },
+    {
+      "count": 1,
+      "identity_key": "1c076f9af40f515797bfdba448d30aa7f468c0cd7195047fd3b11322b8e59a9c",
+      "source_id": 1854
+    },
+    {
+      "count": 2,
+      "identity_key": "75e671c7c65e9a8b1f29ba3234e7dac8c23b491d32e2ee13828df7079c9ed094",
+      "source_id": 1848
+    },
+    {
+      "count": 2,
+      "identity_key": "390afa82ffec1d3a923bdf01267b5652a3b5815b77522cfb50682946a5cb2b0e",
+      "source_id": 11
+    },
+    {
+      "count": 1,
+      "identity_key": "455a7bd3ffaa3711deea284e83642a93d61d34c32da0899bc44c300c698c10af",
+      "source_id": 1849
+    },
+    {
+      "count": 1,
+      "identity_key": "894cfcbf92ef6b877de6c064eca7e7869efbd4d7c5d5dde5d32d5e8b969a2624",
+      "source_id": 553
+    },
+    {
+      "count": 2,
+      "identity_key": "7bc57a63e105b5f6868ed97c70fcac2e7a229efb0d9fcdfa2fdbe9ec53f6273f",
+      "source_id": 1847
+    },
+    {
+      "count": 1,
+      "identity_key": "1a901561e7efb97d1cebceeb19d547185581c568055c983bace6cba346602abf",
+      "source_id": 1851
+    },
+    {
+      "count": 1,
+      "identity_key": "3a250d64f9ed5f6430dd4ca3fd330ebb2be59862272cfb2027d7d671354b0986",
+      "source_id": 1835
+    },
+    {
+      "count": 1,
+      "identity_key": "b89a915cb8af2e67265471c4159a268923fda8ebb8ded7dbd0f18ec37e1e605f",
+      "source_id": 1855
+    },
+    {
+      "count": 1,
+      "identity_key": "21da5fd9360a7623664f1cf6338c56fc90c3917c5e9d7885ac86d925d961af78",
+      "source_id": 1099
+    }
+  ],
+  "name": "아마조네스",
+  "version": 37
+}

@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1856",
+  "attack": 2800,
+  "attribute": 1,
+  "categories": [
+    "효과-한데스",
+    "소환-패,덱",
+    "효과-제외-묘지"
+  ],
+  "code": 76039636,
+  "defense": 2600,
+  "description": "이 카드는 일반 소환/세트할\n수 없다. 자신 묘지의 곤충족\n몬스터 2장을 게임에서\n제외했을 경우에만 특수\n소환할 수 있다. 이 카드가\n상대 라이프에 전투 데미지를\n주었을 때, 상대의 덱 위에서\n카드를 1장 묘지로 보낸다.\n[안내] 패의 이 카드를 눌러\n\"특수 소환\"을 고른다. 묘지의\n곤충족 몬스터가 3장 이상이면\n제외할 2장을 선택 창에서\n차례로 고른다. 묘지에서 특수\n소환할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "e0702d912a9490eb5f0904584a5f04c4bb8a36329a212d3e6db1658577d52a35",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1246.webp",
+  "level": 8,
+  "links": [],
+  "name": "데블도우저",
+  "name_english": "Doom Dozer",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "UR",
+  "source_id": 1856,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1246
+}

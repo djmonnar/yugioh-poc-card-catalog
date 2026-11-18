@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2435",
+  "attack": 2400,
+  "attribute": 32,
+  "categories": [
+    "덱-암흑계",
+    "발동-묘지",
+    "소환-묘지",
+    "소환-덱리크루터"
+  ],
+  "code": 34968834,
+  "defense": 0,
+  "description": "①: 이 카드가 효과로 패에서 묘지로 버려졌을 경우 발동한다. 이 카드를 특수 소환한다. 상대 효과로 버려졌다면 추가로 자신의 덱에서 악마족 몬스터 1장을 골라 자신이나 상대 필드에 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "c8557782acc171acd8695dd1b9673fb95269eebc0106208cfd068baf78668d6a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2435.jpg",
+  "level": 6,
+  "links": [],
+  "name": "암흑계의 귀신 켈토",
+  "name_english": "Lucent, Netherlord of Dark World",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "source_id": 2435,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1472
+}

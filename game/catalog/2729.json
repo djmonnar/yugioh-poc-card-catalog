@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards103/2729",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-의식"
+  ],
+  "code": 69035382,
+  "defense": 0,
+  "description": "어둠 속성의 의식 몬스터의 의식 소환에 사용할 수 있다. 필드나 패에서, 의식 소환하는 어둠 속성 몬스터와 같은 레벨이 되도록 제물을 바쳐야 한다.",
+  "draw_enabled": true,
+  "identity_key": "3ab8a3b267c5ad21de235ad41f5aeca9622a0bd8ae5f8019f64d2280c4aedeb4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native103/cards/2729.jpg",
+  "level": 0,
+  "links": [],
+  "name": "나락과의 계약",
+  "name_english": "Contract with the Abyss",
+  "native_type": 130,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "나락과의계약",
+    "나락과의 계약",
+    "Contract with the Abyss"
+  ],
+  "source_id": 2729,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1761
+}

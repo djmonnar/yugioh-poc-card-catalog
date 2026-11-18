@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1941",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-필드",
+    "효과-덱샐비지"
+  ],
+  "code": 73628505,
+  "defense": 0,
+  "description": "①: 덱에서 필드 마법 카드\n1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "bed88d3117e91d7548cd6db5ca4c27d1e642c04ee6479938eac2ba59f27dc5d8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1157.webp",
+  "level": 0,
+  "links": [],
+  "name": "테라포밍",
+  "name_english": "Terraforming",
+  "native_type": 2,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1941,
+  "speed_limit": 1,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1157
+}

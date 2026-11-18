@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards084/2604",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-카운터·무효"
+  ],
+  "code": 38891741,
+  "defense": 0,
+  "description": "몬스터 효과 또는 마법·함정 카드가 발동했을 때, 발동한 카드와 같은 종류의 카드 1장을 패에서 버리고 발동한다. 몬스터에는 몬스터, 마법에는 마법, 함정에는 함정을 버린다. 그 발동을 무효로 하고 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "856db37937bc4e8435ddf669e4de0d752b9bc9afcb5c54772cf95e28c47da525",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2604.jpg",
+  "level": 0,
+  "links": [],
+  "name": "신의 섭리",
+  "name_english": "Ultimate Providence",
+  "native_type": 1048580,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "신의섭리",
+    "신의 섭리",
+    "Ultimate Providence"
+  ],
+  "source_id": 2604,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "카운터 함정",
+  "web_slot": 1636
+}

@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1165",
+  "attack": 1200,
+  "attribute": 1,
+  "categories": [
+    "소환-덱리크루터",
+    "발동-묘지"
+  ],
+  "code": 77044671,
+  "defense": 1400,
+  "description": "이 카드가 전투로 파괴되어\n묘지로 보내졌을 때 발동할 수\n있다. 덱에서 수비력 2000\n이하의 언데드족 몬스터 1장을\n특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "8debbdb8402061f8c6931dc12ef0761684f020786fa5b6ff9dcba4cc26904ece",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0822.webp",
+  "level": 4,
+  "links": [],
+  "name": "피라미드 터틀",
+  "name_english": "Pyramid Turtle",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "UR",
+  "source_id": 1165,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 822
+}

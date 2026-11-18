@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/962",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착"
+  ],
+  "code": 86198326,
+  "defense": 0,
+  "description": "이 카드를 장착한 기계족\n몬스터의 공격력 또는 수비력\n중 하나를 700 올린다. 이\n카드가 필드에 앞면으로\n존재하는 동안 선택을 변경할\n수 없다.",
+  "draw_enabled": true,
+  "identity_key": "dc819ac4bfd64a44d876fe0f75bfe97cb0e24e9dfa20e1cb23e5a9d0b52f5724",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0475.webp",
+  "level": 0,
+  "links": [],
+  "name": "7 카드",
+  "name_english": "7 Completed",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 962,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 475
+}

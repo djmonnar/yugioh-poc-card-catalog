@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1441",
+  "attack": 1200,
+  "attribute": 16,
+  "categories": [
+    "효과-회복"
+  ],
+  "code": 81383947,
+  "defense": 0,
+  "description": "이 카드가 자신의 필드에\n앞면으로 존재하는 동안\n자신의 스탠바이 페이즈마다\nLP를 800 회복한다.",
+  "draw_enabled": true,
+  "identity_key": "de95258f2b661266d08fd8e4fa8621a33663ac37420d24b1eabb769b75d6f960",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0813.webp",
+  "level": 2,
+  "links": [],
+  "name": "백마도사 피켈",
+  "name_english": "White Magician Pikeru",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 1441,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 813
+}

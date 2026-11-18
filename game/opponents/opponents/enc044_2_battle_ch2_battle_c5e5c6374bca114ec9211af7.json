@@ -1,0 +1,45 @@
+{
+  "artKey": "DuelUi011/legacy/yugi_intro",
+  "banlistEnabled": false,
+  "deckName": "번덱",
+  "extra": [],
+  "id": "enc044_2_battle_ch2_battle_c5e5c6374bca114ec9211af7",
+  "lpBonus": 0,
+  "main": [
+    1302,
+    1304,
+    1304,
+    1304,
+    1932,
+    1932,
+    1932,
+    1954,
+    1114,
+    1114,
+    1114,
+    1419,
+    1419,
+    310,
+    310,
+    489,
+    1311,
+    1434,
+    1032,
+    1230
+  ],
+  "name": "어둠의 유희",
+  "openingDrawBonus": 0,
+  "profileId": "yugi",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 1898,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "installed-story:sc-b5276f561275e868-88d1b2d8a96c20f2d2b2b432309c5bdf",
+  "usesNativeRules035": false
+}

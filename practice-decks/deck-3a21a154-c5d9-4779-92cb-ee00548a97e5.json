@@ -1,0 +1,64 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-3a21a154-c5d9-4779-92cb-ee00548a97e5",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "d3698f8d02699aa1f38d92fcbe40fb39146f573000b165084749c45e9571e82c",
+      "source_id": 1257
+    },
+    {
+      "count": 3,
+      "identity_key": "5e16eafaedd4b52078c7363b3086617272e8b22c3d7f7065ed0746f650ba60b1",
+      "source_id": 1410
+    },
+    {
+      "count": 2,
+      "identity_key": "8e6a3319767c74439422674af649ec46a84c2dfd6370fc3636e007e55fc0c348",
+      "source_id": 1411
+    },
+    {
+      "count": 2,
+      "identity_key": "8065302ae9a2dfd3a9e8d892270ac848901693d887cb8eebd6b5d008c859ef73",
+      "source_id": 1416
+    },
+    {
+      "count": 1,
+      "identity_key": "07ddab5e0b48625c5c808849b112c14b0f7b3edbae07ec81e0af09faeac42d88",
+      "source_id": 1258
+    },
+    {
+      "count": 2,
+      "identity_key": "f12b3b5d9e2e69e42fba96684f891648d89469671e7b092e80eb13fe52aa16d2",
+      "source_id": 2606
+    },
+    {
+      "count": 2,
+      "identity_key": "f206c5a0ed34556536bccbdecb54745c2576ca62cec262e6933eb42fd6c0248f",
+      "source_id": 2417
+    },
+    {
+      "count": 2,
+      "identity_key": "d592f7c61e4718937e523e1cd32c335c9b5fa4e0fbc1a7ea74f2a4dc10878155",
+      "source_id": 1122
+    },
+    {
+      "count": 1,
+      "identity_key": "e977528ee8be625bd9d30444d35911d0236c48142f509dbb20f3e87267828b78",
+      "source_id": 2534
+    },
+    {
+      "count": 1,
+      "identity_key": "f6af26ef01e7ab92d998dbb441ac6c0fec4fb78c7dcf7983e43c76ceda7f3bf0",
+      "source_id": 1109
+    },
+    {
+      "count": 1,
+      "identity_key": "8fdba67eb686ecfa60afc175239f19193acbe9da9b586db53f44c527a068e050",
+      "source_id": 1220
+    }
+  ],
+  "name": "마리크 가면마수",
+  "version": 584
+}

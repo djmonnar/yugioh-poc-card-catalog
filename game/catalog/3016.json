@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3016",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착",
+    "효과-공격력 상승"
+  ],
+  "code": 42709949,
+  "defense": 0,
+  "description": "장착 몬스터의 공격력은 묘지에 존재하는 장착 몬스터와 같은 이름의 카드 수 × 900 포인트 올린다.",
+  "draw_enabled": true,
+  "identity_key": "ae2adcf2c2d48a033019caecd0183939a734f7d5c0535b65a87b3098fbe3b5c4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3016.jpg",
+  "level": 0,
+  "links": [],
+  "name": "수호신의 창",
+  "name_english": "Phalanx Pike",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "수호신의 창",
+    "Phalanx Pike"
+  ],
+  "source_id": 3016,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 2048
+}

@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards136/2934",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-융합",
+    "지원-저레벨",
+    "발동-LP 지불",
+    "소환-엑스트라 덱에서"
+  ],
+  "code": 63854005,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 1000 LP를 지불하고 발동할 수 있다. 효과 몬스터가 아닌, 레벨 6 이하의 융합 몬스터 1장을 융합 소환으로 취급하여 엑스트라 덱에서 특수 소환한다. 이 효과로 특수 소환한 몬스터는 공격할 수 없으며, 엔드 페이즈에 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "87a13d2cbf9c6649fa511826c919057b5059af71bd01f580c81de02e1b1a3741",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native136/cards/2934.jpg",
+  "level": 0,
+  "links": [],
+  "name": "레토르트 퓨전",
+  "name_english": "Ready Fusion",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "레토르트 퓨전",
+    "Ready Fusion",
+    "Retort Fusion"
+  ],
+  "source_id": 2934,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1966
+}

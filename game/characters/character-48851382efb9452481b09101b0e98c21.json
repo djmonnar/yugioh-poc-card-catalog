@@ -1,0 +1,50 @@
+{
+  "art_key": "CharacterPresentation012/images/weevil/start",
+  "id": "character-48851382efb9452481b09101b0e98c21",
+  "profile": {
+    "name": "사마준",
+    "portrait": "assets/actors/shared-weevil.png",
+    "skill_profiles": [
+      {
+        "name": "숲",
+        "profile_id": "profile-bcb9d0d6-1635-4d47-a08d-ced5d0af8ab1",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "f57735d759d84c2f500a6702fd3f356d0d17fb7782646081e1f11c003d1ef969",
+              "internal_id": 329,
+              "name_ko": "숲",
+              "slot": 990
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "파라사이드",
+        "profile_id": "profile-aec24fea-5ff1-48b9-b7ba-f64ee48b6992",
+        "skills": []
+      },
+      {
+        "name": "인섹트lv3",
+        "profile_id": "profile-adf59ea8-ec21-48ec-80ff-22601b28e57c",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "46ec6929e8e4645989f7d2dd9b6fd6fb97598c4e3f8c7da3c0e51cd506ec4ab4",
+              "internal_id": 1865,
+              "name_ko": "얼티미트 인섹트 LV3",
+              "slot": 1240
+            },
+            "kind": "start_monster",
+            "position": "defense"
+          }
+        ]
+      }
+    ],
+    "skills": []
+  },
+  "profile_id": "weevil",
+  "updated_at": "2026-11-06T06:29:26.433238+00:00",
+  "version": 3865
+}

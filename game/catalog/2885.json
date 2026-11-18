@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards130/2885",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착",
+    "지원-전투"
+  ],
+  "code": 62991886,
+  "defense": 0,
+  "description": "자신의 라이프 포인트가 상대보다 낮을 경우, 장착 몬스터의 원래 공격력은 2400 이 된다. 자신의 라이프 포인트가 상대보다 높을 경우, 장착 몬스터의 원래 공격력은 1000 이 된다.",
+  "draw_enabled": true,
+  "identity_key": "e32a251decac47a746a10f61dea3e255756d16595656c11bac98508369524a25",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native130/cards/2885.jpg",
+  "level": 0,
+  "links": [],
+  "name": "진화하는 인류",
+  "name_english": "Unstable Evolution",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "진화하는 인류",
+    "Unstable Evolution"
+  ],
+  "source_id": 2885,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 1917
+}

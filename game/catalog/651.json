@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/651",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-패,덱",
+    "지원-호루스"
+  ],
+  "code": 25290459,
+  "defense": 0,
+  "description": "①: 자신 필드의 앞면 표시의\n\"LV\" 몬스터 1장을 묘지로\n보내고 발동할 수 있다. 그\n몬스터에 카드명이 쓰여진\n\"LV\" 몬스터 1장을, 소환\n조건을 무시하고 패 / 덱에서\n특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "87065b1e82110395b12c231c79ac2545181950bbab068295d5489d5ffbac426e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0959.webp",
+  "level": 0,
+  "links": [],
+  "name": "레벨 업!",
+  "name_english": "Level Up!",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 651,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 959
+}

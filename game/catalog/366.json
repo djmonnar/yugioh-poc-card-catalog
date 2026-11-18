@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/366",
+  "attack": 2200,
+  "attribute": 1,
+  "categories": [
+    "발동-동전(코인)"
+  ],
+  "code": 94773007,
+  "defense": 100,
+  "description": "이 카드로 공격할 때, 동전을\n던지고 앞면 또는 뒷면을\n선언한다. 맞혔을 경우\n통상대로 공격한다. 틀렸을\n경우 공격 전에 자신의 라이프\n포인트를 절반으로 한다.",
+  "draw_enabled": true,
+  "identity_key": "458763289e6f05942ec386e24719a1d40aee75056a9f6c5df98d60a0e3ca4bed",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0412.webp",
+  "level": 4,
+  "links": [],
+  "name": "지뢰거미",
+  "name_english": "Jirai Gumo",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "SR",
+  "source_id": 366,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 412
+}

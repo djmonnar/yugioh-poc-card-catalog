@@ -1,0 +1,54 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "starter-template-ed4aca4a19596f1fee035d54d3ddc419",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "1ffec6c1ccc750081216a9426282fe6416b0a0f84fb420e378f52c48870d4406",
+      "source_id": 2032
+    },
+    {
+      "count": 3,
+      "identity_key": "e256dd5bfd39ab06196f61db51794a8e14143e3c30922f799a6cea000cf001a5",
+      "source_id": 2004
+    },
+    {
+      "count": 2,
+      "identity_key": "9fdedc365b00f0890fe31ef6922366aaca448e31cf89409c9d86ec961fdca28e",
+      "source_id": 142
+    },
+    {
+      "count": 2,
+      "identity_key": "00378e2157a55b7f266438e3a0bacb027d271da4d58acead4a2fb887bec92be1",
+      "source_id": 2033
+    },
+    {
+      "count": 2,
+      "identity_key": "d0e0c1f5939df608f7a1850b2a47e3216c40b309d376d0c670a77e6eebdb23fa",
+      "source_id": 2035
+    },
+    {
+      "count": 3,
+      "identity_key": "fc99f09581dc32afcd4eac98e90f54e9acb605a2a69d9467c6238664cbfe8166",
+      "source_id": 275
+    },
+    {
+      "count": 2,
+      "identity_key": "74ce2d213073ed98888c123018b65739dcf029cfe1ba59e397cc16da3384a1ad",
+      "source_id": 2084
+    },
+    {
+      "count": 2,
+      "identity_key": "cb97509b20bc9239c3ebfe4d7e43fbd5c7b01df6b91c654e6665f733f03055ef",
+      "source_id": 2622
+    },
+    {
+      "count": 2,
+      "identity_key": "a80e735029b3e028cdac3a760c3036737ce521569cdd6761558340cf2091fda2",
+      "source_id": 2083
+    }
+  ],
+  "name": "천사족",
+  "version": 695
+}

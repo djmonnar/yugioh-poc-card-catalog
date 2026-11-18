@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2468",
+  "attack": 1700,
+  "attribute": 1,
+  "categories": [
+    "지원-젬나이트",
+    "발동-소환",
+    "효과-덱샐비지"
+  ],
+  "code": 27004302,
+  "defense": 500,
+  "description": "일반 소환했을 때 발동할 수 있다. 덱의 젬나이트 몬스터 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "15309ba0a9b172eaed5d11306ef9d2021b6a991c0f809e5862d4b8af1b0641f4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2468.jpg",
+  "level": 4,
+  "links": [],
+  "name": "젬레시스",
+  "name_english": "Gem-Armadillo",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "SR",
+  "source_id": 2468,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1505
+}

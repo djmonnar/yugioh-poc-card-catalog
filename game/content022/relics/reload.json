@@ -1,0 +1,19 @@
+{
+  "description": "각 전투의 첫 드로우 후 손패 1장을 골라 덱에 넣고 섞은 다음 1장 뽑을 수 있어. 건너뛸 수 있어.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 26,
+  "iconKey": "Relics/atlas163",
+  "id": "reload",
+  "kind": "reload",
+  "name": "리로드",
+  "params": {
+    "count": 1
+  },
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

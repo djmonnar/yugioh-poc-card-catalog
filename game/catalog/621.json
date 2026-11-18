@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/621",
+  "attack": 500,
+  "attribute": 8,
+  "categories": [
+    "덱-해피"
+  ],
+  "code": 34100324,
+  "defense": 500,
+  "description": "아름답게 날아다니는 것을\n꿈꾸는 하피 병아리.",
+  "draw_enabled": true,
+  "identity_key": "ccbf250020ce7b1005d516d71759babfdd44221cbffef7fda0f6013ba4dd422b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0469.webp",
+  "level": 2,
+  "links": [],
+  "name": "해피 걸",
+  "name_english": "Harpie Girl",
+  "native_type": 17,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "N",
+  "source_id": 621,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 몬스터",
+  "web_slot": 469
+}

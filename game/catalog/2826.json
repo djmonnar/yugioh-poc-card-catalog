@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards125/2826",
+  "attack": 2600,
+  "attribute": 16,
+  "categories": [
+    "지원-에일리언",
+    "A 카운터",
+    "지원-릴리즈",
+    "지원-전투"
+  ],
+  "code": 51192573,
+  "defense": 2000,
+  "description": "자신 필드 위에 존재하는 원래 주인이 상대의 몬스터를 릴리스할 경우, 이 카드는 릴리스 1장으로 일반 소환할 수 있다. 1턴에 1번만, 상대 필드 위 몬스터 1장에 A 카운터를 1개 놓을 수 있다. A 카운터가 얹힌 몬스터는 \"에일리언\"이라는 이름이 붙은 몬스터와 전투할 경우, A 카운터 1개당 공격력과 수비력을 300 포인트 내린다.",
+  "draw_enabled": true,
+  "identity_key": "cb1ab94e4ed57839af2e30ab1881812059f9c7e0a36a17a861f01b992843edf9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native125/cards/2826.jpg",
+  "level": 7,
+  "links": [],
+  "name": "우주야수 건길",
+  "name_english": "Cosmic Horror Gangi'el",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 524288,
+  "rarity": "R",
+  "search_aliases": [
+    "우주야수 건길",
+    "Cosmic Horror Gangi'el"
+  ],
+  "source_id": 2826,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1858
+}

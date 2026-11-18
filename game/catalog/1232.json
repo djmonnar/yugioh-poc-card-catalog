@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1232",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-토큰"
+  ],
+  "code": 40703222,
+  "defense": 0,
+  "description": "앞면 \"크리보\" 1장을\n릴리스한다. 비어 있는 자신의\n몬스터 존마다 \"크리보\n토큰\"을 수비 표시로 놓는다.\n악마족 / 어둠 속성 / 레벨 1\n/ 공격력 300 / 수비력\n200이다. 이 토큰은 릴리스할\n수 없다.",
+  "draw_enabled": true,
+  "identity_key": "141d0ad4ddd31105ffdd49d6f32a57875384c5a180e0ab9f4283cfc20b52a0a8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0491.webp",
+  "level": 0,
+  "links": [],
+  "name": "증식",
+  "name_english": "Multiply",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1232,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 491
+}

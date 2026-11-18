@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/182",
+  "attack": 2350,
+  "attribute": 1,
+  "categories": [
+    "지원-듀얼"
+  ],
+  "code": 95166228,
+  "defense": 1000,
+  "description": "이 카드는 묘지 또는 필드\n위에 앞면 표시로 존재할\n경우, 일반 몬스터로\n취급한다. 필드 위에 앞면\n표시로 존재하는 이 카드를\n일반 소환으로 취급하여 다시\n소환하는 것으로, 이 카드는\n효과 몬스터로 취급되며,\n이하의 효과를 얻는다.\n●이 카드는 상대 필드 위의\n모든 몬스터에 1회씩 공격을\n할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "e5a059da2916118ccae21b984cde7d0c34873566338c1c4a7419b3f8a4f1ff88",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0848.webp",
+  "level": 5,
+  "links": [],
+  "name": "밸류어블 아머",
+  "name_english": "Grasschopper",
+  "native_type": 2081,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "R",
+  "source_id": 182,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 848
+}

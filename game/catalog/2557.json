@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards067/2557",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-묘지기"
+  ],
+  "code": 56773577,
+  "defense": 0,
+  "description": "필드에 ‘묘지기’ 몬스터와 ‘왕가의 골짜기－네크로밸리’가 함께 있으면 상대 몬스터의 공격력·수비력은 500 내려간다. 한 턴에 한 번, 메인 페이즈에 자신의 필드 존이 비어 있으면 패나 묘지의 ‘왕가의 골짜기－네크로밸리’ 1장을 직접 발동할 수 있다. 자신이 컨트롤하던 이 카드가 상대 효과로 파괴되어 자신의 묘지로 보내지면, 덱에서 같은 이름 이외의 ‘네크로밸리’ 마법·함정 1장을 세트할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "30fbd2833146a6ada1cb8cfd16c86daa7e1dc86d15bcf8a726ccb1b73d5c0997",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2557.jpg",
+  "level": 0,
+  "links": [],
+  "name": "네크로밸리의 신전",
+  "name_english": "Necrovalley Temple",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2557,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 1589
+}

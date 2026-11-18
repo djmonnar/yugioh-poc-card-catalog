@@ -1,0 +1,48 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1934",
+  "attack": 800,
+  "attribute": 32,
+  "categories": [
+    "효과-데미지",
+    "덱-묘지기"
+  ],
+  "code": 50712728,
+  "defense": 800,
+  "description": "이 카드가 일반 소환/반전\n소환/특수 소환되었을 때,\n상대 플레이어에게 500 포인트\n데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "f130cae911f76b5e23b36f8f75a9b7b9b79c1636516b3ec52caf8220d8df226a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1183.webp",
+  "level": 3,
+  "links": [
+    {
+      "identity_key": "e69b2fea567e1e3fe0e2e79b538ce705c0e8505ec0b932105aeff4d1a40bf81a",
+      "slot": 588
+    },
+    {
+      "identity_key": "38c7ceed929684624aeb70d2b736465d99d7adabddb16d0b3bac9e35c8c317c1",
+      "slot": 768
+    },
+    {
+      "identity_key": "900003f145b33f2790d4dcf4b19234c46abd2ebc940072c875c3e0ae35384714",
+      "slot": 1184
+    },
+    {
+      "identity_key": "4d21ad16a83adcb72f9ee960b5d48e381fb2377a1035d072c57419f593d1043b",
+      "slot": 575
+    }
+  ],
+  "name": "묘지기의 주술사",
+  "name_english": "Gravekeeper's Curse",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "N",
+  "source_id": 1934,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1183
+}

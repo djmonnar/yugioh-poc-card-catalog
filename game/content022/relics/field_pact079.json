@@ -1,0 +1,17 @@
+{
+  "description": "내 메인 덱의 필드 마법 1장을 지정합니다. 전투 시작 시 그 카드를 덱에서 꺼내 발동합니다.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 7,
+  "iconKey": "Relics/atlas160",
+  "id": "field_pact079",
+  "kind": "field_pact079",
+  "name": "영원의 나침반",
+  "params": {},
+  "price": 300,
+  "rarity": "UR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

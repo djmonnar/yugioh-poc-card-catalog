@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/939",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-데미지",
+    "파괴-몬스터"
+  ],
+  "code": 83555666,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에\n1장밖에 발동할 수 없다. ①:\n상대 턴에, 상대 LP의 수치\n이하의 공격력을 가지는 상대\n필드의 앞면 표시 몬스터\n1장을 대상으로 하고 발동할\n수 있다. 그 앞면 표시\n몬스터를 파괴하고, 자신은 그\n몬스터의 원래 공격력만큼의\n데미지를 받는다. 그 후,\n자신이 받은 데미지와 같은\n수치만큼의 데미지를 상대에게\n준다.",
+  "draw_enabled": false,
+  "identity_key": "b6ab0a08684dab9fe4980cbaeec96664ff5fc97e2824bad946a16a659439d938",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0707.webp",
+  "level": 0,
+  "links": [],
+  "name": "파괴륜",
+  "name_english": "Ring of Destruction",
+  "native_type": 4,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "L",
+  "source_id": 939,
+  "speed_limit": 0,
+  "stock": false,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 707
+}

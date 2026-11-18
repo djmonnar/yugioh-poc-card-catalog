@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1437",
+  "attack": 1900,
+  "attribute": 2,
+  "categories": [
+    "효과-회복"
+  ],
+  "code": 13944422,
+  "defense": 700,
+  "description": "이 카드가 자신의 필드에 앞면\n공격 표시로 존재하는 동안\n자신의 스탠바이 페이즈마다\nLP를 1000 회복한다.",
+  "draw_enabled": true,
+  "identity_key": "e0d3ed35a494545a4a9f93bbe25aa49c5308c06fadb7b2aca201cdd3f328f1d7",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0498.webp",
+  "level": 4,
+  "links": [],
+  "name": "그라나도라",
+  "name_english": "Granadora",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 524288,
+  "rarity": "SR",
+  "source_id": 1437,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 498
+}

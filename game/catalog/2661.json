@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards090/2661",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-전투"
+  ],
+  "code": 66526672,
+  "defense": 0,
+  "description": "각 턴의 엔드 페이즈에 발동한다. 턴 플레이어 필드의 앞면 표시 몬스터를 모두 앞면 공격 표시는 앞면 수비 표시로, 앞면 수비 표시는 앞면 공격 표시로 변경한다.",
+  "draw_enabled": true,
+  "identity_key": "2d596aa30588fce68a2318a8f9e27577a15d8e94d4c73d1e3ee21c0834230a75",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native090/cards/2661.jpg",
+  "level": 0,
+  "links": [],
+  "name": "악몽의 미궁",
+  "name_english": "Labyrinth of Nightmare",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "악몽의미궁",
+    "악몽의 미궁",
+    "Labyrinth of Nightmare"
+  ],
+  "source_id": 2661,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 1693
+}

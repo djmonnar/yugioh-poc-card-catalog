@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards143/2964",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-카운터·무효",
+    "무효-몬스터효과",
+    "효과-발동봉쇄",
+    "보호-데미지"
+  ],
+  "code": 54693926,
+  "defense": 0,
+  "description": "이 카드에는 몬스터 효과로 체인할 수 없다. 해결 시 상대 필드에 앞면으로 있는 몬스터의 효과를 턴 종료까지 무효로 한다. 이 카드의 효과를 해결한 뒤 턴 종료까지 상대가 받는 데미지는 전부 0이 된다.",
+  "draw_enabled": true,
+  "identity_key": "5461ff4599b8464874862e35b4cec5dff2721a7da66d49b25aba6ac5ed12842d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native143/cards/2964.jpg",
+  "level": 0,
+  "links": [],
+  "name": "명왕결계파",
+  "name_english": "Dark Ruler No More",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "search_aliases": [
+    "명왕결계파",
+    "Dark Ruler No More"
+  ],
+  "source_id": 2964,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1996
+}

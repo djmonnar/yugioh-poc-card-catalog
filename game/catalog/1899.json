@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1899",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-융합"
+  ],
+  "code": 45906428,
+  "defense": 0,
+  "description": "①: 자신의 필드 / 묘지의\n몬스터를 융합 소재로서\n제외하고, \"엘리멘틀 히어로\"\n융합 몬스터 1장을 융합\n소환한다.\n[안내] 이 게임에서 이 카드로\n융합 소환할 수 있는 몬스터는\n\"엘리멘틀 히어로 썬더\n자이언트\", \"엘리멘틀 히어로\n프레임 윙맨\"이다.\n[차이] 융합 소재 대용\n몬스터는 소재로 쓸 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "422ced7fae2540081e1e13a15d7d93fb27d9bbda53af6b594edfbfdcd8aac7fd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1226.webp",
+  "level": 0,
+  "links": [],
+  "name": "미러클 퓨전",
+  "name_english": "Miracle Fusion",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1899,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1226
+}

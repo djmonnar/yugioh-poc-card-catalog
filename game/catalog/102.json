@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/102",
+  "attack": 1800,
+  "attribute": 1,
+  "categories": [
+    "지원-필드",
+    "효과-버리기",
+    "효과-덱샐비지"
+  ],
+  "code": 80186010,
+  "defense": 1100,
+  "description": "이 카드를 패에서 묘지에\n버리고 발동할 수 있다.\n덱에서 \"쥐라기 월드\" 1장을\n패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "513343a524e3abe1d8a307e7eaf54026604852fff5b19160e429bc669cac6089",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0613.webp",
+  "level": 4,
+  "links": [],
+  "name": "킬러사우루스",
+  "name_english": "Destroyersaurus",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "SR",
+  "source_id": 102,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 613
+}

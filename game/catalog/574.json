@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/574",
+  "attack": 500,
+  "attribute": 2,
+  "categories": [
+    "지원-융합",
+    "발동-버리기",
+    "효과-덱샐비지"
+  ],
+  "code": 79109599,
+  "defense": 1100,
+  "description": "①: 융합 몬스터를 융합 소환할\n경우, 패 / 필드 / 묘지의 이\n카드는 그 융합 몬스터에\n카드명이 쓰여진 융합 소재\n몬스터 1장으로 대용할 수\n있다(다른 융합 소재는 대용할\n수 없다). ②: 이 카드를\n패에서 묘지로 버리고 발동할\n수 있다. 덱에서 \"융합\" 1장을\n패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "531ba62a67086586f9a3d3054c11bd910a5974257019605cec0b2fa7f0af93c6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0787.webp",
+  "level": 3,
+  "links": [],
+  "name": "늪지의 마신왕",
+  "name_english": "King of the Swamp",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "SR",
+  "source_id": 574,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 787
+}

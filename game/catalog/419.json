@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/419",
+  "attack": 700,
+  "attribute": 32,
+  "categories": [
+    "지원-융합",
+    "소환-패,덱"
+  ],
+  "code": 69015963,
+  "defense": 500,
+  "description": "자신의 LP를 5000 지불하고\n융합 덱의 융합 몬스터 1장을\n앞면 공격 표시로 특수 소환할\n수 있다.",
+  "draw_enabled": false,
+  "identity_key": "11a34a6db4b9f2b8744d9cc7f65681a50d1444979fe6d190b09825b8f5bdde31",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0601.webp",
+  "level": 2,
+  "links": [],
+  "name": "데블 프랑켄",
+  "name_english": "Cyber-Stein",
+  "native_type": 33,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 32,
+  "rarity": "L",
+  "source_id": 419,
+  "speed_limit": 0,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 601
+}

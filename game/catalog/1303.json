@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1303",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-드로우",
+    "발동-동전(코인)"
+  ],
+  "code": 37313786,
+  "defense": 0,
+  "description": "상대의 패가 6장 이상이고\n자신의 패가 2장 이하일 때\n발동할 수 있다. 동전의 면을\n선언하고 동전을 던진다.\n맞혔으면 자신의 패가 5장이\n될 때까지 드로우한다.\n틀렸으면 자신의 다음 턴을\n건너뛴다.",
+  "draw_enabled": true,
+  "identity_key": "4c835d874ee27cdd1f726d25cc4ac4f5cf6e716676d5379db309b08ea42623f0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0207.webp",
+  "level": 0,
+  "links": [],
+  "name": "겜블",
+  "name_english": "Gamble",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1303,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 207
+}

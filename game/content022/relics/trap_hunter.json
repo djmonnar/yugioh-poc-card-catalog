@@ -1,0 +1,19 @@
+{
+  "description": "전투마다 처음 내 함정의 효과가 정상 처리되면 카드 1장을 드로우해.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 48,
+  "iconKey": "Relics/Content022/atlas022",
+  "id": "trap_hunter",
+  "kind": "trap_hunter",
+  "name": "함정 사냥꾼의 문장",
+  "params": {
+    "draw": 1
+  },
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-native022",
+  "weight": 1
+}

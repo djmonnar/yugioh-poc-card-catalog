@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "ch2_battle_e3b181b2920812cfceac863e",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "9f4f025b62389da4fe96b712a67e804d97d36837341867b6c6e9840adf8b007f",
+      "source_id": 1968
+    },
+    {
+      "count": 2,
+      "identity_key": "794e27f39c93feb0eda5028ccd9246eaf700f43f43e88138e48a5fbe68501605",
+      "source_id": 1969
+    },
+    {
+      "count": 1,
+      "identity_key": "d592f7c61e4718937e523e1cd32c335c9b5fa4e0fbc1a7ea74f2a4dc10878155",
+      "source_id": 1122
+    },
+    {
+      "count": 2,
+      "identity_key": "f6af26ef01e7ab92d998dbb441ac6c0fec4fb78c7dcf7983e43c76ceda7f3bf0",
+      "source_id": 1109
+    },
+    {
+      "count": 3,
+      "identity_key": "1e45fe3dc91f290e363273a33c54acb539d4f7a7c8ff2eb5b9cb63bdef0a4e03",
+      "source_id": 1963
+    },
+    {
+      "count": 3,
+      "identity_key": "4f5d25d2b41d47dc24f115bf7ad5f413fb7dd2c6962ef9e24a56ba14b2c8e4d3",
+      "source_id": 81
+    },
+    {
+      "count": 2,
+      "identity_key": "33cc22a983e08c6f5a9b6c2d25dc4a64b707e4de12052e1d29f4408c1aaaee1e",
+      "source_id": 1965
+    },
+    {
+      "count": 2,
+      "identity_key": "663c53641dd92b60cd43ebbc2ae4fdb609853e74d2a52558a9bc03aeead79dd8",
+      "source_id": 1966
+    },
+    {
+      "count": 1,
+      "identity_key": "5bff08ef4a400039889bf6e769f04614f986af068c099a668d5acb3ccb526b54",
+      "source_id": 626
+    },
+    {
+      "count": 2,
+      "identity_key": "f12b3b5d9e2e69e42fba96684f891648d89469671e7b092e80eb13fe52aa16d2",
+      "source_id": 2606
+    }
+  ],
+  "name": "조이 흑룡 중급",
+  "version": 382
+}

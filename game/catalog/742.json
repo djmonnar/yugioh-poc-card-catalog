@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/742",
+  "attack": 2600,
+  "attribute": 32,
+  "categories": [
+    "파괴-몬스터",
+    "발동-동전(코인)"
+  ],
+  "code": 81480460,
+  "defense": 2200,
+  "description": "동전을 3번 던진다. 3번 중\n2번이 앞면이면 상대 필드의\n몬스터 1장을 파괴한다. 이\n효과는 자신의 턴에만, 턴마다\n한 번 사용할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "11bce19c7ed65c5511912da16c7ce02eaa668cb2bfbd350fba822328282bc884",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1062.webp",
+  "level": 7,
+  "links": [],
+  "name": "속사포 드래곤",
+  "name_english": "Barrel Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "SR",
+  "source_id": 742,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1062
+}

@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1243",
+  "attack": 900,
+  "attribute": 8,
+  "categories": [
+    "면역-전투",
+    "소환-패,덱"
+  ],
+  "code": 54912977,
+  "defense": 1400,
+  "description": "뒷면 수비 표시의 이 몬스터가\n공격받았을 때, 대신 상대\n몬스터 1장을 공격 대상으로\n지정할 수 있다. 이 카드가\n필드에 존재할 경우, 패에서\n\"램프의 요정 라 진\"을 특수\n소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "1da28f00e9298c31ef057181a583784e4331ba560bb242895fb18ef06de1669f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0896.webp",
+  "level": 3,
+  "links": [
+    {
+      "identity_key": "85a68743bef763a1fcef38f252a6d83d714ff3b6b57a7cca231e5f419ea0e906",
+      "slot": 1054
+    }
+  ],
+  "name": "매직 램프",
+  "name_english": "Ancient Lamp",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "source_id": 1243,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 896
+}

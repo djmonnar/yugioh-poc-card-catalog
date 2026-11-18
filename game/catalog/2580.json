@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards067/2580",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-가이아",
+    "효과-덱샐비지",
+    "마력카운터"
+  ],
+  "code": 40089744,
+  "defense": 0,
+  "description": "발동 시 덱에서 ‘카오스 솔저’ 의식 몬스터 또는 ‘암흑 기사 가이아’ 몬스터 1장을 패에 넣는다. 패나 필드에서 묘지로 보내진 몬스터 카드 1장마다 마력 카운터를 하나씩 놓는다(최대 6개). 한 턴에 한 번 이 카드의 마력 카운터 3개를 제거하고 덱에서 의식 마법 1장을 패에 넣을 수 있다. 같은 이름의 카드는 한 턴에 1장만 발동할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "588dc5a51d9697c6b661503fae4175e394abafc34212f0e79dae8af1093392ff",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2580.jpg",
+  "level": 0,
+  "links": [],
+  "name": "카오스 필드",
+  "name_english": "Gateway to Chaos",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2580,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "필드 마법",
+  "web_slot": 1612
+}

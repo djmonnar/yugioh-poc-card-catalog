@@ -1,0 +1,45 @@
+{
+  "artKey": "DuelUi011/legacy/yugi_intro",
+  "banlistEnabled": false,
+  "deckName": "유희 블랙매지션 상급",
+  "extra": [],
+  "id": "enc-2d9d662f-f18d-4735-849d-f793aa2277c9",
+  "lpBonus": 0,
+  "main": [
+    34,
+    34,
+    1211,
+    1212,
+    1210,
+    1210,
+    1210,
+    1525,
+    1525,
+    1525,
+    1924,
+    1919,
+    1925,
+    1917,
+    1926,
+    1926,
+    759,
+    759,
+    710,
+    1166
+  ],
+  "name": "유희 블랙매지션 상급",
+  "openingDrawBonus": 0,
+  "profileId": "yugi",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 34,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-2d9d662f-f18d-4735-849d-f793aa2277c9",
+  "usesNativeRules035": true
+}

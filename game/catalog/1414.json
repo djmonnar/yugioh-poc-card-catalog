@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1414",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-패,덱",
+    "효과-묘지보내기"
+  ],
+  "code": 21888494,
+  "defense": 0,
+  "description": "패에서 몬스터 카드 1장과\n몬스터가 아닌 카드 2장을\n선택한다. 상대는 세 장 중\n무작위로 1장을 고른다.\n몬스터이면 즉시 앞면 공격\n표시 또는 앞면 수비 표시로\n특수 소환하고 나머지 2장은\n묘지로 보낸다. 몬스터가\n아니면 3장 모두 묘지로\n보낸다.",
+  "draw_enabled": true,
+  "identity_key": "c721e270913f0a8998fda2a754bfd20637c4f3c45ec1e761848eb17b4ecb616c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0095.webp",
+  "level": 0,
+  "links": [],
+  "name": "선택받은 자",
+  "name_english": "Chosen One",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1414,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 95
+}

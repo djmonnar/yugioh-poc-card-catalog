@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2449",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-암흑계",
+    "효과-버리기",
+    "효과-덱샐비지"
+  ],
+  "code": 98696958,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장만 발동할 수 있다. ①: 덱에서 \"암흑계\" 몬스터 1장을 패에 넣은 후, 자신의 패에서 카드 1장을 골라 버린다.",
+  "draw_enabled": true,
+  "identity_key": "f11db0a78a9ddc1f0bd8cc5fdb053f5bebef20980a38abbc81bae2cdb2062d56",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2449.jpg",
+  "level": 0,
+  "links": [],
+  "name": "암흑회랑",
+  "name_english": "Dark Corridor",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2449,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1486
+}

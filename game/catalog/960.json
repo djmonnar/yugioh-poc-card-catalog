@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/960",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "면역-전투"
+  ],
+  "code": 14315573,
+  "defense": 0,
+  "description": "상대 몬스터가 공격했을 때,\n모든 공격을 무효로 하고\n상대의 배틀 페이즈를\n종료한다.",
+  "draw_enabled": true,
+  "identity_key": "aeb7f706122e1406053e940be3e169881c0f6817c297f9d79c9458c86acad069",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0282.webp",
+  "level": 0,
+  "links": [],
+  "name": "공격 무력화",
+  "name_english": "Negate Attack",
+  "native_type": 1048580,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 960,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 282
+}

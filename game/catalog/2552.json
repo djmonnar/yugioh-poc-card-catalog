@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards067/2552",
+  "attack": 2000,
+  "attribute": 32,
+  "categories": [
+    "덱-묘지기",
+    "효과-버리기"
+  ],
+  "code": 3825890,
+  "defense": 1800,
+  "description": "‘묘지기’ 몬스터 1장을 릴리스하여 어드밴스 소환할 수 있다. 자신의 묘지의 ‘묘지기’ 몬스터 수 × 200만큼 공격력이 오른다. 앞면 표시인 이 카드가 파괴될 때, 대신 패의 ‘묘지기’ 몬스터 1장을 버릴 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "bfcf53d5fd60a2b59b961c0091a1ab873cf43dd40b23140f54f02223087891a6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2552.jpg",
+  "level": 8,
+  "links": [],
+  "name": "묘지기의 대신관",
+  "name_english": "Gravekeeper's Visionary",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "source_id": 2552,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1584
+}

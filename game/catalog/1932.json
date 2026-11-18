@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1932",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-데미지",
+    "효과-회복"
+  ],
+  "code": 8842266,
+  "defense": 0,
+  "description": "①: 이하의 효과에서 1개를\n선택하고 발동할 수 있다.\n●자신은 1200 LP를 회복한다.\n●상대에게 800 데미지를 준다.\n[안내] 발동할 때 두 효과 중\n하나를 고른다(\"예\": LP 회복,\n\"아니오\": 상대에게 데미지).",
+  "draw_enabled": true,
+  "identity_key": "69d85e6a0e15901e5e02efc5ab79b84cbaa3a232f38f3ff799a74a24bd89cf03",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1181.webp",
+  "level": 0,
+  "links": [],
+  "name": "노인의 맹독약",
+  "name_english": "Poison of the Old Man",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1932,
+  "speed_limit": 3,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1181
+}

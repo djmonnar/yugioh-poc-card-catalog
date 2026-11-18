@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1938",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-붉은눈",
+    "효과-데미지"
+  ],
+  "code": 52684508,
+  "defense": 0,
+  "description": "이 카드를 발동하는 턴에,\n\"붉은 눈의 흑룡\"은 공격할 수\n없다. ①: 자신 몬스터 존의\n\"붉은 눈의 흑룡\" 1장을\n대상으로 하고 발동할 수\n있다. 그 \"붉은 눈의 흑룡\"의\n원래 공격력만큼의 데미지를\n상대에게 준다.\n[안내] 이 턴에 \"붉은 눈의\n흑룡\"으로 공격을 선언했으면\n발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "1dfd0d1fdf80d231ffca04839b9e8e5c601541aa2c47ddac92616bf4fea08dae",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1154.webp",
+  "level": 0,
+  "links": [],
+  "name": "흑염탄",
+  "name_english": "Inferno Fire Blast",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1938,
+  "speed_limit": 0,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1154
+}

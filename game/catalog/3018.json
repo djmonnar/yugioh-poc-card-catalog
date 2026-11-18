@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3018",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-타락천사",
+    "발동-묘지로 보내기",
+    "무효-몬스터효과",
+    "효과-회복"
+  ],
+  "code": 48152161,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 패 및 자신 필드의 앞면 표시 몬스터 중에서, \"타락천사\" 몬스터 1장을 묘지로 보내고 발동할 수 있다. 필드의 효과 몬스터 1장을 골라, 그 효과를 턴 종료시까지 무효로 하고, 그 몬스터의 공격력만큼만 자신의 LP를 회복한다.",
+  "draw_enabled": true,
+  "identity_key": "ba0383d7b5c1c1ba2caa0d82524d2821365dee6cc5c52f61d466049f9061519b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3018.jpg",
+  "level": 0,
+  "links": [],
+  "name": "신무리의 타락천사",
+  "name_english": "The Sanctified Darklord",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "신무리의 타락천사",
+    "The Sanctified Darklord"
+  ],
+  "source_id": 3018,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2050
+}

@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1023",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-버리기",
+    "파괴-몬스터"
+  ],
+  "code": 79759861,
+  "defense": 0,
+  "description": "패의 카드 1장을 묘지로\n버리고, 표시 형식에 관계없이\n필드의 몬스터 1장을\n파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "5f4ef019f9ca65d2921f8734e94a240797877d12abbb3a87f3209a5e8c54b32b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0363.webp",
+  "level": 0,
+  "links": [],
+  "name": "죽은 자에게 흔드는 손",
+  "name_english": "Tribute to The Doomed",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1023,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 363
+}

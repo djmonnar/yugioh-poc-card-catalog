@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1834",
+  "attack": 1500,
+  "attribute": 1,
+  "categories": [
+    "덱-아마조네스"
+  ],
+  "code": 55821894,
+  "defense": 1300,
+  "description": "이 카드가 전투를 실행하는\n것에 의해서 받는 컨트롤러의\n전투 데미지는 0 이 된다.",
+  "draw_enabled": true,
+  "identity_key": "53388ce7cb9044f650d95938c4808fec22d461c09e7b06728d2794a215823c35",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1249.webp",
+  "level": 4,
+  "links": [],
+  "name": "아마조네스의 격투전사",
+  "name_english": "Amazoness Fighter",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "source_id": 1834,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1249
+}

@@ -1,0 +1,20 @@
+{
+  "description": "원정 중 원하는 듀얼에서 나누어 사용할 수 있는 드로우 2회분.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 9,
+  "iconKey": "Relics/atlas160",
+  "id": "draw_tome",
+  "kind": "draw_tome",
+  "name": "드로우 마도서",
+  "params": {
+    "charges": 2,
+    "draw": 1
+  },
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

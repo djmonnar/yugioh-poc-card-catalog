@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards125/2824",
+  "attack": 1600,
+  "attribute": 16,
+  "categories": [
+    "지원-에일리언",
+    "A 카운터",
+    "발동-소환",
+    "지원-전투"
+  ],
+  "code": 64160836,
+  "defense": 700,
+  "description": "이 카드가 자신 필드 위에 앞면 표시로 존재하는 한, 상대 필드 위에 몬스터가 특수 소환될 때마다, 그때 특수 소환된 몬스터에 A 카운터를 1개 놓는다. A 카운터가 얹혀 있는 몬스터는 \"에일리언\"이라는 이름이 붙은 몬스터와 전투할 경우, A 카운터 1개당 공격력과 수비력은 300 포인트 내린다.",
+  "draw_enabled": true,
+  "identity_key": "3d56fc15553c1103bb465912ba1f696b73cefffc913561a34b79f30a8ac2e339",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native125/cards/2824.jpg",
+  "level": 4,
+  "links": [],
+  "name": "에일리언 키즈",
+  "name_english": "Alien Kid",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 524288,
+  "rarity": "R",
+  "search_aliases": [
+    "에일리언 키즈",
+    "Alien Kid"
+  ],
+  "source_id": 2824,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1856
+}

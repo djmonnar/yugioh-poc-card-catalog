@@ -1,0 +1,17 @@
+{
+  "description": "새겨진 주문이 네 카드에 응답한다. 이름이 맞는 의식서를 찾아 의식을 완성하자.",
+  "effect": "보유 의식 몬스터의 대응 의식 마법 1장 획득",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/background",
+  "id": "ritual_altar",
+  "kind": "ritual_altar",
+  "name": "보유 의식 몬스터의 대응 의식 마법 1장 획득",
+  "params": {
+    "count": 1
+  },
+  "rewardRarity": null,
+  "supportStatus": "verified-controller022",
+  "title": "의식의 제단",
+  "weight": 1
+}

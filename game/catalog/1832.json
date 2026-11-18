@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1832",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "파괴-마법",
+    "파괴-몬스터",
+    "파괴-함정"
+  ],
+  "code": 53567095,
+  "defense": 0,
+  "description": "①: 자신 필드의 비행야수족\n몬스터 1장을 릴리스하고,\n필드의 카드 2장을 대상으로\n하여 발동할 수 있다. 그\n카드를 파괴한다.\n[안내] 세트한 다음 턴부터\n발동할 수 있다. 먼저 파괴할\n카드 2장을 커서로 차례로\n고르고, 그다음 릴리스할\n비행야수족 몬스터를 고른다.\n대상으로 고른 몬스터는\n릴리스할 수 없으므로,\n릴리스할 비행야수족 몬스터와\n따로 파괴할 카드 2장이\n필드에 있어야 발동할 수\n있다.",
+  "draw_enabled": true,
+  "identity_key": "700fde8859d973fdcefb68a64de41c7e6f6619025b1309c4e06bba58da071b22",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1247.webp",
+  "level": 0,
+  "links": [],
+  "name": "갓버드 어택",
+  "name_english": "Icarus Attack",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1832,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1247
+}

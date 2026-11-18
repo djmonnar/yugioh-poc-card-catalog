@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards135/2898",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-제외",
+    "효과-제외봉쇄"
+  ],
+  "code": 30459350,
+  "defense": 0,
+  "description": "①: 이 카드가 마법 & 함정 존에 존재하는 한, 서로 카드를 제외할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "568797c751c4298d1a3a41d86403fa4218886550d622bfc9251dce632e6b278c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native135/cards/2898.jpg",
+  "level": 0,
+  "links": [],
+  "name": "왕궁의 철벽",
+  "name_english": "Imperial Iron Wall",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "왕궁의 철벽",
+    "Imperial Iron Wall"
+  ],
+  "source_id": 2898,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 1930
+}

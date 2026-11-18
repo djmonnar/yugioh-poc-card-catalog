@@ -1,0 +1,45 @@
+{
+  "artKey": "Character090/images/tristan/start",
+  "banlistEnabled": false,
+  "deckName": "야수족 초급",
+  "extra": [],
+  "id": "enc-31873e2b-e4ee-4aa5-8ada-3991d016b0cd",
+  "lpBonus": 0,
+  "main": [
+    2069,
+    2069,
+    2069,
+    2067,
+    2067,
+    2067,
+    1115,
+    1115,
+    1115,
+    2616,
+    2616,
+    2616,
+    329,
+    329,
+    2059,
+    2059,
+    2617,
+    2617,
+    2075,
+    2075
+  ],
+  "name": "전우혁",
+  "openingDrawBonus": 0,
+  "profileId": "tristan",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 329,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-31873e2b-e4ee-4aa5-8ada-3991d016b0cd",
+  "usesNativeRules035": true
+}

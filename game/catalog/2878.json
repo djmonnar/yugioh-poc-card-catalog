@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards130/2878",
+  "attack": 1000,
+  "attribute": 8,
+  "categories": [
+    "지원-로이드",
+    "면역-전투"
+  ],
+  "code": 18325492,
+  "defense": 1000,
+  "description": "이 카드는 1턴에 1번만, 전투에 의해서는 파괴되지 않는다(데미지 계산은 적용한다.)",
+  "draw_enabled": true,
+  "identity_key": "5c535eafd2abc1425f47c06fa48044590f7349debf27b9e3cba1ed31c4345816",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native130/cards/2878.jpg",
+  "level": 3,
+  "links": [],
+  "name": "자이로이드",
+  "name_english": "Gyroid",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "N",
+  "search_aliases": [
+    "자이로이드",
+    "Gyroid"
+  ],
+  "source_id": 2878,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1910
+}

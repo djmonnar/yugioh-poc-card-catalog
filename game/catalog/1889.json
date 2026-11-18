@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1889",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-컨트롤"
+  ],
+  "code": 87910978,
+  "defense": 0,
+  "description": "①: 800 LP를 지불하고, 상대\n필드의 통상 소환 가능한 앞면\n표시 몬스터 1장을 대상으로\n하여 발동할 수 있다. 그 앞면\n표시 몬스터의 컨트롤을 엔드\n페이즈까지 얻는다.\n[차이] \"일반 소환할 수 있는\n몬스터\"인지는 카드 종류로\n판정한다(특수 소환 전용\n몬스터, 융합 / 의식 몬스터는\n대상이 아니다).",
+  "draw_enabled": true,
+  "identity_key": "11deec273674ab27d556ef6c986bb2b641b62d439aeab9dde239f05f64249e97",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1216.webp",
+  "level": 0,
+  "links": [],
+  "name": "세뇌－브레인 컨트롤－",
+  "name_english": "Brain Control",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1889,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1216
+}

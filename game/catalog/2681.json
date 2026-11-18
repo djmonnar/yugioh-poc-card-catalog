@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards093/2681",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-데몬",
+    "소환-묘지",
+    "효과-버리기"
+  ],
+  "code": 97803170,
+  "defense": 0,
+  "description": "이 카드명의 ①의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 자신 묘지의 레벨 5 이상의 악마족 몬스터 1장을 대상으로 하고 발동할 수 있다. 패에서 악마족 몬스터 1장을 버리고, 대상 몬스터를 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "e5940c6b3f9fa40f142e78bc2bd7ac0fea6635b02a7980efbe0a3f7ef3f06dcd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native093/cards/2681.jpg",
+  "level": 0,
+  "links": [],
+  "name": "데몬이 부르는 소리",
+  "name_english": "Call of the Archfiend",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "데몬이부르는소리",
+    "데몬이 부르는 소리",
+    "Call of the Archfiend"
+  ],
+  "source_id": 2681,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1713
+}

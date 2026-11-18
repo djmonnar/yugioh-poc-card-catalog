@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2454",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-암흑계",
+    "효과-버리기",
+    "효과-제외-묘지"
+  ],
+  "code": 41930553,
+  "defense": 0,
+  "description": "①: 1턴에 1번, 상대 묘지의 몬스터 1장을 대상으로 발동할 수 있다. 자신의 패에서 악마족 몬스터 1장을 골라 효과로 버리고, 버렸다면 그 대상 몬스터를 제외한다.",
+  "draw_enabled": true,
+  "identity_key": "82052a375f9cce1cf6159cbedc8c1de80feda4280e820af3431f7af8d2539467",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2454.jpg",
+  "level": 0,
+  "links": [],
+  "name": "암흑의 장기",
+  "name_english": "Dark Smog",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2454,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 1491
+}

@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards136/2945",
+  "attack": 1000,
+  "attribute": 32,
+  "categories": [
+    "지원-프레데터 플랜츠",
+    "포식 카운터",
+    "지원-융합",
+    "발동-소환 시",
+    "효과-덱샐비지",
+    "효과-묘지샐비지",
+    "효과-릴리즈",
+    "소환-덱리크루터"
+  ],
+  "code": 66309175,
+  "defense": 2500,
+  "description": "\"프레데터 플랜츠\" 몬스터 × 2\n이 카드명의 ①②의 효과는 각각 1턴에 1번밖에 사용할 수 없다. ①: 이 카드를 융합 소환했을 경우에 발동할 수 있다. 자신의 덱 / 엑스트라 덱(앞면) / 묘지에서 \"프레데터 플랜츠\" 몬스터 1장이나 \"프레데터\" 마법 / 함정 카드 1장을 패에 넣는다. ②: 상대 필드의 포식 카운터가 놓여 있는 몬스터 또는 자신 필드의 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 릴리스하고, 덱에서 \"프레데터 플랜츠\" 몬스터 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "65adbca1d7b6f4eabdf764bd680696ff95ea46a712874f3f256443cda555ffea",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native136/cards/2945.jpg",
+  "level": 5,
+  "links": [],
+  "name": "프레데터 플랜츠 암불로메리두스",
+  "name_english": "Predaplant Ambulomelides",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "SR",
+  "search_aliases": [
+    "프레데터 플랜츠 암불로메리두스",
+    "Predaplant Ambulomelides"
+  ],
+  "source_id": 2945,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 1977
+}

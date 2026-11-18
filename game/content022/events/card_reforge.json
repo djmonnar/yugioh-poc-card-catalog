@@ -1,0 +1,17 @@
+{
+  "description": "오래된 연성로에 희미한 불꽃이 남아 있다. 카드와 금화를 바치면 한 단계 높은 힘이 깨어난다.",
+  "effect": "원정 금화 -75 · N→R / R→SR / SR→UR 카드 1매 교환",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "card_reforge",
+  "kind": "card_reforge",
+  "name": "금화 75와 카드 1장을 바치고 등급 상향",
+  "params": {
+    "gold": 75
+  },
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "봉인된 연성로",
+  "weight": 1
+}

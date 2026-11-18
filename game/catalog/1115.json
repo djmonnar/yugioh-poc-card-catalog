@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1115",
+  "attack": 1000,
+  "attribute": 1,
+  "categories": [
+    "효과-회복",
+    "소환-덱리크루터",
+    "발동-묘지"
+  ],
+  "code": 22567609,
+  "defense": 100,
+  "description": "이 카드가 전투로 묘지로\n보내졌을 때, 자신의 라이프\n포인트를 1000 회복한다. 또한\n자신의 덱에서 같은 이름의\n카드를 골라 필드에 뒷면 수비\n표시로 특수 소환할 수 있다.\n그 후 덱을 셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "e35a8e14e840c0996c6a744a0c371da1c167663818edc1bcf5b8f2aea9bfb28d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0453.webp",
+  "level": 2,
+  "links": [],
+  "name": "재빠른 날다람쥐",
+  "name_english": "Nimble Momonga",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "SR",
+  "source_id": 1115,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 453
+}

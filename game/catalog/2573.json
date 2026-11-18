@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards067/2573",
+  "attack": 2300,
+  "attribute": 1,
+  "categories": [
+    "덱-가이아",
+    "소환-패,덱"
+  ],
+  "code": 8910971,
+  "defense": 2100,
+  "description": "상대에게 몬스터가 있고 자신에게는 없으면 패에서 특수 소환할 수 있다. 한 턴에 한 번, 이 카드보다 공격력이 높은 몬스터가 상대 필드에 특수 소환되면(데미지 스텝 제외), 이 턴 종료까지 자신의 공격력을 700 올릴 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "cc5299b48fc94406ccab08c4ff130b0c21b37753ad511cb424b7177d0af5816b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2573.jpg",
+  "level": 7,
+  "links": [],
+  "name": "암흑 기사 가이아로드",
+  "name_english": "Lord Gaia the Fierce Knight",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "source_id": 2573,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1605
+}

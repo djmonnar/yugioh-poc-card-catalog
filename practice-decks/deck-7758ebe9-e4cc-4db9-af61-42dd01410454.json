@@ -1,0 +1,49 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-7758ebe9-e4cc-4db9-af61-42dd01410454",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "4d21ad16a83adcb72f9ee960b5d48e381fb2377a1035d072c57419f593d1043b",
+      "source_id": 2389
+    },
+    {
+      "count": 2,
+      "identity_key": "cd25dbadd1f45fb9fda4fcc2ee7c2a1574f44d36584b495a80db699c3c951de4",
+      "source_id": 1825
+    },
+    {
+      "count": 2,
+      "identity_key": "b5d8d50e965e617838b4e4173d07273849fdcff9f67e182287c074c6df394224",
+      "source_id": 2565
+    },
+    {
+      "count": 3,
+      "identity_key": "bfcf53d5fd60a2b59b961c0091a1ab873cf43dd40b23140f54f02223087891a6",
+      "source_id": 2552
+    },
+    {
+      "count": 3,
+      "identity_key": "dbaf42f889935cae91b4090f8c249a4ebab5a9af22394288c56e47e842c60267",
+      "source_id": 1822
+    },
+    {
+      "count": 3,
+      "identity_key": "e69b2fea567e1e3fe0e2e79b538ce705c0e8505ec0b932105aeff4d1a40bf81a",
+      "source_id": 1307
+    },
+    {
+      "count": 2,
+      "identity_key": "e62a17908ade5fe79499ece28be07e92f42563251a792661ebb945f548d4e9da",
+      "source_id": 2555
+    },
+    {
+      "count": 3,
+      "identity_key": "38c7ceed929684624aeb70d2b736465d99d7adabddb16d0b3bac9e35c8c317c1",
+      "source_id": 153
+    }
+  ],
+  "name": "묘지기 중급",
+  "version": 281
+}

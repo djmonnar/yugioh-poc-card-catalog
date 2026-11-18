@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1055",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "면역-전투"
+  ],
+  "code": 12607053,
+  "defense": 0,
+  "description": "이 카드가 발동하는 턴, 상대\n몬스터가 주는 데미지는 0로\n감소한다.",
+  "draw_enabled": true,
+  "identity_key": "0cbb01d4f0d453e198507ca2108ed5a1685f782edf88662fbdbf83a58d5d4401",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1102.webp",
+  "level": 0,
+  "links": [],
+  "name": "화목의 사자",
+  "name_english": "Waboku",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1055,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1102
+}

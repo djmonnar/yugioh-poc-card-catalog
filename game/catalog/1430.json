@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1430",
+  "attack": 1400,
+  "attribute": 1,
+  "categories": [
+    "효과-바운스"
+  ],
+  "code": 38480590,
+  "defense": 1300,
+  "description": "앞면 표시의 이 카드를 제물로 바친다. 이 턴에 전투에 의해서 파괴되어 자신의 묘지로 보내진 몬스터 1장을 덱의 맨 위로 되돌린다.\n[미지원] 스피드 듀얼에는 메인 페이즈 2가 없어 발동할 수 없습니다. 일반 듀얼에서는 메인 페이즈 2에 발동합니다.",
+  "draw_enabled": true,
+  "identity_key": "e15778f059a23ab8f69a79986e0f85a24313208f1ce4dcbe89c360af39649c50",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1087.webp",
+  "level": 4,
+  "links": [],
+  "name": "레이디 팬서",
+  "name_english": "Lady Panther",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "R",
+  "source_id": 1430,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1087
+}

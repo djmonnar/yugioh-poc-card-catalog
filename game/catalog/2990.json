@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards144/2990",
+  "attack": 500,
+  "attribute": 1,
+  "categories": [
+    "지원-곤충",
+    "지원-장착",
+    "지원-고레벨",
+    "발동-패에서",
+    "효과-장착",
+    "효과-종족 변경",
+    "효과-공격 제한",
+    "무효-몬스터효과",
+    "발동-묘지로 보내졌을 때",
+    "소환-패에서"
+  ],
+  "code": 14457896,
+  "defense": 300,
+  "description": "이 카드명의 ①의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 이 카드를 패에서 장착 카드로 취급하여 그 몬스터에 장착한다. 장착 몬스터는 종족이 곤충족이 되고, 곤충족 몬스터를 공격할 수 없으며, 곤충족 몬스터를 대상으로 하여 발동한 장착 몬스터의 효과는 무효화된다. 이 효과는 상대 턴에도 발동할 수 있다. ②: 장착 카드 취급의 이 카드가 묘지로 보내졌을 경우에 발동할 수 있다. 패에서 레벨 7 이상의 곤충족 몬스터 1장을 소환 조건을 무시하고 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "edf31a2540f9b6b8976be4ec76c6e683e4bb51a1aa23953463c3687789f41f2c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native144/cards/2990.jpg",
+  "level": 2,
+  "links": [],
+  "name": "기생충 파라노이드",
+  "name_english": "Parasite Paranoid",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "SR",
+  "search_aliases": [
+    "기생충 파라노이드",
+    "Parasite Paranoid"
+  ],
+  "source_id": 2990,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2022
+}

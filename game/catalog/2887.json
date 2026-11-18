@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards130/2887",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-로이드",
+    "지원-융합",
+    "면역-효과"
+  ],
+  "code": 23299957,
+  "defense": 0,
+  "description": "①: 자신의 패 / 필드에서, \"비크로이드\" 융합 몬스터 카드에 기재된 융합 소재 몬스터를 묘지로 보내고, 그 융합 몬스터 1장을 엑스트라 덱에서 융합 소환한다. 이 효과로 특수 소환한 몬스터는 효과로는 파괴되지 않으며, 그 몬스터의 효과는 무효화되지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "adadd107f3adfc33dc71dec1918323068c95e4e4aa067dfb96248d8774ab1a07",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native130/cards/2887.jpg",
+  "level": 0,
+  "links": [],
+  "name": "비크로이드 커넥션 존",
+  "name_english": "Vehicroid Connection Zone",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "비크로이드 커넥션 존",
+    "Vehicroid Connection Zone"
+  ],
+  "source_id": 2887,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1919
+}

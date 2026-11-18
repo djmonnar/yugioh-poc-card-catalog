@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards093/2677",
+  "attack": 1700,
+  "attribute": 8,
+  "categories": [
+    "지원-함정",
+    "지원-전투"
+  ],
+  "code": 41113025,
+  "defense": 1500,
+  "description": "자신의 묘지에 존재하는 일반 함정 카드 1장을 게임에서 제외하고, 이 카드의 공격력은 상대 턴의 엔드 페이즈시까지 500 포인트 올린다. 이 효과는 1턴에 1번밖에 사용할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "16e395504809c3d379c4b89333b47ee2dd830f52f77161858c12e6bdb83ba88c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native093/cards/2677.jpg",
+  "level": 4,
+  "links": [],
+  "name": "디스크라이더",
+  "name_english": "Diskblade Rider",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "search_aliases": [
+    "디스크라이더",
+    "Diskblade Rider"
+  ],
+  "source_id": 2677,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1709
+}

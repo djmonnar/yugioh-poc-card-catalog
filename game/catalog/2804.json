@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards122/2804",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-리버스",
+    "효과-뒷면표시",
+    "효과-앞면표시",
+    "효과-드로우"
+  ],
+  "code": 35480699,
+  "defense": 0,
+  "description": "①: 필드의 앞면 표시 몬스터를 전부 뒷면 수비 표시로 한다. 이 턴의 엔드 페이즈에, 상대 필드의 뒷면 수비 표시 몬스터를 전부 앞면 수비 표시로 하고, 그 후, 이 효과로 앞면 수비 표시로 한 몬스터의 수만큼 상대는 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "734398136884a75193a228f8de8ac70543215902dd22a4da538d106946318668",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native122/cards/2804.jpg",
+  "level": 0,
+  "links": [],
+  "name": "개기일식의 서",
+  "name_english": "Book of Eclipse",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "개기일식의서",
+    "개기일식의 서",
+    "Book of Eclipse"
+  ],
+  "source_id": 2804,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 1836
+}

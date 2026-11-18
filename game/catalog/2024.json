@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2024",
+  "attack": 2300,
+  "attribute": 32,
+  "categories": [
+    "발동-동전(코인)",
+    "파괴-마법",
+    "파괴-몬스터",
+    "파괴-함정"
+  ],
+  "code": 25551951,
+  "defense": 1200,
+  "description": "1턴에 1번, 상대 필드의 카드 1장을 대상으로 발동할 수 있다. 코인 토스를 3회 실행하고, 앞면이 2회 이상 나오면 그 대상을 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "544243db3fb2545affba714527ce5f69b0369f14dddccebe0e87a39e6fc8e437",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1327.webp",
+  "level": 6,
+  "links": [],
+  "name": "블로백 드래곤",
+  "name_english": "Blowback Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "SR",
+  "source_id": 2024,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1327
+}

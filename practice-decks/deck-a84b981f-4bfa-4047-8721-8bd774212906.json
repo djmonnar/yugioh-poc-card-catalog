@@ -1,0 +1,64 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-a84b981f-4bfa-4047-8721-8bd774212906",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "047492df28b02372c0bdbcafaf950807355837c721c7cf0b41c23068bdfc14cf",
+      "source_id": 234
+    },
+    {
+      "count": 2,
+      "identity_key": "5fdc58a7f4a2a6120dc749446ceec3c3836a0b58423a2ebda696ce8d62e5bbdd",
+      "source_id": 2047
+    },
+    {
+      "count": 2,
+      "identity_key": "a284f7cdbeacb83e2b42faabe4df25bc793f6150ce8d7a02bc87d5b29efde4c0",
+      "source_id": 2055
+    },
+    {
+      "count": 2,
+      "identity_key": "15e0aa00503aadc1e90dbb4652016d1326e77c5f4bdde35613603d08a0e4a2dc",
+      "source_id": 2039
+    },
+    {
+      "count": 2,
+      "identity_key": "7b277d7d79e864630242dff5fbf1107f451088479880cabdc2b0f2789473ce65",
+      "source_id": 2044
+    },
+    {
+      "count": 2,
+      "identity_key": "52dfe00bd48baa89cbea0a4652c7ffe1771534d8b4ca03faeed724796e753106",
+      "source_id": 2054
+    },
+    {
+      "count": 1,
+      "identity_key": "ef09eb63a48ccc265d6f647420bcce9e766271db10d86401b6ec0057afddfebe",
+      "source_id": 2049
+    },
+    {
+      "count": 2,
+      "identity_key": "64741d3fb7b1b783edf926d04ab5bc8c7ced74cf90ce97892864e0439cb78008",
+      "source_id": 2041
+    },
+    {
+      "count": 1,
+      "identity_key": "3ea236bed9f5ee9d7e1d0697feca4e3ff5cbec3d4aa454ddc9c0d2ff8b37e1b1",
+      "source_id": 2042
+    },
+    {
+      "count": 1,
+      "identity_key": "64028f7acd32daba0282d5dfa5416908fa5319002420a5960913701a28f55e32",
+      "source_id": 637
+    },
+    {
+      "count": 2,
+      "identity_key": "0778f846f6cc96a7a54b31a9148046fe8e39870d0f1e6844e5d9d193d400c36b",
+      "source_id": 2046
+    }
+  ],
+  "name": "아키 식물 중급",
+  "version": 685
+}

@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "starter-template-97498efc0d5d7e11956069f3792ab529",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "1a7b9a9cb2e196f128565435e7b0303dca167b67e71af570e0f0696ad5427876",
+      "source_id": 2089
+    },
+    {
+      "count": 1,
+      "identity_key": "9da543a696490e35c2ab7d6266d71a058cbe4473a198f7ef64cb16eb05067026",
+      "source_id": 287
+    },
+    {
+      "count": 2,
+      "identity_key": "56929ca6f7ee1e0ae20e72a60d6e324f33c3d9ec8008f32d559a967cd1549db4",
+      "source_id": 2090
+    },
+    {
+      "count": 2,
+      "identity_key": "a0f9834d220ce9d2cc1ef1b9950094e71d76da1fd8417788f202c298bed501a1",
+      "source_id": 2091
+    },
+    {
+      "count": 2,
+      "identity_key": "0e6025257a4a4d6d957b3e6f59556d1819cd3160bf62875e993c8cb1c61372e0",
+      "source_id": 139
+    },
+    {
+      "count": 2,
+      "identity_key": "410f06ce4e398037c5f235484d60c8eae6ceda1ff0b961416212c87b83b60c5b",
+      "source_id": 1955
+    },
+    {
+      "count": 2,
+      "identity_key": "a007bca3e1f98bc0dbcd13c19091dba971722ad8a7221d64f011725c71e5c34a",
+      "source_id": 1950
+    },
+    {
+      "count": 2,
+      "identity_key": "59d2eeb4510631822483357e45dd52235c268a83ee173b8ec311bf9993209514",
+      "source_id": 1949
+    },
+    {
+      "count": 2,
+      "identity_key": "cdc2f1d7aafc0e830690f023ae58740e48c2aaca4bf148b6f2d6baf1c2462b92",
+      "source_id": 1539
+    },
+    {
+      "count": 3,
+      "identity_key": "37bc82455411d8d6dce52c360d37c2ea8ab72ecbe6ca818a7c335a34a56317b3",
+      "source_id": 967
+    }
+  ],
+  "name": "암석족",
+  "version": 691
+}

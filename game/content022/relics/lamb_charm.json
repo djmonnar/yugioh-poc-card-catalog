@@ -1,0 +1,19 @@
+{
+  "description": "전투 시작 시 양 토큰을 앞면 수비 표시로 소환해. 어드밴스 소환을 위해 릴리스할 수 없어.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 30,
+  "iconKey": "Relics/atlas163",
+  "id": "lamb_charm",
+  "kind": "lamb_charm",
+  "name": "어린 양",
+  "params": {
+    "count": 1
+  },
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

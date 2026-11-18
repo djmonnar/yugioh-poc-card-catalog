@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1106",
+  "attack": 900,
+  "attribute": 32,
+  "categories": [
+    "파괴-몬스터",
+    "소환-패,덱",
+    "효과-드로우"
+  ],
+  "code": 34124316,
+  "defense": 900,
+  "description": "리버스: 이 카드를 포함한\n필드의 모든 몬스터를\n파괴한다. 양쪽 플레이어는\n각각 자신의 덱 위에서 카드\n5장을 넘겨 서로 공개한다.\n이는 드로우로 취급하지\n않는다. 그중 레벨 4 이하의\n몬스터를 즉시 앞면 공격 표시\n또는 뒷면 수비 표시로 특수\n소환한다. 나머지는 각각\n자신의 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "acb7ead2036031871600089b462b8e4e86a38b4ded6af7d5a9c1021e3cc9977a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0320.webp",
+  "level": 3,
+  "links": [],
+  "name": "사이버 포드",
+  "name_english": "Cyber Jar",
+  "native_type": 2097185,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 256,
+  "rarity": "UR",
+  "source_id": 1106,
+  "speed_limit": 0,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 320
+}

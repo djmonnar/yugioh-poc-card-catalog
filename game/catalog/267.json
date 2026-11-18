@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/267",
+  "attack": 2800,
+  "attribute": 32,
+  "categories": [
+    "발동-묘지",
+    "소환-묘지"
+  ],
+  "code": 71200730,
+  "defense": 3000,
+  "description": "이 카드가 상대의 카드의\n효과에 의해서 패 또는 덱에서\n묘지로 보내졌을 때, 이\n카드를 필드 위에 특수\n소환한다.",
+  "draw_enabled": true,
+  "identity_key": "265476daf85c45695657dfec2375927fec198bd15358fed23264dd26323249bf",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1013.webp",
+  "level": 8,
+  "links": [],
+  "name": "어둠에서 나온 절망",
+  "name_english": "Despair from the Dark",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "R",
+  "source_id": 267,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1013
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/336",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "파괴-몬스터"
+  ],
+  "code": 12580477,
+  "defense": 0,
+  "description": "상대 필드의 몬스터를 모두\n파괴합니다.",
+  "draw_enabled": false,
+  "identity_key": "bb2944521fe3be609ca839e0bc9026555884f1734a357351789a36a6a89911d5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0345.webp",
+  "level": 0,
+  "links": [],
+  "name": "번개",
+  "name_english": "Raigeki",
+  "native_type": 2,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "L",
+  "source_id": 336,
+  "speed_limit": 1,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 345
+}

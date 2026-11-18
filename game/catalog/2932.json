@@ -1,0 +1,34 @@
+{
+  "alias": 0,
+  "art_key": "Cards135/2932",
+  "attack": 300,
+  "attribute": 4,
+  "categories": [
+    "소환-토큰"
+  ],
+  "code": 44689689,
+  "defense": 0,
+  "description": "「쥬락 스피노스」의 효과로 특수 소환된다.",
+  "draw_enabled": true,
+  "identity_key": "1c7ef681266eba7bd801a747db9c6f2205991a2db0784d44673d8f30f392522a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native135/cards/2932.jpg",
+  "level": 1,
+  "links": [],
+  "name": "스피노스 토큰",
+  "name_english": "Spinos Token",
+  "native_type": 16401,
+  "normal_limit": 0,
+  "playable": false,
+  "race": 65536,
+  "rarity": "N",
+  "search_aliases": [
+    "스피노스 토큰",
+    "Spinos Token"
+  ],
+  "source_id": 2932,
+  "speed_limit": null,
+  "stock": true,
+  "token": true,
+  "type_name": "토큰",
+  "web_slot": 1964
+}

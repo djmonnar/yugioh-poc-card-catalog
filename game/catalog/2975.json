@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards143/2975",
+  "attack": 2800,
+  "attribute": 2,
+  "categories": [
+    "지원-해황",
+    "지원-머메일",
+    "지원-물 속성",
+    "발동-패에서",
+    "발동-묘지로 보내기",
+    "소환-패에서",
+    "발동-소환 시",
+    "효과-바운스"
+  ],
+  "code": 99193444,
+  "defense": 1600,
+  "description": "이 카드명의 ①②의 효과는 각각 1턴에 1번밖에 사용할 수 없다. ①: 자신의 패 / 필드(앞면 표시)에서 다른 물 속성 몬스터 1장을 묘지로 보내고 발동할 수 있다. 이 카드를 패에서 특수 소환한다. ②: 이 카드를 일반 소환 / 특수 소환했을 경우, 덱에서 \"해황\" 몬스터나 \"머메일\" 몬스터 1장을 묘지로 보내고, 상대 필드의 카드 1장을 대상으로 하여 발동할 수 있다. 그 카드를 패로 되돌린다. ③: 자신 필드에 \"굉해황 포세이도라\" 이외의 몬스터가 존재하는 한, 상대 몬스터는 이 카드를 공격 대상으로 선택할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "bd5dbc80897b9f8c50a0bbf2825afbbd7896f495c26e436aa0bd28c2ed2267b3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native143/cards/2975.jpg",
+  "level": 7,
+  "links": [],
+  "name": "굉해황 포세이도라",
+  "name_english": "Poseidra, the Storming Atlantean",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 262144,
+  "rarity": "UR",
+  "search_aliases": [
+    "굉해황 포세이도라",
+    "Poseidra, the Storming Atlantean"
+  ],
+  "source_id": 2975,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2007
+}

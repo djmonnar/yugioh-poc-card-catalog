@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards120/2769",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착",
+    "소환-묘지"
+  ],
+  "code": 71453557,
+  "defense": 0,
+  "description": "1500 라이프 포인트를 지불한다. 상대의 묘지에서 몬스터를 1장 선택하고 공격 표시로 자신 필드 위에 특수 소환하여, 이 카드를 장착한다. 이 카드가 필드 위에 존재하지 않게 되었을 때, 장착 몬스터를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "b03efc80142793cde8aa0d09e91fe273015cd715972cff96b46ec330aa8b475e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native120/cards/2769.jpg",
+  "level": 0,
+  "links": [],
+  "name": "자율행동 유닛",
+  "name_english": "Autonomous Action Unit",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "자율행동 유닛",
+    "Autonomous Action Unit"
+  ],
+  "source_id": 2769,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 1801
+}

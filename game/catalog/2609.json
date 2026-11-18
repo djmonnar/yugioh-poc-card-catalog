@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards084/2609",
+  "attack": 500,
+  "attribute": 4,
+  "categories": [
+    "지원-장착",
+    "효과-덱샐비지"
+  ],
+  "code": 73431236,
+  "defense": 500,
+  "description": "리버스하면 덱에서 장착 마법 카드 1장을 골라 상대에게 보여 주고 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "5981acc8fa5c0e62cabcaf5b34aa2847d57cca2685232d917d58a63aff77112a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2609.jpg",
+  "level": 2,
+  "links": [],
+  "name": "명공 호철",
+  "name_english": "Iron Blacksmith Kotetsu",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "SR",
+  "search_aliases": [
+    "명공호철",
+    "명공 호철",
+    "Iron Blacksmith Kotetsu"
+  ],
+  "source_id": 2609,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1641
+}

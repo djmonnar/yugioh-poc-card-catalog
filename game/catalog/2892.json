@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards130/2892",
+  "attack": 1600,
+  "attribute": 4,
+  "categories": [
+    "지원-로이드",
+    "발동-파괴",
+    "효과-묘지샐비지"
+  ],
+  "code": 24311595,
+  "defense": 1800,
+  "description": "이 카드가 자신 필드 위에 앞면 표시로 존재하는 한, 자신 필드 위에 존재하는 \"로이드\"라는 이름이 붙은 몬스터가 전투에 의해서 파괴되어 묘지로 보내졌을 때, 그 몬스터를 패로 되돌릴 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "5d1351799d7290a244c55bd9367b81362362f19b2fbf0747316316bf7e611558",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native130/cards/2892.jpg",
+  "level": 6,
+  "links": [],
+  "name": "구조로이드",
+  "name_english": "Rescueroid",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "search_aliases": [
+    "구조로이드",
+    "Rescueroid"
+  ],
+  "source_id": 2892,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1924
+}

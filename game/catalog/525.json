@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/525",
+  "attack": 1800,
+  "attribute": 1,
+  "categories": [
+    "발동-묘지"
+  ],
+  "code": 98719226,
+  "defense": 1000,
+  "description": "이 카드가 전투에 의해서\n파괴되어 묘지로 보내졌을 때,\n이 카드를 파괴한 몬스터에 A\n카운터를 2개 놓는다. 이\n카드가 필드 위에 앞면 표시로\n존재하는 한, A 카운터가 얹힌\n몬스터는 \"에일리언\"이라는\n이름이 붙은 몬스터와 전투를\n실행할 경우, 데미지\n계산시에만 A 카운터 1개당\n공격력 / 수비력을 300 포인트\n내린다.",
+  "draw_enabled": true,
+  "identity_key": "2af88bce57ba1ddb4d526a6d030c3310146cb78b8680bc139caa54b4b9c7188d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0681.webp",
+  "level": 4,
+  "links": [],
+  "name": "에일리언 워리어",
+  "name_english": "Alien Warrior",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 524288,
+  "rarity": "R",
+  "source_id": 525,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 681
+}

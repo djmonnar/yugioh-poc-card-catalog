@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2387",
+  "attack": 1200,
+  "attribute": 1,
+  "categories": [
+    "발동-소환",
+    "효과-덱샐비지"
+  ],
+  "code": 13839120,
+  "defense": 1200,
+  "description": "이 카드가 일반 소환 / 특수\n소환에 성공했을 때 발동할 수\n있다. 덱에서 \"그린 가제트\"\n1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "3d9ebe75b1ca9934067f5047c8fbf60bf4eb02f8852a110c7db3638783cc57d7",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0810.webp",
+  "level": 4,
+  "links": [
+    {
+      "identity_key": "cea13664a9e98e9530443b6f6d4c626373430b6fa376f0b580401c9ff2aba41c",
+      "slot": 1040
+    },
+    {
+      "identity_key": "78486ecd82422d0aea7f012dbdecd08467b2923bf3759dd24e6d67290415eb23",
+      "slot": 5
+    }
+  ],
+  "name": "옐로 가제트",
+  "name_english": "Yellow Gadget",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "source_id": 2387,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 810
+}

@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/945",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-묘지보내기",
+    "면역-전투",
+    "파괴-마법"
+  ],
+  "code": 81210420,
+  "defense": 0,
+  "description": "상대의 배틀 페이즈에 발동할\n수 있다. 덱에서 몬스터가\n아닌 카드 2장과 자신의 필드\n몬스터 1장을 선택하고 덱을\n셔플한다. 선택한 카드 3장을\n섞어 필드에 뒷면 수비 표시로\n세트한다. 덱에서 선택한 카드\n2장은 공격력 0 / 수비력 0의\n몬스터로 취급하며 배틀\n페이즈 종료시에 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "7d784394abeefe58120d79e3cf17f1bb7d1f40f5f01d69502a52caf8a8c040d9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0890.webp",
+  "level": 0,
+  "links": [],
+  "name": "매지컬 실크햇",
+  "name_english": "Magical Hats",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 945,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 890
+}

@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards126/2865",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-엑조디아",
+    "소환-패,덱"
+  ],
+  "code": 33244944,
+  "defense": 0,
+  "description": "①: 자신의 묘지에 \"봉인된 엑조디아\" \"봉인된 자의 오른쪽 팔\" \"봉인된 자의 왼쪽 팔\" \"봉인된 자의 오른쪽 다리\" \"봉인된 자의 왼쪽 다리\"가 존재할 경우에 발동할 수 있다. 패에서 \"엑조디아 네크로스\" 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "d6dbe57dac0fe3deb3c39291d8c3f467e69fa6d4ace202618c296bca37b20f8a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native126/cards/2865.jpg",
+  "level": 0,
+  "links": [],
+  "name": "엑조디아와의 계약",
+  "name_english": "Contract with Exodia",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "엑조디아와의 계약",
+    "Contract with Exodia"
+  ],
+  "source_id": 2865,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1897
+}

@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards130/2881",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "면역-효과",
+    "지원-전투"
+  ],
+  "code": 96864811,
+  "defense": 0,
+  "description": "①: 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 턴 종료시까지 그 몬스터는 공격력을 600 내리고, 효과의 대상이 되지 않으며, 효과로는 파괴되지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "a6f910d6bb7e19dcdf2ae74e733906359c3448f40796e57a6dded5a8c5765968",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native130/cards/2881.jpg",
+  "level": 0,
+  "links": [],
+  "name": "금지된 성의",
+  "name_english": "Forbidden Dress",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "금지된 성의",
+    "Forbidden Dress"
+  ],
+  "source_id": 2881,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 1913
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/684",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "파괴-몬스터"
+  ],
+  "code": 41356845,
+  "defense": 0,
+  "description": "뒷면 수비 표시 몬스터 1장을\n앞면으로 뒤집는다. 수비력이\n2000 이하이면 파괴한다.\n수비력이 2000보다 높으면\n뒷면 수비 표시로 되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "a85808122d2ab7b56710724a605abdcda0a11a6b47f9fedd224333519cf26fbd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1066.webp",
+  "level": 0,
+  "links": [],
+  "name": "황산의 함정 속으로",
+  "name_english": "Acid Trap Hole",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 684,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1066
+}

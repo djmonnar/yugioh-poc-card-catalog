@@ -1,0 +1,20 @@
+{
+  "description": "한 전투에서 내 마법을 3번 발동하면 카드 1장을 드로우해. 전투당 한 번이야.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 49,
+  "iconKey": "Relics/Content022/atlas022",
+  "id": "mana_accumulator",
+  "kind": "mana_accumulator",
+  "name": "마력 축전석",
+  "params": {
+    "draw": 1,
+    "threshold": 3
+  },
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-native022",
+  "weight": 1
+}

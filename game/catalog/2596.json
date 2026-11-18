@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards081/2596",
+  "attack": 1700,
+  "attribute": 16,
+  "categories": [
+    "지원-인조인간",
+    "발동-소환",
+    "효과-덱샐비지",
+    "파괴-몬스터"
+  ],
+  "code": 65471349,
+  "defense": 1000,
+  "description": "각 효과는 1턴에 1번 사용할 수 있다. 일반·특수 소환되면 ‘인조인간 －사이코 쇼커－’ 또는 그 카드명이 쓰인 마법·함정 1장을 덱에서 패에 넣을 수 있다. 다른 자신의 몬스터가 상대에게 공격받은 데미지 계산 전에, 공격 몬스터와 이 카드를 함께 파괴할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "0394e1201bbcb2cec57bb5fd6ab1af08dfe2df62630b623346e950faa7d2a04b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native081/cards/2596.jpg",
+  "level": 4,
+  "links": [],
+  "name": "마경도사 사이코 바운더",
+  "name_english": "Psychic Bounder",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "SR",
+  "source_id": 2596,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1628
+}

@@ -1,0 +1,39 @@
+{
+  "alias": 23995346,
+  "art_key": "Cards/379",
+  "attack": 4500,
+  "attribute": 16,
+  "categories": [
+    "덱-푸른눈"
+  ],
+  "code": 23995348,
+  "defense": 3800,
+  "description": "\"푸른 눈의 백룡\" ＋ \"푸른\n눈의 백룡\" ＋ \"푸른 눈의\n백룡\"",
+  "draw_enabled": true,
+  "identity_key": "6485fc919b766b9a7690cd4baf711f0e9884396352b673e6155701205634e6da",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0814.webp",
+  "level": 12,
+  "links": [
+    {
+      "identity_key": "1b35a77b57322b756f47b453317628046ce9d712cc2933185cd2fb61bf8e1c33",
+      "slot": 816
+    },
+    {
+      "identity_key": "05162f6740ec23960625cae410c4330e55f38b11544da804e475179c75f5179d",
+      "slot": 1192
+    }
+  ],
+  "name": "궁극의 푸른 눈의 백룡",
+  "name_english": "Blue-Eyes Ultimate Dragon",
+  "native_type": 65,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "source_id": 379,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 814
+}

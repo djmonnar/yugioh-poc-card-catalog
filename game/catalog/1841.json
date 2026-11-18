@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1841",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-해피",
+    "면역-함정"
+  ],
+  "code": 12181376,
+  "defense": 0,
+  "description": "①: 필드의 모든 \"해피 레이디\n세자매\"의 공격력은 턴\n종료시까지 2700 이 된다. 이\n턴에, 상대는 함정 카드를\n발동할 수 없으며, 상대\n필드의 함정 카드의 효과는\n무효화된다.\n[안내] 효과 해결시 필드에\n있던 \"해피 레이디 세자매\"만\n공격력 2700이 된다(다른\n증감은 적용되지 않는다).",
+  "draw_enabled": true,
+  "identity_key": "a495332dab5ebb921101cebcbbd1710c19672cba179a8c80104635574ccd8da6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1255.webp",
+  "level": 0,
+  "links": [],
+  "name": "트라이앵글 X 스파크",
+  "name_english": "Triangle Ecstasy Spark",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1841,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1255
+}

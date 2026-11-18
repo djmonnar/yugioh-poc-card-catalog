@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2463",
+  "attack": 400,
+  "attribute": 1,
+  "categories": [
+    "지원-젬나이트",
+    "효과-바운스",
+    "지원-일반몬스터",
+    "효과-묘지보내기"
+  ],
+  "code": 19019586,
+  "defense": 1900,
+  "description": "① 자신 메인 페이즈에 필드의 앞면인 이 카드를 패로 되돌릴 수 있다. ② 이 카드가 전투하는 데미지 계산시에 1번, 패의 일반 몬스터 1장을 묘지로 보내고 발동할 수 있다. 그 데미지 계산 동안 이 카드의 수비력은 1000 오른다.",
+  "draw_enabled": true,
+  "identity_key": "efeb79e4509e2d75250dfbea692e9c18646e7e09603a0ec53216a26d90c645bf",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2463.jpg",
+  "level": 3,
+  "links": [],
+  "name": "젬엘리펀트",
+  "name_english": "Gem-Elephant",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "N",
+  "source_id": 2463,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1500
+}

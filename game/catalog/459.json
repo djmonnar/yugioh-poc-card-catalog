@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/459",
+  "attack": 1800,
+  "attribute": 8,
+  "categories": [
+    "지원-듀얼"
+  ],
+  "code": 47459126,
+  "defense": 1600,
+  "description": "이 카드는 묘지 또는 필드\n위에 앞면 표시로 존재할\n경우, 일반 몬스터로\n취급한다. 필드 위에 앞면\n표시로 존재하는 이 카드를\n일반 소환으로 취급하여 다시\n소환하는 것으로, 이 카드는\n효과 몬스터로 취급되며,\n이하의 효과를 얻는다.\n●이 카드가 필드 위에 앞면\n표시로 존재하는 한, 이\n카드를 튜너로 취급한다.",
+  "draw_enabled": true,
+  "identity_key": "75b34de08f87a9d5021911e1fa6a1c94d93f42fede4d5b67e2e321a37ac97990",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0865.webp",
+  "level": 4,
+  "links": [],
+  "name": "튠드 매지션",
+  "name_english": "Tuned Magician",
+  "native_type": 2081,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 459,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 865
+}

@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards084/2612",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착",
+    "효과-버리기",
+    "발동-묘지",
+    "발동-파괴"
+  ],
+  "code": 63789924,
+  "defense": 0,
+  "description": "몬스터에 장착한다. 장착되어 있던 이 카드가 효과로 파괴되어 묘지로 보내지면, 상대의 패를 확인하고 자신이 고른 카드 1장을 버리게 한다.",
+  "draw_enabled": true,
+  "identity_key": "36a5bb05830b2b114b0cd01a80901282d027989e25e7cac7bd378788747b8f0e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2612.jpg",
+  "level": 0,
+  "links": [],
+  "name": "도둑의 연막탄",
+  "name_english": "Smoke Grenade of the Thief",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "도둑의연막탄",
+    "도둑의 연막탄",
+    "Smoke Grenade of the Thief"
+  ],
+  "source_id": 2612,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 1644
+}

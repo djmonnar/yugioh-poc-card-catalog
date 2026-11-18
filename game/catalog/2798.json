@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards122/2798",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "발동-리버스",
+    "발동-뒷면표시",
+    "지원-리버스",
+    "효과-파괴",
+    "효과-데미지"
+  ],
+  "code": 42510430,
+  "defense": 0,
+  "description": "이 카드명의 ①②의 효과는 각각 1턴에 1번밖에 사용할 수 없다. ①: 자신 필드의 앞면 표시 몬스터가 뒷면 수비 표시로 되었을 경우, 필드의 카드 1장을 대상으로 하고 발동할 수 있다. 그 카드를 파괴한다. ②: 자신 필드의 리버스 몬스터가 리버스했을 경우, 그 중의 1장을 대상으로 하고 발동할 수 있다(데미지 스텝에도 발동 가능). 그 몬스터의 레벨 × 200 데미지를 상대에게 준다.",
+  "draw_enabled": true,
+  "identity_key": "44bbb661fda4760f12fcbfd0644d53d65e5679b90fca00991e6988a30a1c1645",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native122/cards/2798.jpg",
+  "level": 0,
+  "links": [],
+  "name": "선셋 비트",
+  "name_english": "Sunset Beat",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "선셋 비트",
+    "Sunset Beat"
+  ],
+  "source_id": 2798,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 1830
+}

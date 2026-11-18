@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2088",
+  "attack": 100,
+  "attribute": 1,
+  "categories": [
+    "지원-제외"
+  ],
+  "code": 45871897,
+  "defense": -2,
+  "description": "이 카드의 원래 수비력은 자신이 제외하고 있는 암석족 몬스터의 수 × 700 포인트의 수치가 된다.",
+  "draw_enabled": true,
+  "identity_key": "e7551a348acf33c317e372aa86fe49dc41a8470a212e932dfa583ff256d3d509",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1386.webp",
+  "level": 4,
+  "links": [],
+  "name": "로스트 가디언",
+  "name_english": "Lost Guardian",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "R",
+  "source_id": 2088,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1386
+}

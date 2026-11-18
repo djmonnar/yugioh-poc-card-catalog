@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards035/2414",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "면역-효과",
+    "지원-장착"
+  ],
+  "code": 35220244,
+  "defense": 0,
+  "description": "기계족 몬스터에만 장착 가능.\n1턴에 1번, 장착 몬스터의 공격력을 400 올릴 수 있다. 이 상승은 이 카드가 필드를 벗어나도 유지된다.\n장착 몬스터가 상대 몬스터와 전투를 실행할 경우, 배틀 페이즈 종료시까지 그 상대 몬스터의 효과를 무효로 한다.",
+  "draw_enabled": true,
+  "identity_key": "1c37641b2db46bb97918a33f7955626b81d9b0e114ef40e2e29ba07f8414a0fb",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native035/cards/2414.jpg",
+  "level": 0,
+  "links": [],
+  "name": "그래비티 블래스터",
+  "name_english": "Gravity Blaster",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2414,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 1451
+}

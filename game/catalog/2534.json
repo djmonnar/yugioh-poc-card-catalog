@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2534",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-의식",
+    "효과-덱샐비지",
+    "효과-묘지샐비지"
+  ],
+  "code": 13048472,
+  "defense": 0,
+  "description": "이 카드명은 1턴에 1장만 발동할 수 있다. 덱의 의식 마법 1장과, 그 마법에 카드명이 적혀 있는 의식 몬스터 1장을 자신의 덱·묘지에서 골라 함께 패에 넣는다. 카드군 이름만 적힌 기계천사의 의식으로는 이 효과의 이름 지정 조건을 충족하지 못한다.",
+  "draw_enabled": true,
+  "identity_key": "e977528ee8be625bd9d30444d35911d0236c48142f509dbb20f3e87267828b78",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2534.jpg",
+  "level": 0,
+  "links": [],
+  "name": "의식의 밑준비",
+  "name_english": "Pre-Preparation of Rites",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2534,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1566
+}

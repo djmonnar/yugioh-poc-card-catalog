@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards122/2791",
+  "attack": 1600,
+  "attribute": 1,
+  "categories": [
+    "발동-반전소환",
+    "지원-리버스",
+    "효과-데미지",
+    "지원-전투"
+  ],
+  "code": 40937767,
+  "defense": 1500,
+  "description": "자신 필드 위에 뒷면 수비 표시 몬스터가 존재하는 한, 이 카드를 공격 대상으로 선택할 수 없다. 자신 필드 위의 몬스터가 반전 소환할 때마다, 상대 라이프에 300 포인트 데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "f3465ad184c76552439fa34a63656e51b78d579af92322b7132e78a0ddb0abb0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native122/cards/2791.jpg",
+  "level": 4,
+  "links": [],
+  "name": "그레이브 오우자",
+  "name_english": "Grave Ohja",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "R",
+  "search_aliases": [
+    "그레이브 오우자",
+    "Grave Ohja"
+  ],
+  "source_id": 2791,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1823
+}

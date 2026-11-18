@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/marik/start",
+  "banlistEnabled": false,
+  "deckName": "카오스소서러-제외",
+  "extra": [],
+  "id": "enc-195e844d-d30d-449d-b217-34709d8cae67",
+  "lpBonus": 0,
+  "main": [
+    1892,
+    1892,
+    1157,
+    1157,
+    1158,
+    1158,
+    1946,
+    1946,
+    1511,
+    1511,
+    255,
+    255,
+    255,
+    1959,
+    1959,
+    480,
+    480,
+    480,
+    1897,
+    1897
+  ],
+  "name": "어둠의 마리크",
+  "openingDrawBonus": 0,
+  "profileId": "marik",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 1896,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-195e844d-d30d-449d-b217-34709d8cae67",
+  "usesNativeRules035": true
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1875",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-묘지샐비지"
+  ],
+  "code": 96947648,
+  "defense": 0,
+  "description": "①: 자신 묘지의 공격력 1500\n이하의 물 속성 몬스터 2장을\n대상으로 하고 발동할 수\n있다. 그 물 속성 몬스터를\n패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "b781c54ef02789ecc1ca8b98fc91db18c49bdfbd9af4d65e5e1e1da2e0a9fb87",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1202.webp",
+  "level": 0,
+  "links": [],
+  "name": "샐비지",
+  "name_english": "Salvage",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1875,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1202
+}

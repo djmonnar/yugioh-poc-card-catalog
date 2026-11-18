@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2070",
+  "attack": 800,
+  "attribute": 2,
+  "categories": [
+    "소환-묘지",
+    "소환-덱리크루터"
+  ],
+  "code": 46384403,
+  "defense": 100,
+  "description": "필드 위의 이 카드가 카드의 효과에 의해서 묘지로 보내졌을 때, 덱에서 \"재빠른 맨터\"를 임의의 수만큼 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "150a730543578073e576c9c464ef3a0f74914f8f05f2bc8e901b5caa746f9aa5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1368.webp",
+  "level": 2,
+  "links": [],
+  "name": "재빠른 맨터",
+  "name_english": "Nimble Manta",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 131072,
+  "rarity": "R",
+  "source_id": 2070,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1368
+}

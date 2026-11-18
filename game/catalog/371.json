@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/371",
+  "attack": 2800,
+  "attribute": 16,
+  "categories": [
+    "파괴-몬스터"
+  ],
+  "code": 36354007,
+  "defense": 1400,
+  "description": "이 카드는 몬스터 3장을\n릴리스하고 일반 소환할 수도\n있다. ①: 몬스터 3장을\n릴리스하고 이 카드의\n어드밴스 소환에 성공했을\n경우에 발동한다. 상대 필드의\n몬스터를 전부 파괴한다.\n[안내] 3장을 릴리스하는\n소환은 패 메뉴의 특수 소환\n항목으로 실행하며, 일반\n소환으로 취급한다.",
+  "draw_enabled": true,
+  "identity_key": "893f7c90d5f546f066670faeb3697f3e5b3e1a7b974d82aa7585328c5fbc4d7d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0781.webp",
+  "level": 8,
+  "links": [],
+  "name": "길포드 더 라이트닝",
+  "name_english": "Gilford the Lightning",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "source_id": 371,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 781
+}

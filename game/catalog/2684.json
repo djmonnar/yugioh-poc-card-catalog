@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards093/2684",
+  "attack": 1000,
+  "attribute": 32,
+  "categories": [
+    "덱-데몬",
+    "효과-덱샐비지"
+  ],
+  "code": 66540884,
+  "defense": 0,
+  "description": "이 카드명의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 이 카드가 효과로 묘지로 보내졌을 경우, 또는 전투로 파괴되어 묘지로 보내졌을 경우에 발동할 수 있다. 덱에서 \"트릭 데몬\" 이외의 \"데몬\" 카드 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "ef65c5f333c14c6afe2abee0fcf3548b069ec6ac2206e6d577897b5cb9ac21a6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native093/cards/2684.jpg",
+  "level": 3,
+  "links": [],
+  "name": "트릭 데몬",
+  "name_english": "Archfiend Heiress",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "search_aliases": [
+    "트릭데몬",
+    "트릭 데몬",
+    "Archfiend Heiress"
+  ],
+  "source_id": 2684,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1716
+}

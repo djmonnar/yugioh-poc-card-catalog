@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards143/2973",
+  "attack": 1400,
+  "attribute": 2,
+  "categories": [
+    "지원-해황",
+    "지원-물 속성",
+    "지원-해룡족",
+    "지원-저레벨",
+    "발동-피해 발생 시",
+    "소환-덱리크루터",
+    "발동-묘지로 보내졌을 때",
+    "효과-파괴"
+  ],
+  "code": 706925,
+  "defense": 0,
+  "description": "이 카드가 상대 라이프에 전투 데미지를 주었을 때, 덱에서 \"해황의 저격병\" 이외의 레벨 4 이하의 \"해황\"이라는 이름이 붙은 해룡족 몬스터 1장을 특수 소환할 수 있다. 또한, 이 카드가 물 속성 몬스터의 효과를 발동하기 위해 묘지로 보내졌을 때, 상대 필드 위에 세트된 카드 1장을 선택하고 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "7dd50322d4687f684c93892004572dcc60fb89e6c95e995490448c16d99f3b7d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native143/cards/2973.jpg",
+  "level": 3,
+  "links": [],
+  "name": "해황의 저격병",
+  "name_english": "Atlantean Marksman",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 262144,
+  "rarity": "SR",
+  "search_aliases": [
+    "해황의 저격병",
+    "Atlantean Marksman"
+  ],
+  "source_id": 2973,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2005
+}

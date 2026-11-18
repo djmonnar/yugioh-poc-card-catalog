@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1061",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "파괴-함정",
+    "파괴-마법"
+  ],
+  "code": 19613556,
+  "defense": 0,
+  "description": "필드의 모든 마법 / 함정\n카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "14ef258363d710ff47bd001f920d5d2da6c8c35f10ae8e91a935c8195660ce78",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0114.webp",
+  "level": 0,
+  "links": [],
+  "name": "태풍",
+  "name_english": "Heavy Storm",
+  "native_type": 2,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1061,
+  "speed_limit": 1,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 114
+}

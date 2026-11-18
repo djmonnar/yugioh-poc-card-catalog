@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards125/2831",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-에일리언",
+    "A 카운터",
+    "효과-컨트롤"
+  ],
+  "code": 57384901,
+  "defense": 0,
+  "description": "자신 필드 위 몬스터 1장과 상대 필드 위의 A 카운터가 얹혀진 몬스터 1장의 컨트롤을 맞바꾼다.",
+  "draw_enabled": true,
+  "identity_key": "fd5a5d32c1ab2df03155dde3d6200cdb9d18cc111e4d94442601fd80246bbac5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native125/cards/2831.jpg",
+  "level": 0,
+  "links": [],
+  "name": "아공간 점프 장치",
+  "name_english": "Interdimensional Warp",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "아공간 점프 장치",
+    "Interdimensional Warp"
+  ],
+  "source_id": 2831,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1863
+}

@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2050",
+  "attack": 1000,
+  "attribute": 32,
+  "categories": [
+    "면역-전투",
+    "소환-패,덱"
+  ],
+  "code": 2986553,
+  "defense": 1000,
+  "description": "①: 이 카드가 일반 소환에 성공했을 때에 발동할 수 있다. 패에서 레벨 4 이하의 식물족 몬스터 1장을 특수 소환한다. ②: 이 카드가 몬스터 존에 존재하는 한, 상대는 식물족 몬스터를 공격 대상으로 선택할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "30e4b4df076b004b21da58147ebbb26ee7d56b82d3d43fa88b3e58ba423bf7d1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1350.webp",
+  "level": 3,
+  "links": [],
+  "name": "밤장미 기사",
+  "name_english": "Twilight Rose Knight",
+  "native_type": 4129,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "source_id": 2050,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1350
+}

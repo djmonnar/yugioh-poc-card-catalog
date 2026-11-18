@@ -1,0 +1,17 @@
+{
+  "description": "거울 너머에서 네 카드와 똑같은 그림이 빛난다. 카드 한 장을 비추면 그 힘을 한 번 더 손에 넣을 수 있을 듯하다.",
+  "effect": "선택 카드 +1매 · 원정 카드함에 보관 · 덱에는 자동으로 넣지 않아.",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Relics/atlas160",
+  "id": "card_duplication",
+  "kind": "card_duplication",
+  "name": "보유 카드 1장을 골라 같은 카드 1장 획득",
+  "params": {
+    "count": 1
+  },
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "복제의 거울",
+  "weight": 1
+}

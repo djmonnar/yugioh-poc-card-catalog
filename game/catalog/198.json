@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/198",
+  "attack": 2100,
+  "attribute": 16,
+  "categories": [
+    "소환-묘지",
+    "발동-묘지"
+  ],
+  "code": 58996430,
+  "defense": 300,
+  "description": "이 카드는 통상 소환할 수\n없으며, 카드의 효과로만 특수\n소환할 수 있다. ①: 이 카드가\n덱에서 묘지로 보내졌을\n경우에 발동한다. 이 카드를\n특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "ce8501c74c90fee9ce17fbae7f9a191d45d832d5dda49a82cfcf7e7d296f79ca",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0840.webp",
+  "level": 4,
+  "links": [],
+  "name": "라이트로드 비스트 울프",
+  "name_english": "Wulf, Lightsworn Beast",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "R",
+  "source_id": 198,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 840
+}

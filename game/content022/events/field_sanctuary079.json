@@ -1,0 +1,15 @@
+{
+  "description": "여러 풍경이 새겨진 석판이 탑의 벽을 채우고 있다. 다음 여정에 펼칠 지형을 고르자.",
+  "effect": "현재 획득 가능한 필드 마법 중 1장을 골라 카드함에 획득합니다.",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "field_sanctuary079",
+  "kind": "field_sanctuary079",
+  "name": "필드 마법 1장 선택",
+  "params": {},
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "지형의 성소",
+  "weight": 1
+}

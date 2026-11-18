@@ -1,0 +1,17 @@
+{
+  "description": "매 듀얼 처음 받는 LP 피해를 한 번 막아. LP를 지불하는 비용에는 적용되지 않아.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 5,
+  "iconKey": "Relics/atlas160",
+  "id": "kuriboh_charm",
+  "kind": "kuriboh_charm",
+  "name": "크리보의 부적",
+  "params": {},
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

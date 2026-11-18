@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards081/2599",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-인조인간",
+    "발동-묘지로보내기",
+    "소환-묘지",
+    "효과-드로우"
+  ],
+  "code": 91654806,
+  "defense": 0,
+  "description": "각 효과는 1턴에 1번 사용할 수 있다. 원래 주인이 상대인 자신의 몬스터 1장을 묘지로 보내고 패·묘지의 기계족 1장을 특수 소환한다. ‘인조인간 －사이코 쇼커－’가 있을 때 상대가 일반 드로우하면 카드 종류를 선언할 수 있다. 뽑은 카드를 확인하여 맞혔다면 이 카드를 묘지로 보내고 자신은 1장 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "9de0f6f7f13e19e527ba33116a5971102c8ec545de4756ff7ad1b4a923fdf872",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native081/cards/2599.jpg",
+  "level": 0,
+  "links": [],
+  "name": "우주와의 교신",
+  "name_english": "Cosmos Channelling",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2599,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 1631
+}

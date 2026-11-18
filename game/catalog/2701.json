@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards093/2701",
+  "attack": 100,
+  "attribute": 16,
+  "categories": [
+    "지원-아로마",
+    "효과-회복",
+    "지원-릴리즈",
+    "효과-드로우",
+    "발동-회복"
+  ],
+  "code": 96789758,
+  "defense": 1900,
+  "description": "①: 자신의 LP가 상대보다 많고, 이 카드가 몬스터 존에 존재하는 한, 자신은 통상 소환 외에도 1번만, 자신 메인 페이즈에 \"아로마지－재스민\" 이외의 식물족 몬스터 1장을 일반 소환할 수 있다. ②: 1턴에 1번, 자신의 LP가 회복했을 경우에 발동한다. 자신은 덱에서 1장 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "5533d265b67adb5b2dd1da58a777c519adef3382209a030f9e48421bb33faf9a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native093/cards/2701.jpg",
+  "level": 2,
+  "links": [],
+  "name": "아로마지－재스민",
+  "name_english": "Aromage Jasmine",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "SR",
+  "search_aliases": [
+    "아로마 카드군",
+    "아로마지－재스민",
+    "Aromage Jasmine"
+  ],
+  "source_id": 2701,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1733
+}

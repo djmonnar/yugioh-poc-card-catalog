@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2448",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-암흑계",
+    "파괴-함정",
+    "파괴-마법",
+    "효과-버리기"
+  ],
+  "code": 93554166,
+  "defense": 0,
+  "description": "①: 필드에 세트된 카드 1장을 대상으로 발동할 수 있다. 효과 처리 시에도 그 카드가 뒷면 표시로 남아 있으면 파괴한다. 그 후, 자신의 패에서 카드 1장을 골라 버린다. 대상이 앞면 표시가 되거나 필드를 벗어나면 패를 버리는 처리도 하지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "70e8d4722d5e9b4a509e6a1736cab06f0926f2e5e5233096a6796840cfcd2629",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2448.jpg",
+  "level": 0,
+  "links": [],
+  "name": "암흑계의 번개",
+  "name_english": "Dark World Lightning",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2448,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1485
+}

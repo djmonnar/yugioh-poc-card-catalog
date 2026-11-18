@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/mai/start",
+  "banlistEnabled": false,
+  "deckName": "아마조네스",
+  "extra": [],
+  "id": "enc044_2_battle_ch1_battle_ef78381916401c1be19704b1",
+  "lpBonus": 0,
+  "main": [
+    1837,
+    1837,
+    1834,
+    1852,
+    1852,
+    1853,
+    1853,
+    1854,
+    1848,
+    1848,
+    11,
+    11,
+    1849,
+    553,
+    1847,
+    1847,
+    1851,
+    1835,
+    1855,
+    1099
+  ],
+  "name": "메이 쿠자쿠",
+  "openingDrawBonus": 0,
+  "profileId": "mai",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 1852,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "installed-story:sc-b5892a9b9b432561-e548bd5deb72f3affc5de9f03735744e",
+  "usesNativeRules035": false
+}

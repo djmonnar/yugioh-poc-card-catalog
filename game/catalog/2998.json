@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards144/2998",
+  "attack": 500,
+  "attribute": 8,
+  "categories": [
+    "지원-곤충",
+    "발동-릴리즈",
+    "효과-드로우"
+  ],
+  "code": 1474910,
+  "defense": 400,
+  "description": "이 카드와 자신 필드 위에 앞면 표시로 존재하는 \"하치비\" 이외의 곤충족 몬스터 1장을 릴리스하고 발동한다. 자신의 덱에서 카드를 2장 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "4653acf17f8caf8f4036d0b45fe7ddbe3955022a4aa27ce0f99eeeecd29ad332",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native144/cards/2998.jpg",
+  "level": 1,
+  "links": [],
+  "name": "하치비",
+  "name_english": "Bee List Soldier",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "R",
+  "search_aliases": [
+    "하치비",
+    "Bee List Soldier"
+  ],
+  "source_id": 2998,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2030
+}

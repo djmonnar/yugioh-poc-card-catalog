@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/86",
+  "attack": 200,
+  "attribute": 16,
+  "categories": [
+    "효과-묘지보내기",
+    "파괴-몬스터"
+  ],
+  "code": 21502796,
+  "defense": 100,
+  "description": "①: 이 카드가 리버스했을\n경우에 발동한다. 필드의 카드\n1장을 파괴할 수 있다. 자신의\n덱 위에서 카드를 3장 묘지로\n보낸다.",
+  "draw_enabled": true,
+  "identity_key": "414c47d38f8bbc708aed268a2cbe9dc1387c0d05b7c20f27bc6c1f797b47ad1a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0506.webp",
+  "level": 2,
+  "links": [],
+  "name": "라이트로드 헌터 라이코",
+  "name_english": "Ryko, Lightsworn Hunter",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "SR",
+  "source_id": 86,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 506
+}

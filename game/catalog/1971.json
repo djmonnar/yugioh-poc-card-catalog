@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1971",
+  "attack": 500,
+  "attribute": 1,
+  "categories": [
+    "소환-덱리크루터",
+    "발동-묘지"
+  ],
+  "code": 36042004,
+  "defense": 500,
+  "description": "①: 이 카드가 효과로 파괴되어\n묘지로 보내졌을 경우에\n발동한다. 덱에서 레벨 4\n이하의 공룡족 몬스터 1장을\n특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "f3f27c7e51578a2a9ba9a8a9963f554467a27c8d8e42470d49b7a5109cf832c7",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1134.webp",
+  "level": 2,
+  "links": [],
+  "name": "베이비 케라사우루스",
+  "name_english": "Babycerasaurus",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "R",
+  "source_id": 1971,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1134
+}

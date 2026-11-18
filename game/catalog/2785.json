@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards120/2785",
+  "attack": 1700,
+  "attribute": 16,
+  "categories": [
+    "지원-번개족",
+    "지원-카운터·무효"
+  ],
+  "code": 13974207,
+  "defense": 1000,
+  "description": "이 카드는 특수 소환할 수 없다. ①: 이 카드가 몬스터 존에 존재하고, 자신 필드에 세트된 마법 / 함정 카드가 존재하지 않을 경우, 서로 마법 / 함정 카드를 세트할 수 없으며, 필드에 세트된 마법 / 함정 카드는 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "66efcb35a0fc1288350f90c38bb51cf06efa2cc1c064b4ed165803c6e72787b1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native120/cards/2785.jpg",
+  "level": 4,
+  "links": [],
+  "name": "전광－설화－",
+  "name_english": "Denko Sekka",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4096,
+  "rarity": "SR",
+  "search_aliases": [
+    "전광 설화",
+    "전광－설화－",
+    "Denko Sekka"
+  ],
+  "source_id": 2785,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1817
+}

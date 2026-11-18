@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2470",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-젬나이트",
+    "지원-융합"
+  ],
+  "code": 39261576,
+  "defense": 0,
+  "description": "자신 필드의 몬스터만 소재로 사용하여 젬나이트 융합 몬스터 1장을 융합 소환한다. 이어서 묘지의 이 카드를 제외하고 그 융합에 사용한 젬나이트 소재 1장을 대상으로 하여, 융합 몬스터의 공격력을 그 소재의 공격력만큼 턴 종료시까지 올린다.",
+  "draw_enabled": true,
+  "identity_key": "275869f471b44c22ff11d33eac605876848fc302886b85fa725a4164e8cb0dad",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2470.jpg",
+  "level": 0,
+  "links": [],
+  "name": "파티클 퓨전",
+  "name_english": "Particle Fusion",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2470,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1507
+}

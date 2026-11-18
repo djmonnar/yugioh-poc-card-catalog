@@ -1,0 +1,48 @@
+{
+  "artKey": "CharacterPresentation012/images/roamer_sera/start",
+  "banlistEnabled": false,
+  "deckName": "사이버드래곤 중급",
+  "extra": [
+    441,
+    426
+  ],
+  "id": "enc044_1_elite_ch1_elite_3b28eb170b799c83a00dde43",
+  "lpBonus": 500,
+  "main": [
+    602,
+    602,
+    602,
+    1350,
+    1350,
+    641,
+    641,
+    392,
+    392,
+    1314,
+    1003,
+    1003,
+    1524,
+    13,
+    657,
+    657,
+    1947,
+    1947,
+    962,
+    962
+  ],
+  "name": "방랑 듀얼리스트 세라",
+  "openingDrawBonus": 0,
+  "profileId": "roamer_sera",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 392,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "d3f3b069-6035-4702-ad6b-e4eee6b924a5:9e2e40be-3c86-4e2d-8086-e045f641f2d3",
+  "usesNativeRules035": false
+}

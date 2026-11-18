@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/147",
+  "attack": 2900,
+  "attribute": 4,
+  "categories": [
+    "면역-함정",
+    "파괴-함정"
+  ],
+  "code": 94568601,
+  "defense": 2500,
+  "description": "상대 필드 위에 몬스터가\n존재하는 경우에만, 배틀\n페이즈 중에 1번만 더 공격을\n할 수 있다. 또한, 이 카드를\n대상으로 하는 함정 카드의\n효과를 무효로 하여 파괴한다.\n다른 카드의 효과에 의해서 이\n카드가 묘지에서 특수 소환될\n경우, 자신 필드 위의\n드래곤족 몬스터 1장을 제물로\n바쳐야 한다.\n[차이] 묘지에서 특수 소환할\n때 릴리스할 드래곤족은\n자동으로 선택된다.\n패·덱에서의 특수 소환에도\n드래곤족이 필요하다.",
+  "draw_enabled": true,
+  "identity_key": "9c17a256285a4942a40df275489a1c0797c17216ff8daff89ddcaea1647c0c93",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1021.webp",
+  "level": 8,
+  "links": [],
+  "name": "타이란트 드래곤",
+  "name_english": "Tyrant Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "source_id": 147,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1021
+}

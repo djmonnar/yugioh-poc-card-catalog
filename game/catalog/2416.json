@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards035/2416",
+  "attack": 1600,
+  "attribute": 4,
+  "categories": [
+    "면역-마법",
+    "면역-함정"
+  ],
+  "code": 43359262,
+  "defense": 1300,
+  "description": "1턴에 1번, 상대의 마법 & 함정 존에 세트된 카드 1장을 대상으로 하여 발동할 수 있다. 이 카드가 앞면 표시로 존재하는 동안, 그 세트된 카드는 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "20488551f3c6cf269ad5993fb21eecec3907c08042965c55d0d87e36abcf7624",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native035/cards/2416.jpg",
+  "level": 4,
+  "links": [],
+  "name": "일렉트로 군조",
+  "name_english": "Sergeant Electro",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "SR",
+  "source_id": 2416,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1453
+}

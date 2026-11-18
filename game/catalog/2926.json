@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards135/2926",
+  "attack": 200,
+  "attribute": 4,
+  "categories": [
+    "지원-쥬락",
+    "지원-저레벨",
+    "발동-릴리즈",
+    "소환-묘지"
+  ],
+  "code": 80727721,
+  "defense": 200,
+  "description": "①: 이 카드를 릴리스하고, \"쥬락 아우로\" 이외의 자신 묘지의 레벨 4 이하의 \"쥬락\" 몬스터 1장을 대상으로 하여 발동할 수 있다. 그 몬스터를 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "a8ebed545104f23834af41b0a95d2c450718fe9e222b508e531e74e7d2186e1c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native135/cards/2926.jpg",
+  "level": 1,
+  "links": [],
+  "name": "쥬락 아우로",
+  "name_english": "Jurrac Aeolo",
+  "native_type": 4129,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "SR",
+  "search_aliases": [
+    "쥬락 아우로",
+    "Jurrac Aeolo"
+  ],
+  "source_id": 2926,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "튜너 몬스터",
+  "web_slot": 1958
+}

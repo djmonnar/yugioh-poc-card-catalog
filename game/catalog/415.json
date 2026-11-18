@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/415",
+  "attack": 1900,
+  "attribute": 32,
+  "categories": [
+    "소환-패,덱",
+    "발동-파괴"
+  ],
+  "code": 93927067,
+  "defense": 1200,
+  "description": "①: 자신 필드에 몬스터가\n존재하지 않을 경우, 이\n카드는 패에서 특수 소환할 수\n있다. ②: 이 카드가 전투로\n상대 몬스터를 파괴했을\n경우에 발동한다. 이 카드의\n공격력은 500 올린다. ③: 이\n카드가 전투로 파괴되었을\n경우에 발동한다. 이 카드를\n파괴한 몬스터의 공격력은 500\n내린다.",
+  "draw_enabled": true,
+  "identity_key": "04b71cb7cb31a159ab082f31fb041432db24d4e6301e0be644518f44be897e3b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0829.webp",
+  "level": 5,
+  "links": [],
+  "name": "카이저 블러드 볼스",
+  "name_english": "Kaiser Vorse Raider",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "UR",
+  "source_id": 415,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 829
+}

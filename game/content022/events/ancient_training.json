@@ -1,0 +1,18 @@
+{
+  "description": "석상들이 다가올 결투를 예행한다. 짧지만 강렬한 수련을 받을 동료를 고르자.",
+  "effect": "몬스터 1매 공격력 +400 · 다음 완료 전투 3회 동안",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/background",
+  "id": "ancient_training",
+  "kind": "ancient_training",
+  "name": "몬스터 1매 공격력 +400 · 다음 완료 전투 3회 동안",
+  "params": {
+    "atk": 400,
+    "battles": 3
+  },
+  "rewardRarity": null,
+  "supportStatus": "verified-controller022",
+  "title": "고대의 훈련장",
+  "weight": 1
+}

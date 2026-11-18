@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1421",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-버리기"
+  ],
+  "code": 74848038,
+  "defense": 0,
+  "description": "패의 몬스터 1장을 묘지로\n버린다. 이 턴에 전투로\n자신의 묘지로 보내진 몬스터\n1장을 턴 종료시에 자신의\n패로 되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "e8b1e5a18ee5d57788dde4dd4363e75df17d7414b296aeb6b718a00b4769d963",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0361.webp",
+  "level": 0,
+  "links": [],
+  "name": "죽은 자의 환생",
+  "name_english": "Monster Reincarnation",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1421,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 361
+}

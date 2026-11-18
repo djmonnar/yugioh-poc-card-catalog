@@ -1,0 +1,17 @@
+{
+  "description": "어둠의 게임에서 상대의 추가 시작 패 1장을 없앱니다. 상대 캐릭터 특성으로 늘어난 시작 패는 유지됩니다.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 4,
+  "iconKey": "Relics/atlas160",
+  "id": "shadow_veil093",
+  "kind": "shadow_veil093",
+  "name": "그림자 장막",
+  "params": {},
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

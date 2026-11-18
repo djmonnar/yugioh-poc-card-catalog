@@ -1,0 +1,44 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1307",
+  "attack": 1200,
+  "attribute": 32,
+  "categories": [
+    "덱-묘지기",
+    "소환-패,덱"
+  ],
+  "code": 24317029,
+  "defense": 2000,
+  "description": "리버스: 덱에서 공격력 1500\n이하의 \"묘지기\" 몬스터 1장을\n뒷면 수비 표시로 특수\n소환한다.",
+  "draw_enabled": true,
+  "identity_key": "e69b2fea567e1e3fe0e2e79b538ce705c0e8505ec0b932105aeff4d1a40bf81a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0588.webp",
+  "level": 4,
+  "links": [
+    {
+      "identity_key": "38c7ceed929684624aeb70d2b736465d99d7adabddb16d0b3bac9e35c8c317c1",
+      "slot": 768
+    },
+    {
+      "identity_key": "f130cae911f76b5e23b36f8f75a9b7b9b79c1636516b3ec52caf8220d8df226a",
+      "slot": 1183
+    },
+    {
+      "identity_key": "900003f145b33f2790d4dcf4b19234c46abd2ebc940072c875c3e0ae35384714",
+      "slot": 1184
+    }
+  ],
+  "name": "묘지기의 정찰자",
+  "name_english": "Gravekeeper's Spy",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "source_id": 1307,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 588
+}

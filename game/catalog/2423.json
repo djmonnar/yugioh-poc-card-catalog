@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2423",
+  "attack": 1800,
+  "attribute": 32,
+  "categories": [
+    "덱-암흑계",
+    "효과-버리기"
+  ],
+  "code": 6214884,
+  "defense": 400,
+  "description": "①: 이 카드가 상대에게 전투 데미지를 주었을 때 발동할 수 있다. 자신의 패에서 카드 1장을 골라 버린다.",
+  "draw_enabled": true,
+  "identity_key": "91b7889b7ee8e14292334207d1e3a79506b9f15bc52dcbeb52e2cee2446a8a0f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2423.jpg",
+  "level": 4,
+  "links": [],
+  "name": "암흑계의 광왕 브론",
+  "name_english": "Brron, Mad King of Dark World",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "N",
+  "source_id": 2423,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1460
+}

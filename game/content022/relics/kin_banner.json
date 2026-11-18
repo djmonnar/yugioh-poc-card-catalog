@@ -1,0 +1,20 @@
+{
+  "description": "종족을 하나 지정해. 내 필드에 해당 종족의 앞면 몬스터가 2장 이상 있으면 그 종족의 공격력이 200 증가해.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 54,
+  "iconKey": "Relics/Content022/atlas022",
+  "id": "kin_banner",
+  "kind": "kin_banner",
+  "name": "동족의 깃발",
+  "params": {
+    "atk": 200,
+    "count": 2
+  },
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-native022",
+  "weight": 1
+}

@@ -1,0 +1,49 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-2680179a-18cc-4f85-b325-e07974fb39f9",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "d0ef2941ee2fbde42ca5e6247b4b1d38b0031b6141f208232357750c957cefdd",
+      "source_id": 2633
+    },
+    {
+      "count": 2,
+      "identity_key": "8b3b45e753ed851101f7265bb0742a6f236cef943540740ebd1390ecaabc1f4b",
+      "source_id": 2102
+    },
+    {
+      "count": 2,
+      "identity_key": "2efa468fbbcaee28d45d696615341968ac1535fe942c8bb72fa0e964ca45975b",
+      "source_id": 2101
+    },
+    {
+      "count": 3,
+      "identity_key": "9c538a2af288b2c952dc44a83520e9e1aa666077dc0241a3c14f590c8e408b33",
+      "source_id": 1336
+    },
+    {
+      "count": 3,
+      "identity_key": "6382982d8b750aa9cef1d06352229821f3627cab34d04c3b56d2dacf369c849d",
+      "source_id": 150
+    },
+    {
+      "count": 3,
+      "identity_key": "e02faad8c364491eefd1e0a5d730c4fc0c8a96beb695059c8ec0c234537c1aec",
+      "source_id": 244
+    },
+    {
+      "count": 2,
+      "identity_key": "2153fff00bb802ab602d36339b5aaf2411c4f02121b9de92643cf8be7352463e",
+      "source_id": 2634
+    },
+    {
+      "count": 2,
+      "identity_key": "10ea3cb3e7ca9ce12f88d8bc1f0fa80dd3e4e59dd82b7fe2fbec0152013321c1",
+      "source_id": 2103
+    }
+  ],
+  "name": "듀얼몬스터 초급",
+  "version": 571
+}

@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1924",
+  "attack": 1600,
+  "attribute": 32,
+  "categories": [
+    "덱-블랙매지션",
+    "발동-소환",
+    "효과-덱샐비지",
+    "발동-릴리즈"
+  ],
+  "code": 7084129,
+  "defense": 100,
+  "description": "이 카드명의 ①②의 효과는 각각\n1턴에 1번밖에 사용할 수\n없다. ①: 이 카드를 일반\n소환했을 때에 발동할 수\n있다. \"블랙 매지션\"의\n카드명이 쓰여진 마법 / 함정\n카드 1장을 덱에서 패에\n넣는다. ②: 이 카드가 묘지에\n존재하는 상태에서, 자신이\n상대 턴에 마법 / 함정 카드의\n효과를 발동했을 경우, 자신\n필드의 마법사족 몬스터 1장을\n릴리스하고 발동할 수 있다.\n이 카드를 패에 넣는다.\n[차이] ②는 발동한 카드의\n체인이 모두 처리된 뒤에\n사용할지 묻는다.",
+  "draw_enabled": true,
+  "identity_key": "e59839abbcfb0aeca99b2305a17c4280aaa98be82be82bcdf349e6a1d8c6aa0b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1196.webp",
+  "level": 3,
+  "links": [
+    {
+      "identity_key": "a850b8cd0e118c301dde50e7dcabc13ebb54f1506ec19fbe0694955bba7dfd67",
+      "slot": 803
+    },
+    {
+      "identity_key": "e7a0ae4a02cc970faa1d456a1b3332ccb2402e49fc8c92ea125aff18e54ec19d",
+      "slot": 265
+    }
+  ],
+  "name": "매지션즈 로드",
+  "name_english": "Magician's Rod",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "UR",
+  "source_id": 1924,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1196
+}

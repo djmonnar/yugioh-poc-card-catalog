@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards081/2597",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-인조인간",
+    "발동-버리기",
+    "소환-덱리크루터"
+  ],
+  "code": 72563071,
+  "defense": 0,
+  "description": "상대가 함정 카드를 발동했을 때, 패의 마법·함정 1장을 버리고 발동한다. 덱에서 레벨 6의 어둠 속성 기계족 몬스터 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "5d9d385a1d3266b1bba16bf9c4f71a64771379292fba5755090f310e7951a1b6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native081/cards/2597.jpg",
+  "level": 0,
+  "links": [],
+  "name": "사이코 쇼크웨이브",
+  "name_english": "Psychic Shockwave",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2597,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1629
+}

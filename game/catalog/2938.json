@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards136/2938",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-프레데터 플랜츠",
+    "지원-융합",
+    "지원-어둠 속성",
+    "소환-엑스트라 덱에서",
+    "효과-묘지로 보내기"
+  ],
+  "code": 8148322,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 필드에 \"프레데터 플랜츠\" 몬스터가 존재할 경우에 발동할 수 있다. 자신 / 상대 필드에서, 어둠 속성 융합 몬스터 카드에 기재된, 자신 필드의 어둠 속성 몬스터 2장 이상을 포함하는 융합 소재 몬스터를 묘지로 보내고, 그 융합 몬스터 1장을 엑스트라 덱에서 융합 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "cecd2e75e4b6cf17da18767aa4741b26289b2599e9612cf82b4041c716bf5a28",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native136/cards/2938.jpg",
+  "level": 0,
+  "links": [],
+  "name": "프레데터 프라임 퓨전",
+  "name_english": "Predaprime Fusion",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "프레데터 프라임 퓨전",
+    "Predaprime Fusion"
+  ],
+  "source_id": 2938,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 1970
+}

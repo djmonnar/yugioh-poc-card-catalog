@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards126/2844",
+  "attack": 1600,
+  "attribute": 32,
+  "categories": [
+    "지원-일반몬스터",
+    "지원-저레벨",
+    "효과-덱샐비지",
+    "발동-묘지로보내기"
+  ],
+  "code": 75043725,
+  "defense": 600,
+  "description": "이 카드가 필드 위에서 묘지로 보내졌을 때, 서로 자신의 덱에서 레벨 3 이하의 일반 몬스터 1장을 선택하여, 서로 확인하고 패에 넣는다. 그 후 덱을 셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "49b5e17e8325a76c2663cffe9be29a0b6498de500c004ad52790b4dd235e8ffd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native126/cards/2844.jpg",
+  "level": 4,
+  "links": [],
+  "name": "명계의 사자",
+  "name_english": "Emissary of the Afterlife",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "search_aliases": [
+    "명계의 사자",
+    "Emissary of the Afterlife"
+  ],
+  "source_id": 2844,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1876
+}

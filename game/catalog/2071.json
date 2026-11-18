@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2071",
+  "attack": 400,
+  "attribute": 1,
+  "categories": [
+    "소환-묘지",
+    "효과-버리기"
+  ],
+  "code": 24096499,
+  "defense": 900,
+  "description": "\"숲의 성수 발레리폰\"의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 패를 1장 버리고 \"숲의 성수 발레리폰\" 이외의 자신 묘지의 레벨 2 이하의 야수족 몬스터 1장을 대상으로 하여 발동할 수 있다. 그 몬스터를 앞면 공격 표시 또는 뒷면 수비 표시로 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "4904a794d17e83888cdc3f99c59fac5f2f7c8dc1d99677c95364cf1519eddea4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1369.webp",
+  "level": 2,
+  "links": [],
+  "name": "숲의 성수 발레리폰",
+  "name_english": "Valerifawn, Mystical Beast of the Forest",
+  "native_type": 4129,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "SR",
+  "source_id": 2071,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1369
+}

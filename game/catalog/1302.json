@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1302",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 1918087,
+  "defense": 0,
+  "description": "상대의 LP가 3000 이하일 때\n발동할 수 있다. 상대의\n스탠바이 페이즈마다 상대에게\n500 직접 데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "e23fc23c35d87b96b9c223f03780d16a275d3efc2040063a077fd78a800cc76f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0308.webp",
+  "level": 0,
+  "links": [],
+  "name": "고블린의 관리인",
+  "name_english": "Minor Goblin Official",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1302,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 308
+}

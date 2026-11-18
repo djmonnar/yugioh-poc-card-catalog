@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/728",
+  "attack": 2500,
+  "attribute": 32,
+  "categories": [
+    "덱-툰"
+  ],
+  "code": 91842653,
+  "defense": 1200,
+  "description": "필드에 \"툰 월드\"가 없으면\n소환할 수 없다. 소환한\n턴에는 공격할 수 없다.\n공격할 때마다 500 LP를\n지불한다. \"툰 월드\"가\n파괴되면 이 카드도 파괴된다.\n상대 필드에 툰 몬스터가\n없으면 상대에게 직접 공격할\n수 있다. 상대 필드에 툰\n몬스터가 있으면 그 몬스터를\n공격 대상으로 해야 한다.",
+  "draw_enabled": true,
+  "identity_key": "fcb127b8a30a318cba837a11d3a3e99987af91345e29ea51af521d36889f86df",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0620.webp",
+  "level": 6,
+  "links": [],
+  "name": "툰 데몬",
+  "name_english": "Toon Summoned Skull",
+  "native_type": 37748769,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "source_id": 728,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 620
+}

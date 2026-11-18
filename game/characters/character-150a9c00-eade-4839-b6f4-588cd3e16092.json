@@ -1,0 +1,44 @@
+{
+  "art_key": "Character035/crowler",
+  "id": "character-150a9c00-eade-4839-b6f4-588cd3e16092",
+  "profile": {
+    "name": "크로노스 데 메디치",
+    "portrait": "assets/native035/characters/crowler.png",
+    "skill_profiles": [
+      {
+        "name": "엔틱 기어 캐슬",
+        "profile_id": "profile-8c243658-d11b-4e07-9c3f-beb000bc7e2e",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "a26f45cd4208f0475c296998778440632fa8aef3657250da4c288553f579118a",
+              "internal_id": 2410,
+              "name_ko": "앤틱 기어 캐슬",
+              "slot": 1447
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "앤틱 기어 타운",
+        "profile_id": "profile-c44f852a-bf74-4198-b367-f51a866d6edd",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "aac98651b3838f865c1f92716a4fb64994e90cc08151209029c8cb30e9394c75",
+              "internal_id": 2404,
+              "name_ko": "기어 타운",
+              "slot": 1441
+            },
+            "kind": "start_field"
+          }
+        ]
+      }
+    ],
+    "skills": []
+  },
+  "profile_id": "crowler",
+  "updated_at": "2026-11-06T01:03:35.990899+00:00",
+  "version": 3855
+}

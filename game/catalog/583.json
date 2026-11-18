@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/583",
+  "attack": 1800,
+  "attribute": 4,
+  "categories": [
+    "효과-드로우",
+    "발동-묘지",
+    "소환-덱리크루터"
+  ],
+  "code": 75132317,
+  "defense": 600,
+  "description": "1턴에 1번, \"염무\"라는 이름이\n붙은 마법 / 함정 카드가\n자신의 묘지로 보내졌을 경우,\n덱에서 \"염무\"라는 이름이\n붙은 함정 카드 1장을 고르고\n자신 필드 위에 세트할 수\n있다. 또한, 자신 필드 위에\n이 카드 이외의 몬스터가\n존재하지 않을 경우, 1턴에\n1번, 자신 필드 위에 앞면\n표시로 존재하는 \"염무\"라는\n이름이 붙은 마법 / 함정 카드\n2장을 묘지로 보내고 발동할\n수 있다. 덱에서 카드를 1장\n드로우한다.\n[차이] ①로 세트하는 \"염무\"\n함정 카드는 덱에서 패를 거쳐\n세트된다.",
+  "draw_enabled": true,
+  "identity_key": "c1014cb102bdceee3f1fe9634e0c772d0dc9eb26c300cb4d7d8dc87c6c20d1bd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0779.webp",
+  "level": 4,
+  "links": [],
+  "name": "웅염성－스네이린",
+  "name_english": "Brotherhood of the Fire Fist - Snake",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "SR",
+  "source_id": 583,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 779
+}

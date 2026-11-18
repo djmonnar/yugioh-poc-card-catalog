@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards125/2817",
+  "attack": 1600,
+  "attribute": 8,
+  "categories": [
+    "지원-에일리언",
+    "A 카운터",
+    "지원-전투",
+    "소환-패,덱"
+  ],
+  "code": 25920413,
+  "defense": 1800,
+  "description": "상대 필드 위의 레벨 3 이하 몬스터 1장을 릴리스하고, 이 카드를 패에서 상대 필드 위에 특수 소환할 수 있다. 이 방법으로 특수 소환할 경우, 이 턴에 자신은 일반 소환 / 세트할 수 없으며, 특수 소환시에 이 카드에 A 카운터를 1개 놓는다. 이 카드가 필드 위에 앞면 표시로 존재하는 한, A 카운터가 얹힌 몬스터는, \"에일리언\"이라는 이름이 붙은 몬스터와 전투를 실행할 경우, 데미지 계산시에만 A 카운터 1개당 공격력 / 수비력을 300 포인트 내린다.",
+  "draw_enabled": true,
+  "identity_key": "d1be5d0963e8e22534515cd211c758173e04e89612372549df74f4cab598bf18",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native125/cards/2817.jpg",
+  "level": 4,
+  "links": [],
+  "name": "에일리언 스컬",
+  "name_english": "Alien Skull",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 524288,
+  "rarity": "R",
+  "search_aliases": [
+    "에일리언스컬",
+    "에일리언 스컬",
+    "Alien Skull"
+  ],
+  "source_id": 2817,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1849
+}

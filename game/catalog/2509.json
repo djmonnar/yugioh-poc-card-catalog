@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2509",
+  "attack": 1700,
+  "attribute": 16,
+  "categories": [
+    "효과-버리기",
+    "효과-제외",
+    "소환-패,덱",
+    "덱-그레퍼"
+  ],
+  "code": 27407330,
+  "defense": 1600,
+  "description": "①: 패의 레벨 5 이상 빛 속성 몬스터 1장을 버리고, 이 카드를 패에서 특수 소환할 수 있다.\n②: 1턴에 1번, 패의 빛 속성 몬스터 1장을 버리고 발동할 수 있다. 덱의 빛 속성 몬스터 1장을 제외한다.",
+  "draw_enabled": true,
+  "identity_key": "0bd582669ccd6d8233938e571419ec5ff8eba745a82bb245a46a8944cddb50db",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2509.jpg",
+  "level": 4,
+  "links": [],
+  "name": "라이트레이 그레퍼",
+  "name_english": "Lightray Grepher",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "source_id": 2509,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1541
+}

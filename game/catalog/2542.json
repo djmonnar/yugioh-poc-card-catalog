@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2542",
+  "attack": 2400,
+  "attribute": 32,
+  "categories": [
+    "덱-네프티스",
+    "소환-제외",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 38107923,
+  "defense": 1600,
+  "description": "① 자신 묘지에 어둠 속성 몬스터가 3장 이상 있으면, 그중 2장을 제외하고 패의 이 카드를 효과로 묘지에 보낼 수 있다. 다음 자신의 스탠바이 페이즈에 이 효과로 묘지에 보낸 이 카드를 특수 소환한다. ② 어떤 방법으로든 특수 소환되었을 때 필드의 마법·함정 1장을 대상으로 파괴한다. ②는 강제 효과이므로 상대 필드에 대상이 없으면 자신의 카드를 선택해야 할 수도 있다.",
+  "draw_enabled": true,
+  "identity_key": "df80ec4425c236fe50e005b1e4689e1bcec2a64028db999d09c0e6211d2f1617",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2542.jpg",
+  "level": 8,
+  "links": [],
+  "name": "다크 네프티스",
+  "name_english": "Dark Nephthys",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "SR",
+  "source_id": 2542,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1574
+}

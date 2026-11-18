@@ -1,0 +1,18 @@
+{
+  "description": "빛나는 비문이 맥박에 맞춰 반짝인다. 잠깐의 생명력을 내어주면 생명의 그릇을 넓힐 수 있다.",
+  "effect": "현재 LP -300 · 최대 LP +500 (현재 LP 추가 회복 없음)",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "life_inscription",
+  "kind": "life_inscription",
+  "name": "LP 300을 바치고 최대 LP +500",
+  "params": {
+    "lp": 300,
+    "max_lp": 500
+  },
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "생명의 비문",
+  "weight": 1
+}

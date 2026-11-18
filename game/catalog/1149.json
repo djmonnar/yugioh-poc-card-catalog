@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1149",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-바운스",
+    "소환-패,덱"
+  ],
+  "code": 9074847,
+  "defense": 0,
+  "description": "자신의 몬스터가 1장 이상\n필드에서 패로 돌아왔을 때\n발동할 수 있다. 필드의 모든\n몬스터 카드를 각각의 패로\n되돌린다. 그 후 양쪽\n플레이어는 패에서 같은 수의\n몬스터 카드를 필드에 뒷면\n수비 표시로 특수 소환할 수\n있다.",
+  "draw_enabled": true,
+  "identity_key": "e82f10a1ffea252b9b621ae801725836915bf538ba7a49e9eb93e28e87c79eb4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0117.webp",
+  "level": 0,
+  "links": [],
+  "name": "대소동",
+  "name_english": "Major Riot",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1149,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 117
+}

@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1510",
+  "attack": 2400,
+  "attribute": 32,
+  "categories": [
+    "효과-버리기",
+    "파괴-몬스터",
+    "무효-소환"
+  ],
+  "code": 47084486,
+  "defense": 1200,
+  "description": "패의 카드 1장을 무작위로\n묘지로 버리고 필드의 특수\n소환된 몬스터를 모두\n파괴한다. 또한 이 카드가\n필드에 앞면으로 존재하는\n동안 몬스터를 특수 소환할 수\n없다.",
+  "draw_enabled": true,
+  "identity_key": "05304979b07d74baf430e2c4403780c5a3f4f9238ba96fa4d526023c327e5180",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0409.webp",
+  "level": 6,
+  "links": [],
+  "name": "배너티 데블",
+  "name_english": "Vanity's Fiend",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "source_id": 1510,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 409
+}

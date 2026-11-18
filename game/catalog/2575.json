@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards067/2575",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-가이아"
+  ],
+  "code": 29477860,
+  "defense": 0,
+  "description": "자신의 몬스터 존에 ‘용기사 가이아’가 있으면 상대 몬스터는 ‘용기사 가이아’만 공격 대상으로 고를 수 있다. 자신의 ‘용기사 가이아’가 전투하는 공격 선언 시 필드 카드 1장을 대상으로 파괴할 수 있다. 같은 이름의 이 효과는 한 턴에 한 번만 사용할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "f097c70264c265b0aaccaddcfeffefc33c336798c1ca3fc3d8bece40da28f30a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2575.jpg",
+  "level": 0,
+  "links": [],
+  "name": "스파이럴 디스차지",
+  "name_english": "Spiral Discharge",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2575,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 1607
+}

@@ -1,0 +1,19 @@
+{
+  "description": "듀얼 중 사용하면 무승부로 끝내고 전투 직전 위치와 LP로 돌아가. 다 쓴 뒤 다시 얻으면 새 횟수를 받아.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 28,
+  "iconKey": "Relics/atlas163",
+  "id": "lizard_tail",
+  "kind": "lizard_tail",
+  "name": "도마뱀 꼬리",
+  "params": {
+    "charges": 1
+  },
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

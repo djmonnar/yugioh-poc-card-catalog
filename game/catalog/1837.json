@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1837",
+  "attack": 2400,
+  "attribute": 1,
+  "categories": [
+    "덱-아마조네스",
+    "면역-전투"
+  ],
+  "code": 15951532,
+  "defense": 1800,
+  "description": "①: 이 카드가 몬스터 존에\n존재하는 한, 자신의\n\"아마조네스\" 몬스터는\n전투로는 파괴되지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "2d6820c46b2e5a167340dd51d08d4653bcd40b6b69169fa306a1a1cf49d736c7",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1252.webp",
+  "level": 6,
+  "links": [],
+  "name": "아마조네스 여왕",
+  "name_english": "Amazoness Queen",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "UR",
+  "source_id": 1837,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1252
+}

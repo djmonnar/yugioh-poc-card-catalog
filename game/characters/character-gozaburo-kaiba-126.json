@@ -1,0 +1,13 @@
+{
+  "art_key": "Character126/images/gozaburo_kaiba/start",
+  "id": "character-gozaburo-kaiba-126",
+  "profile": {
+    "name": "카이바 고자부로",
+    "portrait": "assets/actors/native126/gozaburo_kaiba/start.png",
+    "skill_profiles": [],
+    "skills": []
+  },
+  "profile_id": "gozaburo_kaiba",
+  "updated_at": null,
+  "version": 718
+}

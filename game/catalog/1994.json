@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1994",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-덱샐비지"
+  ],
+  "code": 89739383,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에\n1장밖에 발동할 수 없다. ①:\n덱에서 \"그리모의 마도서\"\n이외의 \"마도서\" 카드 1장을\n패에 넣는다.\n[안내] 이 게임의 \"마도서\"\n카드는 \"휴그로의 마도서\"와\n\"그리모의 마도서\"뿐이다.\n[차이] 패에 넣는 카드는\n상대에게 공개된다.",
+  "draw_enabled": true,
+  "identity_key": "590ebbfd869bc3fd0b77820167c95ac7e84aca64e1c8602339630cbabf8311d1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1119.webp",
+  "level": 0,
+  "links": [
+    {
+      "identity_key": "b1d844d40d803bd9a5bc5ab462ff1f88fd2b0c0223deb50ef692b2f1ee026168",
+      "slot": 1118
+    }
+  ],
+  "name": "그리모의 마도서",
+  "name_english": "Spellbook of Secrets",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1994,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1119
+}

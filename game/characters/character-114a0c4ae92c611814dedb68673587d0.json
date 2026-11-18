@@ -1,0 +1,59 @@
+{
+  "art_key": "DuelUi011/legacy/yugi_intro",
+  "id": "character-114a0c4ae92c611814dedb68673587d0",
+  "profile": {
+    "name": "어둠의 유희",
+    "portrait": "https://mjrvbxjmnnzjhwjyqjhc.supabase.co/storage/v1/object/public/poc-story-assets/portraits/da3ab35f-c345-4cfe-81c6-c0b5ab8fb238.webp",
+    "skill_profiles": [
+      {
+        "name": "블랙매지션",
+        "profile_id": "profile-35cb8a79-1316-4ffa-a8a8-c802671a7999",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "a850b8cd0e118c301dde50e7dcabc13ebb54f1506ec19fbe0694955bba7dfd67",
+              "internal_id": 34,
+              "name_ko": "블랙 매지션",
+              "slot": 803
+            },
+            "kind": "start_hand"
+          }
+        ]
+      },
+      {
+        "name": "어둠",
+        "profile_id": "profile-8d7be664-b818-4e74-9e2e-16819ab7db87",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "27bf0a25dc6d4ff751576acc2f70ea53b416840321345203ce7623441c791fcf",
+              "internal_id": 334,
+              "name_ko": "어둠",
+              "slot": 1008
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "카오스솔져",
+        "profile_id": "profile-4267ee48-02ae-435e-bbbf-2c4b440473fd",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "588dc5a51d9697c6b661503fae4175e394abafc34212f0e79dae8af1093392ff",
+              "internal_id": 2580,
+              "name_ko": "카오스 필드",
+              "slot": 1612
+            },
+            "kind": "start_hand"
+          }
+        ]
+      }
+    ],
+    "skills": []
+  },
+  "profile_id": "yugi",
+  "updated_at": "2026-11-09T21:13:52.990794+00:00",
+  "version": 3921
+}

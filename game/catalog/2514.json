@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2514",
+  "attack": 1600,
+  "attribute": 16,
+  "categories": [
+    "덱-사이버 엔젤",
+    "지원-의식",
+    "효과-묘지샐비지"
+  ],
+  "code": 3629090,
+  "defense": 2000,
+  "description": "기계천사의 의식 등으로 의식 소환한다. ① 의식 소환되었을 경우, 자신의 덱·묘지에서 의식 마법 1장을 패에 넣을 수 있다. ② 이 카드가 릴리스되었을 경우, 자신 필드의 모든 의식 몬스터의 공격력·수비력을 1000 올릴 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "ff47fa80b245704063d82cfcd0da7f3bd735a3f33970e023dc0abf5026da164d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2514.jpg",
+  "level": 6,
+  "links": [],
+  "name": "사이버 엔젤－이다텐－",
+  "name_english": "Cyber Angel Idaten",
+  "native_type": 161,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "R",
+  "source_id": 2514,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "의식 / 효과 몬스터",
+  "web_slot": 1546
+}

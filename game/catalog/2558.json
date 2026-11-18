@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards067/2558",
+  "attack": 1500,
+  "attribute": 32,
+  "categories": [
+    "덱-묘지기"
+  ],
+  "code": 58139128,
+  "defense": 1500,
+  "description": "자신의 묘지의 ‘묘지기’ 몬스터 1장마다 수비력이 200 오른다. ‘묘지기’ 이외의 몬스터가 묘지에서 발동하는 효과는 무효가 된다. 필드에 ‘왕가의 골짜기－네크로밸리’가 있으면 상대는 필드 마법을 발동할 수 없고, 상대 효과로 필드 마법을 파괴할 수도 없다.",
+  "draw_enabled": true,
+  "identity_key": "46ceafe6c8904984da5787216e0c2db5e008745c338dd1f38590b2a1a8df29d5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2558.jpg",
+  "level": 6,
+  "links": [],
+  "name": "묘지기의 기도사",
+  "name_english": "Gravekeeper's Shaman",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "source_id": 2558,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1590
+}

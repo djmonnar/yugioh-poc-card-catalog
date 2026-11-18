@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1902",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-토큰"
+  ],
+  "code": 73915051,
+  "defense": 0,
+  "description": "이 카드를 발동하는 턴에는\n몬스터를 소환할 수 없다(반전\n소환 / 특수 소환 포함).\n자신의 필드에 \"양\n토큰\"(야수족 / 땅 / 레벨 1 /\n공격력 0 / 수비력 0) 4장을\n수비 표시로 놓는다. 이\n토큰은 어드밴스 소환을 위한\n릴리스로 사용할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "fcfc4844e4793eabbe75bb427764cfc833a3829484e1843d64d3b6f1c5059445",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1106.webp",
+  "level": 0,
+  "links": [],
+  "name": "희생양",
+  "name_english": "Scapegoat",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1902,
+  "speed_limit": 2,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1106
+}

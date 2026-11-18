@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1851",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-아마조네스"
+  ],
+  "code": 81325903,
+  "defense": 0,
+  "description": "턴 종료시까지, 자신 필드\n위의 \"아마조네스\"라는 이름이\n붙은 앞면 표시 몬스터 1장과\n상대 필드 위의 앞면 표시\n몬스터 1장의 원래 공격력을\n맞바꾼다.\n[안내] 발동하면 먼저 자신의\n앞면 \"아마조네스\" 몬스터를,\n다음에 상대의 앞면 몬스터를\n커서로 고른다. 바꾸는 것은\n원래 공격력이며,\n아마조네스의 마을 등 다른\n효과로 오른 공격력은 그대로\n더해진다. 이 턴이 끝나면\n원래대로 돌아온다.\n[차이] 마법 카드의 영향을\n받지 않는 몬스터(호루스의\n흑염룡 LV6 이상 등)는\n대상으로 고를 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "1a901561e7efb97d1cebceeb19d547185581c568055c983bace6cba346602abf",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1264.webp",
+  "level": 0,
+  "links": [],
+  "name": "아마조네스의 주술사",
+  "name_english": "Amazoness Spellcaster",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1851,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1264
+}

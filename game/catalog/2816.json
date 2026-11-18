@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards125/2816",
+  "attack": 1500,
+  "attribute": 16,
+  "categories": [
+    "지원-에일리언",
+    "A 카운터",
+    "발동-소환",
+    "소환-패,덱"
+  ],
+  "code": 15475415,
+  "defense": 1000,
+  "description": "자신이 \"에일리언\"이라는 이름이 붙은 몬스터의 일반 소환에 성공했을 때, 이 카드를 패에서 특수 소환할 수 있다. 이 효과로 특수 소환에 성공했을 때, 상대 필드 위에 앞면 표시로 존재하는 몬스터에 A 카운터를 2개 놓는다.",
+  "draw_enabled": true,
+  "identity_key": "c662f0c2203c59482124b08a7cb0c02888e854dc500216f4774d087b30721243",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native125/cards/2816.jpg",
+  "level": 3,
+  "links": [],
+  "name": "에일리언 도그",
+  "name_english": "Alien Dog",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 524288,
+  "rarity": "R",
+  "search_aliases": [
+    "에일리언도그",
+    "에일리언 도그",
+    "Alien Dog"
+  ],
+  "source_id": 2816,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1848
+}

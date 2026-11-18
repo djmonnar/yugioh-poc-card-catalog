@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/112",
+  "attack": 1800,
+  "attribute": 32,
+  "categories": [
+    "덱-암흑계"
+  ],
+  "code": 7459013,
+  "defense": 1500,
+  "description": "이 기사의 이름은 암흑세계의\n모든 주민들이 알고 있다.",
+  "draw_enabled": true,
+  "identity_key": "91e7197b44d29d0c4c4d6c9d966c83611f2d6c5483c328c2c72ba00cd6eeb6cc",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0508.webp",
+  "level": 4,
+  "links": [],
+  "name": "암흑계의 기사 즈루",
+  "name_english": "Zure, Knight of Dark World",
+  "native_type": 17,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "source_id": 112,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 몬스터",
+  "web_slot": 508
+}

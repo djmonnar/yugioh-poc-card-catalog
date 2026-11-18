@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards093/2664",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착",
+    "무효-몬스터효과"
+  ],
+  "code": 19578592,
+  "defense": 0,
+  "description": "①: 장착 몬스터의 공격력은 1000 올리고, 효과는 무효화된다. ②: 자신 스탠바이 페이즈에 발동한다. 장착 몬스터의 컨트롤러에게 500 데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "7154c5e968f626068ff755281e454c17bcc33ccf8f6cc1e5505f49301ee0b34f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native093/cards/2664.jpg",
+  "level": 0,
+  "links": [],
+  "name": "우둔한 도끼",
+  "name_english": "Axe of Fools",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "우둔한도끼",
+    "우둔한 도끼",
+    "Axe of Fools"
+  ],
+  "source_id": 2664,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1696
+}

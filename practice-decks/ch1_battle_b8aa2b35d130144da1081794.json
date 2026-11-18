@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": false,
+  "extra": [],
+  "id": "ch1_battle_b8aa2b35d130144da1081794",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "16c4b283dc56a51fc5ea3b9def1591e93bebe375442d0232258f477121138c75",
+      "source_id": 1117
+    },
+    {
+      "count": 1,
+      "identity_key": "e069f870ae0491006d2e458a8994d372eac2bb43daae3015631f062788eb606c",
+      "source_id": 1408
+    },
+    {
+      "count": 1,
+      "identity_key": "edeb68c6994ecb411f3d6db246f7abdb0c704beda3dc4730207b8fa7cfe630ac",
+      "source_id": 632
+    },
+    {
+      "count": 2,
+      "identity_key": "3fe303dc5c490fe7949d8149a146400ecfb2c047eabfdfe1c9793513dc4d671e",
+      "source_id": 272
+    },
+    {
+      "count": 2,
+      "identity_key": "51b5740d10ab23899643b847205bb7969dc3badfabee63b633b5f7128610b832",
+      "source_id": 1129
+    },
+    {
+      "count": 2,
+      "identity_key": "8407648f788e5ad7583f8f92c74953f2c51816a8667989e4f99741d7bc9ad657",
+      "source_id": 1073
+    },
+    {
+      "count": 3,
+      "identity_key": "4e6046301a2c099bd8bf0f2ec76aed6283096ee02426e89d7e1fee1095cc1f5a",
+      "source_id": 1140
+    },
+    {
+      "count": 2,
+      "identity_key": "cc66d3b0752722e7eaa14f429ca7916e79be0c09b67c2aa5aac6f0063e31c436",
+      "source_id": 2036
+    },
+    {
+      "count": 2,
+      "identity_key": "d0e0c1f5939df608f7a1850b2a47e3216c40b309d376d0c670a77e6eebdb23fa",
+      "source_id": 2035
+    },
+    {
+      "count": 2,
+      "identity_key": "e256dd5bfd39ab06196f61db51794a8e14143e3c30922f799a6cea000cf001a5",
+      "source_id": 2004
+    }
+  ],
+  "name": "안수진 초급",
+  "version": 327
+}

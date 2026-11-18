@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2505",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-공용",
+    "지원-일반몬스터",
+    "지원-고레벨",
+    "무효-소환"
+  ],
+  "code": 82382815,
+  "defense": 0,
+  "description": "자신 필드에 앞면 표시 레벨 7 이상의 일반 몬스터가 있을 경우, 몬스터가 일반 소환 / 반전 소환 / 특수 소환되려 할 때 또는 마법 / 함정 카드가 발동했을 때 발동할 수 있다. 그 소환이나 발동을 무효로 하고 해당 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "bfac1ae3670d6cb5cc3b188084e5f18d93938a0d45a026302ca94e035e818a9a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2505.jpg",
+  "level": 0,
+  "links": [],
+  "name": "왕자의 간파",
+  "name_english": "Champion's Vigilance",
+  "native_type": 1048580,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 2505,
+  "speed_limit": 1,
+  "stock": true,
+  "token": false,
+  "type_name": "카운터 함정",
+  "web_slot": 1537
+}

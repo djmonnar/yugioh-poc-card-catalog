@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/175",
+  "attack": 1800,
+  "attribute": 1,
+  "categories": [
+    "지원-필드",
+    "효과-묘지샐비지"
+  ],
+  "code": 32485518,
+  "defense": 200,
+  "description": "이 카드를 릴리스하여 묘지의\n\"언데드 월드\" 1장을 패에\n넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "ce4608c097b25edbc2a503b6d2f94a083cb6a94b34edf67e1cb6d20ebca01223",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0764.webp",
+  "level": 4,
+  "links": [],
+  "name": "임모털 룰러",
+  "name_english": "Immortal Ruler",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "SR",
+  "source_id": 175,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 764
+}

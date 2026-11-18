@@ -1,0 +1,30 @@
+{
+  "alias": 83764718,
+  "art_key": "Cards/1008",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-묘지"
+  ],
+  "code": 83764719,
+  "defense": 0,
+  "description": "자신 또는 상대 묘지의 몬스터\n1장을 선택하여, 자신의\n필드에 앞면 공격 표시 또는\n앞면 수비 표시로 놓는다.\n이는 특수 소환으로 취급한다.",
+  "draw_enabled": false,
+  "identity_key": "99ecb0005356e2d273d84b197aa7869b5bc16ecf8e22c552bd4f6cabb1aff8fc",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0359.webp",
+  "level": 0,
+  "links": [],
+  "name": "죽은 자의 소생",
+  "name_english": "Monster Reborn",
+  "native_type": 2,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "L",
+  "source_id": 1008,
+  "speed_limit": 1,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 359
+}

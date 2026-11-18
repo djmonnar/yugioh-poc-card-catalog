@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/bonz/start",
+  "banlistEnabled": true,
+  "deckName": "해골수스 중급",
+  "extra": [],
+  "id": "enc044_1_elite_ch1_elite_087a104b911f0803e614a8c1",
+  "lpBonus": 500,
+  "main": [
+    399,
+    399,
+    404,
+    404,
+    1165,
+    1165,
+    1165,
+    1979,
+    1980,
+    1997,
+    1997,
+    1023,
+    1023,
+    1159,
+    1029,
+    1029,
+    175,
+    175,
+    2394,
+    2394
+  ],
+  "name": "해골수스",
+  "openingDrawBonus": 0,
+  "profileId": "bonz",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 399,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "installed-story:sc-b1a34e1b4dc8f165-adb2d3f1b2802f3bfa39e21a5b2d22b6",
+  "usesNativeRules035": true
+}

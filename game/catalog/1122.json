@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1122",
+  "attack": 1400,
+  "attribute": 8,
+  "categories": [
+    "지원-의식",
+    "효과-덱샐비지",
+    "지원-사이버 엔젤"
+  ],
+  "code": 57617178,
+  "defense": 1000,
+  "description": "이 카드가 소환되었을 때(특수\n소환 제외), 자신의 덱에서\n의식 마법 카드 1장을 패에\n넣을 수 있다. 그 후 덱을\n셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "d592f7c61e4718937e523e1cd32c335c9b5fa4e0fbc1a7ea74f2a4dc10878155",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0497.webp",
+  "level": 4,
+  "links": [],
+  "name": "소닉 버드",
+  "name_english": "Sonic Bird",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "SR",
+  "source_id": 1122,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 497
+}

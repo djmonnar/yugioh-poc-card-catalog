@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards135/2910",
+  "attack": -2,
+  "attribute": 1,
+  "categories": [
+    "지원-공룡족",
+    "지원-제외",
+    "지원-전투"
+  ],
+  "code": 83235263,
+  "defense": 0,
+  "description": "①: 이 카드의 원래 공격력은, 제외되어 있는 자신의 공룡족 몬스터의 수 × 1000 이 된다.",
+  "draw_enabled": true,
+  "identity_key": "8dd3cfa6244c94aa4be9b35c452670aee896228908c2ec3bd3fc98b387b0ee11",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native135/cards/2910.jpg",
+  "level": 4,
+  "links": [],
+  "name": "디노 인피니티",
+  "name_english": "Tyranno Infinity",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "SR",
+  "search_aliases": [
+    "디노 인피니티",
+    "Tyranno Infinity"
+  ],
+  "source_id": 2910,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1942
+}

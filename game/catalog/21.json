@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/21",
+  "attack": 2500,
+  "attribute": 32,
+  "categories": [
+    "덱-데몬"
+  ],
+  "code": 70781052,
+  "defense": 1200,
+  "description": "어둠의 힘으로 적을 혼란에\n빠뜨리는 악마. 악마족 몬스터\n중에서도 상당한 힘을\n자랑한다.",
+  "draw_enabled": true,
+  "identity_key": "a902fd7ff228ad2c3f298ad6dcec79da90f3236f39d6aa67398ba7aa8e57e5e6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0582.webp",
+  "level": 6,
+  "links": [],
+  "name": "데몬 소환",
+  "name_english": "Summoned Skull",
+  "native_type": 17,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "source_id": 21,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 몬스터",
+  "web_slot": 582
+}

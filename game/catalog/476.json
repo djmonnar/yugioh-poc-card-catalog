@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/476",
+  "attack": 2900,
+  "attribute": 2,
+  "categories": [
+    "파괴-몬스터"
+  ],
+  "code": 10532969,
+  "defense": 1300,
+  "description": "이 카드가 상대 라이프에 전투\n데미지를 주었을 때, 상대\n필드 위의 몬스터 1장을\n선택하고 파괴할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "21b226757705f1071769bc769936ffff2020d8f2f57d1da36d21ff32d38630c1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0065.webp",
+  "level": 8,
+  "links": [],
+  "name": "고대 샤크 하이퍼 메가로돈",
+  "name_english": "Hyper-Ancient Shark Megalodon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 131072,
+  "rarity": "R",
+  "source_id": 476,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 65
+}

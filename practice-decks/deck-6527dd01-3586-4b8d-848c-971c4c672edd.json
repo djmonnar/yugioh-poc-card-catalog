@@ -1,0 +1,64 @@
+{
+  "banlist_enabled": false,
+  "extra": [],
+  "id": "deck-6527dd01-3586-4b8d-848c-971c4c672edd",
+  "main": [
+    {
+      "count": 1,
+      "identity_key": "0394e1201bbcb2cec57bb5fd6ab1af08dfe2df62630b623346e950faa7d2a04b",
+      "source_id": 2596
+    },
+    {
+      "count": 1,
+      "identity_key": "8e56dfb0f7a94b2e76427314cc5e0a40ceb2d83a5fa81d6a70cd74346b6d14c0",
+      "source_id": 2591
+    },
+    {
+      "count": 3,
+      "identity_key": "874ea894086d0542a721f8754d5e5ad625e4a83fc137f61584e74e0880a548d1",
+      "source_id": 751
+    },
+    {
+      "count": 3,
+      "identity_key": "2467a7b7ef5bc542a745579afa09454aef762449bcd9436ca59d2b4ac0bdd13a",
+      "source_id": 2594
+    },
+    {
+      "count": 1,
+      "identity_key": "7739172bde1f67e4919034abb0f06f45c70413cd3097d55cd36b5bc733aa6470",
+      "source_id": 2588
+    },
+    {
+      "count": 1,
+      "identity_key": "6738d7e1508c08a42ec2a54ec45af53fa80760ce9e9716f83d7399ed989bc573",
+      "source_id": 2590
+    },
+    {
+      "count": 2,
+      "identity_key": "4fd84966e9860f75c380e9f14afd99edd4eddd7142e4014db0247835f48d3d54",
+      "source_id": 2595
+    },
+    {
+      "count": 2,
+      "identity_key": "5d9d385a1d3266b1bba16bf9c4f71a64771379292fba5755090f310e7951a1b6",
+      "source_id": 2597
+    },
+    {
+      "count": 2,
+      "identity_key": "46825bc6644b4004e00e1536a3a63ee58ef669819f7be91ed15c83b31fed46a7",
+      "source_id": 444
+    },
+    {
+      "count": 2,
+      "identity_key": "20488551f3c6cf269ad5993fb21eecec3907c08042965c55d0d87e36abcf7624",
+      "source_id": 2416
+    },
+    {
+      "count": 2,
+      "identity_key": "fd444b62b7cf876f9257c857e42753635ba00b864a1a90ce56a4c6df8f03571d",
+      "source_id": 2415
+    }
+  ],
+  "name": "에스퍼 로바 인조인간",
+  "version": 450
+}

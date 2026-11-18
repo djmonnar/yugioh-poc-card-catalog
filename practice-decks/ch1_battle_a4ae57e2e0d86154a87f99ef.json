@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": false,
+  "extra": [],
+  "id": "ch1_battle_a4ae57e2e0d86154a87f99ef",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "7162cc7fd2c004837beabf292c05659b65f4db064b047810e5d56b2c42b8070a",
+      "source_id": 1827
+    },
+    {
+      "count": 1,
+      "identity_key": "b1ee59f2ac81c544858100bcfb40d164c39b02a26b246bfafe916f2eb9fac123",
+      "source_id": 1828
+    },
+    {
+      "count": 2,
+      "identity_key": "8eb7b0b13cdaed21967f28dfb5ad23c6708fd6cbcc0315189c250126baf10b02",
+      "source_id": 1898
+    },
+    {
+      "count": 3,
+      "identity_key": "04604a76cc29664acc9ba80085185cebf25da7702df1a8fbdf2be95318b12505",
+      "source_id": 158
+    },
+    {
+      "count": 2,
+      "identity_key": "02e7efbfa02bffc6a1fc929acd0cfea0ad1ed31a7c53570004f5913c2c728aea",
+      "source_id": 1049
+    },
+    {
+      "count": 1,
+      "identity_key": "64b5039a32f6e686df9f4007c6f4722bbe501a7d62849c8938af6f635830f6cb",
+      "source_id": 101
+    },
+    {
+      "count": 2,
+      "identity_key": "7558ec74781803edab6353a676f8a997705bae39bb28fada3bfaf6983fe1a0b0",
+      "source_id": 1419
+    },
+    {
+      "count": 2,
+      "identity_key": "62d49484afd4ee81dcd0521bcd53aaf0f39dad042b7bfe2f914362639620f07b",
+      "source_id": 1888
+    },
+    {
+      "count": 2,
+      "identity_key": "5349c07bb3874169f6339512131cedfe6f1738b0de781c72c986b3f1dad27839",
+      "source_id": 1947
+    },
+    {
+      "count": 2,
+      "identity_key": "02d5242015819fc994205f03b2df3f1719434411e1cf4f38b79cc118b4da4f96",
+      "source_id": 1230
+    }
+  ],
+  "name": "어둠의 마리크 · 20장",
+  "version": 37
+}

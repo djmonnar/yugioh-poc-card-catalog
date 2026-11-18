@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards130/2891",
+  "attack": 800,
+  "attribute": 1,
+  "categories": [
+    "지원-로이드",
+    "지원-일반몬스터"
+  ],
+  "code": 45945685,
+  "defense": 1000,
+  "description": "수많은 비크로이드 중에서 가장 친근하게 사랑받는 비크로이드. 보조 바퀴를 장착할 수도 있다.",
+  "draw_enabled": true,
+  "identity_key": "6419ba24274745271bfe2175c8010c38e4cd6c87760b0d643e452956ec1acd95",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native130/cards/2891.jpg",
+  "level": 3,
+  "links": [],
+  "name": "싸이크로이드",
+  "name_english": "Cycroid",
+  "native_type": 17,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "N",
+  "search_aliases": [
+    "싸이크로이드",
+    "Cycroid"
+  ],
+  "source_id": 2891,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 몬스터",
+  "web_slot": 1923
+}

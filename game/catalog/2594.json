@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards081/2594",
+  "attack": 800,
+  "attribute": 32,
+  "categories": [
+    "지원-인조인간",
+    "발동-릴리즈",
+    "효과-덱샐비지",
+    "소환-패,덱"
+  ],
+  "code": 51916032,
+  "defense": 2000,
+  "description": "필드·묘지에서 이름을 ‘인조인간 －사이코 쇼커－’로 취급한다. 1턴에 1번, 자신을 릴리스하여 덱에서 이 카드 이외의 ‘인조인간’ 몬스터 1장을 패에 넣는다. 이어 상대 마법·함정 존의 세트 카드를 모두 확인하고, 확인한 함정 수까지 패의 ‘인조인간’ 몬스터를 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "2467a7b7ef5bc542a745579afa09454aef762449bcd9436ca59d2b4ac0bdd13a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native081/cards/2594.jpg",
+  "level": 4,
+  "links": [],
+  "name": "인조인간－사이코 잭커",
+  "name_english": "Jinzo - Jector",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "SR",
+  "source_id": 2594,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1626
+}

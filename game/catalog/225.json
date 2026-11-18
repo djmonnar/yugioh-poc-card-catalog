@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/225",
+  "attack": 2000,
+  "attribute": 1,
+  "categories": [
+    "소환-제외"
+  ],
+  "code": 80280944,
+  "defense": 1200,
+  "description": "이 카드명의 ②의 효과는 1턴에\n1번밖에 사용할 수 없다. ①:\n이 카드는 직접 공격할 수\n없다. ②: 이 카드가\n제외되었을 경우에 발동할 수\n있다. 이 카드를 특수\n소환한다. 이 효과로 특수\n소환한 이 카드의 공격력은,\n제외되어 있는 자신의 공룡족\n몬스터의 수 × 200 올린다.",
+  "draw_enabled": true,
+  "identity_key": "3ba23b1428ef54afed5b66ff7aac445988c7d7678d50b070ab755fbcb40dc825",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0585.webp",
+  "level": 4,
+  "links": [],
+  "name": "자이언트 렉스",
+  "name_english": "Giant Rex",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "SR",
+  "source_id": 225,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 585
+}

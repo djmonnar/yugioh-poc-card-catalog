@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/475",
+  "attack": 1850,
+  "attribute": 32,
+  "categories": [
+    "소환-패,덱",
+    "효과-덱샐비지",
+    "효과-묘지보내기"
+  ],
+  "code": 21390858,
+  "defense": 1500,
+  "description": "이 카드는 자신 필드 위의\n\"암령사 달크\" 1장과 어둠\n속성 몬스터 1장을 묘지로\n보내고, 패 또는 덱에서 특수\n소환할 수 있다. 이 방법으로\n특수 소환에 성공했을 때,\n덱에서 레벨 3 또는 레벨 4의\n마법사족 / 빛 속성 몬스터\n1장을 패에 넣을 수 있다.\n또한, 이 방법으로 특수\n소환한 이 카드가 수비 표시\n몬스터를 공격했을 때, 그\n수비력을 공격력이 넘었으면,\n그 수치만큼 상대 라이프에\n전투 데미지를 준다.\n[안내] 덱에 있는 이 카드는\n필드의 대응하는 령사를\n선택하여 발동해서 특수\n소환한다(체인이 발생한다).",
+  "draw_enabled": true,
+  "identity_key": "1b042669d44bf8ff125f6bb6ea2488c659219636d0f93a8cafd710e032de2abb",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0161.webp",
+  "level": 4,
+  "links": [],
+  "name": "빙의장착－달크",
+  "name_english": "Familiar-Possesed - Dharc",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 475,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 161
+}

@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards035/2394",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "파괴-함정",
+    "파괴-마법"
+  ],
+  "code": 75652080,
+  "defense": 0,
+  "description": "자신 필드의 마법 / 함정 카드 1장과 상대 필드의 마법 / 함정 카드 1장을 대상으로 하여 발동할 수 있다. 그 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "2648bcd0ab58c5ebb05a1d0aae0a1020880f2247e3482f462d4df1ccd27ef1dc",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native035/cards/2394.jpg",
+  "level": 0,
+  "links": [],
+  "name": "더블 싸이크론",
+  "name_english": "Double Cyclone",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2394,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 1431
+}

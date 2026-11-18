@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1908",
+  "attack": 300,
+  "attribute": 16,
+  "categories": [
+    "덱-푸른눈",
+    "효과-덱샐비지",
+    "발동-묘지"
+  ],
+  "code": 79814787,
+  "defense": 250,
+  "description": "①: 이 카드가 묘지로 보내졌을\n경우에 발동한다. 덱에서\n\"푸른 눈의 백룡\" 1장을 패에\n넣는다.",
+  "draw_enabled": true,
+  "identity_key": "9f459c59d9294e03c2b260af6bbdd5392b6d7a0a6d02b1d7ab09df945eaf1bdc",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1187.webp",
+  "level": 1,
+  "links": [
+    {
+      "identity_key": "1b35a77b57322b756f47b453317628046ce9d712cc2933185cd2fb61bf8e1c33",
+      "slot": 816
+    }
+  ],
+  "name": "전설의 백석",
+  "name_english": "The White Stone of Legend",
+  "native_type": 4129,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "source_id": 1908,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1187
+}

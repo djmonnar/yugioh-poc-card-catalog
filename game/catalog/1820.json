@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1820",
+  "attack": 1000,
+  "attribute": 32,
+  "categories": [
+    "소환-덱리크루터",
+    "발동-묘지"
+  ],
+  "code": 85646474,
+  "defense": 1000,
+  "description": "이 카드가 상대 몬스터의\n공격에 의해서 파괴되어\n묘지로 보내졌을 때, 덱에서\n\"묘지기의 사도\" 이외의\n\"묘지기\"라는 이름이 붙은\n몬스터 1장을 뒷면 수비\n표시로 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "241fb02635adf86aa7881c4567ea8a48014852c7f04879327e3f3a3f7c2fd663",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1285.webp",
+  "level": 3,
+  "links": [],
+  "name": "묘지기의 사도",
+  "name_english": "Gravekeeper's Nobleman",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "source_id": 1820,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1285
+}

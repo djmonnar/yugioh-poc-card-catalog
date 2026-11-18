@@ -1,0 +1,31 @@
+{
+  "alias": 83011277,
+  "art_key": "Cards/1123",
+  "attack": 1400,
+  "attribute": 32,
+  "categories": [
+    "소환-덱리크루터",
+    "발동-묘지"
+  ],
+  "code": 83011278,
+  "defense": 1100,
+  "description": "이 카드가 전투로 묘지로\n보내졌을 때, 자신의 덱에서\n공격력 1500 이하의 어둠 속성\n몬스터 1장을 선택하여 필드에\n특수 소환할 수 있다(레벨 5\n이상도 릴리스 불필요). 그 후\n덱을 셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "23de2b793af85f92dcc498aa52e934442c72a6cf818a3f4157eac19cdc9fc6a4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0221.webp",
+  "level": 4,
+  "links": [],
+  "name": "킬러 토마토",
+  "name_english": "Mystic Tomato",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "SR",
+  "source_id": 1123,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 221
+}

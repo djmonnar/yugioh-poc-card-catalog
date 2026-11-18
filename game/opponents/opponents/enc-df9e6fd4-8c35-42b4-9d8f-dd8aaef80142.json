@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/ishizu/start",
+  "banlistEnabled": false,
+  "deckName": "네프티스 중급",
+  "extra": [],
+  "id": "enc-df9e6fd4-8c35-42b4-9d8f-dd8aaef80142",
+  "lpBonus": 500,
+  "main": [
+    2547,
+    2547,
+    2546,
+    2546,
+    2544,
+    2544,
+    2544,
+    2549,
+    2549,
+    2548,
+    2548,
+    2537,
+    2537,
+    2538,
+    2538,
+    2538,
+    2543,
+    2543,
+    2541,
+    2541
+  ],
+  "name": "이시즈 이슈타르",
+  "openingDrawBonus": 0,
+  "profileId": "ishizu",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 2545,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-df9e6fd4-8c35-42b4-9d8f-dd8aaef80142",
+  "usesNativeRules035": true
+}

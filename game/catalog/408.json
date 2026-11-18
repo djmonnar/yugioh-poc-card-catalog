@@ -1,0 +1,44 @@
+{
+  "alias": 0,
+  "art_key": "Cards/408",
+  "attack": 2600,
+  "attribute": 1,
+  "categories": [
+    "소환-묘지",
+    "효과-바운스"
+  ],
+  "code": 71628381,
+  "defense": 1300,
+  "description": "\"빅 피스 골렘\" ＋ \"미드 피스\n골렘\"\n이 카드가 전투를 실행한 배틀\n페이즈 종료시에 이 카드를\n엑스트라 덱으로 되돌릴 수\n있다. 또한, 엑스트라 덱으로\n되돌린 이 카드의 융합 소환에\n사용한 융합 소재 몬스터\n1세트가 자신의 묘지에 모여\n있으면, 이 1세트를 자신 필드\n위에 특수 소환할 수 있다.\n[차이] 융합 소재는 한 장씩\n차례로, 공격 표시로만 특수\n소환된다. 자신 필드에 빈\n몬스터 존이 2칸 이상\n필요하다.",
+  "draw_enabled": true,
+  "identity_key": "ac12ea0260ca83241a3f31c07b1aa80e27beaa9c00545e92f1693d4d663f0dc4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0976.webp",
+  "level": 7,
+  "links": [
+    {
+      "identity_key": "42ba20e9a1cc59a7cebaec4c7f50299f0a219352e5395504df076a12f5e33bf7",
+      "slot": 286
+    },
+    {
+      "identity_key": "168645363e004c88b0ec234ac4124c488ae45cdd3028c6341012b7cd219fab29",
+      "slot": 833
+    },
+    {
+      "identity_key": "f15691e6340530088b02195d9d6a0902a967e79a043eb9d0b82befac1e1933a2",
+      "slot": 1081
+    }
+  ],
+  "name": "멀티 피스 골렘",
+  "name_english": "Multiple Piece Golem",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "R",
+  "source_id": 408,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 976
+}

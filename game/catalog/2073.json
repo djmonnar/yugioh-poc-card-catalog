@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2073",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-버리기",
+    "소환-패,덱",
+    "지원-저레벨"
+  ],
+  "code": 2295440,
+  "defense": 0,
+  "description": "①: 패에서 몬스터 1장을 묘지로 보내고 발동할 수 있다. 패 / 덱에서 레벨 1 몬스터 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "157126802564b0006076f1563c20e7409b8be9482f1808b39e72bb009f50e4b1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1371.webp",
+  "level": 0,
+  "links": [],
+  "name": "원 포 원",
+  "name_english": "One for One",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2073,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1371
+}

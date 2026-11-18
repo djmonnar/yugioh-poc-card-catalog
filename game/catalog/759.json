@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards/759",
+  "attack": 2000,
+  "attribute": 32,
+  "categories": [
+    "덱-블랙매지션"
+  ],
+  "code": 38033121,
+  "defense": 1700,
+  "description": "양쪽 플레이어의 묘지에 있는\n\"블랙 매지션\" 또는 \"매지션\n오브 블랙 카오스\" 1장당 이\n카드의 공격력을 300 올린다.",
+  "draw_enabled": true,
+  "identity_key": "1b9077aeac6cf3d35fd62e05e34fea9eab86b21b05132660bc569234f88b1893",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0806.webp",
+  "level": 6,
+  "links": [
+    {
+      "identity_key": "a850b8cd0e118c301dde50e7dcabc13ebb54f1506ec19fbe0694955bba7dfd67",
+      "slot": 803
+    }
+  ],
+  "name": "블랙 매지션 걸",
+  "name_english": "Dark Magician Girl",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 759,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 806
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/647",
+  "attack": 1800,
+  "attribute": 16,
+  "categories": [
+    "면역-마법"
+  ],
+  "code": 40672993,
+  "defense": 100,
+  "description": "①: 이 카드가 몬스터 존에\n존재하는 한, 서로 메인\n페이즈 1 동안은 마법 카드를\n발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "090854d50f273efeafdecb25f6d26d76d92b4c447eb8d3f7e3c277a1d86d71a5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0899.webp",
+  "level": 4,
+  "links": [],
+  "name": "피뢰신",
+  "name_english": "Lightning Rod Lord",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4096,
+  "rarity": "SR",
+  "source_id": 647,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 899
+}

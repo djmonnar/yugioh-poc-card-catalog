@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2085",
+  "attack": 1100,
+  "attribute": 16,
+  "categories": [
+    "효과-바운스",
+    "효과-패트랩",
+    "효과-묘지보내기"
+  ],
+  "code": 37742478,
+  "defense": 1900,
+  "description": "①: 자신 메인 페이즈에 발동할 수 있다. 필드의 앞면 표시의 이 카드를 패로 되돌린다. ②: 자신의 빛 속성 몬스터가 전투를 실행하는 데미지 스텝 개시시부터 데미지 계산 전까지, 이 카드를 패에서 묘지로 보내고 발동할 수 있다. 그 몬스터의 공격력은 턴 종료시까지, 전투를 실행하는 상대 몬스터의 공격력만큼 올린다.",
+  "draw_enabled": true,
+  "identity_key": "41148609d6513d683e3379523262f4e11e4144e2732c838b88901b49b28941bd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1383.webp",
+  "level": 4,
+  "links": [],
+  "name": "어니스트",
+  "name_english": "Honest",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "UR",
+  "source_id": 2085,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1383
+}

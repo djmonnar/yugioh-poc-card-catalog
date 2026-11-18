@@ -1,0 +1,65 @@
+{
+  "banlist_enabled": true,
+  "extra": [
+    {
+      "count": 1,
+      "identity_key": "1b6797ec3e25ae53450d952889b5e6896b0a781982700594f08c08d968037ab7",
+      "source_id": 2574
+    },
+    {
+      "count": 1,
+      "identity_key": "de04e8932d4e720bbf33b425317688271363b31e78219d0a769209e68c512369",
+      "source_id": 2569
+    }
+  ],
+  "id": "deck-152da6da-61d3-4f1b-a88d-7d0475dbb5ce",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "487d32887fbfb21f994c60b61735e72d8ac6d0eb85e77ae5bc7929744512a4b4",
+      "source_id": 2581
+    },
+    {
+      "count": 2,
+      "identity_key": "b1f9d5074f48ab440d52dec395ec5d175340bafa07c8f086b418ae7005799605",
+      "source_id": 2587
+    },
+    {
+      "count": 2,
+      "identity_key": "9063dd91e7655ec9f3a49a8df615b013c68aa258ac23a983b6442892e2bb892d",
+      "source_id": 2578
+    },
+    {
+      "count": 2,
+      "identity_key": "37add55c1bdf2f1f2442d65dfa18b89bb500dca2e3d12cd4098dc3b401dd36b0",
+      "source_id": 2586
+    },
+    {
+      "count": 3,
+      "identity_key": "12935475cffba0e125502f5db4814f4eba26e10fcf49a067ab2d698d221f1f55",
+      "source_id": 2582
+    },
+    {
+      "count": 3,
+      "identity_key": "e307e6a96ada649e6f77544c6b4d8e371a3f4fa64d7ef22b1c7a0f13905a6297",
+      "source_id": 2570
+    },
+    {
+      "count": 2,
+      "identity_key": "90c257c09a13be5c08dde46feb5430c8094a96ccb3e70d8540d72d4661d99a67",
+      "source_id": 1948
+    },
+    {
+      "count": 2,
+      "identity_key": "185cdc87e8f2a4d63f7820cd314d9d96c41fbe7032edd38c95f77f444482d067",
+      "source_id": 1967
+    },
+    {
+      "count": 2,
+      "identity_key": "5ebe08b8ca1221bb7bd57a8ceb6fb2fb4cfbe43e6354c88b24db8bb570edd98c",
+      "source_id": 2579
+    }
+  ],
+  "name": "가이아",
+  "version": 677
+}

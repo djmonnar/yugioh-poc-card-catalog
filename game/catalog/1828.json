@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1828",
+  "attack": 800,
+  "attribute": 32,
+  "categories": [
+    "효과-바운스"
+  ],
+  "code": 17597059,
+  "defense": 600,
+  "description": "이 카드가 일반 소환/반전\n소환/특수 소환에 성공했을\n때, 필드 위의 모든 세트된\n카드를 주인의 패로 되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "b1ee59f2ac81c544858100bcfb40d164c39b02a26b246bfafe916f2eb9fac123",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1277.webp",
+  "level": 5,
+  "links": [],
+  "name": "바이서 쇼크",
+  "name_english": "Byser Shock",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "source_id": 1828,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1277
+}

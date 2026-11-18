@@ -1,0 +1,34 @@
+{
+  "alias": 0,
+  "art_key": "Cards120/2779",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-묘지"
+  ],
+  "code": 59919307,
+  "defense": 0,
+  "description": "①: 자신 묘지의 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 수비 표시로 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "b639549dcb1cda581d1ca247470c08489fd80734886e902b0bc5558dd3cace49",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native120/cards/2779.jpg",
+  "level": 0,
+  "links": [],
+  "name": "전선복귀",
+  "name_english": "Back to the Front",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "전선복귀",
+    "Back to the Front"
+  ],
+  "source_id": 2779,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1811
+}

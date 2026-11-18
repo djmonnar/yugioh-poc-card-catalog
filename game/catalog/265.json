@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/265",
+  "attack": 1300,
+  "attribute": 32,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 52090844,
+  "defense": 1000,
+  "description": "리버스: 상대 필드의 마법 /\n함정 카드 1장당 상대에게 500\n직접 데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "c261df20267316d3c07108f81b3210cc819dea85a24f78f2a3b8e9a301d25ee3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0570.webp",
+  "level": 3,
+  "links": [],
+  "name": "보우가니언",
+  "name_english": "Bowganian",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "source_id": 265,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 570
+}

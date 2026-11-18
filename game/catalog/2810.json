@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards122/2810",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-펭귄",
+    "지원-펭귄",
+    "지원-장착",
+    "발동-데미지",
+    "효과-바운스",
+    "무효-몬스터효과",
+    "무효-마법",
+    "무효-함정"
+  ],
+  "code": 69792699,
+  "defense": 0,
+  "description": "\"펭귄\" 몬스터에만 장착 가능. 이 카드명의 ③의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 장착 몬스터의 공격력은 800 올린다. ②: 장착 몬스터가 상대에게 전투 데미지를 주었을 때에 발동할 수 있다. 상대 필드의 카드 1장을 고르고 주인의 패로 되돌린다. ③: 상대 필드의 앞면 표시의 카드가 \"펭귄\" 카드의 효과로 필드에서 벗어나, 패로 되돌아갔을 경우 또는 제외되었을 경우에 발동한다. 다음 턴의 종료시까지, 그 카드 및 그 카드와 원래의 카드명이 같은 카드의 효과는 무효화된다.",
+  "draw_enabled": true,
+  "identity_key": "8f7fcfce45cff39ccb38195bd3a5b0d8e7aaeb91349604bc906dc2caa9731811",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native122/cards/2810.jpg",
+  "level": 0,
+  "links": [],
+  "name": "펭귄 스워드",
+  "name_english": "Penguin Sword",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "펭귄스워드",
+    "펭귄 스워드",
+    "Penguin Sword"
+  ],
+  "source_id": 2810,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 1842
+}

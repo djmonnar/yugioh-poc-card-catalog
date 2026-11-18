@@ -1,0 +1,20 @@
+{
+  "description": "감정사는 오래된 유물의 봉인을 한 겹 벗긴다. 지금의 힘을 더 높은 가능성과 바꾸자.",
+  "effect": "유물과 골드를 내고 한 단계 높은 등급의 유물 후보 중 선택",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/background",
+  "id": "relic_appraiser",
+  "kind": "relic_appraiser",
+  "name": "유물과 골드를 내고 한 단계 높은 등급의 유물 후보 중 선택",
+  "params": {
+    "choices": 3,
+    "n_gold": 50,
+    "r_gold": 100,
+    "sr_gold": 200
+  },
+  "rewardRarity": null,
+  "supportStatus": "verified-controller022",
+  "title": "유물 감정사",
+  "weight": 1
+}

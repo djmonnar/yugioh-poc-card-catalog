@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1417",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 20765952,
+  "defense": 0,
+  "description": "필드의 앞면 마법 카드 1장을\n선택한다. 그 카드의 사용자는\n자신의 스탠바이 페이즈마다\n500 데미지를 받는다. 선택한\n카드가 파괴되거나 필드에서\n벗어나면 이 카드도 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "95617f68053870156324cfd75b058ad272fb05e83f3b29db01fe85f7217d8524",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0923.webp",
+  "level": 0,
+  "links": [],
+  "name": "마력무력화 가면",
+  "name_english": "Mask of Dispel",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1417,
+  "speed_limit": 3,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 923
+}

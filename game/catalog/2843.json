@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards126/2843",
+  "attack": 1300,
+  "attribute": 32,
+  "categories": [
+    "지원-마법사",
+    "지원-일반몬스터",
+    "지원-릴리즈",
+    "효과-덱샐비지",
+    "효과-묘지샐비지"
+  ],
+  "code": 25280974,
+  "defense": 1500,
+  "description": "\"마도화 리젼\"의 ②의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 이 카드가 몬스터 존에 존재하는 한, 자신은 통상 소환 외에도 1번만, 자신 메인 페이즈에 마법사족 몬스터 1장을 앞면 공격 표시로 어드밴스 소환할 수 있다. ②: 이 카드가 필드에서 묘지로 보내졌을 경우에 발동할 수 있다. 자신의 덱 / 묘지에서 마법사족의 일반 몬스터 1장을 고르고 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "49c27b12b46eeb5bb3c5df51f6c3dbde7ac9664bd4d7991709d53e1ead1dafcf",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native126/cards/2843.jpg",
+  "level": 4,
+  "links": [],
+  "name": "마도화 리젼",
+  "name_english": "Legion the Fiend Jester",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "search_aliases": [
+    "마도화 리전",
+    "마도화 리젼",
+    "Legion the Fiend Jester"
+  ],
+  "source_id": 2843,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1875
+}

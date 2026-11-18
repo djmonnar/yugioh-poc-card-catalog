@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2532",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-호루스"
+  ],
+  "code": 74741494,
+  "defense": 0,
+  "description": "엔드 페이즈까지 자신 필드의 앞면 몬스터들의 레벨을 1 내린다. 레벨이 1인 몬스터의 레벨은 내리지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "b16749e4ef01522af17aa944311d76eeaf73e268a12f3a9c08057fb34d3f4ca5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2532.jpg",
+  "level": 0,
+  "links": [],
+  "name": "능력조정",
+  "name_english": "Level Tuning",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "source_id": 2532,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1564
+}

@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1071",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-한데스",
+    "효과-버리기"
+  ],
+  "code": 44763025,
+  "defense": 0,
+  "description": "1000 LP를 지불하세요. 상대의\n손에서 1 카드를 무작위로\n선택하여 버립니다. 그런 다음\n상대방은 자신의 손에서 다른\n카드를 선택하고 버립니다.",
+  "draw_enabled": true,
+  "identity_key": "a837df7f2300c40b48404a051824862418942519a957e14f225e635802cfb8c1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0050.webp",
+  "level": 0,
+  "links": [],
+  "name": "짓궂은 쌍둥이 악마",
+  "name_english": "Delinquent Duo",
+  "native_type": 2,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1071,
+  "speed_limit": 0,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 50
+}

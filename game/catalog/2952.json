@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards136/2952",
+  "attack": 800,
+  "attribute": 32,
+  "categories": [
+    "지원-프레데터 플랜츠",
+    "포식 카운터",
+    "소환-릴리즈 코스트",
+    "소환-패에서",
+    "소환-묘지",
+    "발동-묘지에서",
+    "발동-제외"
+  ],
+  "code": 99913726,
+  "defense": 2300,
+  "description": "이 카드명의, ①의 방법에 의한 특수 소환은 1턴에 1번밖에 할 수 없으며, ②의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 이 카드는 자신 또는 상대 필드의 포식 카운터가 놓여진 몬스터 1장을 릴리스했을 경우에 패 / 묘지에서 특수 소환할 수 있다. ②: 이 카드가 필드 / 묘지에 존재할 경우, 이 카드 이외의 자신 묘지의 \"프레데터 플랜츠\" 몬스터 1장을 제외하고, 필드의 앞면 표시 몬스터 1장을 대상으로 하여 발동할 수 있다. 그 몬스터의 공격력은 500 내린다. 이 효과는 상대 턴에도 발동할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "c5bda1311c11e3935bce13edd03a2d56f668ff921292820dbf20710e9c41ac54",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native136/cards/2952.jpg",
+  "level": 5,
+  "links": [],
+  "name": "프레데터 플랜츠 드로소필룸 히드라",
+  "name_english": "Predaplant Drosophyllum Hydra",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "SR",
+  "search_aliases": [
+    "프레데터 플랜츠 드로소필룸 히드라",
+    "Predaplant Drosophyllum Hydra"
+  ],
+  "source_id": 2952,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1984
+}

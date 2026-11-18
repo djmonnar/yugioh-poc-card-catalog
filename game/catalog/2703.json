@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards099/2703",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-토큰",
+    "지원-릴리즈",
+    "소환제약"
+  ],
+  "code": 46173679,
+  "defense": 0,
+  "description": "이 카드를 발동하는 턴에, 자신은 이 카드의 효과 이외로는 몬스터를 일반 소환 / 반전 소환 / 특수 소환할 수 없다. ①: 자신 필드에 \"흑염 토큰\"(악마족 / 어둠 / 레벨 1 / 공 0 / 수 0) 2장을 수비 표시로 특수 소환한다. 이 토큰은 어둠 속성 이외의 몬스터의 어드밴스 소환을 위해서는 릴리스할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "da46b6404f6653ee3c9583d68f92a316676b35014d6bf8ddddf0bf396d654935",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native099/cards/2703.jpg",
+  "level": 0,
+  "links": [],
+  "name": "종언의 화염",
+  "name_english": "Fires of Doomsday",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "종언의화염",
+    "종언의 화염",
+    "Fires of Doomsday"
+  ],
+  "source_id": 2703,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1735
+}

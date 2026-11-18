@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards143/2959",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-공용",
+    "효과-바운스"
+  ],
+  "code": 64697431,
+  "defense": 0,
+  "description": "양쪽 필드에 세트된 모든 마법·함정 카드를 각 주인의 패로 돌려보낸다.",
+  "draw_enabled": true,
+  "identity_key": "cbe0e33213e57d0ed06644870c78ed20f657913b6c0f283a9a91492ad3230c28",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native143/cards/2959.jpg",
+  "level": 0,
+  "links": [],
+  "name": "국소적 허리케인",
+  "name_english": "Hey, Trunade!",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "국소적 허리케인",
+    "Hey, Trunade!"
+  ],
+  "source_id": 2959,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1991
+}

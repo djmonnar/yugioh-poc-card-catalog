@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards120/2767",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착",
+    "지원-전투"
+  ],
+  "code": 6691855,
+  "defense": 0,
+  "description": "발동 후 이 카드는 공격력 500 포인트 올리는 장착 카드가 되어, 필드 위의 몬스터 1장에 장착한다. 장착 몬스터가 수비 표시로 전투를 실행할 경우, 장착 몬스터의 수비력은 데미지 계산시에만, 그 공격력만큼 올린다.",
+  "draw_enabled": true,
+  "identity_key": "ce0a5830a5a33d3c0d8d10bad972fa5be77087361566caf6df4f535df07002b4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native120/cards/2767.jpg",
+  "level": 0,
+  "links": [],
+  "name": "쇠사슬 스파이크 실드",
+  "name_english": "Spikeshield with Chain",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "쇠사슬 스파이크 실드",
+    "Spikeshield with Chain"
+  ],
+  "source_id": 2767,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1799
+}

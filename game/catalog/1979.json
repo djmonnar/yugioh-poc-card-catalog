@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1979",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-패,덱"
+  ],
+  "code": 4861205,
+  "defense": 0,
+  "description": "①: 1턴에 1번, 자신 메인\n페이즈에 발동할 수 있다.\n패에서 언데드족 몬스터 1장을\n특수 소환한다. 이 효과는\n자신 필드에 몬스터가\n존재하지 않을 경우에 발동과\n처리를 할 수 있다.\n[안내] 카드를 발동해 놓은\n뒤, 앞면의 이 카드를 눌러\n효과를 쓴다(자신의 메인\n페이즈, 자신 필드에 몬스터가\n없을 때). 특수 소환할\n언데드족을 창에서 고르고\n수비 표시로 할지 묻는다.\n[차이] 컴퓨터는 이 카드의\n효과를 쓸 수 있는 턴에는\n일반 소환을 뒤로 미룬다.",
+  "draw_enabled": true,
+  "identity_key": "1fb1d0436c0264d0b1932c1a3ad9b4d51d08c9bc7923e77f63ff136d100685e0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1142.webp",
+  "level": 0,
+  "links": [],
+  "name": "미라가 부르는 소리",
+  "name_english": "Call of the Mummy",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1979,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1142
+}

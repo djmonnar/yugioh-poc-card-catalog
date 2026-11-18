@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2503",
+  "attack": 1700,
+  "attribute": 16,
+  "categories": [
+    "지원-바다"
+  ],
+  "code": 76203291,
+  "defense": 1000,
+  "description": "이 카드 이외의 자신 필드의 어류족 몬스터 1장을 릴리스하고, 필드의 카드 1장을 대상으로 발동할 수 있다. 그 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "d91f5d5ea08ae961cd0bd986baf97bbcef0f45c4d5440b584efdf700ccd54937",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2503.jpg",
+  "level": 4,
+  "links": [],
+  "name": "금빛의 날치",
+  "name_english": "Golden Flying Fish",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 131072,
+  "rarity": "SR",
+  "source_id": 2503,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1535
+}

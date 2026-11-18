@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2022",
+  "attack": 0,
+  "attribute": 2,
+  "categories": [
+    "무효-소환"
+  ],
+  "code": 74952447,
+  "defense": 1800,
+  "description": "이 카드가 필드 위에 앞면 표시로 존재하는 한, 서로 공격력 1800 이상의 몬스터를 특수 소환할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "a278bf33414a5dd14541b37f9332c3ce76becb4037067a7a0f39ed5b6c1109c2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1325.webp",
+  "level": 1,
+  "links": [],
+  "name": "일찍이 신이라 불리운 거북이",
+  "name_english": "Testudo erat Numen",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "R",
+  "source_id": 2022,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1325
+}

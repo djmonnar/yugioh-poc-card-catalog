@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards122/2811",
+  "attack": 900,
+  "attribute": 2,
+  "categories": [
+    "덱-펭귄",
+    "발동-리버스",
+    "효과-바운스",
+    "지원-전투"
+  ],
+  "code": 81306586,
+  "defense": 1800,
+  "description": "이 카드가 리버스했을 때, 상대 필드 위의 카드 1장을 선택하고 주인의 패로 되돌린다. 또한, 이 카드가 필드 위에 앞면 표시로 존재하는 한, 자신 필드 위의 물 속성 몬스터의 공격력은 200 포인트 올린다.",
+  "draw_enabled": true,
+  "identity_key": "5e9afb67053dca915d539b93a90def33b656f064eb869ba12c7f247742a5ee8f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native122/cards/2811.jpg",
+  "level": 4,
+  "links": [],
+  "name": "펭귄 나이트메어",
+  "name_english": "Nightmare Penguin",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "SR",
+  "search_aliases": [
+    "펭귄나이트메어",
+    "펭귄 나이트메어",
+    "Nightmare Penguin"
+  ],
+  "source_id": 2811,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1843
+}

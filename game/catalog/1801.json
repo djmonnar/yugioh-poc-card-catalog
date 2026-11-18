@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1801",
+  "attack": -2,
+  "attribute": 32,
+  "categories": [
+    "소환-묘지",
+    "효과-제외-묘지",
+    "발동-묘지"
+  ],
+  "code": 36021814,
+  "defense": 0,
+  "description": "①: 이 카드의 원래 공격력은, 자신 묘지의 \"저주받은 하인 킹\" \"저주받은 하인\"의 수 × 1000 이 된다. ②: 이 카드가 전투로 파괴되어 묘지로 보내졌을 때, 자신 묘지에서 다른 \"저주받은 하인 킹\"이나 \"저주받은 하인\" 1장을 제외하고 발동할 수 있다. 이 카드를 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "1f980e36db465ec426456f64291b6aea9ce1ceee0d4376a36a7d4c1b8ad1a7bb",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1288.webp",
+  "level": 1,
+  "links": [],
+  "name": "저주받은 하인 킹",
+  "name_english": "King of the Skull Servants",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "UR",
+  "source_id": 1801,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1288
+}

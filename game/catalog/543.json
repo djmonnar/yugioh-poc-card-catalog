@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards/543",
+  "attack": 2300,
+  "attribute": 32,
+  "categories": [
+    "효과-제외-묘지",
+    "효과-제외",
+    "효과-컨트롤"
+  ],
+  "code": 53136004,
+  "defense": 2000,
+  "description": "이 카드 이외의 자신 필드\n위에 앞면 표시로 존재하는\n마법사족 몬스터 1장과 자신\n묘지의 \"마도서\"라는 이름이\n붙은 카드 1장을 게임에서\n제외하고 발동할 수 있다.\n상대 필드 위에 앞면 표시로\n존재하는 몬스터 1장을\n선택하고, 엔드 페이즈시까지\n컨트롤을 얻는다. \"마도황사\n앙푸르\"의 효과는 1턴에\n1번밖에 사용할 수 없으며, 이\n효과를 발동하는 턴에, 이\n카드는 공격할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "39694a622ca3fbef3d51383fb97d9fb5c3ba2503b282932430fdd4b1594fbb24",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0530.webp",
+  "level": 5,
+  "links": [
+    {
+      "identity_key": "b1d844d40d803bd9a5bc5ab462ff1f88fd2b0c0223deb50ef692b2f1ee026168",
+      "slot": 1118
+    },
+    {
+      "identity_key": "590ebbfd869bc3fd0b77820167c95ac7e84aca64e1c8602339630cbabf8311d1",
+      "slot": 1119
+    }
+  ],
+  "name": "마도황사 앙푸르",
+  "name_english": "Emperor of Prophecy",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "source_id": 543,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 530
+}

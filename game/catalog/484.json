@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards/484",
+  "attack": 1500,
+  "attribute": 16,
+  "categories": [
+    "효과-버리기",
+    "효과-덱샐비지"
+  ],
+  "code": 74968065,
+  "defense": 1100,
+  "description": "①: 자신 메인 페이즈에 이 카드를 패에서 묘지로 버리고 발동할 수 있다. 덱에서 \"신의 거성－발할라\" 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "0a3da1b24f0dd5e682b113cb56acc71333a91b2960c01881ba6f5f7d049a7558",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0312.webp",
+  "level": 4,
+  "links": [
+    {
+      "identity_key": "fbed888acabc0416a9ed3b0d0f5e06207e5123688f00a8c871e520bd47d57510",
+      "slot": 1333
+    }
+  ],
+  "name": "헤카테리스",
+  "name_english": "Hecatrice",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "N",
+  "source_id": 484,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 312
+}

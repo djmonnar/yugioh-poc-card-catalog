@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards035/2419",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-융합",
+    "효과-묘지샐비지",
+    "효과-덱샐비지",
+    "지원-젬나이트"
+  ],
+  "code": 66127916,
+  "defense": 0,
+  "description": "이 카드를 발동할 수 있다. 효과 처리시에 엑스트라 덱의 융합 몬스터 1장을 상대에게 보여주고, 그 몬스터에 카드명이 기재된 융합 소재 몬스터 1장을 덱에서 패에 넣는다. 그 후, 자신 묘지의 \"융합\" 1장을 패에 넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "05b29e463364e57c9dfa8c71ba4f2e4a78e3fb4757e0f8bc155ca6f3983fcc6d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native035/cards/2419.jpg",
+  "level": 0,
+  "links": [],
+  "name": "융합 준비",
+  "name_english": "Fusion Reserve",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2419,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1456
+}

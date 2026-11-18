@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/424",
+  "attack": 1600,
+  "attribute": 16,
+  "categories": [
+    "효과-버리기",
+    "효과-덱샐비지"
+  ],
+  "code": 31786629,
+  "defense": 1500,
+  "description": "패의 이 카드를 묘지로\n버리고, 덱에서 \"썬더\n드래곤\"을 최대 2장까지 패에\n넣는다. 그 후 덱을 셔플한다.\n이 효과는 메인 페이즈에만\n발동할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "c3ffc4c0abf2ba0b5ad45a04d76060a8f2af643f71fc513655327cb20da7ad94",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0344.webp",
+  "level": 5,
+  "links": [],
+  "name": "썬더 드래곤",
+  "name_english": "Thunder Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4096,
+  "rarity": "SR",
+  "source_id": 424,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 344
+}

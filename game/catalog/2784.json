@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards120/2784",
+  "attack": 800,
+  "attribute": 16,
+  "categories": [
+    "덱-제왕",
+    "소환-토큰"
+  ],
+  "code": 22404676,
+  "defense": 1000,
+  "description": "「번개 제왕가신 미스라」의 효과로 특수 소환된다.",
+  "draw_enabled": false,
+  "identity_key": "f46d10e7b5e7999886cde613f31a5cd3c7b32fef12331cc4d914bea0b3df0f02",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native120/cards/2784.jpg",
+  "level": 1,
+  "links": [],
+  "name": "가신 토큰",
+  "name_english": "Vassal Token",
+  "native_type": 16401,
+  "normal_limit": 0,
+  "playable": false,
+  "race": 4096,
+  "rarity": "N",
+  "search_aliases": [
+    "가신 토큰",
+    "Vassal Token"
+  ],
+  "source_id": 2784,
+  "speed_limit": null,
+  "stock": false,
+  "token": true,
+  "type_name": "토큰",
+  "web_slot": 1816
+}

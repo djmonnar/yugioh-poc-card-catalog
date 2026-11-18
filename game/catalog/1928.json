@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1928",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-덱리크루터",
+    "지원-고레벨",
+    "발동-묘지",
+    "소환-패,덱"
+  ],
+  "code": 6850209,
+  "defense": 0,
+  "description": "자신 필드 위의 레벨 8 이상의 몬스터가 묘지로 보내진 턴에 발동할 수 있다. 자신의 패 또는 덱에서 \"버서크 데드 드래곤\" 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "4cfce7343a18efba1676a7cf185b5507560f56638888957ce087634452ac4b22",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1304.webp",
+  "level": 0,
+  "links": [
+    {
+      "identity_key": "93d10a6abaeae0a47ae2ace7169c5425239ef0e8f3632dfb739b085a5f5183a2",
+      "slot": 841
+    }
+  ],
+  "name": "데몬과의 거래",
+  "name_english": "A Deal with Dark Ruler",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1928,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1304
+}

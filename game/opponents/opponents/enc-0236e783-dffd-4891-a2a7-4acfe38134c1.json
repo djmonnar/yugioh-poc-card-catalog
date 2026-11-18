@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/marik/start",
+  "banlistEnabled": false,
+  "deckName": "마리크 새크리파이스",
+  "extra": [],
+  "id": "enc-0236e783-dffd-4891-a2a7-4acfe38134c1",
+  "lpBonus": 0,
+  "main": [
+    730,
+    730,
+    958,
+    958,
+    482,
+    1122,
+    1122,
+    2601,
+    2601,
+    1109,
+    1109,
+    2615,
+    2615,
+    1515,
+    1044,
+    57,
+    1898,
+    1898,
+    1419,
+    1419
+  ],
+  "name": "어둠의 마리크",
+  "openingDrawBonus": 0,
+  "profileId": "marik",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 2601,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-0236e783-dffd-4891-a2a7-4acfe38134c1",
+  "usesNativeRules035": true
+}

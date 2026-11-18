@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2506",
+  "attack": 700,
+  "attribute": 32,
+  "categories": [
+    "지원-공용"
+  ],
+  "code": 82593786,
+  "defense": 600,
+  "description": "공격이 진행 중인 자신 또는 상대의 배틀 스텝에, 묘지의 이 카드를 제외하고 발동할 수 있다. 그 공격을 무효로 한다. 이 카드명의 효과는 듀얼 중 1번만 사용할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "9bd20c15633c1cf55cb7c86d36c29f2d8d2d2335ac92a0795aba6fbe11bf1e18",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2506.jpg",
+  "level": 2,
+  "links": [],
+  "name": "타스켈톤",
+  "name_english": "Bacon Saver",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "R",
+  "source_id": 2506,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1538
+}

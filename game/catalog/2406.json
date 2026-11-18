@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards035/2406",
+  "attack": 1700,
+  "attribute": 1,
+  "categories": [
+    "효과-덱샐비지",
+    "발동-소환",
+    "면역-효과"
+  ],
+  "code": 17663375,
+  "defense": 1200,
+  "description": "이 카드명의 ①의 효과는 1턴에 1번밖에 사용할 수 없다.\n①: 이 카드가 일반 소환 / 특수 소환에 성공했을 경우에 발동할 수 있다. 덱에서 \"앤틱 기어 와이반\" 이외의 \"앤틱 기어\" 카드 1장을 패에 넣는다. 이 효과의 발동 후, 턴 종료시까지 자신은 카드를 세트할 수 없다.\n②: 이 카드가 공격할 경우, 상대는 데미지 스텝 종료시까지 몬스터의 효과를 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "74a069d59834d2f4623ae0e9196fdc6c02405ebc3779f06d26618aa0b8fde06a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native035/cards/2406.jpg",
+  "level": 4,
+  "links": [],
+  "name": "앤틱 기어 와이반",
+  "name_english": "Ancient Gear Wyvern",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "SR",
+  "source_id": 2406,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1443
+}

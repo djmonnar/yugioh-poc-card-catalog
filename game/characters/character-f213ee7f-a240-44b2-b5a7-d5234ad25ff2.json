@@ -1,0 +1,44 @@
+{
+  "art_key": "CharacterPresentation012/images/roamer_leon/start",
+  "id": "character-f213ee7f-a240-44b2-b5a7-d5234ad25ff2",
+  "profile": {
+    "name": "방랑 듀얼리스트 레온",
+    "portrait": "assets/characters/roamer_leon.png",
+    "skill_profiles": [
+      {
+        "name": "황야",
+        "profile_id": "f01d2249-4ff5-49ce-aa7e-3f1e3e2f7ecf",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "19b203f677427148a520f62a3f21f8011cd1d93e3cad83a29c073c154c060690",
+              "internal_id": 330,
+              "name_ko": "황야",
+              "slot": 287
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "황야",
+        "profile_id": "fd4a5a9e-d4ae-4f7b-80dc-987e69f791b4",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "19b203f677427148a520f62a3f21f8011cd1d93e3cad83a29c073c154c060690",
+              "internal_id": 330,
+              "name_ko": "황야",
+              "slot": 287
+            },
+            "kind": "start_field"
+          }
+        ]
+      }
+    ],
+    "skills": []
+  },
+  "profile_id": "roamer_leon",
+  "updated_at": "2026-10-14T17:51:16.792926+00:00",
+  "version": 2907
+}

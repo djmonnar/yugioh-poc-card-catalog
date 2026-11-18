@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/242",
+  "attack": 0,
+  "attribute": 32,
+  "categories": [
+    "면역-전투",
+    "면역-함정",
+    "면역-마법"
+  ],
+  "code": 40991587,
+  "defense": 2200,
+  "description": "이 카드의 카드명은 묘지에 존재하는 한, \"저주받은 하인\"으로 취급한다. 또한, 이 카드가 자신 필드 위에 앞면 표시로 존재하는 한, 필드 위에 앞면 표시로 존재하는 \"저주받은 하인 부인\" 이외의 레벨 3 이하의 언데드족 몬스터는 전투에 의해서는 파괴되지 않으며, 마법/함정 카드의 효과도 받지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "68ba1320ede183c9612f42646fa2a5865e93240aa358a49c4c1324cced4008da",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0077.webp",
+  "level": 3,
+  "links": [],
+  "name": "저주받은 하인 부인",
+  "name_english": "The Lady in Wight",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "SR",
+  "source_id": 242,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 77
+}

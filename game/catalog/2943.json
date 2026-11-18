@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards136/2943",
+  "attack": 2700,
+  "attribute": 32,
+  "categories": [
+    "지원-프레데터 플랜츠",
+    "포식 카운터",
+    "효과-레벨다운",
+    "지원-융합",
+    "지원-어둠 속성",
+    "무효-몬스터효과"
+  ],
+  "code": 69946549,
+  "defense": 1900,
+  "description": "융합 몬스터 ＋ 어둠 속성 몬스터\n①: 1턴에 1번, 상대 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터에 포식 카운터를 1개 놓는다. 포식 카운터가 놓여진 레벨 2 이상의 몬스터 레벨은 1 이 된다. 이 효과는 상대 턴에도 발동할 수 있다. ②: 이 카드가 몬스터 존에 존재하는 한, 상대가 발동한, 포식 카운터가 놓여 있는 몬스터의 효과는 무효화된다.",
+  "draw_enabled": true,
+  "identity_key": "faf0adbb9f60ab9a85756bfd8604542524838095cab59a6cd25af08a05927f13",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native136/cards/2943.jpg",
+  "level": 8,
+  "links": [],
+  "name": "프레데터 플랜츠 드라고스타페리아",
+  "name_english": "Predaplant Dragostapelia",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "UR",
+  "search_aliases": [
+    "프레데터 플랜츠 드라고스타페리아",
+    "Predaplant Dragostapelia"
+  ],
+  "source_id": 2943,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 1975
+}

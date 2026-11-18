@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards067/2554",
+  "attack": 2000,
+  "attribute": 32,
+  "categories": [
+    "덱-묘지기",
+    "파괴-몬스터"
+  ],
+  "code": 25524823,
+  "defense": 1500,
+  "description": "몬스터 3장 또는 ‘묘지기’ 몬스터 1장을 릴리스하여 어드밴스 소환할 수 있다(세트에는 적용하지 않는다). 어드밴스 소환 시, 소환에 릴리스한 ‘묘지기’의 수까지 다음 효과를 골라 순서대로 처리할 수 있다. ● 릴리스한 몬스터들의 필드에서의 레벨 합계 × 100만큼 공격력을 올린다. ● 상대의 세트 몬스터를 전부 파괴한다. ● 현재 상대 필드의 모든 몬스터의 공격력·수비력을 2000 내린다.",
+  "draw_enabled": true,
+  "identity_key": "01e9f3db52bb41c99cde0bfdcbfa92bbce497d8fea6303f8b7f344ad9b33f478",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2554.jpg",
+  "level": 10,
+  "links": [],
+  "name": "묘지기의 심신자",
+  "name_english": "Gravekeeper's Oracle",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "UR",
+  "source_id": 2554,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1586
+}

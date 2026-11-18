@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2444",
+  "attack": 1000,
+  "attribute": 32,
+  "categories": [
+    "덱-암흑계"
+  ],
+  "code": 77895328,
+  "defense": 1800,
+  "description": "자신은 \"암흑계의 문지기 젠타\"를 1턴에 1번만 특수 소환할 수 있다. ①: 패의 이 카드를 묘지로 버리는 것을 비용으로 발동할 수 있다. 덱에서 \"암흑계의 문\" 1장을 패에 넣는다. ②: 이 카드가 제외되었을 경우, 자신 필드에 \"암흑계\" 카드가 있으면 발동할 수 있다. 이 카드를 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "43fca7823e1d50cd702312e631d0735a25d9e8aeb8cf82f35b77ab9bff141231",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2444.jpg",
+  "level": 4,
+  "links": [],
+  "name": "암흑계의 문지기 젠타",
+  "name_english": "Genta, Gateman of Dark World",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "source_id": 2444,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1481
+}

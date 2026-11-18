@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1138",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "면역-마법"
+  ],
+  "code": 49251811,
+  "defense": 0,
+  "description": "지속 마법 카드가 발동했을 때\n발동할 수 있다. 이 카드를\n발동한 턴 동안 모든 지속\n마법 카드를 무효로 한다.",
+  "draw_enabled": true,
+  "identity_key": "49caeb2ccd526f64c2cc679382614d2a1df900e27c88d8d5937786adfb2f2948",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0917.webp",
+  "level": 0,
+  "links": [],
+  "name": "마법 탐사의 석판",
+  "name_english": "Mystic Probe",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1138,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 917
+}

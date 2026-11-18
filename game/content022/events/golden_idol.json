@@ -1,0 +1,18 @@
+{
+  "description": "황금 우상이 동전 한 줌을 내민다. 대가를 치를지, 아무것도 받지 않고 지나갈지는 너의 선택이다.",
+  "effect": "현재 LP -500 · 원정 금화 +120",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "golden_idol",
+  "kind": "golden_idol",
+  "name": "LP 500을 바치고 금화 120 획득",
+  "params": {
+    "gold": 120,
+    "lp": 500
+  },
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "황금 우상의 계약",
+  "weight": 1
+}

@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1506",
+  "attack": 1900,
+  "attribute": 1,
+  "categories": [
+    "면역-마법",
+    "면역-함정",
+    "면역-효과"
+  ],
+  "code": 34251483,
+  "defense": 0,
+  "description": "이 카드의 공격 선언시,\n상대는 마법 / 함정 / 효과\n몬스터의 효과를 발동할 수\n없다. 이 카드는 공격했을\n경우, 배틀 페이즈 종료시에\n수비 표시가 되어, 다음\n자신의 턴 종료시까지 이\n카드는 표시 형식을 변경할 수\n없다.\n[차이] 표시 형식 변경 불가는\n카드의 효과에 의한 변경에는\n적용되지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "018653dc7b69f7ee39116278eddd8e29fba76aa95dd0a095dcf13e24173765c8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0849.webp",
+  "level": 4,
+  "links": [],
+  "name": "고블린 선봉 부대",
+  "name_english": "Goblin Marauding Squad",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "SR",
+  "source_id": 1506,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 849
+}

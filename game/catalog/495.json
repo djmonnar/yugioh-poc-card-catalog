@@ -1,0 +1,31 @@
+{
+  "alias": 31764353,
+  "art_key": "Cards/495",
+  "attack": 1850,
+  "attribute": 8,
+  "categories": [
+    "소환-패,덱",
+    "효과-묘지보내기"
+  ],
+  "code": 31764354,
+  "defense": 1500,
+  "description": "①: 이 카드는 자신 필드의\n앞면 표시의, \"풍령사 윈\"\n1장과 바람 속성 몬스터 1장을\n묘지로 보내고, 패 / 덱에서\n특수 소환할 수 있다. ②: 이\n카드의 ①의 방법으로 특수\n소환한 이 카드가 수비 표시\n몬스터를 공격했을 경우, 그\n수비력을 공격력이 넘은\n만큼만 상대에게 전투\n데미지를 준다.\n[안내] 덱에 있는 이 카드는\n필드의 대응하는 령사를\n선택하여 발동해서 특수\n소환한다(체인이 발생한다).",
+  "draw_enabled": true,
+  "identity_key": "4c0ec1c1cf32f9923632730d0a63e60cde5b2e2205646906830e09b0900c82ca",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0070.webp",
+  "level": 4,
+  "links": [],
+  "name": "빙의장착－윈",
+  "name_english": "Familiar-Possessed - Wynn",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 495,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 70
+}

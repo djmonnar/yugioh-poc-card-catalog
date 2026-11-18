@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards144/2997",
+  "attack": 1200,
+  "attribute": 8,
+  "categories": [
+    "지원-곤충",
+    "소환-패에서",
+    "효과-레벨 상승"
+  ],
+  "code": 98154550,
+  "defense": 900,
+  "description": "①: 자신 필드에 몬스터가 존재하지 않을 경우, 이 카드는 패에서 특수 소환할 수 있다. ②: 1턴에 1번, 자신 메인 페이즈에 발동할 수 있다. 자신 필드의 모든 곤충족 몬스터의 레벨을 1개 올린다.",
+  "draw_enabled": true,
+  "identity_key": "1c24f115f456f7573ad0000a80e85b29aa0f8686b1a50f3f188532e3b9465e5d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native144/cards/2997.jpg",
+  "level": 5,
+  "links": [],
+  "name": "프리미티브 버터플라이",
+  "name_english": "Primitive Butterfly",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "R",
+  "search_aliases": [
+    "프리미티브 버터플라이",
+    "Primitive Butterfly"
+  ],
+  "source_id": 2997,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2029
+}

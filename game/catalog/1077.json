@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1077",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-바운스"
+  ],
+  "code": 42829885,
+  "defense": 0,
+  "description": "상대의 패를 보고 카드 1장을\n선택하여 상대의 덱으로\n되돌린다. 그 후 덱을\n셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "62e150b04ca165ab315481a3c6e1814fc207ee9c70fedd2471f00450eea3bd7e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0281.webp",
+  "level": 0,
+  "links": [],
+  "name": "강인한 파수병",
+  "name_english": "The Forceful Sentry",
+  "native_type": 2,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1077,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 281
+}

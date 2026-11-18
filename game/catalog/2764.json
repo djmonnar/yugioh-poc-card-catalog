@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards109/2764",
+  "attack": 600,
+  "attribute": 4,
+  "categories": [
+    "효과-묘지보내기",
+    "효과-한데스"
+  ],
+  "code": 16751086,
+  "defense": 1400,
+  "description": "이 카드가 파괴되었을 경우, 상대의 덱 위에서 카드를 3장 묘지로 보낸다.",
+  "draw_enabled": true,
+  "identity_key": "d267d1d712fcbff77b451b4b51a7f19efefc17a73d250c1334889fec9274460a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native109/cards/2764.jpg",
+  "level": 3,
+  "links": [],
+  "name": "우옴 웜",
+  "name_english": "Warm Worm",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "R",
+  "search_aliases": [
+    "우옴웜",
+    "우옴 웜",
+    "Warm Worm"
+  ],
+  "source_id": 2764,
+  "speed_limit": 2,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1796
+}

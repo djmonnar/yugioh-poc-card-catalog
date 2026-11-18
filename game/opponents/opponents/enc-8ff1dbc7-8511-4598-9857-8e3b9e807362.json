@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/rex/start",
+  "banlistEnabled": false,
+  "deckName": "용만 상급",
+  "extra": [],
+  "id": "enc-8ff1dbc7-8511-4598-9857-8e3b9e807362",
+  "lpBonus": 0,
+  "main": [
+    1520,
+    1520,
+    1999,
+    1999,
+    1972,
+    1972,
+    1989,
+    1973,
+    1973,
+    1973,
+    440,
+    440,
+    447,
+    447,
+    1001,
+    1001,
+    1990,
+    1990,
+    1971,
+    1971
+  ],
+  "name": "다이노소어 용만",
+  "openingDrawBonus": 0,
+  "profileId": "rex",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 440,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-8ff1dbc7-8511-4598-9857-8e3b9e807362",
+  "usesNativeRules035": true
+}

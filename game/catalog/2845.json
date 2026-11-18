@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards126/2845",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-회복",
+    "효과-버리기",
+    "지원-전투"
+  ],
+  "code": 34002992,
+  "defense": 0,
+  "description": "패를 1장 버린다. 이 턴의 엔드 페이즈시까지, 자신이 받는 데미지는 무효가 되고, 그 수치만큼 라이프 포인트를 회복한다.",
+  "draw_enabled": true,
+  "identity_key": "6ab5ade9a7ef90930a68205cc0b1a316b91c50ae37a7ef0123957994889aadae",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native126/cards/2845.jpg",
+  "level": 0,
+  "links": [],
+  "name": "레인보우 라이프",
+  "name_english": "Rainbow Life",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "레인보우 라이프",
+    "Rainbow Life"
+  ],
+  "source_id": 2845,
+  "speed_limit": 1,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1877
+}

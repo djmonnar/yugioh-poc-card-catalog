@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1859",
+  "attack": 1000,
+  "attribute": 1,
+  "categories": [
+    "소환-패,덱",
+    "발동-묘지"
+  ],
+  "code": 26185991,
+  "defense": 1200,
+  "description": "①: 이 카드가 자신 필드에서\n묘지로 보내졌을 때에 발동할\n수 있다. 패에서 곤충족\n몬스터 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "a16462f1a6d6be3b2bc206c0437c13a6cc62435a331abb5b27ecabd61c5bdda2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1234.webp",
+  "level": 4,
+  "links": [],
+  "name": "대타 메뚜기",
+  "name_english": "Pinch Hopper",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "SR",
+  "source_id": 1859,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1234
+}

@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/462",
+  "attack": 1400,
+  "attribute": 32,
+  "categories": [
+    "효과-드로우",
+    "효과-버리기",
+    "덱-암흑계"
+  ],
+  "code": 79126789,
+  "defense": 800,
+  "description": "①: 이 카드가 효과로 패에서\n묘지로 버려졌을 경우에\n발동한다. 자신은 덱에서 1장\n드로우한다. 상대 효과로\n버려졌을 경우, 이 효과로\n드로우할 매수는 2장이 된다.",
+  "draw_enabled": true,
+  "identity_key": "2e6a629db08f9f8e8e8cda7c69e7c8889a1e0509055cdd46ae960ca6bb09cb14",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0101.webp",
+  "level": 3,
+  "links": [],
+  "name": "암흑계의 사냥꾼 브라우",
+  "name_english": "Broww, Huntsman of Dark World",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "source_id": 462,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 101
+}

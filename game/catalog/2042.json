@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2042",
+  "attack": 500,
+  "attribute": 4,
+  "categories": [
+    "발동-릴리즈",
+    "소환-덱리크루터"
+  ],
+  "code": 48686504,
+  "defense": 1400,
+  "description": "①: 1턴에 1번, 자신 필드의 앞면 표시 식물족 몬스터 1장을 릴리스하고 발동할 수 있다. 덱에서 식물족 몬스터 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "3ea236bed9f5ee9d7e1d0697feca4e3ff5cbec3d4aa454ddc9c0d2ff8b37e1b1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1342.webp",
+  "level": 3,
+  "links": [],
+  "name": "론 파이어 블로섬",
+  "name_english": "Lonefire Blossom",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "UR",
+  "source_id": 2042,
+  "speed_limit": 3,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1342
+}

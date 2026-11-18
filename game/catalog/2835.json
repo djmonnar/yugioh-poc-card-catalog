@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards125/2835",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-에일리언",
+    "A 카운터",
+    "효과-묘지보내기",
+    "효과-제외-묘지",
+    "효과-덱샐비지"
+  ],
+  "code": 91231901,
+  "defense": 0,
+  "description": "①: 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 덱에서 \"에일리언\" 몬스터 1장을 묘지로 보내고, 묘지로 보낸 몬스터의 레벨의 수만큼, 대상의 몬스터에 A 카운터를 놓는다. ②: 자신 메인 페이즈에 묘지의 이 카드를 제외하고 발동할 수 있다. 덱에서 \"에일리언\" 몬스터 1장을 패에 넣는다. 이 효과는 이 카드가 묘지로 보내진 턴에는 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "6294e4a8c5ce2de0c13dd097e5f79768fac61867c23cf2304d0c69d28cac03f9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native125/cards/2835.jpg",
+  "level": 0,
+  "links": [],
+  "name": "\"A\" 세포 변환 장치",
+  "name_english": "\"A\" Cell Recombination Device",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "\"A\" 세포 변환 장치",
+    "\"A\" Cell Recombination Device"
+  ],
+  "source_id": 2835,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 1867
+}

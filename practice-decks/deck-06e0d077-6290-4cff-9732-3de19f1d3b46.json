@@ -1,0 +1,54 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-06e0d077-6290-4cff-9732-3de19f1d3b46",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "6970778e6b0be53e8b02f53756e3825199874ad44664c723a4f2378b5d14c0c2",
+      "source_id": 1806
+    },
+    {
+      "count": 2,
+      "identity_key": "2fc82a4e337009e06ad5db2a9dcc3aabe117b2ec0666badb4f7db18c7f029e6e",
+      "source_id": 1805
+    },
+    {
+      "count": 2,
+      "identity_key": "5f5fb443127ccf3877c6e5493e812001fca42d6fda6371e60f46c37fd2c17e99",
+      "source_id": 1804
+    },
+    {
+      "count": 3,
+      "identity_key": "355de00b65bacbcbeb432d7acd2e7fc117465d074277f10056d540f8174506c6",
+      "source_id": 516
+    },
+    {
+      "count": 2,
+      "identity_key": "37eac914ffaeb3ad292797b67d2be12cc66d8ad3cda2ffc919dff9ccefdffb1b",
+      "source_id": 2787
+    },
+    {
+      "count": 2,
+      "identity_key": "fc8ef10da68ed4d302c5022da8b288eee84b9141295d46b6702fd41d0b4cbbc5",
+      "source_id": 331
+    },
+    {
+      "count": 2,
+      "identity_key": "90c257c09a13be5c08dde46feb5430c8094a96ccb3e70d8540d72d4661d99a67",
+      "source_id": 1948
+    },
+    {
+      "count": 2,
+      "identity_key": "3a1aba1642ddca25ba3c4076c14113cf56d13756cd1f1940974230767b6848ae",
+      "source_id": 1944
+    },
+    {
+      "count": 2,
+      "identity_key": "49f6935556c45573209be707572f3db27fd4e46335f508bc8f9d9c5eec447f0b",
+      "source_id": 2624
+    }
+  ],
+  "name": "전지맨",
+  "version": 675
+}

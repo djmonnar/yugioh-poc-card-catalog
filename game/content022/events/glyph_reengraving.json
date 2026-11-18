@@ -1,0 +1,18 @@
+{
+  "description": "칼날의 문양이 방패의 문양으로 바뀐다. 동료에게 필요한 힘은 무엇일까?",
+  "effect": "몬스터 1매의 공격 강화 100을 수비 강화 300으로 전환",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/background",
+  "id": "glyph_reengraving",
+  "kind": "glyph_reengraving",
+  "name": "몬스터 1매의 공격 강화 100을 수비 강화 300으로 전환",
+  "params": {
+    "atk_cost": 100,
+    "def": 300
+  },
+  "rewardRarity": null,
+  "supportStatus": "verified-controller022",
+  "title": "문양 재각인",
+  "weight": 1
+}

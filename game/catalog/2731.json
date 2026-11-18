@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards103/2731",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-의식",
+    "덱-블랙매지션",
+    "덱-푸른눈"
+  ],
+  "code": 21082832,
+  "defense": 0,
+  "description": "①: 레벨의 합계가 의식 소환할 몬스터와 같아지도록, 자신의 패 / 필드의 몬스터를 릴리스, 또는 릴리스 대신에 자신 묘지에서 \"푸른 눈의 백룡\"이나 \"블랙 매지션\"을 제외하고, 패에서 \"카오스\" 의식 몬스터 1장을 의식 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "6305e48fdcee756c6eb8f3a014215d3e8217a536582127757f05377502d0eaec",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native103/cards/2731.jpg",
+  "level": 0,
+  "links": [],
+  "name": "카오스 폼",
+  "name_english": "Chaos Form",
+  "native_type": 130,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "카오스폼",
+    "카오스 폼",
+    "Chaos Form"
+  ],
+  "source_id": 2731,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1763
+}

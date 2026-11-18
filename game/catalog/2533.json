@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2533",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-의식"
+  ],
+  "code": 96729612,
+  "defense": 0,
+  "description": "덱의 레벨 7 이하 의식 몬스터 1장을 패에 넣는다. 그 후 자신 묘지의 의식 마법 1장을 패에 넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "1494580adefbb4c738709d918798dbea0315314fcd46144f2c037a33294d9f0b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2533.jpg",
+  "level": 0,
+  "links": [],
+  "name": "의식의 준비",
+  "name_english": "Preparation of Rites",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2533,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1565
+}

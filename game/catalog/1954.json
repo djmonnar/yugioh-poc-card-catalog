@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1954",
+  "attack": 2400,
+  "attribute": 4,
+  "categories": [
+    "효과-데미지",
+    "효과-버리기",
+    "효과-한데스"
+  ],
+  "code": 26205777,
+  "defense": 1000,
+  "description": "①: 이 카드가 어드밴스 소환에\n성공했을 경우에 발동한다.\n상대의 패를 무작위로 1장\n고르고 버린다. 버린 카드가\n몬스터 카드였을 경우, 그\n몬스터의 레벨 × 100 데미지를\n상대에게 준다.",
+  "draw_enabled": true,
+  "identity_key": "7f6ea51117f2d1f9acb474978a566e9ead6bdbe7d9af12a9c324896ce7214a6e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1170.webp",
+  "level": 6,
+  "links": [],
+  "name": "화염 제왕 테스탈로스",
+  "name_english": "Thestalos the Firestorm Monarch",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 128,
+  "rarity": "SR",
+  "source_id": 1954,
+  "speed_limit": 3,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1170
+}

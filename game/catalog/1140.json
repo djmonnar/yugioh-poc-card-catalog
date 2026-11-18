@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1140",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-회복"
+  ],
+  "code": 2130625,
+  "defense": 0,
+  "description": "자신이 데미지를 받았을 때\n발동할 수 있다. 자신의 LP를\n1000 회복한다. 묘지에 다른\n\"백의의 천사\"가 있으면, 그\n카드 1장당 LP를 500 더\n회복한다.",
+  "draw_enabled": true,
+  "identity_key": "4e6046301a2c099bd8bf0f2ec76aed6283096ee02426e89d7e1fee1095cc1f5a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0712.webp",
+  "level": 0,
+  "links": [],
+  "name": "백의의 천사",
+  "name_english": "Numinous Healer",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1140,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 712
+}

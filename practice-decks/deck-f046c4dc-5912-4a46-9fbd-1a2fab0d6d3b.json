@@ -1,0 +1,69 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-f046c4dc-5912-4a46-9fbd-1a2fab0d6d3b",
+  "main": [
+    {
+      "count": 1,
+      "identity_key": "7cbccf2a12c77db61a2efc820f8b92ce18fb6ab47dc0c4c5898734cfdd049285",
+      "source_id": 954
+    },
+    {
+      "count": 1,
+      "identity_key": "42e707296ec5840626bc380ba4ab75fa644307669b04928f578a51cb39952633",
+      "source_id": 1817
+    },
+    {
+      "count": 1,
+      "identity_key": "738f12974359088a62f3c9bf223186a4c934990cbfd3983e5023c9aace0993ac",
+      "source_id": 667
+    },
+    {
+      "count": 3,
+      "identity_key": "f2141a10381933dcf14e20eedd51349121a35806cccaccd4bf17257f08ff44d4",
+      "source_id": 727
+    },
+    {
+      "count": 2,
+      "identity_key": "5c9a72fc9eba9ad09b2a08bb5e95186389483c6af2ca5e9a6e145da462fe094e",
+      "source_id": 2403
+    },
+    {
+      "count": 1,
+      "identity_key": "fa8d82c9b62691b15b6cf71a7c57f38512bdf44b256c0e0697cb26e0c85242cb",
+      "source_id": 2640
+    },
+    {
+      "count": 2,
+      "identity_key": "a6d7b78da9fe60b086014c947c497ec6824b14411e317ad817def59693090095",
+      "source_id": 1508
+    },
+    {
+      "count": 2,
+      "identity_key": "3f68a1964d51d24d255a75dce5a5f92fc8a787f7b9a6b5975b0558a2e3892a48",
+      "source_id": 2603
+    },
+    {
+      "count": 1,
+      "identity_key": "f38b527b2ce6bda8083030df9cda09df153f824a6c384df50e2f6f50143a16d2",
+      "source_id": 2626
+    },
+    {
+      "count": 2,
+      "identity_key": "8fdba67eb686ecfa60afc175239f19193acbe9da9b586db53f44c527a068e050",
+      "source_id": 1220
+    },
+    {
+      "count": 2,
+      "identity_key": "5166924ae5a3f0815f4e5ef4a463fe22a5b2eca168ff278ff7f932c91d659b1a",
+      "source_id": 1043
+    },
+    {
+      "count": 2,
+      "identity_key": "fcb127b8a30a318cba837a11d3a3e99987af91345e29ea51af521d36889f86df",
+      "source_id": 728
+    }
+  ],
+  "name": "페가수스 툰월드 보스",
+  "version": 482
+}

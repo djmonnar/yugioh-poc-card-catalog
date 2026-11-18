@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3021",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-타락천사",
+    "소환-묘지"
+  ],
+  "code": 14517422,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 자신 묘지에서 \"타락천사\" 몬스터 1장을 수비 표시로 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "5efadf69515fe429f2102e2b6c3963593c16d86cd2cd20d756d261502f29faee",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3021.jpg",
+  "level": 0,
+  "links": [],
+  "name": "타락천사의 계단",
+  "name_english": "Darklord Contact",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "타락천사의 계단",
+    "Darklord Contact"
+  ],
+  "source_id": 3021,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 2053
+}

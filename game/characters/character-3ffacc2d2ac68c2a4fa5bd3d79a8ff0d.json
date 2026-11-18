@@ -1,0 +1,44 @@
+{
+  "art_key": "CharacterPresentation012/images/mako/start",
+  "id": "character-3ffacc2d2ac68c2a4fa5bd3d79a8ff0d",
+  "profile": {
+    "name": "마해룡",
+    "portrait": "assets/actors/shared-mako.png",
+    "skill_profiles": [
+      {
+        "name": "바다",
+        "profile_id": "profile-c076aaed-275a-44a2-87d2-d0f96b4d2e21",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "6961a3507f2f54f2a8a88248bd6bc7db81dcf9198375c486d4d48ac12e3c6896",
+              "internal_id": 333,
+              "name_ko": "바다",
+              "slot": 86
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "아틀란티스",
+        "profile_id": "profile-407abde1-3001-4294-abdb-3ecf92479194",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "7341256371bb51ebb64315d92ec728919936d0ad41b80e53c0fe63d15fb84eb6",
+              "internal_id": 2040,
+              "name_ko": "전설의 도시 아틀란티스",
+              "slot": 98
+            },
+            "kind": "start_field"
+          }
+        ]
+      }
+    ],
+    "skills": []
+  },
+  "profile_id": "mako",
+  "updated_at": "2026-11-05T22:26:24.289021+00:00",
+  "version": 3835
+}

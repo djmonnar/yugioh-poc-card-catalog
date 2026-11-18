@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/640",
+  "attack": 0,
+  "attribute": 32,
+  "categories": [
+    "효과-컨트롤"
+  ],
+  "code": 11508758,
+  "defense": 2500,
+  "description": "리버스: 상대 몬스터 1장을\n선택하여 이 카드와 컨트롤을\n바꾼다. 배틀 페이즈에는\n발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "8b326f0f5037b5d504bd90742174242f1fdc62da6ea4ae5ae9da5fb266550fce",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0111.webp",
+  "level": 6,
+  "links": [],
+  "name": "뮤턴트 하이브레인",
+  "name_english": "Mutant Mindmaster",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 640,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 111
+}

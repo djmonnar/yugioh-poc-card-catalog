@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1111",
+  "attack": 2800,
+  "attribute": 4,
+  "categories": [
+    "효과-버리기"
+  ],
+  "code": 23309606,
+  "defense": 1800,
+  "description": "이 카드 이외의 자신의 패를\n전부 묘지에 버리고, 다시\n자신 필드 위의 공격력 2000\n이상의 몬스터 1장을 제물로\n바치지 않으면 일반\n소환/세트할 수 없다. 상대\n필드 위 몬스터 1장당 이\n카드의 공격력은 200 포인트\n올린다. 이 카드 이외의 자신\n필드 위의 몬스터 1장당 이\n카드의 공격력은 500 포인트\n내린다.",
+  "draw_enabled": true,
+  "identity_key": "a753d6be813c374d4eed075ed19a42bf784c8d3308b7beaab38e1f679dce8b70",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0760.webp",
+  "level": 6,
+  "links": [],
+  "name": "염옥마인 헬 버너",
+  "name_english": "Infernal Incinerator",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "source_id": 1111,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 760
+}

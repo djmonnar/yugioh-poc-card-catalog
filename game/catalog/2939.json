@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards136/2939",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-프레데터 플랜츠",
+    "지원-융합",
+    "소환-패에서",
+    "효과-덱샐비지",
+    "소환제약"
+  ],
+  "code": 31643613,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 패에서 \"프레데터 플랜츠\" 몬스터 1장을 특수 소환한다. 그 후, 덱에서 \"프레데터 프랙티스\" 이외의 \"프레데터\" 카드 1장을 패에 넣는다. 이 카드의 발동 후, 턴 종료시까지 자신은 융합 몬스터밖에 엑스트라 덱에서 특수 소환할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "497c36693649edf652a4fa73a0a496a4d79a1855a80671afd2e41189fdb6afbe",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native136/cards/2939.jpg",
+  "level": 0,
+  "links": [],
+  "name": "프레데터 프랙티스",
+  "name_english": "Predapractice",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "프레데터 프랙티스",
+    "Predapractice"
+  ],
+  "source_id": 2939,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1971
+}

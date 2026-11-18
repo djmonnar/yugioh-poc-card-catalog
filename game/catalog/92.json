@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/92",
+  "attack": 2800,
+  "attribute": 32,
+  "categories": [
+    "지원-릴리즈",
+    "효과-묘지보내기",
+    "파괴-몬스터"
+  ],
+  "code": 40921744,
+  "defense": 2300,
+  "description": "자신 묘지에 어둠 속성\n몬스터가 4종류 이상 존재할\n경우, 이 카드는 어둠 속성\n몬스터 1장을 릴리스하고\n어드밴스 소환할 수 있다. ①:\n패에서 어둠 속성 몬스터\n1장을 묘지로 보내고 발동할\n수 있다. 상대 필드의\n몬스터를 전부 파괴한다. ②:\n이 카드의 ①의 효과를 발동한\n턴의 엔드 페이즈에 발동한다.\n이 카드를 파괴한다.\n[안내] 컴퓨터도 묘지에\n이름이 다른 어둠 속성\n몬스터가 4종류 이상이면 어둠\n속성 1장 릴리스 소환을 쓰며,\n이 카드보다 공격력이 낮은\n몬스터만 릴리스한다.",
+  "draw_enabled": true,
+  "identity_key": "5cd0b55c27b7461b6d1c7e27a1fa707445d4900a9f09f04a7b730b94184338f4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1041.webp",
+  "level": 8,
+  "links": [],
+  "name": "타락천사 제라토",
+  "name_english": "Darklord Zerato",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "SR",
+  "source_id": 92,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1041
+}

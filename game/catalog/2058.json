@@ -1,0 +1,44 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2058",
+  "attack": 300,
+  "attribute": 16,
+  "categories": [
+    "효과-버리기",
+    "효과-덱샐비지"
+  ],
+  "code": 99910751,
+  "defense": 100,
+  "description": "①: 이 카드는 필드 / 묘지에 존재하는 한, 카드명이 \"모케모케\"가 되고, 일반 몬스터로 취급한다. ②: 이 카드를 패에서 버리고 발동할 수 있다. 덱에서 \"낙오된 모케모케\" 이외의 \"모케모케\" 카드 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "868ff1ad87e5a0c45d222ce4cf1bf7fce016c2ebf770835c45ae106f9800a17b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1358.webp",
+  "level": 1,
+  "links": [
+    {
+      "identity_key": "874dfb5efff31e8b937bafadd8a78d8bc18c8ad178a9375f02cf277106db7fc0",
+      "slot": 174
+    },
+    {
+      "identity_key": "0a088d26832dc0210aa5313df528e781a19d1f16fa8ff2c2142459c9799cea5e",
+      "slot": 1324
+    },
+    {
+      "identity_key": "287ec4a6044185bc2da6056a309b198e749b0d0b456098a3eb6e62382b91de94",
+      "slot": 1334
+    }
+  ],
+  "name": "낙오된 모케모케",
+  "name_english": "Mokey Mokey Adrift",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "R",
+  "source_id": 2058,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1358
+}

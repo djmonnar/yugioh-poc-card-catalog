@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/726",
+  "attack": 2000,
+  "attribute": 32,
+  "categories": [
+    "덱-툰",
+    "덱-블랙매지션"
+  ],
+  "code": 90960358,
+  "defense": 1700,
+  "description": "이 카드는 통상 소환할 수 없다. 자신 필드에 \"툰 월드\"가 존재하는 상태에서, 자신 필드의 몬스터 1장을 릴리스했을 경우에 특수 소환할 수 있다. ①: 이 카드의 공격력은, 서로의 묘지의 \"블랙 매지션\" \"매지션 오브 블랙 카오스\"의 수 × 300 올린다. ②: 이 카드는, 상대 필드에 툰 몬스터가 존재하지 않을 경우, 직접 공격할 수 있다. 존재할 경우, 툰 몬스터밖에 공격 대상으로 선택할 수 없다. ③: 필드의 \"툰 월드\"가 파괴될 때에 이 카드는 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "cb0b774225522f72211f5ddbb524a5775af55affb038a97f866b3db3341aa77d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0621.webp",
+  "level": 6,
+  "links": [],
+  "name": "툰 블랙 매지션 걸",
+  "name_english": "Toon Dark Magician Girl",
+  "native_type": 37748769,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "N",
+  "source_id": 726,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 621
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/618",
+  "attack": 1600,
+  "attribute": 1,
+  "categories": [
+    "지원-릴리즈"
+  ],
+  "code": 23087070,
+  "defense": 1000,
+  "description": "식물족 몬스터를 어드밴스\n소환할 때 이 몬스터 1장을 두\n장분의 릴리스로 취급할 수\n있다.",
+  "draw_enabled": true,
+  "identity_key": "d4bc6486e9905c4b8ab39ec7d91179797ee89af2bad92ed89204edd7255584dd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0187.webp",
+  "level": 4,
+  "links": [],
+  "name": "로즈 위치",
+  "name_english": "Rose Witch",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "R",
+  "source_id": 618,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 187
+}

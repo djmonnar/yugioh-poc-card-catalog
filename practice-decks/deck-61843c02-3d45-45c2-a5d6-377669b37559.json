@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-61843c02-3d45-45c2-a5d6-377669b37559",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "a6d7b78da9fe60b086014c947c497ec6824b14411e317ad817def59693090095",
+      "source_id": 1508
+    },
+    {
+      "count": 1,
+      "identity_key": "42e707296ec5840626bc380ba4ab75fa644307669b04928f578a51cb39952633",
+      "source_id": 1817
+    },
+    {
+      "count": 1,
+      "identity_key": "7cbccf2a12c77db61a2efc820f8b92ce18fb6ab47dc0c4c5898734cfdd049285",
+      "source_id": 954
+    },
+    {
+      "count": 1,
+      "identity_key": "738f12974359088a62f3c9bf223186a4c934990cbfd3983e5023c9aace0993ac",
+      "source_id": 667
+    },
+    {
+      "count": 3,
+      "identity_key": "f2141a10381933dcf14e20eedd51349121a35806cccaccd4bf17257f08ff44d4",
+      "source_id": 727
+    },
+    {
+      "count": 3,
+      "identity_key": "33cc22a983e08c6f5a9b6c2d25dc4a64b707e4de12052e1d29f4408c1aaaee1e",
+      "source_id": 1965
+    },
+    {
+      "count": 3,
+      "identity_key": "6f0407c61e1df4385486b2d994e9bc339ef0fa8b2ec6a1415b426e4fd5fbb4ad",
+      "source_id": 1961
+    },
+    {
+      "count": 1,
+      "identity_key": "fe2b38b4f4bcd724274c1d8f8c1b09cee26e197d2b2b2eb5422bb7153505ad6f",
+      "source_id": 1964
+    },
+    {
+      "count": 2,
+      "identity_key": "2d32723e05325c462bd6991969607f23079c63e389bc937ba4ede1d70b29b9d5",
+      "source_id": 1933
+    },
+    {
+      "count": 2,
+      "identity_key": "5c9a72fc9eba9ad09b2a08bb5e95186389483c6af2ca5e9a6e145da462fe094e",
+      "source_id": 2403
+    }
+  ],
+  "name": "페가수스 붉은눈 툰",
+  "version": 483
+}

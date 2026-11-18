@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2526",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-사이버 엔젤",
+    "지원-의식",
+    "발동-릴리즈",
+    "효과-드로우"
+  ],
+  "code": 64442155,
+  "defense": 0,
+  "description": "이 카드명은 1턴에 1장만 발동할 수 있다. 패·필드의 사이버 엔젤 의식 몬스터 1장을 비용으로 릴리스하고, 2장 드로우한 뒤 패 1장을 덱 맨 아래로 되돌린다. 이 효과 처리 후부터 턴 종료시까지 의식 몬스터만 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "d7837707ecc9a1afb22debace8a9ea9c3ce292bfaa8d1e2310594b4e2458301a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2526.jpg",
+  "level": 0,
+  "links": [],
+  "name": "자비심 깊은 기계천사",
+  "name_english": "Merciful Machine Angel",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2526,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1558
+}

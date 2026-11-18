@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1992",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "발동-파괴",
+    "효과-묘지샐비지",
+    "지원-융합"
+  ],
+  "code": 59419719,
+  "defense": 0,
+  "description": "이 카드명의 ②의 효과는 1턴에\n1번밖에 사용할 수 없다. ①:\n자신 / 상대의 묘지의\n몬스터를 융합 소재로서\n제외하고, \"화석\" 융합 몬스터\n1장을 융합 소환한다. 이\n효과로 서로의 묘지에서\n몬스터를 제외했을 경우, 그\n특수 소환한 몬스터를 서로\n몬스터의 효과의 대상으로 할\n수 없다. ②: 이 카드가 묘지에\n존재하는 상태에서, 자신\n필드의 앞면 표시의 \"화석\"\n융합 몬스터가 전투 / 효과로\n파괴되었을 경우에 발동할 수\n있다. 이 카드를 패에 넣는다.\n[차이] 소환하는 몬스터는\n공격 표시로만 소환된다.",
+  "draw_enabled": true,
+  "identity_key": "412b07e4bf913effbac7320d2f4f386dad3de45eaffcfe521537145be9535323",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1117.webp",
+  "level": 0,
+  "links": [
+    {
+      "identity_key": "1bcad39afd77ac37ec69e9309f5540c1a8310f8dbab9f21672be3005a7cf78b4",
+      "slot": 432
+    },
+    {
+      "identity_key": "3a455ac1ad819a8695ac0ec0fdb13917356439434806ffa52399556d45f342cf",
+      "slot": 443
+    }
+  ],
+  "name": "화석융합－파슬 퓨전",
+  "name_english": "Fossil Fusion",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1992,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1117
+}

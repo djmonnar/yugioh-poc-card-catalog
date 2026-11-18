@@ -1,0 +1,66 @@
+{
+  "artKey": "DuelUi011/legacy/yugi_intro",
+  "banlistEnabled": false,
+  "deckName": "엑조디아",
+  "extra": [],
+  "id": "enc044_3_battle_ch2_battle_24d1d7a377142361d7ff489a",
+  "lpBonus": 1000,
+  "main": [
+    20,
+    16,
+    18,
+    17,
+    19,
+    1447,
+    1447,
+    1447,
+    1065,
+    1147,
+    1881,
+    1881,
+    1881,
+    2627,
+    2627,
+    2627,
+    2010,
+    2010,
+    2770,
+    2623,
+    2623,
+    2623,
+    347,
+    2066,
+    1044
+  ],
+  "name": "어둠의 유희",
+  "openingDrawBonus": 0,
+  "profileId": "yugi",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "add_hand_once",
+      "position": 0,
+      "sourceId": 1201,
+      "threshold": 0,
+      "value": 0
+    },
+    {
+      "entries": [],
+      "kind": "draw_once",
+      "position": 0,
+      "sourceId": -1,
+      "threshold": 1000,
+      "value": 1
+    },
+    {
+      "entries": [],
+      "kind": "start_monster",
+      "position": 4,
+      "sourceId": 212,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "installed-story:sc-b5276f561275e868-6ea938c263e31d840d83f39dcf50a29d",
+  "usesNativeRules035": true
+}

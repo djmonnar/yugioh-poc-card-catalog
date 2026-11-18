@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards126/2855",
+  "attack": 1800,
+  "attribute": 32,
+  "categories": [
+    "소환-함정 몬스터",
+    "효과-데미지",
+    "발동-파괴",
+    "지원-전투"
+  ],
+  "code": 79852326,
+  "defense": 500,
+  "description": "①: 이 카드는 발동 후, 효과 몬스터(언데드족 / 어둠 / 레벨 4 / 공 1800 / 수 500)가 되어, 몬스터 존에 수비 표시로 특수 소환한다. 이 카드는 함정 카드로도 취급한다. ②: 이 카드의 효과로 특수 소환한 이 카드가 전투로 파괴되었을 경우에 발동한다. 이 카드를 파괴한 몬스터의 공격력만큼의 데미지를 상대에게 준다.",
+  "draw_enabled": true,
+  "identity_key": "5072d7339c5d1f014e9ce2fcb9d37a4b2c665be0d3f640a2301729a76edd8bc9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native126/cards/2855.jpg",
+  "level": 4,
+  "links": [],
+  "name": "사령 조마",
+  "name_english": "Zoma the Spirit",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "SR",
+  "search_aliases": [
+    "사령 조마",
+    "Zoma the Spirit"
+  ],
+  "source_id": 2855,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 1887
+}

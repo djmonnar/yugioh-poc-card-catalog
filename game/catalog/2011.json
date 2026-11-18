@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2011",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-묘지보내기",
+    "지원-일반몬스터",
+    "효과-드로우"
+  ],
+  "code": 40465719,
+  "defense": 0,
+  "description": "덱에서 카드를 2장 드로우하고, 그 후 패에서 일반 몬스터 카드 1장을 게임에서 제외한다. 패에 일반 몬스터 카드가 없을 경우, 패를 전부 묘지로 보낸다.",
+  "draw_enabled": true,
+  "identity_key": "7ec747922daee1f11520f5cfb70cac8b59ed4f95b028741a50013abdff433731",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1315.webp",
+  "level": 0,
+  "links": [],
+  "name": "범인의 자비",
+  "name_english": "Common Charity",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2011,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1315
+}

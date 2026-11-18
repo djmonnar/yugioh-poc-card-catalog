@@ -1,0 +1,19 @@
+{
+  "description": "치명적인 전투·효과 피해를 받으면 LP 1로 살아남아. 원정에서 1회 사용하면 소모돼. LP 비용에는 적용하지 않아.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 56,
+  "iconKey": "Relics/Content022/atlas022",
+  "id": "pharaoh_hourglass",
+  "kind": "pharaoh_hourglass",
+  "name": "파라오의 모래시계",
+  "params": {
+    "charges": 1
+  },
+  "price": 300,
+  "rarity": "UR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-native022",
+  "weight": 1
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1431",
+  "attack": 2400,
+  "attribute": 16,
+  "categories": [
+    "지원-릴리즈"
+  ],
+  "code": 69303178,
+  "defense": 1400,
+  "description": "이 카드는 제물 없이 소환할\n수 있다. 이 방법으로\n소환했을 경우, 이 카드는\n엔드 페이즈시에 묘지로\n보내진다.\n[안내] 컴퓨터는 릴리스할\n몬스터가 없고, 메인 페이즈\n1에 이 카드의 공격으로 상대\n몬스터를 쓰러뜨리거나 승부를\n낼 수 있을 때만 릴리스 없이\n소환한다.",
+  "draw_enabled": true,
+  "identity_key": "ab3992dcdabd64bf7b2d045e7d9a3f44854f6fb42c4fb51e3033c66719abb4ae",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0928.webp",
+  "level": 6,
+  "links": [],
+  "name": "라이트닝 기어－앵화",
+  "name_english": "Majestic Mech - Ohka",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "R",
+  "source_id": 1431,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 928
+}

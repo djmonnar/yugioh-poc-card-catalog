@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards143/2979",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-해황",
+    "지원-해룡족",
+    "지원-저레벨",
+    "소환-묘지",
+    "소환제약"
+  ],
+  "code": 73199638,
+  "defense": 0,
+  "description": "자신 묘지의 레벨 3 이하의 해룡족 몬스터 3장을 선택하고 발동할 수 있다. 선택한 몬스터 3장을 묘지에서 특수 소환한다. 이 카드를 발동하는 턴에, 자신은 몬스터를 특수 소환할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "fa4bfd86172a414cebd8f031705bd61eecdbc7070f94285edd04affab46c6510",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native143/cards/2979.jpg",
+  "level": 0,
+  "links": [],
+  "name": "해황의 포효",
+  "name_english": "Call of the Atlanteans",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "해황의 포효",
+    "Call of the Atlanteans"
+  ],
+  "source_id": 2979,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 2011
+}

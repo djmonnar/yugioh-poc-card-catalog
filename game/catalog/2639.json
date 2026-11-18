@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards088/2639",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-묘지",
+    "발동-파괴",
+    "발동-묘지"
+  ],
+  "code": 79544790,
+  "defense": 0,
+  "description": "자신 필드 위의 몬스터가 전투에 의해서 파괴되어 묘지로 보내졌을 때에 발동할 수 있다. 그 몬스터 1장을 선택하고 자신 필드 위에 앞면 수비 표시로 특수 소환한다. 이 효과로 특수 소환한 몬스터는 자신의 엔드 페이즈시에 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "1c929a02a3c7d3fbe2caf8b50f980d878011de6315509a3c472b76ea2c17a73f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native088/cards/2639.jpg",
+  "level": 0,
+  "links": [],
+  "name": "리그렛 리본",
+  "name_english": "Regretful Rebirth",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "리그렛리본",
+    "리그렛 리본",
+    "Regretful Rebirth"
+  ],
+  "source_id": 2639,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1671
+}

@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/128",
+  "attack": 1800,
+  "attribute": 1,
+  "categories": [
+    "효과-묘지샐비지",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 77036039,
+  "defense": 300,
+  "description": "자신의 패 또는 묘지에 존재하는 \"버스터 모드\" 1장을 덱으로 되돌리는 것으로, 상대 필드 위에 존재하는 마법/함정 카드 1장을 파괴한다. 이 효과는 1턴에 1번밖에 사용할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "4e0f6514d8622d93872a721ad0fd679d439fdc58494e497ad926eeacfde865ba",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0682.webp",
+  "level": 4,
+  "links": [],
+  "name": "버스터 머시너리",
+  "name_english": "Assault Mercenary",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "source_id": 128,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 682
+}

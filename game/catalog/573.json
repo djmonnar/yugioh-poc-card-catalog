@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/573",
+  "attack": 1100,
+  "attribute": 32,
+  "categories": [
+    "효과-덱샐비지",
+    "발동-묘지"
+  ],
+  "code": 78010363,
+  "defense": 1200,
+  "description": "이 카드가 필드에서 묘지로\n보내졌을 때, 자신의 덱에서\n수비력 1500 이하의 몬스터\n1장을 패에 넣고 덱을\n셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "f0e154f94ffe8a7a28abd997fe418c42a175c0b7ca6d113f4252d590c74d4968",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0261.webp",
+  "level": 4,
+  "links": [],
+  "name": "검은 숲의 마녀",
+  "name_english": "Witch of the Black Forest",
+  "native_type": 33,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 2,
+  "rarity": "UR",
+  "source_id": 573,
+  "speed_limit": 1,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 261
+}

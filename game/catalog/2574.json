@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards067/2574",
+  "attack": 2600,
+  "attribute": 8,
+  "categories": [
+    "덱-가이아"
+  ],
+  "code": 15989522,
+  "defense": 2100,
+  "description": "융합 소재: ‘암흑 기사 가이아’ 몬스터 1장 + 레벨 5 드래곤족 몬스터 1장. 몬스터 존에 있는 동안 카드 이름을 ‘용기사 가이아’로 취급한다. 같은 이름의 다음 효과는 각각 한 턴에 한 번만 사용할 수 있다. ● 메인 페이즈에 다른 필드 카드 1장을 대상으로 발동할 수 있다(상대 턴에도 가능). 자신의 공격력을 정확히 2600 내리고, 내렸다면 대상을 파괴한다. ● 상대 몬스터를 전투로 파괴하면 자신의 공격력을 2600 올릴 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "1b6797ec3e25ae53450d952889b5e6896b0a781982700594f08c08d968037ab7",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2574.jpg",
+  "level": 7,
+  "links": [],
+  "name": "용마방 기사 가이아",
+  "name_english": "Gaia the Magical Knight of Dragons",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "UR",
+  "source_id": 2574,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 / 효과 몬스터",
+  "web_slot": 1606
+}

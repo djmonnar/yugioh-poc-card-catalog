@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards067/2551",
+  "attack": 1000,
+  "attribute": 32,
+  "categories": [
+    "덱-묘지기",
+    "지원-필드"
+  ],
+  "code": 3381441,
+  "defense": 1500,
+  "description": "앞면 표시 필드 마법이 없으면 필드를 ‘왕가의 골짜기－네크로밸리’로 취급한다. 필드의 모든 ‘묘지기’ 몬스터의 공격력·수비력은 200 오른다.",
+  "draw_enabled": true,
+  "identity_key": "45ecdb5a020eb1e0c9bf643773cb438613c1c3b0b815b2af33d161eab1c53511",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2551.jpg",
+  "level": 3,
+  "links": [],
+  "name": "묘지기의 무녀",
+  "name_english": "Gravekeeper's Priestess",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 2551,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1583
+}

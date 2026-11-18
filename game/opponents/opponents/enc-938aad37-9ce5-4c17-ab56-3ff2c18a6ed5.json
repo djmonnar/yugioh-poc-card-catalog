@@ -1,0 +1,45 @@
+{
+  "artKey": "DuelUi011/legacy/yugi_intro",
+  "banlistEnabled": false,
+  "deckName": "카오스솔져",
+  "extra": [],
+  "id": "enc-938aad37-9ce5-4c17-ab56-3ff2c18a6ed5",
+  "lpBonus": 0,
+  "main": [
+    1515,
+    1515,
+    2580,
+    2580,
+    363,
+    363,
+    669,
+    669,
+    2509,
+    2509,
+    2509,
+    2578,
+    2508,
+    2508,
+    2508,
+    2576,
+    2638,
+    2638,
+    1079,
+    1079
+  ],
+  "name": "카오스솔져",
+  "openingDrawBonus": 0,
+  "profileId": "yugi",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 2580,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-938aad37-9ce5-4c17-ab56-3ff2c18a6ed5",
+  "usesNativeRules035": true
+}

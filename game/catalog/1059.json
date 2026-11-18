@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1059",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "파괴-몬스터",
+    "발동-릴리즈"
+  ],
+  "code": 56830749,
+  "defense": 0,
+  "description": "자신의 필드 몬스터 1장을\n릴리스한다. 상대도 자신의\n필드 몬스터 1장을 선택하여\n릴리스해야 한다.",
+  "draw_enabled": true,
+  "identity_key": "27562a90d2dcf5c1d764469333ca00d4a8883ef191ae324fb22770e492806ace",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0051.webp",
+  "level": 0,
+  "links": [],
+  "name": "고통 분담",
+  "name_english": "Share the Pain",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1059,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 51
+}

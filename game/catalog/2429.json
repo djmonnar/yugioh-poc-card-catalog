@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2429",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-암흑계",
+    "효과-묘지샐비지",
+    "덱-암흑계"
+  ],
+  "code": 29826127,
+  "defense": 0,
+  "description": "①: 자신 묘지의 \"암흑계\" 몬스터 2장을 대상으로 발동할 수 있다. 그 몬스터들을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "7937b40955c11685e0acd9e97fa49c8aa074850d1c22022eb9d862a4e123e173",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2429.jpg",
+  "level": 0,
+  "links": [],
+  "name": "암흑에서 온 군세",
+  "name_english": "The Forces of Darkness",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2429,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1466
+}

@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards090/2657",
+  "attack": 1600,
+  "attribute": 1,
+  "categories": [
+    "지원-전사족",
+    "지원-저레벨"
+  ],
+  "code": 89529919,
+  "defense": 1200,
+  "description": "이 카드가 일반 소환 또는 특수 소환되었을 때 발동한다. 덱에서 \"전사 라즈\" 이외의 레벨 4 이하 전사족 몬스터 1장을 고른다. 덱을 섞은 뒤 그 카드를 맨 위에 놓고 서로 확인한다.",
+  "draw_enabled": true,
+  "identity_key": "2ffd7252e9a4e319fe49200d924a96f20818f49096fbc76978fc26915f22558c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native090/cards/2657.jpg",
+  "level": 4,
+  "links": [],
+  "name": "전사 라즈",
+  "name_english": "Field-Commander Rahz",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "전사라즈",
+    "전사 라즈",
+    "Field-Commander Rahz"
+  ],
+  "source_id": 2657,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1689
+}

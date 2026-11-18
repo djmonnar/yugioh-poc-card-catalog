@@ -1,0 +1,18 @@
+{
+  "description": "푸른 불꽃이 마법의 조각을 삼킨다. 선물을 받거나, 동전이나 마법 카드를 바쳐 더 나은 가능성을 고를 수 있다.",
+  "effect": "무작위 마법 1장 · 금화 50으로 마법 3장 중 1장 · 보유 마법 1매 제거 후 SR 마법 3장 중 1장",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "mana_furnace",
+  "kind": "mana_furnace",
+  "name": "마법 카드를 받거나 대가를 바치고 선택",
+  "params": {
+    "choices": 3,
+    "gold": 50
+  },
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "마나 용광로",
+  "weight": 1
+}

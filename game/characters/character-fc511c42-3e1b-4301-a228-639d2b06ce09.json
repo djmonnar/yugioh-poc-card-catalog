@@ -1,0 +1,45 @@
+{
+  "art_key": "CharacterPresentation012/images/roamer_sera/start",
+  "id": "character-fc511c42-3e1b-4301-a228-639d2b06ce09",
+  "profile": {
+    "name": "방랑 듀얼리스트 세라",
+    "portrait": "assets/characters/roamer_sera.png",
+    "skill_profiles": [
+      {
+        "name": "사이버드래곤",
+        "profile_id": "0af140b5-3989-4fe0-acd5-2ea886936fad",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "9a22eb17c39ac8582c6dd846f9eb6b40ec418073631f9b9aed493044afff53df",
+              "internal_id": 392,
+              "name_ko": "사이버 드래곤 츠바이",
+              "slot": 496
+            },
+            "kind": "start_hand"
+          }
+        ]
+      },
+      {
+        "name": "이차원",
+        "profile_id": "profile-fb67061a-a161-45a7-9d6d-93a937358040",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "0663afd289a8de85ee3ae494ac2df0938d593d86c35cd0aec29d2b97ee648245",
+              "internal_id": 480,
+              "name_ko": "이차원 트레이너",
+              "slot": 686
+            },
+            "kind": "start_monster",
+            "position": "defense"
+          }
+        ]
+      }
+    ],
+    "skills": []
+  },
+  "profile_id": "roamer_sera",
+  "updated_at": "2026-11-13T22:52:51.905384+00:00",
+  "version": 3937
+}

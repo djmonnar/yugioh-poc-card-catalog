@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1047",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "면역-전투"
+  ],
+  "code": 50152549,
+  "defense": 0,
+  "description": "기계족 이외의 몬스터만 장착\n가능. 장착 몬스터는 공격\n선언을 할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "23cab518645fa063e5c4bbba72711631b6bb8aef38270a91f5aef59f34964920",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0378.webp",
+  "level": 0,
+  "links": [],
+  "name": "마비약",
+  "name_english": "Paralyzing Potion",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1047,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 378
+}

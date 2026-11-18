@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/22",
+  "attack": 2000,
+  "attribute": 1,
+  "categories": [
+    "효과-바운스"
+  ],
+  "code": 40473581,
+  "defense": 1600,
+  "description": "이 카드는 특수 소환할 수\n없다. 일반 소환/리버스한\n턴의 엔드 페이즈시에 주인의\n패로 되돌아간다. 이 카드가\n상대 플레이어에게 주는 전투\n데미지는 절반이 된다.",
+  "draw_enabled": true,
+  "identity_key": "c2007a6356336ab8e25dd182caad19304bb5a4bf52a19f44791e42c614ec9395",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0382.webp",
+  "level": 4,
+  "links": [],
+  "name": "뇌제신",
+  "name_english": "Susa Soldier",
+  "native_type": 545,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4096,
+  "rarity": "R",
+  "source_id": 22,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 382
+}

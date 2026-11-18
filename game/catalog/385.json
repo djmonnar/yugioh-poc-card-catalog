@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/385",
+  "attack": 2000,
+  "attribute": 8,
+  "categories": [
+    "덱-해피"
+  ],
+  "code": 52040216,
+  "defense": 2500,
+  "description": "①: 이 카드의 공격력 /\n수비력은, 필드의 \"해피\n레이디\"의 수 × 300 올린다.",
+  "draw_enabled": true,
+  "identity_key": "74aad73c2844af40f6a8f43892bb593c13fe11f8d115d5980da2d4a1174f2ff6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0694.webp",
+  "level": 7,
+  "links": [],
+  "name": "해피의 애완 드래곤",
+  "name_english": "Harpie's Pet Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "N",
+  "source_id": 385,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 694
+}

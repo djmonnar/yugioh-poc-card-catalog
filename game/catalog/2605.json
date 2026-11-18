@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards084/2605",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-카운터·무효"
+  ],
+  "code": 92512625,
+  "defense": 0,
+  "description": "자신의 마법·함정 존에 다른 세트 카드가 없을 때 3000 LP를 지불하고 발동한다. 몬스터의 일반·반전·특수 소환을 무효로 하고 파괴하거나, 몬스터 효과 또는 마법·함정 카드의 발동을 무효로 하고 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "2542f9832403c47f3590bbd2573ebdfd54509ce8c9206dec3408613dd9439ff2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2605.jpg",
+  "level": 0,
+  "links": [],
+  "name": "신의 충고",
+  "name_english": "Solemn Scolding",
+  "native_type": 1048580,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "신의충고",
+    "신의 충고",
+    "Solemn Scolding"
+  ],
+  "source_id": 2605,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "카운터 함정",
+  "web_slot": 1637
+}

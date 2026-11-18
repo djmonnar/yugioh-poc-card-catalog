@@ -1,0 +1,20 @@
+{
+  "description": "자신의 레벨 3 이하 몬스터가 소환될 때 원래 공격력이 300 상승해.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 22,
+  "iconKey": "Relics/atlas160",
+  "id": "weak_power",
+  "kind": "weak_power",
+  "name": "약자의 힘",
+  "params": {
+    "atk": 300,
+    "max_level": 3
+  },
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

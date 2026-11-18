@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards109/2754",
+  "attack": 1400,
+  "attribute": 32,
+  "categories": [
+    "지원-장착",
+    "효과-파괴"
+  ],
+  "code": 39978267,
+  "defense": 1000,
+  "description": "이 카드가 일반 소환/반전 소환/특수 소환에 성공했을 때, 다음 효과에서 1개를 선택하고 발동한다.\n●필드 위의 몬스터 1장에 장착되어 있는 장착 카드를 1장 선택하여 파괴한다.\n●필드 위의 몬스터 1장에 장착되어 있는 장착 카드를 1장 선택하여 이 카드에 장착한다.",
+  "draw_enabled": true,
+  "identity_key": "92e73979ca579077784adc7d5e7be7991f4522666981a0fdb84f18c0d476635c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native109/cards/2754.jpg",
+  "level": 4,
+  "links": [],
+  "name": "사이버 레이더",
+  "name_english": "Cyber Raider",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "search_aliases": [
+    "사이버레이더",
+    "사이버 레이더",
+    "Cyber Raider"
+  ],
+  "source_id": 2754,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1786
+}

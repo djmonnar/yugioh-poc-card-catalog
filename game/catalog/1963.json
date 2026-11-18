@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1963",
+  "attack": 1800,
+  "attribute": 8,
+  "categories": [
+    "덱-붉은눈",
+    "소환-묘지",
+    "효과-제외-묘지"
+  ],
+  "code": 67300516,
+  "defense": 1600,
+  "description": "이 카드의 효과를 발동하는\n턴에, 자신은 통상 소환할 수\n없다. ①: 자신 엔드 페이즈에\n묘지의 이 카드를 제외하고,\n자신 묘지의 \"붉은 눈\" 몬스터\n1장을 대상으로 하여 발동할\n수 있다. 그 몬스터를 특수\n소환한다.\n[안내] 자신의 엔드 페이즈가\n시작될 때, 쓸 수 있으면\n사용할지 묻는다. 그 턴에\n일반 소환이나 세트를 했으면\n묻지 않는다.\n[차이] 컴퓨터는 거의 매 턴\n일반 소환을 하므로 이 효과를\n드물게 쓴다.",
+  "draw_enabled": true,
+  "identity_key": "1e45fe3dc91f290e363273a33c54acb539d4f7a7c8ff2eb5b9cb63bdef0a4e03",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1146.webp",
+  "level": 4,
+  "links": [],
+  "name": "붉은 눈의 비룡",
+  "name_english": "Red-Eyes Wyvern",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "source_id": 1963,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1146
+}

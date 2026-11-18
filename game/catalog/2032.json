@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2032",
+  "attack": 2100,
+  "attribute": 16,
+  "categories": [
+    "효과-버리기",
+    "효과-덱샐비지"
+  ],
+  "code": 12171659,
+  "defense": 800,
+  "description": "①: 이 카드를 패에서 묘지로 버리고 발동할 수 있다. 덱에서 \"천공의 성역\" 1장을 패에 넣는다. ②: 필드에 \"천공의 성역\"이 존재하지 않을 경우에 이 카드는 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "1ffec6c1ccc750081216a9426282fe6416b0a0f84fb420e378f52c48870d4406",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1335.webp",
+  "level": 4,
+  "links": [],
+  "name": "천공의 사자 제라디아스",
+  "name_english": "Zeradias, Herald of Heaven",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "SR",
+  "source_id": 2032,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1335
+}

@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1892",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "파괴-몬스터",
+    "효과-제외"
+  ],
+  "code": 29401950,
+  "defense": 0,
+  "description": "①: 상대가 공격력 1500 이상의\n몬스터의 일반 소환 / 반전\n소환 / 특수 소환에 성공했을\n때에 발동할 수 있다. 그\n공격력 1500 이상의 몬스터를\n파괴하고 제외한다.",
+  "draw_enabled": true,
+  "identity_key": "e15ed14a8c7a5dad643760cbf4de53e2f3763a728c7a1291dc33f7af655b979a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1219.webp",
+  "level": 0,
+  "links": [],
+  "name": "나락의 함정 속으로",
+  "name_english": "Bottomless Trap Hole",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1892,
+  "speed_limit": 2,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1219
+}

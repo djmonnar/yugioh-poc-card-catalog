@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1551",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-제외"
+  ],
+  "code": 69832741,
+  "defense": 0,
+  "description": "묘지의 몬스터를 게임에서\n제외할 경우, 그 대신 자신의\n필드 위에서 몬스터를\n제외한다. 이 효과는 발동\n턴에만 유효.",
+  "draw_enabled": true,
+  "identity_key": "fd4768ca714dc3e82e022fbfb6f363ee1c1c45a106e46090759403f738c0e910",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1072.webp",
+  "level": 0,
+  "links": [],
+  "name": "영혼 소멸",
+  "name_english": "Spirit Elimination",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1551,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1072
+}

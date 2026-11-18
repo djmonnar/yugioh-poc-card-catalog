@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1324",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 21237481,
+  "defense": 0,
+  "description": "패의 마법 카드를 1장 버릴\n때마다, 상대 라이프에 500\n포인트 데미지를 준다.\n[안내] 효과는 세트한 카드를\n발동해 앞면으로 만든 뒤,\n필드의 앞면 카드를 눌러 패의\n마법 카드를 끌어다 놓아\n쓴다.\n[차이] 카드를 발동하면서 쓴\n효과와 같은 체인에서 이\n효과를 다시 쓸 수 없다는\n제한은 적용하지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "545f41c8335b4e86f9f09d86c415b9b9c7040d970ded62eb71707985928b08a4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0481.webp",
+  "level": 0,
+  "links": [],
+  "name": "영식 마법 분쇄기",
+  "name_english": "Type Zero Magic Crusher",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1324,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 481
+}

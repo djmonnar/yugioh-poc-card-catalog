@@ -1,0 +1,54 @@
+{
+  "banlist_enabled": false,
+  "extra": [],
+  "id": "ch1_battle_61513c3358a627c00a231223",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "dc819ac4bfd64a44d876fe0f75bfe97cb0e24e9dfa20e1cb23e5a9d0b52f5724",
+      "source_id": 962
+    },
+    {
+      "count": 3,
+      "identity_key": "5d5396d2eb9ed024b103bf3ebfa43ea439264bb5fa70226c8adcf9ca2fccfb2c",
+      "source_id": 393
+    },
+    {
+      "count": 3,
+      "identity_key": "7d4c2cd65f736d186741e3ec25b1527a0434c29d35fd7336cb514422428c20ce",
+      "source_id": 1310
+    },
+    {
+      "count": 3,
+      "identity_key": "e0d9841d02e1792910971fa17fe7aae67f6761abee1407642aac2faacbc04948",
+      "source_id": 406
+    },
+    {
+      "count": 1,
+      "identity_key": "11bce19c7ed65c5511912da16c7ce02eaa668cb2bfbd350fba822328282bc884",
+      "source_id": 742
+    },
+    {
+      "count": 2,
+      "identity_key": "d61cf20cdac1800b1c3c1c6d44cc142579ba1be08ab9d0287c3619127c6642bc",
+      "source_id": 2025
+    },
+    {
+      "count": 2,
+      "identity_key": "05b26a45d30cc9f5293e3a00bbc51ea03b2be6d45d06fc37eb468717bccba07f",
+      "source_id": 657
+    },
+    {
+      "count": 2,
+      "identity_key": "f404ba133372b351606334cc3284cc4e1ec47fb7adc423f12092ccf32146f581",
+      "source_id": 685
+    },
+    {
+      "count": 2,
+      "identity_key": "ee11c293432c63cedd628f6f7326b6833b9e601ec39ced6335635729ecd4e8ea",
+      "source_id": 1004
+    }
+  ],
+  "name": "밴디트 키스 초급",
+  "version": 37
+}

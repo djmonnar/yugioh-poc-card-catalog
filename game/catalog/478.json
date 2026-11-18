@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/478",
+  "attack": 1700,
+  "attribute": 8,
+  "categories": [
+    "효과-바운스"
+  ],
+  "code": 87523462,
+  "defense": 1200,
+  "description": "이 카드가 전투에 의해서\n파괴하여 묘지로 보낸 앞면\n공격 표시의 상대 몬스터를,\n상대의 덱의 맨 위로 되돌릴\n수 있다.",
+  "draw_enabled": true,
+  "identity_key": "80f3ad444adef5bd495433da7f6c216e536fe58c97388d26b657172f38b82c42",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0296.webp",
+  "level": 4,
+  "links": [],
+  "name": "비행현자 팔코스",
+  "name_english": "Winged Sage Falcos",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "SR",
+  "source_id": 478,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 296
+}

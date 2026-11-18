@@ -1,0 +1,45 @@
+{
+  "artKey": "Character090/images/paradox_brothers/start",
+  "banlistEnabled": false,
+  "deckName": "미궁형제 중급",
+  "extra": [],
+  "id": "enc-e3a4ccbb-4f1b-4208-9d31-c5e9c719f98b",
+  "lpBonus": 0,
+  "main": [
+    180,
+    180,
+    180,
+    967,
+    967,
+    2642,
+    2642,
+    2642,
+    2647,
+    2647,
+    2647,
+    1220,
+    1220,
+    2103,
+    2103,
+    139,
+    139,
+    2650,
+    2650,
+    2651
+  ],
+  "name": "미궁형제",
+  "openingDrawBonus": 0,
+  "profileId": "paradox_brothers",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_monster",
+      "position": 4,
+      "sourceId": 180,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-e3a4ccbb-4f1b-4208-9d31-c5e9c719f98b",
+  "usesNativeRules035": true
+}

@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1813",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-필드"
+  ],
+  "code": 42015635,
+  "defense": 0,
+  "description": "①: 필드의 \"엘리멘틀 히어로 네오스\" 및 \"엘리멘틀 히어로 네오스\"를 융합 소재로 하는 융합 몬스터의 공격력은 500 올린다. ②: 필드의 \"엘리멘틀 히어로 네오스\"를 융합 소재로 하는 융합 몬스터는, 엔드 페이즈에 자신을 엑스트라 덱으로 되돌리는 효과를 발동하지 않아도 된다.",
+  "draw_enabled": true,
+  "identity_key": "815cfef34d4a5c97d261caa19ffa0928f931339df62e49b09591fbef8f239146",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1300.webp",
+  "level": 0,
+  "links": [
+    {
+      "identity_key": "b4d3d123f8cfd184fed5d057fdd92c8a22c00748d957636f22ee85778d91b931",
+      "slot": 71
+    }
+  ],
+  "name": "네오스페이스",
+  "name_english": "Neo Space",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1813,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1300
+}

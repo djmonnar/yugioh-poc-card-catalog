@@ -1,0 +1,13 @@
+{
+  "art_key": "Character035/zane",
+  "id": "character-6fd9c25d-4c87-4b33-b01f-10763f786b8d",
+  "profile": {
+    "name": "마루후지 료(카이저)",
+    "portrait": "assets/native035/characters/zane.png",
+    "skill_profiles": [],
+    "skills": []
+  },
+  "profile_id": "zane",
+  "updated_at": "2026-10-25T22:45:47.196224+00:00",
+  "version": 3044
+}

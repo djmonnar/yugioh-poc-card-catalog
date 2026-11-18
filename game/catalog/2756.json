@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards109/2756",
+  "attack": 1700,
+  "attribute": 16,
+  "categories": [
+    "지원-전투",
+    "효과-데미지"
+  ],
+  "code": 2851070,
+  "defense": 1000,
+  "description": "필드 위에 앞면 공격 표시로 존재하는 이 카드가 상대 몬스터에게 공격받았을 경우, 그 데미지 계산 전에 공격 몬스터의 공격력만큼의 데미지를 상대 라이프에 주어, 그 데미지 계산 후에 이 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "b0f7a9f0e259586c38ed78a2beb9b4d60bd3e4f7a7c8bd52a5c038a35f29838c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native109/cards/2756.jpg",
+  "level": 4,
+  "links": [],
+  "name": "마경도사 리플렉트 바운더",
+  "name_english": "Reflect Bounder",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "SR",
+  "search_aliases": [
+    "마경도사 리플렉트 바운더",
+    "마경도사리플렉트바운더",
+    "Reflect Bounder"
+  ],
+  "source_id": 2756,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1788
+}

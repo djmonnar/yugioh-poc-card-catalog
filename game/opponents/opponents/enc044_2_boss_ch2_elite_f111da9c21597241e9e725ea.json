@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/mai/start",
+  "banlistEnabled": false,
+  "deckName": "메이 해피 상급",
+  "extra": [],
+  "id": "enc044_2_boss_ch2_elite_f111da9c21597241e9e725ea",
+  "lpBonus": 0,
+  "main": [
+    1249,
+    1845,
+    403,
+    403,
+    403,
+    1846,
+    671,
+    2068,
+    2068,
+    1838,
+    1838,
+    1843,
+    1833,
+    1833,
+    608,
+    608,
+    1099,
+    1944,
+    1832,
+    1832
+  ],
+  "name": "메이 쿠자쿠",
+  "openingDrawBonus": 0,
+  "profileId": "mai",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 2068,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "installed-story:sc-b5892a9b9b432561-1ef9c5da41349c34651fbf8df22f6c6a",
+  "usesNativeRules035": true
+}

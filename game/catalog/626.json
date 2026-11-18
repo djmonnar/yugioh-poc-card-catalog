@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/626",
+  "attack": 800,
+  "attribute": 32,
+  "categories": [
+    "덱-붉은눈",
+    "소환-패,덱",
+    "효과-묘지보내기"
+  ],
+  "code": 36262024,
+  "defense": 500,
+  "description": "자신 필드 위에 앞면 표시로\n존재하는 이 카드를 묘지로\n보내고 발동할 수 있다.\n패에서 \"붉은 눈의 흑룡\"\n1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "5bff08ef4a400039889bf6e769f04614f986af068c099a668d5acb3ccb526b54",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0205.webp",
+  "level": 1,
+  "links": [],
+  "name": "아기 흑룡",
+  "name_english": "Black Dragon's Chick",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "source_id": 626,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 205
+}

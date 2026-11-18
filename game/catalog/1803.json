@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1803",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-묘지보내기",
+    "파괴-몬스터",
+    "효과-데미지"
+  ],
+  "code": 21420702,
+  "defense": 0,
+  "description": "이 카드는 자신 필드 위에 앞면 표시로 존재하는 \"브레이즈 캐논\" 1장을 묘지로 보내고 발동할 수 있다. 또한, 자신의 메인 페이즈시, 상대 필드 위의 몬스터 1장을 선택하고 발동할 수 있다. 패에서 화염족 몬스터 1장을 묘지로 보내고, 선택한 상대 몬스터를 파괴하여 상대 라이프에 500 포인트 데미지를 준다. 이 효과를 발동하는 턴에, 자신의 몬스터는 공격할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "f6caec55f310145b0eaa9b2ae39d247f3bf3a600d12a46466fd7302c61b5212b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1290.webp",
+  "level": 0,
+  "links": [
+    {
+      "identity_key": "66c9ecf34284dcd4f922e1b6d826414325aa8c4b4033e308ce288026f0bb44ea",
+      "slot": 1289
+    }
+  ],
+  "name": "브레이즈 캐논－트라이든트",
+  "name_english": "Tri-Blaze Accelerator",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1803,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1290
+}

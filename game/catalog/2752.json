@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards108/2752",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-드래곤족",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 28596933,
+  "defense": 0,
+  "description": "①: 자신 필드의 레벨 5 이상의 드래곤족 몬스터 1장을 골라 주인의 패로 되돌리고, 필드의 마법 / 함정 카드를 전부 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "cffcb6bd726660938bc915b9d18711875550e30241c885237d7b83cf424c2b75",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native108/cards/2752.jpg",
+  "level": 0,
+  "links": [],
+  "name": "거룡의 도약",
+  "name_english": "A Wingbeat of Giant Dragon",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "거룡의 도약",
+    "거룡의도약",
+    "A Wingbeat of Giant Dragon"
+  ],
+  "source_id": 2752,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1784
+}

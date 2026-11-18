@@ -1,0 +1,75 @@
+{
+  "banlist_enabled": true,
+  "extra": [
+    {
+      "count": 1,
+      "identity_key": "1b6797ec3e25ae53450d952889b5e6896b0a781982700594f08c08d968037ab7",
+      "source_id": 2574
+    },
+    {
+      "count": 1,
+      "identity_key": "de04e8932d4e720bbf33b425317688271363b31e78219d0a769209e68c512369",
+      "source_id": 2569
+    },
+    {
+      "count": 1,
+      "identity_key": "39bc3c59382a6341870811ff6d1867641a8a3a8524a14631affc55f2fa015d03",
+      "source_id": 36
+    },
+    {
+      "count": 1,
+      "identity_key": "474641c865b6acba331091e6dd5291a5d3de366b32b3181b480a8e02de3db0f7",
+      "source_id": 2585
+    }
+  ],
+  "id": "deck-a6800a7d-6f40-4268-b978-f7832321f00f",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "5ebe08b8ca1221bb7bd57a8ceb6fb2fb4cfbe43e6354c88b24db8bb570edd98c",
+      "source_id": 2579
+    },
+    {
+      "count": 3,
+      "identity_key": "12935475cffba0e125502f5db4814f4eba26e10fcf49a067ab2d698d221f1f55",
+      "source_id": 2582
+    },
+    {
+      "count": 2,
+      "identity_key": "cc5299b48fc94406ccab08c4ff130b0c21b37753ad511cb424b7177d0af5816b",
+      "source_id": 2573
+    },
+    {
+      "count": 3,
+      "identity_key": "c0f16b1670bd94d5e89c7d133c5031e8d069d091a24ec42469e5397b381ba1b4",
+      "source_id": 2571
+    },
+    {
+      "count": 2,
+      "identity_key": "e307e6a96ada649e6f77544c6b4d8e371a3f4fa64d7ef22b1c7a0f13905a6297",
+      "source_id": 2570
+    },
+    {
+      "count": 2,
+      "identity_key": "487d32887fbfb21f994c60b61735e72d8ac6d0eb85e77ae5bc7929744512a4b4",
+      "source_id": 2581
+    },
+    {
+      "count": 2,
+      "identity_key": "9063dd91e7655ec9f3a49a8df615b013c68aa258ac23a983b6442892e2bb892d",
+      "source_id": 2578
+    },
+    {
+      "count": 2,
+      "identity_key": "e8045946b7d6b3ee7eb3239ad1044bb6f5204721bd9d60e8df8fbf84951fcd64",
+      "source_id": 1094
+    },
+    {
+      "count": 2,
+      "identity_key": "1f9e6b24ff450316386024577be58ba354c015796aa4736c908d092fbf3a3ff1",
+      "source_id": 1181
+    }
+  ],
+  "name": "가이아 상급",
+  "version": 320
+}

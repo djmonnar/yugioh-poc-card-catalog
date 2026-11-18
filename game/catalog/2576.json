@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards067/2576",
+  "attack": 2300,
+  "attribute": 32,
+  "categories": [
+    "덱-가이아"
+  ],
+  "code": 29904964,
+  "defense": 2100,
+  "description": "상대 몬스터 수가 자신의 몬스터 수보다 많으면 릴리스 없이 일반 소환할 수 있다. 이 카드가 릴리스되면 패나 묘지에서 ‘카오스 솔저’ 몬스터 1장을 특수 소환할 수 있다. 같은 이름의 이 효과는 한 턴에 한 번만 사용할 수 있다. ‘카오스 솔저’의 의식 소환 시 묘지의 이 카드를 제외하여 필요한 소재 중 하나로 사용할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "aad23372048270bed83dd141ea40f603df41e8b6dd726d1e7a049d2946d30f65",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2576.jpg",
+  "level": 7,
+  "links": [],
+  "name": "각성의 암흑 기사 가이아",
+  "name_english": "Arisen Gaia the Fierce Knight",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "source_id": 2576,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1608
+}

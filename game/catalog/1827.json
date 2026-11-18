@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1827",
+  "attack": 1200,
+  "attribute": 32,
+  "categories": [
+    "파괴-몬스터",
+    "발동-묘지"
+  ],
+  "code": 4335645,
+  "defense": 800,
+  "description": "이 카드가 전투에 의해서\n파괴되어 묘지로 보내졌을 때,\n필드 위의 몬스터 1장을\n파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "7162cc7fd2c004837beabf292c05659b65f4db064b047810e5d56b2c42b8070a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1276.webp",
+  "level": 4,
+  "links": [],
+  "name": "뉴도리아",
+  "name_english": "Newdoria",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "source_id": 1827,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1276
+}

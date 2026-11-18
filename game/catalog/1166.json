@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1166",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-일반몬스터",
+    "효과-덱샐비지",
+    "지원-고레벨"
+  ],
+  "code": 79816536,
+  "defense": 0,
+  "description": "①: 덱에서 레벨 5 이상의 일반\n몬스터 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "7c91bc02916e6d4ddc8f520910d4106d0533dfdaa62e0e743ceb7b66e18fad69",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0750.webp",
+  "level": 0,
+  "links": [],
+  "name": "소환사의 스킬",
+  "name_english": "Summoner's Art",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1166,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 750
+}

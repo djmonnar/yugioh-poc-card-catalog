@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1511",
+  "attack": 1800,
+  "attribute": 32,
+  "categories": [
+    "효과-제외-묘지"
+  ],
+  "code": 88240808,
+  "defense": 700,
+  "description": "이 카드가 상대에게 전투\n데미지를 줄 때마다 상대\n묘지의 카드를 최대 2장까지\n제외할 수 있다. 또한 이\n카드가 필드에 앞면으로\n존재하는 동안 상대는 양쪽\n묘지의 카드를 제외할 수\n없다.",
+  "draw_enabled": true,
+  "identity_key": "326ec7211293443b43d618e86c4d1790d473f0ade94b71a4a8bf1a6cc0f2f957",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1073.webp",
+  "level": 4,
+  "links": [],
+  "name": "영멸술사 카이쿠",
+  "name_english": "Kycoo the Ghost Destroyer",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 1511,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1073
+}

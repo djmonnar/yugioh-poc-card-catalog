@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1909",
+  "attack": 1700,
+  "attribute": 16,
+  "categories": [
+    "지원-릴리즈"
+  ],
+  "code": 17444133,
+  "defense": 1650,
+  "description": "빛 속성 몬스터를 어드밴스\n소환할 경우, 이 카드는\n2장만큼의 릴리스로 할 수\n있다.\n[안내] 릴리스 2장으로도\n소환할 수 있을 때에는, 이\n카드를 2장분으로 쓸지\n묻는다.",
+  "draw_enabled": true,
+  "identity_key": "998afac3a223057d36b54952c7ee5f217881aa823759d2f0e3586eeab705c1b8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1188.webp",
+  "level": 4,
+  "links": [],
+  "name": "카이저 씨호스",
+  "name_english": "Kaiser Sea Horse",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 262144,
+  "rarity": "SR",
+  "source_id": 1909,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1188
+}

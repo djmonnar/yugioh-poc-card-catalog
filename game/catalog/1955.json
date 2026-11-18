@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1955",
+  "attack": 2400,
+  "attribute": 1,
+  "categories": [
+    "파괴-함정",
+    "파괴-몬스터",
+    "파괴-마법"
+  ],
+  "code": 60229110,
+  "defense": 1000,
+  "description": "①: 이 카드가 어드밴스 소환에\n성공했을 경우, 필드에 세트된\n카드 1장을 대상으로 하고\n발동한다. 세트된 그 카드를\n파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "410f06ce4e398037c5f235484d60c8eae6ceda1ff0b961416212c87b83b60c5b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1171.webp",
+  "level": 6,
+  "links": [],
+  "name": "땅의 제왕 그란마그",
+  "name_english": "Granmarg the Rock Monarch",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "R",
+  "source_id": 1955,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1171
+}

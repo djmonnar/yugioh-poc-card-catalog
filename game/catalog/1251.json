@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1251",
+  "attack": 1400,
+  "attribute": 1,
+  "categories": [
+    "면역-전투"
+  ],
+  "code": 52077741,
+  "defense": 1200,
+  "description": "이 카드는 공격력 1900 이상의\n몬스터와의 전투로 파괴되지\n않는다.",
+  "draw_enabled": true,
+  "identity_key": "ce1bbd8f9297aaaf5c42774fcaf75b213251c06773c9684e5a74c021dc0a1d3b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0872.webp",
+  "level": 4,
+  "links": [],
+  "name": "번롱하는 엘프 검사",
+  "name_english": "Obnoxious Celtic Guard",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "source_id": 1251,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 872
+}

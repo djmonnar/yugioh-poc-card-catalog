@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/637",
+  "attack": 2400,
+  "attribute": 1,
+  "categories": [
+    "파괴-몬스터",
+    "지원-릴리즈"
+  ],
+  "code": 96470883,
+  "defense": 1300,
+  "description": "이 카드는 식물족 몬스터\n1장을 릴리스하고 앞면 공격\n표시로 어드밴스 소환할 수\n있다. ①: 자신 스탠바이\n페이즈에 발동한다. 필드의\n공격력이 가장 낮은 몬스터\n1장을 파괴한다.\n[안내] 컴퓨터도 식물족 1장\n릴리스 소환을 쓸 수 있으면\n쓰며, 이 카드보다 공격력이\n낮은 몬스터만 릴리스한다.",
+  "draw_enabled": true,
+  "identity_key": "64028f7acd32daba0282d5dfa5416908fa5319002420a5960913701a28f55e32",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0289.webp",
+  "level": 7,
+  "links": [],
+  "name": "린천사 퀸 오브 로즈",
+  "name_english": "Queen Angel of Roses",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "SR",
+  "source_id": 637,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 289
+}

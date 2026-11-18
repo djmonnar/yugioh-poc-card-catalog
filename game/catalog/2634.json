@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards088/2634",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-듀얼",
+    "무효-마법",
+    "파괴-마법"
+  ],
+  "code": 81601517,
+  "defense": 0,
+  "description": "자신 필드 위에 앞면 표시로 존재하는 듀얼 몬스터 1장을 뒷면 수비 표시로 하고, 상대의 마법 카드의 발동을 무효로 하여 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "2153fff00bb802ab602d36339b5aaf2411c4f02121b9de92643cf8be7352463e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native088/cards/2634.jpg",
+  "level": 0,
+  "links": [],
+  "name": "빅팀 카운터",
+  "name_english": "Gemini Counter",
+  "native_type": 1048580,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "빅팀카운터",
+    "빅팀 카운터",
+    "Gemini Counter"
+  ],
+  "source_id": 2634,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "카운터 함정",
+  "web_slot": 1666
+}

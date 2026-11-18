@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1526",
+  "attack": 2350,
+  "attribute": 1,
+  "categories": [
+    "무효-소환",
+    "파괴-몬스터"
+  ],
+  "code": 86099788,
+  "defense": 2300,
+  "description": "\"다크 히어로 존바이어\" +\n\"마력흡수구체\". 이 카드가\n특수 소환되었을 때, 이 카드\n이외의 자신의 필드 몬스터를\n모두 파괴한다. 이 카드가\n필드에 앞면으로 존재하는\n동안 양쪽 플레이어는\n몬스터를 소환할 수 없다.\n반전 소환과 특수 소환도\n포함한다.",
+  "draw_enabled": true,
+  "identity_key": "3a4d65431714d857b10a8e0619a5a5545edb3d9945f7e7f79ea8b29621092d31",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0048.webp",
+  "level": 7,
+  "links": [],
+  "name": "혹성의 마지막 전사",
+  "name_english": "The Last Warrior from Another Planet",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "source_id": 1526,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 48
+}

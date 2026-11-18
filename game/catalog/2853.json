@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards126/2853",
+  "attack": 0,
+  "attribute": 2,
+  "categories": [
+    "소환-함정 몬스터",
+    "지원-전투"
+  ],
+  "code": 26905245,
+  "defense": 3000,
+  "description": "①: 이 카드는 발동 후, 효과 몬스터(물족 / 물 / 레벨 10 / 공 0 / 수 3000)가 되어, 몬스터 존에 수비 표시로 특수 소환한다. 이 카드는 함정 카드로도 취급한다. ②: 이 카드의 효과로 특수 소환된 이 카드는 공격할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "9fa73f15ca06cc080db5e397f7559fb98f952d4a5944f721b9621ea8af62f956",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native126/cards/2853.jpg",
+  "level": 10,
+  "links": [],
+  "name": "메탈 리플렉트 슬라임",
+  "name_english": "Metal Reflect Slime",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "SR",
+  "search_aliases": [
+    "메탈 리플렉트 슬라임",
+    "Metal Reflect Slime"
+  ],
+  "source_id": 2853,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 1885
+}

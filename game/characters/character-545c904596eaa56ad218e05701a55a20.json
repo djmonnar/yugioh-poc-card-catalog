@@ -1,0 +1,60 @@
+{
+  "art_key": "CharacterPresentation012/images/marik/start",
+  "id": "character-545c904596eaa56ad218e05701a55a20",
+  "profile": {
+    "name": "어둠의 마리크",
+    "portrait": "assets/actors/shared-marik.png",
+    "skill_profiles": [
+      {
+        "name": "의식마인",
+        "profile_id": "profile-0d37d7ce-adba-4212-a8c2-d439db242b28",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "f2d92f116ad6d20f267775af80f4fd47335a156d171905a24df2ad68e82d90e9",
+              "internal_id": 2601,
+              "name_ko": "의식마인 디저즈",
+              "slot": 1633
+            },
+            "kind": "start_hand"
+          }
+        ]
+      },
+      {
+        "name": "가면마수",
+        "profile_id": "profile-66987680-ae9c-4fb7-adae-232b908e2539",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "f38474dc2a68cb2d8c81553becb2db449a255b4c2c0d5755b7abd1391d01d40b",
+              "internal_id": 1412,
+              "name_ko": "멜키드 사면수",
+              "slot": 982
+            },
+            "kind": "start_monster",
+            "position": "attack"
+          }
+        ]
+      },
+      {
+        "name": "이차원",
+        "profile_id": "profile-fbd0fc87-8bc4-4bcc-8d97-c584a369e5bb",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "fc595945ce5690c209234d0ef69c678412c17bd0730fed41acaa6e334328853f",
+              "internal_id": 1896,
+              "name_ko": "이차원으로부터의 귀환",
+              "slot": 1223
+            },
+            "kind": "start_hand"
+          }
+        ]
+      }
+    ],
+    "skills": []
+  },
+  "profile_id": "marik",
+  "updated_at": "2026-11-09T21:03:12.283618+00:00",
+  "version": 3920
+}

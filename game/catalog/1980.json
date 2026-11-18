@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1980",
+  "attack": 900,
+  "attribute": 32,
+  "categories": [
+    "발동-파괴"
+  ],
+  "code": 17601919,
+  "defense": 1000,
+  "description": "몬스터 존의 앞면 표시인 이 카드가 파괴되었을 경우, 묘지로 보내는 대신 지속 마법으로 취급하여 자신의 마법 & 함정 존에 앞면 표시로 놓을 수 있다. 이 효과로 지속 마법으로 취급하는 동안, 매 스탠바이 페이즈에 이 카드에 펌프킨 카운터를 1개 놓는다. 상대 필드의 모든 몬스터의 공격력 / 수비력은 이 카드의 펌프킨 카운터 1개당 100 내린다.",
+  "draw_enabled": true,
+  "identity_key": "45a513c1b1ffd4171b1ef905366b94a2812c4babc9fa91684d70848878e96663",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1143.webp",
+  "level": 3,
+  "links": [],
+  "name": "고스트 공주 펌프린세스",
+  "name_english": "Pumprincess the Princess of Ghosts",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "SR",
+  "source_id": 1980,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1143
+}

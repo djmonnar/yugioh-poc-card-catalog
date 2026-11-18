@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards130/2890",
+  "attack": 2200,
+  "attribute": 1,
+  "categories": [
+    "지원-로이드",
+    "지원-융합"
+  ],
+  "code": 5368615,
+  "defense": 1600,
+  "description": "\"자이로이드\" ＋ \"스팀로이드\"",
+  "draw_enabled": true,
+  "identity_key": "dadc8a1fe17d4e8f6b779eeeaf681ac04c721635c3769b907445d539f059701a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native130/cards/2890.jpg",
+  "level": 6,
+  "links": [],
+  "name": "스팀자이로이드",
+  "name_english": "Steam Gyroid",
+  "native_type": 65,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "search_aliases": [
+    "스팀자이로이드",
+    "Steam Gyroid"
+  ],
+  "source_id": 2890,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 1922
+}

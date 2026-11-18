@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1956",
+  "attack": 1000,
+  "attribute": 1,
+  "categories": [
+    "파괴-몬스터"
+  ],
+  "code": 74131780,
+  "defense": 1000,
+  "description": "이 카드를 릴리스하고\n발동한다. 필드 위에 존재하는\n몬스터 1장을 선택하고\n파괴한다.\n[안내] 필드의 이 카드를 눌러\n쓴다. 대상을 먼저 고른 뒤에\n이 카드가 릴리스된다.",
+  "draw_enabled": true,
+  "identity_key": "580dd284064c95b4aa16f4099e32bc1b479ce0ce0d1481763c3c1411c4fdb476",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1172.webp",
+  "level": 4,
+  "links": [],
+  "name": "반란 용병 부대",
+  "name_english": "Exiled Force",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "source_id": 1956,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1172
+}

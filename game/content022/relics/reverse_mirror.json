@@ -1,0 +1,19 @@
+{
+  "description": "전투마다 내 몬스터가 처음 뒷면에서 앞면으로 뒤집히면 LP 300을 회복해.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 47,
+  "iconKey": "Relics/Content022/atlas022",
+  "id": "reverse_mirror",
+  "kind": "reverse_mirror",
+  "name": "리버스의 거울",
+  "params": {
+    "heal": 300
+  },
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-native022",
+  "weight": 1
+}

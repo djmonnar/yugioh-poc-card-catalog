@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1894",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-드로우"
+  ],
+  "code": 37576645,
+  "defense": 0,
+  "description": "①: 자신은 덱에서 2장\n드로우하고, 그 후의 자신\n드로우 페이즈는 2회\n스킵된다.",
+  "draw_enabled": true,
+  "identity_key": "fdf747b75ff493d7a5c4643aec9eb3a4726acb49efde71c82a7c195e41e139fe",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1221.webp",
+  "level": 0,
+  "links": [],
+  "name": "무모한 욕심쟁이",
+  "name_english": "Reckless Greed",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1894,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1221
+}

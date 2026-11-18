@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3022",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-타락천사",
+    "효과-덱샐비지"
+  ],
+  "code": 87112784,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 덱에서 \"타락천사의 추방\" 이외의 \"타락천사\" 카드 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "d5a89c13b8c339de931b2b8666a65998e88f02cb2454787e5eb5321c38e4e7d8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3022.jpg",
+  "level": 0,
+  "links": [],
+  "name": "타락천사의 추방",
+  "name_english": "Banishment of the Darklords",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "타락천사의 추방",
+    "Banishment of the Darklords"
+  ],
+  "source_id": 3022,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 2054
+}

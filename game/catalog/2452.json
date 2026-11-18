@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2452",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-암흑계",
+    "효과-드로우",
+    "효과-버리기"
+  ],
+  "code": 16435215,
+  "defense": 0,
+  "description": "①: 양쪽 플레이어는 서로의 패를 공개한다. 각 플레이어는 상대 패에서 카드 1장을 고르고, 그 카드들을 각각의 패에서 버린다. 그 후, 양쪽 플레이어는 각각 1장 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "d088ebff9bf78fdaae6df6fdc0670af2ef1fc23f0726f503bec12954a771607f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2452.jpg",
+  "level": 0,
+  "links": [],
+  "name": "무덤으로의 동반",
+  "name_english": "Dragged Down into the Grave",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2452,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1489
+}

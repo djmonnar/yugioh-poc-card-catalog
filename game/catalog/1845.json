@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1845",
+  "attack": 1400,
+  "attribute": 8,
+  "categories": [
+    "덱-해피",
+    "소환-덱리크루터",
+    "효과-버리기"
+  ],
+  "code": 90238142,
+  "defense": 1300,
+  "description": "이 카드명의 ③의 효과는 1턴에\n1번밖에 사용할 수 없다. ①:\n이 카드의 카드명은, 필드 /\n묘지에 존재하는 한 \"해피\n레이디\"로 취급한다. ②: 자신\n필드에 드래곤족 몬스터가\n존재하는 한, 이 카드의\n레벨은 7 이 된다. ③: 패에서\n\"해피\" 카드 1장을 버리고\n발동할 수 있다. 덱에서 \"해피\n채널러\" 이외의 \"해피\" 몬스터\n1장을 수비 표시로 특수\n소환한다.\n[안내] 버릴 \"해피\" 카드와\n덱에서 소환할 몬스터를\n창에서 고른다. 이 카드의\n이름이 \"해피 레이디\"가 되는\n것은 필드와 묘지에 있을\n때뿐이다.\n[미지원] \"드래곤족 몬스터를\n컨트롤하는 동안 레벨 7\"은\n스왈로즈 네스트의 레벨\n비교에만 반영된다. 엔진이\n읽는 다른 레벨에는 적용되지\n않는다.",
+  "draw_enabled": true,
+  "identity_key": "e98a15bc87cf2b2362911ac37f5c3b2a5471635ad250b7ca12e49dc967ace706",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1259.webp",
+  "level": 4,
+  "links": [],
+  "name": "해피 채널러",
+  "name_english": "Harpie Channeler",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "SR",
+  "source_id": 1845,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1259
+}

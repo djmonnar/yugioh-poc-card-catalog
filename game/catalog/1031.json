@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1031",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "무효-소환",
+    "파괴-몬스터"
+  ],
+  "code": 98069388,
+  "defense": 0,
+  "description": "자신 필드 위의 몬스터 1장을\n제물로 바친다. 몬스터의 일반\n소환/반전 소환/특수 소환을\n무효로 하고, 그것을\n파괴한다.\n[안내] 소환된 몬스터가\n필드에 나온 직후 사용할지\n묻고, 자신의 다른 몬스터\n1장을 골라 릴리스한다(뒷면\n표시도 가능).\n[차이] 몬스터는 이미 필드에\n놓인 뒤 파괴된다. 소환된\n몬스터 자신은 릴리스할 수\n없고, 카드의 효과에 의한\n특수 소환에는 사용할 수\n없다.\n[안내] 컴퓨터는 상대가\n공격력 2000 이상의 몬스터를\n소환하고, 릴리스할 자신의\n몬스터가 공격력 1500 이하일\n때 사용한다.",
+  "draw_enabled": true,
+  "identity_key": "77da1b9e3ab109f0be6b782abdba8e401815cc79f0ff2c5f97408b1a0ad59cc2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0406.webp",
+  "level": 0,
+  "links": [],
+  "name": "승천의 뿔피리",
+  "name_english": "Horn of Heaven",
+  "native_type": 1048580,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1031,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 406
+}

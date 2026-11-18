@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2103",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-릴리즈"
+  ],
+  "code": 43422537,
+  "defense": 0,
+  "description": "①: 이 턴에 자신은 통상 소환을 2회까지 실행할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "10ea3cb3e7ca9ce12f88d8bc1f0fa80dd3e4e59dd82b7fe2fbec0152013321c1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1401.webp",
+  "level": 0,
+  "links": [],
+  "name": "이중소환",
+  "name_english": "Double Summon",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2103,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1401
+}

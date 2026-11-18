@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/165",
+  "attack": 300,
+  "attribute": 16,
+  "categories": [
+    "효과-회복",
+    "효과-데미지"
+  ],
+  "code": 83725008,
+  "defense": 2100,
+  "description": "\"라이트로드\"라는 이름이 붙은\n카드의 효과에 의해서 자신의\n덱에서 카드가 묘지로 보내진\n턴의 엔드 페이즈시, 상대\n라이프에 500 포인트 데미지를\n주고, 자신은 500 라이프\n포인트를 회복한다.",
+  "draw_enabled": true,
+  "identity_key": "5c6084c3a710f5a652154b105aa057a285a38048dab1ca45db0dcbf81ffe1098",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0670.webp",
+  "level": 4,
+  "links": [],
+  "name": "라이트로드 프리스트 제니스",
+  "name_english": "Jenis, Lightsworn Mender",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 165,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 670
+}

@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1067",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-버리기",
+    "파괴-몬스터",
+    "파괴-함정",
+    "파괴-마법"
+  ],
+  "code": 18591904,
+  "defense": 0,
+  "description": "패에서 5 카드를 버려 필드의\n모든 카드를 파괴합니다.",
+  "draw_enabled": true,
+  "identity_key": "a748e8ad4ea4c348ecc75088c3ef890411ef85c65022139853b4a1d013238a6a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0319.webp",
+  "level": 0,
+  "links": [],
+  "name": "마지막 전쟁",
+  "name_english": "Final Destiny",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1067,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 319
+}

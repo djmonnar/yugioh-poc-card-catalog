@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards120/2788",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-화염족",
+    "효과-덱샐비지"
+  ],
+  "code": 85106525,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 덱에서 레벨 4 이하의 화염족 몬스터 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "eac884873ccf55a0a5fa682da4611a6887c499b69fb3c0135a24ca9b5e7869c3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native120/cards/2788.jpg",
+  "level": 0,
+  "links": [],
+  "name": "화톳불",
+  "name_english": "Bonfire",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "화톳불",
+    "Bonfire"
+  ],
+  "source_id": 2788,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1820
+}

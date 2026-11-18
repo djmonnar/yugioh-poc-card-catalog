@@ -1,0 +1,17 @@
+{
+  "description": "몬스터, 마법, 함정의 문장이 서로 다른 문 위에서 빛난다. 필요한 힘이 있는 문을 열자.",
+  "effect": "고른 종류의 카드 후보 5장 중 1장 획득",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "card_choice",
+  "kind": "card_choice",
+  "name": "몬스터·마법·함정 중 필요한 카드 종류 선택",
+  "params": {
+    "choices": 5
+  },
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "카드의 선택",
+  "weight": 1
+}

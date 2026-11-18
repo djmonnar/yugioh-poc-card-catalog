@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards130/2868",
+  "attack": 3000,
+  "attribute": 1,
+  "categories": [
+    "지원-로이드",
+    "지원-융합",
+    "지원-전투"
+  ],
+  "code": 36256625,
+  "defense": 2000,
+  "description": "\"스팀로이드\" ＋ \"드릴로이드\" ＋ \"서브마린로이드\"\n이 카드의 융합 소환은 상기의 카드로밖에 실행할 수 없다. 이 카드가 수비 표시 몬스터를 공격했을 때, 그 수비력을 공격력이 넘었으면, 그 수치만큼 상대 라이프에 전투 데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "4d25a6c7d11c05f742de32ce2f26c254396726edf68b68a10ef8bd1e10a8bc4a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native130/cards/2868.jpg",
+  "level": 8,
+  "links": [],
+  "name": "슈퍼 비크로이드 점보 드릴",
+  "name_english": "Super Vehicroid Jumbo Drill",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "UR",
+  "search_aliases": [
+    "슈퍼 비크로이드 점보 드릴",
+    "Super Vehicroid Jumbo Drill"
+  ],
+  "source_id": 2868,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 1900
+}

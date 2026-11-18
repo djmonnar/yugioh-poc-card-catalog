@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards084/2616",
+  "attack": 2300,
+  "attribute": 32,
+  "categories": [
+    "지원-필드",
+    "파괴-마법"
+  ],
+  "code": 56931015,
+  "defense": 2000,
+  "description": "선공 첫 턴 이외에 필드에 카드가 한 장도 없으면 릴리스 없이 일반 소환할 수 있다. 1턴에 1번, 이 카드가 아직 공격 선언을 하지 않았다면 필드 마법을 전부 파괴할 수 있다. 이 효과를 사용한 턴에 이 카드는 공격할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "6e4b1984f463a4719ab4f592d91d40920d24ceb1c9bc9990917a55a97abb22f6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2616.jpg",
+  "level": 6,
+  "links": [],
+  "name": "그레비티 베히모스",
+  "name_english": "Gravity Behemoth",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "SR",
+  "search_aliases": [
+    "그레비티베히모스",
+    "그레비티 베히모스",
+    "Gravity Behemoth"
+  ],
+  "source_id": 2616,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1648
+}

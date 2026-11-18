@@ -1,0 +1,105 @@
+{
+  "art_key": "CharacterPresentation012/images/bonz/start",
+  "id": "character-42885dee9f2d4c7d10a61bd2fea91310",
+  "profile": {
+    "name": "해골수스",
+    "portrait": "assets/actors/shared-bonz.png",
+    "skill_profiles": [
+      {
+        "name": "저주받은하인 1",
+        "profile_id": "profile-a809966d-3fcd-4946-97f8-78c43f5872a4",
+        "skills": [
+          {
+            "entries": [
+              {
+                "card": {
+                  "identity_key": "424143f93d03ef36cdfff096683bf844948649f4c616d5e0fcf80cb54de3ca27",
+                  "internal_id": 2001,
+                  "name_ko": "저주받은 하인",
+                  "slot": 1305
+                },
+                "count": 1
+              }
+            ],
+            "kind": "start_grave"
+          }
+        ]
+      },
+      {
+        "name": "저주받은 하인2",
+        "profile_id": "profile-b02f2a7a-0ea3-4cde-b743-c2f82454bd63",
+        "skills": [
+          {
+            "entries": [
+              {
+                "card": {
+                  "identity_key": "424143f93d03ef36cdfff096683bf844948649f4c616d5e0fcf80cb54de3ca27",
+                  "internal_id": 2001,
+                  "name_ko": "저주받은 하인",
+                  "slot": 1305
+                },
+                "count": 2
+              }
+            ],
+            "kind": "start_grave"
+          }
+        ]
+      },
+      {
+        "name": "저주받은하인 3",
+        "profile_id": "profile-67fc7386-ea1a-4b4f-af85-2954f1135354",
+        "skills": [
+          {
+            "entries": [
+              {
+                "card": {
+                  "identity_key": "424143f93d03ef36cdfff096683bf844948649f4c616d5e0fcf80cb54de3ca27",
+                  "internal_id": 2001,
+                  "name_ko": "저주받은 하인",
+                  "slot": 1305
+                },
+                "count": 3
+              }
+            ],
+            "kind": "start_grave"
+          }
+        ]
+      },
+      {
+        "name": "언데드월드",
+        "profile_id": "profile-8576b17d-9dd1-49b9-b400-11c0ec6f027b",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "949912aa2bae61aa966a2de76bc06c86b2ff6064b9e88a8365c6d1f25172558d",
+              "internal_id": 399,
+              "name_ko": "언데드 월드",
+              "slot": 431
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "암흑의성",
+        "profile_id": "profile-d988cae3-079f-4bdd-9efd-717ab798b21b",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "8f57a70a7862d16cbb9d35db5ef484b3d7300349454a333381d6ae6e996606e6",
+              "internal_id": 82,
+              "name_ko": "암흑의 성",
+              "slot": 1011
+            },
+            "kind": "start_monster",
+            "position": "defense"
+          }
+        ]
+      }
+    ],
+    "skills": []
+  },
+  "profile_id": "bonz",
+  "updated_at": "2026-11-06T06:17:04.919278+00:00",
+  "version": 3862
+}

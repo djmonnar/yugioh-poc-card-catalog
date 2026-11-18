@@ -1,0 +1,54 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-9f544b50-2be2-4b1f-82cb-55ad6036c6e8",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "fe0590e41010c962b12186e0eb06aeeafaa5d2bf563372f46619e79caa9cf166",
+      "source_id": 241
+    },
+    {
+      "count": 3,
+      "identity_key": "83f9551be865da8a132e51c4eb82d0138f7630570eafc4755974632e9ffc0bec",
+      "source_id": 2116
+    },
+    {
+      "count": 2,
+      "identity_key": "440bb0e90128d6ad228ce405f401979eeff283403ae25dbae03dae823219dc2b",
+      "source_id": 1814
+    },
+    {
+      "count": 3,
+      "identity_key": "fc8d5928975eff41c7099c7814d21102d0b494c6a9d8f0db465a16a0e738bf54",
+      "source_id": 1110
+    },
+    {
+      "count": 2,
+      "identity_key": "99671c3ee186622841d591fb906bf0e5173c6b861861184cd6b9204831f5e55e",
+      "source_id": 1991
+    },
+    {
+      "count": 2,
+      "identity_key": "e4f184c4fd898c9c92b387022dfea1366ea0a99d167d2f34bc4c89c3725c8935",
+      "source_id": 348
+    },
+    {
+      "count": 2,
+      "identity_key": "1480b36b36d66092bdac8fb94ee708f8e2dfe65d4076c4d5c8483f0caba6e242",
+      "source_id": 2645
+    },
+    {
+      "count": 2,
+      "identity_key": "1c929a02a3c7d3fbe2caf8b50f980d878011de6315509a3c472b76ea2c17a73f",
+      "source_id": 2639
+    },
+    {
+      "count": 2,
+      "identity_key": "97ec3d0a386c623b1626d1d27d3b5344ca1f4e5d7950107c7422740f07303f65",
+      "source_id": 1001
+    }
+  ],
+  "name": "화염속성 초급",
+  "version": 598
+}

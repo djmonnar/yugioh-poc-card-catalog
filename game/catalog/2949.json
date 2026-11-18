@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards136/2949",
+  "attack": 1000,
+  "attribute": 32,
+  "categories": [
+    "지원-프레데터 플랜츠",
+    "지원-융합",
+    "발동-소환 시",
+    "효과-덱샐비지"
+  ],
+  "code": 61677004,
+  "defense": 1500,
+  "description": "이 카드명의 효과는 듀얼 중에 1번밖에 사용할 수 없다. ①: 이 카드를 \"프레데터 플랜츠\" 몬스터의 효과로 특수 소환했을 경우에 발동할 수 있다. 덱에서 \"융합\" 마법 카드나 \"퓨전\" 마법 카드 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "dbf89d73487df202eed7109a0f66c86505bba86a087312764f584587dded70a2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native136/cards/2949.jpg",
+  "level": 3,
+  "links": [],
+  "name": "프레데터 플랜츠 달링 코브라",
+  "name_english": "Predaplant Darlingtonia Cobra",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "SR",
+  "search_aliases": [
+    "프레데터 플랜츠 달링 코브라",
+    "Predaplant Darlingtonia Cobra"
+  ],
+  "source_id": 2949,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1981
+}

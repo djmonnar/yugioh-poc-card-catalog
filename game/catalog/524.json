@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/524",
+  "attack": 2300,
+  "attribute": 1,
+  "categories": [
+    "소환-묘지"
+  ],
+  "code": 82012319,
+  "defense": 1400,
+  "description": "1턴에 1번, 자신의 묘지에\n존재하는 레벨 4 이하의\n\"스크랩\"이라는 이름이 붙은\n몬스터 1장을 선택하고, 자신\n또는 상대 필드 위에 특수\n소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "e1dc8538a9f3cc3664e69efef9b7eb8e533e0e824640f2cc5114837370f95855",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1007.webp",
+  "level": 5,
+  "links": [],
+  "name": "스크랩 골렘",
+  "name_english": "Scrap Golem",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "R",
+  "source_id": 524,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1007
+}

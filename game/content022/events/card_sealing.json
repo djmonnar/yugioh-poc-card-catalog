@@ -1,0 +1,19 @@
+{
+  "description": "석문 너머의 마력이 동료를 부른다. 세 번의 결투 동안 봉인하면 더 강한 모습으로 돌아온다.",
+  "effect": null,
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "card_sealing",
+  "kind": "card_sealing",
+  "name": "강화되지 않은 덱 몬스터 1매를 세 전투 동안 봉인",
+  "params": {
+    "atk": 100,
+    "battles": 3,
+    "def": 300
+  },
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "카드 봉인",
+  "weight": 1
+}

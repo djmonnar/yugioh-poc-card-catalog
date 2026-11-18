@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1997",
+  "attack": 1700,
+  "attribute": 1,
+  "categories": [
+    "소환-묘지",
+    "효과-제외",
+    "발동-소환"
+  ],
+  "code": 92826944,
+  "defense": 800,
+  "description": "①: 묘지의 이 카드를\n제외하고, 자신 묘지의\n언데드족 몬스터 1장을\n대상으로 하여 발동할 수\n있다. 그 언데드족 몬스터를\n특수 소환한다.\n[안내] 묘지의 이 카드의\n효과는 자신의 메인 페이즈\n1·2가 시작될 때 발동할지\n묻는다.",
+  "draw_enabled": true,
+  "identity_key": "45eab39ec65aeec9dcac963d5792275e6a7dea9fd4bec26704f8a109e1a17d94",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1122.webp",
+  "level": 4,
+  "links": [],
+  "name": "마두귀",
+  "name_english": "Mezuki",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "UR",
+  "source_id": 1997,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1122
+}

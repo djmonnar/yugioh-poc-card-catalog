@@ -1,0 +1,59 @@
+{
+  "art_key": "DuelUi011/legacy/kaiba_intro",
+  "id": "character-ee9fbf736ddaec903c6011201e74189f",
+  "profile": {
+    "name": "카이바",
+    "portrait": "https://mjrvbxjmnnzjhwjyqjhc.supabase.co/storage/v1/object/public/poc-story-assets/portraits/e811155e-d9d5-48b0-85ed-e31a1be81716.webp",
+    "skill_profiles": [
+      {
+        "name": "산",
+        "profile_id": "profile-44b55e4a-6fb5-4c34-9d88-0ef011cc4752",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "fc8ef10da68ed4d302c5022da8b288eee84b9141295d46b6702fd41d0b4cbbc5",
+              "internal_id": 331,
+              "name_ko": "산",
+              "slot": 1004
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "푸른눈",
+        "profile_id": "profile-26ce87bf-7a8e-4b50-9c6d-6ecd047c2f08",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "1b35a77b57322b756f47b453317628046ce9d712cc2933185cd2fb61bf8e1c33",
+              "internal_id": 0,
+              "name_ko": "푸른 눈의 백룡",
+              "slot": 816
+            },
+            "kind": "start_hand"
+          }
+        ]
+      },
+      {
+        "name": "심안의여신",
+        "profile_id": "profile-7704a36f-e2ca-48b9-9161-88f7777991d1",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "aa1030d08a4c31555604f02f282ebb66983c1a27319af00aa28857633f4f1239",
+              "internal_id": 108,
+              "name_ko": "심안의 여신",
+              "slot": 425
+            },
+            "kind": "start_hand"
+          }
+        ]
+      }
+    ],
+    "skills": []
+  },
+  "profile_id": "kaiba",
+  "updated_at": "2026-11-09T19:49:39.713234+00:00",
+  "version": 3918
+}

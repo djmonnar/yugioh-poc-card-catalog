@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards067/2561",
+  "attack": 1900,
+  "attribute": 32,
+  "categories": [
+    "덱-묘지기"
+  ],
+  "code": 62473983,
+  "defense": 1200,
+  "description": "자신의 필드에 앞면 표시로 1장만 존재할 수 있다. 자신의 묘지는 ‘왕가의 골짜기－네크로밸리’의 영향을 받지 않는다. 어드밴스 소환 시 자신의 묘지의 ‘묘지기’ 몬스터 1장을 대상으로 하여 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "6419ab8955ef2818bf73a9c1eea8e3e95e59c4e807ac04bece06d8dbb46e4bfa",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2561.jpg",
+  "level": 5,
+  "links": [],
+  "name": "묘지기의 장",
+  "name_english": "Gravekeeper's Chief",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 2561,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1593
+}

@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards143/2961",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-공용",
+    "효과-덱에서 묘지로 보내기"
+  ],
+  "code": 35726888,
+  "defense": 0,
+  "description": "같은 이름의 카드는 턴당 한 번만 발동할 수 있다. 자신의 덱에서 마법·함정 카드 한 장을 묘지로 보낸다.",
+  "draw_enabled": true,
+  "identity_key": "7be1db0c7ce0c6288490f3b1aaf57c0d30717045e4b0b606f15dbeb2664ffc6a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native143/cards/2961.jpg",
+  "level": 0,
+  "links": [],
+  "name": "어리석은 부장",
+  "name_english": "Foolish Burial Goods",
+  "native_type": 2,
+  "normal_limit": 2,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "어리석은 부장",
+    "Foolish Burial Goods"
+  ],
+  "source_id": 2961,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1993
+}

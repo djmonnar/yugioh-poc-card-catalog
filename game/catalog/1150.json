@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1150",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 36468556,
+  "defense": 0,
+  "description": "필드의 모든 뒷면 몬스터를\n앞면으로 뒤집는다. 리버스\n효과는 발동하지 않는다.\n필드의 효과 몬스터 1장당\n상대에게 500 직접 데미지를\n준다.",
+  "draw_enabled": true,
+  "identity_key": "c122fa58f489659612137f8a27f30c67b382156ec925efaabc91d1cac0e24474",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0577.webp",
+  "level": 0,
+  "links": [],
+  "name": "정전 협정",
+  "name_english": "Ceasefire",
+  "native_type": 4,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1150,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 577
+}

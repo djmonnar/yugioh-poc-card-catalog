@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1063",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-버리기",
+    "효과-한데스"
+  ],
+  "code": 16762927,
+  "defense": 0,
+  "description": "상대 몬스터가 공격할 때마다\n상대는 자신의 덱 맨 위의\n카드 1장을 묘지로 보내야\n한다.",
+  "draw_enabled": true,
+  "identity_key": "892e78e7c52e0d48ac541aaaa1caafbf9f7851ae91095a91b20ff0382f8056ae",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0711.webp",
+  "level": 0,
+  "links": [],
+  "name": "묘지기의 마법",
+  "name_english": "Gravekeeper's Servant",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1063,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 711
+}

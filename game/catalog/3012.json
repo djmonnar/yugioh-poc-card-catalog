@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3012",
+  "attack": 100,
+  "attribute": 2,
+  "categories": [
+    "지원-빙결계",
+    "보호-효과 대상"
+  ],
+  "code": 27527047,
+  "defense": 1600,
+  "description": "①: 이 카드가 몬스터 존에 존재하는 한, 자신 필드의 \"빙결계\" 몬스터를 상대는 몬스터의 효과의 대상으로 할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "5fbf8221442de17bddc0871f15298418809caa7d720d335d5eca4264a97d56dc",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3012.jpg",
+  "level": 2,
+  "links": [],
+  "name": "빙결계의 정원지기",
+  "name_english": "Secret Guards of the Ice Barrier",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "R",
+  "search_aliases": [
+    "빙결계의 정원지기",
+    "Secret Guards of the Ice Barrier"
+  ],
+  "source_id": 3012,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2044
+}

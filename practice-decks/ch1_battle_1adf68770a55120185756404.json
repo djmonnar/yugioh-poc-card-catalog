@@ -1,0 +1,74 @@
+{
+  "banlist_enabled": false,
+  "extra": [],
+  "id": "ch1_battle_1adf68770a55120185756404",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "e240dab4568e70743c89e3a2c2ea540a03c92316d5a928efe7dcfb7e06d74ad2",
+      "source_id": 471
+    },
+    {
+      "count": 2,
+      "identity_key": "1b35a77b57322b756f47b453317628046ce9d712cc2933185cd2fb61bf8e1c33",
+      "source_id": 0
+    },
+    {
+      "count": 1,
+      "identity_key": "c6c4af8c112e81d1955f9c18a69786db466c65aa50c43a7a98ee01d24254a8b7",
+      "source_id": 1913
+    },
+    {
+      "count": 2,
+      "identity_key": "9f459c59d9294e03c2b260af6bbdd5392b6d7a0a6d02b1d7ab09df945eaf1bdc",
+      "source_id": 1908
+    },
+    {
+      "count": 1,
+      "identity_key": "0e91a136403c3bdbf11bb7568bef5c5585b64141d67626d74b9a240ea8f59690",
+      "source_id": 710
+    },
+    {
+      "count": 1,
+      "identity_key": "7c91bc02916e6d4ddc8f520910d4106d0533dfdaa62e0e743ceb7b66e18fad69",
+      "source_id": 1166
+    },
+    {
+      "count": 1,
+      "identity_key": "57552d0f61322c86932f8d08513f03308c84e66150d7bb95902e2259bbb8018e",
+      "source_id": 1915
+    },
+    {
+      "count": 1,
+      "identity_key": "fc8ef10da68ed4d302c5022da8b288eee84b9141295d46b6702fd41d0b4cbbc5",
+      "source_id": 331
+    },
+    {
+      "count": 2,
+      "identity_key": "0a6bfcbb90b1857fd1ab17e602d557c33e59c36ffd0b0166b1b598b612eacc14",
+      "source_id": 1930
+    },
+    {
+      "count": 3,
+      "identity_key": "a6ac6673be0e4c5edca24c9edbfbadb57c8abc0e338919df7a6466b0c4f08d94",
+      "source_id": 9
+    },
+    {
+      "count": 1,
+      "identity_key": "9283f5e0814cba224f97d98cb805cca1f2b715af4f2df45526fa3e102eaae4bf",
+      "source_id": 713
+    },
+    {
+      "count": 2,
+      "identity_key": "a666a06302a80af231bc3e09a8ed2c2cd66836fd8f7c37d8904de7935cde3942",
+      "source_id": 603
+    },
+    {
+      "count": 1,
+      "identity_key": "aeb7f706122e1406053e940be3e169881c0f6817c297f9d79c9458c86acad069",
+      "source_id": 960
+    }
+  ],
+  "name": "카이바 푸른눈 초급",
+  "version": 37
+}

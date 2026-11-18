@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards088/2629",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-드로우"
+  ],
+  "code": 30461781,
+  "defense": 0,
+  "description": "다음 효과에서 1개를 선택하고 발동한다.<br>●자신의 덱에서 카드를 1장 드로우한다.<br>●상대 필드 위에 스피릿 몬스터가 앞면 표시로 존재할 때 발동할 수 있다. 자신의 덱에서 카드를 2장 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "5f58a39445c931bf24a6b7b330c0c843dceecf22ac1a952db505ec7a1da563fe",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native088/cards/2629.jpg",
+  "level": 0,
+  "links": [],
+  "name": "야타 까마귀의 유해",
+  "name_english": "Legacy of Yata-Garasu",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "search_aliases": [
+    "야타까마귀의유해",
+    "야타 까마귀의 유해",
+    "Legacy of Yata-Garasu"
+  ],
+  "source_id": 2629,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1661
+}

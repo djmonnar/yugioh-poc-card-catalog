@@ -1,0 +1,17 @@
+{
+  "description": "봉인된 문 너머에서 도전자가 기다린다. 승리하면 특별한 SR 보상을 받지만, 평소 전투 보상은 얻지 못한다.",
+  "effect": "특별 전투 승리 시 SR 후보 3장 중 1장 · 일반 전투 보상 없음 · 도전 거절 가능",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "challenge_duel",
+  "kind": "challenge_duel",
+  "name": "상대를 골라 특별 결투에 도전",
+  "params": {
+    "choices": 3
+  },
+  "rewardRarity": "SR",
+  "supportStatus": "implemented",
+  "title": "선택받은 자의 결투",
+  "weight": 1
+}

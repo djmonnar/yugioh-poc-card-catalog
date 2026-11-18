@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2061",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-패,덱",
+    "효과-바운스",
+    "발동-바운스"
+  ],
+  "code": 35149085,
+  "defense": 0,
+  "description": "자신 필드 위에 앞면 표시로 존재하는 야수족 몬스터 1장을 패로 되돌리고, 패에서 되돌린 몬스터와 같은 레벨의 야수족 몬스터 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "f22146429f465277cbf5eb94e3042a72b127c5c76958d04129d1f17df0cb601c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1361.webp",
+  "level": 0,
+  "links": [],
+  "name": "캐틀 뮤틸레이션",
+  "name_english": "Beast Soul Swap",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2061,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1361
+}

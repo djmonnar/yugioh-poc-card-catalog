@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1158",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-제외",
+    "파괴-함정",
+    "파괴-마법"
+  ],
+  "code": 17449108,
+  "defense": 0,
+  "description": "뒷면 마법 / 함정 카드 1장을\n파괴하고 제외한다. 그 카드가\n함정 카드이면, 양쪽\n플레이어는 각각 자신의\n덱에서 같은 이름의 함정\n카드를 모두 제외한다. 그 후\n덱을 셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "06a7534b1e918ce2df8cd0ce5a667b406f1b862a17e561c2c4e52341b16a4032",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0850.webp",
+  "level": 0,
+  "links": [],
+  "name": "박멸의 사도",
+  "name_english": "Nobleman of Extermination",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1158,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 850
+}

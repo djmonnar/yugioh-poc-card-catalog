@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards088/2636",
+  "attack": 1000,
+  "attribute": 16,
+  "categories": [
+    "효과-한데스"
+  ],
+  "code": 15150365,
+  "defense": 700,
+  "description": "이 카드가 상대에게 전투 데미지를 줄 때, 상대는 무작위로 패를 1장 버린다.",
+  "draw_enabled": true,
+  "identity_key": "7ae2d0c0cb0cb02c717ca93a6c36dd70d74b3a2d0bb00731cfc0d0f29a3b3c92",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native088/cards/2636.jpg",
+  "level": 3,
+  "links": [],
+  "name": "흰 도둑",
+  "name_english": "White Magical Hat",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "search_aliases": [
+    "흰도둑",
+    "흰 도둑",
+    "White Magical Hat"
+  ],
+  "source_id": 2636,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1668
+}

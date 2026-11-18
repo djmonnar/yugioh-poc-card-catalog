@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1212",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-블랙매지션"
+  ],
+  "code": 99789342,
+  "defense": 0,
+  "description": "이 카드를 발동하는 턴에는\n몬스터를 소환할 수 없다(반전\n소환 / 특수 소환 포함).\n자신의 라이프 포인트를 절반\n지불하여 자신의 덱에서 \"블랙\n매지션\" 1장을 특수 소환할 수\n있다.",
+  "draw_enabled": true,
+  "identity_key": "e7a0ae4a02cc970faa1d456a1b3332ccb2402e49fc8c92ea125aff18e54ec19d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0265.webp",
+  "level": 0,
+  "links": [
+    {
+      "identity_key": "a850b8cd0e118c301dde50e7dcabc13ebb54f1506ec19fbe0694955bba7dfd67",
+      "slot": 803
+    },
+    {
+      "identity_key": "e59839abbcfb0aeca99b2305a17c4280aaa98be82be82bcdf349e6a1d8c6aa0b",
+      "slot": 1196
+    }
+  ],
+  "name": "흑마술의 커튼",
+  "name_english": "Dark Magic Curtain",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1212,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 265
+}

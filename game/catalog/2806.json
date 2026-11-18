@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards122/2806",
+  "attack": 2000,
+  "attribute": 1,
+  "categories": [
+    "발동-리버스",
+    "효과-드로우",
+    "효과-바운스",
+    "파괴-몬스터",
+    "효과-한데스",
+    "효과-덱으로되돌리기"
+  ],
+  "code": 91501248,
+  "defense": 3000,
+  "description": "이 카드명의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 이 카드가 리버스했을 경우, 이하의 효과에서 1개를 선택하고 발동할 수 있다.\n●자신은 2장 드로우한다.\n●필드의 마법 / 함정 카드를 전부 패로 되돌린다.\n●상대 필드의 몬스터를 전부 파괴한다.\n●상대의 패를 확인하고, 그 중의 1장을 골라 덱으로 되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "84a18cf04c0c368cee0c1b9523e61635ba5688be6001431bd777d6ccdf8a6ec9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native122/cards/2806.jpg",
+  "level": 9,
+  "links": [],
+  "name": "금기의 항아리",
+  "name_english": "Pot of the Forbidden",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "UR",
+  "search_aliases": [
+    "금기의항아리",
+    "금기의 항아리",
+    "Pot of the Forbidden"
+  ],
+  "source_id": 2806,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "리버스 몬스터",
+  "web_slot": 1838
+}

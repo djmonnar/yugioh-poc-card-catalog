@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards088/2645",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-묘지",
+    "발동-데미지"
+  ],
+  "code": 87106146,
+  "defense": 0,
+  "description": "①: 자신이 전투 데미지를 받았을 때, 그 데미지의 수치 이하의 공격력을 가지는 자신 묘지의 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "1480b36b36d66092bdac8fb94ee708f8e2dfe65d4076c4d5c8483f0caba6e242",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native088/cards/2645.jpg",
+  "level": 0,
+  "links": [],
+  "name": "데미지 게이트",
+  "name_english": "Damage Gate",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "데미지게이트",
+    "데미지 게이트",
+    "Damage Gate"
+  ],
+  "source_id": 2645,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1677
+}

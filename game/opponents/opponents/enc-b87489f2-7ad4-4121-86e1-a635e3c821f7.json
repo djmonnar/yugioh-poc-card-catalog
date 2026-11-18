@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/pegasus/start",
+  "banlistEnabled": false,
+  "deckName": "페가수스 붉은눈 툰",
+  "extra": [],
+  "id": "enc-b87489f2-7ad4-4121-86e1-a635e3c821f7",
+  "lpBonus": 0,
+  "main": [
+    1508,
+    1508,
+    1508,
+    1817,
+    954,
+    667,
+    727,
+    727,
+    727,
+    1965,
+    1965,
+    1965,
+    1961,
+    1961,
+    1961,
+    1964,
+    1933,
+    1933,
+    2403,
+    2403
+  ],
+  "name": "페가수스",
+  "openingDrawBonus": 0,
+  "profileId": "pegasus",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 954,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-b87489f2-7ad4-4121-86e1-a635e3c821f7",
+  "usesNativeRules035": true
+}

@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1240",
+  "attack": 1400,
+  "attribute": 32,
+  "categories": [],
+  "code": 77207191,
+  "defense": 1800,
+  "description": "이 카드가 소환되었을 때(특수\n소환 제외), 자신의 덱에서\n\"환상수왕 가젤\" 1장을 패에\n넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "9d7e0188464713fdff3be0816d9ad6a109212baecb72871a8e4cc1bfc747644a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0725.webp",
+  "level": 5,
+  "links": [
+    {
+      "identity_key": "813a3284da4ab499ec5a97cfe9c83519b6fb31dea2a68abafacef3c06446f8f9",
+      "slot": 277
+    }
+  ],
+  "name": "바포메트",
+  "name_english": "Berfomet",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "N",
+  "source_id": 1240,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 725
+}

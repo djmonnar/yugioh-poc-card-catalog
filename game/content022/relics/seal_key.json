@@ -1,0 +1,19 @@
+{
+  "description": "각 장에서 처음 치르는 이벤트의 LP 대가를 한 번 면제해. 금화와 최대 LP 대가는 그대로야.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 41,
+  "iconKey": "Relics/Content022/atlas022",
+  "id": "seal_key",
+  "kind": "seal_key",
+  "name": "봉인의 열쇠",
+  "params": {
+    "waivers_per_chapter": 1
+  },
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-controller022",
+  "weight": 1
+}

@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1948",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-버리기",
+    "파괴-마법",
+    "파괴-몬스터",
+    "파괴-함정"
+  ],
+  "code": 4178474,
+  "defense": 0,
+  "description": "①: 패를 1장 버리고, 필드의\n카드 1장을 대상으로 하여\n발동할 수 있다. 그 카드를\n파괴한다.\n[안내] 대상 카드를 먼저\n고르고, 그다음에 버릴 패를\n고른다.",
+  "draw_enabled": true,
+  "identity_key": "90c257c09a13be5c08dde46feb5430c8094a96ccb3e70d8540d72d4661d99a67",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1164.webp",
+  "level": 0,
+  "links": [],
+  "name": "썬더 브레이크",
+  "name_english": "Raigeki Break",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1948,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1164
+}

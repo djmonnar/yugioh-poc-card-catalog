@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/213",
+  "attack": 1900,
+  "attribute": 1,
+  "categories": [
+    "효과-버리기",
+    "효과-덱샐비지"
+  ],
+  "code": 3431737,
+  "defense": 1200,
+  "description": "이 카드를 묘지로 버리고\n덱에서 \"버스터 모드\" 1장을\n패에 넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "fbf48bb08cc1838a1ffac771d9580f4571f71b13ba42c8cb833496cac08717c9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0354.webp",
+  "level": 4,
+  "links": [],
+  "name": "버스터 비스트",
+  "name_english": "Assault Beast",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "SR",
+  "source_id": 213,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 354
+}

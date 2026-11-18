@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2487",
+  "attack": 500,
+  "attribute": 16,
+  "categories": [
+    "지원-젬나이트",
+    "효과-묘지보내기",
+    "효과-제외-묘지",
+    "소환-묘지"
+  ],
+  "code": 79531196,
+  "defense": 500,
+  "description": "① 1턴에 1번 패·덱의 젬나이트 또는 환주 몬스터 1장을 효과로 묘지로 보내고, 턴 종료시까지 이 카드의 이름을 보낸 몬스터의 이름과 같게 할 수 있다. ② 묘지의 이 카드는 자신 묘지의 융합 몬스터 1장을 제외하여 수비 표시로 특수 소환할 수 있다. 이 소생 효과는 카드명당 1턴에 1번.",
+  "draw_enabled": true,
+  "identity_key": "6017b3a150e76458cd8df85332b29e2eb15da73a8d7b9854c4d9ba1626cb5943",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2487.jpg",
+  "level": 2,
+  "links": [],
+  "name": "크리스탈 로즈",
+  "name_english": "Crystal Rose",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "R",
+  "source_id": 2487,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1524
+}

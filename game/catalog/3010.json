@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3010",
+  "attack": 400,
+  "attribute": 2,
+  "categories": [
+    "지원-개구리",
+    "효과-직접공격",
+    "발동-피해 발생 시",
+    "효과-파괴"
+  ],
+  "code": 56052205,
+  "defense": 400,
+  "description": "이 카드는 상대 플레이어를 직접 공격할 수 있다. 이 카드가 직접 공격에 성공했을 때, 자신 필드 위에 \"뿔 개구리\" 이외의 \"개구리\"라는 이름이 붙은 몬스터가 존재할 경우, 상대 필드 위의 마법/함정 카드 1장을 파괴할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "3ecdeaa289ea1e6aefc1b1946b172768343d75542ce8c102a590f706d42803a0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3010.jpg",
+  "level": 2,
+  "links": [],
+  "name": "뿔 개구리",
+  "name_english": "Unifrog",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "N",
+  "search_aliases": [
+    "뿔 개구리",
+    "Unifrog"
+  ],
+  "source_id": 3010,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2042
+}

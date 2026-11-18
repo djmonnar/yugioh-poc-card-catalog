@@ -1,0 +1,18 @@
+{
+  "description": "저울 한쪽에는 생명의 그릇이, 다른 쪽에는 왕가의 유물이 놓여 있다.",
+  "effect": "최대 LP 500을 잃고 SR 유물 3개 중 1개 선택",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/background",
+  "id": "millennium_scales",
+  "kind": "millennium_scales",
+  "name": "최대 LP 500을 잃고 SR 유물 3개 중 1개 선택",
+  "params": {
+    "choices": 3,
+    "max_lp_cost": 500
+  },
+  "rewardRarity": null,
+  "supportStatus": "verified-controller022",
+  "title": "천년의 저울",
+  "weight": 1
+}

@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2469",
+  "attack": 1500,
+  "attribute": 1,
+  "categories": [
+    "덱-젬나이트",
+    "소환-덱리크루터",
+    "효과-버리기"
+  ],
+  "code": 35622739,
+  "defense": 1500,
+  "description": "① 상대 필드에 몬스터가 있으면 패의 이 카드를 버리고, 덱의 퓨전 지속 마법 1장을 세트할 수 있다. 이후 이 턴에는 엑스트라 덱에서 젬나이트만 특수 소환할 수 있다. ② 융합 소재로 사용되어 묘지로 보내지거나 앞면으로 제외되면 자신 묘지의 이 카드명 이외 젬나이트 몬스터 1장을 패에 넣을 수 있다. 각 효과는 카드명당 1턴에 1번.",
+  "draw_enabled": true,
+  "identity_key": "9a8963325063837f23a61d469e734a1aa6e7f110fc04fac63a94ff56b449ca81",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2469.jpg",
+  "level": 4,
+  "links": [],
+  "name": "젬나이트 쿼츠",
+  "name_english": "Gem-Knight Quartz",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "SR",
+  "source_id": 2469,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1506
+}

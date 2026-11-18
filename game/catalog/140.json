@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/140",
+  "attack": 0,
+  "attribute": 1,
+  "categories": [
+    "덱-젬나이트"
+  ],
+  "code": 27126980,
+  "defense": 2100,
+  "description": "그의 사파이어 능력은 물에게\n명령하여 그를 보호합니다.",
+  "draw_enabled": true,
+  "identity_key": "f5968bbb5191917dd401a4b61b4743a850f9a733f324e7b28c188c433e219cbb",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0599.webp",
+  "level": 4,
+  "links": [],
+  "name": "젬나이트 사피아",
+  "name_english": "Gem-Knight Sapphire",
+  "native_type": 17,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "R",
+  "source_id": 140,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 몬스터",
+  "web_slot": 599
+}

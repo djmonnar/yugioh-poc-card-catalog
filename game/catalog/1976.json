@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1976",
+  "attack": 2000,
+  "attribute": 32,
+  "categories": [
+    "면역-효과",
+    "효과-한데스",
+    "소환-묘지",
+    "발동-묘지"
+  ],
+  "code": 53839837,
+  "defense": 1500,
+  "description": "이 카드가 상대 플레이어에게\n전투 데미지를 줄 때마다,\n카드의 종류(몬스터, 마법,\n함정)을 선언한다. 상대는\n덱에서 그 종류의 카드 1장을\n선택하고 묘지로 보낸다.\n또한, 이 카드가 상대의\n카드의 효과로 파괴되어\n묘지로 보내졌을 경우, 다음\n자신의 스텐바이 페이즈에\n필드 위에 특수 소환된다.\n[안내] ①의 선언은 \"몬스터\n카드를 선언하시겠습니까?\",\n아니오면 \"마법 카드를\n선언하시겠습니까?\"(아니오는\n함정 카드)의 두 질문으로\n한다. 상대가 자신의 덱에서\n그 종류의 카드를 직접\n고른다. ②는 다음 자신의\n스탠바이 페이즈에 자동으로\n발동한다.\n[차이] ②의 특수 소환은 공격\n표시로만 한다. 주인이\n컨트롤하고 있던 카드만 ②가\n적용된다.",
+  "draw_enabled": true,
+  "identity_key": "03a20d640181f88c02b06b03dcacf08bef18ca9b8198e2124d050b2f8c51bd72",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1139.webp",
+  "level": 5,
+  "links": [],
+  "name": "뱀파이어 로드",
+  "name_english": "Vampire Lord",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "SR",
+  "source_id": 1976,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1139
+}

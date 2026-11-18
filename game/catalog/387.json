@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards/387",
+  "attack": 1300,
+  "attribute": 1,
+  "categories": [
+    "효과-덱샐비지",
+    "발동-소환"
+  ],
+  "code": 86445415,
+  "defense": 1500,
+  "description": "이 카드가 일반 소환 / 특수\n소환에 성공했을 때 발동할 수\n있다. 덱에서 \"옐로 가제트\"\n1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "db67f454eadaf709a44ac04e48a14619eb93f8f61982d0f6b80c2761ec7cece1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0809.webp",
+  "level": 4,
+  "links": [
+    {
+      "identity_key": "9006184879d06f98f210ce674116304ddf71becc5f9445ac0d42379d555781ae",
+      "slot": 202
+    },
+    {
+      "identity_key": "3d9ebe75b1ca9934067f5047c8fbf60bf4eb02f8852a110c7db3638783cc57d7",
+      "slot": 810
+    }
+  ],
+  "name": "레드 가제트",
+  "name_english": "Red Gadget",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "source_id": 387,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 809
+}

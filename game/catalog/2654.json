@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards090/2654",
+  "attack": 1700,
+  "attribute": 16,
+  "categories": [
+    "파괴-몬스터",
+    "효과-제외-묘지"
+  ],
+  "code": 16556849,
+  "defense": 1200,
+  "description": "1턴에 1번, 자신 묘지의 빛 속성 몬스터 2장을 제외하고 발동할 수 있다. 이 카드의 현재 공격력보다 높은 공격력을 가진 필드의 앞면 표시 몬스터 1장을 대상으로 하여 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "227e146740dfa0e03d458238d47c25ae019ed47bfc50c891a97e949c40d6acdf",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native090/cards/2654.jpg",
+  "level": 4,
+  "links": [],
+  "name": "방랑의 용사 프리드",
+  "name_english": "Freed the Brave Wanderer",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "search_aliases": [
+    "방랑용사프리드",
+    "방랑의 용사 프리드",
+    "방랑의용사프리드",
+    "Freed the Brave Wanderer"
+  ],
+  "source_id": 2654,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1686
+}

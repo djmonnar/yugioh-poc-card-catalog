@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3017",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-타락천사",
+    "지원-천사족",
+    "발동-묘지로 보내기",
+    "소환-패에서",
+    "소환-덱리크루터",
+    "소환-제외"
+  ],
+  "code": 93023136,
+  "defense": 0,
+  "description": "이 카드명은 룰상 \"타락천사\" 카드로도 취급한다. 이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 자신의 패 / 필드(앞면 표시)에서 천사족 몬스터 1장을 묘지로 보내고 발동할 수 있다. 자신의 패 / 덱 / 제외 상태인 \"타락천사\" 몬스터 1장을 소환 조건을 무시하고 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "62d9ad4398e9ccc3875749823e8e74c6721ac9f649bcb71afc198c7daecaea91",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3017.jpg",
+  "level": 0,
+  "links": [],
+  "name": "어둠에 떨어진 천사",
+  "name_english": "Fallen Angel in Darkness",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "어둠에 떨어진 천사",
+    "Fallen Angel in Darkness"
+  ],
+  "source_id": 3017,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2049
+}

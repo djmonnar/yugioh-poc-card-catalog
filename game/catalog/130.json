@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/130",
+  "attack": 1800,
+  "attribute": 32,
+  "categories": [
+    "소환-묘지"
+  ],
+  "code": 16909657,
+  "defense": 1200,
+  "description": "이 카드가 전투에 의해서\n공격력 0인 몬스터를 파괴했을\n경우, 그 몬스터를 묘지에서\n자신 필드 위에 앞면 수비\n표시로 특수 소환할 수 있다.\n이 효과로 특수 소환한\n몬스터의 효과는 무효화된다.",
+  "draw_enabled": true,
+  "identity_key": "05332b019f9fca4bda06ec27f401cf605153dca7fcad226eb935812eeb393229",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0118.webp",
+  "level": 4,
+  "links": [],
+  "name": "레프티레스 스큐러",
+  "name_english": "Reptilianne Scylla",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 524288,
+  "rarity": "R",
+  "source_id": 130,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 118
+}

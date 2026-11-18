@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/mai/start",
+  "banlistEnabled": false,
+  "deckName": "메이 중급",
+  "extra": [],
+  "id": "enc044_2_battle_ch2_battle_572496ddbe849982a4c3e8a9",
+  "lpBonus": 0,
+  "main": [
+    1249,
+    1249,
+    671,
+    2068,
+    2068,
+    403,
+    403,
+    403,
+    554,
+    554,
+    1134,
+    1134,
+    1325,
+    1325,
+    1177,
+    320,
+    608,
+    1833,
+    1833,
+    1833
+  ],
+  "name": "메이 쿠자쿠",
+  "openingDrawBonus": 0,
+  "profileId": "mai",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 2068,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "installed-story:sc-b5892a9b9b432561-764aa2961f8aaccb8359ef6b4ad645e3",
+  "usesNativeRules035": true
+}

@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards130/2894",
+  "attack": 1200,
+  "attribute": 32,
+  "categories": [
+    "지원-로이드",
+    "파괴-마법",
+    "파괴-함정",
+    "지원-전투"
+  ],
+  "code": 98049038,
+  "defense": 0,
+  "description": "자신 필드 위에 이 카드 이외의 \"로이드\"라는 이름이 붙은 몬스터가 존재할 경우, 이 카드가 전투를 실행한 자신 턴의 배틀 페이즈 종료시에, 필드 위의 마법 또는 함정 카드 1장을 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "afacfca9c20c7251cfe885753cbba118e9f35d8f4d2550e4210b8919cbf68814",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native130/cards/2894.jpg",
+  "level": 4,
+  "links": [],
+  "name": "스텔스로이드",
+  "name_english": "Stealthroid",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "search_aliases": [
+    "스텔스로이드",
+    "Stealthroid"
+  ],
+  "source_id": 2894,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1926
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1348",
+  "attack": 1200,
+  "attribute": 4,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 39343610,
+  "defense": 1000,
+  "description": "①: 이 카드가 묘지에서의 특수\n소환에 성공했을 경우에\n발동한다. 이 카드의 공격력 /\n수비력은 원래 수치의 배가\n된다. ②: 이 카드가 전투로\n몬스터를 파괴하고 묘지로\n보냈을 경우에 발동한다. 그\n몬스터의 원래 공격력만큼의\n데미지를 상대에게 준다.",
+  "draw_enabled": true,
+  "identity_key": "d1de5c5353661d95b8fa39490331b589cdbd3e820bc5bdcd7f283690d1209369",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0126.webp",
+  "level": 7,
+  "links": [],
+  "name": "다크브레이즈 드래곤",
+  "name_english": "Darkblaze Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "R",
+  "source_id": 1348,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 126
+}

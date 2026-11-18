@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1332",
+  "attack": 1800,
+  "attribute": 2,
+  "categories": [
+    "면역-전투"
+  ],
+  "code": 61802346,
+  "defense": 1000,
+  "description": "상대 필드 위에 존재하는\n몬스터 1장을 선택한다.\n선택한 몬스터는 다음 상대\n턴의 엔드 페이즈시까지, 표시\n형식의 변경과 공격 선언을 할\n수 없게 된다. 이 효과는\n1턴에 1번밖에 사용할 수\n없다.\n[차이] 대상 몬스터가 뒷면\n표시가 되면 이 효과는\n풀린다.",
+  "draw_enabled": true,
+  "identity_key": "f0efa6ca98d27c307a11ecae44c76f810a00485805a21d09fd8e28ad5ae1f066",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0035.webp",
+  "level": 4,
+  "links": [],
+  "name": "블리자드 드래곤",
+  "name_english": "Blizzard Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "source_id": 1332,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 35
+}

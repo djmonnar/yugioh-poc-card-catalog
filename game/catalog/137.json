@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/137",
+  "attack": 1850,
+  "attribute": 32,
+  "categories": [
+    "효과-제외-묘지"
+  ],
+  "code": 4058065,
+  "defense": 950,
+  "description": "①: 자신 묘지에서 몬스터\n1장을 제외하고 발동할 수\n있다. 이 카드의 공격력은\n상대 턴 종료시까지 300\n올린다. 이 효과는 1턴에\n2번까지 사용할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "ee6538158f35801509bf6117928db59ec89beb43d9e63606cca58d712d99bd7d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0648.webp",
+  "level": 4,
+  "links": [],
+  "name": "벨즈 사라만도라",
+  "name_english": "Evilswarm Salamandra",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "SR",
+  "source_id": 137,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 648
+}

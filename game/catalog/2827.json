@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards125/2827",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-에일리언",
+    "효과-묘지보내기",
+    "효과-파괴"
+  ],
+  "code": 96875080,
+  "defense": 0,
+  "description": "자신 필드 위의 \"에일리언\"이라는 이름이 붙은 몬스터 1장을 묘지로 보내고 발동한다. 필드 위의 마법 또는 함정 카드 1장을 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "8c55a00f23035a46163dc7fe2e2f08c9c9869470acca2fd55fc283335d013fa3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native125/cards/2827.jpg",
+  "level": 0,
+  "links": [],
+  "name": "대기권 외 사격",
+  "name_english": "Orbital Bombardment",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "대기권 외 사격",
+    "Orbital Bombardment"
+  ],
+  "source_id": 2827,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1859
+}

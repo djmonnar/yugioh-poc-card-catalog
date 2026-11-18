@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards122/2797",
+  "attack": 500,
+  "attribute": 32,
+  "categories": [
+    "발동-반전소환",
+    "효과-뒷면표시",
+    "파괴-몬스터"
+  ],
+  "code": 15383415,
+  "defense": 1000,
+  "description": "이 카드는 1턴에 1번만 뒷면 수비 표시로 할 수 있다. 이 카드가 반전 소환에 성공했을 때, 상대 필드 위의 몬스터 1장을 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "cc0928edd72880757ae1e8761251c65f4ee85fbb0d7c9dae2e505b25b2313418",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native122/cards/2797.jpg",
+  "level": 3,
+  "links": [],
+  "name": "스캐럽 대군",
+  "name_english": "Swarm of Scarabs",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "SR",
+  "search_aliases": [
+    "스캐럽 대군",
+    "Swarm of Scarabs"
+  ],
+  "source_id": 2797,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1829
+}

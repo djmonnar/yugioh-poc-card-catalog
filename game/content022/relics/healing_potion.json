@@ -1,0 +1,20 @@
+{
+  "description": "듀얼 중 LP를 500 회복하는 원정 소모품.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 10,
+  "iconKey": "Relics/atlas160",
+  "id": "healing_potion",
+  "kind": "healing_potion",
+  "name": "생명의 물약",
+  "params": {
+    "charges": 1,
+    "heal": 500
+  },
+  "price": 75,
+  "rarity": "N",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

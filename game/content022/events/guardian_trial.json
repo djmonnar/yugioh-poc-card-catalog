@@ -1,0 +1,17 @@
+{
+  "description": "돌 수호자는 상처 없이 돌아올 수 있는지 묻는다. 도전을 받아도 원래 결투의 보상은 남는다.",
+  "effect": "다음 전투를 LP 피해 없이 승리하면 R 유물 추가 획득",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/background",
+  "id": "guardian_trial",
+  "kind": "guardian_trial",
+  "name": "다음 전투를 LP 피해 없이 승리하면 R 유물 추가 획득",
+  "params": {
+    "damage_limit": 0
+  },
+  "rewardRarity": null,
+  "supportStatus": "verified-controller022",
+  "title": "수호자의 시험",
+  "weight": 1
+}

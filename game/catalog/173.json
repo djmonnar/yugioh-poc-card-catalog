@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards/173",
+  "attack": 1800,
+  "attribute": 16,
+  "categories": [
+    "효과-버리기",
+    "효과-덱샐비지",
+    "효과-묘지샐비지",
+    "지원-필드"
+  ],
+  "code": 19594506,
+  "defense": 800,
+  "description": "①: 이 카드를 패에서 묘지로 버리고 발동할 수 있다. 자신의 덱 / 묘지에서 \"네오스페이스\" 1장을 골라 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "6f1509c0e6401853520ad722160265ca29a101153b30655259ac67e916a339d7",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0730.webp",
+  "level": 4,
+  "links": [
+    {
+      "identity_key": "815cfef34d4a5c97d261caa19ffa0928f931339df62e49b09591fbef8f239146",
+      "slot": 1300
+    }
+  ],
+  "name": "네오스페이스 컨덕터",
+  "name_english": "Neo Space Pathfinder",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "source_id": 173,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 730
+}

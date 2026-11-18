@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3013",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착",
+    "지원-저레벨",
+    "효과-직접공격"
+  ],
+  "code": 44762290,
+  "defense": 0,
+  "description": "레벨 1의 몬스터만 장착 가능. 장착 몬스터는 상대 플레이어에게 직접 공격을 할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "0ca11269cc6c1a493b2b743d8d475dc687547f9678033f0daa32c934ded76223",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3013.jpg",
+  "level": 0,
+  "links": [],
+  "name": "광학위장 아머",
+  "name_english": "Opti-Camouflage Armor",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "광학위장 아머",
+    "Opti-Camouflage Armor"
+  ],
+  "source_id": 3013,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 2045
+}

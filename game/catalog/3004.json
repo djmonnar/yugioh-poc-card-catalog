@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards144/3004",
+  "attack": 500,
+  "attribute": 1,
+  "categories": [
+    "지원-곤충",
+    "소환-토큰"
+  ],
+  "code": 22493812,
+  "defense": 1200,
+  "description": "「개미 증식」의 효과로 특수 소환된다.",
+  "draw_enabled": false,
+  "identity_key": "99a4bedace14eabe3f09d6a9d0203611ed71a59b0a4d325ab2d5b0b066ba7cbf",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native144/cards/3004.jpg",
+  "level": 4,
+  "links": [],
+  "name": "병사개미 토큰",
+  "name_english": "Army Ant Token",
+  "native_type": 16401,
+  "normal_limit": 0,
+  "playable": false,
+  "race": 2048,
+  "rarity": "N",
+  "search_aliases": [
+    "병사개미 토큰",
+    "Army Ant Token"
+  ],
+  "source_id": 3004,
+  "speed_limit": null,
+  "stock": false,
+  "token": true,
+  "type_name": "토큰",
+  "web_slot": 2036
+}

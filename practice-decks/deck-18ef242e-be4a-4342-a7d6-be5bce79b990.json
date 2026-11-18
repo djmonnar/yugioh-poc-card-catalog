@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-18ef242e-be4a-4342-a7d6-be5bce79b990",
+  "main": [
+    {
+      "count": 1,
+      "identity_key": "acf8b07a9dc7ceb0ed4c8e3a4e74be6ae5373042e1e54230ed0db340051c9ef2",
+      "source_id": 1514
+    },
+    {
+      "count": 3,
+      "identity_key": "0ebc381df550b33554881ad29db274e9ba600c495b1e65393db07672c37c7aaa",
+      "source_id": 1254
+    },
+    {
+      "count": 1,
+      "identity_key": "df80ec4425c236fe50e005b1e4689e1bcec2a64028db999d09c0e6211d2f1617",
+      "source_id": 2542
+    },
+    {
+      "count": 3,
+      "identity_key": "7cdb186b247eb7f3d9836d1868f8c583996ffbb6df7b38f3dfc45cd38bc0fbe2",
+      "source_id": 2456
+    },
+    {
+      "count": 2,
+      "identity_key": "6a708381c382bf7ebf77b64431d364cdf3e5399fa9a05c60f544c38d5853895b",
+      "source_id": 521
+    },
+    {
+      "count": 1,
+      "identity_key": "04655567665ec137c01cc7f30ea8a3b821df80b515fcd2858de9d9ac6f46d782",
+      "source_id": 2685
+    },
+    {
+      "count": 2,
+      "identity_key": "e5940c6b3f9fa40f142e78bc2bd7ac0fea6635b02a7980efbe0a3f7ef3f06dcd",
+      "source_id": 2681
+    },
+    {
+      "count": 3,
+      "identity_key": "1411fb82022714d7d71b0b79cad8170f89cde392d7b9e0bcf0a5f148cfb76901",
+      "source_id": 2682
+    },
+    {
+      "count": 2,
+      "identity_key": "a4112aaf2827abdc99b52fc6d3a1ee01aea218cf19b51dfd0f0c59cc45f5f35d",
+      "source_id": 2679
+    },
+    {
+      "count": 2,
+      "identity_key": "90c257c09a13be5c08dde46feb5430c8094a96ccb3e70d8540d72d4661d99a67",
+      "source_id": 1948
+    }
+  ],
+  "name": "바쿠라 네크로피어",
+  "version": 545
+}

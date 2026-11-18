@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1054",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-덱리크루터",
+    "발동-묘지"
+  ],
+  "code": 85602018,
+  "defense": 0,
+  "description": "이 카드를 사용한 턴에 자신의\n몬스터가 필드에서 묘지로\n보내지면, 덱에서 공격력 1500\n이하의 몬스터 1장을 선택하여\n특수 소환할 수 있다. 그 후\n덱을 셔플한다. 이 카드의\n효과는 1턴만 적용된다.",
+  "draw_enabled": true,
+  "identity_key": "6c954c9a67293d56d9ac5264bf2043f15f2bbdba3d98c0c8aa4d90ef46e9776c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1023.webp",
+  "level": 0,
+  "links": [],
+  "name": "유언장",
+  "name_english": "Last Will",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1054,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1023
+}

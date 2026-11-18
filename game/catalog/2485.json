@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2485",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-젬나이트",
+    "효과-제외-묘지",
+    "지원-융합"
+  ],
+  "code": 72029628,
+  "defense": 0,
+  "description": "자신 묘지의 몬스터들을 제외하여 젬나이트 융합 몬스터 1장을 융합 소환한다. 이 효과로 소환한 몬스터는 엔드 페이즈에 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "7f97fba321c99eef4139b9f15c003fcaf12c12d9c7a095866268a55bdac37095",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2485.jpg",
+  "level": 0,
+  "links": [],
+  "name": "다블렛 퓨전",
+  "name_english": "Fragment Fusion",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2485,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1522
+}

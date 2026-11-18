@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards067/2577",
+  "attack": 2600,
+  "attribute": 32,
+  "categories": [
+    "덱-가이아",
+    "발동-릴리즈",
+    "효과-덱샐비지",
+    "소환-패,덱"
+  ],
+  "code": 33318980,
+  "defense": 2100,
+  "description": "같은 이름의 다음 효과는 각각 한 턴에 한 번만 사용할 수 있다. ● 자신의 드래곤족 융합 몬스터 1장을 릴리스하고 이 카드를 패에서 특수 소환할 수 있다(상대 턴에도 가능). ● 특수 소환 시 필드의 공격 표시 몬스터 1장을 대상으로 수비 표시로 바꿀 수 있다. ● 자신을 릴리스하고 덱에서 같은 이름 이외의 레벨 7 이상 전사족 1장을 패에 넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "d8fb7278ec11f2f638a152f798b756d7f4744dd3ec69b0acc99be5da627881ed",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2577.jpg",
+  "level": 8,
+  "links": [],
+  "name": "암흑 기사 가이아솔저",
+  "name_english": "Soldier Gaia the Fierce Knight",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "source_id": 2577,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1609
+}

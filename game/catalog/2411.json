@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards035/2411",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 37457534,
+  "defense": 0,
+  "description": "\"앤틱 기어\" 몬스터에만 장착 가능. 장착 몬스터의 공격력은 600 올린다.\n이 카드가 파괴되어 묘지로 보내졌을 때 발동한다. 상대에게 600 데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "379dd9797383bc2fa825e58092d8838329f57c3f4ef19fca04c814b2b33b7063",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native035/cards/2411.jpg",
+  "level": 0,
+  "links": [],
+  "name": "앤틱 기어 탱크",
+  "name_english": "Ancient Gear Tank",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "source_id": 2411,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 1448
+}

@@ -1,0 +1,17 @@
+{
+  "description": "매 전투에서 자신의 덱 맨 위에서 두 번째 카드를 계속 확인할 수 있다. 덱에 카드가 2장 미만이면 확인할 카드가 없다.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 3,
+  "iconKey": "Relics/Content073/second_sight",
+  "id": "second_sight",
+  "kind": "second_sight",
+  "name": "두 번째 예지",
+  "params": {},
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-native073",
+  "weight": 1
+}

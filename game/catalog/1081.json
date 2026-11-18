@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1081",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-버리기",
+    "효과-덱샐비지"
+  ],
+  "code": 74191942,
+  "defense": 0,
+  "description": "덱의 카드 5장을 선택하여\n상대에게 공개한다. 상대가\n선택한 1장을 자신의 패에\n넣고, 나머지는 묘지로\n버린다.",
+  "draw_enabled": true,
+  "identity_key": "39efcd809d22191804bfdf5105af1ecfab57c2ba259abfc1f5d471945dec3a58",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0237.webp",
+  "level": 0,
+  "links": [],
+  "name": "고통의 선택",
+  "name_english": "Painful Choice",
+  "native_type": 2,
+  "normal_limit": 0,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1081,
+  "speed_limit": 0,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 237
+}

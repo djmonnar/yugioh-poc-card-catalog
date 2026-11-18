@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/mako/start",
+  "banlistEnabled": false,
+  "deckName": "마해룡 초급",
+  "extra": [],
+  "id": "enc044_1_battle_ch1_battle_08e1ce31fae34b2d1f489bb7",
+  "lpBonus": 0,
+  "main": [
+    2040,
+    2040,
+    523,
+    523,
+    1882,
+    1882,
+    1326,
+    1326,
+    1874,
+    1874,
+    1875,
+    1875,
+    1877,
+    1877,
+    1948,
+    1883,
+    1883,
+    1878,
+    1878,
+    120
+  ],
+  "name": "마해룡",
+  "openingDrawBonus": 0,
+  "profileId": "mako",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 333,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "installed-story:sc-3a44fab9feddb671-314d3e12fff99364bccc3d6ac4d69833",
+  "usesNativeRules035": true
+}

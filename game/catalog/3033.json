@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3033",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-블랙매지션",
+    "지원-마법사",
+    "지원-어둠 속성",
+    "소환-패에서",
+    "소환-덱리크루터",
+    "효과-덱샐비지",
+    "효과-발동 제한"
+  ],
+  "code": 41350417,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 양쪽 플레이어는 각각 자신의 패 / 덱에서 마법사족 / 어둠 속성 몬스터 1장을 특수 소환할 수 있다. 이 효과로 자신이 특수 소환한 몬스터의 원래의 카드명이 \"블랙 매지션\"이나 \"블랙 매지션 걸\"일 경우, 추가로 자신은 \"흑마도의 커튼\"이 아닌, \"블랙 매지션\"의 카드명이 쓰여진 마법 / 함정 카드 1장을 덱에서 패에 넣을 수 있다. 이 턴에, 이 효과로 특수 소환한 몬스터의 효과는 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "3384f0b53f117eef67de1e9e45cb7496ade1cc324f1747b7a280c5d7f8cc3b27",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3033.jpg",
+  "level": 0,
+  "links": [],
+  "name": "흑마도의 커튼",
+  "name_english": "Dark Magical Curtain",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "search_aliases": [
+    "흑마도의 커튼",
+    "Dark Magical Curtain"
+  ],
+  "source_id": 3033,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 2065
+}

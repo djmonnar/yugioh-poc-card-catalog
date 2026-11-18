@@ -1,0 +1,20 @@
+{
+  "description": "덱의 레벨 7 몬스터 1매의 공격력을 600 올려. 대상이 없으면 붉은 눈의 흑룡 1장을 받아. 받은 카드는 자동 강화되지 않아.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 32,
+  "iconKey": "Relics/red_dragon_eye",
+  "id": "red_dragon_eye",
+  "kind": "red_dragon_eye",
+  "name": "흑룡의 눈",
+  "params": {
+    "atk": 600,
+    "level": 7
+  },
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

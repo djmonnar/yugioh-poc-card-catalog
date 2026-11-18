@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards126/2840",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-엑조디아",
+    "효과-바운스",
+    "효과-묘지보내기",
+    "효과-묘지샐비지"
+  ],
+  "code": 64043465,
+  "defense": 0,
+  "description": "이 카드명의 ①②의 효과는 1턴에 1번, 어느 쪽이든 1개밖에 사용할 수 없다. ①: 필드의 몬스터 1장을 대상으로 하고 발동할 수 있다. 패 / 덱에서 \"봉인된\" 몬스터 1장이나 \"엑조디아\" 카드 1장을 묘지로 보내고, 대상 몬스터를 패로 되돌린다. ②: 이 카드가 마법 & 함정 존에서 묘지로 보내졌을 경우, 자신 묘지의, \"봉인된\" 몬스터 1장이나 \"엑조디아\" 카드 1장을 대상으로 하고 발동할 수 있다. 그 카드를 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "2a195538a1691454d7c8cf743dec74b76d78df16ba581eeca743f7717df755a9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native126/cards/2840.jpg",
+  "level": 0,
+  "links": [],
+  "name": "엑조드 프레임",
+  "name_english": "Obliterate!!!",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "엑조드 프레임",
+    "Obliterate!!!"
+  ],
+  "source_id": 2840,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 1872
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1201",
+  "attack": 100,
+  "attribute": 1,
+  "categories": [
+    "면역-마법"
+  ],
+  "code": 65240384,
+  "defense": 2600,
+  "description": "뒷면 표시의 이 카드가 몬스터\n1장만을 대상으로 하는 마법\n카드의 대상이 되었을 때, 그\n마법 카드를 무효로 하고 이\n카드를 앞면 수비 표시로\n한다. 이 카드가 공격받았을\n때, 데미지 스텝 종료 후 공격\n표시로 변경한다.",
+  "draw_enabled": true,
+  "identity_key": "bdf1bf1fc3e671ba2810af230558c09a4f77dbf90d5c1b6a2b90f19d52cb076f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0748.webp",
+  "level": 4,
+  "links": [],
+  "name": "빅 실드 가드너",
+  "name_english": "Big Shield Gardna",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "source_id": 1201,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 748
+}

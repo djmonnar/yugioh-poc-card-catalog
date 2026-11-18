@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards103/2736",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-의식",
+    "지원-장착"
+  ],
+  "code": 54351224,
+  "defense": 0,
+  "description": "레벨 6 이하의 의식 몬스터만 장착 가능. 장착 몬스터의 공격력과 수비력은 1500 포인트 올린다.",
+  "draw_enabled": true,
+  "identity_key": "b1ce135567405980b9005d3834cb2b779405c729941b02ac9057ba29d163817e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native103/cards/2736.jpg",
+  "level": 0,
+  "links": [],
+  "name": "리추얼 웨폰",
+  "name_english": "Ritual Weapon",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "리추얼웨폰",
+    "리추얼 웨폰",
+    "Ritual Weapon"
+  ],
+  "source_id": 2736,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1768
+}

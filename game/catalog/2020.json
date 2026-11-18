@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2020",
+  "attack": 1000,
+  "attribute": 32,
+  "categories": [
+    "효과-패트랩",
+    "파괴-마법",
+    "파괴-몬스터",
+    "파괴-함정"
+  ],
+  "code": 26084285,
+  "defense": 1000,
+  "description": "상대 플레이어가 스스로 패를 버리는 효과를 포함하는 카드를 발동했을 때, 이 카드를 패에서 묘지로 보내는 것으로, 그 발동과 효과를 무효로 하고 그 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "edd3c4e6775907f5888608144c3796520b1db011c9904718c2c98b02cb35541c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1323.webp",
+  "level": 4,
+  "links": [],
+  "name": "묘지기의 감시자",
+  "name_english": "Gravekeeper's Watcher",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "N",
+  "source_id": 2020,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1323
+}

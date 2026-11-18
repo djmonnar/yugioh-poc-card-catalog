@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2002",
+  "attack": 1000,
+  "attribute": 1,
+  "categories": [
+    "효과-한데스",
+    "효과-버리기"
+  ],
+  "code": 10209545,
+  "defense": 1500,
+  "description": "이 카드가 일반 소환에 성공했을 때, 패에서 \"좀비 타이거\" 1장을 특수 소환할 수 있다. 이 카드가 상대 플레이어에게로의 직접 공격에 성공했을 경우, 상대는 패에서 무작위로 카드를 1장 버린다.",
+  "draw_enabled": true,
+  "identity_key": "3f1852caa3475d236ec3bb9a3539bbb219c58eb13876ba161b42b5dac4158d7f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1306.webp",
+  "level": 4,
+  "links": [
+    {
+      "identity_key": "d4a4de3a386aadd7eb5b6df764a0ac63a564101fd2dc79cec6d7e635a9f897b1",
+      "slot": 448
+    }
+  ],
+  "name": "부패한 무장",
+  "name_english": "Decayed Commander",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "R",
+  "source_id": 2002,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1306
+}

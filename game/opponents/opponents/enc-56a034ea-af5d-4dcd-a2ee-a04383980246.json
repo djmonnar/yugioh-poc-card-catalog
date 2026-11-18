@@ -1,0 +1,47 @@
+{
+  "artKey": "CharacterPresentation012/images/keith/start",
+  "banlistEnabled": false,
+  "deckName": "밴디트 키스 상급",
+  "extra": [
+    2026
+  ],
+  "id": "enc-56a034ea-af5d-4dcd-a2ee-a04383980246",
+  "lpBonus": 0,
+  "main": [
+    962,
+    962,
+    962,
+    2024,
+    2024,
+    2024,
+    2025,
+    2025,
+    2025,
+    356,
+    356,
+    356,
+    1003,
+    1003,
+    1040,
+    657,
+    657,
+    685,
+    685,
+    268
+  ],
+  "name": "밴디트키스",
+  "openingDrawBonus": 0,
+  "profileId": "keith",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "draw_once",
+      "position": 0,
+      "sourceId": -1,
+      "threshold": 2000,
+      "value": 1
+    }
+  ],
+  "templateId": "unified039:enc-56a034ea-af5d-4dcd-a2ee-a04383980246",
+  "usesNativeRules035": true
+}

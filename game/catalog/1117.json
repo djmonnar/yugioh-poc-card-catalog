@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1117",
+  "attack": 1400,
+  "attribute": 16,
+  "categories": [
+    "소환-덱리크루터",
+    "발동-묘지"
+  ],
+  "code": 95956346,
+  "defense": 800,
+  "description": "이 카드가 전투로 묘지로\n보내졌을 때, 자신의 덱에서\n공격력 1500 이하의 빛 속성\n몬스터 1장을 선택하여 앞면\n공격 표시로 특수 소환할 수\n있다(레벨 5 이상도 릴리스\n불필요). 그 후 덱을\n셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "16c4b283dc56a51fc5ea3b9def1591e93bebe375442d0232258f477121138c75",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0385.webp",
+  "level": 4,
+  "links": [],
+  "name": "샤이닝 엔젤",
+  "name_english": "Shining Angel",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "SR",
+  "source_id": 1117,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 385
+}

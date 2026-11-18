@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards126/2854",
+  "attack": 0,
+  "attribute": 1,
+  "categories": [
+    "소환-함정 몬스터",
+    "지원-함정"
+  ],
+  "code": 13955608,
+  "defense": 2000,
+  "description": "①: 이 카드는 발동 후, 효과 몬스터(기계족 / 땅 / 레벨 4 / 공 0 / 수 2000)가 되어, 몬스터 존에 수비 표시로 특수 소환한다. 이 카드는 함정 카드로도 취급한다. ②: 자신 필드에 \"그린 가제트\" \"레드 가제트\" \"옐로 가제트\"가 존재할 경우, 이 카드의 효과로 특수 소환된 이 카드의 공격력은 3000 올린다.",
+  "draw_enabled": true,
+  "identity_key": "00003a9dc747f6a86e96f7e242ee80fd2829bb497730253ece0fc513caabdc8b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native126/cards/2854.jpg",
+  "level": 4,
+  "links": [],
+  "name": "기동요새 스트롱 홀드",
+  "name_english": "Stronghold the Moving Fortress",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "search_aliases": [
+    "기동요새 스트롱 홀드",
+    "Stronghold the Moving Fortress"
+  ],
+  "source_id": 2854,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 1886
+}

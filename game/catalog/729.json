@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/729",
+  "attack": 0,
+  "attribute": 32,
+  "categories": [
+    "면역-전투"
+  ],
+  "code": 38247752,
+  "defense": 1400,
+  "description": "리버스: 이 카드가 필드에\n존재하는 한, 지정한 몬스터\n1장은 공격할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "a20764f2f151bb9d5cc0ba744bf9d96992ddc4fc9736778804f0374c2bd9e7ff",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0504.webp",
+  "level": 2,
+  "links": [],
+  "name": "다크 아이즈 일루저니스트",
+  "name_english": "Dark-Eyes Illusionist",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 729,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 504
+}

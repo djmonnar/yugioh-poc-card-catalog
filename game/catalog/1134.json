@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1134",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-필드",
+    "발동-묘지",
+    "파괴-함정",
+    "파괴-마법"
+  ],
+  "code": 73079365,
+  "defense": 0,
+  "description": "상대가 사용하는 카드의\n효과로 자신의 필드 마법\n카드가 1장 이상 파괴되어\n묘지로 보내졌을 때 발동할 수\n있다. 필드의 마법 / 함정\n카드 1장을 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "da56931d80e7a521bbdfb3377b5af0f3bc83a1aa16cd15dc3cc13ae2944802f9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0636.webp",
+  "level": 0,
+  "links": [],
+  "name": "돌풍",
+  "name_english": "Gust",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "source_id": 1134,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 636
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1318",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-패,덱"
+  ],
+  "code": 96965364,
+  "defense": 0,
+  "description": "자신의 필드 몬스터 1장을\n릴리스한다. 그 몬스터보다\n레벨이 1 높은 곤충족 몬스터\n1장을 덱에서 선택하여 앞면\n공격 표시 또는 뒷면 수비\n표시로 특수 소환한다. 그 후\n덱을 셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "71db51531173c4c5d42aaed396486cc80612d5db632f28cbbad092aaeea7c36f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0786.webp",
+  "level": 0,
+  "links": [],
+  "name": "부화",
+  "name_english": "Insect Imitation",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1318,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 786
+}

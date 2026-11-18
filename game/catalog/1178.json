@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1178",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-종족",
+    "지원-저레벨"
+  ],
+  "code": 95132338,
+  "defense": 0,
+  "description": "필드에 같은 이름의 몬스터\n카드가 있으면 그 카드들의\n공격력과 수비력을 500\n올린다.",
+  "draw_enabled": true,
+  "identity_key": "856d2be413b49e1f4d2a2a411fd60d202e98606422591b9693f920bf3f955839",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0011.webp",
+  "level": 0,
+  "links": [],
+  "name": "아쿠아의 합창",
+  "name_english": "Aqua Chorus",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1178,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 11
+}

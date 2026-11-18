@@ -1,0 +1,47 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2389",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-묘지기"
+  ],
+  "code": 47355498,
+  "defense": 0,
+  "description": "①: 필드의 \"묘지기\" 몬스터의\n공격력 / 수비력은 500\n올린다. ②: 이 카드가 필드\n존에 존재하는 한, 서로\n묘지의 카드를 제외할 수\n없으며, 묘지의 카드에 미치는\n효과는 무효화되고, 적용되지\n않는다.\n[차이] 묘지의 몬스터를 특수\n소환하는 카드(죽은 자의 소생\n등)는 발동한 뒤 무효가 되는\n대신, 이 카드가 있는 동안\n발동할 수 없다. 묘지에서\n패나 덱으로 되돌리는 효과는\n발동되며 그 부분만 적용되지\n않는다. 묘지에서 제외하는\n코스트나 대상이 필요한\n카드는 발동할 수 없다.\n[미지원] 묘지 카드의\n종족·속성을 바꾸는\n효과(언데드 월드 등)는 막지\n않는다.",
+  "draw_enabled": true,
+  "identity_key": "4d21ad16a83adcb72f9ee960b5d48e381fb2377a1035d072c57419f593d1043b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0575.webp",
+  "level": 0,
+  "links": [
+    {
+      "identity_key": "e69b2fea567e1e3fe0e2e79b538ce705c0e8505ec0b932105aeff4d1a40bf81a",
+      "slot": 588
+    },
+    {
+      "identity_key": "38c7ceed929684624aeb70d2b736465d99d7adabddb16d0b3bac9e35c8c317c1",
+      "slot": 768
+    },
+    {
+      "identity_key": "f130cae911f76b5e23b36f8f75a9b7b9b79c1636516b3ec52caf8220d8df226a",
+      "slot": 1183
+    },
+    {
+      "identity_key": "900003f145b33f2790d4dcf4b19234c46abd2ebc940072c875c3e0ae35384714",
+      "slot": 1184
+    }
+  ],
+  "name": "왕가의 골짜기－네크로밸리",
+  "name_english": "Necrovalley",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2389,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 575
+}

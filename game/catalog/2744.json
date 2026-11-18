@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards108/2744",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-레벨·소환",
+    "지원-릴리즈"
+  ],
+  "code": 80921533,
+  "defense": 0,
+  "description": "①: 양쪽의 플레이어는, 자신 메인 페이즈에 이하의 효과에서 1개를 선택하고 발동할 수 있다.\n●1000 LP를 지불하고 발동할 수 있다. 1장의 릴리스를 필요로 하는 패의 몬스터 1장의 통상 소환을, 릴리스 없이 실행한다.\n●2000 LP를 지불하고 발동할 수 있다. 2장의 릴리스를 필요로 하는 패의 몬스터 1장의 통상 소환을, 릴리스 없이 실행한다.",
+  "draw_enabled": true,
+  "identity_key": "b7ea1f8ec993f2b03ab8e95cac7c1791702647e0c6973cbd13b8c8047b88e331",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native108/cards/2744.jpg",
+  "level": 0,
+  "links": [],
+  "name": "사황제의 능묘",
+  "name_english": "Mausoleum of the Emperor",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "시황제의 능묘",
+    "사황제의 능묘",
+    "사황제의능묘",
+    "Mausoleum of the Emperor"
+  ],
+  "source_id": 2744,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1776
+}

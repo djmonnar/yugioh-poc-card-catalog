@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/407",
+  "attack": 100,
+  "attribute": 1,
+  "categories": [
+    "효과-묘지샐비지",
+    "발동-묘지"
+  ],
+  "code": 94878265,
+  "defense": 100,
+  "description": "이 카드가 전투에 의해서 파괴되어 묘지로 보내졌을 때, 자신의 묘지에 존재하는 레벨 4의 야수족 몬스터 1장을 패에 넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "0b94b4ee091fe31e345e7eba1aaacacb5594eb069200e63c0e18ddd7456dfaa9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0193.webp",
+  "level": 1,
+  "links": [],
+  "name": "모쟈",
+  "name_english": "Moja",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "N",
+  "source_id": 407,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 193
+}

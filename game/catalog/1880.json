@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1880",
+  "attack": 1500,
+  "attribute": 2,
+  "categories": [
+    "지원-릴리즈"
+  ],
+  "code": 92084010,
+  "defense": 1600,
+  "description": "물 속성 몬스터를 제물 소환할\n경우, 이 몬스터 1장으로 2장\n만큼의 제물로 할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "0dd50f6fd0171fe688825db1ac4906bdf2dba0c5933100e63a8fd5ed021a8e28",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1207.webp",
+  "level": 4,
+  "links": [],
+  "name": "수염 아귀",
+  "name_english": "Unshaven Angler",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 131072,
+  "rarity": "R",
+  "source_id": 1880,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1207
+}

@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2550",
+  "attack": 0,
+  "attribute": 8,
+  "categories": [
+    "덱-네프티스",
+    "효과-파괴",
+    "효과-덱샐비지",
+    "발동-묘지"
+  ],
+  "code": 98999181,
+  "defense": 2000,
+  "description": "각 효과는 카드명당 1턴에 1번만 사용할 수 있다. ① 메인 페이즈에 패 1장을 효과로 파괴하고, 파괴했다면 덱에서 같은 이름 이외의 네프티스 몬스터 1장을 패에 넣을 수 있다. ② 효과로 파괴되어 묘지로 보내지면, 다음 자신의 스탠바이 페이즈에 덱의 네프티스 마법·함정 1장을 패에 넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "7296be0579ab323fbb51446a5576cd33b02e157fd42264878b7ce43b95387447",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2550.jpg",
+  "level": 2,
+  "links": [],
+  "name": "네프티스의 기도하는 손",
+  "name_english": "Disciple of Nephthys",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "source_id": 2550,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1582
+}

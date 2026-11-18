@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards144/3000",
+  "attack": 2400,
+  "attribute": 1,
+  "categories": [
+    "효과-관통"
+  ],
+  "code": 49645921,
+  "defense": 600,
+  "description": "이 카드가 수비 표시 몬스터를 공격했을 때, 그 수비력을 공격력이 넘었으면, 그 수치만큼 상대 라이프에 전투 데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "cb604ce511a57f43f44b14f4b96d8425dca242900703613851650427e06a3252",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native144/cards/3000.jpg",
+  "level": 6,
+  "links": [],
+  "name": "세이버 비틀",
+  "name_english": "Saber Beetle",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "N",
+  "search_aliases": [
+    "세이버비틀",
+    "세이버 비틀",
+    "Saber Beetle"
+  ],
+  "source_id": 3000,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2032
+}

@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-645d867a-30b2-4e77-aaee-55096594e100",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "f451a7da7bfe5ae3daf053fca0d777939b00cc329c564f8aaf51c73342574bb0",
+      "source_id": 2523
+    },
+    {
+      "count": 2,
+      "identity_key": "90004872676e5a9ab1692d7db7a1374e6ba0c69356c0ecb59a1b0a2cfb995389",
+      "source_id": 2524
+    },
+    {
+      "count": 2,
+      "identity_key": "bad8965d4b591b682062c42c033fe9b4e71e07db3e2553957fe0e905aaa35598",
+      "source_id": 2520
+    },
+    {
+      "count": 3,
+      "identity_key": "bf48aa17ed2bb86961c7c667b67921b4a5fc664364a99394595eaf21132d467a",
+      "source_id": 2515
+    },
+    {
+      "count": 2,
+      "identity_key": "fe4e3cd90fb07d69b954c35b50386fa3570fc27d6b1b1d86dda214f3714eced5",
+      "source_id": 2516
+    },
+    {
+      "count": 1,
+      "identity_key": "ff47fa80b245704063d82cfcd0da7f3bd735a3f33970e023dc0abf5026da164d",
+      "source_id": 2514
+    },
+    {
+      "count": 2,
+      "identity_key": "f6af26ef01e7ab92d998dbb441ac6c0fec4fb78c7dcf7983e43c76ceda7f3bf0",
+      "source_id": 1109
+    },
+    {
+      "count": 2,
+      "identity_key": "61e346111e626982913e6dab256551715e2c7252596f76da5b4290ad32752a85",
+      "source_id": 2667
+    },
+    {
+      "count": 2,
+      "identity_key": "f206c5a0ed34556536bccbdecb54745c2576ca62cec262e6933eb42fd6c0248f",
+      "source_id": 2417
+    },
+    {
+      "count": 1,
+      "identity_key": "2fc0411822fedd8614e206bcfd89681d80bb23998a4790eb45adbc4ec800878f",
+      "source_id": 2390
+    }
+  ],
+  "name": "안수진 기계천사 중급",
+  "version": 604
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1886",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-패,덱"
+  ],
+  "code": 49669730,
+  "defense": 0,
+  "description": "자신 필드 위에 몬스터가\n존재하지 않을 경우, 패에서\n레벨 4 이하의 물 속성 몬스터\n1장을 특수 소환할 수 있다.\n이 효과는 1턴에 1번밖에\n사용할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "6c0478800ca751c783ffee5c3f77c5f95834a4a22c08a90fda4041462b8b6c98",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1213.webp",
+  "level": 0,
+  "links": [],
+  "name": "워터 해저드",
+  "name_english": "Water Hazard",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1886,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1213
+}

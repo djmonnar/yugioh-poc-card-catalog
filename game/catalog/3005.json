@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards144/3005",
+  "attack": 1000,
+  "attribute": 1,
+  "categories": [
+    "지원-곤충",
+    "지원-비틀트루퍼",
+    "소환-토큰"
+  ],
+  "code": 64213018,
+  "defense": 1000,
+  "description": "「비틀트루퍼 스쿼드」의 효과로 특수 소환된다.",
+  "draw_enabled": false,
+  "identity_key": "08dcee916a5fb611289e7056a567add2b4b10192e173bd2539696527362af67e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native144/cards/3005.jpg",
+  "level": 3,
+  "links": [],
+  "name": "비틀트루퍼 토큰",
+  "name_english": "Beetrooper Token",
+  "native_type": 16401,
+  "normal_limit": 0,
+  "playable": false,
+  "race": 2048,
+  "rarity": "N",
+  "search_aliases": [
+    "비틀트루퍼 토큰",
+    "Beetrooper Token"
+  ],
+  "source_id": 3005,
+  "speed_limit": null,
+  "stock": false,
+  "token": true,
+  "type_name": "토큰",
+  "web_slot": 2037
+}

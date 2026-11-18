@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards144/2992",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-곤충",
+    "발동-파괴 시",
+    "효과-덱샐비지"
+  ],
+  "code": 80402389,
+  "defense": 0,
+  "description": "필드 위에 앞면 표시로 존재하는 곤충족 몬스터가 파괴되어 묘지로 보내졌을 때, 그 몬스터의 컨트롤러는 파괴된 몬스터와 같은 레벨의 곤충족 몬스터 1장을 덱에서 패에 넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "480f86c33d0b88c28cca84540b292fd883a2732bd03599f038969d95e4629f70",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native144/cards/2992.jpg",
+  "level": 0,
+  "links": [],
+  "name": "대수해",
+  "name_english": "Verdant Sanctuary",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "대수해",
+    "Verdant Sanctuary"
+  ],
+  "source_id": 2992,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 2024
+}

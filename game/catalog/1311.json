@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1311",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-필드",
+    "효과-데미지"
+  ],
+  "code": 24294108,
+  "defense": 0,
+  "description": "필드의 모든 필드 마법 카드를\n파괴한다. 추가로 양쪽\n플레이어는 각각 자신의\n스탠바이 페이즈마다 500 직접\n데미지를 받는다.",
+  "draw_enabled": true,
+  "identity_key": "cdf0342ed4d925c7b6df71e9b8537023f277e230889b073a1e08096fca9a39b0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0987.webp",
+  "level": 0,
+  "links": [],
+  "name": "불타오르는 대지",
+  "name_english": "Burning Land",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1311,
+  "speed_limit": 1,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 987
+}

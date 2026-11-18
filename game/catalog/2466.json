@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2466",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-젬나이트",
+    "지원-융합",
+    "효과-제외샐비지",
+    "효과-덱샐비지"
+  ],
+  "code": 24220368,
+  "defense": 0,
+  "description": "다음 두 효과는 각각 같은 이름의 카드로 1턴에 1번만 선택할 수 있다. ● 패·필드의 소재로 젬나이트를 융합 소환한다. 자신 묘지에 젬나이트 퓨전이 있으면 덱·엑스트라 덱의 암석족 이외 젬나이트 몬스터도 2장까지 소재로 쓸 수 있다. ● 덱 또는 자신의 앞면 제외 상태인 젬 몬스터 1장을 패에 넣는다. 이 효과를 쓴 턴의 메인 페이즈에는 상대가 받는 효과 데미지가 절반이 된다.",
+  "draw_enabled": true,
+  "identity_key": "07481c73f6274c1c059fcc33a0be4f8571430169b2d88f6397cd80f8884598e6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2466.jpg",
+  "level": 0,
+  "links": [],
+  "name": "젬나이트 디스퍼전",
+  "name_english": "Gem-Knight Dispersion",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2466,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1503
+}

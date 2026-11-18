@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1043",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-컨트롤"
+  ],
+  "code": 98045062,
+  "defense": 0,
+  "description": "①: 이하의 효과에서 1개를\n선택하고 발동할 수 있다.\n●상대 필드의 앞면 표시\n몬스터 1장을 대상으로 하고\n발동할 수 있다. 그 상대의\n앞면 표시 몬스터의 표시\n형식을 변경한다.\n●자신 필드의 몬스터 1장을\n릴리스하고, 상대 필드의 앞면\n표시 몬스터 1장을 대상으로\n하여 발동할 수 있다. 그 앞면\n표시 몬스터의 컨트롤을 엔드\n페이즈까지 얻는다.",
+  "draw_enabled": true,
+  "identity_key": "5166924ae5a3f0815f4e5ef4a463fe22a5b2eca168ff278ff7f932c91d659b1a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0283.webp",
+  "level": 0,
+  "links": [],
+  "name": "에너미 컨트롤러",
+  "name_english": "Enemy Controller",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1043,
+  "speed_limit": 3,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 283
+}

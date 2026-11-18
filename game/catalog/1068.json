@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1068",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-회복",
+    "효과-컨트롤"
+  ],
+  "code": 45986603,
+  "defense": 0,
+  "description": "상대의 앞면 몬스터 1장의\n컨트롤을 얻는다. 상대의\n스탠바이 페이즈마다 상대의\nLP를 1000 회복한다.",
+  "draw_enabled": true,
+  "identity_key": "da00e269e42e378a38633b60dc6d68b8e7df2e2ea4a588f43bedf222b2a8e2a2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0285.webp",
+  "level": 0,
+  "links": [],
+  "name": "강탈",
+  "name_english": "Snatch Steal",
+  "native_type": 262146,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1068,
+  "speed_limit": 1,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 285
+}

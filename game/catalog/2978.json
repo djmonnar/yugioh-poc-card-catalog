@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards143/2978",
+  "attack": 1800,
+  "attribute": 2,
+  "categories": [
+    "지원-해황",
+    "지원-물 속성",
+    "지원-해룡족",
+    "지원-저레벨",
+    "효과-직접공격",
+    "발동-묘지로 보내졌을 때",
+    "효과-덱샐비지"
+  ],
+  "code": 74311226,
+  "defense": 0,
+  "description": "①: 이 카드가 몬스터 존에 존재하는 한, 자신의 레벨 3 이하의 해룡족 몬스터는 직접 공격할 수 있다. ②: 이 카드가 물 속성 몬스터의 효과를 발동하기 위해 묘지로 보내졌을 경우에 발동한다. 덱에서 \"해황의 용기대\" 이외의 해룡족 몬스터 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "d233d7195760bd088ca8db8fc3aa159b3b3d8fb85a7b9f97ec8ecf5d85a8d058",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native143/cards/2978.jpg",
+  "level": 4,
+  "links": [],
+  "name": "해황의 용기대",
+  "name_english": "Atlantean Dragoons",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 262144,
+  "rarity": "SR",
+  "search_aliases": [
+    "해황의 용기대",
+    "Atlantean Dragoons"
+  ],
+  "source_id": 2978,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2010
+}

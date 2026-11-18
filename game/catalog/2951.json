@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards136/2951",
+  "attack": 1600,
+  "attribute": 32,
+  "categories": [
+    "지원-프레데터 플랜츠",
+    "포식 카운터",
+    "지원-장착",
+    "발동-파괴 시",
+    "효과-파괴",
+    "효과-회복"
+  ],
+  "code": 22011689,
+  "defense": 1000,
+  "description": "①: 이 카드의 공격력은, 필드의 포식 카운터의 수 × 200 올린다. ②: 이 카드가 전투로 상대 몬스터를 파괴했을 때에 발동할 수 있다. 그 파괴한 몬스터를 장착 카드로 취급하여 이 카드에 장착한다. ③: 1턴에 1번, 이 카드의 효과로 장착하고 있는 몬스터 카드 1장을 대상으로 하여 발동할 수 있다. 그 카드를 파괴하고, 그 원래의 공격력만큼만 자신의 LP를 회복한다.",
+  "draw_enabled": true,
+  "identity_key": "cb827e0102fea789ec3884fa754ece15515bcfc38dacd6ad95580b14d70236d0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native136/cards/2951.jpg",
+  "level": 4,
+  "links": [],
+  "name": "프레데터 플랜츠 모레이 네펜테스",
+  "name_english": "Predaplant Moray Nepenthes",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "R",
+  "search_aliases": [
+    "프레데터 플랜츠 모레이 네펜테스",
+    "Predaplant Moray Nepenthes"
+  ],
+  "source_id": 2951,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1983
+}

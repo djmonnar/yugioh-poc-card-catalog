@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/423",
+  "attack": 2800,
+  "attribute": 8,
+  "categories": [
+    "파괴-몬스터",
+    "효과-묘지보내기"
+  ],
+  "code": 73879377,
+  "defense": 1000,
+  "description": "이 카드는 통상 소환할 수\n없으며, \"암드 드래곤 LV5\"의\n효과로만 특수 소환할 수\n있다. ①: 패에서 몬스터 1장을\n묘지로 보내고 발동할 수\n있다. 묘지로 보낸 몬스터의\n공격력 이하의 공격력을\n가지는, 상대 필드의 몬스터를\n전부 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "d000cd3ec66435798832c25ba65f34642f0fba7eedf8b7d4518f56e7248b2ec7",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0435.webp",
+  "level": 7,
+  "links": [],
+  "name": "암드 드래곤 LV7",
+  "name_english": "Armed Dragon LV7",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "source_id": 423,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 435
+}

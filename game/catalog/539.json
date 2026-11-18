@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/539",
+  "attack": 900,
+  "attribute": 16,
+  "categories": [
+    "효과-드로우"
+  ],
+  "code": 60694662,
+  "defense": 400,
+  "description": "리버스: 자신의 덱에서 카드를\n1장 드로우할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "c9e3aae21560d7a33fa407581886f383542ed4ad7322a2e6aaf40f359c9af18f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0440.webp",
+  "level": 2,
+  "links": [],
+  "name": "스켈엔젤",
+  "name_english": "Skelengel",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "R",
+  "source_id": 539,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 440
+}

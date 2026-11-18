@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards088/2633",
+  "attack": 1600,
+  "attribute": 1,
+  "categories": [
+    "지원-듀얼",
+    "발동-소환",
+    "소환-패,덱",
+    "지원-저레벨"
+  ],
+  "code": 91798373,
+  "defense": 400,
+  "description": "이 카드가 일반 소환/특수 소환에 성공했을 때, 패에서 레벨 4 이하의 듀얼 몬스터 1장을 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "d0ef2941ee2fbde42ca5e6247b4b1d38b0031b6141f208232357750c957cefdd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native088/cards/2633.jpg",
+  "level": 4,
+  "links": [],
+  "name": "듀얼 스콜피온",
+  "name_english": "Gemini Scorpion",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "듀얼 스콜피온",
+    "듀얼스콜피온",
+    "Gemini Scorpion"
+  ],
+  "source_id": 2633,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1665
+}

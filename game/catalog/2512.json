@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2512",
+  "attack": 1700,
+  "attribute": 1,
+  "categories": [
+    "덱-다크 루시어스",
+    "효과-묘지보내기",
+    "소환-패,덱"
+  ],
+  "code": 12817939,
+  "defense": 600,
+  "description": "\"다크 루시어스 LV4\"의 효과로 특수 소환된 이 카드가 전투로 파괴한 상대 몬스터의 효과는 무효화된다. 이 효과로 상대 몬스터의 효과를 무효로 한 다음 자신 턴의 스텐바이 페이즈에, 이 카드를 묘지로 보내고 발동할 수 있다. 패 또는 덱에서 \"다크 루시어스 LV8\" 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "e735c47a6234d9aa129df010390588ad79b329f47fe114603d01db08b8a30cb4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2512.jpg",
+  "level": 6,
+  "links": [],
+  "name": "다크 루시어스 LV6",
+  "name_english": "Dark Lucius LV6",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "N",
+  "source_id": 2512,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1544
+}

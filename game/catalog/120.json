@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/120",
+  "attack": 2400,
+  "attribute": 2,
+  "categories": [
+    "지원-릴리즈"
+  ],
+  "code": 71923655,
+  "defense": 2100,
+  "description": "이 카드는 자신 필드 위의 물\n속성 몬스터 1장을\n릴리스하고, 패에서 특수\n소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "e33d3e359d6bb9a9c7f5a266c3335d575e14b1c179080b76672daa720d3b7939",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0683.webp",
+  "level": 6,
+  "links": [],
+  "name": "샤크라켄",
+  "name_english": "Sharkraken",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 131072,
+  "rarity": "R",
+  "source_id": 120,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 683
+}

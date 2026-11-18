@@ -1,0 +1,19 @@
+{
+  "description": "획득 즉시 원정 금화 200을 받아.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 17,
+  "iconKey": "Relics/atlas160",
+  "id": "golden_pot",
+  "kind": "golden_pot",
+  "name": "욕망의 항아리",
+  "params": {
+    "gold": 200
+  },
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

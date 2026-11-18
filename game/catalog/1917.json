@@ -1,0 +1,45 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1917",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-블랙매지션",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 2314238,
+  "defense": 0,
+  "description": "①: 자신 필드에 \"블랙\n매지션\"이 존재할 경우에\n발동할 수 있다. 상대 필드의\n마법 / 함정 카드를 전부\n파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "389828818d18ff9751e6883c28e1159288f287f3285a8a895ff6ff9febebd6f6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1193.webp",
+  "level": 0,
+  "links": [
+    {
+      "identity_key": "a850b8cd0e118c301dde50e7dcabc13ebb54f1506ec19fbe0694955bba7dfd67",
+      "slot": 803
+    },
+    {
+      "identity_key": "e59839abbcfb0aeca99b2305a17c4280aaa98be82be82bcdf349e6a1d8c6aa0b",
+      "slot": 1196
+    },
+    {
+      "identity_key": "8a96c1c8818cfc0823a7527a2bb44e1ddc9f0c11a2b5f82ee8b1a7e9cacfb9ba",
+      "slot": 1197
+    }
+  ],
+  "name": "흑·마·도",
+  "name_english": "Dark Magic Attack",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1917,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1193
+}

@@ -1,0 +1,54 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-c6ecd084-627e-4ddf-bb19-fbc6f55502d5",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "499731fa7be39302fe35182888480246d81b770ee76e4e3cd7775a65e14614f9",
+      "source_id": 190
+    },
+    {
+      "count": 3,
+      "identity_key": "5b92c2a265e313de2040238c9bfdd6497b9e31104e8dc6d4c811622818dea5e3",
+      "source_id": 562
+    },
+    {
+      "count": 3,
+      "identity_key": "b17f8fc899491eacea4a30e41f1c6de5c503a4a8f495a26b4d37fb259dbaf78e",
+      "source_id": 226
+    },
+    {
+      "count": 2,
+      "identity_key": "10ea3cb3e7ca9ce12f88d8bc1f0fa80dd3e4e59dd82b7fe2fbec0152013321c1",
+      "source_id": 2103
+    },
+    {
+      "count": 2,
+      "identity_key": "0dd50f6fd0171fe688825db1ac4906bdf2dba0c5933100e63a8fd5ed021a8e28",
+      "source_id": 1880
+    },
+    {
+      "count": 2,
+      "identity_key": "051a68d46e73f712b6ddcde1be027a0d95caced1e8dd561297017bd2e246b759",
+      "source_id": 2010
+    },
+    {
+      "count": 2,
+      "identity_key": "185cdc87e8f2a4d63f7820cd314d9d96c41fbe7032edd38c95f77f444482d067",
+      "source_id": 1967
+    },
+    {
+      "count": 1,
+      "identity_key": "bfac1ae3670d6cb5cc3b188084e5f18d93938a0d45a026302ca94e035e818a9a",
+      "source_id": 2505
+    },
+    {
+      "count": 2,
+      "identity_key": "481f1539cec9a73be5473ae58ff0606a64a3c466ce9d278c03be239ebf6f8087",
+      "source_id": 2620
+    }
+  ],
+  "name": "전우혁 가가기고 초급",
+  "version": 547
+}

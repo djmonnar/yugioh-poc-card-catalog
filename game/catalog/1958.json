@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1958",
+  "attack": 1400,
+  "attribute": 32,
+  "categories": [
+    "효과-버리기",
+    "효과-한데스",
+    "효과-묘지보내기"
+  ],
+  "code": 76922029,
+  "defense": 1500,
+  "description": "①: 이 카드가 상대에게 전투\n데미지를 주었을 때, 이하의\n효과에서 1개를 선택하고\n발동할 수 있다.\n●상대의 패를 무작위로 1장\n버린다.\n●상대의 덱 위에서 카드를 2장\n묘지로 보낸다.\n[안내] 상대의 패를 버리게\n할지 먼저 묻고, \"아니오\"를\n고르면 덱 위 2장을 묘지로\n보낼지 묻는다.",
+  "draw_enabled": true,
+  "identity_key": "8efd470271f99973d71b09b61ff5ffc846ef706cf31b08d7264f4564219e7835",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1174.webp",
+  "level": 4,
+  "links": [],
+  "name": "돈 잘우그",
+  "name_english": "Don Zaloog",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "source_id": 1958,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1174
+}

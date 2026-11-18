@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards125/2828",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-에일리언",
+    "A 카운터",
+    "효과-컨트롤"
+  ],
+  "code": 59258334,
+  "defense": 0,
+  "description": "상대 필드 위의 A 카운터가 얹힌 몬스터 1장을 선택하고 컨트롤을 얻는다. 자신의 엔드 페이즈마다, 선택한 몬스터의 A 카운터를 1개 제거한다. 그 몬스터의 A 카운터가 전부 제거되거나 그 몬스터가 파괴되었을 경우, 이 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "d754f19afe57c8619f5d8d5dc6baee0e1702f612aa0ea9876ffd0fd211f4465f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native125/cards/2828.jpg",
+  "level": 0,
+  "links": [],
+  "name": "세뇌광선",
+  "name_english": "Brainwashing Beam",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "세뇌광선",
+    "Brainwashing Beam"
+  ],
+  "source_id": 2828,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 1860
+}

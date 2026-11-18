@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1862",
+  "attack": 0,
+  "attribute": 1,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 65064143,
+  "defense": 1600,
+  "description": "자신 필드 위에 존재하는\n곤충족 몬스터 1장을 제물로\n바칠 때마다, 상대 라이프에\n800 포인트 데미지를 준다.\n[안내] 릴리스할 곤충족\n몬스터가 2장 이상이면 선택\n창에서 고른다.",
+  "draw_enabled": true,
+  "identity_key": "da30de197a4eaa55bcc6cfa05e6fa63e9ff9898a60cfb1a4f049da6212f13746",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1237.webp",
+  "level": 3,
+  "links": [],
+  "name": "대공방화",
+  "name_english": "Anti-Aircraft Flower",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "R",
+  "source_id": 1862,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1237
+}

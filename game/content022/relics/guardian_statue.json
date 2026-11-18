@@ -1,0 +1,19 @@
+{
+  "description": "내 수비 표시 몬스터가 상대 공격을 받고 전투에서 살아남으면 LP 300을 회복해. 전투당 한 번이야.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 53,
+  "iconKey": "Relics/Content022/atlas022",
+  "id": "guardian_statue",
+  "kind": "guardian_statue",
+  "name": "수호자의 석상",
+  "params": {
+    "heal": 300
+  },
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-native022",
+  "weight": 1
+}

@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards088/2635",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-듀얼",
+    "소환-패,덱",
+    "지원-저레벨"
+  ],
+  "code": 57441100,
+  "defense": 0,
+  "description": "상대 필드 위에 몬스터가 존재하고, 자신 필드 위에 몬스터가 존재하지 않을 경우, 패에서 레벨 4 이하의 듀얼 몬스터 1장을 특수 소환할 수 있다. 이 효과는 1턴에 1번밖에 사용할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "8da7d19c50a02f5d0850b9a7ee5a0ad9ef08d7816a8a3a534cd7c7af60a70cd2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native088/cards/2635.jpg",
+  "level": 0,
+  "links": [],
+  "name": "금강진력",
+  "name_english": "Herculean Power",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "금강진력",
+    "Herculean Power"
+  ],
+  "source_id": 2635,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 1667
+}

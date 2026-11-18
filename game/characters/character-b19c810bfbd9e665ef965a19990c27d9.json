@@ -1,0 +1,11 @@
+{
+  "art_key": "DuelUi011/legacy/joey_intro",
+  "id": "character-b19c810bfbd9e665ef965a19990c27d9",
+  "profile": {
+    "name": "조이",
+    "portrait": "https://mjrvbxjmnnzjhwjyqjhc.supabase.co/storage/v1/object/public/poc-story-assets/portraits/ab47b6a4-1aaf-469e-81c4-0945ea89411b.webp"
+  },
+  "profile_id": "joey",
+  "updated_at": "2026-10-10T10:50:45.481177+00:00",
+  "version": 1025
+}

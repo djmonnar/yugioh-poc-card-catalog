@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1940",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-덱샐비지"
+  ],
+  "code": 32807846,
+  "defense": 0,
+  "description": "①: 덱에서 레벨 4 이하의\n전사족 몬스터 1장을 패에\n넣는다.",
+  "draw_enabled": true,
+  "identity_key": "45d860d25b85638ceddfaeb743ab74b99d71467e48c4e8f1bc8ca3060872695f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1156.webp",
+  "level": 0,
+  "links": [],
+  "name": "증원",
+  "name_english": "Reinforcement of the Army",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1940,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1156
+}

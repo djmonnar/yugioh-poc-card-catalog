@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1858",
+  "attack": 900,
+  "attribute": 1,
+  "categories": [
+    "파괴-몬스터"
+  ],
+  "code": 65878864,
+  "defense": 1200,
+  "description": "리버스 : 필드 위의 몬스터\n2장을 파괴한다.\n[차이] 공식 카드는 대상을\n지정하지 않지만, 이\n게임에서는 리버스했을 때\n파괴할 몬스터 2장을 고른다.",
+  "draw_enabled": true,
+  "identity_key": "42155c28cf76409f52010ad1e7160ab26c1caefec67a813f070aa73211d5fbf7",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1233.webp",
+  "level": 5,
+  "links": [],
+  "name": "사도 식충",
+  "name_english": "Nobleman-Eater Bug",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "R",
+  "source_id": 1858,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1233
+}

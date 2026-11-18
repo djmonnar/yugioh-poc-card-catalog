@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3027",
+  "attack": 2900,
+  "attribute": 32,
+  "categories": [
+    "지원-타락천사",
+    "지원-천사족",
+    "발동-소환 시",
+    "소환-묘지"
+  ],
+  "code": 11260714,
+  "defense": 2400,
+  "description": "①: 이 카드가 묘지에서의 특수 소환에 성공했을 때, \"타락천사 스펠비어\" 이외의 자신 묘지의 천사족 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 천사족 몬스터를 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "f3038b6f392c0b8a14464bbde0650f05e1a093499999696a20ee57c2f4d605d4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3027.jpg",
+  "level": 8,
+  "links": [],
+  "name": "타락천사 스펠비어",
+  "name_english": "Darklord Superbia",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "SR",
+  "search_aliases": [
+    "타락천사 스펠비어",
+    "Darklord Superbia"
+  ],
+  "source_id": 3027,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2059
+}

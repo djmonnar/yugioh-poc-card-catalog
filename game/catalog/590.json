@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/590",
+  "attack": 700,
+  "attribute": 1,
+  "categories": [
+    "효과-버리기",
+    "효과-드로우",
+    "효과-한데스"
+  ],
+  "code": 33508719,
+  "defense": 600,
+  "description": "리버스: 양쪽 플레이어는 패를\n모두 버리고 각각 자신의\n덱에서 카드를 5장\n드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "4593dfe628fc9b62431a213fa629369f522a4828a8c947e7667ebe31e327c93c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0972.webp",
+  "level": 2,
+  "links": [],
+  "name": "메타모르 포트",
+  "name_english": "Morphing Jar",
+  "native_type": 2097185,
+  "normal_limit": 2,
+  "playable": true,
+  "race": 256,
+  "rarity": "UR",
+  "source_id": 590,
+  "speed_limit": 1,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 972
+}

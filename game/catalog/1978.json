@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1978",
+  "attack": 1100,
+  "attribute": 32,
+  "categories": [
+    "효과-묘지보내기",
+    "효과-한데스",
+    "효과-덱샐비지",
+    "발동-묘지"
+  ],
+  "code": 63665875,
+  "defense": 1050,
+  "description": "①: 이 카드가 상대에게 전투\n데미지를 주었을 경우에\n발동한다. 상대의 덱 맨 위의\n카드를 묘지로 보낸다. ②: 이\n카드가 필드에서 묘지로\n보내졌을 경우에 발동한다.\n덱에서 수비력 1200 이하의\n언데드족 몬스터 1장을 패에\n넣는다.\n[안내] ②로 덱에서 패에 넣는\n카드는 상대에게 공개되고, 그\n뒤 덱을 섞는다. 후보가 둘\n이상이면 고르는 창이 열린다.",
+  "draw_enabled": true,
+  "identity_key": "b81ade9072c67c200f791300d52f035b939f0092a4691de7200156fa2fa05a24",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1141.webp",
+  "level": 4,
+  "links": [],
+  "name": "고블린 좀비",
+  "name_english": "Goblin Zombie",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "R",
+  "source_id": 1978,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1141
+}

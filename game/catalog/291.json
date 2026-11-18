@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/291",
+  "attack": 1900,
+  "attribute": 8,
+  "categories": [
+    "면역-소환",
+    "면역-함정"
+  ],
+  "code": 47013502,
+  "defense": 1200,
+  "description": "이 카드의 일반 소환은\n무효화되지 않는다. 이 카드가\n일반 소환에 성공한 턴에,\n상대는 카운터 함정 카드를\n발동할 수 없다.\n[차이] 자신의 카운터 함정에\n의한 소환 무효는 막지\n않는다.",
+  "draw_enabled": true,
+  "identity_key": "adad744315896868bce9d56f932719b1be0f5e4639874b18fc105de19daab9d6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0318.webp",
+  "level": 4,
+  "links": [],
+  "name": "어보이드 드래곤",
+  "name_english": "Dodger Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "source_id": 291,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 318
+}

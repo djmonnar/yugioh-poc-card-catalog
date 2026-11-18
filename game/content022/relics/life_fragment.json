@@ -1,0 +1,19 @@
+{
+  "description": "획득 즉시 최대 LP +250. 현재 LP는 그대로야.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 4,
+  "iconKey": "Relics/atlas160",
+  "id": "life_fragment",
+  "kind": "life_fragment",
+  "name": "생명의 조각",
+  "params": {
+    "max_lp": 250
+  },
+  "price": 75,
+  "rarity": "N",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

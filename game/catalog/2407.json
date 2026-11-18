@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards035/2407",
+  "attack": 1500,
+  "attribute": 1,
+  "categories": [
+    "면역-마법",
+    "면역-함정",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 1953925,
+  "defense": 1500,
+  "description": "이 카드를 대상으로 하는 함정 카드의 효과를 무효로 하고 파괴한다.\n이 카드가 공격할 경우, 상대는 데미지 스텝 종료시까지 마법 / 함정 카드를 발동할 수 없다.\n이 카드가 공격한 데미지 스텝 종료시에, 상대 필드의 마법 / 함정 카드 1장을 대상으로 하여 발동한다. 그 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "0c9341f11c662062a8de97accc86fbe83a16a0dca55ddd57cd05856ed74a6733",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native035/cards/2407.jpg",
+  "level": 5,
+  "links": [],
+  "name": "앤틱 기어 엔지니어",
+  "name_english": "Ancient Gear Engineer",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "source_id": 2407,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1444
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1180",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "면역-마법"
+  ],
+  "code": 58921041,
+  "defense": 0,
+  "description": "이 카드가 필드에 앞면으로\n존재하는 동안 양쪽\n플레이어는 마법 카드를 먼저\n세트해야 하며, 자신의 다음\n턴까지 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "c4212f5f55834cc61d5897743177878968c0fdd8019251048f2fa552981e2974",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0913.webp",
+  "level": 0,
+  "links": [],
+  "name": "마법 봉인의 방향제",
+  "name_english": "Anti-Spell Fragrance",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1180,
+  "speed_limit": 2,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 913
+}

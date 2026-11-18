@@ -1,0 +1,69 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "esper_roba_jinzo081",
+  "main": [
+    {
+      "count": 1,
+      "identity_key": "874ea894086d0542a721f8754d5e5ad625e4a83fc137f61584e74e0880a548d1",
+      "source_id": 751
+    },
+    {
+      "count": 2,
+      "identity_key": "b5671f858e9cb819290efa982e13cf5c90b7e1dd63120295f71562ffcf94a026",
+      "source_id": 2593
+    },
+    {
+      "count": 3,
+      "identity_key": "e4dfe7de8e34e2e2b9a095b5d889bda022b3f49061ca579eb1d156b45f33dd49",
+      "source_id": 421
+    },
+    {
+      "count": 2,
+      "identity_key": "2467a7b7ef5bc542a745579afa09454aef762449bcd9436ca59d2b4ac0bdd13a",
+      "source_id": 2594
+    },
+    {
+      "count": 3,
+      "identity_key": "0394e1201bbcb2cec57bb5fd6ab1af08dfe2df62630b623346e950faa7d2a04b",
+      "source_id": 2596
+    },
+    {
+      "count": 1,
+      "identity_key": "f8cf403ed0d72daf508e26291e24768eb4c962154a8b99a9db14c4c9091c0dc7",
+      "source_id": 2600
+    },
+    {
+      "count": 1,
+      "identity_key": "6738d7e1508c08a42ec2a54ec45af53fa80760ce9e9716f83d7399ed989bc573",
+      "source_id": 2590
+    },
+    {
+      "count": 2,
+      "identity_key": "1cba2c95fdcdb1ed2f33e0e569c164701e37679b850ec3352755f087db1d2302",
+      "source_id": 2592
+    },
+    {
+      "count": 2,
+      "identity_key": "4fd84966e9860f75c380e9f14afd99edd4eddd7142e4014db0247835f48d3d54",
+      "source_id": 2595
+    },
+    {
+      "count": 1,
+      "identity_key": "dd5d58fd5a9ec256fbefdd99081b1843839df76bbb233aba6e21d5f0f94a7ca2",
+      "source_id": 2598
+    },
+    {
+      "count": 1,
+      "identity_key": "9de0f6f7f13e19e527ba33116a5971102c8ec545de4756ff7ad1b4a923fdf872",
+      "source_id": 2599
+    },
+    {
+      "count": 1,
+      "identity_key": "7739172bde1f67e4919034abb0f06f45c70413cd3097d55cd36b5bc733aa6470",
+      "source_id": 2588
+    }
+  ],
+  "name": "사이코 쇼커 · 초능력의 공명",
+  "version": 332
+}

@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/weevil/start",
+  "banlistEnabled": false,
+  "deckName": "사마준 초급",
+  "extra": [],
+  "id": "enc044_1_battle_ch1_battle_248b6942e1ebe0e21977f3da",
+  "lpBonus": 0,
+  "main": [
+    1860,
+    1860,
+    182,
+    182,
+    1318,
+    1857,
+    1857,
+    1173,
+    1173,
+    1173,
+    305,
+    305,
+    402,
+    402,
+    1415,
+    1415,
+    1015,
+    1015,
+    329,
+    1059
+  ],
+  "name": "사마준",
+  "openingDrawBonus": 0,
+  "profileId": "weevil",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 332,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "installed-story:sc-7ecd814884e200f5-1b2e4c4db5ebfd85dcd9518bb1606e5e",
+  "usesNativeRules035": false
+}

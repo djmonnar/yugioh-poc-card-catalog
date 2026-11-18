@@ -1,0 +1,51 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1808",
+  "attack": 2500,
+  "attribute": 1,
+  "categories": [
+    "덱-젬나이트"
+  ],
+  "code": 76614340,
+  "defense": 1300,
+  "description": "\"젬나이트 가넷\" ＋ \"젬나이트\" 몬스터\n이 카드는 상기 카드를 융합 소재로 한 융합 소환으로만 엑스트라 덱에서 특수 소환할 수 있다. ①: 1턴에 1번, 자신 필드의 다른 앞면 표시의 \"젬\" 몬스터 1장을 릴리스하고 발동할 수 있다. 이 카드의 공격력은 턴 종료시까지, 릴리스한 몬스터의 공격력만큼 올린다. ②: 이 카드가 수비 표시 몬스터를 공격했을 경우, 그 수비력을 공격력이 넘은 만큼만 상대에게 전투 데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "24505f0dcd89119733b4e481885c30656c0fe1a09352986891c92b974d233ee3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1295.webp",
+  "level": 6,
+  "links": [
+    {
+      "identity_key": "4eb599ea6885b1fb5294cfbe68e87c2066d33589886ec24d66aa67fc82f1a882",
+      "slot": 292
+    },
+    {
+      "identity_key": "f5968bbb5191917dd401a4b61b4743a850f9a733f324e7b28c188c433e219cbb",
+      "slot": 599
+    },
+    {
+      "identity_key": "92a2c418d05f42b14bec87fff1fc1a68612d86c225d9af10c937fbd3db24e131",
+      "slot": 875
+    },
+    {
+      "identity_key": "1f8bf500b99dce1e179a0740f3f93aefe8ce44654e432225ffa306eae3352499",
+      "slot": 967
+    },
+    {
+      "identity_key": "0f9b95cfa6287b10727e610afca356c031788ccc8d2c4a763c46f1bfc18adc0e",
+      "slot": 1294
+    }
+  ],
+  "name": "젬나이트 루비즈",
+  "name_english": "Gem-Knight Ruby",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 128,
+  "rarity": "SR",
+  "source_id": 1808,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 1295
+}

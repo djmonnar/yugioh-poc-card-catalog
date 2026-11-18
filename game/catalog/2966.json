@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards143/2966",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-종족",
+    "발동-메인 페이즈 1 개시 시",
+    "효과-덱으로 되돌리기",
+    "효과-드로우",
+    "효과-배틀 페이즈 제한"
+  ],
+  "code": 98672567,
+  "defense": 0,
+  "description": "내 메인 페이즈 1이 시작할 때 묘지에서 서로 종족이 다른 몬스터 3장을 대상으로 발동할 수 있다. 세 카드를 덱에 되돌려 섞고 2장을 드로우한다. 이 카드를 발동하는 턴에는 배틀 페이즈를 실행할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "e5bc8d81f7281332a4ee4cb85809685455a86d1e2765c3342a2a5777ef1c7dcc",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native143/cards/2966.jpg",
+  "level": 0,
+  "links": [],
+  "name": "탐욕과 무욕의 항아리",
+  "name_english": "Pot of Dichotomy",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "탐욕과 무욕의 항아리",
+    "Pot of Dichotomy"
+  ],
+  "source_id": 2966,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1998
+}

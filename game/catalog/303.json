@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/303",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착",
+    "덱-데몬",
+    "발동-묘지",
+    "효과-바운스"
+  ],
+  "code": 40619825,
+  "defense": 0,
+  "description": "장착 몬스터의 공격력을 1000\n올린다. 이 카드가 필드에서\n묘지로 보내졌을 때, 필드의\n몬스터 1장을 릴리스하고 이\n카드를 자신의 덱 맨 위에\n놓을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "ab5b13055ae4bd8aa410f8d7d92a4b6647759e3f7546f4403a54359f413193df",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0581.webp",
+  "level": 0,
+  "links": [],
+  "name": "데몬의 도끼",
+  "name_english": "Axe of Despair",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 303,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 581
+}

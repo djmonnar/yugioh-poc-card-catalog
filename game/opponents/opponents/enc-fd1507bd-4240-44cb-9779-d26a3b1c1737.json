@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/keith/start",
+  "banlistEnabled": false,
+  "deckName": "볼캐닉 중급",
+  "extra": [],
+  "id": "enc-fd1507bd-4240-44cb-9779-d26a3b1c1737",
+  "lpBonus": 0,
+  "main": [
+    202,
+    202,
+    202,
+    2124,
+    2124,
+    2124,
+    2107,
+    2107,
+    1802,
+    1802,
+    1802,
+    1803,
+    1803,
+    2105,
+    2105,
+    2105,
+    2125,
+    2112,
+    2391,
+    2391
+  ],
+  "name": "밴디트키스",
+  "openingDrawBonus": 0,
+  "profileId": "keith",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 1802,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-fd1507bd-4240-44cb-9779-d26a3b1c1737",
+  "usesNativeRules035": true
+}

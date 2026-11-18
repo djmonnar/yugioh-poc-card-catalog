@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/125",
+  "attack": 3000,
+  "attribute": 8,
+  "categories": [
+    "효과-묘지보내기",
+    "파괴-몬스터"
+  ],
+  "code": 59464593,
+  "defense": 2000,
+  "description": "이 카드는 통상 소환할 수\n없다. 자신 필드의 \"암드\n드래곤 LV7\" 1장을 릴리스했을\n경우에만 특수 소환할 수\n있다. ①: 패를 1장 묘지로\n보내고 발동할 수 있다. 상대\n필드의 앞면 표시 몬스터를\n전부 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "221be38296c1fff11a7a6c7cc96fd5ad09f988920348f6235bd0cd832623fc46",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0536.webp",
+  "level": 10,
+  "links": [],
+  "name": "암드 드래곤 LV10",
+  "name_english": "Armed Dragon LV10",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "UR",
+  "source_id": 125,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 536
+}

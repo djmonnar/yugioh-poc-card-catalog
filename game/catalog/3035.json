@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3035",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-블랙매지션",
+    "지원-장착",
+    "효과-공격력 상승",
+    "발동-묘지로 보내졌을 때",
+    "효과-회복"
+  ],
+  "code": 67227834,
+  "defense": 0,
+  "description": "\"블랙 매지션\" \"블랙 매지션 걸\"에만 장착 가능. ①: 장착 몬스터의 공격력은 700 올린다. ②: 이 카드가 필드에서 묘지로 보내졌을 때에 발동한다. 자신은 1000 LP 회복한다.",
+  "draw_enabled": true,
+  "identity_key": "d6619d82eb7f6996b2ed39e66fdf3aeb2c93923388dfba885b3044fbad86dd50",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3035.jpg",
+  "level": 0,
+  "links": [],
+  "name": "마술의 주문서",
+  "name_english": "Magic Formula",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "마술의 주문서",
+    "Magic Formula"
+  ],
+  "source_id": 3035,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 2067
+}

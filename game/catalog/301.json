@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/301",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착"
+  ],
+  "code": 37120512,
+  "defense": 0,
+  "description": "이 카드를 장착한 어둠 속성\n몬스터의 공격력을 400 올리고\n수비력을 200 내린다.",
+  "draw_enabled": true,
+  "identity_key": "8c7bc205c2b4e45c73d6ce3fefe2f99a82060b1ff8ba6915aa7e5278210aa5a0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1018.webp",
+  "level": 0,
+  "links": [],
+  "name": "어둠의 파신검",
+  "name_english": "Sword of Dark Destruction",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 301,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1018
+}

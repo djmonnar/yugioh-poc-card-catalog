@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1338",
+  "attack": 800,
+  "attribute": 8,
+  "categories": [
+    "파괴-몬스터"
+  ],
+  "code": 83994646,
+  "defense": 1200,
+  "description": "리버스: 상대 필드의 앞면\n레벨 4 몬스터를 모두\n파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "ad4ba2d01e13630a28da2f9e38ad127efcb6a11379ddb448138339999c9fb344",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0375.webp",
+  "level": 3,
+  "links": [],
+  "name": "죽음의 4성 무당벌레",
+  "name_english": "4-Starred Ladybug of Doom",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "SR",
+  "source_id": 1338,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 375
+}

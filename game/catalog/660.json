@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/660",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "파괴-몬스터"
+  ],
+  "code": 57728570,
+  "defense": 0,
+  "description": "자신의 필드에 있는 공격력\n1000 이하의 어둠 속성 몬스터\n1장을 릴리스한다. 상대\n필드와 패의 몬스터를\n확인하고 공격력 1500 이상\n몬스터를 모두 파괴한다. 또한\n상대의 다음 3턴 동안\n드로우한 카드도 확인하여\n공격력 1500 이상 몬스터를\n파괴한다.",
+  "draw_enabled": false,
+  "identity_key": "aab476518e44e33071dfa82b8be4a0a8159e01aa335d44f36d72c825ee41cf71",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0369.webp",
+  "level": 0,
+  "links": [],
+  "name": "죽음의 덱 파괴 바이러스",
+  "name_english": "Crush Card",
+  "native_type": 4,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "L",
+  "source_id": 660,
+  "speed_limit": 0,
+  "stock": false,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 369
+}

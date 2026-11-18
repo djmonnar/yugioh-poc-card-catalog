@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3008",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-드로우",
+    "효과-덱으로 되돌리기"
+  ],
+  "code": 9744376,
+  "defense": 0,
+  "description": "자신의 묘지에 존재하는 \"고블린의 운영 실력\"의 매수 ＋ 1장을 덱에서 드로우하고, 패에서 카드를 1장 선택하여 덱의 맨 아래로 되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "0ae5fd654729c6e8ceb2c532f352fcab15caf08452f6081accf91ef829e750d2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3008.jpg",
+  "level": 0,
+  "links": [],
+  "name": "고블린의 운영 실력",
+  "name_english": "Good Goblin Housekeeping",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "고블린의 운영 실력",
+    "Good Goblin Housekeeping"
+  ],
+  "source_id": 3008,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2040
+}

@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1812",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-덱리크루터"
+  ],
+  "code": 80280737,
+  "defense": 0,
+  "description": "①: 자신 필드의 싱크로 몬스터 1장을 릴리스하고 발동할 수 있다. 그 몬스터의 카드명을 포함하는 \"/ 버스터\" 몬스터 1장을 덱에서 공격 표시로 특수 소환한다.\n[미지원] 현재 카드풀에는 싱크로 몬스터가 없어 이 카드 자체의 발동은 불가합니다. 버스터 머시너리의 패/묘지 비용으로 사용할 수 있습니다.",
+  "draw_enabled": true,
+  "identity_key": "f0a9bdec5dc2c2a31c39244dd77780fd68cfbf9b8c936637f2533fb8de627e3d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1299.webp",
+  "level": 0,
+  "links": [
+    {
+      "identity_key": "4e0f6514d8622d93872a721ad0fd679d439fdc58494e497ad926eeacfde865ba",
+      "slot": 682
+    }
+  ],
+  "name": "버스터 모드",
+  "name_english": "Assault Mode Activate",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1812,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1299
+}

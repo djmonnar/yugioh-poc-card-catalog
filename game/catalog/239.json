@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/239",
+  "attack": 1700,
+  "attribute": 32,
+  "categories": [
+    "효과-패트랩",
+    "소환-패,덱",
+    "발동-릴리즈"
+  ],
+  "code": 59546797,
+  "defense": 1300,
+  "description": "이 카드명의 ①의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 자신 / 상대의 배틀 스텝에 발동할 수 있다. 이 카드를 패에서 특수 소환하고, 자신은 1000 LP 회복한다. ②: 이 카드를 릴리스하고, 자신 필드의 앞면 표시 몬스터 1장을 대상으로 하여 발동할 수 있다. 그 몬스터의 공격력을 다음 턴의 종료시까지 1000 올린다. 이 효과는 상대 턴에도 발동할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "9d3c0ed031c23155498493a99cbed9f95fcc667660a2d7c5c6feea76e99256dc",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0589.webp",
+  "level": 4,
+  "links": [],
+  "name": "쥬라게도",
+  "name_english": "Juragedo",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "source_id": 239,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 589
+}

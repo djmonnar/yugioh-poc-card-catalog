@@ -1,0 +1,13 @@
+{
+  "art_key": "Character093/images/yugi_muto/start",
+  "id": "character-yugi-muto-093",
+  "profile": {
+    "name": "무토 유우기",
+    "portrait": "assets/actors/native093/yugi_muto/start.png",
+    "skill_profiles": [],
+    "skills": []
+  },
+  "profile_id": "yugi_muto",
+  "updated_at": "2026-11-06T12:09:11.718664+00:00",
+  "version": 506
+}

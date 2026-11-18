@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards081/2589",
+  "attack": 500,
+  "attribute": 32,
+  "categories": [
+    "지원-인조인간"
+  ],
+  "code": 32809211,
+  "defense": 400,
+  "description": "이 카드는 상대에게 직접 공격할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "db129ccb28fc3277206372099c64038e948d1c5dcbce128f0e1555616abf4e2a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native081/cards/2589.jpg",
+  "level": 2,
+  "links": [],
+  "name": "인조인간 7호",
+  "name_english": "Jinzo #7",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "N",
+  "source_id": 2589,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1621
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2035",
+  "attack": 1900,
+  "attribute": 16,
+  "categories": [
+    "효과-드로우"
+  ],
+  "code": 18036057,
+  "defense": 1400,
+  "description": "①: 이 카드가 수비 표시 몬스터를 공격했을 경우, 그 수비력을 공격력이 넘은 만큼만 전투 데미지를 준다. ②: 이 카드가 상대에게 전투 데미지를 주었을 경우에 발동한다. 자신은 덱에서 1장 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "d0e0c1f5939df608f7a1850b2a47e3216c40b309d376d0c670a77e6eebdb23fa",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1337.webp",
+  "level": 5,
+  "links": [],
+  "name": "천공기사 파샤스",
+  "name_english": "Airknight Parshath",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "SR",
+  "source_id": 2035,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1337
+}

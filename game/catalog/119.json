@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/119",
+  "attack": 1200,
+  "attribute": 1,
+  "categories": [
+    "파괴-몬스터"
+  ],
+  "code": 13215230,
+  "defense": 900,
+  "description": "이 카드가 공격 표시에서 수비\n표시로 변경되었을 때, 상대\n필드의 몬스터 1장을 선택하여\n파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "3bec788745f621189b48a8ba5d81630735ff0dd0e7b32a111e0a16d21731a90d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0657.webp",
+  "level": 3,
+  "links": [],
+  "name": "드림 삐에로",
+  "name_english": "Dream Clown",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "source_id": 119,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 657
+}

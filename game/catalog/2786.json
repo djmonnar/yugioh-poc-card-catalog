@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards120/2786",
+  "attack": 1300,
+  "attribute": 16,
+  "categories": [
+    "지원-번개족",
+    "지원-전투"
+  ],
+  "code": 511001912,
+  "defense": 1200,
+  "description": "①: 필드의 앞면 표시 번개족 몬스터의 수 × 400만큼 이 카드의 공격력이 오른다.\n\n[원정판] 애니메이션 등장 카드를 구현했습니다.",
+  "draw_enabled": true,
+  "identity_key": "d403d9f3ffa0e2c7c61797d4f8f74e594348a039c432239c249582ee17813afa",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native120/cards/2786.jpg",
+  "level": 4,
+  "links": [],
+  "name": "썬더 나이트",
+  "name_english": "Thunder Knight",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4096,
+  "rarity": "R",
+  "search_aliases": [
+    "썬더나이트",
+    "썬더 나이트",
+    "Thunder Knight"
+  ],
+  "source_id": 2786,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1818
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1815",
+  "attack": 1600,
+  "attribute": 8,
+  "categories": [
+    "효과-제외-묘지"
+  ],
+  "code": 12800777,
+  "defense": 1200,
+  "description": "이 카드는 통상 소환할 수\n없다. 자신 묘지에서 바람\n속성 몬스터 1장을 제외했을\n경우에 특수 소환할 수 있다.\n①: 상대 엔드 페이즈에 상대\n필드의 앞면 표시 몬스터\n1장을 대상으로 하고 발동할\n수 있다. 그 상대의 앞면 표시\n몬스터의 표시 형식을\n변경한다.",
+  "draw_enabled": true,
+  "identity_key": "53ad399b71e4a36523a12d055e8fc6053ada1396f043af20ad47c6a706a43dcb",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1280.webp",
+  "level": 4,
+  "links": [],
+  "name": "바람의 정령 가루다",
+  "name_english": "Garuda the Wind Spirit",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "R",
+  "source_id": 1815,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1280
+}

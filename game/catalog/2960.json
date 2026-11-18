@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards143/2960",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-전투",
+    "발동-배틀 페이즈 개시 시",
+    "효과-발동봉쇄"
+  ],
+  "code": 97120394,
+  "defense": 0,
+  "description": "자신이나 상대의 배틀 페이즈가 시작할 때 발동할 수 있다. 이 카드의 발동에 체인할 수 없으며, 해결 후 이 턴이 끝날 때까지 양쪽 모두 마법·함정 카드와 그 효과를 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "db70835d9fbd4da30c3525738302005b28cd35f055138c02d6655320ff96628c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native143/cards/2960.jpg",
+  "level": 0,
+  "links": [],
+  "name": "봉인 마법의 화살",
+  "name_english": "Anti-Magic Arrows",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "봉마의 화살",
+    "봉인 마법의 화살",
+    "Anti-Magic Arrows"
+  ],
+  "source_id": 2960,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 1992
+}

@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3014",
+  "attack": 1200,
+  "attribute": 2,
+  "categories": [
+    "지원-빙결계",
+    "지원-저레벨",
+    "효과-직접공격"
+  ],
+  "code": 90311614,
+  "defense": 800,
+  "description": "①: 자신 필드의 앞면 표시 몬스터가 레벨 2 이하의 몬스터뿐일 경우, 이 카드는 직접 공격할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "397d1f0faa4549affe8a6504adf40fe145f6cb55a96503f03744b6243d85aec6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3014.jpg",
+  "level": 2,
+  "links": [],
+  "name": "빙결계의 수영",
+  "name_english": "Dewdark of the Ice Barrier",
+  "native_type": 4129,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "R",
+  "search_aliases": [
+    "빙결계의 수영",
+    "Dewdark of the Ice Barrier"
+  ],
+  "source_id": 3014,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "튜너 몬스터",
+  "web_slot": 2046
+}

@@ -1,0 +1,70 @@
+{
+  "banlist_enabled": false,
+  "extra": [
+    {
+      "count": 1,
+      "identity_key": "6485fc919b766b9a7690cd4baf711f0e9884396352b673e6155701205634e6da",
+      "source_id": 379
+    }
+  ],
+  "id": "ch2_battle_8c6dd52b0c4459f2415f21c7",
+  "main": [
+    {
+      "count": 1,
+      "identity_key": "05162f6740ec23960625cae410c4330e55f38b11544da804e475179c75f5179d",
+      "source_id": 1916
+    },
+    {
+      "count": 3,
+      "identity_key": "1b35a77b57322b756f47b453317628046ce9d712cc2933185cd2fb61bf8e1c33",
+      "source_id": 0
+    },
+    {
+      "count": 2,
+      "identity_key": "e240dab4568e70743c89e3a2c2ea540a03c92316d5a928efe7dcfb7e06d74ad2",
+      "source_id": 471
+    },
+    {
+      "count": 2,
+      "identity_key": "9f459c59d9294e03c2b260af6bbdd5392b6d7a0a6d02b1d7ab09df945eaf1bdc",
+      "source_id": 1908
+    },
+    {
+      "count": 2,
+      "identity_key": "0e91a136403c3bdbf11bb7568bef5c5585b64141d67626d74b9a240ea8f59690",
+      "source_id": 710
+    },
+    {
+      "count": 1,
+      "identity_key": "7c91bc02916e6d4ddc8f520910d4106d0533dfdaa62e0e743ceb7b66e18fad69",
+      "source_id": 1166
+    },
+    {
+      "count": 1,
+      "identity_key": "925e8a7745b34deb543a7dd2f8d3d0995da9baca63261b1b83afa1acda0d0858",
+      "source_id": 1914
+    },
+    {
+      "count": 1,
+      "identity_key": "f0efa6ca98d27c307a11ecae44c76f810a00485805a21d09fd8e28ad5ae1f066",
+      "source_id": 1332
+    },
+    {
+      "count": 3,
+      "identity_key": "7cde00742ed7fec275902625795471075b4ec45aac30f63546334a86f670d5f7",
+      "source_id": 196
+    },
+    {
+      "count": 2,
+      "identity_key": "4e58038539301273b8746f7ec000011e70767b0a06b59e7a03db9f655b5de850",
+      "source_id": 1301
+    },
+    {
+      "count": 2,
+      "identity_key": "5f4ef019f9ca65d2921f8734e94a240797877d12abbb3a87f3209a5e8c54b32b",
+      "source_id": 1023
+    }
+  ],
+  "name": "카이바 상급",
+  "version": 257
+}

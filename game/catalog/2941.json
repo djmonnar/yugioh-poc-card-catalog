@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards136/2941",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-프레데터 플랜츠",
+    "지원-장착",
+    "소환-묘지",
+    "파괴-몬스터"
+  ],
+  "code": 14463695,
+  "defense": 0,
+  "description": "①: 자신 묘지의 \"프레데터 플랜츠\" 몬스터 1장을 대상으로 하고 이 카드를 발동할 수 있다. 그 몬스터를 특수 소환하고, 이 카드를 장착한다. 이 카드가 필드에서 벗어났을 때에 그 몬스터는 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "99d07fca8b82d3ace5104233fe02dc21492a8281d6af5939a32f85a28055996b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native136/cards/2941.jpg",
+  "level": 0,
+  "links": [],
+  "name": "프레데터 그래프트",
+  "name_english": "Predapruning",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "프레데터 그래프트",
+    "Predapruning"
+  ],
+  "source_id": 2941,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 1973
+}

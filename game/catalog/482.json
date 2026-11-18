@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/482",
+  "attack": 1400,
+  "attribute": 16,
+  "categories": [
+    "효과-덱샐비지",
+    "지원-의식",
+    "지원-사이버 엔젤"
+  ],
+  "code": 95492061,
+  "defense": 1000,
+  "description": "①: 이 카드가 일반 소환 /\n반전 소환에 성공했을 때에\n발동할 수 있다. 덱에서 의식\n몬스터 1장 또는 의식 마법\n카드 1장을 패에 넣는다.",
+  "draw_enabled": false,
+  "identity_key": "7afbc2f5f643a24005f9bdfd033973600c03a087497bc6adf593d116f07b55a7",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0180.webp",
+  "level": 4,
+  "links": [],
+  "name": "만수의 신",
+  "name_english": "Manju of the Ten Thousand Hands",
+  "native_type": 33,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 4,
+  "rarity": "L",
+  "source_id": 482,
+  "speed_limit": 1,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 180
+}

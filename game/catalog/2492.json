@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2492",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-일반몬스터",
+    "소환-덱리크루터"
+  ],
+  "code": 911883,
+  "defense": 0,
+  "description": "자신 필드에 몬스터가 없으면 발동할 수 있다. 덱에서 레벨 4 이하 일반 몬스터 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "1bb00c252253384f69a533f9e9a97ebde3e0636296d0757f59cf869e5db1872b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2492.jpg",
+  "level": 0,
+  "links": [],
+  "name": "예상외",
+  "name_english": "Unexpected Dai",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2492,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1529
+}

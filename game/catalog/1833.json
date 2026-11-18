@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1833",
+  "attack": 1600,
+  "attribute": 8,
+  "categories": [
+    "덱-해피",
+    "효과-덱샐비지",
+    "발동-묘지"
+  ],
+  "code": 45547649,
+  "defense": 1600,
+  "description": "이 카드가 전투에 의해서\n묘지로 보내졌을 때, 덱에서\n\"해피 레이디\"를 1장 패에\n넣을 수 있다. 그 후 덱을\n셔플한다.\n[안내] 전투로 파괴되어\n묘지로 보내지면 발동 여부를\n묻는다. 덱에서 이름이 \"해피\n레이디\"인 카드(해피 레이디,\n해피 레이디1·2·3, 해피\n레이디·SB)를 선택 창에서\n고른다.",
+  "draw_enabled": true,
+  "identity_key": "9cbb703e9751611a56ce5f22c8b305e9f9e9d3511898432edf8cd6b0e5520319",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1248.webp",
+  "level": 4,
+  "links": [],
+  "name": "버드 페이스",
+  "name_english": "Birdface",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "R",
+  "source_id": 1833,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1248
+}

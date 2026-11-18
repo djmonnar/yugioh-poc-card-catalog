@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2113",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "발동-파괴",
+    "발동-묘지",
+    "효과-데미지"
+  ],
+  "code": 82705573,
+  "defense": 0,
+  "description": "①: 자신 필드의 앞면 표시의 화염 속성 몬스터가 파괴되어 묘지로 보내질 때마다 발동한다. 상대에게 500 데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "637941745a9fc184b3eb74e6eb1931da71a1b745f95c776ef2966054bd750eba",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1411.webp",
+  "level": 0,
+  "links": [],
+  "name": "백파이어",
+  "name_english": "Backfire",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2113,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1411
+}

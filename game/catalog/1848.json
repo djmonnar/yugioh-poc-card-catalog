@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1848",
+  "attack": 1400,
+  "attribute": 1,
+  "categories": [
+    "덱-아마조네스"
+  ],
+  "code": 53162898,
+  "defense": 700,
+  "description": "이 카드가 공격했을 경우, 그\n데미지 스텝 종료시에 상대\n필드 위에 존재하는 마법/함정\n카드 1장을 선택하고\n파괴한다.\n[안내] 공격한 전투의 데미지\n스텝 종료시에 이 카드가\n필드에 남아 있으면 자동으로\n체인에 올라가는 강제\n효과이다. 대상은 상대의 마법\n/ 함정 카드(세트·필드 존\n포함)이다.",
+  "draw_enabled": true,
+  "identity_key": "75e671c7c65e9a8b1f29ba3234e7dac8c23b491d32e2ee13828df7079c9ed094",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1262.webp",
+  "level": 4,
+  "links": [],
+  "name": "아마조네스의 현자",
+  "name_english": "Amazoness Sage",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "source_id": 1848,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1262
+}

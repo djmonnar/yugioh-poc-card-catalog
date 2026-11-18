@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards144/2984",
+  "attack": 1900,
+  "attribute": 1,
+  "categories": [
+    "지원-곤충",
+    "소환-제외 코스트",
+    "소환-패에서",
+    "발동-피해 발생 시",
+    "효과-덱에서 묘지로 보내기"
+  ],
+  "code": 75081613,
+  "defense": 400,
+  "description": "이 카드는 일반 소환/세트할 수 없다. 자신의 묘지에 존재하는 곤충족 몬스터 1장을 게임에서 제외했을 경우에만 특수 소환할 수 있다. 이 카드가 상대 라이프에 전투 데미지를 주었을 때, 상대의 덱 맨 위에서 카드를 1장 묘지로 보낸다.",
+  "draw_enabled": true,
+  "identity_key": "881d05accc3d3861d77689daddbb1fe523520ce9f0558db92f9280dcfd3ab05f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native144/cards/2984.jpg",
+  "level": 4,
+  "links": [],
+  "name": "자이언트 웜",
+  "name_english": "Aztekipede, the Worm Warrior",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "R",
+  "search_aliases": [
+    "자이언트 웜",
+    "Aztekipede, the Worm Warrior"
+  ],
+  "source_id": 2984,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "특수 소환 몬스터",
+  "web_slot": 2016
+}

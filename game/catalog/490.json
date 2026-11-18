@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/490",
+  "attack": 1700,
+  "attribute": 16,
+  "categories": [
+    "지원-필드",
+    "효과-묘지샐비지"
+  ],
+  "code": 20210570,
+  "defense": 1000,
+  "description": "묘지의 필드 마법 1장을\n선택하여 덱으로 되돌릴 수\n있다.",
+  "draw_enabled": true,
+  "identity_key": "25c9622ab57b2007f8c51b40e767a7dc853c7ded1f5ea3691522a9a5bf2fcd1d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0236.webp",
+  "level": 4,
+  "links": [],
+  "name": "레굴루스",
+  "name_english": "Regulus",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "SR",
+  "source_id": 490,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 236
+}

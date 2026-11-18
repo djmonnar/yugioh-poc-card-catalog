@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1537",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착"
+  ],
+  "code": 68400115,
+  "defense": 0,
+  "description": "모든 장착 카드의 효과를\n무효로 한다.",
+  "draw_enabled": true,
+  "identity_key": "5305994307386c2ffc49d0a5d2492530b94f1e3ef684f1e853eec4e217bb7699",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0717.webp",
+  "level": 0,
+  "links": [],
+  "name": "벌거벗은 임금님",
+  "name_english": "The Emperor's Holiday",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1537,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 717
+}

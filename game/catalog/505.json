@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/505",
+  "attack": 650,
+  "attribute": 1,
+  "categories": [
+    "지원-융합",
+    "효과-묘지보내기"
+  ],
+  "code": 16229315,
+  "defense": 600,
+  "description": "3000 LP를 지불하고 융합 덱의\n몬스터 1장을 묘지로 버릴 수\n있다.",
+  "draw_enabled": true,
+  "identity_key": "1e39afd9d4cbe69f0bb85889c97c36125459c78957df87859dc6e5f66b19e2bb",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0271.webp",
+  "level": 2,
+  "links": [],
+  "name": "게일 도그라",
+  "name_english": "Gale Dogra",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "SR",
+  "source_id": 505,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 271
+}

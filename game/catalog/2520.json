@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2520",
+  "attack": 300,
+  "attribute": 16,
+  "categories": [
+    "덱-사이버 엔젤",
+    "지원-의식"
+  ],
+  "code": 76103404,
+  "defense": 200,
+  "description": "이 카드명의 효과는 1턴에 1번만 사용할 수 있다. 일반·반전·특수 소환되었을 경우, 덱에서 사이버 엔젤 몬스터 또는 기계천사의 의식 1장을 패에 넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "bad8965d4b591b682062c42c033fe9b4e71e07db3e2553957fe0e905aaa35598",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2520.jpg",
+  "level": 2,
+  "links": [],
+  "name": "사이버 쁘띠 엔젤",
+  "name_english": "Cyber Petit Angel",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "R",
+  "source_id": 2520,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1552
+}

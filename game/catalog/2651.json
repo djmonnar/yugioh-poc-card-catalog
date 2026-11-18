@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards088/2651",
+  "attack": 1600,
+  "attribute": 32,
+  "categories": [
+    "지원-게이트가디언",
+    "발동-버리기",
+    "효과-덱샐비지",
+    "발동-제외",
+    "파괴-몬스터"
+  ],
+  "code": 62411811,
+  "defense": 1300,
+  "description": "이 카드명의 ①②의 효과는 각각 1턴에 1번밖에 사용할 수 없다. ①: 이 카드를 패에서 버리고 발동할 수 있다. 덱에서 \"래버린스 월\" 카드 1장을 패에 넣는다. ②: 상대 몬스터가 전투를 실행하는 데미지 스텝 개시시, 자신 필드에 \"래버린스 월\" 카드가 존재할 경우, 묘지의 이 카드를 제외하고 발동할 수 있다. 그 상대 몬스터를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "610b12ad148194bc5f6b3e3e5458f716b532a44cb8a468aa40520d282be212fc",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native088/cards/2651.jpg",
+  "level": 5,
+  "links": [],
+  "name": "미궁에 숨은 섀도우 구울",
+  "name_english": "Shadow Ghoul of the Labyrinth",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "R",
+  "search_aliases": [
+    "미궁에숨은 섀도우 구울",
+    "미궁에 숨은 섀도우 구울",
+    "미궁에숨은섀도우구울",
+    "Shadow Ghoul of the Labyrinth"
+  ],
+  "source_id": 2651,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1683
+}

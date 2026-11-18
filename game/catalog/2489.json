@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2489",
+  "attack": 300,
+  "attribute": 1,
+  "categories": [
+    "지원-일반몬스터",
+    "소환-덱리크루터",
+    "지원-저레벨"
+  ],
+  "code": 85138716,
+  "defense": 100,
+  "description": "덱에서 이 카드를 특수 소환할 수 없다. 필드의 이 카드를 제외하고, 덱에서 같은 이름의 레벨 4 이하 일반 몬스터 2장을 특수 소환할 수 있다. 이 효과로 소환한 몬스터는 엔드 페이즈에 파괴된다. 이 효과는 카드명당 1턴에 1번.",
+  "draw_enabled": true,
+  "identity_key": "74694934721082ab24a5ac163ca111972487643c323622054d27dff5412e9268",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2489.jpg",
+  "level": 4,
+  "links": [],
+  "name": "레스큐 래빗",
+  "name_english": "Rescue Rabbit",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "SR",
+  "source_id": 2489,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1526
+}

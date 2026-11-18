@@ -1,0 +1,70 @@
+{
+  "banlist_enabled": true,
+  "extra": [
+    {
+      "count": 2,
+      "identity_key": "39bc3c59382a6341870811ff6d1867641a8a3a8524a14631affc55f2fa015d03",
+      "source_id": 36
+    }
+  ],
+  "id": "deck-48a783aa-a375-4f9d-9b5b-03acdeb0a12d",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "b743485929701efeac8e3dbaff6ff5d580cf22865ec7c24f45ba01f91bb6af26",
+      "source_id": 37
+    },
+    {
+      "count": 2,
+      "identity_key": "4f1fd929af0b3e748e3333dade001152ebf6868f8f6974033b594d0358cd50d3",
+      "source_id": 1250
+    },
+    {
+      "count": 3,
+      "identity_key": "40c9c42b1bae2e1627c85f81d98aeee19c40fa4465b00931d0065b8c344f6d40",
+      "source_id": 2572
+    },
+    {
+      "count": 2,
+      "identity_key": "4b2aa7f59e53d201d4ffe88c8e6cefacefd7816691999c102dc9e1783e9220a4",
+      "source_id": 38
+    },
+    {
+      "count": 2,
+      "identity_key": "12935475cffba0e125502f5db4814f4eba26e10fcf49a067ab2d698d221f1f55",
+      "source_id": 2582
+    },
+    {
+      "count": 1,
+      "identity_key": "40ed81512aa2831063fbd3657650e782d98ca30484242fbd0883454014eea624",
+      "source_id": 1927
+    },
+    {
+      "count": 1,
+      "identity_key": "45d860d25b85638ceddfaeb743ab74b99d71467e48c4e8f1bc8ca3060872695f",
+      "source_id": 1940
+    },
+    {
+      "count": 2,
+      "identity_key": "03cb347f3f65bd9a1295dc97533dd4ee1aba840ea0a98c57026ae0b3aec6b81a",
+      "source_id": 332
+    },
+    {
+      "count": 2,
+      "identity_key": "f097c70264c265b0aaccaddcfeffefc33c336798c1ca3fc3d8bece40da28f30a",
+      "source_id": 2575
+    },
+    {
+      "count": 2,
+      "identity_key": "6e88143a6d19b63d51f9f78d79264941a106691798fb78f1579481304fad7560",
+      "source_id": 1003
+    },
+    {
+      "count": 1,
+      "identity_key": "05b29e463364e57c9dfa8c71ba4f2e4a78e3fb4757e0f8bc155ca6f3983fcc6d",
+      "source_id": 2419
+    }
+  ],
+  "name": "가이아 초급",
+  "version": 309
+}

@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/548",
+  "attack": 2400,
+  "attribute": 16,
+  "categories": [
+    "효과-바운스",
+    "발동-묘지"
+  ],
+  "code": 52824910,
+  "defense": 2200,
+  "description": "①: 이 카드는 같은 공격력의\n몬스터와의 전투로는 파괴되지\n않는다. ②: 이 카드가\n파괴되어 묘지로 보내졌을\n경우, 필드의 몬스터 1장을\n대상으로 하고 발동한다. 그\n몬스터를 주인의 패로\n되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "b9aee5358102c4a5d1d8be138e03b27d349b89557a49bcd1b499680e2966c775",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0139.webp",
+  "level": 6,
+  "links": [],
+  "name": "카이저 글라이더",
+  "name_english": "Kaiser Glider",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "source_id": 548,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 139
+}

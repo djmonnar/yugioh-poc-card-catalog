@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1091",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-묘지샐비지"
+  ],
+  "code": 61705417,
+  "defense": 0,
+  "description": "상대 묘지의 마법 카드 1장을\n선택한다. 턴 종료시까지\n자신의 패에 있는 마법\n카드처럼 사용할 수 있다.\n발동했으면 자신은 2000\n데미지를 받는다.",
+  "draw_enabled": true,
+  "identity_key": "fa9ed92e21e39127e87ac5ef8885d212cd7dfc3ecac4bb838e2274fb90cf084f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0703.webp",
+  "level": 0,
+  "links": [],
+  "name": "도굴꾼",
+  "name_english": "Graverobber",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1091,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 703
+}

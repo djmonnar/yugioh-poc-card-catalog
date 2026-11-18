@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2072",
+  "attack": 200,
+  "attribute": 1,
+  "categories": [
+    "발동-소환",
+    "파괴-몬스터",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 97317530,
+  "defense": 1400,
+  "description": "이 카드가 야수족 몬스터의 효과에 의해서 특수 소환에 성공했을 경우, 필드 위의 카드 1장을 선택하고 파괴할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "1771f7d68b08e587cfcc7036c1b6535042035b14b34606706463173890de8e54",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1370.webp",
+  "level": 2,
+  "links": [],
+  "name": "숲의 성수 카란토사",
+  "name_english": "Kalantosa, Mystical Beast of the Forest",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "SR",
+  "source_id": 2072,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1370
+}

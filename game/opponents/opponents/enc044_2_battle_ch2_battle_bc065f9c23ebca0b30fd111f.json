@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/weevil/start",
+  "banlistEnabled": false,
+  "deckName": "사마준",
+  "extra": [],
+  "id": "enc044_2_battle_ch2_battle_bc065f9c23ebca0b30fd111f",
+  "lpBonus": 0,
+  "main": [
+    1145,
+    1145,
+    1352,
+    1352,
+    1868,
+    1868,
+    402,
+    402,
+    1335,
+    1335,
+    1859,
+    1859,
+    1857,
+    1857,
+    1079,
+    1079,
+    1030,
+    1029,
+    1318,
+    182
+  ],
+  "name": "사마준",
+  "openingDrawBonus": 0,
+  "profileId": "weevil",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "parasite_deck",
+      "position": 0,
+      "sourceId": -1,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "installed-story:sc-7ecd814884e200f5-efeb55951a9623dbf70238fd4f3b8e29",
+  "usesNativeRules035": false
+}

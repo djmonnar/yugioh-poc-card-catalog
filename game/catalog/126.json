@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/126",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-묘지",
+    "효과-바운스",
+    "지원-호루스"
+  ],
+  "code": 90500169,
+  "defense": 0,
+  "description": "필드 위의 \"LV\"이라고 이름\n붙은 몬스터 1장을 선택하고\n발동할 수 있다. 선택한\n몬스터를 주인의 덱으로\n되돌리고, 주인의 묘지에서 그\n몬스터의 카드 이름이 포함된\n\"LV\"이 낮은 몬스터 1장을\n골라, 특수 소환 조건을\n무시하고 주인의 필드 위에\n특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "9f7ec8e50135377b8bad3f6d07f32466e9d4b29e276231ffc87f634303ba3e13",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0021.webp",
+  "level": 0,
+  "links": [],
+  "name": "레벨 다운!?",
+  "name_english": "Level Down!?",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 126,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 21
+}

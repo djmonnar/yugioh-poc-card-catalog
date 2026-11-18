@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards099/2720",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착",
+    "지원-가디언",
+    "효과-직접공격"
+  ],
+  "code": 95638658,
+  "defense": 0,
+  "description": "장착 몬스터의 공격력은 1000 포인트 내린다. 장착 몬스터는 상대 플레이어에게 직접 공격을 할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "93bbc3255f64a7c420e8b14221cb4892bb9fa39f58088dea7b76acfd1573fb28",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native099/cards/2720.jpg",
+  "level": 0,
+  "links": [],
+  "name": "유성의 활－실",
+  "name_english": "Shooting Star Bow - Ceal",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "유성의활-실",
+    "유성의 활－실",
+    "유성의활－실",
+    "Shooting Star Bow - Ceal"
+  ],
+  "source_id": 2720,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1752
+}

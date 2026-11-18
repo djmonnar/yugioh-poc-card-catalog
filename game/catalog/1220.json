@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1220",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-릴리즈"
+  ],
+  "code": 68005187,
+  "defense": 0,
+  "description": "상대의 몬스터 1장을 자신의\n몬스터 대신 릴리스한다. 이\n카드를 발동한 턴의 배틀\n페이즈는 건너뛰어야 한다.",
+  "draw_enabled": true,
+  "identity_key": "8fdba67eb686ecfa60afc175239f19193acbe9da9b586db53f44c527a068e050",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0264.webp",
+  "level": 0,
+  "links": [],
+  "name": "크로스 소울",
+  "name_english": "Soul Exchange",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1220,
+  "speed_limit": 2,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 264
+}

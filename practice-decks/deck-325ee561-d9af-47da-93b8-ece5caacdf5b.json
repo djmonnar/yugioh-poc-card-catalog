@@ -1,0 +1,54 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-325ee561-d9af-47da-93b8-ece5caacdf5b",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "39185fc59a67bd1d87f0f1f0cf8b5aac1dd9a3bf8d46b0b7dcb45bdf26bbdff3",
+      "source_id": 2547
+    },
+    {
+      "count": 2,
+      "identity_key": "05c899674fc8464dca1e1b0ff13bb0d31bab78b1ea8e7ce8ce79ce8bfffbfc30",
+      "source_id": 2546
+    },
+    {
+      "count": 3,
+      "identity_key": "d7b9b5e2af1e3ec0bc818b96fcb911849c83d8053e20b52a5006b4a22f6cb3eb",
+      "source_id": 2544
+    },
+    {
+      "count": 2,
+      "identity_key": "1f707f406d1bd5ddd2175d44818ca6cb8091f363728cf688bcdd1b7020ac90b9",
+      "source_id": 2549
+    },
+    {
+      "count": 2,
+      "identity_key": "3f413c22cd1fac072be296dd61bdc0e7036f3513a27ef2e22e68cf85d3118a6c",
+      "source_id": 2548
+    },
+    {
+      "count": 2,
+      "identity_key": "40ef305663bf3754e629c68da80f82bdc38796f6cffcde52c1dfbb788974c64c",
+      "source_id": 2537
+    },
+    {
+      "count": 3,
+      "identity_key": "caf9878c5ed66b133c00c17ad2dd98c56a516de0ee113d10a3360665b1cf9fc4",
+      "source_id": 2538
+    },
+    {
+      "count": 2,
+      "identity_key": "27f6099f9655c6341c4abaf47b3430d1838a911bc34f33fc8181e28e920f3b8a",
+      "source_id": 2543
+    },
+    {
+      "count": 2,
+      "identity_key": "dee4edece802a8de51d11503eb3ffdf4db5b3e17a1538856cf1e91bbb59a3af1",
+      "source_id": 2541
+    }
+  ],
+  "name": "네프티스 중급",
+  "version": 288
+}

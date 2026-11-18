@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/akiza/start",
+  "banlistEnabled": false,
+  "deckName": "아키 식물 상급",
+  "extra": [],
+  "id": "enc-51d4f71f-f9df-4e60-98de-e1c792934978",
+  "lpBonus": 0,
+  "main": [
+    2048,
+    2048,
+    2048,
+    2042,
+    2042,
+    234,
+    234,
+    234,
+    2054,
+    2054,
+    2047,
+    2047,
+    2055,
+    2055,
+    2039,
+    2049,
+    2045,
+    2056,
+    2056,
+    2041
+  ],
+  "name": "아나트 아키",
+  "openingDrawBonus": 0,
+  "profileId": "akiza",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2054,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-51d4f71f-f9df-4e60-98de-e1c792934978",
+  "usesNativeRules035": true
+}

@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1918",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-덱리크루터"
+  ],
+  "code": 13604200,
+  "defense": 0,
+  "description": "①: 자신 필드에 \"블랙 매지션\n걸\"이 존재할 경우에 발동할\n수 있다. 패 / 덱에서 \"블랙\n매지션\" 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "c797a5a23bbe1c474544f2826663e3b533a0b8588541ac0f967ad74a6c29949c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1194.webp",
+  "level": 0,
+  "links": [
+    {
+      "identity_key": "cb0b774225522f72211f5ddbb524a5775af55affb038a97f866b3db3341aa77d",
+      "slot": 621
+    },
+    {
+      "identity_key": "a850b8cd0e118c301dde50e7dcabc13ebb54f1506ec19fbe0694955bba7dfd67",
+      "slot": 803
+    },
+    {
+      "identity_key": "e59839abbcfb0aeca99b2305a17c4280aaa98be82be82bcdf349e6a1d8c6aa0b",
+      "slot": 1196
+    }
+  ],
+  "name": "현자의 보석",
+  "name_english": "Sage's Stone",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1918,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1194
+}

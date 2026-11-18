@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1313",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착"
+  ],
+  "code": 97687912,
+  "defense": 0,
+  "description": "이 카드를 장착한 자신의\n몬스터가 상대의 수비 표시\n몬스터를 공격했을 때,\n공격력이 그 수비력을 넘으면\n그 차만큼 상대에게 전투\n데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "1e6e2055de66317da0286b401be65f4d36eaa8ebd01223721904d97a0f6ad391",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0978.webp",
+  "level": 0,
+  "links": [],
+  "name": "메테오 스트라이크",
+  "name_english": "Fairy Meteor Crush",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1313,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 978
+}

@@ -1,0 +1,85 @@
+{
+  "banlist_enabled": true,
+  "extra": [
+    {
+      "count": 1,
+      "identity_key": "35c2904f0b33aec238db12ef668db15ac2a5c7cd8f2b7eb1648d9c5904d131af",
+      "source_id": 2858
+    },
+    {
+      "count": 1,
+      "identity_key": "37bc5ff52bb3b3b943ea3098bae88b4d737f2eab8f7850656478dcdedf99a5da",
+      "source_id": 2861
+    }
+  ],
+  "id": "rishid126",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "4622607701a32bb375bb9f780aae02feeab399c3eb802a189ce2a3cebe296713",
+      "source_id": 2848
+    },
+    {
+      "count": 2,
+      "identity_key": "860ac9a49c1b377b5215fcfccaa1296531191e349739b855089a2490a66f04b5",
+      "source_id": 2851
+    },
+    {
+      "count": 2,
+      "identity_key": "2723bdec40ce7492977a25b448c7b055d75ae70837bce86cb3290bca3d960875",
+      "source_id": 2852
+    },
+    {
+      "count": 2,
+      "identity_key": "61c53cb1d0b0dc348d3a2dae0412a3bd8d09a98bafb6e32993e036a7f40678fe",
+      "source_id": 2849
+    },
+    {
+      "count": 2,
+      "identity_key": "9fa73f15ca06cc080db5e397f7559fb98f952d4a5944f721b9621ea8af62f956",
+      "source_id": 2853
+    },
+    {
+      "count": 2,
+      "identity_key": "5072d7339c5d1f014e9ce2fcb9d37a4b2c665be0d3f640a2301729a76edd8bc9",
+      "source_id": 2855
+    },
+    {
+      "count": 1,
+      "identity_key": "a95dfff565800ba6619f2f640cfa39419718eef0983e53579a021978cae06426",
+      "source_id": 2862
+    },
+    {
+      "count": 1,
+      "identity_key": "b6e098a65d6e1a7afbbce2792724b2fdbed913a54ad6f918258ae8680c1fc176",
+      "source_id": 2863
+    },
+    {
+      "count": 1,
+      "identity_key": "343365ba1025324519a95b36641b9b345809ddfeb06dd3c422c944140846fee2",
+      "source_id": 2857
+    },
+    {
+      "count": 1,
+      "identity_key": "7019832552aa60957353fdfa5b7878cfe665aefc865580ef942f513cb7aba8bb",
+      "source_id": 2860
+    },
+    {
+      "count": 1,
+      "identity_key": "f4f3ff415bb3b2cc7170e4069e483f830f08df58eee01747835cf2e407c0be7e",
+      "source_id": 2864
+    },
+    {
+      "count": 1,
+      "identity_key": "d812c6451b66762bfc80bf11983503ac26fa383d8dcf77be37cf003c5efdda39",
+      "source_id": 2057
+    },
+    {
+      "count": 1,
+      "identity_key": "30767dc711bb3cd04de6ad25afd2c70580d0627e3113567b84493430bc31d8af",
+      "source_id": 2850
+    }
+  ],
+  "name": "아포피스와 함정 몬스터",
+  "version": 718
+}

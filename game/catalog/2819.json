@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards125/2819",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-파충류",
+    "효과-버리기",
+    "효과-묘지보내기"
+  ],
+  "code": 17189677,
+  "defense": 0,
+  "description": "①: 패를 1장 버리고 발동할 수 있다. 덱에서 파충류족 몬스터 4장을 묘지로 보낸다.",
+  "draw_enabled": true,
+  "identity_key": "f2eedbf49dd038288ed38ebe87b466203139e601fd3b57aac4f08a193aa79b7a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native125/cards/2819.jpg",
+  "level": 0,
+  "links": [],
+  "name": "스네이크 레인",
+  "name_english": "Snake Rain",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "search_aliases": [
+    "스네이크레인",
+    "스네이크 레인",
+    "Snake Rain"
+  ],
+  "source_id": 2819,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1851
+}

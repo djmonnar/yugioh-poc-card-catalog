@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards067/2564",
+  "attack": 2000,
+  "attribute": 32,
+  "categories": [
+    "덱-묘지기"
+  ],
+  "code": 79206925,
+  "defense": 2000,
+  "description": "융합 소재: ‘묘지기’ 몬스터 2장. 융합 소재의 원래 레벨 합계 × 100만큼 공격력·수비력이 오른다. ‘왕가의 골짜기－네크로밸리’가 필드에 있으면 이 카드와 자신의 필드 존의 카드는 효과로 파괴되지 않는다. 자신의 메인 페이즈에 효과를 발동할 수 있으며, 그 턴의 엔드 페이즈에 덱에서 ‘묘지기’ 몬스터 또는 ‘네크로밸리’ 카드 1장을 패에 넣는다. 같은 이름의 이 효과는 한 턴에 한 번만 사용할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "bfce9664e15a9a8d70bef559c568ca2254bbf243319b1d89b761e033e76bedbe",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2564.jpg",
+  "level": 7,
+  "links": [],
+  "name": "묘지기의 이능자",
+  "name_english": "Gravekeeper's Supernaturalist",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "UR",
+  "source_id": 2564,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 / 효과 몬스터",
+  "web_slot": 1596
+}

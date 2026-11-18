@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1901",
+  "attack": 2400,
+  "attribute": 16,
+  "categories": [
+    "효과-패트랩",
+    "발동-동전(코인)",
+    "효과-버리기"
+  ],
+  "code": 60953118,
+  "defense": 2400,
+  "description": "패에서 이 카드를 버리는\n것으로, 자신이 받는 전투\n데미지를 1번만 0 으로 한다.\n이 카드가 일반 소환/반전\n소환/특수 소환에 성공했을\n때, 코인 토스를 1회 실행하고\n이하의 효과를 얻는다.\n●앞 : 자신이 받는 전투\n데미지는 절반이 된다.\n●뒤 : 상대가 받는 전투\n데미지는 절반이 된다.\n[차이] 패에서 버리는 효과는\n공격받는 플레이어만 사용할\n수 있다.",
+  "draw_enabled": true,
+  "identity_key": "3721857d0c693357e18995d38a513410064b8ab15fc61295d12e32f139657f42",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1105.webp",
+  "level": 6,
+  "links": [],
+  "name": "아르카나 포스 ⅩⅣ－템퍼런스",
+  "name_english": "Arcana Force XIV - The Temperance",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "R",
+  "source_id": 1901,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1105
+}

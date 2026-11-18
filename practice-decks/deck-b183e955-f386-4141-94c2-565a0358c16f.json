@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-b183e955-f386-4141-94c2-565a0358c16f",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "23fdc67e0948c79e7d317abd591a3e2eca6cffd8e3d4df3beaa6ae07693d5a6f",
+      "source_id": 2455
+    },
+    {
+      "count": 2,
+      "identity_key": "487a2f9665c6c773fc03381d9488bf5fb3b9dd3949c2ef8100dc0258aaab7e2c",
+      "source_id": 2442
+    },
+    {
+      "count": 2,
+      "identity_key": "f54a18de554931d8230fc6ebbf11ed67638c0bd7bda566fb93ef6afc7f44dc7d",
+      "source_id": 2428
+    },
+    {
+      "count": 2,
+      "identity_key": "a267032c35284963906683cf6a24805f7e36bc5c14e8c60f283d53767db00f11",
+      "source_id": 2438
+    },
+    {
+      "count": 2,
+      "identity_key": "a39d442a23b30860ecd7be464cf114ffd35401b76f2138dc80e70f97f0fa839b",
+      "source_id": 2433
+    },
+    {
+      "count": 2,
+      "identity_key": "251a8cd935df839f7c8ad2c387863a0d276baa98c7748c416e6d61895704a283",
+      "source_id": 2453
+    },
+    {
+      "count": 2,
+      "identity_key": "83b5e54d58c66cf4621252b0df4243ff8e82308823a3a42adf8fe89fdc19e10f",
+      "source_id": 2445
+    },
+    {
+      "count": 2,
+      "identity_key": "70e8d4722d5e9b4a509e6a1736cab06f0926f2e5e5233096a6796840cfcd2629",
+      "source_id": 2448
+    },
+    {
+      "count": 2,
+      "identity_key": "a5a161d265880d47e9886cf4f4c57b777745023a03e1bf27bf523fd96b8c2a5a",
+      "source_id": 2432
+    },
+    {
+      "count": 2,
+      "identity_key": "13b55edb85db2cf71a4e057d911f305c2b92a2b413769f8a1bee62ce679ee012",
+      "source_id": 2446
+    }
+  ],
+  "name": "암흑계 중급",
+  "version": 268
+}

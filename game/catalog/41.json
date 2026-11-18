@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/41",
+  "attack": 2300,
+  "attribute": 4,
+  "categories": [
+    "효과-묘지보내기",
+    "소환-패,덱",
+    "면역-마법",
+    "덱-호루스"
+  ],
+  "code": 11224103,
+  "defense": 1600,
+  "description": "이 카드는 자신 필드 위에\n앞면 표시로 존재하는 한,\n마법의 효과를 받지 않는다.\n이 카드가 몬스터를 전투에\n의해서 파괴한 턴의 엔드\n페이즈시, 이 카드를 묘지로\n보내는 것으로 \"호루스의\n흑염룡 LV8\" 1장을 패 또는\n덱에서 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "9076b42462f55801886d0e80afb0819b210d95d50b782ac73095db03ea76d027",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0060.webp",
+  "level": 6,
+  "links": [],
+  "name": "호루스의 흑염룡 LV6",
+  "name_english": "Horus the Black Flame Dragon LV6",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "source_id": 41,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 60
+}

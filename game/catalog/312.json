@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/312",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착",
+    "발동-묘지",
+    "효과-바운스"
+  ],
+  "code": 38552107,
+  "defense": 0,
+  "description": "장착 몬스터의 수비력을 800\n올린다. 이 카드가 필드에서\n묘지로 보내졌을 때, 500 LP를\n지불하고 자신의 덱 맨 위에\n놓을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "aac9fc36fe78e6e678c6f41cc4e52e67209f33c9856e006e8efa01d2c2bb5a32",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0742.webp",
+  "level": 0,
+  "links": [],
+  "name": "빛의 뿔",
+  "name_english": "Horn of Light",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 312,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 742
+}

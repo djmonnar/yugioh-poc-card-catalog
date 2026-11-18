@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1011",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-제외-묘지"
+  ],
+  "code": 82542267,
+  "defense": 0,
+  "description": "상대 묘지의 몬스터 2장을\n선택하여 듀얼이 끝날 때까지\n제외한다.",
+  "draw_enabled": true,
+  "identity_key": "4f00c597aeb4e8c19e66a646ad901e82c8208094e77f042e5cd0261e5eb7e8ef",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0710.webp",
+  "level": 0,
+  "links": [],
+  "name": "도굴꾼 구울",
+  "name_english": "Gravedigger Ghoul",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1011,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 710
+}

@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards035/2397",
+  "attack": 400,
+  "attribute": 16,
+  "categories": [
+    "발동-소환",
+    "발동-묘지",
+    "발동-제외",
+    "효과-덱샐비지",
+    "소환-덱리크루터"
+  ],
+  "code": 23893227,
+  "defense": 1500,
+  "description": "이 카드명의 ①②의 효과는 1턴에 1번, 어느 쪽이든 1개밖에 사용할 수 없다.\n①: 이 카드가 일반 소환에 성공했을 때 발동한다. 덱에서 \"사이버\" 마법 / 함정 카드 또는 \"사이버네틱\" 마법 / 함정 카드 1장을 패에 넣는다.\n②: 상대 필드에만 몬스터가 존재할 경우, 묘지의 이 카드를 제외하고 발동할 수 있다. 덱에서 \"사이버 드래곤\" 몬스터 1장을 특수 소환한다.\n③: 이 카드의 카드명은 몬스터 존 / 묘지에 존재하는 한 \"사이버 드래곤\"으로 취급한다.",
+  "draw_enabled": true,
+  "identity_key": "77839d26a9fce740d19d7d12d6c078fd11cba32ca395043360b78b075c52701c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native035/cards/2397.jpg",
+  "level": 2,
+  "links": [
+    {
+      "identity_key": "4ee7da1607ec6bac05c5cb186ca2a8b4bf5337490734f05276fe43575087f4c7",
+      "slot": 782
+    }
+  ],
+  "name": "사이버 드래곤 코어",
+  "name_english": "Cyber Dragon Core",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "SR",
+  "source_id": 2397,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1434
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/450",
+  "attack": 2400,
+  "attribute": 16,
+  "categories": [
+    "효과-드로우"
+  ],
+  "code": 9628664,
+  "defense": 1200,
+  "description": "체인 3 이상으로 쌓인 체인의\n처리가 끝난 뒤, 1장\n드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "da6778dd8fc326972d3f6ad86ce9f972af8c0cf5d230b601fc2714292a20d487",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0160.webp",
+  "level": 6,
+  "links": [],
+  "name": "어스 마더 아이리스",
+  "name_english": "Iris, the Earth Mother",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "R",
+  "source_id": 450,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 160
+}

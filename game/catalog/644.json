@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/644",
+  "attack": 1600,
+  "attribute": 4,
+  "categories": [
+    "덱-호루스"
+  ],
+  "code": 75830094,
+  "defense": 1000,
+  "description": "이 카드는 자신 필드 위에\n앞면 표시로 존재하는 한,\n컨트롤을 변경할 수는 없다.\n이 카드가 몬스터를 전투에\n의해서 파괴한 턴의 엔드\n페이즈시, 이 카드를 묘지로\n보내는 것으로 \"호루스의\n흑염룡 LV6\" 1장을 패 또는\n덱에서 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "595e64cf3a671b1bd334c1d23d632b25f8e818c4d86b24a8bfa3b9e577aef60b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1088.webp",
+  "level": 4,
+  "links": [],
+  "name": "호루스의 흑염룡 LV4",
+  "name_english": "Horus the Black Flame Dragon LV4",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "R",
+  "source_id": 644,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1088
+}

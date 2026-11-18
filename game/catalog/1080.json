@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1080",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-바운스"
+  ],
+  "code": 42703248,
+  "defense": 0,
+  "description": "필드의 모든 마법 / 함정\n카드를 각각 주인의 패로\n되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "1f3a8f2d69f16e3aa2f7bdd6ca4c3aea1bea583cdc07176ffedfcdc97c8f88d2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0729.webp",
+  "level": 0,
+  "links": [],
+  "name": "허리케인",
+  "name_english": "Giant Trunade",
+  "native_type": 2,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1080,
+  "speed_limit": 2,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 729
+}

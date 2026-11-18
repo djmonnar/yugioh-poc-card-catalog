@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/101",
+  "attack": 900,
+  "attribute": 32,
+  "categories": [
+    "효과-묘지샐비지",
+    "지원-함정"
+  ],
+  "code": 28933734,
+  "defense": 400,
+  "description": "리버스: 자신의 묘지의 함정\n카드 1장을 선택하여 패로\n되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "64b5039a32f6e686df9f4007c6f4722bbe501a7d62849c8938af6f635830f6cb",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1016.webp",
+  "level": 2,
+  "links": [],
+  "name": "암흑의 가면",
+  "name_english": "Mask of Darkness",
+  "native_type": 2097185,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 8,
+  "rarity": "UR",
+  "source_id": 101,
+  "speed_limit": 1,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1016
+}

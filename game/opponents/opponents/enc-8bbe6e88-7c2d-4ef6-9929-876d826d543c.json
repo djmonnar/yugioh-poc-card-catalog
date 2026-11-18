@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/mako/start",
+  "banlistEnabled": false,
+  "deckName": "리버스 펭귄",
+  "extra": [],
+  "id": "enc-8bbe6e88-7c2d-4ef6-9929-876d826d543c",
+  "lpBonus": 0,
+  "main": [
+    2023,
+    2023,
+    2811,
+    2811,
+    601,
+    601,
+    601,
+    2810,
+    2810,
+    2812,
+    2812,
+    2809,
+    2809,
+    1950,
+    1950,
+    964,
+    1539,
+    1539,
+    1953,
+    1953
+  ],
+  "name": "마해룡",
+  "openingDrawBonus": 0,
+  "profileId": "mako",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 333,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-8bbe6e88-7c2d-4ef6-9929-876d826d543c",
+  "usesNativeRules035": true
+}

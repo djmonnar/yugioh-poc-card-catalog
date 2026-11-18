@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/500",
+  "attack": 450,
+  "attribute": 32,
+  "categories": [
+    "파괴-몬스터"
+  ],
+  "code": 45141844,
+  "defense": 600,
+  "description": "리버스: 필드의 몬스터 1장을\n파괴한다. 표시 형식은\n상관없다.",
+  "draw_enabled": true,
+  "identity_key": "d3f35b63760808e80a81b23bbc641591154af0d589b5a12533373a0dbac1dc6e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0753.webp",
+  "level": 2,
+  "links": [],
+  "name": "집념의 노마술사",
+  "name_english": "Old Vindictive Magician",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 500,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 753
+}

@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards120/2782",
+  "attack": 2400,
+  "attribute": 16,
+  "categories": [
+    "덱-제왕",
+    "효과-파괴",
+    "발동-소환"
+  ],
+  "code": 51945556,
+  "defense": 1000,
+  "description": "①: 이 카드가 어드밴스 소환에 성공했을 경우, 필드의 몬스터 1장을 대상으로 하고 발동한다. 그 몬스터를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "1f9737028fd42867fb3bf39a9eee7037532805d090aba08b8f90cfaea493aa2a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native120/cards/2782.jpg",
+  "level": 5,
+  "links": [],
+  "name": "번개 제왕 자보르그",
+  "name_english": "Zaborg the Thunder Monarch",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4096,
+  "rarity": "SR",
+  "search_aliases": [
+    "번개제왕자보르그",
+    "번개 제왕 자보르그",
+    "Zaborg the Thunder Monarch"
+  ],
+  "source_id": 2782,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1814
+}

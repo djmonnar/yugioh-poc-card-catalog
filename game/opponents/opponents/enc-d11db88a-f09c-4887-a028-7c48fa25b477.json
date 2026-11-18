@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/roamer_leon/start",
+  "banlistEnabled": false,
+  "deckName": "야수족",
+  "extra": [],
+  "id": "enc-d11db88a-f09c-4887-a028-7c48fa25b477",
+  "lpBonus": 500,
+  "main": [
+    1108,
+    1108,
+    1108,
+    2059,
+    2059,
+    2078,
+    2078,
+    127,
+    127,
+    407,
+    407,
+    407,
+    455,
+    455,
+    455,
+    2075,
+    2075,
+    2075,
+    2617,
+    2617
+  ],
+  "name": "방랑 듀얼리스트 레온",
+  "openingDrawBonus": 0,
+  "profileId": "roamer_leon",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 330,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-d11db88a-f09c-4887-a028-7c48fa25b477",
+  "usesNativeRules035": true
+}

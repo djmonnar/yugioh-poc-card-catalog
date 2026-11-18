@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1040",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-융합"
+  ],
+  "code": 26902560,
+  "defense": 0,
+  "description": "덱의 \"융합\" 1장을 패에 넣고\n덱을 셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "3c91fb75629a9ab81c5ee5d7f5c379d2ed640b6db9af3d248b0e0acf5e860f8c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1029.webp",
+  "level": 0,
+  "links": [],
+  "name": "융합 현자",
+  "name_english": "Fusion Sage",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1040,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1029
+}

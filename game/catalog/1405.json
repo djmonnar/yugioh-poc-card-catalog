@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1405",
+  "attack": 1500,
+  "attribute": 2,
+  "categories": [
+    "소환-묘지",
+    "발동-묘지"
+  ],
+  "code": 31709826,
+  "defense": 500,
+  "description": "이 카드가 전투로 묘지로\n보내졌을 때, 라이프 포인트를\n1000 지불하여 자신의 다음\n스탠바이 페이즈에 이 카드를\n앞면 수비 표시로 특수 소환할\n수 있다. 몬스터가 파괴되었을\n때 이 효과의 사용을 선언해야\n한다. 이 방법으로 특수\n소환한 턴에는 표시 형식을\n변경할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "9a340856b4fe80508b12905a317a58ef21599b12e94a8e6d5cf9ec2ea70c3096",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1060.webp",
+  "level": 4,
+  "links": [],
+  "name": "리바이벌 슬라임",
+  "name_english": "Revival Jam",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "R",
+  "source_id": 1405,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1060
+}

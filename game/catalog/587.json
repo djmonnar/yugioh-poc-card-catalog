@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/587",
+  "attack": 1600,
+  "attribute": 4,
+  "categories": [
+    "소환-묘지"
+  ],
+  "code": 41741922,
+  "defense": 1200,
+  "description": "앞면 수비 표시의 이 카드를\n릴리스하여 묘지의 레벨 3\n드래곤족 몬스터 2장을 소환할\n수 있다.",
+  "draw_enabled": true,
+  "identity_key": "7e3d8568eb3b81fc95c0938fd422d9682fa242ce9bff0800374064930118a90e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0055.webp",
+  "level": 4,
+  "links": [],
+  "name": "라바 드래곤",
+  "name_english": "Lava Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "R",
+  "source_id": 587,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 55
+}

@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2507",
+  "attack": 1400,
+  "attribute": 32,
+  "categories": [
+    "지원-전사족",
+    "발동-소환",
+    "효과-묘지보내기"
+  ],
+  "code": 28985331,
+  "defense": 1200,
+  "description": "이 카드가 일반 소환 / 반전 소환 / 특수 소환되었을 때 발동할 수 있다. 덱에서 어둠 속성 몬스터 1장을 묘지로 보낸다.",
+  "draw_enabled": true,
+  "identity_key": "835def346ab103af40eecf0990b36ecfd16ad487feb789e2d3a70770b6d7a9e7",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2507.jpg",
+  "level": 4,
+  "links": [],
+  "name": "종말의 기사",
+  "name_english": "Armageddon Knight",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "UR",
+  "source_id": 2507,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1539
+}

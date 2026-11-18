@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2461",
+  "attack": 2900,
+  "attribute": 1,
+  "categories": [
+    "덱-젬나이트"
+  ],
+  "code": 8692301,
+  "defense": 2500,
+  "description": "젬나이트 몬스터 + 암석족 몬스터. 효과가 없는 융합 몬스터.",
+  "draw_enabled": true,
+  "identity_key": "13374ff42efb191e7b3a2b0ad9c6eb60df0a6f582b62a746abdcb7cfd3cc4614",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2461.jpg",
+  "level": 8,
+  "links": [],
+  "name": "젬나이트 지르코니아",
+  "name_english": "Gem-Knight Zirconia",
+  "native_type": 65,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "R",
+  "source_id": 2461,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 1498
+}

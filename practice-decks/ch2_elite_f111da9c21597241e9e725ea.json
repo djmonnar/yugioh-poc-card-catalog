@@ -1,0 +1,74 @@
+{
+  "banlist_enabled": false,
+  "extra": [],
+  "id": "ch2_elite_f111da9c21597241e9e725ea",
+  "main": [
+    {
+      "count": 1,
+      "identity_key": "ba261ad5d7299c19808d5425047365d4395340f7d1717cdad9c0ecefb69ba864",
+      "source_id": 1249
+    },
+    {
+      "count": 1,
+      "identity_key": "e98a15bc87cf2b2362911ac37f5c3b2a5471635ad250b7ca12e49dc967ace706",
+      "source_id": 1845
+    },
+    {
+      "count": 3,
+      "identity_key": "2e168a76d266646266cac0e53f728bf2bc176f6056ab030a73457f6a9c7eb404",
+      "source_id": 403
+    },
+    {
+      "count": 1,
+      "identity_key": "fba9617e3e89a457bfa5e121a46bec40c732fb602c2d19bf87c000922b8ba382",
+      "source_id": 1846
+    },
+    {
+      "count": 1,
+      "identity_key": "b0daa89e310e3ddfa61b168952f9866e0ae524ec8528737a4a42981d1a2190af",
+      "source_id": 671
+    },
+    {
+      "count": 2,
+      "identity_key": "14ef34dddf99754c0eae2578fc9f5635584f61b1ff8672d65b4bef854f78776d",
+      "source_id": 2068
+    },
+    {
+      "count": 2,
+      "identity_key": "1cc438e8511fb5e84e2fd51101ec555b82f55584a194230ebcf9bc63e919bf00",
+      "source_id": 1838
+    },
+    {
+      "count": 1,
+      "identity_key": "c8649042ab64749db95a76ff00802063648fd8c76bfe27f3e81daf08a7ebc811",
+      "source_id": 1843
+    },
+    {
+      "count": 2,
+      "identity_key": "9cbb703e9751611a56ce5f22c8b305e9f9e9d3511898432edf8cd6b0e5520319",
+      "source_id": 1833
+    },
+    {
+      "count": 2,
+      "identity_key": "b2636cd14103e8412c8af1e9f070e23f6aa1e115c6114a7aa65cd85d77883058",
+      "source_id": 608
+    },
+    {
+      "count": 1,
+      "identity_key": "21da5fd9360a7623664f1cf6338c56fc90c3917c5e9d7885ac86d925d961af78",
+      "source_id": 1099
+    },
+    {
+      "count": 1,
+      "identity_key": "3a1aba1642ddca25ba3c4076c14113cf56d13756cd1f1940974230767b6848ae",
+      "source_id": 1944
+    },
+    {
+      "count": 2,
+      "identity_key": "700fde8859d973fdcefb68a64de41c7e6f6619025b1309c4e06bba58da071b22",
+      "source_id": 1832
+    }
+  ],
+  "name": "메이 해피 상급",
+  "version": 259
+}

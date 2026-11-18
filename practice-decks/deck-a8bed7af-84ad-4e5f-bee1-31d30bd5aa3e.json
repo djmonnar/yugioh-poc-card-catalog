@@ -1,0 +1,69 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-a8bed7af-84ad-4e5f-bee1-31d30bd5aa3e",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "035d7d36342a6f9e0fb944905c001832cbb38b305821af4525a1165e393c00d5",
+      "source_id": 730
+    },
+    {
+      "count": 2,
+      "identity_key": "c0259c813cb269ba537aabed0ab776bfa3ae6a5c09a556e9a90e24911ecc426b",
+      "source_id": 958
+    },
+    {
+      "count": 1,
+      "identity_key": "7afbc2f5f643a24005f9bdfd033973600c03a087497bc6adf593d116f07b55a7",
+      "source_id": 482
+    },
+    {
+      "count": 2,
+      "identity_key": "d592f7c61e4718937e523e1cd32c335c9b5fa4e0fbc1a7ea74f2a4dc10878155",
+      "source_id": 1122
+    },
+    {
+      "count": 2,
+      "identity_key": "f2d92f116ad6d20f267775af80f4fd47335a156d171905a24df2ad68e82d90e9",
+      "source_id": 2601
+    },
+    {
+      "count": 2,
+      "identity_key": "f6af26ef01e7ab92d998dbb441ac6c0fec4fb78c7dcf7983e43c76ceda7f3bf0",
+      "source_id": 1109
+    },
+    {
+      "count": 2,
+      "identity_key": "db5b4da7b369739dfb61840c029d6783be1a54dd4f346c5d15dbfd367212a3b0",
+      "source_id": 2615
+    },
+    {
+      "count": 1,
+      "identity_key": "5ae192b9483526307dc77c0fc689274471e7ae62e72672e6ae4d42021a88934d",
+      "source_id": 1515
+    },
+    {
+      "count": 1,
+      "identity_key": "09cb0f23c3e62db5c3b626165a6dd18feac6562108e4123e55913564c2f6f5aa",
+      "source_id": 1044
+    },
+    {
+      "count": 1,
+      "identity_key": "3b4c4c590f1a20bc917eb2f7e2463798d591d0f87520a19a9ba57f855e59600c",
+      "source_id": 57
+    },
+    {
+      "count": 2,
+      "identity_key": "8eb7b0b13cdaed21967f28dfb5ad23c6708fd6cbcc0315189c250126baf10b02",
+      "source_id": 1898
+    },
+    {
+      "count": 2,
+      "identity_key": "7558ec74781803edab6353a676f8a997705bae39bb28fada3bfaf6983fe1a0b0",
+      "source_id": 1419
+    }
+  ],
+  "name": "마리크 새크리파이스",
+  "version": 484
+}

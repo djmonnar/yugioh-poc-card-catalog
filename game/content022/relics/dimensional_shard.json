@@ -1,0 +1,19 @@
+{
+  "description": "전투마다 내 카드가 처음 제외되면 카드 1장을 드로우해.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 52,
+  "iconKey": "Relics/Content022/atlas022",
+  "id": "dimensional_shard",
+  "kind": "dimensional_shard",
+  "name": "차원의 파편",
+  "params": {
+    "draw": 1
+  },
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-native022",
+  "weight": 1
+}

@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards130/2882",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "발동-묘지로보내기",
+    "소환-패,덱",
+    "소환-묘지",
+    "지원-전사족"
+  ],
+  "code": 92450185,
+  "defense": 0,
+  "description": "①: 이 카드가 묘지로 보내졌을 경우에 발동한다. 자신의 패 / 덱 / 묘지에서 \"스피드 워리어\" 1장을 고르고 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "0da627f30d37b2c7433529d1d2dc364b61735938506035c65d05f559c23cf1f0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native130/cards/2882.jpg",
+  "level": 0,
+  "links": [],
+  "name": "리미터 브레이크",
+  "name_english": "Limiter Overload",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "리미터 브레이크",
+    "Limiter Overload"
+  ],
+  "source_id": 2882,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1914
+}

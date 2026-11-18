@@ -1,0 +1,19 @@
+{
+  "description": "전투 카드 보상 후보 +1. 기본 5장에서 6장으로 늘어나.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 2,
+  "iconKey": "Relics/atlas160",
+  "id": "card_slate",
+  "kind": "card_slate",
+  "name": "카드의 석판",
+  "params": {
+    "extra_choices": 1
+  },
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

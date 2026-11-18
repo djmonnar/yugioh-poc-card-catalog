@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/144",
+  "attack": 1700,
+  "attribute": 1,
+  "categories": [
+    "덱-그레퍼"
+  ],
+  "code": 75953262,
+  "defense": 1600,
+  "description": "신비한 과거를 지닌 용을\n조종할 수 있는 전사.",
+  "draw_enabled": true,
+  "identity_key": "8b0d9478dcbea7ab43d9bccebba02c7eabb90303a2c36e55fbea5ad1f54b43be",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0949.webp",
+  "level": 4,
+  "links": [],
+  "name": "전사 다이 그레퍼",
+  "name_english": "Warrior Dai Grepher",
+  "native_type": 17,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "source_id": 144,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 몬스터",
+  "web_slot": 949
+}

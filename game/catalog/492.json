@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/492",
+  "attack": 1550,
+  "attribute": 16,
+  "categories": [
+    "지원-장착"
+  ],
+  "code": 93013676,
+  "defense": 1400,
+  "description": "장착 카드 자체의 효과에\n더해, 이 몬스터에 장착된\n카드 1장당 이 몬스터의\n공격력을 500 올린다.",
+  "draw_enabled": true,
+  "identity_key": "33a7d2dab9230946de518a269bc696b001b14131d064b13bc32e603c7fee70e3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0912.webp",
+  "level": 4,
+  "links": [],
+  "name": "마하 바일로",
+  "name_english": "Maha Vailo",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 492,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 912
+}

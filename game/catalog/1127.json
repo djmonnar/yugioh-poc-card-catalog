@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1127",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-필드"
+  ],
+  "code": 19384334,
+  "defense": 0,
+  "description": "모든 화염 속성 몬스터의\n공격력을 500 올리고 수비력을\n400 내린다.",
+  "draw_enabled": true,
+  "identity_key": "ab7cfbc3ea71f74372cd7e68e9445f08d3155893b5942e176ab0e44d691d90ea",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0691.webp",
+  "level": 0,
+  "links": [],
+  "name": "버닝 블러드",
+  "name_english": "Molten Destruction",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1127,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 691
+}

@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards090/2655",
+  "attack": 2300,
+  "attribute": 1,
+  "categories": [
+    "지원-전사족",
+    "무효-마법",
+    "효과-덱샐비지"
+  ],
+  "code": 49681811,
+  "defense": 1700,
+  "description": "이 카드를 대상으로 하는 마법 카드의 효과를 무효로 하고 그 카드를 파괴한다. 자신 드로우 페이즈의 일반 드로우 대신, 덱에서 레벨 4 이하의 전사족 몬스터 1장을 골라 패에 넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "444e9cba41b5c5e85c2712da0b57f0ae3a1a434989b10822ef6101e12986f605",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native090/cards/2655.jpg",
+  "level": 5,
+  "links": [],
+  "name": "무적장군 프리드",
+  "name_english": "Freed the Matchless General",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "search_aliases": [
+    "무적장군프리드",
+    "무적장군 프리드",
+    "Freed the Matchless General"
+  ],
+  "source_id": 2655,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1687
+}

@@ -1,0 +1,44 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1257",
+  "attack": 3300,
+  "attribute": 32,
+  "categories": [
+    "지원-장착",
+    "발동-묘지"
+  ],
+  "code": 48948935,
+  "defense": 2500,
+  "description": "이 카드는 일반 소환 / 세트할\n수 없다. \"가면주술사 커스드\n규라\" 또는 \"멜키드 사면수\"를\n1장 이상 포함한 몬스터 2장을\n릴리스한 경우에만 특수\n소환할 수 있다. 이 카드가\n필드에서 묘지로 보내졌을 때,\n덱의 \"유언의 가면\" 1장을\n필드의 몬스터 1장에\n장착한다.",
+  "draw_enabled": true,
+  "identity_key": "d3698f8d02699aa1f38d92fcbe40fb39146f573000b165084749c45e9571e82c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0171.webp",
+  "level": 8,
+  "links": [
+    {
+      "identity_key": "07ddab5e0b48625c5c808849b112c14b0f7b3edbae07ec81e0af09faeac42d88",
+      "slot": 1024
+    },
+    {
+      "identity_key": "5e16eafaedd4b52078c7363b3086617272e8b22c3d7f7065ed0746f650ba60b1",
+      "slot": 169
+    },
+    {
+      "identity_key": "f38474dc2a68cb2d8c81553becb2db449a255b4c2c0d5755b7abd1391d01d40b",
+      "slot": 982
+    }
+  ],
+  "name": "가면마수 데스 가디우스",
+  "name_english": "Masked Beast Des Gardius",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "source_id": 1257,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 171
+}

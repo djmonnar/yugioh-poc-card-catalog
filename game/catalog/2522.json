@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2522",
+  "attack": 1800,
+  "attribute": 1,
+  "categories": [
+    "덱-사이버 엔젤",
+    "지원-의식"
+  ],
+  "code": 42600274,
+  "defense": 1600,
+  "description": "① 패·필드의 전사족 또는 천사족 몬스터 1장을 릴리스하여 패에서 특수 소환할 수 있다. ② 이 카드가 의식 소환을 위해 릴리스되었을 경우, 자신 묘지의 의식 마법 1장을 대상으로 패에 넣을 수 있다. ②는 일반적인 어드밴스 소환의 릴리스에는 적용하지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "e660919934fe71c4ed7facb0ae4f0b386a8000f5e65cb4b7135bc829a5e66ba0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2522.jpg",
+  "level": 5,
+  "links": [],
+  "name": "사이버 츄츄본",
+  "name_english": "Cyber Tutubon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "source_id": 2522,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1554
+}

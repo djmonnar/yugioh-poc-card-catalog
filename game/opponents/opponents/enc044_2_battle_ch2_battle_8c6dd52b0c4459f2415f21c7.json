@@ -1,0 +1,47 @@
+{
+  "artKey": "DuelUi011/legacy/kaiba_intro",
+  "banlistEnabled": false,
+  "deckName": "카이바 상급",
+  "extra": [
+    379
+  ],
+  "id": "enc044_2_battle_ch2_battle_8c6dd52b0c4459f2415f21c7",
+  "lpBonus": 1000,
+  "main": [
+    1916,
+    0,
+    0,
+    0,
+    471,
+    471,
+    1908,
+    1908,
+    710,
+    710,
+    1166,
+    1914,
+    1332,
+    196,
+    196,
+    196,
+    1301,
+    1301,
+    1023,
+    1023
+  ],
+  "name": "카이바",
+  "openingDrawBonus": 0,
+  "profileId": "kaiba",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 0,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "installed-story:sc-2a9546bc3b4669bf-a3182dff6d599826b9c782081af4ff3a",
+  "usesNativeRules035": true
+}

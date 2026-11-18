@@ -1,0 +1,20 @@
+{
+  "description": "보유 중 상점에서 카드 3장 구매마다 금화 40을 돌려받아. 유물 구매와 품절 상품 재클릭은 제외해.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 40,
+  "iconKey": "Relics/Content022/atlas022",
+  "id": "graveking_ledger",
+  "kind": "graveking_ledger",
+  "name": "도굴왕의 장부",
+  "params": {
+    "gold": 40,
+    "purchases": 3
+  },
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-controller022",
+  "weight": 1
+}

@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/akiza/start",
+  "banlistEnabled": false,
+  "deckName": "아키 식물 초급",
+  "extra": [],
+  "id": "enc-34cf3a3a-46c8-428d-8c38-b1e72c12cf65",
+  "lpBonus": 0,
+  "main": [
+    266,
+    266,
+    266,
+    1800,
+    1800,
+    1800,
+    1256,
+    1256,
+    1256,
+    637,
+    637,
+    618,
+    618,
+    618,
+    329,
+    329,
+    2047,
+    2047,
+    2390,
+    2390
+  ],
+  "name": "아나트 아키",
+  "openingDrawBonus": 0,
+  "profileId": "akiza",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 329,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-34cf3a3a-46c8-428d-8c38-b1e72c12cf65",
+  "usesNativeRules035": true
+}

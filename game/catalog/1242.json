@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1242",
+  "attack": 2200,
+  "attribute": 32,
+  "categories": [
+    "지원-장착",
+    "발동-묘지"
+  ],
+  "code": 50287060,
+  "defense": 2500,
+  "description": "이 카드가 묘지로 보내졌을\n때, 장착 마법 카드로\n취급하여 필드의 몬스터 1장에\n장착할 수 있다. 이 카드를\n장착한 몬스터의 공격력은 500\n내린다.",
+  "draw_enabled": true,
+  "identity_key": "e374269f0a9cb158bd01059ada43047d964258cac7f3f24cc24b35b3a6f11b23",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0037.webp",
+  "level": 6,
+  "links": [],
+  "name": "암흑 마족 길퍼 데몬",
+  "name_english": "Beast of Gilfer",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "source_id": 1242,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 37
+}

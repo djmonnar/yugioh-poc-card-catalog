@@ -1,0 +1,19 @@
+{
+  "description": "전투마다 1번 앞면 표시 몬스터 1장을 뒷면 수비 표시로 바꿔. 유물은 소모되지 않아.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 34,
+  "iconKey": "Relics/moon_book",
+  "id": "moon_book",
+  "kind": "moon_book",
+  "name": "달의 서",
+  "params": {
+    "uses_per_battle": 1
+  },
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

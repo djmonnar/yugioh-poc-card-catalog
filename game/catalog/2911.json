@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards135/2911",
+  "attack": 1800,
+  "attribute": 4,
+  "categories": [
+    "지원-공룡족",
+    "발동-패에서",
+    "발동-묘지로 보내기",
+    "발동-묘지에서",
+    "발동-제외",
+    "면역-효과",
+    "소환-덱리크루터"
+  ],
+  "code": 38572779,
+  "defense": 1000,
+  "description": "이 카드명의 ②의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 자신 / 상대의 메인 페이즈에, 이 카드를 패에서 묘지로 보내고 발동할 수 있다. 이 메인 페이즈 중, 자신 필드의 공룡족 몬스터는 상대가 발동한 효과를 받지 않는다. ②: 자신 묘지에서 이 카드를 포함하는 공룡족 몬스터를 임의의 수만큼 제외하고 발동할 수 있다. 제외한 몬스터의 수와 같은 레벨을 가지는 공룡족 몬스터 1장을 덱에서 특수 소환한다. 이 효과로 특수 소환한 몬스터는 엔드 페이즈에 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "89180a0b52e45309d52a40df61ecb0427ad3403b7be947df15a97510053aa7d2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native135/cards/2911.jpg",
+  "level": 4,
+  "links": [],
+  "name": "환창의 미세라사우루스",
+  "name_english": "Miscellaneousaurus",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "UR",
+  "search_aliases": [
+    "환창의 미세라사우루스",
+    "Miscellaneousaurus"
+  ],
+  "source_id": 2911,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1943
+}

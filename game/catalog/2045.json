@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2045",
+  "attack": 2800,
+  "attribute": 4,
+  "categories": [
+    "발동-묘지",
+    "파괴-몬스터",
+    "파괴-함정",
+    "파괴-마법"
+  ],
+  "code": 78540593,
+  "defense": 1600,
+  "description": "이 카드가 필드 위에 앞면 표시로 존재하는 한, 이 카드 이외의 자신 필드 위의 식물족 몬스터 1장이 전투 또는 카드의 효과에 의해서 파괴되어 묘지로 보내졌을 경우, 상대 필드 위의 카드 1장을 선택하여 파괴할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "2866b79dd0f3a8a12ff9a7f9ce8b758bdfce84300807e6751d5b171be3a1d974",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1345.webp",
+  "level": 8,
+  "links": [],
+  "name": "해바라기 공주 마리너",
+  "name_english": "Mariña, Princess of Sunflowers",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "UR",
+  "source_id": 2045,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1345
+}

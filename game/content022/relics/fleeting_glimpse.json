@@ -1,0 +1,17 @@
+{
+  "description": "서로의 턴마다 통상 드로우 뒤 상대 패 1장을 무작위로 확인한다. 다음 턴이 되거나 그 카드가 패를 떠나거나 패가 섞이면 공개가 끝난다. 상대 패가 비어 있으면 그 턴에는 확인하지 않는다.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 2,
+  "iconKey": "Relics/Content073/fleeting_glimpse",
+  "id": "fleeting_glimpse",
+  "kind": "fleeting_glimpse",
+  "name": "찰나의 렌즈",
+  "params": {},
+  "price": 75,
+  "rarity": "N",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-native073",
+  "weight": 1
+}

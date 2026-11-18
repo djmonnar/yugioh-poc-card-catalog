@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/703",
+  "attack": 2500,
+  "attribute": 32,
+  "categories": [
+    "파괴-몬스터"
+  ],
+  "code": 30646525,
+  "defense": 1400,
+  "description": "\"파멸의 의식\"에 의해서 의식\n소환. 이 카드가 의식 소환에\n성공했을 때, 이 카드의\n공격력 이하의 수비력을 가진,\n이 카드 이외의 필드 위에\n앞면 표시로 존재하는\n몬스터를 전부 파괴하고,\n파괴한 몬스터 1장당 이\n카드의 공격력은 100 포인트\n올린다.",
+  "draw_enabled": true,
+  "identity_key": "471c3513e33bc83a9824388da05ff9aa99a7658883690fa3511148cdf2526438",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1089.webp",
+  "level": 7,
+  "links": [],
+  "name": "파멸의 마왕 가란돌프",
+  "name_english": "Garlandolf, King of Destruction",
+  "native_type": 161,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "source_id": 703,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "의식 몬스터",
+  "web_slot": 1089
+}

@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2049",
+  "attack": 600,
+  "attribute": 8,
+  "categories": [
+    "소환-패,덱"
+  ],
+  "code": 44125452,
+  "defense": 1200,
+  "description": "이 카드가 마법/함정/효과 몬스터의 효과에 의해서 자신의 덱에서 패로 넣어졌을 경우, 이 카드를 자신 필드 위에 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "ef09eb63a48ccc265d6f647420bcce9e766271db10d86401b6ec0057afddfebe",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1349.webp",
+  "level": 3,
+  "links": [
+    {
+      "identity_key": "0778f846f6cc96a7a54b31a9148046fe8e39870d0f1e6844e5d9d193d400c36b",
+      "slot": 1346
+    }
+  ],
+  "name": "장미의 요정",
+  "name_english": "Rose Fairy",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "N",
+  "source_id": 2049,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1349
+}

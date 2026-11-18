@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards103/2733",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-의식"
+  ],
+  "code": 88301833,
+  "defense": 0,
+  "description": "의식 몬스터가 의식 소환에 성공했을 때, 그 의식 소환으로 릴리스한 자신의 묘지에 존재하는 몬스터 1장을 선택하고 패에 넣을 수 있다. 이 효과는 1턴에 1번밖에 사용할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "ddf2758030152cae82b4ee0f960e9f6d56addba280e4c5738397e54c083ad19a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native103/cards/2733.jpg",
+  "level": 0,
+  "links": [],
+  "name": "승화하는 혼",
+  "name_english": "Ascending Soul",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "승화하는혼",
+    "승화하는 혼",
+    "Ascending Soul"
+  ],
+  "source_id": 2733,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1765
+}

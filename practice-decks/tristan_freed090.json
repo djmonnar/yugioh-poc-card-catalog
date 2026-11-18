@@ -1,0 +1,79 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "tristan_freed090",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "227e146740dfa0e03d458238d47c25ae019ed47bfc50c891a97e949c40d6acdf",
+      "source_id": 2654
+    },
+    {
+      "count": 1,
+      "identity_key": "444e9cba41b5c5e85c2712da0b57f0ae3a1a434989b10822ef6101e12986f605",
+      "source_id": 2655
+    },
+    {
+      "count": 1,
+      "identity_key": "1124d113a88d1a3e36c6c57c4d6e135d0609272bda6e55e7ed25bca2f7f31828",
+      "source_id": 2656
+    },
+    {
+      "count": 2,
+      "identity_key": "2ffd7252e9a4e319fe49200d924a96f20818f49096fbc76978fc26915f22558c",
+      "source_id": 2657
+    },
+    {
+      "count": 1,
+      "identity_key": "adcb2e9fd286b5233e655a5da76d79f25a1d6ef77e4b88e22ce271c689fd6043",
+      "source_id": 2658
+    },
+    {
+      "count": 2,
+      "identity_key": "7f4a69749834c9d67bc83bf88ac1032074234f16b595401ae090a5b5a5532b93",
+      "source_id": 1957
+    },
+    {
+      "count": 2,
+      "identity_key": "ee70a8cb824328ae07896d9ef74075c183038fa400fee10bbc38b32bf64a9a0c",
+      "source_id": 204
+    },
+    {
+      "count": 2,
+      "identity_key": "2c26a093bfcfef4b10433e905f720083619ed0e38e9aaf522e1d394330ecb4db",
+      "source_id": 1231
+    },
+    {
+      "count": 2,
+      "identity_key": "e2b30b2ce7010e2966ad4a88a832877712f9a4ab1e38e835412a7bbbc541e51d",
+      "source_id": 2659
+    },
+    {
+      "count": 1,
+      "identity_key": "40ed81512aa2831063fbd3657650e782d98ca30484242fbd0883454014eea624",
+      "source_id": 1927
+    },
+    {
+      "count": 1,
+      "identity_key": "45d860d25b85638ceddfaeb743ab74b99d71467e48c4e8f1bc8ca3060872695f",
+      "source_id": 1940
+    },
+    {
+      "count": 1,
+      "identity_key": "62d49484afd4ee81dcd0521bcd53aaf0f39dad042b7bfe2f914362639620f07b",
+      "source_id": 1888
+    },
+    {
+      "count": 1,
+      "identity_key": "5349c07bb3874169f6339512131cedfe6f1738b0de781c72c986b3f1dad27839",
+      "source_id": 1947
+    },
+    {
+      "count": 1,
+      "identity_key": "2f70e4fb1fdba621566962e8968fe8fec261fd5f1cf4c0705f1ad2c48cfabcff",
+      "source_id": 347
+    }
+  ],
+  "name": "프리드 · 전사들의 연합",
+  "version": 454
+}

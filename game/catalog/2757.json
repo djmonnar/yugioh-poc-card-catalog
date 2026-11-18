@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards109/2757",
+  "attack": 1600,
+  "attribute": 32,
+  "categories": [
+    "효과-묘지샐비지"
+  ],
+  "code": 81985784,
+  "defense": 1800,
+  "description": "①: 이 카드가 리버스했을 경우, 자신 묘지의 카드 1장을 대상으로 하고 발동한다. 그 카드를 덱으로 되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "291cb15f1a220b24b87dc0a2f521483b7c22f48e819ab15f2dd4811dab1e5763",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native109/cards/2757.jpg",
+  "level": 4,
+  "links": [],
+  "name": "데스 그렘린",
+  "name_english": "Des Feral Imp",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 524288,
+  "rarity": "N",
+  "search_aliases": [
+    "데스 그렘린",
+    "데스그렘린",
+    "Des Feral Imp"
+  ],
+  "source_id": 2757,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1789
+}

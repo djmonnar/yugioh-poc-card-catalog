@@ -1,0 +1,45 @@
+{
+  "artKey": "Character090/images/tristan/start",
+  "banlistEnabled": false,
+  "deckName": "전우혁 프리드 중급",
+  "extra": [],
+  "id": "enc-972ffca9-deaf-49f2-af4c-d697fa5f04e7",
+  "lpBonus": 500,
+  "main": [
+    2654,
+    2654,
+    2654,
+    1129,
+    1129,
+    2655,
+    2655,
+    2655,
+    1940,
+    2659,
+    2659,
+    2391,
+    2391,
+    509,
+    509,
+    509,
+    1231,
+    1231,
+    1947,
+    1947
+  ],
+  "name": "전우혁",
+  "openingDrawBonus": 0,
+  "profileId": "tristan",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2619,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-972ffca9-deaf-49f2-af4c-d697fa5f04e7",
+  "usesNativeRules035": true
+}

@@ -1,0 +1,31 @@
+{
+  "alias": 64335804,
+  "art_key": "Cards/741",
+  "attack": 2800,
+  "attribute": 32,
+  "categories": [
+    "덱-붉은눈",
+    "소환제약"
+  ],
+  "code": 64335805,
+  "defense": 2400,
+  "description": "\"메탈화 마법반사장갑\"을\n장착한 \"붉은 눈의 흑룡\"을\n릴리스해야만 덱에서 필드로\n특수 소환할 수 있다. 그 후\n덱을 셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "fbc4e28bf8cd09dfa3a155c22474286f2eb4da18ba813e9861f0621daa6131d7",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1083.webp",
+  "level": 8,
+  "links": [],
+  "name": "메탈 붉은 눈의 흑룡",
+  "name_english": "Red-Eyes Black Metal Dragon",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "source_id": 741,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1083
+}

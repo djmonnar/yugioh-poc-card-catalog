@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/716",
+  "attack": 2700,
+  "attribute": 32,
+  "categories": [
+    "파괴-몬스터"
+  ],
+  "code": 97642679,
+  "defense": 1500,
+  "description": "\"어둠의 지배자와의 계약\"에\n의해 의식 소환. ①: 1턴에\n1번, 자신 메인 페이즈에\n발동할 수 있다. 주사위를 1회\n던지고, 나온 눈의 효과를\n적용한다.\n●1, 2: 상대 필드의 몬스터를\n전부 파괴한다.\n●3, 4, 5: 상대 필드의 몬스터\n1장을 고르고 파괴한다.\n●6: 자신 필드의 몬스터를\n전부 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "51ebd72402503021ebe12d669a7171e8ac04f562c6d2951295b35fac501fc746",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0397.webp",
+  "level": 8,
+  "links": [],
+  "name": "어둠의 지배자－조크",
+  "name_english": "Dark Master - Zorc",
+  "native_type": 161,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "source_id": 716,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "의식 몬스터",
+  "web_slot": 397
+}

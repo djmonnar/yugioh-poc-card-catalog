@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2536",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-의식"
+  ],
+  "code": 38844957,
+  "defense": 0,
+  "description": "자신 필드에 앞면 의식 몬스터가 없으면, 자신의 패·묘지의 의식 마법 1장을 제외하고 발동할 수 있다. 이 카드의 효과는 그 마법을 발동했을 때의 의식 소환 효과와 같아진다. 복사한 의식 마법의 소환 대상·소재 조건을 그대로 따른다.",
+  "draw_enabled": true,
+  "identity_key": "562937492969b70e49f63a0b152fc75daba48e59e1fd8ed38edbb39dd1c431e8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2536.jpg",
+  "level": 0,
+  "links": [],
+  "name": "긴급의식술",
+  "name_english": "Urgent Ritual Art",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 2536,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1568
+}

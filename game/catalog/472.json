@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/472",
+  "attack": 2800,
+  "attribute": 1,
+  "categories": [
+    "효과-버리기",
+    "소환-묘지"
+  ],
+  "code": 96897184,
+  "defense": 1300,
+  "description": "암석족 몬스터 ＋ 레벨 7\n이상의 몬스터\n이 카드는 \"화석융합－파슬\n퓨전\"의 효과로만 엑스트라\n덱에서 특수 소환할 수 있다.\n이 카드명의 ③의 효과는 1턴에\n1번밖에 사용할 수 없다. ①:\n이 카드는 1번의 배틀 페이즈\n중에 2회 공격할 수 있다. ②:\n이 카드가 수비 표시 몬스터를\n공격했을 경우, 그 수비력을\n공격력이 넘은 만큼만 전투\n데미지를 준다. ③: 상대 턴에,\n상대 묘지의 몬스터 1장을\n대상으로 하고 발동할 수\n있다. 자신의 패를 1장 골라\n버리고, 대상 몬스터를 자신\n필드에 특수 소환한다.\n[차이] ③의 효과로 특수\n소환하는 몬스터는 공격\n표시로만 소환된다. CPU는\n상대의 발동에 체인할 때만\n③의 효과를 사용한다.",
+  "draw_enabled": true,
+  "identity_key": "3a455ac1ad819a8695ac0ec0fdb13917356439434806ffa52399556d45f342cf",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0443.webp",
+  "level": 8,
+  "links": [],
+  "name": "고생대 화석 기사 스컬킹",
+  "name_english": "Fossil Warrior Skullking",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "R",
+  "source_id": 472,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 443
+}

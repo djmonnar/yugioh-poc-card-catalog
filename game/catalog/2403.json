@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards035/2403",
+  "attack": 2100,
+  "attribute": 16,
+  "categories": [
+    "소환-패,덱"
+  ],
+  "code": 83629030,
+  "defense": 1600,
+  "description": "상대 필드에만 몬스터가 존재할 경우, 이 카드는 패에서 특수 소환할 수 있다.\n이 카드는 일반 소환 / 반전 소환 / 특수 소환한 턴에는 공격할 수 없다.\n자신 필드에 \"툰 월드\"가 존재하고, 상대 필드에 툰 몬스터가 존재하지 않을 경우, 이 카드는 직접 공격할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "5c9a72fc9eba9ad09b2a08bb5e95186389483c6af2ca5e9a6e145da462fe094e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native035/cards/2403.jpg",
+  "level": 5,
+  "links": [
+    {
+      "identity_key": "738f12974359088a62f3c9bf223186a4c934990cbfd3983e5023c9aace0993ac",
+      "slot": 386
+    },
+    {
+      "identity_key": "7cbccf2a12c77db61a2efc820f8b92ce18fb6ab47dc0c4c5898734cfdd049285",
+      "slot": 623
+    },
+    {
+      "identity_key": "42e707296ec5840626bc380ba4ab75fa644307669b04928f578a51cb39952633",
+      "slot": 1282
+    }
+  ],
+  "name": "툰 사이버 드래곤",
+  "name_english": "Toon Cyber Dragon",
+  "native_type": 4194337,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "source_id": 2403,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1440
+}

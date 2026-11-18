@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/487",
+  "attack": 800,
+  "attribute": 2,
+  "categories": [
+    "효과-직접공격"
+  ],
+  "code": 99861526,
+  "defense": 1800,
+  "description": "이 카드는 상대 플레이어에게\n직접 공격할 수 있다. 이때,\n상대 라이프에 주는 전투\n데미지는 이 카드의 원래\n공격력과 같은 수치가 된다.\n또한, 이 카드가 전투를\n실행한 데미지 스텝 종료시,\n이 카드의 표시 형식을 수비\n표시로 할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "0ff2569dd88fe904504f6a821204b2b2a8a9b8c4df6bae2755e84b9dfa6b7055",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1075.webp",
+  "level": 4,
+  "links": [],
+  "name": "서브마린로이드",
+  "name_english": "Submarineroid",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "source_id": 487,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1075
+}

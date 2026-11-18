@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards067/2570",
+  "attack": 2000,
+  "attribute": 32,
+  "categories": [
+    "덱-가이아",
+    "지원-융합",
+    "파괴-마법",
+    "발동-소환"
+  ],
+  "code": 7241272,
+  "defense": 1500,
+  "description": "일반 소환·특수 소환 시 필드 마법 1장을 대상으로 하여 파괴할 수 있다. 한 턴에 한 번, 필드의 이 카드를 포함한 자신의 몬스터를 소재로 엑스트라 덱에서 융합 몬스터 1장을 융합 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "e307e6a96ada649e6f77544c6b4d8e371a3f4fa64d7ef22b1c7a0f13905a6297",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2570.jpg",
+  "level": 5,
+  "links": [],
+  "name": "옥염의 커스 오브 드래곤",
+  "name_english": "Curse of Dragonfire",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "R",
+  "source_id": 2570,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1602
+}

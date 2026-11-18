@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2115",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-묘지",
+    "효과-제외"
+  ],
+  "code": 74845897,
+  "defense": 0,
+  "description": "①: 자신 묘지에서 수비력 200 의 화염 속성 몬스터를 가능한 한 특수 소환한다. 이 효과로 특수 소환한 몬스터는 이 턴의 엔드 페이즈에 제외된다.",
+  "draw_enabled": true,
+  "identity_key": "be61a6384248d4830b5c7243e5043f31d3a3aa8484e82afa682033e011f087db",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1413.webp",
+  "level": 0,
+  "links": [],
+  "name": "진염의 폭발",
+  "name_english": "Rekindling",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 2115,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1413
+}

@@ -1,0 +1,46 @@
+{
+  "alias": 0,
+  "art_key": "Cards/153",
+  "attack": 1600,
+  "attribute": 1,
+  "categories": [
+    "지원-필드",
+    "덱-묘지기",
+    "효과-버리기",
+    "효과-덱샐비지"
+  ],
+  "code": 17393207,
+  "defense": 1500,
+  "description": "이 카드를 패에서 묘지에\n버리고 발동할 수 있다.\n덱에서 \"왕가의\n골짜기－네크로밸리\" 1장을\n패에 넣는다.\n[안내] 패의 이 카드를 선택해\n효과를 발동한다(자신의 메인\n페이즈). 덱에 \"왕가의\n골짜기－네크로밸리\"가 없으면\n발동할 수 없고, 가져온\n카드는 상대에게 공개한 뒤\n덱을 섞는다.",
+  "draw_enabled": true,
+  "identity_key": "38c7ceed929684624aeb70d2b736465d99d7adabddb16d0b3bac9e35c8c317c1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0768.webp",
+  "level": 4,
+  "links": [
+    {
+      "identity_key": "e69b2fea567e1e3fe0e2e79b538ce705c0e8505ec0b932105aeff4d1a40bf81a",
+      "slot": 588
+    },
+    {
+      "identity_key": "f130cae911f76b5e23b36f8f75a9b7b9b79c1636516b3ec52caf8220d8df226a",
+      "slot": 1183
+    },
+    {
+      "identity_key": "900003f145b33f2790d4dcf4b19234c46abd2ebc940072c875c3e0ae35384714",
+      "slot": 1184
+    }
+  ],
+  "name": "묘지기의 사령관",
+  "name_english": "Gravekeeper's Commandant",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "source_id": 153,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 768
+}

@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards090/2659",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-전사족",
+    "지원-전투"
+  ],
+  "code": 403847,
+  "defense": 0,
+  "description": "자신 필드의 전사족 몬스터는 자신 필드의 앞면 표시 전사족·마법사족 몬스터 수 × 200만큼 공격력을 올린다.",
+  "draw_enabled": true,
+  "identity_key": "e2b30b2ce7010e2966ad4a88a832877712f9a4ab1e38e835412a7bbbc541e51d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native090/cards/2659.jpg",
+  "level": 0,
+  "links": [],
+  "name": "연합군",
+  "name_english": "The A. Forces",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "연합군",
+    "The A. Forces"
+  ],
+  "source_id": 2659,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 1691
+}

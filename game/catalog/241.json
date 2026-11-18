@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/241",
+  "attack": 2600,
+  "attribute": 4,
+  "categories": [
+    "효과-묘지샐비지",
+    "소환-패,덱"
+  ],
+  "code": 99899504,
+  "defense": 2000,
+  "description": "①: 1턴에 1번, 자신 메인\n페이즈 1 에 발동할 수 있다.\n패에서 \"버닝 스컬 헤드\"\n1장을 특수 소환한다. 이\n효과를 발동하는 턴에, 자신은\n배틀 페이즈를 실행할 수\n없다. ②: 자신 드로우\n페이즈의 드로우 전에, 자신\n묘지의 \"버닝 스컬 헤드\"\n1장을 대상으로 하고 발동할\n수 있다. 이 턴에 일반\n드로우를 실행하는 대신에, 그\n몬스터를 패에 넣는다.\n[안내] ②의 효과는 자신의\n드로우 페이즈에 일반 드로우\n직전에 발동할지 묻는다.",
+  "draw_enabled": true,
+  "identity_key": "fe0590e41010c962b12186e0eb06aeeafaa5d2bf563372f46619e79caa9cf166",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0089.webp",
+  "level": 8,
+  "links": [],
+  "name": "스컬 프레임",
+  "name_english": "Skull Flame",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "R",
+  "source_id": 241,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 89
+}

@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/317",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-해피",
+    "소환-패,덱"
+  ],
+  "code": 90219263,
+  "defense": 0,
+  "description": "①: 필드에 \"해피 레이디\"가\n존재할 경우에 발동할 수\n있다. 패 / 덱에서 \"해피\n레이디\"나 \"해피 레이디\n세자매\" 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "f80894051478e16cae83757f0d7ed6105a346e06fbebb0917a675281b0b1e0db",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0926.webp",
+  "level": 0,
+  "links": [],
+  "name": "만화경 －화려한 분신－",
+  "name_english": "Elegant Egotist",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 317,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 926
+}

@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards120/2773",
+  "attack": 2800,
+  "attribute": 2,
+  "categories": [
+    "지원-마법사",
+    "지원-릴리즈",
+    "발동-소환",
+    "무효-함정",
+    "무효-마법"
+  ],
+  "code": 28348537,
+  "defense": 2100,
+  "description": "이 카드는 마법사족 몬스터 1장을 릴리스하고 앞면 공격 표시로 어드밴스 소환할 수 있다. 이 카드가 일반 소환에 성공한 턴에, 상대는 마법 / 함정 카드를 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "3633d2c1eedc4658dbaed9e3709799ad048c41aabef149a27827fee44093cfaf",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native120/cards/2773.jpg",
+  "level": 8,
+  "links": [],
+  "name": "블리자드 프린세스",
+  "name_english": "Blizzard Princess",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "search_aliases": [
+    "블리자드 프린세스",
+    "Blizzard Princess"
+  ],
+  "source_id": 2773,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1805
+}

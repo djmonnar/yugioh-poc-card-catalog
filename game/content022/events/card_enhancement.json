@@ -1,0 +1,17 @@
+{
+  "description": "오래된 제련대에 한 장의 카드를 올린다. 칼날과 방패 중 어느 문장을 새길까?",
+  "effect": null,
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "card_enhancement",
+  "kind": "card_enhancement",
+  "name": "덱 몬스터 1매를 골라 공격 또는 수비 강화",
+  "params": {
+    "amount": 100
+  },
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "카드 강화",
+  "weight": 1
+}

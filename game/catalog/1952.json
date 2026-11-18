@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1952",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "면역-함정"
+  ],
+  "code": 51452091,
+  "defense": 0,
+  "description": "①: 이 카드가 마법 & 함정\n존에 존재하는 한, 필드의\n다른 함정 카드의 효과는\n무효화된다.\n[차이] 이 카드가 앞면 표시로\n2장 있으면 서로를 무효로\n하여, 다른 함정 카드는\n무효가 되지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "95d18603a0ca6ce675cac605d9c55144e80d889d2bcb79283471a33ed29464e3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1168.webp",
+  "level": 0,
+  "links": [],
+  "name": "왕궁의 포고령",
+  "name_english": "Royal Decree",
+  "native_type": 131076,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1952,
+  "speed_limit": 3,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1168
+}

@@ -1,0 +1,19 @@
+{
+  "description": "소모성 회복 유물의 회복량이 250 증가해. 최대 LP까지만 회복해.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 42,
+  "iconKey": "Relics/Content022/atlas022",
+  "id": "desert_canteen",
+  "kind": "desert_canteen",
+  "name": "사막의 물통",
+  "params": {
+    "heal_bonus": 250
+  },
+  "price": 75,
+  "rarity": "N",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "verified-controller022",
+  "weight": 1
+}

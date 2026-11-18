@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2424",
+  "attack": 100,
+  "attribute": 32,
+  "categories": [
+    "덱-암흑계",
+    "발동-묘지",
+    "소환-묘지",
+    "효과-버리기"
+  ],
+  "code": 7623640,
+  "defense": 300,
+  "description": "①: 이 카드가 효과로 패에서 묘지로 버려졌을 경우 발동한다. 이 카드를 상대 필드에 수비 표시로 특수 소환한다. ②: 이 카드가 \"암흑계\" 카드의 효과로 특수 소환되었을 경우 발동한다. 이 카드의 컨트롤러의 상대는 자신의 패에서 카드 1장을 골라 버린다.",
+  "draw_enabled": true,
+  "identity_key": "d0c2eccb36efd4e2034d01519f7d72ff3e4492d7df5ac778425925e8f2e9f575",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2424.jpg",
+  "level": 1,
+  "links": [],
+  "name": "암흑계의 도사 세루리",
+  "name_english": "Ceruli, Guru of Dark World",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "source_id": 2424,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1461
+}

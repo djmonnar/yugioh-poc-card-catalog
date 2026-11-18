@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2046",
+  "attack": 1100,
+  "attribute": 32,
+  "categories": [
+    "발동-묘지",
+    "효과-덱샐비지"
+  ],
+  "code": 62379337,
+  "defense": 1200,
+  "description": "이 카드가 전투에 의해서 파괴되어 묘지로 보내졌을 때, 자신의 덱에서 수비력 1500 이하의 식물족 몬스터 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "0778f846f6cc96a7a54b31a9148046fe8e39870d0f1e6844e5d9d193d400c36b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1346.webp",
+  "level": 4,
+  "links": [],
+  "name": "바이올렛 마녀",
+  "name_english": "Violet Witch",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 2046,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1346
+}

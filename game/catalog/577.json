@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards/577",
+  "attack": 2100,
+  "attribute": 2,
+  "categories": [],
+  "code": 63120904,
+  "defense": 1200,
+  "description": "자신 필드 위의 \"어뢰어\" 1장을 제물로 바치는 것으로, 필드 위의 몬스터 1장을 파괴한다. 자신 필드 위의 \"포탄 창조개\" 1장을 제물로 바치는 것으로, 필드 위의 마법/함정 카드 1장을 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "038b1238360753e7d6d9988dbcff3bcc304c4620d9cf10f587b5430ff1a4452d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1078.webp",
+  "level": 5,
+  "links": [
+    {
+      "identity_key": "953cccf6308079c3270771d1bbe83de6000671fe82f4200a1ae33f91fd974068",
+      "slot": 1302
+    },
+    {
+      "identity_key": "8c8ab3be9c415f4216ce255663adcc8cb672e5677ec60997021938a67d3a35ef",
+      "slot": 1303
+    }
+  ],
+  "name": "암흑 대요새호",
+  "name_english": "Orca Mega-Fortress of Darkness",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 262144,
+  "rarity": "N",
+  "source_id": 577,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1078
+}

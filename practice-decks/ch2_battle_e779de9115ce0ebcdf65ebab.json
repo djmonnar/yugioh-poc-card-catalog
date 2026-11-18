@@ -1,0 +1,69 @@
+{
+  "banlist_enabled": false,
+  "extra": [],
+  "id": "ch2_battle_e779de9115ce0ebcdf65ebab",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "45eab39ec65aeec9dcac963d5792275e6a7dea9fd4bec26704f8a109e1a17d94",
+      "source_id": 1997
+    },
+    {
+      "count": 2,
+      "identity_key": "80180ae741222676ea7ff60475effa2b5edaf7d47ff0779c4ceb2008c1ae3fa6",
+      "source_id": 381
+    },
+    {
+      "count": 2,
+      "identity_key": "0ea24e92422a32103fd743a111c61c1a33465e975c22e93cccdf3c35845d68bb",
+      "source_id": 262
+    },
+    {
+      "count": 1,
+      "identity_key": "6cb500df0ca7264d464f668edfbab3f006d3278fe3b7ef9c5efeb83e6f6b09e5",
+      "source_id": 1975
+    },
+    {
+      "count": 1,
+      "identity_key": "ce4608c097b25edbc2a503b6d2f94a083cb6a94b34edf67e1cb6d20ebca01223",
+      "source_id": 175
+    },
+    {
+      "count": 1,
+      "identity_key": "949912aa2bae61aa966a2de76bc06c86b2ff6064b9e88a8365c6d1f25172558d",
+      "source_id": 399
+    },
+    {
+      "count": 1,
+      "identity_key": "d0326802c55dfafa8e0fb56953de49870dc1148e2589d474b0d789bd02a3b945",
+      "source_id": 404
+    },
+    {
+      "count": 2,
+      "identity_key": "4f17e332940a371c7b3b2e845f0f7d687e3481e51e6449a42f0ea8117d6b2d9a",
+      "source_id": 1029
+    },
+    {
+      "count": 2,
+      "identity_key": "ab46d64d448b0c8211557fb6747062799954baea63eef898b4ac4973481de4fd",
+      "source_id": 1977
+    },
+    {
+      "count": 2,
+      "identity_key": "5f4ef019f9ca65d2921f8734e94a240797877d12abbb3a87f3209a5e8c54b32b",
+      "source_id": 1023
+    },
+    {
+      "count": 2,
+      "identity_key": "8debbdb8402061f8c6931dc12ef0761684f020786fa5b6ff9dcba4cc26904ece",
+      "source_id": 1165
+    },
+    {
+      "count": 2,
+      "identity_key": "2fc0411822fedd8614e206bcfd89681d80bb23998a4790eb45adbc4ec800878f",
+      "source_id": 2390
+    }
+  ],
+  "name": "해골수스 상급",
+  "version": 60
+}

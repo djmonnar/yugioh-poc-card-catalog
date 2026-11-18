@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards130/2870",
+  "attack": 2700,
+  "attribute": 32,
+  "categories": [
+    "지원-일반몬스터",
+    "지원-융합",
+    "면역-전투",
+    "면역-효과"
+  ],
+  "code": 10817524,
+  "defense": 2000,
+  "description": "일반 몬스터 × 2\n이 카드는 융합 소환으로밖에 특수 소환할 수 없다. ①: \"시조룡 와이암\"은 자신 필드에 1장밖에 앞면 표시로 존재할 수 없다. ②: 이 카드는 몬스터 존에 존재하는 한, 일반 몬스터 이외의 몬스터와의 전투로는 파괴되지 않으며, 이 카드 이외의 몬스터의 효과를 받지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "7e932ff31837dc8b290592d63a85a22f4501daa95d5dd8fd118da2d11d47ef73",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native130/cards/2870.jpg",
+  "level": 9,
+  "links": [],
+  "name": "시조룡 와이암",
+  "name_english": "First of the Dragons",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "UR",
+  "search_aliases": [
+    "시조룡 와이암",
+    "First of the Dragons"
+  ],
+  "source_id": 2870,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 1902
+}

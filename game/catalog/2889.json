@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards130/2889",
+  "attack": 1600,
+  "attribute": 1,
+  "categories": [
+    "지원-로이드",
+    "지원-융합",
+    "효과-직접공격"
+  ],
+  "code": 16114248,
+  "defense": 1200,
+  "description": "같은 이름의 기계족 몬스터 × 2\n①: 이 카드는 직접 공격할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "7e09d9e55aa86f344b4611ee7a4d97b1facfb08295cf46743fc2a4d5fa512101",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native130/cards/2889.jpg",
+  "level": 5,
+  "links": [],
+  "name": "페어싸이크로이드",
+  "name_english": "Pair Cycroid",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "SR",
+  "search_aliases": [
+    "페어싸이크로이드",
+    "Pair Cycroid"
+  ],
+  "source_id": 2889,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 1921
+}

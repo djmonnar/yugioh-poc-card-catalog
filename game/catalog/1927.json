@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1927",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-묘지샐비지"
+  ],
+  "code": 95281259,
+  "defense": 0,
+  "description": "①: 자신 묘지의 전사족 몬스터\n1장을 대상으로 하고 발동할\n수 있다. 그 전사족 몬스터를\n패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "40ed81512aa2831063fbd3657650e782d98ca30484242fbd0883454014eea624",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1177.webp",
+  "level": 0,
+  "links": [],
+  "name": "전사의 생환",
+  "name_english": "The Warrior Returning Alive",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1927,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1177
+}

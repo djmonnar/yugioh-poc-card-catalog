@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1072",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-버리기"
+  ],
+  "code": 80168720,
+  "defense": 0,
+  "description": "패의 카드 2장을 버린다. 앞면\n몬스터 1장을 선택하여\n뒷면으로 뒤집되, 공격 / 수비\n표시 형식은 바꾸지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "d1e52eb08d3ee0f3a0f18e87805b57328d699c035b05049fc977940d0d1cee08",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1015.webp",
+  "level": 0,
+  "links": [],
+  "name": "어둠의 엄습",
+  "name_english": "Darkness Approaches",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1072,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1015
+}

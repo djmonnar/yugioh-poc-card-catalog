@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "starter-template-600570ff7bf096f980bc388801873928",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "aeb7f706122e1406053e940be3e169881c0f6817c297f9d79c9458c86acad069",
+      "source_id": 960
+    },
+    {
+      "count": 2,
+      "identity_key": "4e58038539301273b8746f7ec000011e70767b0a06b59e7a03db9f655b5de850",
+      "source_id": 1301
+    },
+    {
+      "count": 2,
+      "identity_key": "e240dab4568e70743c89e3a2c2ea540a03c92316d5a928efe7dcfb7e06d74ad2",
+      "source_id": 471
+    },
+    {
+      "count": 2,
+      "identity_key": "1b35a77b57322b756f47b453317628046ce9d712cc2933185cd2fb61bf8e1c33",
+      "source_id": 0
+    },
+    {
+      "count": 1,
+      "identity_key": "c6c4af8c112e81d1955f9c18a69786db466c65aa50c43a7a98ee01d24254a8b7",
+      "source_id": 1913
+    },
+    {
+      "count": 2,
+      "identity_key": "9f459c59d9294e03c2b260af6bbdd5392b6d7a0a6d02b1d7ab09df945eaf1bdc",
+      "source_id": 1908
+    },
+    {
+      "count": 2,
+      "identity_key": "0e91a136403c3bdbf11bb7568bef5c5585b64141d67626d74b9a240ea8f59690",
+      "source_id": 710
+    },
+    {
+      "count": 3,
+      "identity_key": "998afac3a223057d36b54952c7ee5f217881aa823759d2f0e3586eeab705c1b8",
+      "source_id": 1909
+    },
+    {
+      "count": 2,
+      "identity_key": "8763558c2d9b44edd23608cfb17b6ed874a0d41cbc6777be9e553d5c544b4c9e",
+      "source_id": 615
+    },
+    {
+      "count": 2,
+      "identity_key": "b5fc4428a667d2e28276286a0de0c82243e2fe3548863209ed3afd1d5a898591",
+      "source_id": 1135
+    }
+  ],
+  "name": "카이바 푸른눈 중급",
+  "version": 256
+}

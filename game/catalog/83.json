@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards/83",
+  "attack": 1600,
+  "attribute": 16,
+  "categories": [
+    "소환-묘지",
+    "파괴-함정",
+    "파괴-마법",
+    "발동-묘지"
+  ],
+  "code": 58132856,
+  "defense": 1500,
+  "description": "이 카드는 마법 카드로\n취급하고 패에서 마법 & 함정\n카드 존에 세트할 수 있다.\n마법 & 함정 카드 존에 세트된\n이 카드가, 상대가 컨트롤하는\n카드의 효과에 의해서\n파괴되어 묘지로 보내졌을\n경우, 그 턴의 엔드\n페이즈시에 이 카드를 자신\n필드 위에 특수 소환한다.\n또한, 이 카드의 반전 소환에\n성공했을 때, 필드 위에 앞면\n표시로 존재하는 \"토이\n매지션\"의 수만큼 필드 위의\n마법/함정 카드를 파괴한다.\n[안내] 패 메뉴의 \"특수 소환\"\n항목을 고르면 이 카드를 마법\n& 함정 카드 존에\n세트한다(일반 소환은 쓰지\n않는다).\n[차이] CPU는 이 카드를 마법\n& 함정 카드 존에 세트하지\n않는다.",
+  "draw_enabled": true,
+  "identity_key": "ec901d9869918e48ad6b7bfa4f2823ee1308c2d03969f8731401562f4139b0ab",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0132.webp",
+  "level": 4,
+  "links": [],
+  "name": "토이 매지션",
+  "name_english": "Toy Magician",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "source_id": 83,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 132
+}

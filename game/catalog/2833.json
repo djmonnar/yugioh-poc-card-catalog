@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards125/2833",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-전투",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 1224927,
+  "defense": 0,
+  "description": "①: 상대 몬스터의 공격 선언시에 발동할 수 있다. 필드의 마법 / 함정 카드를 전부 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "4b8ee46ccba163a0bbdc708e67ca0c2e39281225c4e3eef7858146feed46b622",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native125/cards/2833.jpg",
+  "level": 0,
+  "links": [],
+  "name": "사신의 대재해",
+  "name_english": "Malevolent Catastrophe",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "사신의 대재해",
+    "Malevolent Catastrophe"
+  ],
+  "source_id": 2833,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1865
+}

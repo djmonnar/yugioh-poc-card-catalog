@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards135/2914",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-쥬락",
+    "지원-공룡족",
+    "효과-파괴"
+  ],
+  "code": 5479217,
+  "defense": 0,
+  "description": "①: 자신 필드에 공격력 2500 이상의 공룡족 몬스터가 존재할 경우에 발동할 수 있다. 필드의 카드를 전부 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "aaadf300f9fd4e0eeed1a8bab10c0982f23a037fb6b0ab5ff4cb9b50c44143ae",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native135/cards/2914.jpg",
+  "level": 0,
+  "links": [],
+  "name": "쥬락 임팩트",
+  "name_english": "Jurrac Impact",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "쥬락 임팩트",
+    "Jurrac Impact"
+  ],
+  "source_id": 2914,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1946
+}

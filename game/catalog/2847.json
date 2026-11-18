@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards126/2847",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-묘지",
+    "지원-저레벨",
+    "지원-레벨·소환"
+  ],
+  "code": 84298614,
+  "defense": 0,
+  "description": "①: 자신 묘지의 레벨 4 이하의 몬스터 1장을 대상으로 하고 이 카드를 발동할 수 있다. 그 몬스터를 특수 소환한다. 이 카드가 마법 & 함정 존에 존재하는 한, 그 몬스터의 레벨은 1개 올라가고, 공격력 / 수비력은 100 올린다. 그 몬스터가 파괴되었을 때에 이 카드는 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "14ed19ca22d444a2c0c191e14c53b736907be0e6610c18cc5665837175ce974b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native126/cards/2847.jpg",
+  "level": 0,
+  "links": [],
+  "name": "강화소생",
+  "name_english": "Powerful Rebirth",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "강화소생",
+    "Powerful Rebirth"
+  ],
+  "source_id": 2847,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 1879
+}

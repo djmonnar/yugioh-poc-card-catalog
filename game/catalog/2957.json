@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards136/2957",
+  "attack": 2800,
+  "attribute": 4,
+  "categories": [
+    "지원-쥬락",
+    "지원-공룡족",
+    "지원-튜너",
+    "소환-싱크로",
+    "발동-소환 시",
+    "효과-파괴",
+    "소환-묘지"
+  ],
+  "code": 17548456,
+  "defense": 2000,
+  "description": "\"쥬락\" 튜너 ＋ 튜너 이외의 공룡족 몬스터 2장 이상\n①: 이 카드를 싱크로 소환했을 경우에 발동한다. 필드의 카드를 전부 파괴한다. 그 후, 자신 묘지에서 튜너 1장을 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "70ef0605146cd656fb70ed0f65944da6410509d9c411d4094986920c7c8600be",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native136/cards/2957.jpg",
+  "level": 10,
+  "links": [],
+  "name": "쥬락 메테오",
+  "name_english": "Jurrac Meteor",
+  "native_type": 8225,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "UR",
+  "search_aliases": [
+    "쥬락 메테오",
+    "Jurrac Meteor"
+  ],
+  "source_id": 2957,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "싱크로 몬스터",
+  "web_slot": 1989
+}

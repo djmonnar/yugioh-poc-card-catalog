@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards135/2917",
+  "attack": 3000,
+  "attribute": 4,
+  "categories": [
+    "지원-쥬락",
+    "지원-전투",
+    "발동-제외",
+    "보호-효과 대상 제외",
+    "소환제약"
+  ],
+  "code": 85028288,
+  "defense": 2800,
+  "description": "이 카드는 특수 소환할 수 없다. ①: 양쪽 플레이어는 필드의 이 카드를 함정 / 몬스터의 효과의 대상으로 할 수 없다. ②: 1턴에 1번, 자신 묘지에서 공격력 1700 이하의 \"쥬락\" 몬스터 1장을 제외하고 발동할 수 있다. 이 카드의 공격력은 턴 종료시까지 1000 올린다.",
+  "draw_enabled": true,
+  "identity_key": "417ef453595ca185c2d4b3aaa1d473ef94fffc43dd037b22805e2fbfe1ed2760",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native135/cards/2917.jpg",
+  "level": 9,
+  "links": [],
+  "name": "쥬락 타이탄",
+  "name_english": "Jurrac Titano",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "UR",
+  "search_aliases": [
+    "쥬락 타이탄",
+    "Jurrac Titano"
+  ],
+  "source_id": 2917,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1949
+}

@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards/499",
+  "attack": 2500,
+  "attribute": 32,
+  "categories": [
+    "덱-블랙매지션",
+    "소환제약",
+    "파괴-몬스터",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 50725996,
+  "defense": 2100,
+  "description": "이 카드는 통상 소환할 수\n없다. \"기사의 칭호\"의\n효과로만 특수 소환할 수\n있다. ①: 이 카드가 특수\n소환에 성공했을 경우, 필드의\n카드 1장을 대상으로 하고\n발동한다. 그 카드를\n파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "d12106509c5eecfd77d9bc322311f07feae855d48c300246c86b097d41a7cb10",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0647.webp",
+  "level": 7,
+  "links": [
+    {
+      "identity_key": "90ddd3e0a588d7100865829cc0b62db98775f3e28d3b762b0ff07618af8d502f",
+      "slot": 32
+    }
+  ],
+  "name": "블랙 매지션즈 나이트",
+  "name_english": "Dark Magician Knight",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "source_id": 499,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 647
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/343",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 46130346,
+  "defense": 0,
+  "description": "상대에게 500 직접 데미지를\n준다.",
+  "draw_enabled": true,
+  "identity_key": "2302b9d6fb40e0684718b3b0e0f052e1b774d39342b2a98ee987984ccd2a0408",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0769.webp",
+  "level": 0,
+  "links": [],
+  "name": "파이어 볼",
+  "name_english": "Hinotama",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "source_id": 343,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 769
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/322",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착"
+  ],
+  "code": 91595718,
+  "defense": 0,
+  "description": "마법사족 몬스터에만 장착\n가능. 장착 몬스터의 공격력 /\n수비력은 300 포인트 올린다.",
+  "draw_enabled": true,
+  "identity_key": "71e64398f5f89f3031afbc454561bee36e0f47c25f71f164508d341228cda2d3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0745.webp",
+  "level": 0,
+  "links": [],
+  "name": "비술서",
+  "name_english": "Book of Secret Arts",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 322,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 745
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/655",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착"
+  ],
+  "code": 95051344,
+  "defense": 0,
+  "description": "장착 카드를 장착한 몬스터를\n모두 파괴합니다.",
+  "draw_enabled": true,
+  "identity_key": "e8cd9516f2095f240277ccf0c9df5ce5a7dbc3f4f1e30a689ad0f5e4ab8b4232",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0407.webp",
+  "level": 0,
+  "links": [],
+  "name": "성불",
+  "name_english": "Eternal Rest",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "source_id": 655,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 407
+}

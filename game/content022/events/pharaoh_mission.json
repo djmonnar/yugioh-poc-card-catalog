@@ -1,0 +1,17 @@
+{
+  "description": "왕의 사자가 강적을 쓰러뜨릴 결투사를 찾는다. 위험한 길을 걷는다면 왕가의 보상이 기다린다.",
+  "effect": "이번 장에서 엘리트 2회 추가 승리하면 SR 유물 추가 획득",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/background",
+  "id": "pharaoh_mission",
+  "kind": "pharaoh_mission",
+  "name": "이번 장에서 엘리트 2회 추가 승리하면 SR 유물 추가 획득",
+  "params": {
+    "elite_wins": 2
+  },
+  "rewardRarity": null,
+  "supportStatus": "verified-controller022",
+  "title": "파라오의 밀명",
+  "weight": 1
+}

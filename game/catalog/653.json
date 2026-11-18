@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/653",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착"
+  ],
+  "code": 32268901,
+  "defense": 0,
+  "description": "이 카드를 장착한 화염 속성\n몬스터의 공격력을 700\n올린다.",
+  "draw_enabled": true,
+  "identity_key": "ebfbbf7e0e17366e5eda2f80bbe81903df7c73f6a2bd654ca8250731dcb9c651",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0340.webp",
+  "level": 0,
+  "links": [],
+  "name": "사라만도라",
+  "name_english": "Salamandra",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 653,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 340
+}

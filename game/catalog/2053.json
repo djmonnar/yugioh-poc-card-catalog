@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2053",
+  "attack": 1300,
+  "attribute": 32,
+  "categories": [
+    "발동-묘지",
+    "소환-묘지"
+  ],
+  "code": 12469386,
+  "defense": 1300,
+  "description": "자신 필드 위에 존재하는 레벨 5 이상의 식물족 몬스터가 파괴되었을 경우, 묘지에 존재하는 이 카드를 자신 필드 위에 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "522711c3b2f9ad06ba23d4c52a266a2d77db0a1104b9e9a00a47941284312cd1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1353.webp",
+  "level": 4,
+  "links": [],
+  "name": "리바이벌 로즈",
+  "name_english": "Revival Rose",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1024,
+  "rarity": "R",
+  "source_id": 2053,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1353
+}

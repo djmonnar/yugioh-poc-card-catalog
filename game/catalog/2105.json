@@ -1,0 +1,70 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2105",
+  "attack": 500,
+  "attribute": 4,
+  "categories": [
+    "덱-볼캐닉",
+    "발동-묘지",
+    "효과-묘지보내기",
+    "파괴-몬스터"
+  ],
+  "code": 69750546,
+  "defense": 0,
+  "description": "①: 이 카드가 묘지로 보내졌을 경우에 발동한다. 상대에게 500 데미지를 준다. ②: 이 카드가 \"브레이즈 캐논\" 카드의 효과로 묘지로 보내졌을 경우, 패 / 덱에서 \"볼캐닉 백샷\" 2장을 묘지로 보내고 발동할 수 있다. 상대 필드의 몬스터를 전부 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "3020114321ff2db5e5fdb5f5ca4d2794fc80c362110e97f79c29512e0c6a9ce5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1403.webp",
+  "level": 2,
+  "links": [
+    {
+      "identity_key": "c81886fc0f0a43bf27619067a5d82f9141ce84b993e678f42014c05a90939881",
+      "slot": 293
+    },
+    {
+      "identity_key": "184999d07133621a16a4ef296b7e218469d447fca7373d9a6d5e7e54cb3531c6",
+      "slot": 1404
+    },
+    {
+      "identity_key": "5d2f5425c5c4ca0f5da3e3bf5aa7cf556f6a963d2c98fa9386f619c8e2e1ca95",
+      "slot": 1405
+    },
+    {
+      "identity_key": "e62c8716039889d477cf8be2a601e270144f10bcdbb47646796fd72b9272299a",
+      "slot": 1406
+    },
+    {
+      "identity_key": "4d7b67f355652a4933cbe0850b1ef39a87dcf5e33ca48c558ae4b179e8bcf62f",
+      "slot": 1407
+    },
+    {
+      "identity_key": "07adebc96bf42075a206419dd47a38a346663582d7700098aa5e308fbf591e6c",
+      "slot": 1409
+    },
+    {
+      "identity_key": "6a3c77735e326d28769214d37e2ad2746df4b71aeb7aaf6d911438cb023c6fcc",
+      "slot": 1423
+    },
+    {
+      "identity_key": "e1436f93c45208cc8edf03b45b430ff270e9061482b9c63dded116dfcdffb938",
+      "slot": 1408
+    },
+    {
+      "identity_key": "a9aa7e4588fcca348af07bee8f0673c6eccacc3b9ef5bbbd6fc9e3710135bdda",
+      "slot": 1422
+    }
+  ],
+  "name": "볼캐닉 백샷",
+  "name_english": "Volcanic Scattershot",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 128,
+  "rarity": "N",
+  "source_id": 2105,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1403
+}

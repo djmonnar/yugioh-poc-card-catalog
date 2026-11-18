@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards090/2660",
+  "attack": 3750,
+  "attribute": 32,
+  "categories": [
+    "지원-게이트가디언",
+    "지원-고레벨",
+    "소환제약"
+  ],
+  "code": 25833572,
+  "defense": 3400,
+  "description": "이 카드는 일반 소환 / 세트할 수 없다. 자신 필드의 \"번개 마신－썬가\", \"풍 마신－휴가\", \"수 마신－스가\"를 1장씩 릴리스하는 방법으로 패에서 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "09239c69c7b4cf7bafbcc1b598d3dae39b190f63dfa30414e9ccd25cb9a01601",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native090/cards/2660.jpg",
+  "level": 11,
+  "links": [],
+  "name": "게이트 가디언",
+  "name_english": "Gate Guardian",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "UR",
+  "search_aliases": [
+    "게이트가디언",
+    "게이트 가디언",
+    "Gate Guardian"
+  ],
+  "source_id": 2660,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "특수 소환 / 효과 몬스터",
+  "web_slot": 1692
+}

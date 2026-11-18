@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards099/2717",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착",
+    "지원-가디언",
+    "지원-전투"
+  ],
+  "code": 32022366,
+  "defense": 0,
+  "description": "장착 몬스터의 공격력은 500 포인트 올린다. 이 카드가 필드 위에 존재하는 한, 상대 필드 위 몬스터는 표시 형식을 변경할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "047702f41c691cc0544d93855a40d06716a94b3720062984bc0af9c19ba2ec3f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native099/cards/2717.jpg",
+  "level": 0,
+  "links": [],
+  "name": "중력의 도끼－그랄",
+  "name_english": "Gravity Axe - Grarl",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "중력의도끼-그랄",
+    "중력의 도끼－그랄",
+    "중력의도끼－그랄",
+    "Gravity Axe - Grarl"
+  ],
+  "source_id": 2717,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1749
+}

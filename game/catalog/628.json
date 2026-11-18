@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/628",
+  "attack": 3000,
+  "attribute": 1,
+  "categories": [
+    "면역-마법",
+    "면역-함정",
+    "효과-데미지"
+  ],
+  "code": 50933533,
+  "defense": 2000,
+  "description": "①: 이 카드의 일반 소환을\n위해 릴리스한 몬스터에 의해\n이하의 효과를 얻는다.\n●그린 가제트: 이 카드가 수비\n표시 몬스터를 공격했을 경우,\n그 수비력을 공격력이 넘은\n만큼만 전투 데미지를 준다.\n●레드 가제트: 이 카드가\n상대에게 전투 데미지를\n주었을 경우에 발동한다.\n상대에게 400 데미지를 준다.\n●옐로 가제트: 이 카드가\n전투로 상대 몬스터를\n파괴했을 경우에 발동한다.\n상대에게 600 데미지를 준다.\n②: 이 카드가 공격할 경우,\n상대는 데미지 스텝\n종료시까지 마법 / 함정\n카드를 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "cea13664a9e98e9530443b6f6d4c626373430b6fa376f0b580401c9ff2aba41c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1040.webp",
+  "level": 8,
+  "links": [],
+  "name": "앤틱 기어 가젤 드래곤",
+  "name_english": "Ancient Gear Gadjiltron Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "SR",
+  "source_id": 628,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1040
+}

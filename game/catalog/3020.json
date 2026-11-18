@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3020",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-타락천사",
+    "발동-묘지로 보내기",
+    "효과-파괴"
+  ],
+  "code": 50501121,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 자신의 패 / 필드(앞면 표시)에서 \"타락천사\" 몬스터 1장을 묘지로 보내고 발동할 수 있다. 필드의 카드 1장을 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "eb08d55be5141bc23577d7a463e1ecb8ea67450ae53a2c612249c9766b7bed49",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3020.jpg",
+  "level": 0,
+  "links": [],
+  "name": "배덕의 타락천사",
+  "name_english": "Darklord Rebellion",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "배덕의 타락천사",
+    "Darklord Rebellion"
+  ],
+  "source_id": 3020,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2052
+}

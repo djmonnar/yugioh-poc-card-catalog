@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards136/2940",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-프레데터 플랜츠",
+    "포식 카운터",
+    "효과-레벨다운",
+    "발동-묘지에서",
+    "보호-파괴 대체"
+  ],
+  "code": 72129804,
+  "defense": 0,
+  "description": "①: 패의 \"프레데터\" 카드를 임의의 수만큼 상대에게 보여주고, 보여준 수만큼 상대 필드의 앞면 표시 몬스터를 대상으로 하여 발동할 수 있다. 그 몬스터에 포식 카운터를 1개씩 놓는다. 포식 카운터가 놓여진 레벨 2 이상의 몬스터 레벨은 1 이 된다. ②: 자신의 \"프레데터 플랜츠\" 몬스터가 전투로 파괴될 경우, 대신에 묘지의 이 카드를 제외할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "9a6e6fae17e550491da038bf31365cffc766e85755b542269dda4aa79ae52baf",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native136/cards/2940.jpg",
+  "level": 0,
+  "links": [],
+  "name": "프레데터 플라스트",
+  "name_english": "Predaplast",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "프레데터 플라스트",
+    "Predaplast"
+  ],
+  "source_id": 2940,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 1972
+}

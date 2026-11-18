@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1094",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 60082869,
+  "defense": 0,
+  "description": "상대 필드의 마법 / 함정 카드\n1장을 파괴한다. 그 후 패에서\n마법 / 함정 카드 1장을\n세트할 수 있다. 그 카드는\n속공 마법일 경우에만 발동할\n수 있다.",
+  "draw_enabled": true,
+  "identity_key": "e8045946b7d6b3ee7eb3239ad1044bb6f5204721bd9d60e8df8fbf84951fcd64",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0332.webp",
+  "level": 0,
+  "links": [],
+  "name": "더스트 토네이도",
+  "name_english": "Dust Tornado",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1094,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 332
+}

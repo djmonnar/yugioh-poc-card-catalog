@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1202",
+  "attack": 2800,
+  "attribute": 32,
+  "categories": [
+    "덱-블랙매지션"
+  ],
+  "code": 92377303,
+  "defense": 3200,
+  "description": "\"시간의 마술사\"의 효과를\n발동하여 맞혔을 때, \"블랙\n매지션\" 1장을 릴리스하여 이\n카드를 패 또는 덱에서 소환할\n수 있다. 그 후 자신의 덱에서\n마법 카드 1장을 패에 넣고\n덱을 셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "a8d478f3928db1f35fd64315d25ecc4f07e824d3411e8ca0c193588ed96c6d3c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0298.webp",
+  "level": 9,
+  "links": [
+    {
+      "identity_key": "a850b8cd0e118c301dde50e7dcabc13ebb54f1506ec19fbe0694955bba7dfd67",
+      "slot": 803
+    },
+    {
+      "identity_key": "418484ead41f5acba84c6cd8d84354378d53e56df9fb2d4d8da1d13f63526587",
+      "slot": 630
+    }
+  ],
+  "name": "검은 옷의 대현자",
+  "name_english": "Dark Sage",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "N",
+  "source_id": 1202,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 298
+}

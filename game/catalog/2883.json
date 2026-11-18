@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards130/2883",
+  "attack": 500,
+  "attribute": 32,
+  "categories": [
+    "지원-장착",
+    "지원-전사족",
+    "지원-전투"
+  ],
+  "code": 84430950,
+  "defense": 800,
+  "description": "이 카드는 일반 공격 외에도 이 카드에 장착된 장착 카드의 수만큼, 1번의 배틀 페이즈 중에 공격할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "91679397370f25bbc1fada6e65a9000485105eed4d2934c62c750e2792d50556",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native130/cards/2883.jpg",
+  "level": 4,
+  "links": [],
+  "name": "중무장무사－벤 케이",
+  "name_english": "Armed Samurai - Ben Kei",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "search_aliases": [
+    "중무장무사－벤 케이",
+    "Armed Samurai - Ben Kei"
+  ],
+  "source_id": 2883,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1915
+}

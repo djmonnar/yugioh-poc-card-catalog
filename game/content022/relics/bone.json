@@ -1,0 +1,19 @@
+{
+  "description": "획득 즉시 최대 LP가 500 증가해. 현재 LP는 그대로 유지돼.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 36,
+  "iconKey": "Relics/bone",
+  "id": "bone",
+  "kind": "bone",
+  "name": "말뼈",
+  "params": {
+    "max_lp": 500
+  },
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

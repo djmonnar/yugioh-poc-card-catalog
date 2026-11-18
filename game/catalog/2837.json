@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards125/2837",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-에일리언",
+    "A 카운터",
+    "파괴-몬스터"
+  ],
+  "code": 73262676,
+  "defense": 0,
+  "description": "자신 필드 위의 \"에일리언\"이라는 이름이 붙은 몬스터 1장을 선택하고 발동할 수 있다. 선택한 앞면 표시 몬스터를 파괴하고, 그 몬스터의 레벨 수만큼 A 카운터를 상대 필드 위에 앞면 표시로 존재하는 몬스터에 놓는다.",
+  "draw_enabled": true,
+  "identity_key": "0ff73a6d4d97302db319d35811426085b8c7d740b8fdc3876f5771faf34818e0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native125/cards/2837.jpg",
+  "level": 0,
+  "links": [],
+  "name": "\"A\" 세포 산포 폭탄",
+  "name_english": "\"A\" Cell Scatter Burst",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "search_aliases": [
+    "\"A\" 세포 산포 폭탄",
+    "\"A\" Cell Scatter Burst"
+  ],
+  "source_id": 2837,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 1869
+}

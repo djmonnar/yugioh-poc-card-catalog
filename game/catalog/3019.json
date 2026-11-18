@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards152/3019",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-타락천사",
+    "발동-묘지로 보내기",
+    "효과-컨트롤"
+  ],
+  "code": 87990236,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 패 및 자신 필드의 앞면 표시 몬스터 중에서, \"타락천사\" 몬스터 1장을 묘지로 보내고 발동할 수 있다. 상대 필드의 앞면 표시 몬스터 1장을 고르고, 엔드 페이즈까지 컨트롤을 얻는다.",
+  "draw_enabled": true,
+  "identity_key": "589e2b312a052be44728c18d1c6358eedaabd017c94bcd24eaacd84775998f9d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3019.jpg",
+  "level": 0,
+  "links": [],
+  "name": "매혹의 타락천사",
+  "name_english": "Darklord Enchantment",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "매혹의 타락천사",
+    "Darklord Enchantment"
+  ],
+  "source_id": 3019,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2051
+}

@@ -1,0 +1,89 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "yugi_muto093",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "9006184879d06f98f210ce674116304ddf71becc5f9445ac0d42379d555781ae",
+      "source_id": 89
+    },
+    {
+      "count": 2,
+      "identity_key": "db67f454eadaf709a44ac04e48a14619eb93f8f61982d0f6b80c2761ec7cece1",
+      "source_id": 387
+    },
+    {
+      "count": 2,
+      "identity_key": "3d9ebe75b1ca9934067f5047c8fbf60bf4eb02f8852a110c7db3638783cc57d7",
+      "source_id": 2387
+    },
+    {
+      "count": 2,
+      "identity_key": "4c0e6cb34692988098c29d4cb99ad4eec1ccf5a1eb92a31b507142d780ffbca4",
+      "source_id": 1409
+    },
+    {
+      "count": 1,
+      "identity_key": "41e2bfcb1c9ba7b24bc0d13433e73e5a716bf32e264ed342d499f64043e4fbb3",
+      "source_id": 1331
+    },
+    {
+      "count": 1,
+      "identity_key": "2df858f1a5cc1e3d51bff48648852aa193833f0b88043a04819aebbb864272a6",
+      "source_id": 1507
+    },
+    {
+      "count": 2,
+      "identity_key": "4d1bf5d6a269b328846fc034e0a79e161b3454df6136713bd89b50861239ab37",
+      "source_id": 365
+    },
+    {
+      "count": 1,
+      "identity_key": "68b05df658038176ea90390a7479e4e1fbf6580a6eda1a56ec08471cc13cdc78",
+      "source_id": 368
+    },
+    {
+      "count": 1,
+      "identity_key": "3b4c4c590f1a20bc917eb2f7e2463798d591d0f87520a19a9ba57f855e59600c",
+      "source_id": 57
+    },
+    {
+      "count": 1,
+      "identity_key": "09cb0f23c3e62db5c3b626165a6dd18feac6562108e4123e55913564c2f6f5aa",
+      "source_id": 1044
+    },
+    {
+      "count": 1,
+      "identity_key": "80e4564840d478e757208a3aaf8e31eeb3daa5cbbd123c705d30aba49fe58fb7",
+      "source_id": 2668
+    },
+    {
+      "count": 1,
+      "identity_key": "2f19aca0217a15bdc61b9bc07bd838dce271f8aa45df6b5e29c4a614f0eafbc3",
+      "source_id": 2669
+    },
+    {
+      "count": 2,
+      "identity_key": "62d49484afd4ee81dcd0521bcd53aaf0f39dad042b7bfe2f914362639620f07b",
+      "source_id": 1888
+    },
+    {
+      "count": 1,
+      "identity_key": "5166924ae5a3f0815f4e5ef4a463fe22a5b2eca168ff278ff7f932c91d659b1a",
+      "source_id": 1043
+    },
+    {
+      "count": 2,
+      "identity_key": "5349c07bb3874169f6339512131cedfe6f1738b0de781c72c986b3f1dad27839",
+      "source_id": 1947
+    },
+    {
+      "count": 2,
+      "identity_key": "a007bca3e1f98bc0dbcd13c19091dba971722ad8a7221d64f011725c71e5c34a",
+      "source_id": 1950
+    }
+  ],
+  "name": "작은 유우기의 용기 · 가제트와 침묵의 검",
+  "version": 506
+}

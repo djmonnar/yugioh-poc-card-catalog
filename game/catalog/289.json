@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/289",
+  "attack": 1800,
+  "attribute": 2,
+  "categories": [
+    "효과-제외",
+    "효과-바운스"
+  ],
+  "code": 37792478,
+  "defense": 500,
+  "description": "제외된 어류족 몬스터 2장을\n자신의 덱으로 되돌릴 수\n있다.",
+  "draw_enabled": true,
+  "identity_key": "ee83093aa95575a98eb192164a229211e33903fda610caf9ab06ca569825c0cc",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0566.webp",
+  "level": 4,
+  "links": [],
+  "name": "메타보 샤크",
+  "name_english": "Metabo-Shark",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 131072,
+  "rarity": "R",
+  "source_id": 289,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 566
+}

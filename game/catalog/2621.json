@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards084/2621",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-일반몬스터",
+    "소환-패,덱"
+  ],
+  "code": 25578802,
+  "defense": 0,
+  "description": "각 플레이어는 자신의 엔드 페이즈에 1번, 패의 레벨 4 일반 몬스터 1장을 앞면으로 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "b7857fa0b5301525239a35e1183a21e9a89a3c160736818f338843aba6794324",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2621.jpg",
+  "level": 0,
+  "links": [],
+  "name": "투맨 셀 배틀",
+  "name_english": "Two-Man Cell Battle",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "투맨셀배틀",
+    "투맨 셀 배틀",
+    "Two-Man Cell Battle"
+  ],
+  "source_id": 2621,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 1653
+}

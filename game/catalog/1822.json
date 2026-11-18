@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1822",
+  "attack": 1200,
+  "attribute": 32,
+  "categories": [
+    "덱-묘지기",
+    "효과-덱샐비지",
+    "발동-묘지"
+  ],
+  "code": 93023479,
+  "defense": 1500,
+  "description": "이 카드가 자신 필드 위에서\n묘지로 보내졌을 때, 자신의\n덱에서 수비력 1500 이하의\n\"묘지기의\"라는 이름이 붙은\n몬스터 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "dbaf42f889935cae91b4090f8c249a4ebab5a9af22394288c56e47e842c60267",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1271.webp",
+  "level": 3,
+  "links": [],
+  "name": "묘지기의 소환사",
+  "name_english": "Gravekeeper's Recruiter",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "source_id": 1822,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1271
+}

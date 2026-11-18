@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1533",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-데미지"
+  ],
+  "code": 33737664,
+  "defense": 0,
+  "description": "자신의 스탠바이 페이즈마다\n상대의 제외된 몬스터 카드\n1장당 상대에게 100 직접\n데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "d3cfda645a44b7e3990763d26d5c9d07fe83a3ddbfbb90070fa503a9b1dca773",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0704.webp",
+  "level": 0,
+  "links": [],
+  "name": "도굴꾼의 보복",
+  "name_english": "Graverobber's Retribution",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1533,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 704
+}

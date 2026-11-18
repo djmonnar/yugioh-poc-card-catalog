@@ -1,0 +1,73 @@
+{
+  "art_key": "CharacterPresentation012/images/bakura/start",
+  "id": "character-deea163f3ab194e18bd1da56e44f2628",
+  "profile": {
+    "name": "어둠의 바쿠라",
+    "portrait": "assets/actors/shared-bakura.png",
+    "skill_profiles": [
+      {
+        "name": "팬더모니엄",
+        "profile_id": "profile-daaf5683-9592-4fda-a9fd-69664b5f69b2",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "79afd9a513cafb26fcb6152dab8473c6cacb76214ce63fe65a384a63ea47a805",
+              "internal_id": 1840,
+              "name_ko": "팬더모니엄－악마의 소굴－",
+              "slot": 1301
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "데몬소환",
+        "profile_id": "profile-1596aec7-c4bd-43f6-a162-f63294370cdf",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "a902fd7ff228ad2c3f298ad6dcec79da90f3236f39d6aa67398ba7aa8e57e5e6",
+              "internal_id": 21,
+              "name_ko": "데몬 소환",
+              "slot": 582
+            },
+            "kind": "start_hand"
+          }
+        ]
+      },
+      {
+        "name": "네크로피어",
+        "profile_id": "profile-c299176c-81b2-454b-a5fd-837d6cba7e07",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "acf8b07a9dc7ceb0ed4c8e3a4e74be6ae5373042e1e54230ed0db340051c9ef2",
+              "internal_id": 1514,
+              "name_ko": "다크 네크로피어",
+              "slot": 513
+            },
+            "kind": "start_hand"
+          },
+          {
+            "entries": [
+              {
+                "card": {
+                  "identity_key": "a902fd7ff228ad2c3f298ad6dcec79da90f3236f39d6aa67398ba7aa8e57e5e6",
+                  "internal_id": 21,
+                  "name_ko": "데몬 소환",
+                  "slot": 582
+                },
+                "count": 1
+              }
+            ],
+            "kind": "start_grave"
+          }
+        ]
+      }
+    ],
+    "skills": []
+  },
+  "profile_id": "bakura",
+  "updated_at": "2026-11-09T10:14:04.495012+00:00",
+  "version": 3888
+}

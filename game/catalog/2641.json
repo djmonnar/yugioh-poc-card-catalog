@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards088/2641",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착",
+    "발동-묘지",
+    "효과-드로우",
+    "지원-마법사"
+  ],
+  "code": 67775894,
+  "defense": 0,
+  "description": "마법사족 몬스터에만 장착 가능. ①: 장착 몬스터의 공격력은 500 올린다. ②: 장착 몬스터와 이 카드를 자신 필드에서 묘지로 보내고 발동할 수 있다. 자신은 덱에서 2장 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "7a79d8db7b8e1d15537fba3060dcc9aa0af44cd7ac9f0c6877bdb7a90dca893c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native088/cards/2641.jpg",
+  "level": 0,
+  "links": [],
+  "name": "원더 원드",
+  "name_english": "Wonder Wand",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "원더원드",
+    "원더 원드",
+    "Wonder Wand"
+  ],
+  "source_id": 2641,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 1673
+}

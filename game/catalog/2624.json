@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards088/2624",
+  "attack": 1400,
+  "attribute": 16,
+  "categories": [
+    "지원-저레벨",
+    "발동-묘지",
+    "발동-파괴",
+    "효과-덱샐비지"
+  ],
+  "code": 63223467,
+  "defense": 1200,
+  "description": "이 카드가 전투에 의해서 파괴되어 묘지로 보내졌을 때, 덱에서 레벨 2 이하의 빛 속성 몬스터 1장을 패에 넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "49f6935556c45573209be707572f3db27fd4e46335f508bc8f9d9c5eec447f0b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native088/cards/2624.jpg",
+  "level": 3,
+  "links": [],
+  "name": "RAI－MEI",
+  "name_english": "Rai-Mei",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4096,
+  "rarity": "R",
+  "search_aliases": [
+    "Rai-mei",
+    "RAI－MEI",
+    "Rai-Mei"
+  ],
+  "source_id": 2624,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1656
+}

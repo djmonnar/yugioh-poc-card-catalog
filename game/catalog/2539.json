@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2539",
+  "attack": 3000,
+  "attribute": 4,
+  "categories": [
+    "덱-네프티스"
+  ],
+  "code": 24175232,
+  "defense": 1000,
+  "description": "네프티스의 윤회 등으로 의식 소환한다. 각 효과는 카드명당 1턴에 1번만 사용할 수 있다. ① 자신의 메인 페이즈에 패와 자신의 앞면 필드에서 네프티스 카드를 원하는 수만큼 골라 파괴한 뒤, 파괴한 수만큼 상대 몬스터를 골라 파괴할 수 있다. ② 전투·효과로 파괴되어 묘지로 보내지면, 다음 자신의 스탠바이 페이즈에 이 카드를 특수 소환할 수 있다. 파괴할 카드를 대상으로 지정하는 효과가 아니다.",
+  "draw_enabled": true,
+  "identity_key": "ef7d6c9d3644a6aaf7da462bd9e17acf28aa434cd518b3f8ba269c6e71164815",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2539.jpg",
+  "level": 8,
+  "links": [],
+  "name": "네프티스의 창황신",
+  "name_english": "Cerulean Sacred Phoenix of Nephthys",
+  "native_type": 161,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "UR",
+  "source_id": 2539,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "의식 / 효과 몬스터",
+  "web_slot": 1571
+}

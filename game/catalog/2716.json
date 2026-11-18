@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards099/2716",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착",
+    "효과-묘지샐비지"
+  ],
+  "code": 20188127,
+  "defense": 0,
+  "description": "자신의 묘지에서 장착 마법 카드 1장을 패에 넣는다. 그 장착 마법 카드는 이 턴에 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "cb60fc01239bf2eca3769f73ab83eb20f966560f54eb156c1363d8885ef73e06",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native099/cards/2716.jpg",
+  "level": 0,
+  "links": [],
+  "name": "샘의 정령",
+  "name_english": "Fairy of the Spring",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "샘의정령",
+    "샘의 정령",
+    "Fairy of the Spring"
+  ],
+  "source_id": 2716,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1748
+}

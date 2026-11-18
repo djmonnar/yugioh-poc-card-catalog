@@ -1,0 +1,19 @@
+{
+  "description": "전투 승리 시 원정 금화 +20.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 0,
+  "iconKey": "Relics/atlas160",
+  "id": "golden_scarab",
+  "kind": "golden_scarab",
+  "name": "황금 풍뎅이",
+  "params": {
+    "gold": 20
+  },
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

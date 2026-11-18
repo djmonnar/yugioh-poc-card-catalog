@@ -1,0 +1,53 @@
+{
+  "artKey": "CharacterPresentation012/images/tea/start",
+  "banlistEnabled": false,
+  "deckName": "습지초원",
+  "extra": [],
+  "id": "enc-3d28dbd0-8ffc-44f1-97aa-1dbc570e07cb",
+  "lpBonus": 0,
+  "main": [
+    2016,
+    2016,
+    2016,
+    2015,
+    2015,
+    2015,
+    601,
+    601,
+    2022,
+    2022,
+    1900,
+    1900,
+    1881,
+    1881,
+    2012,
+    1134,
+    1134,
+    2013,
+    2013,
+    1882
+  ],
+  "name": "안수진",
+  "openingDrawBonus": 0,
+  "profileId": "tea",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2016,
+      "threshold": 0,
+      "value": 0
+    },
+    {
+      "entries": [],
+      "kind": "draw_once",
+      "position": 0,
+      "sourceId": -1,
+      "threshold": 2000,
+      "value": 1
+    }
+  ],
+  "templateId": "unified039:enc-3d28dbd0-8ffc-44f1-97aa-1dbc570e07cb",
+  "usesNativeRules035": true
+}

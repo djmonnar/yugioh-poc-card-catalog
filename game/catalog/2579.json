@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards067/2579",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-가이아",
+    "지원-융합"
+  ],
+  "code": 38590361,
+  "defense": 0,
+  "description": "자신의 패·필드의 몬스터를 소재로 엑스트라 덱에서 드래곤족 융합 몬스터 1장을 융합 소환한다. 이 효과로 ‘용기사 가이아’를 특수 소환했다면 그 공격력을 2600 올리고, 매 배틀 페이즈에 몬스터에 2회까지 공격할 수 있게 한다.",
+  "draw_enabled": true,
+  "identity_key": "5ebe08b8ca1221bb7bd57a8ceb6fb2fb4cfbe43e6354c88b24db8bb570edd98c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2579.jpg",
+  "level": 0,
+  "links": [],
+  "name": "스파이럴 퓨전",
+  "name_english": "Spiral Fusion",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2579,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1611
+}

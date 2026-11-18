@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards084/2606",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-카운터·무효",
+    "무효-마법",
+    "발동-묘지로보내기",
+    "파괴-마법"
+  ],
+  "code": 38275183,
+  "defense": 0,
+  "description": "마법 카드의 발동에 대응하여 다음 중 하나를 선택한다. 필드의 몬스터 1장만을 대상으로 하는 마법이면 그 발동을 무효로 하고 파괴한다. 또는 패의 마법 카드 1장을 묘지로 보내고, 마법 카드의 발동을 무효로 하고 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "f12b3b5d9e2e69e42fba96684f891648d89469671e7b092e80eb13fe52aa16d2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2606.jpg",
+  "level": 0,
+  "links": [],
+  "name": "8식대 마법다중결계",
+  "name_english": "Spell Shield Type-8",
+  "native_type": 1048580,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "8식대 마법다중결계",
+    "8식대마법다중결계",
+    "Spell Shield Type-8"
+  ],
+  "source_id": 2606,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "카운터 함정",
+  "web_slot": 1638
+}

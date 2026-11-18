@@ -1,0 +1,68 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2106",
+  "attack": 1800,
+  "attribute": 4,
+  "categories": [
+    "효과-데미지",
+    "덱-볼캐닉"
+  ],
+  "code": 17415895,
+  "defense": 1200,
+  "description": "1턴에 1번, 자신의 메인 페이즈시에 발동할 수 있다. 상대 라이프에 500 포인트 데미지를 준다. 이 효과를 발동하는 턴에, 이 카드는 공격할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "184999d07133621a16a4ef296b7e218469d447fca7373d9a6d5e7e54cb3531c6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1404.webp",
+  "level": 4,
+  "links": [
+    {
+      "identity_key": "c81886fc0f0a43bf27619067a5d82f9141ce84b993e678f42014c05a90939881",
+      "slot": 293
+    },
+    {
+      "identity_key": "3020114321ff2db5e5fdb5f5ca4d2794fc80c362110e97f79c29512e0c6a9ce5",
+      "slot": 1403
+    },
+    {
+      "identity_key": "e62c8716039889d477cf8be2a601e270144f10bcdbb47646796fd72b9272299a",
+      "slot": 1406
+    },
+    {
+      "identity_key": "4d7b67f355652a4933cbe0850b1ef39a87dcf5e33ca48c558ae4b179e8bcf62f",
+      "slot": 1407
+    },
+    {
+      "identity_key": "5d2f5425c5c4ca0f5da3e3bf5aa7cf556f6a963d2c98fa9386f619c8e2e1ca95",
+      "slot": 1405
+    },
+    {
+      "identity_key": "07adebc96bf42075a206419dd47a38a346663582d7700098aa5e308fbf591e6c",
+      "slot": 1409
+    },
+    {
+      "identity_key": "a9aa7e4588fcca348af07bee8f0673c6eccacc3b9ef5bbbd6fc9e3710135bdda",
+      "slot": 1422
+    },
+    {
+      "identity_key": "e1436f93c45208cc8edf03b45b430ff270e9061482b9c63dded116dfcdffb938",
+      "slot": 1408
+    },
+    {
+      "identity_key": "6a3c77735e326d28769214d37e2ad2746df4b71aeb7aaf6d911438cb023c6fcc",
+      "slot": 1423
+    }
+  ],
+  "name": "볼캐닉 에지",
+  "name_english": "Volcanic Slicer",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 128,
+  "rarity": "R",
+  "source_id": 2106,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1404
+}

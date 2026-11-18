@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2013",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-종족"
+  ],
+  "code": 86780027,
+  "defense": 0,
+  "description": "자신의 묘지에 존재하는 몬스터의 원래 종족이 1종류뿐일 경우, 자신 필드 위에 앞면 표시로 존재하는 그 종족의 몬스터 공격력은 800 포인트 올린다.",
+  "draw_enabled": true,
+  "identity_key": "e84d94a4fae01c996a8987182984fb3ffa213f361b0ab853eb512074b855dd20",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1317.webp",
+  "level": 0,
+  "links": [],
+  "name": "일족의 결속",
+  "name_english": "Solidarity",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2013,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1317
+}

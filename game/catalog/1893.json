@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1893",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "면역-효과",
+    "발동-lp지불"
+  ],
+  "code": 82732705,
+  "defense": 0,
+  "description": "1000 LP를 지불하고 이 카드를\n발동할 수 있다. ①: 이 카드가\n마법 & 함정 존에 존재하는\n한, 필드의 앞면 표시\n몬스터의 효과는 무효화된다.\n[차이] 이 카드가 적용되는\n동안 대부분의 효과 몬스터는\n효과를 발동할 수 없다(공식\n카드는 발동은 되고 효과만\n무효가 된다). 일부 몬스터의\n지속 효과(공격력 변화 등)는\n무효가 되지 않는다. 나중에\n나온 \"인조인간 －사이코\n쇼커－\"는 이 카드를 무효로\n한다.",
+  "draw_enabled": true,
+  "identity_key": "3b89bea291e4b395c94950818b9e39fd813a0d8e2f04145056d97e4816841d70",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1220.webp",
+  "level": 0,
+  "links": [],
+  "name": "스킬 드레인",
+  "name_english": "Skill Drain",
+  "native_type": 131076,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1893,
+  "speed_limit": 1,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1220
+}

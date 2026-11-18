@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1160",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "소환-묘지"
+  ],
+  "code": 70828912,
+  "defense": 0,
+  "description": "800 LP를 지불한다. 자신의\n묘지의 몬스터 1장을 앞면\n공격 표시로 특수 소환하고 이\n카드를 장착한다. 이 카드가\n파괴되면 그 몬스터도\n파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "a51a2555b7faf4bf0d0452d5e7d98befcbcaf7149145ebdd773f7a1142ebe37f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0726.webp",
+  "level": 0,
+  "links": [],
+  "name": "성급한 매장",
+  "name_english": "Premature Burial",
+  "native_type": 262146,
+  "normal_limit": 2,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "source_id": 1160,
+  "speed_limit": 2,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 726
+}

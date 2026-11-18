@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/474",
+  "attack": 300,
+  "attribute": 2,
+  "categories": [
+    "효과-묘지샐비지",
+    "발동-묘지"
+  ],
+  "code": 8131171,
+  "defense": 250,
+  "description": "자신의 스탠바이 페이즈에\n묘지의 \"킬러 스네이크\"를\n패로 되돌릴 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "e99944e312fd4b4cbdda00c0ea6c9df96152c22a026eadfc5e45823e48522a77",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0220.webp",
+  "level": 1,
+  "links": [],
+  "name": "킬러 스네이크",
+  "name_english": "Sinister Serpent",
+  "native_type": 33,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 524288,
+  "rarity": "SR",
+  "source_id": 474,
+  "speed_limit": 1,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 220
+}

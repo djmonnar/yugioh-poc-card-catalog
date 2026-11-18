@@ -1,0 +1,17 @@
+{
+  "description": "두 카드의 빛이 하나로 합쳐지는 작업실이다. 장인은 네가 가진 융합 카드의 빈자리를 살핀다.",
+  "effect": "보유한 융합 몬스터를 골라 부족한 정식 소재 1장 획득",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/background",
+  "id": "fusion_workshop",
+  "kind": "fusion_workshop",
+  "name": "보유한 융합 몬스터를 골라 부족한 정식 소재 1장 획득",
+  "params": {
+    "count": 1
+  },
+  "rewardRarity": null,
+  "supportStatus": "verified-controller022",
+  "title": "융합술사의 작업실",
+  "weight": 1
+}

@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1933",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "면역-전투",
+    "효과-회복"
+  ],
+  "code": 43250041,
+  "defense": 0,
+  "description": "①: 상대 몬스터의 공격\n선언시, 공격 몬스터 1장을\n대상으로 하고 발동할 수\n있다. 그 공격 몬스터의\n공격을 무효로 하고, 그\n몬스터의 공격력만큼만 자신은\nLP를 회복한다.",
+  "draw_enabled": true,
+  "identity_key": "2d32723e05325c462bd6991969607f23079c63e389bc937ba4ede1d70b29b9d5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1182.webp",
+  "level": 0,
+  "links": [],
+  "name": "드레인 실드",
+  "name_english": "Draining Shield",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1933,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 1182
+}

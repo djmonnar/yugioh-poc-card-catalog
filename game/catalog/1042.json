@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1042",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "발동-묘지",
+    "지원-장착",
+    "효과-바운스"
+  ],
+  "code": 98495314,
+  "defense": 0,
+  "description": "장착 몬스터의 공격력과\n수비력을 500 올린다. 이\n카드가 묘지로 보내졌을 때\n자신의 덱 맨 위에 놓는다.",
+  "draw_enabled": true,
+  "identity_key": "c351331e186f4211c4491f3efea6829e7059c1a42c180f4920a01380847cbfea",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0401.webp",
+  "level": 0,
+  "links": [],
+  "name": "집념의 검",
+  "name_english": "Sword of Deep-Seated",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1042,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 401
+}

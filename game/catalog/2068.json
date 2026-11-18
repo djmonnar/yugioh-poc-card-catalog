@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2068",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "덱-해피",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 75782277,
+  "defense": 0,
+  "description": "①: 필드의 비행야수족\n몬스터의 공격력 / 수비력은\n200 올린다. ②: 자신이나\n상대가, \"해피 레이디\"나\n\"해피 레이디 세자매\"를 일반\n소환 / 특수 소환했을 경우,\n그 플레이어는 필드의 마법 /\n함정 카드 1장을 대상으로\n하고 발동한다. 그 카드를\n파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "14ef34dddf99754c0eae2578fc9f5635584f61b1ff8672d65b4bef854f78776d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0328.webp",
+  "level": 0,
+  "links": [],
+  "name": "해피의 사냥터",
+  "name_english": "Harpies' Hunting Ground",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2068,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 328
+}

@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards088/2650",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-게이트가디언",
+    "파괴-몬스터"
+  ],
+  "code": 34771947,
+  "defense": 0,
+  "description": "①: 원래의 레벨이 5 이상의 몬스터가 아닌, 일반 소환 / 반전 소환 / 특수 소환된 몬스터는, 그 턴에는 공격할 수 없다. ②: 1턴에 1번, 자신 메인 페이즈에 발동할 수 있다. 자신의 패 / 덱 / 제외 상태의 \"번개 마신－썬가\" \"풍 마신－휴가\" \"수 마신－스가\" 중 어느 1장을 골라, 지속 마법 카드로 취급하고 자신의 마법 & 함정 존에 앞면 표시로 놓는다. ③: 상대 배틀 페이즈 개시시, 상대 필드의 공격력 1600 미만의 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "852fe5889e1239390ea2bb7b75d0ab4c7221c1253f1c1d2d954ce9820561a8cc",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native088/cards/2650.jpg",
+  "level": 0,
+  "links": [],
+  "name": "래버린스 월 섀도우",
+  "name_english": "Labyrinth Wall Shadow",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "레버런스 월 섀도우",
+    "래버린스 월 섀도우",
+    "래버린스월섀도우",
+    "Labyrinth Wall Shadow"
+  ],
+  "source_id": 2650,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "필드 마법",
+  "web_slot": 1682
+}

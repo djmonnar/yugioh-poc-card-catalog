@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2057",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-묘지보내기",
+    "효과-드로우",
+    "지원-함정"
+  ],
+  "code": 1073952,
+  "defense": 0,
+  "description": "①: 자신 필드의 앞면 표시의 지속 함정 카드 1장을 묘지로 보내고 발동할 수 있다. 자신은 2장 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "d812c6451b66762bfc80bf11983503ac26fa383d8dcf77be37cf003c5efdda39",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1357.webp",
+  "level": 0,
+  "links": [
+    {
+      "identity_key": "a284f7cdbeacb83e2b42faabe4df25bc793f6150ce8d7a02bc87d5b29efde4c0",
+      "slot": 1355
+    }
+  ],
+  "name": "매직 플랜터",
+  "name_english": "Magic Planter",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 2057,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1357
+}

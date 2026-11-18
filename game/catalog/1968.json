@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1968",
+  "attack": 1900,
+  "attribute": 32,
+  "categories": [
+    "덱-붉은눈",
+    "소환-패,덱",
+    "파괴-몬스터"
+  ],
+  "code": 71408082,
+  "defense": 1200,
+  "description": "\"흑룡강림\"에 의해 의식 소환.\n\"나이트 오브 블랙 드래곤\"의\n②의 효과는 1턴에 1번밖에\n사용할 수 없다. ①: 이 카드가\n수비 표시 몬스터를 공격한\n데미지 스텝 개시시에\n발동한다. 그 몬스터를\n파괴한다. ②: 이 카드를\n릴리스하고 발동할 수 있다.\n패 / 덱에서 \"붉은 눈\" 몬스터\n1장을 특수 소환한다.\n[안내] ①로 몬스터를 파괴하면\n데미지 계산 없이 그 전투가\n끝난다. ②는 필드의 이 카드를\n눌러 쓴다.",
+  "draw_enabled": true,
+  "identity_key": "9f4f025b62389da4fe96b712a67e804d97d36837341867b6c6e9840adf8b007f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1151.webp",
+  "level": 4,
+  "links": [],
+  "name": "나이트 오브 블랙 드래곤",
+  "name_english": "Paladin of Dark Dragon",
+  "native_type": 161,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "source_id": 1968,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "의식 몬스터",
+  "web_slot": 1151
+}

@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards125/2836",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-에일리언",
+    "A 카운터",
+    "파괴-몬스터",
+    "소환-패,덱"
+  ],
+  "code": 53291093,
+  "defense": 0,
+  "description": "A 카운터가 얹혀 있는 필드 위의 몬스터 1장을 파괴한다. 또한 자신의 덱에서 \"에일리언\"이라는 이름이 붙은 레벨 4 몬스터 1장을 특수 소환할 수 있다. 이 효과로 특수 소환한 몬스터는 엔드 페이즈시에 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "494779d777092fb999f97e0966868c08279bc4b6d311ac9bada6c5e4f5535aa3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native125/cards/2836.jpg",
+  "level": 0,
+  "links": [],
+  "name": "트라이앵글 에리어",
+  "name_english": "Mysterious Triangle",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "트라이앵글 에리어",
+    "Mysterious Triangle"
+  ],
+  "source_id": 2836,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 1868
+}

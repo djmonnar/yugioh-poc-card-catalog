@@ -1,0 +1,17 @@
+{
+  "description": "강화되지 않은 덱의 마법사족 1매에 특수 소환 시 덱의 마법 카드 1장 서치를 추가해. 마법사족이 아예 없으면 블랙 매지션 1장을 받아. 받은 카드는 자동 강화되지 않아.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 33,
+  "iconKey": "Relics/magician_grimoire",
+  "id": "magician_grimoire",
+  "kind": "magician_grimoire",
+  "name": "매지션의 마도서",
+  "params": {},
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1429",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-드로우"
+  ],
+  "code": 57953380,
+  "defense": 0,
+  "description": "자신의 묘지에서 몬스터가\n필드에 특수 소환되었을 때,\n자신의 덱에서 1장 드로우할\n수 있다.",
+  "draw_enabled": true,
+  "identity_key": "78a6b16986dd0f6c6334b5ee2ae5d67a70071640d49bd6d4b7d17cd752051d69",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0461.webp",
+  "level": 0,
+  "links": [],
+  "name": "생환의 패",
+  "name_english": "Card of Safe Return",
+  "native_type": 131074,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "source_id": 1429,
+  "speed_limit": 1,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 461
+}

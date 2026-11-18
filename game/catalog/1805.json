@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1805",
+  "attack": 0,
+  "attribute": 16,
+  "categories": [],
+  "code": 19733961,
+  "defense": 0,
+  "description": "자신 필드 위의 \"전지맨－C\"가 전부 공격 표시였을 경우, \"전지맨－C\" 1장당 자신 필드 위의 모든 기계족 몬스터의 공격력은 500 포인트 올린다. 자신 필드 위의 \"전지맨－C\"가 전부 수비 표시였을 경우, \"전지맨－C\" 1장당 자신 필드 위의 모든 기계족 몬스터의 수비력은 500 포인트 올린다.",
+  "draw_enabled": true,
+  "identity_key": "2fc82a4e337009e06ad5db2a9dcc3aabe117b2ec0666badb4f7db18c7f029e6e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1292.webp",
+  "level": 2,
+  "links": [
+    {
+      "identity_key": "5f5fb443127ccf3877c6e5493e812001fca42d6fda6371e60f46c37fd2c17e99",
+      "slot": 1291
+    },
+    {
+      "identity_key": "6970778e6b0be53e8b02f53756e3825199874ad44664c723a4f2378b5d14c0c2",
+      "slot": 1293
+    }
+  ],
+  "name": "전지맨－C",
+  "name_english": "Batteryman C",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4096,
+  "rarity": "N",
+  "source_id": 1805,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1292
+}

@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/tea/start",
+  "banlistEnabled": false,
+  "deckName": "안수진 초급",
+  "extra": [],
+  "id": "enc044_1_battle_ch1_battle_b8aa2b35d130144da1081794",
+  "lpBonus": 0,
+  "main": [
+    1117,
+    1117,
+    1117,
+    1408,
+    632,
+    272,
+    272,
+    1129,
+    1129,
+    1073,
+    1073,
+    1140,
+    1140,
+    1140,
+    2036,
+    2036,
+    2035,
+    2035,
+    2004,
+    2004
+  ],
+  "name": "안수진",
+  "openingDrawBonus": 0,
+  "profileId": "tea",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 1305,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "installed-story:sc-e97be9a47a56dd04-f028ad028ea2739e56041f52e0801668",
+  "usesNativeRules035": true
+}

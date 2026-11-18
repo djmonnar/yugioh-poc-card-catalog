@@ -1,0 +1,60 @@
+{
+  "banlist_enabled": false,
+  "extra": [
+    {
+      "count": 1,
+      "identity_key": "451ec98f39752ceff25e1fb3367202f326e72d575eda4188fddffb45416260d9",
+      "source_id": 2026
+    }
+  ],
+  "id": "ch2_battle_399393c266d79f4f09a4d10b",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "dc819ac4bfd64a44d876fe0f75bfe97cb0e24e9dfa20e1cb23e5a9d0b52f5724",
+      "source_id": 962
+    },
+    {
+      "count": 3,
+      "identity_key": "544243db3fb2545affba714527ce5f69b0369f14dddccebe0e87a39e6fc8e437",
+      "source_id": 2024
+    },
+    {
+      "count": 3,
+      "identity_key": "d61cf20cdac1800b1c3c1c6d44cc142579ba1be08ab9d0287c3619127c6642bc",
+      "source_id": 2025
+    },
+    {
+      "count": 3,
+      "identity_key": "9030ef423bbc13a7c4056fab7c19e0a6606b92badf8539245b3ececbe979bd30",
+      "source_id": 356
+    },
+    {
+      "count": 2,
+      "identity_key": "6e88143a6d19b63d51f9f78d79264941a106691798fb78f1579481304fad7560",
+      "source_id": 1003
+    },
+    {
+      "count": 1,
+      "identity_key": "3c91fb75629a9ab81c5ee5d7f5c379d2ed640b6db9af3d248b0e0acf5e860f8c",
+      "source_id": 1040
+    },
+    {
+      "count": 2,
+      "identity_key": "05b26a45d30cc9f5293e3a00bbc51ea03b2be6d45d06fc37eb468717bccba07f",
+      "source_id": 657
+    },
+    {
+      "count": 2,
+      "identity_key": "f404ba133372b351606334cc3284cc4e1ec47fb7adc423f12092ccf32146f581",
+      "source_id": 685
+    },
+    {
+      "count": 1,
+      "identity_key": "026140006354fb4cbca6db18fd5cf686d1393d60f7141f354fe71a12f6f4a6f6",
+      "source_id": 268
+    }
+  ],
+  "name": "밴디트 키스 상급",
+  "version": 37
+}

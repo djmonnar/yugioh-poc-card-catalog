@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards144/2981",
+  "attack": 1000,
+  "attribute": 1,
+  "categories": [
+    "지원-곤충",
+    "지원-고레벨",
+    "발동-묘지로 보내졌을 때",
+    "효과-덱샐비지",
+    "발동-제외됐을 때",
+    "효과-덱에서 묘지로 보내기"
+  ],
+  "code": 96938986,
+  "defense": 700,
+  "description": "①: 이 카드가 필드에서 묘지로 보내졌을 경우에 발동할 수 있다. 덱에서 레벨 5 이상의 곤충족 몬스터 1장을 패에 넣는다. ②: 이 카드가 제외되었을 경우에 발동할 수 있다. 덱에서 \"공진충\" 이외의 곤충족 몬스터 1장을 묘지로 보낸다.",
+  "draw_enabled": true,
+  "identity_key": "eb3713e4c520e2986c8063646f73e1b88b884bfd5e05acacac1b951b99042067",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native144/cards/2981.jpg",
+  "level": 4,
+  "links": [],
+  "name": "공진충",
+  "name_english": "Resonance Insect",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "UR",
+  "search_aliases": [
+    "공진충",
+    "Resonance Insect"
+  ],
+  "source_id": 2981,
+  "speed_limit": 1,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2013
+}

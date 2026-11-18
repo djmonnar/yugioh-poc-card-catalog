@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/109",
+  "attack": 1900,
+  "attribute": 16,
+  "categories": [
+    "덱-엔디미온",
+    "마력카운터",
+    "지원-듀얼"
+  ],
+  "code": 73853830,
+  "defense": 1200,
+  "description": "①: 이 카드는 필드 / 묘지에\n존재하는 한, 일반 몬스터로\n취급한다. ②: 필드의 일반\n몬스터 취급의 이 카드를 통상\n소환으로서 1번 더 일반\n소환할 수 있다. 그 경우 이\n카드는 효과 몬스터로\n취급되고, 이하의 효과를\n얻는다.\n●1턴에 1번, 필드의 마력\n카운터를 놓을 수 있는 카드\n1장을 대상으로 하고 발동할\n수 있다. 그 카드에 마력\n카운터를 1개 놓고, 이 카드의\n공격력은 턴 종료시까지 600\n올린다.",
+  "draw_enabled": true,
+  "identity_key": "efe2cca00a012cfb25e938b0c0c265fd5a4fdb4bda8b17bafbbb74d30cf84647",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0625.webp",
+  "level": 4,
+  "links": [],
+  "name": "크루세이더 오브 엔디미온",
+  "name_english": "Crusader of Endymion",
+  "native_type": 2081,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "source_id": 109,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 625
+}

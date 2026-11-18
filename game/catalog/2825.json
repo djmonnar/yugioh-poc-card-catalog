@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards125/2825",
+  "attack": 1000,
+  "attribute": 16,
+  "categories": [
+    "지원-에일리언",
+    "효과-덱샐비지"
+  ],
+  "code": 97697678,
+  "defense": 2000,
+  "description": "이 카드가 필드 위에 앞면 표시로 존재하는 한, 자신의 드로우 페이즈에 일반 드로우를 실행하는 대신에, 덱에서 \"에일리언\"이라는 이름이 붙은 카드 1장을 선택하고 패에 넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "a35c7d691d7858cd03b3147db4a8bef36973ca4947bf6dbf7b336117ce6a164c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native125/cards/2825.jpg",
+  "level": 5,
+  "links": [],
+  "name": "원반 무스키",
+  "name_english": "Flying Saucer Muusik'i",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "N",
+  "search_aliases": [
+    "원반 무스키",
+    "Flying Saucer Muusik'i"
+  ],
+  "source_id": 2825,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1857
+}

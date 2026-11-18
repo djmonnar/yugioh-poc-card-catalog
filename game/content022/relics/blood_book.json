@@ -1,0 +1,17 @@
+{
+  "description": "상대의 남은 LP보다 큰 피해를 주면 초과한 만큼 LP를 회복해. 최대 LP는 넘지 않아.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 35,
+  "iconKey": "Relics/blood_book",
+  "id": "blood_book",
+  "kind": "blood_book",
+  "name": "흡혈의 서",
+  "params": {},
+  "price": 300,
+  "rarity": "UR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

@@ -1,0 +1,64 @@
+{
+  "banlist_enabled": false,
+  "extra": [],
+  "id": "ch1_battle_08e1ce31fae34b2d1f489bb7",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "7341256371bb51ebb64315d92ec728919936d0ad41b80e53c0fe63d15fb84eb6",
+      "source_id": 2040
+    },
+    {
+      "count": 2,
+      "identity_key": "38d26583516afa66200a18980410f723fb5985d2c3ce65315fe80ac11312e19b",
+      "source_id": 523
+    },
+    {
+      "count": 2,
+      "identity_key": "98bcc1c4a6a5fafd4c449c99095c0a7354bf74dc70790330b065f32ce4e29c37",
+      "source_id": 1882
+    },
+    {
+      "count": 2,
+      "identity_key": "b93aa6d144f62804a0499f978973f8c1ab33433feea464c4a3f27a5150b54631",
+      "source_id": 1326
+    },
+    {
+      "count": 2,
+      "identity_key": "9cc91f5bc4ba8c34de8d8387128cc634883356abc20f4482a25248b00defc6db",
+      "source_id": 1874
+    },
+    {
+      "count": 2,
+      "identity_key": "b781c54ef02789ecc1ca8b98fc91db18c49bdfbd9af4d65e5e1e1da2e0a9fb87",
+      "source_id": 1875
+    },
+    {
+      "count": 2,
+      "identity_key": "5d2c02a144e186abb8172b737e999056a915863c1463dcc0242798a1f490e352",
+      "source_id": 1877
+    },
+    {
+      "count": 1,
+      "identity_key": "90c257c09a13be5c08dde46feb5430c8094a96ccb3e70d8540d72d4661d99a67",
+      "source_id": 1948
+    },
+    {
+      "count": 2,
+      "identity_key": "c335c482bc19cb8785faf255d8d4a88a80eab9b136ec765a4322f39238709d4f",
+      "source_id": 1883
+    },
+    {
+      "count": 2,
+      "identity_key": "04c4280f9e6f4053393ce32d35b3c3a8cb921a501c8992434436eb943b4ead51",
+      "source_id": 1878
+    },
+    {
+      "count": 1,
+      "identity_key": "e33d3e359d6bb9a9c7f5a266c3335d575e14b1c179080b76672daa720d3b7939",
+      "source_id": 120
+    }
+  ],
+  "name": "마해룡 초급",
+  "version": 251
+}

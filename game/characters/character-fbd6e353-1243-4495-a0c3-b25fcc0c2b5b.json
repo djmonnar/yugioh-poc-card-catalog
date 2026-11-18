@@ -1,0 +1,44 @@
+{
+  "art_key": "CharacterPresentation012/images/akiza/start",
+  "id": "character-fbd6e353-1243-4495-a0c3-b25fcc0c2b5b",
+  "profile": {
+    "name": "아나트 아키",
+    "portrait": "assets/characters/akiza.png",
+    "skill_profiles": [
+      {
+        "name": "숲",
+        "profile_id": "profile-77a1868c-d834-42b4-bced-246ea67e584a",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "f57735d759d84c2f500a6702fd3f356d0d17fb7782646081e1f11c003d1ef969",
+              "internal_id": 329,
+              "name_ko": "숲",
+              "slot": 990
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "세계수",
+        "profile_id": "profile-dbb89409-7761-4149-97dd-03710757e511",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "52dfe00bd48baa89cbea0a4652c7ffe1771534d8b4ca03faeed724796e753106",
+              "internal_id": 2054,
+              "name_ko": "세계수",
+              "slot": 1354
+            },
+            "kind": "start_field"
+          }
+        ]
+      }
+    ],
+    "skills": []
+  },
+  "profile_id": "akiza",
+  "updated_at": "2026-11-06T09:47:09.177059+00:00",
+  "version": 3872
+}

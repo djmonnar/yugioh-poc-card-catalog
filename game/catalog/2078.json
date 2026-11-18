@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/2078",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-드로우"
+  ],
+  "code": 82386016,
+  "defense": 0,
+  "description": "자신 필드 위에 야수족 / 야수전사족 / 비행야수족 중 몬스터가 존재할 경우, 그 종족 1종류당 1장 덱에서 카드를 드로우한다. 이 카드를 발동하는 턴에, 자신은 다른 마법 / 함정 카드의 효과를 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "a51136374017d7d6e1bf6afdafb3fd52fb6c80a02f573d5f90e13643099273a0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1376.webp",
+  "level": 0,
+  "links": [],
+  "name": "오합의 행진",
+  "name_english": "The Big Cattle Drive",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "source_id": 2078,
+  "speed_limit": null,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 1376
+}

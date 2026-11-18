@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards/282",
+  "attack": 2500,
+  "attribute": 16,
+  "categories": [],
+  "code": 86585274,
+  "defense": 2100,
+  "description": "①: 패의 \"마도서\" 마법 카드\n3장을 상대에게 보여주고\n발동할 수 있다. 이 카드를\n패에서 특수 소환한다. ②:\n1턴에 1번, 자신의 패 /\n묘지에서 \"마도서\" 마법 카드\n1장을 제외하고, 필드의 카드\n1장을 대상으로 하여 발동할\n수 있다. 그 카드를 파괴한다.\n[차이] ①의 패를 보여주는\n처리는 연출 없이 진행된다.",
+  "draw_enabled": true,
+  "identity_key": "e63967d067d07084e8ddf270968b33dbd9c4b5638a24b942039b9be8bf7ba1cb",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0867.webp",
+  "level": 7,
+  "links": [
+    {
+      "identity_key": "b1d844d40d803bd9a5bc5ab462ff1f88fd2b0c0223deb50ef692b2f1ee026168",
+      "slot": 1118
+    },
+    {
+      "identity_key": "590ebbfd869bc3fd0b77820167c95ac7e84aca64e1c8602339630cbabf8311d1",
+      "slot": 1119
+    }
+  ],
+  "name": "마도법사 쥬논",
+  "name_english": "High Priestess of Prophecy",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "N",
+  "source_id": 282,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 867
+}

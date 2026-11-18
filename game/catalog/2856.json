@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards126/2856",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-왕가의 신전",
+    "지원-아포피스",
+    "지원-셀케트",
+    "지원-필드",
+    "지원-함정",
+    "효과-덱샐비지"
+  ],
+  "code": 69299029,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 이 카드의 발동시의 효과 처리로서, 덱에서 \"아포피스\" 함정 카드 1장을 자신 필드에 세트할 수 있다. ②: 이 카드는 필드 존에 존재하는 한, 카드명을 \"왕가의 신전\"으로 취급한다. ③: 1턴에 1번, 자신 필드에 뒷면 표시 카드가 2장 이상 존재할 경우, 또는 자신 묘지에 함정 카드가 존재할 경우에 발동할 수 있다. 덱에서 \"왕가의 신전\"의 카드명이 쓰여진 몬스터 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "e0702dbdf72abe8914f6080f9bed64c2cca1b8ee22d7e34dc2468672cf66882f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native126/cards/2856.jpg",
+  "level": 0,
+  "links": [],
+  "name": "왕의 유산을 모시는 성역",
+  "name_english": "Treasures of the Kings",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "search_aliases": [
+    "왕의 유산을 모시는 성역",
+    "Treasures of the Kings"
+  ],
+  "source_id": 2856,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "필드 마법",
+  "web_slot": 1888
+}

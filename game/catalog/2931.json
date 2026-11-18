@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards135/2931",
+  "attack": 0,
+  "attribute": 4,
+  "categories": [
+    "지원-쥬락",
+    "소환-토큰",
+    "지원-릴리즈"
+  ],
+  "code": 48411997,
+  "defense": 0,
+  "description": "「쥬락 스타우리코」의 효과로 특수 소환된다.",
+  "draw_enabled": true,
+  "identity_key": "0d4cd524249cb27100b3a0515b526ef2a02d9d266e89960059036f125e4ab052",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native135/cards/2931.jpg",
+  "level": 1,
+  "links": [],
+  "name": "쥬락 토큰",
+  "name_english": "Jurrac Token",
+  "native_type": 16401,
+  "normal_limit": 0,
+  "playable": false,
+  "race": 65536,
+  "rarity": "N",
+  "search_aliases": [
+    "쥬락 토큰",
+    "Jurrac Token"
+  ],
+  "source_id": 2931,
+  "speed_limit": null,
+  "stock": true,
+  "token": true,
+  "type_name": "토큰",
+  "web_slot": 1963
+}

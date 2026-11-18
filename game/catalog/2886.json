@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards130/2886",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-로이드",
+    "지원-필드",
+    "효과-덱샐비지",
+    "효과-묘지보내기",
+    "지원-전투",
+    "소환제약"
+  ],
+  "code": 44139064,
+  "defense": 0,
+  "description": "이 카드명의 ①②의 효과는 각각 1턴에 1번밖에 사용할 수 없으며, 이 효과를 발동하는 턴에, 자신은 융합 몬스터밖에 엑스트라 덱에서 특수 소환할 수 없다. ①: 이 카드 이외의 자신 필드의 카드 1장을 대상으로 하고 발동할 수 있다. 그 카드를 파괴하고, 덱에서 \"로이드\" 카드 1장을 패에 넣는다. ②: 자신의 \"로이드\" 몬스터가 전투를 실행하는 데미지 계산시에, 덱에서 \"로이드\" 몬스터 1장을 묘지로 보내고 발동할 수 있다. 그 전투를 실행하는 자신 몬스터는 그 데미지 계산시에만, 원래 공격력과 원래 수비력이 맞바뀐다.",
+  "draw_enabled": true,
+  "identity_key": "e4a94aedf061ba98193b0649de1bc12590d2e6e5ceee3501dce6fe6272901987",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native130/cards/2886.jpg",
+  "level": 0,
+  "links": [],
+  "name": "메가로이드 시티",
+  "name_english": "Megaroid City",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "메가로이드 시티",
+    "Megaroid City"
+  ],
+  "source_id": 2886,
+  "speed_limit": 2,
+  "stock": true,
+  "token": false,
+  "type_name": "필드 마법",
+  "web_slot": 1918
+}

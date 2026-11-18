@@ -1,0 +1,33 @@
+{
+  "alias": 0,
+  "art_key": "Cards049/2438",
+  "attack": 300,
+  "attribute": 32,
+  "categories": [
+    "덱-암흑계",
+    "발동-묘지",
+    "파괴-함정",
+    "파괴-마법"
+  ],
+  "code": 51232472,
+  "defense": 500,
+  "description": "①: 이 카드가 효과로 패에서 묘지로 버려졌을 경우, 필드의 마법 / 함정 카드 1장을 대상으로 발동한다. 그 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "a267032c35284963906683cf6a24805f7e36bc5c14e8c60f283d53767db00f11",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2438.jpg",
+  "level": 2,
+  "links": [],
+  "name": "암흑계의 책사 그린",
+  "name_english": "Gren, Tactician of Dark World",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "N",
+  "source_id": 2438,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1475
+}

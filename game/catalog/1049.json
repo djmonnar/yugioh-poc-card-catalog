@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1049",
+  "attack": 1000,
+  "attribute": 32,
+  "categories": [
+    "효과-바운스"
+  ],
+  "code": 13945283,
+  "defense": 1850,
+  "description": "이 몬스터를 공격한 몬스터는\n주인의 패로 되돌아간다.\n공격에 따른 데미지 계산은\n통상대로 실행한다.",
+  "draw_enabled": true,
+  "identity_key": "02e7efbfa02bffc6a1fc929acd0cfea0ad1ed31a7c53570004f5913c2c728aea",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0273.webp",
+  "level": 4,
+  "links": [],
+  "name": "환상의 벽",
+  "name_english": "Wall of Illusion",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "source_id": 1049,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 273
+}

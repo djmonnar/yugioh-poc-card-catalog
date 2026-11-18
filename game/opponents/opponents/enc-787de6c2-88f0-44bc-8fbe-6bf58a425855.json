@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/mai/start",
+  "banlistEnabled": false,
+  "deckName": "안개골짜기 중급",
+  "extra": [],
+  "id": "enc-787de6c2-88f0-44bc-8fbe-6bf58a425855",
+  "lpBonus": 0,
+  "main": [
+    541,
+    541,
+    2120,
+    2120,
+    2119,
+    2119,
+    2123,
+    2128,
+    2122,
+    2122,
+    2127,
+    2127,
+    2121,
+    2121,
+    1832,
+    1832,
+    1949,
+    1949,
+    1244,
+    1244
+  ],
+  "name": "메이 쿠자쿠",
+  "openingDrawBonus": 0,
+  "profileId": "mai",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2128,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-787de6c2-88f0-44bc-8fbe-6bf58a425855",
+  "usesNativeRules035": true
+}

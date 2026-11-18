@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1114",
+  "attack": 1000,
+  "attribute": 32,
+  "categories": [
+    "효과-데미지",
+    "소환-덱리크루터",
+    "발동-묘지"
+  ],
+  "code": 95178994,
+  "defense": 100,
+  "description": "이 카드가 전투로 묘지로\n보내졌을 때, 상대에게 500\n데미지를 준다. 또한 자신의\n덱에서 같은 이름의 카드를\n골라 필드에 앞면 공격 표시로\n특수 소환할 수 있다. 그 후\n덱을 셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "c6106a4882ec3c5e1f5d9fd85e16a5e894ebba711fa5eeb7bb425e2d23cf41d6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0383.webp",
+  "level": 2,
+  "links": [],
+  "name": "자이언트 바이러스",
+  "name_english": "Giant Germ",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "source_id": 1114,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 383
+}

@@ -1,0 +1,49 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "ch2_battle_bb6b829c8a321d2357979751",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "513343a524e3abe1d8a307e7eaf54026604852fff5b19160e429bc669cac6089",
+      "source_id": 102
+    },
+    {
+      "count": 2,
+      "identity_key": "fa110fa4ecf126e45c1218b4ecd12f41441c809df3f9fbf87e1733ab129c4b9f",
+      "source_id": 197
+    },
+    {
+      "count": 2,
+      "identity_key": "e6fb6de67c6bf7634070a7a3231fb2c61a71f6680839c7d9b9c26adbe69e2e88",
+      "source_id": 440
+    },
+    {
+      "count": 3,
+      "identity_key": "c3fa06a9d06fadf7799f0f7e3f92836f7733c7ff57e0128887d9bb916569bdfc",
+      "source_id": 8
+    },
+    {
+      "count": 3,
+      "identity_key": "2e5b09e8cbb003a78a38101064462aeb0d78745bbca28fb850e2f1911f497552",
+      "source_id": 1079
+    },
+    {
+      "count": 2,
+      "identity_key": "ea4cb63a2f5b4442f3286cd894bc918277c53244436ce839f8bfe3ef173a8285",
+      "source_id": 1002
+    },
+    {
+      "count": 2,
+      "identity_key": "bcf4c5406d009dcfefcbec9e9dbc378f987cb915b7c4c90f9e0ad75f93df8439",
+      "source_id": 447
+    },
+    {
+      "count": 3,
+      "identity_key": "94bef6b97b015d09dc930e530725ae19025c846a25d59af45e2236b32a71a79b",
+      "source_id": 1520
+    }
+  ],
+  "name": "공룡 중급",
+  "version": 260
+}

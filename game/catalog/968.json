@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/968",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-버리기",
+    "효과-드로우"
+  ],
+  "code": 79571449,
+  "defense": 0,
+  "description": "자신의 덱에서 카드를 3장\n드로우하고, 패에서 원하는\n카드 2장을 버린다.",
+  "draw_enabled": false,
+  "identity_key": "3b0cbbd0b63884dfa5256c54e4ec41e9fd3aabb1731aa284b8966bd5cf12a567",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0612.webp",
+  "level": 0,
+  "links": [],
+  "name": "천사의 자비",
+  "name_english": "Graceful Charity",
+  "native_type": 2,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "L",
+  "source_id": 968,
+  "speed_limit": 1,
+  "stock": false,
+  "token": false,
+  "type_name": "마법",
+  "web_slot": 612
+}

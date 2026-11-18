@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1336",
+  "attack": 2400,
+  "attribute": 4,
+  "categories": [
+    "지원-듀얼"
+  ],
+  "code": 95888876,
+  "defense": 1500,
+  "description": "이 카드는 묘지 또는 필드 위에 앞면 표시로 존재할 경우, 일반 몬스터로 취급한다. 필드 위에 앞면 표시로 존재하는 이 카드를 일반 소환으로 취급하여 다시 소환하는 것으로, 이 카드는 효과 몬스터로 취급되며, 이하의 효과를 얻는다.\n●이 카드는 1번의 배틀 페이즈 중에 2회 공격할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "9c538a2af288b2c952dc44a83520e9e1aa666077dc0241a3c14f590c8e408b33",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0727.webp",
+  "level": 6,
+  "links": [],
+  "name": "헬카이저 드래곤",
+  "name_english": "Chthonian Emperor Dragon",
+  "native_type": 2081,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "R",
+  "source_id": 1336,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 727
+}

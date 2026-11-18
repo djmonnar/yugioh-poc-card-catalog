@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/pegasus/start",
+  "banlistEnabled": false,
+  "deckName": "페가수스 툰월드 보스",
+  "extra": [],
+  "id": "enc-077ab184-6c94-41ee-b15e-bd9439b0ebbb",
+  "lpBonus": 0,
+  "main": [
+    954,
+    1817,
+    667,
+    727,
+    727,
+    727,
+    2403,
+    2403,
+    2640,
+    1508,
+    1508,
+    2603,
+    2603,
+    2626,
+    1220,
+    1220,
+    1043,
+    1043,
+    728,
+    728
+  ],
+  "name": "페가수스",
+  "openingDrawBonus": 0,
+  "profileId": "pegasus",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 954,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-077ab184-6c94-41ee-b15e-bd9439b0ebbb",
+  "usesNativeRules035": true
+}

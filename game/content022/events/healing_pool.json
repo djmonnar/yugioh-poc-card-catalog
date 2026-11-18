@@ -1,0 +1,18 @@
+{
+  "description": "돌 수호자가 별빛이 담긴 샘을 가리킨다. 작은 공물을 놓으면 상처가 아물 듯하다.",
+  "effect": "원정 금화 -50 · LP +1,000 (최대 LP까지)",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "healing_pool",
+  "kind": "healing_pool",
+  "name": "금화 50을 바치고 LP 1,000 회복",
+  "params": {
+    "gold": 50,
+    "heal": 1000
+  },
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "수호자의 샘",
+  "weight": 1
+}

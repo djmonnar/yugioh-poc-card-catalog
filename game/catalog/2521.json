@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards053/2521",
+  "attack": 200,
+  "attribute": 16,
+  "categories": [
+    "덱-사이버 엔젤",
+    "지원-의식"
+  ],
+  "code": 28053106,
+  "defense": 300,
+  "description": "이 카드명의 효과는 1턴에 1번만 사용할 수 있다. 일반·반전·특수 소환되었을 경우, 덱에서 기계천사 마법 또는 축복의 교회－리츄얼 처치 1장을 패에 넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "8ad0e0453fd0e77cc528ea672ba9142813fbd6cc55a77715cf28b553f4af623c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native053/cards/2521.jpg",
+  "level": 2,
+  "links": [],
+  "name": "사이버 에그 엔젤",
+  "name_english": "Cyber Egg Angel",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "R",
+  "source_id": 2521,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1553
+}

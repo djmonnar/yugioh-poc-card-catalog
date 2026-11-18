@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/561",
+  "attack": 750,
+  "attribute": 1,
+  "categories": [
+    "효과-한데스",
+    "효과-버리기"
+  ],
+  "code": 81843628,
+  "defense": 600,
+  "description": "리버스: 상대 덱 맨 위의 카드\n5장을 상대의 묘지로 버린다.",
+  "draw_enabled": true,
+  "identity_key": "712ea16e30991129744e6790a1c4245853c94558ae62747ca803e3485df8f47c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0674.webp",
+  "level": 2,
+  "links": [],
+  "name": "니들 웜",
+  "name_english": "Needle Worm",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2048,
+  "rarity": "SR",
+  "source_id": 561,
+  "speed_limit": 1,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 674
+}

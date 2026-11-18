@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards088/2631",
+  "attack": 700,
+  "attribute": 8,
+  "categories": [
+    "소환-덱리크루터",
+    "발동-파괴",
+    "발동-묘지"
+  ],
+  "code": 55013285,
+  "defense": 800,
+  "description": "이 카드가 전투에서 파괴되어 묘지로 보내졌을 경우, \"군대 드래곤\"을 덱에서 1장 선택하여 자신 필드 위에 특수 소환한다. 그 후 덱을 셔플한다.",
+  "draw_enabled": true,
+  "identity_key": "2c67051d81dd98450e3672126771238edc33bf0726d628316199597423afa159",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native088/cards/2631.jpg",
+  "level": 2,
+  "links": [],
+  "name": "군대 드래곤",
+  "name_english": "Troop Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "N",
+  "search_aliases": [
+    "군대드래곤",
+    "군대 드래곤",
+    "Troop Dragon"
+  ],
+  "source_id": 2631,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1663
+}

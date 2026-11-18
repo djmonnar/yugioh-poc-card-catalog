@@ -1,0 +1,31 @@
+{
+  "alias": 0,
+  "art_key": "Cards/1142",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-버리기",
+    "효과-한데스"
+  ],
+  "code": 74923978,
+  "defense": 0,
+  "description": "자신이 패를 버렸을 때 발동할\n수 있다. 자신이 패를 버릴\n때마다, 상대도 같은 수의\n카드를 패에서 버려야 한다.",
+  "draw_enabled": true,
+  "identity_key": "8ce5fd37f96e0e0e6742e0fd3a5ef6c48e869d16ff252405f269cd57abd59124",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0212.webp",
+  "level": 0,
+  "links": [],
+  "name": "강제 접수",
+  "name_english": "Forced Requisition",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "source_id": 1142,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "함정",
+  "web_slot": 212
+}

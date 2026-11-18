@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards143/2958",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-공용",
+    "효과-파괴",
+    "파괴-마법",
+    "파괴-함정",
+    "효과-배틀 페이즈 제한"
+  ],
+  "code": 23924608,
+  "defense": 0,
+  "description": "필드의 마법·함정 카드 1~2장을 대상으로 하여 파괴한다. 이 카드를 발동하는 턴에는 자신의 배틀 페이즈를 실행할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "4dea881c367baed982936a47bea2b17cd6ec1e38b0aaa4615ce270a9b15bcabb",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native143/cards/2958.jpg",
+  "level": 0,
+  "links": [],
+  "name": "모래 먼지의 태풍",
+  "name_english": "Heavy Storm Duster",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "모래먼지태풍",
+    "모래 먼지의 태풍",
+    "Heavy Storm Duster"
+  ],
+  "source_id": 2958,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 1990
+}

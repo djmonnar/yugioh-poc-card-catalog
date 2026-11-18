@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards126/2849",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-왕가의 신전",
+    "지원-셀케트",
+    "지원-함정",
+    "소환-패,덱",
+    "효과-묘지보내기"
+  ],
+  "code": 29762407,
+  "defense": 0,
+  "description": "이 카드명의 ①②의 효과는 각각 1턴에 1번밖에 사용할 수 없다. ①: 자신은 함정 카드 1장을 세트한 턴에 발동할 수 있다. ②: 자신 필드의 앞면 표시의 \"신성한 몬스터 셀케트\" 1장과 이 카드를 묘지로 보내고 발동할 수 있다. 패 / 덱의 몬스터 1장 또는 엑스트라 덱의 융합 몬스터 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "61c53cb1d0b0dc348d3a2dae0412a3bd8d09a98bafb6e32993e036a7f40678fe",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native126/cards/2849.jpg",
+  "level": 0,
+  "links": [],
+  "name": "왕가의 신전",
+  "name_english": "Temple of the Kings",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "search_aliases": [
+    "왕가의 신전",
+    "Temple of the Kings"
+  ],
+  "source_id": 2849,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 1881
+}

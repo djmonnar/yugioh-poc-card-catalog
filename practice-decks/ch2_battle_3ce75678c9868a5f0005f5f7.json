@@ -1,0 +1,64 @@
+{
+  "banlist_enabled": false,
+  "extra": [],
+  "id": "ch2_battle_3ce75678c9868a5f0005f5f7",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "299115cc5b20a9a8868b8288936d4d15f25b7da3b2e313b8d5d044a29ed2438f",
+      "source_id": 294
+    },
+    {
+      "count": 3,
+      "identity_key": "9cc91f5bc4ba8c34de8d8387128cc634883356abc20f4482a25248b00defc6db",
+      "source_id": 1874
+    },
+    {
+      "count": 2,
+      "identity_key": "c335c482bc19cb8785faf255d8d4a88a80eab9b136ec765a4322f39238709d4f",
+      "source_id": 1883
+    },
+    {
+      "count": 2,
+      "identity_key": "04c4280f9e6f4053393ce32d35b3c3a8cb921a501c8992434436eb943b4ead51",
+      "source_id": 1878
+    },
+    {
+      "count": 2,
+      "identity_key": "69db8c3a15c31b677515e4ae95af703c4a59d5f2c2b071c3cf81120100e2212b",
+      "source_id": 1872
+    },
+    {
+      "count": 2,
+      "identity_key": "7341256371bb51ebb64315d92ec728919936d0ad41b80e53c0fe63d15fb84eb6",
+      "source_id": 2040
+    },
+    {
+      "count": 1,
+      "identity_key": "721d89f926e31f4f495d75fc6ff8470a1c6d6d3a1e25498a6e015319a7fd6de9",
+      "source_id": 417
+    },
+    {
+      "count": 2,
+      "identity_key": "98bcc1c4a6a5fafd4c449c99095c0a7354bf74dc70790330b065f32ce4e29c37",
+      "source_id": 1882
+    },
+    {
+      "count": 1,
+      "identity_key": "29e207bf7722a2b7543bcab39ee0322c7dea262e4bd4deb992c4a8d0e2339abb",
+      "source_id": 1887
+    },
+    {
+      "count": 2,
+      "identity_key": "123f8db62fdf8a84be896e28d06f23e8f3bbca2f55f622ff939f27d49336941d",
+      "source_id": 2501
+    },
+    {
+      "count": 1,
+      "identity_key": "af5fe4799fdcd80e64b5c2e24dee34e3b3ce8b899e137f414a617551de1e1f0b",
+      "source_id": 2502
+    }
+  ],
+  "name": "마해룡 최상급",
+  "version": 389
+}

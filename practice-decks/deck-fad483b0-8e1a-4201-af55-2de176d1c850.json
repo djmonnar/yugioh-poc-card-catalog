@@ -1,0 +1,49 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-fad483b0-8e1a-4201-af55-2de176d1c850",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "224a6c9a6a6378fd615982599caa84e3415a3a912c4c8c48f8951c97aaeb626e",
+      "source_id": 2069
+    },
+    {
+      "count": 3,
+      "identity_key": "19aaaa77edd48098f585413f87dade04d3715ed373bfa5ae3e11fc27ef7875b0",
+      "source_id": 2067
+    },
+    {
+      "count": 3,
+      "identity_key": "e35a8e14e840c0996c6a744a0c371da1c167663818edc1bcf5b8f2aea9bfb28d",
+      "source_id": 1115
+    },
+    {
+      "count": 3,
+      "identity_key": "6e4b1984f463a4719ab4f592d91d40920d24ceb1c9bc9990917a55a97abb22f6",
+      "source_id": 2616
+    },
+    {
+      "count": 2,
+      "identity_key": "f57735d759d84c2f500a6702fd3f356d0d17fb7782646081e1f11c003d1ef969",
+      "source_id": 329
+    },
+    {
+      "count": 2,
+      "identity_key": "f0821962c3b0944a72d41ae0f1b7c6d951d261185ca520a42af642be36cf2f6f",
+      "source_id": 2059
+    },
+    {
+      "count": 2,
+      "identity_key": "e18bfa84cfdffbc5f7680ba291d125d138abf433d20bbe968c71b5d2dec49ab8",
+      "source_id": 2617
+    },
+    {
+      "count": 2,
+      "identity_key": "bbc53e2ec11776db7deb7f5d291e80c8a89562722630ee4c45933a5bdc87e7f4",
+      "source_id": 2075
+    }
+  ],
+  "name": "야수족 초급",
+  "version": 613
+}

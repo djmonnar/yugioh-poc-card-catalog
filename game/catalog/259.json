@@ -1,0 +1,30 @@
+{
+  "alias": 0,
+  "art_key": "Cards/259",
+  "attack": 1800,
+  "attribute": 16,
+  "categories": [
+    "지원-장착"
+  ],
+  "code": 10321588,
+  "defense": 1000,
+  "description": "①: 1턴에 1번, 자신 메인\n페이즈에 발동할 수 있다.\n자신의 덱 맨 위의 카드를\n넘기고, 그것이 장착 마법\n카드였을 경우, 그 카드를\n패에 넣는다. 다를 경우, 그\n카드를 덱 맨 아래로\n되돌린다.\n[차이] 넘긴 카드를 상대에게\n공개하지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "04981e6ba985879308a7d883855b0fee488c907edd697bb32d2df4e997aa8225",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0567.webp",
+  "level": 4,
+  "links": [],
+  "name": "썬라이트 유니콘",
+  "name_english": "Sunlight Unicorn",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "R",
+  "source_id": 259,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 567
+}

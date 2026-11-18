@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards143/2967",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-공용",
+    "효과-덱으로 되돌리기",
+    "효과-드로우"
+  ],
+  "code": 67169062,
+  "defense": 0,
+  "description": "자신의 묘지에 있는 몬스터 5장을 대상으로 발동한다. 그 몬스터들을 덱에 되돌려 섞은 뒤 2장을 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "d83abeaa38de4d1e3f0d4edf4c1f1b0b04feccb61cf395b68fd7b87737eb107c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native143/cards/2967.jpg",
+  "level": 0,
+  "links": [],
+  "name": "탐욕의 항아리",
+  "name_english": "Pot of Avarice",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "search_aliases": [
+    "탐욕의 항아리",
+    "Pot of Avarice"
+  ],
+  "source_id": 2967,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 1999
+}

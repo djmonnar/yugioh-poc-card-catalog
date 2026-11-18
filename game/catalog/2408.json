@@ -1,0 +1,32 @@
+{
+  "alias": 0,
+  "art_key": "Cards035/2408",
+  "attack": 2000,
+  "attribute": 1,
+  "categories": [
+    "면역-마법",
+    "면역-함정",
+    "면역-효과"
+  ],
+  "code": 10509340,
+  "defense": 2000,
+  "description": "이 카드는 특수 소환할 수 없다.\n이 카드가 공격할 경우, 상대는 데미지 스텝 종료시까지 마법 / 함정 카드를 발동할 수 없다.\n이 카드가 전투로 파괴한 상대 몬스터의 효과는 무효화된다.",
+  "draw_enabled": true,
+  "identity_key": "a56cf922e50a1f4088a573ed9e0d679d164e4013ce7c4d9c103814f204e0c7d0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native035/cards/2408.jpg",
+  "level": 6,
+  "links": [],
+  "name": "앤틱 기어 비스트",
+  "name_english": "Ancient Gear Beast",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "source_id": 2408,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 1445
+}
