@@ -1,0 +1,74 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-36d5db2c-f05f-4012-a181-41b7db28f8df",
+  "main": [
+    {
+      "count": 1,
+      "identity_key": "643eabd270671776b78e22b01c54885c1dbf89d9b118206695e85b5b72e065a0",
+      "source_id": 2706
+    },
+    {
+      "count": 3,
+      "identity_key": "a5ac51b6fd99cebb5106fa47a4f2df95734b46a4ba8e1f7960cfba8c3ed85ac0",
+      "source_id": 254
+    },
+    {
+      "count": 3,
+      "identity_key": "7098af7ff48a74b5bc41e85d1e66a762317146ac9be19e1b2eaf9fa7556247f0",
+      "source_id": 605
+    },
+    {
+      "count": 2,
+      "identity_key": "04a91d1c34071c637ab5580a52499909a684d01bbfb02bc05e2df2e19911bcce",
+      "source_id": 117
+    },
+    {
+      "count": 1,
+      "identity_key": "d428985884eb71202800d918851091b45a6a318b3e1ce476de1819f47666b415",
+      "source_id": 702
+    },
+    {
+      "count": 1,
+      "identity_key": "0e91a136403c3bdbf11bb7568bef5c5585b64141d67626d74b9a240ea8f59690",
+      "source_id": 710
+    },
+    {
+      "count": 2,
+      "identity_key": "481f1539cec9a73be5473ae58ff0606a64a3c466ce9d278c03be239ebf6f8087",
+      "source_id": 2620
+    },
+    {
+      "count": 1,
+      "identity_key": "b7857fa0b5301525239a35e1183a21e9a89a3c160736818f338843aba6794324",
+      "source_id": 2621
+    },
+    {
+      "count": 1,
+      "identity_key": "2f3d9696714ab0240e21754af8c9eab7061ed8c10ea4abfa162660ba79508d03",
+      "source_id": 1942
+    },
+    {
+      "count": 1,
+      "identity_key": "97ec3d0a386c623b1626d1d27d3b5344ca1f4e5d7950107c7422740f07303f65",
+      "source_id": 1001
+    },
+    {
+      "count": 1,
+      "identity_key": "cdf0342ed4d925c7b6df71e9b8537023f277e230889b073a1e08096fca9a39b0",
+      "source_id": 1311
+    },
+    {
+      "count": 1,
+      "identity_key": "051a68d46e73f712b6ddcde1be027a0d95caced1e8dd561297017bd2e246b759",
+      "source_id": 2010
+    },
+    {
+      "count": 2,
+      "identity_key": "6504d59bc73f15b820fcd676bb029e390966919edbe5582b814a0464b3342061",
+      "source_id": 2086
+    }
+  ],
+  "name": "땅속성",
+  "version": 876
+}

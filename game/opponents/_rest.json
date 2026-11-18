@@ -126,6 +126,10 @@
           {
             "opponentId": "enc-e87a6c6d-9ecd-4e8e-9e2d-3c3db62188e7",
             "weight": 1
+          },
+          {
+            "opponentId": "enc-599aacc6-179b-4810-b712-f74ed2d0f052",
+            "weight": 1
           }
         ],
         "lpBonus": 0
