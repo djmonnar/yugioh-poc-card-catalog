@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.96",
-  "versionCode": 115,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.96/YGOClassicExpedition-0.18.96-arm64.apk",
-  "sizeBytes": 675109598,
-  "sha256": "aecf1d511263d6bb5c396c012873644e0b94d821ef0310de74eb9b6c0003a56c",
-  "releaseNotes": "새 유물 2개와 LP 회복 보상을 추가하고 AI 판단을 개선했습니다."
+  "versionName": "0.18.97",
+  "versionCode": 116,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.97/YGOClassicExpedition-0.18.97-arm64.apk",
+  "sizeBytes": 687005772,
+  "sha256": "a5e27ee8c9d68f97e5a3a2db98a40cad8b8fb91378a1c3d2f15bbebd1ccc3947",
+  "releaseNotes": "어둠·전갈 카드 19장(D·D·R, 매크로 코스모스, 원시태양 헬리오스, 사 제왕 가이우스, 저승사자 고즈, 전갈 카드군 등)을 더하고, 새 카드의 AI 판단을 넣었습니다."
 }
