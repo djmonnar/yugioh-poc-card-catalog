@@ -119,3 +119,16 @@ test('editing a deck can restore a card composition shared by another deck',asyn
   assert.deepEqual(order(fields.main),order(deck.content.main));
   assert.deepEqual(ui.errors,[]);
 });
+
+test('copying a deck whose management title only mirrors its name keeps the two names together', async () => {
+  const {state, deck} = fixture044();
+  deck.content.deck_name = '공유 덱';
+  deck.content.management_title = '공유 덱';
+  const ui = mount(state);
+  ui.panels.render('decks', ui.root, state);
+  button041(ui.root, '덱 복사').click(); await flush();
+  const [, , content] = ui.changes[0];
+  assert.equal(content.deck_name, '공유 덱 복사본');
+  assert.equal(content.management_title, '공유 덱 복사본', 'the copy is not labelled with the source deck name');
+  assert.deepEqual(ui.errors, []);
+});

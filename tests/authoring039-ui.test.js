@@ -149,3 +149,23 @@ test('intentional section navigation resets page scroll and focuses main while a
  assert.equal(scrolls.length,1);assert.equal(window.scrollY,480);assert.equal(document.activeElement,find(root,'덱 이름'));assert.equal(document.activeElement.selectionStart,1);assert.equal(document.activeElement.selectionEnd,3);
  window.location.href='https://example.test/index.html?section=events';events.popstate();assert.equal(scrolls.length,2);assert.equal(window.scrollY,0);assert.equal(document.activeElement.id,'authoring-main');shell.destroy();
 });
+
+test('renaming a deck carries a management title that only mirrored the old name, and keeps a distinct one', () => {
+  const state = fixture(), [first] = state.entities.filter(row => row.entity_type === 'deck');
+  Object.assign(first.content, {deck_name: '복사한 덱', management_title: '복사한 덱'});
+  const m = mounted('decks', state), game = find(m.root, '덱 이름');
+  game.value = '새 덱 이름'; game.fire('input');
+  assert.deepEqual(m.writes[0].slice(0, 3), ['deck', first.entity_id, {deck_name: '새 덱 이름', management_title: '새 덱 이름'}]);
+  const distinct = fixture(), [kept] = distinct.entities.filter(row => row.entity_type === 'deck');
+  Object.assign(kept.content, {deck_name: '다른 덱', management_title: '다른 덱 관리용'});
+  const k = mounted('decks', distinct), keptName = find(k.root, '덱 이름');
+  keptName.value = '다른 덱 새 이름'; keptName.fire('input');
+  assert.deepEqual(k.writes[0].slice(0, 3), ['deck', kept.entity_id, {deck_name: '다른 덱 새 이름'}]);
+});
+
+test('the deck list names the game deck when the management title differs', () => {
+  const state = fixture(), [first] = state.entities.filter(row => row.entity_type === 'deck');
+  Object.assign(first.content, {deck_name: '게임에 나오는 이름', management_title: '관리용 이름'});
+  const m = mounted('decks', state);
+  assert.ok(m.root.textContent.includes('관리용 이름 (덱 이름: 게임에 나오는 이름)'), 'header and list show both names');
+});

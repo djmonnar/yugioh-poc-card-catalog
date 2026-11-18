@@ -603,19 +603,21 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     const flagRow170=el('div',null,'au-flags170'),flagInputs170=new Map();flagRow170.setAttribute('role','group');flagRow170.setAttribute('aria-label','목록 조건');
     for(const [flag,label,hint] of CATALOG_FLAGS170){const wrap=el('label',null,'au-flag170'),input=el('input');input.type='checkbox';input.setAttribute('aria-label',label);input.dataset.editKey=`${key}.flag170.${flag}`;wrap.title=hint;input.onchange=()=>{const set=new Set(filterValues091(state.flags170));if(input.checked)set.add(flag);else{set.delete(flag);if(flag==='recent'){recentCards170.delete(state.recent170??'latest');state.recent170=null;}}state.flags170=[...set];state.page=1;display();};wrap.append(input,el('span',label));flagRow170.append(wrap);flagInputs170.set(flag,input);}
     toolbar.append(flagRow170);
+    // (171) 덱 만들기에서는 도감 관리용 조건(분류 없음·그림 없음·문제 있음·최근 변경)을 숨긴다.
+    flagRow170.hidden=Boolean(deck);
     // Refresh only the results, preserving the input node and its live IME session.
     // Android may keep a Korean word composing until space, Enter or blur.
     const updateSearch=()=>{if(state.query===search.value)return;state.query=search.value;state.page=1;display();};
     search.oninput=updateSearch;search.oncompositionend=updateSearch;search.onsearch=updateSearch;search.onchange=updateSearch;
     const choices=[['type','종류',[...new Set(currentCards.map(c=>c.type).filter(Boolean))]],['tier','등급',['N','R','SR','UR','L']],['race','종족',[...new Set(currentCards.map(c=>c.race).filter(Boolean))]],['attribute','속성',[...new Set(currentCards.map(c=>c.attribute).filter(Boolean))]],['limit','일반 금제',['0','1','2','3']],['speedLimit','스피드 금제',['0','1','2','3','unrestricted']],['status','판매·보상',['stock','reward']]];
     const details=el('details',null,'au-filter-details au-filter091'),filterSummary=el('summary','카드 필터'),filterControls=new Map();details.open=filters.get(`${key}.filter-open`)??false;details.ontoggle=()=>filters.set(`${key}.filter-open`,details.open);details.append(filterSummary);
-    details.append(el('p','항목에서 하나씩 고르면 선택 목록에 추가됩니다. 같은 항목은 ‘또는’, 다른 항목은 ‘그리고’로 적용합니다.','au-hint au-filter-hint091'));
+    details.append(el('p','여러 개를 고를 수 있습니다. 같은 항목은 ‘또는’, 다른 항목은 ‘그리고’로 적용합니다.','au-hint au-filter-hint091'));
     const facetGrid091=el('div',null,'au-facet-grid091');details.append(facetGrid091);
     const choiceLabel=(label,v)=>v==='unrestricted'?'제한 없음':v==='stock'?'상점 판매':v==='reward'?'전투 보상':label.includes('금제')?v==='0'?'금지':`${v}장`:v;
     function multiFilter091(fieldKey,label,values,sourceSelect=null){
       const root=el('fieldset',null,'au-facet091'),legend=el('legend',label),select=sourceSelect??el('select'),selectedValues=el('div',null,'au-facet-values091');root.append(legend);select.setAttribute('aria-label',label);
-      if(!sourceSelect){const first=el('option',`${label} 추가 (복수 선택)`);first.value='';select.append(first);for(const value of values){const option=el('option',choiceLabel(label,value));option.value=value;select.append(option);}}
-      else if(select.options[0])select.options[0].textContent=`${label} 추가 (복수 선택)`;
+      if(!sourceSelect){const first=el('option','고르기');first.value='';select.append(first);for(const value of values){const option=el('option',choiceLabel(label,value));option.value=value;select.append(option);}}
+      else if(select.options[0])select.options[0].textContent='고르기';
       select.value='';select.onchange=()=>{const value=select.value;if(!value)return;state[fieldKey]=[...new Set([...filterValues091(state[fieldKey]),value])];select.value='';state.page=1;display();};
       const clearGroup=button(`${label} 선택 해제`,()=>{state[fieldKey]=[];state.page=1;display();select.focus({preventScroll:true});},'au-facet-clear091');root.append(select,selectedValues,clearGroup);facetGrid091.append(root);
       const refresh=()=>{const selected=filterValues091(state[fieldKey]);legend.textContent=label+(selected.length?` · ${selected.length}개`:'');selectedValues.replaceChildren();for(const value of selected){const option=[...select.options].find(o=>o.value===value),name=option?.textContent??value,remove=button(`${name} 해제`,()=>{state[fieldKey]=filterValues091(state[fieldKey]).filter(v=>v!==value);state.page=1;display();select.focus({preventScroll:true});},'au-facet-chip091');remove.setAttribute('aria-label',`${label} ${name} 해제`);selectedValues.append(remove);}selectedValues.hidden=!selected.length;clearGroup.hidden=!selected.length;for(const option of select.options)if(option.value)option.disabled=selected.includes(option.value);select.disabled=select.options.length>1&&[...select.options].filter(o=>o.value).every(o=>o.disabled);};
@@ -677,7 +679,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
       const picker=el('section',null,'au-deck-picker170'),searchRow=el('div',null,'au-catalog-tools'),search=el('input'),searchStatus=el('p',null,'au-hint au-deck-count170'),current=el('p',null,'au-deck-current170'),list=el('div',null,'au-deck-list170');
       picker.setAttribute('aria-label','편집할 덱 고르기');list.setAttribute('role','list');list.setAttribute('aria-label','덱 목록');searchStatus.setAttribute('role','status');
       const rows=deckOptions041(decks,{cards:currentCards,characters}).map(row=>({
-        id:row.id,search:row.search,label:deckDisplayName039(currentState,row.entity,row.displayTitle),detail:row.detail
+        id:row.id,search:row.search,label:deckDisplayName039(currentState,row.entity,row.gameTitle&&row.gameTitle!==row.title?`${row.displayTitle} (덱 이름: ${row.gameTitle})`:row.displayTitle),detail:row.detail
       }));
       const queryKey=`deck-query:${currentState.user?.id??(currentState.canEdit?'editor':'public')}`,limitKey=`${queryKey}:limit170`;
       search.type='search';search.placeholder='관리용 제목·덱 이름으로 찾기';
@@ -736,7 +738,8 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
         const titles=liveDecks.map(row=>deckManagementTitle041(row.content));
         const names=liveDecks.map(row=>row.content.deck_name||row.content.name||'');
         content.deck_name=copiedDeckName(content.deck_name||content.name||'',[...names,...titles],nameOptions);
-        if(content.management_title?.trim())content.management_title=copiedDeckName(content.management_title,titles,nameOptions);
+        const mirroredTitle=Boolean(content.management_title?.trim())&&content.management_title.trim()===(source.content.deck_name||source.content.name||'').trim();
+        if(mirroredTitle)content.management_title=content.deck_name;else if(content.management_title?.trim())content.management_title=copiedDeckName(content.management_title,titles,nameOptions);
         if(composition)content.name=content.deck_name;
         const id=`deck-${crypto.randomUUID()}`;
         const result=await onChange('deck',id,content,{operation:'create'});
@@ -759,7 +762,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     if(!composition&&currentState.manualSave060&&onSaveDrafts060){const scope={id:deck.entity_id,types:['deck']},save=button('덱 저장',()=>onSaveDrafts060(scope),'au-primary');tools.append(save);manualSaveControl060(scope,save);}
     const value=deck.content,props=el('div',null,'au-form-grid');
     props.append(
-      field('덱 이름',value.deck_name,{type:'string',maxLength:100,description:'게임에 표시할 덱 이름입니다.'},deck_name=>patch(deck,composition?{deck_name,name:deck_name}:{deck_name}),`${deck.entity_id}.deck_name`),
+      field('덱 이름',value.deck_name,{type:'string',maxLength:100,description:'게임에 표시할 덱 이름입니다. 관리용 제목이 이전 덱 이름과 같으면 함께 바뀝니다.'},deck_name=>{const mirrored=Boolean(value.management_title?.trim())&&value.management_title.trim()===(value.deck_name??'').trim(),follow=mirrored?{management_title:deck_name.trim()}:{};return patch(deck,composition?{deck_name,name:deck_name,...follow}:{deck_name,...follow});},`${deck.entity_id}.deck_name`),
       field('관리용 제목',value.management_title,{type:'string',maxLength:100,description:'제작 화면에서 덱을 구분하는 제목입니다. 비워 두면 덱 이름이 표시됩니다.'},title=>patch(deck,{management_title:title.trim()}),`${entityKey039('deck',deck.entity_id)}.management_title`)
     );
     if(!composition)props.append(field('상대 이름',value.name,{type:'string',maxLength:100},name=>patch(deck,{name}),`${deck.entity_id}.name`));

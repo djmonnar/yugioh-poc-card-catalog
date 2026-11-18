@@ -64,3 +64,20 @@
 .au-app .au-bulk-category-details170{border:1px solid #31506b;border-radius:10px;padding:8px 12px;background:#0a1d2b}
 .au-app .au-bulk-category-details170>summary{cursor:pointer;min-height:36px;display:flex;align-items:center;color:var(--au-gold);font-weight:700}
 .au-app .au-bulk-category-details170[open]>summary{margin-bottom:8px}
+/* (171) 휴대폰에서 카드 필터와 카테고리 고르기를 짧게: 필터는 두 칸씩, 카테고리는 작은 칩으로 감싸고 묶음마다 안에서 넘긴다. */
+.au-app .au-category-options054{flex-direction:row;flex-wrap:wrap;gap:6px;max-height:min(46vh,420px);overflow:auto;overscroll-behavior:contain;padding:4px 2px 10px}
+.au-app .au-category-option054{display:inline-flex;gap:6px;min-height:36px;padding:4px 10px;border:1px solid var(--au-line);border-radius:18px;line-height:1.35}
+.au-app .au-category-option054 input[type=checkbox]{min-width:16px;width:16px;height:16px}
+.au-app .au-category-options054>.au-category-help054{flex:1 1 100%;margin:2px 0 4px}
+.au-app .au-category-group054>summary{min-height:40px;padding:9px 3px}
+@media(max-width:700px){
+ .au-app .au-facet-grid091{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 8px}
+ .au-app .au-facet091{padding:0;border:0}
+ .au-app .au-facet091 legend{padding:0 0 4px;font-size:12px}
+ .au-app .au-facet091 select{min-height:40px;padding:6px 8px}
+ .au-app .au-filter-hint091{display:none}
+ .au-app .au-filter091[open]>:not(summary){margin-top:10px}
+ .au-app .au-facet-chip091{min-height:36px;padding:4px 9px;font-size:13px}
+ .au-app .au-facet-clear091{margin-top:4px;min-height:32px;padding:2px 4px;font-size:12px}
+ .au-app .au-category-option054{min-height:34px;padding:3px 9px;font-size:13px}
+}
