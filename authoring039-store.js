@@ -399,7 +399,7 @@ export class AuthoringStore039 {
       this.patch('recovery_archive',id,{source_key,sha256,raw_json,origin:'browser'},{operation:'create'});
     }
   }
-  async login(email) { const result=await this.client.auth.signInWithOtp({email:email.trim(),options:{emailRedirectTo:this.redirectUrl}}); if(result.error)throw result.error; }
+  async login(email) { const result=await this.client.auth.signInWithOtp({email:email.trim(),options:{shouldCreateUser:false,emailRedirectTo:this.redirectUrl}}); if(result.error)throw result.error; }
   async readRecovery(id) {
     need(this.canEdit083()&&HASH.test(id),'복구 자료를 열 권한을 확인해줘.');
     const result=await this.client.rpc('poc_read_recovery039',{p_id:id}); if(result.error)throw result.error;

@@ -1,0 +1,41 @@
+name: Record web DB history
+# 공개 게임 자료(앱과 같은 공개 조회)를 항목별 파일로 web-db-history 브랜치에 기록한다.
+# DB는 바꾸지 않는다. 바뀐 것이 있을 때만 커밋한다.
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: web-db-history
+  cancel-in-progress: false
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Check out history branch
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          remote="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if git ls-remote --exit-code --heads "$remote" web-db-history >/dev/null; then
+            git clone --quiet --depth 1 --branch web-db-history "$remote" "$RUNNER_TEMP/history"
+          else
+            git init --quiet -b web-db-history "$RUNNER_TEMP/history"
+          fi
+      - name: Snapshot public game data
+        run: node scripts/web-db-history.mjs "$RUNNER_TEMP/history" --message "$RUNNER_TEMP/history-message.txt"
+      - name: Commit when changed
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          cd "$RUNNER_TEMP/history"
+          git add -A
+          if git diff --cached --quiet; then echo "No change"; exit 0; fi
+          git -c user.name="web-db-history" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit --quiet -F "$RUNNER_TEMP/history-message.txt"
+          git push --quiet "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:web-db-history

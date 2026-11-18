@@ -310,7 +310,7 @@ async function sendLogin(){
   const email=$('auth-email').value.trim();if(!$('auth-email').reportValidity())return;
   $('auth-send').disabled=true;$('auth-message').textContent='인증 메일을 보내는 중…';persist();
   try{if(!authClient)throw new Error('온라인 연결 없음');const redirect=new URL('ai-decks.html',location.href);redirect.hash='';redirect.search=`?engine=${engine}`;
-    const {error}=await authClient.auth.signInWithOtp({email,options:{emailRedirectTo:redirect.href}});if(error)throw error;
+    const {error}=await authClient.auth.signInWithOtp({email,options:{shouldCreateUser:false,emailRedirectTo:redirect.href}});if(error)throw error;
     $('auth-message').textContent='인증 메일을 보냈어. 메일의 로그인 링크를 눌러줘. 편집본은 이 브라우저에 보관돼.';
   }catch(error){$('auth-message').textContent=cloudError(error);}finally{$('auth-send').disabled=false;}
 }
