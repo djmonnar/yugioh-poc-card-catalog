@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.95",
-  "versionCode": 114,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.95/YGOClassicExpedition-0.18.95-arm64.apk",
-  "sizeBytes": 675092074,
-  "sha256": "cc605e517d9914e67dca5643d24cba7e72ea997da25c284dd199e8878e5015b3",
-  "releaseNotes": "게임 시작과 불러오기를 빠르게 했습니다."
+  "versionName": "0.18.96",
+  "versionCode": 115,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.96/YGOClassicExpedition-0.18.96-arm64.apk",
+  "sizeBytes": 675109598,
+  "sha256": "aecf1d511263d6bb5c396c012873644e0b94d821ef0310de74eb9b6c0003a56c",
+  "releaseNotes": "새 유물 2개와 LP 회복 보상을 추가하고 AI 판단을 개선했습니다."
 }
