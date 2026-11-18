@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards161/3040",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-제외",
+    "소환-패에서",
+    "소환-덱리크루터",
+    "효과-제외"
+  ],
+  "code": 30241314,
+  "defense": 0,
+  "description": "①: 이 카드의 발동시의 효과 처리로서, 패 / 덱에서 \"원시태양 헬리오스\" 1장을 특수 소환할 수 있다. ②: 이 카드가 마법 & 함정 존에 존재하는 한, 묘지로 보내지는 카드는 묘지로는 가지 않으며 제외된다.",
+  "draw_enabled": true,
+  "identity_key": "abfe20f3f16d2ae16639e6c52f64e7c1922320eee638492a1b4f5a07bcdeaa42",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native161/cards/3040.jpg",
+  "level": 0,
+  "links": [],
+  "name": "매크로 코스모스",
+  "name_english": "Macro Cosmos",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "search_aliases": [
+    "매크로코스모스",
+    "매크로 코스모스",
+    "Macro Cosmos"
+  ],
+  "source_id": 3040,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 2072
+}

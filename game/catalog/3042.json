@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards161/3042",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-제외",
+    "효과-제외"
+  ],
+  "code": 81674782,
+  "defense": 0,
+  "description": "①: 이 카드가 마법 & 함정 존에 존재하는 한, 묘지로 보내지는 몬스터는 묘지로는 가지 않으며 제외된다.",
+  "draw_enabled": true,
+  "identity_key": "679c0491f59fd33ed906a7f44e5eab2a6533e69fb51cb4dd6b479dfa468257c5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native161/cards/3042.jpg",
+  "level": 0,
+  "links": [],
+  "name": "차원의 틈",
+  "name_english": "Dimensional Fissure",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "차원의틈",
+    "차원의 틈",
+    "Dimensional Fissure"
+  ],
+  "source_id": 3042,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 2074
+}

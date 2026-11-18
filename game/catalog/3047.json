@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards161/3047",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-어둠 속성",
+    "효과-공격력 상승"
+  ],
+  "code": 18161786,
+  "defense": 0,
+  "description": "모든 어둠 속성 몬스터의 공격력은 500 포인트 올리고, 수비력은 400 포인트 내린다.",
+  "draw_enabled": true,
+  "identity_key": "aa0a735fde404a8c6f46f7eefb16cff614e5df7b8f5b92e0cf1e434f0843e5f1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native161/cards/3047.jpg",
+  "level": 0,
+  "links": [],
+  "name": "다크 존",
+  "name_english": "Mystic Plasma Zone",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "다크존",
+    "다크 존",
+    "Mystic Plasma Zone"
+  ],
+  "source_id": 3047,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "필드 마법",
+  "web_slot": 2079
+}

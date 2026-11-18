@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards161/3046",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-필드",
+    "보호-효과 파괴",
+    "효과-발동 제한"
+  ],
+  "code": 7153114,
+  "defense": 0,
+  "description": "이 카드가 필드 위에 존재하는 한, 서로 필드 마법 카드를 파괴할 수 없으며, 필드 마법 카드의 발동도 할 수 없다. \"필드 베리어\"는 자신 필드 위에 1장밖에 앞면 표시로 존재할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "2118635a17a2116fb53e4cc7a5b7976fd0adda2243683fdfd26c8a23abc6e068",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native161/cards/3046.jpg",
+  "level": 0,
+  "links": [],
+  "name": "필드 베리어",
+  "name_english": "Field Barrier",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "search_aliases": [
+    "필드배리어",
+    "필드 베리어",
+    "Field Barrier"
+  ],
+  "source_id": 3046,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 2078
+}

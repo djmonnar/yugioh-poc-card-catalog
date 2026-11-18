@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards161/3050",
+  "attack": 2700,
+  "attribute": 32,
+  "categories": [
+    "발동-피해 발생 시",
+    "발동-패에서",
+    "소환-패에서",
+    "발동-소환 시",
+    "소환-토큰",
+    "효과-데미지"
+  ],
+  "code": 44330098,
+  "defense": 2500,
+  "description": "①: 상대에 의해 자신이 전투 / 효과 데미지를 받았을 때에 발동할 수 있다(이 효과는 자신 필드에 카드가 존재하지 않을 경우에 발동과 처리를 할 수 있다). 이 카드를 패에서 특수 소환한다. ②: 이 카드의 ①의 방법으로 특수 소환했을 경우, 받은 데미지의 종류에 따라 이하의 효과를 발동한다. ●전투 데미지: 자신 필드에 \"저승사자 카이엔 토큰\"(천사족 / 빛 / 레벨 7 / 공 ? / 수 ?)을 1장 특수 소환한다. 이 토큰의 공격력 / 수비력은, 이때 받은 데미지의 수치와 같아진다. ●효과 데미지: 받은 데미지의 수치만큼의 데미지를 상대에게 준다.",
+  "draw_enabled": true,
+  "identity_key": "baf4a15a1f6f258476546dcb1eb70f948fa36f1956906ee6eb300eec23627d61",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native161/cards/3050.jpg",
+  "level": 7,
+  "links": [],
+  "name": "저승사자 고즈",
+  "name_english": "Gorz the Emissary of Darkness",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "UR",
+  "search_aliases": [
+    "저승사자 고즈",
+    "Gorz the Emissary of Darkness"
+  ],
+  "source_id": 3050,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2082
+}

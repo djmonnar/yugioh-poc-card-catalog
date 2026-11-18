@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards161/3048",
+  "attack": 550,
+  "attribute": 32,
+  "categories": [
+    "지원-어둠 속성",
+    "효과-공격력 상승",
+    "효과-공격력 감소"
+  ],
+  "code": 80741828,
+  "defense": 500,
+  "description": "이 카드가 필드 위에 앞면 표시로 존재하는 한, 모든 어둠 속성 몬스터의 공격력은 500 포인트 올린다. 빛 속성 몬스터의 공격력은 400 포인트 내린다.",
+  "draw_enabled": true,
+  "identity_key": "8ede66cf91810f4536c30e7a1172faf73481494dbf57f6f41988dabc09d7f3d3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native161/cards/3048.jpg",
+  "level": 2,
+  "links": [],
+  "name": "견습 마녀",
+  "name_english": "Witch's Apprentice",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "N",
+  "search_aliases": [
+    "견습마녀",
+    "견습 마녀",
+    "Witch's Apprentice"
+  ],
+  "source_id": 3048,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2080
+}

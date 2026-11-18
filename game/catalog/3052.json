@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards161/3052",
+  "attack": 1000,
+  "attribute": 32,
+  "categories": [
+    "지원-전갈",
+    "발동-피해 발생 시",
+    "효과-바운스"
+  ],
+  "code": 61587183,
+  "defense": 1000,
+  "description": "이 카드가 상대 플레이어에게 전투 데미지를 주었을 때, 다음 효과에서 1개를 선택하고 발동할 수 있다.\n●필드 위의 카드 1장을 주인의 패로 되돌린다.\n●상대의 덱의 맨 위의 카드를 1장 넘긴다(상대는 확인할 수 없다). 덱의 맨 위나 맨 아래를 선택하고 그 카드를 되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "694fc6322d0242093c619cba762a8cd05dbe85c91a04c465dd553800b86d5919",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native161/cards/3052.jpg",
+  "level": 3,
+  "links": [],
+  "name": "전갈－도주하는 치크",
+  "name_english": "Dark Scorpion - Chick the Yellow",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "전갈-도주하는치크",
+    "전갈－도주하는 치크",
+    "Dark Scorpion - Chick the Yellow"
+  ],
+  "source_id": 3052,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2084
+}

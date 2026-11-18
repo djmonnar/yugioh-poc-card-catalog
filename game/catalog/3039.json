@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards161/3039",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-제외",
+    "지원-장착",
+    "발동-패 버리기",
+    "소환-제외",
+    "효과-장착"
+  ],
+  "code": 9622164,
+  "defense": 0,
+  "description": "①: 패를 1장 버리고, 제외되어 있는 자신 몬스터 1장을 대상으로 하여 이 카드를 발동할 수 있다. 그 몬스터를 공격 표시로 특수 소환하고, 이 카드를 장착한다. 이 카드가 필드에서 벗어났을 때에 그 몬스터는 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "3943653b79485c8980beda62e7f0f819e761941ac5609653c6d65f058d5c1d9e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native161/cards/3039.jpg",
+  "level": 0,
+  "links": [],
+  "name": "D·D·R",
+  "name_english": "D.D.R. - Different Dimension Reincarnation",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "DDR",
+    "D·D·R",
+    "D.D.R. - Different Dimension Reincarnation"
+  ],
+  "source_id": 3039,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 2071
+}

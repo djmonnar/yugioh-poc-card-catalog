@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards161/3044",
+  "attack": 0,
+  "attribute": 32,
+  "categories": [
+    "발동-공격 선언 시",
+    "발동-패에서",
+    "소환-패에서",
+    "효과-배틀 페이즈 제한"
+  ],
+  "code": 19665973,
+  "defense": 0,
+  "description": "①: 상대 몬스터의 직접 공격 선언시에 발동할 수 있다. 이 카드를 패에서 특수 소환한다. 그 후, 배틀 페이즈를 종료한다. 이 효과로 특수 소환한 이 카드는, 필드에서 벗어났을 경우에 제외된다.",
+  "draw_enabled": true,
+  "identity_key": "9abf0302f3e0802869d1a01fef0480e38279990f5a233193d609f8a147e6bd1b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native161/cards/3044.jpg",
+  "level": 1,
+  "links": [],
+  "name": "배틀 페이더",
+  "name_english": "Battle Fader",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "search_aliases": [
+    "배틀페이더",
+    "배틀 페이더",
+    "Battle Fader"
+  ],
+  "source_id": 3044,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2076
+}

@@ -81,6 +81,14 @@
     "card_set": "ritual-dark-magician152",
     "schema": 1
   },
+  "content_profile161": {
+    "card_set": "dark-scorpion161",
+    "schema": 1
+  },
+  "content_relics160": {
+    "relic_set": "relics160",
+    "schema": 1
+  },
   "content_shadow093": {
     "relic_set": "shadow093",
     "schema": 1

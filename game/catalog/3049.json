@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards161/3049",
+  "attack": 1600,
+  "attribute": 32,
+  "categories": [
+    "지원-어둠 속성",
+    "발동-묘지로 보내기",
+    "효과-공격력 상승"
+  ],
+  "code": 91596726,
+  "defense": 200,
+  "description": "패에서 어둠 속성 몬스터 1장을 묘지로 보내는 것으로, 이 카드의 공격력은 400 포인트 올린다.",
+  "draw_enabled": true,
+  "identity_key": "5362ef3bd85c7a82c41abe8c48ed945087cf8bd682665d2c9e875c50baf55c4d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native161/cards/3049.jpg",
+  "level": 4,
+  "links": [],
+  "name": "다크 크루세이더",
+  "name_english": "Dark Crusader",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "N",
+  "search_aliases": [
+    "다크 크루세이더",
+    "Dark Crusader"
+  ],
+  "source_id": 3049,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2081
+}

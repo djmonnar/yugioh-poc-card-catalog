@@ -1,0 +1,34 @@
+{
+  "alias": 0,
+  "art_key": "Cards161/3058",
+  "attack": -2,
+  "attribute": 16,
+  "categories": [
+    "소환-토큰"
+  ],
+  "code": 44330099,
+  "defense": -2,
+  "description": "「저승사자 고즈」의 효과로 특수 소환된다.",
+  "draw_enabled": false,
+  "identity_key": "6bf6ef48406d7ea1c87947c73e4c1c98ce30f2aa6b1d3136a7cf73d5be866189",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native161/cards/3058.jpg",
+  "level": 7,
+  "links": [],
+  "name": "저승사자 카이엔 토큰",
+  "name_english": "Emissary of Darkness Token",
+  "native_type": 16401,
+  "normal_limit": 0,
+  "playable": false,
+  "race": 4,
+  "rarity": "N",
+  "search_aliases": [
+    "저승사자 카이엔 토큰",
+    "Emissary of Darkness Token"
+  ],
+  "source_id": 3058,
+  "speed_limit": null,
+  "stock": false,
+  "token": true,
+  "type_name": "토큰",
+  "web_slot": 2090
+}

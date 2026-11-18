@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards161/3057",
+  "attack": 1200,
+  "attribute": 32,
+  "categories": [
+    "지원-전사족",
+    "발동-묘지에서",
+    "발동-스탠바이 페이즈 시",
+    "소환-묘지"
+  ],
+  "code": 52035300,
+  "defense": 600,
+  "description": "이 카드는 전사족 몬스터의 제물 소환 이외의 제물로는 할 수 없다. 자신의 스텐바이 페이즈시에 이 카드가 묘지에 존재하고, 자신 필드 위에 몬스터 카드가 존재하지 않을 경우, 이 카드를 자신 필드 위에 특수 소환할 수 있다. 이 효과는 자신의 묘지에 전사족 이외의 몬스터가 존재할 경우에는 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "146aaaf2744fc0516cd3cd09631e0ff296d50f129ae43d505ed4882eeb3da2d3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native161/cards/3057.jpg",
+  "level": 3,
+  "links": [],
+  "name": "불사무사",
+  "name_english": "The Immortal Bushi",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "불사무사",
+    "The Immortal Bushi"
+  ],
+  "source_id": 3057,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2089
+}

@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards161/3043",
+  "attack": 2400,
+  "attribute": 32,
+  "categories": [
+    "발동-소환 시",
+    "효과-제외",
+    "효과-데미지"
+  ],
+  "code": 9748752,
+  "defense": 1000,
+  "description": "①: 이 카드가 어드밴스 소환에 성공했을 경우, 필드의 카드 1장을 대상으로 하고 발동한다. 그 카드를 제외하고, 제외한 카드가 어둠 속성 몬스터 카드였을 경우, 상대에게 1000 데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "13d42144090a62b7dace59c4e086ed4282b4582c93bbbd9d2760cdae8c62004b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native161/cards/3043.jpg",
+  "level": 6,
+  "links": [],
+  "name": "사 제왕 가이우스",
+  "name_english": "Caius the Shadow Monarch",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "UR",
+  "search_aliases": [
+    "사 제왕 가이우스",
+    "Caius the Shadow Monarch"
+  ],
+  "source_id": 3043,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2075
+}

@@ -1,0 +1,19 @@
+{
+  "description": "내 스탠바이 페이즈마다 LP 100 회복.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 11,
+  "iconKey": "Relics/atlas160",
+  "id": "standby_dew160",
+  "kind": "standby_dew160",
+  "name": "생명의 이슬",
+  "params": {
+    "heal": 100
+  },
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

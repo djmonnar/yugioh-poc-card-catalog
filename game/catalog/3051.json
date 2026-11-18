@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards161/3051",
+  "attack": 1000,
+  "attribute": 32,
+  "categories": [
+    "지원-전갈",
+    "발동-피해 발생 시",
+    "효과-덱샐비지",
+    "효과-묘지샐비지"
+  ],
+  "code": 74153887,
+  "defense": 1800,
+  "description": "이 카드가 상대 플레이어에게 전투 데미지를 주었을 때, 다음 효과에서 1개를 선택하고 발동할 수 있다.\n●\"전갈\"이라는 이름이 붙은 카드를 자신의 덱에서 1장 패에 넣는다.\n●\"전갈\"이라는 이름이 붙은 카드를 자신의 묘지에서 1장 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "ee30f34d7e2dcda7cdc06eeba63bee251b7993e46f82f536fda83342a6fe344e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native161/cards/3051.jpg",
+  "level": 4,
+  "links": [],
+  "name": "전갈－가시의 미네",
+  "name_english": "Dark Scorpion - Meanae the Thorn",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "전갈-가시의미네",
+    "전갈－가시의 미네",
+    "Dark Scorpion - Meanae the Thorn"
+  ],
+  "source_id": 3051,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2083
+}
