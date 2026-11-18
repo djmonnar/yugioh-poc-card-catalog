@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.93",
-  "versionCode": 112,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.93/YGOClassicExpedition-0.18.93-arm64.apk",
-  "sizeBytes": 675077814,
-  "sha256": "35e75b83faffaa594b854e7e9f86e0d5264e96256e26e2550e9861ee2a5d7e4c",
-  "releaseNotes": "카드 자료를 불러오는 코드를 정리했습니다."
+  "versionName": "0.18.94",
+  "versionCode": 113,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.94/YGOClassicExpedition-0.18.94-arm64.apk",
+  "sizeBytes": 675091402,
+  "sha256": "cbc321cbad8405fef1dc0eb1a97841a2171a770bad4fc061957cc38e651073c6",
+  "releaseNotes": "AI 전투 판단을 고치고 체인 선택 화면과 공격력 출처 표시를 개선했습니다."
 }
