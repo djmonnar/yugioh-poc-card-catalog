@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.91",
-  "versionCode": 110,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.91/YGOClassicExpedition-0.18.91-arm64.apk",
-  "sizeBytes": 675077730,
-  "sha256": "a97b73142b7e631448f01838304c671bd9958a6ff4416470458ae026064867da",
-  "releaseNotes": "날개 크리보, 라의 익신룡, 오벨리스크의 거신병, 오시리스의 천공룡, 초융합, 엘리멘틀 히어로 프리즈마의 설명을 정정했습니다."
+  "versionName": "0.18.92",
+  "versionCode": 111,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.92/YGOClassicExpedition-0.18.92-arm64.apk",
+  "sizeBytes": 675085066,
+  "sha256": "5d555bde53f80b404e243c67fee72d847b2fb01be1b71bb2675493ffd943346c",
+  "releaseNotes": "AI 판단 속도를 개선하고 덱 제한 검사를 정리했습니다."
 }
