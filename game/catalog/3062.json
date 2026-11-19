@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards162/3062",
+  "attack": 1300,
+  "attribute": 2,
+  "categories": [
+    "지원-물족",
+    "지원-물 속성",
+    "효과-공격력 상승",
+    "소환-추가 일반 소환",
+    "소환제약"
+  ],
+  "code": 99328137,
+  "defense": 1200,
+  "description": "①: 이 카드의 공격력은, 자신 필드의 물족 몬스터의 수 × 400 올린다. ②: 1턴에 1번, 자신 메인 페이즈에 발동할 수 있다. 이 턴에, 자신은 통상 소환 외에도 1번만, 자신 메인 페이즈에 물 속성 몬스터 1장을 일반 소환할 수 있다. 이 효과의 발동 후, 턴 종료시까지 자신은 물 속성 몬스터밖에 일반 소환 / 특수 소환할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "d977495d7bb985e27396376ae204b218b9a45b6df8ac4323c28fd4a9efecf87d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native162/cards/3062.jpg",
+  "level": 4,
+  "links": [],
+  "name": "아이스나이트",
+  "name_english": "Ice Knight",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "R",
+  "search_aliases": [
+    "아이스나이트",
+    "Ice Knight"
+  ],
+  "source_id": 3062,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2094
+}

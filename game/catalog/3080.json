@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards162/3080",
+  "attack": 2450,
+  "attribute": 32,
+  "categories": [
+    "소환-싱크로",
+    "지원-튜너",
+    "지원-언데드",
+    "무효-몬스터효과"
+  ],
+  "code": 5309481,
+  "defense": 0,
+  "description": "\"좀비 캐리어\" ＋ 튜너 이외의 언데드족 몬스터 1장 이상\n이 카드가 필드 위에 앞면 표시로 존재하는 한, 자신 필드 위에 존재하는 언데드족 몬스터가 전투로 파괴한 효과 몬스터의 효과는 무효화된다.",
+  "draw_enabled": true,
+  "identity_key": "41242ee78108df485f5a4a32918a2f9c9c7e0e3e83590aaec2b6dbf88316cfe3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native162/cards/3080.jpg",
+  "level": 6,
+  "links": [],
+  "name": "소생 마왕 하데스",
+  "name_english": "Revived King Ha Des",
+  "native_type": 8225,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "SR",
+  "search_aliases": [
+    "소생마왕 하데스",
+    "소생 마왕 하데스",
+    "Revived King Ha Des"
+  ],
+  "source_id": 3080,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "싱크로 몬스터",
+  "web_slot": 2112
+}

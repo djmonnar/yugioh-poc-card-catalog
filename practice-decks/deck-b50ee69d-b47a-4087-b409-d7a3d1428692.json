@@ -1,0 +1,69 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-b50ee69d-b47a-4087-b409-d7a3d1428692",
+  "main": [
+    {
+      "count": 1,
+      "identity_key": "b1d3d36bac7ee08ed7e173490b12186a74b797cebddc2c55ffba6e77f720c2a5",
+      "source_id": 3055
+    },
+    {
+      "count": 2,
+      "identity_key": "ee30f34d7e2dcda7cdc06eeba63bee251b7993e46f82f536fda83342a6fe344e",
+      "source_id": 3051
+    },
+    {
+      "count": 1,
+      "identity_key": "8534797f9ed8446de22d756479611fe03f7cc3ebdc5f94c28d9030e5cffb1746",
+      "source_id": 3054
+    },
+    {
+      "count": 2,
+      "identity_key": "694fc6322d0242093c619cba762a8cd05dbe85c91a04c465dd553800b86d5919",
+      "source_id": 3052
+    },
+    {
+      "count": 2,
+      "identity_key": "1f8dfab629edc362b45d6313704e08c2d2b56de1e65eb283877fc459d4e2643c",
+      "source_id": 3053
+    },
+    {
+      "count": 2,
+      "identity_key": "8efd470271f99973d71b09b61ff5ffc846ef706cf31b08d7264f4564219e7835",
+      "source_id": 1958
+    },
+    {
+      "count": 2,
+      "identity_key": "227b3fe2da761ff363993304d93403c50e185bb9c312d97546ce2ae08e328709",
+      "source_id": 3056
+    },
+    {
+      "count": 1,
+      "identity_key": "57d0cc425bd7bb2d96bcdb39315956e00e39285290b82e9fca36c3ef707a0aee",
+      "source_id": 1424
+    },
+    {
+      "count": 1,
+      "identity_key": "f206c5a0ed34556536bccbdecb54745c2576ca62cec262e6933eb42fd6c0248f",
+      "source_id": 2417
+    },
+    {
+      "count": 2,
+      "identity_key": "868a7903825981b484f745446c05bd19d2be94d0c2d4359b07ea016837bd78c6",
+      "source_id": 650
+    },
+    {
+      "count": 2,
+      "identity_key": "aa0a735fde404a8c6f46f7eefb16cff614e5df7b8f5b92e0cf1e434f0843e5f1",
+      "source_id": 3047
+    },
+    {
+      "count": 2,
+      "identity_key": "7f4a69749834c9d67bc83bf88ac1032074234f16b595401ae090a5b5a5532b93",
+      "source_id": 1957
+    }
+  ],
+  "name": "전갈단 소집",
+  "version": 880
+}

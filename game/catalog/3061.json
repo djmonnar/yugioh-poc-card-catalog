@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards162/3061",
+  "attack": 800,
+  "attribute": 2,
+  "categories": [
+    "지원-제왕",
+    "지원-릴리즈",
+    "소환-패에서"
+  ],
+  "code": 24326617,
+  "defense": 1000,
+  "description": "①: 상대의 마법 & 함정 존에 카드가 2장 이상 존재할 경우, 이 카드는 패에서 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "18860f2696ed37d0c296fbef92223d69c26b8b01c6909a5f7edc67ada44b64e3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native162/cards/3061.jpg",
+  "level": 4,
+  "links": [],
+  "name": "빙제의 가신 에셔",
+  "name_english": "Escher the Frost Vassal",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "R",
+  "search_aliases": [
+    "얼음제왕가신에셔",
+    "빙제의 가신 에셔",
+    "Escher the Frost Vassal"
+  ],
+  "source_id": 3061,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2093
+}

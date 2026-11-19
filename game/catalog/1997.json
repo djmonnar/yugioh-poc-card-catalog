@@ -11,7 +11,7 @@
   ],
   "code": 92826944,
   "defense": 800,
-  "description": "①: 묘지의 이 카드를\n제외하고, 자신 묘지의\n언데드족 몬스터 1장을\n대상으로 하여 발동할 수\n있다. 그 언데드족 몬스터를\n특수 소환한다.\n[안내] 묘지의 이 카드의\n효과는 자신의 메인 페이즈\n1·2가 시작될 때 발동할지\n묻는다.",
+  "description": "①: 자신의 메인 페이즈에 묘지의 이 카드를 제외하고, 자신 묘지의 언데드족 몬스터 1장을 대상으로 하여 발동할 수 있다. 그 몬스터를 특수 소환한다.\n\n발동할 수 있을 때 내 묘지에서 이 카드를 열고 ‘효과 발동’을 누르세요.",
   "draw_enabled": true,
   "identity_key": "45eab39ec65aeec9dcac963d5792275e6a7dea9fd4bec26704f8a109e1a17d94",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1122.webp",

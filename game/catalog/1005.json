@@ -3,7 +3,9 @@
   "art_key": "Cards/1005",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-자괴"
+  ],
   "code": 83887306,
   "defense": 0,
   "description": "자신 필드 위의 몬스터 2장과\n상대 필드 위의 몬스터 1장을\n선택하여 파괴한다.",

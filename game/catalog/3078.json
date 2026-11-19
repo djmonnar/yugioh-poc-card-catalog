@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards162/3078",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-자괴",
+    "효과-파괴",
+    "효과-회복"
+  ],
+  "code": 18739764,
+  "defense": 0,
+  "description": "자신 필드 위에 존재하는 몬스터 1장을 선택하고 발동한다. 선택한 몬스터를 파괴하고, 파괴한 몬스터의 공격력만큼 자신의 라이프 포인트를 회복한다.",
+  "draw_enabled": true,
+  "identity_key": "09d389743ab0ea36d9cf83c7f69ed00e9900b0c2ac64dcdfca7bc8971b71f91b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native162/cards/3078.jpg",
+  "level": 0,
+  "links": [],
+  "name": "디스트럭트 포션",
+  "name_english": "Destruct Potion",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "디스트럭트포션",
+    "디스트럭트 포션",
+    "Destruct Potion"
+  ],
+  "source_id": 3078,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2110
+}

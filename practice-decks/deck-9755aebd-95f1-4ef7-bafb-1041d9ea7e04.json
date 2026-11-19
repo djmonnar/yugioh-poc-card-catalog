@@ -1,0 +1,70 @@
+{
+  "banlist_enabled": true,
+  "extra": [
+    {
+      "count": 3,
+      "identity_key": "3bedc619681dd879b26fed6b168a3c2545aa7e9e1da3d37cc5fc05290cae8d47",
+      "source_id": 1907
+    }
+  ],
+  "id": "deck-9755aebd-95f1-4ef7-bafb-1041d9ea7e04",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "5fb3c122cb16a57d7355496445b81331f47ccce607defd0871618f27456bd857",
+      "source_id": 740
+    },
+    {
+      "count": 2,
+      "identity_key": "338e76bb8ef47b80f71d275e5df925f0ccd0683bdf044801c9651597a75f0f22",
+      "source_id": 1871
+    },
+    {
+      "count": 3,
+      "identity_key": "8763558c2d9b44edd23608cfb17b6ed874a0d41cbc6777be9e553d5c544b4c9e",
+      "source_id": 615
+    },
+    {
+      "count": 1,
+      "identity_key": "fa594335da2254a0c087155f5da3eb447d6c8e52929b8be8ce3984ddeef198e6",
+      "source_id": 966
+    },
+    {
+      "count": 2,
+      "identity_key": "0a6bfcbb90b1857fd1ab17e602d557c33e59c36ffd0b0166b1b598b612eacc14",
+      "source_id": 1930
+    },
+    {
+      "count": 1,
+      "identity_key": "847c0f75550778e6ac35148031c74605cc98328541d728a4dadb8d6546011fb1",
+      "source_id": 1904
+    },
+    {
+      "count": 2,
+      "identity_key": "6e88143a6d19b63d51f9f78d79264941a106691798fb78f1579481304fad7560",
+      "source_id": 1003
+    },
+    {
+      "count": 1,
+      "identity_key": "92c407b19462a5b66da924a75b7385a2f879f0bad6d0584aa796b4453afa23f9",
+      "source_id": 2739
+    },
+    {
+      "count": 1,
+      "identity_key": "7ef5b198380f416b5f3ce6e3f214eda58b354613e8e49d240fa5ece1fd4dade2",
+      "source_id": 2743
+    },
+    {
+      "count": 2,
+      "identity_key": "7302b7c44e7522d1a8af1a71badb06c2fb268af451de8ea080da5c908b661859",
+      "source_id": 1308
+    },
+    {
+      "count": 2,
+      "identity_key": "21e61f074467db6cef2ab853eb76a2da7bde4671b0561cebf98770b28e2d8065",
+      "source_id": 3045
+    }
+  ],
+  "name": "용마인 킹드라군",
+  "version": 884
+}

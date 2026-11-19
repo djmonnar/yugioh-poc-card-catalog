@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards162/3069",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-제왕",
+    "효과-공격력 상승",
+    "효과-레벨다운",
+    "효과-소환 봉쇄"
+  ],
+  "code": 84171830,
+  "defense": 0,
+  "description": "①: 자신의 엑스트라 덱에 카드가 존재하지 않으며, 자신 필드에만 어드밴스 소환한 몬스터가 존재하는 한, 상대는 엑스트라 덱에서 몬스터를 특수 소환할 수 없다. ②: 자신의 어드밴스 소환한 몬스터의 공격력은, 상대 몬스터에 공격하는 데미지 계산시에만 800 올린다. ③: 1턴에 1번, 자신 메인 페이즈에 발동할 수 있다. 자신의 패의 공격력 2800 / 수비력 1000 인 몬스터 1장의 레벨을 턴 종료시까지 2개 내린다.",
+  "draw_enabled": true,
+  "identity_key": "489f9793d952f1d190af9519121cb8a293ef9e7b20434623706b39afbe0a2980",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native162/cards/3069.jpg",
+  "level": 0,
+  "links": [],
+  "name": "진제왕영역",
+  "name_english": "Domain of the True Monarchs",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "진제왕영역",
+    "Domain of the True Monarchs"
+  ],
+  "source_id": 3069,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "필드 마법",
+  "web_slot": 2101
+}

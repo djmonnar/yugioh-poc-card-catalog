@@ -1,7 +1,7 @@
 {
   "artKey": "DuelUi011/legacy/yugi_intro",
   "banlistEnabled": false,
-  "deckName": "가란돌프 의식",
+  "deckName": "파멸의마왕 가란돌프",
   "extra": [],
   "id": "enc-e6ba9805-a2bc-4d63-bf77-68c6fdcec421",
   "lpBonus": 0,
@@ -22,10 +22,10 @@
     1967,
     2602,
     2602,
-    2602,
     1066,
     1066,
-    1066
+    1066,
+    2732
   ],
   "name": "가란돌프 의식",
   "openingDrawBonus": 0,

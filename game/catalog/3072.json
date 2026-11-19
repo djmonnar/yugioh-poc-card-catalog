@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards162/3072",
+  "attack": 2400,
+  "attribute": 16,
+  "categories": [
+    "지원-릴리즈",
+    "발동-엔드 페이즈 시",
+    "효과-묘지로 보내기",
+    "효과-데미지"
+  ],
+  "code": 31571902,
+  "defense": 1400,
+  "description": "①: 이 카드는 릴리스 없이 일반 소환할 수 있다. ②: 이 카드의 ①의 방법으로 소환되어 있을 경우, 엔드 페이즈에 발동한다. 이 카드를 묘지로 보낸다. 그 후, 자신은 이 카드의 원래의 공격력만큼의 데미지를 받는다. 이 효과는 필드에 이 카드 이외의 언데드족 몬스터가 존재하지 않을 경우에 발동과 처리를 실행한다.",
+  "draw_enabled": true,
+  "identity_key": "6d0224b7eeb0c39d1ac1cfc49c01fd2ff932d378b7f315616d67140c9abb4219",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native162/cards/3072.jpg",
+  "level": 6,
+  "links": [],
+  "name": "사신기－옥화",
+  "name_english": "Malevolent Mech - Goku En",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "R",
+  "search_aliases": [
+    "사신기-옥화",
+    "사신기－옥화",
+    "Malevolent Mech - Goku En"
+  ],
+  "source_id": 3072,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2104
+}

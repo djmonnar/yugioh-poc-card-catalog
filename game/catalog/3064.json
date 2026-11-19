@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards162/3064",
+  "attack": 1400,
+  "attribute": 2,
+  "categories": [
+    "지원-릴리즈",
+    "발동-스탠바이 페이즈 시",
+    "효과-공격력 상승"
+  ],
+  "code": 37798171,
+  "defense": 0,
+  "description": "자신 필드 위에 몬스터가 존재하지 않을 경우, 이 카드는 릴리스 없이 일반 소환할 수 있다. 상대의 스텐바이 페이즈시에 1번, 이 카드의 공격력은 엔드 페이즈시까지 배가 된다.",
+  "draw_enabled": true,
+  "identity_key": "44306c01e89c82feee31e78fefecbc6a05019bb51f9a21ba1c43f7b7cf9c16ae",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native162/cards/3064.jpg",
+  "level": 5,
+  "links": [],
+  "name": "뎁스 샤크",
+  "name_english": "Depth Shark",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 131072,
+  "rarity": "N",
+  "search_aliases": [
+    "뎁스 샤크",
+    "Depth Shark"
+  ],
+  "source_id": 3064,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2096
+}

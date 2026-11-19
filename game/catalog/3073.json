@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards162/3073",
+  "attack": 2000,
+  "attribute": 32,
+  "categories": [
+    "발동-묘지에서",
+    "발동-스탠바이 페이즈 시",
+    "발동-LP 지불",
+    "발동-소환 시",
+    "소환-묘지",
+    "효과-공격력 상승"
+  ],
+  "code": 34294855,
+  "defense": 800,
+  "description": "이 카드가 전투에 의해서 파괴되어 묘지로 보내졌을 때, 500 라이프 포인트를 지불하는 것에 의해서, 다음 턴의 스텐바이 페이즈시에 이 카드를 자신 필드 위에 특수 소환한다. 이 효과에 의해서 특수 소환에 성공했을 때, 이 카드의 공격력은 500 포인트 올린다.",
+  "draw_enabled": true,
+  "identity_key": "6d0689e89c83f3b56dcefa4b612df26944218d331f51049ba3f6d2dd6e341a36",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native162/cards/3073.jpg",
+  "level": 6,
+  "links": [],
+  "name": "커스 오브 뱀파이어",
+  "name_english": "Vampire's Curse",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "R",
+  "search_aliases": [
+    "커스 오브 뱀파이어",
+    "Vampire's Curse"
+  ],
+  "source_id": 3073,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2105
+}

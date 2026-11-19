@@ -1,0 +1,49 @@
+{
+  "artKey": "DuelUi011/legacy/kaiba_intro",
+  "banlistEnabled": false,
+  "deckName": "용마인 킹드라군",
+  "extra": [
+    1907,
+    1907,
+    1907
+  ],
+  "id": "enc-a95cc599-87d1-45a4-9e07-bde036766a1a",
+  "lpBonus": 0,
+  "main": [
+    740,
+    740,
+    740,
+    1871,
+    1871,
+    615,
+    615,
+    615,
+    966,
+    1930,
+    1930,
+    1904,
+    1003,
+    1003,
+    2739,
+    2743,
+    1308,
+    1308,
+    3045,
+    3045
+  ],
+  "name": "카이바",
+  "openingDrawBonus": 0,
+  "profileId": "kaiba",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 331,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-a95cc599-87d1-45a4-9e07-bde036766a1a",
+  "usesNativeRules035": true
+}

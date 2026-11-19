@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards162/3063",
+  "attack": 1700,
+  "attribute": 2,
+  "categories": [
+    "보호-효과 파괴"
+  ],
+  "code": 44223284,
+  "defense": 600,
+  "description": "이 카드는 1턴에 1번만, 대상을 지정하지 않은 카드의 효과로는 파괴되지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "9c9f022ab3a1c9ac0d4e4d1b6c335b3c8b5366bb8bcc6bba396619a37116ec6e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native162/cards/3063.jpg",
+  "level": 4,
+  "links": [],
+  "name": "심해왕 데블 샤크",
+  "name_english": "Abyssal Kingshark",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 131072,
+  "rarity": "N",
+  "search_aliases": [
+    "심해왕 데블샤크",
+    "심해왕 데블 샤크",
+    "Abyssal Kingshark"
+  ],
+  "source_id": 3063,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2095
+}

@@ -4,7 +4,8 @@
   "attack": 1000,
   "attribute": 1,
   "categories": [
-    "지원-제넥스"
+    "지원-제넥스",
+    "지원-자괴"
   ],
   "code": 89333528,
   "defense": 1900,

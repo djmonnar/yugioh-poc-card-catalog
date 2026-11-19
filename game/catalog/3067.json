@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards162/3067",
+  "attack": 800,
+  "attribute": 2,
+  "categories": [
+    "발동-소환 시",
+    "소환-패에서"
+  ],
+  "code": 18063928,
+  "defense": 2000,
+  "description": "①: 이 카드가 일반 소환에 성공했을 때에 발동할 수 있다. 패에서 레벨 4 몬스터 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "2d4019da18a892bdf50889f3ae2cecc30fa65b966a555022f74349a35c3b96ac",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native162/cards/3067.jpg",
+  "level": 4,
+  "links": [],
+  "name": "양철금붕어",
+  "name_english": "Tin Goldfish",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "search_aliases": [
+    "양철금붕어",
+    "Tin Goldfish"
+  ],
+  "source_id": 3067,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2099
+}

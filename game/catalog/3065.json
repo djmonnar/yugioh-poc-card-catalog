@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards162/3065",
+  "attack": 1800,
+  "attribute": 2,
+  "categories": [
+    "발동-파괴 시",
+    "소환-덱리크루터",
+    "지원-물 속성",
+    "지원-저레벨"
+  ],
+  "code": 20358953,
+  "defense": 2200,
+  "description": "자신 필드 위에 앞면 표시로 존재하는 이 카드가 상대 카드의 효과에 의해서 파괴되었을 경우, 자신의 덱에서 레벨 4 이하의 물 속성 몬스터를 2장까지 자신 필드 위에 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "f55213f5e20007ca26d150234d05ca85ef83c972f8afd41a47fff4dcb9698850",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native162/cards/3065.jpg",
+  "level": 5,
+  "links": [],
+  "name": "샤크 더 크루",
+  "name_english": "Shark Cruiser",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 131072,
+  "rarity": "R",
+  "search_aliases": [
+    "샤크 더 크루",
+    "Shark Cruiser"
+  ],
+  "source_id": 3065,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2097
+}

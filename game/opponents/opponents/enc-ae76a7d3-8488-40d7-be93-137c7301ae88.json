@@ -1,0 +1,45 @@
+{
+  "artKey": "Character090/images/tristan/start",
+  "banlistEnabled": false,
+  "deckName": "전갈단 소집",
+  "extra": [],
+  "id": "enc-ae76a7d3-8488-40d7-be93-137c7301ae88",
+  "lpBonus": 0,
+  "main": [
+    3055,
+    3051,
+    3051,
+    3054,
+    3052,
+    3052,
+    3053,
+    3053,
+    1958,
+    1958,
+    3056,
+    3056,
+    1424,
+    2417,
+    650,
+    650,
+    3047,
+    3047,
+    1957,
+    1957
+  ],
+  "name": "전우혁",
+  "openingDrawBonus": 0,
+  "profileId": "tristan",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2619,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-ae76a7d3-8488-40d7-be93-137c7301ae88",
+  "usesNativeRules035": true
+}

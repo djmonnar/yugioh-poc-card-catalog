@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards162/3074",
+  "attack": 2450,
+  "attribute": 32,
+  "categories": [
+    "지원-악마족",
+    "무효-몬스터효과",
+    "소환제약"
+  ],
+  "code": 53982768,
+  "defense": 1600,
+  "description": "이 카드는 묘지에서의 특수 소환은 할 수 없다. ①: 이 카드가 몬스터 존에 존재하는 한, 자신의 악마족 몬스터가 전투로 몬스터를 파괴했을 경우, 그 파괴된 몬스터는 필드 / 묘지에 존재하는 한 효과가 무효화된다.",
+  "draw_enabled": true,
+  "identity_key": "ce606854304a99f40254f25afb754d1326fff6d360c005175e780f8408dc48c6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native162/cards/3074.jpg",
+  "level": 6,
+  "links": [],
+  "name": "명계의 마왕 하데스",
+  "name_english": "Dark Ruler Ha Des",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "search_aliases": [
+    "명계의 마왕하데스",
+    "명계의 마왕 하데스",
+    "Dark Ruler Ha Des"
+  ],
+  "source_id": 3074,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2106
+}

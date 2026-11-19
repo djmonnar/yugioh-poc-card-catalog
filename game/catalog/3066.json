@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards162/3066",
+  "attack": 1000,
+  "attribute": 2,
+  "categories": [
+    "발동-소환 시",
+    "소환-묘지",
+    "지원-어류족",
+    "지원-물 속성",
+    "소환제약"
+  ],
+  "code": 64319467,
+  "defense": 1200,
+  "description": "이 카드가 일반 소환에 성공했을 때, 자신의 묘지에서 레벨 3 또는 레벨 4의 어류족 / 물 속성 몬스터 1장을 선택하고 앞면 수비 표시로 특수 소환할 수 있다. 이 효과로 특수 소환한 몬스터의 효과는 무효화된다. 이 효과를 발동하는 턴에, 자신은 물 속성 이외의 몬스터를 특수 소환할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "781e3bb3e4b0e90ffc07bcf3a5682eb37cc3555562b58cecb1091ae16769c9be",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native162/cards/3066.jpg",
+  "level": 4,
+  "links": [],
+  "name": "더블핀 샤크",
+  "name_english": "Double Fin Shark",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 131072,
+  "rarity": "R",
+  "search_aliases": [
+    "더블 핀 샤크",
+    "더블핀 샤크",
+    "Double Fin Shark"
+  ],
+  "source_id": 3066,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2098
+}

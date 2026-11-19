@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards162/3077",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-장착",
+    "효과-레벨다운"
+  ],
+  "code": 72575145,
+  "defense": 0,
+  "description": "이 카드를 장착한 몬스터의 레벨을 2개 내린다.",
+  "draw_enabled": true,
+  "identity_key": "769466f187c5b1e5ba848dc20e43f4d15113c1a96e1366a389f6097368f6a280",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native162/cards/3077.jpg",
+  "level": 0,
+  "links": [],
+  "name": "강격처분",
+  "name_english": "Demotion",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "search_aliases": [
+    "강격처분",
+    "Demotion"
+  ],
+  "source_id": 3077,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 2109
+}

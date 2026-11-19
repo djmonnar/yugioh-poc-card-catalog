@@ -39,7 +39,7 @@
       "source_id": 1967
     },
     {
-      "count": 3,
+      "count": 2,
       "identity_key": "f6b7e64af99c980eea0c15c6b80a71b9ce399881892d186d9aa3e288d112e274",
       "source_id": 2602
     },
@@ -47,8 +47,13 @@
       "count": 3,
       "identity_key": "2ac39810a2ca3419aeb526e10e37565ef7fec083e59eddd80a14e98f9fcd7442",
       "source_id": 1066
+    },
+    {
+      "count": 1,
+      "identity_key": "2d36016e436f66fefcb616fc56824d48f4c45052f18754dcfeb6c4abd0c44522",
+      "source_id": 2732
     }
   ],
-  "name": "가란돌프 의식",
-  "version": 607
+  "name": "파멸의마왕 가란돌프",
+  "version": 883
 }

@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards162/3060",
+  "attack": 400,
+  "attribute": 1,
+  "categories": [
+    "지원-자괴",
+    "발동-묘지로 보내기",
+    "효과-공격력 상승",
+    "발동-파괴 시",
+    "발동-묘지로 보내졌을 때",
+    "효과-드로우"
+  ],
+  "code": 85087012,
+  "defense": 400,
+  "description": "①: 1턴에 1번, 자신의 덱 위에서 카드를 3장까지 묘지로 보내고 발동할 수 있다. 이 카드의 공격력은 턴 종료시까지, 이 효과를 발동하기 위해 묘지로 보낸 카드의 수 × 500 올린다. ②: 자신 필드의 이 카드가 파괴되어 묘지로 보내졌을 경우에 발동한다. 자신은 덱에서 1장 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "4bbb2b83ed46581b16bd956882e179ae78af646bce3cbdcdf4d1a59236020229",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native162/cards/3060.jpg",
+  "level": 3,
+  "links": [],
+  "name": "카드 트루퍼",
+  "name_english": "Card Trooper",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "SR",
+  "search_aliases": [
+    "카드트루퍼",
+    "카드 트루퍼",
+    "Card Trooper"
+  ],
+  "source_id": 3060,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2092
+}
