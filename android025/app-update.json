@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.99",
-  "versionCode": 118,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.99/YGOClassicExpedition-0.18.99-arm64.apk",
-  "sizeBytes": 695289170,
-  "sha256": "5c228fd8c25ad5aec68953283b8a83158cca9835082e3a8af06379279591ad37",
-  "releaseNotes": "새 카드팩 제왕·샤크 22장과 자기 몬스터를 파괴하는 카드 분류(지원-자괴)를 더했습니다. 로켓 전사·장착 마법·선봉대장·듀얼 몬스터를 다루는 상대 판단을 고쳤고, 보호·관통·몇 턴 뒤 파괴 상태와 주사위·코인 결과, 회수·덱에서 소환 같은 행동 기록을 화면에 보여 줍니다."
+  "versionName": "0.18.101",
+  "versionCode": 120,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.101/YGOClassicExpedition-0.18.101-arm64.apk",
+  "sizeBytes": 695299602,
+  "sha256": "95e2463edb75bb0a73d2ca730962a621e05f4de0664dc228820c34e22873d743",
+  "releaseNotes": "전투에서 내 직전 턴 시작으로 시간을 되감는 기능을 더했습니다. 원정 한 판에 한 번 쓸 수 있고, 행동 막대의 '되감기' 버튼으로 사용합니다."
 }
