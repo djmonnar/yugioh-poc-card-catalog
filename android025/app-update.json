@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.103",
-  "versionCode": 122,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.103/YGOClassicExpedition-0.18.103-arm64.apk",
-  "sizeBytes": 718145652,
-  "sha256": "335196199015ebd033c40abb45f8ee4073c9439adc9a26929475dbf258f936ca",
-  "releaseNotes": "되감기를 내 턴 시작에도 쓸 수 있게 고쳤습니다(지난 내 턴으로). AI가 용마인 킹드라군 등 융합을 사용합니다."
+  "versionName": "0.18.104",
+  "versionCode": 123,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.104/YGOClassicExpedition-0.18.104-arm64.apk",
+  "sizeBytes": 718202080,
+  "sha256": "a0bf815714cb752025611fe9146f3a108a7a17c56545043f587f53181e4b1cf0",
+  "releaseNotes": "원정을 시작할 때 덱을 두 개까지 고를 수 있습니다. 덱 하나만 고르면 최대 LP +2000. 전투 전에 쓸 덱을 고릅니다."
 }
