@@ -22,7 +22,7 @@ import {portraitUrl081} from './authoring081-assets.js?v=20261105-082';
 import {traitCardMatches089} from './authoring089-traits.js?v=20261106-089';
 import {CARD_SORTS091,filterValues091,cardQueryTokens091,cardFiltersMatch091,sortCards091} from './authoring091-search.js?v=20261106-091';
 import {deckDeletionBlocks153,deckDeletionChanges153,openDeckDeletion153} from './authoring153-deck-delete.js';
-import {CATALOG_FLAGS170,pageNumber170,thumbnailUrl170,createCardProblems170,cardFlagsMatch170,bulkCardPatches170,selectRange170} from './authoring170-catalog.js';
+import {cardDeckUsages172,cardDeckCountText172,deckHref172} from './authoring172-card-decks.js';import {CATALOG_PARAMS170,CATALOG_FLAGS170,pageNumber170,thumbnailUrl170,createCardProblems170,cardFlagsMatch170,bulkCardPatches170,selectRange170} from './authoring170-catalog.js';
 import {deckMatches170,deckExport170,deckFileName170,deckImport170,gameStatus170} from './authoring170-decks.js';
 import {renderHistoryPanel170} from './authoring170-history.js';
 
@@ -156,6 +156,20 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     control.addEventListener(event,commit);if(event==='input')control.addEventListener('compositionend',commit);wrap.append(caption,control,error);if(spec.description)wrap.append(el('small',spec.description,'au-hint'));return wrap;}
   function status(entity){const box=el('div',null,'au-entity-status');const state=currentState.entityStates?.[entityKey039(entity.entity_type,entity.entity_id)]??entity.state;box.append(el('span',entity.localDraft060?'저장 전 변경':entity.pending?(currentState.phase==='invalid'?'입력 확인 필요 · 아직 반영되지 않음':'DB에 저장 중…'):state==='saved_needs_review'?'DB 저장됨 · 구성 확인 필요':state==='saving'?'자동 저장 중…':'DB에 저장됨'));const game=gameStatus170(entity,{state:currentState,usages:entity.entity_type==='deck'?deckUsages170(entity.entity_id):[]});if(entity.entity_type==='deck'){const count=(entity.content.main??[]).reduce((n,r)=>n+r.count,0);if(count<20&&game?.kind!=='stale')box.append(el('small',`메인 ${count}/20장 · 완성하면 게임에 반영됩니다.`));}for(const issue of entity.issues??[])box.append(el('small',issue.message??issue));if(game){const badge=el('span',game.label,`au-game-status170 au-game-${game.kind}170`);badge.title=game.detail;box.dataset.gameStatus=game.kind;box.append(badge,el('small',game.detail,'au-game-detail170'));}return box;}
   function deckUsages170(id){return entities039(currentState).filter(row=>['chapter_role','starter_list'].includes(row.entity_type)&&!row.deleted&&row.content?.entries?.some(entry=>entry.deck_id===id));}
+  // 172: 카드 정보 창에 이 카드가 들어 있는 덱을 덱 목록과 같은 이름·순서로 보이고, 누르면 그 덱 편집으로 간다(새 탭 열기도 된다).
+  function cardDecks172(card){
+    const decks=entities039(currentState).filter(e=>e.entity_type==='deck'&&!e.deleted),usage=new Map(cardDeckUsages172(decks,card).map(row=>[row.id,row]));
+    const box=el('section',null,'au-card-decks172');box.setAttribute('aria-label','이 카드가 들어 있는 덱');box.append(el('h3',usage.size?`들어 있는 덱 · ${usage.size.toLocaleString('ko-KR')}개`:'들어 있는 덱'));
+    if(!usage.size){box.append(el('p','이 카드를 넣은 덱이 없습니다.','au-hint'));return box;}
+    const rows=deckOptions041(decks,{cards:currentCards,characters:characterProfiles()}).filter(row=>usage.has(row.id)),list=el('ul',null,'au-card-deck-list172'),more=button('덱 더 보기',()=>{shown+=12;draw();},'au-text-button');let shown=12;
+    const href=id=>deckHref172(doc.defaultView?.location?.href??doc.location?.href??'https://studio.invalid/index.html',id,CATALOG_PARAMS170);
+    const draw=()=>{list.replaceChildren(...rows.slice(0,shown).map(row=>{
+      const item=el('li'),link=el('a',null,'au-card-deck-link172'),counts=usage.get(row.id);link.href=href(row.id);link.dataset.deckId=row.id;
+      link.append(el('span',deckDisplayName039(currentState,row.entity,row.gameTitle&&row.gameTitle!==row.title?`${row.displayTitle} (덱 이름: ${row.gameTitle})`:row.displayTitle)),el('small',cardDeckCountText172(counts)));
+      link.addEventListener('click',event=>{if((event.button??0)!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;event.preventDefault();dialog?.close();selected.set('decks',row.id);try{Promise.resolve(onNavigate('decks',row.id)).catch(onError);}catch(error){onError(error);}});
+      item.append(link);return item;}));more.hidden=shown>=rows.length;};
+    draw();box.append(list,more);return box;
+  }
   function picture(card,{full=false}={}){const img=el('img'),thumb=full?null:thumbnailUrl170(card.image);let fallback=Boolean(thumb);img.src=thumb??card.image;img.alt=card.name_ko??'';img.loading='lazy';img.decoding='async';img.width=160;img.height=232;img.onerror=()=>{if(fallback){fallback=false;img.src=card.image;return;}img.classList.add('au-image-missing');if(card.source_id!=null)missingImages170.add(card.source_id);};return img;}
   function title(host,name,description){host.append(el('h1',name));if(description)host.append(el('p',description,'au-lead'));}
   function categoryGroups055(){const rows=entities039(currentState).filter(row=>row.entity_type==='category_group');return rows.length||currentState.bootstrap?.category_groups055?.schema===1?rows:undefined;}
@@ -362,7 +376,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     const description=el('p',null,'au-card-description'),lines=String(card.description_ko??'').split(/<br\s*\/?\s*>/i);
     if(lines.length===1)description.textContent=lines[0];
     else for(const [index,line] of lines.entries()){if(index)description.append(el('br'));description.append(el('span',line));}
-    body.append(limitBadges(card,{includeUnrestricted:true}),description);
+    body.append(limitBadges(card,{includeUnrestricted:true}),description,cardDecks172(card));
     if(currentState.canEdit){
       const forms=el('div',null,'au-form-grid'),allowed=(currentState.bootstrap?.capabilities?.entities?.card_setting?.fields?.rarity?.values??['N','R','SR','UR']).filter(r=>r!=='L'||card.source_id<2390),rarities=[...new Set([...allowed,...(card.source_id<2390?['L']:[]),card.rarity])];
       const {maximumNormalLimit,maximumSpeedLimit}=cardMetadata162(card.source_id,card.identity_key)??{};
