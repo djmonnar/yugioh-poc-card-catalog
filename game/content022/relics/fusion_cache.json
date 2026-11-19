@@ -1,5 +1,5 @@
 {
-  "description": "융합 마법 1장, 무작위 정식 융합 몬스터 1장과 그 정식 소재를 각각 2장 받아.",
+  "description": "융합 마법 1장, 무작위 정식 융합 몬스터 1장과 그 소재 한 세트를 받아.",
   "enabled": true,
   "fields": [],
   "iconIndex": 13,
@@ -8,7 +8,7 @@
   "kind": "fusion_cache",
   "name": "융합술사의 보급함",
   "params": {
-    "material_copies": 2
+    "material_copies": 1
   },
   "price": 200,
   "rarity": "SR",
