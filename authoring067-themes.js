@@ -20,8 +20,9 @@ import {ADDITION_BATCHES143} from './authoring143-batch-data.js?v=20261116-atlan
 import {ADDITION_BATCHES144} from './authoring144-batch-data.js?v=20261117-insects';
 import {ADDITION_BATCHES152} from './authoring152-batch-data.js?v=20261117-ritual-dark-magician';
 import {ADDITION_BATCHES161} from './authoring161-batch-data.js?v=20261119-dark-scorpion161';
+import {ADDITION_BATCHES162} from './authoring162-batch-data.js?v=20261119-monarch-shark162';
 
-export function additionMetadata067(key,registry=[...ADDITION_BATCHES067,...ADDITION_BATCHES081,...ADDITION_BATCHES084,...ADDITION_BATCHES088,...ADDITION_BATCHES090,...ADDITION_BATCHES093,...ADDITION_BATCHES099,...ADDITION_BATCHES103,...ADDITION_BATCHES109,...ADDITION_BATCHES120,...ADDITION_BATCHES122,...ADDITION_BATCHES125,...ADDITION_BATCHES126,...ADDITION_BATCHES130,...ADDITION_BATCHES135,...ADDITION_BATCHES136,...ADDITION_BATCHES143,...ADDITION_BATCHES144,...ADDITION_BATCHES152,...ADDITION_BATCHES161]){return registry.find(batch=>batch.key===key)??{key,label:`추가 묶음 ${key.replace(/^Cards/,'')}`,themes:[]};}
+export function additionMetadata067(key,registry=[...ADDITION_BATCHES067,...ADDITION_BATCHES081,...ADDITION_BATCHES084,...ADDITION_BATCHES088,...ADDITION_BATCHES090,...ADDITION_BATCHES093,...ADDITION_BATCHES099,...ADDITION_BATCHES103,...ADDITION_BATCHES109,...ADDITION_BATCHES120,...ADDITION_BATCHES122,...ADDITION_BATCHES125,...ADDITION_BATCHES126,...ADDITION_BATCHES130,...ADDITION_BATCHES135,...ADDITION_BATCHES136,...ADDITION_BATCHES143,...ADDITION_BATCHES144,...ADDITION_BATCHES152,...ADDITION_BATCHES161,...ADDITION_BATCHES162]){return registry.find(batch=>batch.key===key)??{key,label:`추가 묶음 ${key.replace(/^Cards/,'')}`,themes:[]};}
 
 // A theme is registration metadata. User-edited category tags stay independent.
 export function additionThemes067(cards,scope,index){
