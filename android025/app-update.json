@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.101",
-  "versionCode": 120,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.101/YGOClassicExpedition-0.18.101-arm64.apk",
-  "sizeBytes": 695299602,
-  "sha256": "95e2463edb75bb0a73d2ca730962a621e05f4de0664dc228820c34e22873d743",
-  "releaseNotes": "전투에서 내 직전 턴 시작으로 시간을 되감는 기능을 더했습니다. 원정 한 판에 한 번 쓸 수 있고, 행동 막대의 '되감기' 버튼으로 사용합니다."
+  "versionName": "0.18.102",
+  "versionCode": 121,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.102/YGOClassicExpedition-0.18.102-arm64.apk",
+  "sizeBytes": 718096052,
+  "sha256": "80473fe2fb3dc015aefa65a74b6c3395a8051fa3716a5fc2d8131acf1a477039",
+  "releaseNotes": "새 카드 36장(블랙 매지션·사일런트 매지션·매지션 걸·왕의 관·빛의 황금궤)을 추가하고 AI가 새 카드와 서치·드로우 효과를 더 잘 쓰도록 고쳤습니다."
 }
