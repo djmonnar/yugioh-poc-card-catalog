@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.104",
-  "versionCode": 123,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.104/YGOClassicExpedition-0.18.104-arm64.apk",
-  "sizeBytes": 718202080,
-  "sha256": "a0bf815714cb752025611fe9146f3a108a7a17c56545043f587f53181e4b1cf0",
-  "releaseNotes": "원정을 시작할 때 덱을 두 개까지 고를 수 있습니다. 덱 하나만 고르면 최대 LP +2000. 전투 전에 쓸 덱을 고릅니다."
+  "versionName": "0.18.105",
+  "versionCode": 124,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.105/YGOClassicExpedition-0.18.105-arm64.apk",
+  "sizeBytes": 718316320,
+  "sha256": "ef47e99cc59edeb8272e7738df061a17dcd97e8ab23573e247fe0f45ae1cd512",
+  "releaseNotes": "체인 창에 시점과 대상을 표시하고 필드를 가리지 않게 바꿨습니다. 이벤트 선택지를 늘리고 AI가 더 많은 카드를 사용합니다."
 }
