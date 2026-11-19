@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards165/3100",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-고레벨",
+    "발동-릴리즈",
+    "효과-드로우"
+  ],
+  "code": 51630558,
+  "defense": 0,
+  "description": "①: 자신 필드의 앞면 표시의 레벨 8 이상의 몬스터 1장을 릴리스하고 발동할 수 있다. 자신은 2장 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "2e2dab8e6b29e72e29c7e308101331222d7bfb4885e1c0c6337a0f4a39be2505",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native165/cards/3100.jpg",
+  "level": 0,
+  "links": [],
+  "name": "어드밴스 드로우",
+  "name_english": "Advance Draw",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "search_aliases": [
+    "어드밴스 드로우",
+    "Advance Draw"
+  ],
+  "source_id": 3100,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 2132
+}

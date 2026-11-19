@@ -1,0 +1,64 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-54f3311d-04aa-4cb1-a4f3-ae4d00ec60de",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "4d1bf5d6a269b328846fc034e0a79e161b3454df6136713bd89b50861239ab37",
+      "source_id": 365
+    },
+    {
+      "count": 2,
+      "identity_key": "68b05df658038176ea90390a7479e4e1fbf6580a6eda1a56ec08471cc13cdc78",
+      "source_id": 368
+    },
+    {
+      "count": 1,
+      "identity_key": "837838a981db9ba6bd0627ad4f3b525ee8a1b703a7c97ebf3b36bb9c2fcaa32b",
+      "source_id": 3085
+    },
+    {
+      "count": 2,
+      "identity_key": "87065b1e82110395b12c231c79ac2545181950bbab068295d5489d5ffbac426e",
+      "source_id": 651
+    },
+    {
+      "count": 1,
+      "identity_key": "45a796bc74915b2dcb7f1e4ae14b2385eeb811f3abadd10606f2829f95919a95",
+      "source_id": 734
+    },
+    {
+      "count": 3,
+      "identity_key": "4dfbd485246e953916ccb0e814b2a466e704439ca0a8cc448986519d764bd092",
+      "source_id": 3083
+    },
+    {
+      "count": 2,
+      "identity_key": "efe2cca00a012cfb25e938b0c0c265fd5a4fdb4bda8b17bafbbb74d30cf84647",
+      "source_id": 109
+    },
+    {
+      "count": 1,
+      "identity_key": "255237020376c0a5d64e86779f0affee0f8532c732503cb882dab4c90cea4c66",
+      "source_id": 3087
+    },
+    {
+      "count": 1,
+      "identity_key": "c68a37eb8db8e83274fa56e70b590db3cea60d16e61a372c1297baf693c43eac",
+      "source_id": 3084
+    },
+    {
+      "count": 2,
+      "identity_key": "cc43ed9978e9a88cc6f159884ff0432c4df10988fde0ef0ce20e13938d113b8c",
+      "source_id": 1525
+    },
+    {
+      "count": 2,
+      "identity_key": "183d6a42ab7a9ac6f3a4ea871fb7820aec6dc704421eed88e77a79001efccf3c",
+      "source_id": 2772
+    }
+  ],
+  "name": "사일런트매지션",
+  "version": 894
+}

@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards165/3086",
+  "attack": 500,
+  "attribute": 32,
+  "categories": [
+    "발동-리버스",
+    "마력카운터"
+  ],
+  "code": 7802006,
+  "defense": 200,
+  "description": "리버스 : 마력 카운터를 얹을 수 있는 카드 전부에, 마력 카운터를 1개씩 얹는다.",
+  "draw_enabled": true,
+  "identity_key": "2388e7cf7a0c78a0a55938dbcbc93d68adc56bd44041a79658c8e84619914663",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native165/cards/3086.jpg",
+  "level": 2,
+  "links": [],
+  "name": "마법초 만드라고라",
+  "name_english": "Magical Plant Mandragola",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "N",
+  "search_aliases": [
+    "마법초 만드라고라",
+    "Magical Plant Mandragola"
+  ],
+  "source_id": 3086,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "리버스 몬스터",
+  "web_slot": 2118
+}

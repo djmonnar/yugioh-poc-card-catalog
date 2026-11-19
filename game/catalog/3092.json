@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards165/3092",
+  "attack": 800,
+  "attribute": 16,
+  "categories": [
+    "지원-매지션 걸",
+    "지원-마법사",
+    "발동-릴리즈",
+    "효과-덱샐비지",
+    "발동-대상이 되었을 때",
+    "소환-패에서",
+    "효과-공격 대상 변경",
+    "효과-공격력 감소"
+  ],
+  "code": 34318086,
+  "defense": 600,
+  "description": "①: 1턴에 1번, \"레몬 매지션 걸\" 이외의 자신 필드의 \"매지션 걸\" 몬스터 1장을 릴리스하고 발동할 수 있다. 덱에서 마법사족 몬스터 1장을 패에 넣는다. ②: 1턴에 1번, 이 카드가 공격 대상으로 선택되었을 경우에 발동할 수 있다. 패에서 마법사족 몬스터 1장을 효과를 무효로 하고 특수 소환한다. 그 후, 공격 대상을 그 몬스터로 옮기고, 공격 몬스터의 공격력을 절반으로 한다.",
+  "draw_enabled": true,
+  "identity_key": "4bc4affa81394bf5ae8d699e5ce9b0160cbe94eeacaffaedbd3c2169bf7f6a99",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native165/cards/3092.jpg",
+  "level": 2,
+  "links": [],
+  "name": "레몬 매지션 걸",
+  "name_english": "Lemon Magician Girl",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "search_aliases": [
+    "레몬 매지션 걸",
+    "Lemon Magician Girl"
+  ],
+  "source_id": 3092,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2124
+}

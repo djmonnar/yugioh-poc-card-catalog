@@ -1,0 +1,45 @@
+{
+  "artKey": "Character093/images/yugi_muto/start",
+  "banlistEnabled": false,
+  "deckName": "사일런트매지션",
+  "extra": [],
+  "id": "enc-0e13b0e4-e5bb-4308-b05c-e32e9e96b6da",
+  "lpBonus": 0,
+  "main": [
+    365,
+    365,
+    368,
+    368,
+    368,
+    3085,
+    651,
+    651,
+    3083,
+    3083,
+    1525,
+    1525,
+    3082,
+    3082,
+    3082,
+    573,
+    2641,
+    521,
+    3081,
+    3081
+  ],
+  "name": "무토 유우기",
+  "openingDrawBonus": 0,
+  "profileId": "yugi_muto",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 3083,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-0e13b0e4-e5bb-4308-b05c-e32e9e96b6da",
+  "usesNativeRules035": true
+}

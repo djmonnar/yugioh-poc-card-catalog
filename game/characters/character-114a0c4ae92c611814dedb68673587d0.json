@@ -64,11 +64,26 @@
             "kind": "start_field"
           }
         ]
+      },
+      {
+        "name": "레벨업",
+        "profile_id": "profile-7e19528d-f16c-47e7-8131-a10f6d2b59f3",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "87065b1e82110395b12c231c79ac2545181950bbab068295d5489d5ffbac426e",
+              "internal_id": 651,
+              "name_ko": "레벨 업!",
+              "slot": 959
+            },
+            "kind": "start_hand"
+          }
+        ]
       }
     ],
     "skills": []
   },
   "profile_id": "yugi",
-  "updated_at": "2026-11-17T09:21:47.91906+00:00",
-  "version": 5885
+  "updated_at": "2026-11-19T02:22:28.528484+00:00",
+  "version": 5945
 }

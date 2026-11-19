@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards165/3111",
+  "attack": 0,
+  "attribute": 32,
+  "categories": [
+    "지원-빛의 황금궤",
+    "소환-패에서",
+    "발동-LP 지불",
+    "효과-파괴",
+    "효과-제외",
+    "소환-덱리크루터",
+    "효과-레벨 상승",
+    "효과-공격력 상승"
+  ],
+  "code": 2333466,
+  "defense": 0,
+  "description": "이 카드명의 ①③의 효과는 각각 1턴에 1번밖에 사용할 수 없다. ①: 자신 필드에 \"빛의 황금궤\"가 존재할 경우에 발동할 수 있다. 이 카드를 패에서 특수 소환한다. ②: 이 카드의 공격력은, 제외 상태인 카드의 수 × 300 올린다. ③: LP를 절반 지불하고 발동할 수 있다. 필드의 다른 카드를 전부 파괴하고 제외한다. 그 후, 덱에서 \"빛의 황금궤\"의 카드명이 쓰여진 레벨 7 이하의 몬스터 1장을 특수 소환한다. 이 효과로 특수 소환한 몬스터의 레벨은, 이 효과로 파괴한 카드의 수만큼 올라간다.",
+  "draw_enabled": true,
+  "identity_key": "4761aa44ba39f401b190b052c7a9bfb375377c12855fbd28b57b2d0d22a70113",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native165/cards/3111.jpg",
+  "level": 8,
+  "links": [],
+  "name": "파괴룡 간드라G",
+  "name_english": "Gandora-G the Dragon of Destruction",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "UR",
+  "search_aliases": [
+    "파괴룡 간드라G",
+    "Gandora-G the Dragon of Destruction"
+  ],
+  "source_id": 3111,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2143
+}

@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards165/3105",
+  "attack": 2500,
+  "attribute": 1,
+  "categories": [
+    "지원-호루스",
+    "소환-묘지",
+    "발동-필드를 벗어났을 때",
+    "보호-효과 대상 제외",
+    "보호-공격 대상 제외"
+  ],
+  "code": 74725513,
+  "defense": 2000,
+  "description": "이 카드명의, ①의 방법에 의한 특수 소환은 1턴에 1번밖에 할 수 없으며, ②의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 자신 필드에 \"왕의 관\"이 존재할 경우, 이 카드는 묘지에서 특수 소환할 수 있다. ②: 이 카드가 몬스터 존에 존재하는 상태에서, 자신 필드의 다른 카드가 상대 효과로 필드에서 벗어났을 경우에 발동할 수 있다. 이 턴 중에, 상대 몬스터는 \"호루스\" 몬스터를 공격 대상으로 할 수 없으며, 상대는 필드의 \"호루스\" 몬스터를 효과의 대상으로 할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "e06c6252fbefbc2466e8af8e7f3b47b9f97326361f34c8249f2165898fbdb9c7",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native165/cards/3105.jpg",
+  "level": 8,
+  "links": [],
+  "name": "호루스의 가호－케벤세누프",
+  "name_english": "Qebehsenuef, Protection of Horus",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "R",
+  "search_aliases": [
+    "호루스의 가호－케벤세누프",
+    "Qebehsenuef, Protection of Horus"
+  ],
+  "source_id": 3105,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2137
+}

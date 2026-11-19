@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards165/3116",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-빛의 황금궤",
+    "지원-저레벨",
+    "소환-패에서",
+    "소환-덱리크루터",
+    "소환제약"
+  ],
+  "code": 32270212,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 자신 필드에 \"빛의 황금궤\" 및 그 카드명이 쓰여진 몬스터가 존재할 경우에 발동할 수 있다. \"빛의 황금궤\"의 카드명이 쓰여진 레벨 4 이하의 몬스터를 패 / 덱에서 2장까지 특수 소환한다(같은 이름의 카드는 1장까지). 이 카드의 발동 후, 턴 종료시까지 자신은 엑스트라 덱에서 몬스터를 특수 소환할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "6ac8b636f19d23fbce4bd8db0b6a313db6104db1c16209c73d71be00bc723b9b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native165/cards/3116.jpg",
+  "level": 0,
+  "links": [],
+  "name": "동료의 연",
+  "name_english": "Ties That Bind",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "동료의 연",
+    "Ties That Bind"
+  ],
+  "source_id": 3116,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 2148
+}

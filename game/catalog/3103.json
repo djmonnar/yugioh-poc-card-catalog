@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards165/3103",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "발동-릴리즈",
+    "효과-발동봉쇄"
+  ],
+  "code": 76721030,
+  "defense": 0,
+  "description": "자신 필드 위에 존재하는 몬스터 2장을 릴리스하고 발동한다. 이 카드가 필드 위에 존재하는 한, 서로 패 및 필드 위에서 발동하는 효과 몬스터의 효과를 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "24485e9013249c88ebbb28bda50719de83ce8d1fd4f271e5fd9439ea1cc4c430",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native165/cards/3103.jpg",
+  "level": 0,
+  "links": [],
+  "name": "폭군의 폭언",
+  "name_english": "Tyrant's Tirade",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "폭군의 폭언",
+    "Tyrant's Tirade"
+  ],
+  "source_id": 3103,
+  "speed_limit": 1,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 2135
+}

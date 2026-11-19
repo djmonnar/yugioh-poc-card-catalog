@@ -1,0 +1,45 @@
+{
+  "artKey": "DuelUi011/legacy/yugi_intro",
+  "banlistEnabled": false,
+  "deckName": "호루스",
+  "extra": [],
+  "id": "enc-1e9ba6a9-8cf5-42e9-bb8a-c36fd225365f",
+  "lpBonus": 0,
+  "main": [
+    576,
+    576,
+    2531,
+    2531,
+    644,
+    644,
+    644,
+    41,
+    41,
+    651,
+    651,
+    651,
+    734,
+    2416,
+    2416,
+    2814,
+    1015,
+    1015,
+    1127,
+    1127
+  ],
+  "name": "호루스",
+  "openingDrawBonus": 0,
+  "profileId": "yugi",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 651,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-1e9ba6a9-8cf5-42e9-bb8a-c36fd225365f",
+  "usesNativeRules035": true
+}

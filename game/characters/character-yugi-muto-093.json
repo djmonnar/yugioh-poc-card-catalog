@@ -34,11 +34,26 @@
             "kind": "start_field"
           }
         ]
+      },
+      {
+        "name": "마력카운터",
+        "profile_id": "profile-7d91b75f-b0e0-47d3-94c6-2229a57cc789",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "4dfbd485246e953916ccb0e814b2a466e704439ca0a8cc448986519d764bd092",
+              "internal_id": 3083,
+              "name_ko": "칠흑의 파워 스톤",
+              "slot": 2115
+            },
+            "kind": "start_field"
+          }
+        ]
       }
     ],
     "skills": []
   },
   "profile_id": "yugi_muto",
-  "updated_at": "2026-11-15T20:56:34.795261+00:00",
-  "version": 5828
+  "updated_at": "2026-11-19T08:18:01.536764+00:00",
+  "version": 5951
 }

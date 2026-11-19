@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards165/3090",
+  "attack": 1200,
+  "attribute": 4,
+  "categories": [
+    "지원-매지션 걸",
+    "지원-마법사",
+    "발동-대상이 되었을 때",
+    "소환-패에서",
+    "효과-공격 대상 변경",
+    "효과-공격력 감소",
+    "발동-파괴 시",
+    "효과-묘지샐비지"
+  ],
+  "code": 56132807,
+  "defense": 800,
+  "description": "①: 1턴에 1번, 이 카드가 공격 대상으로 선택되었을 경우에 발동할 수 있다. 패에서 레벨 5 이하의 마법사족 몬스터 1장을 특수 소환한다. 그 후, 공격 대상을 그 몬스터로 옮기고, 공격 몬스터의 공격력을 절반으로 한다. ②: 이 카드가 전투 / 효과로 파괴되었을 경우, 자신 묘지의 다른 \"매지션 걸\" 몬스터를 3장까지 대상으로 하고 발동할 수 있다(같은 이름의 카드는 1장까지). 그 카드를 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "1ac0c2fa6a61d74074631ec0b8dc656a66b8234be18664e2104fb1389613b534",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native165/cards/3090.jpg",
+  "level": 3,
+  "links": [],
+  "name": "애플 매지션 걸",
+  "name_english": "Apple Magician Girl",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "search_aliases": [
+    "애플 매지션 걸",
+    "Apple Magician Girl"
+  ],
+  "source_id": 3090,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2122
+}

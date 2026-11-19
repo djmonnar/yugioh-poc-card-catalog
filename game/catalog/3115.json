@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards165/3115",
+  "attack": 0,
+  "attribute": 1,
+  "categories": [
+    "지원-빛의 황금궤",
+    "소환-함정 몬스터",
+    "효과-공격력 상승",
+    "발동-공격 선언 시",
+    "효과-파괴"
+  ],
+  "code": 27157727,
+  "defense": 2000,
+  "description": "①: 이 카드는 발동 후, 이하의 효과를 가지는 효과 몬스터(기계족 / 땅 / 레벨 4 / 공 0 / 수 2000)가 되고, 몬스터 존에 특수 소환한다(함정 카드로도 취급한다).\n●이 카드의 공격력은, 자신 필드의, \"빛의 황금궤\" 및 그 카드명이 쓰여진 몬스터의 수 × 1000 올린다.\n●1턴에 1번, 자신 필드에 \"빛의 황금궤\"가 존재할 경우, 상대 몬스터의 공격 선언시에 발동할 수 있다. 그 몬스터를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "1a7b4dd7affc2b051962223f39f57f50a26ecd1d612af6b9dfa54c6483d3fd7b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native165/cards/3115.jpg",
+  "level": 4,
+  "links": [],
+  "name": "비밀요새 스트롱 홀드",
+  "name_english": "Stronghold the Hidden Fortress",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "search_aliases": [
+    "비밀요새 스트롱 홀드",
+    "Stronghold the Hidden Fortress"
+  ],
+  "source_id": 3115,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 2147
+}

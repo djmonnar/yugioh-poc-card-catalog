@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards165/3097",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-빛의 황금궤",
+    "효과-덱샐비지",
+    "효과-드로우",
+    "효과-상대 드로우"
+  ],
+  "code": 78679226,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 덱에서 \"빛의 황금궤\"의 카드명이 쓰여진 몬스터 1장을 패에 넣는다. 자신 필드에 \"빛의 황금궤\" 및 그 카드명이 쓰여진 몬스터가 존재하는 상태에서, 이 카드를 자신 / 상대의 배틀 페이즈에 발동했을 경우, 추가로 양쪽 플레이어는 각각 패가 6장이 되도록 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "b8ee415a3467953a6ec8279d249524d96864dd95a45bc0232b5df6dc2956f859",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native165/cards/3097.jpg",
+  "level": 0,
+  "links": [],
+  "name": "미래로의 침묵",
+  "name_english": "Future Silence",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "미래로의 침묵",
+    "Future Silence"
+  ],
+  "source_id": 3097,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 2129
+}

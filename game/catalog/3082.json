@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards165/3082",
+  "attack": 1000,
+  "attribute": 16,
+  "categories": [
+    "지원-사일런트 매지션",
+    "지원-마법사",
+    "소환-릴리즈 코스트",
+    "효과-공격력 상승",
+    "무효-마법",
+    "발동-파괴 시",
+    "소환-덱리크루터",
+    "소환-패에서"
+  ],
+  "code": 41175645,
+  "defense": 1000,
+  "description": "이 카드는 통상 소환할 수 없다. 자신 필드의 마법사족 몬스터 1장을 릴리스했을 경우에만 특수 소환할 수 있다. ①: 이 카드의 공격력은, 자신 패의 수 × 500 올린다. ②: 1턴에 1번, 마법 카드가 발동했을 때에 발동할 수 있다. 그 발동을 무효로 한다. ③: 필드의 이 카드가 전투 또는 상대 효과로 파괴되었을 경우에 발동할 수 있다. 패 / 덱에서 \"침묵의 마술사－사일런트 매지션\" 이외의 \"사일런트 매지션\" 몬스터 1장을 소환 조건을 무시하고 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "15ea8a3d1a1523f22d5f22ad94212790db3ed0a5c12be19f8034a24f87712a00",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native165/cards/3082.jpg",
+  "level": 4,
+  "links": [],
+  "name": "침묵의 마술사－사일런트 매지션",
+  "name_english": "Silent Magician",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "search_aliases": [
+    "침묵의 마술사－사일런트 매지션",
+    "Silent Magician"
+  ],
+  "source_id": 3082,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "특수 소환 몬스터",
+  "web_slot": 2114
+}

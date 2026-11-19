@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards165/3114",
+  "attack": 1300,
+  "attribute": 1,
+  "categories": [
+    "지원-가제트",
+    "지원-빛의 황금궤",
+    "발동-소환 시",
+    "효과-덱샐비지",
+    "발동-파괴 시"
+  ],
+  "code": 92110878,
+  "defense": 1100,
+  "description": "이 카드명의 ①②의 효과는 각각 1턴에 1번밖에 사용할 수 없다. ①: 이 카드를 일반 소환 / 특수 소환했을 경우에 발동할 수 있다. \"빛의 황금궤\" 또는 그 카드명이 쓰여진 마법 / 함정 카드 1장을 덱에서 패에 넣는다. ②: 이 카드가 전투 / 효과로 파괴되었을 경우에 발동할 수 있다. 덱에서 \"비밀요새 스트롱 홀드\" 1장을 자신 필드에 세트한다.",
+  "draw_enabled": true,
+  "identity_key": "9c50208a8fc133c0ca5e526c35cf57f19bb8ef805178face138b284ebee9428d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native165/cards/3114.jpg",
+  "level": 4,
+  "links": [],
+  "name": "트리콜로르 가제트",
+  "name_english": "Gadget Trio",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "search_aliases": [
+    "트리콜로르 가제트",
+    "Gadget Trio"
+  ],
+  "source_id": 3114,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2146
+}

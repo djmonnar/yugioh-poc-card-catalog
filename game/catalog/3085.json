@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards165/3085",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-사일런트 매지션",
+    "효과-드로우",
+    "효과-상대 드로우",
+    "발동-묘지에서",
+    "발동-제외",
+    "효과-덱샐비지"
+  ],
+  "code": 44968459,
+  "defense": 0,
+  "description": "①: 자신 필드에 \"사일런트 매지션\" 몬스터가 존재하고, 자신의 패가 상대보다 많을 경우, 자신 / 상대의 배틀 페이즈에 발동할 수 있다(이 카드의 발동과 효과는 무효화되지 않는다). 양쪽 플레이어는, 각각 패가 6장이 되도록 드로우한다. ②: 자신 메인 페이즈에 묘지의 이 카드를 제외하고 발동할 수 있다. 덱에서 \"사일런트 매지션\" 몬스터 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "837838a981db9ba6bd0627ad4f3b525ee8a1b703a7c97ebf3b36bb9c2fcaa32b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native165/cards/3085.jpg",
+  "level": 0,
+  "links": [],
+  "name": "사일런트 버닝",
+  "name_english": "Silent Burning",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "사일런트 버닝",
+    "Silent Burning"
+  ],
+  "source_id": 3085,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 2117
+}

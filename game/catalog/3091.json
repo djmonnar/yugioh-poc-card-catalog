@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards165/3091",
+  "attack": 1600,
+  "attribute": 2,
+  "categories": [
+    "지원-매지션 걸",
+    "지원-마법사",
+    "발동-패 버리기",
+    "효과-드로우",
+    "발동-대상이 되었을 때",
+    "소환-묘지",
+    "효과-공격 대상 변경",
+    "효과-공격력 감소"
+  ],
+  "code": 7198399,
+  "defense": 1000,
+  "description": "①: 1턴에 1번, 패에서 마법사족 몬스터 1장을 버리고 발동할 수 있다. 자신은 1장 드로우한다. ②: 1턴에 1번, 이 카드가 공격 대상으로 선택되었을 경우, \"초코 매지션 걸\" 이외의 자신 묘지의 마법사족 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 특수 소환한다. 그 후, 공격 대상을 그 몬스터로 옮기고, 공격 몬스터의 공격력을 절반으로 한다.",
+  "draw_enabled": true,
+  "identity_key": "7cae9ad2fe6fc34d855b61205ffd91f38bd07f13b9e5141e732663087dba93f3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native165/cards/3091.jpg",
+  "level": 4,
+  "links": [],
+  "name": "초코 매지션 걸",
+  "name_english": "Chocolate Magician Girl",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "search_aliases": [
+    "초코 매지션 걸",
+    "Chocolate Magician Girl"
+  ],
+  "source_id": 3091,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2123
+}

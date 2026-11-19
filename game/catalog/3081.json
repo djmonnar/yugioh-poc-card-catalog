@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards165/3081",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-카운터·무효",
+    "무효-마법",
+    "무효-함정",
+    "효과-파괴",
+    "효과-상대 드로우"
+  ],
+  "code": 77538567,
+  "defense": 0,
+  "description": "①: 상대가 마법 / 함정 카드를 발동했을 때에 발동할 수 있다. 그 발동을 무효로 하고 파괴한다. 상대는 1장 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "4570e6104c2788164d1b9e770f5d190da491c434b949d671049c918f28d50892",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native165/cards/3081.jpg",
+  "level": 0,
+  "links": [],
+  "name": "마궁의 뇌물",
+  "name_english": "Dark Bribe",
+  "native_type": 1048580,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "마궁의뇌물",
+    "마궁의 뇌물",
+    "Dark Bribe"
+  ],
+  "source_id": 3081,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "카운터 함정",
+  "web_slot": 2113
+}
