@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.102",
-  "versionCode": 121,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.102/YGOClassicExpedition-0.18.102-arm64.apk",
-  "sizeBytes": 718096052,
-  "sha256": "80473fe2fb3dc015aefa65a74b6c3395a8051fa3716a5fc2d8131acf1a477039",
-  "releaseNotes": "새 카드 36장(블랙 매지션·사일런트 매지션·매지션 걸·왕의 관·빛의 황금궤)을 추가하고 AI가 새 카드와 서치·드로우 효과를 더 잘 쓰도록 고쳤습니다."
+  "versionName": "0.18.103",
+  "versionCode": 122,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.103/YGOClassicExpedition-0.18.103-arm64.apk",
+  "sizeBytes": 718145652,
+  "sha256": "335196199015ebd033c40abb45f8ee4073c9439adc9a26929475dbf258f936ca",
+  "releaseNotes": "되감기를 내 턴 시작에도 쓸 수 있게 고쳤습니다(지난 내 턴으로). AI가 용마인 킹드라군 등 융합을 사용합니다."
 }
