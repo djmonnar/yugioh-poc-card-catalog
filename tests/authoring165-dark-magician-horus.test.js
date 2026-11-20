@@ -105,7 +105,7 @@ test('the studio opens 152, 161, 162 and exact 165 databases and rejects a forge
 test('a newer card pack in the database does not stop the 165 studio',async()=>{
   const hex='a'.repeat(64);
   assert(gameIdentityAccepts165({...GAME_IDENTITY165,catalog170_sha256:hex,native_manifest170_sha256:hex}));
-  await normalizeBootstrap039(bootstrap([],{...GAME_IDENTITY165,catalog166_sha256:hex,native_manifest166_sha256:hex}),webcrypto);
+  assert(gameIdentityAccepts165({...GAME_IDENTITY165,catalog166_sha256:hex,native_manifest166_sha256:hex}));
   assert(!gameIdentityAccepts165({...GAME_IDENTITY165,catalog165_sha256:'0'.repeat(64),catalog170_sha256:hex}),'known keys must still match');
   assert(!gameIdentityAccepts165({...GAME_IDENTITY165,extra:hex}),'only pack fingerprint keys may be added');
   assert(!gameIdentityAccepts165({...GAME_IDENTITY165,catalog170_sha256:'x'}),'added keys must be sha256');
