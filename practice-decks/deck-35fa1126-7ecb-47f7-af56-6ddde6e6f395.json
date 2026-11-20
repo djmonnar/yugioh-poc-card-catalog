@@ -1,0 +1,64 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-35fa1126-7ecb-47f7-af56-6ddde6e6f395",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "4c0e6cb34692988098c29d4cb99ad4eec1ccf5a1eb92a31b507142d780ffbca4",
+      "source_id": 1409
+    },
+    {
+      "count": 2,
+      "identity_key": "41e2bfcb1c9ba7b24bc0d13433e73e5a716bf32e264ed342d499f64043e4fbb3",
+      "source_id": 1331
+    },
+    {
+      "count": 2,
+      "identity_key": "2df858f1a5cc1e3d51bff48648852aa193833f0b88043a04819aebbb864272a6",
+      "source_id": 1507
+    },
+    {
+      "count": 1,
+      "identity_key": "d5ce3f615099d029bfd01a4e1fc08eb4261e20c1f21090db2aa8b482530f4bbd",
+      "source_id": 3133
+    },
+    {
+      "count": 3,
+      "identity_key": "b6259fce7610ccf176cf8f33fa457bba294aa3ab9e3290e070db1f6299d1cbac",
+      "source_id": 3134
+    },
+    {
+      "count": 1,
+      "identity_key": "3b205e1723d9e48188a056a246bf87c24567a8d3c92c0dfca5118ddb65bfb055",
+      "source_id": 3135
+    },
+    {
+      "count": 2,
+      "identity_key": "87065b1e82110395b12c231c79ac2545181950bbab068295d5489d5ffbac426e",
+      "source_id": 651
+    },
+    {
+      "count": 1,
+      "identity_key": "95d18603a0ca6ce675cac605d9c55144e80d889d2bcb79283471a33ed29464e3",
+      "source_id": 1952
+    },
+    {
+      "count": 2,
+      "identity_key": "2fc0411822fedd8614e206bcfd89681d80bb23998a4790eb45adbc4ec800878f",
+      "source_id": 2390
+    },
+    {
+      "count": 2,
+      "identity_key": "45d860d25b85638ceddfaeb743ab74b99d71467e48c4e8f1bc8ca3060872695f",
+      "source_id": 1940
+    },
+    {
+      "count": 2,
+      "identity_key": "40ed81512aa2831063fbd3657650e782d98ca30484242fbd0883454014eea624",
+      "source_id": 1927
+    }
+  ],
+  "name": "사일런트 스워드맨",
+  "version": 907
+}

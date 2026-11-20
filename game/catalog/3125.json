@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards174/3125",
+  "attack": 2000,
+  "attribute": 32,
+  "categories": [
+    "지원-데몬",
+    "지원-악마족",
+    "소환-패에서",
+    "효과-파괴",
+    "지원-자괴",
+    "효과-공격력 상승"
+  ],
+  "code": 13744068,
+  "defense": 0,
+  "description": "이 카드명의 ①의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 악마족 몬스터를 포함하는 자신 필드의 앞면 표시 몬스터를 2장까지 대상으로 하고 발동할 수 있다. 이 카드를 패에서 특수 소환하고, 대상 몬스터를 파괴한다. ②: 이 카드의 ①의 효과로 몬스터를 파괴했을 때, 그 수만큼 상대 필드의 앞면 표시 몬스터를 대상으로 하고 발동할 수 있다. 이 카드의 공격력은 다음 자신 턴의 종료시까지, 대상 몬스터의 원래 공격력의 합계만큼 올린다.",
+  "draw_enabled": true,
+  "identity_key": "50643bc79c1c9dd8b78e08e941ed9b6ed2156ecffbebbb6b23f13e11afa9b7d6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native174/cards/3125.jpg",
+  "level": 6,
+  "links": [],
+  "name": "버서크 데몬",
+  "name_english": "Berserk Archfiend",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "search_aliases": [
+    "버서크 데몬",
+    "Berserk Archfiend"
+  ],
+  "source_id": 3125,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2157
+}

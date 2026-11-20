@@ -1,0 +1,45 @@
+{
+  "artKey": "DuelUi011/legacy/joey_intro",
+  "banlistEnabled": false,
+  "deckName": "라이컨 슬로프",
+  "extra": [],
+  "id": "enc-780087d2-8cb5-480a-ae14-e04bbd74917c",
+  "lpBonus": 0,
+  "main": [
+    2535,
+    2535,
+    435,
+    435,
+    435,
+    2620,
+    2620,
+    260,
+    260,
+    260,
+    3075,
+    3015,
+    3015,
+    3015,
+    2017,
+    364,
+    364,
+    364,
+    2534,
+    673
+  ],
+  "name": "조이",
+  "openingDrawBonus": 0,
+  "profileId": "joey",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 482,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-780087d2-8cb5-480a-ae14-e04bbd74917c",
+  "usesNativeRules035": true
+}

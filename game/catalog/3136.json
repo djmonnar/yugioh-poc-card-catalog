@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards175/3136",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-악마족",
+    "지원-고레벨",
+    "보호-파괴 대체"
+  ],
+  "code": 72497366,
+  "defense": 0,
+  "description": "①: 이 카드가 마법 & 함정 존에 존재하는 한, 자신은 레벨 5 이상의 악마족 몬스터를 일반 소환할 경우에 필요한 릴리스를 없앨 수 있다. 이 효과는 1턴에 1번밖에 적용할 수 없다. ②: 통상 소환한 레벨 5 이상의 악마족 몬스터 1장만이 파괴될 경우, 대신에 이 카드를 묘지로 보낼 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "ba818c9e3d3b01eb0d403818f490efcc245c3111bc485e64df0d0a5d7cbd748b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native175/cards/3136.jpg",
+  "level": 0,
+  "links": [],
+  "name": "악마의 현신",
+  "name_english": "Sinister Yorishiro",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "악마의 현신",
+    "Sinister Yorishiro"
+  ],
+  "source_id": 3136,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 2168
+}

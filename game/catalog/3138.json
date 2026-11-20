@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards175/3138",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-데몬",
+    "발동-릴리즈",
+    "효과-직접공격"
+  ],
+  "code": 69313735,
+  "defense": 0,
+  "description": "자신 필드 위에 존재하는 \"데몬\"이라는 이름이 붙은 몬스터 1장을 제물로 바친다. 이 턴, 자신 필드 위의 \"제노사이드킹 데몬\" 1장은 상대 플레이어를 직접 공격할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "13b868fa9e03e605e60ebd58745a6d60dd3d955ea0085eca6835b9a2fcbf091b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native175/cards/3138.jpg",
+  "level": 0,
+  "links": [],
+  "name": "디스커버드 어택",
+  "name_english": "Checkmate",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "디스커버드 어택",
+    "Checkmate"
+  ],
+  "source_id": 3138,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 2170
+}

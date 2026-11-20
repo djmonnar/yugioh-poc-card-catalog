@@ -1,0 +1,65 @@
+{
+  "banlist_enabled": true,
+  "extra": [
+    {
+      "count": 2,
+      "identity_key": "2682fbdb4c556be2db9e5ee21dd29f862c656da96a94803295e812991eba3a4d",
+      "source_id": 3126
+    }
+  ],
+  "id": "deck-0eaa21a8-4502-475e-bc42-12c251101cfc",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "a902fd7ff228ad2c3f298ad6dcec79da90f3236f39d6aa67398ba7aa8e57e5e6",
+      "source_id": 21
+    },
+    {
+      "count": 3,
+      "identity_key": "ef65c5f333c14c6afe2abee0fcf3548b069ec6ac2206e6d577897b5cb9ac21a6",
+      "source_id": 2684
+    },
+    {
+      "count": 2,
+      "identity_key": "79afd9a513cafb26fcb6152dab8473c6cacb76214ce63fe65a384a63ea47a805",
+      "source_id": 1840
+    },
+    {
+      "count": 1,
+      "identity_key": "afd4aa615a4eaf3b835d7c96460d68b08c84728ff726b6036dddbe0d275a78e3",
+      "source_id": 1248
+    },
+    {
+      "count": 3,
+      "identity_key": "1411fb82022714d7d71b0b79cad8170f89cde392d7b9e0bcf0a5f148cfb76901",
+      "source_id": 2682
+    },
+    {
+      "count": 2,
+      "identity_key": "e5940c6b3f9fa40f142e78bc2bd7ac0fea6635b02a7980efbe0a3f7ef3f06dcd",
+      "source_id": 2681
+    },
+    {
+      "count": 2,
+      "identity_key": "ccda2e4a0d4e7edd49d25ae042bae538c1d6bd1bd3f0874f3ff92e4df5da050a",
+      "source_id": 3120
+    },
+    {
+      "count": 1,
+      "identity_key": "7ef5b198380f416b5f3ce6e3f214eda58b354613e8e49d240fa5ece1fd4dade2",
+      "source_id": 2743
+    },
+    {
+      "count": 1,
+      "identity_key": "0014364187b6ea67fc6202c60c371b8ad569fe234b1213af412f6a818ab0a215",
+      "source_id": 335
+    },
+    {
+      "count": 2,
+      "identity_key": "1ac9e2b6c1ffaa9dd54b59f9026b8a8091bac80f81c766868211f12c8b369be6",
+      "source_id": 2738
+    }
+  ],
+  "name": "데몬 현현",
+  "version": 911
+}

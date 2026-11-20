@@ -1,0 +1,45 @@
+{
+  "artKey": "Character090/images/tristan/start",
+  "banlistEnabled": false,
+  "deckName": "사일런트 스워드맨",
+  "extra": [],
+  "id": "enc-09778a47-1d03-4a28-982b-fec80a1c4953",
+  "lpBonus": 0,
+  "main": [
+    1409,
+    1409,
+    1331,
+    1331,
+    1507,
+    1507,
+    3133,
+    3134,
+    3134,
+    3134,
+    3135,
+    651,
+    651,
+    1952,
+    2390,
+    2390,
+    1940,
+    1940,
+    1927,
+    1927
+  ],
+  "name": "전우혁",
+  "openingDrawBonus": 0,
+  "profileId": "tristan",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 2659,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-09778a47-1d03-4a28-982b-fec80a1c4953",
+  "usesNativeRules035": true
+}

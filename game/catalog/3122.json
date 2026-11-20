@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards174/3122",
+  "attack": 2100,
+  "attribute": 32,
+  "categories": [
+    "지원-데몬",
+    "효과-제외"
+  ],
+  "code": 16475472,
+  "defense": 1000,
+  "description": "①: 이 카드가 몬스터 존에 존재하는 한, 이 카드가 전투로 파괴한 몬스터는 묘지로는 가지 않으며 제외된다.",
+  "draw_enabled": true,
+  "identity_key": "7199bdbf842873d0287644dd023bada74c4861cdddbdc0c8cda8c1de41e3994d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native174/cards/3122.jpg",
+  "level": 5,
+  "links": [],
+  "name": "레서 데몬",
+  "name_english": "Lesser Fiend",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "search_aliases": [
+    "레서 데몬",
+    "Lesser Fiend"
+  ],
+  "source_id": 3122,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2154
+}

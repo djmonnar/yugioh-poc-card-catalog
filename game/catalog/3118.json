@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards174/3118",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-악마족",
+    "지원-공룡족",
+    "지원-물 속성",
+    "지원-화염 속성",
+    "지원-고레벨",
+    "효과-덱샐비지",
+    "발동-릴리즈",
+    "소환-패에서",
+    "소환-덱리크루터",
+    "소환-묘지"
+  ],
+  "code": 28653611,
+  "defense": 0,
+  "description": "①: 이하의 효과에서 1개를 선택하고 발동할 수 있다(이 카드명의 이하의 효과는 각각 1턴에 1번밖에 선택할 수 없다).\n●덱에서 공룡족 / 물 속성 몬스터 1장을 패에 넣는다. 상대 필드에 몬스터가 존재할 경우, 추가로 패에 넣은 그 몬스터를 특수 소환할 수 있다.\n●자신 필드의 몬스터 1장을 릴리스하고 발동할 수 있다. 자신의 패 / 덱 / 묘지에서 레벨 6 이상의 화염 속성 몬스터 1장을 특수 소환한다. 이 효과로 악마족 이외의 몬스터를 특수 소환했을 경우, 그 몬스터의 효과는 무효화된다.",
+  "draw_enabled": true,
+  "identity_key": "52ea194f572f894c8e4f5b3c84e29e49a19f83bc0fac53fd400b0777ce531515",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native174/cards/3118.jpg",
+  "level": 0,
+  "links": [],
+  "name": "헬 퍼니셔",
+  "name_english": "Infernal Punisher",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "헬 퍼니셔",
+    "Infernal Punisher"
+  ],
+  "source_id": 3118,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 2150
+}

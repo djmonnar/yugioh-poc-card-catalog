@@ -1,6 +1,6 @@
 {
-  "authoring_revision": 905,
-  "game_revision": 905,
+  "authoring_revision": 915,
+  "game_revision": 915,
   "identity": {
     "base_catalog_sha256": "b73dd51c78aeab8c9beebf936b46e4cac16040e70df3a7980dec38c40db21e09",
     "catalog035_sha256": "b5f1e9749cec0c1497c5fdcbfb2dc9c64895dcd859f083ec0ec4014580f05308",
@@ -29,6 +29,8 @@
     "catalog161_sha256": "d2eca56bf700650f781a7398d9529d43b488adff73430bbb880c07679ce7955e",
     "catalog162_sha256": "b84eeef9642310763f8f38c93e0fd06ec0c6b682be15aa89b9c8bf44a76e1f75",
     "catalog165_sha256": "96f1406f2eb20c2980b7e6f6b7511ab3b6b2498e5a992185fdcbb1c5ebaed8ac",
+    "catalog174_sha256": "af59f00b9918575359cb23a65de31a591a509ff41e9ba03c1ac3510fdb1d15c5",
+    "catalog175_sha256": "d61b9f379795ad3997966332d0d6589ba9044d7e6d4bfaf6175803f5108b34bc",
     "native_manifest049_sha256": "843bc3bcebe36bcbfe7f5f6e2584222f5ab67bc5175c590b37d2963839134e7f",
     "native_manifest053_sha256": "205ef763b65335d553c1e5870e84f6237814b65b1481c96de06503684dd455aa",
     "native_manifest067_sha256": "5d671f09f3754cef65f05af7344745372404e8f28ed2e1e15cdafcc409c36d3f",
@@ -54,13 +56,15 @@
     "native_manifest161_sha256": "94677542c1ea3eebfaef2b62121b0a82dad2180e9a89b85a20e3267d3ffebd3f",
     "native_manifest162_sha256": "28796d7919b94988fc615d08c3af6cabe076bad3e7d1dbec403d994878dada90",
     "native_manifest165_sha256": "491ca79dcfa4d2bc5c48626e4d8676cbbfb38ce7256f5a3a76e463a089658b7e",
+    "native_manifest174_sha256": "ec592b3e28d3995877066e1ec4b4ecabe8d7c0acd2b191bbbb7d277847e96b4e",
+    "native_manifest175_sha256": "37981c7061fa6eba85438daa10dfc644cfe7e84328b37e6d4c4bf160caf2546c",
     "native_manifest_sha256": "4674de031c9e3044c86b90fcd402d9533d9353347802f268863746bf3bd7e4d7"
   },
   "map_rules_revision": 858,
-  "metadata_revision": "904",
-  "practice_decks_sha256": "f13caff72600143f9e663b404f9956e6c056597f3fad4b2b78f1db5ae4c16025",
+  "metadata_revision": "915",
+  "practice_decks_sha256": "0b67822d86ea8f4109a1379424f338d7cebf369780f56a52541fc4d740043334",
   "project_id": "ygoclassic-expedition",
-  "project_revision": 905,
-  "route": "poc_bootstrap165",
-  "source_fingerprint": "93521f0f42dbdc8ee22ba0561dc237a4cf3a485c08cb96fd51d85bc013e73785"
+  "project_revision": 915,
+  "route": "poc_bootstrap175",
+  "source_fingerprint": "97de4eeef2b510ad343a81ec88431ba545aae1c60eca5edad63e211fb43ec6ca"
 }

@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards174/3130",
+  "attack": 1200,
+  "attribute": 4,
+  "categories": [
+    "지원-엘리멘틀 히어로",
+    "지원-융합",
+    "발동-소환 시",
+    "효과-덱샐비지",
+    "효과-덱에서 묘지로 보내기",
+    "효과-묘지로 보내기",
+    "소환제약"
+  ],
+  "code": 63060238,
+  "defense": 1800,
+  "description": "이 카드명의 ①②의 효과는 1턴에 1번, 어느 쪽이든 1개밖에 사용할 수 없다. ①: 이 카드가 일반 소환 / 특수 소환에 성공했을 경우에 발동할 수 있다. 덱에서 \"융합\" 1장을 패에 넣는다. ②: 자신 메인 페이즈에 발동할 수 있다. 덱에서 \"엘리멘틀 히어로 브레이즈맨\" 이외의 \"엘리멘틀 히어로\" 몬스터 1장을 묘지로 보낸다. 이 카드는 턴 종료시까지, 이 효과로 묘지로 보낸 몬스터와 같은 속성 / 공격력 / 수비력이 된다. 이 효과의 발동 후, 턴 종료시까지 자신은 융합 몬스터밖에 특수 소환할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "cb6a122fcbd745c58d7864b53cd9adbd52517ba78b4f116377db34343d69acf6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native174/cards/3130.jpg",
+  "level": 4,
+  "links": [],
+  "name": "엘리멘틀 히어로 브레이즈맨",
+  "name_english": "Elemental HERO Blazeman",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "search_aliases": [
+    "엘리멘틀 히어로 브레이즈맨",
+    "Elemental HERO Blazeman"
+  ],
+  "source_id": 3130,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2162
+}

@@ -19,11 +19,26 @@
             "kind": "start_hand"
           }
         ]
+      },
+      {
+        "name": "만수의신",
+        "profile_id": "profile-ff1a8337-0783-4d0c-b7ef-3503c1b6bb60",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "7afbc2f5f643a24005f9bdfd033973600c03a087497bc6adf593d116f07b55a7",
+              "internal_id": 482,
+              "name_ko": "만수의 신",
+              "slot": 180
+            },
+            "kind": "start_hand"
+          }
+        ]
       }
     ],
     "skills": []
   },
   "profile_id": "joey",
-  "updated_at": "2026-11-16T08:18:34.945673+00:00",
-  "version": 5849
+  "updated_at": "2026-11-20T06:16:34.884281+00:00",
+  "version": 5953
 }

@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards174/3124",
+  "attack": 2400,
+  "attribute": 32,
+  "categories": [
+    "지원-데몬",
+    "발동-엔드 페이즈 시",
+    "효과-파괴",
+    "효과-데미지"
+  ],
+  "code": 28601770,
+  "defense": 0,
+  "description": "①: 이 카드는 릴리스 없이 일반 소환할 수 있다. ②: 이 카드의 ①의 방법으로 일반 소환되어 있을 경우, 엔드 페이즈에 발동한다. 이 카드를 파괴하고, 자신은 1000 데미지를 받는다.",
+  "draw_enabled": true,
+  "identity_key": "c4f9882a6093185428b6d6a1c9decd9afe0169ad1e5013a12a4f6a5dc1cff6ba",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native174/cards/3124.jpg",
+  "level": 5,
+  "links": [],
+  "name": "미스트 데몬",
+  "name_english": "Mist Archfiend",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "R",
+  "search_aliases": [
+    "미스트 데몬",
+    "Mist Archfiend"
+  ],
+  "source_id": 3124,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2156
+}

@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards175/3137",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-악마족",
+    "발동-대상이 되었을 때",
+    "효과-파괴",
+    "파괴-몬스터",
+    "효과-데미지"
+  ],
+  "code": 93895605,
+  "defense": 0,
+  "description": "자신 필드 위에 앞면 표시로 존재하는 악마족 몬스터가 공격 대상으로 선택되었을 때 발동할 수 있다. 상대의 공격 몬스터 1장과 공격 대상이 된 자신의 몬스터 1장을 파괴하고, 파괴한 상대 몬스터의 공격력만큼 데미지를 상대 라이프에 준다.",
+  "draw_enabled": true,
+  "identity_key": "3cf7258e475690af0252ce22bc9c8d7071a0bf25f55eac73c6a7a5aad9433ec9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native175/cards/3137.jpg",
+  "level": 0,
+  "links": [],
+  "name": "헤이트 버스터",
+  "name_english": "Hate Buster",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "헤이트 버스터",
+    "Hate Buster"
+  ],
+  "source_id": 3137,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2169
+}

@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-d7659715-807a-4841-92eb-05f4cb5c8665",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "0c0fca9eecf4ebb26ce38df84553098bc60c86bce9d33d62124bd0bf26560f95",
+      "source_id": 2535
+    },
+    {
+      "count": 3,
+      "identity_key": "530ee318921a4cd5c0ccfca24fbbf0dccedaf9233f3f17f6960ec5ae8b432933",
+      "source_id": 435
+    },
+    {
+      "count": 2,
+      "identity_key": "481f1539cec9a73be5473ae58ff0606a64a3c466ce9d278c03be239ebf6f8087",
+      "source_id": 2620
+    },
+    {
+      "count": 3,
+      "identity_key": "f905477d9785c303ef4fda32de44c5d7160a2f8f711bcfd2973666838b40ea4b",
+      "source_id": 260
+    },
+    {
+      "count": 1,
+      "identity_key": "138869e742caa623d7f729731d05afdcedf98835e4a11d9a5c7288b38eadacaf",
+      "source_id": 3075
+    },
+    {
+      "count": 3,
+      "identity_key": "c52901a321dc4ae74dd686c57b2255058d2ef3653ac2caf06ddeaecc7f2b75a8",
+      "source_id": 3015
+    },
+    {
+      "count": 1,
+      "identity_key": "5e427dba7babe63f916ec6f4811a108053414aafa3aa30be8867706de9eac3c7",
+      "source_id": 2017
+    },
+    {
+      "count": 3,
+      "identity_key": "90640b7c7c936f6cd8426a93b4241b17c7fa39cd41f117527a8a9ec6489d46ac",
+      "source_id": 364
+    },
+    {
+      "count": 1,
+      "identity_key": "e977528ee8be625bd9d30444d35911d0236c48142f509dbb20f3e87267828b78",
+      "source_id": 2534
+    },
+    {
+      "count": 1,
+      "identity_key": "a6e3ecda0f116e76e5f6914c0e00b3719667cdbb29e513991a87dd28c6ab034c",
+      "source_id": 673
+    }
+  ],
+  "name": "라이컨 슬로프",
+  "version": 912
+}

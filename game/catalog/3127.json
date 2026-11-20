@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards174/3127",
+  "attack": 2500,
+  "attribute": 32,
+  "categories": [
+    "지원-데몬",
+    "면역-전투",
+    "보호-효과 파괴",
+    "발동-묘지로 보내졌을 때",
+    "소환-패에서",
+    "소환-덱리크루터",
+    "소환-묘지"
+  ],
+  "code": 95825679,
+  "defense": 1200,
+  "description": "\"나락과의 계약\"에 의해 의식 소환. ①: 이 카드는 몬스터 존에 존재하는 한, 카드명을 \"데몬 소환\"으로 취급한다. ②: 필드의 이 카드는, 의식 몬스터 이외의 몬스터와의 전투로는 파괴되지 않으며, 의식 몬스터 이외의 몬스터 효과로는 파괴되지 않는다. ③: 의식 소환한 이 카드가 상대에 의해 묘지로 보내졌을 경우에 발동할 수 있다. 자신의 패 / 덱 / 묘지에서 \"데몬 소환\" 1장을 골라 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "0665d1a09df7afe49587a25a9b1fe7de223b4f53af49323ff382b32c32600fa8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native174/cards/3127.jpg",
+  "level": 6,
+  "links": [],
+  "name": "데몬 강림",
+  "name_english": "Archfiend's Awakening",
+  "native_type": 161,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "search_aliases": [
+    "데몬 강림",
+    "Archfiend's Awakening"
+  ],
+  "source_id": 3127,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "의식 몬스터",
+  "web_slot": 2159
+}

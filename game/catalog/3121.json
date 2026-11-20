@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards174/3121",
+  "attack": 1600,
+  "attribute": 32,
+  "categories": [
+    "지원-데몬",
+    "효과-관통",
+    "발동-공격 선언 시"
+  ],
+  "code": 79418153,
+  "defense": 1400,
+  "description": "상대 필드 위에 수비 표시로 존재하는 몬스터를 공격 대상으로 한 자신 몬스터의 공격 선언시에 발동할 수 있다. 그 몬스터가 수비 표시 몬스터를 공격했을 경우, 그 수비력을 공격력이 넘었으면, 그 수치만큼 상대 라이프에 전투 데미지를 준다. 이 효과는 1턴에 1번밖에 사용할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "03a93d419e3d54cc1534d2527ad811b07445121bee889b9e896170e38010167e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native174/cards/3121.jpg",
+  "level": 4,
+  "links": [],
+  "name": "랜서 데몬",
+  "name_english": "Lancer Archfiend",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "N",
+  "search_aliases": [
+    "랜서 데몬",
+    "Lancer Archfiend"
+  ],
+  "source_id": 3121,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2153
+}

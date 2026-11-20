@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards174/3129",
+  "attack": 800,
+  "attribute": 2,
+  "categories": [
+    "지원-엘리멘틀 히어로",
+    "소환-패에서",
+    "발동-소환 시",
+    "발동-반전 소환 시",
+    "효과-드로우"
+  ],
+  "code": 79979666,
+  "defense": 1200,
+  "description": "①: 패가 이 카드 1장뿐일 경우, 이 카드는 패에서 특수 소환할 수 있다. ②: 이 카드를 일반 소환 / 반전 소환 / 특수 소환했을 때에 발동할 수 있다(이 효과는 자신의 패 / 필드에 다른 카드가 존재하지 않을 경우에 발동과 처리를 할 수 있다). 자신은 2장 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "22ac1a2795369658cbf038564b1e4bf2355f09f6812c04f97c33dcbbf026e8b1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native174/cards/3129.jpg",
+  "level": 4,
+  "links": [],
+  "name": "엘리멘틀 히어로 버블맨",
+  "name_english": "Elemental HERO Bubbleman",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "엘리멘틀 히어로 버블맨",
+    "Elemental HERO Bubbleman"
+  ],
+  "source_id": 3129,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2161
+}

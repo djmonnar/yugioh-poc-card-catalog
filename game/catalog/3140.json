@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards175/3140",
+  "attack": 2000,
+  "attribute": 32,
+  "categories": [
+    "지원-데몬",
+    "소환제약",
+    "무효-몬스터효과",
+    "무효-마법",
+    "무효-함정",
+    "파괴-몬스터",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 35975813,
+  "defense": 1500,
+  "description": "자신 필드 위에 \"데몬\"이라는 이름이 붙은 몬스터 카드가 존재하지 않으면 이 카드는 일반 소환/반전 소환할 수 없다. 이 카드의 컨트롤러는 자신의 스텐바이 페이즈마다 800 라이프 포인트를 지불한다. 이 카드가 상대가 컨트롤하는 카드의 효과의 대상이 되어, 그 처리를 실행할 때, 주사위를 1회 던진다. 2, 5가 나온 경우, 그 효과를 무효로 하여 파괴한다. 이 카드가 전투로 파괴한 효과 몬스터의 효과는 무효화된다.",
+  "draw_enabled": true,
+  "identity_key": "47ca734e6db3d0fe6a802202408fc497da9ece2bec9e5ce4fea2efad1b6d9ea2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native175/cards/3140.jpg",
+  "level": 4,
+  "links": [],
+  "name": "제노사이드킹 데몬",
+  "name_english": "Terrorking Archfiend",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "search_aliases": [
+    "제노사이드킹 데몬",
+    "Terrorking Archfiend"
+  ],
+  "source_id": 3140,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2172
+}

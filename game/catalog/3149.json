@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards175/3149",
+  "attack": 3000,
+  "attribute": 32,
+  "categories": [
+    "지원-데몬",
+    "소환제약",
+    "발동-제외",
+    "효과-파괴",
+    "파괴-몬스터",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 28423537,
+  "defense": 2000,
+  "description": "①: 이 카드는 릴리스 없이 일반 소환할 수 있다. ②: 이 카드의 ①의 방법으로 일반 소환한 이 카드의 원래의 공격력 / 수비력은 절반이 되고, 엔드 페이즈에 파괴된다. ③: 이 카드가 몬스터 존에 존재하는 한, 자신은 악마족 몬스터밖에 특수 소환할 수 없다. ④: 1턴에 1번, 자신의 패 / 묘지의 \"데몬\" 카드 1장을 제외하고, 필드의 카드 1장을 대상으로 하여 발동할 수 있다. 그 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "fe7d73471cdc0bb11fff02e46b605399a55437f82f2232ac6e2f371748a74404",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native175/cards/3149.jpg",
+  "level": 8,
+  "links": [],
+  "name": "전율의 흉황－제네시스 데몬",
+  "name_english": "Archfiend Emperor, the First Lord of Horror",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "UR",
+  "search_aliases": [
+    "전율의 흉황－제네시스 데몬",
+    "Archfiend Emperor, the First Lord of Horror"
+  ],
+  "source_id": 3149,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2181
+}

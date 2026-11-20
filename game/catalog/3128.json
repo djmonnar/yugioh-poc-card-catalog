@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards174/3128",
+  "attack": 1500,
+  "attribute": 1,
+  "categories": [
+    "지원-엘리멘틀 히어로",
+    "면역-함정"
+  ],
+  "code": 86188410,
+  "defense": 1600,
+  "description": "①: 이 카드는 몬스터 존에 존재하는 한, 함정 카드의 효과를 받지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "801276b1482887b76a5e500a3f63d122435be4f4108efebe0ef7d8f4a1ff4ecd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native174/cards/3128.jpg",
+  "level": 4,
+  "links": [],
+  "name": "엘리멘틀 히어로 와일드맨",
+  "name_english": "Elemental HERO Wildheart",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "N",
+  "search_aliases": [
+    "엘리멘틀 히어로 와일드맨",
+    "Elemental HERO Wildheart"
+  ],
+  "source_id": 3128,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2160
+}

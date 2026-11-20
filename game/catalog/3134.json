@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards174/3134",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-사일런트 스워드맨",
+    "효과-공격력 상승",
+    "효과-수비력 상승",
+    "면역-효과",
+    "발동-묘지에서",
+    "발동-제외",
+    "효과-덱샐비지"
+  ],
+  "code": 18563744,
+  "defense": 0,
+  "description": "①: 자신 필드의 \"사일런트 스워드맨\" 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 자신 몬스터의 공격력 / 수비력은 1500 올리고, 턴 종료시까지 상대의 효과를 받지 않는다. 이 카드의 발동과 효과는 무효화되지 않는다. ②: 묘지의 이 카드를 제외하고 발동할 수 있다. 덱에서 \"사일런트 스워드맨\" 몬스터 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "b6259fce7610ccf176cf8f33fa457bba294aa3ab9e3290e070db1f6299d1cbac",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native174/cards/3134.jpg",
+  "level": 0,
+  "links": [],
+  "name": "침묵의 검",
+  "name_english": "Silent Sword Slash",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "침묵의 검",
+    "Silent Sword Slash"
+  ],
+  "source_id": 3134,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 2166
+}

@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards174/3131",
+  "attack": 1800,
+  "attribute": 8,
+  "categories": [
+    "지원-엘리멘틀 히어로",
+    "발동-소환 시",
+    "효과-덱샐비지",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 40044918,
+  "defense": 300,
+  "description": "①: 이 카드를 일반 소환 / 특수 소환했을 때, 이하의 효과에서 1개를 선택하고 발동할 수 있다.\n●자신 필드의 다른 \"히어로\" 몬스터의 수까지, 필드의 마법 / 함정 카드를 파괴한다.\n●덱에서 \"히어로\" 몬스터 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "b75e544eeeabdef169e0f8fd0111f2d397998e725994007acad6bf87d5498c88",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native174/cards/3131.jpg",
+  "level": 4,
+  "links": [],
+  "name": "엘리멘틀 히어로 에어맨",
+  "name_english": "Elemental HERO Stratos",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "UR",
+  "search_aliases": [
+    "엘리멘틀 히어로 에어맨",
+    "Elemental HERO Stratos"
+  ],
+  "source_id": 3131,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2163
+}
