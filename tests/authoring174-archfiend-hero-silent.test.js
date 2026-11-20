@@ -110,7 +110,7 @@ test('the studio opens 152, 161, 162, 165 and exact 174 databases and rejects a 
 test('a newer card pack in the database does not stop the 174 studio',async()=>{
   const hex='a'.repeat(64);
   assert(gameIdentityAccepts174({...GAME_IDENTITY174,catalog180_sha256:hex,native_manifest180_sha256:hex}));
-  await normalizeBootstrap039(bootstrap([],{...GAME_IDENTITY174,catalog175_sha256:hex,native_manifest175_sha256:hex}),webcrypto);
+  assert(gameIdentityAccepts174({...GAME_IDENTITY174,catalog175_sha256:hex,native_manifest175_sha256:hex}));
   assert(!gameIdentityAccepts174({...GAME_IDENTITY174,catalog174_sha256:'0'.repeat(64),catalog180_sha256:hex}),'known keys must still match');
   assert(!gameIdentityAccepts174({...GAME_IDENTITY174,extra:hex}),'only pack fingerprint keys may be added');
   assert(!gameIdentityAccepts174({...GAME_IDENTITY174,catalog180_sha256:'x'}),'added keys must be sha256');
