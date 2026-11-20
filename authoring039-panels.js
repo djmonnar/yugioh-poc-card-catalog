@@ -21,7 +21,7 @@ import {characterChoice068,changeCharacter068,traitChoices068,changeTrait068} fr
 import {portraitUrl081} from './authoring081-assets.js?v=20261105-082';
 import {traitCardMatches089} from './authoring089-traits.js?v=20261106-089';
 import {CARD_SORTS091,filterValues091,cardQueryTokens091,cardFiltersMatch091,sortCards091} from './authoring091-search.js?v=20261106-091';
-import {deckDeletionBlocks153,deckDeletionChanges153,openDeckDeletion153} from './authoring153-deck-delete.js';
+import {deckDeletionChanges153,deckDeletionPlan174,deckDeletionSteps174,openDeckDeletion153} from './authoring153-deck-delete.js';
 import {cardDeckUsages172,cardDeckCountText172,deckHref172} from './authoring172-card-decks.js';import {CATALOG_PARAMS170,CATALOG_FLAGS170,pageNumber170,thumbnailUrl170,createCardProblems170,cardFlagsMatch170,bulkCardPatches170,selectRange170} from './authoring170-catalog.js';
 import {deckMatches170,deckExport170,deckFileName170,deckImport170,gameStatus170} from './authoring170-decks.js';
 import {renderHistoryPanel170} from './authoring170-history.js';
@@ -104,7 +104,7 @@ export function formSchema039(state,entity){
   return {type:'object',properties};
 }
 
-export function createAuthoringPanels039({document:doc=globalThis.document,onChange,onNavigate=()=>{},onError=()=>{},onUpload=null,onRecoveryRead=null,onRetryWrite=null,onSaveDrafts060=null,onResolveDrafts060=null,getLatestState068=null,onPrepareDeckSetup068=()=>{},onStageMany071=null,onDeleteDecks153=null,onEditingChange=()=>{},history170=null,historyDb171=null,catalogUrl170=null,onGroup170=run=>run(),onDownload170=null}={}){
+export function createAuthoringPanels039({document:doc=globalThis.document,onChange,onNavigate=()=>{},onError=()=>{},onUpload=null,onRecoveryRead=null,onRetryWrite=null,onSaveDrafts060=null,onResolveDrafts060=null,getLatestState068=null,onPrepareDeckSetup068=()=>{},onStageMany071=null,onDeleteDecks153=null,onCancelDrafts174=null,onEditingChange=()=>{},history170=null,historyDb171=null,catalogUrl170=null,onGroup170=run=>run(),onDownload170=null}={}){
   let deckDeletionDialog153,pendingCatalog170=null,deckImport170Notice=null;
   // Bulk selection and image/recent-change lookups live for this panel instance only.
   const missingImages170=new Set(),recentCards170=new Map(),bulk170={on:false,selected:new Set(),anchor:null,rarity:'',add:[],remove:[],message:''};
@@ -826,12 +826,17 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
         const rows=deckOptions041(entities039(snapshot).filter(row=>row.entity_type==='deck'&&!row.deleted),{cards:currentCards,characters})
           .map(row=>({id:row.id,title:row.displayTitle,detail:row.detail,search:row.search,version:row.entity.version}));
         deckDeletionDialog153=openDeckDeletion153({document:doc,el,button,rows,trigger:remove,
-          getBlocks:()=>{const live=latestState068();return deckDeletionBlocks153(deletionRows(live),live.manualDrafts060?.items);},
+          getBlocks:()=>{const live=latestState068();return deckDeletionPlan174(deletionRows(live),live.manualDrafts060?.items);},
           onDelete:choices=>{
             const live=latestState068();
             if(!live.canEdit||live.user?.id!==owner)throw Error('로그인 계정이 바뀌었습니다. 덱을 다시 선택해 주세요.');
             if(localDeckSetup068?.hasLocal)throw Error('설정 중인 배치를 저장하거나 취소한 뒤 삭제해 주세요.');
-            return onDeleteDecks153(deckDeletionChanges153(choices,deletionRows(live),live.manualDrafts060?.items));
+            // (174) 덱 초안 취소 -> 편성에서 빼는 저장 -> 덱 삭제. 앞 단계가 끝난 DB 상태로 삭제를 다시 확인한다.
+            const steps=deckDeletionSteps174(choices,deletionRows(live),live.manualDrafts060?.items);
+            if(steps.draftKeys.length){if(!onCancelDrafts174)throw Error('저장 전 변경을 먼저 저장하거나 취소해 주세요.');onCancelDrafts174(steps.draftKeys);}
+            const remove153=()=>{const now=latestState068();return onDeleteDecks153(deckDeletionChanges153(choices,deletionRows(now),now.manualDrafts060?.items));};
+            if(!steps.poolPatches.length)return remove153();
+            return Promise.resolve(onDeleteDecks153(steps.poolPatches)).then(result=>result?.discarded?result:remove153()).catch(error=>{onError(error);throw error;});
           }});
       });
       remove.disabled=!currentState.canEdit||Boolean(currentState.pending)||Boolean(currentState.manualDrafts060?.saving);

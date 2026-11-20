@@ -432,3 +432,6 @@
   .au-deck-delete-body153{padding:18px 15px max(16px,env(safe-area-inset-bottom))}
   .au-deck-delete-actions153 button{flex:1}
 }
+/* (174) 덱 삭제: 함께 처리되는 일과 막는 이유를 구분해 보인다. */
+.au-deck-delete-info153 small.au-deck-delete-fix174{color:var(--au-gold)}
+.au-deck-delete-info153 small.au-deck-delete-hard174{color:#ffb4a8}

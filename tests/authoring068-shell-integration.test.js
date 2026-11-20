@@ -62,7 +62,9 @@ test('confirming deck deletion sends only that deck and leaves unrelated local d
   assert.ok(dialog?.open);
   const rows=dialog.querySelectorAll('.au-deck-delete-row153');
   const draft=rows.find(row=>row.textContent.includes('편집 중 이름'));
-  assert.equal(draft.querySelector('input').disabled,true);
+  // (174) 저장 전 변경이 있는 덱도 직접 고를 수 있지만(초안 취소 안내), 한꺼번에 고르기에는 들어가지 않는다.
+  assert.equal(draft.querySelector('input').disabled,false);
+  assert.match(draft.textContent,/저장 전 변경은 취소돼요/);
   click(m,'검색 결과 선택',dialog);
   click(m,'선택 확인',dialog);
   click(m,'1개 삭제',dialog);
@@ -77,6 +79,22 @@ test('confirming deck deletion sends only that deck and leaves unrelated local d
   assert.equal(m.shell.drafts060.summary().dirtyCount,0);
 });
 
+// (174) 대표님 제보 2026-11-20: 저장 전 변경이 있는 덱을 직접 고르면 그 초안을 취소하고 삭제한다.
+test('a deck with an unsaved draft can be picked; its draft is cancelled and only that deck is deleted',async t=>{
+  const m=await setup(t);
+  await input(m,'덱 이름','편집 중 이름');
+  assert.equal(m.shell.drafts060.summary().dirtyCount,1);
+  click(m,'덱 삭제');
+  const dialog=m.document.querySelector('.au-deck-delete153');
+  const draft=dialog.querySelectorAll('.au-deck-delete-row153').find(row=>row.textContent.includes('편집 중 이름'));
+  const check=draft.querySelector('input');check.checked=true;check.fire('change');
+  click(m,'선택 확인',dialog);
+  click(m,'1개 삭제',dialog);
+  await drain(m);
+  assert.deepEqual(m.remote.writes.at(-1).changes.map(({entity_id,operation})=>[entity_id,operation]),[['deck-a','delete']]);
+  assert.equal(m.canonical('deck','deck-a'),undefined);
+  assert.equal(m.shell.drafts060.summary().dirtyCount,0);
+});
 test('a fully configured local Add enables the global footer and saves character, named traits and renamed deck in one intent',async t=>{
   const m=await setup(t);await openAdd(m);await input(m,'배치할 장',2,'change');await input(m,'전투 종류','boss','change');await input(m,'캐릭터','character-kaiba','change');const traits=field041(setupEditor(m),'특성');assert.ok(traits);const duplicateLabels=traits.children.filter(option=>option.textContent.includes('같은 이름 특성'));assert.equal(duplicateLabels.length,2);assert.notEqual(duplicateLabels[0].textContent,duplicateLabels[1].textContent);
   await input(m,'특성',JSON.stringify(['character-kaiba','kaiba-two']),'change');await input(m,'상대 추가 LP',800);await input(m,'시작 패 추가 장수',2);assert.equal(m.shell.drafts060.summary().dirtyCount,0);assert.equal(m.remote.writes.length,0);assert.equal(button041(footer(m),'변경 사항 저장').disabled,false,'Unstaged configuration is saveable directly');
