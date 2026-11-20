@@ -6,7 +6,7 @@
   "categories": [],
   "code": 26842483,
   "defense": 1000,
-  "description": "상대의 특수 소환된 몬스터\n1장의 효과를 무효로 한다.",
+  "description": "상대 필드 위에 존재하는 특수 소환한 몬스터의 효과가 발동했을 때 발동할 수 있다. 그 발동을 무효로 한다. 이 효과는 1턴에 1번밖에 사용할 수 없다.",
   "draw_enabled": true,
   "identity_key": "f9bd328faf664181d51addbcb80f885d00ba5f65284d42f002d65f0cbf7c21ed",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0759.webp",

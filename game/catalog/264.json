@@ -8,7 +8,7 @@
   ],
   "code": 71829750,
   "defense": 2000,
-  "description": "필드에서 자신의 덱으로\n되돌아갔을 때, 덱에서 레벨 3\n몬스터 1장을 특수 소환한다.",
+  "description": "앞면 표시의 이 카드가 필드 위에서 덱으로 되돌아갔을 경우, 레벨 3 이하의 몬스터 1장을 덱에서 특수 소환한다.",
   "draw_enabled": true,
   "identity_key": "f2deb7fcda00f0a4b3af08259c5ee05ebc034159595d5e59511215d52712f984",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0041.webp",

@@ -4,7 +4,7 @@
   "id": "deck-c73cab76-dc48-4770-97d2-11f8632ea018",
   "main": [
     {
-      "count": 3,
+      "count": 2,
       "identity_key": "e735c47a6234d9aa129df010390588ad79b329f47fe114603d01db08b8a30cb4",
       "source_id": 2512
     },
@@ -39,16 +39,21 @@
       "source_id": 320
     },
     {
-      "count": 2,
-      "identity_key": "99c9effe61e61c41855eb47f60f9b10a32460ce1defef0cb63330fc228817402",
-      "source_id": 1015
-    },
-    {
       "count": 3,
       "identity_key": "7162cc7fd2c004837beabf292c05659b65f4db064b047810e5d56b2c42b8070a",
       "source_id": 1827
+    },
+    {
+      "count": 1,
+      "identity_key": "c4915486e818f4883101481a0952cfc5506f305f4627b89f04e6323566052dd3",
+      "source_id": 2702
+    },
+    {
+      "count": 2,
+      "identity_key": "5349c07bb3874169f6339512131cedfe6f1738b0de781c72c986b3f1dad27839",
+      "source_id": 1947
     }
   ],
-  "name": "바쿠라-악마 초급",
-  "version": 537
+  "name": "다크 루시어스",
+  "version": 902
 }

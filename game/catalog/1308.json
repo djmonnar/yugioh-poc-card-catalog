@@ -10,7 +10,7 @@
   ],
   "code": 3536537,
   "defense": 850,
-  "description": "이 카드가 파괴되었을 때,\n특수 소환된 레벨 5 몬스터\n1장을 대상으로 하여 그\n몬스터를 파괴한다.",
+  "description": "①: 필드 앞면 표시의 이 카드가 상대에 의해서 파괴되어 묘지로 보내졌을 경우, 필드의 특수 소환된 레벨 5 이상의 몬스터 1장을 대상으로 하고 발동한다. 그 레벨 5 이상의 몬스터를 파괴한다.",
   "draw_enabled": true,
   "identity_key": "7302b7c44e7522d1a8af1a71badb06c2fb268af451de8ea080da5c908b661859",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0514.webp",

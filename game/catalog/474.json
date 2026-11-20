@@ -11,7 +11,7 @@
   ],
   "code": 8131171,
   "defense": 250,
-  "description": "자신의 스탠바이 페이즈에\n묘지의 \"킬러 스네이크\"를\n패로 되돌릴 수 있다.",
+  "description": "\"킬러 스네이크\"의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 이 카드가 묘지에 존재할 경우, 자신 스탠바이 페이즈에 발동할 수 있다. 이 카드를 패로 되돌린다. 다음 상대 엔드 페이즈에 자신 묘지의 \"킬러 스네이크\" 1장을 골라 제외한다.",
   "draw_enabled": true,
   "identity_key": "e99944e312fd4b4cbdda00c0ea6c9df96152c22a026eadfc5e45823e48522a77",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0220.webp",

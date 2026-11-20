@@ -1,0 +1,45 @@
+{
+  "artKey": "Character090/images/tristan/start",
+  "banlistEnabled": false,
+  "deckName": "직접공격",
+  "extra": [],
+  "id": "enc-5dc0a14b-1e5d-4df6-bec1-ef4ce5d249fc",
+  "lpBonus": 0,
+  "main": [
+    396,
+    396,
+    396,
+    487,
+    487,
+    487,
+    634,
+    634,
+    634,
+    812,
+    812,
+    812,
+    656,
+    656,
+    2885,
+    2885,
+    1045,
+    1045,
+    303,
+    303
+  ],
+  "name": "전우혁",
+  "openingDrawBonus": 0,
+  "profileId": "tristan",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2619,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-5dc0a14b-1e5d-4df6-bec1-ef4ce5d249fc",
+  "usesNativeRules035": true
+}

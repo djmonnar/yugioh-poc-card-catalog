@@ -1,0 +1,49 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-9ee7c2da-87e7-4ae8-8768-899d17314d1f",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "e12415c3f7ea5055564189f9ef3f6f82635d21f3c0c65be1137a5b1202dbb106",
+      "source_id": 396
+    },
+    {
+      "count": 3,
+      "identity_key": "0ff2569dd88fe904504f6a821204b2b2a8a9b8c4df6bae2755e84b9dfa6b7055",
+      "source_id": 487
+    },
+    {
+      "count": 3,
+      "identity_key": "a0b86d54f925b5d2b071a63a893d88b0a23213fee0b498f81aafe3d1ef571f10",
+      "source_id": 634
+    },
+    {
+      "count": 3,
+      "identity_key": "af2191c200ca24f44f32f838ed75be9dd8928e63b0bc3f9afe56f5ba52b2b499",
+      "source_id": 812
+    },
+    {
+      "count": 2,
+      "identity_key": "de2e928fc863d795fa24c043d29cef39cbae0700353439b1b218e2656b8c05d5",
+      "source_id": 656
+    },
+    {
+      "count": 2,
+      "identity_key": "e32a251decac47a746a10f61dea3e255756d16595656c11bac98508369524a25",
+      "source_id": 2885
+    },
+    {
+      "count": 2,
+      "identity_key": "23a49307c4d51477d9e6c3fc0c5a10eefc3a3b57385a696f5fe086ab75ea7b03",
+      "source_id": 1045
+    },
+    {
+      "count": 2,
+      "identity_key": "ab5b13055ae4bd8aa410f8d7d92a4b6647759e3f7546f4403a54359f413193df",
+      "source_id": 303
+    }
+  ],
+  "name": "직접공격",
+  "version": 905
+}

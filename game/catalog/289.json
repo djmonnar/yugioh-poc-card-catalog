@@ -11,7 +11,7 @@
   ],
   "code": 37792478,
   "defense": 500,
-  "description": "제외된 어류족 몬스터 2장을\n자신의 덱으로 되돌릴 수\n있다.",
+  "description": "이 카드가 일반 소환에 성공했을 때, 자신의 묘지에 존재하는 어류족 몬스터 2장을 선택하고 덱으로 되돌릴 수 있다.",
   "draw_enabled": true,
   "identity_key": "ee83093aa95575a98eb192164a229211e33903fda610caf9ab06ca569825c0cc",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0566.webp",
