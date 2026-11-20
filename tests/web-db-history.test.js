@@ -75,7 +75,17 @@ test('최신 공개 경로부터 찾는다 (고정된 옛 경로를 읽지 않�
   const floorOnly = await fetchBootstrap({ url: 'https://example.invalid', publishable_key: 'k' },
     async url => url.endsWith(`poc_bootstrap${RPC_FLOOR}`) ? reply(200, { project_revision: 1 }) : reply(404, { code: 'PGRST202' }));
   assert.equal(floorOnly.route, `poc_bootstrap${RPC_FLOOR}`);
-  await assert.rejects(() => fetchBootstrap({ url: 'https://example.invalid', publishable_key: 'k' }, async () => reply(500, {})), /HTTP 500/);
+  const noWait = { sleep: async () => {} };
+  let calls = 0;
+  await assert.rejects(() => fetchBootstrap({ url: 'https://example.invalid', publishable_key: 'k' }, async () => { calls++; return reply(500, {}); }, noWait), /HTTP 500/);
+  assert.equal(calls, 3, '5xx는 최대 3번 묻는다');
+  let cold = 0;
+  const warmed = await fetchBootstrap({ url: 'https://example.invalid', publishable_key: 'k' },
+    async url => url.endsWith(`poc_bootstrap${RPC_FLOOR}`) ? (++cold === 1 ? reply(500, {}) : reply(200, { project_revision: 7 })) : reply(404, { code: 'PGRST202' }), noWait);
+  assert.equal(warmed.bootstrap.project_revision, 7, '쉬고 난 뒤 첫 500은 다시 물어 받는다');
+  let offline = 0;
+  await assert.rejects(() => fetchBootstrap({ url: 'https://example.invalid', publishable_key: 'k' }, async () => { offline++; throw new TypeError('fetch failed'); }, noWait), /fetch failed/);
+  assert.equal(offline, 3, '연결 실패도 최대 3번');
   await assert.rejects(() => fetchBootstrap({ url: 'https://example.invalid', publishable_key: 'k' }, async () => reply(404, { code: 'PGRST116' })), /HTTP 404/);
 });
 

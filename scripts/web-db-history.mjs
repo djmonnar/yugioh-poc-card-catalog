@@ -157,14 +157,28 @@ async function readTree(root, prefix = '') {
 }
 
 // 경로가 없으면 PostgREST가 404와 PGRST202를 돌려준다. 그때만 다음(낮은) 번호로 넘어간다.
-export async function fetchBootstrap(config, fetchImpl = fetch) {
+// 최신 경로는 요청마다 자료를 계산해(약 2초) 쉬고 난 뒤 첫 호출이 익명 조회 제한(3초)에 걸려 HTTP 500이
+// 날 수 있다(2026-11-20, poc_bootstrap175). 앱(NativeOpponentOnline013.FetchBody)처럼 5xx와 연결 실패는
+// 잠시 뒤 다시 묻는다(최대 3번). 404 등 다른 답은 그대로 끝난다.
+export async function fetchBootstrap(config, fetchImpl = fetch, { attempts = 3, delayMs = 2000, sleep = ms => new Promise(done => setTimeout(done, ms)) } = {}) {
   for (const rpc of routeCandidates()) {
-    const response = await fetchImpl(`${config.url}/rest/v1/rpc/${rpc}`, {
-      method: 'POST',
-      headers: { apikey: config.publishable_key, Authorization: `Bearer ${config.publishable_key}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ p_view: 'game', p_known_revision: null }),
-      signal: AbortSignal.timeout(60000),
-    });
+    let response = null;
+    for (let attempt = 1; ; attempt++) {
+      try {
+        response = await fetchImpl(`${config.url}/rest/v1/rpc/${rpc}`, {
+          method: 'POST',
+          headers: { apikey: config.publishable_key, Authorization: `Bearer ${config.publishable_key}`, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ p_view: 'game', p_known_revision: null }),
+          signal: AbortSignal.timeout(60000),
+        });
+      } catch (error) {
+        if (attempt >= attempts) throw error;
+        await sleep(delayMs);
+        continue;
+      }
+      if (response.status >= 500 && response.status <= 599 && attempt < attempts) { await sleep(delayMs); continue; }
+      break;
+    }
     if (response.status === 404) {
       let code = null;
       try { code = (await response.json())?.code ?? null; } catch {}
