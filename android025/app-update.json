@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.116",
-  "versionCode": 135,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.116/YGOClassicExpedition-0.18.116-arm64.apk",
-  "sizeBytes": 745744444,
-  "sha256": "b5e3f367b14d3a27fe43f17460bd316ce8a7c14cac5c17dd9b21e0c556dad680",
-  "releaseNotes": "듀얼 시작 토큰의 배경을 투명하게 고쳤고, 원정 종료 화면을 새 UI로 바꿨습니다. 상대 AI가 길라사우루스를 특수 소환할 때 내 묘지 몬스터를 내주는 손해를 계산합니다."
+  "versionName": "0.18.117",
+  "versionCode": 136,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.117/YGOClassicExpedition-0.18.117-arm64.apk",
+  "sizeBytes": 745807500,
+  "sha256": "cde25669abf995d668c8e3252620a31c6d056e5ea4c324002ef7f6d52bc336f4",
+  "releaseNotes": "듀얼 화면의 선택 창·체인 창·카드 정보·묘지 목록·확인 창을 새 UI로 바꿨습니다. 카드 정보에 효과 몬스터가 바꾼 공격력·수비력의 출처가 보이고, 상대 AI가 달의 서·육망성의 저주를 겹쳐 쓰지 않으며 얕은 무덤을 더 잘 씁니다."
 }
