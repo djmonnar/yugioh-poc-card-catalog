@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.117",
-  "versionCode": 136,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.117/YGOClassicExpedition-0.18.117-arm64.apk",
-  "sizeBytes": 745807500,
-  "sha256": "cde25669abf995d668c8e3252620a31c6d056e5ea4c324002ef7f6d52bc336f4",
-  "releaseNotes": "듀얼 화면의 선택 창·체인 창·카드 정보·묘지 목록·확인 창을 새 UI로 바꿨습니다. 카드 정보에 효과 몬스터가 바꾼 공격력·수비력의 출처가 보이고, 상대 AI가 달의 서·육망성의 저주를 겹쳐 쓰지 않으며 얕은 무덤을 더 잘 씁니다."
+  "versionName": "0.18.118",
+  "versionCode": 137,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.118/YGOClassicExpedition-0.18.118-arm64.apk",
+  "sizeBytes": 745828160,
+  "sha256": "7027398705a3a3af0340e98b43005beca50e6ebe261f0fafbc6f8a48eed65324",
+  "releaseNotes": "세로 듀얼 화면에 전투 종류별 배경 매트(일반·엘리트·보스)와 칸 반짝임, 시트·확인 창·버튼 움직임을 더했습니다. 발동 확인 설정, 배틀 시작 안내, 상대 패 확인 창을 새 모양으로 바꿨습니다."
 }
