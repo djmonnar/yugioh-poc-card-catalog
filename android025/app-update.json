@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.109",
-  "versionCode": 128,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.109/YGOClassicExpedition-0.18.109-arm64.apk",
-  "sizeBytes": 730379728,
-  "sha256": "f99e58812e0bc9ac4c3f130fb99631990c06f3f2e038d4b6fbcee372ffcffe02",
-  "releaseNotes": "2장 보스를 넘으면 시작 덱 하나를 더하거나(덱 B·덱 C) 최대 LP +1000을 고를 수 있습니다. 일부 이벤트에서 되감기를 다시 채우거나 횟수를 늘릴 수 있습니다."
+  "versionName": "0.18.110",
+  "versionCode": 129,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.110/YGOClassicExpedition-0.18.110-arm64.apk",
+  "sizeBytes": 736157144,
+  "sha256": "7c387eee4e39b85abfc3f82601b4fb792bb89c60d8f072d29c9e1612190111fd",
+  "releaseNotes": "전투 화면의 판·버튼·선택 창을 새 디자인(금테 남색)으로 바꿨습니다. 배치와 조작은 그대로입니다."
 }
