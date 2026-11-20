@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.106",
-  "versionCode": 125,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.106/YGOClassicExpedition-0.18.106-arm64.apk",
-  "sizeBytes": 718373340,
-  "sha256": "f074cb72023fcc771335dda5338ec200b254e37f99372364983c22cc9700d0fd",
-  "releaseNotes": "AI가 처음 보는 카드 효과도 스스로 판단해 사용합니다(서치·드로우·특수 소환·제거 등)."
+  "versionName": "0.18.107",
+  "versionCode": 126,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.107/YGOClassicExpedition-0.18.107-arm64.apk",
+  "sizeBytes": 730354936,
+  "sha256": "3fe0c2599f94e1a807baf36d229c3ca839956c4b31bf0bb57cc5047205653ca6",
+  "releaseNotes": "새 카드 19장(데몬·엘리멘틀 히어로·사일런트)을 넣고, 전투 화면에 화살표가 남던 것과 작은 선택 창에서 후보가 안 보이던 것을 고쳤습니다."
 }
