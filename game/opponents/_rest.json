@@ -382,6 +382,10 @@
           {
             "opponentId": "enc-ce1c8bab-261a-4c91-a99c-9ab0349e8881",
             "weight": 1
+          },
+          {
+            "opponentId": "enc-da3d7785-bf5b-491a-b5ff-14542644a50f",
+            "weight": 1
           }
         ],
         "lpBonus": 0
@@ -527,6 +531,10 @@
           {
             "opponentId": "enc-5dc0a14b-1e5d-4df6-bec1-ef4ce5d249fc",
             "weight": 1
+          },
+          {
+            "opponentId": "enc-6a9cfa89-2b2e-46af-9cb7-10a6e65add8f",
+            "weight": 1
           }
         ],
         "lpBonus": 500
@@ -627,6 +635,10 @@
           },
           {
             "opponentId": "enc-1e9ba6a9-8cf5-42e9-bb8a-c36fd225365f",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-855768e1-3b38-45b7-a3fa-afed50cf1a4a",
             "weight": 1
           }
         ],
@@ -1099,6 +1111,10 @@
           },
           {
             "opponentId": "enc-115e7582-e381-47b0-86c7-b141f37ecfcc",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-44c1c9f3-c841-4d55-a8d1-50a945a1abcb",
             "weight": 1
           }
         ],

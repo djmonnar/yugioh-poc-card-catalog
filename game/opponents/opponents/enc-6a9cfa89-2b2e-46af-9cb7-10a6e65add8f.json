@@ -1,0 +1,45 @@
+{
+  "artKey": "DuelUi011/legacy/yugi_intro",
+  "banlistEnabled": false,
+  "deckName": "체스데몬",
+  "extra": [],
+  "id": "enc-6a9cfa89-2b2e-46af-9cb7-10a6e65add8f",
+  "lpBonus": 0,
+  "main": [
+    3144,
+    3145,
+    3143,
+    3143,
+    3141,
+    3140,
+    3140,
+    3142,
+    3142,
+    3139,
+    521,
+    2684,
+    2684,
+    1023,
+    1023,
+    1840,
+    1840,
+    1840,
+    2679,
+    303
+  ],
+  "name": "체스데몬",
+  "openingDrawBonus": 0,
+  "profileId": "yugi",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 334,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-6a9cfa89-2b2e-46af-9cb7-10a6e65add8f",
+  "usesNativeRules035": true
+}

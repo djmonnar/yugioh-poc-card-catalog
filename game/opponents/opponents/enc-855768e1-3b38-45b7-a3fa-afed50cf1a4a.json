@@ -1,0 +1,48 @@
+{
+  "artKey": "DuelUi011/legacy/yugi_intro",
+  "banlistEnabled": false,
+  "deckName": "데몬 현현",
+  "extra": [
+    3126,
+    3126
+  ],
+  "id": "enc-855768e1-3b38-45b7-a3fa-afed50cf1a4a",
+  "lpBonus": 0,
+  "main": [
+    21,
+    21,
+    21,
+    2684,
+    2684,
+    2684,
+    2682,
+    2682,
+    2682,
+    2681,
+    2743,
+    2738,
+    2738,
+    3136,
+    3136,
+    3137,
+    3146,
+    3146,
+    2683,
+    3149
+  ],
+  "name": "데몬 현현",
+  "openingDrawBonus": 0,
+  "profileId": "yugi",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 3146,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-855768e1-3b38-45b7-a3fa-afed50cf1a4a",
+  "usesNativeRules035": true
+}

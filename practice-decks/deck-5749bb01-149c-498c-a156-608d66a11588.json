@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-5749bb01-149c-498c-a156-608d66a11588",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "ef65c5f333c14c6afe2abee0fcf3548b069ec6ac2206e6d577897b5cb9ac21a6",
+      "source_id": 2684
+    },
+    {
+      "count": 2,
+      "identity_key": "0665d1a09df7afe49587a25a9b1fe7de223b4f53af49323ff382b32c32600fa8",
+      "source_id": 3127
+    },
+    {
+      "count": 3,
+      "identity_key": "1411fb82022714d7d71b0b79cad8170f89cde392d7b9e0bcf0a5f148cfb76901",
+      "source_id": 2682
+    },
+    {
+      "count": 1,
+      "identity_key": "ff875f64d76359b021fe7a04ea247b3c7d3a4c476de2c96a621699d3b5fce964",
+      "source_id": 3119
+    },
+    {
+      "count": 1,
+      "identity_key": "e5940c6b3f9fa40f142e78bc2bd7ac0fea6635b02a7980efbe0a3f7ef3f06dcd",
+      "source_id": 2681
+    },
+    {
+      "count": 2,
+      "identity_key": "2adb05af8ff0646e165317ffa4f2ea03f5bd8960b48accdfcbd9cf1f8bc10630",
+      "source_id": 3146
+    },
+    {
+      "count": 2,
+      "identity_key": "3cf7258e475690af0252ce22bc9c8d7071a0bf25f55eac73c6a7a5aad9433ec9",
+      "source_id": 3137
+    },
+    {
+      "count": 2,
+      "identity_key": "0c0fca9eecf4ebb26ce38df84553098bc60c86bce9d33d62124bd0bf26560f95",
+      "source_id": 2535
+    },
+    {
+      "count": 1,
+      "identity_key": "3ab8a3b267c5ad21de235ad41f5aeca9622a0bd8ae5f8019f64d2280c4aedeb4",
+      "source_id": 2729
+    },
+    {
+      "count": 3,
+      "identity_key": "a902fd7ff228ad2c3f298ad6dcec79da90f3236f39d6aa67398ba7aa8e57e5e6",
+      "source_id": 21
+    }
+  ],
+  "name": "데몬 강림",
+  "version": 920
+}

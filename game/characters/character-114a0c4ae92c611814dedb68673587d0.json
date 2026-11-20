@@ -79,11 +79,26 @@
             "kind": "start_hand"
           }
         ]
+      },
+      {
+        "name": "데몬팰리스",
+        "profile_id": "profile-1bb9b1ef-7f2c-45eb-bbf7-9e3e2729f694",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "2adb05af8ff0646e165317ffa4f2ea03f5bd8960b48accdfcbd9cf1f8bc10630",
+              "internal_id": 3146,
+              "name_ko": "데몬팰리스－악마의 미궁－",
+              "slot": 2178
+            },
+            "kind": "start_field"
+          }
+        ]
       }
     ],
     "skills": []
   },
   "profile_id": "yugi",
-  "updated_at": "2026-11-19T02:22:28.528484+00:00",
-  "version": 5945
+  "updated_at": "2026-11-20T12:01:32.38993+00:00",
+  "version": 5954
 }

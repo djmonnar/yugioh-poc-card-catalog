@@ -1,0 +1,45 @@
+{
+  "artKey": "DuelUi011/legacy/yugi_intro",
+  "banlistEnabled": false,
+  "deckName": "데몬 강림",
+  "extra": [],
+  "id": "enc-44c1c9f3-c841-4d55-a8d1-50a945a1abcb",
+  "lpBonus": 0,
+  "main": [
+    2684,
+    2684,
+    2684,
+    3127,
+    3127,
+    2682,
+    2682,
+    2682,
+    3119,
+    2681,
+    3146,
+    3146,
+    3137,
+    3137,
+    2535,
+    2535,
+    2729,
+    21,
+    21,
+    21
+  ],
+  "name": "데몬 강림",
+  "openingDrawBonus": 0,
+  "profileId": "yugi",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 3146,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-44c1c9f3-c841-4d55-a8d1-50a945a1abcb",
+  "usesNativeRules035": true
+}
