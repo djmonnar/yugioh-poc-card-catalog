@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.107",
-  "versionCode": 126,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.107/YGOClassicExpedition-0.18.107-arm64.apk",
-  "sizeBytes": 730354936,
-  "sha256": "3fe0c2599f94e1a807baf36d229c3ca839956c4b31bf0bb57cc5047205653ca6",
-  "releaseNotes": "새 카드 19장(데몬·엘리멘틀 히어로·사일런트)을 넣고, 전투 화면에 화살표가 남던 것과 작은 선택 창에서 후보가 안 보이던 것을 고쳤습니다."
+  "versionName": "0.18.108",
+  "versionCode": 127,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.108/YGOClassicExpedition-0.18.108-arm64.apk",
+  "sizeBytes": 730356820,
+  "sha256": "11ecdc6819a5cd28bd2a23198958c61c859b6e3841f830aa1058c4bf596517cb",
+  "releaseNotes": "AI가 쥬라게도·어니스트 같은 패에서 쓰는 몬스터를 일반 소환하지 않고 패에 남겨 두도록 고쳤습니다."
 }
