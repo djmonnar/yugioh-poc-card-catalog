@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.113",
-  "versionCode": 132,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.113/YGOClassicExpedition-0.18.113-arm64.apk",
-  "sizeBytes": 745102102,
-  "sha256": "f2c460d372fd64fb2e39ce1b55fbabee95f52ac8d046fe5065ff158a1ffa7127",
-  "releaseNotes": "덱 2~3개 원정에서 전투에 지면 그 덱만 잠기고, LP를 모두 회복해 남은 덱으로 같은 상대에게 다시 도전합니다. 잠긴 덱은 상점(500골드)이나 부활의 제단 이벤트에서 되살릴 수 있습니다."
+  "versionName": "0.18.114",
+  "versionCode": 133,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.114/YGOClassicExpedition-0.18.114-arm64.apk",
+  "sizeBytes": 745546868,
+  "sha256": "e0c2eba971afbb32c7c33435421ed632a0ad07eda4ff94a0886c24895af74551",
+  "releaseNotes": "새 캐릭터 유키 쥬다이·만죠메 준이 추가됐습니다. 이 이름의 상대와 싸우면 등장·소환·공격·승패 장면에 캐릭터 연출과 대사가 나옵니다."
 }
