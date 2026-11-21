@@ -1,6 +1,6 @@
 {
-  "authoring_revision": 920,
-  "game_revision": 920,
+  "authoring_revision": 921,
+  "game_revision": 921,
   "identity": {
     "base_catalog_sha256": "b73dd51c78aeab8c9beebf936b46e4cac16040e70df3a7980dec38c40db21e09",
     "catalog035_sha256": "b5f1e9749cec0c1497c5fdcbfb2dc9c64895dcd859f083ec0ec4014580f05308",
@@ -31,6 +31,7 @@
     "catalog165_sha256": "96f1406f2eb20c2980b7e6f6b7511ab3b6b2498e5a992185fdcbb1c5ebaed8ac",
     "catalog174_sha256": "af59f00b9918575359cb23a65de31a591a509ff41e9ba03c1ac3510fdb1d15c5",
     "catalog175_sha256": "d61b9f379795ad3997966332d0d6589ba9044d7e6d4bfaf6175803f5108b34bc",
+    "catalog183_sha256": "8a5f24a40dec9a76b2f436c210c1185371530dae4b782231500156f43f5f0a2b",
     "native_manifest049_sha256": "843bc3bcebe36bcbfe7f5f6e2584222f5ab67bc5175c590b37d2963839134e7f",
     "native_manifest053_sha256": "205ef763b65335d553c1e5870e84f6237814b65b1481c96de06503684dd455aa",
     "native_manifest067_sha256": "5d671f09f3754cef65f05af7344745372404e8f28ed2e1e15cdafcc409c36d3f",
@@ -58,13 +59,14 @@
     "native_manifest165_sha256": "491ca79dcfa4d2bc5c48626e4d8676cbbfb38ce7256f5a3a76e463a089658b7e",
     "native_manifest174_sha256": "ec592b3e28d3995877066e1ec4b4ecabe8d7c0acd2b191bbbb7d277847e96b4e",
     "native_manifest175_sha256": "37981c7061fa6eba85438daa10dfc644cfe7e84328b37e6d4c4bf160caf2546c",
+    "native_manifest183_sha256": "d997d549eda213d18818e1b9a7e3f4905d722c8e075e3897cedfd5d79888a8e7",
     "native_manifest_sha256": "4674de031c9e3044c86b90fcd402d9533d9353347802f268863746bf3bd7e4d7"
   },
   "map_rules_revision": 858,
-  "metadata_revision": "915",
+  "metadata_revision": "921",
   "practice_decks_sha256": "40b000c2bc9ad880b290a3de1ebfb53dfdb9d5558d765f7ab51079c153f69e0c",
   "project_id": "ygoclassic-expedition",
-  "project_revision": 920,
-  "route": "poc_bootstrap175",
-  "source_fingerprint": "0ff7abfda8aed1f43277a219a73b81d818a3f2b88670d86f5f816f2a49c654e6"
+  "project_revision": 921,
+  "route": "poc_bootstrap183",
+  "source_fingerprint": "2e186a3d379d98270fd223de5e37b0f43e8927117f394b2955dc581fc672604d"
 }

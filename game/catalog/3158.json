@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards183/3158",
+  "attack": 2800,
+  "attribute": 4,
+  "categories": [
+    "발동-패에서",
+    "발동-대상이 되었을 때",
+    "발동-묘지로 보내기",
+    "소환-패에서"
+  ],
+  "code": 38109772,
+  "defense": 2300,
+  "description": "자신 필드 위의 카드를 파괴하는 효과를 상대 몬스터가 발동했을 때, 대상이 된 자신의 카드를 전부 묘지로 보내고 발동할 수 있다. 이 카드를 패에서 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "678683f1b126602648381fa3d9c2d1b65c3e8fbbdae3a6f63552f5ca72bce129",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native183/cards/3158.jpg",
+  "level": 7,
+  "links": [],
+  "name": "용의 기사",
+  "name_english": "Dragonic Knight",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "search_aliases": [
+    "용의 기사",
+    "Dragonic Knight"
+  ],
+  "source_id": 3158,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2190
+}

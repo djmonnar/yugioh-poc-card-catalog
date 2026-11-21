@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards183/3160",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-암드 드래곤",
+    "지원-저레벨",
+    "소환-덱리크루터"
+  ],
+  "code": 34611551,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 덱에서 레벨 3 의 \"암드 드래곤\" 몬스터 1장을 수비 표시로 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "52f5fff246c8513c0acbeef1c1c194be06325254d779fe6831f22ad784318ab7",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native183/cards/3160.jpg",
+  "level": 0,
+  "links": [],
+  "name": "암드 드래곤 플래시",
+  "name_english": "Armed Dragon Flash",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "암드 드래곤 플래시",
+    "Armed Dragon Flash"
+  ],
+  "source_id": 3160,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 2192
+}

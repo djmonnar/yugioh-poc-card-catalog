@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards183/3168",
+  "attack": 0,
+  "attribute": 16,
+  "categories": [
+    "지원-방해꾼",
+    "발동-소환 시",
+    "소환-패에서"
+  ],
+  "code": 37132349,
+  "defense": 1000,
+  "description": "①: 이 카드를 일반 소환했을 때에 발동할 수 있다. 패에서 \"방해꾼\" 몬스터를 4장까지 공격 표시로 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "dde0ba0b054ded393018edd458973d7f332a090e7e8f4acca8593ff2bec0008d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native183/cards/3168.jpg",
+  "level": 2,
+  "links": [],
+  "name": "방해꾼 레드",
+  "name_english": "Ojama Red",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "R",
+  "search_aliases": [
+    "방해꾼 레드",
+    "Ojama Red"
+  ],
+  "source_id": 3168,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2200
+}

@@ -1,0 +1,34 @@
+{
+  "alias": 0,
+  "art_key": "Cards183/3171",
+  "attack": 0,
+  "attribute": 16,
+  "categories": [
+    "지원-방해꾼"
+  ],
+  "code": 90140980,
+  "defense": 3000,
+  "description": "\"방해꾼 그린\" ＋ \"방해꾼 옐로\" ＋ \"방해꾼 블랙\"\n이 카드가 필드 위에 앞면 표시로 존재하는 한, 상대의 몬스터 카드 존을 3개까지 사용할 수 없게 한다.",
+  "draw_enabled": true,
+  "identity_key": "34bc33246cf43376a6b48603ad24b61387d2fc6b0faf510cef0559e28a24ec8e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native183/cards/3171.jpg",
+  "level": 6,
+  "links": [],
+  "name": "방해꾼 킹",
+  "name_english": "Ojama King",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "UR",
+  "search_aliases": [
+    "방해꾼 킹",
+    "Ojama King"
+  ],
+  "source_id": 3171,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 2203
+}

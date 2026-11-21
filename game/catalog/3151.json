@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards183/3151",
+  "attack": 1900,
+  "attribute": 8,
+  "categories": [
+    "지원-암드 드래곤",
+    "지원-드래곤족",
+    "지원-바람 속성",
+    "발동-파괴 시",
+    "소환-패에서",
+    "소환-덱리크루터"
+  ],
+  "code": 75220074,
+  "defense": 1400,
+  "description": "①: 이 카드가 전투로 상대 몬스터를 파괴했을 때에 발동할 수 있다. 패 / 덱에서 \"갑옷룡－암드 드래곤－\" 이외의 레벨 5 이하의 드래곤족 / 바람 속성 몬스터 1장을 특수 소환한다. 이 효과로 특수 소환한 몬스터는 이 턴에 직접 공격할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "a8ad0db782a0c5f29d51cb6f7efd84e2d90708c522c43149dbee9da2da39e281",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native183/cards/3151.jpg",
+  "level": 4,
+  "links": [],
+  "name": "갑옷룡－암드 드래곤－",
+  "name_english": "Armed Dragon, the Armored Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "R",
+  "search_aliases": [
+    "갑옷룡－암드 드래곤－",
+    "Armed Dragon, the Armored Dragon"
+  ],
+  "source_id": 3151,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2183
+}

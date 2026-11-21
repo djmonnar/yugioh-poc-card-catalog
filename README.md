@@ -1,7 +1,7 @@
 # 웹 DB 공개 변경 기록
 
 이 브랜치는 제작소 DB의 공개 게임 자료를 항목별 파일로 나눠 보관한다.
-GitHub Actions(`Record web DB history`)가 한 시간마다 앱과 같은 최신 공개 조회(지금은 `poc_bootstrap175`, view=game)를 읽고,
+GitHub Actions(`Record web DB history`)가 한 시간마다 앱과 같은 최신 공개 조회(지금은 `poc_bootstrap183`, view=game)를 읽고,
 바뀐 것이 있을 때만 커밋한다. DB는 바꾸지 않고, 공개 키 외의 비밀은 쓰지 않는다.
 
 - 최근 변경 요약: [LATEST.md](LATEST.md)

@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards183/3169",
+  "attack": 0,
+  "attribute": 16,
+  "categories": [
+    "지원-방해꾼",
+    "발동-묘지로 보내졌을 때",
+    "효과-드로우",
+    "효과-상대 드로우",
+    "효과-패 버리기"
+  ],
+  "code": 42517468,
+  "defense": 1000,
+  "description": "이 카드명의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 이 카드가 패 / 필드에서 묘지로 보내졌을 경우에 발동할 수 있다. 양쪽 플레이어는 덱에서 1장 드로우하고, 그 후 패를 1장 골라 버린다. 이 효과로 자신이 \"방해꾼\" 카드를 버렸을 경우, 추가로 사용하고 있지 않은 상대 몬스터 존을 1곳 지정할 수 있다. 그 존은 상대 턴 종료시까지 사용할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "b146c2166a2982179ff2766ff75ce6415409c80056f6c4a2489e28cf4aa6ce6e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native183/cards/3169.jpg",
+  "level": 2,
+  "links": [],
+  "name": "방해꾼 핑크",
+  "name_english": "Ojama Pink",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "R",
+  "search_aliases": [
+    "방해꾼 핑크",
+    "Ojama Pink"
+  ],
+  "source_id": 3169,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2201
+}

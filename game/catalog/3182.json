@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards183/3182",
+  "attack": 800,
+  "attribute": 32,
+  "categories": [
+    "발동-패에서",
+    "발동-소환 시",
+    "소환-패에서",
+    "소환-토큰",
+    "발동-묘지로 보내졌을 때"
+  ],
+  "code": 53855409,
+  "defense": 800,
+  "description": "①: 자신 묘지에서 몬스터가 특수 소환되었을 때에 발동할 수 있다. 이 카드를 패에서 특수 소환한다. ②: 이 카드가 싱크로 소재로서 묘지로 보내졌을 경우에 발동할 수 있다. 자신 필드에 \"도플 토큰\"(전사족 / 어둠 / 레벨 1 / 공 400 / 수 400) 2장을 공격 표시로 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "d81992ba80f576847a1ab046f4518304ac0998bdf61bda90fb880ad0b1b77fa8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native183/cards/3182.jpg",
+  "level": 2,
+  "links": [],
+  "name": "도플 워리어",
+  "name_english": "Doppelwarrior",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "search_aliases": [
+    "도플 워리어",
+    "Doppelwarrior"
+  ],
+  "source_id": 3182,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2214
+}

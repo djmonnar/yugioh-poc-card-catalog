@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards183/3163",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-암드 드래곤",
+    "효과-공격력 상승",
+    "발동-묘지에서",
+    "발동-제외",
+    "효과-묘지샐비지"
+  ],
+  "code": 57605303,
+  "defense": 0,
+  "description": "이 카드명의 ①②의 효과는 1턴에 1번, 어느 쪽이든 1개밖에 사용할 수 없다. ①: 자신 필드의 \"암드 드래곤\" 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터의 공격력은 그 몬스터의 레벨 이하의 레벨을 가지는 자신 묘지의 \"암드 드래곤\" 몬스터의 종류 × 1000 올린다. 이 턴에 그 몬스터가 상대에게 주는 전투 데미지는 0 이 된다. ②: 묘지의 이 카드를 제외하고, 자신 묘지의 \"암드 드래곤\" 마법 카드 1장을 대상으로 하여 발동할 수 있다. 그 카드를 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "5bff733447c3db32d6404162be2bbb025f2bc72cc3cd946e891d8d0aa8e3e336",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native183/cards/3163.jpg",
+  "level": 0,
+  "links": [],
+  "name": "암드 드래곤 썬더볼트",
+  "name_english": "Armed Dragon Thunderbolt",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "암드 드래곤 썬더볼트",
+    "Armed Dragon Thunderbolt"
+  ],
+  "source_id": 3163,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2195
+}

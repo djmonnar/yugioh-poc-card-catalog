@@ -101,6 +101,10 @@
     "card_set": "chess-archfiend175",
     "schema": 1
   },
+  "content_profile183": {
+    "card_set": "manjoume183",
+    "schema": 1
+  },
   "content_relics160": {
     "relic_set": "relics160",
     "schema": 1

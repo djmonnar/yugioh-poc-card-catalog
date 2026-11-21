@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards183/3174",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-방해꾼",
+    "소환-토큰",
+    "소환-상대필드",
+    "효과-데미지"
+  ],
+  "code": 29843091,
+  "defense": 0,
+  "description": "①: 상대 필드에 \"방해꾼 토큰\"(야수족 / 빛 / 레벨 2 / 공 0 / 수 1000) 3장을 수비 표시로 특수 소환한다. 이 토큰은 어드밴스 소환을 위해서는 릴리스할 수 없다. 이 토큰이 파괴되었을 때에 그 컨트롤러는 1장당 300 데미지를 받는다.",
+  "draw_enabled": true,
+  "identity_key": "a003007c2bd108fc62ce569857a60d4d1aaec305db5e9b382c233f9ad2a742b8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native183/cards/3174.jpg",
+  "level": 0,
+  "links": [],
+  "name": "방해꾼 트리오",
+  "name_english": "Ojama Trio",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "방해꾼 트리오",
+    "Ojama Trio"
+  ],
+  "source_id": 3174,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2206
+}

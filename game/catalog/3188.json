@@ -1,0 +1,34 @@
+{
+  "alias": 0,
+  "art_key": "Cards183/3188",
+  "attack": 400,
+  "attribute": 32,
+  "categories": [
+    "소환-토큰"
+  ],
+  "code": 53855410,
+  "defense": 400,
+  "description": "「도플 워리어」의 효과로 특수 소환된다.",
+  "draw_enabled": false,
+  "identity_key": "39fb2f9573f572e2d3078871b27412d73a5eaa5044f4662664e4d0f347ee38c9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native183/cards/3188.jpg",
+  "level": 1,
+  "links": [],
+  "name": "도플 토큰",
+  "name_english": "Doppel Token",
+  "native_type": 16401,
+  "normal_limit": 0,
+  "playable": false,
+  "race": 1,
+  "rarity": "N",
+  "search_aliases": [
+    "도플 토큰",
+    "Doppel Token"
+  ],
+  "source_id": 3188,
+  "speed_limit": null,
+  "stock": false,
+  "token": true,
+  "type_name": "토큰",
+  "web_slot": 2220
+}

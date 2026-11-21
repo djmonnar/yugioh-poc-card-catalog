@@ -1,0 +1,34 @@
+{
+  "alias": 0,
+  "art_key": "Cards183/3166",
+  "attack": 0,
+  "attribute": 16,
+  "categories": [
+    "지원-방해꾼"
+  ],
+  "code": 42941100,
+  "defense": 1000,
+  "description": "모든 수단을 사용해서 방해를 한다는 방해꾼 트리오의 일원. 3명이 모이면 무슨 일이 일어난다고 한다.",
+  "draw_enabled": true,
+  "identity_key": "5b4ceb632d442bb9daf5d5087378147e506ddee509f58c4982e5f1aaf01c3b54",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native183/cards/3166.jpg",
+  "level": 2,
+  "links": [],
+  "name": "방해꾼 옐로",
+  "name_english": "Ojama Yellow",
+  "native_type": 17,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "N",
+  "search_aliases": [
+    "방해꾼 옐로",
+    "Ojama Yellow"
+  ],
+  "source_id": 3166,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 몬스터",
+  "web_slot": 2198
+}

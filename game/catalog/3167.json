@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards183/3167",
+  "attack": 0,
+  "attribute": 16,
+  "categories": [
+    "지원-방해꾼",
+    "발동-파괴 시",
+    "효과-덱샐비지"
+  ],
+  "code": 64627453,
+  "defense": 1000,
+  "description": "①: 이 카드가 전투로 파괴되어 묘지로 보내졌을 때에 발동할 수 있다. 덱에서 \"방해꾼\" 카드 2장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "583e8015d18da28dbe45288c2048995a20310a6622e6df83ba79545bafe1bb39",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native183/cards/3167.jpg",
+  "level": 2,
+  "links": [],
+  "name": "방해꾼 블루",
+  "name_english": "Ojama Blue",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "R",
+  "search_aliases": [
+    "방해꾼 블루",
+    "Ojama Blue"
+  ],
+  "source_id": 3167,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2199
+}

@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards183/3173",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-방해꾼",
+    "발동-묘지로 보내졌을 때",
+    "효과-덱샐비지"
+  ],
+  "code": 24643836,
+  "defense": 0,
+  "description": "①: 이 카드가 패 / 필드에서 묘지로 보내졌을 경우에 발동한다. 덱에서 \"방해꾼 그린\" \"방해꾼 옐로\" \"방해꾼 블랙\"을 1장씩 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "f4c44b9e65d84bf3afc4c2ebe7f44d2f6aa9f1dde99d49262bf54dde08c6304c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native183/cards/3173.jpg",
+  "level": 0,
+  "links": [],
+  "name": "방해꾼 매직",
+  "name_english": "Ojamagic",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "방해꾼 매직",
+    "Ojamagic"
+  ],
+  "source_id": 3173,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 2205
+}

@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards183/3175",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-방해꾼",
+    "소환-토큰",
+    "소환-상대필드",
+    "효과-데미지",
+    "발동-묘지에서",
+    "발동-제외",
+    "소환-덱리크루터"
+  ],
+  "code": 14470845,
+  "defense": 0,
+  "description": "①: 상대 필드에 \"방해꾼 토큰\"(야수족 / 빛 / 레벨 2 / 공 0 / 수 1000) 2장을 수비 표시로 특수 소환한다. 이 토큰은 어드밴스 소환을 위해서는 릴리스할 수 없다. \"방해꾼 토큰\"이 파괴되었을 때에 그 컨트롤러는 1장당 300 데미지를 받는다. ②: 묘지의 이 카드를 제외하고 발동할 수 있다. 덱에서 카드명이 다른 \"방해꾼\" 몬스터 2장을 특수 소환한다. 이 효과는 이 카드가 묘지로 보내진 턴에는 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "9cb7136cca791381b87f75ac11b1f881d9da90e282f3688ab1d4313e4dab0916",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native183/cards/3175.jpg",
+  "level": 0,
+  "links": [],
+  "name": "방해꾼 듀오",
+  "name_english": "Ojama Duo",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "방해꾼 듀오",
+    "Ojama Duo"
+  ],
+  "source_id": 3175,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2207
+}

@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards183/3172",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-방해꾼",
+    "효과-파괴",
+    "파괴-몬스터",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 8251996,
+  "defense": 0,
+  "description": "①: 자신 필드에 \"방해꾼 그린\" \"방해꾼 옐로\" \"방해꾼 블랙\"이 전부 존재할 경우에 발동할 수 있다. 상대 필드의 카드를 전부 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "c4c06dd2e15fd238d7fb37db527bb33af09dfad634b08681f0c48f58888c91af",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native183/cards/3172.jpg",
+  "level": 0,
+  "links": [],
+  "name": "방해꾼 델타 허리케인!!",
+  "name_english": "Ojama Delta Hurricane!!",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "search_aliases": [
+    "방해꾼 델타 허리케인!!",
+    "Ojama Delta Hurricane!!"
+  ],
+  "source_id": 3172,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 2204
+}

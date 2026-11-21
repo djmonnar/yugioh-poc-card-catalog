@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards183/3179",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-방해꾼",
+    "지원-필드",
+    "발동-묘지로 보내기",
+    "소환-묘지"
+  ],
+  "code": 90011152,
+  "defense": 0,
+  "description": "①: 자신 필드에 \"방해꾼\" 몬스터가 존재하는 한, 필드의 몬스터의 원래 공격력과 원래 수비력은 맞바뀐다. ②: 1턴에 1번, 패에서 \"방해꾼\" 카드 1장을 묘지로 보내고, 자신 묘지의 \"방해꾼\" 몬스터 1장을 대상으로 하여 발동할 수 있다. 그 몬스터를 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "1f5120873e4a43f8628b08db741129ecab7fb1a3cb7c23a299b44ccef9e3495a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native183/cards/3179.jpg",
+  "level": 0,
+  "links": [],
+  "name": "방해꾼 컨트리",
+  "name_english": "Ojama Country",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "방해꾼 컨트리",
+    "Ojama Country"
+  ],
+  "source_id": 3179,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "필드 마법",
+  "web_slot": 2211
+}

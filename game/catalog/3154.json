@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards183/3154",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-고레벨",
+    "발동-묘지로 보내기",
+    "효과-드로우"
+  ],
+  "code": 78543464,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 패 및 자신 필드의 앞면 표시 몬스터 중에서, 레벨 9 몬스터 1장을 묘지로 보내고 발동할 수 있다. 자신은 덱에서 2장 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "ab1b1b5f883cad8f6f6c09e99fb019ed49dc17a39717f031e3ec2ed6bb9be237",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native183/cards/3154.jpg",
+  "level": 0,
+  "links": [],
+  "name": "쿠지키리의 부적",
+  "name_english": "Kuji-Kiri Curse",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "쿠지키리의 부적",
+    "Kuji-Kiri Curse"
+  ],
+  "source_id": 3154,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 2186
+}

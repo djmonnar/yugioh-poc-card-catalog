@@ -1,0 +1,35 @@
+{
+  "alias": 29843092,
+  "art_key": "Cards183/3184",
+  "attack": 0,
+  "attribute": 16,
+  "categories": [
+    "소환-토큰",
+    "지원-방해꾼"
+  ],
+  "code": 29843093,
+  "defense": 1000,
+  "description": "「방해꾼 트리오」의 효과로 특수 소환된다.",
+  "draw_enabled": false,
+  "identity_key": "245a276fcfe7bde08aa3b1a12434237501acb878e8f307bccbf0ef3ef06722e2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native183/cards/3184.jpg",
+  "level": 2,
+  "links": [],
+  "name": "방해꾼 토큰",
+  "name_english": "Ojama Token",
+  "native_type": 16401,
+  "normal_limit": 0,
+  "playable": false,
+  "race": 16384,
+  "rarity": "N",
+  "search_aliases": [
+    "방해꾼 토큰",
+    "Ojama Token"
+  ],
+  "source_id": 3184,
+  "speed_limit": null,
+  "stock": false,
+  "token": true,
+  "type_name": "토큰",
+  "web_slot": 2216
+}

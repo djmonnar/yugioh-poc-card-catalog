@@ -1,0 +1,34 @@
+{
+  "alias": 0,
+  "art_key": "Cards183/3165",
+  "attack": 0,
+  "attribute": 16,
+  "categories": [
+    "지원-방해꾼"
+  ],
+  "code": 79335209,
+  "defense": 1000,
+  "description": "모든 수단을 사용해서 방해를 한다는 방해꾼 트리오의 일원. 3명이 모이면 무슨 일이 일어난다고 한다.",
+  "draw_enabled": true,
+  "identity_key": "b50464450c71b6bbd31ef4d6e4103ebb6af9d2b795d63bb1dd59c19dd0ff6f6f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native183/cards/3165.jpg",
+  "level": 2,
+  "links": [],
+  "name": "방해꾼 블랙",
+  "name_english": "Ojama Black",
+  "native_type": 17,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "N",
+  "search_aliases": [
+    "방해꾼 블랙",
+    "Ojama Black"
+  ],
+  "source_id": 3165,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 몬스터",
+  "web_slot": 2197
+}

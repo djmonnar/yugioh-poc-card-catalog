@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards183/3162",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-암드 드래곤",
+    "효과-공격력 상승",
+    "효과-묘지샐비지",
+    "보호-파괴 대체"
+  ],
+  "code": 97091969,
+  "defense": 0,
+  "description": "이 카드명의 ①의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 자신 필드의 \"암드 드래곤\" 몬스터 1장을 대상으로 하고, 이하의 효과에서 1개를 선택하여 발동할 수 있다.\n●그 몬스터의 공격력은 그 몬스터의 레벨 × 100 올린다.\n●그 몬스터의 레벨 이하의 레벨을 가지는 \"암드 드래곤\" 몬스터 1장을 자신 묘지에서 고르고 패에 넣는다.\n②: 자신 필드의 \"암드 드래곤\" 몬스터가 효과로 파괴될 경우, 대신에 이 카드를 묘지로 보낼 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "3ff6d71797c41919bbd9e63b22fd22198954c28ea435baf843331228fbd1b367",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native183/cards/3162.jpg",
+  "level": 0,
+  "links": [],
+  "name": "암드 드래곤 라이트닝",
+  "name_english": "Armed Dragon Lightning",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "암드 드래곤 라이트닝",
+    "Armed Dragon Lightning"
+  ],
+  "source_id": 3162,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 2194
+}
