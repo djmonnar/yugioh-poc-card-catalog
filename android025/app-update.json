@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.120",
-  "versionCode": 139,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.120/YGOClassicExpedition-0.18.120-arm64.apk",
-  "sizeBytes": 773665056,
-  "sha256": "9505f542a6061cb9ff929b4fdb010c76247823fa472240f673dcbca6dc9f8d3a",
-  "releaseNotes": "새 상대 특성 4종(효과·반사·첫 데미지 무효, 위저보드)을 더했습니다. 위저보드 상대는 다크 네크로피어가 나온 뒤 턴마다 F·I·N·A·L을 한 글자씩 새기며, 다섯 글자가 모이면 승리합니다."
+  "versionName": "0.18.121",
+  "versionCode": 140,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.121/YGOClassicExpedition-0.18.121-arm64.apk",
+  "sizeBytes": 785819430,
+  "sha256": "314a7abd6330d6708e9558dcaaa5577b5ca0c644856c4c41044116063d52e993",
+  "releaseNotes": "화염의 검사·사라만도라·다크 스워드 카드 18장을 더했습니다. AI가 드래곤의 제왕과 드래곤을 부르는 피리, 용의 거울, 레벨 업! 등 특수 소환 카드를 더 잘 쓰고, 드래곤의 제왕이 지키는 드래곤에게 대상 지정 효과를 낭비하지 않습니다."
 }
