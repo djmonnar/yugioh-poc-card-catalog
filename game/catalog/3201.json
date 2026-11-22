@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards188/3201",
+  "attack": 2200,
+  "attribute": 32,
+  "categories": [
+    "지원-다크 스워드",
+    "발동-피해 발생 시",
+    "효과-제외",
+    "효과-묘지 카드 제외"
+  ],
+  "code": 86805855,
+  "defense": 1500,
+  "description": "\"암흑 마계의 전사 다크 스워드\" ＋ \"칠흑의 전투용\"\n이 카드가 상대에게 전투 데미지를 줄 때마다, 상대의 묘지에서 3장까지 몬스터 카드를 선택하여, 게임에서 제외할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "a86b0f5dcd6310db7909168bba1add995ed9b6341d77f12ce8961d01dfe38545",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native188/cards/3201.jpg",
+  "level": 6,
+  "links": [],
+  "name": "암흑 마계의 용기사 다크 스워드",
+  "name_english": "Dark Blade the Dragon Knight",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "search_aliases": [
+    "암흑 마계의 용기사 다크 스워드",
+    "Dark Blade the Dragon Knight"
+  ],
+  "source_id": 3201,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 2233
+}

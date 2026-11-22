@@ -1,8 +1,11 @@
 # 최근 변경
 
-웹 DB 개정 923 (이전 기록 921)
+웹 DB 개정 926 (이전 기록 923)
 
+- content-profiles (content-profiles) · 변경 1: content-profiles
+- 카드 (game/catalog) · 추가 18: 3190 극화염의 검사, 3191 투의염참룡, 3192 환화염의 검사－미라지 스워드맨－, 3193 흑화염의 검사－블랙 플레어 스워드맨－, 3194 비룡염 사라만도라, 3195 화염의 검무, 3196 투의염참검, 3197 화염의 검역 …
+- 캐릭터 (game/characters) · 추가 2: character-judai-178, character-manjoume-178
+- game/deck_rules035 (game/deck_rules035) · 변경 1: _rest
+- 덱 금제 (game/deck_rules035/rows) · 추가 18: 3190, 3191, 3192, 3193, 3194, 3195, 3196, 3197 …
 - game/opponents (game/opponents) · 변경 1: _rest
-- 상대 편성 (game/opponents/opponents) · 변경 1: enc044_1_battle_ch1_battle_08e1ce31fae34b2d1f489bb7 마해룡 / 추가 2: enc-cfc19e84-f3c3-4c64-aaf2-4c0c035a04ab 전우혁, enc-e510d892-1397-4c8b-b5d0-04ab0f8a2511 전우혁
-- 시작 덱 (game/starters/starters) · 추가 1: unified039:deck-56e3c4d8-fb99-44c6-9f8c-8180f1e29c44 초융합-일반몬스터
-- 연습 덱 (practice-decks) · 변경 2: ch1_battle_08e1ce31fae34b2d1f489bb7 바다, _rest / 추가 1: deck-56e3c4d8-fb99-44c6-9f8c-8180f1e29c44 초융합-일반몬스터
+- 연습 덱 (practice-decks) · 변경 1: _rest

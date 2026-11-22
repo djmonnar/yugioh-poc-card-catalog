@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards188/3197",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-화염의 검사",
+    "지원-전사족",
+    "지원-화염 속성",
+    "효과-발동 제한",
+    "발동-묘지로 보내기",
+    "소환-엑스트라 덱에서",
+    "발동-공격 선언 시",
+    "효과-공격력 상승",
+    "효과-공격력 감소"
+  ],
+  "code": 73714736,
+  "defense": 0,
+  "description": "①: 자신의 전사족 / 화염 속성 몬스터의 일반 소환 성공시에 상대는 카드 효과를 발동할 수 없다. ②: 1턴에 1번, 자신의 패 / 필드(앞면 표시)에서 몬스터 1장을 묘지로 보내고 발동할 수 있다. 엑스트라 덱에서 \"화염의 검사\" 1장을 융합 소환으로 취급하고 특수 소환한다. ③: 1턴에 1번, 몬스터의 공격 선언시, 자신 필드의 전사족 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터의 공격력을 턴 종료시까지 1000 내리고, 그 몬스터 이외의 자신 필드의 모든 몬스터의 공격력은 턴 종료시까지 1000 올린다.",
+  "draw_enabled": true,
+  "identity_key": "129f21f5c12fb4af680f92bdb2d08f5f2e5816a13b17500187f8fff6d45ea3c4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native188/cards/3197.jpg",
+  "level": 0,
+  "links": [],
+  "name": "화염의 검역",
+  "name_english": "Flame Swordsrealm",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "화염의 검역",
+    "Flame Swordsrealm"
+  ],
+  "source_id": 3197,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 2229
+}

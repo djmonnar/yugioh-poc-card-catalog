@@ -1,0 +1,13 @@
+{
+  "art_key": "Character178/manjoume_start",
+  "id": "character-manjoume-178",
+  "profile": {
+    "name": "만죠메 준",
+    "portrait": "assets/actors/native178/manjoume/start.png",
+    "skill_profiles": [],
+    "skills": []
+  },
+  "profile_id": "manjoume",
+  "updated_at": "2026-11-22T16:13:01.711027+00:00",
+  "version": 925
+}

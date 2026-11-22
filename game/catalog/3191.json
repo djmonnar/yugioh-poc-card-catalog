@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards188/3191",
+  "attack": 1700,
+  "attribute": 4,
+  "categories": [
+    "지원-화염의 검사",
+    "지원-전사족",
+    "지원-화염 속성",
+    "지원-드래곤족",
+    "지원-융합",
+    "발동-묘지에서",
+    "효과-장착",
+    "효과-공격력 상승",
+    "효과-추가공격"
+  ],
+  "code": 36319131,
+  "defense": 1600,
+  "description": "드래곤족 몬스터 ＋ 전사족 / 화염 속성 몬스터\n이 카드명의 ①의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 자신 / 상대 턴에, 자신 필드의 전사족 융합 몬스터 1장을 대상으로 하고 발동할 수 있다. 자신의 필드 / 묘지에서 이 카드를 장착 마법 카드로 취급하고 그 자신 몬스터에 장착한다. ②: 이 카드가 \"화염의 검사\" 또는 그 카드명이 쓰여진 몬스터에 장착되어 있는 한, 장착 몬스터의 공격력은 700 올리고, 1번의 배틀 페이즈 중에 2회 공격할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "16fa97a11ac6b1c916469ddcd3bbea2c82e0d481b847ab2dbcfcc715a4fe8509",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native188/cards/3191.jpg",
+  "level": 5,
+  "links": [],
+  "name": "투의염참룡",
+  "name_english": "Fighting Flame Dragon",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "search_aliases": [
+    "투의염참룡",
+    "Fighting Flame Dragon"
+  ],
+  "source_id": 3191,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 2223
+}

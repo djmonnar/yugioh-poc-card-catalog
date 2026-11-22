@@ -105,6 +105,14 @@
     "card_set": "manjoume183",
     "schema": 1
   },
+  "content_profile184": {
+    "schema": 1,
+    "trait_set": "damage-ouija184"
+  },
+  "content_profile188": {
+    "card_set": "flame-swordsman188",
+    "schema": 1
+  },
   "content_relics160": {
     "relic_set": "relics160",
     "schema": 1

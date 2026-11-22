@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards188/3198",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-화염의 검사",
+    "지원-사라만도라",
+    "지원-장착",
+    "지원-전사족",
+    "지원-화염 속성",
+    "지원-융합",
+    "효과-공격력 상승",
+    "보호-파괴 대체",
+    "효과-묘지로 보내기",
+    "소환-엑스트라 덱에서"
+  ],
+  "code": 9102835,
+  "defense": 0,
+  "description": "전사족 / 화염 속성 몬스터에만 장착 가능. 이 카드명의 ③의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 장착 몬스터의 공격력은 700 올린다. ②: 장착 몬스터가 전투 / 효과로 파괴될 경우, 대신에 이 카드를 파괴할 수 있다. ③: 이 카드가 자신 필드의 융합 몬스터에 장착되어 있을 경우에 발동할 수 있다. 장착 몬스터와 이 카드를 묘지로 보내고, \"화염의 검사\" 또는 그 카드명이 쓰여진 융합 몬스터 1장을 융합 소환으로 취급하여 엑스트라 덱에서 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "95553e6ac8772d948c8276eb431e280232cb22bd4dd6747f7822383ab539a336",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native188/cards/3198.jpg",
+  "level": 0,
+  "links": [],
+  "name": "사라만도라 퓨전",
+  "name_english": "Salamandra Fusion",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "사라만도라 퓨전",
+    "Salamandra Fusion"
+  ],
+  "source_id": 3198,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 2230
+}

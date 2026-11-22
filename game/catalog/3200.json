@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards188/3200",
+  "attack": 1800,
+  "attribute": 32,
+  "categories": [
+    "지원-어둠 속성",
+    "발동-제외",
+    "효과-장착",
+    "효과-컨트롤",
+    "보호-파괴 대체"
+  ],
+  "code": 57784563,
+  "defense": 1500,
+  "description": "1턴에 1번, 자신 묘지의 어둠 속성 몬스터 1장을 게임에서 제외하고, 상대 필드 위의 빛 속성 / 레벨 4 이하의 몬스터 1장을 선택하고 발동할 수 있다. 선택한 몬스터를 장착 카드로 취급하여 이 카드에 1장만 장착한다. 또한, 필드 위의 이 카드가 파괴될 경우, 대신에 이 카드의 효과로 장착한 몬스터를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "269d5de7dc0ec9df47706d3949c07cfad81250f5a997b418c54af51fddfe4b51",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native188/cards/3200.jpg",
+  "level": 4,
+  "links": [],
+  "name": "암흑 마계의 전사장 다크 스워드",
+  "name_english": "Dark Blade the Captain of the Evil World",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "암흑 마계의 전사장 다크 스워드",
+    "Dark Blade the Captain of the Evil World"
+  ],
+  "source_id": 3200,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2232
+}

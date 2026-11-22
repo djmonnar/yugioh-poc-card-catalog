@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards188/3195",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-화염의 검사",
+    "지원-융합",
+    "발동-소환 시",
+    "소환-엑스트라 덱에서",
+    "효과-뒷면표시",
+    "발동-묘지에서",
+    "발동-제외",
+    "발동-릴리즈",
+    "소환-덱리크루터"
+  ],
+  "code": 8080257,
+  "defense": 0,
+  "description": "이 카드명의 ②의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 몬스터가 특수 소환되었을 경우에 발동할 수 있다. 레벨 7 이하의, \"화염의 검사\" 또는 그 카드명이 쓰여진 융합 몬스터 1장을 엑스트라 덱에서 특수 소환한다. 그 후, 필드의 앞면 표시 몬스터 1장을 뒷면 수비 표시로 할 수 있다. ②: 상대 배틀 페이즈에, 묘지의 이 카드를 제외하고, 자신 필드의 뒷면 수비 표시 몬스터 1장을 릴리스하여 발동할 수 있다. \"화염의 검사\" 또는 그 카드명이 쓰여진 몬스터 1장을 덱 / 엑스트라 덱에서 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "03d27a32a00dfb3bf02f92ea57b4426cf836dcd4bdd9094a9a7a24111df312b8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native188/cards/3195.jpg",
+  "level": 0,
+  "links": [],
+  "name": "화염의 검무",
+  "name_english": "Flame Swordsdance",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "화염의 검무",
+    "Flame Swordsdance"
+  ],
+  "source_id": 3195,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2227
+}

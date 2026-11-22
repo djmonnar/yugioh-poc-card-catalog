@@ -1,0 +1,13 @@
+{
+  "art_key": "Character178/judai_start",
+  "id": "character-judai-178",
+  "profile": {
+    "name": "유키 쥬다이",
+    "portrait": "assets/actors/native178/judai/start.png",
+    "skill_profiles": [],
+    "skills": []
+  },
+  "profile_id": "judai",
+  "updated_at": "2026-11-22T16:13:01.711027+00:00",
+  "version": 925
+}
