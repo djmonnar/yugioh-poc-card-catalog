@@ -1,0 +1,52 @@
+{
+  "artKey": "Character090/images/tristan/start",
+  "banlistEnabled": false,
+  "deckName": "초융합-일반몬스터",
+  "extra": [
+    2962,
+    2962,
+    2963,
+    2963,
+    2870,
+    2870
+  ],
+  "id": "enc-cfc19e84-f3c3-4c64-aaf2-4c0c035a04ab",
+  "lpBonus": 0,
+  "main": [
+    1034,
+    1034,
+    49,
+    217,
+    122,
+    2620,
+    2620,
+    2620,
+    2489,
+    2010,
+    568,
+    837,
+    196,
+    8,
+    531,
+    204,
+    129,
+    1003,
+    1003,
+    2621
+  ],
+  "name": "전우혁",
+  "openingDrawBonus": 0,
+  "profileId": "tristan",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2619,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-cfc19e84-f3c3-4c64-aaf2-4c0c035a04ab",
+  "usesNativeRules035": true
+}

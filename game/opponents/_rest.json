@@ -386,6 +386,10 @@
           {
             "opponentId": "enc-da3d7785-bf5b-491a-b5ff-14542644a50f",
             "weight": 1
+          },
+          {
+            "opponentId": "enc-cfc19e84-f3c3-4c64-aaf2-4c0c035a04ab",
+            "weight": 1
           }
         ],
         "lpBonus": 0
@@ -534,6 +538,10 @@
           },
           {
             "opponentId": "enc-6a9cfa89-2b2e-46af-9cb7-10a6e65add8f",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-e510d892-1397-4c8b-b5d0-04ab0f8a2511",
             "weight": 1
           }
         ],

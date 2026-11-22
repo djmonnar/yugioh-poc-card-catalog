@@ -1,0 +1,105 @@
+{
+  "banlist_enabled": true,
+  "extra": [
+    {
+      "count": 2,
+      "identity_key": "205140899a0c2f765f90ba6685b31599fc396c1c7d08547e3fa553bb569e3f4d",
+      "source_id": 2962
+    },
+    {
+      "count": 2,
+      "identity_key": "dc1e19c6583e8b193e88f6342717605517c5566f2839b06bbb7d9f75fb02b4fb",
+      "source_id": 2963
+    },
+    {
+      "count": 2,
+      "identity_key": "7e932ff31837dc8b290592d63a85a22f4501daa95d5dd8fd118da2d11d47ef73",
+      "source_id": 2870
+    }
+  ],
+  "id": "deck-56e3c4d8-fb99-44c6-9f8c-8180f1e29c44",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "5a2c7365e35f2614ef395c7972a205900b472d91d2dc2fc7bde8e4b425949160",
+      "source_id": 1034
+    },
+    {
+      "count": 1,
+      "identity_key": "5213ed37b8937d167b843b6fae136b404cd95980b49b5d909a118170d251434f",
+      "source_id": 49
+    },
+    {
+      "count": 1,
+      "identity_key": "a0e30e4163e635d53a693a02cd59a0b9eeb6159883accbfcd2d8133c27c0789d",
+      "source_id": 217
+    },
+    {
+      "count": 1,
+      "identity_key": "e4b2aeb4368b9ab6c3bdc697caf16a5888d43b96be1c287c558789aaa148755f",
+      "source_id": 122
+    },
+    {
+      "count": 3,
+      "identity_key": "481f1539cec9a73be5473ae58ff0606a64a3c466ce9d278c03be239ebf6f8087",
+      "source_id": 2620
+    },
+    {
+      "count": 1,
+      "identity_key": "74694934721082ab24a5ac163ca111972487643c323622054d27dff5412e9268",
+      "source_id": 2489
+    },
+    {
+      "count": 1,
+      "identity_key": "051a68d46e73f712b6ddcde1be027a0d95caced1e8dd561297017bd2e246b759",
+      "source_id": 2010
+    },
+    {
+      "count": 1,
+      "identity_key": "8699b499083ca0c270cc6df3b2720d6c75f8f3d32613dc14af399336f43b346a",
+      "source_id": 568
+    },
+    {
+      "count": 1,
+      "identity_key": "7059a52b58a0c3660d72930a02ed1272b2cabb207f5d50218cf8e03957eaaacd",
+      "source_id": 837
+    },
+    {
+      "count": 1,
+      "identity_key": "7cde00742ed7fec275902625795471075b4ec45aac30f63546334a86f670d5f7",
+      "source_id": 196
+    },
+    {
+      "count": 1,
+      "identity_key": "c3fa06a9d06fadf7799f0f7e3f92836f7733c7ff57e0128887d9bb916569bdfc",
+      "source_id": 8
+    },
+    {
+      "count": 1,
+      "identity_key": "03cdfae3af47831184035400a2247113cca83ef0466462e77058a36bd6150ee4",
+      "source_id": 531
+    },
+    {
+      "count": 1,
+      "identity_key": "ee70a8cb824328ae07896d9ef74075c183038fa400fee10bbc38b32bf64a9a0c",
+      "source_id": 204
+    },
+    {
+      "count": 1,
+      "identity_key": "03ee871cf5f2a3636a1ec9160146ef066f85db728247e66fa5f4f8cbd5773164",
+      "source_id": 129
+    },
+    {
+      "count": 2,
+      "identity_key": "6e88143a6d19b63d51f9f78d79264941a106691798fb78f1579481304fad7560",
+      "source_id": 1003
+    },
+    {
+      "count": 1,
+      "identity_key": "b7857fa0b5301525239a35e1183a21e9a89a3c160736818f338843aba6794324",
+      "source_id": 2621
+    }
+  ],
+  "name": "초융합-일반몬스터",
+  "version": 922
+}

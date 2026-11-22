@@ -10,11 +10,6 @@
     },
     {
       "count": 2,
-      "identity_key": "38d26583516afa66200a18980410f723fb5985d2c3ce65315fe80ac11312e19b",
-      "source_id": 523
-    },
-    {
-      "count": 2,
       "identity_key": "98bcc1c4a6a5fafd4c449c99095c0a7354bf74dc70790330b065f32ce4e29c37",
       "source_id": 1882
     },
@@ -27,11 +22,6 @@
       "count": 2,
       "identity_key": "9cc91f5bc4ba8c34de8d8387128cc634883356abc20f4482a25248b00defc6db",
       "source_id": 1874
-    },
-    {
-      "count": 2,
-      "identity_key": "b781c54ef02789ecc1ca8b98fc91db18c49bdfbd9af4d65e5e1e1da2e0a9fb87",
-      "source_id": 1875
     },
     {
       "count": 2,
@@ -57,8 +47,23 @@
       "count": 1,
       "identity_key": "e33d3e359d6bb9a9c7f5a266c3335d575e14b1c179080b76672daa720d3b7939",
       "source_id": 120
+    },
+    {
+      "count": 2,
+      "identity_key": "36d9bf9e187aa9eaa86c4feb8c3b9c30db1a4a34a2fc6dd3bd2e4d44c0b50fd6",
+      "source_id": 2015
+    },
+    {
+      "count": 1,
+      "identity_key": "6c0478800ca751c783ffee5c3f77c5f95834a4a22c08a90fda4041462b8b6c98",
+      "source_id": 1886
+    },
+    {
+      "count": 1,
+      "identity_key": "5a100397d453b70d4470ff7a37e2d94e136d5524e220b58a29232ba102b04aa0",
+      "source_id": 1126
     }
   ],
-  "name": "마해룡 초급",
-  "version": 251
+  "name": "바다",
+  "version": 922
 }
