@@ -2,6 +2,7 @@
 // Reads only public card files and test contracts from this repository; never a DB.
 import {readFile,readdir} from 'node:fs/promises';
 import path from 'node:path';
+import {TRAIT_KINDS184} from '../authoring184-traits.js';
 
 const json=async file=>JSON.parse(await readFile(file,'utf8'));
 const copy=structuredClone;
@@ -12,6 +13,8 @@ export async function previewSeed170(root){
   const data=path.join(root,'data'),files=(await readdir(data)).filter(name=>/^native-(base|expansion)\d+\.json$/.test(name)).sort();
   const web=new Map((await json(path.join(data,'cards.json'))).cards.map(card=>[card.internal_id,card]));
   const capabilities=await json(path.join(root,'tests/fixtures/authoring-capabilities066.json'));capabilities.deck_compositions044=true;
+  // (184) The production database offers the four opponent traits 184 after the WebSync184 migration; preview them too.
+  for(const kind of TRAIT_KINDS184)if(!capabilities.trait_form.kinds.some(row=>row.kind===kind.kind))capabilities.trait_form.kinds.push(copy(kind));
   const schema=await json(path.join(root,'tests/fixtures/authoring-schema039.json'));
   // Pack art lives in assets/native<NNN>/cards/<id>.jpg; the DB catalog carries the same path.
   const art=new Map(),assets=path.join(root,'assets');

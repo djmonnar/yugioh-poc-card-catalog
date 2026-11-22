@@ -20,6 +20,7 @@ import {draftScope068} from './authoring068-scope.js?v=20261103-071';
 import {characterChoice068,changeCharacter068,traitChoices068,changeTrait068} from './authoring068-character.js?v=20261103-071';
 import {portraitUrl081} from './authoring081-assets.js?v=20261105-082';
 import {traitCardMatches089} from './authoring089-traits.js?v=20261106-089';
+import {traitKindOffered184,traitHelp184,ouijaWithoutNecrofear184} from './authoring184-traits.js';
 import {CARD_SORTS091,filterValues091,cardQueryTokens091,cardFiltersMatch091,sortCards091} from './authoring091-search.js?v=20261106-091';
 import {deckDeletionChanges153,deckDeletionPlan174,deckDeletionSteps174,openDeckDeletion153} from './authoring153-deck-delete.js';
 import {cardDeckUsages172,cardDeckCountText172,deckHref172} from './authoring172-card-decks.js';import {CATALOG_PARAMS170,CATALOG_FLAGS170,pageNumber170,thumbnailUrl170,createCardProblems170,cardFlagsMatch170,bulkCardPatches170,selectRange170} from './authoring170-catalog.js';
@@ -231,8 +232,11 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     };
     input.oninput=()=>{visible=30;display();};box.append(input,count,results,more);host.append(box);display();
   }
+  // (184) A 위저보드 trait needs Dark Necrofear in the main deck to reveal letters. A note, not an error.
+  function ouijaWarning184(host,skills,main){if(ouijaWithoutNecrofear184(skills,currentCards,main))host.append(el('p','위저보드 특성이 있지만 이 덱의 메인 덱에 다크 네크로피어가 없습니다. 다크 네크로피어가 나오지 않으면 글자가 놓이지 않습니다.','au-hint au-ouija-warning184'));}
   function skillFields(host,rows,onRows,key,shared=false,getRows=()=>rows,allowed=()=>true){
-    const form=currentState.bootstrap?.capabilities?.trait_form,definitions=(form?.kinds??[]).filter(k=>(shared||k.compiled)&&allowed(k.kind));
+    // (184) Shared editors (characters, starter decks) skip kinds marked shared:false; decks and encounters take every compiled kind.
+    const form=currentState.bootstrap?.capabilities?.trait_form,definitions=(form?.kinds??[]).filter(k=>traitKindOffered184(k,shared)&&allowed(k.kind));
     if(!definitions.length){host.append(el('p',`설정된 특성 ${rows.length}개 · 특성 편집 자료를 확인하는 중입니다.`,'au-hint'));return;}
     const mainCard=c=>traitCardMatches089(c),cardRef=c=>({slot:c.slot,internal_id:c.source_id,identity_key:c.identity_key,name_ko:c.name_ko});
     const liveRows=()=>getRows()??[];
@@ -245,6 +249,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     };
     for(const [index,row] of rows.entries()){
       const definition=definitions.find(k=>k.kind===row.kind),box=el('fieldset',null,'au-form-group');box.append(el('legend',definition?.label??'기존 특성'));
+      const help=definition?traitHelp184(definition):'';if(help)box.append(el('p',help,'au-hint au-trait-help184'));
       box.append(button('특성 제거',()=>onRows(liveRows().filter(item=>item.kind!==row.kind))));
       for(const [keyName,spec] of Object.entries(definition?.fields??{})){
         if(spec.type==='integer')box.append(field(keyName==='threshold'?'발동 LP':row.kind==='heal_once'||row.kind==='lp_bonus'?'LP 수치':'드로우 장수',row[keyName],{type:'integer',minimum:spec.min,maximum:spec.max},value=>replace(row.kind,live=>({...live,[keyName]:value})),`${key}.${index}.${keyName}`));
@@ -288,7 +293,10 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
           }
         }
         return onRows([...latest,next]);
-      });add.disabled=!currentState.canEdit;host.append(select,add);
+      });add.disabled=!currentState.canEdit;
+      // (184) The help of the kind about to be added, so its meaning is visible before adding it.
+      const addHelp=el('p','','au-hint au-trait-help184');const showAddHelp=()=>{const chosen=definitions.find(kind=>kind.kind===select.value);addHelp.textContent=chosen?traitHelp184(chosen):'';addHelp.hidden=!addHelp.textContent;};
+      select.addEventListener('change',showAddHelp);showAddHelp();host.append(select,add,addHelp);
     }
   }
   function foldForm(host,label,key,renderContent,className){
@@ -785,7 +793,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     const deckFields=formSchema039(currentState,deck).properties;props.append(field('카드 제한 적용',value.banlist_enabled,{type:'boolean'},v=>patch(deck,{banlist_enabled:v}),`${deck.entity_id}.banlist`),field('덱의 추가 LP',value.lp_bonus??0,deckFields.lp_bonus??{type:'integer',minimum:0,maximum:8000,zeroOrMinimum:100},lp_bonus=>patch(deck,{lp_bonus}),`${deck.entity_id}.lp`),field('시작 패 추가 장수',value.opening_draw_bonus??0,deckFields.opening_draw_bonus??{type:'integer',minimum:0,maximum:3},opening_draw_bonus=>patch(deck,{opening_draw_bonus}),`${deck.entity_id}.opening`));if(currentState.bootstrap?.capabilities?.entities?.deck?.fields?.shared_character_id){const sharedIds=['',...characters.map(c=>c.id)],sharedNames=['연결하지 않음',...characters.map(c=>c.profile.name)];props.append(field('공용 특성 연결',value.use_shared_skills?value.shared_character_id??'':'',{type:'string',enum:sharedIds,enumNames:sharedNames},id=>patch(deck,{shared_character_id:id||null,shared_skill_profile_id:null,use_shared_skills:Boolean(id)}),`${deck.entity_id}.shared_character`));const shared=characters.find(c=>c.id===value.shared_character_id),profiles=shared?.profile.skill_profiles??[];if(value.use_shared_skills&&profiles.length)props.append(field('공용 특성 묶음',value.shared_skill_profile_id??'',{type:'string',enum:['',...profiles.map(p=>p.profile_id)],enumNames:['기본 특성',...profiles.map(p=>p.name)]},id=>patch(deck,{shared_skill_profile_id:id||null}),`${deck.entity_id}.shared_profile`));props.append(el('small','공용 특성은 연결한 덱에 적용됩니다. 아래의 덱 전투 특성도 유지됩니다.','au-hint'));}
     }
     const settings=el('details',null,'au-deck-settings');settings.open=filters.get(`deck-settings:${deck.entity_id}`)??!(value.main??[]).length;settings.ontoggle=()=>filters.set(`deck-settings:${deck.entity_id}`,settings.open);settings.append(el('summary',composition?'덱 설정 · 이름·카드 제한':'덱 설정 · 이름·상대·전투 특성'),props);host.append(settings,status(deck));
-    if(!composition){sharedTraitsPreview051(settings,value,characters);const traits=el('details',null,'au-trait-editor');traits.append(el('summary',`이 덱의 전투 특성 · ${(value.skills??[]).length}개`));skillFields(traits,value.skills??[],skills=>patch(deck,{skills}),`${deck.entity_id}.skills`,false,()=>entities039(currentState).find(row=>row.entity_type==='deck'&&row.entity_id===deck.entity_id)?.content.skills??[]);settings.append(traits);}
+    if(!composition){sharedTraitsPreview051(settings,value,characters);const traits=el('details',null,'au-trait-editor');traits.append(el('summary',`이 덱의 전투 특성 · ${(value.skills??[]).length}개`));skillFields(traits,value.skills??[],skills=>patch(deck,{skills}),`${deck.entity_id}.skills`,false,()=>entities039(currentState).find(row=>row.entity_type==='deck'&&row.entity_id===deck.entity_id)?.content.skills??[]);ouijaWarning184(traits,value.skills,value.main);settings.append(traits);}
     if(composition)renderDeckSetup068({host,getState:latestState068,entities:entities039,getCharacters:()=>characterProfiles(latestState068()),deckId:deck.entity_id,onBulkAssign:(id,options)=>openEnemyRoutes071(id,{...options,fromDeck101:true}),el,button,field,patch,stageMany:onStageMany071,renderEncounter:encounterForm068,onNavigate,onSaveDrafts:onSaveDrafts060,manualSaveControl:manualSaveControl060,filters,registerSave068:setup=>{localDeckSetup068=setup;onPrepareDeckSetup068(setup);},rerender:({force=false}={})=>render('decks',currentRoot,latestState068(),{force})});
     host.append(el('p','카드에 금지·제한·준제한과 스피드 제한을 표시합니다. 스피드 제한은 같은 숫자의 카드 전체를 합산합니다.','au-hint au-limit-guide'));
     const split=el('div',null,'au-deck-workspace'),owned=el('section',null,'au-deck-owned'),catalog=el('section',null,'au-deck-catalog'),tabs=el('div',null,'au-deck-tabs');tabs.setAttribute('aria-label','덱 카드 보기');const activeView=filters.get(`deck-view:${deck.entity_id}`)??'cards';split.dataset.mobileView=activeView;for(const [mode,label] of [['deck',`내 덱 · ${(value.main??[]).reduce((n,r)=>n+r.count,0)}장`],['cards','카드 찾기']]){const tab=button(label,()=>{filters.set(`deck-view:${deck.entity_id}`,mode);split.dataset.mobileView=mode;for(const b of tabs.children)b.setAttribute('aria-pressed',String(b.dataset.mode===mode));});tab.dataset.mode=mode;tab.setAttribute('aria-pressed',String(mode===activeView));tabs.append(tab);}host.append(tabs);
@@ -853,7 +861,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     sharedTraitsPreview051(host,value,characters);
     const advanced=el('details',null,'au-encounter-advanced068');advanced.open=filters.get(`${key}.advanced068`)??false;advanced.ontoggle=()=>filters.set(`${key}.advanced068`,advanced.open);advanced.append(el('summary',`세부 설정 · 이름·LP·직접 특성 ${(value.skills??[]).length}개`));
     const extra=el('div',null,'au-form-grid');extra.append(field('상대 이름',value.name,{type:'string',maxLength:100},name=>change({name}),`${key}.name`),field('상대 덱 표시 이름',value.deck_name??deck.content.deck_name,{type:'string',maxLength:100},deck_name=>change({deck_name}),`${key}.deck_name`),...(prominentLp?[]:[field('상대 추가 LP',value.lp_bonus??0,{type:'integer',minimum:0,maximum:8000,zeroOrMinimum:100,description:'0이면 연결된 공용 특성의 LP를 사용합니다.'},lp_bonus=>change({lp_bonus}),`${key}.lp`)]),field('시작 패 추가 장수',value.opening_draw_bonus??0,{type:'integer',minimum:0,maximum:3},opening_draw_bonus=>change({opening_draw_bonus}),`${key}.opening`),field('상대 카드 제한 적용',value.banlist_enabled,{type:'boolean'},banlist_enabled=>change({banlist_enabled}),`${key}.banlist`));advanced.append(extra);
-    skillFields(advanced,value.skills??[],skills=>change({skills}),`${key}.skills`,false,()=>getEntry()?.encounter?.skills??[]);advanced.append(el('p','직접 설정한 특성은 공용 특성과 함께 적용됩니다. 같은 종류가 겹치면 직접 설정한 값을 사용합니다.','au-hint'));host.append(advanced);
+    skillFields(advanced,value.skills??[],skills=>change({skills}),`${key}.skills`,false,()=>getEntry()?.encounter?.skills??[]);ouijaWarning184(advanced,value.skills,deck?.content?.main);advanced.append(el('p','직접 설정한 특성은 공용 특성과 함께 적용됩니다. 같은 종류가 겹치면 직접 설정한 값을 사용합니다.','au-hint'));host.append(advanced);
   }
   function encounterForm044(host,entry,deck,change,key,getEntry=()=>entry){
     const value=entry.encounter??encounterDefaults044(deck),characters=characterProfiles(),profiles=[...new Map(characters.filter(c=>c.profile_id).map(c=>[c.profile_id,c])).values()],props=el('div',null,'au-form-grid');
@@ -865,7 +873,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     const shared=characters.find(c=>c.id===value.shared_character_id),sharedProfiles=shared?.profile.skill_profiles??[];
     if(value.use_shared_skills&&sharedProfiles.length)props.append(field('공용 특성 묶음',value.shared_skill_profile_id??'',{type:'string',enum:['',...sharedProfiles.map(p=>p.profile_id)],enumNames:['기본 특성',...sharedProfiles.map(p=>p.name)]},id=>change({shared_skill_profile_id:id||null}),`${key}.shared_profile`));
     host.append(props);sharedTraitsPreview051(host,value,characters);host.append(el('p','이 상대의 LP·특성·캐릭터는 이 구역에서만 바뀝니다. 카드 구성은 연결된 덱을 함께 사용합니다.','au-hint'));
-    const traits=el('div',null,'au-encounter-traits');traits.append(el('h3',`이 상대에게 직접 설정한 특성 · ${(value.skills??[]).length}개`));skillFields(traits,value.skills??[],skills=>change({skills}),`${key}.skills`,false,()=>getEntry()?.encounter?.skills??[]);host.append(traits);
+    const traits=el('div',null,'au-encounter-traits');traits.append(el('h3',`이 상대에게 직접 설정한 특성 · ${(value.skills??[]).length}개`));skillFields(traits,value.skills??[],skills=>change({skills}),`${key}.skills`,false,()=>getEntry()?.encounter?.skills??[]);ouijaWarning184(traits,value.skills,deck?.content?.main);host.append(traits);
   }
   async function openEnemyRoutes071(deckId=null,options101={}){
     const owner=latestState068().user?.id??null;
