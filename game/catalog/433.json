@@ -11,7 +11,7 @@
   ],
   "code": 73333463,
   "defense": 2000,
-  "description": "\"로이드\"를 릴리스하여\n어드밴스 소환했을 때 모든\n함정을 파괴한다.",
+  "description": "①: \"로이드\" 몬스터를 릴리스하고 이 카드가 어드밴스 소환에 성공했을 경우에 발동한다. 필드의 마법 / 함정 카드를 전부 제외한다.",
   "draw_enabled": true,
   "identity_key": "f5346370866abe6094ecf2bbbbfd96b5d26819a49829882efdc0e1d01bba63d2",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0082.webp",

@@ -9,7 +9,7 @@
   ],
   "code": 12607053,
   "defense": 0,
-  "description": "이 카드가 발동하는 턴, 상대\n몬스터가 주는 데미지는 0로\n감소한다.",
+  "description": "①: 이 턴에, 자신 몬스터는 전투로는 파괴되지 않으며, 자신이 받는 전투 데미지는 0 이 된다.",
   "draw_enabled": true,
   "identity_key": "0cbb01d4f0d453e198507ca2108ed5a1685f782edf88662fbdbf83a58d5d4401",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1102.webp",

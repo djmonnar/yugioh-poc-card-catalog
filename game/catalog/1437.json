@@ -6,13 +6,14 @@
   "categories": [
     "효과-회복",
     "발동-묘지로 보내졌을 때",
+    "발동-필드에서 묘지로 보내졌을 때",
     "발동-반전 소환 시",
     "발동-소환 시",
     "발동-파괴 시"
   ],
   "code": 13944422,
   "defense": 700,
-  "description": "이 카드가 자신의 필드에 앞면\n공격 표시로 존재하는 동안\n자신의 스탠바이 페이즈마다\nLP를 1000 회복한다.",
+  "description": "이 몬스터가 일반 소환/반전 소환/특수 소환에 성공했을 때, 자신은 1000 라이프 포인트를 회복한다. 이 카드가 파괴되어 묘지로 보내졌을 때, 자신은 2000 포인트 데미지를 받는다.",
   "draw_enabled": true,
   "identity_key": "e0d3ed35a494545a4a9f93bbe25aa49c5308c06fadb7b2aca201cdd3f328f1d7",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0498.webp",

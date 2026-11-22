@@ -4,10 +4,42 @@
   "profile": {
     "name": "만죠메 준",
     "portrait": "assets/actors/native178/manjoume/start.png",
-    "skill_profiles": [],
+    "skill_profiles": [
+      {
+        "name": "방해꾼 컨트리",
+        "profile_id": "profile-baafeeb4-fdd9-40e5-8666-71e80980b2e7",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "1f5120873e4a43f8628b08db741129ecab7fb1a3cb7c23a299b44ccef9e3495a",
+              "internal_id": 3179,
+              "name_ko": "방해꾼 컨트리",
+              "slot": 2211
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "암드드래곤",
+        "profile_id": "profile-533f2bc4-a95c-4c44-8063-bb23b5bf9155",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "dad7bc691696b637525164ff645f697f33acd67066a06779648350dac2c76b82",
+              "internal_id": 67,
+              "name_ko": "암드 드래곤 LV3",
+              "slot": 179
+            },
+            "kind": "start_monster",
+            "position": "attack"
+          }
+        ]
+      }
+    ],
     "skills": []
   },
   "profile_id": "manjoume",
-  "updated_at": "2026-11-22T16:13:01.711027+00:00",
-  "version": 925
+  "updated_at": "2026-11-22T22:20:57.511966+00:00",
+  "version": 5963
 }

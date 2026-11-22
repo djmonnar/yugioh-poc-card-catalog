@@ -11,7 +11,7 @@
   ],
   "code": 7602840,
   "defense": 1200,
-  "description": "이 카드가 전투로 파괴되었을\n때, 덱에서 공격력 1500의\n기계족 몬스터 1장을 특수\n소환한다.",
+  "description": "이 카드가 전투에 의해서 파괴되어 묘지로 보내졌을 때, 덱에서 공격력 1500 이하의 기계족 몬스터 1장을 앞면 공격 표시로 특수 소환할 수 있다. 그 후 덱을 셔플한다.",
   "draw_enabled": true,
   "identity_key": "8d661fab8a61d1425c715c84a38815a88842a8827a107dee94278d556b167031",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0888.webp",

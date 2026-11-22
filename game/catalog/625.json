@@ -8,7 +8,7 @@
   ],
   "code": 64788463,
   "defense": 1400,
-  "description": "자신의 필드에 \"퀸즈\n나이트\"가 있으면 \"잭스\n나이트\"를 특수 소환할 수\n있다.",
+  "description": "①: 자신 필드에 \"퀸즈 나이트\"가 존재하고, 이 카드가 일반 소환에 성공했을 때에 발동할 수 있다. 덱에서 \"잭스 나이트\" 1장을 특수 소환한다.",
   "draw_enabled": true,
   "identity_key": "c17e0ba95348ec1681e456751c1577d98e203ee10bfbcb76a1790af31f622a2e",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0085.webp",

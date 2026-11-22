@@ -6,7 +6,7 @@
   "categories": [],
   "code": 66362965,
   "defense": 1200,
-  "description": "상대 필드의 몬스터가\n자신보다 2장 이상 많으면\n릴리스 없이 이 카드를 소환할\n수 있다.",
+  "description": "자신의 필드 위 몬스터가 상대의 필드 위 몬스터보다 2장 이상 적을 경우, 이 카드는 패에서 특수 소환할 수 있다.",
   "draw_enabled": true,
   "identity_key": "89fe7de99a997327f4633681def247bc7c4e2fa951b80ddda43351f0893b1bda",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0908.webp",

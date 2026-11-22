@@ -3,7 +3,9 @@
   "art_key": "Cards/204",
   "attack": 1800,
   "attribute": 32,
-  "categories": [],
+  "categories": [
+    "지원-다크 스워드"
+  ],
   "code": 11321183,
   "defense": 1500,
   "description": "그는 용을 조종하는 전사라고\n합니다.",

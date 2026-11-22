@@ -6,7 +6,7 @@
   "categories": [],
   "code": 30860696,
   "defense": 1300,
-  "description": "이 카드의 효과는 자신의 턴의\n배틀 페이즈에만 적용된다. 이\n몬스터가 받는 모든 데미지를\n0으로 한다. 이 카드가 공격한\n몬스터의 공격력을 턴\n종료시까지 500 내린다.",
+  "description": "①: 자신 배틀 페이즈 중, 이 카드는 전투로는 파괴되지 않으며, 이 카드의 전투로 발생하는 자신에게로의 전투 데미지는 0 이 된다. ②: 이 카드가 몬스터에 공격한 데미지 계산 후에 발동한다. 공격 대상 몬스터의 공격력은 턴 종료시까지 500 내린다.",
   "draw_enabled": true,
   "identity_key": "2c26a093bfcfef4b10433e905f720083619ed0e38e9aaf522e1d394330ecb4db",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1093.webp",

@@ -6,7 +6,7 @@
   "categories": [],
   "code": 68087897,
   "defense": 2300,
-  "description": "이 몬스터는 \"진화의 고치\"를\n장착한 \"꼬마 모스\"를, 장착\n후 자신의 2번째 턴에\n릴리스했을 경우에만 특수\n소환할 수 있다.",
+  "description": "이 카드가 필드 위에 앞면 표시로 존재하는 한, 양쪽의 플레이어는 1턴에 1번밖에 몬스터를 특수 소환할 수 없다.",
   "draw_enabled": true,
   "identity_key": "61c6cea25c5612bfe8b13d260240f7e6d74216d7fc2795bdea1d71f2f0439e39",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1045.webp",

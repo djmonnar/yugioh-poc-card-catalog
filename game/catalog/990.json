@@ -8,7 +8,7 @@
   ],
   "code": 96008713,
   "defense": 0,
-  "description": "상대가 공격을 선언했을 때\n발동할 수 있다. 상대 필드의\n앞면 수비 표시 몬스터 1장을\n선택하여 공격 대상으로 한다.",
+  "description": "①: 상대 필드에 앞면 표시 몬스터가 2장 이상 존재하고, 자신 필드에 몬스터가 존재할 경우, 상대 몬스터의 공격 선언시에 공격 몬스터 이외의 상대 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 앞면 표시 몬스터의 컨트롤을 배틀 페이즈 종료시까지 얻고, 공격 대상을 그 몬스터로 옮겨 데미지 계산을 실행한다.",
   "draw_enabled": true,
   "identity_key": "b9c971ec38eabb323d384d7d1e2909bde3052044003ba87bccdd0436a512509e",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0892.webp",

@@ -8,7 +8,7 @@
   ],
   "code": 52090844,
   "defense": 1000,
-  "description": "리버스: 상대 필드의 마법 /\n함정 카드 1장당 상대에게 500\n직접 데미지를 준다.",
+  "description": "자신의 스텐바이 페이즈마다 상대 라이프에 600 포인트 데미지를 준다.",
   "draw_enabled": true,
   "identity_key": "c261df20267316d3c07108f81b3210cc819dea85a24f78f2a3b8e9a301d25ee3",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0570.webp",

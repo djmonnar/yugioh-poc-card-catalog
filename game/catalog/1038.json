@@ -8,7 +8,7 @@
   ],
   "code": 53119267,
   "defense": 0,
-  "description": "상대의 카드가 마법 / 함정 /\n효과 몬스터의 효과로 묘지에\n버려졌을 때, 그 카드 1장당\n상대에게 500 데미지를 줄 수\n있다.",
+  "description": "상대의 패가 묘지에 버려졌을 때, 버린 카드 1장당 500 포인트 데미지를 상대 라이프에 준다.",
   "draw_enabled": true,
   "identity_key": "6b77ce3165ab6347eea4e1811df274654550a5ca7b8820dfa9fcbccb945ce1d4",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0922.webp",

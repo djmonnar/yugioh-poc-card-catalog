@@ -6,7 +6,7 @@
   "categories": [],
   "code": 53116300,
   "defense": 0,
-  "description": "이 카드를 릴리스하여\n\"인벨즈\"가 소환되었을 때,\n덱에서 레벨 4 몬스터 1장을\n소환한다.",
+  "description": "이 카드를 릴리스하고 \"인벨즈\"라는 이름이 붙은 몬스터의 어드밴스 소환에 성공했을 때, 자신의 덱에서 레벨 4 이하의 \"인벨즈\"라는 이름이 붙은 몬스터 1장을 특수 소환할 수 있다.",
   "draw_enabled": true,
   "identity_key": "bc2d9213562fe65aeec2499d3dddebb7ede3a0e2f323d13a894f7721edf0a71e",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0263.webp",

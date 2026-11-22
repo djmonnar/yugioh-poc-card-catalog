@@ -1,6 +1,6 @@
 {
-  "authoring_revision": 926,
-  "game_revision": 926,
+  "authoring_revision": 933,
+  "game_revision": 933,
   "identity": {
     "base_catalog_sha256": "b73dd51c78aeab8c9beebf936b46e4cac16040e70df3a7980dec38c40db21e09",
     "catalog035_sha256": "b5f1e9749cec0c1497c5fdcbfb2dc9c64895dcd859f083ec0ec4014580f05308",
@@ -65,10 +65,10 @@
     "native_manifest_sha256": "4674de031c9e3044c86b90fcd402d9533d9353347802f268863746bf3bd7e4d7"
   },
   "map_rules_revision": 858,
-  "metadata_revision": "926",
+  "metadata_revision": "933",
   "practice_decks_sha256": "c2d5908a174f4d1f16751ef59f6d327c8ced9b9c9274b6e332b15c24b20d9f2c",
   "project_id": "ygoclassic-expedition",
-  "project_revision": 926,
+  "project_revision": 933,
   "route": "poc_bootstrap188",
-  "source_fingerprint": "803a0c9c06a9b7b3e3751c1827cd25266ba6d7fa58214870ca2f3ab3ff895b3d"
+  "source_fingerprint": "2d6020c5129dd94c57733269773f2bc0ccd06086e282b420bafc79d293dd1f43"
 }

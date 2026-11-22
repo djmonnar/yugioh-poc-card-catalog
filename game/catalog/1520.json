@@ -10,7 +10,7 @@
   ],
   "code": 45894482,
   "defense": 400,
-  "description": "이 카드의 일반 소환을 특수\n소환으로 취급할 수 있다.\n특수 소환을 선택하면 상대는\n자신의 묘지의 몬스터 1장을\n선택하여 필드에 특수 소환할\n수 있다.",
+  "description": "①: 이 카드는 패에서 특수 소환할 수 있다. ②: 이 카드의 ①의 방법으로 특수 소환에 성공했을 경우에 발동한다. 상대는 자신 묘지의 몬스터 1장을 고르고 특수 소환할 수 있다.",
   "draw_enabled": true,
   "identity_key": "94bef6b97b015d09dc930e530725ae19025c846a25d59af45e2236b32a71a79b",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0405.webp",

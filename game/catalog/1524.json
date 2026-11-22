@@ -10,7 +10,7 @@
   ],
   "code": 6480253,
   "defense": 1200,
-  "description": "리버스: 융합 소환에 사용되어\n묘지로 보내진 융합 소재\n몬스터 2장을 자신의 패로\n되돌린다.",
+  "description": "이 카드가 전투에 의해서 파괴되어 묘지로 보내졌을 때, 자신의 묘지에서 \"엘리멘틀 히어로\"라는 이름이 붙은 카드 1장과 \"융합\" 마법 카드 1장을 패에 넣는다.",
   "draw_enabled": true,
   "identity_key": "83176f3fabd5a8b57f264142b6caa0dbbe26b214c8f9702d8cdce70ee66af99a",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0793.webp",
