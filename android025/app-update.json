@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.119",
-  "versionCode": 138,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.119/YGOClassicExpedition-0.18.119-arm64.apk",
-  "sizeBytes": 769395230,
-  "sha256": "d9f4d62bd7e0f7f2bf5b021b74cdca9e73a47283bea5c24a7a7b57330c42bdc4",
-  "releaseNotes": "만죠메 카드 33장(암드 드래곤·방해꾼·정크 싱크론 등)을 더했습니다. AI가 같은 지속 카드를 겹쳐 깔지 않고, 로이드 덱을 더 잘 쓰며, 체인 OFF에서도 내 카드의 선택 효과를 묻습니다. 리플레이 질문을 더 분명하게 바꾸고 쥬다이·만죠메 컷신을 다듬었습니다."
+  "versionName": "0.18.120",
+  "versionCode": 139,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.120/YGOClassicExpedition-0.18.120-arm64.apk",
+  "sizeBytes": 773665056,
+  "sha256": "9505f542a6061cb9ff929b4fdb010c76247823fa472240f673dcbca6dc9f8d3a",
+  "releaseNotes": "새 상대 특성 4종(효과·반사·첫 데미지 무효, 위저보드)을 더했습니다. 위저보드 상대는 다크 네크로피어가 나온 뒤 턴마다 F·I·N·A·L을 한 글자씩 새기며, 다섯 글자가 모이면 승리합니다."
 }
