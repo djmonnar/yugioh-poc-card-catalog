@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.125",
-  "versionCode": 144,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.125/YGOClassicExpedition-0.18.125-arm64.apk",
-  "sizeBytes": 798618924,
-  "sha256": "d714dd3423ba310c101e398b55fd1be9d7bb85bd127b7fc66e745851d66ec250",
-  "releaseNotes": "유니온·엘리멘틀 히어로 카드 19장과 상대 특성 '유니온의 힘'을 추가했습니다."
+  "versionName": "0.18.126",
+  "versionCode": 145,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.126/YGOClassicExpedition-0.18.126-arm64.apk",
+  "sizeBytes": 799836642,
+  "sha256": "56986fbbeac9eebb18338d3fbe232ecdd53606d260d08e3fd2b9250354c0fdf8",
+  "releaseNotes": "새 캐릭터 4명(판도라·빛과 어둠의 가면·어둠의 플레이어 킬러·텐죠인 아스카)과 특성 융합회수·의식회수를 더하고, 호루스의 흑염룡 LV8 앞 마법 발동·전선기지·선택 창 크기를 고쳤습니다."
 }
