@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/ishizu/start",
+  "banlistEnabled": false,
+  "deckName": "창세신",
+  "extra": [],
+  "id": "enc-0512daa9-07df-45d0-bbe5-9f1a5f7bf7ed",
+  "lpBonus": 0,
+  "main": [
+    2747,
+    2747,
+    2747,
+    2746,
+    2746,
+    2746,
+    2748,
+    2748,
+    2748,
+    521,
+    521,
+    2509,
+    2509,
+    2509,
+    1129,
+    1129,
+    2847,
+    2847,
+    1948,
+    1948
+  ],
+  "name": "이시즈 이슈타르",
+  "openingDrawBonus": 0,
+  "profileId": "ishizu",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 675,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-0512daa9-07df-45d0-bbe5-9f1a5f7bf7ed",
+  "usesNativeRules035": true
+}

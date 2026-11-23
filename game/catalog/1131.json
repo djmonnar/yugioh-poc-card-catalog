@@ -3,7 +3,10 @@
   "art_key": "Cards/1131",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "효과-공격 제한",
+    "발동-LP 지불"
+  ],
   "code": 44656491,
   "defense": 0,
   "description": "자신의 스탠바이 페이즈마다\n100 LP를 지불해야 한다.\n지불할 수 없으면 이 카드를\n파괴한다. 공격력 1500 이상의\n몬스터는 모두 공격할 수\n없다.",

@@ -1,0 +1,49 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-6e4e5463-58a7-449a-9806-a9fd95db5940",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "38732c2dc17e0f99d1df2769578af7154db864496c1e6818440c5b4230544e30",
+      "source_id": 2747
+    },
+    {
+      "count": 3,
+      "identity_key": "77431993370dd0b57acc6442cd19f02cf2c07bca0bd6ee3977b5465268074f6a",
+      "source_id": 2746
+    },
+    {
+      "count": 3,
+      "identity_key": "139de0cd3c43d8d0c03ba6c33ee9310124ea99271a397356b33c9a5231ec594e",
+      "source_id": 2748
+    },
+    {
+      "count": 2,
+      "identity_key": "6a708381c382bf7ebf77b64431d364cdf3e5399fa9a05c60f544c38d5853895b",
+      "source_id": 521
+    },
+    {
+      "count": 3,
+      "identity_key": "0bd582669ccd6d8233938e571419ec5ff8eba745a82bb245a46a8944cddb50db",
+      "source_id": 2509
+    },
+    {
+      "count": 2,
+      "identity_key": "51b5740d10ab23899643b847205bb7969dc3badfabee63b633b5f7128610b832",
+      "source_id": 1129
+    },
+    {
+      "count": 2,
+      "identity_key": "14ed19ca22d444a2c0c191e14c53b736907be0e6610c18cc5665837175ce974b",
+      "source_id": 2847
+    },
+    {
+      "count": 2,
+      "identity_key": "90c257c09a13be5c08dde46feb5430c8094a96ccb3e70d8540d72d4661d99a67",
+      "source_id": 1948
+    }
+  ],
+  "name": "창세신",
+  "version": 949
+}
