@@ -1,0 +1,80 @@
+{
+  "banlist_enabled": true,
+  "extra": [
+    {
+      "count": 2,
+      "identity_key": "37f9df2854c4d6078750c67645f66e1ac605a604bf6cb7d51c5393aa44b12864",
+      "source_id": 3190
+    },
+    {
+      "count": 1,
+      "identity_key": "9348e84a202c559a7e7632d94c806300c47479c9ab7f48962cc5a5e08d5ba0be",
+      "source_id": 14
+    },
+    {
+      "count": 1,
+      "identity_key": "16fa97a11ac6b1c916469ddcd3bbea2c82e0d481b847ab2dbcfcc715a4fe8509",
+      "source_id": 3191
+    }
+  ],
+  "id": "deck-7b7a36ed-23ab-4b07-9d11-e0099c5672a7",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "49deab04b52ee5e79c74c018a1ce386865f6714d51df126d6219a5a8914f197f",
+      "source_id": 297
+    },
+    {
+      "count": 3,
+      "identity_key": "e6eb75e16b5c6e32d151c9f4686543750077ff886d373a8b790bf4c34227b230",
+      "source_id": 597
+    },
+    {
+      "count": 3,
+      "identity_key": "ac6ba7bac046e814ed03d245fbeb69a2e7d1bb1e83708be9128a5528b53baad1",
+      "source_id": 3194
+    },
+    {
+      "count": 2,
+      "identity_key": "3f4d58d2c9fb4989c04cc1bead307c96915f44809de8af62dcd797fd015769ba",
+      "source_id": 3196
+    },
+    {
+      "count": 2,
+      "identity_key": "129f21f5c12fb4af680f92bdb2d08f5f2e5816a13b17500187f8fff6d45ea3c4",
+      "source_id": 3197
+    },
+    {
+      "count": 1,
+      "identity_key": "03d27a32a00dfb3bf02f92ea57b4426cf836dcd4bdd9094a9a7a24111df312b8",
+      "source_id": 3195
+    },
+    {
+      "count": 2,
+      "identity_key": "c1e7ed38015f0ecb5e2a79a3069d39f320f4928e71cf8b2c7dea62d6e6ab0232",
+      "source_id": 3206
+    },
+    {
+      "count": 1,
+      "identity_key": "95553e6ac8772d948c8276eb431e280232cb22bd4dd6747f7822383ab539a336",
+      "source_id": 3198
+    },
+    {
+      "count": 1,
+      "identity_key": "6e88143a6d19b63d51f9f78d79264941a106691798fb78f1579481304fad7560",
+      "source_id": 1003
+    },
+    {
+      "count": 1,
+      "identity_key": "45d860d25b85638ceddfaeb743ab74b99d71467e48c4e8f1bc8ca3060872695f",
+      "source_id": 1940
+    },
+    {
+      "count": 1,
+      "identity_key": "40ed81512aa2831063fbd3657650e782d98ca30484242fbd0883454014eea624",
+      "source_id": 1927
+    }
+  ],
+  "name": "화염의 검사",
+  "version": 943
+}

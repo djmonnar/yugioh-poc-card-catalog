@@ -1,0 +1,45 @@
+{
+  "artKey": "Character178/manjoume_start",
+  "banlistEnabled": false,
+  "deckName": "암드드래곤",
+  "extra": [],
+  "id": "enc-b13769eb-8e20-4c42-9df3-93fbc5ed218d",
+  "lpBonus": 0,
+  "main": [
+    3162,
+    3162,
+    3162,
+    67,
+    67,
+    67,
+    448,
+    448,
+    448,
+    423,
+    423,
+    3156,
+    3156,
+    651,
+    651,
+    651,
+    2127,
+    1930,
+    1930,
+    1930
+  ],
+  "name": "만죠메 준",
+  "openingDrawBonus": 0,
+  "profileId": "manjoume",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_monster",
+      "position": 1,
+      "sourceId": 67,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-b13769eb-8e20-4c42-9df3-93fbc5ed218d",
+  "usesNativeRules035": true
+}

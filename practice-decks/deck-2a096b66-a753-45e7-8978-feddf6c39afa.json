@@ -1,0 +1,49 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-2a096b66-a753-45e7-8978-feddf6c39afa",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "3ff6d71797c41919bbd9e63b22fd22198954c28ea435baf843331228fbd1b367",
+      "source_id": 3162
+    },
+    {
+      "count": 3,
+      "identity_key": "dad7bc691696b637525164ff645f697f33acd67066a06779648350dac2c76b82",
+      "source_id": 67
+    },
+    {
+      "count": 3,
+      "identity_key": "db766c19c326142563efa52ac245ec45578046443928668b681de6e451a78d7c",
+      "source_id": 448
+    },
+    {
+      "count": 2,
+      "identity_key": "d000cd3ec66435798832c25ba65f34642f0fba7eedf8b7d4518f56e7248b2ec7",
+      "source_id": 423
+    },
+    {
+      "count": 2,
+      "identity_key": "52a1f106d0a6ced5dc493b6fca0d2a937c5be5a2dc6b7a4b83ad35cfff6c370a",
+      "source_id": 3156
+    },
+    {
+      "count": 3,
+      "identity_key": "87065b1e82110395b12c231c79ac2545181950bbab068295d5489d5ffbac426e",
+      "source_id": 651
+    },
+    {
+      "count": 1,
+      "identity_key": "5c3da29305041d4d90caedf287fce054c06fe737e1a0fb69e44ee517261529fd",
+      "source_id": 2127
+    },
+    {
+      "count": 3,
+      "identity_key": "0a6bfcbb90b1857fd1ab17e602d557c33e59c36ffd0b0166b1b598b612eacc14",
+      "source_id": 1930
+    }
+  ],
+  "name": "암드드래곤",
+  "version": 941
+}

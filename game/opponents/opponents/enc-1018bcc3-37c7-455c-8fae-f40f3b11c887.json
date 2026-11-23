@@ -1,0 +1,49 @@
+{
+  "artKey": "Character178/manjoume_start",
+  "banlistEnabled": false,
+  "deckName": "방해꾼",
+  "extra": [
+    3171,
+    3170,
+    3170
+  ],
+  "id": "enc-1018bcc3-37c7-455c-8fae-f40f3b11c887",
+  "lpBonus": 0,
+  "main": [
+    3164,
+    3164,
+    3164,
+    3165,
+    3165,
+    3165,
+    3166,
+    3166,
+    3166,
+    3179,
+    3179,
+    3167,
+    3167,
+    2006,
+    2006,
+    3075,
+    3075,
+    1003,
+    1003,
+    1003
+  ],
+  "name": "만죠메 준",
+  "openingDrawBonus": 0,
+  "profileId": "manjoume",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 3179,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-1018bcc3-37c7-455c-8fae-f40f3b11c887",
+  "usesNativeRules035": true
+}

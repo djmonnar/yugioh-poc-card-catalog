@@ -34,11 +34,26 @@
             "kind": "start_hand"
           }
         ]
+      },
+      {
+        "name": "전사족",
+        "profile_id": "profile-4c6516b3-87e9-4962-a603-a99f7e0ff12b",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "e2b30b2ce7010e2966ad4a88a832877712f9a4ab1e38e835412a7bbbc541e51d",
+              "internal_id": 2659,
+              "name_ko": "연합군",
+              "slot": 1691
+            },
+            "kind": "start_field"
+          }
+        ]
       }
     ],
     "skills": []
   },
   "profile_id": "joey",
-  "updated_at": "2026-11-20T06:16:34.884281+00:00",
-  "version": 5953
+  "updated_at": "2026-11-23T06:45:51.824112+00:00",
+  "version": 6256
 }

@@ -1,0 +1,50 @@
+{
+  "artKey": "DuelUi011/legacy/joey_intro",
+  "banlistEnabled": false,
+  "deckName": "화염의 검사",
+  "extra": [
+    3190,
+    3190,
+    14,
+    3191
+  ],
+  "id": "enc-888f7bad-0e44-4d90-8c89-042bd61d989e",
+  "lpBonus": 0,
+  "main": [
+    297,
+    297,
+    297,
+    597,
+    597,
+    597,
+    3194,
+    3194,
+    3194,
+    3196,
+    3196,
+    3197,
+    3197,
+    3195,
+    3206,
+    3206,
+    3198,
+    1003,
+    1940,
+    1927
+  ],
+  "name": "조이",
+  "openingDrawBonus": 0,
+  "profileId": "joey",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2659,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-888f7bad-0e44-4d90-8c89-042bd61d989e",
+  "usesNativeRules035": true
+}

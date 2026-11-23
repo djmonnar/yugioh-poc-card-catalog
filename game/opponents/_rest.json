@@ -251,6 +251,18 @@
           {
             "opponentId": "enc-09778a47-1d03-4a28-982b-fec80a1c4953",
             "weight": 1
+          },
+          {
+            "opponentId": "enc-37e87243-ce6b-421a-9216-fd082438c433",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-0af17682-076f-458d-ad64-a596fff67fde",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-724133c9-7a2c-4a76-88ae-4a529c660688",
+            "weight": 1
           }
         ],
         "lpBonus": 1500
@@ -385,6 +397,10 @@
           },
           {
             "opponentId": "enc-da3d7785-bf5b-491a-b5ff-14542644a50f",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-df72eaf9-26a4-4369-b7df-1471d7e036a8",
             "weight": 1
           }
         ],
@@ -534,6 +550,10 @@
           },
           {
             "opponentId": "enc-6a9cfa89-2b2e-46af-9cb7-10a6e65add8f",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-29c20d15-97fc-491a-9acd-4d42cd6c8f51",
             "weight": 1
           }
         ],
@@ -783,6 +803,18 @@
           {
             "opponentId": "enc-c3edead1-9ca2-4e8d-9a58-f1dded0c1682",
             "weight": 1
+          },
+          {
+            "opponentId": "enc-d666a916-4d35-4809-92fc-d9bf1828934c",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-aba38914-e526-4571-ba05-cc95bae087ea",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-4178d206-1241-4220-aace-da41aeb140bb",
+            "weight": 1
           }
         ],
         "lpBonus": 1000
@@ -939,6 +971,18 @@
           },
           {
             "opponentId": "enc-2e1ddcf2-6dd1-464c-bbee-ea623e8c7658",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-b13769eb-8e20-4c42-9df3-93fbc5ed218d",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-1018bcc3-37c7-455c-8fae-f40f3b11c887",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-888f7bad-0e44-4d90-8c89-042bd61d989e",
             "weight": 1
           }
         ],

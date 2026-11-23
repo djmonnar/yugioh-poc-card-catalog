@@ -1,0 +1,64 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-4ff56be2-85d2-4ff7-acb3-5a6a18f88539",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "69239aa3ffa6f83d823f15d9b605ed480e17fa696bca09da8d8e5065a20af6e8",
+      "source_id": 1891
+    },
+    {
+      "count": 2,
+      "identity_key": "11deec273674ab27d556ef6c986bb2b641b62d439aeab9dde239f05f64249e97",
+      "source_id": 1889
+    },
+    {
+      "count": 1,
+      "identity_key": "5166924ae5a3f0815f4e5ef4a463fe22a5b2eca168ff278ff7f932c91d659b1a",
+      "source_id": 1043
+    },
+    {
+      "count": 2,
+      "identity_key": "e3df1c7dcf8e584d6be15dafc7bb3b6b03def40864d28a28b257ea175616f1af",
+      "source_id": 1213
+    },
+    {
+      "count": 3,
+      "identity_key": "b36deadfbc45f4414e047f1946d654da5f85e58d57f678e8366f4d32ef9bb101",
+      "source_id": 157
+    },
+    {
+      "count": 1,
+      "identity_key": "d59054d0233bb2bc12083dc14d553714a0213be2fed6a33666603cd45e91e09f",
+      "source_id": 546
+    },
+    {
+      "count": 1,
+      "identity_key": "d1064eabce89083c97e8fbe9042a36305abdb032c5a1ac17185888abbe38d215",
+      "source_id": 483
+    },
+    {
+      "count": 1,
+      "identity_key": "da00e269e42e378a38633b60dc6d68b8e7df2e2ea4a588f43bedf222b2a8e2a2",
+      "source_id": 1068
+    },
+    {
+      "count": 2,
+      "identity_key": "b9c971ec38eabb323d384d7d1e2909bde3052044003ba87bccdd0436a512509e",
+      "source_id": 990
+    },
+    {
+      "count": 3,
+      "identity_key": "b467440da87d7c8e8206fba8be52cd666b911aefaf2c091c04b7d45552335cd1",
+      "source_id": 74
+    },
+    {
+      "count": 2,
+      "identity_key": "8eb7b0b13cdaed21967f28dfb5ad23c6708fd6cbcc0315189c250126baf10b02",
+      "source_id": 1898
+    }
+  ],
+  "name": "탈취",
+  "version": 947
+}

@@ -1,1 +1,18 @@
-{}
+{
+  "unified039_519bad9cf6b70ec564c09c2407ba1e5135cf3342": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_field",
+        "position": 0,
+        "sourceId": 3179,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  }
+}
