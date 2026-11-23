@@ -20,7 +20,8 @@ import {draftScope068} from './authoring068-scope.js?v=20261103-071';
 import {characterChoice068,changeCharacter068,traitChoices068,changeTrait068} from './authoring068-character.js?v=20261103-071';
 import {portraitUrl081} from './authoring081-assets.js?v=20261105-082';
 import {traitCardMatches089} from './authoring089-traits.js?v=20261106-089';
-import {traitKindOffered184,traitHelp184,ouijaWithoutNecrofear184} from './authoring184-traits.js';
+import {traitHelp184,ouijaWithoutNecrofear184} from './authoring184-traits.js';
+import {traitKindOffered197} from './authoring197-traits.js';
 import {traitFieldLabel196,traitDefault196} from './authoring196-traits.js';
 import {CARD_SORTS091,filterValues091,cardQueryTokens091,cardFiltersMatch091,sortCards091} from './authoring091-search.js?v=20261106-091';
 import {deckDeletionChanges153,deckDeletionPlan174,deckDeletionSteps174,openDeckDeletion153} from './authoring153-deck-delete.js';
@@ -52,13 +53,13 @@ export function deckDisplayName039(state,deck,displayTitle){const all=entities03
 export function sourceId039(card){const id=card?.source_id??card?.sourceId??card?.internal_id;return Number.isSafeInteger(id)&&id>=0?id:null;}
 export function fieldValue039(value,path,next){const parts=Array.isArray(path)?path:[path];if(!parts.length||parts.some(k=>['__proto__','prototype','constructor'].includes(k)))throw Error('편집할 항목을 확인해 주세요.');const result=clone(value),first=parts[0];let node=result;for(const k of parts.slice(0,-1)){if(!node[k]||typeof node[k]!=='object'||Array.isArray(node[k]))node[k]={};node=node[k];}node[parts.at(-1)]=next;return {[first]:result[first]};}
 import {cardMetadata109} from './authoring109-catalog.js?v=20261114-109';
-import {cardMetadata196} from './authoring196-catalog.js?v=20261123-union-hero196';
+import {cardMetadata197} from './authoring197-catalog.js?v=20261123-thunder-hand197';
 
 export function normalizeCatalog039(state){
   const boot=state.bootstrap??{},game=state.gamePayload??boot.game_payload??boot.game??{},raw=boot.catalog?.cards??boot.catalog??game.catalog?.cards??game.catalog??[],rows=Array.isArray(raw)?raw:[],all=entities039(state),lookup=new Map();
   for(const e of all){const id=sourceId039(e.content)??(e.entity_type.startsWith('card_')&&/^\d+$/.test(e.entity_id)?Number(e.entity_id):null);if(id!==null)lookup.set(entityKey039(e.entity_type,id),e.content);}
   const normalized=rows.map(raw=>{const id=sourceId039(raw);if(id===null)throw Error('카드 자료의 번호가 올바르지 않습니다.');const display=lookup.get(entityKey039('card_display',id))??{},setting=lookup.get(entityKey039('card_setting',id))??{},annotation=lookup.get(entityKey039('card_annotation',id))??{},limit=lookup.get(entityKey039('card_limit',id))??{};
-    const metadata120=cardMetadata196(id,raw.identity_key),maximumNormalLimit=metadata120?.maximumNormalLimit??(raw.token===true?0:undefined),fixedToken=maximumNormalLimit===0;
+    const metadata120=cardMetadata197(id,raw.identity_key),maximumNormalLimit=metadata120?.maximumNormalLimit??(raw.token===true?0:undefined),fixedToken=maximumNormalLimit===0;
     const inherited=(key,frozen,fallback)=>{if(!own(limit,key))return fallback;if(limit[key]!==null)return limit[key];if(!own(limit,frozen))throw Error('카드 제한의 기본 자료를 다시 확인해 주세요.');return limit[frozen];};
     const storedNormalLimit=inherited('normal_limit','frozen_normal_limit',raw.normal_limit??raw.deck_limit??raw.maxCopies??3);
     const normalLimit=maximumNormalLimit==null?storedNormalLimit:Math.min(maximumNormalLimit,storedNormalLimit),speedLimit=inherited('speed_limit','frozen_speed_limit',raw.speed_limit??null);
@@ -205,7 +206,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
         const definition=definitions.find(k=>k.kind===row.kind),item=el('li'),details=[];
         item.append(el('strong',definition?.label??'기존 특성'));
         for(const [key,spec] of Object.entries(definition?.fields??{})){
-          if(spec.type==='integer'&&Number.isFinite(row[key]))details.push(key==='threshold'?`LP ${row[key].toLocaleString('ko-KR')} 이하`:row.kind==='lp_bonus'||row.kind==='heal_once'?`${row[key].toLocaleString('ko-KR')} LP`:`${row[key]}장`);
+          if(spec.type==='integer'&&Number.isFinite(row[key]))details.push(key==='threshold'?`LP ${row[key].toLocaleString('ko-KR')} 이하`:row.kind==='lp_bonus'||row.kind==='heal_once'?`${row[key].toLocaleString('ko-KR')} LP`:row.kind==='union_power'?`공격력·수비력 +${row[key].toLocaleString('ko-KR')}`:`${row[key]}장`);
           if(spec.type==='source-card')details.push(cardName(row.card));
           if(spec.type==='counted-source-cards')details.push(`합계 ${(row.entries??[]).reduce((n,entry)=>n+entry.count,0)}장`,...(row.entries??[]).map(entry=>`${cardName(entry.card)} ${entry.count}장`));
           if(spec.type==='enum'){const index=['attack','defense','set'].indexOf(row.position),label=spec.labels?.[index];if(label)details.push(label);}
@@ -235,9 +236,10 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
   }
   // (184) A 위저보드 trait needs Dark Necrofear in the main deck to reveal letters. A note, not an error.
   function ouijaWarning184(host,skills,main){if(ouijaWithoutNecrofear184(skills,currentCards,main))host.append(el('p','위저보드 특성이 있지만 이 덱의 메인 덱에 다크 네크로피어가 없습니다. 다크 네크로피어가 나오지 않으면 글자가 놓이지 않습니다.','au-hint au-ouija-warning184'));}
-  function skillFields(host,rows,onRows,key,shared=false,getRows=()=>rows,allowed=()=>true){
-    // (184) Shared editors (characters, starter decks) skip kinds marked shared:false; decks and encounters take every compiled kind.
-    const form=currentState.bootstrap?.capabilities?.trait_form,definitions=(form?.kinds??[]).filter(k=>traitKindOffered184(k,shared)&&allowed(k.kind));
+  function skillFields(host,rows,onRows,key,shared=false,getRows=()=>rows,allowed=()=>true,starter=false){
+    // (197) Character shared traits take the kinds the database marks shared (from 197 also the 184 kinds, union_power and the recover kinds);
+    // starter decks take STARTER_KINDS197 whatever the shared flag says; decks and encounters take every compiled kind.
+    const form=currentState.bootstrap?.capabilities?.trait_form,definitions=(form?.kinds??[]).filter(k=>traitKindOffered197(k,shared,starter)&&allowed(k.kind));
     if(!definitions.length){host.append(el('p',`설정된 특성 ${rows.length}개 · 특성 편집 자료를 확인하는 중입니다.`,'au-hint'));return;}
     const mainCard=c=>traitCardMatches089(c),cardRef=c=>({slot:c.slot,internal_id:c.source_id,identity_key:c.identity_key,name_ko:c.name_ko});
     const liveRows=()=>getRows()??[];
@@ -388,7 +390,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     body.append(limitBadges(card,{includeUnrestricted:true}),description,cardDecks172(card));
     if(currentState.canEdit){
       const forms=el('div',null,'au-form-grid'),allowed=(currentState.bootstrap?.capabilities?.entities?.card_setting?.fields?.rarity?.values??['N','R','SR','UR']).filter(r=>r!=='L'||card.source_id<2390),rarities=[...new Set([...allowed,...(card.source_id<2390?['L']:[]),card.rarity])];
-      const {maximumNormalLimit,maximumSpeedLimit}=cardMetadata196(card.source_id,card.identity_key)??{};
+      const {maximumNormalLimit,maximumSpeedLimit}=cardMetadata197(card.source_id,card.identity_key)??{};
       const effectToken=maximumNormalLimit===0,stockReadOnly=card.rarity==='L'||effectToken;
       forms.append(field('카드 이름',card.name_ko,{type:'string',maxLength:100},v=>cardPatch('card_display',card,{name:v}),`card.${card.source_id}.name`),field('영문 이름',card.name_en,{type:'string',maxLength:160},v=>cardPatch('card_display',card,{name_english:v}),`card.${card.source_id}.english`),field('카드 설명',card.description_ko,{type:'string',multiline:true,maxLength:12000},v=>cardPatch('card_display',card,{description:v}),`card.${card.source_id}.description`),field('등급',card.rarity,{type:'string',enum:rarities,readOnlyValues:card.source_id<2390?[]:rarities.filter(v=>!allowed.includes(v))},v=>cardPatch('card_setting',card,v==='L'?{rarity:v,stock:false,draw_enabled:false}:{rarity:v}),`card.${card.source_id}.rarity`),field('상점 판매',card.stock,{type:'boolean',readOnly:stockReadOnly},v=>cardPatch('card_setting',card,{stock:v}),`card.${card.source_id}.stock`),field('전투 보상',card.draw_enabled!==false,{type:'boolean',readOnly:stockReadOnly},v=>cardPatch('card_setting',card,{draw_enabled:v}),`card.${card.source_id}.draw`));body.append(forms,el('small','설명을 바꾸어도 카드의 실제 효과 처리 규칙은 바뀌지 않습니다.','au-hint'));
       if(!effectToken){
@@ -1003,7 +1005,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
       const traits=el('fieldset',null,'au-form-group');
       traits.append(el('legend',`시작 특성 · ${config.traits.length}개`),
         el('p','이 시작 덱으로 연 원정의 듀얼마다 적용됩니다.','au-hint'));
-      skillFields(traits,config.traits,rows=>save({traits:rows}),`${prefix}.traits`,true,()=>read().traits??[],kind=>kind!=='lp_bonus');
+      skillFields(traits,config.traits,rows=>save({traits:rows}),`${prefix}.traits`,true,()=>read().traits??[],kind=>kind!=='lp_bonus',true);
       content.append(traits);
     },'au-starter-edit au-starter-loadout');
   }

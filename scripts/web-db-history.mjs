@@ -12,7 +12,7 @@ import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 export const RPC_FLOOR = 161;
-export const RPC_PROBE_AHEAD = 30;
+export const RPC_PROBE_AHEAD = 60;
 export const RPC = `poc_bootstrap${RPC_FLOOR}`;
 export const routeCandidates = (floor = RPC_FLOOR, ahead = RPC_PROBE_AHEAD) =>
   Array.from({ length: ahead + 1 }, (_, i) => `poc_bootstrap${floor + ahead - i}`);

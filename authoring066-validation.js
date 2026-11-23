@@ -1,6 +1,6 @@
 import {traitCardMatches089,sharedTraitRefMatches089} from './authoring089-traits.js?v=20261106-089';
-import {traitKindOffered184} from './authoring184-traits.js';
-import {cardMetadata196} from './authoring196-catalog.js?v=20261123-union-hero196';
+import {traitKindOffered197} from './authoring197-traits.js';
+import {cardMetadata197} from './authoring197-catalog.js?v=20261123-thunder-hand197';
 // Local preflight explains known server contracts. The server remains authoritative.
 const own=(value,key)=>Object.prototype.hasOwnProperty.call(value??{},key);
 const object=value=>value!==null&&typeof value==='object'&&!Array.isArray(value);
@@ -44,7 +44,7 @@ export function validateAuthoringChange066(snapshot,type,id,fields,{operation='p
   const cards=Array.isArray(raw)?raw:[],source=card=>card.source_id??card.sourceId??card.internal_id,slot=card=>card.web_slot??card.slot,extra=card=>Boolean((card.native_type??card.type??0)&(0x40|0x2000|0x800000|0x4000000)),playable=card=>card&&card.playable!==false&&!card.token&&!card.special;
   const bySource=new Map(cards.map(card=>[source(card),card])),bySlot=new Map(cards.map(card=>[slot(card),card]));
   if(type==='card_limit'||type==='card_setting'){
-    const card=bySource.get(Number(id)),metadata=cardMetadata196(source(card??{}),card?.identity_key),maximum=metadata?.maximumNormalLimit;
+    const card=bySource.get(Number(id)),metadata=cardMetadata197(source(card??{}),card?.identity_key),maximum=metadata?.maximumNormalLimit;
     if(maximum===0){
       if(type==='card_limit')check(!own(fields,'normal_limit')&&!own(fields,'speed_limit'),Object.keys(fields),'효과로 생성되는 토큰에는 덱 제한을 설정할 수 없습니다.');
       else check(fields.stock!==true&&fields.draw_enabled!==true,['stock','draw_enabled'],'효과로 생성되는 토큰은 판매하거나 보상으로 지급할 수 없습니다.');
@@ -71,8 +71,8 @@ export function validateAuthoringChange066(snapshot,type,id,fields,{operation='p
       check(playable(card)&&!extra(card)&&(setting?.stock??card.stock)===true&&normal>0&&speed!==0,['fixed_source_ids'],'항상 진열할 카드에 현재 판매할 수 없는 카드가 있습니다. 판매 설정과 카드 제한을 확인해 주세요.');
     }
   }
-  const validateSkills=(rows,shared,keys)=>{
-    const maximum=shared?10:8,kinds=(capabilities.trait_form?.kinds??[]).filter(kind=>traitKindOffered184(kind,shared));
+  const validateSkills=(rows,shared,keys,starter=false)=>{
+    const maximum=shared?10:8,kinds=(capabilities.trait_form?.kinds??[]).filter(kind=>traitKindOffered197(kind,shared,starter));
     check(Array.isArray(rows)&&rows.length<=maximum,keys,`특성은 ${maximum}개까지 설정할 수 있습니다.`);
     check(new Set(rows.map(row=>row.kind)).size===rows.length,keys,'같은 종류의 특성은 한 번만 설정할 수 있습니다.');
     for(const row of rows){
@@ -125,7 +125,7 @@ export function validateAuthoringChange066(snapshot,type,id,fields,{operation='p
     check(Array.isArray(config.relic_ids)&&config.relic_ids.length<=rule.relics_max&&
       new Set(config.relic_ids).size===config.relic_ids.length&&config.relic_ids.every(id=>relicIds.has(id)),keys,'시작 유물 목록을 확인해 주세요.');
     check(Array.isArray(config.traits)&&config.traits.every(trait=>object(trait)&&trait.kind!=='lp_bonus'),keys,'시작 특성의 종류를 확인해 주세요.');
-    validateSkills(config.traits,true,keys);
+    validateSkills(config.traits,true,keys,true);
   }
   if(type==='chapter_role')for(const entry of content.entries??[])if(entry.encounter){
     try{validateSkills(entry.encounter.skills??[],false,['entries']);}
