@@ -25,7 +25,7 @@ import {traitKindOffered197} from './authoring197-traits.js';
 import {traitFieldLabel196,traitDefault196} from './authoring196-traits.js';
 import {CARD_SORTS091,filterValues091,cardQueryTokens091,cardFiltersMatch091,sortCards091} from './authoring091-search.js?v=20261106-091';
 import {deckDeletionChanges153,deckDeletionPlan174,deckDeletionSteps174,openDeckDeletion153} from './authoring153-deck-delete.js';
-import {cardDeckUsages172,cardDeckCountText172,deckHref172} from './authoring172-card-decks.js';import {CATALOG_PARAMS170,CATALOG_FLAGS170,pageNumber170,thumbnailUrl170,createCardProblems170,cardFlagsMatch170,bulkCardPatches170,selectRange170} from './authoring170-catalog.js';
+import {cardDeckUsages172,cardDeckCountText172,deckHref172} from './authoring172-card-decks.js';import {cardRelations198,cardHref198} from './authoring198-card-relations.js';import {CATALOG_PARAMS170,CATALOG_FLAGS170,pageNumber170,thumbnailUrl170,createCardProblems170,cardFlagsMatch170,bulkCardPatches170,selectRange170} from './authoring170-catalog.js';
 import {deckMatches170,deckExport170,deckFileName170,deckImport170,gameStatus170} from './authoring170-decks.js';
 import {renderHistoryPanel170} from './authoring170-history.js';
 
@@ -110,6 +110,7 @@ export function formSchema039(state,entity){
 export function createAuthoringPanels039({document:doc=globalThis.document,onChange,onNavigate=()=>{},onError=()=>{},onUpload=null,onRecoveryRead=null,onRetryWrite=null,onSaveDrafts060=null,onResolveDrafts060=null,getLatestState068=null,onPrepareDeckSetup068=()=>{},onStageMany071=null,onDeleteDecks153=null,onCancelDrafts174=null,onEditingChange=()=>{},history170=null,historyDb171=null,catalogUrl170=null,onGroup170=run=>run(),onDownload170=null}={}){
   let deckDeletionDialog153,pendingCatalog170=null,deckImport170Notice=null;
   // Bulk selection and image/recent-change lookups live for this panel instance only.
+  let relationTrail198=[];
   const missingImages170=new Set(),recentCards170=new Map(),bulk170={on:false,selected:new Set(),anchor:null,rarity:'',add:[],remove:[],message:''};
   const catalogDefaults170=()=>({query:'',type:[],tier:[],race:[],attribute:[],subtype:[],page:1,tags:[],categoryMatch:'all',statConditions:[],status:[],limit:[],speedLimit:[],browse:'all',addition:'latest',additionTheme:'all',sort:null,flags170:[],recent170:null});
   const selected=new Map(),filters=new Map(),statWidgets=new Map(),categoryStates054=new Map(),manualControls060=new Map();let dialog=null,currentState=null,currentCards=[],currentRoot=null,refreshCatalog041=null,localDeckSetup068=null;
@@ -172,6 +173,25 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
       link.addEventListener('click',event=>{if((event.button??0)!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;event.preventDefault();dialog?.close();selected.set('decks',row.id);try{Promise.resolve(onNavigate('decks',row.id)).catch(onError);}catch(error){onError(error);}});
       item.append(link);return item;}));more.hidden=shown>=rows.length;};
     draw();box.append(list,more);return box;
+  }
+  // 198: 카드 정보 창의 "관련 카드". 융합 소재·의식 짝·텍스트가 지칭하는 카드·직접 연결한 카드·이 카드를 지칭하는 카드를 묶어 보이고,
+  // 누르면 같은 창에서 그 카드를 연다(링크라서 Ctrl·가운데 클릭은 새 탭). 빈 묶음은 숨기고, 관계가 없으면 칸 전체를 숨긴다.
+  function cardRelationsSection198(card){
+    const groups=cardRelations198(card,currentCards);if(!groups.length)return null;
+    const box=el('section',null,'au-card-relations198');box.setAttribute('aria-label','관련 카드');box.append(el('h3','관련 카드'));
+    const href=target=>cardHref198(doc.defaultView?.location?.href??doc.location?.href??'https://studio.invalid/index.html',target);
+    for(const group of groups){
+      const wrap=el('div',null,'au-card-relation-group198'),list=el('ul',null,'au-card-relation-list198'),step=group.page??group.cards.length;let shown=step;
+      wrap.dataset.relation=group.key;wrap.append(el('h4',`${group.label} · ${group.cards.length.toLocaleString('ko-KR')}장`),list);
+      const more=button('더 보기',()=>{shown+=step;draw();},'au-text-button');
+      const draw=()=>{list.replaceChildren(...group.cards.slice(0,shown).map(target=>{
+        const item=el('li'),link=el('a',null,'au-card-relation-link198'),art=picture(target);art.alt='';art.width=40;art.height=58;
+        link.href=href(target);link.dataset.sourceId=String(target.source_id);link.append(art,el('span',target.name_ko),el('small',target.type,'au-card-relation-kind198'));
+        link.addEventListener('click',event=>{if((event.button??0)!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;event.preventDefault();openCard(currentCards.find(row=>row.source_id===target.source_id)??target,{from:card});});
+        item.append(link);return item;}));more.hidden=shown>=group.cards.length;};
+      draw();if(group.page)wrap.append(more);box.append(wrap);
+    }
+    return box;
   }
   function picture(card,{full=false}={}){const img=el('img'),thumb=full?null:thumbnailUrl170(card.image);let fallback=Boolean(thumb);img.src=thumb??card.image;img.alt=card.name_ko??'';img.loading='lazy';img.decoding='async';img.width=160;img.height=232;img.onerror=()=>{if(fallback){fallback=false;img.src=card.image;return;}img.classList.add('au-image-missing');if(card.source_id!=null)missingImages170.add(card.source_id);};return img;}
   function title(host,name,description){host.append(el('h1',name));if(description)host.append(el('p',description,'au-lead'));}
@@ -381,13 +401,14 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
       host.append(field(label,val,spec,next=>change({[key]:next}),`${prefix}.${key}`));
     }
   }
-  function openCard(card){
+  function openCard(card,{from=null,back=false}={}){
+    const previous198=dialog?.open?Number(dialog.dataset.source):null;if(from)relationTrail198.push(from.source_id);else if(!back&&previous198!==card.source_id)relationTrail198=[];
     if(!dialog){dialog=el('dialog',null,'au-card-dialog');dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});doc.body.append(dialog);}dialog.dataset.source=String(card.source_id);dialog.setAttribute('aria-label',`${card.name_ko} 카드 정보`);dialog.replaceChildren();
-    const body=el('div',null,'au-card-detail'),head=el('div',null,'au-card-heading');head.append(picture(card,{full:true}),el('h2',card.name_ko),el('p',[card.type,card.race,card.attribute,card.level?`레벨 ${card.level}`:'',card.atk!=null?`${card.atk} / ${card.def}`:''].filter(Boolean).join(' · ')));body.append(button('닫기',()=>dialog.close(),'au-dialog-close'),head);const categoryLabels=cardCategoryLabels049(card);if(categoryLabels)body.append(categoryLabels);
+    const body=el('div',null,'au-card-detail'),head=el('div',null,'au-card-heading');head.append(picture(card,{full:true}),el('h2',card.name_ko),el('p',[card.type,card.race,card.attribute,card.level?`레벨 ${card.level}`:'',card.atk!=null?`${card.atk} / ${card.def}`:''].filter(Boolean).join(' · ')));body.append(button('닫기',()=>dialog.close(),'au-dialog-close'));const back198=currentCards.find(row=>row.source_id===relationTrail198.at(-1));if(back198)body.append(button(`← ${back198.name_ko}`,()=>{relationTrail198.pop();openCard(back198,{back:true});},'au-card-back198'));body.append(head);const categoryLabels=cardCategoryLabels049(card);if(categoryLabels)body.append(categoryLabels);
     const description=el('p',null,'au-card-description'),lines=String(card.description_ko??'').split(/<br\s*\/?\s*>/i);
     if(lines.length===1)description.textContent=lines[0];
     else for(const [index,line] of lines.entries()){if(index)description.append(el('br'));description.append(el('span',line));}
-    body.append(limitBadges(card,{includeUnrestricted:true}),description,cardDecks172(card));
+    body.append(limitBadges(card,{includeUnrestricted:true}),description);const relations198=cardRelationsSection198(card);if(relations198)body.append(relations198);body.append(cardDecks172(card));
     if(currentState.canEdit){
       const forms=el('div',null,'au-form-grid'),allowed=(currentState.bootstrap?.capabilities?.entities?.card_setting?.fields?.rarity?.values??['N','R','SR','UR']).filter(r=>r!=='L'||card.source_id<2390),rarities=[...new Set([...allowed,...(card.source_id<2390?['L']:[]),card.rarity])];
       const {maximumNormalLimit,maximumSpeedLimit}=cardMetadata197(card.source_id,card.identity_key)??{};
@@ -433,7 +454,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
       let choices=null,choiceButtons=[];if(onResolveDrafts060){choices=el('div',null,'au-card-save-choices060');choiceButtons=[button('내 수정 유지',()=>onResolveDrafts060(scope,'local')),button('DB 내용 사용',()=>onResolveDrafts060(scope,'remote'))];choices.append(...choiceButtons);actions.append(choices);}
       body.append(actions);manualSaveControl060(scope,save,{message,choices,choiceButtons});
     }
-    dialog.append(body);if(!dialog.open)dialog.showModal();
+    dialog.append(body);if(!dialog.open)dialog.showModal();if(from||back)dialog.scrollTop=0;
   }
   function deckQuantity046(card,deck,{owned=false}={}){
     const live=()=>entities039(currentState).find(e=>e.entity_type==='deck'&&e.entity_id===deck.entity_id)??deck;
