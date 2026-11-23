@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.121",
-  "versionCode": 140,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.121/YGOClassicExpedition-0.18.121-arm64.apk",
-  "sizeBytes": 785819430,
-  "sha256": "314a7abd6330d6708e9558dcaaa5577b5ca0c644856c4c41044116063d52e993",
-  "releaseNotes": "화염의 검사·사라만도라·다크 스워드 카드 18장을 더했습니다. AI가 드래곤의 제왕과 드래곤을 부르는 피리, 용의 거울, 레벨 업! 등 특수 소환 카드를 더 잘 쓰고, 드래곤의 제왕이 지키는 드래곤에게 대상 지정 효과를 낭비하지 않습니다."
+  "versionName": "0.18.122",
+  "versionCode": 141,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.122/YGOClassicExpedition-0.18.122-arm64.apk",
+  "sizeBytes": 785869302,
+  "sha256": "c19c020d2017c4d8f084a8202ea172d43cf37dcef251a3b7b585e58c53a07be1",
+  "releaseNotes": "에이스 몬스터 소환 연출이 더 길어지고, LP 데미지·턴 시작·체인에 연출을 더했습니다. 원정이 끝나면 쓰러뜨린 상대, 에이스 카드, 함께한 유물을 여정의 기록으로 보여 줍니다."
 }
