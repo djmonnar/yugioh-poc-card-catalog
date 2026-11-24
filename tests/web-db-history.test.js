@@ -115,7 +115,7 @@ test('이전 기록의 개정을 보내고 가까운 경로만 찾는다', async
   const known = { route: 'poc_bootstrap197', revision: 962 };
   const same = await fetchBootstrap({ url: 'https://example.invalid', publishable_key: 'k' }, fake, { known });
   assert.equal(same.bootstrap.unchanged, true);
-  assert.equal(asked.length, RPC_PROBE_AHEAD_RECORDED + 1, '기록한 경로 위로 8개만 찾고 바로 그 경로를 읽는다');
+  assert.equal(asked.length, RPC_PROBE_AHEAD_RECORDED + 1, '기록한 경로 위 몇 개만 찾고 그 경로를 읽는다');
   assert.equal(asked[0][0], `poc_bootstrap${197 + RPC_PROBE_AHEAD_RECORDED}`);
   assert.deepEqual(asked.at(-1), ['poc_bootstrap197', 962]);
   assert(asked.slice(0, -1).every(([, revision]) => revision === null), '다른 경로에는 개정을 보내지 않는다');

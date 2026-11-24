@@ -13,8 +13,8 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 
 export const RPC_FLOOR = 161;
 export const RPC_PROBE_AHEAD = 60;
-// (200) 전송량 줄이기: 이전 기록(revision.json의 route)이 있으면 그 경로부터 위로 이만큼만 찾는다(없는 번호마다 404 요청).
-export const RPC_PROBE_AHEAD_RECORDED = 8;
+// (200) 전송량 줄이기: 이전 기록(revision.json의 route)이 있으면 그 경로부터 위로 이만큼만 찾는다(없는 번호마다 작은 404 요청, 기록이 오래돼도 새 경로를 놓치지 않을 만큼 넉넉히).
+export const RPC_PROBE_AHEAD_RECORDED = 30;
 export const RPC = `poc_bootstrap${RPC_FLOOR}`;
 const routeNumber = rpc => { const m = /^poc_bootstrap(\d{3})$/.exec(rpc ?? ''); return m ? Number(m[1]) : null; };
 /** (200) 이전 기록에서 다음 조회의 시작 경로와 개정 번호를 읽는다. 없거나 깨졌으면 null(처음처럼 전체를 받는다). */
