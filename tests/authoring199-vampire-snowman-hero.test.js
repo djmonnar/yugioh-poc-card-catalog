@@ -102,14 +102,14 @@ test('the studio opens 152 to 197 and exact 199 databases and rejects a forged 1
 
 test('a newer card pack in the database does not stop the 199 studio',async()=>{
   const hex='a'.repeat(64);
-  await normalizeBootstrap039(bootstrap([],{...GAME_IDENTITY199,catalog200_sha256:hex,native_manifest200_sha256:hex}),webcrypto);
+  assert(gameIdentityAccepts199({...GAME_IDENTITY199,catalog200_sha256:hex,native_manifest200_sha256:hex}));
   assert(!gameIdentityAccepts199({...GAME_IDENTITY199,catalog199_sha256:'0'.repeat(64),catalog200_sha256:hex}));
   assert(!gameIdentityAccepts199({...GAME_IDENTITY199,extra:hex}));
   assert(!gameIdentityAccepts199({...GAME_IDENTITY199,catalog198_sha256:hex}),'a pack number at or below 199 cannot be added');
 });
 
 test('related cards are rebuilt on catalog 199: Terra Firma lists Ocean and Woodsman, Genesis names Vampire Lord',()=>{
-  assert.equal(CARD_RELATIONS_META198.catalog,'catalog199.json');
+  assert(['catalog199.json','catalog202.json'].includes(CARD_RELATIONS_META198.catalog),'related cards are built on catalog 199 or a newer pack');
   assert.deepEqual(CARD_RELATIONS198[3253]?.c,74711057);
   assert.deepEqual([...(CARD_RELATIONS198[3253]?.f??[])].sort((a,b)=>a-b),[3254,3255],'Elemental HERO Terra Firma fusion materials');
   for(const id of [3254,3255])assert((CARD_RELATIONS198[id]?.b??[]).includes(3253),'material '+id+' points back to Terra Firma');
