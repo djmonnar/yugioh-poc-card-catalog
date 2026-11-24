@@ -63,7 +63,7 @@ function validEntity(row) {
   if(row.entity_type==='map_rules'){need(row.entity_id==='main'&&row.deleted!==true,'맵 분포 항목을 확인해 주세요.');parseMapRules052(row.content);}
   if(row.entity_type==='category_group'){
     const text=value=>typeof value==='string'&&value.length>=1&&value.length<=40&&value===value.trim()&&!/[\u0000-\u001f\u007f]/.test(value),value=row.content;
-    need(/^category-group-[a-z0-9-]{1,64}$/.test(row.entity_id)&&row.deleted!==true&&object(value)&&Object.keys(value).length===3&&text(value.name)&&typeof value.archived==='boolean'&&Array.isArray(value.categories)&&value.categories.length<=128&&value.categories.every(text)&&new Set(value.categories).size===value.categories.length,'카테고리 묶음의 이름과 포함 항목을 확인해 주세요.');
+    need(/^category-group-[a-z0-9-]{1,64}$/.test(row.entity_id)&&row.deleted!==true&&object(value)&&Object.keys(value).length===3&&text(value.name)&&typeof value.archived==='boolean'&&Array.isArray(value.categories)&&value.categories.length<=512&&value.categories.every(text)&&new Set(value.categories).size===value.categories.length,'카테고리 묶음의 이름과 포함 항목을 확인해 주세요.');
   }
   if(row.entity_type==='category_group_order'){
     const value=row.content;

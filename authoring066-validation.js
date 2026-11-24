@@ -1,5 +1,5 @@
 import {traitCardMatches089,sharedTraitRefMatches089} from './authoring089-traits.js?v=20261106-089';
-import {traitKindOffered197} from './authoring197-traits.js';
+import {traitKindOffered199} from './authoring199-traits.js';
 import {cardMetadata197} from './authoring197-catalog.js?v=20261123-thunder-hand197';
 // Local preflight explains known server contracts. The server remains authoritative.
 const own=(value,key)=>Object.prototype.hasOwnProperty.call(value??{},key);
@@ -72,7 +72,7 @@ export function validateAuthoringChange066(snapshot,type,id,fields,{operation='p
     }
   }
   const validateSkills=(rows,shared,keys,starter=false)=>{
-    const maximum=shared?10:8,kinds=(capabilities.trait_form?.kinds??[]).filter(kind=>traitKindOffered197(kind,shared,starter));
+    const maximum=shared?10:8,kinds=(capabilities.trait_form?.kinds??[]).filter(kind=>traitKindOffered199(kind,shared,starter));
     check(Array.isArray(rows)&&rows.length<=maximum,keys,`특성은 ${maximum}개까지 설정할 수 있습니다.`);
     check(new Set(rows.map(row=>row.kind)).size===rows.length,keys,'같은 종류의 특성은 한 번만 설정할 수 있습니다.');
     for(const row of rows){
@@ -89,8 +89,8 @@ export function validateAuthoringChange066(snapshot,type,id,fields,{operation='p
         }
         if(spec.type==='counted-source-cards'){
           const entries=row.entries??[],ids=entries.map(entry=>shared?entry.card?.internal_id:entry.sourceId);
-          check(entries.length>0&&entries.length<=12&&new Set(ids).size===ids.length&&entries.every(entry=>Number.isSafeInteger(entry.count)&&entry.count>=1&&entry.count<=12)&&entries.reduce((sum,entry)=>sum+entry.count,0)<=12,keys,'시작 묘지는 중복 카드 없이 합계 1~12장으로 설정해 주세요.');
-          if(cards.length)for(const entry of entries){const ref=shared?entry.card:null,card=bySource.get(shared?ref?.internal_id:entry.sourceId);check(traitCardMatches089(card)&&(!shared||sharedTraitRefMatches089(card,ref)),keys,'시작 묘지의 대상 카드를 다시 선택해 주세요.');}
+          check(entries.length>0&&entries.length<=12&&new Set(ids).size===ids.length&&entries.every(entry=>Number.isSafeInteger(entry.count)&&entry.count>=1&&entry.count<=12)&&entries.reduce((sum,entry)=>sum+entry.count,0)<=12,keys,`${kind.label}는 중복 카드 없이 합계 1~12장으로 설정해 주세요.`);
+          if(cards.length)for(const entry of entries){const ref=shared?entry.card:null,card=bySource.get(shared?ref?.internal_id:entry.sourceId);check(traitCardMatches089(card)&&(!shared||sharedTraitRefMatches089(card,ref)),keys,`${kind.label}의 대상 카드를 다시 선택해 주세요.`);}
         }
       }
     }

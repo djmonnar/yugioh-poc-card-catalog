@@ -21,7 +21,7 @@ import {characterChoice068,changeCharacter068,traitChoices068,changeTrait068} fr
 import {portraitUrl081} from './authoring081-assets.js?v=20261105-082';
 import {traitCardMatches089} from './authoring089-traits.js?v=20261106-089';
 import {traitHelp184,ouijaWithoutNecrofear184} from './authoring184-traits.js';
-import {traitKindOffered197} from './authoring197-traits.js';
+import {traitKindOffered199} from './authoring199-traits.js';
 import {traitFieldLabel196,traitDefault196} from './authoring196-traits.js';
 import {CARD_SORTS091,filterValues091,cardQueryTokens091,cardFiltersMatch091,sortCards091} from './authoring091-search.js?v=20261106-091';
 import {deckDeletionChanges153,deckDeletionPlan174,deckDeletionSteps174,openDeckDeletion153} from './authoring153-deck-delete.js';
@@ -258,8 +258,8 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
   function ouijaWarning184(host,skills,main){if(ouijaWithoutNecrofear184(skills,currentCards,main))host.append(el('p','위저보드 특성이 있지만 이 덱의 메인 덱에 다크 네크로피어가 없습니다. 다크 네크로피어가 나오지 않으면 글자가 놓이지 않습니다.','au-hint au-ouija-warning184'));}
   function skillFields(host,rows,onRows,key,shared=false,getRows=()=>rows,allowed=()=>true,starter=false){
     // (197) Character shared traits take the kinds the database marks shared (from 197 also the 184 kinds, union_power and the recover kinds);
-    // starter decks take STARTER_KINDS197 whatever the shared flag says; decks and encounters take every compiled kind.
-    const form=currentState.bootstrap?.capabilities?.trait_form,definitions=(form?.kinds??[]).filter(k=>traitKindOffered197(k,shared,starter)&&allowed(k.kind));
+    // starter decks take STARTER_KINDS199 (STARTER_KINDS197 + start_deck) whatever the shared flag says; decks and encounters take every compiled kind.
+    const form=currentState.bootstrap?.capabilities?.trait_form,definitions=(form?.kinds??[]).filter(k=>traitKindOffered199(k,shared,starter)&&allowed(k.kind));
     if(!definitions.length){host.append(el('p',`설정된 특성 ${rows.length}개 · 특성 편집 자료를 확인하는 중입니다.`,'au-hint'));return;}
     const mainCard=c=>traitCardMatches089(c),cardRef=c=>({slot:c.slot,internal_id:c.source_id,identity_key:c.identity_key,name_ko:c.name_ko});
     const liveRows=()=>getRows()??[];
@@ -267,7 +267,8 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
       const latest=liveRows(),current=latest.find(row=>row.kind===kind);
       if(!current)throw Error('이 특성이 변경됐습니다. 현재 목록을 다시 확인해 주세요.');
       const next=update(current);
-      if(next.kind==='start_grave'&&((next.entries??[]).length>12||(next.entries??[]).reduce((n,r)=>n+r.count,0)>12))throw Error('시작 묘지는 합계 12장까지 설정할 수 있습니다.');
+      // (199) 시작 덱 (start_deck) shares the 시작 묘지 entry list and its 12-card total.
+      if((next.kind==='start_grave'||next.kind==='start_deck')&&((next.entries??[]).length>12||(next.entries??[]).reduce((n,r)=>n+r.count,0)>12))throw Error(next.kind==='start_deck'?'시작 덱은 합계 12장까지 설정할 수 있습니다.':'시작 묘지는 합계 12장까지 설정할 수 있습니다.');
       return onRows(latest.map(row=>row.kind===kind?next:row));
     };
     for(const [index,row] of rows.entries()){
@@ -287,7 +288,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
         }
         if(spec.type==='counted-source-cards'){
           const entryId=entry=>shared?entry.card?.internal_id:entry.sourceId,total=(row.entries??[]).reduce((n,r)=>n+r.count,0);
-          box.append(el('p',`시작 묘지 · ${total}/12장`,'au-hint'));
+          box.append(el('p',`${definition.label} · ${total}/12장`,'au-hint'));
           for(const [j,entry] of (row.entries??[]).entries()){
             const id=entryId(entry),card=currentCards.find(c=>c.source_id===id),line=el('div',null,'au-toolbar');
             line.append(el('span',card?.name_ko??'카드'),field('매수',entry.count,{type:'integer',minimum:1,maximum:12},count=>replace(row.kind,live=>({...live,entries:live.entries.map(item=>entryId(item)===id?{...item,count}:item)})),`${key}.${index}.grave.${j}`),button('빼기',()=>replace(row.kind,live=>({...live,entries:live.entries.filter(item=>entryId(item)!==id)}))));box.append(line);
