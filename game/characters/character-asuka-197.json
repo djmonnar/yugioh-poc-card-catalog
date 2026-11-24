@@ -19,11 +19,27 @@
             "kind": "start_hand"
           }
         ]
+      },
+      {
+        "name": "스노우드래곤",
+        "profile_id": "profile-2306c272-a85f-47a7-b756-8288c0bde6db",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "ac6792044326ba96fd5d7aee13f3cfb92617c28d11536b27fcfe8c7b6afeba08",
+              "internal_id": 3261,
+              "name_ko": "스노우 드래곤",
+              "slot": 2293
+            },
+            "kind": "start_monster",
+            "position": "attack"
+          }
+        ]
       }
     ],
     "skills": []
   },
   "profile_id": "asuka",
-  "updated_at": "2026-11-24T08:13:04.800899+00:00",
-  "version": 6288
+  "updated_at": "2026-11-24T11:17:26.780125+00:00",
+  "version": 6307
 }

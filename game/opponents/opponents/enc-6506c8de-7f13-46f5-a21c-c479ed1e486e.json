@@ -1,7 +1,7 @@
 {
   "artKey": "CharacterPresentation012/images/bakura/start",
   "banlistEnabled": false,
-  "deckName": "바쿠라 -악마 중급 데몬소환",
+  "deckName": "데몬소환",
   "extra": [],
   "id": "enc-6506c8de-7f13-46f5-a21c-c479ed1e486e",
   "lpBonus": 0,
@@ -9,7 +9,6 @@
     21,
     21,
     21,
-    122,
     122,
     122,
     2679,
@@ -24,6 +23,7 @@
     2394,
     2394,
     1248,
+    2682,
     2682,
     2682
   ],

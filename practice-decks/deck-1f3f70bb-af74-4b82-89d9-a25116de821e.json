@@ -9,7 +9,7 @@
       "source_id": 21
     },
     {
-      "count": 3,
+      "count": 2,
       "identity_key": "e4b2aeb4368b9ab6c3bdc697caf16a5888d43b96be1c287c558789aaa148755f",
       "source_id": 122
     },
@@ -44,11 +44,11 @@
       "source_id": 1248
     },
     {
-      "count": 2,
+      "count": 3,
       "identity_key": "1411fb82022714d7d71b0b79cad8170f89cde392d7b9e0bcf0a5f148cfb76901",
       "source_id": 2682
     }
   ],
-  "name": "바쿠라 -악마 중급 데몬소환",
-  "version": 540
+  "name": "데몬소환",
+  "version": 991
 }

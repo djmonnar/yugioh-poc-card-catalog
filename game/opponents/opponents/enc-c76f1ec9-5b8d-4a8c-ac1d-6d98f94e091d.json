@@ -1,0 +1,45 @@
+{
+  "artKey": "Character197/player_killer_start",
+  "banlistEnabled": false,
+  "deckName": "뱀파이어 로드",
+  "extra": [],
+  "id": "enc-c76f1ec9-5b8d-4a8c-ac1d-6d98f94e091d",
+  "lpBonus": 0,
+  "main": [
+    3266,
+    3266,
+    3270,
+    3270,
+    3285,
+    3265,
+    3265,
+    3275,
+    3275,
+    3269,
+    1976,
+    1976,
+    1976,
+    3273,
+    3273,
+    3284,
+    3284,
+    3284,
+    1244,
+    3267
+  ],
+  "name": "어둠의 플레이어 킬러",
+  "openingDrawBonus": 0,
+  "profileId": "player_killer",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 334,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-c76f1ec9-5b8d-4a8c-ac1d-6d98f94e091d",
+  "usesNativeRules035": true
+}

@@ -154,6 +154,10 @@
           {
             "opponentId": "enc-c8afffa2-e035-4796-9ea1-e955fd1c7ef8",
             "weight": 1
+          },
+          {
+            "opponentId": "enc-c76f1ec9-5b8d-4a8c-ac1d-6d98f94e091d",
+            "weight": 1
           }
         ],
         "lpBonus": 0
@@ -278,6 +282,10 @@
           },
           {
             "opponentId": "enc-90abe1cc-e21e-492e-b174-2f14ffdc23a3",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-580d854b-994f-4bc7-b389-3e67c0a78b02",
             "weight": 1
           }
         ],
@@ -692,6 +700,10 @@
           {
             "opponentId": "enc-8b93b4a7-a64c-4f20-a1f6-5212a2b838ae",
             "weight": 1
+          },
+          {
+            "opponentId": "enc-1f4b83fd-4410-4818-8697-a21edd0a1114",
+            "weight": 1
           }
         ],
         "lpBonus": 2000
@@ -846,6 +858,10 @@
           },
           {
             "opponentId": "enc-0512daa9-07df-45d0-bbe5-9f1a5f7bf7ed",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-ef44628b-8c7b-4269-ba93-ceaebec16e94",
             "weight": 1
           }
         ],
@@ -1016,6 +1032,10 @@
           {
             "opponentId": "enc-888f7bad-0e44-4d90-8c89-042bd61d989e",
             "weight": 1
+          },
+          {
+            "opponentId": "enc-2966be46-4261-4baf-a1fe-892fdcbca2b7",
+            "weight": 1
           }
         ],
         "lpBonus": 1000
@@ -1084,6 +1104,10 @@
           },
           {
             "opponentId": "enc-c61d1943-a239-4257-8927-3b189a6d28fc",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-723290f2-e818-4a49-8b0a-efec964a03e5",
             "weight": 1
           }
         ],
@@ -1207,6 +1231,10 @@
           },
           {
             "opponentId": "enc-49c9d261-2da2-42c4-b980-d91ead4f82d7",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-5686c917-79fa-42fe-908d-ac4ba74f3dc2",
             "weight": 1
           }
         ],

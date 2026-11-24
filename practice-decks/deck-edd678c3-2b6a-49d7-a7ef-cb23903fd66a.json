@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-edd678c3-2b6a-49d7-a7ef-cb23903fd66a",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "5e7276f079461df29305c8b7158fb490ae2fd7a8f55264ed289a218f7efdf9c6",
+      "source_id": 413
+    },
+    {
+      "count": 2,
+      "identity_key": "ac6792044326ba96fd5d7aee13f3cfb92617c28d11536b27fcfe8c7b6afeba08",
+      "source_id": 3261
+    },
+    {
+      "count": 2,
+      "identity_key": "f273877ec5be84c8f371fa2f9dc9dca23daee569262a3ca69f76b20b2846d7de",
+      "source_id": 3257
+    },
+    {
+      "count": 2,
+      "identity_key": "98b1cd294ca8c848dc36131fe9e3586142dc0c6cccd61e8cb575584ca9f40184",
+      "source_id": 3258
+    },
+    {
+      "count": 1,
+      "identity_key": "dd62dfcd0c9ca05d27e9f039ff5c4376260a2aeed4815be926fa5062953ca748",
+      "source_id": 3259
+    },
+    {
+      "count": 3,
+      "identity_key": "07e23984f347f3e92ece41c9edeb2482037e5a9ad8ee34fa9588eda4c864e3b4",
+      "source_id": 3260
+    },
+    {
+      "count": 2,
+      "identity_key": "3f68a1964d51d24d255a75dce5a5f92fc8a787f7b9a6b5975b0558a2e3892a48",
+      "source_id": 2603
+    },
+    {
+      "count": 2,
+      "identity_key": "b781c54ef02789ecc1ca8b98fc91db18c49bdfbd9af4d65e5e1e1da2e0a9fb87",
+      "source_id": 1875
+    },
+    {
+      "count": 2,
+      "identity_key": "98bcc1c4a6a5fafd4c449c99095c0a7354bf74dc70790330b065f32ce4e29c37",
+      "source_id": 1882
+    },
+    {
+      "count": 2,
+      "identity_key": "6c0478800ca751c783ffee5c3f77c5f95834a4a22c08a90fda4041462b8b6c98",
+      "source_id": 1886
+    }
+  ],
+  "name": "스노우드래곤",
+  "version": 979
+}

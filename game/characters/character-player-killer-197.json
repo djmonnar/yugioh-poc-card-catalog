@@ -4,10 +4,41 @@
   "profile": {
     "name": "어둠의 플레이어 킬러",
     "portrait": "assets/actors/native197/player_killer/start.png",
-    "skill_profiles": [],
+    "skill_profiles": [
+      {
+        "name": "어둠",
+        "profile_id": "profile-05543393-3490-4973-b134-9b2318abd940",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "27bf0a25dc6d4ff751576acc2f70ea53b416840321345203ce7623441c791fcf",
+              "internal_id": 334,
+              "name_ko": "어둠",
+              "slot": 1008
+            },
+            "kind": "start_hand"
+          }
+        ]
+      },
+      {
+        "name": "뱀파이어 엠파이어",
+        "profile_id": "profile-1f6fdb6f-b8a6-4c11-b8f3-5d017764858f",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "a7aefe71302fdaf29362806add43ad2094a476313eca7d879eda411d7ee4ad53",
+              "internal_id": 3270,
+              "name_ko": "뱀파이어 엠파이어",
+              "slot": 2302
+            },
+            "kind": "start_field"
+          }
+        ]
+      }
+    ],
     "skills": []
   },
   "profile_id": "player_killer",
-  "updated_at": "2026-11-24T03:06:04.507602+00:00",
-  "version": 962
+  "updated_at": "2026-11-24T12:43:29.638508+00:00",
+  "version": 6308
 }

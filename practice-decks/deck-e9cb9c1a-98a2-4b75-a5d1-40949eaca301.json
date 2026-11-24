@@ -1,0 +1,79 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-e9cb9c1a-98a2-4b75-a5d1-40949eaca301",
+  "main": [
+    {
+      "count": 1,
+      "identity_key": "be2b7daaa8a7ff4eedf44bed35cac2102d370e691faab2d7d3c1ba781ca3c7f1",
+      "source_id": 3266
+    },
+    {
+      "count": 2,
+      "identity_key": "a7aefe71302fdaf29362806add43ad2094a476313eca7d879eda411d7ee4ad53",
+      "source_id": 3270
+    },
+    {
+      "count": 2,
+      "identity_key": "9b6572c3c9d9427e83273af6d952d5adf36e97439f1afa47a98c9966d3d8ba4d",
+      "source_id": 3265
+    },
+    {
+      "count": 3,
+      "identity_key": "68550d7bf35ca62e4d76138c6dae6f3e286d3f7a7c81acf26f5b8106f4506aba",
+      "source_id": 3275
+    },
+    {
+      "count": 1,
+      "identity_key": "fc48744216e409451b027de11e4d19f55e556caf4d1807b03c0e61d2548e492d",
+      "source_id": 3269
+    },
+    {
+      "count": 1,
+      "identity_key": "6f3cd63f7b360fda5ea1d8a8f297fbf0212c4ddb1a99f7bda51c2b2867ecafab",
+      "source_id": 3267
+    },
+    {
+      "count": 1,
+      "identity_key": "9142ea414f6e666daf3b58b276ac1bb709cfcf901bfe5782ff32affb4f5e9ab2",
+      "source_id": 3280
+    },
+    {
+      "count": 1,
+      "identity_key": "96212fca53b1cbd651d0699201cb956413a97d809cdfd137040a0f3823217884",
+      "source_id": 3278
+    },
+    {
+      "count": 2,
+      "identity_key": "e857969ca461e6b2f34535a47972996ca5f456112b23c42f268cf65b0de9f45d",
+      "source_id": 3268
+    },
+    {
+      "count": 3,
+      "identity_key": "8debbdb8402061f8c6931dc12ef0761684f020786fa5b6ff9dcba4cc26904ece",
+      "source_id": 1165
+    },
+    {
+      "count": 1,
+      "identity_key": "cbc7599d3e1b6f01a780851ed6a4b8188ae7281146efd3ee5afebb825f7427fe",
+      "source_id": 3279
+    },
+    {
+      "count": 1,
+      "identity_key": "bc245030460316c418ecb5523231092def7ca2630cc33a2f5bececb8e68d2ab0",
+      "source_id": 3281
+    },
+    {
+      "count": 1,
+      "identity_key": "03a20d640181f88c02b06b03dcacf08bef18ca9b8198e2124d050b2f8c51bd72",
+      "source_id": 1976
+    },
+    {
+      "count": 1,
+      "identity_key": "2b2af9293ce8588d9d5c91258bcb53a8eebdc5bd6fb3486389f06f26cac796c4",
+      "source_id": 3282
+    }
+  ],
+  "name": "뱀파이어 로드",
+  "version": 1004
+}

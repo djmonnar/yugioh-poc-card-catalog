@@ -4,12 +4,12 @@
   "id": "deck-81ad2be0-b818-4711-bada-f40172e420fb",
   "main": [
     {
-      "count": 3,
+      "count": 2,
       "identity_key": "aac98651b3838f865c1f92716a4fb64994e90cc08151209029c8cb30e9394c75",
       "source_id": 2404
     },
     {
-      "count": 3,
+      "count": 2,
       "identity_key": "75a02a07c6b5b5e5fdfd07c6534a3ab3fa0afe65b66ca1c50ee115bce1058df0",
       "source_id": 2413
     },
@@ -24,12 +24,12 @@
       "source_id": 559
     },
     {
-      "count": 2,
+      "count": 1,
       "identity_key": "10dcdaf072e6210dbbe771a636fcf71d5e59fe22348d33211eb428508e1b610d",
       "source_id": 2412
     },
     {
-      "count": 3,
+      "count": 2,
       "identity_key": "a26f45cd4208f0475c296998778440632fa8aef3657250da4c288553f579118a",
       "source_id": 2410
     },
@@ -42,8 +42,23 @@
       "count": 2,
       "identity_key": "74a069d59834d2f4623ae0e9196fdc6c02405ebc3779f06d26618aa0b8fde06a",
       "source_id": 2406
+    },
+    {
+      "count": 1,
+      "identity_key": "a56cf922e50a1f4088a573ed9e0d679d164e4013ce7c4d9c103814f204e0c7d0",
+      "source_id": 2408
+    },
+    {
+      "count": 1,
+      "identity_key": "0c9341f11c662062a8de97accc86fbe83a16a0dca55ddd57cd05856ed74a6733",
+      "source_id": 2407
+    },
+    {
+      "count": 2,
+      "identity_key": "379dd9797383bc2fa825e58092d8838329f57c3f4ef19fca04c814b2b33b7063",
+      "source_id": 2411
     }
   ],
-  "name": "앤틱기어 중급",
-  "version": 101
+  "name": "앤틱기어골렘",
+  "version": 987
 }

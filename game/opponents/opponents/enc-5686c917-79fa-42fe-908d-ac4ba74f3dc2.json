@@ -1,0 +1,45 @@
+{
+  "artKey": "Character197/asuka_start",
+  "banlistEnabled": false,
+  "deckName": "스노우드래곤",
+  "extra": [],
+  "id": "enc-5686c917-79fa-42fe-908d-ac4ba74f3dc2",
+  "lpBonus": 0,
+  "main": [
+    413,
+    413,
+    3261,
+    3261,
+    3257,
+    3257,
+    3258,
+    3258,
+    3259,
+    3260,
+    3260,
+    3260,
+    2603,
+    2603,
+    1875,
+    1875,
+    1882,
+    1882,
+    1886,
+    1886
+  ],
+  "name": "텐죠인 아스카",
+  "openingDrawBonus": 0,
+  "profileId": "asuka",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_monster",
+      "position": 1,
+      "sourceId": 3261,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-5686c917-79fa-42fe-908d-ac4ba74f3dc2",
+  "usesNativeRules035": true
+}

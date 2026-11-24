@@ -4,39 +4,9 @@
   "id": "deck-1cae9870-3080-43a5-b31f-d577d7bb117f",
   "main": [
     {
-      "count": 3,
-      "identity_key": "e926fb71bd9ef4246e7c1f3966ed98d30ca128a5702052ac1f6d0dc24158d100",
-      "source_id": 180
-    },
-    {
-      "count": 2,
-      "identity_key": "37bc82455411d8d6dce52c360d37c2ea8ab72ecbe6ca818a7c335a34a56317b3",
-      "source_id": 967
-    },
-    {
-      "count": 3,
+      "count": 1,
       "identity_key": "caa8e0ade98a181fe9466d259058c05351ba9f01107e683190b6ce8e2b2e0862",
       "source_id": 2642
-    },
-    {
-      "count": 3,
-      "identity_key": "80bb317de95917ed10879ee3ca06a82214baa55350f17b78383ae0ed355d07cf",
-      "source_id": 2647
-    },
-    {
-      "count": 2,
-      "identity_key": "8fdba67eb686ecfa60afc175239f19193acbe9da9b586db53f44c527a068e050",
-      "source_id": 1220
-    },
-    {
-      "count": 2,
-      "identity_key": "10ea3cb3e7ca9ce12f88d8bc1f0fa80dd3e4e59dd82b7fe2fbec0152013321c1",
-      "source_id": 2103
-    },
-    {
-      "count": 2,
-      "identity_key": "0e6025257a4a4d6d957b3e6f59556d1819cd3160bf62875e993c8cb1c61372e0",
-      "source_id": 139
     },
     {
       "count": 2,
@@ -44,11 +14,66 @@
       "source_id": 2650
     },
     {
-      "count": 1,
+      "count": 2,
       "identity_key": "610b12ad148194bc5f6b3e3e5458f716b532a44cb8a468aa40520d282be212fc",
       "source_id": 2651
+    },
+    {
+      "count": 3,
+      "identity_key": "eca93858dac1b11ca496465f06db3801516b86d86268ff5088250d60d771519b",
+      "source_id": 2648
+    },
+    {
+      "count": 2,
+      "identity_key": "e80ea165be33982534d76c5787cbc6f83b765ceffa2fdad054dfd6b3ba4935c6",
+      "source_id": 2652
+    },
+    {
+      "count": 1,
+      "identity_key": "f7aef7ecc3b534b727fd2b9d5098925f35c0c11c864e7d3df141b53ab5bd2eb5",
+      "source_id": 2653
+    },
+    {
+      "count": 1,
+      "identity_key": "c977fcd91f84aff8dd28e8e3b0f582b51ce1252a2377e155da06b2be6a92bf10",
+      "source_id": 2644
+    },
+    {
+      "count": 1,
+      "identity_key": "6e370f1cd538e45698822beb38008047e6ce4ba951c2b2ba905eb49bd2296ad3",
+      "source_id": 2643
+    },
+    {
+      "count": 1,
+      "identity_key": "09239c69c7b4cf7bafbcc1b598d3dae39b190f63dfa30414e9ccd25cb9a01601",
+      "source_id": 2660
+    },
+    {
+      "count": 1,
+      "identity_key": "185cdc87e8f2a4d63f7820cd314d9d96c41fbe7032edd38c95f77f444482d067",
+      "source_id": 1967
+    },
+    {
+      "count": 2,
+      "identity_key": "445b9738504d14ef7da51fb11b7fb89fe7a926e1b02c421d834f3006a2e10ffa",
+      "source_id": 2649
+    },
+    {
+      "count": 1,
+      "identity_key": "5f4ef019f9ca65d2921f8734e94a240797877d12abbb3a87f3209a5e8c54b32b",
+      "source_id": 1023
+    },
+    {
+      "count": 1,
+      "identity_key": "9f67744e6f64d112fdfc42401dad7ae2277c29c2377236a94e47147f351a68bb",
+      "source_id": 2392
+    },
+    {
+      "count": 1,
+      "identity_key": "60e35f535dd5d99446ffa1b9158db6d9a3585dc04e9c7a10bfb1f781f582dd1b",
+      "source_id": 1159
     }
   ],
-  "name": "미궁형제 중급",
-  "version": 464
+  "name": "게이트가디언",
+  "version": 1016
 }

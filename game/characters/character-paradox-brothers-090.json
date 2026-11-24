@@ -85,11 +85,35 @@
             "position": "defense"
           }
         ]
+      },
+      {
+        "name": "래버런스월",
+        "profile_id": "profile-be2772da-c454-4b28-a662-80b0d8dcb10f",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "852fe5889e1239390ea2bb7b75d0ab4c7221c1253f1c1d2d954ce9820561a8cc",
+              "internal_id": 2650,
+              "name_ko": "래버린스 월 섀도우",
+              "slot": 1682
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "데스티니드로우",
+        "profile_id": "profile-009378e0-4892-489c-bd07-135450a5058a",
+        "skills": [
+          {
+            "kind": "destiny_draw"
+          }
+        ]
       }
     ],
     "skills": []
   },
   "profile_id": "paradox_brothers",
-  "updated_at": "2026-11-17T15:35:09.739516+00:00",
-  "version": 5906
+  "updated_at": "2026-11-24T13:38:35.764427+00:00",
+  "version": 6310
 }

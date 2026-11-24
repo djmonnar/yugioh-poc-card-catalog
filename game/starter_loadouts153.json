@@ -1,4 +1,492 @@
 {
+  "unified039_00f0e31fc3cc83fb8d0d36b9c393d740a8a3ef5d": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_field",
+        "position": 0,
+        "sourceId": 329,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_02c8983842897172aeb85eea207f06c673fc5696": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "fusion_recover",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_05700955258864283a1328d1b3aaa858718321b3": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_field",
+        "position": 0,
+        "sourceId": 329,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_0a7492fa043b34933bc9969a274fe83d7899a01a": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [
+      "reload"
+    ],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "opening_reload",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_13982b902d1445c71e454a448a321ee3b5e5f4f9": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "aura": {
+          "atk": 300,
+          "attributes": 1,
+          "def": 0,
+          "levels": 30,
+          "races": 32,
+          "types": 48
+        },
+        "entries": [],
+        "kind": "stat_aura",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_165c090bc5c9075cdd9067352cd1ddee4da94f11": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "opening_reload",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_1de95cb41ad48b4ab946cc6e08b5abca061544ff": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [
+          {
+            "count": 1,
+            "sourceId": 2001
+          }
+        ],
+        "kind": "start_grave",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_2301015cdcec066c4cb87d572b374984b7cb1a60": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "aura": {
+          "atk": 100,
+          "attributes": 4,
+          "def": 0,
+          "levels": 0,
+          "races": 65536,
+          "types": 0
+        },
+        "entries": [],
+        "kind": "stat_aura",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_307d29af5a014a0321e2d07390c3c057bd040ae8": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "ritual_recover",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_342775bf0552effbc5a9cb5ce35a58324487fa43": {
+    "gold": 0,
+    "lp": 5000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": []
+  },
+  "unified039_343c8bbdc12aa6764a1d0cfbd8cbbc28bc239e33": {
+    "gold": 0,
+    "lp": 5000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": []
+  },
+  "unified039_3e588a1d007a5237ec6d8087ef50bea957c52c21": {
+    "gold": 0,
+    "lp": 5000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": []
+  },
+  "unified039_40410ab2afbfa22fa4cd99d45d8d416acc9f0ae3": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "fusion_recover",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_456cbdabe9cd74c44d59d616067ac059a6b2ce06": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "draw_once",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 1500,
+        "value": 1
+      }
+    ]
+  },
+  "unified039_49a1211d1d9aeaa1ac0c6d01728e5eed58710995": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_field",
+        "position": 0,
+        "sourceId": 333,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_4b9a2324f99fd5b7a4e94e3d9d380ab213978544": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [
+      "flip_shield193"
+    ],
+    "skills": []
+  },
+  "unified039_514bb820e027d9593a739b11422066704d972497": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [
+      "reload"
+    ],
+    "skills": []
+  },
+  "unified039_51553ef65ddcb11d288a31f5e08088279db29bb0": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "opening_reload",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_53be2347344f593549ad955afc5a84126593a059": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_hand",
+        "position": 0,
+        "sourceId": 329,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_57a54279c4fc0ddd1eca0624923ddde98e3beace": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "aura": {
+          "atk": 300,
+          "attributes": 0,
+          "def": 0,
+          "levels": 32,
+          "races": 2,
+          "types": 0
+        },
+        "entries": [],
+        "kind": "stat_aura",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_5b19929323fe00ddfc55d13023f55df5ae41a347": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [
+          {
+            "count": 1,
+            "sourceId": 1997
+          }
+        ],
+        "kind": "start_grave",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_5cd212676b79742322ad4e5fadf9ce0c64c80f03": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "destiny_draw",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_628ab5caa39c0051d1d1b64063fb406bf9cf4d34": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "destiny_draw",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_648660f8fc480d7a243a4ab2e3efb6052a685998": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_hand",
+        "position": 0,
+        "sourceId": 688,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_696c16c636a8ab91eaffeb0595e1ac8eb98318f8": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "destiny_draw",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_760de7f59f1ee5c079deae4227d3ccef8ade336e": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_field",
+        "position": 0,
+        "sourceId": 420,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_7933d647f4b0e1bd71be4e7326dd7b061e453198": {
+    "gold": 0,
+    "lp": 5000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": []
+  },
+  "unified039_81140665a7e7f6f943e267f6e19cdf0b7d4ea45e": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_field",
+        "position": 0,
+        "sourceId": 2004,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_8ada66f7929efbcfccd9fa84ca2e9a8fc40217bd": {
+    "gold": 0,
+    "lp": 5000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": []
+  },
+  "unified039_90dcfbc798d48fb278b72aeef9b2934562040ba8": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "aura": {
+          "atk": 100,
+          "attributes": 0,
+          "def": 100,
+          "levels": 0,
+          "races": 524288,
+          "types": 0
+        },
+        "entries": [],
+        "kind": "stat_aura",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_942acb03b30fe6f30576e7c28c1b920f441fa5a5": {
+    "gold": 0,
+    "lp": 5000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": []
+  },
+  "unified039_950bc38613b243c0466439283ee3ef9a788af28f": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "fusion_recover",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
   "unified039_a203e5aa7978cfc54686e12a73b14268973cd0d3": {
     "gold": 0,
     "lp": 4000,
@@ -15,6 +503,146 @@
       }
     ]
   },
+  "unified039_abef295650a7ee9dd5a2ff2bbf74d76ad678eda5": {
+    "gold": 0,
+    "lp": 5000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": []
+  },
+  "unified039_ae40b3b0a11d2f27f5d0257f9c68f4da2a602731": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [
+          {
+            "count": 1,
+            "sourceId": 8
+          }
+        ],
+        "kind": "start_grave",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_b85f993fbf845a038f2e937ca24717b3947b57a4": {
+    "gold": 0,
+    "lp": 4500,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_field",
+        "position": 0,
+        "sourceId": 1840,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_bf15355e7203723330adedc116893aba059fcf65": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_hand",
+        "position": 0,
+        "sourceId": 1820,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_c0f84a521260aa3ef21e2df864020957d977ae83": {
+    "gold": 0,
+    "lp": 4500,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": []
+  },
+  "unified039_c422a6019723faf761416c199101bfd8afa02afe": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_field",
+        "position": 0,
+        "sourceId": 330,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_c5554feea093cad8d34c039a29e1fc8d8bddd5b9": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_monster",
+        "position": 1,
+        "sourceId": 3261,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_c7541d56168b4d3283af0a2f829f41e576ea40c4": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_field",
+        "position": 0,
+        "sourceId": 1045,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_c81e917a746a3673e0f05c25198cdf8665abf1c6": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "ritual_recover",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_cc073d973daa4c8d4b49121ba86801485b9c457e": {
+    "gold": 0,
+    "lp": 4500,
+    "openingDrawBonus": 0,
+    "relicIds": [
+      "blood_book"
+    ],
+    "skills": []
+  },
   "unified039_cf30d2f33e131fc9a7214cbcdf5f27e4343ec3d8": {
     "gold": 0,
     "lp": 4000,
@@ -26,6 +654,224 @@
         "kind": "start_field",
         "position": 0,
         "sourceId": 3210,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_dfb3a989f546ce2978ba9e9bdfafd736392655d1": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "aura": {
+          "atk": 0,
+          "attributes": 0,
+          "def": 200,
+          "levels": 0,
+          "races": 4096,
+          "types": 0
+        },
+        "entries": [],
+        "kind": "stat_aura",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_e05be480c854c57190586f5d7d0c5a4a4a5ac7f5": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_field",
+        "position": 0,
+        "sourceId": 330,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_e09976ad07fb398c353256db6e689be92fb28034": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "aura": {
+          "atk": 300,
+          "attributes": 0,
+          "def": 0,
+          "levels": 16,
+          "races": 8,
+          "types": 16
+        },
+        "entries": [],
+        "kind": "stat_aura",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_e1c2fd4be65edb1f95a322ac937882809ee4bf29": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [
+      "restoring_ankh"
+    ],
+    "skills": []
+  },
+  "unified039_e46e973f2ecbcbbde9f61f3c29c36ce7f24557a1": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_field",
+        "position": 0,
+        "sourceId": 2404,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_e4eb38b819310d648a6f025b4fed3032ed56ef3a": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "aura": {
+          "atk": 100,
+          "attributes": 0,
+          "def": 0,
+          "levels": 0,
+          "races": 2048,
+          "types": 16
+        },
+        "entries": [],
+        "kind": "stat_aura",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_e8d741b71e6bc302132be23d5fe378b0b6c2e8fa": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "draw_once",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 1000,
+        "value": 1
+      }
+    ]
+  },
+  "unified039_e9fd33d570fb523d2bd824e001f64eae1281fff3": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "destiny_draw",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_ecb600ccc7c18f91a64573387f6e55d34c0b9e2c": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "opening_reload",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_f36d3c66ea0e763484801a0f93cf5ca347658199": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_field",
+        "position": 0,
+        "sourceId": 333,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_f8bb24c2f50dcae6d3cef08dea02ee607a3da75b": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [
+      "thorn_armor"
+    ],
+    "skills": []
+  },
+  "unified039_f8ec3eae8e62bd018e3ac02b5e9d574864183bfd": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_field",
+        "position": 0,
+        "sourceId": 1802,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_fd32f65886586ea650a3284e708a3f52dfd48f1a": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "opening_reload",
+        "position": 0,
+        "sourceId": -1,
         "threshold": 0,
         "value": 0
       }
