@@ -1,0 +1,176 @@
+export const ADDITION_BATCHES199 = [
+  {
+    "key": "Cards199",
+    "label": "뱀파이어·스노우맨·엘리멘틀 히어로",
+    "themes": [
+      {
+        "key": "vampire199",
+        "label": "뱀파이어",
+        "members": [
+          [
+            3265,
+            "9b6572c3c9d9427e83273af6d952d5adf36e97439f1afa47a98c9966d3d8ba4d"
+          ],
+          [
+            3266,
+            "be2b7daaa8a7ff4eedf44bed35cac2102d370e691faab2d7d3c1ba781ca3c7f1"
+          ],
+          [
+            3267,
+            "6f3cd63f7b360fda5ea1d8a8f297fbf0212c4ddb1a99f7bda51c2b2867ecafab"
+          ],
+          [
+            3268,
+            "e857969ca461e6b2f34535a47972996ca5f456112b23c42f268cf65b0de9f45d"
+          ],
+          [
+            3269,
+            "fc48744216e409451b027de11e4d19f55e556caf4d1807b03c0e61d2548e492d"
+          ],
+          [
+            3270,
+            "a7aefe71302fdaf29362806add43ad2094a476313eca7d879eda411d7ee4ad53"
+          ],
+          [
+            3271,
+            "a7b26d0b259be8be3dd98e483a81f4cd191894ea5d98002f63d0451ba69b1112"
+          ],
+          [
+            3272,
+            "1ff12cad2a5bc9031d7835001595edd237be49fc0c5424baa530ce39b04092a5"
+          ],
+          [
+            3273,
+            "15f59ef271cb45e7f28e5af03ee4e171f5758d8f2349dbab30e118f0d55f0e8a"
+          ],
+          [
+            3274,
+            "1deba1eac6dd5af9c7550abf34a86d72f95066b5a939d545d3f4ab1c7986ec90"
+          ],
+          [
+            3275,
+            "68550d7bf35ca62e4d76138c6dae6f3e286d3f7a7c81acf26f5b8106f4506aba"
+          ],
+          [
+            3276,
+            "7b7d0c55fb8b44fa9065b3fb4cf479f00cb5a854927e85a5662d414da10784b0"
+          ],
+          [
+            3277,
+            "f4a6388375dba6da6d39baa4fa7c68f894b8efe8b1517547ea90f117337ca5c1"
+          ],
+          [
+            3278,
+            "96212fca53b1cbd651d0699201cb956413a97d809cdfd137040a0f3823217884"
+          ],
+          [
+            3279,
+            "cbc7599d3e1b6f01a780851ed6a4b8188ae7281146efd3ee5afebb825f7427fe"
+          ],
+          [
+            3280,
+            "9142ea414f6e666daf3b58b276ac1bb709cfcf901bfe5782ff32affb4f5e9ab2"
+          ],
+          [
+            3281,
+            "bc245030460316c418ecb5523231092def7ca2630cc33a2f5bececb8e68d2ab0"
+          ],
+          [
+            3282,
+            "2b2af9293ce8588d9d5c91258bcb53a8eebdc5bd6fb3486389f06f26cac796c4"
+          ],
+          [
+            3283,
+            "8efd1039a6b4ea9b1453b083d6d70db1c6347539ae0978158d1ed5b657d4d48e"
+          ],
+          [
+            3284,
+            "2653cbec605dfbc7c6a0a4e341c803a6d1eb2f68da6ff2d0499f177935c17970"
+          ],
+          [
+            3285,
+            "342fc0ccd3290e57c1c877edef8c86ab4528dd34f166d35e5cc1c68c1ac95dd0"
+          ]
+        ]
+      },
+      {
+        "key": "hero199",
+        "label": "엘리멘틀 히어로",
+        "members": [
+          [
+            3253,
+            "0affaa50e7c1a76054ad9161e389c5caa979f52d66dd0980a08799475c2bee67"
+          ],
+          [
+            3254,
+            "ca05b4dfd2bcf113edb986de5a16f8c5a3350cbc8977495ca2cbacdeac5995fb"
+          ],
+          [
+            3255,
+            "0646913a070de89eaadf0098e2cb395f114743ae326920091c025af26e24cbe5"
+          ],
+          [
+            3256,
+            "2396a483ee644f917e1a4b8e82d9394432d76b3963bcd4ff2e1ceeac80a6ca03"
+          ]
+        ]
+      },
+      {
+        "key": "snowman199",
+        "label": "스노우맨·얼음",
+        "members": [
+          [
+            3257,
+            "f273877ec5be84c8f371fa2f9dc9dca23daee569262a3ca69f76b20b2846d7de"
+          ],
+          [
+            3258,
+            "98b1cd294ca8c848dc36131fe9e3586142dc0c6cccd61e8cb575584ca9f40184"
+          ],
+          [
+            3259,
+            "dd62dfcd0c9ca05d27e9f039ff5c4376260a2aeed4815be926fa5062953ca748"
+          ],
+          [
+            3260,
+            "07e23984f347f3e92ece41c9edeb2482037e5a9ad8ee34fa9588eda4c864e3b4"
+          ],
+          [
+            3261,
+            "ac6792044326ba96fd5d7aee13f3cfb92617c28d11536b27fcfe8c7b6afeba08"
+          ]
+        ]
+      },
+      {
+        "key": "others199",
+        "label": "그 밖의 카드",
+        "members": [
+          [
+            3250,
+            "7033c7a1a08056ebd2e6d03b3a6012731bf5a842d5a60308b9cf90d83202db77"
+          ],
+          [
+            3251,
+            "f92cccfc0493a182d88af97e7dbb0dc8350731dfce5a8ed5c887bf652febc5b5"
+          ],
+          [
+            3252,
+            "da57bf1b467f6f4f5f17c82c52bb565c2c1283b08ff71e455a90d59939ad047d"
+          ],
+          [
+            3262,
+            "ea684f0157f08487c2175f09109c2bb2e20dc7647c26024c10e31f4f98682a65"
+          ],
+          [
+            3263,
+            "34bb4a3dceae96b8ffce3a360beb77ad54b3cf5be3feaeb4d18f8600e792c4c1"
+          ],
+          [
+            3264,
+            "5df27c538bd5fa946ed49b8b1ae13c2264c718d7bf49db7a44e2b46b704fc6cf"
+          ]
+        ]
+      }
+    ]
+  }
+];

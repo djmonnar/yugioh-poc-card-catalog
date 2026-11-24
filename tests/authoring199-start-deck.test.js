@@ -15,10 +15,11 @@ const clone=structuredClone;
 const withDeck199=state=>{state.bootstrap.capabilities.trait_form.kinds.push(clone(START_DECK_DEFINITION199));return state;};
 const typedDeck=(entries)=>({kind:'start_deck',value:0,threshold:0,sourceId:-1,position:0,entries});
 
-test('199 trait lists add start_deck after the 197 lists',()=>{
-  assert.deepEqual([...TRAIT_KIND_IDS199],['start_deck']);
-  assert.deepEqual([...STARTER_KINDS199],[...STARTER_KINDS197,'start_deck']);
-  assert.deepEqual([...CHARACTER_KINDS199],[...CHARACTER_KINDS197,'start_deck']);
+test('199 trait lists add the four 199 kinds (start_deck first) after the 197 lists',()=>{
+  const kinds199=['start_deck','stat_aura','destiny_draw','opening_reload'];
+  assert.deepEqual([...TRAIT_KIND_IDS199],kinds199);
+  assert.deepEqual([...STARTER_KINDS199],[...STARTER_KINDS197,...kinds199]);
+  assert.deepEqual([...CHARACTER_KINDS199],[...CHARACTER_KINDS197,...kinds199]);
   assert.equal(TRAIT_KINDS199[0],START_DECK_DEFINITION199);
   assert.deepEqual(START_DECK_DEFINITION199.fields.entries,{type:'counted-source-cards',filter:'playable-main',max_rows:12,min_rows:1,count_max:12,count_min:1,total_max:12,distinct_source:true},
     'the same entry list as 시작 묘지');

@@ -21,7 +21,7 @@ import {characterChoice068,changeCharacter068,traitChoices068,changeTrait068} fr
 import {portraitUrl081} from './authoring081-assets.js?v=20261105-082';
 import {traitCardMatches089} from './authoring089-traits.js?v=20261106-089';
 import {traitHelp184,ouijaWithoutNecrofear184} from './authoring184-traits.js';
-import {traitKindOffered199} from './authoring199-traits.js';
+import {traitKindOffered199,AURA_GROUPS199,AURA_DEFAULT199,auraOptions199,auraSummary199} from './authoring199-traits.js';
 import {traitFieldLabel196,traitDefault196} from './authoring196-traits.js';
 import {CARD_SORTS091,filterValues091,cardQueryTokens091,cardFiltersMatch091,sortCards091} from './authoring091-search.js?v=20261106-091';
 import {deckDeletionChanges153,deckDeletionPlan174,deckDeletionSteps174,openDeckDeletion153} from './authoring153-deck-delete.js';
@@ -53,13 +53,13 @@ export function deckDisplayName039(state,deck,displayTitle){const all=entities03
 export function sourceId039(card){const id=card?.source_id??card?.sourceId??card?.internal_id;return Number.isSafeInteger(id)&&id>=0?id:null;}
 export function fieldValue039(value,path,next){const parts=Array.isArray(path)?path:[path];if(!parts.length||parts.some(k=>['__proto__','prototype','constructor'].includes(k)))throw Error('편집할 항목을 확인해 주세요.');const result=clone(value),first=parts[0];let node=result;for(const k of parts.slice(0,-1)){if(!node[k]||typeof node[k]!=='object'||Array.isArray(node[k]))node[k]={};node=node[k];}node[parts.at(-1)]=next;return {[first]:result[first]};}
 import {cardMetadata109} from './authoring109-catalog.js?v=20261114-109';
-import {cardMetadata197} from './authoring197-catalog.js?v=20261123-thunder-hand197';
+import {cardMetadata199} from './authoring199-catalog.js?v=20261124-vampire-snowman-hero199';
 
 export function normalizeCatalog039(state){
   const boot=state.bootstrap??{},game=state.gamePayload??boot.game_payload??boot.game??{},raw=boot.catalog?.cards??boot.catalog??game.catalog?.cards??game.catalog??[],rows=Array.isArray(raw)?raw:[],all=entities039(state),lookup=new Map();
   for(const e of all){const id=sourceId039(e.content)??(e.entity_type.startsWith('card_')&&/^\d+$/.test(e.entity_id)?Number(e.entity_id):null);if(id!==null)lookup.set(entityKey039(e.entity_type,id),e.content);}
   const normalized=rows.map(raw=>{const id=sourceId039(raw);if(id===null)throw Error('카드 자료의 번호가 올바르지 않습니다.');const display=lookup.get(entityKey039('card_display',id))??{},setting=lookup.get(entityKey039('card_setting',id))??{},annotation=lookup.get(entityKey039('card_annotation',id))??{},limit=lookup.get(entityKey039('card_limit',id))??{};
-    const metadata120=cardMetadata197(id,raw.identity_key),maximumNormalLimit=metadata120?.maximumNormalLimit??(raw.token===true?0:undefined),fixedToken=maximumNormalLimit===0;
+    const metadata120=cardMetadata199(id,raw.identity_key),maximumNormalLimit=metadata120?.maximumNormalLimit??(raw.token===true?0:undefined),fixedToken=maximumNormalLimit===0;
     const inherited=(key,frozen,fallback)=>{if(!own(limit,key))return fallback;if(limit[key]!==null)return limit[key];if(!own(limit,frozen))throw Error('카드 제한의 기본 자료를 다시 확인해 주세요.');return limit[frozen];};
     const storedNormalLimit=inherited('normal_limit','frozen_normal_limit',raw.normal_limit??raw.deck_limit??raw.maxCopies??3);
     const normalLimit=maximumNormalLimit==null?storedNormalLimit:Math.min(maximumNormalLimit,storedNormalLimit),speedLimit=inherited('speed_limit','frozen_speed_limit',raw.speed_limit??null);
@@ -228,6 +228,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
         for(const [key,spec] of Object.entries(definition?.fields??{})){
           if(spec.type==='integer'&&Number.isFinite(row[key]))details.push(key==='threshold'?`LP ${row[key].toLocaleString('ko-KR')} 이하`:row.kind==='lp_bonus'||row.kind==='heal_once'?`${row[key].toLocaleString('ko-KR')} LP`:row.kind==='union_power'?`공격력·수비력 +${row[key].toLocaleString('ko-KR')}`:`${row[key]}장`);
           if(spec.type==='source-card')details.push(cardName(row.card));
+          if(spec.type==='stat-aura')details.push(auraSummary199(row.aura,spec));
           if(spec.type==='counted-source-cards')details.push(`합계 ${(row.entries??[]).reduce((n,entry)=>n+entry.count,0)}장`,...(row.entries??[]).map(entry=>`${cardName(entry.card)} ${entry.count}장`));
           if(spec.type==='enum'){const index=['attack','defense','set'].indexOf(row.position),label=spec.labels?.[index];if(label)details.push(label);}
         }
@@ -286,6 +287,24 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
           box.append(el('p',`선택한 카드: ${card?.name_ko??'카드를 선택하세요'}`,'au-hint'));
           chooseCard(box,selectedId,card=>replace(row.kind,live=>shared?{...live,card:cardRef(card)}:{...live,sourceId:card.source_id}),`${key}.${index}.card`,card=>traitCardMatches089(card,spec.filter));
         }
+        if(spec.type==='stat-aura'){
+          const aura={...AURA_DEFAULT199,...(row.aura??{})};
+          box.append(el('p',`조건 · ${auraSummary199(row.aura,spec)}`,'au-hint au-aura-summary199'));
+          for(const [group,label] of AURA_GROUPS199){
+            const set=el('fieldset',null,'au-aura-group199'),chips=el('div',null,'au-filter-chips au-chips199');set.append(el('legend',label));
+            for(const [bit,name] of auraOptions199(spec,group)){
+              const chip=el('label',null,'level-choice au-chip199'),input=el('input');input.type='checkbox';input.checked=(aura[group]&bit)!==0;input.disabled=!currentState.canEdit;
+              input.setAttribute('aria-label',`${label} ${name}`);input.dataset.editKey=`${key}.${index}.aura.${group}.${bit}`;
+              input.addEventListener('change',()=>replace(row.kind,live=>{const now={...AURA_DEFAULT199,...(live.aura??{})};return {...live,aura:{...now,[group]:input.checked?(now[group]|bit):(now[group]&~bit)}};}));
+              chip.append(input,el('span',name));chips.append(chip);
+            }
+            set.append(chips);box.append(set);
+          }
+          for(const [stat,label,minimum,maximum] of [['atk','공격력 조정',spec.atk_min,spec.atk_max],['def','수비력 조정',spec.def_min,spec.def_max]]){
+            const wrap=field(label,aura[stat],{type:'integer',minimum,maximum},value=>replace(row.kind,live=>({...live,aura:{...AURA_DEFAULT199,...(live.aura??{}),[stat]:value}})),`${key}.${index}.aura.${stat}`);
+            const input=wrap.querySelector?.('input');if(input)input.step=String(spec.step??100);box.append(wrap);
+          }
+        }
         if(spec.type==='counted-source-cards'){
           const entryId=entry=>shared?entry.card?.internal_id:entry.sourceId,total=(row.entries??[]).reduce((n,r)=>n+r.count,0);
           box.append(el('p',`${definition.label} · ${total}/12장`,'au-hint'));
@@ -310,6 +329,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
         for(const [fieldKey,spec] of Object.entries(definition.fields)){
           if(spec.type==='integer')next[fieldKey]=traitDefault196(definition.kind,fieldKey,spec);
           if(spec.type==='enum')next.position=shared?'attack':spec.values[0];
+          if(spec.type==='stat-aura')next.aura={...AURA_DEFAULT199};
           if(spec.type==='source-card'||spec.type==='counted-source-cards'){
             if(!first)throw Error('선택 가능한 카드가 없습니다.');
             if(spec.type==='source-card'){if(shared)next.card=cardRef(first);else next.sourceId=first.source_id;}
@@ -412,7 +432,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     body.append(limitBadges(card,{includeUnrestricted:true}),description);const relations198=cardRelationsSection198(card);if(relations198)body.append(relations198);body.append(cardDecks172(card));
     if(currentState.canEdit){
       const forms=el('div',null,'au-form-grid'),allowed=(currentState.bootstrap?.capabilities?.entities?.card_setting?.fields?.rarity?.values??['N','R','SR','UR']).filter(r=>r!=='L'||card.source_id<2390),rarities=[...new Set([...allowed,...(card.source_id<2390?['L']:[]),card.rarity])];
-      const {maximumNormalLimit,maximumSpeedLimit}=cardMetadata197(card.source_id,card.identity_key)??{};
+      const {maximumNormalLimit,maximumSpeedLimit}=cardMetadata199(card.source_id,card.identity_key)??{};
       const effectToken=maximumNormalLimit===0,stockReadOnly=card.rarity==='L'||effectToken;
       forms.append(field('카드 이름',card.name_ko,{type:'string',maxLength:100},v=>cardPatch('card_display',card,{name:v}),`card.${card.source_id}.name`),field('영문 이름',card.name_en,{type:'string',maxLength:160},v=>cardPatch('card_display',card,{name_english:v}),`card.${card.source_id}.english`),field('카드 설명',card.description_ko,{type:'string',multiline:true,maxLength:12000},v=>cardPatch('card_display',card,{description:v}),`card.${card.source_id}.description`),field('등급',card.rarity,{type:'string',enum:rarities,readOnlyValues:card.source_id<2390?[]:rarities.filter(v=>!allowed.includes(v))},v=>cardPatch('card_setting',card,v==='L'?{rarity:v,stock:false,draw_enabled:false}:{rarity:v}),`card.${card.source_id}.rarity`),field('상점 판매',card.stock,{type:'boolean',readOnly:stockReadOnly},v=>cardPatch('card_setting',card,{stock:v}),`card.${card.source_id}.stock`),field('전투 보상',card.draw_enabled!==false,{type:'boolean',readOnly:stockReadOnly},v=>cardPatch('card_setting',card,{draw_enabled:v}),`card.${card.source_id}.draw`));body.append(forms,el('small','설명을 바꾸어도 카드의 실제 효과 처리 규칙은 바뀌지 않습니다.','au-hint'));
       if(!effectToken){

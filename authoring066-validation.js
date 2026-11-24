@@ -1,6 +1,6 @@
 import {traitCardMatches089,sharedTraitRefMatches089} from './authoring089-traits.js?v=20261106-089';
-import {traitKindOffered199} from './authoring199-traits.js';
-import {cardMetadata197} from './authoring197-catalog.js?v=20261123-thunder-hand197';
+import {traitKindOffered199,auraValid199} from './authoring199-traits.js';
+import {cardMetadata199} from './authoring199-catalog.js?v=20261124-vampire-snowman-hero199';
 // Local preflight explains known server contracts. The server remains authoritative.
 const own=(value,key)=>Object.prototype.hasOwnProperty.call(value??{},key);
 const object=value=>value!==null&&typeof value==='object'&&!Array.isArray(value);
@@ -44,7 +44,7 @@ export function validateAuthoringChange066(snapshot,type,id,fields,{operation='p
   const cards=Array.isArray(raw)?raw:[],source=card=>card.source_id??card.sourceId??card.internal_id,slot=card=>card.web_slot??card.slot,extra=card=>Boolean((card.native_type??card.type??0)&(0x40|0x2000|0x800000|0x4000000)),playable=card=>card&&card.playable!==false&&!card.token&&!card.special;
   const bySource=new Map(cards.map(card=>[source(card),card])),bySlot=new Map(cards.map(card=>[slot(card),card]));
   if(type==='card_limit'||type==='card_setting'){
-    const card=bySource.get(Number(id)),metadata=cardMetadata197(source(card??{}),card?.identity_key),maximum=metadata?.maximumNormalLimit;
+    const card=bySource.get(Number(id)),metadata=cardMetadata199(source(card??{}),card?.identity_key),maximum=metadata?.maximumNormalLimit;
     if(maximum===0){
       if(type==='card_limit')check(!own(fields,'normal_limit')&&!own(fields,'speed_limit'),Object.keys(fields),'효과로 생성되는 토큰에는 덱 제한을 설정할 수 없습니다.');
       else check(fields.stock!==true&&fields.draw_enabled!==true,['stock','draw_enabled'],'효과로 생성되는 토큰은 판매하거나 보상으로 지급할 수 없습니다.');
@@ -87,6 +87,7 @@ export function validateAuthoringChange066(snapshot,type,id,fields,{operation='p
           if(spec.filter?.endsWith('-monster'))check(traitCardMatches089(card,spec.filter),keys,`${kind.label}에는 몬스터 카드를 선택해 주세요.`);
           if(spec.filter?.endsWith('-spell-trap'))check(traitCardMatches089(card,spec.filter),keys,`${kind.label}에는 마법·함정 카드를 선택해 주세요.`);
         }
+        if(spec.type==='stat-aura')check(auraValid199(row.aura,spec),keys,`${kind.label}의 조건과 수치를 확인해 주세요. 공격력·수비력은 ${spec.atk_min}~${spec.atk_max}, ${spec.step??100} 단위이고 둘 다 0일 수 없습니다.`);
         if(spec.type==='counted-source-cards'){
           const entries=row.entries??[],ids=entries.map(entry=>shared?entry.card?.internal_id:entry.sourceId);
           check(entries.length>0&&entries.length<=12&&new Set(ids).size===ids.length&&entries.every(entry=>Number.isSafeInteger(entry.count)&&entry.count>=1&&entry.count<=12)&&entries.reduce((sum,entry)=>sum+entry.count,0)<=12,keys,`${kind.label}는 중복 카드 없이 합계 1~12장으로 설정해 주세요.`);
