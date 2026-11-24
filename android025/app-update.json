@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.128",
-  "versionCode": 147,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.128/YGOClassicExpedition-0.18.128-arm64.apk",
-  "sizeBytes": 835948160,
-  "sha256": "bb44807ae29faee5cc5dc0a0169fed9483ffb86ab27913808f645615de8de45c",
-  "releaseNotes": "뱀파이어·스노우맨·엘리멘틀 히어로 카드 36장과 덱 특성 4종(시작 덱 추가·공격력 조정·데스티니 드로우·리로드)을 추가했습니다. 결과 화면의 에이스를 준 데미지 순으로 보여 주고, 지도에서 엘리트·보스가 더 잘 보이게 했습니다. 시작 배치 연출과 AI(쥬락 티라누스·마천루·G 볼파크·시간의 마술사·아이스 카운터)를 고쳤습니다."
+  "versionName": "0.18.129",
+  "versionCode": 148,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.129/YGOClassicExpedition-0.18.129-arm64.apk",
+  "sizeBytes": 835997644,
+  "sha256": "6eea02fbb15dfd363e1e6c41632c5f95bca929cfcc2a77aa3d2e3c64a191ca74",
+  "releaseNotes": "특성·유물을 원정 지도에서 켜고 끌 수 있게 했습니다(다음 전투부터 적용). 시작 필드 마법이 겹치면 가장 최근에 얻은 효과만 깔립니다. 시작 덱을 고를 때 특성·시작 유물을 보여 주고, 전투 중 유물 목록에 덱 특성 전부를, 카드 정보에 특성 공격력 출처를 보여 줍니다."
 }
