@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.126",
-  "versionCode": 145,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.126/YGOClassicExpedition-0.18.126-arm64.apk",
-  "sizeBytes": 799836642,
-  "sha256": "56986fbbeac9eebb18338d3fbe232ecdd53606d260d08e3fd2b9250354c0fdf8",
-  "releaseNotes": "새 캐릭터 4명(판도라·빛과 어둠의 가면·어둠의 플레이어 킬러·텐죠인 아스카)과 특성 융합회수·의식회수를 더하고, 호루스의 흑염룡 LV8 앞 마법 발동·전선기지·선택 창 크기를 고쳤습니다."
+  "versionName": "0.18.127",
+  "versionCode": 146,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.127/YGOClassicExpedition-0.18.127-arm64.apk",
+  "sizeBytes": 814512794,
+  "sha256": "68b81f3414bae2b24c9097b2533df429e5cf6ed493c8686517588c944f182e63",
+  "releaseNotes": "새 카드 23장(썬더 드래곤·핸드: 초뇌룡－썬더 드래곤, 라이트닝 스톰, 금지된 일적 등)을 더하고 AI가 쓸 수 있게 했습니다. 특성 융합회수·의식회수와 새 캐릭터 4명을 제작소에서 쓸 수 있습니다."
 }
