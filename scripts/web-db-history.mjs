@@ -13,7 +13,19 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 
 export const RPC_FLOOR = 161;
 export const RPC_PROBE_AHEAD = 60;
+// (200) 전송량 줄이기: 이전 기록(revision.json의 route)이 있으면 그 경로부터 위로 이만큼만 찾는다(없는 번호마다 404 요청).
+export const RPC_PROBE_AHEAD_RECORDED = 8;
 export const RPC = `poc_bootstrap${RPC_FLOOR}`;
+const routeNumber = rpc => { const m = /^poc_bootstrap(\d{3})$/.exec(rpc ?? ''); return m ? Number(m[1]) : null; };
+/** (200) 이전 기록에서 다음 조회의 시작 경로와 개정 번호를 읽는다. 없거나 깨졌으면 null(처음처럼 전체를 받는다). */
+export function recordedState(revisionJson) {
+  try {
+    const value = JSON.parse(revisionJson);
+    const number = routeNumber(value?.route);
+    if (number === null || number < RPC_FLOOR || !Number.isSafeInteger(value?.project_revision) || value.project_revision < 1) return null;
+    return { route: value.route, revision: value.project_revision };
+  } catch { return null; }
+}
 export const routeCandidates = (floor = RPC_FLOOR, ahead = RPC_PROBE_AHEAD) =>
   Array.from({ length: ahead + 1 }, (_, i) => `poc_bootstrap${floor + ahead - i}`);
 const ID_KEYS = ['source_id', 'sourceId', 'id', 'profile_id', 'code', 'slot'];
@@ -160,15 +172,19 @@ async function readTree(root, prefix = '') {
 // 최신 경로는 요청마다 자료를 계산해(약 2초) 쉬고 난 뒤 첫 호출이 익명 조회 제한(3초)에 걸려 HTTP 500이
 // 날 수 있다(2026-11-20, poc_bootstrap175). 앱(NativeOpponentOnline013.FetchBody)처럼 5xx와 연결 실패는
 // 잠시 뒤 다시 묻는다(최대 3번). 404 등 다른 답은 그대로 끝난다.
-export async function fetchBootstrap(config, fetchImpl = fetch, { attempts = 3, delayMs = 2000, sleep = ms => new Promise(done => setTimeout(done, ms)) } = {}) {
-  for (const rpc of routeCandidates()) {
+// (200) known({route, revision})이 있으면 그 경로에는 p_known_revision을 보내, 바뀌지 않았을 때 DB가 짧은 "unchanged" 답(약 9KB)을 준다.
+// 새 경로가 생겼거나 개정이 바뀌었으면 전과 같이 전체 응답을 받는다.
+export async function fetchBootstrap(config, fetchImpl = fetch, { attempts = 3, delayMs = 2000, sleep = ms => new Promise(done => setTimeout(done, ms)), known = null } = {}) {
+  const from = known ? routeNumber(known.route) : null;
+  const candidates = from === null ? routeCandidates() : routeCandidates(from, RPC_PROBE_AHEAD_RECORDED);
+  for (const rpc of candidates) {
     let response = null;
     for (let attempt = 1; ; attempt++) {
       try {
         response = await fetchImpl(`${config.url}/rest/v1/rpc/${rpc}`, {
           method: 'POST',
           headers: { apikey: config.publishable_key, Authorization: `Bearer ${config.publishable_key}`, 'Content-Type': 'application/json' },
-          body: JSON.stringify({ p_view: 'game', p_known_revision: null }),
+          body: JSON.stringify({ p_view: 'game', p_known_revision: known && rpc === known.route ? known.revision : null }),
           signal: AbortSignal.timeout(60000),
         });
       } catch (error) {
@@ -196,12 +212,18 @@ async function main(argv) {
   const option = name => { const i = argv.indexOf(name); return i > 0 ? argv[i + 1] : null; };
   const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
   const config = JSON.parse(await readFile(path.join(repoRoot, 'data', 'cloud-config.json'), 'utf8'));
+  const before = await readTree(out);
   const fetched = option('--from')
     ? { route: option('--route'), bootstrap: JSON.parse(await readFile(option('--from'), 'utf8')) }
-    : await fetchBootstrap(config);
+    : await fetchBootstrap(config, fetch, { known: recordedState(before.get('revision.json')) });
   const bootstrap = fetched.bootstrap;
+  // (200) 같은 경로·같은 개정: 받은 것은 짧은 "unchanged" 답뿐이다. 아무 파일도 쓰지 않는다.
+  if (bootstrap?.unchanged === true) {
+    if (bootstrap.kind !== 'unified039-bootstrap' || bootstrap.view !== 'game') throw new Error('공개 게임 조회 응답이 아닙니다.');
+    process.stdout.write('변경 없음 (같은 경로·같은 개정)\n');
+    return;
+  }
   const after = snapshotFiles(bootstrap, fetched.route);
-  const before = await readTree(out);
   let previous = null;
   try { previous = JSON.parse(before.get('revision.json')).project_revision; } catch {}
   const summary = summarize(before, after);

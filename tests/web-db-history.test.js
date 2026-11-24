@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { snapshotFiles, summarize, describe, routeCandidates, fetchBootstrap, RPC_FLOOR } from '../scripts/web-db-history.mjs';
+import { snapshotFiles, summarize, describe, routeCandidates, fetchBootstrap, recordedState, RPC_FLOOR, RPC_PROBE_AHEAD_RECORDED } from '../scripts/web-db-history.mjs';
 
 function bootstrap(revision, cards, relicLp) {
   return {
@@ -93,4 +93,44 @@ test('기록에 읽은 경로를 남긴다', () => {
   const files = snapshotFiles(bootstrap(10, [{ source_id: 1, name: '가', code: 4 }], 200), 'poc_bootstrap161');
   assert.equal(JSON.parse(files.get('revision.json')).route, 'poc_bootstrap161');
   assert.equal(JSON.parse(snapshotFiles(bootstrap(10, [], 200)).get('revision.json')).route, undefined);
+});
+
+// (200) 전송량 줄이기: 이전 기록의 경로·개정을 알면 그 경로에 p_known_revision을 보내고(바뀌지 않았으면 짧은 unchanged 답),
+// 그 경로부터 위로 몇 개만 찾는다. 기록이 없거나 깨졌으면 전처럼 전체를 받는다.
+test('이전 기록의 개정을 보내고 가까운 경로만 찾는다', async () => {
+  assert.deepEqual(recordedState(JSON.stringify({ route: 'poc_bootstrap197', project_revision: 962 })), { route: 'poc_bootstrap197', revision: 962 });
+  for (const bad of [null, '', '{', JSON.stringify({ route: 'poc_bootstrap150', project_revision: 9 }), JSON.stringify({ route: 'x', project_revision: 9 }),
+    JSON.stringify({ route: 'poc_bootstrap197', project_revision: 0 }), JSON.stringify({ project_revision: 9 })])
+    assert.equal(recordedState(bad), null, String(bad));
+  const reply = (status, body) => ({ status, ok: status >= 200 && status < 300, json: async () => body });
+  const asked = [];
+  const fake = async (url, init) => {
+    const rpc = url.split('/').pop(), body = JSON.parse(init.body);
+    asked.push([rpc, body.p_known_revision]);
+    if (rpc === 'poc_bootstrap197') return reply(200, body.p_known_revision === 962
+      ? { kind: 'unified039-bootstrap', view: 'game', unchanged: true, project_revision: 962 }
+      : { kind: 'unified039-bootstrap', view: 'game', project_revision: 962 });
+    return reply(404, { code: 'PGRST202' });
+  };
+  const known = { route: 'poc_bootstrap197', revision: 962 };
+  const same = await fetchBootstrap({ url: 'https://example.invalid', publishable_key: 'k' }, fake, { known });
+  assert.equal(same.bootstrap.unchanged, true);
+  assert.equal(asked.length, RPC_PROBE_AHEAD_RECORDED + 1, '기록한 경로 위로 8개만 찾고 바로 그 경로를 읽는다');
+  assert.equal(asked[0][0], `poc_bootstrap${197 + RPC_PROBE_AHEAD_RECORDED}`);
+  assert.deepEqual(asked.at(-1), ['poc_bootstrap197', 962]);
+  assert(asked.slice(0, -1).every(([, revision]) => revision === null), '다른 경로에는 개정을 보내지 않는다');
+  // 새 경로(199)가 생기면 그 경로는 개정 없이 전체를 받는다.
+  asked.length = 0;
+  const newer = await fetchBootstrap({ url: 'https://example.invalid', publishable_key: 'k' }, async (url, init) => {
+    const rpc = url.split('/').pop(), body = JSON.parse(init.body);
+    asked.push([rpc, body.p_known_revision]);
+    return rpc === 'poc_bootstrap199' ? reply(200, { kind: 'unified039-bootstrap', view: 'game', project_revision: 964 }) : reply(404, { code: 'PGRST202' });
+  }, { known });
+  assert.equal(newer.route, 'poc_bootstrap199');
+  assert.deepEqual(asked.at(-1), ['poc_bootstrap199', null]);
+  // 기록이 없으면 전처럼 RPC_FLOOR 위 전체 범위에서 찾는다.
+  asked.length = 0;
+  await fetchBootstrap({ url: 'https://example.invalid', publishable_key: 'k' }, fake);
+  assert.equal(asked[0][0], routeCandidates()[0]);
+  assert.deepEqual(asked.at(-1), ['poc_bootstrap197', null]);
 });
