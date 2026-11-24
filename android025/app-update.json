@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.127",
-  "versionCode": 146,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.127/YGOClassicExpedition-0.18.127-arm64.apk",
-  "sizeBytes": 814512794,
-  "sha256": "68b81f3414bae2b24c9097b2533df429e5cf6ed493c8686517588c944f182e63",
-  "releaseNotes": "새 카드 23장(썬더 드래곤·핸드: 초뇌룡－썬더 드래곤, 라이트닝 스톰, 금지된 일적 등)을 더하고 AI가 쓸 수 있게 했습니다. 특성 융합회수·의식회수와 새 캐릭터 4명을 제작소에서 쓸 수 있습니다."
+  "versionName": "0.18.128",
+  "versionCode": 147,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.128/YGOClassicExpedition-0.18.128-arm64.apk",
+  "sizeBytes": 835948160,
+  "sha256": "bb44807ae29faee5cc5dc0a0169fed9483ffb86ab27913808f645615de8de45c",
+  "releaseNotes": "뱀파이어·스노우맨·엘리멘틀 히어로 카드 36장과 덱 특성 4종(시작 덱 추가·공격력 조정·데스티니 드로우·리로드)을 추가했습니다. 결과 화면의 에이스를 준 데미지 순으로 보여 주고, 지도에서 엘리트·보스가 더 잘 보이게 했습니다. 시작 배치 연출과 AI(쥬락 티라누스·마천루·G 볼파크·시간의 마술사·아이스 카운터)를 고쳤습니다."
 }
