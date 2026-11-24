@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards196/3223",
+  "attack": 2100,
+  "attribute": 16,
+  "categories": [
+    "지원-엘리멘틀 히어로",
+    "지원-필드",
+    "발동-패에서",
+    "발동-패 버리기",
+    "효과-덱샐비지"
+  ],
+  "code": 80908502,
+  "defense": 800,
+  "description": "이 카드를 패에서 묘지에 버리고 발동할 수 있다. 덱에서 \"마천루－스카이스크레이퍼－\" 1장을 패에 넣는다. 또한, 필드 위에 \"마천루－스카이스크레이퍼－\"가 존재하지 않을 경우, 이 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "89b9e2e75abee542a7bbb41b74ac5d933f927b1a36f29dbfddb279055ac2003b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native196/cards/3223.jpg",
+  "level": 4,
+  "links": [],
+  "name": "엘리멘틀 히어로 캡틴 골드",
+  "name_english": "Elemental HERO Captain Gold",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "엘리멘틀 히어로 캡틴 골드",
+    "Elemental HERO Captain Gold"
+  ],
+  "source_id": 3223,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2255
+}

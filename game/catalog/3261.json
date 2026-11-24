@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards199/3261",
+  "attack": 1400,
+  "attribute": 2,
+  "categories": [
+    "발동-파괴 시",
+    "발동-묘지로 보내졌을 때",
+    "발동-필드에서 묘지로 보내졌을 때",
+    "아이스 카운터"
+  ],
+  "code": 3070049,
+  "defense": 900,
+  "description": "이 카드가 전투 또는 카드의 효과에 의해서 파괴되어 묘지로 보내졌을 때, 필드 위에 앞면 표시로 존재하는 모든 몬스터에 아이스 카운터를 1개 놓는다.",
+  "draw_enabled": true,
+  "identity_key": "ac6792044326ba96fd5d7aee13f3cfb92617c28d11536b27fcfe8c7b6afeba08",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native199/cards/3261.jpg",
+  "level": 4,
+  "links": [],
+  "name": "스노우 드래곤",
+  "name_english": "Snow Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "R",
+  "search_aliases": [
+    "스노우 드래곤",
+    "Snow Dragon"
+  ],
+  "source_id": 3261,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2293
+}

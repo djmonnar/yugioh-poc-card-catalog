@@ -1,0 +1,45 @@
+{
+  "artKey": "Character035/crowler",
+  "banlistEnabled": false,
+  "deckName": "핸드",
+  "extra": [],
+  "id": "enc-9ab3710f-9748-4697-a152-8fbc1ebf8934",
+  "lpBonus": 0,
+  "main": [
+    3247,
+    3247,
+    3247,
+    3248,
+    3248,
+    3248,
+    3245,
+    3245,
+    3246,
+    3246,
+    2546,
+    2546,
+    2968,
+    2968,
+    2639,
+    2639,
+    2065,
+    2065,
+    2753,
+    2753
+  ],
+  "name": "크로노스 데 메디치",
+  "openingDrawBonus": 0,
+  "profileId": "crowler",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2968,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-9ab3710f-9748-4697-a152-8fbc1ebf8934",
+  "usesNativeRules035": true
+}

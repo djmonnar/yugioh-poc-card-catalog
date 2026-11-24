@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards199/3273",
+  "attack": 700,
+  "attribute": 32,
+  "categories": [
+    "지원-뱀파이어",
+    "소환-묘지"
+  ],
+  "code": 56387350,
+  "defense": 1000,
+  "description": "이 카드와의 전투에 의해서 파괴되어 묘지로 보내진 몬스터는, 배틀 페이즈 종료시에 자신의 필드 위에 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "15f59ef271cb45e7f28e5af03ee4e171f5758d8f2349dbab30e118f0d55f0e8a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native199/cards/3273.jpg",
+  "level": 3,
+  "links": [],
+  "name": "뱀파이어 베이비",
+  "name_english": "Vampire Baby",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "R",
+  "search_aliases": [
+    "뱀파이어 베이비",
+    "Vampire Baby"
+  ],
+  "source_id": 3273,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2305
+}

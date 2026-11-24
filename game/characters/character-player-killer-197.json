@@ -1,0 +1,13 @@
+{
+  "art_key": "Character197/player_killer_start",
+  "id": "character-player-killer-197",
+  "profile": {
+    "name": "어둠의 플레이어 킬러",
+    "portrait": "assets/actors/native197/player_killer/start.png",
+    "skill_profiles": [],
+    "skills": []
+  },
+  "profile_id": "player_killer",
+  "updated_at": "2026-11-24T03:06:04.507602+00:00",
+  "version": 962
+}

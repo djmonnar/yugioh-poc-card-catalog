@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-35cc0098-84f6-4222-8cad-045721fdafc3",
+  "main": [
+    {
+      "count": 1,
+      "identity_key": "69d85e6a0e15901e5e02efc5ab79b84cbaa3a232f38f3ff799a74a24bd89cf03",
+      "source_id": 1932
+    },
+    {
+      "count": 1,
+      "identity_key": "2d32723e05325c462bd6991969607f23079c63e389bc937ba4ede1d70b29b9d5",
+      "source_id": 1933
+    },
+    {
+      "count": 3,
+      "identity_key": "5533d265b67adb5b2dd1da58a777c519adef3382209a030f9e48421bb33faf9a",
+      "source_id": 2701
+    },
+    {
+      "count": 3,
+      "identity_key": "25bea33beacadee426ec06910d6617b99cef260d6a21a606d95d248882c5aa6a",
+      "source_id": 2698
+    },
+    {
+      "count": 2,
+      "identity_key": "df894f8a40c90a86ea3fc9d89f62b8455001fcb4751a594a12156c446b2d104f",
+      "source_id": 2699
+    },
+    {
+      "count": 3,
+      "identity_key": "a8525b97f6980918d3f035070ebf9375481fc18bb3011338a539dea7cf40e3dd",
+      "source_id": 2692
+    },
+    {
+      "count": 1,
+      "identity_key": "984fc56ead79ad7efe7c0bae5aecd316a0d1eac1c09fd10d3338528aa62c69a6",
+      "source_id": 2697
+    },
+    {
+      "count": 2,
+      "identity_key": "5322bd47dbe75184a786983dee49d7d9d5c0641cef2ee938722e3f98e923f78f",
+      "source_id": 2391
+    },
+    {
+      "count": 2,
+      "identity_key": "0388059cb0e00d74770543e6229caa7269e69a85f953061dafe5c456c738fe45",
+      "source_id": 2696
+    },
+    {
+      "count": 2,
+      "identity_key": "1307623e378c6b88295a1bc5717abdb5e70c152ca32e4b7d3601feb52655831c",
+      "source_id": 2686
+    }
+  ],
+  "name": "아로마",
+  "version": 967
+}

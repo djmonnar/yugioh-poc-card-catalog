@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards199/3256",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-엘리멘틀 히어로",
+    "효과-덱샐비지"
+  ],
+  "code": 213326,
+  "defense": 0,
+  "description": "①: 덱에서 \"엘리멘틀 히어로\" 몬스터 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "2396a483ee644f917e1a4b8e82d9394432d76b3963bcd4ff2e1ceeac80a6ca03",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native199/cards/3256.jpg",
+  "level": 0,
+  "links": [],
+  "name": "E－이멀전시 콜",
+  "name_english": "E - Emergency Call",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "E－이멀전시 콜",
+    "E - Emergency Call"
+  ],
+  "source_id": 3256,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 2288
+}

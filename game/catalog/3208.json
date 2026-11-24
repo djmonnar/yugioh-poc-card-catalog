@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards196/3208",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-유니온",
+    "효과-장착"
+  ],
+  "code": 26931058,
+  "defense": 0,
+  "description": "다음 효과에서 1개를 선택하고 발동한다.\n●자신 필드 위의 유니온 몬스터 1장을, 자신 필드 위의 몬스터에 장착시킨다.\n●자신의 장착 카드 취급 유니온 몬스터 1장의 장착을 해제하고, 앞면 공격 표시로 자신의 필드 위에 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "ca23c55fd41e3d0144e41b86f86c6ab4ac34168a54cab0f423e94d9b87a9b7f7",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native196/cards/3208.jpg",
+  "level": 0,
+  "links": [],
+  "name": "포메이션 유니온",
+  "name_english": "Formation Union",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "포메이션 유니온",
+    "Formation Union"
+  ],
+  "source_id": 3208,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2240
+}

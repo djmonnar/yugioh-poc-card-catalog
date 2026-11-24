@@ -49,11 +49,26 @@
             "kind": "start_field"
           }
         ]
+      },
+      {
+        "name": "아로마",
+        "profile_id": "profile-6e36d685-587d-4ad3-8c58-4f652f6d9f4b",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "1307623e378c6b88295a1bc5717abdb5e70c152ca32e4b7d3601feb52655831c",
+              "internal_id": 2686,
+              "name_ko": "아로마가든",
+              "slot": 1718
+            },
+            "kind": "start_field"
+          }
+        ]
       }
     ],
     "skills": []
   },
   "profile_id": "akiza",
-  "updated_at": "2026-11-16T05:39:55.012258+00:00",
-  "version": 5842
+  "updated_at": "2026-11-24T08:12:06.741811+00:00",
+  "version": 6287
 }

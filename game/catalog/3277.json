@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards199/3277",
+  "attack": 2400,
+  "attribute": 32,
+  "categories": [
+    "지원-뱀파이어",
+    "지원-저레벨",
+    "발동-묘지로 보내졌을 때",
+    "발동-필드에서 묘지로 보내졌을 때",
+    "효과-덱샐비지"
+  ],
+  "code": 36352429,
+  "defense": 0,
+  "description": "어드밴스 소환한 이 카드가 필드 위에서 묘지로 보내졌을 때, 덱에서 레벨 4 이하의 몬스터 1장을 패에 넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "f4a6388375dba6da6d39baa4fa7c68f894b8efe8b1517547ea90f117337ca5c1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native199/cards/3277.jpg",
+  "level": 5,
+  "links": [],
+  "name": "뱀파이어 드래곤",
+  "name_english": "Vampire Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "R",
+  "search_aliases": [
+    "뱀파이어 드래곤",
+    "Vampire Dragon"
+  ],
+  "source_id": 3277,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2309
+}

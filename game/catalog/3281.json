@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards199/3281",
+  "attack": 2400,
+  "attribute": 32,
+  "categories": [
+    "지원-뱀파이어",
+    "발동-LP 지불",
+    "효과-컨트롤",
+    "소환-묘지"
+  ],
+  "code": 6917479,
+  "defense": 1000,
+  "description": "①: 1턴에 1번, 1000 LP를 지불하고, 상대 필드의 몬스터 1장과 이 카드 이외의 자신 필드의 \"뱀파이어\" 몬스터 1장을 대상으로 하여 발동할 수 있다. 그 몬스터 2장의 컨트롤을 맞바꾼다. ②: 이 카드가 전투로 몬스터를 파괴한 배틀 페이즈 종료시에 발동할 수 있다. 그 몬스터를 묘지에서 가능한 한 자신 필드에 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "bc245030460316c418ecb5523231092def7ca2630cc33a2f5bececb8e68d2ab0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native199/cards/3281.jpg",
+  "level": 6,
+  "links": [],
+  "name": "뱀파이어 레드바론",
+  "name_english": "Vampire Red Baron",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "SR",
+  "search_aliases": [
+    "뱀파이어 레드바론",
+    "Vampire Red Baron"
+  ],
+  "source_id": 3281,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2313
+}

@@ -1,0 +1,18 @@
+{
+  "description": "무너진 벽 너머에 먼지 쌓인 보물 상자가 줄지어 있다. 열쇠값만 치르면 하나를 가져갈 수 있다.",
+  "effect": "원정 금화 -100 · 미보유 R 유물 3개 중 1개",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "relic_vault193",
+  "kind": "relic_vault193",
+  "name": "금화 100을 내고 R 유물 3개 중 1개 선택",
+  "params": {
+    "choices": 3,
+    "gold": 100
+  },
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "잊힌 보물고",
+  "weight": 2
+}

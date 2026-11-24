@@ -1,0 +1,13 @@
+{
+  "art_key": "Character197/pandora_start",
+  "id": "character-pandora-197",
+  "profile": {
+    "name": "판도라",
+    "portrait": "assets/actors/native197/pandora/start.png",
+    "skill_profiles": [],
+    "skills": []
+  },
+  "profile_id": "pandora",
+  "updated_at": "2026-11-24T03:06:04.507602+00:00",
+  "version": 962
+}

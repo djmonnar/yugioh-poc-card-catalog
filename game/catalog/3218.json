@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards196/3218",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-엘리멘틀 히어로",
+    "발동-릴리즈",
+    "효과-데미지",
+    "효과-파괴",
+    "파괴-몬스터"
+  ],
+  "code": 84361420,
+  "defense": 0,
+  "description": "자신 필드 위에 존재하는 \"엘리멘틀 히어로 에지맨\" 1장을 제물로 바친다. 상대 필드 위에 존재하는 몬스터 1장을 파괴하고, 그 몬스터의 원래 공격력만큼의 데미지를 상대 라이프에 준다.",
+  "draw_enabled": true,
+  "identity_key": "63888106d5507e4e53704f9d8cf0ee313ebfc57d226ca7e949944c56575f7c85",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native196/cards/3218.jpg",
+  "level": 0,
+  "links": [],
+  "name": "에지 해머",
+  "name_english": "Edge Hammer",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "에지 해머",
+    "Edge Hammer"
+  ],
+  "source_id": 3218,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2250
+}

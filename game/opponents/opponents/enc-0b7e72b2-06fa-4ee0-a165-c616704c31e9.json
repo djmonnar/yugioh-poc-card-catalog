@@ -1,0 +1,39 @@
+{
+  "artKey": "Character178/judai_start",
+  "banlistEnabled": false,
+  "deckName": "엘리멘틀 히어로",
+  "extra": [
+    293,
+    29
+  ],
+  "id": "enc-0b7e72b2-06fa-4ee0-a165-c616704c31e9",
+  "lpBonus": 0,
+  "main": [
+    463,
+    463,
+    171,
+    171,
+    23,
+    23,
+    99,
+    99,
+    295,
+    295,
+    3223,
+    3223,
+    3222,
+    3222,
+    1899,
+    1899,
+    2620,
+    2620,
+    1079,
+    1079
+  ],
+  "name": "유키 쥬다이",
+  "openingDrawBonus": 0,
+  "profileId": "judai",
+  "skills": [],
+  "templateId": "unified039:enc-0b7e72b2-06fa-4ee0-a165-c616704c31e9",
+  "usesNativeRules035": true
+}

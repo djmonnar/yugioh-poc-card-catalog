@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards196/3215",
+  "attack": 2800,
+  "attribute": 8,
+  "categories": [
+    "지원-엘리멘틀 히어로",
+    "발동-묘지로 보내기",
+    "면역-전투"
+  ],
+  "code": 83121692,
+  "defense": 2800,
+  "description": "\"엘리멘틀 히어로 페더맨\" ＋ \"엘리멘틀 히어로 스파크맨\" ＋ \"엘리멘틀 히어로 버블맨\"\n이 몬스터는 융합 소환으로밖에 특수 소환할 수 없다. 이 카드 이외의 자신 필드 위의 카드 1장을 묘지로 보내고, 자신 필드 위의 몬스터 1장을 선택한다. 이 카드가 필드 위에 앞면 표시로 존재하는 한, 선택한 몬스터는 전투에 의해서는 파괴되지 않는다(데미지 계산은 적용한다).",
+  "draw_enabled": true,
+  "identity_key": "25573c31edb5e9e60c253134919a69e4029b5a1199ff35907a4ac3ae99ac1982",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native196/cards/3215.jpg",
+  "level": 8,
+  "links": [],
+  "name": "엘리멘틀 히어로 템피스터",
+  "name_english": "Elemental HERO Tempest",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "UR",
+  "search_aliases": [
+    "엘리멘틀 히어로 템피스터",
+    "Elemental HERO Tempest"
+  ],
+  "source_id": 3215,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 2247
+}

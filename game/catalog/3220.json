@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards196/3220",
+  "attack": 2600,
+  "attribute": 1,
+  "categories": [
+    "지원-엘리멘틀 히어로",
+    "효과-관통"
+  ],
+  "code": 59793705,
+  "defense": 1800,
+  "description": "①: 이 카드가 수비 표시 몬스터를 공격했을 경우, 그 수비력을 공격력이 넘은 만큼만 전투 데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "1eb9ffb6a21ac3f1d5a3dc9694e919de0b6760d96aa184f1bad2d926995a735c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native196/cards/3220.jpg",
+  "level": 7,
+  "links": [],
+  "name": "엘리멘틀 히어로 에지맨",
+  "name_english": "Elemental HERO Bladedge",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "엘리멘틀 히어로 에지맨",
+    "Elemental HERO Bladedge"
+  ],
+  "source_id": 3220,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2252
+}

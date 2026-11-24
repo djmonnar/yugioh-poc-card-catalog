@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards197/3242",
+  "attack": 200,
+  "attribute": 2,
+  "categories": [
+    "지원-해룡족",
+    "지원-저레벨",
+    "발동-소환 시",
+    "소환-덱리크루터"
+  ],
+  "code": 78868119,
+  "defense": 400,
+  "description": "①: 이 카드가 일반 소환에 성공했을 때에 발동할 수 있다. 덱에서 레벨 3 이하의 해룡족 몬스터 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "f4f93a735788cd57426677ea9e1bfeefda5521df0b50f0df82641196b69cfa40",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native197/cards/3242.jpg",
+  "level": 2,
+  "links": [],
+  "name": "심해의 디바",
+  "name_english": "Deep Sea Diva",
+  "native_type": 4129,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 262144,
+  "rarity": "R",
+  "search_aliases": [
+    "심해의 디바",
+    "Deep Sea Diva"
+  ],
+  "source_id": 3242,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "튜너 몬스터",
+  "web_slot": 2274
+}

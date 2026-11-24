@@ -1,0 +1,19 @@
+{
+  "description": "패와 필드의 내 리버스 몬스터의 레벨이 1 내려간다(1 아래로는 내려가지 않는다).",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 0,
+  "iconKey": "Relics/Content193/flip_mask193",
+  "id": "flip_mask193",
+  "kind": "flip_mask193",
+  "name": "숨은 자의 가면",
+  "params": {
+    "levels": 1
+  },
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

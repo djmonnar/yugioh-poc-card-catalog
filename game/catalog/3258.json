@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards199/3258",
+  "attack": 1600,
+  "attribute": 2,
+  "categories": [
+    "지원-물 속성",
+    "발동-소환 시",
+    "발동-반전 소환 시",
+    "아이스 카운터",
+    "효과-파괴",
+    "파괴-몬스터",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 15893860,
+  "defense": 1000,
+  "description": "이 카드가 일반 소환 / 반전 소환 / 특수 소환에 성공했을 때에 발동할 수 있다. 자신 필드 위의 물 속성 몬스터의 수와 같은 수만큼, 상대 필드 위에 앞면 표시로 존재하는 몬스터에 아이스 카운터를 놓는다. 이 효과로 놓은 수가 3개 이상일 경우, 다시 상대 필드 위의 카드 1장을 고르고 파괴할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "98b1cd294ca8c848dc36131fe9e3586142dc0c6cccd61e8cb575584ca9f40184",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native199/cards/3258.jpg",
+  "level": 4,
+  "links": [],
+  "name": "스노우맨 크리에이터",
+  "name_english": "Snowman Creator",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "SR",
+  "search_aliases": [
+    "스노우맨 크리에이터",
+    "Snowman Creator"
+  ],
+  "source_id": 3258,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2290
+}

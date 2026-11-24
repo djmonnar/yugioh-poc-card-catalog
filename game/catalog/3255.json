@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards199/3255",
+  "attack": 1000,
+  "attribute": 1,
+  "categories": [
+    "지원-엘리멘틀 히어로",
+    "지원-융합",
+    "발동-스탠바이 페이즈 시",
+    "효과-덱샐비지",
+    "효과-묘지샐비지"
+  ],
+  "code": 75434695,
+  "defense": 2000,
+  "description": "①: 1턴에 1번, 자신 스탠바이 페이즈에 발동할 수 있다. 자신의 덱 / 묘지에서 \"융합\" 1장을 고르고 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "0646913a070de89eaadf0098e2cb395f114743ae326920091c025af26e24cbe5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native199/cards/3255.jpg",
+  "level": 4,
+  "links": [],
+  "name": "엘리멘틀 히어로 포레스트맨",
+  "name_english": "Elemental HERO Woodsman",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "엘리멘틀 히어로 포레스트맨",
+    "Elemental HERO Woodsman"
+  ],
+  "source_id": 3255,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2287
+}

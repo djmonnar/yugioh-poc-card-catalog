@@ -1,0 +1,19 @@
+{
+  "description": "내 일반 몬스터의 공격력이 200 올라간다(토큰 제외).",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 0,
+  "iconKey": "Relics/Content193/plain_crown193",
+  "id": "plain_crown193",
+  "kind": "plain_crown193",
+  "name": "평범함의 왕관",
+  "params": {
+    "atk": 200
+  },
+  "price": 125,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

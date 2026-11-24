@@ -1,0 +1,17 @@
+{
+  "description": "신관이 성수를 떠 준다. 봉헌금을 놓으면 모든 상처가 아문다.",
+  "effect": "원정 금화 -100 · LP를 최대 LP까지 회복",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "holy_spring193",
+  "kind": "holy_spring193",
+  "name": "금화 100을 내고 LP를 최대까지 회복",
+  "params": {
+    "gold": 100
+  },
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "성수의 샘",
+  "weight": 2
+}

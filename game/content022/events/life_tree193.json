@@ -1,0 +1,18 @@
+{
+  "description": "황금빛 잎을 단 나무가 홀로 서 있다. 열매 하나가 생명의 그릇을 넓혀 준다.",
+  "effect": "최대 LP +500 · LP +500",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "life_tree193",
+  "kind": "life_tree193",
+  "name": "최대 LP +500, LP 500 회복",
+  "params": {
+    "heal": 500,
+    "max_lp": 500
+  },
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "생명의 나무",
+  "weight": 1
+}

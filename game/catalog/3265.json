@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards199/3265",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-뱀파이어",
+    "무효-몬스터효과",
+    "무효-마법",
+    "무효-함정",
+    "효과-파괴",
+    "파괴-몬스터",
+    "파괴-마법",
+    "파괴-함정",
+    "효과-회복"
+  ],
+  "code": 68688135,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 자신 필드에 \"뱀파이어\" 몬스터가 존재하고, 몬스터의 효과 / 마법 / 함정 카드가 발동했을 때에 발동할 수 있다. 그 발동을 무효로 하고 파괴한다. 그 후, 파괴한 카드가 몬스터 카드였을 경우, 자신은 그 원래 공격력만큼만 LP를 회복한다.",
+  "draw_enabled": true,
+  "identity_key": "9b6572c3c9d9427e83273af6d952d5adf36e97439f1afa47a98c9966d3d8ba4d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native199/cards/3265.jpg",
+  "level": 0,
+  "links": [],
+  "name": "뱀파이어의 지배",
+  "name_english": "Vampire Domination",
+  "native_type": 1048580,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "search_aliases": [
+    "뱀파이어의 지배",
+    "Vampire Domination"
+  ],
+  "source_id": 3265,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "카운터 함정",
+  "web_slot": 2297
+}

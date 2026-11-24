@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards197/3235",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "발동-메인 페이즈 1 개시 시",
+    "효과-덱샐비지"
+  ],
+  "code": 33907039,
+  "defense": 0,
+  "description": "①: 자신 메인 페이즈 1 개시시에 발동할 수 있다. 덱에서 공격력 0 인 몬스터 1장을 패에 넣고, 자신의 LP를 절반으로 한다. 이 카드의 발동 후, 다음 턴의 종료시까지, 자신은 이 효과로 패에 넣은 몬스터 또는 그와 같은 이름의 카드의 일반 소환에 성공하지 않는 한, 그 몬스터 및 그와 같은 이름의 카드 효과를 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "0b1844cdd1e510581728856153724def55ebc5e811c45fb0e0018a6bad13c555",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native197/cards/3235.jpg",
+  "level": 0,
+  "links": [],
+  "name": "피리 레이스의 지도",
+  "name_english": "Piri Reis Map",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "피리 레이스의 지도",
+    "Piri Reis Map"
+  ],
+  "source_id": 3235,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 2267
+}

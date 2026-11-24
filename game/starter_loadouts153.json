@@ -1,5 +1,5 @@
 {
-  "unified039_519bad9cf6b70ec564c09c2407ba1e5135cf3342": {
+  "unified039_a203e5aa7978cfc54686e12a73b14268973cd0d3": {
     "gold": 0,
     "lp": 4000,
     "openingDrawBonus": 0,
@@ -10,6 +10,22 @@
         "kind": "start_field",
         "position": 0,
         "sourceId": 3179,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_cf30d2f33e131fc9a7214cbcdf5f27e4343ec3d8": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_field",
+        "position": 0,
+        "sourceId": 3210,
         "threshold": 0,
         "value": 0
       }

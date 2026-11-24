@@ -30,7 +30,7 @@
       "source_id": 3166
     },
     {
-      "count": 2,
+      "count": 1,
       "identity_key": "1f5120873e4a43f8628b08db741129ecab7fb1a3cb7c23a299b44ccef9e3495a",
       "source_id": 3179
     },
@@ -50,11 +50,16 @@
       "source_id": 3075
     },
     {
-      "count": 3,
+      "count": 2,
       "identity_key": "6e88143a6d19b63d51f9f78d79264941a106691798fb78f1579481304fad7560",
       "source_id": 1003
+    },
+    {
+      "count": 2,
+      "identity_key": "481f1539cec9a73be5473ae58ff0606a64a3c466ce9d278c03be239ebf6f8087",
+      "source_id": 2620
     }
   ],
   "name": "방해꾼",
-  "version": 938
+  "version": 956
 }

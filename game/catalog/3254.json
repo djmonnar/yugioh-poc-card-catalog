@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards199/3254",
+  "attack": 1500,
+  "attribute": 2,
+  "categories": [
+    "지원-엘리멘틀 히어로",
+    "발동-스탠바이 페이즈 시",
+    "효과-바운스",
+    "효과-묘지샐비지"
+  ],
+  "code": 37195861,
+  "defense": 1200,
+  "description": "①: 1턴에 1번, 자신 스탠바이 페이즈에 자신의 필드 / 묘지의 \"히어로\" 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 자신의 \"히어로\" 몬스터를 주인의 패로 되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "ca05b4dfd2bcf113edb986de5a16f8c5a3350cbc8977495ca2cbacdeac5995fb",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native199/cards/3254.jpg",
+  "level": 4,
+  "links": [],
+  "name": "엘리멘틀 히어로 오션",
+  "name_english": "Elemental HERO Ocean",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "엘리멘틀 히어로 오션",
+    "Elemental HERO Ocean"
+  ],
+  "source_id": 3254,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2286
+}

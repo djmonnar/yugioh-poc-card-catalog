@@ -1,0 +1,19 @@
+{
+  "description": "내 레벨 1 몬스터의 공격력이 1000 올라간다. 레벨이 내려가 1이 된 몬스터도 포함한다(토큰 제외).",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 0,
+  "iconKey": "Relics/Content193/lone_star193",
+  "id": "lone_star193",
+  "kind": "lone_star193",
+  "name": "작은 거인의 훈장",
+  "params": {
+    "atk": 1000
+  },
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

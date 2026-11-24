@@ -1,0 +1,19 @@
+{
+  "description": "내 일반 몬스터의 공격력이 100 올라간다(토큰 제외).",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 0,
+  "iconKey": "Relics/Content193/plain_banner193",
+  "id": "plain_banner193",
+  "kind": "plain_banner193",
+  "name": "평범함의 깃발",
+  "params": {
+    "atk": 100
+  },
+  "price": 75,
+  "rarity": "N",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

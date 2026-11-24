@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards197/3236",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-일반몬스터",
+    "지원-저레벨",
+    "효과-묘지로 보내기",
+    "효과-덱에서 묘지로 보내기",
+    "효과-덱샐비지"
+  ],
+  "code": 1033312,
+  "defense": 0,
+  "description": "\"고통의 결단\"은 1턴에 1장밖에 발동할 수 없다. ①: 덱에서 레벨 4 이하의 일반 몬스터 1장을 묘지로 보내고, 그 같은 이름의 카드 1장을 덱에서 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "2759d010c84d7e96bea596fef0a2d30b45af2dc6c890fb196825d31dd57d9c09",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native197/cards/3236.jpg",
+  "level": 0,
+  "links": [],
+  "name": "고통의 결단",
+  "name_english": "Painful Decision",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "고통의 결단",
+    "Painful Decision"
+  ],
+  "source_id": 3236,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 2268
+}

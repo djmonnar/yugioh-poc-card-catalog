@@ -1,0 +1,17 @@
+{
+  "description": "한 턴 되감기를 원정 1번 대신 전투마다 1번 쓸 수 있다. 원정 되감기와 겹치지 않고, 이 유물로 되감으면 원정 되감기는 남는다.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 0,
+  "iconKey": "Relics/Content193/thousand_sands193",
+  "id": "thousand_sands193",
+  "kind": "thousand_sands193",
+  "name": "천 개의 백사",
+  "params": {},
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

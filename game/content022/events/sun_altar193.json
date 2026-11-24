@@ -1,0 +1,18 @@
+{
+  "description": "제단 위에서 태양 원반이 타오른다. 생명의 일부를 바치면 왕의 보물이 깨어난다.",
+  "effect": "최대 LP -1,000 · 미보유 UR 유물 3개 중 1개",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "sun_altar193",
+  "kind": "sun_altar193",
+  "name": "최대 LP 1,000을 잃고 UR 유물 3개 중 1개 선택",
+  "params": {
+    "choices": 3,
+    "max_lp_cost": 1000
+  },
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "태양의 제단",
+  "weight": 1
+}

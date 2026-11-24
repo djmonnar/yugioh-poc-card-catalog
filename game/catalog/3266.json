@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards199/3266",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-뱀파이어",
+    "소환-덱리크루터"
+  ],
+  "code": 31189536,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 덱에서 \"뱀파이어\" 몬스터 1장을 특수 소환한다. 이 효과로 특수 소환한 몬스터는 이 턴의 엔드 페이즈에 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "be2b7daaa8a7ff4eedf44bed35cac2102d370e691faab2d7d3c1ba781ca3c7f1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native199/cards/3266.jpg",
+  "level": 0,
+  "links": [],
+  "name": "뱀파이어 어웨이크",
+  "name_english": "Vampire Awakening",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "뱀파이어 어웨이크",
+    "Vampire Awakening"
+  ],
+  "source_id": 3266,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2298
+}

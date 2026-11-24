@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards196/3210",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-유니온",
+    "지원-저레벨",
+    "소환-패에서"
+  ],
+  "code": 46181000,
+  "defense": 0,
+  "description": "자신의 메인 페이즈에 1번만, 패에서 레벨 4 이하의 유니온 몬스터 1장을 특수 소환할 수 있다. 이 효과는 1턴에 1번밖에 사용할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "06d36f0333e0c5068b53775c801895bb2525acd94fabe9e030b7427883390144",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native196/cards/3210.jpg",
+  "level": 0,
+  "links": [],
+  "name": "전선기지",
+  "name_english": "Frontline Base",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "전선기지",
+    "Frontline Base"
+  ],
+  "source_id": 3210,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 2242
+}

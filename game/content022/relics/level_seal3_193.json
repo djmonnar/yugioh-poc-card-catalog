@@ -1,0 +1,20 @@
+{
+  "description": "전투마다 1번, 내 메인 페이즈 1에 패의 몬스터 1장의 레벨을 3 낮춘다(1 아래로는 내려가지 않는다). 소환해도 그 레벨이 유지된다.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 0,
+  "iconKey": "Relics/Content193/level_seal3_193",
+  "id": "level_seal3_193",
+  "kind": "level_seal3_193",
+  "name": "강격처분 Ⅲ",
+  "params": {
+    "levels": 3,
+    "uses_per_battle": 1
+  },
+  "price": 300,
+  "rarity": "UR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

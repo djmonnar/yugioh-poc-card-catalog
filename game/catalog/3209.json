@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards196/3209",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-유니온",
+    "효과-장착"
+  ],
+  "code": 91597389,
+  "defense": 0,
+  "description": "자신 묘지의 유니온 몬스터 1장을 선택하고, 자신 필드 위의 장착 가능한 몬스터에 장착한다.",
+  "draw_enabled": true,
+  "identity_key": "97fbe61c4693d836d5cad548d14fbcd6c8988707c3433548547771eaea2da750",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native196/cards/3209.jpg",
+  "level": 0,
+  "links": [],
+  "name": "겟 라이드!",
+  "name_english": "Roll Out!",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "겟 라이드!",
+    "Roll Out!"
+  ],
+  "source_id": 3209,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2241
+}

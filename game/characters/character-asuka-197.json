@@ -1,0 +1,29 @@
+{
+  "art_key": "Character197/asuka_start",
+  "id": "character-asuka-197",
+  "profile": {
+    "name": "텐죠인 아스카",
+    "portrait": "assets/actors/native197/asuka/start.png",
+    "skill_profiles": [
+      {
+        "name": "사이버에그",
+        "profile_id": "profile-c8882256-dfcf-4db2-9174-a86bfff01d12",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "8ad0e0453fd0e77cc528ea672ba9142813fbd6cc55a77715cf28b553f4af623c",
+              "internal_id": 2521,
+              "name_ko": "사이버 에그 엔젤",
+              "slot": 1553
+            },
+            "kind": "start_hand"
+          }
+        ]
+      }
+    ],
+    "skills": []
+  },
+  "profile_id": "asuka",
+  "updated_at": "2026-11-24T08:13:04.800899+00:00",
+  "version": 6288
+}

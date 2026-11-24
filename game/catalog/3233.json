@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards197/3233",
+  "attack": 0,
+  "attribute": 16,
+  "categories": [
+    "지원-썬더 드래곤",
+    "지원-번개족",
+    "발동-패에서",
+    "발동-패 버리기",
+    "효과-공격력 상승",
+    "효과-덱샐비지",
+    "발동-제외됐을 때",
+    "발동-묘지로 보내졌을 때",
+    "발동-필드에서 묘지로 보내졌을 때"
+  ],
+  "code": 20318029,
+  "defense": 2000,
+  "description": "이 카드명의 ①②의 효과는 1턴에 1번, 어느 쪽이든 1개밖에 사용할 수 없다. ①: 자신 / 상대 턴에, 이 카드를 패에서 버리고, 자신 필드의 번개족 몬스터 1장을 대상으로 하여 발동할 수 있다. 그 몬스터의 공격력은 500 올린다. ②: 이 카드가 제외되었을 경우, 또는 필드에서 묘지로 보내졌을 경우에 발동할 수 있다. 덱에서 \"뇌원룡－썬더 드래곤\" 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "d462294e2d38ba3896e3e3ffa3787e8bfdcaf127ef706fee5295ec1fdfa7430c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native197/cards/3233.jpg",
+  "level": 1,
+  "links": [],
+  "name": "뇌원룡－썬더 드래곤",
+  "name_english": "Thunder Dragonmatrix",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4096,
+  "rarity": "R",
+  "search_aliases": [
+    "뇌원룡－썬더 드래곤",
+    "Thunder Dragonmatrix"
+  ],
+  "source_id": 3233,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2265
+}

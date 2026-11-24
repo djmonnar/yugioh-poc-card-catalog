@@ -1,0 +1,51 @@
+{
+  "artKey": "DuelUi011/legacy/kaiba_intro",
+  "banlistEnabled": false,
+  "deckName": "썬더드래곤",
+  "extra": [
+    3234,
+    3234,
+    612,
+    612
+  ],
+  "id": "enc-c61d1943-a239-4257-8927-3b189a6d28fc",
+  "lpBonus": 0,
+  "main": [
+    424,
+    424,
+    424,
+    3227,
+    3227,
+    3227,
+    3232,
+    3232,
+    3231,
+    3231,
+    3228,
+    3228,
+    3229,
+    3233,
+    3233,
+    3233,
+    3230,
+    3230,
+    1948,
+    1948,
+    2787
+  ],
+  "name": "카이바",
+  "openingDrawBonus": 0,
+  "profileId": "kaiba",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "draw_once",
+      "position": 0,
+      "sourceId": -1,
+      "threshold": 2000,
+      "value": 1
+    }
+  ],
+  "templateId": "unified039:enc-c61d1943-a239-4257-8927-3b189a6d28fc",
+  "usesNativeRules035": true
+}

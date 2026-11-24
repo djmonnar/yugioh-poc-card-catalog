@@ -1,0 +1,29 @@
+{
+  "art_key": "Character197/masks_light_darkness_start",
+  "id": "character-masks-light-darkness-197",
+  "profile": {
+    "name": "빛과 어둠의 가면",
+    "portrait": "assets/actors/native197/masks_light_darkness/start.png",
+    "skill_profiles": [
+      {
+        "name": "가면마수헬레이저",
+        "profile_id": "profile-72034672-e173-417b-b7ab-fc36695961b9",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "d3698f8d02699aa1f38d92fcbe40fb39146f573000b165084749c45e9571e82c",
+              "internal_id": 1257,
+              "name_ko": "가면마수 데스 가디우스",
+              "slot": 171
+            },
+            "kind": "start_hand"
+          }
+        ]
+      }
+    ],
+    "skills": []
+  },
+  "profile_id": "masks_light_darkness",
+  "updated_at": "2026-11-24T06:11:06.113439+00:00",
+  "version": 6286
+}

@@ -1,0 +1,70 @@
+{
+  "banlist_enabled": true,
+  "extra": [
+    {
+      "count": 2,
+      "identity_key": "21b3439e4019cd416a6fcb284778680928aba430dba75bba3d50657f18e8db77",
+      "source_id": 3234
+    },
+    {
+      "count": 2,
+      "identity_key": "040823bee603d5e85963c4b23a598eefecc7e48a6eacd5b1a2d24742ec590caa",
+      "source_id": 612
+    }
+  ],
+  "id": "deck-b539855d-0fdf-4c98-a345-fbc0dba233b0",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "c3ffc4c0abf2ba0b5ad45a04d76060a8f2af643f71fc513655327cb20da7ad94",
+      "source_id": 424
+    },
+    {
+      "count": 3,
+      "identity_key": "a60da2ec494d04db117652594becd7acfb95001d6eef8c076c1db5ab541cb743",
+      "source_id": 3227
+    },
+    {
+      "count": 2,
+      "identity_key": "5373e061b8ee5ac7f8c573f605dcb965a8fd02306e509ab386ab35c7f7e36f26",
+      "source_id": 3232
+    },
+    {
+      "count": 2,
+      "identity_key": "1d0da9cf0770c0e075dd0f537793aa182dbcddcffd9537c87556bc926db26870",
+      "source_id": 3231
+    },
+    {
+      "count": 2,
+      "identity_key": "f52682908e524353b40cf3f3289a290ef18b091064c3f381784087060ccbdb05",
+      "source_id": 3228
+    },
+    {
+      "count": 1,
+      "identity_key": "ddc148473b34b02fcf5e8f26526e40af414e1befa86dc31bbd5f6f65a2c923ef",
+      "source_id": 3229
+    },
+    {
+      "count": 3,
+      "identity_key": "d462294e2d38ba3896e3e3ffa3787e8bfdcaf127ef706fee5295ec1fdfa7430c",
+      "source_id": 3233
+    },
+    {
+      "count": 2,
+      "identity_key": "19f0959129131afe63b7532d69063197bfc2b5eb4d19d190c7acaacccaa22ef1",
+      "source_id": 3230
+    },
+    {
+      "count": 2,
+      "identity_key": "90c257c09a13be5c08dde46feb5430c8094a96ccb3e70d8540d72d4661d99a67",
+      "source_id": 1948
+    },
+    {
+      "count": 1,
+      "identity_key": "37eac914ffaeb3ad292797b67d2be12cc66d8ad3cda2ffc919dff9ccefdffb1b",
+      "source_id": 2787
+    }
+  ],
+  "name": "썬더드래곤",
+  "version": 963
+}

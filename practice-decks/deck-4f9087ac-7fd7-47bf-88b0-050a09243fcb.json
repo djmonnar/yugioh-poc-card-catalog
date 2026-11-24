@@ -1,0 +1,54 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-4f9087ac-7fd7-47bf-88b0-050a09243fcb",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "584df9d2bcc637f344dbccf0443e38c2fce10ae68d3b18594329f15b4fbf91f5",
+      "source_id": 3247
+    },
+    {
+      "count": 3,
+      "identity_key": "7000324e799a136ee0fa70ac5ee818202546ef8809eb09967aaf4d10dbf39869",
+      "source_id": 3248
+    },
+    {
+      "count": 2,
+      "identity_key": "ee24bdac99376dff3bf92d0cc3437d33c0c8e33cd033617cdd12787126612391",
+      "source_id": 3245
+    },
+    {
+      "count": 2,
+      "identity_key": "a59c4da564df3e9358600c626f8954e42d1b66fd336bc292d03e9345dd5c99b1",
+      "source_id": 3246
+    },
+    {
+      "count": 2,
+      "identity_key": "05c899674fc8464dca1e1b0ff13bb0d31bab78b1ea8e7ce8ce79ce8bfffbfc30",
+      "source_id": 2546
+    },
+    {
+      "count": 2,
+      "identity_key": "a409aedc875eb50f9374b5ec6756fef5a043810729e47fc4f725a0c1e9f616dd",
+      "source_id": 2968
+    },
+    {
+      "count": 2,
+      "identity_key": "1c929a02a3c7d3fbe2caf8b50f980d878011de6315509a3c472b76ea2c17a73f",
+      "source_id": 2639
+    },
+    {
+      "count": 2,
+      "identity_key": "ecdfd296882c318c3dc7c1010d715874f950a7590d9aead00715c60c6a1f7067",
+      "source_id": 2065
+    },
+    {
+      "count": 2,
+      "identity_key": "ed190dee2874ec322edcf8a4a72a1e0ee4a002d3b2db84ab2cd6354d4284361f",
+      "source_id": 2753
+    }
+  ],
+  "name": "핸드",
+  "version": 973
+}

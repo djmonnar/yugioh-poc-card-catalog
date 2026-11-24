@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards199/3274",
+  "attack": 1500,
+  "attribute": 32,
+  "categories": [
+    "지원-뱀파이어",
+    "발동-소환 시",
+    "발동-묘지로 보내기",
+    "효과-덱샐비지",
+    "효과-묘지로 보내기",
+    "효과-덱에서 묘지로 보내기",
+    "발동-묘지에서",
+    "발동-제외",
+    "발동-LP 지불",
+    "소환-추가 일반 소환"
+  ],
+  "code": 90299015,
+  "defense": 0,
+  "description": "이 카드명의 ①②의 효과는 각각 1턴에 1번밖에 사용할 수 없다. ①: 이 카드가 일반 소환에 성공했을 경우, 패 및 자신 필드의 앞면 표시의 카드 중에서, 이 카드 이외의 \"뱀파이어\" 카드 1장을 묘지로 보내고 발동할 수 있다. 덱에서 레벨 4 이상의 \"뱀파이어\" 몬스터 1장을 패에 넣고, 덱에서 레벨 2 이하의 \"뱀파이어\" 몬스터 1장을 묘지로 보낸다. ②: 자신 / 상대의 메인 페이즈에, 묘지의 이 카드를 제외하고, 500 LP를 지불하여 발동할 수 있다. \"뱀파이어\" 몬스터 1장을 일반 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "1deba1eac6dd5af9c7550abf34a86d72f95066b5a939d545d3f4ab1c7986ec90",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native199/cards/3274.jpg",
+  "level": 3,
+  "links": [],
+  "name": "뱀파이어의 유귀",
+  "name_english": "Vampire Ghost",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "SR",
+  "search_aliases": [
+    "뱀파이어의 유귀",
+    "Vampire Ghost"
+  ],
+  "source_id": 3274,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2306
+}

@@ -1,0 +1,56 @@
+{
+  "alias": 0,
+  "art_key": "Cards197/3248",
+  "attack": 1600,
+  "attribute": 4,
+  "categories": [
+    "발동-파괴 시",
+    "발동-묘지로 보내졌을 때",
+    "발동-필드에서 묘지로 보내졌을 때",
+    "효과-파괴",
+    "파괴-몬스터",
+    "소환-덱리크루터"
+  ],
+  "code": 68535320,
+  "defense": 1000,
+  "description": "①: 이 카드가 상대에 의해 파괴되어 묘지로 보내졌을 때, 상대 필드의 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 상대 몬스터를 파괴한다. 그 후, 덱에서 \"아이스 핸드\" 1장을 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "7000324e799a136ee0fa70ac5ee818202546ef8809eb09967aaf4d10dbf39869",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native197/cards/3248.jpg",
+  "level": 4,
+  "links": [
+    {
+      "identity_key": "62c8eebffe9ce1ed637b2355d2ec6b7b26e0ad33004d4e3573e676b5b079917e",
+      "slot": 2276
+    },
+    {
+      "identity_key": "ee24bdac99376dff3bf92d0cc3437d33c0c8e33cd033617cdd12787126612391",
+      "slot": 2277
+    },
+    {
+      "identity_key": "a59c4da564df3e9358600c626f8954e42d1b66fd336bc292d03e9345dd5c99b1",
+      "slot": 2278
+    },
+    {
+      "identity_key": "584df9d2bcc637f344dbccf0443e38c2fce10ae68d3b18594329f15b4fbf91f5",
+      "slot": 2279
+    }
+  ],
+  "name": "파이어 핸드",
+  "name_english": "Fire Hand",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 128,
+  "rarity": "R",
+  "search_aliases": [
+    "파이어 핸드",
+    "Fire Hand"
+  ],
+  "source_id": 3248,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2280
+}

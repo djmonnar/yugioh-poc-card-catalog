@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards199/3257",
+  "attack": 0,
+  "attribute": 2,
+  "categories": [
+    "발동-리버스",
+    "효과-파괴",
+    "파괴-몬스터"
+  ],
+  "code": 91133740,
+  "defense": 1900,
+  "description": "이 카드가 리버스했을 때, 필드 위에 앞면 표시로 존재하는 몬스터 1장을 선택하고 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "f273877ec5be84c8f371fa2f9dc9dca23daee569262a3ca69f76b20b2846d7de",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native199/cards/3257.jpg",
+  "level": 3,
+  "links": [],
+  "name": "스노우맨 이터",
+  "name_english": "Snowman Eater",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "N",
+  "search_aliases": [
+    "스노우맨 이터",
+    "Snowman Eater"
+  ],
+  "source_id": 3257,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2289
+}

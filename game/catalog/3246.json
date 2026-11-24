@@ -1,0 +1,51 @@
+{
+  "alias": 0,
+  "art_key": "Cards197/3246",
+  "attack": 600,
+  "attribute": 4,
+  "categories": [
+    "소환-패에서"
+  ],
+  "code": 21414674,
+  "defense": 2000,
+  "description": "①: 자신 필드에 \"매직 핸드\" \"파이어 핸드\" \"아이스 핸드\" 중 어느 것이 존재할 경우, 이 카드는 패에서 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "a59c4da564df3e9358600c626f8954e42d1b66fd336bc292d03e9345dd5c99b1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native197/cards/3246.jpg",
+  "level": 4,
+  "links": [
+    {
+      "identity_key": "62c8eebffe9ce1ed637b2355d2ec6b7b26e0ad33004d4e3573e676b5b079917e",
+      "slot": 2276
+    },
+    {
+      "identity_key": "ee24bdac99376dff3bf92d0cc3437d33c0c8e33cd033617cdd12787126612391",
+      "slot": 2277
+    },
+    {
+      "identity_key": "584df9d2bcc637f344dbccf0443e38c2fce10ae68d3b18594329f15b4fbf91f5",
+      "slot": 2279
+    },
+    {
+      "identity_key": "7000324e799a136ee0fa70ac5ee818202546ef8809eb09967aaf4d10dbf39869",
+      "slot": 2280
+    }
+  ],
+  "name": "프로미넌스 핸드",
+  "name_english": "Prominence Hand",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 128,
+  "rarity": "N",
+  "search_aliases": [
+    "프로미넌스 핸드",
+    "Prominence Hand"
+  ],
+  "source_id": 3246,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2278
+}

@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards199/3253",
+  "attack": 2500,
+  "attribute": 1,
+  "categories": [
+    "지원-엘리멘틀 히어로",
+    "발동-릴리즈",
+    "효과-공격력 상승"
+  ],
+  "code": 74711057,
+  "defense": 2000,
+  "description": "\"엘리멘틀 히어로 오션\" ＋ \"엘리멘틀 히어로 포레스트맨\"\n이 카드는 융합 소환으로밖에 특수 소환할 수 없다. ①: 이 카드 이외의 자신 필드 앞면 표시의 \"엘리멘틀 히어로\" 몬스터 1장을 릴리스하고 발동할 수 있다. 이 카드의 공격력은 턴 종료시까지 릴리스한 몬스터의 공격력만큼 올린다.",
+  "draw_enabled": true,
+  "identity_key": "0affaa50e7c1a76054ad9161e389c5caa979f52d66dd0980a08799475c2bee67",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native199/cards/3253.jpg",
+  "level": 8,
+  "links": [],
+  "name": "엘리멘틀 히어로 디 어스",
+  "name_english": "Elemental HERO Terra Firma",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "UR",
+  "search_aliases": [
+    "엘리멘틀 히어로 디 어스",
+    "Elemental HERO Terra Firma"
+  ],
+  "source_id": 3253,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 2285
+}

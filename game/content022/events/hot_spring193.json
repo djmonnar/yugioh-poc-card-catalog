@@ -1,0 +1,17 @@
+{
+  "description": "바위 틈에서 따뜻한 김이 피어오른다. 잠시 몸을 담그면 지친 몸이 풀린다.",
+  "effect": "LP +(최대 LP × 50%) (최대 LP까지)",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "hot_spring193",
+  "kind": "hot_spring193",
+  "name": "최대 LP의 50%만큼 LP 회복",
+  "params": {
+    "percent": 50
+  },
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "치유의 온천",
+  "weight": 2
+}

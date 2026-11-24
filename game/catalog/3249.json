@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards197/3249",
+  "attack": 2300,
+  "attribute": 2,
+  "categories": [
+    "소환-제외 코스트",
+    "지원-물 속성",
+    "지원-화염 속성",
+    "발동-패 버리기",
+    "효과-파괴",
+    "파괴-몬스터"
+  ],
+  "code": 55589254,
+  "defense": 2000,
+  "description": "이 카드는 일반 소환 / 세트할 수 없다. 자신 묘지의 물 속성 몬스터 2장과 화염 속성 몬스터 1장을 게임에서 제외했을 경우에만 특수 소환할 수 있다. 1턴에 1번, 패를 1장 버리고 발동할 수 있다. 필드 위의 몬스터 1장을 선택하고 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "995b5cd8ac3815ec44815fc9dfdd86dea8a593f5e68bfa8e5d0dbe70f9c75632",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native197/cards/3249.jpg",
+  "level": 6,
+  "links": [],
+  "name": "빙염의 쌍룡",
+  "name_english": "Frost and Flame Dragon",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "search_aliases": [
+    "빙염의 쌍룡",
+    "Frost and Flame Dragon"
+  ],
+  "source_id": 3249,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "특수 소환 몬스터",
+  "web_slot": 2281
+}

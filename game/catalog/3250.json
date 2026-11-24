@@ -1,0 +1,34 @@
+{
+  "alias": 0,
+  "art_key": "Cards199/3250",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-직접공격"
+  ],
+  "code": 77876207,
+  "defense": 0,
+  "description": "앞면 표시로 자신 필드 위에 존재하는 공격력 1000 이하의 몬스터 1장을 선택한다. 이 턴, 선택한 몬스터는 상대 플레이어를 직접 공격할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "7033c7a1a08056ebd2e6d03b3a6012731bf5a842d5a60308b9cf90d83202db77",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native199/cards/3250.jpg",
+  "level": 0,
+  "links": [],
+  "name": "보물로 가는 비밀통로",
+  "name_english": "Secret Pass to the Treasures",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "search_aliases": [
+    "보물로 가는 비밀통로",
+    "Secret Pass to the Treasures"
+  ],
+  "source_id": 3250,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 2282
+}

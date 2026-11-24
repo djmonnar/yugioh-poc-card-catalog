@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards196/3222",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-엘리멘틀 히어로",
+    "지원-필드",
+    "효과-공격력 상승"
+  ],
+  "code": 63035430,
+  "defense": 0,
+  "description": "①: \"엘리멘틀 히어로\" 몬스터의 공격력은, 자신의 공격력보다 높은 공격력을 가지는 몬스터에 공격하는 데미지 계산시에만 1000 올린다.",
+  "draw_enabled": true,
+  "identity_key": "22ad7b80ff6b617a740642551689ed45790cddfab771bcca6e3ea815638ac3e9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native196/cards/3222.jpg",
+  "level": 0,
+  "links": [],
+  "name": "마천루－스카이스크레이퍼－",
+  "name_english": "Skyscraper",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "마천루－스카이스크레이퍼－",
+    "Skyscraper"
+  ],
+  "source_id": 3222,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "필드 마법",
+  "web_slot": 2254
+}

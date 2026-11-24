@@ -69,11 +69,37 @@
             "kind": "start_grave"
           }
         ]
+      },
+      {
+        "name": "유니온",
+        "profile_id": "profile-ddc2b8ed-fe99-42c9-80a4-87fbc5e984cc",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "06d36f0333e0c5068b53775c801895bb2525acd94fabe9e030b7427883390144",
+              "internal_id": 3210,
+              "name_ko": "전선기지",
+              "slot": 2242
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "위기 회피",
+        "profile_id": "profile-85275256-1ad1-454f-8a8a-d7cea474b88c",
+        "skills": [
+          {
+            "kind": "draw_once",
+            "threshold": 2000,
+            "value": 1
+          }
+        ]
       }
     ],
     "skills": []
   },
   "profile_id": "kaiba",
-  "updated_at": "2026-11-16T19:32:20.278254+00:00",
-  "version": 5861
+  "updated_at": "2026-11-24T06:08:10.489854+00:00",
+  "version": 6285
 }

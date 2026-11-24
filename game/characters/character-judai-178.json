@@ -4,10 +4,41 @@
   "profile": {
     "name": "유키 쥬다이",
     "portrait": "assets/actors/native178/judai/start.png",
-    "skill_profiles": [],
+    "skill_profiles": [
+      {
+        "name": "마천루",
+        "profile_id": "profile-42f7f067-f940-4ee5-acd1-a20d20c3848f",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "22ad7b80ff6b617a740642551689ed45790cddfab771bcca6e3ea815638ac3e9",
+              "internal_id": 3222,
+              "name_ko": "마천루－스카이스크레이퍼－",
+              "slot": 2254
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "미라클퓨전",
+        "profile_id": "profile-0c8150fa-47c7-4b55-88f3-03b867679671",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "422ced7fae2540081e1e13a15d7d93fb27d9bbda53af6b594edfbfdcd8aac7fd",
+              "internal_id": 1899,
+              "name_ko": "미러클 퓨전",
+              "slot": 1226
+            },
+            "kind": "start_hand"
+          }
+        ]
+      }
+    ],
     "skills": []
   },
   "profile_id": "judai",
-  "updated_at": "2026-11-22T16:13:01.711027+00:00",
-  "version": 925
+  "updated_at": "2026-11-23T11:04:09.235204+00:00",
+  "version": 6276
 }

@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards199/3267",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-뱀파이어",
+    "지원-언데드",
+    "지원-어둠 속성",
+    "지원-필드",
+    "소환-묘지"
+  ],
+  "code": 22900598,
+  "defense": 0,
+  "description": "자신의 필드 카드 존에 카드가 존재하지 않고, 자신 필드 위에 앞면 표시로 존재하는 몬스터가 언데드족 몬스터뿐일 경우에 발동할 수 있다. 덱에서 \"뱀파이어 엠파이어\" 1장을 고르고 발동한다. 그 후, 자신의 묘지에서 \"뱀파이어\"라는 이름이 붙은 어둠 속성 몬스터 1장을 고르고 앞면 수비 표시로 특수 소환할 수 있다. \"뱀파이어 시프트\"는 1턴에 1장밖에 발동할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "6f3cd63f7b360fda5ea1d8a8f297fbf0212c4ddb1a99f7bda51c2b2867ecafab",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native199/cards/3267.jpg",
+  "level": 0,
+  "links": [],
+  "name": "뱀파이어 시프트",
+  "name_english": "Vampire Takeover",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "뱀파이어 시프트",
+    "Vampire Takeover"
+  ],
+  "source_id": 3267,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2299
+}

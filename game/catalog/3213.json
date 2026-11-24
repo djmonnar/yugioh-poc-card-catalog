@@ -1,0 +1,34 @@
+{
+  "alias": 0,
+  "art_key": "Cards196/3213",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-속성"
+  ],
+  "code": 56769674,
+  "defense": 0,
+  "description": "발동시에 1종류의 속성을 선언한다. 이 카드가 필드 위에 존재하는 한, 필드 위의 모든 앞면 표시 몬스터는 자신이 선언한 속성이 된다.",
+  "draw_enabled": true,
+  "identity_key": "fd75f5a9d34fa67845bf0ac7183f9b53995fe8caa4a8dfa81f0f692b7564ec2a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native196/cards/3213.jpg",
+  "level": 0,
+  "links": [],
+  "name": "DNA 이식 수술",
+  "name_english": "DNA Transplant",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "DNA 이식 수술",
+    "DNA Transplant"
+  ],
+  "source_id": 3213,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 2245
+}

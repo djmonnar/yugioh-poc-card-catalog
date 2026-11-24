@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards199/3251",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-전사족",
+    "지원-장착",
+    "효과-공격력 상승",
+    "발동-묘지로 보내기",
+    "효과-추가공격"
+  ],
+  "code": 88190790,
+  "defense": 0,
+  "description": "자신 필드의 몬스터가 전사족 몬스터 1장뿐일 경우, 그 몬스터에 장착할 수 있다. ①: 장착 몬스터의 공격력은 300 올린다. ②: 장착되어 있는 이 카드를 묘지로 보내고 발동할 수 있다. 이 턴에, 이 카드를 장착하고 있던 몬스터는 1번의 배틀 페이즈 중에 2회 공격할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "f92cccfc0493a182d88af97e7dbb0dc8350731dfce5a8ed5c887bf652febc5b5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native199/cards/3251.jpg",
+  "level": 0,
+  "links": [],
+  "name": "돌격용 갑옷",
+  "name_english": "Assault Armor",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "돌격용 갑옷",
+    "Assault Armor"
+  ],
+  "source_id": 3251,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 2283
+}

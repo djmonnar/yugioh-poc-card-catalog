@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards196/3214",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-엘리멘틀 히어로",
+    "지원-장착"
+  ],
+  "code": 97362768,
+  "defense": 0,
+  "description": "\"엘리멘틀 히어로 스파크맨\"에만 장착 가능. 자신 턴의 메인 페이즈시에 앞면 표시 몬스터 1장의 표시 형식을 변경할 수 있다. 이 효과를 3회 사용한 후, 이 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "ab3307dcad2df084cd26d34af325e45ad7694139280c357374996e8032614f1c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native196/cards/3214.jpg",
+  "level": 0,
+  "links": [],
+  "name": "스파크 건",
+  "name_english": "Spark Blaster",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "스파크 건",
+    "Spark Blaster"
+  ],
+  "source_id": 3214,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 2246
+}

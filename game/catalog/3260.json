@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards199/3260",
+  "attack": 1600,
+  "attribute": 2,
+  "categories": [
+    "발동-패 버리기",
+    "아이스 카운터",
+    "효과-공격력 상승"
+  ],
+  "code": 24661486,
+  "defense": 1200,
+  "description": "패를 1장 버리고 발동할 수 있다. 필드 위에 앞면 표시로 존재하는 몬스터 1장을 선택하고, 아이스 카운터를 1개 놓는다. 이 카드가 필드 위에 앞면 표시로 존재하는 한, 이 카드의 공격력은 필드 위의 아이스 카운터의 수 × 300 포인트 올린다.",
+  "draw_enabled": true,
+  "identity_key": "07e23984f347f3e92ece41c9edeb2482037e5a9ad8ee34fa9588eda4c864e3b4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native199/cards/3260.jpg",
+  "level": 4,
+  "links": [],
+  "name": "콜드 인챈터",
+  "name_english": "Cold Enchanter",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "R",
+  "search_aliases": [
+    "콜드 인챈터",
+    "Cold Enchanter"
+  ],
+  "source_id": 3260,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2292
+}

@@ -1,7 +1,7 @@
 {
-  "artKey": "CharacterPresentation012/images/tea/start",
+  "artKey": "Character197/asuka_start",
   "banlistEnabled": false,
-  "deckName": "안수진 기계천사 중급",
+  "deckName": "기계천사",
   "extra": [],
   "id": "enc-6884b5a8-8c18-4b6b-8112-175af04300b1",
   "lpBonus": 0,
@@ -27,9 +27,9 @@
     2417,
     2390
   ],
-  "name": "안수진",
+  "name": "텐죠인 아스카",
   "openingDrawBonus": 0,
-  "profileId": "tea",
+  "profileId": "asuka",
   "skills": [
     {
       "entries": [],

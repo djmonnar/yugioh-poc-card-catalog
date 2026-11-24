@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards199/3269",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-뱀파이어",
+    "효과-묘지로 보내기",
+    "효과-덱에서 묘지로 보내기",
+    "소환-묘지"
+  ],
+  "code": 69700783,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. ①: 이하의 효과에서 1개를 선택하고 발동할 수 있다.\n●자신 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터의 레벨과 다른 레벨을 가지는 \"뱀파이어\" 몬스터 1장을 덱에서 묘지로 보낸다. 대상 몬스터의 레벨은, 턴 종료시까지 묘지로 보낸 몬스터와 같아진다.\n●자신 묘지의 \"뱀파이어\" 몬스터 1장을 대상으로 하고 발동할 수 있다. 자신 필드의 몬스터 1장을 골라 묘지로 보내고, 대상 몬스터를 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "fc48744216e409451b027de11e4d19f55e556caf4d1807b03c0e61d2548e492d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native199/cards/3269.jpg",
+  "level": 0,
+  "links": [],
+  "name": "뱀파이어 데자이어",
+  "name_english": "Vampire's Desire",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "뱀파이어 데자이어",
+    "Vampire's Desire"
+  ],
+  "source_id": 3269,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 2301
+}

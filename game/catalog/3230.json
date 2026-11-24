@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards197/3230",
+  "attack": 2400,
+  "attribute": 32,
+  "categories": [
+    "지원-썬더 드래곤",
+    "발동-패에서",
+    "발동-패 버리기",
+    "효과-묘지샐비지",
+    "효과-제외샐비지",
+    "발동-제외됐을 때",
+    "발동-묘지로 보내졌을 때",
+    "발동-필드에서 묘지로 보내졌을 때",
+    "소환-덱리크루터"
+  ],
+  "code": 29596581,
+  "defense": 0,
+  "description": "이 카드명의 ①②의 효과는 1턴에 1번, 어느 쪽이든 1개밖에 사용할 수 없다. ①: 이 카드를 패에서 버리고 발동할 수 있다. \"뇌수룡－썬더 드래곤\" 이외의 자신의 묘지 / 제외 상태의 \"썬더 드래곤\" 카드 1장을 패에 넣는다. ②: 이 카드가 제외되었을 경우, 또는 필드에서 묘지로 보내졌을 경우에 발동할 수 있다. 덱에서 \"썬더 드래곤\" 몬스터 1장을 수비 표시로 특수 소환한다. 이 효과로 특수 소환한 몬스터는 엔드 페이즈에 패로 되돌아간다.",
+  "draw_enabled": true,
+  "identity_key": "19f0959129131afe63b7532d69063197bfc2b5eb4d19d190c7acaacccaa22ef1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native197/cards/3230.jpg",
+  "level": 6,
+  "links": [],
+  "name": "뇌수룡－썬더 드래곤",
+  "name_english": "Thunder Dragonroar",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4096,
+  "rarity": "SR",
+  "search_aliases": [
+    "뇌수룡-썬더 드래곤",
+    "뇌수룡－썬더 드래곤",
+    "Thunder Dragonroar"
+  ],
+  "source_id": 3230,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2262
+}

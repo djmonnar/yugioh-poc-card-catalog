@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards199/3262",
+  "attack": 2300,
+  "attribute": 8,
+  "categories": [
+    "소환-제외 코스트",
+    "지원-바람 속성",
+    "지원-땅 속성",
+    "발동-패 버리기",
+    "효과-파괴",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 81977953,
+  "defense": 2000,
+  "description": "이 카드는 일반 소환/세트할 수 없다. 자신 묘지의 바람 속성 몬스터 2장과 땅 속성 몬스터 1장을 게임에서 제외하는 것으로만 특수 소환할 수 있다. 패를 1장 버리는 것으로 필드 위의 마법/함정 카드 1장을 파괴한다. 이 효과는 1턴에 1번밖에 사용할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "ea684f0157f08487c2175f09109c2bb2e20dc7647c26024c10e31f4f98682a65",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native199/cards/3262.jpg",
+  "level": 6,
+  "links": [],
+  "name": "데저트 트위스터",
+  "name_english": "Desert Twister",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "search_aliases": [
+    "데저트 트위스터",
+    "Desert Twister"
+  ],
+  "source_id": 3262,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "특수 소환 몬스터",
+  "web_slot": 2294
+}

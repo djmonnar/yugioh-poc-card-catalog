@@ -1,0 +1,45 @@
+{
+  "artKey": "CharacterPresentation012/images/akiza/start",
+  "banlistEnabled": false,
+  "deckName": "아로마",
+  "extra": [],
+  "id": "enc-8b93b4a7-a64c-4f20-a1f6-5212a2b838ae",
+  "lpBonus": 0,
+  "main": [
+    1932,
+    1933,
+    2701,
+    2701,
+    2701,
+    2698,
+    2698,
+    2698,
+    2699,
+    2699,
+    2692,
+    2692,
+    2692,
+    2697,
+    2391,
+    2391,
+    2696,
+    2696,
+    2686,
+    2686
+  ],
+  "name": "아나트 아키",
+  "openingDrawBonus": 0,
+  "profileId": "akiza",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2686,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-8b93b4a7-a64c-4f20-a1f6-5212a2b838ae",
+  "usesNativeRules035": true
+}

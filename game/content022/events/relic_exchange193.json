@@ -1,0 +1,17 @@
+{
+  "description": "수레를 끄는 상인이 유물을 펼쳐 놓는다. 가진 것 하나를 내놓으면 같은 값어치의 다른 물건과 바꿔 준다.",
+  "effect": "보유 유물 1개를 바치고 같은 등급의 미보유 유물 3개 중 1개",
+  "enabled": true,
+  "encounterId": null,
+  "iconKey": "Art/event",
+  "id": "relic_exchange193",
+  "kind": "relic_exchange193",
+  "name": "보유 유물 1개를 내고 같은 등급 유물 3개 중 1개 선택",
+  "params": {
+    "choices": 3
+  },
+  "rewardRarity": null,
+  "supportStatus": "implemented",
+  "title": "유물 교환소",
+  "weight": 1
+}

@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards196/3225",
+  "attack": 1500,
+  "attribute": 16,
+  "categories": [
+    "지원-유니온",
+    "지원-장착",
+    "효과-장착",
+    "효과-공격력 상승",
+    "효과-수비력 상승",
+    "보호-파괴 대체"
+  ],
+  "code": 64500000,
+  "defense": 1300,
+  "description": "①: 1턴에 1번, 이하의 효과를 1개 발동할 수 있다. ●자신 필드의, \"X－헤드 캐논\"이나 \"Y－드래곤 헤드\" 1장을 대상으로 하고, 이 카드를 장착 마법 카드로 취급하여 장착한다. 장착 몬스터가 전투 / 효과로 파괴될 경우, 대신에 이 카드를 파괴한다. ●장착 상태의 이 카드를 특수 소환한다. ②: 장착 몬스터의 공격력 / 수비력은 600 올린다.",
+  "draw_enabled": true,
+  "identity_key": "074ed394ad0e40e0fcd312316805cc08dc555449198fabdb8acc37fd15c87120",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native196/cards/3225.jpg",
+  "level": 4,
+  "links": [],
+  "name": "Z－메탈 캐터필러",
+  "name_english": "Z-Metal Tank",
+  "native_type": 1057,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "R",
+  "search_aliases": [
+    "Z－메탈 캐터필러",
+    "Z-Metal Tank"
+  ],
+  "source_id": 3225,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "유니온 몬스터",
+  "web_slot": 2257
+}

@@ -113,8 +113,25 @@
     "card_set": "flame-swordsman188",
     "schema": 1
   },
+  "content_profile196": {
+    "card_set": "union-hero196",
+    "schema": 1
+  },
+  "content_profile197": {
+    "card_set": "thunder-dragon-hand197",
+    "schema": 1
+  },
+  "content_profile199": {
+    "card_set": "vampire-snowman-hero199",
+    "schema": 1
+  },
   "content_relics160": {
     "relic_set": "relics160",
+    "schema": 1
+  },
+  "content_relics193": {
+    "event_set": "events193",
+    "relic_set": "relics193",
     "schema": 1
   },
   "content_shadow093": {

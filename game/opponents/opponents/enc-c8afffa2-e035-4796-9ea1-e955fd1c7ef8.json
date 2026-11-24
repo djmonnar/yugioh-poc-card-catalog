@@ -1,0 +1,45 @@
+{
+  "artKey": "Character197/masks_light_darkness_start",
+  "banlistEnabled": false,
+  "deckName": "가면마수",
+  "extra": [],
+  "id": "enc-c8afffa2-e035-4796-9ea1-e955fd1c7ef8",
+  "lpBonus": 0,
+  "main": [
+    1257,
+    1417,
+    1417,
+    1415,
+    1415,
+    1258,
+    2763,
+    2763,
+    1420,
+    1420,
+    1412,
+    1412,
+    1412,
+    1410,
+    1410,
+    1410,
+    101,
+    615,
+    615,
+    615
+  ],
+  "name": "빛과 어둠의 가면",
+  "openingDrawBonus": 0,
+  "profileId": "masks_light_darkness",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 1257,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-c8afffa2-e035-4796-9ea1-e955fd1c7ef8",
+  "usesNativeRules035": true
+}

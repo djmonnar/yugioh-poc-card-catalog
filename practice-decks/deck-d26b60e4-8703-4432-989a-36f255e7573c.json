@@ -1,0 +1,70 @@
+{
+  "banlist_enabled": true,
+  "extra": [
+    {
+      "count": 1,
+      "identity_key": "5e5f826048c37306e7af048c509e03fdd59a85cd32977afccf7e9689243308f4",
+      "source_id": 293
+    },
+    {
+      "count": 1,
+      "identity_key": "3e19bad8b49b759fe82dd648135b7678e58c9da9bb36155615ce69ac8de89da0",
+      "source_id": 29
+    }
+  ],
+  "id": "deck-d26b60e4-8703-4432-989a-36f255e7573c",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "b4d3d123f8cfd184fed5d057fdd92c8a22c00748d957636f22ee85778d91b931",
+      "source_id": 463
+    },
+    {
+      "count": 2,
+      "identity_key": "fef6ee100fb8b0b278f709072dee609e580ecdcc27722106af0cf2ac9f647e2e",
+      "source_id": 171
+    },
+    {
+      "count": 2,
+      "identity_key": "fd06f41057fbe252141c752f1f9d811039f039602c15d07770e293c0def3a10a",
+      "source_id": 23
+    },
+    {
+      "count": 2,
+      "identity_key": "2fa8a0e08bc623f76d57782432471fd04fd0c0867fc9bd56acc3ee159d58ef04",
+      "source_id": 99
+    },
+    {
+      "count": 2,
+      "identity_key": "8709b3b447b64ac233b5d76a48a00fe84c705390c82dd38a62b6dae8c8ed17df",
+      "source_id": 295
+    },
+    {
+      "count": 2,
+      "identity_key": "89b9e2e75abee542a7bbb41b74ac5d933f927b1a36f29dbfddb279055ac2003b",
+      "source_id": 3223
+    },
+    {
+      "count": 2,
+      "identity_key": "22ad7b80ff6b617a740642551689ed45790cddfab771bcca6e3ea815638ac3e9",
+      "source_id": 3222
+    },
+    {
+      "count": 2,
+      "identity_key": "422ced7fae2540081e1e13a15d7d93fb27d9bbda53af6b594edfbfdcd8aac7fd",
+      "source_id": 1899
+    },
+    {
+      "count": 2,
+      "identity_key": "481f1539cec9a73be5473ae58ff0606a64a3c466ce9d278c03be239ebf6f8087",
+      "source_id": 2620
+    },
+    {
+      "count": 2,
+      "identity_key": "2e5b09e8cbb003a78a38101064462aeb0d78745bbca28fb850e2f1911f497552",
+      "source_id": 1079
+    }
+  ],
+  "name": "엘리멘틀 히어로",
+  "version": 960
+}

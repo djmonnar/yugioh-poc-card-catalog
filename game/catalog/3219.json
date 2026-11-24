@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards196/3219",
+  "attack": 2600,
+  "attribute": 1,
+  "categories": [
+    "지원-엘리멘틀 히어로",
+    "효과-추가공격"
+  ],
+  "code": 10526791,
+  "defense": 2300,
+  "description": "\"엘리멘틀 히어로 와일드맨\" ＋ \"엘리멘틀 히어로 에지맨\"\n이 몬스터는 융합 소환으로밖에 특수 소환할 수 없다. 상대 필드 위의 모든 몬스터에 1회씩 공격을 할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "7da506fb121f8863ab09030747726088753ee92b2ea92ce81905cff361835054",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native196/cards/3219.jpg",
+  "level": 8,
+  "links": [],
+  "name": "엘리멘틀 히어로 와일드 쟤기맨",
+  "name_english": "Elemental HERO Wildedge",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "UR",
+  "search_aliases": [
+    "엘리멘틀 히어로 와일드 쟤기맨",
+    "Elemental HERO Wildedge"
+  ],
+  "source_id": 3219,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 2251
+}

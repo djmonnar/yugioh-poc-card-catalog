@@ -1,0 +1,59 @@
+{
+  "alias": 0,
+  "art_key": "Cards197/3245",
+  "attack": 1600,
+  "attribute": 16,
+  "categories": [
+    "발동-패에서",
+    "발동-묘지에서",
+    "발동-파괴 시",
+    "소환-패에서",
+    "소환-묘지",
+    "효과-파괴",
+    "파괴-몬스터",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 16223761,
+  "defense": 1600,
+  "description": "이 카드명의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 이 카드가 패 / 묘지에 존재하고, 원래 공격력 또는 원래 수비력이 1600 인 자신 필드의 앞면 표시 몬스터가 전투 또는 상대 효과로 파괴되어 묘지로 보내졌을 경우에 발동할 수 있다. 이 카드를 특수 소환하고, 상대 필드의 카드 1장을 골라 파괴한다. 이 효과로 특수 소환한 이 카드는, 필드에서 벗어났을 경우에 제외된다.",
+  "draw_enabled": true,
+  "identity_key": "ee24bdac99376dff3bf92d0cc3437d33c0c8e33cd033617cdd12787126612391",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native197/cards/3245.jpg",
+  "level": 4,
+  "links": [
+    {
+      "identity_key": "62c8eebffe9ce1ed637b2355d2ec6b7b26e0ad33004d4e3573e676b5b079917e",
+      "slot": 2276
+    },
+    {
+      "identity_key": "a59c4da564df3e9358600c626f8954e42d1b66fd336bc292d03e9345dd5c99b1",
+      "slot": 2278
+    },
+    {
+      "identity_key": "584df9d2bcc637f344dbccf0443e38c2fce10ae68d3b18594329f15b4fbf91f5",
+      "slot": 2279
+    },
+    {
+      "identity_key": "7000324e799a136ee0fa70ac5ee818202546ef8809eb09967aaf4d10dbf39869",
+      "slot": 2280
+    }
+  ],
+  "name": "썬더 핸드",
+  "name_english": "Thunder Hand",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4096,
+  "rarity": "R",
+  "search_aliases": [
+    "썬더 핸드",
+    "Thunder Hand"
+  ],
+  "source_id": 3245,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2277
+}

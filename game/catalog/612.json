@@ -3,7 +3,9 @@
   "art_key": "Cards/612",
   "attack": 2800,
   "attribute": 16,
-  "categories": [],
+  "categories": [
+    "지원-썬더 드래곤"
+  ],
   "code": 54752875,
   "defense": 2100,
   "description": "\"썬더 드래곤\" ＋ \"썬더\n드래곤\"",

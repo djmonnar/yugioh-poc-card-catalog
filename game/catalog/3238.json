@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards197/3238",
+  "attack": 1200,
+  "attribute": 16,
+  "categories": [
+    "소환-패에서",
+    "소환-상대필드",
+    "소환-릴리즈 코스트",
+    "발동-엔드 페이즈 시",
+    "효과-상대 드로우"
+  ],
+  "code": 46565218,
+  "defense": 2500,
+  "description": "①: 이 카드는 상대 필드의 몬스터 1장을 릴리스하고, 패에서 상대 필드에 수비 표시로 특수 소환할 수 있다. ②: 이 카드가 이 카드의 ①의 방법으로 특수 소환된 턴의 엔드 페이즈에 발동할 수 있다. 자신은 1장 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "b2e3ad6da73d02520358467d55e5531f1cdb8d13d1ca7928ee5f1576354612ab",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native197/cards/3238.jpg",
+  "level": 6,
+  "links": [],
+  "name": "사탄클로스",
+  "name_english": "Santa Claws",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "search_aliases": [
+    "사탄클로스",
+    "Santa Claws"
+  ],
+  "source_id": 3238,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2270
+}
