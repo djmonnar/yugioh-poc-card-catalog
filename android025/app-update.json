@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.132",
-  "versionCode": 151,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.132/YGOClassicExpedition-0.18.132-arm64.apk",
-  "sizeBytes": 891479620,
-  "sha256": "5439b4d538706845ba7cb2e538ff78536330189486e81cea9979363432fb8257",
-  "releaseNotes": "특성 LP배리어·하이랜더와 유물 「검약의 반지」를 추가했습니다. 새 캐릭터 미사와 다이치가 등장하고, 에이스 몬스터 20마리에 소환 연출이 생겼습니다."
+  "versionName": "0.18.133",
+  "versionCode": 152,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.133/YGOClassicExpedition-0.18.133-arm64.apk",
+  "sizeBytes": 905639926,
+  "sha256": "4b55d8004a0b852ccf79e234efeeb5311f5bd441dba553703023eaa71298290d",
+  "releaseNotes": "아마조네스·해피·미사와 카드 22장(카드팩 203)을 더했습니다."
 }
