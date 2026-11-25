@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards203/3347",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-본딩",
+    "소환-덱 복귀 코스트",
+    "소환-패에서",
+    "소환-묘지",
+    "발동-묘지에서",
+    "발동-제외",
+    "효과-덱샐비지",
+    "효과-묘지샐비지"
+  ],
+  "code": 6890729,
+  "defense": 0,
+  "description": "①: 자신의 패 / 묘지에서 \"듀테리온\" \"하이드로게돈\" \"옥시게돈\"을 1장씩 덱으로 되돌리고 발동할 수 있다. 자신의 패 / 묘지에서 \"워터 드래곤－클러스터\" 1장을 고르고 특수 소환한다. ②: 묘지의 이 카드를 제외하고 발동할 수 있다. 자신의 덱 / 묘지에서 \"워터 드래곤\" 또는 \"워터 드래곤－클러스터\" 1장을 고르고 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "b4596c7f622f94f7564a1a37e1a3072431727cb5b58b2b515976ee1d1343bda5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native203/cards/3347.jpg",
+  "level": 0,
+  "links": [],
+  "name": "본딩－DHO",
+  "name_english": "Bonding - DHO",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "Bonding - DHO",
+    "본딩－DHO"
+  ],
+  "source_id": 3347,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2379
+}

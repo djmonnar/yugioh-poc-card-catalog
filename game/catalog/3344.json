@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards203/3344",
+  "attack": 2800,
+  "attribute": 2,
+  "categories": [
+    "지원-본딩",
+    "발동-소환 시",
+    "효과-공격력 감소",
+    "효과-발동봉쇄",
+    "발동-릴리즈",
+    "소환-패에서",
+    "소환-덱리크루터"
+  ],
+  "code": 6022371,
+  "defense": 2600,
+  "description": "이 카드는 통상 소환할 수 없다. \"본딩\" 마법 / 함정 카드의 효과로만 특수 소환할 수 있다. ①: 이 카드가 특수 소환에 성공했을 경우에 발동할 수 있다. 상대 필드의 효과 몬스터는 턴 종료시까지, 공격력이 0 이 되고, 효과를 발동할 수 없다. ②: 이 카드를 릴리스하고 발동할 수 있다. 패 / 덱에서 \"워터 드래곤\" 2장을 소환 조건을 무시하고 수비 표시로 특수 소환한다. 이 효과는 상대 턴에도 발동할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "cdf0f22c6ea87afae988f282db6c9466f0396c0dd88379f21826c0bb1df76354",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native203/cards/3344.jpg",
+  "level": 10,
+  "links": [],
+  "name": "워터 드래곤－클러스터",
+  "name_english": "Water Dragon Cluster",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 262144,
+  "rarity": "UR",
+  "search_aliases": [
+    "Water Dragon Cluster",
+    "워터 드래곤－클러스터"
+  ],
+  "source_id": 3344,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "특수 소환 몬스터",
+  "web_slot": 2376
+}

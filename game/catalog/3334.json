@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards203/3334",
+  "attack": 2900,
+  "attribute": 1,
+  "categories": [
+    "지원-아마조네스",
+    "보호-공격 대상 제외",
+    "소환-묘지"
+  ],
+  "code": 59353647,
+  "defense": 2800,
+  "description": "레벨 5 이상의 \"아마조네스\" 몬스터 ＋ \"아마조네스\" 몬스터\n이 카드명의 ②의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 이 카드가 몬스터 존에 존재하는 한, 상대 몬스터는 이 카드 이외의 몬스터를 공격할 수 없다. ②: 자신 필드의 \"아마조네스\" 카드 1장과 자신 묘지의 전사족 \"아마조네스\" 몬스터 1장을 대상으로 하고 발동할 수 있다. 대상 필드의 카드를 파괴하고, 대상 묘지의 몬스터를 특수 소환한다. 이 효과를 발동하는 턴에, 이 카드는 공격할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "06edf6c9a9f1cd1936344a5c1591fcd79399df36bbe8e2501ba413bab23d90ad",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native203/cards/3334.jpg",
+  "level": 9,
+  "links": [],
+  "name": "아마조네스의 애완킹라이거",
+  "name_english": "Amazoness Pet Liger King",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "SR",
+  "search_aliases": [
+    "아마조네스의 애완킹라이거",
+    "Amazoness Pet Liger King"
+  ],
+  "source_id": 3334,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 2366
+}

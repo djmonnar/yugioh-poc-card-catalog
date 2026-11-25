@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards203/3330",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-아마조네스",
+    "발동-공격 선언 시",
+    "효과-공격력 감소",
+    "효과-앞면표시"
+  ],
+  "code": 67987611,
+  "defense": 0,
+  "description": "상대가 공격 선언시, 자신 필드 위에 \"아마조네스\"라는 이름이 붙은 몬스터가 존재할 경우에만 발동할 수 있다. 상대 필드 위의 모든 몬스터는 앞면 공격 표시가 되어(리버스 효과는 발동하지 않는다), 공격력은 500 포인트 내린다. 상대는 모든 몬스터로 공격해야 한다.",
+  "draw_enabled": true,
+  "identity_key": "c5ce5be943238d20920cb5e62a2d1536aef8c55c7b8fd2debb99fe3f07441dcc",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native203/cards/3330.jpg",
+  "level": 0,
+  "links": [],
+  "name": "아마조네스의 궁수대",
+  "name_english": "Amazoness Archers",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "아마조네스의 궁수대",
+    "Amazoness Archers"
+  ],
+  "source_id": 3330,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2362
+}

@@ -1,0 +1,45 @@
+{
+  "artKey": "Character126/images/gozaburo_kaiba/start",
+  "banlistEnabled": false,
+  "deckName": "여섯무사",
+  "extra": [],
+  "id": "enc-5af754e6-5ca0-4632-be04-dad70e448437",
+  "lpBonus": 0,
+  "main": [
+    3319,
+    3321,
+    3320,
+    3318,
+    591,
+    3302,
+    3302,
+    3307,
+    3307,
+    3308,
+    3308,
+    3314,
+    3293,
+    3293,
+    3295,
+    3295,
+    3286,
+    3286,
+    3288,
+    3288
+  ],
+  "name": "카이바 고자부로",
+  "openingDrawBonus": 0,
+  "profileId": "gozaburo_kaiba",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 3288,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-5af754e6-5ca0-4632-be04-dad70e448437",
+  "usesNativeRules035": true
+}

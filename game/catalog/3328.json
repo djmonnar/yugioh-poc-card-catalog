@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards203/3328",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-아마조네스",
+    "소환-패에서",
+    "효과-공격력 상승",
+    "발동-전투 시",
+    "효과-제외",
+    "발동-파괴 시",
+    "발동-묘지로 보내졌을 때",
+    "발동-필드에서 묘지로 보내졌을 때",
+    "소환-묘지"
+  ],
+  "code": 83407038,
+  "defense": 0,
+  "description": "①: 1턴에 1번, 자신 / 상대의 배틀 페이즈에 발동할 수 있다. 패에서 \"아마조네스\" 몬스터 1장을 특수 소환한다. 이 효과로 특수 소환한 몬스터의 공격력은 턴 종료시까지 500 올린다. ②: 자신의 \"아마조네스\" 몬스터가 상대 몬스터와 전투를 실행한 데미지 계산 후에 발동할 수 있다. 그 상대 몬스터를 제외한다. ③: 필드의 이 카드가 파괴되어 묘지로 보내졌을 경우, 자신 묘지의 \"아마조네스\" 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "7ce8c59ffbe410ad31b3e5605bc43c80aa5f82efd48f5ad97e0c37e89a2a6c28",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native203/cards/3328.jpg",
+  "level": 0,
+  "links": [],
+  "name": "아마조네스의 급습",
+  "name_english": "Amazoness Onslaught",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "아마조네스의 급습",
+    "Amazoness Onslaught"
+  ],
+  "source_id": 3328,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 2360
+}

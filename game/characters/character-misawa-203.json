@@ -1,0 +1,13 @@
+{
+  "art_key": "Character203/misawa_start",
+  "id": "character-misawa-203",
+  "profile": {
+    "name": "미사와 다이치",
+    "portrait": "assets/actors/native203/misawa/start.png",
+    "skill_profiles": [],
+    "skills": []
+  },
+  "profile_id": "misawa",
+  "updated_at": "2026-11-25T03:04:38.403561+00:00",
+  "version": 1027
+}

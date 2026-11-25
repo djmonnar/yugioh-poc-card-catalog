@@ -1,0 +1,64 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-929a426a-4126-4f5a-8550-b7cb5578e635",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "35382c09c63a08bbea164be5535e4348bee929cff7f2e82520ab09d7a5f191f8",
+      "source_id": 3302
+    },
+    {
+      "count": 1,
+      "identity_key": "cb8c124d5fea8cfa9cdfdbca4d457353427dab06f6bd4d6f52da9f6cd85d3c42",
+      "source_id": 3314
+    },
+    {
+      "count": 2,
+      "identity_key": "710a3fc174bd5b5ad5a1def3a155dd51647c7c37528d87456b5607961fa1f93a",
+      "source_id": 3286
+    },
+    {
+      "count": 2,
+      "identity_key": "1930c5639dfc97322a19c3805d898120fd05e6dd718d227c88e6c78750fb1551",
+      "source_id": 3299
+    },
+    {
+      "count": 2,
+      "identity_key": "fdea075ec77da79417f323b21ce2790071a0e62f75b2a4a0467e8ad678273116",
+      "source_id": 3316
+    },
+    {
+      "count": 2,
+      "identity_key": "bf1f28791dadd42e36dbc408e419cc0049537bf2be66952471980f0a0418a308",
+      "source_id": 3317
+    },
+    {
+      "count": 2,
+      "identity_key": "2aed505fa18ce73ec7279d04a2a54f4c519b300627d0675c1613bac5d5a1647d",
+      "source_id": 3310
+    },
+    {
+      "count": 1,
+      "identity_key": "ac5ecbe4a3411c8cd89408543edf515355b6c89e3d70af75fe8cdc5a5400f67e",
+      "source_id": 3289
+    },
+    {
+      "count": 2,
+      "identity_key": "8699946b8eda9227c826e061a1b9b07407ad267e3073770201438545a311d6a3",
+      "source_id": 3298
+    },
+    {
+      "count": 2,
+      "identity_key": "47d40d67a58bd09f16f5f28d62e4714ddc2634a59f5cd25440aa641eea1edeaf",
+      "source_id": 3304
+    },
+    {
+      "count": 2,
+      "identity_key": "b272971ec8f850aec4ffab8785058f70efe8cb7d3a8175b4da1bb192922e78b7",
+      "source_id": 3320
+    }
+  ],
+  "name": "여섯무사",
+  "version": 1022
+}

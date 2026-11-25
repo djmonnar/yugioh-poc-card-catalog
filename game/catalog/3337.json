@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards203/3337",
+  "attack": 1900,
+  "attribute": 1,
+  "categories": [
+    "지원-아마조네스",
+    "지원-융합",
+    "소환-패에서",
+    "발동-소환 시",
+    "효과-덱샐비지"
+  ],
+  "code": 50486289,
+  "defense": 0,
+  "description": "이 카드명의 ①②의 효과는 각각 1턴에 1번밖에 사용할 수 없다. ①: 자신 필드의 몬스터가, 존재하지 않을 경우 또는 \"아마조네스\" 몬스터뿐일 경우에 발동할 수 있다. 이 카드를 패에서 특수 소환한다. ②: 이 카드가 일반 소환 / 특수 소환에 성공했을 경우에 발동할 수 있다. 덱에서 \"아마조네스\" 마법 / 함정 카드 또는 \"융합\" 1장을 고르고 자신 필드에 세트한다. 이 턴에, 자신은 \"아마조네스\" 몬스터로밖에 공격할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "ff2ed55a1d5bbb87d0328ceba4651813dd465a1cd0d3f4c681b07029da06219a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native203/cards/3337.jpg",
+  "level": 5,
+  "links": [],
+  "name": "아마조네스의 전사장",
+  "name_english": "Amazoness War Chief",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "search_aliases": [
+    "아마조네스의 전사장",
+    "Amazoness War Chief"
+  ],
+  "source_id": 3337,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2369
+}

@@ -31,7 +31,7 @@
     "Gateway of the Six"
   ],
   "source_id": 3301,
-  "speed_limit": null,
+  "speed_limit": 1,
   "stock": true,
   "token": false,
   "type_name": "지속 마법",

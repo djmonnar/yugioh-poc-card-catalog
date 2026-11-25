@@ -129,6 +129,10 @@
     "card_set": "six-samurai-gate-guardian202",
     "schema": 1
   },
+  "content_profile203": {
+    "card_set": "amazoness-harpie-misawa203",
+    "schema": 1
+  },
   "content_relics160": {
     "relic_set": "relics160",
     "schema": 1
@@ -136,6 +140,10 @@
   "content_relics193": {
     "event_set": "events193",
     "relic_set": "relics193",
+    "schema": 1
+  },
+  "content_relics203": {
+    "relic_set": "relics203",
     "schema": 1
   },
   "content_shadow093": {

@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards203/3333",
+  "attack": 3200,
+  "attribute": 1,
+  "categories": [
+    "지원-아마조네스",
+    "발동-소환 시",
+    "소환-덱리크루터",
+    "보호-효과 대상",
+    "보호-효과 파괴",
+    "효과-추가공격"
+  ],
+  "code": 23965033,
+  "defense": 2800,
+  "description": "\"아마조네스\" 융합 몬스터 ＋ \"아마조네스\" 몬스터\n이 카드명의 ①의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 이 카드가 융합 소환에 성공했을 경우에 발동할 수 있다. 덱에서 \"아마조네스\" 몬스터 1장을 특수 소환한다. ②: 이 카드가 몬스터 존에 존재하는 한, 이 카드 이외의 자신 필드의 \"아마조네스\" 카드는 상대 효과의 대상이 되지 않으며, 상대 효과로는 파괴되지 않는다. ③: \"아마조네스 임프레스\" 또는 \"아마조네스 여왕\"을 소재로서 융합 소환한 이 카드는 1번의 배틀 페이즈 중에 2회 공격할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "fc15acd30ef574e05c74f7e258b07f8dd3579e146fa74d4f090a2a68de58597b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native203/cards/3333.jpg",
+  "level": 10,
+  "links": [],
+  "name": "아마조네스 카이제린",
+  "name_english": "Amazoness Augusta",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "UR",
+  "search_aliases": [
+    "아마조네스 카이제린",
+    "Amazoness Augusta"
+  ],
+  "source_id": 3333,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 2365
+}

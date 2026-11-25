@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards203/3331",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-아마조네스",
+    "지원-융합",
+    "소환-엑스트라 덱에서",
+    "발동-묘지에서",
+    "발동-제외"
+  ],
+  "code": 86758746,
+  "defense": 0,
+  "description": "이 카드명의 ①②의 효과는 1턴에 1번, 어느 쪽이든 1개밖에 사용할 수 없다. ①: 자신의 패 / 필드에서, \"아마조네스\" 융합 몬스터 카드에 기재된 융합 소재 몬스터를 묘지로 보내고, 그 융합 몬스터 1장을 엑스트라 덱에서 융합 소환한다. ②: 자신 메인 페이즈에 묘지의 이 카드를 제외하고 발동할 수 있다. 이 턴에, 자신이 \"아마조네스\" 융합 몬스터를 융합 소환할 경우에 1번만, 자신의 엑스트라 덱의 \"아마조네스\" 몬스터 1장을 묘지로 보내고 융합 소재로 할 수도 있다.",
+  "draw_enabled": true,
+  "identity_key": "eac9888eae1de05a985c12d820a7e0654a287ad83bccf52423589839cd17cae5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native203/cards/3331.jpg",
+  "level": 0,
+  "links": [],
+  "name": "아마조네스의 비술",
+  "name_english": "Amazoness Secret Arts",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "아마조네스의 비술",
+    "Amazoness Secret Arts"
+  ],
+  "source_id": 3331,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 2363
+}

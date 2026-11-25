@@ -158,6 +158,10 @@
           {
             "opponentId": "enc-c76f1ec9-5b8d-4a8c-ac1d-6d98f94e091d",
             "weight": 1
+          },
+          {
+            "opponentId": "enc-5af754e6-5ca0-4632-be04-dad70e448437",
+            "weight": 1
           }
         ],
         "lpBonus": 0
@@ -286,6 +290,10 @@
           },
           {
             "opponentId": "enc-580d854b-994f-4bc7-b389-3e67c0a78b02",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-34167673-6ccd-4af9-bcb0-04573825d1d9",
             "weight": 1
           }
         ],
@@ -863,6 +871,10 @@
           {
             "opponentId": "enc-ef44628b-8c7b-4269-ba93-ceaebec16e94",
             "weight": 1
+          },
+          {
+            "opponentId": "enc-fbd56072-70b6-45f2-8389-efec04c4eb92",
+            "weight": 1
           }
         ],
         "lpBonus": 1000
@@ -1035,6 +1047,10 @@
           },
           {
             "opponentId": "enc-2966be46-4261-4baf-a1fe-892fdcbca2b7",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-a6555dc4-6f6f-41a7-aa0c-907bf6580534",
             "weight": 1
           }
         ],
@@ -1236,6 +1252,10 @@
           {
             "opponentId": "enc-5686c917-79fa-42fe-908d-ac4ba74f3dc2",
             "weight": 1
+          },
+          {
+            "opponentId": "enc-165308f5-f14b-4359-ba23-a21c705194fe",
+            "weight": 1
           }
         ],
         "lpBonus": 2000
@@ -1246,7 +1266,7 @@
   ],
   "nativeDeckRules035": {
     "baseBindingSha256": "3889a4f651854c23ddb8b03d90841a6c380c8be4a6d4f1858d6fd59e4968586e",
-    "catalogSha256": "9a5cffd954f1c0ed166810d0a60d498b6d8f59a53316617798211e0745e94e39",
+    "catalogSha256": "3c11e23e07c535f8746eca12af5ebcf25d27ed47aa5f6229add5789dcf5b3e80",
     "engine": "unity-native-035",
     "origin": "online",
     "rows": [
@@ -19720,7 +19740,7 @@
         "identityKey": "c6db8d561af05024ce73aa928bc5159b17bf279bad3edb100ea0362762401c65",
         "normalLimit": 2,
         "sourceId": 3300,
-        "speedLimit": null
+        "speedLimit": 2
       },
       {
         "alias": 0,
@@ -19728,7 +19748,7 @@
         "identityKey": "6984c1c52c4a27996bc1abce270567f4aa266ce67d17e826e920639edd89ac57",
         "normalLimit": 1,
         "sourceId": 3301,
-        "speedLimit": null
+        "speedLimit": 1
       },
       {
         "alias": 0,
@@ -19937,11 +19957,187 @@
         "normalLimit": 3,
         "sourceId": 3327,
         "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 83407038,
+        "identityKey": "7ce8c59ffbe410ad31b3e5605bc43c80aa5f82efd48f5ad97e0c37e89a2a6c28",
+        "normalLimit": 3,
+        "sourceId": 3328,
+        "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 22082163,
+        "identityKey": "7716874b1f45a767699b3415b667b577f2d1065ef889b32d081f96b2b2ef1d44",
+        "normalLimit": 3,
+        "sourceId": 3329,
+        "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 67987611,
+        "identityKey": "c5ce5be943238d20920cb5e62a2d1536aef8c55c7b8fd2debb99fe3f07441dcc",
+        "normalLimit": 3,
+        "sourceId": 3330,
+        "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 86758746,
+        "identityKey": "eac9888eae1de05a985c12d820a7e0654a287ad83bccf52423589839cd17cae5",
+        "normalLimit": 3,
+        "sourceId": 3331,
+        "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 57312333,
+        "identityKey": "4be47f572e9266c5b983cf5f53de24eb731d58958705cc56ce8a7a77857ae9ba",
+        "normalLimit": 3,
+        "sourceId": 3332,
+        "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 23965033,
+        "identityKey": "fc15acd30ef574e05c74f7e258b07f8dd3579e146fa74d4f090a2a68de58597b",
+        "normalLimit": 3,
+        "sourceId": 3333,
+        "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 59353647,
+        "identityKey": "06edf6c9a9f1cd1936344a5c1591fcd79399df36bbe8e2501ba413bab23d90ad",
+        "normalLimit": 3,
+        "sourceId": 3334,
+        "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 4591250,
+        "identityKey": "c5e546d91f93fbe28ff4e151133ec21dc93dd89b3bec83c9af82d3caba8e9c68",
+        "normalLimit": 3,
+        "sourceId": 3335,
+        "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 68507541,
+        "identityKey": "aa519b0c77bafecb04d2aeeefc93ceedab244bfbd7dd0497bc72ac2df01d92a8",
+        "normalLimit": 3,
+        "sourceId": 3336,
+        "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 50486289,
+        "identityKey": "ff2ed55a1d5bbb87d0328ceba4651813dd465a1cd0d3f4c681b07029da06219a",
+        "normalLimit": 3,
+        "sourceId": 3337,
+        "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 39275698,
+        "identityKey": "4545294b37ede15b4ef6f493ffb30f8516d3f6de12ea8634f401c234a112c427",
+        "normalLimit": 3,
+        "sourceId": 3338,
+        "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 4991081,
+        "identityKey": "1ec1f341760c6787e3fccfcf1748f734415454abd207d701375c6da381bfb825",
+        "normalLimit": 3,
+        "sourceId": 3339,
+        "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 85066822,
+        "identityKey": "1476f6d5c670180728ad08ff096407bbe932720ad27b65e3b6d519ff27e1ef76",
+        "normalLimit": 3,
+        "sourceId": 3340,
+        "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 22587018,
+        "identityKey": "f7666c3a962190f1772fc3f052badedcfb7680e694b01e169b89ad4bc8081f96",
+        "normalLimit": 3,
+        "sourceId": 3341,
+        "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 45898858,
+        "identityKey": "30a7d80a9eab1ef0c4a63071ad862baa2be4b118b76b3d5a013a345332e3d34a",
+        "normalLimit": 3,
+        "sourceId": 3342,
+        "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 15981690,
+        "identityKey": "0f883d0f593517590e9a138f19c4886c7a86779b8253ed9c58d07b610002f1fe",
+        "normalLimit": 3,
+        "sourceId": 3343,
+        "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 6022371,
+        "identityKey": "cdf0f22c6ea87afae988f282db6c9466f0396c0dd88379f21826c0bb1df76354",
+        "normalLimit": 3,
+        "sourceId": 3344,
+        "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 1082946,
+        "identityKey": "a5b71c46a7447b69062e03e200e8eaa5e7720dca99537307291aa2114f047e82",
+        "normalLimit": 3,
+        "sourceId": 3345,
+        "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 79402185,
+        "identityKey": "4f23aa1768e49754a5cd04f40f64830bd8402f423d0e7a4a3f0ba9bb43cdaa53",
+        "normalLimit": 3,
+        "sourceId": 3346,
+        "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 6890729,
+        "identityKey": "b4596c7f622f94f7564a1a37e1a3072431727cb5b58b2b515976ee1d1343bda5",
+        "normalLimit": 3,
+        "sourceId": 3347,
+        "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 43017476,
+        "identityKey": "74d274ad5d0a0589c8902560cf3728e4f8c871a75baa0e7c8b4278bc5a6c94aa",
+        "normalLimit": 3,
+        "sourceId": 3348,
+        "speedLimit": null
+      },
+      {
+        "alias": 0,
+        "code": 54343893,
+        "identityKey": "a3ea79d645c2f625ef27dede4ea8e6b06f77164a48954d8a4998aacee2764da5",
+        "normalLimit": 3,
+        "sourceId": 3349,
+        "speedLimit": null
       }
     ],
     "schema": 1,
-    "sha256": "46a5650db87cd5aac8abeaf957cffff9cc81036915100a87055770c258a00345",
-    "sourceSha256": "2219cf1700602fd336c01540dada23445257876fd70230018e7bbeb50c8d22cf"
+    "sha256": "5efe58c64032399a55e5d09b1ebb3c32fe91f5608c9665bf2f7aae5e03ab3c36",
+    "sourceSha256": "448375fdb55faac8de5261c41b79099607cb3d98b58d3f492aaa7aadcf7e1f32"
   },
   "schema": 2,
   "source": "native035",

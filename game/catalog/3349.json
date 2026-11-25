@@ -1,0 +1,34 @@
+{
+  "alias": 0,
+  "art_key": "Cards203/3349",
+  "attack": 2000,
+  "attribute": 32,
+  "categories": [
+    "소환-패에서"
+  ],
+  "code": 54343893,
+  "defense": 2400,
+  "description": "①: 상대 필드에만 몬스터가 존재할 경우, 이 카드는 패에서 특수 소환할 수 있다. 이 방법으로 특수 소환한 이 카드의 원래의 공격력 / 수비력은 절반이 된다.",
+  "draw_enabled": true,
+  "identity_key": "a3ea79d645c2f625ef27dede4ea8e6b06f77164a48954d8a4998aacee2764da5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native203/cards/3349.jpg",
+  "level": 5,
+  "links": [],
+  "name": "바이스 드래곤",
+  "name_english": "Vice Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "R",
+  "search_aliases": [
+    "Vice Dragon",
+    "바이스 드래곤"
+  ],
+  "source_id": 3349,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2381
+}

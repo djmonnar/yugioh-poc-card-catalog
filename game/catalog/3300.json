@@ -29,7 +29,7 @@
     "Shien's Dojo"
   ],
   "source_id": 3300,
-  "speed_limit": null,
+  "speed_limit": 2,
   "stock": true,
   "token": false,
   "type_name": "지속 마법",

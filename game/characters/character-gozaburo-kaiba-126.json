@@ -4,10 +4,71 @@
   "profile": {
     "name": "카이바 고자부로",
     "portrait": "assets/actors/native126/gozaburo_kaiba/start.png",
-    "skill_profiles": [],
+    "skill_profiles": [
+      {
+        "name": "질풍흉살진(여섯무사)",
+        "profile_id": "profile-72d2d18a-d869-4240-989c-7412246d2471",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "3497c8550ae50415de72a665403cae64a919b47c985a7bc5666a605ae7b7aeeb",
+              "internal_id": 3288,
+              "name_ko": "질풍! 흉살진",
+              "slot": 2320
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "시엔의 안개성",
+        "profile_id": "profile-31605de5-26fd-4aae-9784-7bc90af3b801",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "5c982c61f7a1f0fea9666cde073ece6f1590e394ad22efe30759bfc454be8aff",
+              "internal_id": 3293,
+              "name_ko": "시엔의 안개성",
+              "slot": 2325
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "여섯무의사원",
+        "profile_id": "profile-70006cac-26de-414a-9acf-6592fe082a2b",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "1930c5639dfc97322a19c3805d898120fd05e6dd718d227c88e6c78750fb1551",
+              "internal_id": 3299,
+              "name_ko": "여섯 무의 사원",
+              "slot": 2331
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "시엔의 도량",
+        "profile_id": "profile-70920b78-336f-480b-b3ab-0efb695e5979",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "c6db8d561af05024ce73aa928bc5159b17bf279bad3edb100ea0362762401c65",
+              "internal_id": 3300,
+              "name_ko": "시엔의 도량",
+              "slot": 2332
+            },
+            "kind": "start_field"
+          }
+        ]
+      }
+    ],
     "skills": []
   },
   "profile_id": "gozaburo_kaiba",
-  "updated_at": "2026-11-15T03:02:03.334913+00:00",
-  "version": 718
+  "updated_at": "2026-11-25T01:28:38.996096+00:00",
+  "version": 6317
 }

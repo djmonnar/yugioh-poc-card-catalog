@@ -51,9 +51,7 @@
     "gold": 0,
     "lp": 4000,
     "openingDrawBonus": 0,
-    "relicIds": [
-      "reload"
-    ],
+    "relicIds": [],
     "skills": [
       {
         "entries": [],
@@ -149,6 +147,15 @@
         "value": 0
       }
     ]
+  },
+  "unified039_255a73ecd54533c598164b3882c2268723da6f65": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [
+      "thorn_armor"
+    ],
+    "skills": []
   },
   "unified039_307d29af5a014a0321e2d07390c3c057bd040ae8": {
     "gold": 0,
@@ -433,6 +440,22 @@
       }
     ]
   },
+  "unified039_82b21aa6547fa2150999bdab059f64db39d7a2f7": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_field",
+        "position": 0,
+        "sourceId": 3293,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
   "unified039_8ada66f7929efbcfccd9fa84ca2e9a8fc40217bd": {
     "gold": 0,
     "lp": 5000,
@@ -531,6 +554,30 @@
       }
     ]
   },
+  "unified039_b57fc1a5094c0aab251b35582f0f2c877af14ecb": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "aura": {
+          "atk": 100,
+          "attributes": 0,
+          "def": 100,
+          "levels": 0,
+          "races": 0,
+          "types": 2048
+        },
+        "entries": [],
+        "kind": "stat_aura",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
   "unified039_b85f993fbf845a038f2e937ca24717b3947b57a4": {
     "gold": 0,
     "lp": 4500,
@@ -558,6 +605,22 @@
         "kind": "start_hand",
         "position": 0,
         "sourceId": 1820,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_c0ae126618564ec6d6d4552e34d236c41ec0a22e": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_field",
+        "position": 0,
+        "sourceId": 334,
         "threshold": 0,
         "value": 0
       }
@@ -835,15 +898,6 @@
         "value": 0
       }
     ]
-  },
-  "unified039_f8bb24c2f50dcae6d3cef08dea02ee607a3da75b": {
-    "gold": 0,
-    "lp": 4000,
-    "openingDrawBonus": 0,
-    "relicIds": [
-      "thorn_armor"
-    ],
-    "skills": []
   },
   "unified039_f8ec3eae8e62bd018e3ac02b5e9d574864183bfd": {
     "gold": 0,

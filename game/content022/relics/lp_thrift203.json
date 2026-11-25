@@ -1,0 +1,20 @@
+{
+  "description": "내가 지불하는 LP 비용이 500 줄어든다. 단, 100 아래로는 줄지 않고, 원래 비용이 100 이하이면 그대로 지불한다.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 0,
+  "iconKey": "Relics/Content203/lp_thrift203",
+  "id": "lp_thrift203",
+  "kind": "lp_thrift203",
+  "name": "검약의 반지",
+  "params": {
+    "amount": 500,
+    "minimum": 100
+  },
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}
