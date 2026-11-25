@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.133",
-  "versionCode": 152,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.133/YGOClassicExpedition-0.18.133-arm64.apk",
-  "sizeBytes": 905639926,
-  "sha256": "4b55d8004a0b852ccf79e234efeeb5311f5bd441dba553703023eaa71298290d",
-  "releaseNotes": "아마조네스·해피·미사와 카드 22장(카드팩 203)을 더했습니다."
+  "versionName": "0.18.134",
+  "versionCode": 153,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.134/YGOClassicExpedition-0.18.134-arm64.apk",
+  "sizeBytes": 905641498,
+  "sha256": "d205f863a817a41c4d5fd5d822fb84efed2c511ff53111990d5c65716298d8bb",
+  "releaseNotes": "판도라·빛과 어둠의 가면·어둠의 플레이어 킬러·텐죠인 아스카·미사와 다이치의 컷신을 보강했습니다. 유물 효과 알림에 전투에서 사용 중인 유물 그림을 표시합니다."
 }
