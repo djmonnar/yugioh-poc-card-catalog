@@ -119,14 +119,14 @@ test('the studio opens 152 to 199 and exact 202 databases and rejects a forged 2
 
 test('a newer card pack in the database does not stop the 202 studio',async()=>{
   const hex='a'.repeat(64);
-  await normalizeBootstrap039(bootstrap([],{...GAME_IDENTITY202,catalog203_sha256:hex,native_manifest203_sha256:hex}),webcrypto);
+  assert(gameIdentityAccepts202({...GAME_IDENTITY202,catalog203_sha256:hex,native_manifest203_sha256:hex}));
   assert(!gameIdentityAccepts202({...GAME_IDENTITY202,catalog202_sha256:'0'.repeat(64),catalog203_sha256:hex}));
   assert(!gameIdentityAccepts202({...GAME_IDENTITY202,extra:hex}));
   assert(!gameIdentityAccepts202({...GAME_IDENTITY202,catalog201_sha256:hex}),'a pack number at or below 202 cannot be added');
 });
 
 test('related cards are rebuilt on catalog 202: Gate Guardian Fusions list their Contact Fusion materials',()=>{
-  assert.equal(CARD_RELATIONS_META198.catalog,'catalog202.json');
+  assert(['catalog202.json','catalog203.json'].includes(CARD_RELATIONS_META198.catalog),'related cards are built on catalog 202 or a newer pack');
   assert.deepEqual(CARD_RELATIONS198[3325]?.c,8505920);
   for(const [id,materials] of [[3322,[2642,2644]],[3323,[2642,2643]],[3324,[2643,2644]],[3325,[2642,2643,2644]]]){
     assert.deepEqual([...(CARD_RELATIONS198[id]?.f??[])].sort((a,b)=>a-b),materials,'Gate Guardian Fusion '+id+' materials');

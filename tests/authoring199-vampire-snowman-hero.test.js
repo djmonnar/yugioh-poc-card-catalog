@@ -109,7 +109,7 @@ test('a newer card pack in the database does not stop the 199 studio',async()=>{
 });
 
 test('related cards are rebuilt on catalog 199: Terra Firma lists Ocean and Woodsman, Genesis names Vampire Lord',()=>{
-  assert(['catalog199.json','catalog202.json'].includes(CARD_RELATIONS_META198.catalog),'related cards are built on catalog 199 or a newer pack');
+  assert(['catalog199.json','catalog202.json','catalog203.json'].includes(CARD_RELATIONS_META198.catalog),'related cards are built on catalog 199 or a newer pack');
   assert.deepEqual(CARD_RELATIONS198[3253]?.c,74711057);
   assert.deepEqual([...(CARD_RELATIONS198[3253]?.f??[])].sort((a,b)=>a-b),[3254,3255],'Elemental HERO Terra Firma fusion materials');
   for(const id of [3254,3255])assert((CARD_RELATIONS198[id]?.b??[]).includes(3253),'material '+id+' points back to Terra Firma');
