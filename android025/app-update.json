@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.135",
-  "versionCode": 154,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.135/YGOClassicExpedition-0.18.135-arm64.apk",
-  "sizeBytes": 905647506,
-  "sha256": "32ca515108d9e5d111f67f082e706d34334ee836e1cbc16711e05ed871a59b67",
-  "releaseNotes": "시작 덱의 덱 보기에서 특성과 시작 유물의 효과를 확인할 수 있습니다.\n유물 이미지에 다른 유물의 일부가 섞여 보이는 문제를 고쳤습니다.\nAI가 해피의 애완 드래곤－세인트 파이어 기가의 공격 대상 제한을 고려합니다."
+  "versionName": "0.18.136",
+  "versionCode": 155,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.136/YGOClassicExpedition-0.18.136-arm64.apk",
+  "sizeBytes": 905661230,
+  "sha256": "40174696bd668c1eb830d4e739ccfe5755df59a108c0e20fe62e71746fc483ea",
+  "releaseNotes": "AI가 작렬 장갑의 파괴를 자기 체인으로 막는 일을 줄였습니다.\n듀얼 프로필에서 잘리던 캐릭터 얼굴의 위치와 크기를 조정했습니다."
 }

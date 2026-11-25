@@ -3,55 +3,64 @@
   "format": "YGODLT92",
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.135",
-  "versionCode": 154,
-  "sha256": "32ca515108d9e5d111f67f082e706d34334ee836e1cbc16711e05ed871a59b67",
-  "sizeBytes": 905647506,
+  "versionName": "0.18.136",
+  "versionCode": 155,
+  "sha256": "40174696bd668c1eb830d4e739ccfe5755df59a108c0e20fe62e71746fc483ea",
+  "sizeBytes": 905661230,
   "patches": [
+    {
+      "baseVersionName": "0.18.135",
+      "baseVersionCode": 154,
+      "baseSizeBytes": 905647506,
+      "baseSha256": "32ca515108d9e5d111f67f082e706d34334ee836e1cbc16711e05ed871a59b67",
+      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.136/YGOClassicExpedition-0.18.135-to-0.18.136-arm64.delta092.gz",
+      "patchSizeBytes": 22665336,
+      "patchSha256": "0565a048a681d88c9407f4732d4e4213232aaef7711acf65710073082c596706"
+    },
     {
       "baseVersionName": "0.18.134",
       "baseVersionCode": 153,
       "baseSizeBytes": 905641498,
       "baseSha256": "d205f863a817a41c4d5fd5d822fb84efed2c511ff53111990d5c65716298d8bb",
-      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.135/YGOClassicExpedition-0.18.134-to-0.18.135-arm64.delta092.gz",
-      "patchSizeBytes": 22654022,
-      "patchSha256": "0b851476e35f104fab58c65181e58dd4b6d7bf129078af3cfee070fe86945f29"
+      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.136/YGOClassicExpedition-0.18.134-to-0.18.136-arm64.delta092.gz",
+      "patchSizeBytes": 22665359,
+      "patchSha256": "ae2f8c3a0fa49cff40c12dcda1403214062364f01c5ff7bda1c11d02a10c96a1"
     },
     {
       "baseVersionName": "0.18.133",
       "baseVersionCode": 152,
       "baseSizeBytes": 905639926,
       "baseSha256": "4b55d8004a0b852ccf79e234efeeb5311f5bd441dba553703023eaa71298290d",
-      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.135/YGOClassicExpedition-0.18.133-to-0.18.135-arm64.delta092.gz",
-      "patchSizeBytes": 22756310,
-      "patchSha256": "4ee44bfe62a3f0d1f4ec0989f1e19af78ac7f76c16f7721cbe068671b7f6aea0"
+      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.136/YGOClassicExpedition-0.18.133-to-0.18.136-arm64.delta092.gz",
+      "patchSizeBytes": 22767748,
+      "patchSha256": "0f33deffd6fd4bd2673bbb2e8d00e9f50efb3c03c3e19d0fe23406334c9d9ac7"
     },
     {
       "baseVersionName": "0.18.132",
       "baseVersionCode": 151,
       "baseSizeBytes": 891479620,
       "baseSha256": "5439b4d538706845ba7cb2e538ff78536330189486e81cea9979363432fb8257",
-      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.135/YGOClassicExpedition-0.18.132-to-0.18.135-arm64.delta092.gz",
-      "patchSizeBytes": 36835078,
-      "patchSha256": "10f9f0bf453f40f245d80c258ad0485894276955c35734688e0132316ed50ada"
+      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.136/YGOClassicExpedition-0.18.132-to-0.18.136-arm64.delta092.gz",
+      "patchSizeBytes": 36847838,
+      "patchSha256": "4b0a3d2e5ac6f44d2c3d5fab094bcfa16edd1781bfda063b9e84257a19809610"
     },
     {
       "baseVersionName": "0.18.131",
       "baseVersionCode": 150,
       "baseSizeBytes": 861526094,
       "baseSha256": "43dc25e1f8592e6ae9c1f788c5d7e40b4c47244f327966d56411a4fc68a3c76b",
-      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.135/YGOClassicExpedition-0.18.131-to-0.18.135-arm64.delta092.gz",
-      "patchSizeBytes": 66743268,
-      "patchSha256": "acfb7f7cf5607ec3679751d5716c6090c9e8c03b8dcd2d78ab786a1fcce1bcc0"
+      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.136/YGOClassicExpedition-0.18.131-to-0.18.136-arm64.delta092.gz",
+      "patchSizeBytes": 66755568,
+      "patchSha256": "b5e103bbe1d6d164560c5773ee6fd1c68f83ba878cda9a1e818ca152139b94c8"
     },
     {
       "baseVersionName": "0.18.130",
       "baseVersionCode": 149,
       "baseSizeBytes": 835999124,
       "baseSha256": "a4ac332b321462d7868e2ff22277d59596a8ab61ae93ce9625cc50fac9d49fad",
-      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.135/YGOClassicExpedition-0.18.130-to-0.18.135-arm64.delta092.gz",
-      "patchSizeBytes": 92022323,
-      "patchSha256": "1db490be3a0a33a98119110d71d4fa007073174f4d76f719e3e5ee52a79fe7b5"
+      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.136/YGOClassicExpedition-0.18.130-to-0.18.136-arm64.delta092.gz",
+      "patchSizeBytes": 92034494,
+      "patchSha256": "e0398eedb8e39e4dac358f64df6d30653c0573c80610e779bcf80cf9b4a16d45"
     }
   ]
 }
