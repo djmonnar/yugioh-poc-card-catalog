@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3302",
+  "attack": 2500,
+  "attribute": 4,
+  "categories": [
+    "지원-여섯 무사",
+    "효과-발동 제한",
+    "보호-파괴 대체"
+  ],
+  "code": 63176202,
+  "defense": 2400,
+  "description": "자신 필드 위에 \"여섯 무사\"라는 이름이 붙은 몬스터가 2장 이상 존재할 경우, 이 카드는 패에서 특수 소환할 수 있다. 이 카드가 필드 위에 앞면 표시로 존재하는 한, 상대는 1턴에 1번밖에 마법 / 함정 카드를 발동할 수 없다. 또한, 필드 위에 앞면 표시로 존재하는 이 카드가 파괴될 경우, 대신에 자신 필드 위에 앞면 표시로 존재하는 \"여섯 무사\"라는 이름이 붙은 몬스터 1장을 파괴할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "35382c09c63a08bbea164be5535e4348bee929cff7f2e82520ab09d7a5f191f8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3302.jpg",
+  "level": 7,
+  "links": [],
+  "name": "대장군 시엔",
+  "name_english": "Great Shogun Shien",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "UR",
+  "search_aliases": [
+    "대장군 시엔",
+    "Great Shogun Shien"
+  ],
+  "source_id": 3302,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2334
+}

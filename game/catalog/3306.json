@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3306",
+  "attack": 1500,
+  "attribute": 4,
+  "categories": [
+    "지원-여섯 무사",
+    "면역-함정"
+  ],
+  "code": 41589166,
+  "defense": 1000,
+  "description": "이 카드는 함정의 효과를 받지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "bbe9867817a51d00fd224808d30cb6acb3398f9593adaf1051471d63aaf21fc9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3306.jpg",
+  "level": 4,
+  "links": [],
+  "name": "천하인 시엔",
+  "name_english": "Tenkabito Shien",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 128,
+  "rarity": "SR",
+  "search_aliases": [
+    "천하인 시엔",
+    "Tenkabito Shien"
+  ],
+  "source_id": 3306,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2338
+}

@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3304",
+  "attack": 1600,
+  "attribute": 1,
+  "categories": [
+    "지원-여섯 무사",
+    "무사도 카운터",
+    "발동-소환 시",
+    "효과-공격력 상승"
+  ],
+  "code": 98162021,
+  "defense": 1000,
+  "description": "이 카드가 일반 소환에 성공했을 때, 이 카드에 무사도 카운터를 1개 놓는다(최대 1개까지). 이 카드에 무사도 카운터가 얹혀 있을 경우, 이 카드의 공격력은 300 포인트 올린다. 또한, 1턴에 1번, 이 카드에 얹혀 있는 무사도 카운터를 제거하고, 필드 위에 앞면 표시로 존재하는 무사도 카운터를 놓을 수 있는 카드 1장을 선택하고 무사도 카운터를 1개 놓을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "47d40d67a58bd09f16f5f28d62e4714ddc2634a59f5cd25440aa641eea1edeaf",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3304.jpg",
+  "level": 4,
+  "links": [],
+  "name": "시엔의 황무자",
+  "name_english": "Shien's Daredevil",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "시엔의 황무자",
+    "Shien's Daredevil"
+  ],
+  "source_id": 3304,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2336
+}

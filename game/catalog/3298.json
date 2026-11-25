@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3298",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-여섯 무사",
+    "무사도 카운터",
+    "효과-파괴",
+    "파괴-몬스터",
+    "효과-바운스"
+  ],
+  "code": 23212990,
+  "defense": 0,
+  "description": "자신 필드 위에 존재하는 무사도 카운터를 1개 제거하고, 이하의 효과에서 1개를 선택하고 발동한다.\n●상대 필드 위에 존재하는 몬스터 1장을 선택하고 파괴한다.\n●상대 필드 위에 존재하는 카드 1장을 선택하고 주인의 패로 되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "8699946b8eda9227c826e061a1b9b07407ad267e3073770201438545a311d6a3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3298.jpg",
+  "level": 0,
+  "links": [],
+  "name": "여섯 무식 풍뢰참",
+  "name_english": "Six Strike - Thunder Blast",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "여섯 무식 풍뢰참",
+    "Six Strike - Thunder Blast"
+  ],
+  "source_id": 3298,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2330
+}

@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3294",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-여섯 무사",
+    "발동-릴리즈",
+    "소환-덱리크루터"
+  ],
+  "code": 54913680,
+  "defense": 0,
+  "description": "①: 자신 필드의 앞면 표시의 \"여섯 무사\" 몬스터 2장을 릴리스하고 발동할 수 있다. 덱에서 \"대장군 시엔\" 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "92772515bc85009aab5da75aad96618356fc57e6bacdee86e2bbf03ade1a7800",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3294.jpg",
+  "level": 0,
+  "links": [],
+  "name": "여섯 무의 서",
+  "name_english": "Six Scrolls of the Samurai",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "여섯 무의 서",
+    "Six Scrolls of the Samurai"
+  ],
+  "source_id": 3294,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 2326
+}

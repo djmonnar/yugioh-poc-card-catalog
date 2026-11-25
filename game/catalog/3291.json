@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3291",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-여섯 무사",
+    "소환-묘지"
+  ],
+  "code": 21007444,
+  "defense": 0,
+  "description": "①: 자신 묘지의 \"여섯 무사\" 몬스터 2장을 대상으로 하고 발동할 수 있다. 그 몬스터를 공격 표시로 특수 소환한다. 이 효과로 특수 소환한 몬스터는 이 턴의 엔드 페이즈에 파괴되고, 자신은 파괴된 몬스터 공격력의 합계만큼의 데미지를 받는다.",
+  "draw_enabled": true,
+  "identity_key": "a946a434fe67f4c2fa6f5a1a96d58059f21e96b3489663608e6cf679bf7ce102",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3291.jpg",
+  "level": 0,
+  "links": [],
+  "name": "양날의 활인검술",
+  "name_english": "Double-Edged Sword Technique",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "양날의 활인검술",
+    "Double-Edged Sword Technique"
+  ],
+  "source_id": 3291,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2323
+}

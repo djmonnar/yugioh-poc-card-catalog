@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3305",
+  "attack": 1200,
+  "attribute": 1,
+  "categories": [
+    "지원-여섯 무사",
+    "발동-소환 시",
+    "효과-공격 제한",
+    "효과-소환 봉쇄"
+  ],
+  "code": 98126725,
+  "defense": 400,
+  "description": "자신 필드 위에 \"여섯 무사\"라는 이름이 붙은 몬스터가 앞면 표시로 존재할 경우에 이 카드가 일반 소환에 성공했을 때, 종족을 1개 선언하고 발동한다. 이 카드가 필드 위에 앞면 표시로 존재하는 한, 선언한 종족의 몬스터는 공격 선언을 할 수 없고, 양쪽의 플레이어는 선언한 종족의 몬스터를 특수 소환할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "0d4d5f6b1fd721b8e2f84f485673944aaec5c18fc96b9fedba222dc4a5ed8f7d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3305.jpg",
+  "level": 4,
+  "links": [],
+  "name": "시엔의 참모",
+  "name_english": "Shien's Advisor",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "시엔의 참모",
+    "Shien's Advisor"
+  ],
+  "source_id": 3305,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2337
+}

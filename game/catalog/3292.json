@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3292",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-여섯 무사",
+    "지원-장착",
+    "효과-공격력 상승",
+    "효과-수비력 상승",
+    "보호-파괴 대체"
+  ],
+  "code": 12324546,
+  "defense": 0,
+  "description": "\"여섯 무사\"라는 이름이 붙은 몬스터에만 장착 가능. 장착 몬스터의 공격력과 수비력은 200 포인트 올린다. 장착 몬스터가 파괴될 경우, 대신에 이 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "3239867580b761b6ade938712b6fc314e087d1fce362aef5f7a97a8988a9d18d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3292.jpg",
+  "level": 0,
+  "links": [],
+  "name": "칠흑의 명마",
+  "name_english": "Legendary Ebon Steed",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "search_aliases": [
+    "칠흑의 명마",
+    "Legendary Ebon Steed"
+  ],
+  "source_id": 3292,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 2324
+}

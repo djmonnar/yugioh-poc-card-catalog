@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3316",
+  "attack": 1700,
+  "attribute": 32,
+  "categories": [
+    "지원-여섯 무사",
+    "발동-전투 시",
+    "보호-파괴 대체",
+    "효과-파괴",
+    "파괴-몬스터"
+  ],
+  "code": 27782503,
+  "defense": 1200,
+  "description": "자신 필드 위에 \"여섯 무사－이로우\" 이외의 \"여섯 무사\"라는 이름이 붙은 몬스터가 존재하고, 이 카드가 뒷면 수비 표시의 몬스터를 공격했을 경우, 데미지 계산을 실행하지 않고 뒷면 수비 표시인 채로 그 몬스터를 파괴한다. 또한, 필드 위에 앞면 표시로 존재하는 이 카드가 파괴될 경우, 대신에 이 카드 이외의 자신 필드 위에 앞면 표시로 존재하는 \"여섯 무사\"라는 이름이 붙은 몬스터 1장을 파괴할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "fdea075ec77da79417f323b21ce2790071a0e62f75b2a4a0467e8ad678273116",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3316.jpg",
+  "level": 4,
+  "links": [],
+  "name": "여섯 무사－이로우",
+  "name_english": "The Six Samurai - Irou",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "여섯 무사－이로우",
+    "The Six Samurai - Irou"
+  ],
+  "source_id": 3316,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2348
+}

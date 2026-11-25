@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3322",
+  "attack": 2500,
+  "attribute": 16,
+  "categories": [
+    "지원-게이트가디언",
+    "지원-가디언",
+    "소환-제외 코스트",
+    "효과-덱샐비지",
+    "발동-필드를 벗어났을 때",
+    "소환-제외"
+  ],
+  "code": 34904525,
+  "defense": 2200,
+  "description": "\"번개 마신－썬가\" ＋ \"풍 마신－휴가\"\n자신 필드의 상기의 카드를 제외했을 경우에만 특수 소환할 수 있다. 이 카드명의 ①의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 자신 메인 페이즈에 발동할 수 있다. \"번개 마신－썬가\" \"풍 마신－휴가\" \"수 마신－스가\"의 카드명이 전부 쓰여진 마법 / 함정 카드 1장을 덱에서 패에 넣는다. ②: 특수 소환한 앞면 표시의 이 카드가 상대에 의해 필드에서 벗어났을 경우에 발동할 수 있다. 자신의 제외 상태의, \"번개 마신－썬가\"나 \"풍 마신－휴가\" 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "29e64285f35f145d9dda386d1f17914dd3a9d21d66536a43e10be2ac801982f2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3322.jpg",
+  "level": 9,
+  "links": [],
+  "name": "번개풍 마신－게이트 가디언",
+  "name_english": "Gate Guardian of Thunder and Wind",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4096,
+  "rarity": "SR",
+  "search_aliases": [
+    "번개풍 마신－게이트 가디언",
+    "Gate Guardian of Thunder and Wind"
+  ],
+  "source_id": 3322,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 2354
+}

@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3311",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-여섯 무사",
+    "소환-덱리크루터"
+  ],
+  "code": 27821104,
+  "defense": 0,
+  "description": "①: 자신 필드의 \"여섯 무사\" 몬스터 1장을 대상으로 하고 발동할 수 있다. 대상 몬스터와는 카드명이 다르고, 같은 공격력을 가지는 \"여섯 무사\" 몬스터 1장을 덱에서 특수 소환한다. 이 턴의 엔드 페이즈에 대상 몬스터는 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "beb0ef845bd80bdba098261eef54d79e2fd452f92c994768724f984a9fec1c4e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3311.jpg",
+  "level": 0,
+  "links": [],
+  "name": "여섯 무사의 황행",
+  "name_english": "Asceticism of the Six Samurai",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "여섯 무사의 황행",
+    "Asceticism of the Six Samurai"
+  ],
+  "source_id": 3311,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 2343
+}

@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3303",
+  "attack": 2200,
+  "attribute": 16,
+  "categories": [
+    "지원-여섯 무사",
+    "소환-제외 코스트",
+    "효과-파괴",
+    "파괴-몬스터"
+  ],
+  "code": 38280762,
+  "defense": 1200,
+  "description": "이 카드는 일반 소환/세트할 수 없다. 자신 묘지의 \"여섯 무사\"라는 이름이 붙은 몬스터 2장을 게임에서 제외하는 것으로만 특수 소환할 수 있다. 필드 위에 앞면 표시로 존재하는 몬스터 1장을 파괴할 수 있다. 이 효과를 발동할 경우, 이 턴에 이 카드는 공격 선언을 할 수 없다. 이 효과는 1턴에 1번밖에 사용할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "6a3449d3d1209fdffedf2cab5edd7cb350ed03287b3ec980ed7a265cc894a37c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3303.jpg",
+  "level": 6,
+  "links": [],
+  "name": "시엔의 노중 에니시",
+  "name_english": "Enishi, Shien's Chancellor",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "UR",
+  "search_aliases": [
+    "시엔의 노중 에니시",
+    "Enishi, Shien's Chancellor"
+  ],
+  "source_id": 3303,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "특수 소환 몬스터",
+  "web_slot": 2335
+}

@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3290",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-여섯 무사",
+    "발동-파괴 시",
+    "소환-패에서"
+  ],
+  "code": 77847678,
+  "defense": 0,
+  "description": "자신 필드 위에 존재하는 \"여섯 무사\"라는 이름이 붙은 몬스터가 전투에 의해서 파괴되었을 경우에 발동할 수 있다. 패에서 \"여섯 무사\"라는 이름이 붙은 몬스터를 2장까지 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "806e326a309a8166f0e2bf21a22ad0181243887d0ced42e7d8d74ade1e64581e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3290.jpg",
+  "level": 0,
+  "links": [],
+  "name": "시엔의 계략",
+  "name_english": "Shien's Scheme",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "시엔의 계략",
+    "Shien's Scheme"
+  ],
+  "source_id": 3290,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2322
+}

@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3310",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-여섯 무사",
+    "무사도 카운터",
+    "발동-묘지로 보내기",
+    "효과-드로우"
+  ],
+  "code": 72345736,
+  "defense": 0,
+  "description": "①: \"여섯 무사\" 몬스터가 일반 소환 / 특수 소환될 때마다 이 카드에 무사도 카운터를 1개 놓는다(최대 2개까지). ②: 무사도 카운터가 놓여 있는 이 카드를 묘지로 보내고 발동할 수 있다. 이 카드에 놓여 있던 무사도 카운터의 수만큼, 자신은 덱에서 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "2aed505fa18ce73ec7279d04a2a54f4c519b300627d0675c1613bac5d5a1647d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3310.jpg",
+  "level": 0,
+  "links": [],
+  "name": "여섯 무사의 결속",
+  "name_english": "Six Samurai United",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "여섯 무사의 결속",
+    "Six Samurai United"
+  ],
+  "source_id": 3310,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 2342
+}

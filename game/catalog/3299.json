@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3299",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-여섯 무사",
+    "무사도 카운터",
+    "효과-공격력 감소"
+  ],
+  "code": 53819808,
+  "defense": 0,
+  "description": "\"여섯 무사\"라는 이름이 붙은 몬스터가 일반 소환/특수 소환될 때마다, 이 카드에 무사도 카운터를 1개 놓는다. 상대 필드 위에 앞면 표시로 존재하는 몬스터의 공격력은, 이 카드에 얹혀 있는 무사도 카운터의 수 × 100 포인트 내린다.",
+  "draw_enabled": true,
+  "identity_key": "1930c5639dfc97322a19c3805d898120fd05e6dd718d227c88e6c78750fb1551",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3299.jpg",
+  "level": 0,
+  "links": [],
+  "name": "여섯 무의 사원",
+  "name_english": "Temple of the Six",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "여섯 무의 사원",
+    "Temple of the Six"
+  ],
+  "source_id": 3299,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "필드 마법",
+  "web_slot": 2331
+}

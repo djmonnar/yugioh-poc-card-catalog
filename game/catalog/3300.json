@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3300",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-여섯 무사",
+    "무사도 카운터",
+    "발동-묘지로 보내기",
+    "소환-덱리크루터"
+  ],
+  "code": 47436247,
+  "defense": 0,
+  "description": "①: \"여섯 무사\" 몬스터가 일반 소환 / 특수 소환될 때마다, 이 카드에 무사도 카운터를 1개 놓는다. ②: 무사도 카운터가 놓여 있는 이 카드를 묘지로 보내고 발동할 수 있다. 이 카드에 놓여 있던 무사도 카운터의 수 이하의 레벨을 가지는, \"여섯 무사\" 효과 몬스터 또는 \"시엔\" 효과 몬스터 1장을 덱에서 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "c6db8d561af05024ce73aa928bc5159b17bf279bad3edb100ea0362762401c65",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3300.jpg",
+  "level": 0,
+  "links": [],
+  "name": "시엔의 도량",
+  "name_english": "Shien's Dojo",
+  "native_type": 131074,
+  "normal_limit": 2,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "시엔의 도량",
+    "Shien's Dojo"
+  ],
+  "source_id": 3300,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 2332
+}

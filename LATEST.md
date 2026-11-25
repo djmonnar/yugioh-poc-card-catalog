@@ -1,11 +1,10 @@
 # 최근 변경
 
-웹 DB 개정 1017 (이전 기록 975)
+웹 DB 개정 1018 (이전 기록 1017)
 
-- game (game) · 변경 1: starter_loadouts153
-- 캐릭터 (game/characters) · 변경 3: character-asuka-197, character-paradox-brothers-090, character-player-killer-197
+- content-profiles (content-profiles) · 변경 1: content-profiles
+- 카드 (game/catalog) · 변경 1: 591 여섯 무사의 시종 / 추가 42: 3286 육척경구옥, 3287 신속한 구족, 3288 질풍! 흉살진, 3289 여섯 무파 이도류, 3290 시엔의 계략, 3291 양날의 활인검술, 3292 칠흑의 명마, 3293 시엔의 안개성 …
+- game/deck_rules035 (game/deck_rules035) · 변경 1: _rest
+- 덱 금제 (game/deck_rules035/rows) · 추가 42: 3286, 3287, 3288, 3289, 3290, 3291, 3292, 3293 …
 - game/opponents (game/opponents) · 변경 1: _rest
-- 상대 편성 (game/opponents/opponents) · 변경 13: enc-a5d48a0d-802e-40dd-a118-97613f10a1ab 방랑 듀얼리스트 레온, enc-d11db88a-f09c-4887-a028-7c48fa25b477 방랑 듀얼리스트 레온, enc-7c0d7d82-6004-475f-b5d7-b0cb7146fe72 전우혁, enc-7ca8250d-0527-4a06-9af7-6e44c725082f 미궁형제, enc-cf77cbc1-ed36-490d-998d-dcdfff0697e7 미궁형제, enc-e3a4ccbb-4f1b-4208-9d31-c5e9c719f98b 미궁형제, enc-9d8caf17-27b1-4502-8a50-7e43e59a43fb 크로노스 데 메디치, enc-b2229cba-4fdb-48bd-b822-e1b42cb4e6f4 크로노스 데 메디치 … / 추가 7: enc-1f4b83fd-4410-4818-8697-a21edd0a1114 텐죠인 아스카, enc-5686c917-79fa-42fe-908d-ac4ba74f3dc2 텐죠인 아스카, enc-c76f1ec9-5b8d-4a8c-ac1d-6d98f94e091d 어둠의 플레이어 킬러, enc-2966be46-4261-4baf-a1fe-892fdcbca2b7 어둠의 플레이어 킬러, enc-580d854b-994f-4bc7-b389-3e67c0a78b02 어둠의 플레이어 킬러, enc-ef44628b-8c7b-4269-ba93-ceaebec16e94 어둠의 플레이어 킬러, enc-723290f2-e818-4a49-8b0a-efec964a03e5 어둠의 플레이어 킬러
-- game/starters (game/starters) · 변경 1: _rest
-- 시작 덱 (game/starters/starters) · 변경 4: a3345651-babd-41b4-9a46-a8bc5a8dd309 그란마그, 854fa992-8c89-4c97-9db6-53609a3314e9 킹 오브 비스트, unified039:deck-81ad2be0-b818-4711-bada-f40172e420fb 앤틱기어골렘, unified039:deck-1f3f70bb-af74-4b82-89d9-a25116de821e 데몬소환 / 추가 7: unified039:deck-edd678c3-2b6a-49d7-a7ef-cb23903fd66a 스노우드래곤, unified039:deck-be5c71cc-6392-45b6-8bb2-411c17e920d6 파멸의마왕 가란돌프, unified039:deck-1cae9870-3080-43a5-b31f-d577d7bb117f 게이트가디언, unified039:deck-5fe2213f-81e5-4e57-9c83-b7a4eed920bc 체스데몬, unified039:deck-b130f463-b942-4f0e-a40e-a0fe2cd51159 뱀파이어 로드, unified039:deck-152da6da-61d3-4f1b-a88d-7d0475dbb5ce 가이아, unified039:deck-b50ee69d-b47a-4087-b409-d7a3d1428692 전갈단 소집 / 삭제 1: unified039:deck-56e3c4d8-fb99-44c6-9f8c-8180f1e29c44 초융합-일반몬스터
-- 연습 덱 (practice-decks) · 변경 6: deck-1cae9870-3080-43a5-b31f-d577d7bb117f 게이트가디언, deck-1f3f70bb-af74-4b82-89d9-a25116de821e 데몬소환, deck-81ad2be0-b818-4711-bada-f40172e420fb 앤틱기어골렘, starter-template-97498efc0d5d7e11956069f3792ab529 그란마그, starter-template-fe3ce983a1b837fb1b43f9a98a522f75 킹 오브 비스트, _rest / 추가 4: deck-1fd0dfbb-0a29-459f-a046-25b2b6ae3713 뱀파이어 로드, deck-b130f463-b942-4f0e-a40e-a0fe2cd51159 뱀파이어 로드, deck-e9cb9c1a-98a2-4b75-a5d1-40949eaca301 뱀파이어 로드, deck-edd678c3-2b6a-49d7-a7ef-cb23903fd66a 스노우드래곤
+- 연습 덱 (practice-decks) · 변경 1: _rest

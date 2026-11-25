@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3327",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-게이트가디언",
+    "효과-파괴",
+    "파괴-몬스터",
+    "파괴-마법",
+    "파괴-함정",
+    "발동-묘지에서",
+    "발동-제외",
+    "효과-덱샐비지",
+    "효과-제외샐비지"
+  ],
+  "code": 60176682,
+  "defense": 0,
+  "description": "이 카드명의 ②의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 자신 필드에 \"게이트 가디언\" 몬스터가 존재할 경우, 필드의 카드 1장을 대상으로 하고 발동할 수 있다. 그 카드를 파괴한다. ②: 자신 메인 페이즈에 묘지의 이 카드를 제외하고 발동할 수 있다. 자신의 덱 / 제외 상태의 \"번개 마신－썬가\" \"풍 마신－휴가\" \"수 마신－스가\" 중 어느 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "17ff3405bcd050be9b315cca4bc85049f70c5373d75443d702ecdc5341901ba0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3327.jpg",
+  "level": 0,
+  "links": [],
+  "name": "마풍충격파",
+  "name_english": "Double Attack! Wind and Thunder!!",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "마풍충격파",
+    "Double Attack! Wind and Thunder!!"
+  ],
+  "source_id": 3327,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 2359
+}

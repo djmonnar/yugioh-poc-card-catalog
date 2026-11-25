@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3323",
+  "attack": 2450,
+  "attribute": 8,
+  "categories": [
+    "지원-게이트가디언",
+    "지원-가디언",
+    "소환-제외 코스트",
+    "무효-마법",
+    "무효-함정",
+    "발동-필드를 벗어났을 때",
+    "소환-제외"
+  ],
+  "code": 61398234,
+  "defense": 2300,
+  "description": "\"풍 마신－휴가\" ＋ \"수 마신－스가\"\n자신 필드의 상기의 카드를 제외했을 경우에만 특수 소환할 수 있다. 이 카드명의 ①의 효과는 1턴에 2번까지 사용할 수 있다. ①: 상대가 필드의 마법 / 함정 카드의 효과를 발동했을 때에 발동할 수 있다(동일한 체인 위에서는 1번까지). 그 효과를 무효로 한다. ②: 특수 소환한 앞면 표시의 이 카드가 상대에 의해 필드에서 벗어났을 경우에 발동할 수 있다. 자신의 제외 상태의, \"풍 마신－휴가\"나 \"수 마신－스가\" 1장을 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "22957cf12ec37d8ccae80ed4e82a57ed1089eb33289299f5a4c904953179a7d2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3323.jpg",
+  "level": 9,
+  "links": [],
+  "name": "풍수 마신－게이트 가디언",
+  "name_english": "Gate Guardian of Wind and Water",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "search_aliases": [
+    "풍수 마신-게이트 가디언",
+    "풍수 마신－게이트 가디언",
+    "Gate Guardian of Wind and Water"
+  ],
+  "source_id": 3323,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 2355
+}

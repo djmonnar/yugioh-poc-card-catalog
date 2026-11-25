@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3320",
+  "attack": 1500,
+  "attribute": 4,
+  "categories": [
+    "지원-여섯 무사",
+    "보호-파괴 대체",
+    "효과-파괴",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 90397998,
+  "defense": 1000,
+  "description": "자신 필드 위에 \"여섯 무사－카몬\" 이외의 \"여섯 무사\"라는 이름이 붙은 몬스터가 존재할 경우, 1턴에 1번, 필드 위에 앞면 표시로 존재하는 마법 / 함정 카드 1장을 선택하고 파괴할 수 있다. 이 효과를 발동하는 턴에, 이 카드는 공격 선언을 할 수 없다. 또한, 필드 위에 앞면 표시로 존재하는 이 카드가 파괴될 경우, 대신에 이 카드 이외의 자신 필드 위에 앞면 표시로 존재하는 \"여섯 무사\"라는 이름이 붙은 몬스터 1장을 파괴할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "b272971ec8f850aec4ffab8785058f70efe8cb7d3a8175b4da1bb192922e78b7",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3320.jpg",
+  "level": 3,
+  "links": [],
+  "name": "여섯 무사－카몬",
+  "name_english": "The Six Samurai - Kamon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "여섯 무사－카몬",
+    "The Six Samurai - Kamon"
+  ],
+  "source_id": 3320,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2352
+}

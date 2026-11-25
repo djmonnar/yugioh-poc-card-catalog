@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3312",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-여섯 무사",
+    "발동-묘지로 보내기",
+    "소환-묘지"
+  ],
+  "code": 27178262,
+  "defense": 0,
+  "description": "자신 필드 위에 앞면 표시로 존재하는 \"여섯 무사\"라는 이름이 붙은 몬스터 1장을 묘지로 보내고 발동한다. 묘지에 존재하는 \"여섯 무사\"라는 이름이 붙은 몬스터 1장을 자신 필드 위에 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "cca0abc797e096bb4fe706277216e6e57b18960bb2cea2e8bc6d07145ca5ef73",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3312.jpg",
+  "level": 0,
+  "links": [],
+  "name": "여섯 무사의 도리",
+  "name_english": "Cunning of the Six Samurai",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "여섯 무사의 도리",
+    "Cunning of the Six Samurai"
+  ],
+  "source_id": 3312,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 2344
+}

@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3301",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-여섯 무사",
+    "무사도 카운터",
+    "효과-공격력 상승",
+    "효과-덱샐비지",
+    "효과-묘지샐비지",
+    "소환-묘지"
+  ],
+  "code": 27970830,
+  "defense": 0,
+  "description": "①: \"여섯 무사\" 몬스터가 일반 소환 / 특수 소환될 때마다 이 카드에 무사도 카운터를 2개 놓는다. ②: 자신 필드의 무사도 카운터를 이하의 수만큼 제거하고, 그 효과를 발동할 수 있다.\n●2개: 필드의 \"여섯 무사\" 효과 몬스터 또는 \"시엔\" 효과 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터의 공격력은 턴 종료시까지 500 올린다.\n●4개: 자신의 덱 / 묘지에서 \"여섯 무사\" 몬스터 1장을 고르고 패에 넣는다.\n●6개: 자신 묘지의 \"시엔\" 효과 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "6984c1c52c4a27996bc1abce270567f4aa266ce67d17e826e920639edd89ac57",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3301.jpg",
+  "level": 0,
+  "links": [],
+  "name": "여섯 무의 문",
+  "name_english": "Gateway of the Six",
+  "native_type": 131074,
+  "normal_limit": 1,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "search_aliases": [
+    "여섯 무의 문",
+    "Gateway of the Six"
+  ],
+  "source_id": 3301,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 2333
+}

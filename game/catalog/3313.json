@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3313",
+  "attack": 500,
+  "attribute": 1,
+  "categories": [
+    "지원-여섯 무사",
+    "지원-유니온",
+    "지원-장착",
+    "효과-장착",
+    "효과-공격력 상승",
+    "효과-수비력 상승",
+    "보호-파괴 대체",
+    "발동-파괴 시",
+    "효과-드로우"
+  ],
+  "code": 65685470,
+  "defense": 500,
+  "description": "1턴에 1번만 자신의 메인 페이즈에 장착 카드로 취급하여 자신 필드 위의 \"여섯 무사\"라는 이름이 붙은 몬스터에 장착, 또는 장착을 해제하고 앞면 공격 표시로 특수 소환할 수 있다. 이 효과로 장착 카드 취급이 되어 있는 경우에만, 장착 몬스터의 공격력/수비력은 500 포인트 올린다. 장착 몬스터가 상대 몬스터를 전투에 의해서 파괴했을 경우, 자신은 카드를 1장 드로우한다(1장의 몬스터가 장착할 수 있는 유니온은 1장까지. 장착 몬스터가 파괴될 경우는 대신에 이 카드를 파괴한다).",
+  "draw_enabled": true,
+  "identity_key": "c996cbb17d27cad3236fa3eaec887d4b39098809bd5c3091dad80d5251250ee2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3313.jpg",
+  "level": 3,
+  "links": [],
+  "name": "여섯 무사의 영물",
+  "name_english": "Spirit of the Six Samurai",
+  "native_type": 1057,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "여섯 무사의 영물",
+    "Spirit of the Six Samurai"
+  ],
+  "source_id": 3313,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "유니온 몬스터",
+  "web_slot": 2345
+}

@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3295",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-여섯 무사",
+    "지원-저레벨",
+    "효과-덱샐비지"
+  ],
+  "code": 54031490,
+  "defense": 0,
+  "description": "①: 덱에서 레벨 3 이하의 \"여섯 무사\" 몬스터 1장을 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "84aba46160cea90fabfbfa38af09da153915d0e21f9272de0f5a8f049aacecb1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3295.jpg",
+  "level": 0,
+  "links": [],
+  "name": "시엔의 봉화",
+  "name_english": "Shien's Smoke Signal",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "시엔의 봉화",
+    "Shien's Smoke Signal"
+  ],
+  "source_id": 3295,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 2327
+}

@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3297",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-여섯 무사",
+    "소환-패에서",
+    "소환-묘지",
+    "효과-뒷면표시",
+    "발동-묘지에서",
+    "발동-제외",
+    "효과-묘지샐비지"
+  ],
+  "code": 28273805,
+  "defense": 0,
+  "description": "이 카드명의 ①②의 효과는 1턴에 1번, 어느 쪽이든 1개밖에 사용할 수 없다. ①: 이하의 효과에서 1개를 고르고 적용한다. 자신 필드에 \"여섯 무사\" 몬스터가 2장 이상 존재할 경우, 양쪽을 고르고 적용할 수 있다. ●자신의 패 / 묘지에서 공격력 2000 이하의 \"여섯 무사\" 몬스터 1장을 특수 소환한다. ●상대 필드의 공격력 2000 이하의 몬스터 1장을 뒷면 수비 표시로 한다. ②: 자신 메인 페이즈에 묘지의 이 카드를 제외하고, 자신 묘지의 \"여섯 무사\" 몬스터 1장을 대상으로 하여 발동할 수 있다. 그 몬스터를 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "aafca318831d01f8979cc496c3364b061a3066f7053a71776f9480c63418f1fd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3297.jpg",
+  "level": 0,
+  "links": [],
+  "name": "여섯 무식 습쌍진",
+  "name_english": "Six Strike - Double Assault",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "search_aliases": [
+    "여섯 무식 습쌍진",
+    "Six Strike - Double Assault"
+  ],
+  "source_id": 3297,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 2329
+}

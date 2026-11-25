@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3309",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-여섯 무사",
+    "소환-묘지"
+  ],
+  "code": 46874015,
+  "defense": 0,
+  "description": "자신 묘지의 \"여섯 무사\"라는 이름이 붙은 몬스터 1장을 선택하고 발동할 수 있다. 선택한 몬스터를 묘지에서 특수 소환한다. 이 효과로 특수 소환한 몬스터는 이 턴의 엔드 페이즈시에 파괴된다.",
+  "draw_enabled": true,
+  "identity_key": "b1a7a874323b9422bd1204eb82a2de759f89485e8160883baa5d9bb41bcc969d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3309.jpg",
+  "level": 0,
+  "links": [],
+  "name": "여섯 무사의 방문!",
+  "name_english": "Return of the Six Samurai",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "여섯 무사의 방문!",
+    "Return of the Six Samurai"
+  ],
+  "source_id": 3309,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2341
+}

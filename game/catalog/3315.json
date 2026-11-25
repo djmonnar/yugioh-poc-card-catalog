@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3315",
+  "attack": 1400,
+  "attribute": 8,
+  "categories": [
+    "지원-여섯 무사",
+    "효과-추가공격",
+    "보호-파괴 대체"
+  ],
+  "code": 31904181,
+  "defense": 700,
+  "description": "자신 필드 위에 \"여섯 무사－니사시\" 이외의 \"여섯 무사\"라는 이름이 붙은 몬스터가 존재할 경우, 이 카드는 1번의 배틀 페이즈 중에 2회 공격할 수 있다. 또한, 필드 위에 앞면 표시로 존재하는 이 카드가 파괴될 경우, 대신에 이 카드 이외의 자신 필드 위에 앞면 표시로 존재하는 \"여섯 무사\"라는 이름이 붙은 몬스터 1장을 파괴할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "e466254c39aeec7115b120b094705befd420ffede35b792f3c80a788e46b178f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3315.jpg",
+  "level": 4,
+  "links": [],
+  "name": "여섯 무사－니사시",
+  "name_english": "The Six Samurai - Nisashi",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "search_aliases": [
+    "여섯 무사－니사시",
+    "The Six Samurai - Nisashi"
+  ],
+  "source_id": 3315,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2347
+}

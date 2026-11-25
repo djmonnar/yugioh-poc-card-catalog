@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards202/3314",
+  "attack": 2100,
+  "attribute": 1,
+  "categories": [
+    "지원-여섯 무사",
+    "발동-파괴 시",
+    "효과-묘지샐비지"
+  ],
+  "code": 83039729,
+  "defense": 800,
+  "description": "①: \"여섯 무사의 사범\"은 자신 필드에 1장밖에 앞면 표시로 존재할 수 없다. ②: 자신 필드에 \"여섯 무사\" 몬스터가 존재할 경우, 이 카드는 패에서 특수 소환할 수 있다. ③: 이 카드가 상대 효과로 파괴되었을 경우, 자신 묘지의 \"여섯 무사\" 몬스터 1장을 대상으로 하고 발동한다. 그 몬스터를 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "cb8c124d5fea8cfa9cdfdbca4d457353427dab06f6bd4d6f52da9f6cd85d3c42",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native202/cards/3314.jpg",
+  "level": 5,
+  "links": [],
+  "name": "여섯 무사의 사범",
+  "name_english": "Grandmaster of the Six Samurai",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "search_aliases": [
+    "여섯 무사의 사범",
+    "Grandmaster of the Six Samurai"
+  ],
+  "source_id": 3314,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2346
+}
