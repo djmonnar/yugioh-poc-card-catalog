@@ -35,11 +35,16 @@ export function createPreviewClient170({seed,crypto=globalThis.crypto,storage=nu
   const find=(db,type,id)=>{const key=rowKey(type,id);return db.overrides.has(key)?db.overrides.get(key):base.get(key)??null;};
   const rows=db=>{const out=[];for(const [key,row] of base)if(!db.overrides.has(key))out.push(row);for(const row of db.overrides.values())if(row)out.push(row);return out;};
   const row=(type,id,content,version)=>({entity_type:type,entity_id:id,version,state:'saved',issues:[],content:copy(content)});
-  async function bootstrap(){
+  // (203) Like poc_bootstrap039: a matching p_known_revision answers without entities, capabilities or game payload.
+  // Each answer is recorded (time, known revision, JSON bytes) so the studio's request rate can be checked locally.
+  const traffic=[];
+  const record=(known,data)=>{traffic.push({at:Date.now(),known:known??null,unchanged:data.unchanged,bytes:new TextEncoder().encode(JSON.stringify(data)).length});if(traffic.length>2000)traffic.shift();return {data};};
+  async function bootstrap(known=null){
     const db=current();fingerprint??=await sha256(payloadJson,crypto);
-    return {data:{schema:1,kind:'unified039-bootstrap',project_id:PROJECT039,view:'authoring',project_revision:db.revision,unchanged:false,permissions:{can_edit:Boolean(session)},capabilities:copy(seed.capabilities),catalog:{cards:copy(seed.catalog)},characters:copy(seed.characters),
+    if(known!==null&&known===db.revision)return record(known,{schema:1,kind:'unified039-bootstrap',project_id:PROJECT039,view:'authoring',project_revision:db.revision,unchanged:true,permissions:{can_edit:Boolean(session)},capabilities:null,authoring:null,game:null});
+    return record(known,{schema:1,kind:'unified039-bootstrap',project_id:PROJECT039,view:'authoring',project_revision:db.revision,unchanged:false,permissions:{can_edit:Boolean(session)},capabilities:copy(seed.capabilities),catalog:{cards:copy(seed.catalog)},characters:copy(seed.characters),
       authoring:session?{entities:copy(rows(db))}:null,
-      game:{schema:1,kind:'poc-unified-game039',authoring_revision:db.revision,game_revision:db.revision,metadata_revision:String(db.revision),identity:IDENTITY039,source_fingerprint:fingerprint,payload_json:payloadJson}}};
+      game:{schema:1,kind:'poc-unified-game039',authoring_revision:db.revision,game_revision:db.revision,metadata_revision:String(db.revision),identity:IDENTITY039,source_fingerprint:fingerprint,payload_json:payloadJson}});
   }
   function apply(intent){
     const db=current();if(!session)return {error:{code:'P0001',message:'unified039_editor_required'}};
@@ -72,11 +77,12 @@ export function createPreviewClient170({seed,crypto=globalThis.crypto,storage=nu
       signOut:async()=>{session=null;queueMicrotask(()=>listener?.('SIGNED_OUT',null));return {error:null};}
     },
     rpc:async(name,args={})=>{
-      if(name==='poc_bootstrap039')return bootstrap();
+      if(name==='poc_bootstrap039')return bootstrap(Number.isSafeInteger(args?.p_known_revision)?args.p_known_revision:null);
       if(name==='poc_apply_intent039')return apply(copy(args.p_intent));
       return {error:{message:'로컬 미리보기에는 이전 자료 보관소가 없습니다.'}};
     },
     storage:{from:()=>({upload:async()=>({error:Error('로컬 미리보기에서는 이미지를 올리지 않습니다.')}),getPublicUrl:()=>({data:{publicUrl:''}})})},
+    traffic170:()=>copy(traffic),
     // Console helper for the conflict view: change a row as if another editor saved it.
     remoteEdit170(type,id,fields){const db=current(),old=find(db,type,String(id));if(!old)throw Error('미리보기 DB에 없는 항목입니다.');db.revision++;const next=row(type,String(id),{...old.content,...copy(fields)},db.revision);db.overrides.set(rowKey(type,String(id)),next);save(db);return copy(next);}
   };

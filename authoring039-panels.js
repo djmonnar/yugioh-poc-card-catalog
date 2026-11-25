@@ -23,6 +23,7 @@ import {traitCardMatches089} from './authoring089-traits.js?v=20261106-089';
 import {traitHelp184,ouijaWithoutNecrofear184} from './authoring184-traits.js';
 import {traitKindOffered199,AURA_GROUPS199,AURA_DEFAULT199,auraOptions199,auraSummary199} from './authoring199-traits.js';
 import {traitFieldLabel196,traitDefault196} from './authoring196-traits.js';
+import {traitLabel203,traitValues203,traitLines203,encounterTraitText203} from './authoring203-trait-summary.js';
 import {CARD_SORTS091,filterValues091,cardQueryTokens091,cardFiltersMatch091,sortCards091} from './authoring091-search.js?v=20261106-091';
 import {deckDeletionChanges153,deckDeletionPlan174,deckDeletionSteps174,openDeckDeletion153} from './authoring153-deck-delete.js';
 import {cardDeckUsages172,cardDeckCountText172,deckHref172} from './authoring172-card-decks.js';import {cardRelations198,cardHref198} from './authoring198-card-relations.js';import {CATALOG_PARAMS170,CATALOG_FLAGS170,pageNumber170,thumbnailUrl170,createCardProblems170,cardFlagsMatch170,bulkCardPatches170,selectRange170} from './authoring170-catalog.js';
@@ -249,11 +250,24 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     const more=button('카드 더 보기',()=>{visible+=30;display();},'au-text-button');
     const display=()=>{
       const q=input.value.normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,''),matches=currentCards.filter(c=>!c.special&&c.playable!==false&&filter(c)&&(!q||c.searchText.includes(q))),rows=(q?sortCards091(matches,'relevance',input.value):matches).slice(0,visible);
-      results.replaceChildren(...rows.map(c=>{const b=button(`${c.name_ko}${c.source_id===selectedId?' ✓':''}`,()=>onSelect(c),'au-card-pick');const img=picture(c);img.alt='';b.prepend(img);b.disabled=!currentState.canEdit;return b;}));
+      // (203) Choosing a card ends the search: release the box (Safari keeps focus there) so the choice shows at once.
+      results.replaceChildren(...rows.map(c=>{const b=button(`${c.name_ko}${c.source_id===selectedId?' ✓':''}`,()=>{if(doc.activeElement===input)input.blur();return onSelect(c);},'au-card-pick');const img=picture(c);img.alt='';b.prepend(img);b.disabled=!currentState.canEdit;return b;}));
       count.textContent=matches.length?`${matches.length.toLocaleString('ko-KR')}종 중 ${rows.length.toLocaleString('ko-KR')}종 표시`:'일치하는 카드가 없습니다.';
       more.hidden=rows.length>=matches.length;
     };
     input.oninput=()=>{visible=30;display();};box.append(input,count,results,more);host.append(box);display();
+  }
+  // (203) Names and values of stored traits, read with the database definitions and the current card names.
+  function traitOptions203(){const names=new Map(currentCards.map(card=>[card.source_id,card.name_ko]));return {definitions:currentState.bootstrap?.capabilities?.trait_form?.kinds??[],cardName:id=>names.get(id)??null};}
+  function encounterTraits203(value){return encounterTraitText203(value,{characters:characterProfiles(latestState068()),...traitOptions203()});}
+  // (203) Every trait is one folded row "이름 · 값" (closed unless opened before or just added); its editor opens under it.
+  function traitOpenKey203(key,kind){return `trait-open203:${currentState.user?.id??''}:${key}:${kind}`;}
+  function traitFold203(box,row,key,options){
+    const fold=el('details',null,'au-trait-row203'),head=el('summary',null,'au-trait-head203'),openKey=traitOpenKey203(key,row.kind),values=traitValues203(row,options);
+    head.append(el('strong',traitLabel203(row,options.definitions)));if(values.length)head.append(el('span',values.join(' · '),'au-trait-values203'));
+    fold.open=filters.get(openKey)===true;
+    fold.addEventListener('toggle',event=>{if(event.target!==fold)return;if(fold.open)filters.set(openKey,true);else filters.delete(openKey);});
+    fold.append(head,box);return fold;
   }
   // (184) A 위저보드 trait needs Dark Necrofear in the main deck to reveal letters. A note, not an error.
   function ouijaWarning184(host,skills,main){if(ouijaWithoutNecrofear184(skills,currentCards,main))host.append(el('p','위저보드 특성이 있지만 이 덱의 메인 덱에 다크 네크로피어가 없습니다. 다크 네크로피어가 나오지 않으면 글자가 놓이지 않습니다.','au-hint au-ouija-warning184'));}
@@ -263,7 +277,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     const form=currentState.bootstrap?.capabilities?.trait_form,definitions=(form?.kinds??[]).filter(k=>traitKindOffered199(k,shared,starter)&&allowed(k.kind));
     if(!definitions.length){host.append(el('p',`설정된 특성 ${rows.length}개 · 특성 편집 자료를 확인하는 중입니다.`,'au-hint'));return;}
     const mainCard=c=>traitCardMatches089(c),cardRef=c=>({slot:c.slot,internal_id:c.source_id,identity_key:c.identity_key,name_ko:c.name_ko});
-    const liveRows=()=>getRows()??[];
+    const liveRows=()=>getRows()??[],summaryOptions=traitOptions203();
     const replace=(kind,update)=>{
       const latest=liveRows(),current=latest.find(row=>row.kind===kind);
       if(!current)throw Error('이 특성이 변경됐습니다. 현재 목록을 다시 확인해 주세요.');
@@ -295,7 +309,8 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
             for(const [bit,name] of auraOptions199(spec,group)){
               const chip=el('label',null,'level-choice au-chip199'),input=el('input');input.type='checkbox';input.checked=(aura[group]&bit)!==0;input.disabled=!currentState.canEdit;
               input.setAttribute('aria-label',`${label} ${name}`);input.dataset.editKey=`${key}.${index}.aura.${group}.${bit}`;
-              input.addEventListener('change',()=>replace(row.kind,live=>{const now={...AURA_DEFAULT199,...(live.aura??{})};return {...live,aura:{...now,[group]:input.checked?(now[group]|bit):(now[group]&~bit)}};}));
+              // (203) A refused chip change reports its reason instead of failing silently.
+              input.addEventListener('change',()=>{try{Promise.resolve(replace(row.kind,live=>{const now={...AURA_DEFAULT199,...(live.aura??{})};return {...live,aura:{...now,[group]:input.checked?(now[group]|bit):(now[group]&~bit)}};})).catch(onError);}catch(error){onError(error);}});
               chip.append(input,el('span',name));chips.append(chip);
             }
             set.append(chips);box.append(set);
@@ -315,7 +330,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
           chooseCard(box,null,card=>replace(row.kind,live=>live.entries.some(item=>entryId(item)===card.source_id)?live:{...live,entries:[...live.entries,shared?{card:cardRef(card),count:1}:{sourceId:card.source_id,count:1}]}),`${key}.${index}.grave.add`,card=>{const latest=liveRows().find(item=>item.kind===row.kind);return latest&&(latest.entries??[]).reduce((n,r)=>n+r.count,0)<12&&mainCard(card)&&!latest.entries.some(item=>entryId(item)===card.source_id);});
         }
       }
-      host.append(box);
+      host.append(traitFold203(box,row,key,summaryOptions));
     }
     const maximum=shared?10:8,available=definitions.filter(kind=>!rows.some(row=>row.kind===kind.kind));
     if(rows.length<maximum&&available.length){
@@ -336,6 +351,8 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
             else next.entries=[shared?{card:cardRef(first),count:1}:{sourceId:first.source_id,count:1}];
           }
         }
+        // (203) A just-added trait opens so its card or value can be chosen right away.
+        filters.set(traitOpenKey203(key,definition.kind),true);
         return onRows([...latest,next]);
       });add.disabled=!currentState.canEdit;
       // (184) The help of the kind about to be added, so its meaning is visible before adding it.
@@ -839,7 +856,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     }
     const settings=el('details',null,'au-deck-settings');settings.open=filters.get(`deck-settings:${deck.entity_id}`)??!(value.main??[]).length;settings.ontoggle=()=>filters.set(`deck-settings:${deck.entity_id}`,settings.open);settings.append(el('summary',composition?'덱 설정 · 이름·카드 제한':'덱 설정 · 이름·상대·전투 특성'),props);host.append(settings,status(deck));
     if(!composition){sharedTraitsPreview051(settings,value,characters);const traits=el('details',null,'au-trait-editor');traits.append(el('summary',`이 덱의 전투 특성 · ${(value.skills??[]).length}개`));skillFields(traits,value.skills??[],skills=>patch(deck,{skills}),`${deck.entity_id}.skills`,false,()=>entities039(currentState).find(row=>row.entity_type==='deck'&&row.entity_id===deck.entity_id)?.content.skills??[]);ouijaWarning184(traits,value.skills,value.main);settings.append(traits);}
-    if(composition)renderDeckSetup068({host,getState:latestState068,entities:entities039,getCharacters:()=>characterProfiles(latestState068()),deckId:deck.entity_id,onBulkAssign:(id,options)=>openEnemyRoutes071(id,{...options,fromDeck101:true}),el,button,field,patch,stageMany:onStageMany071,renderEncounter:encounterForm068,onNavigate,onSaveDrafts:onSaveDrafts060,manualSaveControl:manualSaveControl060,filters,registerSave068:setup=>{localDeckSetup068=setup;onPrepareDeckSetup068(setup);},rerender:({force=false}={})=>render('decks',currentRoot,latestState068(),{force})});
+    if(composition)renderDeckSetup068({host,getState:latestState068,entities:entities039,getCharacters:()=>characterProfiles(latestState068()),traitText:encounterTraits203,deckId:deck.entity_id,onBulkAssign:(id,options)=>openEnemyRoutes071(id,{...options,fromDeck101:true}),el,button,field,patch,stageMany:onStageMany071,renderEncounter:encounterForm068,onNavigate,onSaveDrafts:onSaveDrafts060,manualSaveControl:manualSaveControl060,filters,registerSave068:setup=>{localDeckSetup068=setup;onPrepareDeckSetup068(setup);},rerender:({force=false}={})=>render('decks',currentRoot,latestState068(),{force})});
     host.append(el('p','카드에 금지·제한·준제한과 스피드 제한을 표시합니다. 스피드 제한은 같은 숫자의 카드 전체를 합산합니다.','au-hint au-limit-guide'));
     const split=el('div',null,'au-deck-workspace'),owned=el('section',null,'au-deck-owned'),catalog=el('section',null,'au-deck-catalog'),tabs=el('div',null,'au-deck-tabs');tabs.setAttribute('aria-label','덱 카드 보기');const activeView=filters.get(`deck-view:${deck.entity_id}`)??'cards';split.dataset.mobileView=activeView;for(const [mode,label] of [['deck',`내 덱 · ${(value.main??[]).reduce((n,r)=>n+r.count,0)}장`],['cards','카드 찾기']]){const tab=button(label,()=>{filters.set(`deck-view:${deck.entity_id}`,mode);split.dataset.mobileView=mode;for(const b of tabs.children)b.setAttribute('aria-pressed',String(b.dataset.mode===mode));});tab.dataset.mode=mode;tab.setAttribute('aria-pressed',String(mode===activeView));tabs.append(tab);}host.append(tabs);
     function displayOwned(){
@@ -937,8 +954,8 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
   }
   function chaptersCompositionPanel044(host){
     const memory=routesMemory071(latestState068()),session=filters.get(memory);
-    if(session?.open){renderEnemyRoutes071({host,session,getState:latestState068,entities:entities039,getCharacters:()=>characterProfiles(latestState068()),deckOptions:deckOptions041,el,button,field,renderEncounter:encounterForm068,stageMany:changes=>{if(!onStageMany071)throw Error('여러 구역 초안 연결을 준비하지 못했습니다.');return onStageMany071(changes);},onSaveDrafts:onSaveDrafts060,manualSaveControl:manualSaveControl060,registerSave:setup=>{localDeckSetup068=setup;onPrepareDeckSetup068(setup);},isInvalid:prefix=>[...invalidFields041.keys()].some(key=>key.startsWith(prefix)),persist:()=>filters.set(memory,session),rerender:({force=false}={})=>render('chapters',currentRoot,latestState068(),{force}),onClose:()=>{session.open=false;if(session.fromDeck101)onNavigate('decks',session.deckId);else render('chapters',currentRoot,latestState068(),{force:true});},getReadiness:row=>deckReadiness041(row,currentCards,{requireLimits:false})});return;}
-    renderChapters066({host,onBulkAssign:openEnemyRoutes071,getState:()=>currentState,entities:entities039,cards:currentCards,characters:characterProfiles(),deckOptions:deckOptions041,readiness:deckReadiness041,el,button,field,patch,onNavigate,onSaveDrafts:onSaveDrafts060,manualSaveControl:manualSaveControl060,status,encounterDefaults:encounterDefaults044,encounterForm:encounterForm044,selected,filters,rerender:()=>render('chapters',currentRoot,currentState,{force:true})});
+    if(session?.open){renderEnemyRoutes071({host,session,getState:latestState068,entities:entities039,getCharacters:()=>characterProfiles(latestState068()),traitText:encounterTraits203,deckOptions:deckOptions041,el,button,field,renderEncounter:encounterForm068,stageMany:changes=>{if(!onStageMany071)throw Error('여러 구역 초안 연결을 준비하지 못했습니다.');return onStageMany071(changes);},onSaveDrafts:onSaveDrafts060,manualSaveControl:manualSaveControl060,registerSave:setup=>{localDeckSetup068=setup;onPrepareDeckSetup068(setup);},isInvalid:prefix=>[...invalidFields041.keys()].some(key=>key.startsWith(prefix)),persist:()=>filters.set(memory,session),rerender:({force=false}={})=>render('chapters',currentRoot,latestState068(),{force}),onClose:()=>{session.open=false;if(session.fromDeck101)onNavigate('decks',session.deckId);else render('chapters',currentRoot,latestState068(),{force:true});},getReadiness:row=>deckReadiness041(row,currentCards,{requireLimits:false})});return;}
+    renderChapters066({host,onBulkAssign:openEnemyRoutes071,traitText:encounterTraits203,getState:()=>currentState,entities:entities039,cards:currentCards,characters:characterProfiles(),deckOptions:deckOptions041,readiness:deckReadiness041,el,button,field,patch,onNavigate,onSaveDrafts:onSaveDrafts060,manualSaveControl:manualSaveControl060,status,encounterDefaults:encounterDefaults044,encounterForm:encounterForm044,selected,filters,rerender:()=>render('chapters',currentRoot,currentState,{force:true})});
   }
   function chaptersPanel(host){
     if(compositionMode044(currentState))return chaptersCompositionPanel044(host);
@@ -989,7 +1006,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
       return patch(live,{entries:rows.map(row=>row===attached?{...row,start_loadout:{...empty,...row.start_loadout,...fields}}:row)});
     };
     const config={...empty,...entry.start_loadout};
-    const label=`원정 시작 설정 · ${config.lp.toLocaleString('ko-KR')} LP · ${config.gold.toLocaleString('ko-KR')} G`;
+    const label=`원정 시작 설정 · ${config.lp.toLocaleString('ko-KR')} LP · ${config.gold.toLocaleString('ko-KR')} G · 유물 ${config.relic_ids.length}개 · 특성 ${config.traits.length}개`;
     foldForm(host,label,prefix,content=>{
       const numbers=el('div',null,'au-form-grid');
       numbers.append(
@@ -1044,10 +1061,14 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
         },'au-starter-relic-picker');
       }
       content.append(relicGroup);
-      const traits=el('fieldset',null,'au-form-group');
-      traits.append(el('legend',`시작 특성 · ${config.traits.length}개`),
-        el('p','이 시작 덱으로 연 원정의 듀얼마다 적용됩니다.','au-hint'));
-      skillFields(traits,config.traits,rows=>save({traits:rows}),`${prefix}.traits`,true,()=>read().traits??[],kind=>kind!=='lp_bonus',true);
+      // (203) 대표님 "특성 섹션이 항상 열려 있어서 보기 힘들다": the trait section folds (closed unless opened before);
+      // its summary names every trait with its values, and each trait below is one folded row.
+      const traits=el('details',null,'au-starter-traits203'),traitsKey=`${prefix}.traits-open203`,traitsHead=el('summary',null,'au-trait-section203'),lines=traitLines203(config.traits,traitOptions203());
+      traitsHead.append(el('strong',`시작 특성 · ${config.traits.length}개`));if(lines.length)traitsHead.append(el('span',lines.join(' · '),'au-trait-values203'));
+      traits.open=filters.get(traitsKey)===true;
+      traits.addEventListener('toggle',event=>{if(event.target!==traits)return;if(traits.open)filters.set(traitsKey,true);else filters.delete(traitsKey);});
+      traits.append(traitsHead,el('p','이 시작 덱으로 연 원정의 듀얼마다 적용됩니다.','au-hint'));
+      skillFields(traits,config.traits,rows=>{filters.set(traitsKey,true);return save({traits:rows});},`${prefix}.traits`,true,()=>read().traits??[],kind=>kind!=='lp_bonus',true);
       content.append(traits);
     },'au-starter-edit au-starter-loadout');
   }
@@ -1080,16 +1101,25 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     starterName.addEventListener('input',()=>{draft.name=starterName.value;updateRegistration();});select.onchange=()=>{const chosen=candidates.find(row=>row.id===select.value);draft.deckId=chosen?.id??'';draft.name=chosen?.gameTitle??'';starterName.value=draft.name;updateRegistration();};updateRegistration();
     const list=el('section',null,'au-starter-list');list.append(el('h2',`등록된 시작 덱 ${entries.length}개`));if(!entries.length)list.append(el('p','아직 등록된 시작 덱이 없습니다. 위에서 덱을 추가하세요.','au-empty'));
     const summaries=new Map(deckOptions041(decks,{cards:currentCards,characters}).map(row=>[row.id,row]));
+    // (203) 대표님 "시작 덱 확인하는 곳이 너무 길다": each starter is one folded row. Its summary line shows the deck size,
+    // the start LP and gold, and the start relics and traits by name and value; editing opens under it.
+    const loadoutCapability=currentState.bootstrap?.capabilities?.starter_loadout,relicNames=new Map(entities039(currentState).filter(row=>row.entity_type==='relic').map(row=>[row.content.id??row.entity_id,row.content.name??row.entity_id])),traitOptions=traitOptions203();
     for(const entry of entries){
-      const summary=summaries.get(entry.deck_id),row=el('article',null,'au-starter-row'),info=el('div',null,'au-starter-summary'),actions=el('div',null,'au-starter-actions'),rename=el('details',null,'au-starter-edit');
-      const names=el('div'),renameKey=`starter.rename:${entry.starter_id}`;
-      names.append(el('h3',entry.name));
+      const summary=summaries.get(entry.deck_id),row=el('details',null,'au-starter-row au-starter-fold203'),head=el('summary',null,'au-starter-head203'),info=el('div',null,'au-starter-summary'),actions=el('div',null,'au-starter-actions'),rename=el('details',null,'au-starter-edit');
+      const names=el('div'),renameKey=`starter.rename:${entry.starter_id}`,openKey=`starter-open203:${currentState.user?.id??''}:${entry.starter_id}`;
+      row.open=filters.get(openKey)===true;
+      row.addEventListener('toggle',event=>{if(event.target!==row)return;if(row.open)filters.set(openKey,true);else filters.delete(openKey);});
+      const startLoadout={lp:4000,gold:0,traits:[],relic_ids:[],...entry.start_loadout},facts=[];
+      if(summary)facts.push(`메인 ${summary.readiness.mainCount}장 · EX ${summary.readiness.extraCount}장`);
+      if(loadoutCapability)facts.push(`${startLoadout.lp.toLocaleString('ko-KR')} LP · ${startLoadout.gold.toLocaleString('ko-KR')} G`);
+      head.append(el('h3',entry.name));if(facts.length)head.append(el('small',facts.join(' · '),'au-starter-facts203'));
+      if(loadoutCapability&&startLoadout.relic_ids.length)head.append(el('small',`유물 ${startLoadout.relic_ids.length}개 · ${startLoadout.relic_ids.map(id=>relicNames.get(id)??id).join(', ')}`,'au-starter-relics203'));
+      if(loadoutCapability&&startLoadout.traits.length)head.append(el('small',`특성 ${startLoadout.traits.length}개 · ${traitLines203(startLoadout.traits,traitOptions).join(' · ')}`,'au-starter-trait-line203'));
+      if(!summary)head.append(el('small','연결된 덱을 확인해 주세요.','au-readiness'));
+      else if(!summary.readiness.ready)head.append(el('small',`${summary.readiness.message} · 완성 전에는 기존 시작 덱을 사용합니다.`,'au-readiness'));
+      row.append(head);
       if(summary)names.append(el('small',`관리용 제목 · ${summary.title}`,'au-hint'));
       info.append(names);
-      if(summary){
-        info.append(el('small',`메인 ${summary.readiness.mainCount}장 · EX ${summary.readiness.extraCount}장`,'au-hint'));
-        if(!summary.readiness.ready)names.append(el('small',`${summary.readiness.message} · 완성 전에는 기존 시작 덱을 사용합니다.`,'au-readiness'));
-      }else names.append(el('small','연결된 덱을 확인해 주세요.','au-readiness'));
       rename.open=filters.get(renameKey)===true;
       rename.ontoggle=()=>filters.set(renameKey,rename.open);
       rename.append(el('summary','이름 편집'),field('게임 표시 이름',entry.name,{type:'string',minLength:1,maxLength:80},name=>{

@@ -13,7 +13,7 @@ function within(root,node){
 }
 
 export function createEditingGuard041({document:doc,getRoots,onEditingChange=()=>{},setTimeout:schedule=globalThis.setTimeout,clearTimeout:cancel=globalThis.clearTimeout}={}){
-  let pending=null,timer=null,commitTimer=null,pointerDown=false,pointerSelect=null,disposed=false,editing=false,committingSelect=null;
+  let pending=null,timer=null,commitTimer=null,pointerDown=false,pointerSelect=null,disposed=false,editing=false,committingSelect=null,acting=false,actingTimer=null;
   const composing=new WeakSet(),bound=new WeakSet(),listeners=[];
   const owns=node=>getRoots().some(root=>within(root,node));
   const active=()=>owns(doc.activeElement)&&editableControl041(doc.activeElement)?doc.activeElement:null;
@@ -40,6 +40,21 @@ export function createEditingGuard041({document:doc,getRoots,onEditingChange=()=
       try{flush();}finally{committingSelect=null;signal();}
     },0);
   }
+  // (203) 대표님 "캐릭터 탭에서 특성을 눌러도 적용이 안 되거나 화면이 넘어간다": Safari (iPhone, Mac) and Firefox
+  // do not move focus to a tapped button, so a select or field used just before kept focus and the render of the
+  // tapped button's change was deferred. Nothing appeared until the next tap released it, and the page then changed
+  // under that tap. A click on a button, checkbox or summary is a finished choice: the render it causes runs now
+  // (through its handler's draft microtasks), unless the focused field is still composing Korean text or is a
+  // search box: search boxes keep their node while results are tapped (the deck builder refreshes its lists in
+  // place; a card picker releases its own box when a card is chosen).
+  function act(event){
+    const target=event.target,focused=active();
+    const choice=target?.closest?.('button,summary,a,[role=button]')??(target?.tagName==='INPUT'&&['checkbox','radio'].includes(String(target.type).toLowerCase())?target:null);
+    if(!choice||!owns(choice)||focused&&(composing.has(focused)||within(focused,choice)||String(focused.type??'').toLowerCase()==='search'))return;
+    acting={focused};cancel(actingTimer);actingTimer=schedule(()=>{actingTimer=null;acting=false;},0);
+  }
+  // Only the click's own render skips the wait: a field focused (or composing) after the click is protected again.
+  function actingNow(target){return Boolean(acting)&&acting.focused===target&&!(target&&composing.has(target));}
   function listen(target,name,handler,options){if(!target?.addEventListener)return;target.addEventListener(name,handler,options);listeners.push(()=>target.removeEventListener?.(name,handler,options));}
   // Capture covers ad-hoc search/registration inputs as well as schema fields.
   listen(doc,'focusin',focus,true);listen(doc,'focusout',blur,true);
@@ -50,6 +65,7 @@ export function createEditingGuard041({document:doc,getRoots,onEditingChange=()=
   listen(doc,'pointercancel',()=>{pointerDown=false;pointerSelect=null;later();},true);
   // Flush after the tapped button's handler, never between touch-down and click.
   listen(doc,'click',()=>{pointerDown=false;pointerSelect=null;later();},false);
+  listen(doc,'click',act,true);
   return {
     defer(render,{force=false}={}){
       if(disposed)return false;
@@ -58,7 +74,7 @@ export function createEditingGuard041({document:doc,getRoots,onEditingChange=()=
       // refresh must not replace that target in the middle of the gesture.
       const target=active();
       const committing=target!==null&&target===committingSelect;
-      if(!force&&!committing&&(pointerDown||target)){pending=render;signal();return true;}
+      if(!force&&!committing&&!actingNow(target)&&(pointerDown||target)){pending=render;signal();return true;}
       pending=null;cancel(timer);timer=null;return false;
     },
     bind(control){
@@ -71,6 +87,6 @@ export function createEditingGuard041({document:doc,getRoots,onEditingChange=()=
     isComposing:control=>composing.has(control),
     isSelecting:()=>Boolean(pointerDown&&pointerSelect||active()?.tagName==='SELECT'),
     refreshSignal:signal,
-    dispose(){disposed=true;pending=null;committingSelect=null;cancel(timer);cancel(commitTimer);for(const off of listeners)off();if(editing)onEditingChange(false);}
+    dispose(){disposed=true;pending=null;committingSelect=null;acting=false;cancel(timer);cancel(commitTimer);cancel(actingTimer);for(const off of listeners)off();if(editing)onEditingChange(false);}
   };
 }

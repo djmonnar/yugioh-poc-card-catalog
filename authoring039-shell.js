@@ -133,8 +133,10 @@ export function mountAuthoringShell039({root,store,uploadAsset=null,manualSave=f
   async function reloadLatest083(){
     if(reload083.disabled||typeof store.refresh!=='function')return;
     reloadBusy083=true;renderSync083();
-    try{await store.refresh(true);}
-    finally{reloadBusy083=false;renderSync083();}
+    // (203) A conditional read: an unchanged DB answers without the 3~4MB payload. A full read only when the
+    // last read failed or nothing is loaded yet.
+    try{await store.refresh(!state.bootstrap||Boolean(state.sync083?.readError)||state.phase==='error');}
+    finally{reloadBusy083=false;if(!destroyed060&&typeof store.snapshot==='function')render(store.snapshot());else renderSync083();}
   }
   function openWrite065(head=state.writeState){
     if(!head)return;

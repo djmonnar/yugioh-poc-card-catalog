@@ -20,7 +20,7 @@ async function start(){
     let storage=null;try{storage=window.localStorage;}catch{/* Recovery storage is optional; the DB remains authoritative. */}
     const preview=localPreview170(window.location.href);
     let client;
-    if(preview){client=await previewClient170(storage);window.preview170={remoteEdit:(type,id,fields)=>client.remoteEdit170(type,id,fields)};}
+    if(preview){client=await previewClient170(storage);window.preview170={remoteEdit:(type,id,fields)=>client.remoteEdit170(type,id,fields),traffic:()=>client.traffic170()};}
     else{
       const response=await fetch('./data/cloud-config.json',{cache:'no-store',signal:AbortSignal.timeout(15000)});if(!response.ok)throw Error('DB 연결 설정을 불러오지 못했습니다.');
       const config=validateCloudConfig(await response.json());client=createClient(config.url,config.publishable_key,{auth:{storageKey:'poc-ai-editor-auth-v1',persistSession:true,autoRefreshToken:true,detectSessionInUrl:true},global:{fetch:(url,options)=>fetch(url,{...options,signal:options?.signal||AbortSignal.timeout(20000)})}});

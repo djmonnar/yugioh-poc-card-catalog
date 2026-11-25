@@ -131,13 +131,17 @@ export async function normalizeBootstrap039(raw,crypto=globalThis.crypto) {
 const BATCH068={HASH,UUID,PROJECT039,clone,equal,key,integer,object,need,safe,validEntity,categoryGroupRows055,categoryGroupOrderRows056,validateAuthoringChange066,rejectionReason065,validationInfo065};
 
 export class AuthoringStore039 {
-  constructor({client,storage=globalThis.localStorage,crypto=globalThis.crypto,debounceMs=400,idleRefreshMs=400,pollMs=15000,redirectUrl=globalThis.location?.href,events=globalThis,visibility=globalThis.document}={}) {
+  // (203) Supabase 전송량: the conditional check runs every 60 s while the tab is shown and someone uses it, every
+  // 5 minutes after 10 minutes without a tap or key, never while hidden; showing the tab again checks at once only
+  // when the last check is at least half a period old. Unchanged answers carry no entities or game payload.
+  constructor({client,storage=globalThis.localStorage,crypto=globalThis.crypto,debounceMs=400,idleRefreshMs=400,pollMs=60000,idlePollMs=300000,idleAfterMs=600000,redirectUrl=globalThis.location?.href,events=globalThis,visibility=globalThis.document}={}) {
     need(client?.rpc && client?.auth,'DB 연결이 필요해.');
-    Object.assign(this,{client,storage,crypto,debounceMs,idleRefreshMs,pollMs,redirectUrl,events,visibility});
+    Object.assign(this,{client,storage,crypto,debounceMs,idleRefreshMs,pollMs,idlePollMs,idleAfterMs,redirectUrl,events,visibility});
     this.listeners=new Set(); this.queue=[]; this.user=null; this.bootstrap=null; this.phase='loading'; this.error=null; this.pendingRevision=null; this.fetchedRevision=null; this.generation=0; this.busy=false; this.stopped=false; this.failures=0; this.refreshTask=null; this.retryRequestId=null; this.retryNotBefore=0; this.conflictInfo=null;
-    this.checkedAt083=null;this.savedAt083=null;this.readError083=null;
+    this.checkedAt083=null;this.savedAt083=null;this.readError083=null;this.activeAt203=Date.now();
     this.online=()=>this.retry();
-    this.visible170=()=>{if(!this.hidden170())this.pollOnce170();};
+    this.visible170=()=>{if(this.hidden170())return;this.activeAt203=Date.now();if(this.due203(this.pollMs/2))this.pollOnce170();};
+    this.activity203=()=>{const now=Date.now(),wasIdle=this.idle203(now);this.activeAt203=now;if(wasIdle&&this.due203(this.pollMs))this.pollOnce170();};
   }
   subscribe(fn) { this.listeners.add(fn); fn(this.snapshot()); return ()=>this.listeners.delete(fn); }
   canEdit083(){return !!this.user&&this.bootstrap?.permissions?.can_edit===true;}
@@ -187,13 +191,17 @@ export class AuthoringStore039 {
     let result;try { result=await this.client.auth.getSession(); if(result.error) throw result.error; }
     catch(error) { this.setError(error); throw error; }
     await this.acceptSession(result.data?.session??null);
-    if(this.pollMs&&!this.poll) { this.poll=setInterval(()=>this.pollOnce170(),this.pollMs); this.poll.unref?.(); this.visibility?.addEventListener?.('visibilitychange',this.visible170); }
+    if(this.pollMs&&!this.poll) { this.poll=setInterval(()=>this.tick203(),this.pollMs); this.poll.unref?.(); this.visibility?.addEventListener?.('visibilitychange',this.visible170); for(const type of ['pointerdown','keydown'])this.events.addEventListener?.(type,this.activity203,{capture:true,passive:true}); }
     return this;
   }
   // The periodic check is a conditional read (p_known_revision): an unchanged
   // DB answers without entities or game payload. Hidden tabs skip it and check
   // once as soon as they are shown again.
   hidden170(){return this.visibility?.hidden===true;}
+  idle203(now=Date.now()){return now-this.activeAt203>=this.idleAfterMs;}
+  due203(period,now=Date.now()){return this.checkedAt083===null||now-this.checkedAt083>=period;}
+  // Interval tick: an idle tab checks only once per idlePollMs (1 s slack for timer drift).
+  tick203(){if(this.idle203()&&!this.due203(this.idlePollMs-1000))return;this.pollOnce170();}
   pollOnce170(){
     const generation=this.generation;
     if(this.stopped||this.busy||this.queue.length||this.hidden170())return;
@@ -429,5 +437,5 @@ export class AuthoringStore039 {
     need(object(result.data),'저장 기록 응답을 확인하지 못했어.'); return result.data;
   }
   async logout() { this.persist(); const result=await this.client.auth.signOut(); if(result.error)throw result.error; await this.acceptSession(null); }
-  stop() { this.stopped=true; clearTimeout(this.timer); clearTimeout(this.idleTimer); clearInterval(this.poll); this.events.removeEventListener?.('online',this.online); this.visibility?.removeEventListener?.('visibilitychange',this.visible170); this.authSubscription?.data?.subscription?.unsubscribe(); }
+  stop() { this.stopped=true; clearTimeout(this.timer); clearTimeout(this.idleTimer); clearInterval(this.poll); this.events.removeEventListener?.('online',this.online); this.visibility?.removeEventListener?.('visibilitychange',this.visible170); for(const type of ['pointerdown','keydown'])this.events.removeEventListener?.(type,this.activity203,{capture:true}); this.authSubscription?.data?.subscription?.unsubscribe(); }
 }

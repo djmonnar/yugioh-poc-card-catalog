@@ -30,7 +30,7 @@ export function patchDeckPlacement068(role,deckId,entryId,fields){
   return role.content.entries.map(entry=>entry.entry_id===entryId&&entry.deck_id===deckId?{...entry,encounter:{...entry.encounter,...copy(fields)}}:entry);
 }
 
-export function renderDeckSetup068({host,getState,entities,getCharacters,deckId,el,button,field,patch,stageMany,renderEncounter,onNavigate,onSaveDrafts,manualSaveControl,registerSave068,filters,rerender,onBulkAssign}){
+export function renderDeckSetup068({host,getState,entities,getCharacters,deckId,el,button,field,patch,stageMany,renderEncounter,onNavigate,onSaveDrafts,manualSaveControl,registerSave068,filters,rerender,onBulkAssign,traitText=null}){
   const initial=getState(),owner=owner068(initial),memoryKey=`deck-setup068:${JSON.stringify([owner,deckId])}`,ui=filters.get(memoryKey)??{mode:'summary',selected:null,query:'',page:1,add:null,remove:null};
   const all=()=>entities(getState()),latestDeck=()=>all().find(row=>row.entity_type==='deck'&&row.entity_id===deckId&&!row.deleted),latestRole=id=>all().find(row=>row.entity_type==='chapter_role'&&row.entity_id===id&&!row.deleted),placements=()=>deckPlacements068(all(),deckId);
   const deck=latestDeck();if(!deck)return;
@@ -123,7 +123,7 @@ export function renderDeckSetup068({host,getState,entities,getCharacters,deckId,
       for(const row of found.slice((page-1)*5,page*5)){
         const line=el('div',null,'au-setup-row101'),checkLabel=el('label',null,'au-setup-check101'),check=el('input');check.type='checkbox';check.checked=selectedKeys().includes(row.key);check.disabled=!getState().canEdit||Boolean(ui.removing101);check.setAttribute('aria-label',`${roleLabel068(row.role)} · ${row.entry.encounter?.name||'상대'} 배치 선택`);check.dataset.placementKey=row.key;check.onchange=()=>changeSelection(check.checked?[...selectedKeys(),row.key]:selectedKeys().filter(key=>key!==row.key));checkLabel.append(check);
         const pick=button('',()=>{ui.selected=row.key;ui.mode='entry';ui.remove=null;persist();paint(true);},'au-setup-placement068'),encounter=row.entry.encounter??{},character=(getCharacters?.()??[]).find(profile=>profile.profile_id===encounter.profile_id);
-        pick.dataset.entryId=row.entry.entry_id??'';pick.dataset.roleId=row.role.entity_id;pick.setAttribute('aria-pressed',String(ui.selected===row.key));pick.append(el('strong',roleLabel068(row.role)),el('span',encounter.name||'이름 없는 상대'),el('small',`${character?.profile?.name??'캐릭터 미확인'} · 직접 특성 ${(encounter.skills??[]).length}개${encounter.use_shared_skills?' · 공용 특성 사용':''}`));line.append(checkLabel,pick);rows.append(line);
+        pick.dataset.entryId=row.entry.entry_id??'';pick.dataset.roleId=row.role.entity_id;pick.setAttribute('aria-pressed',String(ui.selected===row.key));pick.append(el('strong',roleLabel068(row.role)),el('span',encounter.name||'이름 없는 상대'),el('small',`${character?.profile?.name??'캐릭터 미확인'} · ${traitText?traitText(encounter):`직접 특성 ${(encounter.skills??[]).length}개${encounter.use_shared_skills?' · 공용 특성 사용':''}`}`));line.append(checkLabel,pick);rows.append(line);
       }
       if(pages>1){for(const [label,next] of [['이전',page-1],['다음',page+1]]){const b=button(label,()=>{ui.page=next;persist();display();});b.disabled=next<1||next>pages;pager.append(b);}pager.insertBefore(el('span',`${page} / ${pages} · ${found.length}곳`),pager.lastChild);}
     };
