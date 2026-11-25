@@ -4,10 +4,40 @@
   "profile": {
     "name": "미사와 다이치",
     "portrait": "assets/actors/native203/misawa/start.png",
-    "skill_profiles": [],
+    "skill_profiles": [
+      {
+        "name": "반사데미지무효",
+        "profile_id": "profile-1ad08eb1-fa88-46cf-aff1-9d72008a3df9",
+        "skills": [
+          {
+            "kind": "reflect_damage_null"
+          }
+        ]
+      },
+      {
+        "name": "빙염의 쌍룡",
+        "profile_id": "profile-199490a1-3fee-426e-95c6-9504b90924a0",
+        "skills": [
+          {
+            "entries": [
+              {
+                "card": {
+                  "identity_key": "0dd50f6fd0171fe688825db1ac4906bdf2dba0c5933100e63a8fd5ed021a8e28",
+                  "internal_id": 1880,
+                  "name_ko": "수염 아귀",
+                  "slot": 1207
+                },
+                "count": 1
+              }
+            ],
+            "kind": "start_grave"
+          }
+        ]
+      }
+    ],
     "skills": []
   },
   "profile_id": "misawa",
-  "updated_at": "2026-11-25T03:04:38.403561+00:00",
-  "version": 1027
+  "updated_at": "2026-11-25T12:06:29.993671+00:00",
+  "version": 6325
 }

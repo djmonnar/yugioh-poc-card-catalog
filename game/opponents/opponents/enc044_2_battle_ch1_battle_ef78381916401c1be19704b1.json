@@ -2,7 +2,10 @@
   "artKey": "CharacterPresentation012/images/mai/start",
   "banlistEnabled": false,
   "deckName": "아마조네스",
-  "extra": [],
+  "extra": [
+    3336,
+    3335
+  ],
   "id": "enc044_2_battle_ch1_battle_ef78381916401c1be19704b1",
   "lpBonus": 0,
   "main": [
@@ -21,11 +24,11 @@
     1849,
     553,
     1847,
-    1847,
     1851,
     1835,
     1855,
-    1099
+    3331,
+    3331
   ],
   "name": "메이 쿠자쿠",
   "openingDrawBonus": 0,
@@ -41,5 +44,5 @@
     }
   ],
   "templateId": "installed-story:sc-b5892a9b9b432561-e548bd5deb72f3affc5de9f03735744e",
-  "usesNativeRules035": false
+  "usesNativeRules035": true
 }

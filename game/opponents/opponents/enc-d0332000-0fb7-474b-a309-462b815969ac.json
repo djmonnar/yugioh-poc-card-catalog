@@ -1,0 +1,45 @@
+{
+  "artKey": "Character203/misawa_start",
+  "banlistEnabled": false,
+  "deckName": "워터드래곤",
+  "extra": [],
+  "id": "enc-d0332000-0fb7-474b-a309-462b815969ac",
+  "lpBonus": 0,
+  "main": [
+    3348,
+    3348,
+    3341,
+    3341,
+    3341,
+    3340,
+    3340,
+    3346,
+    3346,
+    176,
+    176,
+    176,
+    102,
+    102,
+    440,
+    440,
+    3118,
+    1030,
+    1060,
+    1060
+  ],
+  "name": "미사와 다이치",
+  "openingDrawBonus": 0,
+  "profileId": "misawa",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "reflect_damage_null",
+      "position": 0,
+      "sourceId": -1,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-d0332000-0fb7-474b-a309-462b815969ac",
+  "usesNativeRules035": true
+}

@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-67e4f942-3369-4f32-939b-b5d66232e74a",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "74d274ad5d0a0589c8902560cf3728e4f8c871a75baa0e7c8b4278bc5a6c94aa",
+      "source_id": 3348
+    },
+    {
+      "count": 3,
+      "identity_key": "f7666c3a962190f1772fc3f052badedcfb7680e694b01e169b89ad4bc8081f96",
+      "source_id": 3341
+    },
+    {
+      "count": 2,
+      "identity_key": "1476f6d5c670180728ad08ff096407bbe932720ad27b65e3b6d519ff27e1ef76",
+      "source_id": 3340
+    },
+    {
+      "count": 2,
+      "identity_key": "4f23aa1768e49754a5cd04f40f64830bd8402f423d0e7a4a3f0ba9bb43cdaa53",
+      "source_id": 3346
+    },
+    {
+      "count": 3,
+      "identity_key": "c783a81b563b2b5700fd689e66c74a70c704409e52c12b1d527985f4357034ea",
+      "source_id": 176
+    },
+    {
+      "count": 2,
+      "identity_key": "513343a524e3abe1d8a307e7eaf54026604852fff5b19160e429bc669cac6089",
+      "source_id": 102
+    },
+    {
+      "count": 2,
+      "identity_key": "e6fb6de67c6bf7634070a7a3231fb2c61a71f6680839c7d9b9c26adbe69e2e88",
+      "source_id": 440
+    },
+    {
+      "count": 1,
+      "identity_key": "52ea194f572f894c8e4f5b3c84e29e49a19f83bc0fac53fd400b0777ce531515",
+      "source_id": 3118
+    },
+    {
+      "count": 1,
+      "identity_key": "99eb671aef76f7730b5f1fc19f4448228a2189fc01ba46b5cad0db24b2811e00",
+      "source_id": 1030
+    },
+    {
+      "count": 2,
+      "identity_key": "21c5c2d94b306d4674d1b579caa99576151120c6416af006167d3468adf1a709",
+      "source_id": 1060
+    }
+  ],
+  "name": "워터드래곤",
+  "version": 1040
+}

@@ -1,6 +1,17 @@
 {
-  "banlist_enabled": false,
-  "extra": [],
+  "banlist_enabled": true,
+  "extra": [
+    {
+      "count": 1,
+      "identity_key": "aa519b0c77bafecb04d2aeeefc93ceedab244bfbd7dd0497bc72ac2df01d92a8",
+      "source_id": 3336
+    },
+    {
+      "count": 1,
+      "identity_key": "c5e546d91f93fbe28ff4e151133ec21dc93dd89b3bec83c9af82d3caba8e9c68",
+      "source_id": 3335
+    }
+  ],
   "id": "ch1_battle_ef78381916401c1be19704b1",
   "main": [
     {
@@ -49,7 +60,7 @@
       "source_id": 553
     },
     {
-      "count": 2,
+      "count": 1,
       "identity_key": "7bc57a63e105b5f6868ed97c70fcac2e7a229efb0d9fcdfa2fdbe9ec53f6273f",
       "source_id": 1847
     },
@@ -69,11 +80,11 @@
       "source_id": 1855
     },
     {
-      "count": 1,
-      "identity_key": "21da5fd9360a7623664f1cf6338c56fc90c3917c5e9d7885ac86d925d961af78",
-      "source_id": 1099
+      "count": 2,
+      "identity_key": "eac9888eae1de05a985c12d820a7e0654a287ad83bccf52423589839cd17cae5",
+      "source_id": 3331
     }
   ],
   "name": "아마조네스",
-  "version": 37
+  "version": 1034
 }

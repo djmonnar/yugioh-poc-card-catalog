@@ -1,0 +1,75 @@
+{
+  "banlist_enabled": true,
+  "extra": [
+    {
+      "count": 1,
+      "identity_key": "c5e546d91f93fbe28ff4e151133ec21dc93dd89b3bec83c9af82d3caba8e9c68",
+      "source_id": 3335
+    },
+    {
+      "count": 1,
+      "identity_key": "fc15acd30ef574e05c74f7e258b07f8dd3579e146fa74d4f090a2a68de58597b",
+      "source_id": 3333
+    },
+    {
+      "count": 1,
+      "identity_key": "06edf6c9a9f1cd1936344a5c1591fcd79399df36bbe8e2501ba413bab23d90ad",
+      "source_id": 3334
+    }
+  ],
+  "id": "deck-9be4850b-3b61-4883-9376-6d061ea31b18",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "2d6820c46b2e5a167340dd51d08d4653bcd40b6b69169fa306a1a1cf49d736c7",
+      "source_id": 1837
+    },
+    {
+      "count": 2,
+      "identity_key": "e9a12b768656b3a2fce3653ce06837096df7754a8282ffd08d3598c9ebde5df2",
+      "source_id": 1852
+    },
+    {
+      "count": 1,
+      "identity_key": "7c900a217a9ae58ff028100977f57fb0fa3733624a2c029331a3c1379e617e53",
+      "source_id": 1853
+    },
+    {
+      "count": 2,
+      "identity_key": "75e671c7c65e9a8b1f29ba3234e7dac8c23b491d32e2ee13828df7079c9ed094",
+      "source_id": 1848
+    },
+    {
+      "count": 3,
+      "identity_key": "390afa82ffec1d3a923bdf01267b5652a3b5815b77522cfb50682946a5cb2b0e",
+      "source_id": 11
+    },
+    {
+      "count": 1,
+      "identity_key": "21da5fd9360a7623664f1cf6338c56fc90c3917c5e9d7885ac86d925d961af78",
+      "source_id": 1099
+    },
+    {
+      "count": 2,
+      "identity_key": "eac9888eae1de05a985c12d820a7e0654a287ad83bccf52423589839cd17cae5",
+      "source_id": 3331
+    },
+    {
+      "count": 2,
+      "identity_key": "4be47f572e9266c5b983cf5f53de24eb731d58958705cc56ce8a7a77857ae9ba",
+      "source_id": 3332
+    },
+    {
+      "count": 2,
+      "identity_key": "7ce8c59ffbe410ad31b3e5605bc43c80aa5f82efd48f5ad97e0c37e89a2a6c28",
+      "source_id": 3328
+    },
+    {
+      "count": 2,
+      "identity_key": "ff2ed55a1d5bbb87d0328ceba4651813dd465a1cd0d3f4c681b07029da06219a",
+      "source_id": 3337
+    }
+  ],
+  "name": "아마조네스",
+  "version": 1037
+}

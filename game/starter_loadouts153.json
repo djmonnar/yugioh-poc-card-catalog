@@ -226,6 +226,22 @@
       }
     ]
   },
+  "unified039_46cb911634a1e2c052abe392116bdcec860528fa": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_field",
+        "position": 0,
+        "sourceId": 3328,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
   "unified039_49a1211d1d9aeaa1ac0c6d01728e5eed58710995": {
     "gold": 0,
     "lp": 4000,
@@ -788,7 +804,7 @@
   },
   "unified039_e1c2fd4be65edb1f95a322ac937882809ee4bf29": {
     "gold": 0,
-    "lp": 4000,
+    "lp": 4500,
     "openingDrawBonus": 0,
     "relicIds": [
       "restoring_ankh"
