@@ -21,7 +21,7 @@ import {characterChoice068,changeCharacter068,traitChoices068,changeTrait068} fr
 import {portraitUrl081} from './authoring081-assets.js?v=20261105-082';
 import {traitCardMatches089} from './authoring089-traits.js?v=20261106-089';
 import {traitHelp184,ouijaWithoutNecrofear184} from './authoring184-traits.js';
-import {traitKindOffered199,AURA_GROUPS199,AURA_DEFAULT199,auraOptions199,auraSummary199} from './authoring199-traits.js';
+import {AURA_GROUPS199,AURA_DEFAULT199,auraOptions199,auraSummary199} from './authoring199-traits.js';import {traitKindOffered203} from './authoring203-traits.js';
 import {traitFieldLabel196,traitDefault196} from './authoring196-traits.js';
 import {traitLabel203,traitValues203,traitLines203,encounterTraitText203} from './authoring203-trait-summary.js';
 import {CARD_SORTS091,filterValues091,cardQueryTokens091,cardFiltersMatch091,sortCards091} from './authoring091-search.js?v=20261106-091';
@@ -273,8 +273,8 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
   function ouijaWarning184(host,skills,main){if(ouijaWithoutNecrofear184(skills,currentCards,main))host.append(el('p','위저보드 특성이 있지만 이 덱의 메인 덱에 다크 네크로피어가 없습니다. 다크 네크로피어가 나오지 않으면 글자가 놓이지 않습니다.','au-hint au-ouija-warning184'));}
   function skillFields(host,rows,onRows,key,shared=false,getRows=()=>rows,allowed=()=>true,starter=false){
     // (197) Character shared traits take the kinds the database marks shared (from 197 also the 184 kinds, union_power and the recover kinds);
-    // starter decks take STARTER_KINDS199 (STARTER_KINDS197 + start_deck) whatever the shared flag says; decks and encounters take every compiled kind.
-    const form=currentState.bootstrap?.capabilities?.trait_form,definitions=(form?.kinds??[]).filter(k=>traitKindOffered199(k,shared,starter)&&allowed(k.kind));
+    // starter decks take STARTER_KINDS203 (STARTER_KINDS199 + lp_barrier, highlander) whatever the shared flag says; decks and encounters take every compiled kind.
+    const form=currentState.bootstrap?.capabilities?.trait_form,definitions=(form?.kinds??[]).filter(k=>traitKindOffered203(k,shared,starter)&&allowed(k.kind));
     if(!definitions.length){host.append(el('p',`설정된 특성 ${rows.length}개 · 특성 편집 자료를 확인하는 중입니다.`,'au-hint'));return;}
     const mainCard=c=>traitCardMatches089(c),cardRef=c=>({slot:c.slot,internal_id:c.source_id,identity_key:c.identity_key,name_ko:c.name_ko});
     const liveRows=()=>getRows()??[],summaryOptions=traitOptions203();

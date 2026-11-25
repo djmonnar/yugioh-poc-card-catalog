@@ -1,5 +1,5 @@
 import {traitCardMatches089,sharedTraitRefMatches089} from './authoring089-traits.js?v=20261106-089';
-import {traitKindOffered199,auraValid199} from './authoring199-traits.js';
+import {auraValid199} from './authoring199-traits.js';import {traitKindOffered203} from './authoring203-traits.js';
 import {cardMetadata202} from './authoring202-catalog.js?v=20261125-six-samurai-gate-guardian202';
 // Local preflight explains known server contracts. The server remains authoritative.
 const own=(value,key)=>Object.prototype.hasOwnProperty.call(value??{},key);
@@ -72,7 +72,7 @@ export function validateAuthoringChange066(snapshot,type,id,fields,{operation='p
     }
   }
   const validateSkills=(rows,shared,keys,starter=false)=>{
-    const maximum=shared?10:8,kinds=(capabilities.trait_form?.kinds??[]).filter(kind=>traitKindOffered199(kind,shared,starter));
+    const maximum=shared?10:8,kinds=(capabilities.trait_form?.kinds??[]).filter(kind=>traitKindOffered203(kind,shared,starter));
     check(Array.isArray(rows)&&rows.length<=maximum,keys,`특성은 ${maximum}개까지 설정할 수 있습니다.`);
     check(new Set(rows.map(row=>row.kind)).size===rows.length,keys,'같은 종류의 특성은 한 번만 설정할 수 있습니다.');
     for(const row of rows){

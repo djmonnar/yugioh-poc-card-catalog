@@ -6,6 +6,7 @@ import {TRAIT_KINDS184} from '../authoring184-traits.js';
 import {TRAIT_KINDS196} from '../authoring196-traits.js';
 import {TRAIT_KINDS197,CHARACTER_KINDS197} from '../authoring197-traits.js';
 import {TRAIT_KINDS199} from '../authoring199-traits.js';
+import {TRAIT_KINDS203} from '../authoring203-traits.js';
 
 const json=async file=>JSON.parse(await readFile(file,'utf8'));
 const copy=structuredClone;
@@ -20,7 +21,7 @@ export async function previewSeed170(root){
   for(const kind of TRAIT_KINDS184)if(!capabilities.trait_form.kinds.some(row=>row.kind===kind.kind))capabilities.trait_form.kinds.push(copy(kind));
   // (203) Later migrations as well: union_power (196), the recover kinds and shared 184/196 kinds (197), the 199 kinds
   // and the starter loadout capability (153), so the starter and character screens look like the live studio.
-  for(const kind of [...TRAIT_KINDS196,...TRAIT_KINDS197,...TRAIT_KINDS199])if(!capabilities.trait_form.kinds.some(row=>row.kind===kind.kind))capabilities.trait_form.kinds.push(copy(kind));
+  for(const kind of [...TRAIT_KINDS196,...TRAIT_KINDS197,...TRAIT_KINDS199,...TRAIT_KINDS203])if(!capabilities.trait_form.kinds.some(row=>row.kind===kind.kind))capabilities.trait_form.kinds.push(copy(kind));
   for(const kind of capabilities.trait_form.kinds)if(CHARACTER_KINDS197.includes(kind.kind))kind.shared=true;
   capabilities.starter_loadout={lp_max:1000000,gold_max:1000000,relics_max:70};
   const schema=await json(path.join(root,'tests/fixtures/authoring-schema039.json'));
