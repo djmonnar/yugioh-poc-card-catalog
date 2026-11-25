@@ -34,6 +34,15 @@
       "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.134/YGOClassicExpedition-0.18.131-to-0.18.134-arm64.delta092.gz",
       "patchSizeBytes": 66735440,
       "patchSha256": "316f1305ab14532d06d2b174232ab60b6f23bb5d43067d104147f287d647687d"
+    },
+    {
+      "baseVersionName": "0.18.130",
+      "baseVersionCode": 149,
+      "baseSizeBytes": 835999124,
+      "baseSha256": "a4ac332b321462d7868e2ff22277d59596a8ab61ae93ce9625cc50fac9d49fad",
+      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.134/YGOClassicExpedition-0.18.130-to-0.18.134-arm64.delta092.gz",
+      "patchSizeBytes": 92014238,
+      "patchSha256": "ea273d31b587193c2f9dc2def4f68912103f80ca9c6edf8c4845b6dfdc9c7950"
     }
   ]
 }
