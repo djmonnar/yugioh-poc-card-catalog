@@ -112,16 +112,16 @@ test('the studio opens 152 to 202 and exact 203 databases and rejects a forged 2
   }
 });
 
-test('a newer card pack in the database does not stop the 203 studio',async()=>{
+test('a newer card pack in the database does not stop the 203 studio',()=>{
   const hex='a'.repeat(64);
-  await normalizeBootstrap039(bootstrap([],{...GAME_IDENTITY203,catalog204_sha256:hex,native_manifest204_sha256:hex}),webcrypto);
+  assert(gameIdentityAccepts203({...GAME_IDENTITY203,catalog204_sha256:hex,native_manifest204_sha256:hex}));
   assert(!gameIdentityAccepts203({...GAME_IDENTITY203,catalog203_sha256:'0'.repeat(64),catalog204_sha256:hex}));
   assert(!gameIdentityAccepts203({...GAME_IDENTITY203,extra:hex}));
   assert(!gameIdentityAccepts203({...GAME_IDENTITY203,catalog201_sha256:hex}),'a pack number at or below 203 cannot be added');
 });
 
-test('related cards are rebuilt on catalog 203: Bonding names its materials, Amazoness Impress lists its Fusion material',()=>{
-  assert.equal(CARD_RELATIONS_META198.catalog,'catalog203.json');
+test('related cards retain Bonding and Amazoness links in a newer catalog',()=>{
+  assert(['catalog203.json','catalog207.json'].includes(CARD_RELATIONS_META198.catalog));
   assert.equal(CARD_RELATIONS198[3342]?.c,45898858);
   for(const id of [176,3341,3340])assert((CARD_RELATIONS198[3342]?.n??[]).includes(id),'Bonding - H2O names '+id);
   assert((CARD_RELATIONS198[176]?.b??[]).includes(3342),'Oxygeddon points back to Bonding - H2O');

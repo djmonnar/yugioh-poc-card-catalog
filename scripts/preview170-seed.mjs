@@ -25,6 +25,7 @@ export async function previewSeed170(root){
   for(const kind of capabilities.trait_form.kinds)if(CHARACTER_KINDS197.includes(kind.kind))kind.shared=true;
   capabilities.starter_loadout={lp_max:1000000,gold_max:1000000,relics_max:70};
   const schema=await json(path.join(root,'tests/fixtures/authoring-schema039.json'));
+  const relics207=await json(path.join(data,'relics207.json'));
   // Pack art lives in assets/native<NNN>/cards/<id>.jpg; the DB catalog carries the same path.
   const art=new Map(),assets=path.join(root,'assets');
   for(const pack of (await readdir(assets)).filter(name=>/^native\d{3}$/.test(name)).sort())for(const name of await readdir(path.join(assets,pack,'cards')).catch(()=>[]))if(/^\d+\.jpg$/.test(name))art.set(Number(name.slice(0,-4)),`assets/${pack}/cards/${name}`);
@@ -35,6 +36,8 @@ export async function previewSeed170(root){
   }
   catalog.sort((a,b)=>a.source_id-b.source_id);
   const characters=[['yugi','미리보기 유희'],['kaiba','미리보기 카이바'],['mai','미리보기 메이']].map(([profile_id,name])=>({id:`preview-character-${profile_id}`,version:1,profile_id,art_key:`CharacterPresentation012/images/${profile_id}/start`,profile:{name,portrait:'',skills:[],skill_profiles:[]}}));
+  characters.push({id:'character-tyranno-kenzan-206',version:1,profile_id:'tyranno_kenzan',art_key:'Character206/tyranno_kenzan_start',
+    profile:{name:'티라노 켄잔',portrait:'assets/actors/native206/tyranno_kenzan/start.png',skills:[],skill_profiles:[]}});
   const categories=['드래곤','전사','마법사','기계','지원-공용','함정 견제','융합 소재','의식'];
   const rows=categories.map(name=>row('category',name,{name,archived:false}));
   const byRace={8192:'드래곤',1:'전사',2:'마법사',32:'기계'};
@@ -77,6 +80,11 @@ export async function previewSeed170(root){
   ];
   rows.push(row('starter_list','main',{entries:decks.slice(0,8).filter((_,index)=>index!==4).map((deck,index)=>({starter_id:`preview-starter-${index}`,name:`미리보기 시작 덱 ${index+1}`,deck_id:deck.entity_id,...(loadouts[index]?{start_loadout:copy(loadouts[index])}:{})}))}));
   for(const [type,key] of [['relic','relics'],['event','events']])for(const item of schema.form[key])rows.push(row(type,item.id,{id:item.id,kind:`preview-${item.id}`,name:item.name??`미리보기 ${item.id}`,title:item.name??`미리보기 ${item.id}`,description:'미리보기 설명',effect:'미리보기 결과',enabled:true,weight:1,rarity:'R',price:100,shopEnabled:true,params:Object.fromEntries(Object.entries(item.bounds).map(([name,bound])=>[name,bound.min]))}));
+  for(const {bounds,...relic} of relics207){
+    rows.push(row('relic',relic.id,relic));
+    const forms=capabilities.form?.relics;
+    if(forms&&!forms.some(item=>item.id===relic.id))forms.push({id:relic.id,name:relic.name,bounds});
+  }
   rows.push(row('shop_rules','main',schema.shopRules));
   for(const character of characters)rows.push(row('character',character.id,{...character.profile}));
   const payload={catalog,deck_rules035:{rows:[]},opponents:{opponents:[],chapters:[]},starters:{starters:[]},content022:{relics:rows.filter(item=>item.entity_type==='relic').map(item=>item.content),events:rows.filter(item=>item.entity_type==='event').map(item=>item.content)},characters,meta017:{config:{},packs:[]},shop_rules:schema.shopRules};

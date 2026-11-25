@@ -126,7 +126,7 @@ test('a newer card pack in the database does not stop the 202 studio',async()=>{
 });
 
 test('related cards are rebuilt on catalog 202: Gate Guardian Fusions list their Contact Fusion materials',()=>{
-  assert(['catalog202.json','catalog203.json'].includes(CARD_RELATIONS_META198.catalog),'related cards are built on catalog 202 or a newer pack');
+  assert(['catalog202.json','catalog203.json','catalog207.json'].includes(CARD_RELATIONS_META198.catalog),'related cards are built on catalog 202 or a newer pack');
   assert.deepEqual(CARD_RELATIONS198[3325]?.c,8505920);
   for(const [id,materials] of [[3322,[2642,2644]],[3323,[2642,2643]],[3324,[2643,2644]],[3325,[2642,2643,2644]]]){
     assert.deepEqual([...(CARD_RELATIONS198[id]?.f??[])].sort((a,b)=>a-b),materials,'Gate Guardian Fusion '+id+' materials');

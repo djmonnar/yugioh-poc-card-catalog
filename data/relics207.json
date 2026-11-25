@@ -1,0 +1,257 @@
+[
+  {
+    "id": "harpie_whip207",
+    "kind": "harpie_whip207",
+    "name": "해피의 채찍",
+    "rarity": "SR",
+    "price": 200,
+    "weight": 1,
+    "enabled": true,
+    "shopEnabled": true,
+    "iconKey": "Relics/Content207/harpie_whip207",
+    "iconIndex": 0,
+    "description": "마법·함정 카드가 파괴될 때마다 무작위로 고른 내 앞면 몬스터 1장의 공격력이 이번 전투 동안 100 올라갑니다.",
+    "params": {
+      "atk": 100
+    },
+    "supportStatus": "implemented",
+    "bounds": {
+      "atk": {
+        "min": 1,
+        "max": 9999
+      }
+    }
+  },
+  {
+    "id": "mist_valley_flute207",
+    "kind": "mist_valley_flute207",
+    "name": "안개골짜기의 피리",
+    "rarity": "SR",
+    "price": 200,
+    "weight": 1,
+    "enabled": true,
+    "shopEnabled": true,
+    "iconKey": "Relics/Content207/mist_valley_flute207",
+    "iconIndex": 0,
+    "description": "필드에서 패로 돌아간 카드마다 카운터를 1개 놓습니다. 카운터 4개를 제거할 때마다 1장 드로우합니다. 전투가 끝나면 카운터가 초기화됩니다.",
+    "params": {
+      "threshold": 4,
+      "draw": 1
+    },
+    "supportStatus": "implemented",
+    "bounds": {
+      "threshold": {
+        "min": 2,
+        "max": 100
+      },
+      "draw": {
+        "min": 1,
+        "max": 3
+      }
+    }
+  },
+  {
+    "id": "ancient_fossil207",
+    "kind": "ancient_fossil207",
+    "name": "고대의 화석",
+    "rarity": "R",
+    "price": 150,
+    "weight": 1,
+    "enabled": true,
+    "shopEnabled": true,
+    "iconKey": "Relics/Content207/ancient_fossil207",
+    "iconIndex": 0,
+    "description": "이번 전투에서 처음 내 묘지의 몬스터가 7장 이상이 되면 1장 드로우합니다.",
+    "params": {
+      "threshold": 7,
+      "draw": 1
+    },
+    "supportStatus": "implemented",
+    "bounds": {
+      "threshold": {
+        "min": 1,
+        "max": 100
+      },
+      "draw": {
+        "min": 1,
+        "max": 3
+      }
+    }
+  },
+  {
+    "id": "dark_world_gem207",
+    "kind": "dark_world_gem207",
+    "name": "암흑계의 보석",
+    "rarity": "SR",
+    "price": 200,
+    "weight": 1,
+    "enabled": true,
+    "shopEnabled": true,
+    "iconKey": "Relics/Content207/dark_world_gem207",
+    "iconIndex": 0,
+    "description": "전투마다 1번, 내 메인 페이즈에 패에서 고른 카드 1장을 효과로 버립니다.",
+    "params": {
+      "uses_per_battle": 1
+    },
+    "supportStatus": "implemented",
+    "bounds": {
+      "uses_per_battle": {
+        "min": 1,
+        "max": 1
+      }
+    }
+  },
+  {
+    "id": "dark_world_seal207",
+    "kind": "dark_world_seal207",
+    "name": "암흑계의 옥쇄",
+    "rarity": "UR",
+    "price": 300,
+    "weight": 1,
+    "enabled": true,
+    "shopEnabled": true,
+    "iconKey": "Relics/Content207/dark_world_seal207",
+    "iconIndex": 0,
+    "description": "전투마다 1번, 내 메인 페이즈에 덱 맨 위 카드 1장을 효과로 버립니다.",
+    "params": {
+      "uses_per_battle": 1
+    },
+    "supportStatus": "implemented",
+    "bounds": {
+      "uses_per_battle": {
+        "min": 1,
+        "max": 1
+      }
+    }
+  },
+  {
+    "id": "focus_sash207",
+    "kind": "focus_sash207",
+    "name": "기합의 띠",
+    "rarity": "N",
+    "price": 100,
+    "weight": 1,
+    "enabled": true,
+    "shopEnabled": true,
+    "iconKey": "Relics/Content207/focus_sash207",
+    "iconIndex": 0,
+    "description": "내 LP가 500 이하인 동안 내 앞면 몬스터의 공격력과 수비력이 100 올라갑니다.",
+    "params": {
+      "threshold": 500,
+      "atk": 100,
+      "def": 100
+    },
+    "supportStatus": "implemented",
+    "bounds": {
+      "threshold": {
+        "min": 1,
+        "max": 60000
+      },
+      "atk": {
+        "min": 1,
+        "max": 9999
+      },
+      "def": {
+        "min": 1,
+        "max": 9999
+      }
+    }
+  },
+  {
+    "id": "holy_grail207",
+    "kind": "holy_grail207",
+    "name": "성배",
+    "rarity": "UR",
+    "price": 300,
+    "weight": 1,
+    "enabled": true,
+    "shopEnabled": true,
+    "iconKey": "Relics/Content207/holy_grail207",
+    "iconIndex": 0,
+    "description": "골드를 더 이상 얻을 수 없습니다. 전투의 첫 패는 1장 늘어납니다.",
+    "params": {
+      "opening_draw": 1
+    },
+    "supportStatus": "implemented",
+    "bounds": {
+      "opening_draw": {
+        "min": 1,
+        "max": 3
+      }
+    }
+  },
+  {
+    "id": "gravekeeper_vow207",
+    "kind": "gravekeeper_vow207",
+    "name": "묘지기의 서약",
+    "rarity": "UR",
+    "price": 300,
+    "weight": 1,
+    "enabled": true,
+    "shopEnabled": true,
+    "iconKey": "Relics/Content207/gravekeeper_vow207",
+    "iconIndex": 0,
+    "description": "내 필드에 묘지에서 특수 소환한 몬스터 1장당 LP를 300 잃습니다. 전투의 첫 패는 1장 늘어납니다.",
+    "params": {
+      "opening_draw": 1,
+      "lp": 300
+    },
+    "supportStatus": "implemented",
+    "bounds": {
+      "opening_draw": {
+        "min": 1,
+        "max": 3
+      },
+      "lp": {
+        "min": 1,
+        "max": 60000
+      }
+    }
+  },
+  {
+    "id": "forbidden_card207",
+    "kind": "forbidden_card207",
+    "name": "금지카드",
+    "rarity": "UR",
+    "price": 300,
+    "weight": 1,
+    "enabled": true,
+    "shopEnabled": true,
+    "iconKey": "Relics/Content207/forbidden_card207",
+    "iconIndex": 0,
+    "description": "전투 시작 시 덱에서 무작위 카드 1장을 뒷면으로 제외합니다. 전투의 첫 패는 1장 늘어납니다.",
+    "params": {
+      "opening_draw": 1
+    },
+    "supportStatus": "implemented",
+    "bounds": {
+      "opening_draw": {
+        "min": 1,
+        "max": 3
+      }
+    }
+  },
+  {
+    "id": "limited_card207",
+    "kind": "limited_card207",
+    "name": "제한카드",
+    "rarity": "R",
+    "price": 150,
+    "weight": 1,
+    "enabled": true,
+    "shopEnabled": true,
+    "iconKey": "Relics/Content207/limited_card207",
+    "iconIndex": 0,
+    "description": "전투 시작 시 덱에서 무작위 카드 1장을 묘지로 보냅니다. 그 카드의 효과는 이 이동으로 발동하지 않습니다. LP를 500 회복합니다.",
+    "params": {
+      "heal": 500
+    },
+    "supportStatus": "implemented",
+    "bounds": {
+      "heal": {
+        "min": 1,
+        "max": 60000
+      }
+    }
+  }
+]
