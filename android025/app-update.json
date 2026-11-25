@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.130",
-  "versionCode": 149,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.130/YGOClassicExpedition-0.18.130-arm64.apk",
-  "sizeBytes": 835999124,
-  "sha256": "a4ac332b321462d7868e2ff22277d59596a8ab61ae93ce9625cc50fac9d49fad",
-  "releaseNotes": "덱 2개로 출발해도 두 덱의 시작 유물을 모두 받고, LP는 두 덱 중 큰 값, 골드는 합계로 출발합니다. 상대 몬스터·마법·함정 칸을 좌우 반전해 화면의 맞은편 칸이 실제 같은 세로열이 되게 했습니다."
+  "versionName": "0.18.131",
+  "versionCode": 150,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.131/YGOClassicExpedition-0.18.131-arm64.apk",
+  "sizeBytes": 861526094,
+  "sha256": "43dc25e1f8592e6ae9c1f788c5d7e40b4c47244f327966d56411a4fc68a3c76b",
+  "releaseNotes": "여섯 무사·시엔·게이트 가디언 카드 42장을 추가했습니다(무사도 카운터, 시엔의 도량 2장·여섯 무의 문 1장 제한). AI가 무사도 카운터와 여섯 무사 효과를 쓰고, 팬서 워리어는 벽으로 두며 자기 몬스터를 릴리스하는 카드를 손해 없이 씁니다."
 }
