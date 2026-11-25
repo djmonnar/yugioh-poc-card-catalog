@@ -3,46 +3,55 @@
   "format": "YGODLT92",
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.134",
-  "versionCode": 153,
-  "sha256": "d205f863a817a41c4d5fd5d822fb84efed2c511ff53111990d5c65716298d8bb",
-  "sizeBytes": 905641498,
+  "versionName": "0.18.135",
+  "versionCode": 154,
+  "sha256": "32ca515108d9e5d111f67f082e706d34334ee836e1cbc16711e05ed871a59b67",
+  "sizeBytes": 905647506,
   "patches": [
+    {
+      "baseVersionName": "0.18.134",
+      "baseVersionCode": 153,
+      "baseSizeBytes": 905641498,
+      "baseSha256": "d205f863a817a41c4d5fd5d822fb84efed2c511ff53111990d5c65716298d8bb",
+      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.135/YGOClassicExpedition-0.18.134-to-0.18.135-arm64.delta092.gz",
+      "patchSizeBytes": 22654022,
+      "patchSha256": "0b851476e35f104fab58c65181e58dd4b6d7bf129078af3cfee070fe86945f29"
+    },
     {
       "baseVersionName": "0.18.133",
       "baseVersionCode": 152,
       "baseSizeBytes": 905639926,
       "baseSha256": "4b55d8004a0b852ccf79e234efeeb5311f5bd441dba553703023eaa71298290d",
-      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.134/YGOClassicExpedition-0.18.133-to-0.18.134-arm64.delta092.gz",
-      "patchSizeBytes": 22747226,
-      "patchSha256": "f88559b6aa9a0c6dd274a44ece7a3261b8d6844746361cfa59e165e8ff7afbf9"
+      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.135/YGOClassicExpedition-0.18.133-to-0.18.135-arm64.delta092.gz",
+      "patchSizeBytes": 22756310,
+      "patchSha256": "4ee44bfe62a3f0d1f4ec0989f1e19af78ac7f76c16f7721cbe068671b7f6aea0"
     },
     {
       "baseVersionName": "0.18.132",
       "baseVersionCode": 151,
       "baseSizeBytes": 891479620,
       "baseSha256": "5439b4d538706845ba7cb2e538ff78536330189486e81cea9979363432fb8257",
-      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.134/YGOClassicExpedition-0.18.132-to-0.18.134-arm64.delta092.gz",
-      "patchSizeBytes": 36826897,
-      "patchSha256": "b790eeb03aeda4ddb815b6706618dba42bca8285cfc71483c12e811fbc57928b"
+      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.135/YGOClassicExpedition-0.18.132-to-0.18.135-arm64.delta092.gz",
+      "patchSizeBytes": 36835078,
+      "patchSha256": "10f9f0bf453f40f245d80c258ad0485894276955c35734688e0132316ed50ada"
     },
     {
       "baseVersionName": "0.18.131",
       "baseVersionCode": 150,
       "baseSizeBytes": 861526094,
       "baseSha256": "43dc25e1f8592e6ae9c1f788c5d7e40b4c47244f327966d56411a4fc68a3c76b",
-      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.134/YGOClassicExpedition-0.18.131-to-0.18.134-arm64.delta092.gz",
-      "patchSizeBytes": 66735440,
-      "patchSha256": "316f1305ab14532d06d2b174232ab60b6f23bb5d43067d104147f287d647687d"
+      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.135/YGOClassicExpedition-0.18.131-to-0.18.135-arm64.delta092.gz",
+      "patchSizeBytes": 66743268,
+      "patchSha256": "acfb7f7cf5607ec3679751d5716c6090c9e8c03b8dcd2d78ab786a1fcce1bcc0"
     },
     {
       "baseVersionName": "0.18.130",
       "baseVersionCode": 149,
       "baseSizeBytes": 835999124,
       "baseSha256": "a4ac332b321462d7868e2ff22277d59596a8ab61ae93ce9625cc50fac9d49fad",
-      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.134/YGOClassicExpedition-0.18.130-to-0.18.134-arm64.delta092.gz",
-      "patchSizeBytes": 92014238,
-      "patchSha256": "ea273d31b587193c2f9dc2def4f68912103f80ca9c6edf8c4845b6dfdc9c7950"
+      "patchUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.135/YGOClassicExpedition-0.18.130-to-0.18.135-arm64.delta092.gz",
+      "patchSizeBytes": 92022323,
+      "patchSha256": "1db490be3a0a33a98119110d71d4fa007073174f4d76f719e3e5ee52a79fe7b5"
     }
   ]
 }

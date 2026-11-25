@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.134",
-  "versionCode": 153,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.134/YGOClassicExpedition-0.18.134-arm64.apk",
-  "sizeBytes": 905641498,
-  "sha256": "d205f863a817a41c4d5fd5d822fb84efed2c511ff53111990d5c65716298d8bb",
-  "releaseNotes": "판도라·빛과 어둠의 가면·어둠의 플레이어 킬러·텐죠인 아스카·미사와 다이치의 컷신을 보강했습니다. 유물 효과 알림에 전투에서 사용 중인 유물 그림을 표시합니다."
+  "versionName": "0.18.135",
+  "versionCode": 154,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.135/YGOClassicExpedition-0.18.135-arm64.apk",
+  "sizeBytes": 905647506,
+  "sha256": "32ca515108d9e5d111f67f082e706d34334ee836e1cbc16711e05ed871a59b67",
+  "releaseNotes": "시작 덱의 덱 보기에서 특성과 시작 유물의 효과를 확인할 수 있습니다.\n유물 이미지에 다른 유물의 일부가 섞여 보이는 문제를 고쳤습니다.\nAI가 해피의 애완 드래곤－세인트 파이어 기가의 공격 대상 제한을 고려합니다."
 }
