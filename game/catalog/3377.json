@@ -8,7 +8,7 @@
   ],
   "code": 64892035,
   "defense": 0,
-  "description": "일반 소환한 턴에는 공격할 수 없습니다. 특수 소환에는 이 제한이 생기지 않습니다.",
+  "description": "이 카드는 일반 소환한 턴에 공격할 수 없다.",
   "draw_enabled": true,
   "identity_key": "328ed007c0b9de6fe1afa81d0ddbce78fc2691a3f2ddffe811ff61c588d510b7",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3377.jpg",

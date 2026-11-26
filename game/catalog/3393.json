@@ -9,7 +9,7 @@
   ],
   "code": 91862578,
   "defense": 600,
-  "description": "내 패 1장마다 공격력과 수비력 +400. 소환하면서 패에서 빠지는 자기 자신은 남은 패 수에 포함되지 않습니다.",
+  "description": "자신의 패에 있는 카드 1장당 이 카드의 공격력과 수비력이 각각 400 올라간다.",
   "draw_enabled": true,
   "identity_key": "1244877b66eb77b2e30c05c067b30e98bbb86d824bac29448bd0440ac009ef7f",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3393.jpg",

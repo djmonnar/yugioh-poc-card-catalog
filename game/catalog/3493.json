@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards212/3493",
+  "attack": 800,
+  "attribute": 4,
+  "categories": [
+    "지원-제왕",
+    "지원-릴리즈",
+    "소환-패에서",
+    "소환제약",
+    "발동-패에서",
+    "발동-패 버리기",
+    "발동-릴리즈됐을 때",
+    "효과-카드 확인",
+    "효과-제외"
+  ],
+  "code": 59808784,
+  "defense": 1000,
+  "description": "같은 카드명으로 ①과 ②를 한 턴에 각각 한 번만 사용할 수 있다.\n①: 자신의 패 1장을 버려 발동할 수 있다. 패에 있는 이 카드를 특수 소환한다. 그 턴에 자신은 엑스트라 덱에서 몬스터를 특수 소환할 수 없다.\n②: 어드밴스 소환에 사용하기 위해 이 카드가 릴리스되면 발동할 수 있다. 상대의 패를 확인한 후, 그중 카드 1장을 골라 엔드 페이즈까지 제외한다.",
+  "draw_enabled": true,
+  "identity_key": "85bd1ebc12e752efed5a18287430850145e14eca1c8ab6e89bf487be27462067",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native212/cards/3493.jpg",
+  "level": 3,
+  "links": [],
+  "name": "화염 제왕가신 베르리네스",
+  "name_english": "Berlineth the Firestorm Vassal",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 128,
+  "rarity": "R",
+  "search_aliases": [
+    "화염 제왕가신 베르리네스",
+    "Berlineth the Firestorm Vassal"
+  ],
+  "source_id": 3493,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2525
+}

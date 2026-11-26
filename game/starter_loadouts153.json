@@ -157,6 +157,30 @@
     ],
     "skills": []
   },
+  "unified039_2bd2a3599eedc0fe1c7f387e0a3405852e2d849a": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "aura": {
+          "atk": 100,
+          "attributes": 0,
+          "def": 100,
+          "levels": 0,
+          "races": 0,
+          "types": 2048
+        },
+        "entries": [],
+        "kind": "stat_aura",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
   "unified039_307d29af5a014a0321e2d07390c3c057bd040ae8": {
     "gold": 0,
     "lp": 4000,
@@ -595,30 +619,6 @@
           }
         ],
         "kind": "start_grave",
-        "position": 0,
-        "sourceId": -1,
-        "threshold": 0,
-        "value": 0
-      }
-    ]
-  },
-  "unified039_b57fc1a5094c0aab251b35582f0f2c877af14ecb": {
-    "gold": 0,
-    "lp": 4000,
-    "openingDrawBonus": 0,
-    "relicIds": [],
-    "skills": [
-      {
-        "aura": {
-          "atk": 100,
-          "attributes": 0,
-          "def": 100,
-          "levels": 0,
-          "races": 0,
-          "types": 2048
-        },
-        "entries": [],
-        "kind": "stat_aura",
         "position": 0,
         "sourceId": -1,
         "threshold": 0,

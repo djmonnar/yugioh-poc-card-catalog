@@ -13,7 +13,7 @@
   ],
   "code": 76862289,
   "defense": 3100,
-  "description": "특수 소환할 수 없습니다. 상대에게 전투 피해를 주면 내 패가 5장이 될 때까지 드로우합니다. 일반 소환하거나 앞면이 된 턴의 엔드 페이즈에 패로 돌아갑니다.",
+  "description": "이 카드는 특수 소환할 수 없다.\n①: 이 카드가 상대에게 전투 데미지를 주었을 경우에 발동한다. 자신의 패가 5장이 되도록 덱에서 드로우한다.\n②: 일반 소환 또는 리버스된 턴의 엔드 페이즈에 발동한다. 이 카드를 주인의 패에 되돌린다.",
   "draw_enabled": true,
   "identity_key": "6044624ceea6ae55bc373632ecf4e2820cd8dcf04f2b6f7ef40bc32de9fd14a2",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3406.jpg",

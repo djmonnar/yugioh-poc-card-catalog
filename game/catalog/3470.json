@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards212/3470",
+  "attack": 2800,
+  "attribute": 1,
+  "categories": [
+    "지원-암석족",
+    "지원-제외",
+    "지원-전투",
+    "소환-패에서",
+    "소환-제외 코스트",
+    "효과-공격력 감소",
+    "효과-수비력 감소",
+    "발동-스탠바이 페이즈 시",
+    "효과-유지 코스트"
+  ],
+  "code": 14258627,
+  "defense": 1000,
+  "description": "이 카드의 컨트롤러는 자신의 스탠바이 페이즈마다 묘지의 암석족 몬스터 1장을 제외하거나, 제외하는 대신 이 카드를 묘지로 보낸다.\n①: 자신의 묘지에서 암석족 몬스터 2장을 제외하면 패에서 이 카드를 특수 소환할 수 있다.\n②: 이 카드와 전투하는 상대 몬스터의 공격력과 수비력은 데미지 계산 중에만 각각 절반이 된다.",
+  "draw_enabled": true,
+  "identity_key": "54f1b313157fffc9f92ac3b6e849ea64b558a01d87a6c40828df5aaf1d5578fb",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native212/cards/3470.jpg",
+  "level": 8,
+  "links": [],
+  "name": "지구거인 가이아 플레이트",
+  "name_english": "Gaia Plate the Earth Giant",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "UR",
+  "search_aliases": [
+    "지구거인 가이아 플레이트",
+    "Gaia Plate the Earth Giant"
+  ],
+  "source_id": 3470,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2502
+}

@@ -3,7 +3,10 @@
   "art_key": "Cards/375",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-표시 형식 변경",
+    "효과-표시 형식 변경"
+  ],
   "code": 83133491,
   "defense": 0,
   "description": "자신과 상대 필드 위에 앞면\n표시로 존재하는 모든\n몬스터의 표시 형식을\n변경한다.",

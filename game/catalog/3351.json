@@ -12,7 +12,7 @@
   ],
   "code": 99659159,
   "defense": 0,
-  "description": "드래그니티 몬스터 카드를 장착한 내 몬스터에게 공격력 +500. 턴마다 한 번, 내 앞면 몬스터에 패의 드래곤족 드래그니티 1장을 장착할 수 있습니다.",
+  "description": "① 자신의 몬스터가 「드래그니티」 몬스터 카드를 장착하고 있으면 그 몬스터의 공격력이 500 올라간다.\n② 1턴에 1번, 자신의 앞면 표시 몬스터 1장을 대상으로 발동할 수 있다. 자신의 패에서 드래곤족 「드래그니티」 몬스터 1장을 골라 장착 카드로 취급하고 대상 몬스터에 장착한다.",
   "draw_enabled": true,
   "identity_key": "aeda5ab121c71bdc59dbba9999fcc79932684fbdf6bcb868b45ce34c0321f051",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3351.jpg",

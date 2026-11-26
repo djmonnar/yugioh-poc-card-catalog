@@ -3,7 +3,9 @@
   "art_key": "Cards/428",
   "attack": 1900,
   "attribute": 8,
-  "categories": [],
+  "categories": [
+    "효과-표시 형식 변경"
+  ],
   "code": 31553716,
   "defense": 0,
   "description": "①: 이 카드가 수비 표시\n몬스터를 공격했을 경우, 그\n수비력을 공격력이 넘은\n만큼만 전투 데미지를 준다.\n②: 이 카드는 공격했을 경우,\n데미지 스텝 종료시에 수비\n표시가 된다.",

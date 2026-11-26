@@ -15,7 +15,7 @@
   ],
   "code": 43543777,
   "defense": 1800,
-  "description": "특수 소환할 수 없습니다. 일반 소환하거나 앞면이 되면 패 1장을 버려 묘지의 스피릿 1장을 지정해 회수할 수 있습니다. 그 턴의 엔드 페이즈에 패로 돌아갑니다.",
+  "description": "이 카드는 특수 소환할 수 없다.\n①: 일반 소환 또는 리버스된 턴의 엔드 페이즈에 이 카드를 주인의 패에 되돌린다.\n②: 이 카드를 일반 소환하거나 리버스했을 때, 자신의 패에서 카드 1장을 버리고 자신의 묘지에 있는 스피릿 몬스터 1장을 대상으로 발동할 수 있다. 그 몬스터를 패에 넣는다.",
   "draw_enabled": true,
   "identity_key": "bb41c9a5710faacac955a45da182c5ff1e8b4b17cc0fab07d00f70127c6a0f4d",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3433.jpg",

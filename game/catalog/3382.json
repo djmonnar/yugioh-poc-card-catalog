@@ -4,13 +4,13 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "발동-표시 변경 시",
+    "발동-표시 형식 변경 시",
     "효과-파괴",
     "파괴-몬스터"
   ],
   "code": 35686187,
   "defense": 0,
-  "description": "상대 몬스터가 앞면 공격에서 앞면 수비로 바뀌었을 때, 상대의 수비 표시 몬스터를 전부 파괴합니다. 뒷면 수비도 파괴 범위에 들어갑니다.",
+  "description": "① 상대 필드의 앞면 공격 표시 몬스터가 앞면 수비 표시로 바뀌었을 때 발동할 수 있다. 상대 필드에 수비 표시로 있는 몬스터를 앞면과 뒷면에 관계없이 모두 파괴한다.",
   "draw_enabled": true,
   "identity_key": "9e40e8e318a463f80592cf29d227d82d32ba5279c5faeed9905554484fbf4447",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3382.jpg",

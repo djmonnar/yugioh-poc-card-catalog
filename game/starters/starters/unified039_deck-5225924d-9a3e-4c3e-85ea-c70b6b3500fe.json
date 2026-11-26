@@ -1,6 +1,6 @@
 {
   "extra": [],
-  "id": "unified039_b57fc1a5094c0aab251b35582f0f2c877af14ecb",
+  "id": "unified039_2bd2a3599eedc0fe1c7f387e0a3405852e2d849a",
   "main": [
     2103,
     2635,
@@ -23,6 +23,7 @@
     2634,
     2634
   ],
-  "name": "듀얼몬스터 중급",
+  "name": "피닉스 기어프리드-듀얼",
+  "representativeSourceId": 178,
   "sourceId": "unified039:deck-5225924d-9a3e-4c3e-85ea-c70b6b3500fe"
 }

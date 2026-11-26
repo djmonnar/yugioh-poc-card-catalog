@@ -10,7 +10,7 @@
   ],
   "code": 81661951,
   "defense": 1200,
-  "description": "턴마다 한 번, 내 마법·함정 칸에 놓인 앞면 드래그니티 1장을 몬스터로 전개합니다.",
+  "description": "① 1턴에 1번, 자신의 마법·함정 존에 앞면 표시로 놓인 「드래그니티」 카드 1장을 대상으로 발동할 수 있다. 그 카드를 자신 필드에 특수 소환한다.",
   "draw_enabled": true,
   "identity_key": "28380ecfdccf4b0a798158d5b6a8822b8c16fef3b8a0ee01c6f21d8b57d7cba2",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3364.jpg",

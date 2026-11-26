@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards212/3472",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-전투",
+    "발동-스탠바이 페이즈 시",
+    "효과-표시 형식 변경",
+    "효과-공격 강제",
+    "지원-표시 형식 변경"
+  ],
+  "code": 31245780,
+  "defense": 0,
+  "description": "상대의 스탠바이 페이즈에 발동할 수 있다. 상대 필드의 앞면 몬스터를 모두 공격 표시로 바꾸며, 그 턴에는 이들의 표시 형식을 변경할 수 없다. 이 턴에 공격할 수 있는 상대 몬스터는 반드시 공격한다.",
+  "draw_enabled": true,
+  "identity_key": "4d40767782def1acb5ae3ee53ce2c8c0ce3491f3fc7e46cdd17a5c49405d52cd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native212/cards/3472.jpg",
+  "level": 0,
+  "links": [],
+  "name": "배틀매니아",
+  "name_english": "Battle Mania",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "배틀매니아",
+    "Battle Mania"
+  ],
+  "source_id": 3472,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2504
+}

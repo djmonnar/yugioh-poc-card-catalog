@@ -13,7 +13,7 @@
   ],
   "code": 75745607,
   "defense": 2900,
-  "description": "특수 소환할 수 없습니다. 상대에게 전투 피해를 주면, 상대의 다음 드로우 페이즈에 일반 드로우보다 먼저 상대가 패를 전부 버립니다. 일반 소환하거나 앞면이 된 턴의 엔드 페이즈에 패로 돌아갑니다.",
+  "description": "이 카드는 특수 소환할 수 없다.\n①: 일반 소환 또는 리버스된 턴의 엔드 페이즈에 이 카드를 주인의 패에 되돌린다.\n②: 이 카드가 상대에게 전투 데미지를 주었을 때에 발동한다. 다음 턴의 드로우 페이즈에 상대는 일반 드로우 전에 패를 모두 버린다.",
   "draw_enabled": true,
   "identity_key": "9139a2adf8e7c58117d7120020fedd523342045b9a1cf7b893fbc379ca36b091",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3407.jpg",

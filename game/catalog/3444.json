@@ -11,7 +11,7 @@
   ],
   "code": 13210191,
   "defense": 0,
-  "description": "내 다른 마법·함정을 전부 파괴합니다. 실제로 파괴한 수만큼 상대 마법·함정을 골라 파괴합니다. 상대 카드가 그보다 적으면 전부 파괴합니다.",
+  "description": "이 카드를 제외한 자신 필드의 마법 / 함정 카드를 전부 파괴한다. 그 뒤 실제로 파괴한 수와 같은 수만큼 상대 필드에서 마법 / 함정 카드를 골라 파괴한다. 상대의 마법 / 함정 카드가 그 수 이하라면 전부 파괴한다.",
   "draw_enabled": true,
   "identity_key": "57fa8522638c57d9b6b924a558a32a6a85bfd81adce3184262403126d48e0927",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native211/cards/3444.jpg",

@@ -11,7 +11,7 @@
   ],
   "code": 35011819,
   "defense": 0,
-  "description": "몬스터의 일반 소환을 계기로 발동한 몬스터 효과를 무효로 하고, 그 효과를 발동한 쪽에게 1장을 뽑게 할 수 있습니다. 상대의 강한 효과를 막거나 내 불리한 유발 효과를 드로우로 바꾸는 용도입니다.",
+  "description": "① 몬스터의 일반 소환 성공을 조건으로 하는 몬스터 효과가 발동했을 때, 그 발동에 대응하여 이 효과를 발동할 수 있다. 그 발동을 무효로 한 뒤, 무효가 된 효과를 발동한 플레이어가 자신의 덱에서 1장 드로우한다.",
   "draw_enabled": true,
   "identity_key": "9af124dd062e204e1e49e301ec111aef79fbac63ac9f297b0fb269c7dca46285",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3378.jpg",

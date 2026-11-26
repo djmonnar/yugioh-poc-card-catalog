@@ -3,7 +3,10 @@
   "art_key": "Cards/319",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-표시 형식 변경",
+    "효과-표시 형식 변경"
+  ],
   "code": 63102017,
   "defense": 0,
   "description": "상대의 몬스터 1장을 선택하여\n공격 표시로 변경한다.\n뒷면이면 앞면으로 뒤집는다.\n리버스 효과가 있으면 즉시\n발동한다.",

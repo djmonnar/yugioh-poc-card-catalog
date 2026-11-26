@@ -1,9 +1,9 @@
 {
   "baseBindingSha256": "3889a4f651854c23ddb8b03d90841a6c380c8be4a6d4f1858d6fd59e4968586e",
-  "catalogSha256": "91534cafe087027bbf092b4b2cbc5166f9f583259a52a486841e2996a0d627df",
+  "catalogSha256": "e722bc8cfa60a4d6b0606c92667dd9503109b3b1d300a63e66afff03b0063ef0",
   "engine": "unity-native-035",
   "origin": "online",
   "schema": 1,
-  "sha256": "bc4c5b44325e182405880e1324629c77d554326882ced802a8ce6c200fed141d",
-  "sourceSha256": "aeb943f55c8620cb39bdba64a86fa7be54a01d0a9d8c44020fa3e862efdfafaa"
+  "sha256": "eaea8df70e459727cac081601f53c379303d731700e1af016f52200538f2d34b",
+  "sourceSha256": "bb5dffa73a149416d4be1afe30e0df867d0fd9600ae49bdcaca74a1e9ce089aa"
 }

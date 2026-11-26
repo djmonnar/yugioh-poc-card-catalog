@@ -14,7 +14,7 @@
   ],
   "code": 66815913,
   "defense": 1500,
-  "description": "특수 소환할 수 없습니다. 필드에 앞면인 동안 다른 스피릿이 일반 소환 또는 특수 소환되면 턴당 1번 1장을 드로우할 수 있습니다. 일반 소환하거나 앞면이 된 턴의 엔드 페이즈에 패로 돌아갑니다.",
+  "description": "이 카드는 특수 소환할 수 없다.\n①: 이 카드가 몬스터 존에 있을 때, 다른 스피릿 몬스터가 일반 소환 또는 특수 소환에 성공했을 경우에 1턴에 1번 발동할 수 있다. 자신은 덱에서 카드 1장을 드로우한다.\n②: 일반 소환 또는 리버스된 턴의 엔드 페이즈에 발동한다. 이 카드를 주인의 패에 되돌린다.",
   "draw_enabled": true,
   "identity_key": "eab9874a0edbdf136f1a89cf11fe2acf702d3a77550a81b2a49051d621ea50cd",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3415.jpg",

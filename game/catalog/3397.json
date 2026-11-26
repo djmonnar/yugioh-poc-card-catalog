@@ -11,7 +11,7 @@
   ],
   "code": 97623219,
   "defense": 1200,
-  "description": "양쪽 필드의 앞면 속성을 확인합니다. 화염 속성이 있으면 공격력 +500, 물 속성이 있으면 이 카드의 컨트롤이 바뀌지 않습니다.",
+  "description": "양쪽 필드에서 해당 속성의 몬스터가 앞면 표시로 존재하면, 이 카드는 아래의 효과를 얻는다.\n● 화염 속성 · 이 카드의 공격력이 500 올라간다.\n● 물 속성 · 이 카드의 컨트롤을 바꿀 수 없다.",
   "draw_enabled": true,
   "identity_key": "5f3ffaba04e124638aa15fbe234201a203865530dc642792df933c7e3a7a1960",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3397.jpg",

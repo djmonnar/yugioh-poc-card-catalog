@@ -1,0 +1,34 @@
+{
+  "alias": 0,
+  "art_key": "Cards212/3490",
+  "attack": 2000,
+  "attribute": 8,
+  "categories": [
+    "지원-공용"
+  ],
+  "code": 74852097,
+  "defense": 0,
+  "description": "깊은 산에 깃든 전설의 몬스터. 날개를 한 번 퍼덕이면 폭풍이 인다는 전승이 있다. 해피와는 사이가 좋지 않아 사냥터를 두고 끊임없이 다툰다고 한다.",
+  "draw_enabled": true,
+  "identity_key": "ca54b9f1867c1eb026a27311006b3977941e0507765086d7f2dca35c64c5cdea",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native212/cards/3490.jpg",
+  "level": 4,
+  "links": [],
+  "name": "환상의 그리폰",
+  "name_english": "Phantom Gryphon",
+  "native_type": 17,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "N",
+  "search_aliases": [
+    "환상의 그리폰",
+    "Phantom Gryphon"
+  ],
+  "source_id": 3490,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 몬스터",
+  "web_slot": 2522
+}

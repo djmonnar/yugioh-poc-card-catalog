@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards212/3491",
+  "attack": 2400,
+  "attribute": 8,
+  "categories": [
+    "지원-제왕",
+    "지원-릴리즈",
+    "발동-어드밴스 소환 시",
+    "효과-덱으로 되돌리기"
+  ],
+  "code": 73125233,
+  "defense": 1000,
+  "description": "①: 이 카드의 어드밴스 소환에 성공하면 필드의 카드 1장을 대상으로 발동한다. 그 카드를 주인의 덱 맨 위로 돌린다.",
+  "draw_enabled": true,
+  "identity_key": "92f78b18fcf4a6e7bcb2782ab7454a5733c263bbbcc6c034da3b3331fcf6bac6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native212/cards/3491.jpg",
+  "level": 6,
+  "links": [],
+  "name": "바람 제왕 라이저",
+  "name_english": "Raiza the Storm Monarch",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "UR",
+  "search_aliases": [
+    "바람 제왕 라이저",
+    "Raiza the Storm Monarch"
+  ],
+  "source_id": 3491,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2523
+}

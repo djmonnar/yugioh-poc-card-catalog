@@ -3,7 +3,9 @@
   "art_key": "Cards/1113",
   "attack": 2000,
   "attribute": 32,
-  "categories": [],
+  "categories": [
+    "효과-표시 형식 변경"
+  ],
   "code": 84914462,
   "defense": 1200,
   "description": "①: 이 카드는 공격했을 경우,\n데미지 스텝 종료시에 수비\n표시가 된다.",

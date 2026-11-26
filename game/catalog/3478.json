@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards212/3478",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-지속 마법",
+    "발동-마법 발동 시",
+    "효과-회복"
+  ],
+  "code": 51481927,
+  "defense": 0,
+  "description": "①: 이 카드가 마법 & 함정 존에 있는 동안, 어느 플레이어든 다른 마법 카드를 발동하여 처리할 때마다 이 카드의 컨트롤러가 LP를 500 회복한다.",
+  "draw_enabled": true,
+  "identity_key": "f9034c4cf642fa7d0022b87dc72af756aabb08ff75b013ff5ee0fe99c5e2988d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native212/cards/3478.jpg",
+  "level": 0,
+  "links": [],
+  "name": "마법 흡수",
+  "name_english": "Spell Absorption",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "마법 흡수",
+    "Spell Absorption"
+  ],
+  "source_id": 3478,
+  "speed_limit": 1,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 2510
+}

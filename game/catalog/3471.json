@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards212/3471",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-필드",
+    "지원-암석족",
+    "지원-전투",
+    "효과-전투 데미지 증가"
+  ],
+  "code": 28120197,
+  "defense": 0,
+  "description": "수비 표시의 암석족 몬스터를 공격한 결과, 공격 몬스터를 조종하는 플레이어가 받는 전투 데미지가 있다면 그 양을 두 배로 한다.",
+  "draw_enabled": true,
+  "identity_key": "e222709d43130dcc24a134a30efd5b2e64fba3fbaa00f337d887525aaa09fe59",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native212/cards/3471.jpg",
+  "level": 0,
+  "links": [],
+  "name": "단층지대",
+  "name_english": "Canyon",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "search_aliases": [
+    "단층지대",
+    "Canyon"
+  ],
+  "source_id": 3471,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "필드 마법",
+  "web_slot": 2503
+}

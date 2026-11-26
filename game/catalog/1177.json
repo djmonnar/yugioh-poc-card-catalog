@@ -3,7 +3,10 @@
   "art_key": "Cards/1177",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-표시 형식 변경",
+    "효과-표시 형식 변경"
+  ],
   "code": 59744639,
   "defense": 0,
   "description": "상대 필드의 모든 앞면\n몬스터의 표시 형식을\n변경한다.",

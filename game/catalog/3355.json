@@ -13,7 +13,7 @@
   ],
   "code": 900787,
   "defense": 1100,
-  "description": "소재: 드래곤족 튜너 + 비행야수족 비튜너 1장 이상. 이 카드의 전투 중 데미지 계산 전, 묘지의 비행야수족 1장을 제외하여 그 공격력만큼 이번 턴 공격력을 높입니다. 한 데미지 스텝에 한 번만 쓸 수 있습니다.",
+  "description": "드래곤족 튜너 1장 ＋ 튜너가 아닌 비행야수족 몬스터 1장 이상\n① 이 카드가 전투를 할 때, 데미지 스텝 개시부터 데미지 계산 전까지의 사이에 1번 발동할 수 있다. 자신의 묘지에서 비행야수족 몬스터 1장을 제외해 발동한다. 턴 종료시까지 이 카드의 공격력이 제외한 몬스터의 공격력만큼 올라간다.",
   "draw_enabled": true,
   "identity_key": "1af4376f4820de4a572bf242af1596f5a98900be5ded5a2df6662610f110fa69",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3355.jpg",

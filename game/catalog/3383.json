@@ -4,13 +4,13 @@
   "attack": 400,
   "attribute": 1,
   "categories": [
-    "발동-표시 변경 시",
+    "발동-표시 형식 변경 시",
     "효과-파괴",
     "파괴-몬스터"
   ],
   "code": 58268433,
   "defense": 300,
-  "description": "공격에서 앞면 수비로 바뀌면 상대 몬스터 1장을 파괴합니다.",
+  "description": "① 이 카드가 공격 표시에서 앞면 수비 표시로 바뀌었을 때, 상대 필드의 몬스터 1장을 대상으로 지정해 발동한다. 그 대상을 파괴한다.",
   "draw_enabled": true,
   "identity_key": "66672a988056356d2f8178d8750e8ca35786292ce0a6782ff65b82f52f0725f7",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3383.jpg",

@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards212/3474",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-전투",
+    "지원-바운스",
+    "발동-공격 선언 시",
+    "효과-카드 확인",
+    "효과-바운스"
+  ],
+  "code": 39537362,
+  "defense": 0,
+  "description": "①: 상대 몬스터가 공격을 선언할 때 한 번 발동할 수 있다. 상대는 이 카드의 컨트롤러의 패에서 무작위로 카드 1장을 골라, 그 카드가 몬스터 / 마법 / 함정 중 어느 종류인지 맞힌다. 고른 카드를 공개한 뒤 컨트롤러의 패를 섞으며, 상대가 틀렸다면 공격한 몬스터를 주인의 패로 돌린다.",
+  "draw_enabled": true,
+  "identity_key": "a703475a69b1f3575e1ed3eb67462199f28a45ceb3efffea0354d4e1ffa727a1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native212/cards/3474.jpg",
+  "level": 0,
+  "links": [],
+  "name": "여행자의 시련",
+  "name_english": "Ordeal of a Traveler",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "여행자의 시련",
+    "Ordeal of a Traveler"
+  ],
+  "source_id": 3474,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 2506
+}

@@ -11,7 +11,7 @@
   ],
   "code": 59755122,
   "defense": 1100,
-  "description": "턴마다 한 번, 몬스터에 장착되어 있는 자신을 특수 소환합니다. 장착을 몬스터 수로 바꾸어 싱크로 전개에 연결할 수 있는 튜너입니다.",
+  "description": "① 이 카드가 장착 카드로 놓여 있으면 자신의 메인 페이즈에 1번 발동할 수 있다. 장착 상태에서 이 카드를 특수 소환한다.",
   "draw_enabled": true,
   "identity_key": "d55150f57c87d164e785979bde836b247c91fe11e0d02945762a4214fb335dc5",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3360.jpg",

@@ -6,11 +6,12 @@
   "categories": [
     "지원-리버스",
     "효과-앞면표시",
-    "효과-표시 변경"
+    "효과-표시 형식 변경",
+    "지원-표시 형식 변경"
   ],
   "code": 93747864,
   "defense": 0,
-  "description": "내 몬스터를 모두 앞면 수비로 바꿉니다. 세트 몬스터의 리버스 효과도 사용할 수 있지만, 공격수까지 수비가 되는 점을 함께 고려해야 합니다.",
+  "description": "자신 필드에 있는 몬스터를 모두 앞면 수비 표시로 바꾼다.",
   "draw_enabled": true,
   "identity_key": "de87c4312d01187ec5b1eb7a3481a3e9bfc7bd509e4d51161014be6740815a4e",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3381.jpg",

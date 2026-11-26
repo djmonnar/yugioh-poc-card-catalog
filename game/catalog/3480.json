@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards212/3480",
+  "attack": 1200,
+  "attribute": 32,
+  "categories": [
+    "지원-마법나라 왕녀",
+    "발동-스탠바이 페이즈 시",
+    "효과-데미지"
+  ],
+  "code": 46128076,
+  "defense": 0,
+  "description": "자신의 스탠바이 페이즈마다 상대 필드에 있는 몬스터 1장당 300 데미지를 상대에게 준다.",
+  "draw_enabled": true,
+  "identity_key": "31e02959aa7bccc10f11bf8f3402db1fe69192c0aac9ddaca3c7444a3560ddd2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native212/cards/3480.jpg",
+  "level": 2,
+  "links": [],
+  "name": "흑마도사 쿠란",
+  "name_english": "Ebon Magician Curran",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "N",
+  "search_aliases": [
+    "흑마도사 쿠란",
+    "Ebon Magician Curran"
+  ],
+  "source_id": 3480,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2512
+}

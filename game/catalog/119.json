@@ -4,7 +4,8 @@
   "attack": 1200,
   "attribute": 1,
   "categories": [
-    "파괴-몬스터"
+    "파괴-몬스터",
+    "발동-표시 형식 변경 시"
   ],
   "code": 13215230,
   "defense": 900,

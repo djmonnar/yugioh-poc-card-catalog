@@ -14,7 +14,7 @@
   ],
   "code": 34116027,
   "defense": 800,
-  "description": "소재: 드래곤족 튜너 + 비행야수족 비튜너 1장 이상. 턴마다 한 번, 덱에서 레벨 4 이하 드래곤족 또는 비행야수족을 패로 가져온 뒤, 패의 그 두 종족 중 1장을 버립니다. 버리는 처리는 발동 비용이 아닙니다.",
+  "description": "드래곤족 튜너 1장 ＋ 튜너가 아닌 비행야수족 몬스터 1장 이상\n① 자신의 메인 페이즈에 1턴에 1번 발동할 수 있다. 덱에서 레벨 4 이하인 드래곤족 또는 비행야수족 몬스터 1장을 패로 가져온다. 그 후, 자신의 패에서 드래곤족 또는 비행야수족 몬스터 1장을 골라 버린다.",
   "draw_enabled": true,
   "identity_key": "67b2ef43540bd7dcae7d6e8edcf246944e8a0d1be25da001867f6a1299c3c433",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3354.jpg",

@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards212/3483",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-지속 마법",
+    "효과-공격력 감소"
+  ],
+  "code": 44947065,
+  "defense": 0,
+  "description": "①: 상대 필드의 각 몬스터는 자신의 레벨 1당 공격력이 100 감소한다.",
+  "draw_enabled": true,
+  "identity_key": "7b1715b42f16afbf84a6bd8eed424210585ea594aed07cc7e76412e29c00c913",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native212/cards/3483.jpg",
+  "level": 0,
+  "links": [],
+  "name": "강자의 고통",
+  "name_english": "Burden of the Mighty",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "강자의 고통",
+    "Burden of the Mighty"
+  ],
+  "source_id": 3483,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 2515
+}

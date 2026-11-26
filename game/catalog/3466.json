@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards212/3466",
+  "attack": 2400,
+  "attribute": 1,
+  "categories": [
+    "지원-스핑크스",
+    "지원-리버스",
+    "보호-공격 대상 제외"
+  ],
+  "code": 82260502,
+  "defense": 1200,
+  "description": "이 몬스터가 자신 필드에 앞면 표시로 있는 동안, 상대는 뒷면 수비 표시인 몬스터를 공격 대상으로 삼을 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "58d5dbfcff9b0e8f53c338f23758ca73f9677c16a58ce811c0835670166265c1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native212/cards/3466.jpg",
+  "level": 6,
+  "links": [],
+  "name": "히에라코스핑크스",
+  "name_english": "Hieracosphinx",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "R",
+  "search_aliases": [
+    "히에라코스핑크스",
+    "Hieracosphinx"
+  ],
+  "source_id": 3466,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2498
+}

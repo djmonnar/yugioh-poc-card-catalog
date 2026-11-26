@@ -10,7 +10,7 @@
   ],
   "code": 69632396,
   "defense": 0,
-  "description": "마법 카드 발동에 대응하여 LP 500을 지불합니다. 그 발동을 무효로 하고, 해당 카드가 효과와 관련되어 있으면 패로 돌립니다. 파괴하지 않으므로 상대가 다시 사용할 수 있습니다.",
+  "description": "마법 카드가 발동했을 때 LP를 500 지불하고 발동할 수 있다. 그 발동을 무효로 하고 해당 카드를 주인의 패로 되돌린다.",
   "draw_enabled": true,
   "identity_key": "7456a7d3170cdd9863ed379c461935684cbb6e74a5df0dd0b3278c6483b8eefe",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3388.jpg",

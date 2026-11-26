@@ -3,7 +3,9 @@
   "art_key": "Cards/161",
   "attack": 1250,
   "attribute": 32,
-  "categories": [],
+  "categories": [
+    "발동-표시 형식 변경 시"
+  ],
   "code": 28725004,
   "defense": 800,
   "description": "이 카드가 공격 표시에서 수비\n표시로 변경되었을 때, 자신의\n덱을 셔플한다.",

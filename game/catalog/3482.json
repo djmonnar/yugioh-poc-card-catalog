@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards212/3482",
+  "attack": 2000,
+  "attribute": 32,
+  "categories": [
+    "지원-마법나라 왕녀",
+    "소환제약",
+    "발동-스탠바이 페이즈 시",
+    "효과-데미지"
+  ],
+  "code": 2316186,
+  "defense": 0,
+  "description": "이 카드는 통상 소환할 수 없으며 「왕녀의 시련」의 효과로만 특수 소환할 수 있다.\n자신의 스탠바이 페이즈마다 상대 필드에 있는 몬스터의 수에 600을 곱한 만큼 상대에게 데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "77cf157838b4dc10b1b393988d70dc2e0b43ac4fc85e0b781d3646a0073a2b03",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native212/cards/3482.jpg",
+  "level": 4,
+  "links": [],
+  "name": "마법나라 왕녀－쿠란",
+  "name_english": "Princess Curran",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "search_aliases": [
+    "마법나라 왕녀－쿠란",
+    "Princess Curran"
+  ],
+  "source_id": 3482,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "특수 소환 몬스터",
+  "web_slot": 2514
+}

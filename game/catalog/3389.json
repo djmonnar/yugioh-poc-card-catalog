@@ -12,7 +12,7 @@
   ],
   "code": 42175079,
   "defense": 0,
-  "description": "내 쥬라기 월드가 앞면인 내 엔드 페이즈에 사용할 수 있습니다. 이 카드 이외의 필드 카드를 전부 파괴하므로 내 몬스터와 마법·함정 손실도 계산해야 합니다.",
+  "description": "자신 필드에 앞면 표시인 「쥐라기 월드」가 있는 경우, 자신의 엔드 페이즈에 발동할 수 있다. 이 카드 이외에 양쪽 필드에 있는 카드를 모두 파괴한다.",
   "draw_enabled": true,
   "identity_key": "5328f2b65cb4b7272c986202370ddc18d8e1c598c4143349b08e674fba035505",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3389.jpg",

@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards212/3467",
+  "attack": 1200,
+  "attribute": 1,
+  "categories": [
+    "지원-스핑크스",
+    "지원-바운스",
+    "발동-패로 돌아갔을 때",
+    "효과-묘지로 보내기"
+  ],
+  "code": 18654201,
+  "defense": 2400,
+  "description": "이 몬스터가 앞면 표시로 자신 필드에 있는 동안, 필드에서 몬스터가 주인의 패에 돌아가면 그 주인은 자신의 패 중 카드 1장을 골라 묘지로 보낸다. 양쪽 몬스터가 함께 돌아간 경우에는 각 플레이어가 1장씩 보낸다.",
+  "draw_enabled": true,
+  "identity_key": "ab7e46086dff6de5c606d81361d6fce3acb842fc61d4f32417798e04491dd04a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native212/cards/3467.jpg",
+  "level": 6,
+  "links": [],
+  "name": "크리오스핑크스",
+  "name_english": "Criosphinx",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "R",
+  "search_aliases": [
+    "크리오스핑크스",
+    "Criosphinx"
+  ],
+  "source_id": 3467,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2499
+}

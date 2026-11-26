@@ -36,18 +36,9 @@
         ]
       },
       {
-        "name": "네크로피어",
+        "name": "네크로피어 위저보드",
         "profile_id": "profile-c299176c-81b2-454b-a5fd-837d6cba7e07",
         "skills": [
-          {
-            "card": {
-              "identity_key": "acf8b07a9dc7ceb0ed4c8e3a4e74be6ae5373042e1e54230ed0db340051c9ef2",
-              "internal_id": 1514,
-              "name_ko": "다크 네크로피어",
-              "slot": 513
-            },
-            "kind": "start_hand"
-          },
           {
             "entries": [
               {
@@ -61,13 +52,35 @@
               }
             ],
             "kind": "start_grave"
+          },
+          {
+            "kind": "ouija_board"
+          },
+          {
+            "entries": [
+              {
+                "card": {
+                  "identity_key": "acf8b07a9dc7ceb0ed4c8e3a4e74be6ae5373042e1e54230ed0db340051c9ef2",
+                  "internal_id": 1514,
+                  "name_ko": "다크 네크로피어",
+                  "slot": 513
+                },
+                "count": 1
+              }
+            ],
+            "kind": "start_deck"
           }
         ]
+      },
+      {
+        "name": "위저보드",
+        "profile_id": "profile-76c3cb49-29c0-404f-85fe-bf46f5c202a3",
+        "skills": []
       }
     ],
     "skills": []
   },
   "profile_id": "bakura",
-  "updated_at": "2026-11-09T10:14:04.495012+00:00",
-  "version": 3888
+  "updated_at": "2026-11-26T13:27:39.200082+00:00",
+  "version": 6398
 }

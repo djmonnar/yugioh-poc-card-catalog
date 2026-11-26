@@ -12,7 +12,7 @@
   ],
   "code": 93918159,
   "defense": 0,
-  "description": "양쪽 묘지와 앞면으로 제외된 카드 중 공룡족 몬스터 1장을 지정하여 내 필드에 특수 소환합니다. 같은 턴에 초월천상은 1장만 발동할 수 있습니다.",
+  "description": "이 이름의 카드는 턴마다 1장만 발동할 수 있다.\n①: 양쪽 묘지에 있거나 제외되어 있는 공룡족 몬스터 중 1장을 대상으로 발동할 수 있다. 그 카드를 자신의 필드에 특수 소환한다.",
   "draw_enabled": true,
   "identity_key": "38dd3203356cd2ea1a1aee4686f7c490552aef6c326ddc2d4bafe60fd76b74cf",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native211/cards/3453.jpg",

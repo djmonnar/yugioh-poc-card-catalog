@@ -13,7 +13,7 @@
   ],
   "code": 94215860,
   "defense": 1500,
-  "description": "특수 소환할 수 없습니다. 일반 소환하거나 앞면이 되면 상대 마법·함정 1장을 지정해 패로 돌릴 수 있습니다. 그 턴의 엔드 페이즈에 패로 돌아갑니다.",
+  "description": "이 카드는 특수 소환할 수 없다.\n①: 일반 소환 또는 리버스된 턴의 엔드 페이즈에 이 카드를 주인의 패에 되돌린다.\n②: 이 카드를 일반 소환하거나 리버스했을 때, 상대 필드의 마법·함정 카드 1장을 대상으로 발동할 수 있다. 그 카드를 주인의 패에 되돌린다.",
   "draw_enabled": true,
   "identity_key": "e4636b20f8bc8963da3020e09d16df87b0339cdb21179550fdfdb29c6c1d0bdd",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3424.jpg",

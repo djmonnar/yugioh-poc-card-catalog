@@ -12,7 +12,7 @@
   ],
   "code": 32181268,
   "defense": 1200,
-  "description": "특수 소환할 수 없습니다. 앞면인 동안 양쪽의 스피릿 이외 몬스터는 효과를 발동할 수 없습니다. 일반 소환하거나 앞면이 된 턴의 엔드 페이즈에 패로 돌아갑니다.",
+  "description": "이 카드는 특수 소환할 수 없다.\n①: 이 카드가 몬스터 존에 앞면 표시로 있는 동안, 양쪽 플레이어는 스피릿 몬스터가 아닌 몬스터의 효과를 발동할 수 없다.\n②: 일반 소환 또는 리버스된 턴의 엔드 페이즈에 발동한다. 이 카드를 주인의 패에 되돌린다.",
   "draw_enabled": true,
   "identity_key": "149108ef8b18c848e96d2458a2c0bc864c8383d38d9f2c22da75579cedab2c85",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3438.jpg",

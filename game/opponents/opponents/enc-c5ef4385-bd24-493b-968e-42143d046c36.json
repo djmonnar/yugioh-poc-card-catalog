@@ -1,7 +1,7 @@
 {
   "artKey": "CharacterPresentation012/images/bakura/start",
   "banlistEnabled": false,
-  "deckName": "바쿠라 네크로피어",
+  "deckName": "위저보드",
   "extra": [],
   "id": "enc-c5ef4385-bd24-493b-968e-42143d046c36",
   "lpBonus": 0,
@@ -13,8 +13,6 @@
     2542,
     2456,
     2456,
-    2456,
-    521,
     521,
     2685,
     2681,
@@ -25,20 +23,14 @@
     2679,
     2679,
     1948,
-    1948
+    1948,
+    1549,
+    1160
   ],
   "name": "어둠의 바쿠라",
   "openingDrawBonus": 0,
   "profileId": "bakura",
   "skills": [
-    {
-      "entries": [],
-      "kind": "start_hand",
-      "position": 0,
-      "sourceId": 1514,
-      "threshold": 0,
-      "value": 0
-    },
     {
       "entries": [
         {
@@ -47,6 +39,27 @@
         }
       ],
       "kind": "start_grave",
+      "position": 0,
+      "sourceId": -1,
+      "threshold": 0,
+      "value": 0
+    },
+    {
+      "entries": [],
+      "kind": "ouija_board",
+      "position": 0,
+      "sourceId": -1,
+      "threshold": 0,
+      "value": 0
+    },
+    {
+      "entries": [
+        {
+          "count": 1,
+          "sourceId": 1514
+        }
+      ],
+      "kind": "start_deck",
       "position": 0,
       "sourceId": -1,
       "threshold": 0,

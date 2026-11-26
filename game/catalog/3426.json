@@ -15,7 +15,7 @@
   ],
   "code": 89111398,
   "defense": 1800,
-  "description": "특수 소환할 수 없습니다. 일반 소환하거나 앞면이 되면 이 카드 이외의 앞면 몬스터를 모두 파괴합니다. 그 턴의 엔드 페이즈에 패로 돌아갑니다.",
+  "description": "이 카드는 특수 소환할 수 없다.\n①: 일반 소환 또는 리버스된 턴의 엔드 페이즈에 이 카드를 주인의 패에 되돌린다.\n②: 이 카드를 일반 소환하거나 리버스했을 때, 필드에서 이 카드 이외의 앞면 표시 몬스터를 모두 파괴한다.",
   "draw_enabled": true,
   "identity_key": "78c8149cc6fd7dbba7d417bcec1fdda003be00f24203cbd511ff395b5bb4a9ab",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3426.jpg",

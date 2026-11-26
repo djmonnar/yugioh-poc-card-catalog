@@ -1,0 +1,45 @@
+{
+  "artKey": "Character210/noah_kaiba_start",
+  "banlistEnabled": false,
+  "deckName": "스피릿",
+  "extra": [],
+  "id": "enc-b2f1247c-71f2-4c8e-aabd-8e63bd1ac2ff",
+  "lpBonus": 0,
+  "main": [
+    3422,
+    3422,
+    3431,
+    3431,
+    3426,
+    3426,
+    3427,
+    3428,
+    3421,
+    3421,
+    3423,
+    3423,
+    3424,
+    3424,
+    3417,
+    3417,
+    3430,
+    3430,
+    3432,
+    3432
+  ],
+  "name": "카이바 노아",
+  "openingDrawBonus": 0,
+  "profileId": "noah_kaiba",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 3430,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-b2f1247c-71f2-4c8e-aabd-8e63bd1ac2ff",
+  "usesNativeRules035": true
+}

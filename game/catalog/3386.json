@@ -12,7 +12,7 @@
   ],
   "code": 28106077,
   "defense": 0,
-  "description": "천사족에게 장착하여 공격력 +500. 장착 몬스터가 상대에게 준 전투 피해만큼 내 LP를 회복합니다.",
+  "description": "천사족 몬스터에만 장착할 수 있다.\n① 장착 몬스터의 공격력이 500 올라간다.\n② 장착 몬스터가 상대에게 전투 데미지를 입혔을 때, 자신은 상대에게 준 데미지만큼 LP를 회복한다.",
   "draw_enabled": true,
   "identity_key": "e00e65550ed8efe73d07487e9495a07fa78a58c47c8fa5c1ef7d041fdfdfd6e8",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3386.jpg",

@@ -5,11 +5,11 @@
   "attribute": 1,
   "categories": [
     "발동-공격 선언 시",
-    "효과-표시 변경"
+    "효과-표시 형식 변경"
   ],
   "code": 79409334,
   "defense": 2000,
-  "description": "공격 표시로 공격 대상이 되면 수비로 바뀝니다. 실제 전투는 바뀐 표시의 수비력을 기준으로 진행됩니다.",
+  "description": "이 카드가 앞면 공격 표시인 상태에서 공격 대상으로 선택됐을 때, 이 카드를 수비 표시로 바꾼다.",
   "draw_enabled": true,
   "identity_key": "86f5d642eb8cd90797229bd343c7f99f5a1c33fa23df28a89fe66bf8194d9643",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3391.jpg",

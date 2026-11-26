@@ -12,7 +12,7 @@
   ],
   "code": 29253591,
   "defense": 200,
-  "description": "장착 카드로 놓여 있으면 자신을 몬스터로 전개할 수 있습니다. 드래그니티 싱크로에만 소재로 쓸 수 있으며, 그때 레벨을 2 또는 4로 계산할 수 있습니다. 자기 전개에는 파랑크스와 달리 턴당 한 번 제한이 없습니다.",
+  "description": "싱크로 소재로 쓰는 경우, 이 카드는 「드래그니티」 몬스터의 싱크로 소환에만 사용할 수 있다.\n① 필드의 이 카드를 싱크로 소재로 사용할 때 레벨 4로 계산할 수 있다.\n② 이 카드가 장착 카드로 놓여 있으면 발동할 수 있다. 장착 상태에서 이 카드를 특수 소환한다.",
   "draw_enabled": true,
   "identity_key": "c050bcb85e89fc65a023f3705919b6a0dd31aa8c472a70faf0d64ae12f6c48cd",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3358.jpg",

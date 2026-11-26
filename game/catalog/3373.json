@@ -13,7 +13,7 @@
   ],
   "code": 72657739,
   "defense": 1700,
-  "description": "지속 마법의 효과로 필드에서 묘지로 보내졌다면, 다음 내 스탠바이에 묘지에서 돌아옵니다. 발동 비용으로 보낸 경우에는 이 조건을 채우지 못합니다.",
+  "description": "지속 마법의 효과로 이 카드가 필드에서 묘지로 보내진 경우, 다음 자신의 스탠바이 페이즈에 이 카드를 그 묘지에서 특수 소환한다.",
   "draw_enabled": true,
   "identity_key": "d8d5f724908bd0ea564be62c1be3cac237520c060a001f8c50362855d37eb484",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3373.jpg",

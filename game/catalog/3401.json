@@ -13,7 +13,7 @@
   ],
   "code": 30314994,
   "defense": 1200,
-  "description": "양쪽 필드에 화염 속성 앞면 몬스터가 있으면 공격력 +500. 바람 속성이 있으면 몬스터와의 전투 승리 후 추가 공격을 선택할 수 있습니다.",
+  "description": "① 양쪽 필드에서 해당 속성의 몬스터가 앞면 표시로 존재하면, 이 카드는 아래의 효과를 얻는다.\n● 화염 속성 · 이 카드의 공격력이 500 올라간다.\n● 바람 속성 · 이 카드가 상대 몬스터를 전투로 파괴했을 때 발동할 수 있다. 이 카드는 이어서 공격을 1번 더 할 수 있다.",
   "draw_enabled": true,
   "identity_key": "106ffdda689e5f7b1af93fc7ad5421bc765af28499dc6ad10986984cbbb2b7f2",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3401.jpg",

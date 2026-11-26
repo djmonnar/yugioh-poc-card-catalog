@@ -14,7 +14,7 @@
   ],
   "code": 6351548,
   "defense": 1200,
-  "description": "같은 이름 기준 턴당 한 번. 필드에서 묘지로 가면 덱의 빛 속성 1장을 묘지로 보낼 수 있습니다. 덱에서 직접 묘지로 가면 대신 묘지의 빛 속성 1장을 덱 맨 위로 돌리는 처리가 강제됩니다.",
+  "description": "같은 카드명으로는 한 턴에 ①과 ② 중 한 효과만 1번 사용할 수 있다.\n① 필드의 이 카드가 묘지로 보내진 경우 발동할 수 있다. 자신의 덱에서 빛 속성 몬스터 1장을 골라 묘지로 보낸다.\n② 덱의 이 카드가 묘지로 보내진 경우, 자신 묘지의 빛 속성 몬스터 1장을 대상으로 발동한다. 그 대상을 덱의 맨 위로 되돌린다.",
   "draw_enabled": true,
   "identity_key": "e226d1410aac030d7000c5af653d5f28fb88708eab53f9d612eddde8eec00e4a",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3368.jpg",

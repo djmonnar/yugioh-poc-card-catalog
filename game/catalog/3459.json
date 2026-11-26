@@ -12,7 +12,7 @@
   ],
   "code": 73616671,
   "defense": 0,
-  "description": "내 마법사족 몬스터 1장을 릴리스하고, 덱·묘지에서 블랙 매지션을 2장까지 패에 넣습니다. 같은 턴에 일루전 매직은 1장만 발동할 수 있습니다.",
+  "description": "같은 이름의 카드는 한 턴에 1장까지만 발동할 수 있다.\n①: 자신 필드에 있는 마법사족 몬스터를 1장 릴리스해 발동할 수 있다. 덱과 묘지에서 「블랙 매지션」을 합계 2장까지 골라 패에 추가한다.",
   "draw_enabled": true,
   "identity_key": "ccf3d6e98620ba6db24d78520047ebc935f7660b11b272989312f6f441612bd3",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native211/cards/3459.jpg",

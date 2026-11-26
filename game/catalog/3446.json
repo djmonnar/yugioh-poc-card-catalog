@@ -11,7 +11,7 @@
   ],
   "code": 62633180,
   "defense": 0,
-  "description": "내 몬스터 1장을 지정합니다. 그 몬스터를 파괴한 뒤 상대 덱 위에서 2장을 묘지로 보냅니다.",
+  "description": "자신 필드의 몬스터 1장을 대상으로 이 카드를 발동한다. 선택한 몬스터를 파괴한 뒤 상대 덱 맨 위의 카드 2장을 상대 묘지로 보낸다.",
   "draw_enabled": true,
   "identity_key": "1188ed91d5f06d259a10d90f86b799253f568879e0f94b7a6c51a7d12c0cd1b1",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native211/cards/3446.jpg",

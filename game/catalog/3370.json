@@ -13,7 +13,7 @@
   ],
   "code": 36569343,
   "defense": 1200,
-  "description": "같은 이름 기준 턴당 한 번. 내 화염 속성이 파괴되어 묘지로 가거나 이 카드 자체가 파괴되어 묘지로 가면, 덱의 화염 속성 몬스터 1장을 묘지로 보냅니다.",
+  "description": "이 카드명으로는 한 턴에 ①과 ② 가운데 한 효과만 1번 사용할 수 있다.\n① 이 카드가 이미 몬스터 존에 있을 때, 이 카드 이외의 화염 속성 몬스터가 파괴되어 자신의 묘지로 보내진 경우 발동한다. 자신의 덱에서 화염 속성 몬스터를 1장 골라 묘지로 보낸다.\n② 이 카드가 파괴된 뒤 묘지로 보내진 경우 발동한다. 자신의 덱에서 화염 속성 몬스터를 1장 골라 묘지로 보낸다.",
   "draw_enabled": true,
   "identity_key": "55b39ae9d6df2faeb45dafc951f6290c08d06a45041775219146a1d464e10cec",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3370.jpg",

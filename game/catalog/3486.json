@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards212/3486",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-볼캐닉",
+    "지원-브레이즈 캐논",
+    "지원-화염족",
+    "지원-저레벨",
+    "소환-패에서",
+    "파괴-몬스터",
+    "발동-묘지로 보내기",
+    "효과-덱에서 묘지로 보내기",
+    "효과-파괴"
+  ],
+  "code": 85250352,
+  "defense": 0,
+  "description": "자신의 패, 덱 또는 자신 필드의 앞면 표시 카드 중에서 「브레이즈 캐논」 1장을 묘지로 보내고 이 카드를 발동할 수 있다.\n①: 같은 이름의 카드를 자신의 필드에 앞면 표시로 2장 이상 둘 수 없다.\n②: 턴당 한 번, 자신의 메인 페이즈에 발동할 수 있다. 자신의 패에 있는 「볼캐닉」 몬스터 1장을 특수 소환한다.\n③: 턴당 한 번, 상대 필드의 앞면 표시 몬스터 1장을 대상으로 발동할 수 있다. 덱의 레벨 1 화염족 몬스터 1장을 묘지로 보내고 그 대상을 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "ecef03a3e5da2050a32344d4264ec773fa7422bd48a8a9a13bda8430349c2342",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native212/cards/3486.jpg",
+  "level": 0,
+  "links": [],
+  "name": "볼캐닉 브레이즈 캐논",
+  "name_english": "Volcanic Blaze Accelerator",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "search_aliases": [
+    "볼캐닉 브레이즈 캐논",
+    "Volcanic Blaze Accelerator"
+  ],
+  "source_id": 3486,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 2518
+}

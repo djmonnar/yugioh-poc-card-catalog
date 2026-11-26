@@ -4,10 +4,26 @@
   "profile": {
     "name": "카이바 노아",
     "portrait": "assets/actors/native210/noah_kaiba/start.png",
-    "skill_profiles": [],
+    "skill_profiles": [
+      {
+        "name": "스피릿",
+        "profile_id": "profile-ad81e28c-dfd0-48b2-bc03-ff7eb562b73f",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "b067b554f1cbdfedf691d1819193c85d4cd50d049ff0699bab34e2cc341443a1",
+              "internal_id": 3430,
+              "name_ko": "영혼 에너지 고정장치",
+              "slot": 2462
+            },
+            "kind": "start_field"
+          }
+        ]
+      }
+    ],
     "skills": []
   },
   "profile_id": "noah_kaiba",
-  "updated_at": "2026-11-26T06:26:25.763685+00:00",
-  "version": 1047
+  "updated_at": "2026-11-26T16:33:25.581827+00:00",
+  "version": 6399
 }

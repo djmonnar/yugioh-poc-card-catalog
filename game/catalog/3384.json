@@ -9,7 +9,7 @@
   ],
   "code": 30683373,
   "defense": 0,
-  "description": "수비 표시 몬스터 1장을 골라 파괴합니다. 양쪽 필드와 뒷면 수비도 선택 범위에 들어갑니다.",
+  "description": "① 필드의 앞면 또는 뒷면 수비 표시 몬스터 1장을 대상으로 발동할 수 있다. 그 대상을 파괴한다.",
   "draw_enabled": true,
   "identity_key": "c907ea3efac28877749e03d1518d149fdae6258aad1952472b66c2e517f9485b",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3384.jpg",

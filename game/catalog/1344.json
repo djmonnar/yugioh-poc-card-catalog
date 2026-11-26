@@ -3,7 +3,9 @@
   "art_key": "Cards/1344",
   "attack": 2200,
   "attribute": 1,
-  "categories": [],
+  "categories": [
+    "효과-표시 형식 변경"
+  ],
   "code": 85306040,
   "defense": 1500,
   "description": "이 카드가 공격했을 경우,\n배틀 페이즈 종료시에 수비\n표시로 변경된다. 자신의 다음\n턴에는 이 표시 형식을 변경할\n수 없다.",

@@ -4,7 +4,8 @@
   "attack": 1200,
   "attribute": 8,
   "categories": [
-    "마력카운터"
+    "마력카운터",
+    "효과-표시 형식 변경"
   ],
   "code": 78121572,
   "defense": 1800,

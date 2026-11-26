@@ -3,7 +3,9 @@
   "art_key": "Cards/634",
   "attack": 1300,
   "attribute": 32,
-  "categories": [],
+  "categories": [
+    "효과-표시 형식 변경"
+  ],
   "code": 66707058,
   "defense": 0,
   "description": "이 카드는 상대 플레이어를\n직접 공격할 수 있다. 이\n카드는 공격했을 경우, 배틀\n페이즈 종료시에 수비 표시가\n된다. 다음 자신의 턴\n종료시까지 이 카드는 표시\n형식을 변경할 수 없다.",

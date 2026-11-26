@@ -9,7 +9,7 @@
   ],
   "code": 96890582,
   "defense": 2000,
-  "description": "내 패 1장마다 공격력과 수비력 −400. 패를 비울수록 원래 수치에 가까워집니다.",
+  "description": "자신의 패 매수에 400을 곱한 만큼 이 카드의 공격력과 수비력이 각각 낮아진다.",
   "draw_enabled": true,
   "identity_key": "fa26b9c10856bc1960b6c1678597bc61afbe65f677721cea1e72426642595eb4",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3379.jpg",

@@ -3,7 +3,10 @@
   "art_key": "Cards/349",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-표시 형식 변경",
+    "효과-표시 형식 변경"
+  ],
   "code": 45895206,
   "defense": 0,
   "description": "상대 필드의 모든 뒷면\n몬스터를 앞면으로 뒤집는다.\n그 몬스터의 효과는 이때\n발동한다.",

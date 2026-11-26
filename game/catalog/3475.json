@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards212/3475",
+  "attack": 1400,
+  "attribute": 16,
+  "categories": [
+    "지원-매직비스트",
+    "마력카운터",
+    "발동-마법 발동 시",
+    "효과-카운터",
+    "효과-공격력 상승"
+  ],
+  "code": 55424270,
+  "defense": 1400,
+  "description": "①: 이 카드가 몬스터 존에 있는 동안, 어느 플레이어든 마법 카드를 발동할 때마다 이 카드에 마력 카운터를 하나씩 놓는다.\n②: 이 카드의 공격력은 자신의 마력 카운터 1개당 500 상승한다.\n③: 이 카드가 전투한 배틀 페이즈가 끝날 때, 이 카드에 놓인 마력 카운터를 모두 제거한다.",
+  "draw_enabled": true,
+  "identity_key": "70b32b6856c853ba29fb1ee58627a015366b1353cd424c3773f9d54f9508eb3c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native212/cards/3475.jpg",
+  "level": 4,
+  "links": [],
+  "name": "매직비스트 케로베로스",
+  "name_english": "Mythical Beast Cerberus",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "search_aliases": [
+    "매직비스트 케로베로스",
+    "Mythical Beast Cerberus"
+  ],
+  "source_id": 3475,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2507
+}

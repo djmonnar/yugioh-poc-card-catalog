@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards212/3476",
+  "attack": 1400,
+  "attribute": 4,
+  "categories": [
+    "마력카운터",
+    "파괴-몬스터",
+    "발동-마법 발동 시",
+    "효과-카운터",
+    "발동-카운터 제거",
+    "효과-파괴"
+  ],
+  "code": 21051146,
+  "defense": 1700,
+  "description": "이 카드가 몬스터 존에 앞면으로 있는 동안, 어느 플레이어든 마법 카드를 발동하여 처리하면 이 카드에 마력 카운터 1개를 놓는다.\n필드의 앞면 표시 몬스터 1장을 대상으로 발동할 수 있다. 발동하려면 그 몬스터의 공격력을 700으로 나누어 올림한 수만큼 이 카드의 마력 카운터를 제거한다(최소 1개). 대상 몬스터를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "58ea7b46c78d50900734d3452a39920e29f5f7fcedb381bc6e07c91df36d780b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native212/cards/3476.jpg",
+  "level": 4,
+  "links": [],
+  "name": "블러드 매지션－연옥의 마술사－",
+  "name_english": "Blast Magician",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "search_aliases": [
+    "블러드 매지션－연옥의 마술사－",
+    "블러드 매지션-연옥의 마술사-",
+    "Blast Magician"
+  ],
+  "source_id": 3476,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2508
+}

@@ -12,7 +12,7 @@
   ],
   "code": 35195612,
   "defense": 1200,
-  "description": "리버스했을 때 덱의 땅 속성 몬스터 1장을 묘지에 준비합니다.",
+  "description": "리버스했을 때 발동한다. 자신의 덱에서 땅 속성 몬스터 1장을 골라 묘지로 보낸다.",
   "draw_enabled": true,
   "identity_key": "c4b7786417224771f1dc66085526b0d1b605d192b477226efd0973a79c289f20",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3372.jpg",

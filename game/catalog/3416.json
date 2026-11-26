@@ -12,7 +12,7 @@
   ],
   "code": 92200612,
   "defense": 1800,
-  "description": "특수 소환할 수 없습니다. 턴당 1번 필드의 다른 스피릿 몬스터 1장을 지정해 패로 돌릴 수 있습니다. 일반 소환하거나 앞면이 된 턴의 엔드 페이즈에 패로 돌아갑니다.",
+  "description": "이 카드는 특수 소환할 수 없다.\n①: 필드에서 이 카드 이외의 스피릿 몬스터 1장을 대상으로 하여 1턴에 1번 발동할 수 있다. 그 몬스터를 주인의 패에 되돌린다.\n②: 일반 소환 또는 리버스된 턴의 엔드 페이즈에 발동한다. 이 카드를 주인의 패에 되돌린다.",
   "draw_enabled": true,
   "identity_key": "029b0f45e62a20502cb6f9141b5f60a555bb47a2c9fd42eca5b50bef6b75f7e8",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3416.jpg",

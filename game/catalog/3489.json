@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards212/3489",
+  "attack": 1600,
+  "attribute": 16,
+  "categories": [
+    "발동-소환 시",
+    "효과-드로우"
+  ],
+  "code": 30914564,
+  "defense": 400,
+  "description": "①: 이 카드의 특수 소환에 성공한 경우 발동한다. 이 카드의 컨트롤러가 덱의 카드 1장을 드로우한다.",
+  "draw_enabled": true,
+  "identity_key": "de48b436caab9018cca8ce16251146f023f7325d918b5244216d4cf9b9b346d0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native212/cards/3489.jpg",
+  "level": 4,
+  "links": [],
+  "name": "성조 크레인",
+  "name_english": "Sacred Crane",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "R",
+  "search_aliases": [
+    "성조 크레인",
+    "Sacred Crane"
+  ],
+  "source_id": 3489,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2521
+}

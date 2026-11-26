@@ -3,7 +3,9 @@
   "art_key": "Cards/496",
   "attack": 900,
   "attribute": 2,
-  "categories": [],
+  "categories": [
+    "발동-표시 형식 변경 시"
+  ],
   "code": 29380133,
   "defense": 1700,
   "description": "이 카드의 표시 형식이 공격\n표시에서 앞면 수비 표시로\n바뀌었을 때, 패에서 카드를\n몇장이든 덱의 맨 아래에\n좋아하는 순서대로 되돌릴 수\n있다.",

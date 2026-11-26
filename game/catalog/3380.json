@@ -6,11 +6,12 @@
   "categories": [
     "발동-소환 시",
     "발동-반전 소환 시",
-    "효과-표시 변경"
+    "효과-표시 형식 변경",
+    "지원-표시 형식 변경"
   ],
   "code": 34646691,
   "defense": 0,
-  "description": "어느 쪽이든 일반·반전·특수 소환된 공격 표시 몬스터는 수비로 바뀝니다. 소환 시 효과와 표시 변경 효과의 처리 순서가 중요합니다.",
+  "description": "일반 소환, 반전 소환 또는 특수 소환에 성공한 필드의 몬스터를 수비 표시로 바꾼다.",
   "draw_enabled": true,
   "identity_key": "2098053ea34ca1acd9792fcd1b86f3a5e6ac8af8c80fdef47f7e885cbd9c1e14",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3380.jpg",

@@ -3,7 +3,10 @@
   "art_key": "Cards/328",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-표시 형식 변경",
+    "효과-표시 형식 변경"
+  ],
   "code": 50045299,
   "defense": 0,
   "description": "필드의 모든 드래곤족\n몬스터를 수비 표시로\n변경한다. 이 카드가 적용되는\n동안 그 표시 형식을\n유지한다.",

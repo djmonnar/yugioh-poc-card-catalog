@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards212/3484",
+  "attack": 2500,
+  "attribute": 4,
+  "categories": [
+    "지원-볼캐닉",
+    "지원-릴리즈",
+    "소환-릴리즈 코스트",
+    "소환-상대필드",
+    "소환-패에서",
+    "소환제약",
+    "발동-묘지로 보내기",
+    "효과-데미지",
+    "발동-엔드 페이즈 시",
+    "효과-릴리즈"
+  ],
+  "code": 63014935,
+  "defense": 1200,
+  "description": "이 카드는 통상 소환할 수 없다. 상대 필드의 몬스터 1장을 릴리스하여 이 카드를 상대 필드에 특수 소환할 수 있다. 이 방법으로 이 카드를 특수 소환하는 턴에는 자신이 통상 소환할 수 없다.\n①: 턴마다 한 번, 자신 필드의 다른 카드 1장을 묘지로 보내고 발동할 수 있다. 상대에게 1000의 데미지를 준다.\n②: 이 카드 컨트롤러의 엔드 페이즈에 발동한다. 컨트롤러는 자기 필드의 다른 몬스터 1장을 릴리스하거나, 1000의 데미지를 받는다.",
+  "draw_enabled": true,
+  "identity_key": "f1c85736f5b65f8e6ceaf362b2fbed4ffbc5aa5ced39d1d47453bfa678c72af2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native212/cards/3484.jpg",
+  "level": 6,
+  "links": [],
+  "name": "볼캐닉 퀸",
+  "name_english": "Volcanic Queen",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 128,
+  "rarity": "SR",
+  "search_aliases": [
+    "볼캐닉 퀸",
+    "Volcanic Queen"
+  ],
+  "source_id": 3484,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "특수 소환 몬스터",
+  "web_slot": 2516
+}

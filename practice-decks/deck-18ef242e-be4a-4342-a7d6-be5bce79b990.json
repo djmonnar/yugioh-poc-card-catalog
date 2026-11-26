@@ -19,12 +19,12 @@
       "source_id": 2542
     },
     {
-      "count": 3,
+      "count": 2,
       "identity_key": "7cdb186b247eb7f3d9836d1868f8c583996ffbb6df7b38f3dfc45cd38bc0fbe2",
       "source_id": 2456
     },
     {
-      "count": 2,
+      "count": 1,
       "identity_key": "6a708381c382bf7ebf77b64431d364cdf3e5399fa9a05c60f544c38d5853895b",
       "source_id": 521
     },
@@ -52,8 +52,18 @@
       "count": 2,
       "identity_key": "90c257c09a13be5c08dde46feb5430c8094a96ccb3e70d8540d72d4661d99a67",
       "source_id": 1948
+    },
+    {
+      "count": 1,
+      "identity_key": "b0be83a7363c5bfc386cace84ec5c7d3b98630568b5c1187184fb4fab5e66d40",
+      "source_id": 1549
+    },
+    {
+      "count": 1,
+      "identity_key": "a51a2555b7faf4bf0d0452d5e7d98befcbcaf7149145ebdd773f7a1142ebe37f",
+      "source_id": 1160
     }
   ],
-  "name": "바쿠라 네크로피어",
-  "version": 545
+  "name": "위저보드",
+  "version": 1070
 }

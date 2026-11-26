@@ -4,7 +4,8 @@
   "attack": 100,
   "attribute": 1,
   "categories": [
-    "무효-마법"
+    "무효-마법",
+    "효과-표시 형식 변경"
   ],
   "code": 65240384,
   "defense": 2600,

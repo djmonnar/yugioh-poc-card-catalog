@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards212/3481",
+  "attack": 2000,
+  "attribute": 16,
+  "categories": [
+    "지원-마법나라 왕녀",
+    "소환제약",
+    "발동-스탠바이 페이즈 시",
+    "효과-회복"
+  ],
+  "code": 75917088,
+  "defense": 0,
+  "description": "이 카드는 통상 소환할 수 없으며 「왕녀의 시련」의 효과로만 특수 소환할 수 있다.\n자신의 스탠바이 페이즈마다 자신 필드에 있는 몬스터의 수에 800을 곱한 만큼 LP를 회복한다.",
+  "draw_enabled": true,
+  "identity_key": "134fdf5360dc01888c0d2d3a7bb7009c41a92a4c62b642132d32bf6d7e56f1fd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native212/cards/3481.jpg",
+  "level": 4,
+  "links": [],
+  "name": "마법나라 왕녀－피켈",
+  "name_english": "Princess Pikeru",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "search_aliases": [
+    "마법나라 왕녀－피켈",
+    "Princess Pikeru"
+  ],
+  "source_id": 3481,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "특수 소환 몬스터",
+  "web_slot": 2513
+}

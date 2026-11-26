@@ -3,7 +3,10 @@
   "art_key": "Cards/1064",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "지원-표시 형식 변경",
+    "효과-표시 형식 변경"
+  ],
   "code": 12470447,
   "defense": 0,
   "description": "필드 위의 모든 몬스터의 표시\n형식을 맞바꾼다. 발동 턴에\n몬스터의 표시 형식은 변경할\n수 없다. 이 카드는 스텐바이\n페이즈 밖에 발동할 수 없다.",

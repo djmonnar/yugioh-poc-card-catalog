@@ -1,5 +1,5 @@
 {
-  "banlist_enabled": false,
+  "banlist_enabled": true,
   "extra": [],
   "id": "ch1_battle_598b1c32fce25d1529c56b12",
   "main": [
@@ -64,6 +64,6 @@
       "source_id": 608
     }
   ],
-  "name": "메이 초급",
-  "version": 640
+  "name": "해피의사냥터",
+  "version": 1067
 }

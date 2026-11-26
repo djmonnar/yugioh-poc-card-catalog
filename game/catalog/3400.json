@@ -12,7 +12,7 @@
   ],
   "code": 66712593,
   "defense": 1200,
-  "description": "양쪽 필드에 물 속성 앞면 몬스터가 있으면 컨트롤이 바뀌지 않습니다. 땅 속성이 있으면 이 카드가 전투로 파괴한 상대의 효과를 무효화합니다.",
+  "description": "양쪽 필드에서 해당 속성의 몬스터가 앞면 표시로 존재하면, 이 카드는 아래의 효과를 얻는다.\n● 물 속성 · 이 카드의 컨트롤을 바꿀 수 없다.\n● 땅 속성 · 이 카드가 전투로 파괴한 효과 몬스터의 효과를 무효로 한다.",
   "draw_enabled": true,
   "identity_key": "6b376160c25962b649f3242175ef51b7fbcedd21dac9c5f3aeaef36e4f5781d2",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3400.jpg",
