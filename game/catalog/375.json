@@ -20,7 +20,7 @@
   "race": 0,
   "rarity": "R",
   "source_id": 375,
-  "speed_limit": null,
+  "speed_limit": 1,
   "stock": true,
   "token": false,
   "type_name": "함정",

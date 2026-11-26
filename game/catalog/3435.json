@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards210/3435",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-스피릿",
+    "지원-장착",
+    "발동-패로 돌아갔을 때",
+    "발동-묘지에서",
+    "효과-장착",
+    "효과-표시 변경",
+    "효과-데미지",
+    "효과-묘지샐비지"
+  ],
+  "code": 50418970,
+  "defense": 0,
+  "description": "턴당 1번 장착 몬스터를 수비 표시로 바꿀 수 있습니다. 장착 몬스터가 필드에서 패로 돌아가고 이 카드가 묘지로 보내지면 상대에게 600 피해를 줍니다. 내 드로우 페이즈에 일반 드로우 대신 묘지의 이 카드를 회수할 수 있습니다.",
+  "draw_enabled": true,
+  "identity_key": "91164132b420314615f2ea0888e814bc42d915fa5a646615d56f2e4425fdac43",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3435.jpg",
+  "level": 0,
+  "links": [],
+  "name": "스피릿 버너",
+  "name_english": "Spirit Burner",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "스피릿 버너",
+    "Spirit Burner"
+  ],
+  "source_id": 3435,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 2467
+}

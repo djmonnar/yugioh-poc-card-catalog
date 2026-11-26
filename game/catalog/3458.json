@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards211/3458",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-마법사",
+    "지원-어둠 속성",
+    "발동-소환 시",
+    "효과-묘지로 보내기",
+    "소환-덱리크루터",
+    "소환-묘지"
+  ],
+  "code": 9287078,
+  "defense": 0,
+  "description": "상대가 몬스터를 일반 또는 특수 소환했을 때, 그중 1장과 내 마법사족 1장을 지정해 함께 묘지로 보냅니다. 두 장이 모두 묘지로 갔다면 내 덱·묘지의 어둠 속성 마법사족 1장을 특수 소환할 수 있습니다.",
+  "draw_enabled": true,
+  "identity_key": "cb7fb366bb51e029e87cb926aa487f30c27c83280e13afc680ea0ad09dcf5a7e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native211/cards/3458.jpg",
+  "level": 0,
+  "links": [],
+  "name": "흑마족 부활의 관",
+  "name_english": "Dark Renewal",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "흑마족 부활의 관",
+    "Dark Renewal"
+  ],
+  "source_id": 3458,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2490
+}

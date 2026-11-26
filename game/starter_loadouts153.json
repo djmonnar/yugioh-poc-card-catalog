@@ -173,6 +173,22 @@
       }
     ]
   },
+  "unified039_329ee0e6ab756d211392745579a0d7e1a5a15446": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "opening_reload",
+        "position": 0,
+        "sourceId": -1,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
   "unified039_342775bf0552effbc5a9cb5ce35a58324487fa43": {
     "gold": 0,
     "lp": 5000,
@@ -236,7 +252,7 @@
         "entries": [],
         "kind": "start_field",
         "position": 0,
-        "sourceId": 3328,
+        "sourceId": 1852,
         "threshold": 0,
         "value": 0
       }
@@ -467,6 +483,22 @@
         "kind": "start_field",
         "position": 0,
         "sourceId": 3293,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_82f6680b2c3b1400cc201534806a44b4d5192b5b": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_field",
+        "position": 0,
+        "sourceId": 330,
         "threshold": 0,
         "value": 0
       }
@@ -757,22 +789,6 @@
         "kind": "stat_aura",
         "position": 0,
         "sourceId": -1,
-        "threshold": 0,
-        "value": 0
-      }
-    ]
-  },
-  "unified039_e05be480c854c57190586f5d7d0c5a4a4a5ac7f5": {
-    "gold": 0,
-    "lp": 4000,
-    "openingDrawBonus": 0,
-    "relicIds": [],
-    "skills": [
-      {
-        "entries": [],
-        "kind": "start_field",
-        "position": 0,
-        "sourceId": 330,
         "threshold": 0,
         "value": 0
       }

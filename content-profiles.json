@@ -137,6 +137,14 @@
     "card_set": "dragunity-stance-dinosaur207",
     "schema": 1
   },
+  "content_profile210": {
+    "card_set": "spirit-shinobird210",
+    "schema": 1
+  },
+  "content_profile211": {
+    "card_set": "destruction-dinosaur-dark-magician211",
+    "schema": 1
+  },
   "content_relics160": {
     "relic_set": "relics160",
     "schema": 1

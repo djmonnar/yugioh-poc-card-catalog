@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards210/3407",
+  "attack": 2800,
+  "attribute": 4,
+  "categories": [
+    "지원-스피릿",
+    "발동-피해 발생 시",
+    "발동-엔드 페이즈 시",
+    "효과-패 버리기",
+    "효과-바운스",
+    "소환제약"
+  ],
+  "code": 75745607,
+  "defense": 2900,
+  "description": "특수 소환할 수 없습니다. 상대에게 전투 피해를 주면, 상대의 다음 드로우 페이즈에 일반 드로우보다 먼저 상대가 패를 전부 버립니다. 일반 소환하거나 앞면이 된 턴의 엔드 페이즈에 패로 돌아갑니다.",
+  "draw_enabled": true,
+  "identity_key": "9139a2adf8e7c58117d7120020fedd523342045b9a1cf7b893fbc379ca36b091",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3407.jpg",
+  "level": 8,
+  "links": [],
+  "name": "화지가구토",
+  "name_english": "Hino-Kagu-Tsuchi",
+  "native_type": 545,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 128,
+  "rarity": "UR",
+  "search_aliases": [
+    "화지가구토",
+    "Hino-Kagu-Tsuchi"
+  ],
+  "source_id": 3407,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "스피릿 몬스터",
+  "web_slot": 2439
+}

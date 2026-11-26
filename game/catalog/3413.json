@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards210/3413",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-스피릿",
+    "지원-에스프릿",
+    "지원-의식",
+    "지원-바람 속성",
+    "발동-패로 돌아갔을 때",
+    "효과-공격력 상승",
+    "효과-수비력 상승",
+    "효과-덱샐비지"
+  ],
+  "code": 9553721,
+  "defense": 0,
+  "description": "내 앞면 스피릿의 공격력·수비력을 500씩 올립니다. 데미지 스텝 밖에서 내 앞면 바람 속성 몬스터가 내 패로 돌아오면, 덱에서 스피릿 몬스터 또는 의식 마법 1장을 가져올 수 있습니다. 검색은 카드명 기준 턴당 1번입니다.",
+  "draw_enabled": true,
+  "identity_key": "4099a1b9093363c0f2a1fd668839c8040ec1993b99b7ea79229ce531141fb566",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3413.jpg",
+  "level": 0,
+  "links": [],
+  "name": "에스프릿 파워스팟",
+  "name_english": "Shinobird Power Spot",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "에스프릿 파워스팟",
+    "Shinobird Power Spot"
+  ],
+  "source_id": 3413,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 2445
+}

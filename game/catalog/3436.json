@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards210/3436",
+  "attack": 400,
+  "attribute": 32,
+  "categories": [
+    "지원-스피릿",
+    "지원-저레벨",
+    "발동-소환 시",
+    "발동-리버스",
+    "발동-엔드 페이즈 시",
+    "발동-필드를 벗어났을 때",
+    "소환-묘지",
+    "효과-제외",
+    "효과-바운스",
+    "소환제약"
+  ],
+  "code": 45452224,
+  "defense": 200,
+  "description": "특수 소환할 수 없습니다. 일반 소환하거나 앞면이 되면 묘지의 레벨 1 몬스터 1장을 지정해 특수 소환할 수 있습니다. 금화고양이가 필드를 떠날 때 그 몬스터가 필드에 남아 있으면 제외합니다. 일반 소환하거나 앞면이 된 턴의 엔드 페이즈에 패로 돌아갑니다.",
+  "draw_enabled": true,
+  "identity_key": "089a225d109cc3bf0132121ed72174b6c02095f9d39ee2e53957f912f7b3aa39",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3436.jpg",
+  "level": 1,
+  "links": [],
+  "name": "금화고양이",
+  "name_english": "Kinka-byo",
+  "native_type": 545,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "SR",
+  "search_aliases": [
+    "금화고양이",
+    "Kinka-byo"
+  ],
+  "source_id": 3436,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "스피릿 몬스터",
+  "web_slot": 2468
+}

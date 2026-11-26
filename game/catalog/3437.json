@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards210/3437",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-바운스",
+    "발동-패로 돌아갔을 때",
+    "효과-회복"
+  ],
+  "code": 94425169,
+  "defense": 0,
+  "description": "양쪽 필드에서 몬스터가 주인의 패로 돌아갈 때마다 이 카드의 조종자가 LP 500을 회복합니다. 여러 몬스터가 한꺼번에 귀환하면 한 번만 회복합니다.",
+  "draw_enabled": true,
+  "identity_key": "5d3d59428c9fc604579679d54429e43e181e19e50f2df3ffa36525bb3b6eda7a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3437.jpg",
+  "level": 0,
+  "links": [],
+  "name": "엘리멘트의 샘",
+  "name_english": "Spring of Rebirth",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "search_aliases": [
+    "엘리멘트의 샘",
+    "Spring of Rebirth"
+  ],
+  "source_id": 3437,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 2469
+}

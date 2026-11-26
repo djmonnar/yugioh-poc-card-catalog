@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards210/3434",
+  "attack": 1800,
+  "attribute": 2,
+  "categories": [
+    "지원-스피릿",
+    "발동-소환 시",
+    "발동-리버스",
+    "발동-엔드 페이즈 시",
+    "효과-유형 변경",
+    "효과-바운스",
+    "소환제약"
+  ],
+  "code": 90365482,
+  "defense": 600,
+  "description": "특수 소환할 수 없습니다. 일반 소환하거나 앞면이 되면 필드의 앞면 몬스터 1장을 지정할 수 있습니다. 그 몬스터를 스피릿으로 취급하고 엔드 페이즈에 패로 돌립니다. 이 카드도 일반 소환하거나 앞면이 된 턴의 엔드 페이즈에 패로 돌아갑니다.",
+  "draw_enabled": true,
+  "identity_key": "610f8b64b811f2aecfcc05803cb06ed0325039cbeea64fb5dbd03f0f2a074d16",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3434.jpg",
+  "level": 4,
+  "links": [],
+  "name": "하백",
+  "name_english": "Hebo, Lord of the River",
+  "native_type": 545,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "R",
+  "search_aliases": [
+    "하백",
+    "Hebo, Lord of the River"
+  ],
+  "source_id": 3434,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "스피릿 몬스터",
+  "web_slot": 2466
+}

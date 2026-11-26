@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards210/3416",
+  "attack": 1000,
+  "attribute": 8,
+  "categories": [
+    "지원-스피릿",
+    "지원-에스프릿",
+    "발동-엔드 페이즈 시",
+    "효과-바운스",
+    "소환제약"
+  ],
+  "code": 92200612,
+  "defense": 1800,
+  "description": "특수 소환할 수 없습니다. 턴당 1번 필드의 다른 스피릿 몬스터 1장을 지정해 패로 돌릴 수 있습니다. 일반 소환하거나 앞면이 된 턴의 엔드 페이즈에 패로 돌아갑니다.",
+  "draw_enabled": true,
+  "identity_key": "029b0f45e62a20502cb6f9141b5f60a555bb47a2c9fd42eca5b50bef6b75f7e8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3416.jpg",
+  "level": 4,
+  "links": [],
+  "name": "에스프릿 버드－전구",
+  "name_english": "Shinobird Pigeon",
+  "native_type": 545,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "N",
+  "search_aliases": [
+    "에스프릿 버드－전구",
+    "Shinobird Pigeon"
+  ],
+  "source_id": 3416,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "스피릿 몬스터",
+  "web_slot": 2448
+}

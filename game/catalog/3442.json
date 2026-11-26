@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards211/3442",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-자괴",
+    "효과-파괴",
+    "파괴-몬스터",
+    "효과-덱샐비지"
+  ],
+  "code": 34460239,
+  "defense": 0,
+  "description": "내 앞면 몬스터 1장을 지정해 파괴합니다. 실제로 파괴했다면, 필드에서 사용하던 이름이 같은 몬스터 1장을 덱에서 패로 가져옵니다.",
+  "draw_enabled": true,
+  "identity_key": "9fd49bf7f0b2ebc170e80fcf841fa9775707ec22e3d533799049b4dcbba3276f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native211/cards/3442.jpg",
+  "level": 0,
+  "links": [],
+  "name": "제너레이션 체인지",
+  "name_english": "Generation Shift",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "제너레이션 체인지",
+    "Generation Shift"
+  ],
+  "source_id": 3442,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2474
+}

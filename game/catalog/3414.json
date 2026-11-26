@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards210/3414",
+  "attack": 0,
+  "attribute": 8,
+  "categories": [
+    "지원-스피릿",
+    "지원-에스프릿",
+    "지원-전투",
+    "발동-전투 시",
+    "발동-패 버리기",
+    "발동-엔드 페이즈 시",
+    "효과-공격력 상승",
+    "효과-수비력 상승",
+    "효과-바운스",
+    "소환제약"
+  ],
+  "code": 39817919,
+  "defense": 0,
+  "description": "특수 소환할 수 없습니다. 상대 몬스터와 전투할 때의 데미지 스텝에, 패의 스피릿 1장을 버리고 이 카드의 공격력·수비력을 버린 몬스터의 수치만큼 배틀 페이즈 종료까지 올릴 수 있습니다. 턴당 1번 가능합니다. 일반 소환하거나 앞면이 된 턴의 엔드 페이즈에 패로 돌아갑니다.",
+  "draw_enabled": true,
+  "identity_key": "7b94eff58fc9a1a32b6d1e10a7354404c3dec514a00fba72a5aedde67a3b7f4e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3414.jpg",
+  "level": 4,
+  "links": [],
+  "name": "에스프릿 버드－인아",
+  "name_english": "Shinobird Crow",
+  "native_type": 545,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "R",
+  "search_aliases": [
+    "에스프릿 버드－인아",
+    "Shinobird Crow"
+  ],
+  "source_id": 3414,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "스피릿 몬스터",
+  "web_slot": 2446
+}

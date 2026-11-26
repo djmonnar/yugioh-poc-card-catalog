@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards210/3420",
+  "attack": 1500,
+  "attribute": 8,
+  "categories": [
+    "지원-에스프릿",
+    "지원-토큰"
+  ],
+  "code": 52900001,
+  "defense": 1500,
+  "description": "에스프릿 로드－희공작 또는 에스프릿 로드－언공작의 엔드 페이즈 효과로 특수 소환하는 바람 속성 비행야수족 토큰입니다.",
+  "draw_enabled": false,
+  "identity_key": "51fd3ddd63f3411a1bfeb1865db8d5326421a09871c0407372adfbfd0c0a13fa",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3420.jpg",
+  "level": 4,
+  "links": [],
+  "name": "에스프릿 버드 토큰",
+  "name_english": "Shinobird Token",
+  "native_type": 16401,
+  "normal_limit": 0,
+  "playable": false,
+  "race": 512,
+  "rarity": "N",
+  "search_aliases": [
+    "에스프릿 버드 토큰",
+    "Shinobird Token"
+  ],
+  "source_id": 3420,
+  "speed_limit": null,
+  "stock": false,
+  "token": true,
+  "type_name": "토큰",
+  "web_slot": 2452
+}

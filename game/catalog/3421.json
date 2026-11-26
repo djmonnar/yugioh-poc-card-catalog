@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards210/3421",
+  "attack": 800,
+  "attribute": 32,
+  "categories": [
+    "지원-스피릿",
+    "발동-소환 시",
+    "발동-리버스",
+    "발동-엔드 페이즈 시",
+    "효과-덱샐비지",
+    "효과-바운스",
+    "소환제약"
+  ],
+  "code": 16889337,
+  "defense": 1800,
+  "description": "특수 소환할 수 없습니다. 일반 소환하거나 앞면이 되면 덱에서 아라타마 이외의 스피릿 몬스터 1장을 가져올 수 있습니다. 그 턴의 엔드 페이즈에 패로 돌아갑니다.",
+  "draw_enabled": true,
+  "identity_key": "b776cb1e43e5aeb8850b174973ed6966a466bf007b407756c6a023f61d1d4756",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3421.jpg",
+  "level": 4,
+  "links": [],
+  "name": "아라타마",
+  "name_english": "Aratama",
+  "native_type": 545,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "search_aliases": [
+    "아라타마",
+    "Aratama"
+  ],
+  "source_id": 3421,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "스피릿 몬스터",
+  "web_slot": 2453
+}

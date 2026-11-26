@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards210/3415",
+  "attack": 1500,
+  "attribute": 8,
+  "categories": [
+    "지원-스피릿",
+    "지원-에스프릿",
+    "발동-소환 시",
+    "발동-엔드 페이즈 시",
+    "효과-드로우",
+    "효과-바운스",
+    "소환제약"
+  ],
+  "code": 66815913,
+  "defense": 1500,
+  "description": "특수 소환할 수 없습니다. 필드에 앞면인 동안 다른 스피릿이 일반 소환 또는 특수 소환되면 턴당 1번 1장을 드로우할 수 있습니다. 일반 소환하거나 앞면이 된 턴의 엔드 페이즈에 패로 돌아갑니다.",
+  "draw_enabled": true,
+  "identity_key": "eab9874a0edbdf136f1a89cf11fe2acf702d3a77550a81b2a49051d621ea50cd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3415.jpg",
+  "level": 4,
+  "links": [],
+  "name": "에스프릿 버드－무학",
+  "name_english": "Shinobird Crane",
+  "native_type": 545,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "N",
+  "search_aliases": [
+    "에스프릿 버드－무학",
+    "Shinobird Crane"
+  ],
+  "source_id": 3415,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "스피릿 몬스터",
+  "web_slot": 2447
+}

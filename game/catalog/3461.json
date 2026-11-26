@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards211/3461",
+  "attack": 2500,
+  "attribute": 32,
+  "categories": [
+    "지원-블랙매지션",
+    "지원-푸른눈",
+    "발동-소환 시",
+    "발동-패에서",
+    "소환-패에서",
+    "효과-공격력 상승",
+    "효과-수비력 상승"
+  ],
+  "code": 60948488,
+  "defense": 2500,
+  "description": "내 필드에 원래 공격력 또는 수비력이 2500인 몬스터가 일반·특수 소환되면 패에서 앞면 수비로 특수 소환할 수 있습니다. 자신이 특수 소환되면 내 앞면 블랙 매지션 또는 푸른 눈의 백룡 1장을 지정해 턴 종료까지 공격력과 수비력을 각각 2500 올릴 수 있습니다. 각 효과는 카드명 기준 턴당 1번입니다.",
+  "draw_enabled": true,
+  "identity_key": "f7645c84c0948c7a31ed9d391ca133cce84d45d4a0af3859d0fae500b9556b0e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native211/cards/3461.jpg",
+  "level": 7,
+  "links": [],
+  "name": "크로니클 매지션",
+  "name_english": "Chronicle Magician",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "search_aliases": [
+    "크로니클 매지션",
+    "Chronicle Magician"
+  ],
+  "source_id": 3461,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2493
+}

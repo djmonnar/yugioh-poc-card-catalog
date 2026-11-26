@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards211/3463",
+  "attack": 2100,
+  "attribute": 32,
+  "categories": [
+    "지원-블랙매지션",
+    "발동-패에서",
+    "발동-마법·함정 발동 시",
+    "소환-패에서",
+    "소환-묘지",
+    "효과-카드명 변경"
+  ],
+  "code": 35191415,
+  "defense": 2500,
+  "description": "몬스터 존에서 블랙 매지션으로 취급합니다. 상대 턴에 내 마법·함정 효과가 발동하면 카드명 기준 턴당 1번 패에서 특수 소환할 수 있습니다. 필드에 있는 동안 한 번, 내 마법·함정 효과 발동에 맞춰 묘지의 블랙 매지션 1장을 지정하여 특수 소환할 수 있습니다.",
+  "draw_enabled": true,
+  "identity_key": "9bdcf847ea3d35f407002a0d8ae9b196a8b31ab8750e38ac7a6a34378f56efce",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native211/cards/3463.jpg",
+  "level": 7,
+  "links": [],
+  "name": "매지션 오브 블랙 일루전",
+  "name_english": "Magician of Dark Illusion",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "search_aliases": [
+    "매지션 오브 블랙 일루전",
+    "Magician of Dark Illusion"
+  ],
+  "source_id": 3463,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2495
+}

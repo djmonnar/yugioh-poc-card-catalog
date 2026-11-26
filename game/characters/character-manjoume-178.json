@@ -35,11 +35,26 @@
             "position": "attack"
           }
         ]
+      },
+      {
+        "name": "벤케이",
+        "profile_id": "profile-3c255f7c-cb97-4f17-bc6d-b46bb3663b24",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "91679397370f25bbc1fada6e65a9000485105eed4d2934c62c750e2792d50556",
+              "internal_id": 2883,
+              "name_ko": "중무장무사－벤 케이",
+              "slot": 1915
+            },
+            "kind": "start_hand"
+          }
+        ]
       }
     ],
     "skills": []
   },
   "profile_id": "manjoume",
-  "updated_at": "2026-11-22T22:20:57.511966+00:00",
-  "version": 5963
+  "updated_at": "2026-11-26T10:14:36.812425+00:00",
+  "version": 6380
 }

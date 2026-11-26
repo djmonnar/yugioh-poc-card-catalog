@@ -1,0 +1,69 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-ebe53204-9ebf-438b-8cb8-787f7aca12b2",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "3bec788745f621189b48a8ba5d81630735ff0dd0e7b32a111e0a16d21731a90d",
+      "source_id": 119
+    },
+    {
+      "count": 2,
+      "identity_key": "2098053ea34ca1acd9792fcd1b86f3a5e6ac8af8c80fdef47f7e885cbd9c1e14",
+      "source_id": 3380
+    },
+    {
+      "count": 1,
+      "identity_key": "de87c4312d01187ec5b1eb7a3481a3e9bfc7bd509e4d51161014be6740815a4e",
+      "source_id": 3381
+    },
+    {
+      "count": 3,
+      "identity_key": "66672a988056356d2f8178d8750e8ca35786292ce0a6782ff65b82f52f0725f7",
+      "source_id": 3383
+    },
+    {
+      "count": 2,
+      "identity_key": "9e40e8e318a463f80592cf29d227d82d32ba5279c5faeed9905554484fbf4447",
+      "source_id": 3382
+    },
+    {
+      "count": 3,
+      "identity_key": "d4e6f801bd89eaa928e70252486de94bbfce50745806d0c13cee62e4cd7f6e0f",
+      "source_id": 94
+    },
+    {
+      "count": 1,
+      "identity_key": "b70a3040bf8ce1f7eff3e395fc1cbdff503dbdc7d47389712d89b32becc8b16b",
+      "source_id": 1177
+    },
+    {
+      "count": 1,
+      "identity_key": "b55feb0608d6bbc591e87c8236cec5087530fdc5eedbc2cfc2334b4896a3ebf8",
+      "source_id": 375
+    },
+    {
+      "count": 1,
+      "identity_key": "2d596aa30588fce68a2318a8f9e27577a15d8e94d4c73d1e3ee21c0834230a75",
+      "source_id": 2661
+    },
+    {
+      "count": 1,
+      "identity_key": "02d5242015819fc994205f03b2df3f1719434411e1cf4f38b79cc118b4da4f96",
+      "source_id": 1230
+    },
+    {
+      "count": 1,
+      "identity_key": "382fb1c74d724caa33a30ed3f297d6b310c62eb129e71c06991886dcbbc00160",
+      "source_id": 796
+    },
+    {
+      "count": 1,
+      "identity_key": "acf4f999fb88d03df7baa3682e6d2e1fb0a08d863de8229a89ae543f80a11990",
+      "source_id": 1108
+    }
+  ],
+  "name": "스텀블링",
+  "version": 1063
+}

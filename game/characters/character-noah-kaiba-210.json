@@ -1,0 +1,13 @@
+{
+  "art_key": "Character210/noah_kaiba_start",
+  "id": "character-noah-kaiba-210",
+  "profile": {
+    "name": "카이바 노아",
+    "portrait": "assets/actors/native210/noah_kaiba/start.png",
+    "skill_profiles": [],
+    "skills": []
+  },
+  "profile_id": "noah_kaiba",
+  "updated_at": "2026-11-26T06:26:25.763685+00:00",
+  "version": 1047
+}

@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards211/3453",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-초월룡",
+    "지원-공룡족",
+    "지원-제외",
+    "소환-묘지",
+    "소환-제외"
+  ],
+  "code": 93918159,
+  "defense": 0,
+  "description": "양쪽 묘지와 앞면으로 제외된 카드 중 공룡족 몬스터 1장을 지정하여 내 필드에 특수 소환합니다. 같은 턴에 초월천상은 1장만 발동할 수 있습니다.",
+  "draw_enabled": true,
+  "identity_key": "38dd3203356cd2ea1a1aee4686f7c490552aef6c326ddc2d4bafe60fd76b74cf",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native211/cards/3453.jpg",
+  "level": 0,
+  "links": [],
+  "name": "초월천상",
+  "name_english": "Supersoaring",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "초월천상",
+    "Supersoaring"
+  ],
+  "source_id": 3453,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2485
+}

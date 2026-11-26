@@ -4,10 +4,66 @@
   "profile": {
     "name": "티라노 켄잔",
     "portrait": "assets/actors/native206/tyranno_kenzan/start.png",
-    "skill_profiles": [],
-    "skills": []
+    "skill_profiles": [
+      {
+        "name": "쥐라기월드",
+        "profile_id": "profile-8f124762-8fe1-43a5-9fe7-6245b1ad366e",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "e6fb6de67c6bf7634070a7a3231fb2c61a71f6680839c7d9b9c26adbe69e2e88",
+              "internal_id": 440,
+              "name_ko": "쥐라기 월드",
+              "slot": 324
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "로스트월드",
+        "profile_id": "profile-1131d60b-9045-401f-8efd-166b3cc0595f",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "32a68e6466f7d097ac59d0173b3f195dbdfc8a3d81cba614966799f0a9c7e80e",
+              "internal_id": 2900,
+              "name_ko": "로스트월드",
+              "slot": 1932
+            },
+            "kind": "start_field"
+          }
+        ]
+      },
+      {
+        "name": "쥐라기파워",
+        "profile_id": "profile-638e6130-2be7-45fb-a392-8a2a7a4c48cc",
+        "skills": [
+          {
+            "card": {
+              "identity_key": "8e93ed10a61f3127572825c6da0ebf978a56ea093d600f001b64ad80b0d4be20",
+              "internal_id": 2916,
+              "name_ko": "쥐라기 파워",
+              "slot": 1948
+            },
+            "kind": "start_field"
+          }
+        ]
+      }
+    ],
+    "skills": [
+      {
+        "card": {
+          "identity_key": "e6fb6de67c6bf7634070a7a3231fb2c61a71f6680839c7d9b9c26adbe69e2e88",
+          "internal_id": 440,
+          "name_ko": "쥐라기 월드",
+          "slot": 324
+        },
+        "kind": "start_field"
+      }
+    ]
   },
   "profile_id": "tyranno_kenzan",
-  "updated_at": "2026-11-25T20:32:27.105516+00:00",
-  "version": 1045
+  "updated_at": "2026-11-26T06:51:31.003824+00:00",
+  "version": 6371
 }

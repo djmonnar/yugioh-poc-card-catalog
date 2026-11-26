@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards211/3443",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-필드",
+    "발동-LP 지불",
+    "보호-데미지",
+    "효과-드로우",
+    "효과-자괴",
+    "효과-회복",
+    "제약-체인 불가"
+  ],
+  "code": 67616300,
+  "defense": 0,
+  "description": "이 카드가 필드에 있는 동안 LP가 더 적은 플레이어는 데미지를 받지 않습니다. 양쪽은 각자 메인 페이즈에 1번, LP 1000을 지불해 1장 드로우, 치킨게임 파괴, 상대 LP 1000 회복 중 하나를 고를 수 있습니다. 이 효과에는 체인할 수 없습니다.",
+  "draw_enabled": true,
+  "identity_key": "0293e8959c3400065fa45469f4ddef89aefeda610f767c52010993f151aa2235",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native211/cards/3443.jpg",
+  "level": 0,
+  "links": [],
+  "name": "치킨게임",
+  "name_english": "Chicken Game",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "치킨게임",
+    "Chicken Game"
+  ],
+  "source_id": 3443,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "필드 마법",
+  "web_slot": 2475
+}

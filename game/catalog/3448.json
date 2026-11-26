@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards211/3448",
+  "attack": 2000,
+  "attribute": 4,
+  "categories": [
+    "지원-초월룡",
+    "지원-공룡족",
+    "지원-일반몬스터",
+    "지원-자괴",
+    "발동-파괴 시",
+    "발동-패에서",
+    "소환-패에서",
+    "소환-덱리크루터",
+    "효과-파괴",
+    "소환제약"
+  ],
+  "code": 5852388,
+  "defense": 200,
+  "description": "카드가 전투나 효과로 파괴됐을 때 패에서 특수 소환할 수 있습니다. 내 패 또는 필드의 앞면 공룡족 1장을 파괴해 패·덱의 공룡족 일반 몬스터 1장을 특수 소환할 수 있습니다. 이 효과를 사용한 뒤 턴 종료까지 엑스트라 덱에서는 드래곤족·공룡족·해룡족·환룡족만 특수 소환할 수 있습니다. 각 효과는 카드명 기준 턴당 1번입니다.",
+  "draw_enabled": true,
+  "identity_key": "761516bb6cceeb0bb51c85cf6ff1cfb8e66c8184884b61938909fb84920baedb",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native211/cards/3448.jpg",
+  "level": 6,
+  "links": [],
+  "name": "제노 메테오로스",
+  "name_english": "Xeno Meteorus",
+  "native_type": 4129,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "SR",
+  "search_aliases": [
+    "제노 메테오로스",
+    "Xeno Meteorus"
+  ],
+  "source_id": 3448,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "튜너 몬스터",
+  "web_slot": 2480
+}

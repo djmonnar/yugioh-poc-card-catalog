@@ -10,11 +10,6 @@
       "count": 1,
       "identity_key": "7e09d9e55aa86f344b4611ee7a4d97b1facfb08295cf46743fc2a4d5fa512101",
       "source_id": 2889
-    },
-    {
-      "count": 1,
-      "identity_key": "dadc8a1fe17d4e8f6b779eeeaf681ac04c721635c3769b907445d539f059701a",
-      "source_id": 2890
     }
   ],
   "id": "deck-db7504c2-1620-4fdd-9533-1522e475a43b",
@@ -61,5 +56,5 @@
     }
   ],
   "name": "로이드",
-  "version": 743
+  "version": 1061
 }

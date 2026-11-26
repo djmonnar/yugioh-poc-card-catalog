@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards211/3451",
+  "attack": 1400,
+  "attribute": 8,
+  "categories": [
+    "지원-융합",
+    "지원-제외",
+    "발동-제외됐을 때",
+    "효과-덱샐비지",
+    "효과-묘지샐비지",
+    "소환-제외",
+    "보호-공격 대상 제외"
+  ],
+  "code": 50834074,
+  "defense": 1000,
+  "description": "상대 필드에 앞면 바람 속성 이외의 몬스터가 2장 이상 있으면 그 몬스터들은 이 카드를 공격 대상으로 삼을 수 없습니다. 덱에서 융합 1장을 가져올 수 있습니다. 이 카드가 제외됐을 때 특수 소환하고, 그 뒤 묘지의 융합 1장을 가져올 수 있습니다. 두 발동 효과는 각각 카드명 기준 턴당 1번입니다.",
+  "draw_enabled": true,
+  "identity_key": "dfb6c53584965d8a7f86b347a16ccccb195cd829c9e89cc48282884717736360",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native211/cards/3451.jpg",
+  "level": 4,
+  "links": [],
+  "name": "헬카이트프테라",
+  "name_english": "Kaitoptera",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "SR",
+  "search_aliases": [
+    "헬카이트프테라",
+    "Kaitoptera"
+  ],
+  "source_id": 3451,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2483
+}

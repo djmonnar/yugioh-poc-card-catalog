@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards211/3446",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-자괴",
+    "효과-파괴",
+    "파괴-몬스터",
+    "효과-덱에서 묘지로 보내기"
+  ],
+  "code": 62633180,
+  "defense": 0,
+  "description": "내 몬스터 1장을 지정합니다. 그 몬스터를 파괴한 뒤 상대 덱 위에서 2장을 묘지로 보냅니다.",
+  "draw_enabled": true,
+  "identity_key": "1188ed91d5f06d259a10d90f86b799253f568879e0f94b7a6c51a7d12c0cd1b1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native211/cards/3446.jpg",
+  "level": 0,
+  "links": [],
+  "name": "본진 강습",
+  "name_english": "Assault on GHQ",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "N",
+  "search_aliases": [
+    "본진 강습",
+    "Assault on GHQ"
+  ],
+  "source_id": 3446,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2478
+}

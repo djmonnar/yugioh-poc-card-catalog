@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards210/3403",
+  "attack": 3000,
+  "attribute": 16,
+  "categories": [
+    "지원-스피릿",
+    "지원-리버스",
+    "발동-대상이 되었을 때",
+    "발동-리버스",
+    "발동-엔드 페이즈 시",
+    "효과-앞면표시",
+    "효과-드로우",
+    "효과-제외",
+    "효과-바운스",
+    "소환제약"
+  ],
+  "code": 20073910,
+  "defense": 3000,
+  "description": "일반 소환·특수 소환할 수 없습니다. 뒷면 세트는 가능합니다. 상대가 뒷면인 이 카드를 대상으로 효과를 발동하면, 이 카드를 앞면 수비로 바꿔 1장 드로우할 수 있습니다. 앞면이 되면 이 카드 이외의 필드 카드 전부를 제외합니다. 앞면이 된 턴의 엔드 페이즈에 패로 돌아갑니다.",
+  "draw_enabled": true,
+  "identity_key": "0969f0c15c443cef4d08c880b8d209bd3bfdef45cfa4470bcffd993aab86c02a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3403.jpg",
+  "level": 9,
+  "links": [],
+  "name": "아마테라스",
+  "name_english": "Amaterasu",
+  "native_type": 545,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "UR",
+  "search_aliases": [
+    "아마테라스",
+    "Amaterasu"
+  ],
+  "source_id": 3403,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "스피릿 몬스터",
+  "web_slot": 2435
+}

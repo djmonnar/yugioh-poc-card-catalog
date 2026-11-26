@@ -1,0 +1,69 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-944019f5-48a5-440c-b8ca-26e4001f4896",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "91679397370f25bbc1fada6e65a9000485105eed4d2934c62c750e2792d50556",
+      "source_id": 2883
+    },
+    {
+      "count": 2,
+      "identity_key": "45d860d25b85638ceddfaeb743ab74b99d71467e48c4e8f1bc8ca3060872695f",
+      "source_id": 1940
+    },
+    {
+      "count": 3,
+      "identity_key": "7f4a69749834c9d67bc83bf88ac1032074234f16b595401ae090a5b5a5532b93",
+      "source_id": 1957
+    },
+    {
+      "count": 2,
+      "identity_key": "db5b4da7b369739dfb61840c029d6783be1a54dd4f346c5d15dbfd367212a3b0",
+      "source_id": 2615
+    },
+    {
+      "count": 1,
+      "identity_key": "ab5b13055ae4bd8aa410f8d7d92a4b6647759e3f7546f4403a54359f413193df",
+      "source_id": 303
+    },
+    {
+      "count": 2,
+      "identity_key": "5981acc8fa5c0e62cabcaf5b34aa2847d57cca2685232d917d58a63aff77112a",
+      "source_id": 2609
+    },
+    {
+      "count": 2,
+      "identity_key": "ed190dee2874ec322edcf8a4a72a1e0ee4a002d3b2db84ab2cd6354d4284361f",
+      "source_id": 2753
+    },
+    {
+      "count": 1,
+      "identity_key": "04981e6ba985879308a7d883855b0fee488c907edd697bb32d2df4e997aa8225",
+      "source_id": 259
+    },
+    {
+      "count": 1,
+      "identity_key": "ebf78cd059912197884f99148c63936c10852933456034bee25a7c6c85197c17",
+      "source_id": 2713
+    },
+    {
+      "count": 1,
+      "identity_key": "e32a251decac47a746a10f61dea3e255756d16595656c11bac98508369524a25",
+      "source_id": 2885
+    },
+    {
+      "count": 1,
+      "identity_key": "d2c01cb64e03976bb7e6b09227171d7ee68de146ef4c13f508a92758f2bc74be",
+      "source_id": 1450
+    },
+    {
+      "count": 1,
+      "identity_key": "3cc79d0181ecd1d5052dea24808f01cb8eb3fcf3f52abe2df79af174ccfbdc52",
+      "source_id": 1449
+    }
+  ],
+  "name": "중무장무사-벤케이",
+  "version": 1055
+}

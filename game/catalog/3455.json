@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards211/3455",
+  "attack": 2300,
+  "attribute": 1,
+  "categories": [
+    "지원-공룡족",
+    "지원-암석족",
+    "지원-자괴",
+    "발동-파괴 시",
+    "발동-패에서",
+    "소환-패에서",
+    "소환-묘지"
+  ],
+  "code": 4472318,
+  "defense": 1800,
+  "description": "내 패 또는 필드의 몬스터가 전투나 효과로 파괴되면 패에서 특수 소환할 수 있습니다. 내 필드의 이 카드가 상대에 의해 파괴됐을 때, 묘지에서 자신 이외의 공룡족과 암석족을 각각 1장까지 지정해 특수 소환할 수 있습니다. 각 효과는 카드명 기준 턴당 1번입니다.",
+  "draw_enabled": true,
+  "identity_key": "e155e50fc53ac5ed0b1faccedc5eb31ea1d9555b60617f22a00a9a83c4d761ac",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native211/cards/3455.jpg",
+  "level": 6,
+  "links": [],
+  "name": "암룡 베어록",
+  "name_english": "Bayerock Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "SR",
+  "search_aliases": [
+    "암룡 베어록",
+    "Bayerock Dragon"
+  ],
+  "source_id": 3455,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2487
+}

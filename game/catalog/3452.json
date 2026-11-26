@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards211/3452",
+  "attack": 2000,
+  "attribute": 32,
+  "categories": [
+    "지원-융합",
+    "지원-필드",
+    "지원-공룡족",
+    "지원-드래곤족",
+    "발동-소환 시",
+    "소환-추가 일반 소환",
+    "효과-직접공격",
+    "효과-마법·함정 배치"
+  ],
+  "code": 86239173,
+  "defense": 1800,
+  "description": "융합 소재는 헬카이트프테라와 공룡족 또는 드래곤족 몬스터 1장입니다. 융합 소환하면 덱·묘지의 필드 마법 1장을 내 필드 존에 앞면으로 놓을 수 있습니다. 특수 소환한 턴에는 직접 공격할 수 있습니다. 내 메인 페이즈에 효과를 발동해 공룡족·드래곤족 몬스터 1장을 일반 소환할 수 있습니다. 두 발동 효과는 각각 카드명 기준 턴당 1번입니다.",
+  "draw_enabled": true,
+  "identity_key": "c7fa950fc2ea3c983824eebe5b8a1d266d62aa456f5c44711f6d0f1797e5e26c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native211/cards/3452.jpg",
+  "level": 6,
+  "links": [],
+  "name": "헬혼드사우루스",
+  "name_english": "Horned Saurus",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "UR",
+  "search_aliases": [
+    "헬혼드사우루스",
+    "Horned Saurus"
+  ],
+  "source_id": 3452,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 2484
+}

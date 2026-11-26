@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards211/3462",
+  "attack": 1250,
+  "attribute": 32,
+  "categories": [
+    "지원-블랙매지션",
+    "지원-푸른눈",
+    "지원-빛 속성",
+    "지원-어둠 속성",
+    "효과-덱에서 묘지로 보내기"
+  ],
+  "code": 54878729,
+  "defense": 1250,
+  "description": "내 묘지에 빛 속성 몬스터가 있으면 덱에서 푸른 눈의 백룡 또는 그 이름이 기재된 카드, 어둠 속성 몬스터가 있으면 블랙 매지션 또는 그 이름이 기재된 카드 1장을 묘지로 보낼 수 있습니다. 조건을 둘 다 충족하면 하나를 고릅니다. 크로니클 소서리스는 보낼 수 없으며, 카드명 기준 턴당 1번입니다.",
+  "draw_enabled": true,
+  "identity_key": "0f9045d84781b783fb12da89ffdf25e63d9ce4e21252768a181857aef56624e5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native211/cards/3462.jpg",
+  "level": 4,
+  "links": [],
+  "name": "크로니클 소서리스",
+  "name_english": "Chronicle Sorceress",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "search_aliases": [
+    "크로니클 소서리스",
+    "Chronicle Sorceress"
+  ],
+  "source_id": 3462,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2494
+}

@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards210/3430",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-스피릿",
+    "발동-필드를 벗어났을 때",
+    "효과-유지 코스트",
+    "효과-바운스"
+  ],
+  "code": 99173029,
+  "defense": 0,
+  "description": "이 카드가 앞면이면 양쪽 스피릿은 자신의 엔드 페이즈 귀환 효과로 패에 돌아가지 않습니다. 자신의 엔드 페이즈마다 패 1장을 버리거나 이 카드를 파괴합니다. 이 카드가 필드를 떠나면 앞면 스피릿이 모두 주인의 패로 돌아갑니다.",
+  "draw_enabled": true,
+  "identity_key": "b067b554f1cbdfedf691d1819193c85d4cd50d049ff0699bab34e2cc341443a1",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3430.jpg",
+  "level": 0,
+  "links": [],
+  "name": "영혼 에너지 고정장치",
+  "name_english": "Spiritual Energy Settle Machine",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "영혼 에너지 고정장치",
+    "Spiritual Energy Settle Machine"
+  ],
+  "source_id": 3430,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 2462
+}

@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards210/3427",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-스피릿",
+    "지원-장착",
+    "효과-장착",
+    "효과-파괴대신"
+  ],
+  "code": 1200843,
+  "defense": 0,
+  "description": "스피릿 몬스터에게만 장착할 수 있습니다. 장착 몬스터의 패 귀환 효과를 발동할지 고를 수 있습니다. 장착 몬스터가 전투로 파괴될 때 이 카드를 대신 파괴합니다.",
+  "draw_enabled": true,
+  "identity_key": "9dec45bea90904d07d1e3a29aee782e515031559f0b54b51e585422da2382728",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3427.jpg",
+  "level": 0,
+  "links": [],
+  "name": "신기 － 거울",
+  "name_english": "Mirror of Yata",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "신기 － 거울",
+    "Mirror of Yata"
+  ],
+  "source_id": 3427,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 2459
+}

@@ -1,20 +1,15 @@
 {
-  "banlist_enabled": false,
+  "banlist_enabled": true,
   "extra": [],
   "id": "ch2_battle_73cca432921d0ae49cedde85",
   "main": [
     {
-      "count": 2,
-      "identity_key": "94bef6b97b015d09dc930e530725ae19025c846a25d59af45e2236b32a71a79b",
-      "source_id": 1520
-    },
-    {
-      "count": 2,
+      "count": 3,
       "identity_key": "213154da06d5229af4a68a0d57c221c31f67ca7b48ba86ea70761b89f57ae67d",
       "source_id": 1972
     },
     {
-      "count": 1,
+      "count": 2,
       "identity_key": "2f457513c48e2ee0e034ae7e508d84ec54b1f58c5d36a1ba1c495de7031eb4af",
       "source_id": 1989
     },
@@ -25,40 +20,45 @@
     },
     {
       "count": 2,
-      "identity_key": "e6fb6de67c6bf7634070a7a3231fb2c61a71f6680839c7d9b9c26adbe69e2e88",
-      "source_id": 440
+      "identity_key": "4248e33821c5cbc681eefe853492d05a3780780fa88d8348cafbc0934506a7e0",
+      "source_id": 1432
     },
     {
       "count": 2,
-      "identity_key": "bcf4c5406d009dcfefcbec9e9dbc378f987cb915b7c4c90f9e0ad75f93df8439",
-      "source_id": 447
-    },
-    {
-      "count": 2,
-      "identity_key": "97ec3d0a386c623b1626d1d27d3b5344ca1f4e5d7950107c7422740f07303f65",
-      "source_id": 1001
-    },
-    {
-      "count": 2,
-      "identity_key": "3853f067a84dd61b64a0028e9eccc0f2cb9f8013dbc600bb0cd4b61485e5ebf4",
-      "source_id": 1990
-    },
-    {
-      "count": 2,
-      "identity_key": "f3f27c7e51578a2a9ba9a8a9963f554467a27c8d8e42470d49b7a5109cf832c7",
-      "source_id": 1971
-    },
-    {
-      "count": 2,
-      "identity_key": "513343a524e3abe1d8a307e7eaf54026604852fff5b19160e429bc669cac6089",
-      "source_id": 102
+      "identity_key": "8e93ed10a61f3127572825c6da0ebf978a56ea093d600f001b64ad80b0d4be20",
+      "source_id": 2916
     },
     {
       "count": 1,
-      "identity_key": "fa110fa4ecf126e45c1218b4ecd12f41441c809df3f9fbf87e1733ab129c4b9f",
-      "source_id": 197
+      "identity_key": "14731e34f0fd21f670680848e9d5a1a95d715191d55ff333db1f42ff905d025d",
+      "source_id": 1986
+    },
+    {
+      "count": 2,
+      "identity_key": "32a68e6466f7d097ac59d0173b3f195dbdfc8a3d81cba614966799f0a9c7e80e",
+      "source_id": 2900
+    },
+    {
+      "count": 2,
+      "identity_key": "89180a0b52e45309d52a40df61ecb0427ad3403b7be947df15a97510053aa7d2",
+      "source_id": 2911
+    },
+    {
+      "count": 2,
+      "identity_key": "e155e50fc53ac5ed0b1faccedc5eb31ea1d9555b60617f22a00a9a83c4d761ac",
+      "source_id": 3455
+    },
+    {
+      "count": 1,
+      "identity_key": "5328f2b65cb4b7272c986202370ddc18d8e1c598c4143349b08e674fba035505",
+      "source_id": 3389
+    },
+    {
+      "count": 1,
+      "identity_key": "e6fb6de67c6bf7634070a7a3231fb2c61a71f6680839c7d9b9c26adbe69e2e88",
+      "source_id": 440
     }
   ],
-  "name": "용만 상급",
-  "version": 755
+  "name": "초전도 티라노",
+  "version": 1053
 }

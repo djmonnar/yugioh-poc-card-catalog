@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards210/3426",
+  "attack": 2200,
+  "attribute": 1,
+  "categories": [
+    "지원-스피릿",
+    "발동-소환 시",
+    "발동-리버스",
+    "발동-엔드 페이즈 시",
+    "효과-파괴",
+    "파괴-몬스터",
+    "효과-바운스",
+    "소환제약"
+  ],
+  "code": 89111398,
+  "defense": 1800,
+  "description": "특수 소환할 수 없습니다. 일반 소환하거나 앞면이 되면 이 카드 이외의 앞면 몬스터를 모두 파괴합니다. 그 턴의 엔드 페이즈에 패로 돌아갑니다.",
+  "draw_enabled": true,
+  "identity_key": "78c8149cc6fd7dbba7d417bcec1fdda003be00f24203cbd511ff395b5bb4a9ab",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3426.jpg",
+  "level": 6,
+  "links": [],
+  "name": "모래 먼지의 악령",
+  "name_english": "Dark Dust Spirit",
+  "native_type": 545,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16,
+  "rarity": "SR",
+  "search_aliases": [
+    "모래 먼지의 악령",
+    "Dark Dust Spirit"
+  ],
+  "source_id": 3426,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "스피릿 몬스터",
+  "web_slot": 2458
+}

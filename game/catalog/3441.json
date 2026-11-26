@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards210/3441",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-제외",
+    "발동-제외",
+    "효과-공격력 감소",
+    "효과-수비력 감소"
+  ],
+  "code": 93236220,
+  "defense": 0,
+  "description": "내 앞면 몬스터 1장을 엔드 페이즈까지 일시 제외하고 상대 앞면 몬스터 1장을 지정합니다. 상대 몬스터의 공격력·수비력을 각각 제외한 내 몬스터의 원래 수치만큼 내립니다.",
+  "draw_enabled": true,
+  "identity_key": "3c898408ac0014f533412f896e05d85170da6d0cac563d18597fcb0b758e2485",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3441.jpg",
+  "level": 0,
+  "links": [],
+  "name": "성유물을 둘러싼 싸움",
+  "name_english": "World Legacy Clash",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "성유물을 둘러싼 싸움",
+    "World Legacy Clash"
+  ],
+  "source_id": 3441,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 2473
+}

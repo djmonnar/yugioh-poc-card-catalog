@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards210/3404",
+  "attack": 1300,
+  "attribute": 1,
+  "categories": [
+    "지원-스피릿",
+    "지원-제외",
+    "소환-패에서",
+    "소환제약",
+    "발동-묘지에서",
+    "발동-제외",
+    "발동-엔드 페이즈 시",
+    "효과-발동봉쇄",
+    "효과-바운스"
+  ],
+  "code": 57722593,
+  "defense": 1300,
+  "description": "통상 소환할 수 없습니다. 내 필드에 스피릿 몬스터가 있으면 패의 자신을 특수 소환할 수 있습니다. 이 방법은 카드명 기준으로 턴당 1번이며, 특수 소환된 턴의 엔드 페이즈에 패로 돌아갑니다. 엔드 페이즈에 묘지의 자신을 제외해 내 앞면 스피릿 1장을 지정하면, 턴 종료까지 그 몬스터의 필드 효과를 어느 쪽도 발동할 수 없습니다. 묘지 효과는 턴당 1번입니다.",
+  "draw_enabled": true,
+  "identity_key": "dea60c868d3c7f29f444874d438a3685cb4bef568c5f9ddf36415a9f184fe028",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3404.jpg",
+  "level": 3,
+  "links": [],
+  "name": "코노하나사쿠야",
+  "name_english": "Konohanasakuya",
+  "native_type": 33554977,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "SR",
+  "search_aliases": [
+    "코노하나사쿠야",
+    "Konohanasakuya"
+  ],
+  "source_id": 3404,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "특수 소환 몬스터",
+  "web_slot": 2436
+}

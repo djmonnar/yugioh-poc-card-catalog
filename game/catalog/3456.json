@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards211/3456",
+  "attack": 2200,
+  "attribute": 2,
+  "categories": [
+    "지원-일반몬스터",
+    "지원-전투",
+    "소환-패에서",
+    "보호-전투 파괴"
+  ],
+  "code": 87116749,
+  "defense": 0,
+  "description": "내 필드에 앞면 일반 몬스터가 있으면 카드명 기준 턴당 1번 패에서 특수 소환할 수 있습니다. 이 카드가 앞면인 동안 턴당 1번, 내 일반 몬스터의 효과 몬스터와의 전투 파괴를 막습니다.",
+  "draw_enabled": true,
+  "identity_key": "f0410921e31eb1077cd330337d7722d002c4a10c03e8b7eac4853f6332a5ed8f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native211/cards/3456.jpg",
+  "level": 6,
+  "links": [],
+  "name": "유람정 서브마리드",
+  "name_english": "Submareed Tour Ride",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "R",
+  "search_aliases": [
+    "유람정 서브마리드",
+    "Submareed Tour Ride"
+  ],
+  "source_id": 3456,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2488
+}

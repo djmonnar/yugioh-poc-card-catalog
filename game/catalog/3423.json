@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards210/3423",
+  "attack": 400,
+  "attribute": 16,
+  "categories": [
+    "지원-스피릿",
+    "지원-릴리즈",
+    "발동-패에서",
+    "발동-패 공개",
+    "발동-릴리즈됐을 때",
+    "발동-엔드 페이즈 시",
+    "소환-추가 일반 소환",
+    "효과-묘지샐비지",
+    "효과-바운스",
+    "소환제약"
+  ],
+  "code": 67972302,
+  "defense": 900,
+  "description": "특수 소환할 수 없습니다. 패의 이 카드를 공개하면 해결 직후 패의 스피릿 1장을 일반 소환할 수 있습니다. 이 카드가 릴리스되고 묘지에 회수할 내 스피릿이 있으면 그중 1장을 지정해 패로 가져옵니다. 두 효과는 각각 카드명 기준 턴당 1번입니다. 일반 소환하거나 앞면이 된 턴의 엔드 페이즈에 패로 돌아갑니다.",
+  "draw_enabled": true,
+  "identity_key": "cc7bf57c4e703492fd467fa5a22f338fd31b88eea7c01a14f504a46e7c3ac37d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3423.jpg",
+  "level": 4,
+  "links": [],
+  "name": "사키타마",
+  "name_english": "Sakitama",
+  "native_type": 545,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "SR",
+  "search_aliases": [
+    "사키타마",
+    "Sakitama"
+  ],
+  "source_id": 3423,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "스피릿 몬스터",
+  "web_slot": 2455
+}

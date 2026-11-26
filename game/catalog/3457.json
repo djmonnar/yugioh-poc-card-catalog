@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards211/3457",
+  "attack": 1600,
+  "attribute": 1,
+  "categories": [
+    "지원-공룡족",
+    "소환-패에서",
+    "발동-소환 시",
+    "효과-파괴",
+    "파괴-몬스터"
+  ],
+  "code": 55349196,
+  "defense": 1200,
+  "description": "내 몬스터 존이 비었으면 카드명 기준 턴당 1번 패에서 특수 소환할 수 있습니다. 일반 또는 특수 소환하면, 내 앞면 공룡족 몬스터들의 현재 공격력 합보다 공격력이 낮은 필드의 앞면 몬스터 1장을 지정해 파괴할 수 있습니다. 이 파괴 효과도 카드명 기준 턴당 1번입니다.",
+  "draw_enabled": true,
+  "identity_key": "d6adf035f6ba6a969f07f748eb75e70ff6f66b4b93aec60e451a9377c123b63f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native211/cards/3457.jpg",
+  "level": 6,
+  "links": [],
+  "name": "쌍두룡 킹렉스",
+  "name_english": "Double-Headed Dino King Rex",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "SR",
+  "search_aliases": [
+    "쌍두룡 킹렉스",
+    "Double-Headed Dino King Rex"
+  ],
+  "source_id": 3457,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2489
+}

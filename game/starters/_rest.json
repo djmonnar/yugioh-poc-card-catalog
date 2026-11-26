@@ -1547,6 +1547,34 @@
       "name": "해피의 사냥터",
       "representativeSourceId": 2068,
       "sourceId": "unified039:ch2_battle_572496ddbe849982a4c3e8a9"
+    },
+    {
+      "extra": [],
+      "id": "unified039_e05be480c854c57190586f5d7d0c5a4a4a5ac7f5",
+      "main": [
+        102,
+        102,
+        102,
+        197,
+        197,
+        440,
+        440,
+        8,
+        8,
+        8,
+        1079,
+        1079,
+        1079,
+        1002,
+        1002,
+        447,
+        447,
+        1520,
+        1520,
+        1520
+      ],
+      "name": "공룡 중급",
+      "sourceId": "unified039:ch2_battle_bb6b829c8a321d2357979751"
     }
   ],
   "nativeCatalogSha256": "b73dd51c78aeab8c9beebf936b46e4cac16040e70df3a7980dec38c40db21e09",

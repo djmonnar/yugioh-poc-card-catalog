@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards210/3419",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-스피릿",
+    "지원-에스프릿",
+    "지원-의식",
+    "발동-패 공개",
+    "발동-묘지에서",
+    "발동-제외",
+    "발동-묘지로 보내기",
+    "효과-덱샐비지",
+    "효과-효과 복사"
+  ],
+  "code": 20417688,
+  "defense": 0,
+  "description": "패의 의식 몬스터 1장을 공개해, 그 몬스터와 레벨은 같고 이름이 다른 의식 몬스터를 덱에서 가져옵니다. 묘지에서는 이 카드를 제외하고 패의 의식 마법 1장을 묘지로 보내 그 카드 발동 시의 의식 소환 효과를 적용할 수 있습니다. 두 효과를 각각 카드명 기준 턴당 1번 쓸 수 있습니다.",
+  "draw_enabled": true,
+  "identity_key": "c1c26e04d6a6d4059ecfe518ef1b8d125d2ec0d33e7bc20a48498488f721464d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native210/cards/3419.jpg",
+  "level": 0,
+  "links": [],
+  "name": "성봉의 천하",
+  "name_english": "Stars Align across the Milky Way",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "성봉의 천하",
+    "Stars Align across the Milky Way"
+  ],
+  "source_id": 3419,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2451
+}

@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards211/3464",
+  "attack": 0,
+  "attribute": 32,
+  "categories": [
+    "지원-블랙매지션",
+    "지원-매지션 걸",
+    "지원-마법사",
+    "지원-고레벨",
+    "발동-패에서",
+    "발동-묘지로 보내기",
+    "효과-묘지로 보내기",
+    "효과-드로우",
+    "소환-패에서",
+    "소환-묘지"
+  ],
+  "code": 97631303,
+  "defense": 0,
+  "description": "패에서 발동하여 덱의 레벨 6 이상 마법사족 1장을 묘지로 보낸 뒤, 자신을 특수 소환하거나 자신을 묘지로 보내고 블랙 매지션 또는 블랙 매지션 걸 1장을 묘지에서 특수 소환할 수 있습니다. 필드에서는 내 패·필드의 마법·함정을 2장까지 묘지로 보내 그 수만큼 드로우할 수 있습니다. 각 효과는 카드명 기준 턴당 1번입니다.",
+  "draw_enabled": true,
+  "identity_key": "03e9612c796491e3209972f7c3fe1c1461e9acbf82cd36baa8fbca67b82301a8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native211/cards/3464.jpg",
+  "level": 1,
+  "links": [],
+  "name": "매지션즈 소울즈",
+  "name_english": "Magicians' Souls",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "UR",
+  "search_aliases": [
+    "매지션즈 소울즈",
+    "Magicians' Souls"
+  ],
+  "source_id": 3464,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2496
+}

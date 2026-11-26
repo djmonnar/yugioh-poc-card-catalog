@@ -1,0 +1,45 @@
+{
+  "artKey": "Character178/manjoume_start",
+  "banlistEnabled": false,
+  "deckName": "중무장무사-벤케이",
+  "extra": [],
+  "id": "enc-8ac5aba6-4945-4955-88c5-a754b9ef9576",
+  "lpBonus": 0,
+  "main": [
+    2883,
+    2883,
+    2883,
+    1940,
+    1940,
+    1957,
+    1957,
+    1957,
+    2615,
+    2615,
+    303,
+    2609,
+    2609,
+    2753,
+    2753,
+    259,
+    2713,
+    2885,
+    1450,
+    1449
+  ],
+  "name": "만죠메 준",
+  "openingDrawBonus": 0,
+  "profileId": "manjoume",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_hand",
+      "position": 0,
+      "sourceId": 2883,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-8ac5aba6-4945-4955-88c5-a754b9ef9576",
+  "usesNativeRules035": true
+}

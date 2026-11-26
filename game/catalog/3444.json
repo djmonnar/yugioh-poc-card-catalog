@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards211/3444",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-자괴",
+    "효과-파괴",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 13210191,
+  "defense": 0,
+  "description": "내 다른 마법·함정을 전부 파괴합니다. 실제로 파괴한 수만큼 상대 마법·함정을 골라 파괴합니다. 상대 카드가 그보다 적으면 전부 파괴합니다.",
+  "draw_enabled": true,
+  "identity_key": "57fa8522638c57d9b6b924a558a32a6a85bfd81adce3184262403126d48e0927",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native211/cards/3444.jpg",
+  "level": 0,
+  "links": [],
+  "name": "폭풍",
+  "name_english": "Storm",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "폭풍",
+    "Storm"
+  ],
+  "source_id": 3444,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 2476
+}
