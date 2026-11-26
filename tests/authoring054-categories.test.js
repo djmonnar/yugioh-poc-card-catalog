@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {groupCategories054,createCategoryPicker054,categoryMatcher054} from '../authoring054-categories.js';
 import {createAuthoringPanels039,normalizeCatalog039} from '../authoring039-panels.js';
+import {readCatalogParams170,writeCatalogParams170} from '../authoring170-catalog.js';
 import {Document041,fixture041,field041,button041} from './authoring041-test-dom.js';
 
 const categoryNames=['효과-공격력 상승','덱-백룡','면역-파괴','발동-리버스','소환-묘지','지원-드래곤','파괴-전투','내 분류'];
@@ -124,4 +125,51 @@ test('the actual catalog finds legacy category-ID annotations under the named ch
  const m=mountPanels(t,{canEdit:false}),category=m.state.entities.find(row=>row.entity_type==='category'&&row.entity_id==='덱-백룡');category.entity_id='category-blue';
  const blue=m.state.bootstrap.catalog.cards.find(card=>card.source_id===0);blue.categories=['category-blue','면역-파괴'];m.panels.render('cards',m.root,m.state,{force:true});
  choose(m.root,'덱-백룡');choose(m.root,'면역-파괴');assert.match(m.root.querySelector('.au-card-results-summary').textContent,/^1종/);assert.deepEqual(blue.categories,['category-blue','면역-파괴']);assert.equal(m.writes.length,0);
+});
+
+const positionEffect212='효과-표시 형식 변경',positionTrigger212='발동-표시 형식 변경 시',positionSupport212='지원-표시 형식 변경',cycle212='효과-사이클 리버스';
+const legacyEffect212=['효과-표시형식 변경','효과-표시 변경'];
+const legacyTrigger212='발동-표시 변경 시';
+
+test('position searches find one canonical effect even with legacy category rows and group references',()=>{
+ const categories=[positionEffect212,...legacyEffect212,{name:positionTrigger212,aliases:[legacyTrigger212]},positionSupport212,cycle212];
+ const groups=[
+  {id:'effect',name:'효과',categories:[positionEffect212,...legacyEffect212,cycle212]},
+  {id:'trigger',name:'발동',categories:[legacyTrigger212]},
+  {id:'support',name:'지원',categories:[positionSupport212]}
+ ];
+ const m=mountPicker({categories,groups,mode:'filter',selected:legacyEffect212});
+ const search=field041(m.root,'카테고리 필터 검색');
+ for(const value of ['표시형식변경','표시변경','표시']){
+  search.value=value;search.fire('input');
+  const found=m.root.querySelectorAll('input').filter(control=>control.type==='checkbox');
+  assert.deepEqual(found.map(control=>control.getAttribute('aria-label')),[positionEffect212,positionTrigger212,positionSupport212]);
+  assert.equal(found[0].checked,true);
+ }
+ assert.deepEqual(m.selected(),[positionEffect212]);
+ search.value='사이클 리버스';search.fire('input');
+ assert.equal(checkbox(m.root,cycle212).checked,false);
+ assert.equal(checkbox(m.root,positionEffect212),undefined);
+ choose(m.root,cycle212);
+ assert.deepEqual(m.writes.at(-1),[positionEffect212,cycle212]);
+});
+
+test('old position category URL keys restore canonical selection and keep trigger, support and cycle independent',()=>{
+ const url=new URL('https://example.test/index.html?section=cards');
+ for(const category of [legacyEffect212[0],legacyEffect212[1],legacyTrigger212])url.searchParams.append('cat',category);
+ url.searchParams.set('match','any');
+ const state=readCatalogParams170(url.searchParams);
+ assert.deepEqual(state,{tags:[positionEffect212,positionTrigger212],categoryMatch:'any'});
+ assert.equal(writeCatalogParams170(url,state).searchParams.get('section'),'cards');
+ assert.deepEqual(url.searchParams.getAll('cat'),[positionEffect212,positionTrigger212]);
+ const matches=categoryMatcher054([positionEffect212,positionTrigger212,positionSupport212,cycle212]);
+ const stumbling=[legacyEffect212[0],legacyEffect212[1],positionSupport212,'발동-반전 소환 시'];
+ const dreamClown=[legacyTrigger212],guardianSphinx=[positionEffect212,cycle212,'발동-반전 소환 시'];
+ assert.equal(matches(stumbling,[positionEffect212,positionSupport212]),true);
+ assert.equal(matches(stumbling,[positionTrigger212]),false);
+ assert.equal(matches(stumbling,[cycle212]),false);
+ assert.equal(matches(dreamClown,[positionTrigger212]),true);
+ assert.equal(matches(dreamClown,[positionEffect212]),false);
+ assert.equal(matches(guardianSphinx,[cycle212,positionEffect212]),true);
+ assert.equal(matches(guardianSphinx,[positionSupport212]),false);
 });

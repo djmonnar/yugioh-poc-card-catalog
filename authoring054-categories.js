@@ -1,7 +1,7 @@
 // Category membership belongs to authoring groups. Card tags remain flat,
 // so showing one category in two groups never adds a second tag to a card.
 import {effectiveCategoryGroupOrder056} from './authoring056-group-order.js?v=20261031-056';
-import {legacyCategoryAliases131} from './authoring131-category-aliases.js?v=20261116-card-taxonomy';
+import {legacyCategoryAliases131, canonicalPositionCategory212, canonicalPositionCategories212, positionSearchKey212} from './authoring131-category-aliases.js?v=20261126-position-taxonomy212';
 const ORDER054=['덱','면역','발동','소환','지원','파괴','효과'];
 const GROUP_HELP={
   발동:'발동할 때 내는 코스트와 효과의 발동 조건을 찾습니다.',
@@ -14,21 +14,22 @@ const GROUP_HELP={
 const key054=value=>String(value??'').normalize('NFKC').toLocaleLowerCase('ko').replace(/\s+/g,'');
 export function groupCategories054(categories=[],selected=[],customGroups,orderIds){
   const known=new Map();
-  for(const source of categories){const row=typeof source==='string'?{name:source}:source,name=row?.name;if(typeof name!=='string'||!name.trim()||known.has(name))continue;
-    const aliases=[name,...(row.aliases??[]),...(legacyCategoryAliases131.get(name)??[])];
+  for(const source of categories){const row=typeof source==='string'?{name:source}:source,raw=row?.name;if(typeof raw!=='string'||!raw.trim())continue;
+    const name=canonicalPositionCategory212(raw);
+    const aliases=[name,raw,...(known.get(name)?.aliases??[]),...(row.aliases??[]),...(legacyCategoryAliases131.get(name)??[])];
     known.set(name,{name,aliases:[...new Set(aliases.filter(value=>typeof value==='string'&&value))]});
   }
   const aliases=new Set([...known.values()].flatMap(row=>row.aliases));
   // Archived/unresolved tags remain visible and removable, never silently
   // discarded merely because they are absent from the active category list.
-  for(const name of selected)if(typeof name==='string'&&name.trim()&&!aliases.has(name))known.set(name,{name,aliases:[name]});
+  for(const name of canonicalPositionCategories212(selected))if(typeof name==='string'&&name.trim()&&!aliases.has(name))known.set(name,{name,aliases:[name]});
   if(Array.isArray(customGroups)){
     const lookup=new Map();for(const row of known.values())for(const alias of row.aliases)if(!lookup.has(alias))lookup.set(alias,row);
     const assigned=new Set(),ids=new Set(),groups=[];
     for(const source of Array.isArray(orderIds)?effectiveCategoryGroupOrder056(customGroups,orderIds):customGroups){
       const group=source?.content??source,id=source?.entity_id??group?.id,name=group?.name;
       if(typeof id!=='string'||!id||ids.has(id)||typeof name!=='string'||!name.trim()||group.archived)continue;ids.add(id);
-      const members=new Map();for(const reference of group.categories??[]){const row=lookup.get(reference);if(row){members.set(row.name,{...row,label:row.name});assigned.add(row.name);}}
+      const members=new Map();for(const reference of group.categories??[]){const row=lookup.get(canonicalPositionCategory212(reference));if(row){members.set(row.name,{...row,label:row.name});assigned.add(row.name);}}
       groups.push({key:`group:${id}`,label:name,items:[...members.values()]});
     }
     const remaining=[...known.values()].filter(row=>!assigned.has(row.name)).map(row=>({...row,label:row.name})).sort((a,b)=>a.label.localeCompare(b.label,'ko'));
@@ -47,8 +48,9 @@ export function categoryMatcher054(categories=[]){
   for(const row of rows)for(const alias of row.aliases)if(!names.has(alias))names.set(alias,row.name);
   return (tags=[],selected=[],mode='all')=>{
     if(!selected.length)return true;
-    const known=new Set(tags.map(tag=>names.get(tag)??tag));
-    const hasTag=tag=>known.has(names.get(tag)??tag);
+    const canonical=tag=>names.get(tag)??canonicalPositionCategory212(tag);
+    const known=new Set(tags.map(canonical));
+    const hasTag=tag=>known.has(canonical(tag));
     return mode==='any'?selected.some(hasTag):selected.every(hasTag);
   };
 }
@@ -60,7 +62,7 @@ export function createCategoryPicker054({document:doc=globalThis.document,catego
   if(mode!=='filter')root.append(el('p','묶음을 펼쳐 선택하세요. 같은 카테고리는 어느 묶음에서 골라도 함께 선택됩니다.','au-category-help054'));
   const selectedHead=el('p',null,'au-category-selected-heading054'),selectedList=el('div',null,'au-category-selected054'),groupsRoot=el('div',null,'au-category-groups054'),empty=el('p','일치하는 카테고리가 없습니다.','au-category-empty054');
   selectedHead.setAttribute('role','status');selectedHead.setAttribute('aria-live','polite');selectedList.setAttribute('aria-label','선택한 카테고리');root.append(search,selectedHead,selectedList,groupsRoot,empty);
-  let values=new Set(selected),groups=groupCategories054(categories,selected,customGroups,groupOrder),controls=[],generation=0;
+  let values=new Set(canonicalPositionCategories212(selected)),groups=groupCategories054(categories,selected,customGroups,groupOrder),controls=[],generation=0;
   if(!(memory.open instanceof Set))memory.open=new Set();
   const checked=row=>row.aliases.some(alias=>values.has(alias));
   function notify(before){
@@ -77,9 +79,9 @@ export function createCategoryPicker054({document:doc=globalThis.document,catego
     for(const group of groups){const summary=[...groupsRoot.querySelectorAll('summary')].find(node=>node.dataset.group===group.key);if(summary){const count=group.items.filter(checked).length;summary.querySelector('small').textContent=count?`${count}개 선택 · ${group.items.length}개`:`${group.items.length}개`;}}
   }
   function renderGroups(){
-    groupsRoot.replaceChildren();controls=[];const query=key054(search.value);let matches=0;
+    groupsRoot.replaceChildren();controls=[];const query=key054(search.value),positionQuery=positionSearchKey212(query);let matches=0;
     for(const group of groups){
-      const groupMatches=query&&key054(group.label).includes(query),found=group.items.filter(row=>!query||groupMatches||row.aliases.some(alias=>key054(alias).includes(query)));if(!found.length&&(query&&!groupMatches||group.items.length))continue;matches++;
+      const groupMatches=query&&key054(group.label).includes(query),found=group.items.filter(row=>!query||groupMatches||row.aliases.some(alias=>key054(alias).includes(query)||positionSearchKey212(key054(alias)).includes(positionQuery)));if(!found.length&&(query&&!groupMatches||group.items.length))continue;matches++;
       const details=el('details',null,'au-category-group054'),summary=el('summary'),label=el('span',group.label),count=el('small');summary.dataset.group=group.key;summary.append(label,count);details.append(summary);details.open=query.length>0||memory.open.has(group.key);
       const searchExpanded=query.length>0;details.ontoggle=()=>{if(!searchExpanded){if(details.open)memory.open.add(group.key);else memory.open.delete(group.key);}};
       const options=el('div',null,'au-category-options054');
@@ -91,7 +93,7 @@ export function createCategoryPicker054({document:doc=globalThis.document,catego
     empty.hidden=matches>0;sync();
   }
   const searchChanged=()=>{memory.query=search.value;renderGroups();};search.oninput=searchChanged;search.oncompositionend=searchChanged;search.onsearch=searchChanged;
-  function setSelected(next){values=new Set(next);const merged=groupCategories054(categories,next,customGroups,groupOrder);if(JSON.stringify(merged)!==JSON.stringify(groups)){groups=merged;renderGroups();}else sync();}
+  function setSelected(next){values=new Set(canonicalPositionCategories212(next));const merged=groupCategories054(categories,next,customGroups,groupOrder);if(JSON.stringify(merged)!==JSON.stringify(groups)){groups=merged;renderGroups();}else sync();}
   renderGroups();
   return {root,setSelected,selected:()=>[...values]};
 }

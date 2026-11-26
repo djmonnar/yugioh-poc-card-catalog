@@ -55,13 +55,15 @@ export function deckDisplayName039(state,deck,displayTitle){const all=entities03
 export function sourceId039(card){const id=card?.source_id??card?.sourceId??card?.internal_id;return Number.isSafeInteger(id)&&id>=0?id:null;}
 export function fieldValue039(value,path,next){const parts=Array.isArray(path)?path:[path];if(!parts.length||parts.some(k=>['__proto__','prototype','constructor'].includes(k)))throw Error('편집할 항목을 확인해 주세요.');const result=clone(value),first=parts[0];let node=result;for(const k of parts.slice(0,-1)){if(!node[k]||typeof node[k]!=='object'||Array.isArray(node[k]))node[k]={};node=node[k];}node[parts.at(-1)]=next;return {[first]:result[first]};}
 import {cardMetadata109} from './authoring109-catalog.js?v=20261114-109';
-import {cardMetadata211} from './authoring211-catalog.js?v=20261126-destruction-dinosaur-dark-magician211';
+import {cardMetadata212} from './authoring212-catalog.js?v=20261126-sphinx-volcanic-monarch212';
+import {officialCardText212} from './authoring212-official.js?v=20261126-sphinx-volcanic-monarch212';
+import {canonicalPositionCategories212} from './authoring131-category-aliases.js?v=20261126-position-taxonomy212';
 
 export function normalizeCatalog039(state){
   const boot=state.bootstrap??{},game=state.gamePayload??boot.game_payload??boot.game??{},raw=boot.catalog?.cards??boot.catalog??game.catalog?.cards??game.catalog??[],rows=Array.isArray(raw)?raw:[],all=entities039(state),lookup=new Map();
   for(const e of all){const id=sourceId039(e.content)??(e.entity_type.startsWith('card_')&&/^\d+$/.test(e.entity_id)?Number(e.entity_id):null);if(id!==null)lookup.set(entityKey039(e.entity_type,id),e.content);}
   const normalized=rows.map(raw=>{const id=sourceId039(raw);if(id===null)throw Error('카드 자료의 번호가 올바르지 않습니다.');const display=lookup.get(entityKey039('card_display',id))??{},setting=lookup.get(entityKey039('card_setting',id))??{},annotation=lookup.get(entityKey039('card_annotation',id))??{},limit=lookup.get(entityKey039('card_limit',id))??{};
-    const metadata120=cardMetadata211(id,raw.identity_key),maximumNormalLimit=metadata120?.maximumNormalLimit??(raw.token===true?0:undefined),fixedToken=maximumNormalLimit===0;
+    const metadata120=cardMetadata212(id,raw.identity_key),maximumNormalLimit=metadata120?.maximumNormalLimit??(raw.token===true?0:undefined),fixedToken=maximumNormalLimit===0;
     const inherited=(key,frozen,fallback)=>{if(!own(limit,key))return fallback;if(limit[key]!==null)return limit[key];if(!own(limit,frozen))throw Error('카드 제한의 기본 자료를 다시 확인해 주세요.');return limit[frozen];};
     const storedNormalLimit=inherited('normal_limit','frozen_normal_limit',raw.normal_limit??raw.deck_limit??raw.maxCopies??3);
     const normalLimit=maximumNormalLimit==null?storedNormalLimit:Math.min(maximumNormalLimit,storedNormalLimit),speedLimit=inherited('speed_limit','frozen_speed_limit',raw.speed_limit??null);
@@ -71,6 +73,7 @@ export function normalizeCatalog039(state){
     const image=metadata?.image??raw.image_url??raw.image??raw.imageUrl??(id>=2390&&id<=2419?`assets/native035/cards/${id}.jpg`:raw.web_slot?`assets/cards/${String(raw.web_slot).padStart(4,'0')}.webp`:'');
     const aliases=display.search_aliases??raw.search_aliases??raw.searchAliases??metadata?.searchAliases??[];
     const card={...raw,rarity:setting.rarity??raw.rarity,stock:fixedToken?false:setting.stock??raw.stock,draw_enabled:fixedToken?false:setting.draw_enabled??raw.draw_enabled,source_id:id,internal_id:id,slot:raw.web_slot??raw.slot,identity_key:raw.identity_key,name_ko:display.name??raw.name??raw.name_ko,name_en:display.name_english??raw.name_english??raw.nameEnglish??raw.name_en,description_ko:display.description??raw.description??raw.description_ko,type:kind,subtype,race:typeof raw.race==='number'?RACES039.find((_,i)=>raw.race===2**i)??'':raw.race,attribute:ATTR039[raw.attribute]??raw.attribute,atk:raw.attack??raw.atk,def:raw.defense??raw.def,deck_limit:normalLimit,speed_limit:speedLimit,tags:annotation.tags??raw.categories??raw.tags??[],links:annotation.links??raw.links??[],special:fixedToken||raw.token===true||raw.playable===false,image,search_aliases:metadata120?[...new Set([...aliases,...metadata120.searchAliases])]:aliases};
+    card.tags=canonicalPositionCategories212(card.tags);
     card.normal_limit_setting=own(limit,'normal_limit')?limit.normal_limit:raw.normal_limit??null;card.speed_limit_setting=own(limit,'speed_limit')?limit.speed_limit:raw.speed_limit??null;if(card.speed_limit===-1)card.speed_limit=null;card.reward_eligible=!fixedToken&&(raw.reward_eligible??card.rarity!=='L');card.searchText=[builderSearchText(card),...card.search_aliases,card.code,card.name_ko?.replaceAll('앤틱','엔틱'),...card.tags].join(' ').normalize('NFKC').toLocaleLowerCase('ko').replace(/\s/g,'');return card;});const limits=new Map();for(const c of normalized){const family=c.alias||c.code||c.source_id;limits.set(family,Math.min(limits.get(family)??3,c.deck_limit));}for(const c of normalized){c.effective_normal_limit=limits.get(c.alias||c.code||c.source_id);c.effective_copy_limit=c.speed_limit===0?0:c.effective_normal_limit;}return normalized;
 }
 export function nativeExtra039(card){const type=card.native_type??card.nativeType035??card.native?.type;if(Number.isSafeInteger(type))return Boolean(type&(0x40|0x2000|0x800000|0x4000000));return ['융합 몬스터','싱크로 몬스터','엑시즈 몬스터','링크 몬스터'].includes(card.type);}
@@ -465,10 +468,17 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     const description=el('p',null,'au-card-description'),lines=String(card.description_ko??'').split(/<br\s*\/?\s*>/i);
     if(lines.length===1)description.textContent=lines[0];
     else for(const [index,line] of lines.entries()){if(index)description.append(el('br'));description.append(el('span',line));}
-    body.append(limitBadges(card,{includeUnrestricted:true}),description);const relations198=cardRelationsSection198(card);if(relations198)body.append(relations198);body.append(cardDecks172(card));
+    body.append(limitBadges(card,{includeUnrestricted:true}));
+    const officialText=officialCardText212(card.code);
+    if(officialText){
+      const link=el('a','공식 카드 텍스트','au-official-card-text212');
+      link.setAttribute('href',officialText);link.setAttribute('target','_blank');link.setAttribute('rel','noopener noreferrer');
+      body.append(link);
+    }
+    body.append(description);const relations198=cardRelationsSection198(card);if(relations198)body.append(relations198);body.append(cardDecks172(card));
     if(currentState.canEdit){
       const forms=el('div',null,'au-form-grid'),allowed=(currentState.bootstrap?.capabilities?.entities?.card_setting?.fields?.rarity?.values??['N','R','SR','UR']).filter(r=>r!=='L'||card.source_id<2390),rarities=[...new Set([...allowed,...(card.source_id<2390?['L']:[]),card.rarity])];
-      const {maximumNormalLimit,maximumSpeedLimit}=cardMetadata211(card.source_id,card.identity_key)??{};
+      const {maximumNormalLimit,maximumSpeedLimit}=cardMetadata212(card.source_id,card.identity_key)??{};
       const effectToken=maximumNormalLimit===0,stockReadOnly=card.rarity==='L'||effectToken;
       forms.append(field('카드 이름',card.name_ko,{type:'string',maxLength:100},v=>cardPatch('card_display',card,{name:v}),`card.${card.source_id}.name`),field('영문 이름',card.name_en,{type:'string',maxLength:160},v=>cardPatch('card_display',card,{name_english:v}),`card.${card.source_id}.english`),field('카드 설명',card.description_ko,{type:'string',multiline:true,maxLength:12000},v=>cardPatch('card_display',card,{description:v}),`card.${card.source_id}.description`),field('등급',card.rarity,{type:'string',enum:rarities,readOnlyValues:card.source_id<2390?[]:rarities.filter(v=>!allowed.includes(v))},v=>cardPatch('card_setting',card,v==='L'?{rarity:v,stock:false,draw_enabled:false}:{rarity:v}),`card.${card.source_id}.rarity`),field('상점 판매',card.stock,{type:'boolean',readOnly:stockReadOnly},v=>cardPatch('card_setting',card,{stock:v}),`card.${card.source_id}.stock`),field('전투 보상',card.draw_enabled!==false,{type:'boolean',readOnly:stockReadOnly},v=>cardPatch('card_setting',card,{draw_enabled:v}),`card.${card.source_id}.draw`));body.append(forms,el('small','설명을 바꾸어도 카드의 실제 효과 처리 규칙은 바뀌지 않습니다.','au-hint'));
       if(!effectToken){

@@ -174,5 +174,24 @@ export const legacyCategoryAliases131 = new Map([
     [
       "효과-패트랩"
     ]
-  ]
+  ],
+  ["효과-표시 형식 변경", ["효과-표시형식 변경", "효과-표시 변경"]],
+  ["발동-표시 형식 변경 시", ["발동-표시 변경 시", "발동-표시형식 변경 시"]],
+  ["지원-표시 형식 변경", ["지원-표시 변경"]]
 ]);
+
+const positionCategories212 = new Map([
+  '효과-표시 형식 변경', '발동-표시 형식 변경 시', '지원-표시 형식 변경', '효과-사이클 리버스'
+].map(name => [positionSearchKey212(name), name]));
+
+export function positionSearchKey212(value) {
+  return String(value ?? '').normalize('NFKC').replace(/\s+/g, '').replaceAll('표시형식변경', '표시변경');
+}
+
+export function canonicalPositionCategory212(value) {
+  return positionCategories212.get(positionSearchKey212(value)) ?? value;
+}
+
+export function canonicalPositionCategories212(values) {
+  return [...new Set(values.map(canonicalPositionCategory212))];
+}

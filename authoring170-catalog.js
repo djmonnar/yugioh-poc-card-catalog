@@ -1,6 +1,7 @@
 // Card catalog conveniences: page jumps, URL state, list conditions, thumbnails
 // and bulk changes. Everything here is read-only presentation logic; edits still
 // go through the panel's per-card patch path and the existing draft/store queue.
+import {canonicalPositionCategories212} from './authoring131-category-aliases.js?v=20261126-position-taxonomy212';
 
 export const CATALOG_FLAGS170=Object.freeze([
   ['uncategorized','분류 없음','카테고리가 하나도 없는 카드'],
@@ -24,7 +25,10 @@ export function pageNumber170(value,pages){
 // Writes only non-default values, so a plain catalog keeps a short URL.
 export function writeCatalogParams170(url,state={}){
   const params=url.searchParams;for(const key of CATALOG_PARAMS170)params.delete(key);
-  for(const [field,key] of Object.entries(MULTI170))for(const value of list(state[field]).slice(0,64))params.append(key,value);
+  for(const [field,key] of Object.entries(MULTI170)){
+    const values=list(state[field]);
+    for(const value of (field==='tags'?canonicalPositionCategories212(values):values).slice(0,64))params.append(key,value);
+  }
   for(const [field,key] of Object.entries(SINGLE170)){
     // Addition group and theme only matter in the 최근 추가 view.
     if(['addition','additionTheme'].includes(field)&&state.browse!=='recent')continue;
@@ -39,7 +43,7 @@ export function readCatalogParams170(params){
   const state={};if(!params||typeof params.getAll!=='function')return state;
   for(const [field,key] of Object.entries(MULTI170)){
     const values=params.getAll(key).map(value=>cleanText(value,80)).filter(Boolean).slice(0,64);
-    if(!values.length)continue;state[field]=field==='flags170'?[...new Set(values.filter(value=>FLAG_KEYS170.has(value)))]:[...new Set(values)];
+    if(!values.length)continue;state[field]=field==='flags170'?[...new Set(values.filter(value=>FLAG_KEYS170.has(value)))]:field==='tags'?canonicalPositionCategories212(values):[...new Set(values)];
   }
   const query=params.get('q');if(query!=null&&cleanText(query,200)!=null)state.query=query;
   if(['all','any'].includes(params.get('match')))state.categoryMatch=params.get('match');

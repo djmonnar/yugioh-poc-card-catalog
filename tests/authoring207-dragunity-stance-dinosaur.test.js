@@ -8,6 +8,7 @@ import {CONTENT_PROFILE207, GAME_IDENTITY207, gameIdentityAccepts207} from '../a
 import {cardMetadata207} from '../authoring207-catalog.js';
 import {normalizeBootstrap039, PROJECT039} from '../authoring039-store.js';
 import {changeDeckCard039, normalizeCatalog039} from '../authoring039-panels.js';
+import {canonicalPositionCategories212} from '../authoring131-category-aliases.js';
 import {catalogAdditions049} from '../authoring049-recent.js';
 import {additionThemes067} from '../authoring067-themes.js';
 import {portraitUrl081} from '../authoring081-assets.js';
@@ -39,7 +40,7 @@ test('53 cards keep canonical art, thumbnails, deck limits and the three Synchro
   for (const [index, card] of cards.entries()) {
     const row = pack.cards[index];
     assert.equal(card.name_ko,row.name);
-    assert.deepEqual(card.tags,row.categories);
+    assert.deepEqual(card.tags,canonicalPositionCategories212(row.categories));
     assert.deepEqual(cardMetadata207(row.sourceId,row.identity_key).searchAliases,row.searchAliases);
     assert.equal(cardMetadata207(row.sourceId,'0'.repeat(64)),null);
     assert.equal(card.image,`assets/native207/cards/${row.sourceId}.jpg`);

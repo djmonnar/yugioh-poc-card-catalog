@@ -249,6 +249,7 @@
 .au-limit-unrestricted{background:#152b3b;border-color:#41657a;color:#b6cfde;font-weight:500}
 .au-limit-unknown{background:#2d2639;border-color:#847196;color:#ded1ee}
 .au-card-detail>.au-limit-badges{margin:16px 0 0}
+.au-card-detail>.au-official-card-text212{display:inline-flex;align-items:center;min-height:44px;color:var(--au-cyan);text-underline-offset:.22em}
 .au-app .au-deck-row .au-limit-badge{font-size:11px}
 .au-limit-guide{margin:14px 0 18px}
 .au-app .au-deck-row{grid-template-columns:42px minmax(0,1fr) auto}
