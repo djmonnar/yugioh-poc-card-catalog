@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.139",
-  "versionCode": 158,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.139/YGOClassicExpedition-0.18.139-arm64.apk",
-  "sizeBytes": 934466070,
-  "sha256": "296c89d2f087d27df179db85ecf501cedd1017cd3e1d4788eaebfc87ceee2000",
-  "releaseNotes": "티라노 켄잔 얼굴과 등장·결과 연출을 보강했습니다. 티라노 에이스 3장의 소환에 켄잔 컷신이 표시됩니다."
+  "versionName": "0.18.140",
+  "versionCode": 159,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.140/YGOClassicExpedition-0.18.140-arm64.apk",
+  "sizeBytes": 960722532,
+  "sha256": "313020e0aadca033cce35045685dd394cde124ea676145530636bc8a43949d37",
+  "releaseNotes": "스피릿과 시노버드 카드들을 추가했습니다. 카이바 노아의 컷신과 듀얼 준비 완료 특성, 푸른 눈의 백룡 소환 연출을 추가했습니다. 리시드 AI의 왕가의 신전 사용을 개선했습니다."
 }
