@@ -76,8 +76,11 @@ test('preview exposes Kenzan and the ten relic names, descriptions and editable 
   const seed = await previewSeed170(fileURLToPath(new URL('../',import.meta.url)));
   const kenzan = seed.characters.find(character=>character.profile_id==='tyranno_kenzan');
   assert.equal(kenzan.profile.name,'티라노 켄잔');
-  assert.equal(portraitUrl081(kenzan.art_key),kenzan.profile.portrait);
-  assert.equal(read(kenzan.profile.portrait).subarray(0,8).toString('hex'),'89504e470d0a1a0a');
+  const portrait = 'assets/actors/native208/tyranno_kenzan/start.png';
+  assert.equal(portraitUrl081(kenzan.art_key),portrait);
+  assert.equal(portraitUrl081(kenzan.profile.portrait),portrait);
+  assert.equal(portraitUrl081('Character208/tyranno_kenzan_start'),portrait);
+  assert.equal(hash(read(portrait)),'de9786097445946e7d90d224ee315c4f3a7cc9f4fd70748f6e3716029c584494');
   assert.equal(relics.length,10);
   for (const relic of relics) {
     assert.equal(seed.rows.find(row=>row.entity_type==='relic'&&row.entity_id===relic.id).content.description,relic.description);
