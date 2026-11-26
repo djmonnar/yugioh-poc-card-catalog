@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3380",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "발동-소환 시",
+    "발동-반전 소환 시",
+    "효과-표시 변경"
+  ],
+  "code": 34646691,
+  "defense": 0,
+  "description": "어느 쪽이든 일반·반전·특수 소환된 공격 표시 몬스터는 수비로 바뀝니다. 소환 시 효과와 표시 변경 효과의 처리 순서가 중요합니다.",
+  "draw_enabled": true,
+  "identity_key": "2098053ea34ca1acd9792fcd1b86f3a5e6ac8af8c80fdef47f7e885cbd9c1e14",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3380.jpg",
+  "level": 0,
+  "links": [],
+  "name": "스텀블링",
+  "name_english": "Stumbling",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "스텀블링",
+    "Stumbling"
+  ],
+  "source_id": 3380,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 2412
+}

@@ -45,11 +45,6 @@
       "source_id": 1929
     },
     {
-      "count": 1,
-      "identity_key": "1bb00c252253384f69a533f9e9a97ebde3e0636296d0757f59cf869e5db1872b",
-      "source_id": 2492
-    },
-    {
       "count": 3,
       "identity_key": "41148609d6513d683e3379523262f4e11e4144e2732c838b88901b49b28941bd",
       "source_id": 2085
@@ -63,8 +58,13 @@
       "count": 1,
       "identity_key": "6e88143a6d19b63d51f9f78d79264941a106691798fb78f1579481304fad7560",
       "source_id": 1003
+    },
+    {
+      "count": 1,
+      "identity_key": "bb2944521fe3be609ca839e0bc9026555884f1734a357351789a36a6a89911d5",
+      "source_id": 336
     }
   ],
   "name": "모케모케",
-  "version": 851
+  "version": 1044
 }

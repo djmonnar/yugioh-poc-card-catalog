@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3365",
+  "attack": 1500,
+  "attribute": 8,
+  "categories": [
+    "지원-드래그니티",
+    "지원-드래곤족",
+    "지원-저레벨",
+    "지원-장착",
+    "발동-소환 시",
+    "효과-장착",
+    "효과-공격력 상승"
+  ],
+  "code": 28183605,
+  "defense": 1000,
+  "description": "내 필드의 앞면 드래그니티 카드마다 공격력 +200. 일반 소환 직후, 묘지의 레벨 3 이하 드래곤족 드래그니티 1장을 자신에게 장착할 수 있습니다.",
+  "draw_enabled": true,
+  "identity_key": "721d9d1a6e142aea1be644d8dd290f8c2048c420c106f49657cf8c294f785545",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3365.jpg",
+  "level": 4,
+  "links": [],
+  "name": "드래그니티－둑스",
+  "name_english": "Dragunity Dux",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "SR",
+  "search_aliases": [
+    "드래그니티－둑스",
+    "Dragunity Dux"
+  ],
+  "source_id": 3365,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2397
+}

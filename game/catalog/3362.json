@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3362",
+  "attack": 2600,
+  "attribute": 8,
+  "categories": [
+    "지원-드래그니티",
+    "지원-드래곤족",
+    "지원-장착",
+    "소환-제외 코스트",
+    "소환-패에서",
+    "소환-묘지",
+    "발동-소환 시",
+    "효과-장착",
+    "발동-묘지로 보내졌을 때",
+    "발동-필드에서 묘지로 보내졌을 때"
+  ],
+  "code": 63487632,
+  "defense": 1200,
+  "description": "드래그니티를 장착한 내 몬스터 1장을 제외하면 패·묘지에서 특수 소환할 수 있습니다. 일반·특수 소환 시에는 같은 이름 이외의 묘지 드래곤족을 자신에게 장착할 수 있습니다. 상대 효과로 필드에서 묘지로 보내지면 직전에 자신이 장착하고 있던 몬스터 중 1장을 소생할 수 있습니다.",
+  "draw_enabled": true,
+  "identity_key": "2ce67b08a89df44e082bfe5be295f19833289ef1cebdae99fbaec642a3164a33",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3362.jpg",
+  "level": 8,
+  "links": [],
+  "name": "드래그니티 암즈－레바테인",
+  "name_english": "Dragunity Arma Leyvaten",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "UR",
+  "search_aliases": [
+    "드래그니티 암즈－레바테인",
+    "Dragunity Arma Leyvaten"
+  ],
+  "source_id": 3362,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2394
+}

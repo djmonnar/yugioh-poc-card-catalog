@@ -1,0 +1,19 @@
+{
+  "description": "골드를 더 이상 얻을 수 없습니다. 전투의 첫 패는 1장 늘어납니다.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 0,
+  "iconKey": "Relics/Content207/holy_grail207",
+  "id": "holy_grail207",
+  "kind": "holy_grail207",
+  "name": "성배",
+  "params": {
+    "opening_draw": 1
+  },
+  "price": 300,
+  "rarity": "UR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

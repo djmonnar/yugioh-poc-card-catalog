@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3369",
+  "attack": 1400,
+  "attribute": 8,
+  "categories": [
+    "지원-바람 속성",
+    "발동-패로 돌아갔을 때",
+    "효과-덱에서 묘지로 보내기",
+    "효과-묘지로 보내기"
+  ],
+  "code": 27632240,
+  "defense": 1200,
+  "description": "턴마다 한 번, 필드 몬스터가 패 또는 덱으로 돌아가면 덱의 바람 속성 몬스터 1장을 묘지로 보냅니다. 이 카드가 앞면으로 남아 있어야 처리됩니다.",
+  "draw_enabled": true,
+  "identity_key": "5d49e7e50fffeface17a696ac36b5e4289da0d4901dedf76f9737d3e5b8ceb17",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3369.jpg",
+  "level": 4,
+  "links": [],
+  "name": "허공의 기사",
+  "name_english": "Altitude Knight",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "허공의 기사",
+    "Altitude Knight"
+  ],
+  "source_id": 3369,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2401
+}

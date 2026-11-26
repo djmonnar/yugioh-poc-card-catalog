@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3378",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "발동-소환 시",
+    "무효-몬스터효과",
+    "효과-드로우",
+    "효과-상대 드로우"
+  ],
+  "code": 35011819,
+  "defense": 0,
+  "description": "몬스터의 일반 소환을 계기로 발동한 몬스터 효과를 무효로 하고, 그 효과를 발동한 쪽에게 1장을 뽑게 할 수 있습니다. 상대의 강한 효과를 막거나 내 불리한 유발 효과를 드로우로 바꾸는 용도입니다.",
+  "draw_enabled": true,
+  "identity_key": "9af124dd062e204e1e49e301ec111aef79fbac63ac9f297b0fb269c7dca46285",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3378.jpg",
+  "level": 0,
+  "links": [],
+  "name": "엠페러 오더",
+  "name_english": "By Order of the Emperor",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "엠페러 오더",
+    "By Order of the Emperor"
+  ],
+  "source_id": 3378,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 2410
+}

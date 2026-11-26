@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3357",
+  "attack": 1300,
+  "attribute": 8,
+  "categories": [
+    "지원-드래그니티",
+    "지원-장착",
+    "지원-드래곤족",
+    "발동-패에서",
+    "발동-묘지에서",
+    "발동-제외",
+    "발동-묘지로 보내기",
+    "효과-장착",
+    "효과-제외"
+  ],
+  "code": 8039562,
+  "defense": 1200,
+  "description": "각 효과는 같은 이름 기준 턴당 한 번. 패 또는 묘지의 자신을 제외하면 내 드래그니티에 덱·묘지의 드래곤족 드래그니티를 장착합니다. 드래그니티에 장착된 상태에서는 자신을 묘지로 보내 상대 앞면 카드 1장을 제외할 수 있습니다.",
+  "draw_enabled": true,
+  "identity_key": "d6e6db188f06fa1f63286ee45b095bbf6ff209049c9c45cd5bea09e0bec4a10c",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3357.jpg",
+  "level": 2,
+  "links": [],
+  "name": "드래그니티－파르시온",
+  "name_english": "Dragunity Falchion",
+  "native_type": 4129,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "search_aliases": [
+    "드래그니티－파르시온",
+    "Dragunity Falchion"
+  ],
+  "source_id": 3357,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "튜너 몬스터",
+  "web_slot": 2389
+}

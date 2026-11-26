@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3356",
+  "attack": 1000,
+  "attribute": 8,
+  "categories": [
+    "지원-드래그니티",
+    "지원-비행야수족",
+    "지원-저레벨",
+    "발동-릴리즈",
+    "소환-묘지"
+  ],
+  "code": 13361027,
+  "defense": 1000,
+  "description": "턴마다 한 번, 내 드래곤족 드래그니티 1장을 릴리스하고 묘지의 레벨 4 이하 비행야수족 1장을 특수 소환합니다. 자기 자신도 릴리스할 수 있습니다.",
+  "draw_enabled": true,
+  "identity_key": "03a2a706aba3018ddbe8e45ccf76065324c89c5da9e6d68560fc6a5411b12cf9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3356.jpg",
+  "level": 3,
+  "links": [],
+  "name": "드래그니티－블랙스피어",
+  "name_english": "Dragunity Darkspear",
+  "native_type": 4129,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "N",
+  "search_aliases": [
+    "드래그니티－블랙스피어",
+    "Dragunity Darkspear"
+  ],
+  "source_id": 3356,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "튜너 몬스터",
+  "web_slot": 2388
+}

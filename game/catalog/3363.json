@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3363",
+  "attack": 1800,
+  "attribute": 8,
+  "categories": [
+    "지원-드래그니티",
+    "지원-용의 계곡",
+    "소환-패에서",
+    "효과-파괴",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 89172051,
+  "defense": 1200,
+  "description": "각 효과는 같은 이름 기준 턴당 한 번. 내 앞면 드래그니티 몬스터 또는 용의 계곡이 있으면 패에서 전개됩니다. 내 마법·함정 칸에 드래그니티 몬스터 카드가 있으면 필드의 마법·함정 1장을 파괴할 수 있습니다.",
+  "draw_enabled": true,
+  "identity_key": "d3153e3c2c7e12fc0437e87ec4ece4c709a15d42069cd2a32fe6a5689c1c432e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3363.jpg",
+  "level": 4,
+  "links": [],
+  "name": "드래그니티－레가투스",
+  "name_english": "Dragunity Legatus",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "SR",
+  "search_aliases": [
+    "드래그니티－레가투스",
+    "Dragunity Legatus"
+  ],
+  "source_id": 3363,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2395
+}

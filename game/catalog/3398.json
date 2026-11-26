@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3398",
+  "attack": 1500,
+  "attribute": 32,
+  "categories": [
+    "지원-화염 속성",
+    "지원-땅 속성",
+    "효과-공격력 상승",
+    "발동-전투 시",
+    "무효-몬스터효과"
+  ],
+  "code": 92755808,
+  "defense": 1200,
+  "description": "양쪽 필드에 화염 속성 앞면 몬스터가 있으면 공격력 +500. 땅 속성이 있으면 이 카드가 전투로 파괴한 상대 몬스터의 효과를 무효화합니다.",
+  "draw_enabled": true,
+  "identity_key": "e22cd32fe663e3742b60f1af1255283c4f5df421b64dbace0dc591c4636e6b69",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3398.jpg",
+  "level": 4,
+  "links": [],
+  "name": "엘리멘트 사우루스",
+  "name_english": "Element Saurus",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 65536,
+  "rarity": "R",
+  "search_aliases": [
+    "엘리멘트 사우루스",
+    "Element Saurus"
+  ],
+  "source_id": 3398,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2430
+}

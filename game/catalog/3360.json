@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3360",
+  "attack": 500,
+  "attribute": 8,
+  "categories": [
+    "지원-드래그니티",
+    "지원-싱크로",
+    "지원-장착",
+    "소환-마법·함정에서"
+  ],
+  "code": 59755122,
+  "defense": 1100,
+  "description": "턴마다 한 번, 몬스터에 장착되어 있는 자신을 특수 소환합니다. 장착을 몬스터 수로 바꾸어 싱크로 전개에 연결할 수 있는 튜너입니다.",
+  "draw_enabled": true,
+  "identity_key": "d55150f57c87d164e785979bde836b247c91fe11e0d02945762a4214fb335dc5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3360.jpg",
+  "level": 2,
+  "links": [],
+  "name": "드래그니티－파랑크스",
+  "name_english": "Dragunity Phalanx",
+  "native_type": 4129,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "search_aliases": [
+    "드래그니티－파랑크스",
+    "Dragunity Phalanx"
+  ],
+  "source_id": 3360,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "튜너 몬스터",
+  "web_slot": 2392
+}

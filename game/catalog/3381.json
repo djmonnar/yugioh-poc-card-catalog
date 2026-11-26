@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3381",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-리버스",
+    "효과-앞면표시",
+    "효과-표시 변경"
+  ],
+  "code": 93747864,
+  "defense": 0,
+  "description": "내 몬스터를 모두 앞면 수비로 바꿉니다. 세트 몬스터의 리버스 효과도 사용할 수 있지만, 공격수까지 수비가 되는 점을 함께 고려해야 합니다.",
+  "draw_enabled": true,
+  "identity_key": "de87c4312d01187ec5b1eb7a3481a3e9bfc7bd509e4d51161014be6740815a4e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3381.jpg",
+  "level": 0,
+  "links": [],
+  "name": "사막의빛",
+  "name_english": "Desert Sunlight",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "사막의빛",
+    "Desert Sunlight"
+  ],
+  "source_id": 3381,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2413
+}

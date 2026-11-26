@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3367",
+  "attack": 500,
+  "attribute": 8,
+  "categories": [
+    "지원-드래그니티",
+    "지원-드래곤족",
+    "지원-저레벨",
+    "발동-소환 시",
+    "효과-덱에서 묘지로 보내기",
+    "효과-묘지로 보내기"
+  ],
+  "code": 81962318,
+  "defense": 300,
+  "description": "일반·특수 소환 직후, 덱의 레벨 3 이하 드래곤족 1장을 묘지에 준비할 수 있습니다.",
+  "draw_enabled": true,
+  "identity_key": "58dee79f78192bdc8100ca92870b5abd8ee3a839bb90703fe29ea5ca8ff23d4d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3367.jpg",
+  "level": 1,
+  "links": [],
+  "name": "드래그니티－트리블",
+  "name_english": "Dragunity Tribus",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "R",
+  "search_aliases": [
+    "드래그니티－트리블",
+    "Dragunity Tribus"
+  ],
+  "source_id": 3367,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2399
+}

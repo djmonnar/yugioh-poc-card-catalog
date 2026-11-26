@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3389",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-쥬라기 월드",
+    "효과-파괴",
+    "파괴-몬스터",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 42175079,
+  "defense": 0,
+  "description": "내 쥬라기 월드가 앞면인 내 엔드 페이즈에 사용할 수 있습니다. 이 카드 이외의 필드 카드를 전부 파괴하므로 내 몬스터와 마법·함정 손실도 계산해야 합니다.",
+  "draw_enabled": true,
+  "identity_key": "5328f2b65cb4b7272c986202370ddc18d8e1c598c4143349b08e674fba035505",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3389.jpg",
+  "level": 0,
+  "links": [],
+  "name": "대분화",
+  "name_english": "Volcanic Eruption",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "대분화",
+    "Volcanic Eruption"
+  ],
+  "source_id": 3389,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2421
+}

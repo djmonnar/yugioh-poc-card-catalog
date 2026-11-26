@@ -1,0 +1,20 @@
+{
+  "description": "내 필드에 묘지에서 특수 소환한 몬스터 1장당 LP를 300 잃습니다. 전투의 첫 패는 1장 늘어납니다.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 0,
+  "iconKey": "Relics/Content207/gravekeeper_vow207",
+  "id": "gravekeeper_vow207",
+  "kind": "gravekeeper_vow207",
+  "name": "묘지기의 서약",
+  "params": {
+    "lp": 300,
+    "opening_draw": 1
+  },
+  "price": 300,
+  "rarity": "UR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

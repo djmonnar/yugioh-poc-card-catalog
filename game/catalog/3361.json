@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3361",
+  "attack": 2100,
+  "attribute": 8,
+  "categories": [
+    "지원-드래그니티",
+    "지원-드래곤족",
+    "지원-장착",
+    "소환-패에서",
+    "소환-묘지로 보내기",
+    "발동-소환 시",
+    "효과-장착"
+  ],
+  "code": 876330,
+  "defense": 1500,
+  "description": "내 앞면 드래그니티 1장을 묘지로 보내면 패에서 특수 소환할 수 있습니다. 패에서 일반·특수 소환되었을 때 묘지의 드래곤족 드래그니티 1장을 자신에게 장착할 수 있습니다. 첫 동작은 릴리스가 아니라 묘지로 보내는 비용입니다.",
+  "draw_enabled": true,
+  "identity_key": "4bc64ef9834927d69c1b345440c4058c9aff30c020c7b96011410de2bb56ab35",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3361.jpg",
+  "level": 6,
+  "links": [],
+  "name": "드래그니티 암즈－미스틸",
+  "name_english": "Dragunity Arma Mystletainn",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "search_aliases": [
+    "드래그니티 암즈－미스틸",
+    "Dragunity Arma Mystletainn"
+  ],
+  "source_id": 3361,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2393
+}

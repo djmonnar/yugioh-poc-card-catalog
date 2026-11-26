@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3374",
+  "attack": 1400,
+  "attribute": 1,
+  "categories": [
+    "지원-저레벨",
+    "발동-소환 시",
+    "소환-패에서",
+    "효과-표시 변경"
+  ],
+  "code": 25259669,
+  "defense": 0,
+  "description": "일반 소환 직후 패의 레벨 4 이하 몬스터 1장을 전개할 수 있습니다. 소환이 성공하면 공격 표시였던 이 카드는 수비로 바뀝니다.",
+  "draw_enabled": true,
+  "identity_key": "3164f3ce1dbf1d61c9c710c5e3be6f73fb8357d3f1b9134b55dd8f3e0b2b804b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3374.jpg",
+  "level": 4,
+  "links": [],
+  "name": "고블린드버그",
+  "name_english": "Goblindbergh",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "SR",
+  "search_aliases": [
+    "고블린드버그",
+    "Goblindbergh"
+  ],
+  "source_id": 3374,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2406
+}

@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3401",
+  "attack": 1500,
+  "attribute": 16,
+  "categories": [
+    "지원-화염 속성",
+    "지원-바람 속성",
+    "효과-공격력 상승",
+    "발동-전투 시",
+    "발동-파괴 시",
+    "효과-추가공격"
+  ],
+  "code": 30314994,
+  "defense": 1200,
+  "description": "양쪽 필드에 화염 속성 앞면 몬스터가 있으면 공격력 +500. 바람 속성이 있으면 몬스터와의 전투 승리 후 추가 공격을 선택할 수 있습니다.",
+  "draw_enabled": true,
+  "identity_key": "106ffdda689e5f7b1af93fc7ad5421bc765af28499dc6ad10986984cbbb2b7f2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3401.jpg",
+  "level": 4,
+  "links": [],
+  "name": "엘리멘트 드래곤",
+  "name_english": "Element Dragon",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "R",
+  "search_aliases": [
+    "엘리멘트 드래곤",
+    "Element Dragon"
+  ],
+  "source_id": 3401,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2433
+}

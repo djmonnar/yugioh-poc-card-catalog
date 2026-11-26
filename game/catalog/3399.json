@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3399",
+  "attack": 1500,
+  "attribute": 16,
+  "categories": [
+    "지원-물 속성",
+    "지원-바람 속성",
+    "보호-컨트롤 변경",
+    "발동-전투 시",
+    "발동-파괴 시",
+    "효과-추가공격"
+  ],
+  "code": 65260293,
+  "defense": 1200,
+  "description": "양쪽 필드에 물 속성 앞면 몬스터가 있으면 컨트롤이 바뀌지 않습니다. 바람 속성이 있으면 몬스터와의 전투 승리 후 추가 공격을 선택할 수 있습니다.",
+  "draw_enabled": true,
+  "identity_key": "af5e697e54a32f832b00885892d89ae0a1552bceac84aa0979962c8487aeaabf",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3399.jpg",
+  "level": 4,
+  "links": [],
+  "name": "엘리멘트 매지션",
+  "name_english": "Element Magician",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "search_aliases": [
+    "엘리멘트 매지션",
+    "Element Magician"
+  ],
+  "source_id": 3399,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2431
+}

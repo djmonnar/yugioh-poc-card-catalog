@@ -1,6 +1,6 @@
 {
-  "authoring_revision": 1043,
-  "game_revision": 1043,
+  "authoring_revision": 1046,
+  "game_revision": 1046,
   "identity": {
     "base_catalog_sha256": "b73dd51c78aeab8c9beebf936b46e4cac16040e70df3a7980dec38c40db21e09",
     "catalog035_sha256": "b5f1e9749cec0c1497c5fdcbfb2dc9c64895dcd859f083ec0ec4014580f05308",
@@ -38,6 +38,7 @@
     "catalog199_sha256": "196c01f381104bcc7291cc717aadf38b7e7ab1eaece5f71a19aa533dea88c350",
     "catalog202_sha256": "9a5cffd954f1c0ed166810d0a60d498b6d8f59a53316617798211e0745e94e39",
     "catalog203_sha256": "3c11e23e07c535f8746eca12af5ebcf25d27ed47aa5f6229add5789dcf5b3e80",
+    "catalog207_sha256": "081ed698000a6d95e46857c26e6bdce7d049d747a41f2669d270be33f08abf57",
     "native_manifest049_sha256": "843bc3bcebe36bcbfe7f5f6e2584222f5ab67bc5175c590b37d2963839134e7f",
     "native_manifest053_sha256": "205ef763b65335d553c1e5870e84f6237814b65b1481c96de06503684dd455aa",
     "native_manifest067_sha256": "5d671f09f3754cef65f05af7344745372404e8f28ed2e1e15cdafcc409c36d3f",
@@ -72,13 +73,14 @@
     "native_manifest199_sha256": "f1e8eb3acdddb2703f4cb9460ecd89b247040da07baae6337e478a6dac42e52b",
     "native_manifest202_sha256": "f9bbbeebd623b2ee551d87413676d758b890451ba0b407d3571942a952a49b2e",
     "native_manifest203_sha256": "121f7e41964b5567ca141d03bbedc675043b8cdb9c141739e4d35ed98aaffbc8",
+    "native_manifest207_sha256": "53a925dd0b1169882b8474921632013a84560319786ce3473f59f35e7e579c3d",
     "native_manifest_sha256": "4674de031c9e3044c86b90fcd402d9533d9353347802f268863746bf3bd7e4d7"
   },
   "map_rules_revision": 858,
-  "metadata_revision": "1028",
-  "practice_decks_sha256": "816b8e0240a223a57dd0495141131485800b147354a1475ec10393c49453dcbb",
+  "metadata_revision": "1045",
+  "practice_decks_sha256": "337b688d584ceb0ad3bc1318b91c4c4e205ca7285f389d8845fee928d6a47b78",
   "project_id": "ygoclassic-expedition",
-  "project_revision": 1043,
-  "route": "poc_bootstrap204",
-  "source_fingerprint": "833404e5dcf13f24e4b5f20d2513006206ade3cc38d8a86f61af063323750487"
+  "project_revision": 1046,
+  "route": "poc_bootstrap207",
+  "source_fingerprint": "ca792f2c55334d2d08bafb9826e33ba963eb30af84127a437b397a9608227889"
 }

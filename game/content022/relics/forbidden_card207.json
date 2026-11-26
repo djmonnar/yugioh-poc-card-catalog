@@ -1,0 +1,19 @@
+{
+  "description": "전투 시작 시 덱에서 무작위 카드 1장을 뒷면으로 제외합니다. 전투의 첫 패는 1장 늘어납니다.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 0,
+  "iconKey": "Relics/Content207/forbidden_card207",
+  "id": "forbidden_card207",
+  "kind": "forbidden_card207",
+  "name": "금지카드",
+  "params": {
+    "opening_draw": 1
+  },
+  "price": 300,
+  "rarity": "UR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

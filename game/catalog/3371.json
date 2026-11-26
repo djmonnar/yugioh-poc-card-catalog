@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3371",
+  "attack": 1400,
+  "attribute": 2,
+  "categories": [
+    "지원-물 속성",
+    "발동-표시 변경 시",
+    "효과-덱에서 묘지로 보내기",
+    "효과-묘지로 보내기"
+  ],
+  "code": 14771222,
+  "defense": 1200,
+  "description": "턴마다 한 번, 앞면이었던 이 카드의 표시 형식이 바뀌면 덱의 물 속성 몬스터 1장을 묘지로 보냅니다.",
+  "draw_enabled": true,
+  "identity_key": "5011268a1dc07a5e065670aff334312656b3e67a8d018eb6066ed31386a4d12f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3371.jpg",
+  "level": 4,
+  "links": [],
+  "name": "절해의 기사",
+  "name_english": "Shore Knight",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "절해의 기사",
+    "Shore Knight"
+  ],
+  "source_id": 3371,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2403
+}

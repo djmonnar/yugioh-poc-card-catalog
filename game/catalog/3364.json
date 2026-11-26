@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3364",
+  "attack": 1700,
+  "attribute": 8,
+  "categories": [
+    "지원-드래그니티",
+    "지원-장착",
+    "소환-마법·함정에서"
+  ],
+  "code": 81661951,
+  "defense": 1200,
+  "description": "턴마다 한 번, 내 마법·함정 칸에 놓인 앞면 드래그니티 1장을 몬스터로 전개합니다.",
+  "draw_enabled": true,
+  "identity_key": "28380ecfdccf4b0a798158d5b6a8822b8c16fef3b8a0ee01c6f21d8b57d7cba2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3364.jpg",
+  "level": 4,
+  "links": [],
+  "name": "드래그니티－밀리텀",
+  "name_english": "Dragunity Militum",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "R",
+  "search_aliases": [
+    "드래그니티－밀리텀",
+    "Dragunity Militum"
+  ],
+  "source_id": 3364,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2396
+}

@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3359",
+  "attack": 800,
+  "attribute": 8,
+  "categories": [
+    "지원-드래그니티",
+    "지원-싱크로",
+    "지원-용의 계곡",
+    "발동-패에서",
+    "발동-패 버리기",
+    "효과-덱샐비지",
+    "발동-묘지에서",
+    "소환-묘지",
+    "효과-제외",
+    "소환제약"
+  ],
+  "code": 26577155,
+  "defense": 800,
+  "description": "각 효과는 같은 이름 기준 턴당 한 번. 패에서 자신을 버려 용의 계곡을 찾습니다. 내 앞면 드래그니티가 있으면 묘지에서 스스로 전개하며, 이렇게 나온 카드는 필드를 떠날 때 제외됩니다. 소생 효과를 쓴 턴에는 엑스트라 덱에서 드래곤족만 꺼낼 수 있고, 이 카드는 드래그니티 싱크로의 소재로만 쓸 수 있습니다.",
+  "draw_enabled": true,
+  "identity_key": "2bc04199854cc95c7b1a610956a2c1298601f5ec7d4f362ea0aae12ea85b9be5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3359.jpg",
+  "level": 2,
+  "links": [],
+  "name": "드래그니티－레무스",
+  "name_english": "Dragunity Remus",
+  "native_type": 4129,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "UR",
+  "search_aliases": [
+    "드래그니티－레무스",
+    "Dragunity Remus"
+  ],
+  "source_id": 3359,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "튜너 몬스터",
+  "web_slot": 2391
+}

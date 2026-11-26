@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3388",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "발동-LP 지불",
+    "무효-마법",
+    "효과-바운스"
+  ],
+  "code": 69632396,
+  "defense": 0,
+  "description": "마법 카드 발동에 대응하여 LP 500을 지불합니다. 그 발동을 무효로 하고, 해당 카드가 효과와 관련되어 있으면 패로 돌립니다. 파괴하지 않으므로 상대가 다시 사용할 수 있습니다.",
+  "draw_enabled": true,
+  "identity_key": "7456a7d3170cdd9863ed379c461935684cbb6e74a5df0dd0b3278c6483b8eefe",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3388.jpg",
+  "level": 0,
+  "links": [],
+  "name": "고블린의 임시변통",
+  "name_english": "Goblin Out of the Frying Pan",
+  "native_type": 1048580,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "고블린의 임시변통",
+    "Goblin Out of the Frying Pan"
+  ],
+  "source_id": 3388,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "카운터 함정",
+  "web_slot": 2420
+}

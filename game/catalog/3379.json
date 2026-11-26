@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3379",
+  "attack": 2000,
+  "attribute": 32,
+  "categories": [
+    "효과-공격력 감소",
+    "효과-수비력 감소"
+  ],
+  "code": 96890582,
+  "defense": 2000,
+  "description": "내 패 1장마다 공격력과 수비력 −400. 패를 비울수록 원래 수치에 가까워집니다.",
+  "draw_enabled": true,
+  "identity_key": "fa26b9c10856bc1960b6c1678597bc61afbe65f677721cea1e72426642595eb4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3379.jpg",
+  "level": 4,
+  "links": [],
+  "name": "초스피드 암살자",
+  "name_english": "Flash Assailant",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "N",
+  "search_aliases": [
+    "초스피드 암살자",
+    "Flash Assailant"
+  ],
+  "source_id": 3379,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2411
+}

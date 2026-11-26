@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3373",
+  "attack": 1600,
+  "attribute": 32,
+  "categories": [
+    "지원-지속 마법",
+    "발동-스탠바이 페이즈 시",
+    "발동-묘지에서",
+    "발동-묘지로 보내졌을 때",
+    "발동-필드에서 묘지로 보내졌을 때",
+    "소환-묘지"
+  ],
+  "code": 72657739,
+  "defense": 1700,
+  "description": "지속 마법의 효과로 필드에서 묘지로 보내졌다면, 다음 내 스탠바이에 묘지에서 돌아옵니다. 발동 비용으로 보낸 경우에는 이 조건을 채우지 못합니다.",
+  "draw_enabled": true,
+  "identity_key": "d8d5f724908bd0ea564be62c1be3cac237520c060a001f8c50362855d37eb484",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3373.jpg",
+  "level": 4,
+  "links": [],
+  "name": "원한의 킬러돌",
+  "name_english": "Malice Doll of Demise",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "N",
+  "search_aliases": [
+    "원한의 킬러돌",
+    "Malice Doll of Demise"
+  ],
+  "source_id": 3373,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2405
+}

@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3355",
+  "attack": 2000,
+  "attribute": 8,
+  "categories": [
+    "지원-드래그니티",
+    "지원-싱크로",
+    "지원-비행야수족",
+    "발동-전투 시",
+    "발동-제외",
+    "효과-공격력 상승"
+  ],
+  "code": 900787,
+  "defense": 1100,
+  "description": "소재: 드래곤족 튜너 + 비행야수족 비튜너 1장 이상. 이 카드의 전투 중 데미지 계산 전, 묘지의 비행야수족 1장을 제외하여 그 공격력만큼 이번 턴 공격력을 높입니다. 한 데미지 스텝에 한 번만 쓸 수 있습니다.",
+  "draw_enabled": true,
+  "identity_key": "1af4376f4820de4a572bf242af1596f5a98900be5ded5a2df6662610f110fa69",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3355.jpg",
+  "level": 6,
+  "links": [],
+  "name": "드래그니티 나이트－게이볼그",
+  "name_english": "Dragunity Knight - Gae Bulg",
+  "native_type": 8225,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "search_aliases": [
+    "드래그니티 나이트－게이볼그",
+    "Dragunity Knight - Gae Bulg"
+  ],
+  "source_id": 3355,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "싱크로 몬스터",
+  "web_slot": 2387
+}

@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3354",
+  "attack": 2400,
+  "attribute": 8,
+  "categories": [
+    "지원-드래그니티",
+    "지원-싱크로",
+    "지원-드래곤족",
+    "지원-비행야수족",
+    "지원-저레벨",
+    "효과-덱샐비지",
+    "효과-패 버리기"
+  ],
+  "code": 34116027,
+  "defense": 800,
+  "description": "소재: 드래곤족 튜너 + 비행야수족 비튜너 1장 이상. 턴마다 한 번, 덱에서 레벨 4 이하 드래곤족 또는 비행야수족을 패로 가져온 뒤, 패의 그 두 종족 중 1장을 버립니다. 버리는 처리는 발동 비용이 아닙니다.",
+  "draw_enabled": true,
+  "identity_key": "67b2ef43540bd7dcae7d6e8edcf246944e8a0d1be25da001867f6a1299c3c433",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3354.jpg",
+  "level": 6,
+  "links": [],
+  "name": "드래그니티 나이트－가잘그",
+  "name_english": "Dragunity Knight - Gae Dearg",
+  "native_type": 8225,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "search_aliases": [
+    "드래그니티 나이트－가잘그",
+    "Dragunity Knight - Gae Dearg"
+  ],
+  "source_id": 3354,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "싱크로 몬스터",
+  "web_slot": 2386
+}

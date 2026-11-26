@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3375",
+  "attack": 0,
+  "attribute": 8,
+  "categories": [
+    "발동-소환 시",
+    "효과-표시 변경",
+    "무효-몬스터효과",
+    "발동-묘지에서",
+    "발동-패 버리기",
+    "효과-묘지샐비지"
+  ],
+  "code": 85123771,
+  "defense": 2000,
+  "description": "각 효과는 같은 이름 기준 턴당 한 번. 패에서 공격 표시로 특수 소환되면 자신을 수비로 바꾸어 상대 앞면 효과 몬스터 1장을 무효화할 수 있습니다. 자신이 수비이고 대상 관계가 유지되는 동안 무효가 이어집니다. 묘지에서는 상대의 특수 소환에 반응하여 패 1장을 버리고 자신을 회수할 수 있습니다.",
+  "draw_enabled": true,
+  "identity_key": "534731ec35dc0dee5e106804aa16cf54da39d85f70e12c134c8da6b3155b07ea",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3375.jpg",
+  "level": 4,
+  "links": [],
+  "name": "고블린 강하 부대",
+  "name_english": "Goblin Freefall Squad",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "고블린 강하 부대",
+    "Goblin Freefall Squad"
+  ],
+  "source_id": 3375,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2407
+}

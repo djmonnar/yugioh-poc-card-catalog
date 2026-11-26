@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3350",
+  "attack": 2000,
+  "attribute": 8,
+  "categories": [
+    "지원-드래그니티",
+    "지원-싱크로",
+    "지원-드래곤족",
+    "지원-장착",
+    "발동-소환 시",
+    "효과-장착",
+    "효과-공격력 상승"
+  ],
+  "code": 25682811,
+  "defense": 1200,
+  "description": "소재: 드래곤족 튜너 + 비행야수족 비튜너 1장 이상. 싱크로 소환 직후, 빈 마법·함정 칸 수까지 묘지의 드래곤족 드래그니티를 골라 자신에게 장착할 수 있습니다. 장착된 드래그니티 카드마다 공격력 +300.",
+  "draw_enabled": true,
+  "identity_key": "6584032b34a977925d4f0abc754db503f18eade518dabefd216fc6ce57c4c8f4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3350.jpg",
+  "level": 8,
+  "links": [],
+  "name": "드래그니티 나이트－벌처",
+  "name_english": "Dragunity Knight - Barcha",
+  "native_type": 8225,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "UR",
+  "search_aliases": [
+    "드래그니티 나이트－벌처",
+    "Dragunity Knight - Barcha"
+  ],
+  "source_id": 3350,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "싱크로 몬스터",
+  "web_slot": 2382
+}

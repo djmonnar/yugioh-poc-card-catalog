@@ -1,0 +1,50 @@
+{
+  "artKey": "Character203/misawa_start",
+  "banlistEnabled": false,
+  "deckName": "빙염의 쌍룡",
+  "extra": [],
+  "id": "enc-b0d7fcf1-c3c4-43a5-a31b-919ec4adcf2c",
+  "lpBonus": 0,
+  "main": [
+    3249,
+    3249,
+    3249,
+    3247,
+    3247,
+    3247,
+    3248,
+    3248,
+    3248,
+    1936,
+    1936,
+    1936,
+    1882,
+    2637,
+    2637,
+    2626,
+    2626,
+    2392,
+    2392,
+    1875
+  ],
+  "name": "미사와 다이치",
+  "openingDrawBonus": 0,
+  "profileId": "misawa",
+  "skills": [
+    {
+      "entries": [
+        {
+          "count": 1,
+          "sourceId": 1880
+        }
+      ],
+      "kind": "start_grave",
+      "position": 0,
+      "sourceId": -1,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-b0d7fcf1-c3c4-43a5-a31b-919ec4adcf2c",
+  "usesNativeRules035": true
+}

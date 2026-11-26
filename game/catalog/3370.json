@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3370",
+  "attack": 1400,
+  "attribute": 4,
+  "categories": [
+    "지원-화염 속성",
+    "발동-파괴 시",
+    "발동-묘지로 보내졌을 때",
+    "발동-필드에서 묘지로 보내졌을 때",
+    "효과-덱에서 묘지로 보내기",
+    "효과-묘지로 보내기"
+  ],
+  "code": 36569343,
+  "defense": 1200,
+  "description": "같은 이름 기준 턴당 한 번. 내 화염 속성이 파괴되어 묘지로 가거나 이 카드 자체가 파괴되어 묘지로 가면, 덱의 화염 속성 몬스터 1장을 묘지로 보냅니다.",
+  "draw_enabled": true,
+  "identity_key": "55b39ae9d6df2faeb45dafc951f6290c08d06a45041775219146a1d464e10cec",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3370.jpg",
+  "level": 4,
+  "links": [],
+  "name": "홍염의 기사",
+  "name_english": "Brushfire Knight",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "홍염의 기사",
+    "Brushfire Knight"
+  ],
+  "source_id": 3370,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2402
+}

@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3351",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-드래그니티",
+    "지원-드래곤족",
+    "지원-장착",
+    "효과-장착",
+    "효과-공격력 상승"
+  ],
+  "code": 99659159,
+  "defense": 0,
+  "description": "드래그니티 몬스터 카드를 장착한 내 몬스터에게 공격력 +500. 턴마다 한 번, 내 앞면 몬스터에 패의 드래곤족 드래그니티 1장을 장착할 수 있습니다.",
+  "draw_enabled": true,
+  "identity_key": "aeda5ab121c71bdc59dbba9999fcc79932684fbdf6bcb868b45ce34c0321f051",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3351.jpg",
+  "level": 0,
+  "links": [],
+  "name": "용 조종술",
+  "name_english": "Dragon Mastery",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "용 조종술",
+    "Dragon Mastery"
+  ],
+  "source_id": 3351,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 2383
+}

@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3383",
+  "attack": 400,
+  "attribute": 1,
+  "categories": [
+    "발동-표시 변경 시",
+    "효과-파괴",
+    "파괴-몬스터"
+  ],
+  "code": 58268433,
+  "defense": 300,
+  "description": "공격에서 앞면 수비로 바뀌면 상대 몬스터 1장을 파괴합니다.",
+  "draw_enabled": true,
+  "identity_key": "66672a988056356d2f8178d8750e8ca35786292ce0a6782ff65b82f52f0725f7",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3383.jpg",
+  "level": 2,
+  "links": [],
+  "name": "블레이드 래빗",
+  "name_english": "Blade Rabbit",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 16384,
+  "rarity": "R",
+  "search_aliases": [
+    "블레이드 래빗",
+    "Blade Rabbit"
+  ],
+  "source_id": 3383,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2415
+}

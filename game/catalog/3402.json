@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3402",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-공룡족",
+    "지원-제외",
+    "발동-제외",
+    "소환-패에서",
+    "소환-묘지",
+    "제약-공격 불가"
+  ],
+  "code": 39041729,
+  "defense": 0,
+  "description": "묘지의 공룡족을 2장 이상 제외해 레벨 합계를 만듭니다. 그 합계와 레벨이 같은 공룡족을 패·묘지에서 전개하지만 그 턴에는 공격할 수 없습니다. 일반 상황에서는 필드의 공룡을 비용으로 쓰지 않습니다.",
+  "draw_enabled": true,
+  "identity_key": "623111bebebaa63e0bd49d36d4ca1072bc5c36054ed333a1b526223684a60e82",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3402.jpg",
+  "level": 0,
+  "links": [],
+  "name": "시공초월",
+  "name_english": "Spacetime Transcendence",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "시공초월",
+    "Spacetime Transcendence"
+  ],
+  "source_id": 3402,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 2434
+}

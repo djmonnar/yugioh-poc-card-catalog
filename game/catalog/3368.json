@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3368",
+  "attack": 1400,
+  "attribute": 16,
+  "categories": [
+    "지원-빛 속성",
+    "발동-묘지로 보내졌을 때",
+    "발동-필드에서 묘지로 보내졌을 때",
+    "발동-덱에서 묘지로 보내졌을 때",
+    "효과-덱에서 묘지로 보내기",
+    "효과-묘지로 보내기",
+    "효과-덱으로 되돌리기"
+  ],
+  "code": 6351548,
+  "defense": 1200,
+  "description": "같은 이름 기준 턴당 한 번. 필드에서 묘지로 가면 덱의 빛 속성 1장을 묘지로 보낼 수 있습니다. 덱에서 직접 묘지로 가면 대신 묘지의 빛 속성 1장을 덱 맨 위로 돌리는 처리가 강제됩니다.",
+  "draw_enabled": true,
+  "identity_key": "e226d1410aac030d7000c5af653d5f28fb88708eab53f9d612eddde8eec00e4a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3368.jpg",
+  "level": 4,
+  "links": [],
+  "name": "서광의 기사",
+  "name_english": "Dawn Knight",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "서광의 기사",
+    "Dawn Knight"
+  ],
+  "source_id": 3368,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2400
+}

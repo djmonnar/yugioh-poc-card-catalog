@@ -1,0 +1,13 @@
+{
+  "art_key": "Character206/tyranno_kenzan_start",
+  "id": "character-tyranno-kenzan-206",
+  "profile": {
+    "name": "티라노 켄잔",
+    "portrait": "assets/actors/native206/tyranno_kenzan/start.png",
+    "skill_profiles": [],
+    "skills": []
+  },
+  "profile_id": "tyranno_kenzan",
+  "updated_at": "2026-11-25T20:32:27.105516+00:00",
+  "version": 1045
+}

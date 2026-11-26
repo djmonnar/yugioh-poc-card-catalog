@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3353",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-드래그니티",
+    "지원-장착",
+    "효과-장착",
+    "소환-마법·함정에서",
+    "소환제약"
+  ],
+  "code": 28927782,
+  "defense": 0,
+  "description": "턴마다 한 번, 내 마법·함정 칸의 드래그니티를 수비로 전개하거나, 내 앞면 드래그니티에 묘지의 드래그니티 몬스터를 장착합니다. 이 효과를 처리한 턴에는 드래그니티만 특수 소환할 수 있습니다. 현재 엔진에는 이 두 선택만 지원됩니다.",
+  "draw_enabled": true,
+  "identity_key": "edb4a88253faa5bde204126511f3f42ff119ee5adf280733c26cfb41ad85b577",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3353.jpg",
+  "level": 0,
+  "links": [],
+  "name": "드래그니티 드라이브",
+  "name_english": "Dragunity Legion",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "드래그니티 드라이브",
+    "Dragunity Legion"
+  ],
+  "source_id": 3353,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 2385
+}

@@ -133,6 +133,10 @@
     "card_set": "amazoness-harpie-misawa203",
     "schema": 1
   },
+  "content_profile207": {
+    "card_set": "dragunity-stance-dinosaur207",
+    "schema": 1
+  },
   "content_relics160": {
     "relic_set": "relics160",
     "schema": 1
@@ -144,6 +148,10 @@
   },
   "content_relics203": {
     "relic_set": "relics203",
+    "schema": 1
+  },
+  "content_relics207": {
+    "relic_set": "relics207",
     "schema": 1
   },
   "content_shadow093": {

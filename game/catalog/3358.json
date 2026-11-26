@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3358",
+  "attack": 1000,
+  "attribute": 8,
+  "categories": [
+    "지원-드래그니티",
+    "지원-싱크로",
+    "지원-장착",
+    "소환-마법·함정에서",
+    "소환제약"
+  ],
+  "code": 29253591,
+  "defense": 200,
+  "description": "장착 카드로 놓여 있으면 자신을 몬스터로 전개할 수 있습니다. 드래그니티 싱크로에만 소재로 쓸 수 있으며, 그때 레벨을 2 또는 4로 계산할 수 있습니다. 자기 전개에는 파랑크스와 달리 턴당 한 번 제한이 없습니다.",
+  "draw_enabled": true,
+  "identity_key": "c050bcb85e89fc65a023f3705919b6a0dd31aa8c472a70faf0d64ae12f6c48cd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3358.jpg",
+  "level": 2,
+  "links": [],
+  "name": "드래그니티-쿠제",
+  "name_english": "Dragunity Couse",
+  "native_type": 4129,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "search_aliases": [
+    "드래그니티-쿠제",
+    "Dragunity Couse"
+  ],
+  "source_id": 3358,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "튜너 몬스터",
+  "web_slot": 2390
+}

@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3384",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "효과-파괴",
+    "파괴-몬스터"
+  ],
+  "code": 30683373,
+  "defense": 0,
+  "description": "수비 표시 몬스터 1장을 골라 파괴합니다. 양쪽 필드와 뒷면 수비도 선택 범위에 들어갑니다.",
+  "draw_enabled": true,
+  "identity_key": "c907ea3efac28877749e03d1518d149fdae6258aad1952472b66c2e517f9485b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3384.jpg",
+  "level": 0,
+  "links": [],
+  "name": "실드크러시",
+  "name_english": "Shield Crush",
+  "native_type": 2,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "실드크러시",
+    "Shield Crush"
+  ],
+  "source_id": 3384,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 마법",
+  "web_slot": 2416
+}

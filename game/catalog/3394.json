@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3394",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-융합",
+    "지원-장착",
+    "효과-공격력 상승",
+    "효과-수비력 상승"
+  ],
+  "code": 27967615,
+  "defense": 0,
+  "description": "레벨 6 이하 융합 몬스터에게만 장착할 수 있습니다. 공격력과 수비력이 각각 1500 오릅니다.",
+  "draw_enabled": true,
+  "identity_key": "40b9fab1721b813fd6518352142b045e3d47ae2256106d342ac6f72f070d92d2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3394.jpg",
+  "level": 0,
+  "links": [],
+  "name": "퓨전 웨폰",
+  "name_english": "Fusion Weapon",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "퓨전 웨폰",
+    "Fusion Weapon"
+  ],
+  "source_id": 3394,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 2426
+}

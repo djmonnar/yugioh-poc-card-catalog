@@ -1,0 +1,20 @@
+{
+  "description": "이번 전투에서 처음 내 묘지의 몬스터가 7장 이상이 되면 1장 드로우합니다.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 0,
+  "iconKey": "Relics/Content207/ancient_fossil207",
+  "id": "ancient_fossil207",
+  "kind": "ancient_fossil207",
+  "name": "고대의 화석",
+  "params": {
+    "draw": 1,
+    "threshold": 7
+  },
+  "price": 150,
+  "rarity": "R",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

@@ -1,0 +1,21 @@
+{
+  "description": "내 LP가 500 이하인 동안 내 앞면 몬스터의 공격력과 수비력이 100 올라갑니다.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 0,
+  "iconKey": "Relics/Content207/focus_sash207",
+  "id": "focus_sash207",
+  "kind": "focus_sash207",
+  "name": "기합의 띠",
+  "params": {
+    "atk": 100,
+    "def": 100,
+    "threshold": 500
+  },
+  "price": 100,
+  "rarity": "N",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}

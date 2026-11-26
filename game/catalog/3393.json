@@ -1,0 +1,35 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3393",
+  "attack": 1200,
+  "attribute": 1,
+  "categories": [
+    "효과-공격력 상승",
+    "효과-수비력 상승"
+  ],
+  "code": 91862578,
+  "defense": 600,
+  "description": "내 패 1장마다 공격력과 수비력 +400. 소환하면서 패에서 빠지는 자기 자신은 남은 패 수에 포함되지 않습니다.",
+  "draw_enabled": true,
+  "identity_key": "1244877b66eb77b2e30c05c067b30e98bbb86d824bac29448bd0440ac009ef7f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3393.jpg",
+  "level": 5,
+  "links": [],
+  "name": "격양한 무카무카",
+  "name_english": "Enraged Muka Muka",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 256,
+  "rarity": "R",
+  "search_aliases": [
+    "격양한 무카무카",
+    "Enraged Muka Muka"
+  ],
+  "source_id": 3393,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2425
+}

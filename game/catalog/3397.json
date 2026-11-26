@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3397",
+  "attack": 1500,
+  "attribute": 16,
+  "categories": [
+    "지원-화염 속성",
+    "지원-물 속성",
+    "효과-공격력 상승",
+    "보호-컨트롤 변경"
+  ],
+  "code": 97623219,
+  "defense": 1200,
+  "description": "양쪽 필드의 앞면 속성을 확인합니다. 화염 속성이 있으면 공격력 +500, 물 속성이 있으면 이 카드의 컨트롤이 바뀌지 않습니다.",
+  "draw_enabled": true,
+  "identity_key": "5f3ffaba04e124638aa15fbe234201a203865530dc642792df933c7e3a7a1960",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3397.jpg",
+  "level": 4,
+  "links": [],
+  "name": "엘리멘트 발키리",
+  "name_english": "Element Valkyrie",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "R",
+  "search_aliases": [
+    "엘리멘트 발키리",
+    "Element Valkyrie"
+  ],
+  "source_id": 3397,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2429
+}

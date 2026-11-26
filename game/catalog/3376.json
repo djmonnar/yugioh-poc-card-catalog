@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3376",
+  "attack": 0,
+  "attribute": 1,
+  "categories": [
+    "지원-스크랩",
+    "지원-튜너",
+    "면역-전투",
+    "발동-공격 선언 시",
+    "효과-자괴",
+    "발동-파괴 시",
+    "발동-묘지로 보내졌을 때",
+    "발동-필드에서 묘지로 보내졌을 때",
+    "효과-묘지샐비지"
+  ],
+  "code": 83135907,
+  "defense": 500,
+  "description": "전투로는 파괴되지 않습니다. 앞면 수비일 때 공격 대상으로 잡히면 배틀 페이즈 끝에 스스로 파괴됩니다. 스크랩 효과로 파괴되어 묘지에 가면 같은 이름 이외의 묘지 스크랩 몬스터를 패로 회수할 수 있습니다.",
+  "draw_enabled": true,
+  "identity_key": "0a63630c279e91fafc6e84a1f9e4c0aafba768cf86112823147137421da23abe",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3376.jpg",
+  "level": 3,
+  "links": [],
+  "name": "스크랩 고블린",
+  "name_english": "Scrap Goblin",
+  "native_type": 4129,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "R",
+  "search_aliases": [
+    "스크랩 고블린",
+    "Scrap Goblin"
+  ],
+  "source_id": 3376,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "튜너 몬스터",
+  "web_slot": 2408
+}

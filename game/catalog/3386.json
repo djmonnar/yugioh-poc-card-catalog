@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3386",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-천사족",
+    "지원-장착",
+    "효과-공격력 상승",
+    "발동-피해 발생 시",
+    "효과-회복"
+  ],
+  "code": 28106077,
+  "defense": 0,
+  "description": "천사족에게 장착하여 공격력 +500. 장착 몬스터가 상대에게 준 전투 피해만큼 내 LP를 회복합니다.",
+  "draw_enabled": true,
+  "identity_key": "e00e65550ed8efe73d07487e9495a07fa78a58c47c8fa5c1ef7d041fdfdfd6e8",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3386.jpg",
+  "level": 0,
+  "links": [],
+  "name": "다그라의 검",
+  "name_english": "Cestus of Dagla",
+  "native_type": 262146,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "R",
+  "search_aliases": [
+    "다그라의 검",
+    "Cestus of Dagla"
+  ],
+  "source_id": 3386,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "장착 마법",
+  "web_slot": 2418
+}

@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards207/3372",
+  "attack": 1400,
+  "attribute": 1,
+  "categories": [
+    "지원-땅 속성",
+    "지원-리버스",
+    "발동-리버스",
+    "효과-덱에서 묘지로 보내기",
+    "효과-묘지로 보내기"
+  ],
+  "code": 35195612,
+  "defense": 1200,
+  "description": "리버스했을 때 덱의 땅 속성 몬스터 1장을 묘지에 준비합니다.",
+  "draw_enabled": true,
+  "identity_key": "c4b7786417224771f1dc66085526b0d1b605d192b477226efd0973a79c289f20",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native207/cards/3372.jpg",
+  "level": 4,
+  "links": [],
+  "name": "모래 먼지의 기사",
+  "name_english": "Dust Knight",
+  "native_type": 2097185,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "모래 먼지의 기사",
+    "Dust Knight"
+  ],
+  "source_id": 3372,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "리버스 몬스터",
+  "web_slot": 2404
+}

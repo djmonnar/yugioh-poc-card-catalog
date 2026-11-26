@@ -1,0 +1,54 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-28d88cc4-d040-444a-9433-0ab3b34c8ad7",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "995b5cd8ac3815ec44815fc9dfdd86dea8a593f5e68bfa8e5d0dbe70f9c75632",
+      "source_id": 3249
+    },
+    {
+      "count": 3,
+      "identity_key": "584df9d2bcc637f344dbccf0443e38c2fce10ae68d3b18594329f15b4fbf91f5",
+      "source_id": 3247
+    },
+    {
+      "count": 3,
+      "identity_key": "7000324e799a136ee0fa70ac5ee818202546ef8809eb09967aaf4d10dbf39869",
+      "source_id": 3248
+    },
+    {
+      "count": 3,
+      "identity_key": "6411ed6e26bf8596a9bf00fdb95c63863046f17823917295634cc38c9b274c09",
+      "source_id": 1936
+    },
+    {
+      "count": 1,
+      "identity_key": "98bcc1c4a6a5fafd4c449c99095c0a7354bf74dc70790330b065f32ce4e29c37",
+      "source_id": 1882
+    },
+    {
+      "count": 2,
+      "identity_key": "6f408a88433e52508657a588c8830eba943d213d39b654bb039026d8be849e3d",
+      "source_id": 2637
+    },
+    {
+      "count": 2,
+      "identity_key": "f38b527b2ce6bda8083030df9cda09df153f824a6c384df50e2f6f50143a16d2",
+      "source_id": 2626
+    },
+    {
+      "count": 2,
+      "identity_key": "9f67744e6f64d112fdfc42401dad7ae2277c29c2377236a94e47147f351a68bb",
+      "source_id": 2392
+    },
+    {
+      "count": 1,
+      "identity_key": "b781c54ef02789ecc1ca8b98fc91db18c49bdfbd9af4d65e5e1e1da2e0a9fb87",
+      "source_id": 1875
+    }
+  ],
+  "name": "빙염의 쌍룡",
+  "version": 1046
+}

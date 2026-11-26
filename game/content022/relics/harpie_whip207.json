@@ -1,0 +1,19 @@
+{
+  "description": "마법·함정 카드가 파괴될 때마다 무작위로 고른 내 앞면 몬스터 1장의 공격력이 이번 전투 동안 100 올라갑니다.",
+  "enabled": true,
+  "fields": [],
+  "iconIndex": 0,
+  "iconKey": "Relics/Content207/harpie_whip207",
+  "id": "harpie_whip207",
+  "kind": "harpie_whip207",
+  "name": "해피의 채찍",
+  "params": {
+    "atk": 100
+  },
+  "price": 200,
+  "rarity": "SR",
+  "rewardRarity": null,
+  "shopEnabled": true,
+  "supportStatus": "implemented",
+  "weight": 1
+}
