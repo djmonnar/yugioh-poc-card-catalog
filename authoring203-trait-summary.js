@@ -7,6 +7,7 @@
 import {auraSummary199} from './authoring199-traits.js';
 import {TRAIT_LABELS203} from './authoring203-traits.js';
 import {DUEL_READY209} from './authoring209-traits.js';
+import {DESTRUCTION_REWARD211,destructionRewardValues211} from './authoring211-traits.js';
 
 const number=value=>Number(value).toLocaleString('ko-KR');
 const SHARED_POSITIONS203=['attack','defense','set'];
@@ -16,7 +17,8 @@ const KIND_LABELS203={start_hand:'시작 패에 카드 추가',start_field:'시�
   heal_once:'LP 회복 1회',draw_once:'위기 드로우 1회',add_hand_once:'카드 추가 1회',parasite_deck:'기생충 덱 삽입',lp_bonus:'추가 LP',opening_draw:'시작 드로우 추가',
   effect_damage_null:'효과 데미지 무효',reflect_damage_null:'반사 데미지 무효',first_damage_null:'첫 데미지 무효',ouija_board:'위저보드 (다크 네크로피어)',
   union_power:'유니온의 힘',fusion_recover:'융합회수',ritual_recover:'의식회수',start_deck:'시작 덱에 카드 추가',stat_aura:'공격력·수비력 조정 (조건)',
-  destiny_draw:'데스티니 드로우',opening_reload:'리로드',...TRAIT_LABELS203,[DUEL_READY209.kind]:DUEL_READY209.label};
+  destiny_draw:'데스티니 드로우',opening_reload:'리로드',...TRAIT_LABELS203,[DUEL_READY209.kind]:DUEL_READY209.label,
+  [DESTRUCTION_REWARD211.kind]:DESTRUCTION_REWARD211.label};
 
 export function traitLabel203(row,definitions=[]){
   const kind=typeof row?.kind==='string'?row.kind:'';
@@ -36,6 +38,7 @@ function storedFields(row){
   if(row.card||Number.isSafeInteger(row.sourceId)&&row.sourceId>=0)fields.card={type:'source-card'};
   if(Array.isArray(row.entries)&&row.entries.length)fields.entries={type:'counted-source-cards'};
   if(row.aura&&typeof row.aura==='object')fields.aura={type:'stat-aura'};
+  if(row.kind===DESTRUCTION_REWARD211.kind)fields.destructionReward={type:'destruction-reward'};
   return fields;
 }
 
@@ -59,6 +62,8 @@ export function traitValues203(row,{definitions=[],cardName=()=>null}={}){
       if(label)values.push(label);
     }else if(spec?.type==='stat-aura'){
       values.push(auraSummary199(row.aura,Array.isArray(spec.types)?spec:undefined));
+    }else if(spec?.type==='destruction-reward'){
+      values.push(...destructionRewardValues211(row[key]));
     }else if(spec?.type==='counted-source-cards'){
       const entries=Array.isArray(row.entries)?row.entries:[],total=entries.reduce((n,entry)=>n+(Number.isSafeInteger(entry?.count)?entry.count:0),0);
       const names=entries.map(entry=>`${cardText(cardName,entry?.card?.internal_id??entry?.sourceId,entry?.card)} ${number(entry?.count??0)}장`);
