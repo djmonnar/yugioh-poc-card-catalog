@@ -6,6 +6,7 @@
 // ({kind,card:{internal_id,name_ko},position:'attack',entries:[{card,count}]}).
 import {auraSummary199} from './authoring199-traits.js';
 import {TRAIT_LABELS203} from './authoring203-traits.js';
+import {DUEL_READY209} from './authoring209-traits.js';
 
 const number=value=>Number(value).toLocaleString('ko-KR');
 const SHARED_POSITIONS203=['attack','defense','set'];
@@ -15,7 +16,7 @@ const KIND_LABELS203={start_hand:'시작 패에 카드 추가',start_field:'시�
   heal_once:'LP 회복 1회',draw_once:'위기 드로우 1회',add_hand_once:'카드 추가 1회',parasite_deck:'기생충 덱 삽입',lp_bonus:'추가 LP',opening_draw:'시작 드로우 추가',
   effect_damage_null:'효과 데미지 무효',reflect_damage_null:'반사 데미지 무효',first_damage_null:'첫 데미지 무효',ouija_board:'위저보드 (다크 네크로피어)',
   union_power:'유니온의 힘',fusion_recover:'융합회수',ritual_recover:'의식회수',start_deck:'시작 덱에 카드 추가',stat_aura:'공격력·수비력 조정 (조건)',
-  destiny_draw:'데스티니 드로우',opening_reload:'리로드',...TRAIT_LABELS203};
+  destiny_draw:'데스티니 드로우',opening_reload:'리로드',...TRAIT_LABELS203,[DUEL_READY209.kind]:DUEL_READY209.label};
 
 export function traitLabel203(row,definitions=[]){
   const kind=typeof row?.kind==='string'?row.kind:'';
