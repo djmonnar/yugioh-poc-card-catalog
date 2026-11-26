@@ -57,7 +57,7 @@ export function fieldValue039(value,path,next){const parts=Array.isArray(path)?p
 import {cardMetadata109} from './authoring109-catalog.js?v=20261114-109';
 import {cardMetadata212} from './authoring212-catalog.js?v=20261126-sphinx-volcanic-monarch212';
 import {officialCardText212} from './authoring212-official.js?v=20261126-sphinx-volcanic-monarch212';
-import {canonicalPositionCategories212} from './authoring131-category-aliases.js?v=20261126-position-taxonomy212';
+import {canonicalPositionCategory212,canonicalPositionCategories212} from './authoring131-category-aliases.js?v=20261126-position-taxonomy212';
 
 export function normalizeCatalog039(state){
   const boot=state.bootstrap??{},game=state.gamePayload??boot.game_payload??boot.game??{},raw=boot.catalog?.cards??boot.catalog??game.catalog?.cards??game.catalog??[],rows=Array.isArray(raw)?raw:[],all=entities039(state),lookup=new Map();
@@ -131,7 +131,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
   function restoreScroll056(rows){for(const {node,top,left} of rows)if(node.isConnected!==false){node.scrollTop=top;node.scrollLeft=left;}}
   const invalidFields041=new Map(),editing041=createEditingGuard041({document:doc,getRoots:()=>[currentRoot,dialog?.open?dialog:null].filter(Boolean),onEditingChange});
   const mapPanel052=createMapPanel052({document:doc,getState:mapState052,onSave:config=>patch(mapState052().entity,config),onError,bindControl:control=>editing041.bind(control)});
-  const categoryManager055=createCategoryGroupManager055({document:doc,getState:()=>({groups:entities039(currentState).filter(row=>row.entity_type==='category_group'),order:categoryGroupOrder056(),categories:entities039(currentState).filter(row=>row.entity_type==='category').map(row=>({...row.content})),canEdit:currentState.canEdit===true,canWrite:currentState.bootstrap?.capabilities?.entities?.category_group?.operations?.includes('patch')===true,canOrderWrite:currentState.bootstrap?.capabilities?.entities?.category_group_order?.operations?.includes('patch')===true,owner:currentState.user?.id??(currentState.canEdit?'editor':'public'),phase:currentState.phase,error:currentState.error,writeState:currentState.writeState}),onSave:(...args)=>onChange(...args),onRetry:onRetryWrite,onError,bindControl:control=>editing041.bind(control)});
+  const categoryManager055=createCategoryGroupManager055({document:doc,getState:()=>({groups:entities039(currentState).filter(row=>row.entity_type==='category_group'),order:categoryGroupOrder056(),categories:categoryEntities212().map(row=>({...row.content})),canEdit:currentState.canEdit===true,canWrite:currentState.bootstrap?.capabilities?.entities?.category_group?.operations?.includes('patch')===true,canOrderWrite:currentState.bootstrap?.capabilities?.entities?.category_group_order?.operations?.includes('patch')===true,owner:currentState.user?.id??(currentState.canEdit?'editor':'public'),phase:currentState.phase,error:currentState.error,writeState:currentState.writeState}),onSave:(...args)=>onChange(...args),onRetry:onRetryWrite,onError,bindControl:control=>editing041.bind(control)});
   function mapState052(){
     const live=entities039(currentState).find(row=>row.entity_type==='map_rules'&&row.entity_id==='main'&&!row.deleted),authoritative=currentState.bootstrap?.authoring?.entities?.find(row=>row.entity_type==='map_rules'&&row.entity_id==='main'&&!row.deleted),metadata=currentState.bootstrap?.mapRules052;
     const row=authoritative??(!live?.pending?live:null),capability=currentState.bootstrap?.capabilities?.entities?.map_rules;
@@ -202,7 +202,15 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
   function title(host,name,description){host.append(el('h1',name));if(description)host.append(el('p',description,'au-lead'));}
   function categoryGroups055(){const rows=entities039(currentState).filter(row=>row.entity_type==='category_group');return rows.length||currentState.bootstrap?.category_groups055?.schema===1?rows:undefined;}
   function categoryGroupOrder056(){return entities039(currentState).find(row=>row.entity_type==='category_group_order'&&row.entity_id==='main');}
-  function categories(){const rows=entities039(currentState).filter(e=>e.entity_type==='category'&&!e.content.archived).map(e=>({...e.content,entity:e}));return rows.length||currentState.canEdit?rows:[...new Set([...currentCards.flatMap(c=>c.tags),...(categoryGroups055()??[]).filter(row=>!row.content.archived).flatMap(row=>row.content.categories??[])])].filter(name=>typeof name==='string'&&name).sort((a,b)=>a.localeCompare(b,'ko')).map(name=>({name}));}
+  function categoryEntities212(){
+    const rows=entities039(currentState).filter(row=>row.entity_type==='category');
+    const names=new Set(rows.map(row=>row.content.name));
+    return rows.filter(row=>{
+      const name=row.content.name,canonical=canonicalPositionCategory212(name);
+      return name===canonical||!names.has(canonical);
+    });
+  }
+  function categories(){const rows=categoryEntities212().filter(e=>!e.content.archived).map(e=>({...e.content,entity:e}));return rows.length||currentState.canEdit?rows:[...new Set([...currentCards.flatMap(c=>c.tags),...(categoryGroups055()??[]).filter(row=>!row.content.archived).flatMap(row=>row.content.categories??[])])].filter(name=>typeof name==='string'&&name).sort((a,b)=>a.localeCompare(b,'ko')).map(name=>({name}));}
   function categoryRows054(){return categories().map(category=>({...category,aliases:[category.entity?.entity_id,category.id].filter(value=>typeof value==='string')}));}
   function categoryPicker054(key,values,onChange,mode='edit'){
     if(!categoryStates054.has(key))categoryStates054.set(key,{});
@@ -607,7 +615,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
       editing041.bind(rename);
       const save=button('이름 저장',async()=>{
         if(!currentState.canEdit||draft.busy||category.entity.pending&&!rejected||editing041.isComposing(rename))return;
-        const name=validateInput039(categorySpec,rename.value.trim());
+        const name=canonicalPositionCategory212(validateInput039(categorySpec,rename.value.trim()));
         if(!rejected&&name===category.name)return;
         const duplicate=entities039(currentState).find(entity=>entity.entity_type==='category'&&entity.entity_id!==id&&entity.content.name===name);
         if(duplicate)throw Error(duplicate.content.archived?'보관한 카테고리 이름입니다.':'같은 이름의 카테고리가 있습니다.');
@@ -637,7 +645,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
     const input=el('input');input.placeholder='새 카테고리 이름';input.maxLength=categorySpec.maxLength;input.value=categoryEditor056.name;input.setAttribute('aria-label','새 카테고리 이름');input.dataset.editKey='category056.new-name';editing041.bind(input);
     input.oninput=input.oncompositionend=()=>{categoryEditor056.name=input.value;};
     const add=button('카테고리 추가',()=>{
-      const name=validateInput039(categorySpec,input.value.trim());categoryEditor056.name=input.value;categoryEditor056.open=true;
+      const name=canonicalPositionCategory212(validateInput039(categorySpec,input.value.trim()));categoryEditor056.name=input.value;categoryEditor056.open=true;
       const known=entities039(currentState).find(row=>row.entity_type==='category'&&(row.entity_id===name||row.content.name===name));
       if(known)throw Error(known.content.archived?'보관한 카테고리입니다. 아래에서 복원해 주세요.':'같은 이름의 카테고리가 있습니다.');
       return Promise.resolve(onChange('category',name,{name},{operation:'create'})).then(ack=>{
@@ -646,7 +654,7 @@ export function createAuthoringPanels039({document:doc=globalThis.document,onCha
       });
     });
     add.dataset.editKey='category056.add';add.disabled=!currentState.canEdit;box.append(input,add);
-    const archived=entities039(currentState).filter(e=>e.entity_type==='category'&&e.content.archived);
+    const archived=categoryEntities212().filter(e=>e.content.archived);
     if(archived.length){const list=el('details'),archiveSummary=el('summary','보관한 카테고리');list.open=categoryEditor056.archivedOpen;list.ontoggle=()=>{categoryEditor056.archivedOpen=list.open;};archiveSummary.dataset.editKey='category056.archived.summary';list.append(archiveSummary);for(const e of archived)list.append(button(`${e.content.name} 복원`,()=>patch(e,{archived:false})));box.append(list);}host.append(box);
   }
   // ---- 170: recent changes, bulk card edits ----
