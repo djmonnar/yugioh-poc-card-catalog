@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.138",
-  "versionCode": 157,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.138/YGOClassicExpedition-0.18.138-arm64.apk",
-  "sizeBytes": 934379748,
-  "sha256": "87e65e61a7a5e669f68d565f94d2b0783737683318a74143cffa7d3f8d7d8114",
-  "releaseNotes": "드래그니티 등 카드팩 207의 카드 53장을 실제 카드 이미지로 교체했습니다."
+  "versionName": "0.18.139",
+  "versionCode": 158,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.139/YGOClassicExpedition-0.18.139-arm64.apk",
+  "sizeBytes": 934466070,
+  "sha256": "296c89d2f087d27df179db85ecf501cedd1017cd3e1d4788eaebfc87ceee2000",
+  "releaseNotes": "티라노 켄잔 얼굴과 등장·결과 연출을 보강했습니다. 티라노 에이스 3장의 소환에 켄잔 컷신이 표시됩니다."
 }
