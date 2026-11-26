@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.142",
-  "versionCode": 161,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.142/YGOClassicExpedition-0.18.142-arm64.apk",
-  "sizeBytes": 994865582,
-  "sha256": "603fcd084959e55696f77d408604d295dc72be23f7d9e7122cbc7b67569b5373",
-  "releaseNotes": "스핑크스·볼캐닉·제왕 카드 31장을 추가했습니다. 쥬락 볼케이노 AI 판단과 카드 원문 보기를 개선했습니다."
+  "versionName": "0.18.143",
+  "versionCode": 162,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.143/YGOClassicExpedition-0.18.143-arm64.apk",
+  "sizeBytes": 994916206,
+  "sha256": "377e01b128e7604b2c2650c5fe4b2baf21d6454da7509f90e002f36724961032",
+  "releaseNotes": "니기타마 등 최근 카드 147장의 효과를 공식 카드 구조에 맞춰 효과별로 정리했습니다."
 }
