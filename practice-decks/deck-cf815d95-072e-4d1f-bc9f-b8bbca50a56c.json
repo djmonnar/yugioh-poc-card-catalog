@@ -1,0 +1,64 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-cf815d95-072e-4d1f-bc9f-b8bbca50a56c",
+  "main": [
+    {
+      "count": 2,
+      "identity_key": "2bfd45ef84d709ff98e32ca71a4b14d9025d9c22dc85ca4f314022785989885c",
+      "source_id": 3396
+    },
+    {
+      "count": 2,
+      "identity_key": "106ffdda689e5f7b1af93fc7ad5421bc765af28499dc6ad10986984cbbb2b7f2",
+      "source_id": 3401
+    },
+    {
+      "count": 2,
+      "identity_key": "af5e697e54a32f832b00885892d89ae0a1552bceac84aa0979962c8487aeaabf",
+      "source_id": 3399
+    },
+    {
+      "count": 2,
+      "identity_key": "5f3ffaba04e124638aa15fbe234201a203865530dc642792df933c7e3a7a1960",
+      "source_id": 3397
+    },
+    {
+      "count": 2,
+      "identity_key": "e22cd32fe663e3742b60f1af1255283c4f5df421b64dbace0dc591c4636e6b69",
+      "source_id": 3398
+    },
+    {
+      "count": 2,
+      "identity_key": "6b376160c25962b649f3242175ef51b7fbcedd21dac9c5f3aeaef36e4f5781d2",
+      "source_id": 3400
+    },
+    {
+      "count": 2,
+      "identity_key": "21e61f074467db6cef2ab853eb76a2da7bde4671b0561cebf98770b28e2d8065",
+      "source_id": 3045
+    },
+    {
+      "count": 1,
+      "identity_key": "17c600367139fbd24a9c5774252aa2739700130791fa9eafebadaa55d92a584d",
+      "source_id": 1897
+    },
+    {
+      "count": 1,
+      "identity_key": "5ae192b9483526307dc77c0fc689274471e7ae62e72672e6ae4d42021a88934d",
+      "source_id": 1515
+    },
+    {
+      "count": 2,
+      "identity_key": "a409aedc875eb50f9374b5ec6756fef5a043810729e47fc4f725a0c1e9f616dd",
+      "source_id": 2968
+    },
+    {
+      "count": 2,
+      "identity_key": "9e1b8711459f678d687695a88f26678fe99ae98be36f1ec2cbb8aacbe1dcca8f",
+      "source_id": 306
+    }
+  ],
+  "name": "빛과 어둠",
+  "version": 1093
+}

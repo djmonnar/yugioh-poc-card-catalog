@@ -14,7 +14,7 @@
       "source_id": 3431
     },
     {
-      "count": 2,
+      "count": 1,
       "identity_key": "78c8149cc6fd7dbba7d417bcec1fdda003be00f24203cbd511ff395b5bb4a9ab",
       "source_id": 3426
     },
@@ -57,8 +57,13 @@
       "count": 2,
       "identity_key": "291206b549fc5fcfe44e9360fb304bc6fe52afe18b585cbfe304698678b564e4",
       "source_id": 3432
+    },
+    {
+      "count": 1,
+      "identity_key": "132a667d1cdb7e108aeac3ef6aecc4add2b01567d846a87d82958a70bf0f5a8b",
+      "source_id": 3497
     }
   ],
   "name": "스피릿",
-  "version": 1079
+  "version": 1089
 }

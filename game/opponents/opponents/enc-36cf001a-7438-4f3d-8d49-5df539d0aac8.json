@@ -1,0 +1,45 @@
+{
+  "artKey": "Character035/crowler",
+  "banlistEnabled": false,
+  "deckName": "빛과 어둠",
+  "extra": [],
+  "id": "enc-36cf001a-7438-4f3d-8d49-5df539d0aac8",
+  "lpBonus": 0,
+  "main": [
+    3396,
+    3396,
+    3401,
+    3401,
+    3399,
+    3399,
+    3397,
+    3397,
+    3398,
+    3398,
+    3400,
+    3400,
+    3045,
+    3045,
+    1897,
+    1515,
+    2968,
+    2968,
+    306,
+    306
+  ],
+  "name": "크로노스 데 메디치",
+  "openingDrawBonus": 0,
+  "profileId": "crowler",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2968,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-36cf001a-7438-4f3d-8d49-5df539d0aac8",
+  "usesNativeRules035": true
+}

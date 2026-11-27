@@ -103,6 +103,15 @@
       }
     ]
   },
+  "unified039_18870390b01804da007f9cf5b730bad882e3e052": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [
+      "greater_healing_potion"
+    ],
+    "skills": []
+  },
   "unified039_1de95cb41ad48b4ab946cc6e08b5abca061544ff": {
     "gold": 0,
     "lp": 4000,

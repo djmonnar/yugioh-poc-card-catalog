@@ -293,10 +293,6 @@
             "weight": 1
           },
           {
-            "opponentId": "enc-724133c9-7a2c-4a76-88ae-4a529c660688",
-            "weight": 1
-          },
-          {
             "opponentId": "enc-90abe1cc-e21e-492e-b174-2f14ffdc23a3",
             "weight": 1
           },
@@ -310,6 +306,10 @@
           },
           {
             "opponentId": "enc-b2f1247c-71f2-4c8e-aabd-8e63bd1ac2ff",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-36cf001a-7438-4f3d-8d49-5df539d0aac8",
             "weight": 1
           }
         ],
@@ -752,6 +752,10 @@
           {
             "opponentId": "enc-ef76afab-3815-40e0-9a36-b20303faca42",
             "weight": 1
+          },
+          {
+            "opponentId": "enc-5aa5866a-a95e-43b6-988d-abdcfa8b8ed4",
+            "weight": 1
           }
         ],
         "lpBonus": 2000
@@ -897,10 +901,6 @@
             "weight": 1
           },
           {
-            "opponentId": "enc-4178d206-1241-4220-aace-da41aeb140bb",
-            "weight": 1
-          },
-          {
             "opponentId": "enc-0512daa9-07df-45d0-bbe5-9f1a5f7bf7ed",
             "weight": 1
           },
@@ -914,6 +914,10 @@
           },
           {
             "opponentId": "enc-ccf791e5-0a72-4cb2-b110-759cce0a78ff",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-a355f492-3c76-4ce5-b0a1-c37c673020e6",
             "weight": 1
           }
         ],
@@ -1078,10 +1082,6 @@
             "weight": 1
           },
           {
-            "opponentId": "enc-888f7bad-0e44-4d90-8c89-042bd61d989e",
-            "weight": 1
-          },
-          {
             "opponentId": "enc-2966be46-4261-4baf-a1fe-892fdcbca2b7",
             "weight": 1
           },
@@ -1091,6 +1091,10 @@
           },
           {
             "opponentId": "enc-701cacab-7d3f-4ad4-ac97-801c33ee2aef",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-fbe3225e-7c5c-49da-80a1-0c15c3e2525e",
             "weight": 1
           }
         ],
@@ -1299,6 +1303,10 @@
           },
           {
             "opponentId": "enc-7fa4e8ed-1513-4fe5-9c31-fbc585aacee4",
+            "weight": 1
+          },
+          {
+            "opponentId": "enc-8d73d9af-d143-4137-9a60-085efa5cf699",
             "weight": 1
           }
         ],
