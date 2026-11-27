@@ -32,7 +32,9 @@ export function cardQueryMatches091(card,query,tokens=cardQueryTokens091(query))
   const wanted=normalize(query);
   if(wanted&&[card.name_ko,card.name_en,card.name,card.nameEnglish].some(name=>normalize(name)===wanted))return true;
   const searchable=normalize(card.searchText??[card.name_ko,card.name_en,card.name,card.nameEnglish,card.description_ko,card.description,card.type,card.subtype,card.race,card.attribute,...(card.tags??[]),...(card.search_aliases??[]),card.slot,card.source_id,card.code].join(' '));
-  const monsterConditions=tokens.some(token=>token==='몬스터'||Object.hasOwn(attributes,token.replace(/속성$/,'')));
+  const monsterQuery=tokens.includes('몬스터');
+  const monsterConditions=monsterQuery||tokens.some(token=>Object.hasOwn(attributes,token.replace(/속성$/,'')));
+  const structuredAttribute=monsterQuery||tokens.some(token=>races.includes(token));
   let mentionedRaces;
   return tokens.every(token=>{
     if(races.includes(token)){
@@ -42,7 +44,7 @@ export function cardQueryMatches091(card,query,tokens=cardQueryTokens091(query))
       mentionedRaces??=new Set(Array.from(text.matchAll(writtenRace),match=>normalize(match[1])));
       return mentionedRaces.has(token);
     }
-    if(Object.hasOwn(attributes,token.replace(/속성$/,'')))return attributeMatches(card,token);
+    if(Object.hasOwn(attributes,token.replace(/속성$/,'')))return attributeMatches(card,token)||(!structuredAttribute&&searchable.includes(normalize(token)));
     if(['몬스터','마법','함정'].includes(token))return typeMatches(card,token);
     return searchable.includes(normalize(token));
   });

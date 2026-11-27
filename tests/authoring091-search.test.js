@@ -7,7 +7,7 @@ import {Document041,fixture041,field041,button041} from './authoring041-test-dom
 
 function current(){const state=fixture041();for(const v of ['049','053','067','081','084','088','090'])state.bootstrap.catalog.cards.push(...JSON.parse(fs.readFileSync(new URL('../data/native-expansion'+v+'.json',import.meta.url),'utf8')).cards.map(c=>({...c,source_id:c.sourceId,web_slot:c.slot,native_type:c.type,type_name:c.typeName,stock:true,draw_enabled:true})));return state;}
 const rows=normalizeCatalog039(current());
-function mounted(t,section){const state=current(),before=JSON.stringify(state),document=new Document041(),root=document.createElement('main'),writes=[];document.body.append(root);const panel=createAuthoringPanels039({document,onChange:(...a)=>writes.push(a),onError:e=>{throw e;}});panel.render(section,root,state);t.after(()=>panel.destroy());return{state,before,document,root,writes};}
+function mounted(t,section,state=current()){const before=JSON.stringify(state),document=new Document041(),root=document.createElement('main'),writes=[];document.body.append(root);const panel=createAuthoringPanels039({document,onChange:(...a)=>writes.push(a),onError:e=>{throw e;}});panel.render(section,root,state);t.after(()=>panel.destroy());return{state,before,document,root,writes};}
 function choose(m,label,value){const control=field041(m.root,label);assert(control,label);control.value=value;control.fire('change');return control;}
 const names=m=>m.root.querySelector('.au-catalog-results').querySelectorAll('.au-card-tile').map(tile=>tile.querySelector('strong').textContent);
 const monster=c=>Boolean(c.native_type&1);
@@ -45,6 +45,30 @@ test('race query includes spell and trap effect text; the race filter stays exac
  assert.equal(cardFiltersMatch091(trap,{race:['야수족'],query:'야수족'}),false);
  assert.equal(cardQueryMatches091({type:'마법',description_ko:'비행야수족 또는 환신 야수족 몬스터를 고른다.'},'야수족'),false);
  assert(cardQueryMatches091({type:'몬스터',race:'야수족'},'야수족 몬스터'));
+});
+test('catalog attribute text includes spell and trap effects while the attribute facet stays strict',t=>{
+ const state=current();
+ const trap=JSON.parse(fs.readFileSync(new URL('../data/native-expansion183.json',import.meta.url),'utf8')).cards.find(card=>card.sourceId===3176);
+ state.bootstrap.catalog.cards=state.bootstrap.catalog.cards.filter(card=>[0,2402].includes(card.source_id));
+ state.bootstrap.catalog.cards.push({...trap,source_id:trap.sourceId,web_slot:trap.slot,native_type:trap.type,type_name:trap.typeName});
+ const cards=normalizeCatalog039(state),m=mounted(t,'cards',state);
+ const [monsterName,spellName,trapName]=['푸른 눈의 백룡','사이버 리페어 플랜트','방해꾼 파티'];
+ const spell=cards.find(card=>card.name_ko===spellName),trapCard=cards.find(card=>card.name_ko===trapName);
+ assert.equal(cards.length,3);
+ for(const card of [spell,trapCard]){
+  assert(!card.name_ko.includes('빛'));
+  assert(card.description_ko.includes('빛 속성'));
+ }
+ const input=field041(m.root,'카드 검색');
+ for(const query of ['빛','빛 속성']){
+  input.value=query;input.fire('input');
+  assert.deepEqual(new Set(names(m)),new Set([monsterName,spellName,trapName]),query);
+ }
+ assert(cardQueryMatches091(spell,'빛 마법'));
+ assert(cardQueryMatches091(trapCard,'함정 빛'));
+ choose(m,'속성','빛');
+ assert.deepEqual(names(m),[monsterName]);
+ assert.equal(m.writes.length,0);
 });
 test('relevance ranks complete names, exact aliases, prefixes and effect-only results in that order',()=>{
  const cards=[
