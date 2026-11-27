@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.146",
-  "versionCode": 165,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.146/YGOClassicExpedition-0.18.146-arm64.apk",
-  "sizeBytes": 1020356536,
-  "sha256": "4e70ad867b45e980b45a59d82fc96f224eb4d89726b33272976993b2337fb3b2",
-  "releaseNotes": "네프티스의 봉황신 소환 연출을 추가했습니다. AI가 융합 주술봉인 생물의 자체 특수 소환과 장착·묘지·제외 연계를 더 잘 활용합니다."
+  "versionName": "0.18.147",
+  "versionCode": 166,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.147/YGOClassicExpedition-0.18.147-arm64.apk",
+  "sizeBytes": 1021764388,
+  "sha256": "b3597e36b77ab1fd12460c397762a3fa632f7dc0170fa502174ee3495ac305e8",
+  "releaseNotes": "세로 듀얼의 전투 배경과 LP·페이즈·버튼·기록창을 새 디자인으로 바꿨습니다."
 }
