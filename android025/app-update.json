@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.143",
-  "versionCode": 162,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.143/YGOClassicExpedition-0.18.143-arm64.apk",
-  "sizeBytes": 994916206,
-  "sha256": "377e01b128e7604b2c2650c5fe4b2baf21d6454da7509f90e002f36724961032",
-  "releaseNotes": "니기타마 등 최근 카드 147장의 효과를 공식 카드 구조에 맞춰 효과별로 정리했습니다."
+  "versionName": "0.18.144",
+  "versionCode": 163,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.144/YGOClassicExpedition-0.18.144-arm64.apk",
+  "sizeBytes": 1018719578,
+  "sha256": "7ef2dbd7a976cb6bc9c860023e293485bc8ec321a8e2be4bc4f9eb551423927d",
+  "releaseNotes": "스피릿·염성 카드팩을 추가했습니다. 기존 카드 247장의 정정된 효과를 인터넷 없이도 볼 수 있습니다."
 }
