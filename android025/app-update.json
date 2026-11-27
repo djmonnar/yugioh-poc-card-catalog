@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.145",
-  "versionCode": 164,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.145/YGOClassicExpedition-0.18.145-arm64.apk",
-  "sizeBytes": 1018751894,
-  "sha256": "a208f2f4824ece3c25d1450dfb3fbee50738eab9858e09ee29ccf376a537684f",
-  "releaseNotes": "심술꾸러기의 저주와 금지된 성창의 연계 판단을 개선했습니다. 공격력과 수비력 변동 카테고리를 정리했습니다."
+  "versionName": "0.18.146",
+  "versionCode": 165,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.146/YGOClassicExpedition-0.18.146-arm64.apk",
+  "sizeBytes": 1020356536,
+  "sha256": "4e70ad867b45e980b45a59d82fc96f224eb4d89726b33272976993b2337fb3b2",
+  "releaseNotes": "네프티스의 봉황신 소환 연출을 추가했습니다. AI가 융합 주술봉인 생물의 자체 특수 소환과 장착·묘지·제외 연계를 더 잘 활용합니다."
 }
