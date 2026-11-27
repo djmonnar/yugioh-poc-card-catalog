@@ -1,7 +1,7 @@
 import {traitCardMatches089,sharedTraitRefMatches089} from './authoring089-traits.js?v=20261106-089';
 import {auraValid199} from './authoring199-traits.js';
 import {destructionRewardValid211,traitKindOffered211} from './authoring211-traits.js';
-import {cardMetadata212} from './authoring212-catalog.js?v=20261126-sphinx-volcanic-monarch212';
+import {cardMetadata216} from './authoring216-catalog.js?v=20261127-spirit-fire-fist216';
 // Local preflight explains known server contracts. The server remains authoritative.
 const own=(value,key)=>Object.prototype.hasOwnProperty.call(value??{},key);
 const object=value=>value!==null&&typeof value==='object'&&!Array.isArray(value);
@@ -45,7 +45,7 @@ export function validateAuthoringChange066(snapshot,type,id,fields,{operation='p
   const cards=Array.isArray(raw)?raw:[],source=card=>card.source_id??card.sourceId??card.internal_id,slot=card=>card.web_slot??card.slot,extra=card=>Boolean((card.native_type??card.type??0)&(0x40|0x2000|0x800000|0x4000000)),playable=card=>card&&card.playable!==false&&!card.token&&!card.special;
   const bySource=new Map(cards.map(card=>[source(card),card])),bySlot=new Map(cards.map(card=>[slot(card),card]));
   if(type==='card_limit'||type==='card_setting'){
-    const card=bySource.get(Number(id)),metadata=cardMetadata212(source(card??{}),card?.identity_key),maximum=metadata?.maximumNormalLimit;
+    const card=bySource.get(Number(id)),metadata=cardMetadata216(source(card??{}),card?.identity_key),maximum=metadata?.maximumNormalLimit;
     if(maximum===0){
       if(type==='card_limit')check(!own(fields,'normal_limit')&&!own(fields,'speed_limit'),Object.keys(fields),'효과로 생성되는 토큰에는 덱 제한을 설정할 수 없습니다.');
       else check(fields.stock!==true&&fields.draw_enabled!==true,['stock','draw_enabled'],'효과로 생성되는 토큰은 판매하거나 보상으로 지급할 수 없습니다.');

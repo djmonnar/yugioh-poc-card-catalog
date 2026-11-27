@@ -1,0 +1,4369 @@
+{
+  "schema": 1,
+  "kind": "unity-native-expansion216",
+  "engine": "unity-native-035",
+  "version": "native-expansion216-v1",
+  "parentCatalogSha256": "e722bc8cfa60a4d6b0606c92667dd9503109b3b1d300a63e66afff03b0063ef0",
+  "parentExpansionSha256": "338fc180cafada45e81f40bb56eab146304ccaeda0d21867a0dd6d7f3c3ad06d",
+  "parentWebManifestSha256": "d7546e76ecb347ba7fe4124cbcc738d23c28920c7d684a0571f025bc2d67446f",
+  "nativeMetadataSha256": "3c4f53dd1c9f3dac64439602a002688b59ec0703a512a07312922dca30d324da",
+  "nativeArchiveSha256": "03a074e178b83d3f02ab7e0bc9dfbb98ecb760e9caf8f85b7ce1b968aefeef48",
+  "identityResearchSha256": "1b961e85feed3d1e22e9dda595c685c3f7e9691d5b6d294dd8ebc195137e7899",
+  "cards": [
+    {
+      "alias": 0,
+      "type": 545,
+      "level": 6,
+      "attribute": 4,
+      "race": 512,
+      "attack": 2100,
+      "defense": 1800,
+      "sourceId": 3497,
+      "code": 50866755,
+      "name": "봉황",
+      "nameEnglish": "Fenghuang",
+      "description": "이 카드는 특수 소환할 수 없다.\n이 카드를 일반 소환하거나 리버스했을 때에 발동한다. 상대 필드에 세트된 마법 / 함정 카드를 전부 파괴한다.\n이 카드를 일반 소환하거나 리버스한 턴의 엔드 페이즈에 발동한다. 이 카드를 주인의 패로 되돌린다.",
+      "officialDescription": "Cannot be Special Summoned. On its Normal Summon or when flipped face-up, destroy all Set Spells and Traps on the opposing field. During the End Phase of that turn, return this card to its owner’s hand.",
+      "rarity": "SR",
+      "artKey": "Cards216/3497",
+      "typeName": "스피릿 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2529,
+      "internal_id": 3497,
+      "identity_key": "132a667d1cdb7e108aeac3ef6aecc4add2b01567d846a87d82958a70bf0f5a8b",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c50866755.lua",
+      "nativeLuaSha256": "912a7d787722af3d5f78d3d56643144e37957ef7bc5d6108493bc1d7473efd9f",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-스피릿",
+      "categories": [
+        "지원-스피릿",
+        "발동-소환 시",
+        "발동-리버스",
+        "효과-파괴",
+        "파괴-마법",
+        "파괴-함정",
+        "발동-엔드 페이즈 시",
+        "효과-바운스",
+        "소환제약"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "봉황",
+        "Fenghuang"
+      ],
+      "effectStringsKorean": [
+        "상대의 세트 마법 / 함정을 전부 파괴",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 524290,
+      "level": 0,
+      "attribute": 0,
+      "race": 0,
+      "attack": 0,
+      "defense": 0,
+      "sourceId": 3498,
+      "code": 87624166,
+      "name": "고대의 숲",
+      "nameEnglish": "Ancient Forest",
+      "description": "이 카드의 발동 처리시에 필드에 수비 표시 몬스터가 존재할 경우, 그 몬스터를 전부 앞면 공격 표시로 한다. 이때 뒷면에서 앞면이 된 몬스터의 리버스 효과는 발동하지 않는다.\n몬스터가 공격을 실행한 배틀 페이즈 종료시에 발동한다. 그 배틀 페이즈에 공격을 실행한 몬스터를 전부 파괴한다.",
+      "officialDescription": "On activation, switch all Defense Position monsters to face-up Attack Position without triggering their Flip effects. At the end of a Battle Phase in which monsters attacked, destroy the monsters that carried out attacks.",
+      "rarity": "SR",
+      "artKey": "Cards216/3498",
+      "typeName": "필드 마법",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2530,
+      "internal_id": 3498,
+      "identity_key": "45403f7ab5af7be2cd600f1fe13ad72a562b32f23981e7cb44b7c09629c43419",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c87624166.lua",
+      "nativeLuaSha256": "4ef3b41d55ee442f9ad539b2883fa4a79bf72f38ad9c5c8b3598a22ee90c95ec",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-필드",
+      "categories": [
+        "지원-필드",
+        "효과-표시 형식 변경",
+        "지원-표시 형식 변경",
+        "발동-전투 시",
+        "효과-파괴",
+        "파괴-몬스터"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "고대의 숲",
+        "Ancient Forest"
+      ],
+      "effectStringsKorean": [
+        "배틀 페이즈 종료시에 공격한 몬스터를 전부 파괴",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 545,
+      "level": 4,
+      "attribute": 4,
+      "race": 512,
+      "attack": 1200,
+      "defense": 0,
+      "sourceId": 3499,
+      "code": 38538445,
+      "name": "불사조",
+      "nameEnglish": "Fushi No Tori",
+      "description": "이 카드는 특수 소환할 수 없다.\n이 카드가 상대에게 전투 데미지를 주었을 때에 발동한다. 자신은 그 전투 데미지와 같은 수치만큼 LP를 회복한다.\n이 카드를 일반 소환하거나 리버스한 턴의 엔드 페이즈에 발동한다. 이 카드를 주인의 패로 되돌린다.",
+      "officialDescription": "Cannot be Special Summoned. When it inflicts battle damage on the opponent, gain LP equal to that damage. Return this card to its owner’s hand during the End Phase of the turn it was Normal Summoned or flipped face-up.",
+      "rarity": "N",
+      "artKey": "Cards216/3499",
+      "typeName": "스피릿 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2531,
+      "internal_id": 3499,
+      "identity_key": "3d3a714b30822c26318ce094bdb8540752bda74399aff54c999ed44c37b03f9d",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c38538445.lua",
+      "nativeLuaSha256": "6f9edf28fb8f25fdc011021dc2f059948df8141eb1be4984db1e2c772d4d2922",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-스피릿",
+      "categories": [
+        "지원-스피릿",
+        "발동-피해 발생 시",
+        "효과-회복",
+        "발동-소환 시",
+        "발동-리버스",
+        "발동-엔드 페이즈 시",
+        "효과-바운스",
+        "소환제약"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "불사조",
+        "Fushi No Tori"
+      ],
+      "effectStringsKorean": [
+        "상대에게 준 전투 데미지만큼 LP 회복",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 545,
+      "level": 4,
+      "attribute": 4,
+      "race": 4,
+      "attack": 1500,
+      "defense": 1900,
+      "sourceId": 3500,
+      "code": 43378076,
+      "name": "나찰",
+      "nameEnglish": "Rasetsu",
+      "description": "이 카드는 특수 소환할 수 없다.\n이 카드를 일반 소환하거나 리버스했을 때, 패에서 \"나찰\" 이외의 스피릿 몬스터 1장을 상대에게 보여주고 상대 필드의 앞면 공격 표시 몬스터 1장을 대상으로 하여 발동할 수 있다. 그 몬스터를 주인의 패로 되돌린다. 이 효과를 발동하는 턴에, 자신은 몬스터를 특수 소환할 수 없다.\n이 카드를 일반 소환하거나 리버스한 턴의 엔드 페이즈에 발동한다. 이 카드를 주인의 패로 되돌린다.",
+      "officialDescription": "Cannot be Special Summoned. On its Normal Summon or when flipped face-up, you may reveal a different Spirit monster in your hand and target one opposing face-up Attack Position monster to return it to its owner’s hand. You cannot Special Summon during the turn you activate this effect. During the End Phase of the turn this card was Normal Summoned or flipped face-up, return it to its owner’s hand.",
+      "rarity": "SR",
+      "artKey": "Cards216/3500",
+      "typeName": "스피릿 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2532,
+      "internal_id": 3500,
+      "identity_key": "4adffb2376af33ce2fa7ceac4fff04e08ebc67669a8c6f905ed4be3764c851cd",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c43378076.lua",
+      "nativeLuaSha256": "04660f408f6fd20c2316986ffb01b8826db8d381cd10bf1abda860c669e1f43a",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-스피릿",
+      "categories": [
+        "지원-스피릿",
+        "발동-소환 시",
+        "발동-리버스",
+        "발동-패 공개",
+        "발동-엔드 페이즈 시",
+        "효과-바운스",
+        "소환제약"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "나찰",
+        "Rasetsu"
+      ],
+      "effectStringsKorean": [
+        "패의 다른 스피릿을 공개하고 상대 공격 표시 몬스터를 패로 되돌리기",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 33,
+      "level": 3,
+      "attribute": 32,
+      "race": 1,
+      "attack": 1300,
+      "defense": 800,
+      "sourceId": 3501,
+      "code": 22609617,
+      "name": "기습 공격 마타자",
+      "nameEnglish": "Mataza the Zapper",
+      "description": "이 카드는 1번의 배틀 페이즈에 2회 공격할 수 있다.\n이 카드가 몬스터 존에 앞면 표시로 존재하는 동안, 이 카드의 컨트롤은 변경되지 않는다.",
+      "officialDescription": "This card can attack twice in each Battle Phase. Control of this face-up card in a Monster Zone cannot change.",
+      "rarity": "R",
+      "artKey": "Cards216/3501",
+      "typeName": "효과 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2533,
+      "internal_id": 3501,
+      "identity_key": "0157819dd578cd23b2068e2e03c45504c8477524ff892718d9ece7cd186e2eb3",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c22609617.lua",
+      "nativeLuaSha256": "657c45658210b8e5db6ff2cb758bfd4fa52b201174e42e10376e0afaba1a0ba1",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-전투",
+      "categories": [
+        "지원-전투",
+        "효과-추가공격",
+        "보호-컨트롤 변경"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "기습 공격 마타자",
+        "Mataza the Zapper"
+      ],
+      "effectStringsKorean": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 2,
+      "level": 0,
+      "attribute": 0,
+      "race": 0,
+      "attack": 0,
+      "defense": 0,
+      "sourceId": 3502,
+      "code": 674561,
+      "name": "다크 버스트",
+      "nameEnglish": "Dark Eruption",
+      "description": "①: 자신 묘지의 공격력 1500 이하인 어둠 속성 몬스터 1장을 대상으로 하여 발동할 수 있다. 그 몬스터를 패에 넣는다.",
+      "officialDescription": "Target one DARK monster in your GY with 1500 or less ATK and add it to your hand.",
+      "rarity": "R",
+      "artKey": "Cards216/3502",
+      "typeName": "일반 마법",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2534,
+      "internal_id": 3502,
+      "identity_key": "e3a8ea9459d50161616f598dca46aa22f24bdae3a8e2c27cd407c74e6d8e8083",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c674561.lua",
+      "nativeLuaSha256": "ebf8be69e1ff422f3ccf61d3610034cf0c8de18aefd221782a05dd73dbf1ddc1",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-어둠 속성",
+      "categories": [
+        "지원-어둠 속성",
+        "효과-묘지샐비지"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "다크 버스트",
+        "Dark Eruption"
+      ],
+      "effectStringsKorean": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 33,
+      "level": 3,
+      "attribute": 32,
+      "race": 512,
+      "attack": 700,
+      "defense": 1700,
+      "sourceId": 3503,
+      "code": 3510565,
+      "name": "스텔스 버드",
+      "nameEnglish": "Stealth Bird",
+      "description": "1턴에 1번, 이 카드를 뒷면 수비 표시로 할 수 있다.\n이 카드의 반전 소환에 성공했을 때에 발동한다. 상대에게 1000 데미지를 준다.",
+      "officialDescription": "Once per turn, you can turn this card to face-down Defense Position. On its Flip Summon, inflict 1000 damage to the opponent.",
+      "rarity": "R",
+      "artKey": "Cards216/3503",
+      "typeName": "효과 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2535,
+      "internal_id": 3503,
+      "identity_key": "3941d855564ecc00656f04f6334312654ff9ae60f50c23e45b372a933cd9d72a",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c3510565.lua",
+      "nativeLuaSha256": "44002c72060c0db31ade2d40ec2348c2186517a0ab4603b5335df9e36a5c8208",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "효과-사이클 리버스",
+      "categories": [
+        "효과-사이클 리버스",
+        "효과-뒷면표시",
+        "효과-표시 형식 변경",
+        "발동-반전 소환 시",
+        "효과-데미지"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "스텔스 버드",
+        "Stealth Bird"
+      ],
+      "effectStringsKorean": [
+        "이 카드를 뒷면 수비 표시로 변경",
+        "상대에게 1000 데미지",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 17,
+      "level": 4,
+      "attribute": 32,
+      "race": 8388608,
+      "attack": 2000,
+      "defense": 0,
+      "sourceId": 3504,
+      "code": 18108166,
+      "name": "환각룡",
+      "nameEnglish": "Mystery Shell Dragon",
+      "description": "다른 차원에서 불현듯 나타난 정체불명의 생명체. 강력한 공격과 기습에 능하며, 공격받은 대상을 신경 마비와 극심한 환각에 빠뜨린다.",
+      "officialDescription": "A mysterious being from another dimension. Its sudden attacks paralyze its victims and produce intense hallucinations.",
+      "rarity": "R",
+      "artKey": "Cards216/3504",
+      "typeName": "일반 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2536,
+      "internal_id": 3504,
+      "identity_key": "37a69ba8e9b8a7291260ccd6a423472a370ae7ba4e6f51072654841b3d291713",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": null,
+      "nativeLuaSha256": null,
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-일반몬스터",
+      "categories": [
+        "지원-일반몬스터"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "환각룡",
+        "Mystery Shell Dragon"
+      ],
+      "effectStringsKorean": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 33,
+      "level": 4,
+      "attribute": 32,
+      "race": 1024,
+      "attack": 1900,
+      "defense": 0,
+      "sourceId": 3505,
+      "code": 44928016,
+      "name": "당근인",
+      "nameEnglish": "World Carrotweight Champion",
+      "description": "이 카드명의 효과는 1턴에 1번밖에 사용할 수 없다.\n①: 이 카드가 묘지에 존재할 경우, 자신의 패 또는 자신 필드의 앞면 표시 몬스터 중에서 \"당근인\" 이외의 식물족 몬스터 1장을 묘지로 보내고 발동할 수 있다. 묘지의 이 카드를 특수 소환한다.",
+      "officialDescription": "Once per turn per name, while this card is in your GY, send one other Plant monster from your hand or face-up field to the GY as cost to Special Summon this card from your GY.",
+      "rarity": "SR",
+      "artKey": "Cards216/3505",
+      "typeName": "효과 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2537,
+      "internal_id": 3505,
+      "identity_key": "c8bdd73ebb44c9301bd0c38b04008815c81c4dcc429b07f4788c4f341b7c3f69",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c44928016.lua",
+      "nativeLuaSha256": "b83240c1575a27db4bf77894099cc41b59856a27b0da2405e745f796e8cbd7f1",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-식물족",
+      "categories": [
+        "지원-식물족",
+        "발동-묘지에서",
+        "발동-묘지로 보내기",
+        "소환-묘지"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "당근인",
+        "World Carrotweight Champion"
+      ],
+      "effectStringsKorean": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 4129,
+      "level": 3,
+      "attribute": 4,
+      "race": 32768,
+      "attack": 500,
+      "defense": 200,
+      "sourceId": 3506,
+      "code": 1662004,
+      "name": "염성사－초우텐",
+      "nameEnglish": "Brotherhood of the Fire Fist - Spirit",
+      "description": "이 카드명의 효과는 1턴에 1번만 사용할 수 있다. 이 카드는 야수전사족 몬스터의 싱크로 소환에만 싱크로 소재로 사용할 수 있다.\n①: 일반 소환에 성공했을 때, 자신의 묘지에서 수비력이 200 이하인 레벨 3 화염 속성 몬스터 1장을 대상으로 발동할 수 있다. 그 몬스터를 수비 표시로 특수 소환한다. 특수 소환에 성공했다면, 턴 종료시까지 자신의 야수전사족 이외의 몬스터는 공격할 수 없다.",
+      "officialDescription": "Only a Beast-Warrior Synchro may use this as material. After its Normal Summon, target and revive a Level 3 FIRE monster in Defense Position from your GY if it has at most 200 DEF. After a successful revival, only your Beast-Warriors can attack that turn. This effect is once per turn by name.",
+      "rarity": "SR",
+      "artKey": "Cards216/3506",
+      "typeName": "튜너 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2538,
+      "internal_id": 3506,
+      "identity_key": "1b6f814bf535ae547f22b9d0e8957962bc1065c2f25f3e3df57f92be9f95ed5c",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c1662004.lua",
+      "nativeLuaSha256": "f36f0207aefdd2636edb02076aa42d2c615db9be4b67596eb9c1fea254ca8b39",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염성",
+      "categories": [
+        "지원-염성",
+        "지원-야수전사족",
+        "지원-화염 속성",
+        "지원-싱크로",
+        "발동-소환 시",
+        "소환-묘지",
+        "소환제약",
+        "효과-공격 제한"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "염성사－초우텐",
+        "Brotherhood of the Fire Fist - Spirit"
+      ],
+      "effectStringsKorean": [
+        "수비력 200 이하의 레벨 3 화염 속성을 묘지에서 특수 소환",
+        "이 턴 야수전사족만 공격 가능",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 33,
+      "level": 5,
+      "attribute": 4,
+      "race": 32768,
+      "attack": 2000,
+      "defense": 800,
+      "sourceId": 3507,
+      "code": 2521011,
+      "name": "위염성－히엔샤크",
+      "nameEnglish": "Brotherhood of the Fire Fist - Swallow",
+      "description": "자신 필드의 앞면 표시 \"염무\" 마법 / 함정 카드 3장을 묘지로 보내고 이 카드를 패에서 특수 소환할 수 있다.\n일반 소환 / 특수 소환에 성공했을 때, 덱에서 \"염무\" 함정 카드 1장을 골라 자신 필드에 세트할 수 있다. 이 카드명의 이 효과는 1턴에 1번만 사용할 수 있다.\n이 카드가 몬스터 존에 앞면 표시로 존재하는 동안, 상대는 자신 필드의 앞면 표시 야수전사족 몬스터를 카드 효과의 대상으로 할 수 없다.",
+      "officialDescription": "Send three of your face-up Fire Formation Spells or Traps to the GY to Special Summon this card from hand. On a Normal or Special Summon, optionally Set one Fire Formation Trap from the Deck, once per turn by name. While this is face-up in your Monster Zone, opposing card effects cannot target your face-up Beast-Warriors.",
+      "rarity": "R",
+      "artKey": "Cards216/3507",
+      "typeName": "효과 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2539,
+      "internal_id": 3507,
+      "identity_key": "40b5b7d722f7966ac7e63f45892b37c80c7475bfb7b96331fa656d89aeb0fbaf",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c2521011.lua",
+      "nativeLuaSha256": "33b0dac3b7bd15c89d7e4d005f3d0e2c8c68f4d089209167ed8cfed2c70054e6",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염성",
+      "categories": [
+        "지원-염성",
+        "지원-염무",
+        "지원-야수전사족",
+        "소환-패에서",
+        "소환-묘지로 보내기",
+        "발동-소환 시",
+        "효과-덱에서 세트",
+        "보호-효과 대상"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "위염성－히엔샤크",
+        "Brotherhood of the Fire Fist - Swallow"
+      ],
+      "effectStringsKorean": [
+        "덱의 염무 함정 1장을 세트",
+        "카드 드로우",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 4,
+      "level": 0,
+      "attribute": 0,
+      "race": 0,
+      "attack": 0,
+      "defense": 0,
+      "sourceId": 3508,
+      "code": 6713443,
+      "name": "극염무－「성두」",
+      "nameEnglish": "Ultimate Fire Formation - Seito",
+      "description": "자신의 묘지에서 \"염무\" 마법 / 함정 카드 7장을 제외하고 발동할 수 있다. 그 묘지에서 \"염성\" 몬스터를 가능한 만큼 특수 소환한다. 그 후, 이번 효과로 특수 소환한 몬스터의 수까지 덱에서 \"극염무－「성두」\" 이외의 \"염무\" 마법 / 함정 카드를 골라 자신 필드에 세트할 수 있다.",
+      "officialDescription": "Banish seven Fire Formation Spells or Traps from your GY to revive as many Fire Fist monsters from your GY as possible. You may then Set that many or fewer other Fire Formation Spells or Traps from your Deck, excluding Seito.",
+      "rarity": "SR",
+      "artKey": "Cards216/3508",
+      "typeName": "일반 함정",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2540,
+      "internal_id": 3508,
+      "identity_key": "6e8e9dbdd1ea42af9f3f15aa6c0d40d89bffefb2e5d975d0ab0090f2217f76a3",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c6713443.lua",
+      "nativeLuaSha256": "47b40dd39d95eafff43e207b1f77d608a87373da46a2ce176b818bae495ecb5b",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염무",
+      "categories": [
+        "지원-염무",
+        "지원-염성",
+        "발동-제외",
+        "소환-묘지",
+        "효과-덱에서 세트"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "극염무－「성두」",
+        "Ultimate Fire Formation - Seito"
+      ],
+      "effectStringsKorean": [
+        "특수 소환한 수까지 덱의 염무 마법·함정 세트",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 131074,
+      "level": 0,
+      "attribute": 0,
+      "race": 0,
+      "attack": 0,
+      "defense": 0,
+      "sourceId": 3509,
+      "code": 10719350,
+      "name": "염무－「천추」",
+      "nameEnglish": "Fire Formation - Tensu",
+      "description": "이 카드가 마법 & 함정 존에 앞면 표시로 존재하는 동안, 자신 메인 페이즈에 통상 소환 외에 야수전사족 몬스터 1장을 더 일반 소환할 수 있다. 이 효과로 얻는 추가 일반 소환은 1턴에 1번이다.\n이 카드가 마법 & 함정 존에 앞면 표시로 존재하는 동안, 자신 필드의 야수전사족 몬스터의 공격력은 100 올린다.",
+      "officialDescription": "While face-up, this Spell gives you one extra Normal Summon of a Beast-Warrior during your Main Phase each turn. Your Beast-Warriors also gain 100 ATK for as long as it remains active.",
+      "rarity": "SR",
+      "artKey": "Cards216/3509",
+      "typeName": "지속 마법",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2541,
+      "internal_id": 3509,
+      "identity_key": "e70e5fa9202828bf383f3b4776bd7ab33d3ceca9ba6ca6d85cd4a7947be8d473",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c10719350.lua",
+      "nativeLuaSha256": "5d761e41b2340e183b88f8396fbe956b81870d4d2637a89636377ce6969cc860",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염무",
+      "categories": [
+        "지원-염무",
+        "지원-야수전사족",
+        "소환-추가 일반 소환",
+        "효과-공격력 상승"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "염무－「천추」",
+        "Fire Formation - Tensu"
+      ],
+      "effectStringsKorean": [
+        "야수전사족 몬스터를 추가로 일반 소환",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 33,
+      "level": 3,
+      "attribute": 4,
+      "race": 32768,
+      "attack": 200,
+      "defense": 1500,
+      "sourceId": 3510,
+      "code": 17475251,
+      "name": "영염성－호크에이",
+      "nameEnglish": "Brotherhood of the Fire Fist - Hawk",
+      "description": "자신이 컨트롤하던 이 카드가 상대 몬스터와의 전투 또는 상대 카드의 효과로 파괴되었을 경우 발동할 수 있다. 덱에서 \"염무\" 마법 카드 1장을 골라 자신 필드에 세트한다.\n자신 필드에 앞면 표시 \"염무\" 마법 / 함정 카드가 존재하는 동안, 자신 필드의 \"염성\" 몬스터의 공격력과 수비력은 각각 500 올린다.",
+      "officialDescription": "If an opponent destroys this card while you own and control it, you may Set a Fire Formation Spell from Deck. A face-up Fire Formation Spell or Trap you control grants all your Fire Fist monsters 500 ATK and DEF through this card.",
+      "rarity": "R",
+      "artKey": "Cards216/3510",
+      "typeName": "효과 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2542,
+      "internal_id": 3510,
+      "identity_key": "d3a8defc93a03279538de3ff91767a1dedd0d633f55e7865434d893b50c7ee79",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c17475251.lua",
+      "nativeLuaSha256": "ae4e78d1bf6ff158ef53c2fe19e3c76acedce78edbb8f5e8a2f25c3eee5a3ed6",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염성",
+      "categories": [
+        "지원-염성",
+        "지원-염무",
+        "발동-파괴 시",
+        "효과-덱에서 세트",
+        "효과-공격력 상승",
+        "효과-수비력 상승"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "영염성－호크에이",
+        "Brotherhood of the Fire Fist - Hawk"
+      ],
+      "effectStringsKorean": [
+        "덱의 염무 마법 1장을 세트",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 131074,
+      "level": 0,
+      "attribute": 0,
+      "race": 0,
+      "attack": 0,
+      "defense": 0,
+      "sourceId": 3511,
+      "code": 19059929,
+      "name": "염무－「옥충」",
+      "nameEnglish": "Fire Formation - Gyokkou",
+      "description": "상대 필드의 세트된 마법 / 함정 카드 1장을 대상으로 발동한다. 상대는 이 카드의 발동에 체인하여 그 카드를 발동할 수 없다. 이 카드가 마법 & 함정 존에 앞면 표시로 존재하는 동안에도 대상 카드를 발동할 수 없다.\n이 카드가 마법 & 함정 존에 앞면 표시로 존재하는 동안, 자신 필드의 야수전사족 몬스터의 공격력은 100 올린다.",
+      "officialDescription": "Target one opposing Set Spell or Trap at activation. The targeted card cannot respond to this activation or activate while this Spell remains face-up. Your Beast-Warriors gain 100 ATK while it stays face-up.",
+      "rarity": "SR",
+      "artKey": "Cards216/3511",
+      "typeName": "지속 마법",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2543,
+      "internal_id": 3511,
+      "identity_key": "74def1917c7239b06e0ac033d1d1938b49048df96720443228dcc29e5bf78485",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c19059929.lua",
+      "nativeLuaSha256": "2951dbd3a529eeeb719db6ce2d7d74530346eab9534916bf4aeb11d276c28eb5",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염무",
+      "categories": [
+        "지원-염무",
+        "지원-야수전사족",
+        "효과-발동 제한",
+        "효과-공격력 상승"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "염무－「옥충」",
+        "Fire Formation - Gyokkou"
+      ],
+      "effectStringsKorean": [
+        "발동을 막을 상대의 세트 마법·함정을 선택",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 131074,
+      "level": 0,
+      "attribute": 0,
+      "race": 0,
+      "attack": 0,
+      "defense": 0,
+      "sourceId": 3512,
+      "code": 29143457,
+      "name": "염무－「은원」",
+      "nameEnglish": "Fire Formation - Ingen",
+      "description": "이 카드명의 카드는 1턴에 1장만 발동할 수 있으며, ②의 효과는 1턴에 1번만 사용할 수 있다.\n①: 이 카드의 발동을 처리할 때, 자신의 패 / 필드에서 야수전사족 융합 몬스터 카드에 지정된 소재를 묘지로 보내고, 그 몬스터 1장을 엑스트라 덱에서 융합 소환할 수 있다.\n②: 이 카드가 마법 & 함정 존에서 앞면 표시인 채로 묘지로 보내졌을 경우, 자신의 묘지의 \"염성\" 몬스터 1장을 대상으로 발동할 수 있다. 그 몬스터를 패에 넣는다.",
+      "officialDescription": "On resolving the card activation, you may use the required materials from hand or field to Fusion Summon a Beast-Warrior from your Extra Deck. If this face-up Spell is sent from the Spell & Trap Zone to the GY, you may target a Fire Fist there and add it to hand. The activation and the recovery are each limited by name per turn.",
+      "rarity": "SR",
+      "artKey": "Cards216/3512",
+      "typeName": "지속 마법",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2544,
+      "internal_id": 3512,
+      "identity_key": "ab0a501e7ca07e60fdd6bce5d7be7acca45ac128628588822fc5c1b7ff6f67bc",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c29143457.lua",
+      "nativeLuaSha256": "e026ba6c1ed604d000a280dffb98cc9b93078215344a550eb029f1d07c4e45a9",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염무",
+      "categories": [
+        "지원-염무",
+        "지원-염성",
+        "지원-야수전사족",
+        "지원-융합",
+        "소환-엑스트라 덱에서",
+        "발동-묘지로 보내졌을 때",
+        "발동-필드에서 묘지로 보내졌을 때",
+        "효과-묘지샐비지"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "염무－「은원」",
+        "Fire Formation - Ingen"
+      ],
+      "effectStringsKorean": [
+        "패·필드의 소재로 야수전사족 융합 소환",
+        "묘지의 염성 몬스터 1장을 패에 넣기",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 33,
+      "level": 3,
+      "attribute": 4,
+      "race": 32768,
+      "attack": 1500,
+      "defense": 100,
+      "sourceId": 3513,
+      "code": 30929786,
+      "name": "입염성－토우케이",
+      "nameEnglish": "Brotherhood of the Fire Fist - Rooster",
+      "description": "이 카드명의 ①의 효과는 1턴에 1번만 사용할 수 있다.\n①: \"염성\" 몬스터의 효과로 특수 소환에 성공했을 때 발동할 수 있다. 덱에서 \"염성\" 몬스터 1장을 패에 넣는다.\n②: 1턴에 1번, 자신 필드의 앞면 표시 \"염무\" 마법 / 함정 카드 1장을 묘지로 보내고 발동할 수 있다. 덱에서 \"염무\" 마법 / 함정 카드 1장을 골라 자신 필드에 세트한다.",
+      "officialDescription": "You may search a Fire Fist monster when a Fire Fist monster effect Special Summons this card, once per turn by name. Once per turn, you may send a face-up Fire Formation Spell or Trap you control to the GY and Set a Fire Formation Spell or Trap directly from Deck.",
+      "rarity": "SR",
+      "artKey": "Cards216/3513",
+      "typeName": "효과 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2545,
+      "internal_id": 3513,
+      "identity_key": "2c2a4578f5edfd830854d7270a54671d51225e14dd67047e87a4d06753ac02c9",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c30929786.lua",
+      "nativeLuaSha256": "6df1992d9b2aecf8db24187fff0d764734ff34f441bd4942e3db793f278cba3b",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염성",
+      "categories": [
+        "지원-염성",
+        "지원-염무",
+        "발동-소환 시",
+        "효과-덱샐비지",
+        "발동-묘지로 보내기",
+        "효과-덱에서 세트"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "입염성－토우케이",
+        "Brotherhood of the Fire Fist - Rooster"
+      ],
+      "effectStringsKorean": [
+        "덱의 염성 몬스터 1장을 패에 넣기",
+        "염무 1장을 묘지로 보내 덱의 염무를 세트",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 33,
+      "level": 5,
+      "attribute": 4,
+      "race": 32768,
+      "attack": 2100,
+      "defense": 400,
+      "sourceId": 3514,
+      "code": 35488287,
+      "name": "수염성－리순마오",
+      "nameEnglish": "Brotherhood of the Fire Fist - Panda",
+      "description": "이 카드명의 ①과 ②의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 자신이 \"염무\" 마법 / 함정 카드를 발동했을 경우에 발동할 수 있다. 데미지 스텝에는 발동할 수 없다. 이 카드를 패에서 특수 소환한다. 그 후, 자신의 묘지에서 \"수염성－리순마오\" 이외의 \"염성\" 몬스터 1장을 골라 특수 소환할 수 있다. 이 효과를 발동한 뒤 턴 종료시까지, 자신은 \"염성\" 몬스터만 특수 소환할 수 있다.\n②: 자신 필드의 \"염성\" 몬스터가 상대 효과로 파괴될 경우, 대신 자신 필드의 앞면 표시 \"염무\" 마법 / 함정 카드 1장을 묘지로 보낼 수 있다.",
+      "officialDescription": "Outside the Damage Step, activation of your Fire Formation lets this monster Special Summon itself from hand, with optional revival of a different Fire Fist. After activation, only Fire Fists may be Special Summoned by you that turn. Once per turn each by name, this also permits sending one face-up Fire Formation instead when opposing effects would destroy your Fire Fist monsters.",
+      "rarity": "SR",
+      "artKey": "Cards216/3514",
+      "typeName": "효과 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2546,
+      "internal_id": 3514,
+      "identity_key": "8deaa5d6d574edfd17937f600964558ceb5a1a25a56637bc103b7ab35f0d41c0",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c35488287.lua",
+      "nativeLuaSha256": "81b110d4ba78c7ee498e3955d6396f81d32f9de9c11d364fadd4caf19593dcfb",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염성",
+      "categories": [
+        "지원-염성",
+        "지원-염무",
+        "발동-마법 발동 시",
+        "발동-함정 발동 시",
+        "발동-패에서",
+        "소환-패에서",
+        "소환-묘지",
+        "소환제약",
+        "보호-파괴 대체",
+        "효과-묘지로 보내기"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "수염성－리순마오",
+        "Brotherhood of the Fire Fist - Panda"
+      ],
+      "effectStringsKorean": [
+        "패에서 리순마오를 특수 소환",
+        "이 턴 염성 몬스터만 특수 소환 가능",
+        "묘지에서 다른 염성 몬스터를 특수 소환",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 33,
+      "level": 3,
+      "attribute": 4,
+      "race": 32768,
+      "attack": 0,
+      "defense": 200,
+      "sourceId": 3515,
+      "code": 39699564,
+      "name": "속염성－타이효",
+      "nameEnglish": "Brotherhood of the Fire Fist - Leopard",
+      "description": "이 카드명의 효과는 1턴에 1번만 사용할 수 있다.\n①: 이 카드가 일반 소환 / 특수 소환에 성공한 턴의 자신 메인 페이즈에, 자신 필드의 \"염성\" 몬스터 1장을 릴리스하고 발동할 수 있다. 덱에서 \"염무\" 마법 / 함정 카드 1장을 골라 자신 필드에 세트한다.",
+      "officialDescription": "During your Main Phase on the turn this monster was Normal or Special Summoned, Tribute a Fire Fist you control to Set one Fire Formation Spell or Trap from your Deck. Use this effect only once per turn by name.",
+      "rarity": "R",
+      "artKey": "Cards216/3515",
+      "typeName": "효과 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2547,
+      "internal_id": 3515,
+      "identity_key": "9d22d3fa938b23405276c34c411197bc8235df5a0e731473a06ca4f9622f2b96",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c39699564.lua",
+      "nativeLuaSha256": "0a39d2a17ffb0955eb0685d3ecde4b9a716e2fac0a42501adb05bef91ee521e9",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염성",
+      "categories": [
+        "지원-염성",
+        "지원-염무",
+        "발동-릴리즈",
+        "효과-덱에서 세트"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "속염성－타이효",
+        "Brotherhood of the Fire Fist - Leopard"
+      ],
+      "effectStringsKorean": [
+        "염성 1장을 릴리스하고 덱의 염무를 세트",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 33,
+      "level": 4,
+      "attribute": 4,
+      "race": 32768,
+      "attack": 1800,
+      "defense": 400,
+      "sourceId": 3516,
+      "code": 43748308,
+      "name": "미염성－류우시신",
+      "nameEnglish": "Brotherhood of the Fire Fist - Dragon",
+      "description": "1턴에 1번, 자신이 \"염무\" 마법 / 함정 카드를 발동했을 경우, 덱에서 \"염무\" 함정 카드 1장을 골라 자신 필드에 세트할 수 있다. 데미지 스텝에는 발동할 수 없다.\n1턴에 1번, 자신 필드의 앞면 표시 \"염무\" 마법 / 함정 카드 2장을 묘지로 보내고, 자신의 묘지의 \"미염성－류우시신\" 이외의 \"염성\" 몬스터 1장을 대상으로 발동할 수 있다. 그 몬스터를 특수 소환한다.",
+      "officialDescription": "Once per turn, activating your Fire Formation outside the Damage Step can Set a Fire Formation Trap from Deck. Separately, once per turn, send two face-up Fire Formations you control to the GY to target and revive one other Fire Fist monster from your GY.",
+      "rarity": "SR",
+      "artKey": "Cards216/3516",
+      "typeName": "효과 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2548,
+      "internal_id": 3516,
+      "identity_key": "43462d37a3317acbac58bb29ac8c118793dab00e1d067840cc8c7ed68f1d4126",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c43748308.lua",
+      "nativeLuaSha256": "f60cc67bd9de7148a532c01e7643436f5795bb1631d88023f96bfe720c8ded8d",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염성",
+      "categories": [
+        "지원-염성",
+        "지원-염무",
+        "발동-마법 발동 시",
+        "발동-함정 발동 시",
+        "효과-덱에서 세트",
+        "발동-묘지로 보내기",
+        "소환-묘지"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "미염성－류우시신",
+        "Brotherhood of the Fire Fist - Dragon"
+      ],
+      "effectStringsKorean": [
+        "덱의 염무 함정을 세트",
+        "염무 2장을 묘지로 보내 다른 염성을 특수 소환",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 33,
+      "level": 3,
+      "attribute": 4,
+      "race": 32768,
+      "attack": 200,
+      "defense": 1800,
+      "sourceId": 3517,
+      "code": 44860890,
+      "name": "첩염성－세이븐",
+      "nameEnglish": "Brotherhood of the Fire Fist - Raven",
+      "description": "이 카드가 필드에서 묘지로 보내졌을 경우 발동할 수 있다. 덱에서 \"염무\" 마법 카드 1장을 골라 자신 필드에 세트한다.\n이 카드가 몬스터 존에 앞면 표시로 존재하는 동안, 자신 필드의 \"염무\" 마법 / 함정 카드는 상대 효과로 파괴되지 않는다.",
+      "officialDescription": "Sending this card from the field to the GY lets you Set a Fire Formation Spell from your Deck. While it is face-up in your Monster Zone, opposing card effects cannot destroy your Fire Formation Spells or Traps.",
+      "rarity": "R",
+      "artKey": "Cards216/3517",
+      "typeName": "효과 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2549,
+      "internal_id": 3517,
+      "identity_key": "224e7633ba601398d78eade33921a2fdbcd6df6667215850c45daa6357a3023f",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c44860890.lua",
+      "nativeLuaSha256": "85a695a653212d2d78858f7be3ec3126f5b50186ba954f98f46cc20e0d244889",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염성",
+      "categories": [
+        "지원-염성",
+        "지원-염무",
+        "발동-묘지로 보내졌을 때",
+        "발동-필드에서 묘지로 보내졌을 때",
+        "효과-덱에서 세트",
+        "보호-효과 파괴"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "첩염성－세이븐",
+        "Brotherhood of the Fire Fist - Raven"
+      ],
+      "effectStringsKorean": [
+        "덱의 염무 마법 1장을 세트",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 131076,
+      "level": 0,
+      "attribute": 0,
+      "race": 0,
+      "attack": 0,
+      "defense": 0,
+      "sourceId": 3518,
+      "code": 44920699,
+      "name": "염무－「천선」",
+      "nameEnglish": "Fire Formation - Tensen",
+      "description": "이 카드의 발동시에 자신 필드의 야수전사족 몬스터 1장을 대상으로 한다. 그 몬스터의 공격력은 턴 종료시까지 700 올린다. 이 효과의 처리 후 이 카드가 필드에서 벗어나도 그 상승은 유지된다.\n이 카드가 마법 & 함정 존에 앞면 표시로 존재하는 동안, 자신 필드의 야수전사족 몬스터의 공격력은 300 올린다.",
+      "officialDescription": "Target one of your Beast-Warriors on activation to grant it 700 ATK through the end of the turn, even if this Trap later leaves the field. While this Trap remains face-up, all your Beast-Warriors gain another 300 ATK.",
+      "rarity": "R",
+      "artKey": "Cards216/3518",
+      "typeName": "지속 함정",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2550,
+      "internal_id": 3518,
+      "identity_key": "5ecf3a1371e47d2fa61c04ca78480a46eb5b646a97dd456501628fabd342cd40",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c44920699.lua",
+      "nativeLuaSha256": "207b00cdfcb17a6722d32e9026ec230e666cdb0665a397b0a124d6ab704403c6",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염무",
+      "categories": [
+        "지원-염무",
+        "지원-야수전사족",
+        "효과-공격력 상승"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "염무－「천선」",
+        "Fire Formation - Tensen"
+      ],
+      "effectStringsKorean": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 33,
+      "level": 5,
+      "attribute": 4,
+      "race": 32768,
+      "attack": 2000,
+      "defense": 500,
+      "sourceId": 3519,
+      "code": 49785720,
+      "name": "기염성－고요우테",
+      "nameEnglish": "Brotherhood of the Fire Fist - Coyote",
+      "description": "자신 필드에 앞면 표시 \"염무\" 마법 / 함정 카드가 존재하고 자신 필드에 몬스터가 없을 경우, 이 카드를 패에서 특수 소환할 수 있다.",
+      "officialDescription": "You can Special Summon this card from hand if you control a face-up Fire Formation Spell or Trap and no monsters.",
+      "rarity": "R",
+      "artKey": "Cards216/3519",
+      "typeName": "효과 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2551,
+      "internal_id": 3519,
+      "identity_key": "3b218fa42bf4b5ba1ea3a0543ed35fbe05680ad76e04343cdd268f45c7b6b555",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c49785720.lua",
+      "nativeLuaSha256": "8da94caed73dc5aa13f7a51792952ed477cac2665ebbd78a277fb001d1cd5da0",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염성",
+      "categories": [
+        "지원-염성",
+        "지원-염무",
+        "소환-패에서"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "기염성－고요우테",
+        "Brotherhood of the Fire Fist - Coyote"
+      ],
+      "effectStringsKorean": [
+        "패에서 이 카드를 특수 소환",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 1048580,
+      "level": 0,
+      "attribute": 0,
+      "race": 0,
+      "attack": 0,
+      "defense": 0,
+      "sourceId": 3520,
+      "code": 55538156,
+      "name": "극염무－「진두」",
+      "nameEnglish": "Ultimate Fire Formation - Sinto",
+      "description": "이 카드명은 1턴에 1장만 발동할 수 있다.\n①: 자신 필드에 \"염성\" 몬스터와 \"염무\" 마법 / 함정 카드가 모두 존재하는 상태에서 마법 / 함정 카드가 발동했을 때에 발동할 수 있다. 그 발동을 무효로 하고, 무효로 했을 경우 그 카드를 파괴한다.",
+      "officialDescription": "While you control a Fire Fist monster and a Fire Formation Spell or Trap, respond to a Spell or Trap Card activation by negating it and then destroying that card if negated. Only one Sinto may be activated per turn.",
+      "rarity": "SR",
+      "artKey": "Cards216/3520",
+      "typeName": "카운터 함정",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2552,
+      "internal_id": 3520,
+      "identity_key": "b2aa69c920de93e84fabe5c3ac135d6286172337b9306e36eff4ca5e5acec61f",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c55538156.lua",
+      "nativeLuaSha256": "7a54f61ae4c12615b191d88e141d147159487e69115524d5056e9fa25e9e04ef",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염무",
+      "categories": [
+        "지원-염무",
+        "지원-염성",
+        "발동-마법 발동 시",
+        "발동-함정 발동 시",
+        "무효-마법",
+        "무효-함정",
+        "효과-파괴"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "극염무－「진두」",
+        "Ultimate Fire Formation - Sinto"
+      ],
+      "effectStringsKorean": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 161,
+      "level": 6,
+      "attribute": 4,
+      "race": 32768,
+      "attack": 2400,
+      "defense": 2000,
+      "sourceId": 3521,
+      "code": 61472381,
+      "name": "교염성－에란세이",
+      "nameEnglish": "Brotherhood of the Fire Fist - Eland",
+      "description": "\"염무－「동명」\"에 의해 의식 소환할 수 있다. 이 카드명의 ①과 ②의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 패에서 몬스터 1장을 버리고 발동할 수 있다. 자신의 덱 / 묘지에서 \"염무\" 마법 / 함정 카드 1장을 골라 자신 필드에 세트한다.\n②: 상대가 몬스터 효과를 발동했을 때, 자신 필드의 앞면 표시 카드 중 \"교염성－에란세이\" 이외의 \"염성\" 카드 또는 \"염무\" 카드 1장을 묘지로 보내고 발동할 수 있다. 상대가 발동한 그 효과를 무효로 한다.",
+      "officialDescription": "Ritual Summon this monster with Domei. You may discard a monster to Set a Fire Formation Spell or Trap from Deck or GY. In response to an opposing monster effect, you may send one face-up Fire Fist or Fire Formation card you control, other than Eland, to the GY to negate the effect. Each effect is once per turn by name.",
+      "rarity": "UR",
+      "artKey": "Cards216/3521",
+      "typeName": "의식 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2553,
+      "internal_id": 3521,
+      "identity_key": "0831d5adcfeb0041c17e5ce2e05e6aeb9bb02361b60ac62bf6d3b8f887700396",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c61472381.lua",
+      "nativeLuaSha256": "36de19e9eaf0cd9a911c2e53555004ff24877c6bbfc39447a7cb9ee791ec448f",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염성",
+      "categories": [
+        "지원-염성",
+        "지원-염무",
+        "지원-의식",
+        "발동-패 버리기",
+        "효과-덱에서 세트",
+        "효과-묘지에서 세트",
+        "발동-묘지로 보내기",
+        "무효-몬스터효과"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "교염성－에란세이",
+        "Brotherhood of the Fire Fist - Eland"
+      ],
+      "effectStringsKorean": [
+        "패 몬스터 1장을 버리고 덱·묘지의 염무를 세트",
+        "염성 또는 염무를 묘지로 보내 상대 몬스터 효과를 무효",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 33,
+      "level": 3,
+      "attribute": 4,
+      "race": 32768,
+      "attack": 800,
+      "defense": 200,
+      "sourceId": 3522,
+      "code": 62694833,
+      "name": "괴염성－시브",
+      "nameEnglish": "Brotherhood of the Fire Fist - Ram",
+      "description": "이 카드명의 ①과 ②의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 이 카드가 일반 소환에 성공했을 때, 패 1장을 버리고 자신 필드의 \"염무\" 마법 / 함정 카드 1장을 대상으로 발동할 수 있다. 대상으로 한 카드와 이름이 다른 \"염무\" 마법 / 함정 카드 1장을 덱에서 골라 자신 필드에 세트한다.\n②: \"염성\" 몬스터의 효과로 특수 소환에 성공했을 경우 발동할 수 있다. 자신 묘지에 같은 이름의 카드가 없는 \"염무\" 마법 / 함정 카드 1장을 덱에서 골라 자신 필드에 세트한다.",
+      "officialDescription": "On Normal Summon, you may discard a card and target a Fire Formation Spell or Trap you control to Set a differently named Fire Formation from Deck. If Special Summoned by a Fire Fist monster effect, you can Set a Fire Formation from Deck that does not share a name with a card in your GY. Each is once per turn by name.",
+      "rarity": "R",
+      "artKey": "Cards216/3522",
+      "typeName": "효과 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2554,
+      "internal_id": 3522,
+      "identity_key": "40ae454c0e5c0817b039c4099c8ff8cbeb19b722bafc92577a1768fef2025ed6",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c62694833.lua",
+      "nativeLuaSha256": "af68e30e55b869c7d6167d9caed104d409203ecb0e9ff7ded04dc01d118f7e6d",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염성",
+      "categories": [
+        "지원-염성",
+        "지원-염무",
+        "발동-소환 시",
+        "발동-패 버리기",
+        "효과-덱에서 세트"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "괴염성－시브",
+        "Brotherhood of the Fire Fist - Ram"
+      ],
+      "effectStringsKorean": [
+        "조건에 맞는 덱의 염무 마법·함정 세트",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 33,
+      "level": 4,
+      "attribute": 4,
+      "race": 32768,
+      "attack": 1700,
+      "defense": 1400,
+      "sourceId": 3523,
+      "code": 66084673,
+      "name": "공염성－사이쵸",
+      "nameEnglish": "Brotherhood of the Fire Fist - Rhino",
+      "description": "자신 필드의 \"염성\" 몬스터가 전투하는 데미지 계산시에, 그 전투 중 1번만 자신 필드의 앞면 표시 \"염무\" 마법 / 함정 카드 1장과 패의 \"염성\" 몬스터 1장을 묘지로 보내고 발동할 수 있다. 전투 중인 자신 몬스터의 공격력은 그 데미지 계산시에만 묘지로 보낸 몬스터의 원래 공격력만큼 올린다.",
+      "officialDescription": "During damage calculation once per battle involving your Fire Fist monster, you may pay by sending a face-up Fire Formation from your field and a Fire Fist monster from hand to the GY. For that calculation, the battling monster gains ATK equal to the sent monster’s original ATK.",
+      "rarity": "R",
+      "artKey": "Cards216/3523",
+      "typeName": "효과 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2555,
+      "internal_id": 3523,
+      "identity_key": "750b62b4f549ddc1eec97ea211f2b0b0340d53988da8339c0f16e9fecb312848",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c66084673.lua",
+      "nativeLuaSha256": "4c0b95afbe097247da3c66668af9bc2e1a449c5708ece77eca845f4013a58e6f",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염성",
+      "categories": [
+        "지원-염성",
+        "지원-염무",
+        "지원-전투",
+        "발동-데미지 계산 시",
+        "발동-묘지로 보내기",
+        "효과-공격력 상승"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "공염성－사이쵸",
+        "Brotherhood of the Fire Fist - Rhino"
+      ],
+      "effectStringsKorean": [
+        "염무와 패의 염성을 묘지로 보내 전투 몬스터 공격력 상승",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 524290,
+      "level": 0,
+      "attribute": 0,
+      "race": 0,
+      "attack": 0,
+      "defense": 0,
+      "sourceId": 3524,
+      "code": 66750703,
+      "name": "염걸의 양산각",
+      "nameEnglish": "Fire Fortress atop Liang Peak",
+      "description": "이 카드는 룰상 \"염무\" 카드로도 취급한다.\n①: \"염성\" 몬스터가 일반 소환 / 특수 소환될 때마다 이 카드에 염성 카운터 1개를 놓는다.\n②: 1턴에 1번, 자신 필드에서 다음 수만큼 염성 카운터를 제거하고 해당 효과를 발동할 수 있다.\n●2개: 이 턴, 자신의 야수전사족 몬스터가 공격할 경우 상대는 데미지 스텝 종료시까지 카드 효과를 발동할 수 없다.\n●6개: 덱에서 야수전사족 몬스터 1장을 패에 넣는다.\n●10개: 덱 / 엑스트라 덱에서 야수전사족 몬스터 1장을 소환 조건을 무시하고 특수 소환한다.",
+      "officialDescription": "This is always a Fire Formation card. Receive one Fire Fist Counter per Normal or Special Summon event involving Fire Fists. Once per turn, remove 2 counters from your field to block opposing activations during your Beast-Warriors’ attacks this turn, 6 to search a Beast-Warrior, or 10 to Special Summon one from Deck or Extra Deck ignoring its Summoning conditions.",
+      "rarity": "SR",
+      "artKey": "Cards216/3524",
+      "typeName": "필드 마법",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2556,
+      "internal_id": 3524,
+      "identity_key": "ca9ed0cdcf6c231d68aea78204b83ffcdda0b33f916982b86a641b35bae307f7",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c66750703.lua",
+      "nativeLuaSha256": "68db37fd672da182c5b1c97bc42b4e9979b1a5a4c7cf91be2fe0050870a39300",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염무",
+      "categories": [
+        "지원-염무",
+        "지원-염성",
+        "지원-야수전사족",
+        "염성 카운터",
+        "발동-소환 시",
+        "효과-카운터",
+        "발동-카운터 제거",
+        "효과-발동 제한",
+        "효과-덱샐비지",
+        "소환-덱리크루터",
+        "소환-엑스트라 덱에서"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "염걸의 양산각",
+        "Fire Fortress atop Liang Peak"
+      ],
+      "effectStringsKorean": [
+        "염성 카운터 2개 · 야수전사족 공격 중 상대 발동 제한",
+        "염성 카운터 6개 · 야수전사족 서치",
+        "염성 카운터 10개 · 야수전사족 특수 소환",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 4129,
+      "level": 4,
+      "attribute": 4,
+      "race": 32768,
+      "attack": 1100,
+      "defense": 1400,
+      "sourceId": 3525,
+      "code": 66762372,
+      "name": "고염성－로시신",
+      "nameEnglish": "Brotherhood of the Fire Fist - Boar",
+      "description": "이 카드는 화염 속성 몬스터의 싱크로 소환에만 싱크로 소재로 사용할 수 있다.\n이 카드가 전투로 파괴되어 묘지로 보내졌을 때 발동할 수 있다. 덱에서 \"고염성－로시신\" 이외의 레벨 4 \"염성\" 몬스터 1장을 특수 소환한다.\n1턴에 1번, 이 카드가 필드에 앞면 표시로 존재하고 자신이 엑스트라 덱에서 \"염성\" 몬스터를 특수 소환했을 때 발동할 수 있다. 덱에서 \"염무\" 마법 카드 1장을 골라 자신 필드에 세트한다.",
+      "officialDescription": "Use this as Synchro Material only for FIRE monsters. On battle destruction and arrival in the GY, you can summon a different Level 4 Fire Fist from Deck. Once per turn while this is face-up on the field, a Fire Fist Special Summon from your Extra Deck may Set a Fire Formation Spell from Deck.",
+      "rarity": "R",
+      "artKey": "Cards216/3525",
+      "typeName": "튜너 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2557,
+      "internal_id": 3525,
+      "identity_key": "df4b3377ee6dcc0e1dbac1a69585ee10cd79c8198becab6ba8baaa729add3c63",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c66762372.lua",
+      "nativeLuaSha256": "d10b2339cce261f6718a6c69a8e3261e22920f7982bb77bf3808eeaa373530a7",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염성",
+      "categories": [
+        "지원-염성",
+        "지원-염무",
+        "지원-화염 속성",
+        "지원-싱크로",
+        "소환제약",
+        "발동-전투 파괴 시",
+        "발동-묘지로 보내졌을 때",
+        "발동-필드에서 묘지로 보내졌을 때",
+        "소환-덱리크루터",
+        "발동-소환 시",
+        "효과-덱에서 세트"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "고염성－로시신",
+        "Brotherhood of the Fire Fist - Boar"
+      ],
+      "effectStringsKorean": [
+        "덱의 다른 레벨 4 염성을 특수 소환",
+        "덱의 염무 마법 1장을 세트",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 131076,
+      "level": 0,
+      "attribute": 0,
+      "race": 0,
+      "attack": 0,
+      "defense": 0,
+      "sourceId": 3526,
+      "code": 70329348,
+      "name": "염무－「천권」",
+      "nameEnglish": "Fire Formation - Tenken",
+      "description": "이 카드는 메인 페이즈 1에만 발동할 수 있다. 발동시에 자신 필드의 앞면 표시 야수전사족 몬스터 1장을 대상으로 한다. 그 메인 페이즈 1 동안, 그 몬스터의 효과는 무효가 되고 이 카드 이외의 카드 효과를 받지 않는다. 이 효과의 처리 후 이 카드가 필드에서 벗어나도 그 상태는 유지된다.\n이 카드가 마법 & 함정 존에 앞면 표시로 존재하는 동안, 자신 필드의 야수전사족 몬스터의 공격력은 300 올린다.",
+      "officialDescription": "Activate only in Main Phase 1 and target one face-up Beast-Warrior you control. Its effects are negated and all other card effects leave it unaffected for that phase, even if this Trap later leaves the field. While face-up, the Trap grants your Beast-Warriors 300 ATK.",
+      "rarity": "R",
+      "artKey": "Cards216/3526",
+      "typeName": "지속 함정",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2558,
+      "internal_id": 3526,
+      "identity_key": "5b31201fb5dfed8d10e1e7e8d5dffc7039d58b7317f95af55d83e76c92fe59b1",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c70329348.lua",
+      "nativeLuaSha256": "37de7e84f6800fc4de1c52432bff3ad2a41efcb38e1f8f85c98a82995730452a",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염무",
+      "categories": [
+        "지원-염무",
+        "지원-야수전사족",
+        "무효-몬스터효과",
+        "면역-효과",
+        "효과-공격력 상승"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "염무－「천권」",
+        "Fire Formation - Tenken"
+      ],
+      "effectStringsKorean": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 8225,
+      "level": 6,
+      "attribute": 4,
+      "race": 32768,
+      "attack": 2200,
+      "defense": 2200,
+      "sourceId": 3527,
+      "code": 74168099,
+      "name": "염성후－호우신",
+      "nameEnglish": "Brotherhood of the Fire Fist - Horse Prince",
+      "description": "화염 속성 튜너 1장 ＋ 튜너 이외의 몬스터 1장 이상\n①: 이 카드가 싱크로 소환에 성공했을 때 발동할 수 있다. 덱에서 레벨 3 화염 속성 몬스터 1장을 특수 소환한다.\n②: 이 카드를 싱크로 소환한 뒤, 턴 종료시까지 자신은 레벨 5 이상의 몬스터를 특수 소환할 수 없다.",
+      "officialDescription": "One FIRE Tuner and one or more non-Tuners. On Synchro Summon you may Special Summon a Level 3 FIRE monster from Deck. Once this card is Synchro Summoned, you cannot Special Summon Level 5 or higher monsters for the rest of that turn.",
+      "rarity": "UR",
+      "artKey": "Cards216/3527",
+      "typeName": "싱크로 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2559,
+      "internal_id": 3527,
+      "identity_key": "26172b5cb883fec85a92f86869ff1b002a2a0b1fca262e2094abc90df98eced6",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c74168099.lua",
+      "nativeLuaSha256": "565e1bc1665f3208a8bbfdf7ea7c8d94179a73fee07f217f88491a90bb0928f2",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염성",
+      "categories": [
+        "지원-염성",
+        "지원-화염 속성",
+        "지원-싱크로",
+        "소환-싱크로",
+        "발동-소환 시",
+        "소환-덱리크루터",
+        "소환제약"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "염성후－호우신",
+        "Brotherhood of the Fire Fist - Horse Prince"
+      ],
+      "effectStringsKorean": [
+        "덱의 레벨 3 화염 속성을 특수 소환",
+        "이 턴 레벨 5 이상 특수 소환 불가",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 8225,
+      "level": 8,
+      "attribute": 4,
+      "race": 32768,
+      "attack": 2000,
+      "defense": 2800,
+      "sourceId": 3528,
+      "code": 89856523,
+      "name": "강염성－리순키",
+      "nameEnglish": "Brotherhood of the Fire Fist - Kirin",
+      "description": "화염 속성 튜너 1장 ＋ 튜너 이외의 \"염성\" 몬스터 1장 이상\n이 카드가 싱크로 소환에 성공했을 때 발동할 수 있다. 덱에서 \"염무\" 마법 / 함정 카드 1장을 골라 자신 필드에 세트한다.\n이 카드가 몬스터 존에 앞면 표시로 존재하는 동안, 상대 필드 몬스터의 공격력은 자신 필드의 앞면 표시 마법 / 함정 카드 수 × 100만큼 내린다.",
+      "officialDescription": "One FIRE Tuner and one or more non-Tuner Fire Fists. On Synchro Summon, you can Set a Fire Formation Spell or Trap from Deck. While this is face-up in your Monster Zone, opposing monsters lose 100 ATK per face-up Spell or Trap you control.",
+      "rarity": "SR",
+      "artKey": "Cards216/3528",
+      "typeName": "싱크로 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2560,
+      "internal_id": 3528,
+      "identity_key": "2abd169c049ce1ddaa27d06cdc1b5660db4ab4bf3a9df4f1dc22f6be747c05ee",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c89856523.lua",
+      "nativeLuaSha256": "3fba0b4db99d197da110ddea00a6d328189e3953b1bbfd6df596a997d2cb455f",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염성",
+      "categories": [
+        "지원-염성",
+        "지원-염무",
+        "지원-화염 속성",
+        "지원-싱크로",
+        "소환-싱크로",
+        "발동-소환 시",
+        "효과-덱에서 세트",
+        "효과-공격력 감소"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "강염성－리순키",
+        "Brotherhood of the Fire Fist - Kirin"
+      ],
+      "effectStringsKorean": [
+        "덱의 염무 마법·함정을 세트",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 33,
+      "level": 4,
+      "attribute": 4,
+      "race": 32768,
+      "attack": 1700,
+      "defense": 1000,
+      "sourceId": 3529,
+      "code": 92572371,
+      "name": "살염성－불키",
+      "nameEnglish": "Brotherhood of the Fire Fist - Buffalo",
+      "description": "이 카드명의 효과는 1턴에 1번만 사용할 수 있다. 이 카드가 묘지에 존재할 경우, 자신의 패와 자신 필드의 앞면 표시 카드 중 \"염성\" 카드 또는 \"염무\" 카드를 합계 2장 묘지로 보내고 발동할 수 있다. 묘지의 이 카드를 특수 소환한다.",
+      "officialDescription": "Once per turn by name while this is in your GY, send two Fire Fist or Fire Formation cards in any combination from hand and your face-up field to the GY to Special Summon this card back.",
+      "rarity": "R",
+      "artKey": "Cards216/3529",
+      "typeName": "효과 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2561,
+      "internal_id": 3529,
+      "identity_key": "daed2f8fa667bbcb692e8be498601dd7c207617897cb6bdb482497226fd41830",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c92572371.lua",
+      "nativeLuaSha256": "2b3e5539507a482c40f73851f1350f6b980d65a216a9183e2ca758958e66e483",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염성",
+      "categories": [
+        "지원-염성",
+        "지원-염무",
+        "발동-묘지에서",
+        "발동-묘지로 보내기",
+        "소환-묘지"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "살염성－불키",
+        "Brotherhood of the Fire Fist - Buffalo"
+      ],
+      "effectStringsKorean": [
+        "염성·염무 합계 2장을 묘지로 보내 불키를 특수 소환",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 33,
+      "level": 3,
+      "attribute": 4,
+      "race": 32768,
+      "attack": 0,
+      "defense": 1900,
+      "sourceId": 3530,
+      "code": 93294869,
+      "name": "상염성－울브쇼",
+      "nameEnglish": "Brotherhood of the Fire Fist - Wolf",
+      "description": "이 카드가 리버스했을 경우 발동할 수 있다. 덱에서 \"염무\" 함정 카드 1장을 골라 자신 필드에 세트한다. 반전 소환에 의해 리버스했다면, 그 후 추가로 덱에서 \"염무\" 마법 카드 1장을 골라 자신 필드에 세트할 수 있다.",
+      "officialDescription": "If flipped face-up, you may Set a Fire Formation Trap from Deck. If the flip came from a Flip Summon, you may then also Set a Fire Formation Spell from Deck.",
+      "rarity": "R",
+      "artKey": "Cards216/3530",
+      "typeName": "효과 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2562,
+      "internal_id": 3530,
+      "identity_key": "d20a9b2564d67996967abc06e98aac7bf3d3c33b8e275cedf54bfd41ed56381a",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c93294869.lua",
+      "nativeLuaSha256": "6db8125ac6fb6a4246d6aaf579034c27cabcff81d7db26f2efe02673812689ba",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염성",
+      "categories": [
+        "지원-염성",
+        "지원-염무",
+        "지원-리버스",
+        "발동-리버스",
+        "발동-반전 소환 시",
+        "효과-덱에서 세트"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "상염성－울브쇼",
+        "Brotherhood of the Fire Fist - Wolf"
+      ],
+      "effectStringsKorean": [
+        "덱의 염무 함정 1장을 세트",
+        "반전 소환에 성공하여 염무 마법도 세트",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 131074,
+      "level": 0,
+      "attribute": 0,
+      "race": 0,
+      "attack": 0,
+      "defense": 0,
+      "sourceId": 3531,
+      "code": 93754402,
+      "name": "염무－「동명」",
+      "nameEnglish": "Fire Formation - Domei",
+      "description": "이 카드명의 카드는 1턴에 1장만 발동할 수 있으며, ②의 효과는 1턴에 1번만 사용할 수 있다.\n①: 이 카드의 발동을 처리할 때, 의식 몬스터의 레벨 이상이 되도록 패 / 필드의 몬스터를 릴리스하고, 패의 야수전사족 의식 몬스터 1장을 의식 소환할 수 있다.\n②: 이 카드가 마법 & 함정 존에서 앞면 표시인 채로 묘지로 보내졌을 경우, 자신의 묘지의 \"염성\" 몬스터 1장을 대상으로 발동할 수 있다. 그 몬스터를 특수 소환한다.",
+      "officialDescription": "On resolution of this activation you may Ritual Summon a Beast-Warrior from hand by Tributing monsters from hand or field whose Levels meet or exceed its Level. If sent face-up from the Spell & Trap Zone to the GY, you may target and revive a Fire Fist from your GY. Card activation and revival are each limited by name per turn.",
+      "rarity": "SR",
+      "artKey": "Cards216/3531",
+      "typeName": "지속 마법",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2563,
+      "internal_id": 3531,
+      "identity_key": "862c72191dcc1e41e1a23c144e3c63b72cfce51cac61b06a21c226797574a8ba",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c93754402.lua",
+      "nativeLuaSha256": "fa2ac523bde8fd059b3897674f90fc923b3ac1c9c9fdf41766032f3fd31fdb10",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염무",
+      "categories": [
+        "지원-염무",
+        "지원-염성",
+        "지원-야수전사족",
+        "지원-의식",
+        "효과-릴리즈",
+        "발동-묘지로 보내졌을 때",
+        "발동-필드에서 묘지로 보내졌을 때",
+        "소환-묘지"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "염무－「동명」",
+        "Fire Formation - Domei"
+      ],
+      "effectStringsKorean": [
+        "패의 야수전사족 의식 몬스터를 의식 소환",
+        "묘지의 염성 몬스터 1장을 특수 소환",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 97,
+      "level": 8,
+      "attribute": 4,
+      "race": 32768,
+      "attack": 2600,
+      "defense": 2200,
+      "sourceId": 3532,
+      "code": 93877990,
+      "name": "부염성－하쿠텐오우",
+      "nameEnglish": "Brotherhood of the Fire Fist - Swan",
+      "description": "야수전사족 몬스터 2장\n이 카드명의 ①과 ②의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 이 카드가 특수 소환에 성공했을 경우 발동할 수 있다. 자신 필드의 앞면 표시 \"염무\" 마법 / 함정 카드 수 × 200만큼 상대에게 데미지를 준다.\n②: 자신 / 상대의 배틀 페이즈에, 자신 필드의 앞면 표시 \"염무\" 마법 / 함정 카드 1장을 묘지로 보내고 상대 필드의 카드 1장을 대상으로 발동할 수 있다. 그 카드를 파괴한다.",
+      "officialDescription": "Requires two Beast-Warrior monsters. Upon Special Summon, deal 200 damage per face-up Fire Formation Spell or Trap you control. During either Battle Phase, you may send a face-up Fire Formation to the GY and target one opposing card to destroy it. Each effect is once per turn by name.",
+      "rarity": "UR",
+      "artKey": "Cards216/3532",
+      "typeName": "융합 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2564,
+      "internal_id": 3532,
+      "identity_key": "3b11a76176ce22151ec1c98b2878e27281272dc21b5f43636688f690351677c9",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c93877990.lua",
+      "nativeLuaSha256": "254e39dc309027febcf67d51e9b94851beeb8bc1afaa3d6bb65dd17e4705b119",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염성",
+      "categories": [
+        "지원-염성",
+        "지원-염무",
+        "지원-야수전사족",
+        "지원-융합",
+        "발동-소환 시",
+        "효과-데미지",
+        "발동-묘지로 보내기",
+        "효과-파괴"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "부염성－하쿠텐오우",
+        "Brotherhood of the Fire Fist - Swan"
+      ],
+      "effectStringsKorean": [
+        "자신 필드의 염무 1장당 상대에게 200 데미지",
+        "염무 1장을 묘지로 보내 상대 필드 카드 파괴",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "alias": 0,
+      "type": 33,
+      "level": 4,
+      "attribute": 4,
+      "race": 32768,
+      "attack": 1000,
+      "defense": 1800,
+      "sourceId": 3533,
+      "code": 98093548,
+      "name": "준염성－조우세이",
+      "nameEnglish": "Brotherhood of the Fire Fist - Elephant",
+      "description": "이 카드명의 ①과 ②의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 이 카드가 일반 소환 / 특수 소환에 성공했을 경우, 자신 필드의 앞면 표시 \"염무\" 마법 / 함정 카드 1장을 묘지로 보내고 발동할 수 있다. 패에서 \"준염성－조우세이\" 이외의 \"염성\" 몬스터 1장을 특수 소환한다.\n②: 자신의 묘지의 \"염무\" 마법 / 함정 카드 1장을 대상으로 발동할 수 있다. 그 카드를 덱으로 되돌린다. 그 후, 덱에서 레벨 5 이상의 \"염성\" 몬스터 1장을 패에 넣을 수 있다.",
+      "officialDescription": "On Normal or Special Summon, you can send one face-up Fire Formation from your field to the GY to Special Summon a different Fire Fist from hand. You can also target a Fire Formation in your GY and shuffle it into the Deck, with an optional search for a Level 5 or higher Fire Fist. Each effect is once per turn by name.",
+      "rarity": "SR",
+      "artKey": "Cards216/3533",
+      "typeName": "효과 몬스터",
+      "maxCopies": 3,
+      "playable": true,
+      "token": false,
+      "metadataCorrected": false,
+      "slot": 2565,
+      "internal_id": 3533,
+      "identity_key": "cbfe9e71d7bd65218fc6be0349219341fcaf796b77fd6f83d894f70858d51c0f",
+      "engine": "unity-native-035",
+      "legacyExportAllowed": false,
+      "legacySlot": null,
+      "nativeLuaPath": "official/c98093548.lua",
+      "nativeLuaSha256": "b87628b8cfc1307e7136e40e0e719009c2c78d820139d26cfc4464e699c36ed6",
+      "normalLimit": 3,
+      "speedLimit": null,
+      "category": "지원-염성",
+      "categories": [
+        "지원-염성",
+        "지원-염무",
+        "발동-소환 시",
+        "발동-묘지로 보내기",
+        "소환-패에서",
+        "효과-덱으로 되돌리기",
+        "효과-덱샐비지",
+        "지원-고레벨"
+      ],
+      "tokenOf": null,
+      "searchAliases": [
+        "준염성－조우세이",
+        "Brotherhood of the Fire Fist - Elephant"
+      ],
+      "effectStringsKorean": [
+        "염무 1장을 묘지로 보내 패의 다른 염성을 특수 소환",
+        "묘지의 염무 1장을 덱으로 되돌리기",
+        "덱의 레벨 5 이상 염성 몬스터를 패에 넣기",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "displayCorrections": [
+    {
+      "sourceId": 7,
+      "code": 70948327,
+      "previousSha256": [
+        "23e73a69d004f5b16017beec13bf187ed27c13ad037908785dca1f52916ff161"
+      ],
+      "description": "이 카드로 레벨 3 이하의 앞면 표시 몬스터를 공격했을 경우에 발동한다. 데미지 계산은 하지 않고, 그 몬스터를 파괴한다."
+    },
+    {
+      "sourceId": 13,
+      "code": 39439590,
+      "previousSha256": [
+        "c38f2f284fc76830905c6d11fbdcf28bfd60621e61b7c966782dbadb00377863"
+      ],
+      "description": "상대가 패에서 몬스터를 특수 소환했을 때에 발동할 수 있다. 패의 이 카드를 특수 소환한다."
+    },
+    {
+      "sourceId": 15,
+      "code": 71625222,
+      "previousSha256": [
+        "46ae332582477e5e6083bbbe1b840dcbd9d7a73e576b034fc6b237c133e2409d"
+      ],
+      "description": "①: 자신 메인 페이즈에 1턴에 1번 발동할 수 있다. 코인 토스 1회의 앞면 / 뒷면을 맞춘다. 맞혔을 경우, 상대 필드의 몬스터를 전부 파괴한다. 틀렸을 경우, 자신 필드의 몬스터를 전부 파괴하고, 그중 앞면 표시로 파괴된 몬스터의 공격력 합계의 절반만큼 자신이 데미지를 받는다."
+    },
+    {
+      "sourceId": 39,
+      "code": 55763552,
+      "previousSha256": [
+        "e78d97539a1cdd2fca6133bbc5f5ac2bb7122d63f4ee453f3d964d51f975ac65"
+      ],
+      "description": "리버스: 필드의 앞면 표시 \"드래곤족 봉인항아리\"를 모두 파괴한다. 이 효과로 파괴했을 경우, 필드의 앞면 표시 드래곤족 몬스터를 전부 공격 표시로 한다."
+    },
+    {
+      "sourceId": 56,
+      "code": 14141448,
+      "previousSha256": [
+        "e83ba66f08c6070c89c465235ee83f84c04de62e887f3983d3bcc1e8c550be68"
+      ],
+      "description": "이 카드는 통상 소환할 수 없다. 자신 필드에서 \"진화의 고치\"를 장착한 상태로 자신의 턴을 세어 4턴 이상 경과한 \"꼬마 모스\" 1장을 릴리스했을 경우, 패에서 이 카드를 특수 소환할 수 있다."
+    },
+    {
+      "sourceId": 57,
+      "code": 40640057,
+      "previousSha256": [
+        "8d6ede689e2393ca8e3a26cc7955e2bd8d248cf43b50b02dc778f1dbb87bafc6"
+      ],
+      "description": "①: 상대 몬스터의 공격으로 자신에게 전투 데미지가 발생할 데미지 계산시에, 패의 이 카드를 버리고 발동할 수 있다. 그 전투에서 자신이 받을 전투 데미지를 0으로 한다."
+    },
+    {
+      "sourceId": 66,
+      "code": 48579379,
+      "previousSha256": [
+        "e5f0586fbdc5e3233b0778c5d6ee1632d18333bdb1ffc14c7a23212c117337e7"
+      ],
+      "description": "이 카드는 통상 소환할 수 없다. 자신 필드에서 \"진화의 고치\"를 장착한 상태로 자신의 턴을 세어 6턴 이상 경과한 \"꼬마 모스\" 1장을 릴리스했을 경우, 패에서 이 카드를 특수 소환할 수 있다."
+    },
+    {
+      "sourceId": 71,
+      "code": 40240595,
+      "previousSha256": [
+        "10d3d011327ae6a9954175873d5ab6a98a5819c47d99918a8f90c33a77f7bc62"
+      ],
+      "description": "패에 있는 이 카드는 앞면 표시의 \"꼬마 모스\"에 장착 카드로 장착할 수 있다. 이 카드를 장착한 \"꼬마 모스\"의 공격력과 수비력은 이 카드에 적힌 수치가 된다."
+    },
+    {
+      "sourceId": 119,
+      "code": 13215230,
+      "previousSha256": [
+        "6bf6aab6f141734ab69bd47e2f9d325d180b10bd5ff210406734f93a4c763162"
+      ],
+      "description": "이 카드가 공격 표시에서 앞면 수비 표시로 바뀌었을 때에 발동한다. 상대 필드의 몬스터 1장을 대상으로 하고 그 몬스터를 파괴한다."
+    },
+    {
+      "sourceId": 121,
+      "code": 26722601,
+      "previousSha256": [
+        "9f28994f1bd707953442e0684aea5301def578d4fe20965241e85734ba2bbddb"
+      ],
+      "description": "이 카드가 필드에 앞면 표시로 존재하는 동안 \"인벨즈\" 몬스터가 앞면 표시로 어드밴스 소환된 턴에는, 자신은 통상 소환 외에 1번만 몬스터를 일반 소환하거나 세트할 수 있다."
+    },
+    {
+      "sourceId": 155,
+      "code": 70821187,
+      "previousSha256": [
+        "f287ff1da398c1a5590f1d8d7b5a8bc061909a045999a590cb13be007836231a"
+      ],
+      "description": "상대가 컨트롤하는 카드의 효과로 이 카드가 패에서 묘지로 보내졌을 때에 발동한다. 묘지의 이 카드를 자신의 패로 되돌린다."
+    },
+    {
+      "sourceId": 157,
+      "code": 56514812,
+      "previousSha256": [
+        "c317dadf00bdd98487ee477273abb6596270792c73cb5135df4b8302423f8ccc"
+      ],
+      "description": "필드에서 앞면 표시인 이 카드의 컨트롤이 옮겨졌을 때에 발동한다. 이 카드의 새 컨트롤러는 자신의 패를 무작위로 1장 버린다."
+    },
+    {
+      "sourceId": 161,
+      "code": 28725004,
+      "previousSha256": [
+        "a554b6caad37ec9b4c98b6c6b0dadaa21f6bf6245229b3f079475e8e744cbb9b"
+      ],
+      "description": "이 카드가 공격 표시에서 앞면 수비 표시로 변경되었을 때에 발동한다. 자신은 덱을 셔플한다."
+    },
+    {
+      "sourceId": 175,
+      "code": 32485518,
+      "previousSha256": [
+        "86d12471bf513f521e79ee94145fe6d0a3af0356d9ee894dcdb756eca3b0b484"
+      ],
+      "description": "이 카드는 특수 소환할 수 없다.\n①: 이 카드를 릴리스하고 자신 묘지의 \"언데드 월드\" 1장을 대상으로 하여 발동할 수 있다. 대상 카드를 패에 넣는다."
+    },
+    {
+      "sourceId": 176,
+      "code": 58071123,
+      "previousSha256": [
+        "5d02af84122f934e15f2fe7c6995d57a7b1c97526fd4f5835c6b97954ea058cc"
+      ],
+      "description": "①: 이 카드가 화염족 몬스터와의 전투로 파괴되어 묘지에 보내졌을 경우에 발동한다. 서로 800 데미지를 받는다."
+    },
+    {
+      "sourceId": 183,
+      "code": 70797118,
+      "previousSha256": [
+        "bd2274ac6c062533d993890667d86df30ad716d645fb06dc626b056943ab0ebd"
+      ],
+      "description": "자신 필드에 빛 속성 이외의 앞면 표시 몬스터가 존재하는 경우, 필드의 앞면 표시인 이 카드를 파괴한다."
+    },
+    {
+      "sourceId": 213,
+      "code": 3431737,
+      "previousSha256": [
+        "a7af62d1a05fc121f1f22d074da50f1bfc517b3785e74ec493332e9191a0c5c1"
+      ],
+      "description": "①: 패의 이 카드를 묘지로 버리고 발동할 수 있다. 자신의 덱에서 \"버스터 모드\" 1장을 패에 넣는다."
+    },
+    {
+      "sourceId": 230,
+      "code": 67987302,
+      "previousSha256": [
+        "eb466032f159e01893712515ad81f602470adddd7077dd2920abb47dd1041ccc"
+      ],
+      "description": "①: 이 카드가 몬스터 존에 존재하는 동안, \"지박신\" 몬스터는 그 몬스터 자신의 효과로는 파괴되지 않는다."
+    },
+    {
+      "sourceId": 268,
+      "code": 50259460,
+      "previousSha256": [
+        "4d40e547e9f9fd9a0ff4870fd3073d927cd4f9de80090a04b0137ba842b6efcf"
+      ],
+      "description": "이 카드는 융합 몬스터 카드에 이름이 기재된 융합 소재 몬스터 1장 대신 사용할 수 있다. 나머지 융합 소재는 각각 그 융합 몬스터가 지정한 조건을 충족해야 한다."
+    },
+    {
+      "sourceId": 328,
+      "code": 50045299,
+      "previousSha256": [
+        "aa81e7bcfa5b400a89f6dad6ed0b757d6f3c6ec26598ea6e38b15c49f639ee05"
+      ],
+      "description": "이 카드가 필드에 앞면 표시로 존재하는 동안, 필드의 앞면 표시 드래곤족 몬스터는 모두 앞면 수비 표시가 되고 표시 형식을 변경할 수 없다."
+    },
+    {
+      "sourceId": 337,
+      "code": 58074572,
+      "previousSha256": [
+        "9830091de367bd7e25e13bade48868094935b1b58e5f02511ef03d9ce920b903"
+      ],
+      "description": "자신 또는 상대를 고르고 발동한다. 고른 플레이어는 200 LP 회복한다."
+    },
+    {
+      "sourceId": 347,
+      "code": 72302403,
+      "previousSha256": [
+        "8e02216d9f821400365e7a006e3e98e00efaa85d679abfda8a727d7fb303d26f"
+      ],
+      "description": "이 카드는 발동한 후에도 필드에 남는다. 상대 턴을 세어 세 번째 상대 엔드 페이즈에 이 카드를 파괴한다.\n①: 이 카드의 발동을 처리할 때, 상대 필드에 뒷면 표시 몬스터가 있다면 그 몬스터를 모두 앞면 표시로 한다.\n②: 이 카드가 마법 & 함정 존에 존재하는 동안, 상대 몬스터는 공격을 선언할 수 없다."
+    },
+    {
+      "sourceId": 348,
+      "code": 18807109,
+      "previousSha256": [
+        "f84d306ea7ea80b766fe08d41d8a1f3fdf6689edb54db72acf31e886d75048c4"
+      ],
+      "description": "상대 필드의 몬스터 1장을 대상으로 하고 이 카드를 발동할 수 있다.\n①: 이 카드가 마법 & 함정 존에 존재하는 동안, 그 몬스터는 공격하거나 스스로 표시 형식을 변경할 수 없다. 그 몬스터가 파괴되었을 때, 이 카드를 파괴한다."
+    },
+    {
+      "sourceId": 391,
+      "code": 50705071,
+      "previousSha256": [
+        "6053a28f2b591f2c7efcfb809fa8f6b7842b590334d7023be0c0f960dd5f9f37"
+      ],
+      "description": "이 카드는 통상 소환할 수 없다. 자신 필드의 \"메탈화 마법반사장갑\"을 장착한 \"데블 조아\" 1장을 릴리스했을 경우, 덱에서 이 카드를 특수 소환할 수 있다."
+    },
+    {
+      "sourceId": 393,
+      "code": 13599884,
+      "previousSha256": [
+        "af3890b22e91d2e8e750aa3ace9f4d3fe992641718e07c1302e46ea9f950fdb9"
+      ],
+      "description": "기계족 이외의 몬스터가 이 카드를 공격했을 경우, 상대 턴을 세어 세 번째 상대 엔드 페이즈에 그 몬스터를 파괴한다."
+    },
+    {
+      "sourceId": 398,
+      "code": 85255550,
+      "previousSha256": [
+        "eede871beea54285186aeec0b7b4a7b72508753b26dbf7785ad92f775790c314"
+      ],
+      "description": "이 카드가 상대 몬스터를 공격하여 데미지 계산을 실행한 후에 발동한다. 그 몬스터가 필드에 계속 존재할 경우, 그 공격 후 다섯 번째 엔드 페이즈에 그 몬스터를 파괴한다."
+    },
+    {
+      "sourceId": 401,
+      "code": 84133008,
+      "previousSha256": [
+        "ff7bc2e16b0e53ac28d5173ac15f338f64769c71f656efac85d353980baaf1b9"
+      ],
+      "description": "1000 LP를 지불하고 발동할 수 있다. 자신의 묘지에서 \"융합\" 1장을 골라 패에 넣는다."
+    },
+    {
+      "sourceId": 416,
+      "code": 70138455,
+      "previousSha256": [
+        "003b83c0931fb9fb58b3b43a1dc2017883298a894c066f2a84d74e22a56b15d0"
+      ],
+      "description": "자신 스탠바이 페이즈에 앞면 표시의 이 카드를 릴리스하고, 필드의 공격력 1000 이하인 앞면 표시 몬스터 2장을 대상으로 하여 발동할 수 있다. 그 2장을 파괴한다."
+    },
+    {
+      "sourceId": 429,
+      "code": 78613627,
+      "previousSha256": [
+        "6b3dfa94011a95e865f4d46da9de3fe841e5897a89eed6baf001b4eb05e2a0de"
+      ],
+      "description": "수비 표시의 이 카드를 공격한 몬스터의 공격력이 이 카드의 수비력보다 낮을 경우, 그 공격 몬스터를 파괴한다."
+    },
+    {
+      "sourceId": 450,
+      "code": 9628664,
+      "previousSha256": [
+        "24aeb73e954cf2503c89c61db0d71665555cf65dd99671d2ef9d84398d211565"
+      ],
+      "description": "체인이 3개 이상 쌓여 모두 처리된 후에 발동한다. 자신은 덱에서 1장 드로우한다. 같은 이름의 카드 효과가 그 체인에서 두 번 이상 발동되었을 경우, 이 효과는 발동할 수 없다."
+    },
+    {
+      "sourceId": 488,
+      "code": 72630549,
+      "previousSha256": [
+        "5ae3a84b5fbe5280408e995faf2ddf16863f475f983ce6cd72c3a503c46f22bd"
+      ],
+      "description": "이 카드 1장만을 대상으로 한 몬스터의 효과를 무효로 한다."
+    },
+    {
+      "sourceId": 490,
+      "code": 20210570,
+      "previousSha256": [
+        "fd71cbed5b6f38f9c8db0f0ed34a29d5615a824ae21126836b899eeaba110e1e"
+      ],
+      "description": "1턴에 1번, 자신 묘지의 필드 마법 카드 1장을 대상으로 하고 발동할 수 있다. 대상 카드를 덱으로 되돌린다."
+    },
+    {
+      "sourceId": 498,
+      "code": 56647086,
+      "previousSha256": [
+        "48fc407ef4dc44b33b66d73bfed031ea26fbe05e1d2b53b0afa3c587c35c4873"
+      ],
+      "description": "이 카드가 필드에 앞면 표시로 존재하는 동안, 상대는 속공 마법 카드를 발동할 수 없다."
+    },
+    {
+      "sourceId": 505,
+      "code": 16229315,
+      "previousSha256": [
+        "b4a2a7b7991754ba7eb6052d5762f6d61ac738911eb8af35d125550736c04123"
+      ],
+      "description": "①: 3000 LP를 지불하고 발동할 수 있다. 자신의 엑스트라 덱의 몬스터 1장을 묘지에 보낸다."
+    },
+    {
+      "sourceId": 522,
+      "code": 77252217,
+      "previousSha256": [
+        "a51d693f9d92bfd1307bb1cb9807c62651215b1757c6f828abe503c8fe80658e"
+      ],
+      "description": "이 카드가 전투를 했을 경우, 그 데미지 스텝 종료시에 발동한다. 상대는 덱에서 1장 드로우한다."
+    },
+    {
+      "sourceId": 533,
+      "code": 32539892,
+      "previousSha256": [
+        "78d5b95199ada4a8cc47dbfc425d9ada8b9374d8477aee31503464a6946a3d64"
+      ],
+      "description": "상대가 컨트롤하는 카드의 효과로 이 카드가 패에서 묘지로 버려졌을 때에 발동한다. 상대에게 1000 데미지를 준다."
+    },
+    {
+      "sourceId": 539,
+      "code": 60694662,
+      "previousSha256": [
+        "020eeacf0a579ac157bfcacf34978b6248fdf6af4a41bba9e40c2d8bad931411"
+      ],
+      "description": "①: 이 카드가 리버스했을 경우에 발동한다. 자신은 덱에서 1장 드로우한다."
+    },
+    {
+      "sourceId": 579,
+      "code": 33225925,
+      "previousSha256": [
+        "f57d5d7d1fe5382c4b91007fe2798f4921426bff0e79d485ebfb7ae60be52551"
+      ],
+      "description": "이 카드가 일반 소환에 성공했을 때, 상대 필드에 세트되어 있는 카드 1장을 대상으로 하고 발동한다. 그 카드를 확인한다. 상대는 이 효과의 발동에 대하여 마법 / 함정 카드를 발동할 수 없다."
+    },
+    {
+      "sourceId": 589,
+      "code": 13316346,
+      "previousSha256": [
+        "66e48f744effa9faf72d277b1b8b55cf0fc8b6c3616b507e6cfe80cbd8b03de7"
+      ],
+      "description": "자신 필드에 앞면 표시의 \"가제트\" 몬스터가 존재하는 동안, 이 카드의 공격력은 2000 올린다."
+    },
+    {
+      "sourceId": 657,
+      "code": 68540059,
+      "previousSha256": [
+        "98d61099fc7fa0480786da20c09fecc71900fcdf9160516dc8ae2106891d30b7"
+      ],
+      "description": "①: 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 이 카드를 공격력 / 수비력 300을 올리는 장착 카드로 취급하여 대상 몬스터에 장착한다.\n②: 이 카드의 효과로 이 카드를 장착한 몬스터가 몬스터를 공격하는 데미지 계산시에만, 그 장착 몬스터의 공격력은 공격 대상의 공격력의 절반만큼 추가로 오른다."
+    },
+    {
+      "sourceId": 662,
+      "code": 20101223,
+      "previousSha256": [
+        "ab6e7735cfdd70e553ee28794f777d0867e3d980ea8089a88bf331cf955a3ed8"
+      ],
+      "description": "필드의 앞면 표시 암석족 몬스터를 전부 파괴한다."
+    },
+    {
+      "sourceId": 663,
+      "code": 56606928,
+      "previousSha256": [
+        "4c179b0bbefa9b5c3b6ecdb5c83aa5b7213a19ace97f3b417db53ed3532724ef"
+      ],
+      "description": "필드의 앞면 표시 어류족 몬스터를 전부 파괴한다."
+    },
+    {
+      "sourceId": 676,
+      "code": 33031674,
+      "previousSha256": [
+        "b82837ddbc89bf755e8bb14e7729ae92e10c4e13c9ba0c5e38a08d9dcf05225c"
+      ],
+      "description": "\"전설의 폭염사\"의 의식 소환에 사용한다. 자신의 패 / 필드에서 레벨 합계가 7 이상이 되도록 몬스터를 릴리스하고, 패의 \"전설의 폭염사\"를 의식 소환한다."
+    },
+    {
+      "sourceId": 684,
+      "code": 41356845,
+      "previousSha256": [
+        "e63fa3a23bc4f40bb299c9067c6e604ee3cd4ce1feb5596a7c8ae72a9a773d29"
+      ],
+      "description": "①: 필드의 뒷면 수비 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 앞면 수비 표시로 한다. 그 수비력이 2000 이하면 파괴하고, 2000을 초과하면 뒷면 수비 표시로 되돌린다."
+    },
+    {
+      "sourceId": 685,
+      "code": 77754944,
+      "previousSha256": [
+        "b3e26c0eb48747cd36f4b17de9ab0a99f3b373c4001bc4a4196882f6b2d9d774"
+      ],
+      "description": "①: 상대 몬스터가 공격을 선언했을 때 발동할 수 있다. 상대 필드의 앞면 공격 표시 몬스터 중 공격력이 가장 높은 몬스터 1장을 파괴한다."
+    },
+    {
+      "sourceId": 686,
+      "code": 4149689,
+      "previousSha256": [
+        "29f3c5b8be50bedc84054a4c27120b7b9769732422c08d32eb2dfc7aae18fa3c"
+      ],
+      "description": "①: 이 카드가 마법 & 함정 존에 존재하는 동안, 레벨 2 이하의 몬스터는 반전 소환에 성공했을 때에 파괴된다. 그 몬스터는 이때 필드에서 발동하는 효과를 발동할 수 없다."
+    },
+    {
+      "sourceId": 689,
+      "code": 3027001,
+      "previousSha256": [
+        "0225afa08092bb83a1be601d33cc009b8513a2775be69a00ce063bb20826c99c"
+      ],
+      "description": "자신 필드의 함정 카드를 파괴하는 마법 / 함정 / 몬스터 효과를 상대가 발동했을 때에 발동할 수 있다. 그 함정 카드들 대신 이 카드를 파괴하고, 다른 함정 카드는 파괴하지 않는다. 대신 보호되는 카드 중 세트된 카드는 전부 뒤집어 확인한다."
+    },
+    {
+      "sourceId": 728,
+      "code": 91842653,
+      "previousSha256": [
+        "f5e067256b91fb98c003799f82040c0cfe08be1e8b6525634d0d57f48f6c2232"
+      ],
+      "description": "이 카드는 통상 소환할 수 없다. 자신 필드에 \"툰 월드\"가 있을 때, 자신의 필드에서 몬스터 1장을 릴리스했을 경우에 이 카드를 특수 소환할 수 있다.\n①: 특수 소환된 턴에는 이 카드로 공격할 수 없다.\n②: 이 카드의 공격을 선언할 때, 자신은 500 LP를 지불한다.\n③: 상대 필드에 툰 몬스터가 없을 경우, 이 카드는 직접 공격할 수 있다. 상대 필드에 툰 몬스터가 있을 경우, 그 툰 몬스터만 공격 대상으로 선택할 수 있다.\n④: 필드의 \"툰 월드\"가 파괴되었을 때, 이 카드를 파괴한다."
+    },
+    {
+      "sourceId": 729,
+      "code": 38247752,
+      "previousSha256": [
+        "9feece7ae48ae5e9bdd161853ebcc05455e94822df188e195c0129581cb8f5cf"
+      ],
+      "description": "리버스했을 경우, 필드의 몬스터 1장을 대상으로 하고 발동한다. 이 카드가 필드에 앞면 표시로 존재하는 동안, 그 몬스터는 공격할 수 없다."
+    },
+    {
+      "sourceId": 730,
+      "code": 64631466,
+      "previousSha256": [
+        "ecb4cb04825fbc1e81a3816cb772c77ac4a6fbaa7d18559726231882df199802"
+      ],
+      "description": "\"환술의 의식\"으로 의식 소환한다.\n①: 1턴에 1번, 상대 필드의 몬스터 1장을 대상으로 하고 발동할 수 있다. 대상 몬스터를 장착 카드로 취급하여 이 카드에 장착한다. 이 효과로 장착할 수 있는 몬스터는 1장뿐이다.\n②: 이 카드의 공격력과 수비력은 ①의 효과로 장착한 몬스터의 각 수치가 된다. 뒷면 표시 몬스터를 장착한 경우에는 0이 된다. 이 카드가 전투로 파괴될 경우, 대신 장착 몬스터를 파괴한다.\n③: 이 카드가 ①의 효과로 몬스터를 장착한 상태에서 전투하여 자신이 전투 데미지를 받았을 때, 상대도 그 수치만큼 효과 데미지를 받는다."
+    },
+    {
+      "sourceId": 741,
+      "code": 64335805,
+      "previousSha256": [
+        "40f6d38566c1595d107c911ee1e9802deaa45761aa73bfa4e22079be12cee4e1"
+      ],
+      "description": "이 카드는 통상 소환할 수 없다. 자신 필드의 \"메탈화 마법반사장갑\"을 장착한 \"붉은 눈의 흑룡\" 1장을 릴리스했을 경우, 덱에서 이 카드를 특수 소환할 수 있다."
+    },
+    {
+      "sourceId": 742,
+      "code": 81480460,
+      "previousSha256": [
+        "69037b9b9a4d522b23d51dd68f820f5e57d4d5e812959d2cd4190eed47737dfa"
+      ],
+      "description": "①: 1턴에 1번, 상대 필드의 몬스터 1장을 대상으로 하고 발동할 수 있다. 코인 토스를 3회 실행하고, 앞면이 2회 이상 나왔을 경우 대상 몬스터를 파괴한다."
+    },
+    {
+      "sourceId": 744,
+      "code": 42035044,
+      "previousSha256": [
+        "120c0122355bbb509c713045706049740f66b40036046264fbc35a2130847d91"
+      ],
+      "description": "①: 이 카드가 몬스터 존에서 공격을 선언할 때, 자신은 이 카드 이외의 자신 필드의 몬스터 1장을 릴리스해야 한다."
+    },
+    {
+      "sourceId": 751,
+      "code": 77585513,
+      "previousSha256": [
+        "68c959679360649f37eefeed967b6c6104444435fe51157c1730b4467000b29e"
+      ],
+      "description": "①: 이 카드가 몬스터 존에 존재하는 동안, 서로 필드의 함정 카드 효과를 발동할 수 없으며 필드의 함정 카드 효과는 무효가 된다."
+    },
+    {
+      "sourceId": 761,
+      "code": 91512835,
+      "previousSha256": [
+        "984a90a7fd5422b0bf4ba88b9cf78f89aaa44e1c8d3e89a05c537f1a1fd302de"
+      ],
+      "description": "①: 필드의 곤충족 몬스터 1장당 이 카드의 공격력은 200 올린다.\n②: 이 카드의 공격을 선언할 때, 자신은 이 카드 이외의 자신 필드 몬스터 1장을 릴리스해야 한다.\n③: 이 카드가 전투에서 상대 몬스터를 파괴한 턴의 엔드 페이즈에 발동한다. 자신 필드에 \"곤충 몬스터 토큰\"(곤충족 / 땅 / 레벨 1 / 공 100 / 수 100) 1장을 공격 표시로 특수 소환한다."
+    },
+    {
+      "sourceId": 762,
+      "code": 27911550,
+      "previousSha256": [
+        "706a58e8ecb9eae7e6fc86803f680e90dfb1d19351f2d3c22bee2bf1f4fd447a"
+      ],
+      "description": "①: 이 카드가 리버스했을 경우에 발동한다. 이 카드를 상대의 덱에 앞면 표시로 넣고 셔플한다.\n②: ①의 효과로 덱에 들어간 이 카드를 드로우했을 경우에 발동한다. 이 카드를 수비 표시로 특수 소환하고, 그 드로우를 한 플레이어는 1000 데미지를 받는다.\n③: ②의 효과로 특수 소환한 이 카드가 몬스터 존에 존재하는 동안, 이 카드를 특수 소환한 플레이어의 필드의 몬스터는 곤충족이 된다."
+    },
+    {
+      "sourceId": 766,
+      "code": 53183600,
+      "previousSha256": [
+        "f5e067256b91fb98c003799f82040c0cfe08be1e8b6525634d0d57f48f6c2232"
+      ],
+      "description": "이 카드는 통상 소환할 수 없다. 자신 필드에 \"툰 월드\"가 있을 때, 자신의 필드에서 몬스터 2장을 릴리스했을 경우에 이 카드를 특수 소환할 수 있다.\n①: 특수 소환된 턴에는 이 카드로 공격할 수 없다.\n②: 이 카드의 공격을 선언할 때, 자신은 500 LP를 지불한다.\n③: 상대 필드에 툰 몬스터가 없을 경우, 이 카드는 직접 공격할 수 있다. 상대 필드에 툰 몬스터가 있을 경우, 그 툰 몬스터만 공격 대상으로 선택할 수 있다.\n④: 필드의 \"툰 월드\"가 파괴되었을 때, 이 카드를 파괴한다."
+    },
+    {
+      "sourceId": 796,
+      "code": 75372290,
+      "previousSha256": [
+        "9591ea05326293f29ce170c605728ee6fd646747964f61d80f102ef32460c980"
+      ],
+      "description": "이 카드를 일반 소환 / 반전 소환했을 경우, 수비 표시로 한다. 이 카드는 수비 표시인 채로 공격할 수 있다. 수비 표시로 공격하는 경우에도 이 카드의 공격력으로 데미지 계산을 한다."
+    },
+    {
+      "sourceId": 845,
+      "code": 75347539,
+      "previousSha256": [
+        "0ce6f6dbdee646bd9edce6836b142b12426012109f67b5daaa4c3a856d4cd7cd"
+      ],
+      "description": "이 카드는 통상 소환할 수 없다. 자신의 패 / 필드에서 \"마그넷 워리어 α\", \"마그넷 워리어 β\", \"마그넷 워리어 γ\"를 1장씩 릴리스했을 경우에 특수 소환할 수 있다.\n①: 이 카드를 릴리스하고, 자신 묘지의 \"마그넷 워리어 α\", \"마그넷 워리어 β\", \"마그넷 워리어 γ\"를 1장씩 대상으로 하여 발동할 수 있다. 그 몬스터들을 특수 소환한다."
+    },
+    {
+      "sourceId": 945,
+      "code": 81210420,
+      "previousSha256": [
+        "591a2d515aa6e82175cfba3e0911012fe6bdf76801c90af3469979af4c7e40b0"
+      ],
+      "description": "①: 상대 배틀 페이즈에 발동할 수 있다. 덱의 마법 / 함정 카드 2장을 골라 공격력과 수비력 0의 일반 몬스터로 취급한다. 자신 메인 몬스터 존의 몬스터 1장과 함께 셔플하고, 세 장을 뒷면 수비 표시로 세트한다. 이 효과로 덱에서 특수 소환한 카드는 그 배틀 페이즈 종료시에 파괴된다."
+    },
+    {
+      "sourceId": 950,
+      "code": 80987696,
+      "previousSha256": [
+        "d91b31569e234443314709e3803373cfed3634841e338fe63b9948874f842150"
+      ],
+      "description": "①: 자신 또는 상대의 몬스터 1장이 전투로 파괴되어 묘지에 보내졌을 때에 발동할 수 있다. 그 몬스터를 파괴 직전의 컨트롤러 필드에, 파괴 당시와 같은 표시 형식으로 특수 소환한다."
+    },
+    {
+      "sourceId": 960,
+      "code": 14315573,
+      "previousSha256": [
+        "bedbb1e6d12fefcf9f1df675bb5f8880a847b6ce3550853809a5683918958b5d"
+      ],
+      "description": "①: 상대 몬스터가 공격을 선언했을 때, 그 공격 몬스터를 대상으로 발동할 수 있다. 그 공격을 무효로 한 후, 배틀 페이즈를 종료한다."
+    },
+    {
+      "sourceId": 964,
+      "code": 49587034,
+      "previousSha256": [
+        "3db983f79e02108fc595d1af22f4052e5396fec394d8b5724fb75d4f9282d463"
+      ],
+      "description": "①: 상대의 패에서 무작위로 1장을 뒷면 표시로 제외한다. 이 카드 발동 후 상대 턴을 세어 네 번째 상대 스탠바이 페이즈에, 그 카드를 상대의 패로 되돌린다."
+    },
+    {
+      "sourceId": 966,
+      "code": 43973174,
+      "previousSha256": [
+        "dccb6e2e56fc781710f86b3baf9e448d86e81835aab0d1a01ac138d124275153"
+      ],
+      "description": "①: 패에서 드래곤족 몬스터를 2장까지 특수 소환한다. 효과의 발동과 처리는 필드에 \"드래곤의 제왕\"이 앞면 표시로 존재할 경우에만 가능하다."
+    },
+    {
+      "sourceId": 969,
+      "code": 1248895,
+      "previousSha256": [
+        "81805904e5b2fc9b968ad1204f1380b39c350986d5d579e12ecaff7afacfae00"
+      ],
+      "description": "①: 공격력 2000 이하의 몬스터가 일반 소환 / 반전 소환 / 특수 소환되었을 때, 그 앞면 몬스터 1장을 대상으로 발동할 수 있다. 대상의 컨트롤러의 패 / 덱에서 대상과 같은 이름의 카드를 전부 파괴한다."
+    },
+    {
+      "sourceId": 1002,
+      "code": 4206964,
+      "previousSha256": [
+        "99d32aff2f8cb6e2a944767aa06cf0d9067f42550ed28c1a09942248fadf55b8"
+      ],
+      "description": "①: 상대가 공격력 1000 이상의 몬스터를 일반 소환 / 반전 소환했을 때, 그 몬스터 1장을 대상으로 발동할 수 있다. 그 공격력 1000 이상의 몬스터를 파괴한다."
+    },
+    {
+      "sourceId": 1003,
+      "code": 24094653,
+      "previousSha256": [
+        "6788a5dfcef36992c45f30e2f95aa6572b688112b572708d507e4b68176f4d99"
+      ],
+      "description": "①: 자신의 패 / 필드의 몬스터를 융합 소재로 하여, 엑스트라 덱에서 융합 몬스터 1장을 융합 소환한다."
+    },
+    {
+      "sourceId": 1011,
+      "code": 82542267,
+      "previousSha256": [
+        "aed82fef6eebe5abd9dc15b2022b98d6c7e625a7ad8f2ca15406d9ca2cd1d0a9"
+      ],
+      "description": "상대 묘지에 있는 몬스터를 1장 또는 2장 선택하고, 선택한 카드를 제외한다."
+    },
+    {
+      "sourceId": 1015,
+      "code": 17814387,
+      "previousSha256": [
+        "65895f3995934ed7111b3c71387c9a2eb1c84e3fcb601c644beb42d525db3d56"
+      ],
+      "description": "①: 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 턴 종료시까지 그 몬스터의 공격력은 500 올린다."
+    },
+    {
+      "sourceId": 1016,
+      "code": 44209392,
+      "previousSha256": [
+        "0bf06dd3a9398a10cbddc9d14bdce2a3c59f4a3a1d2f81589cd6737dda18ba51"
+      ],
+      "description": "필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 대상 몬스터의 수비력은 그 턴의 엔드 페이즈까지 500 오른다."
+    },
+    {
+      "sourceId": 1019,
+      "code": 43487744,
+      "previousSha256": [
+        "c19b92ef062974dbe225a4f11aa26f6271408485df1faad55323bc1794d8e403"
+      ],
+      "description": "상대가 \"블랙홀\"을 발동했을 때에 발동할 수 있다. 자신 필드의 몬스터는 그 \"블랙홀\"의 효과로는 파괴되지 않는다."
+    },
+    {
+      "sourceId": 1022,
+      "code": 42364257,
+      "previousSha256": [
+        "9236230ffe2697c22a6ae3aa9b426cc11715603472f6cc61f8da49b39044b643"
+      ],
+      "description": "상대가 \"번개\"를 발동했을 때에 발동할 수 있다. 그 효과를 무효로 하고, 무효로 했을 경우 상대 필드의 몬스터를 전부 파괴한다."
+    },
+    {
+      "sourceId": 1026,
+      "code": 78637313,
+      "previousSha256": [
+        "f6eea894f6e15c2aaddd020a25b9611ad9a97f008f3626767939f095409d6897"
+      ],
+      "description": "이 카드가 마법 & 함정 존에 앞면 표시로 존재하는 동안, \"죽은 자의 소생\"의 효과로 특수 소환된 필드의 몬스터를 전부 묘지로 보낸다.\n이 카드가 마법 & 함정 존에 앞면 표시로 존재하는 동안, 상대는 \"죽은 자의 소생\"을 세트하거나 발동할 수 없다."
+    },
+    {
+      "sourceId": 1027,
+      "code": 4031928,
+      "previousSha256": [
+        "cfe281a8a098a61439712eb2ed760c4bb6bc4eb7574923436344c543823f19b9"
+      ],
+      "description": "①: 상대 필드의 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터의 컨트롤을 이 턴의 엔드 페이즈까지 얻는다."
+    },
+    {
+      "sourceId": 1030,
+      "code": 3819470,
+      "previousSha256": [
+        "381e442a48ffd5410bd922988914fb4726fd60c996d32f01c9bd81e12bc16304"
+      ],
+      "description": "①: 함정 카드가 발동했을 때, 1000 LP를 지불하고 발동할 수 있다. 그 함정 카드의 발동을 무효로 하여 파괴한다."
+    },
+    {
+      "sourceId": 1045,
+      "code": 88279736,
+      "previousSha256": [
+        "d75a74dc06bce8c4e7d52f6016c613e051ed5d5acac85bb5edecb5304aa08e5d"
+      ],
+      "description": "자신 필드의 몬스터가 상대에게 전투 데미지를 줄 때마다 발동한다. 상대는 자신의 패를 무작위로 1장 버린다."
+    },
+    {
+      "sourceId": 1060,
+      "code": 83225447,
+      "previousSha256": [
+        "61fb773b1abeb132d14c221390d0eba0fd00917d4703b47e20c425f80bd30a25"
+      ],
+      "description": "장착한 몬스터의 공격력은 700 올린다. 자신 스탠바이 페이즈마다 그 몬스터의 공격력을 200씩 내린다."
+    },
+    {
+      "sourceId": 1062,
+      "code": 55608151,
+      "previousSha256": [
+        "177a3984b5fa84ea522fd32425d66869e73c44ea78ae941bf65eee6ffc8b4707"
+      ],
+      "description": "①: 상대가 \"해피의 깃털\"을 발동했을 때에 발동할 수 있다. 그 카드의 효과를 무효로 하고, 상대 필드의 마법 / 함정 카드를 전부 파괴한다."
+    },
+    {
+      "sourceId": 1068,
+      "code": 45986603,
+      "previousSha256": [
+        "1956aa6426ebb5819622d616591358a8ddcc0e56e440f80089f0b300ee1882a5"
+      ],
+      "description": "상대 필드의 몬스터에만 장착할 수 있다. 장착 몬스터의 컨트롤을 얻는다. 상대는 자신의 스탠바이 페이즈마다 1000 LP를 회복한다."
+    },
+    {
+      "sourceId": 1075,
+      "code": 70046172,
+      "previousSha256": [
+        "a766810a98380147dcf669e666ec5238167bd6def65dbf0cfdeb4d003557847d"
+      ],
+      "description": "①: 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 턴 종료시까지 그 몬스터의 공격력은 700 오른다."
+    },
+    {
+      "sourceId": 1076,
+      "code": 16430187,
+      "previousSha256": [
+        "ed2aab4c30ca468d946ce4a68aa4432740e5c69173da516d23e642b362281f14"
+      ],
+      "description": "필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 턴 종료시까지 그 몬스터의 수비력은 700 오른다."
+    },
+    {
+      "sourceId": 1079,
+      "code": 5318639,
+      "previousSha256": [
+        "844220543832e5ec5a45a25251a8fe2a5f40ab7cabc14a092db9d5db94b9d0ed"
+      ],
+      "description": "①: 필드의 마법 / 함정 카드 1장을 대상으로 발동할 수 있다. 대상 카드 1장을 파괴한다."
+    },
+    {
+      "sourceId": 1081,
+      "code": 74191942,
+      "previousSha256": [
+        "3821c51d2de4979f5c38e14097183d1df30a268d3750c86c48104c539af95bdb"
+      ],
+      "description": "덱의 카드 5장을 골라 상대에게 공개한다. 상대가 그중 1장을 고르고, 자신은 그 카드를 패에 넣는다. 선택되지 않은 카드는 묘지로 보낸다."
+    },
+    {
+      "sourceId": 1093,
+      "code": 34694160,
+      "previousSha256": [
+        "ce6de29e0737546ad7482f2d26a43835d557de6216e83a406fba4a91a0ff9d26"
+      ],
+      "description": "①: 이 카드가 마법 & 함정 존에 있는 동안, 상대는 자신의 패를 계속 공개한다.\n②: 상대 스탠바이 페이즈에 발동한다. 상대는 1000 LP를 회복한다. 이 효과를 발동할 때와 처리할 때, 상대의 패에 마법 카드가 있어야 한다."
+    },
+    {
+      "sourceId": 1099,
+      "code": 22359980,
+      "previousSha256": [
+        "76d006d0e00a9258608440d842ae58f2f3e9e368f953a59ee8fa56f319d65b2c"
+      ],
+      "description": "이 카드의 컨트롤러는 자신의 스탠바이 페이즈마다 2000 LP를 지불한다. 지불하지 않을 경우 이 카드를 파괴한다.\n①: 이 카드가 마법 & 함정 존에 존재하는 동안, 공격 중인 상대 몬스터의 공격력은 절반이 된다."
+    },
+    {
+      "sourceId": 1114,
+      "code": 95178994,
+      "previousSha256": [
+        "ca546d8c3be43033df0fc0051b139a83edb9755e3b096a4e48220de1c9e58846"
+      ],
+      "description": "이 카드가 전투로 파괴되어 묘지로 보내졌을 때에 발동한다. 상대에게 500 데미지를 준다. 또한, 덱의 \"자이언트 바이러스\"를 원하는 수만큼 앞면 공격 표시로 특수 소환할 수 있다."
+    },
+    {
+      "sourceId": 1131,
+      "code": 44656491,
+      "previousSha256": [
+        "c785740f412919c9b9397368fdfeb613ed8072e12f4db2807ebf0dd9f7ab2779"
+      ],
+      "description": "양쪽 필드의 앞면 표시 공격력 1500 이상 몬스터는 공격을 선언할 수 없다. 자신의 스탠바이 페이즈마다 100 LP를 지불한다. 지불하지 않을 경우 이 카드를 파괴한다."
+    },
+    {
+      "sourceId": 1134,
+      "code": 73079365,
+      "previousSha256": [
+        "104d0717a1b0da491617756744617ec4a37caa7970b9d43a1b27300441e70dd2"
+      ],
+      "description": "상대가 컨트롤하는 카드의 효과로 자신 필드의 마법 카드가 파괴되어 묘지로 보내졌을 때에 발동할 수 있다. 필드의 마법 / 함정 카드 1장을 대상으로 하고 그 카드를 파괴한다."
+    },
+    {
+      "sourceId": 1137,
+      "code": 12253117,
+      "previousSha256": [
+        "ed899d0d31a337a350af495453f9b8fd4f4250839ca6b3395688919a15d667b0"
+      ],
+      "description": "필드 마법 카드가 발동했을 때에 발동할 수 있다. 턴 종료시까지 필드에 있는 필드 마법 카드의 효과를 무효로 한다."
+    },
+    {
+      "sourceId": 1138,
+      "code": 49251811,
+      "previousSha256": [
+        "472b14d76c26bc1a0ad911e0f349ce4b02c1cd4263859100e167e1a8c290e698"
+      ],
+      "description": "지속 마법 카드가 발동했을 때에 발동할 수 있다. 턴 종료시까지 필드의 모든 지속 마법 카드의 효과를 무효로 한다."
+    },
+    {
+      "sourceId": 1139,
+      "code": 75646520,
+      "previousSha256": [
+        "2dfc9631f0970358bfea3fd708d759d3a4d0bcbbdfb5450bd082e75f7d224275"
+      ],
+      "description": "지속 함정 카드가 발동했을 때에 발동할 수 있다. 턴 종료시까지 필드의 모든 지속 함정 카드의 효과를 무효로 한다."
+    },
+    {
+      "sourceId": 1149,
+      "code": 9074847,
+      "previousSha256": [
+        "c5af47aec2df8adeaaff4a4ba34b70d54f682099c5a860267de7ed8e17ded28e"
+      ],
+      "description": "상대가 컨트롤하는 카드의 효과로 자신의 몬스터가 필드에서 패로 되돌아갔을 때에 발동할 수 있다. 필드의 몬스터를 모두 주인의 패로 되돌린다. 그 후, 각 플레이어는 이 효과로 자신의 패에 되돌아온 몬스터 수만큼 패에서 몬스터를 뒷면 수비 표시로 특수 소환한다."
+    },
+    {
+      "sourceId": 1150,
+      "code": 36468556,
+      "previousSha256": [
+        "dd915fa898af29996cd4467b1b4b1c384403746e2efe40ba6a714eeaf8461e7a"
+      ],
+      "description": "①: 필드에 뒷면 수비 표시 몬스터 또는 효과 몬스터가 존재할 경우에 발동할 수 있다. 필드의 뒷면 수비 표시 몬스터를 전부 앞면 수비 표시로 한다. 이때 리버스 몬스터의 효과는 발동하지 않는다. 필드에 존재하는 효과 몬스터 수에 500을 곱한 만큼 상대에게 데미지를 준다."
+    },
+    {
+      "sourceId": 1154,
+      "code": 61740673,
+      "previousSha256": [
+        "3fbed327da1ff920021a03793f7fd5df07216a18f074654e9349260979ec5801"
+      ],
+      "description": "이 카드의 컨트롤러는 서로의 스탠바이 페이즈마다 700 LP를 지불한다. 지불할 수 없을 경우 이 카드를 파괴한다.\n①: 이 카드가 마법 & 함정 존에 존재하는 동안, 필드의 마법 카드 효과는 전부 무효화된다."
+    },
+    {
+      "sourceId": 1163,
+      "code": 79106360,
+      "previousSha256": [
+        "f0767eac5df2ba13406cc6038ccfd76c38ed93bf1dfe4583e797f913f20283bf"
+      ],
+      "description": "리버스: 필드의 몬스터를 모두 주인의 덱으로 되돌리고 셔플한다. 그 후, 각 플레이어는 자신의 메인 덱으로 되돌린 몬스터 수만큼 몬스터가 나올 때까지 덱 위에서 카드를 넘긴다. 그중 레벨 4 이하의 몬스터를 가능한 한 전부 뒷면 수비 표시로 특수 소환하고, 나머지 넘긴 카드는 묘지로 보낸다."
+    },
+    {
+      "sourceId": 1181,
+      "code": 34016756,
+      "previousSha256": [
+        "3a3f726ada17d90448115e157b262f2606f34b07a223e2c6e8a7a5a4ffda3e68"
+      ],
+      "description": "①: 필드의 앞면 표시 몬스터 2장을 대상으로 하고 발동할 수 있다. 턴 종료시까지 그중 1장의 공격력은 절반이 되고, 나머지 1장의 공격력은 그 절반에 해당하는 수치만큼 오른다."
+    },
+    {
+      "sourceId": 1182,
+      "code": 61405855,
+      "previousSha256": [
+        "eb6c7552065edd8ef7f890179e04a9d41cc51efc98853e798fef10beccc1ca99"
+      ],
+      "description": "전사족 몬스터에만 장착할 수 있다.\n①: 장착 몬스터의 공격력은 700 올린다.\n②: 장착 몬스터가 드래곤족 몬스터와 전투를 한 데미지 계산 후에 발동한다. 그 전투의 상대 몬스터는 해당 배틀 페이즈 종료시에 파괴된다."
+    },
+    {
+      "sourceId": 1202,
+      "code": 92377303,
+      "previousSha256": [
+        "5f4fdca1c3172744a4edb485abbc11c69a988645c41a1c9ecd4cf6fb130f3adc"
+      ],
+      "description": "이 카드는 통상 소환할 수 없다. \"시간의 마술사\"의 효과에 성공했을 때, 자신의 필드에서 \"블랙 매지션\" 1장을 릴리스하여 패 / 덱에서 이 카드를 특수 소환할 수 있다. 이 방법으로 특수 소환했을 때, 덱의 마법 카드 1장을 패에 넣는다."
+    },
+    {
+      "sourceId": 1211,
+      "code": 63391643,
+      "previousSha256": [
+        "af064b65c86bda949c83f75ce0e989f28fd94014417cabb6cbe3fae4c32eaa56"
+      ],
+      "description": "①: 자신 필드에 \"블랙 매지션\"이 존재할 경우, 상대 필드의 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 파괴한다."
+    },
+    {
+      "sourceId": 1213,
+      "code": 25774450,
+      "previousSha256": [
+        "60db3b787570dc30d16f7b95d6e90863ba725354f29251391bed19eb98fbcc73"
+      ],
+      "description": "①: 자신과 상대의 필드에서 몬스터를 각각 1장씩 대상으로 하여 발동할 수 있다. 상대의 대상 몬스터를 파괴한 후, 자신의 대상 몬스터의 컨트롤을 상대에게 옮긴다."
+    },
+    {
+      "sourceId": 1220,
+      "code": 68005187,
+      "previousSha256": [
+        "767732fcd88fed4cee0f7f4190a538facd7e905a141a7c90d647b13d8cfd1ca8"
+      ],
+      "description": "이 카드를 발동하는 턴에는 자신은 배틀 페이즈를 실행할 수 없다.\n①: 상대 필드의 몬스터 1장을 대상으로 하고 발동할 수 있다. 이 턴에 자신이 몬스터를 릴리스할 경우, 자신 몬스터 1장 대신 대상 몬스터를 릴리스해야 한다."
+    },
+    {
+      "sourceId": 1232,
+      "code": 40703222,
+      "previousSha256": [
+        "f584122262107607d811888abe118eb43d127be9c7984a2159e4b42f7a0440a5"
+      ],
+      "description": "①: 자신 필드의 앞면 표시 \"크리보\" 1장을 릴리스하고 발동할 수 있다. 자신 필드에 \"크리보 토큰\"(악마족 / 어둠 / 레벨 1 / 공 300 / 수 200)을 가능한 수만큼 수비 표시로 특수 소환한다. 이 토큰은 어드밴스 소환을 위한 릴리스로 사용할 수 없다."
+    },
+    {
+      "sourceId": 1241,
+      "code": 4796100,
+      "previousSha256": [
+        "97fd1a64cf40f0820721999e37d1693867a1cb71aaa151fcc2fff086553cc58c"
+      ],
+      "description": "\"환상수왕 가젤\" ＋ \"바포메트\"\n①: 이 카드가 파괴되었을 때, 자신 묘지의 \"환상수왕 가젤\" 또는 \"바포메트\" 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 특수 소환한다."
+    },
+    {
+      "sourceId": 1242,
+      "code": 50287060,
+      "previousSha256": [
+        "6e51e7de0c484ea5e5998bd99880eff55ef71e2ca97a60b3e209014ff80f13bc"
+      ],
+      "description": "①: 이 카드가 묘지에 보내졌을 때, 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 묘지의 이 카드를 공격력 500을 내리는 장착 카드로 취급하여 대상 몬스터에 장착한다."
+    },
+    {
+      "sourceId": 1243,
+      "code": 54912977,
+      "previousSha256": [
+        "4a3908b7278084ee8b6ea190be7091b3c996de19942962ed7358e3f63f3e65a0"
+      ],
+      "description": "①: 자신 메인 페이즈에 발동할 수 있다. 이 카드가 필드에 앞면 표시로 존재할 경우, 패의 \"램프의 요정 라 진\" 1장을 특수 소환한다.\n②: 뒷면 수비 표시의 이 카드를 상대 몬스터가 공격한 데미지 계산 전에, 공격 몬스터가 아닌 상대 필드의 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터로 공격 대상을 옮기고 데미지 계산을 실행한다."
+    },
+    {
+      "sourceId": 1244,
+      "code": 29267084,
+      "previousSha256": [
+        "eaad7f42d096ffc1512dcfa1e68a7e1d8c784cbfe0bd13f9538b59933e4c8297"
+      ],
+      "description": "상대 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다.\n①: 대상 몬스터는 공격력이 700 내려가고, 공격 및 표시 형식의 변경을 할 수 없다. 대상 몬스터가 필드에서 벗어났을 때, 이 카드를 파괴한다."
+    },
+    {
+      "sourceId": 1254,
+      "code": 78636495,
+      "previousSha256": [
+        "c2195675b0e9bbd6f21b847cc1aa68ac363142a16c344654a970c0e2901283c9"
+      ],
+      "description": "①: 이 카드가 리버스했을 경우에 발동한다. 이 카드의 공격력과 수비력은 500 올린다.\n②: 이 카드가 몬스터와의 전투로 파괴되었을 경우에 발동한다. 그 몬스터의 공격력과 수비력은 500 내린다."
+    },
+    {
+      "sourceId": 1256,
+      "code": 39180960,
+      "previousSha256": [
+        "ae4fddcc5b25fb43c3c06093c220f4fdc2d5e794bc8480b28ed63d24c8f3eedd"
+      ],
+      "description": "리버스했을 경우에 발동한다. 양쪽 플레이어는 각각 자신의 패에서 카드 1장을 골라 버린다.\n이 카드가 전투로 파괴되었을 경우에 발동한다. 이 카드를 파괴한 몬스터의 공격력과 수비력은 각각 500 내린다."
+    },
+    {
+      "sourceId": 1257,
+      "code": 48948935,
+      "previousSha256": [
+        "456666416948e541dcd286fdf1111bed3fa48b35a87be47549ea48180bc7cda1"
+      ],
+      "description": "이 카드는 통상 소환할 수 없다. 자신의 필드에서 \"가면주술사 커스드 규라\" 또는 \"멜키드 사면수\"를 포함한 몬스터 2장을 릴리스했을 경우에 특수 소환할 수 있다.\n①: 이 카드가 필드에서 묘지에 보내졌을 경우, 상대 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동한다. 덱의 \"유언의 가면\" 1장을 장착 카드로 취급하여 대상 몬스터에 장착한다."
+    },
+    {
+      "sourceId": 1305,
+      "code": 35346968,
+      "previousSha256": [
+        "9a41b06707e032edcfcca3077d5355db3bc288c219e800e2ad8cfd1e8b8e7a51"
+      ],
+      "description": "①: 이 카드가 마법 & 함정 존에 존재하는 동안, 자신이 드로우할 때마다 500 LP를 회복한다."
+    },
+    {
+      "sourceId": 1306,
+      "code": 65830223,
+      "previousSha256": [
+        "2ad5b437b8977a62eb256cbc9493e9034ea3c6887d538a1e696ba2e162f8ab46"
+      ],
+      "description": "상대의 묘지에 몬스터 카드가 보내질 때마다 발동한다. 상대에게 300 데미지를 준다."
+    },
+    {
+      "sourceId": 1311,
+      "code": 24294108,
+      "previousSha256": [
+        "1416fd682ca9f98f7ea840659b6feea68972940020bc6397f950228c481eb412"
+      ],
+      "description": "①: 이 카드의 발동을 처리할 때, 필드의 필드 마법 카드를 전부 파괴한다.\n②: 서로의 스탠바이 페이즈에 발동한다. 턴 플레이어는 500 데미지를 받는다."
+    },
+    {
+      "sourceId": 1316,
+      "code": 93108433,
+      "previousSha256": [
+        "ac92092fb30f583e6f19a8055d8ca3cf544c24f6ce2d327d91d2216096349b03"
+      ],
+      "description": "①: 원래 주인이 상대인 카드가 자신의 패에 없을 경우, 자신이 원래 주인인 자신 필드의 몬스터 1장을 대상으로 하고 발동할 수 있다. 대상 몬스터와 자신의 패 전부를 덱으로 되돌려 셔플한다. 그 후, 자신은 원래의 패 매수만큼 덱에서 드로우한다."
+    },
+    {
+      "sourceId": 1317,
+      "code": 59560625,
+      "previousSha256": [
+        "5d40c135c0401110b8dff158bd438326d4a736b346848c5204c07e75ea926721"
+      ],
+      "description": "①: 자신 필드의 몬스터 1장만이 상대의 마법 / 함정 효과의 대상이 되었을 때, 또는 상대 몬스터의 공격 대상이 되었을 때에 발동할 수 있다. 그 몬스터와 다른 적절한 자신 필드의 몬스터 1장을 대상으로 하고, 그 효과 또는 공격의 대상을 그 몬스터로 옮긴다."
+    },
+    {
+      "sourceId": 1320,
+      "code": 90502999,
+      "previousSha256": [
+        "fddb0605909cafc8e13b948d950720f2cc7e817511e2ef601c789a6bc36848e0"
+      ],
+      "description": "사용 중이 아닌 메인 몬스터 존 2곳을 지정하고 발동할 수 있다.\n①: 이 카드가 마법 & 함정 존에 존재하는 동안, 지정한 존은 사용할 수 없다."
+    },
+    {
+      "sourceId": 1326,
+      "code": 3643300,
+      "previousSha256": [
+        "c481ad3dca6bbf30bdddee6e5974d10edb8ad3ca037fcbadd833daee1287213e"
+      ],
+      "description": "①: 필드에 \"바다\"가 있는 동안, 필드의 이 카드는 마법 카드의 효과를 받지 않는다.\n②: 필드에 \"바다\"가 있는 동안, 이 카드는 공격 대상이 되지 않는다. 자신 필드에 이 효과의 적용을 받는 몬스터만 있을 경우, 상대는 직접 공격할 수 있다."
+    },
+    {
+      "sourceId": 1351,
+      "code": 423705,
+      "previousSha256": [
+        "a8dd0c8091d2d406bc4c60cd59024a6c6b57e61dc6b9bdaf3c0997f1eb546eb0"
+      ],
+      "description": "①: 이 카드에 장착 카드가 장착되었을 경우에 발동한다. 그 장착 카드를 파괴한다."
+    },
+    {
+      "sourceId": 1418,
+      "code": 29549364,
+      "previousSha256": [
+        "084455aee9022fc509b43fe7c50693979637cd729d3dbb8921ab104f5861981e"
+      ],
+      "description": "①: 이 카드가 마법 & 함정 존에 존재하는 동안, 양쪽 플레이어는 카드를 릴리스할 수 없다."
+    },
+    {
+      "sourceId": 1421,
+      "code": 74848038,
+      "previousSha256": [
+        "a0774f6ac27579784373da12f57dd7690a5e61af12c4ad6b4ebc0b13975e159a"
+      ],
+      "description": "①: 패를 1장 버리고, 자신 묘지의 몬스터 1장을 대상으로 발동할 수 있다. 그 몬스터를 패에 넣는다."
+    },
+    {
+      "sourceId": 1426,
+      "code": 21770260,
+      "previousSha256": [
+        "d230ecdc3c5bc69a546ee9208db2b2eb0e889ee9989712657d19dd27daadfeeb"
+      ],
+      "description": "자신 스탠바이 페이즈마다 자신 필드에 \"슬라임 몬스터 토큰\"(물족 / 물 / 레벨 1 / 공 500 / 수 500) 1장을 공격 표시로 특수 소환한다. 이 카드가 필드에 앞면 표시로 존재하는 동안, 자신은 \"슬라임 몬스터 토큰\" 이외의 몬스터를 일반 소환 / 반전 소환 / 특수 소환할 수 없다."
+    },
+    {
+      "sourceId": 1444,
+      "code": 84080939,
+      "previousSha256": [
+        "72cd6ba333066924e95627463dedef2fc0254174a6e5bfe0f0930cd969c2e9d9"
+      ],
+      "description": "앞면 표시의 이 카드를 릴리스하고 발동할 수 있다. 이 턴에 전투로 파괴되어 자신 묘지에 보내진 몬스터 1장을 패로 되돌린다."
+    },
+    {
+      "sourceId": 1451,
+      "code": 19230408,
+      "previousSha256": [
+        "825a46b23039159bb3b1da5f0d26706a05b16347aaa4919664403026df0209e5"
+      ],
+      "description": "①: 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 앞면 표시 몬스터를 파괴한다. 자신의 다음 드로우 페이즈를 건너뛴다."
+    },
+    {
+      "sourceId": 1514,
+      "code": 31829185,
+      "previousSha256": [
+        "cdf9850e2dbd6902dafe0854ed44aa245a4214ea670d441f2459694cd1fcdaac"
+      ],
+      "description": "이 카드는 통상 소환할 수 없다. 자신의 묘지에서 악마족 몬스터 3장을 제외했을 경우에 특수 소환할 수 있다.\n①: 몬스터 존의 이 카드가 상대에 의해 파괴되어 묘지로 보내진 턴의 엔드 페이즈에, 상대 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동한다. 묘지의 이 카드를 장착 카드로 취급하여 대상 몬스터에 장착한다.\n②: 이 카드가 자신의 효과로 장착되어 있는 동안, 장착 몬스터의 컨트롤을 얻는다."
+    },
+    {
+      "sourceId": 1535,
+      "code": 5616412,
+      "previousSha256": [
+        "544a6e442da62f49ef6fb77000c42ff15c69496815ad4c635d4b1819b14c3ad7"
+      ],
+      "description": "공격받은 수비 표시 몬스터의 수비력이 상대 공격 몬스터의 공격력보다 높을 경우, 데미지 스텝 종료시에 발동할 수 있다. 그 공격 몬스터를 파괴한다."
+    },
+    {
+      "sourceId": 1539,
+      "code": 15866454,
+      "previousSha256": [
+        "d856bd1eae7a0e471db2157decebc330191f022ce40a21af0f1c6ce076a25b47"
+      ],
+      "description": "①: 상대 필드의 마법 / 함정 카드 1장을 대상으로 하여 발동할 수 있다. 그 카드를 주인의 패로 되돌린다. 이 카드의 발동과 효과는 무효화되지 않는다."
+    },
+    {
+      "sourceId": 1546,
+      "code": 95286165,
+      "previousSha256": [
+        "81d65bad524223ec3cb95ec6eef0445da7992e5dc79562a11a0836daa85923d2"
+      ],
+      "description": "①: 필드의 융합 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 주인의 엑스트라 덱으로 되돌린다. 이후, 그 몬스터의 융합 소환에 사용한 소재 몬스터 1세트 전부가 자신의 묘지에 있으면, 그 1세트를 자신 필드에 특수 소환할 수 있다."
+    },
+    {
+      "sourceId": 1547,
+      "code": 33550694,
+      "previousSha256": [
+        "ced452891d8cb495ae1126327e57540e34ff592ab99e5852ecac6ee10ef6eba6"
+      ],
+      "description": "①: 이 카드가 필드에 있는 동안, 양쪽 플레이어는 각각 자신의 메인 페이즈에 이 효과를 발동할 수 있다. 자신의 패 / 필드에서 융합 몬스터에 적힌 소재 몬스터를 제외하고, 그 융합 몬스터를 엑스트라 덱에서 융합 소환한다."
+    },
+    {
+      "sourceId": 1548,
+      "code": 69954399,
+      "previousSha256": [
+        "0454d19bde46707cbb88af242bc8053ded2ff90093b3c2a4a668242a67524032"
+      ],
+      "description": "장착 몬스터는 공격할 수 없다. 장착 몬스터의 컨트롤러의 두 번째 턴 종료시에 장착 몬스터를 파괴한다. 이 효과로 장착 몬스터를 파괴했을 경우, 이 카드를 주인의 패로 되돌린다."
+    },
+    {
+      "sourceId": 1980,
+      "code": 17601919,
+      "previousSha256": [
+        "a060b3bde4decc553890f696388ed8800419227e8dbe77bdcd42a8ed16777f5f",
+        "e03f73e835665816b3106aa6c57ab1c2bf1cdc528e40aa1749e526605ed4c6db"
+      ],
+      "description": "몬스터 존에 있는 앞면 표시의 이 카드가 파괴되었을 경우, 묘지로 보내지 않고 지속 마법 카드로 취급하여 자신 마법 & 함정 존에 앞면 표시로 놓을 수 있다. 이 효과로 지속 마법 카드로 취급하는 동안, 서로의 스탠바이 페이즈마다 이 카드에 펌프킨 카운터 1개를 놓는다. 상대 필드의 모든 몬스터의 공격력과 수비력은 이 카드의 펌프킨 카운터 1개당 100 내린다."
+    },
+    {
+      "sourceId": 2024,
+      "code": 25551951,
+      "previousSha256": [
+        "0288cc8cc44ed4e56702f1f69dd7053b6e975b442bddaefdab80ae5179ad7c7d"
+      ],
+      "description": "1턴에 1번, 자신 메인 페이즈에 상대 필드의 카드 1장을 대상으로 하고 발동할 수 있다. 코인 토스를 3회 실행한다. 앞면이 2회 이상 나오면 대상 카드를 파괴한다."
+    },
+    {
+      "sourceId": 2397,
+      "code": 23893227,
+      "previousSha256": [
+        "9f0721c7848ee17a92e887515340797374c0910575e14735f5e39f4192e30901"
+      ],
+      "description": "이 카드명의 ②③의 효과는 1턴에 1번, 그중 하나만 사용할 수 있다.\n①: 필드 또는 묘지에 존재하는 이 카드의 이름은 \"사이버 드래곤\"이 된다.\n②: 이 카드를 일반 소환했을 경우에 발동한다. 덱의 \"사이버\" 또는 \"사이버네틱\" 마법 / 함정 카드 중 1장을 패에 넣는다.\n③: 상대 필드에만 몬스터가 있을 경우, 묘지의 이 카드를 제외하여 발동할 수 있다. 덱에서 \"사이버 드래곤\" 몬스터 1장을 특수 소환한다."
+    },
+    {
+      "sourceId": 2402,
+      "code": 86686671,
+      "previousSha256": [
+        "9362813d4f26aa1bb61bb8d64813f290b91ea16437280f653d2b6537bb38d021"
+      ],
+      "description": "이 카드명의 카드는 1턴에 1장만 발동할 수 있다.\n①: 자신 묘지에 \"사이버 드래곤\"이 있는 경우, 다음 중 1개를 선택하여 발동할 수 있다. 발동할 때 자신 묘지에 \"사이버 드래곤\"이 3장 이상 있으면 양쪽 효과를 선택할 수 있다.\n● 덱에서 빛 속성 / 기계족 몬스터 1장을 패에 넣는다.\n● 자신 묘지의 빛 속성 / 기계족 몬스터 1장을 대상으로 하여 발동할 수 있다. 그 몬스터를 덱으로 되돌린다."
+    },
+    {
+      "sourceId": 2404,
+      "code": 37694547,
+      "previousSha256": [
+        "e31aa4d7d71c036bfb34ae4cad915415c5c19e0285215532ea1b821ad71c7423"
+      ],
+      "description": "①: 이 카드가 필드 존에 있는 동안, 양쪽 플레이어는 \"앤틱 기어\" 몬스터의 일반 소환에 필요한 릴리스의 수를 1만큼 줄일 수 있다.\n②: 이 카드가 파괴되어 묘지로 보내졌을 때에 발동할 수 있다. 자신의 패 / 덱 / 묘지 중에서 \"앤틱 기어\" 몬스터 1장을 특수 소환한다."
+    },
+    {
+      "sourceId": 2407,
+      "code": 1953925,
+      "previousSha256": [
+        "a4d53c1a8fb2489cde64e0266dc109b67ffd157fad5a94460c04bbf392b9d6bf"
+      ],
+      "description": "①: 이 카드가 몬스터 존에 있는 동안, 이 카드를 대상으로 한 함정의 효과는 무효가 되며 그 함정 카드는 파괴된다.\n②: 이 카드가 공격하면, 상대는 데미지 스텝이 끝날 때까지 마법 / 함정 카드를 발동할 수 없다.\n③: 이 카드가 공격한 데미지 스텝의 종료시에 상대 필드의 마법 / 함정 카드 1장을 대상으로 하고 발동한다. 그 카드를 파괴한다."
+    },
+    {
+      "sourceId": 2410,
+      "code": 92001300,
+      "previousSha256": [
+        "cb13d542a2f5be8a17f13dc83359b3b9d4526bafa3ed2c43942d14e450c8e487"
+      ],
+      "description": "①: 양쪽 필드에 있는 \"앤틱 기어\" 몬스터의 공격력을 300 올린다.\n②: 이 카드가 마법 & 함정 존에 있는 동안, 어느 쪽이든 몬스터를 통상 소환할 때마다 이 카드에 카운터를 1개 놓는다.\n③: 자신의 \"앤틱 기어\" 몬스터를 앞면 표시로 어드밴스 소환할 경우, 필요한 릴리스의 수 이상으로 카운터가 놓인 이 카드 1장을 릴리스하여 그 소환에 필요한 릴리스 전부를 대신할 수 있다."
+    },
+    {
+      "sourceId": 2441,
+      "code": 65956182,
+      "previousSha256": [
+        "aa3e8fa97958c4e74437fbea98d1de203f6c5f241bda0b96633e755e54287d8f"
+      ],
+      "description": "이 카드명의 ①②의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 자신 / 상대의 메인 페이즈에 발동할 수 있다. 엑스트라 덱의 악마족 융합 몬스터 1장에 기재된 융합 소재를 자신 필드 / 묘지에서 제외하고, 그 몬스터를 융합 소환한다. \"암흑계\" 몬스터를 융합 소환할 경우에는 패에서 몬스터를 효과로 버려 소재로 삼을 수도 있다.\n②: 이 카드가 묘지에 존재할 경우 자신 메인 페이즈에 발동할 수 있다. 이 카드를 패에 넣은 후, 패에서 \"암흑계\" 몬스터 1장을 골라 버린다."
+    },
+    {
+      "sourceId": 2450,
+      "code": 99458769,
+      "previousSha256": [
+        "7a3f05f1db3a3d12bf8bd006c28b20dbf526de64300cb233e4108a5bf5852bbc"
+      ],
+      "description": "①: 상대의 효과로 패의 이 카드가 묘지로 버려졌을 경우 발동한다. 이 카드를 특수 소환한다.\n②: ①의 효과로 이 카드의 특수 소환에 성공했을 경우 발동한다. 다음 중 1개를 골라 처리한다.\n● 상대 필드의 몬스터를 전부 파괴한다.\n● 상대 필드의 마법 / 함정 카드를 전부 파괴한다."
+    },
+    {
+      "sourceId": 2458,
+      "code": 3105404,
+      "previousSha256": [
+        "59bc7a239e6f9440fafa18fea943fd20f1fa1e6c55a368739032a18d85f75348"
+      ],
+      "description": "이 카드명의 카드는 1턴에 1장만 발동할 수 있다.\n①: 자신 필드의 \"젬나이트\" 몬스터가 상대 몬스터의 공격이나 상대 효과로 파괴되었을 경우, 파괴된 그 몬스터 중 1장을 대상으로 하고 발동할 수 있다. 그 몬스터의 원래 공격력만큼 상대에게 데미지를 준다.\n②: 이 카드가 묘지에 존재할 경우, 패의 \"젬나이트\" 카드 1장을 묘지로 보내고 발동할 수 있다. 이 카드를 패에 넣는다."
+    },
+    {
+      "sourceId": 2459,
+      "code": 3113836,
+      "previousSha256": [
+        "65a28d4b6e4399333b790f7b615ff250ccfed75fb8924894323c009ad78e99ee"
+      ],
+      "description": "\"젬나이트\" 몬스터 ＋ 빛 속성 몬스터\n엑스트라 덱의 이 카드는 위 소재를 사용한 융합 소환으로만 특수 소환할 수 있다.\n①: 이 카드가 몬스터 존에 있는 동안, 자신 메인 페이즈에 통상 소환을 1번 더 할 수 있다. 이 추가 통상 소환은 이 효과를 가진 몬스터가 여러 장 있어도 1번만 적용한다."
+    },
+    {
+      "sourceId": 2460,
+      "code": 7394770,
+      "previousSha256": [
+        "5722fc50552b8a6192079aaa23087cbe487479def4344bfbd592dd2bde5612e5"
+      ],
+      "description": "이 카드명의 카드는 1턴에 1장만 발동할 수 있다.\n①: 이 카드의 발동을 처리할 때, 자신의 덱의 몬스터를 소재로 하여 \"젬나이트\" 융합 몬스터 1장을 공격력 / 수비력 0으로 융합 소환한다. 이 카드가 필드에서 벗어나면 그 몬스터를 파괴한다.\n②: 1턴에 1번, 패에서 마법 카드 1장을 버리고 발동할 수 있다. ①로 특수 소환한 몬스터의 공격력 / 수비력을 각각의 원래 수치만큼 올린다. 이 상승은 상대 턴 종료시까지 적용한다."
+    },
+    {
+      "sourceId": 2462,
+      "code": 13108445,
+      "previousSha256": [
+        "6065dd72b5ffa90049e139ca6defede75f588e77f4bc8c4b3bbc6ba3d76ecbaa"
+      ],
+      "description": "\"젬나이트 사피아\" ＋ \"젬나이트\" 몬스터 1장\n엑스트라 덱의 이 카드는, 위에 적힌 카드를 소재로 사용한 융합 소환으로만 특수 소환할 수 있다.\n①: 이 카드가 공격하면 그 배틀 페이즈 종료시에 수비 표시가 된다.\n②: 이 카드가 필드에서 묘지로 보내졌을 경우 상대 필드의 카드 1장을 대상으로 하고 발동한다. 그 카드를 주인의 패로 되돌린다."
+    },
+    {
+      "sourceId": 2465,
+      "code": 19355597,
+      "previousSha256": [
+        "0f6c9d5406b09f9378f93f9e8038832d2cb8ccf628fcde657bfd339419f7884e"
+      ],
+      "description": "\"젬나이트\" 몬스터 3장\n엑스트라 덱의 이 카드는 위의 소재를 사용한 융합 소환으로만 특수 소환할 수 있다. 자신은 이 카드명인 몬스터를 1턴에 1번만 특수 소환할 수 있다.\n①: 1턴에 1번, 자신 메인 페이즈에 발동할 수 있다. 자신 필드의 앞면 표시 \"젬나이트\" 몬스터 1장을 묘지로 보내고, 엑스트라 덱의 \"젬나이트\" 융합 몬스터 1장을 소환 조건을 무시하고 특수 소환한다."
+    },
+    {
+      "sourceId": 2466,
+      "code": 24220368,
+      "previousSha256": [
+        "f3489a72265cd35aa238cb79c3383a702d808dd371eddd37d7d9d3eeddab6318"
+      ],
+      "description": "①: 다음 중 1개를 선택하여 발동할 수 있다. 이 카드명의 아래 두 효과는 각각 1턴에 1번만 선택할 수 있다.\n● 자신의 패 / 필드의 몬스터를 소재로 \"젬나이트\" 융합 몬스터 1장을 융합 소환한다. 자신 묘지에 \"젬나이트 퓨전\"이 존재하면 자신의 덱 / 엑스트라 덱의 암석족 이외의 \"젬나이트\" 몬스터도 합계 2장까지 융합 소재로 사용할 수 있다.\n● 자신 덱에 있거나 앞면으로 제외되어 있는 자신의 \"젬\" 몬스터 1장을 패에 넣는다. 이 턴의 메인 페이즈 동안 상대에게 주어지는 효과 데미지는 절반이 된다."
+    },
+    {
+      "sourceId": 2467,
+      "code": 25342956,
+      "previousSha256": [
+        "8d72b1398cf0f3729cb951b00d5e59739e5bde9dcd9bd9946e9df0a1dca47ade"
+      ],
+      "description": "\"젬\" 몬스터 3장\n이 카드명의 ①②의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 자신 / 상대의 메인 페이즈에 필드의 이 카드를 묘지로 보내고 발동할 수 있다. 자신의 엑스트라 덱 / 묘지에 있는 암석족 이외의 \"젬\" 몬스터를 서로 다른 이름으로 최대 3장 골라 소환 조건을 무시하고 특수 소환한다. 이 효과를 처리한 뒤 턴 종료시까지, 자신은 엑스트라 덱에서 융합 몬스터만 특수 소환할 수 있다.\n②: 이 카드가 묘지에 있는 동안 자신의 \"젬나이트\" 융합 몬스터가 전투로 파괴되었을 때에 발동할 수 있다. 이 카드를 특수 소환한다."
+    },
+    {
+      "sourceId": 2469,
+      "code": 35622739,
+      "previousSha256": [
+        "99f20335c4dd9232a0790fa7b68414cba986f0148028701a60a1cbfdd9bc27de"
+      ],
+      "description": "이 카드명의 ①②의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 상대 필드에 몬스터가 존재할 경우, 패의 이 카드를 버리고 발동할 수 있다. 덱에 있는 \"퓨전\" 지속 마법 카드 1장을 자신의 필드에 세트한다. 이 효과를 처리한 뒤 턴 종료시까지 자신은 엑스트라 덱에서 \"젬나이트\" 몬스터만 특수 소환할 수 있다.\n②: 이 카드가 융합 소재로 묘지에 보내지거나 앞면 표시로 제외되었을 경우에 발동할 수 있다. 자신 묘지에서 이 카드명 이외의 \"젬나이트\" 몬스터 1장을 패에 넣는다."
+    },
+    {
+      "sourceId": 2470,
+      "code": 39261576,
+      "previousSha256": [
+        "73d6019ceacc13d56970d573297c1af22959d9db87b185b095ba7a4265b8b951"
+      ],
+      "description": "자신 필드에서 \"젬나이트\" 융합 몬스터에 기재된 소재 몬스터를 묘지로 보내고, 그 몬스터 1장을 엑스트라 덱에서 융합 소환한다.\n이 효과로 융합 소환에 성공했을 때, 묘지의 이 카드를 제외하고 그 융합에 사용한 \"젬나이트\" 몬스터 1장을 대상으로 하고 발동한다. 융합 소환한 몬스터의 공격력을 그 소재의 공격력만큼 엔드 페이즈까지 올린다."
+    },
+    {
+      "sourceId": 2471,
+      "code": 39512984,
+      "previousSha256": [
+        "1b2084de0c94a0fd03fb2537392c6b54637aa8c7e2da4457212fec4f62f90525"
+      ],
+      "description": "\"젬나이트\" 몬스터 3장\n엑스트라 덱의 이 카드는 융합 소환으로만 특수 소환할 수 있다.\n①: 자신 묘지에 있는 \"젬\" 몬스터 1장마다 이 카드의 공격력이 100 오른다.\n②: 1턴에 1번, 자신 묘지의 레벨 7 이하 \"젬나이트\" 융합 몬스터 1장을 제외하고 발동할 수 있다. 이 카드는 엔드 페이즈까지 그 몬스터의 원래 카드명과 효과를 얻는다."
+    },
+    {
+      "sourceId": 2472,
+      "code": 40597694,
+      "previousSha256": [
+        "094dbde0cd24d027960b5d25f58c74af51fda423aa5ec842751253db599844c0"
+      ],
+      "description": "이 카드명의 ①의 효과는 1턴에 1번만 사용할 수 있다.\n①: 상대 필드에 몬스터가 존재할 경우에 발동할 수 있다. 암석족 이외의 \"젬나이트\" 융합 몬스터 1장에 적힌 소재 몬스터를 자신의 덱에서 묘지로 보내고, 그 몬스터를 엑스트라 덱에서 융합 소환한다. 이 카드가 필드에서 벗어났을 때 그 융합 몬스터를 파괴한다. 이 효과의 발동 후 턴 종료시까지 자신은 엑스트라 덱에서 \"젬나이트\" 몬스터만 특수 소환할 수 있다."
+    },
+    {
+      "sourceId": 2473,
+      "code": 43114901,
+      "previousSha256": [
+        "739d8b2e47fa0ed994c4e99fe69d9c0febce9e4f24b5e978b445455932cc4f65"
+      ],
+      "description": "이 카드는 묘지에 있거나 필드에 앞면 표시로 있을 경우 일반 몬스터로 취급한다.\n필드의 앞면 표시인 이 카드를 한 번 더 일반 소환하면 효과 몬스터로 취급하고 아래 효과를 얻는다.\n● 이 카드가 상대 몬스터를 전투로 파괴하여 묘지로 보냈을 때 발동할 수 있다. 덱의 \"젬나이트\" 카드 1장을 패에 넣는다."
+    },
+    {
+      "sourceId": 2474,
+      "code": 45662855,
+      "previousSha256": [
+        "2dc32b621d7996b5da335385cb70ab48a3c29e2ddc9ae59e0b3d39d1fe452490"
+      ],
+      "description": "이 카드는 묘지에 있거나 필드에 앞면 표시로 있을 경우 일반 몬스터로 취급한다.\n필드의 앞면 표시인 이 카드를 한 번 더 일반 소환하면 효과 몬스터로 취급하고 아래 효과를 얻는다.\n● 1턴에 1번, 자신 묘지의 \"젬\" 몬스터 1장을 제외하고, 자신 묘지의 \"젬나이트\" 카드 1장을 대상으로 발동할 수 있다. 대상 카드를 패에 넣는다."
+    },
+    {
+      "sourceId": 2475,
+      "code": 47611119,
+      "previousSha256": [
+        "e0cc456e5aef04c445f860a330c5f1a5af25b0a137fdae00b42025a3e74292ac"
+      ],
+      "description": "\"젬나이트 라피스\" ＋ \"젬나이트\" 몬스터 1장\n엑스트라 덱의 이 카드는 위에 적힌 몬스터를 소재로 사용한 융합 소환으로만 특수 소환할 수 있다. 자신은 이 카드명인 몬스터를 1턴에 1번만 특수 소환할 수 있다.\n①: 1턴에 1번, 자신 메인 페이즈에 발동할 수 있다. 자신의 덱 / 엑스트라 덱에서 \"젬나이트\" 몬스터 1장을 묘지로 보내고, 양쪽 필드의 특수 소환된 몬스터 수 × 500의 데미지를 상대에게 준다."
+    },
+    {
+      "sourceId": 2476,
+      "code": 49597193,
+      "previousSha256": [
+        "871afed829a95d50699863c697531b63892f2b048453545d50ecf335cfa2ec4c"
+      ],
+      "description": "\"젬나이트 르말린\" ＋ \"젬나이트\" 몬스터 1장\n엑스트라 덱의 이 카드는 위에 적힌 몬스터를 소재로 사용한 융합 소환으로만 특수 소환할 수 있다.\n①: 이 카드는 같은 배틀 페이즈에 2번 공격할 수 있다.\n②: 이 카드가 몬스터를 전투로 파괴하여 묘지로 보냈을 경우에 발동한다. 파괴한 몬스터의 원래 공격력만큼 상대에게 데미지를 준다."
+    },
+    {
+      "sourceId": 2477,
+      "code": 51831560,
+      "previousSha256": [
+        "8369bba29524026aa04df3da07743a1577d10987b35466b9284d8e52c53690d7"
+      ],
+      "description": "이 카드명의 ①②③의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 이 카드를 일반 소환 또는 특수 소환했을 경우에 발동할 수 있다. 덱에서 이 카드명 이외의 \"젬나이트\" 카드 1장을 패에 넣는다. 이 턴의 메인 페이즈 동안 상대가 받는 효과 데미지는 절반이 된다.\n②: 자신 메인 페이즈에 발동할 수 있다. \"젬\" 몬스터 1장을 일반 소환한다.\n③: 이 카드가 패 또는 덱에서 묘지로 보내졌을 경우에 발동할 수 있다. 자신의 패에서 카드 1장을 골라 묘지로 보내고, 이 카드를 특수 소환한다."
+    },
+    {
+      "sourceId": 2479,
+      "code": 55610199,
+      "previousSha256": [
+        "56ff5531a43f1d86253905f648478b703ed5368a29d98862ae2689c6efb539f0"
+      ],
+      "description": "\"젬나이트\" 몬스터 ＋ 천사족 몬스터\n①: 이 카드가 몬스터 존에 있는 동안, 상대 턴에 1번만 자신 필드에 있는 \"젬나이트\" 몬스터가 효과로 파괴되지 않는다.\n②: 자신 턴에 상대가 몬스터의 효과를 발동했을 때, 자신 묘지의 \"젬나이트\" 카드 1장을 제외하고 상대 필드의 앞면 표시 카드 1장을 대상으로 하여 발동할 수 있다. 그 카드를 파괴한다."
+    },
+    {
+      "sourceId": 2480,
+      "code": 61011438,
+      "previousSha256": [
+        "18fe4c22eca3a9baa03340bc27446aafde2715953a2f8ba4aff3a6acdbd11087"
+      ],
+      "description": "이 카드는 룰상 \"젬나이트\" 카드로도 취급한다. 이 카드명의 ①의 효과는 1턴에 1번만 사용할 수 있다.\n①: 자신의 패에서 이 카드 이외의 \"젬나이트\" 카드 또는 \"환주\" 카드 1장을 버리고 발동할 수 있다. 이 카드를 패에서 특수 소환한다.\n②: 1턴에 1번, 엑스트라 덱의 \"젬나이트\" 몬스터 또는 \"환주\" 몬스터 1장을 묘지로 보내고 발동할 수 있다. 엔드 페이즈까지 이 카드의 카드명 / 종족 / 속성을, 이 효과의 발동을 위해 묘지로 보낸 몬스터의 원래 카드명 / 종족 / 속성으로 바꾼다."
+    },
+    {
+      "sourceId": 2481,
+      "code": 67985943,
+      "previousSha256": [
+        "0b530495d0eb9380560ed9a7d303c918c6eccc5308ef5f6f5d49246d9c7b7609"
+      ],
+      "description": "\"젬나이트\" 몬스터 ＋ 화염족 몬스터\n엑스트라 덱의 이 카드는 융합 소환으로만 특수 소환할 수 있다.\n①: 이 카드가 전투를 할 경우, 상대는 데미지 스텝이 끝날 때까지 마법 / 함정 / 몬스터의 효과를 발동할 수 없다."
+    },
+    {
+      "sourceId": 2483,
+      "code": 71422989,
+      "previousSha256": [
+        "6e6b7548ead5f613985624459ae5c61f32e2026170913a1b6ee2c414ea1d92dd"
+      ],
+      "description": "이 카드명의 카드는 1턴에 1장만 발동할 수 있다. 이 카드를 발동하는 턴에 자신은 \"젬나이트\" 몬스터만 특수 소환할 수 있다.\n①: 덱에서 \"젬나이트\" 카드 1장을 패에 넣는다. 그 후 다음 효과를 적용할 수 있다.\n● 자신의 패 / 필드에 있는 몬스터를 융합 소재로 제외하고, \"젬나이트\" 융합 몬스터 1장을 엑스트라 덱에서 융합 소환한다."
+    },
+    {
+      "sourceId": 2484,
+      "code": 71616908,
+      "previousSha256": [
+        "560a1994aeaf7697f615e9626a64d07268225a9ed6592be7eaff127c7e863dd8"
+      ],
+      "description": "\"젬나이트\" 몬스터 ＋ 물족 몬스터\n엑스트라 덱의 이 카드는 융합 소환으로만 특수 소환할 수 있다.\n①: 이 카드가 필드에서 묘지로 보내졌을 경우 발동한다. 양쪽 필드의 뒷면 표시인 마법 / 함정 카드를 모두 주인의 패로 되돌린다."
+    },
+    {
+      "sourceId": 2485,
+      "code": 72029628,
+      "previousSha256": [
+        "0a37fcd1453bf947c75b918da579a1312ce46ff5cb72544a6fa30140f60040b4"
+      ],
+      "description": "①: 자신의 묘지에서 \"젬나이트\" 융합 몬스터 1장에 적힌 융합 소재 몬스터를 제외하고, 그 몬스터를 엑스트라 덱에서 융합 소환한다. 이 효과로 소환한 몬스터는 엔드 페이즈에 파괴된다."
+    },
+    {
+      "sourceId": 2486,
+      "code": 72056560,
+      "previousSha256": [
+        "03151ad5968f02faa1ae6de1fbb0100ea80a6a093d6d4a885ce6048df03e2684"
+      ],
+      "description": "이 카드는 묘지에 있거나 필드에 앞면 표시로 있을 경우 일반 몬스터로 취급한다.\n필드의 앞면 표시인 이 카드를 한 번 더 일반 소환하면 효과 몬스터로 취급하고 아래 효과를 얻는다.\n● 1턴에 1번, 패의 \"젬나이트\" 카드 1장을 묘지로 보내고, 제외되어 있는 자신의 몬스터 1장을 대상으로 발동할 수 있다. 그 몬스터를 패로 되돌린다."
+    },
+    {
+      "sourceId": 2487,
+      "code": 79531196,
+      "previousSha256": [
+        "03f927ae75ec9f6a5fb70c8a29810d2d91709b034489ce5d77f04ad9988f3de8"
+      ],
+      "description": "이 카드명의 ②의 효과는 1턴에 1번만 사용할 수 있다.\n①: 1턴에 1번, 자신 메인 페이즈에 발동할 수 있다. 자신의 패 / 덱에서 \"젬나이트\" 또는 \"환주\" 몬스터 1장을 묘지로 보내며, 이 카드는 엔드 페이즈까지 보낸 몬스터와 같은 이름으로 취급한다.\n②: 이 카드가 묘지에 존재하면, 자신 묘지의 융합 몬스터 1장을 제외하고 발동할 수 있다. 이 카드를 수비 표시로 특수 소환한다."
+    },
+    {
+      "sourceId": 2493,
+      "code": 93379652,
+      "previousSha256": [
+        "c23fe56c3b939002136a82e2d3ed258db8976a8378f4ca2670628dd3b1e3538f"
+      ],
+      "description": "\"젬나이트\" 몬스터 ＋ 번개족 몬스터\n엑스트라 덱의 이 카드는 융합 소환으로만 특수 소환할 수 있다.\n①: 1턴에 1번, 패의 \"젬나이트\" 카드 1장을 묘지로 보내고 필드의 앞면 표시 카드 1장을 대상으로 하여 발동할 수 있다. 그 카드를 파괴한다."
+    },
+    {
+      "sourceId": 2515,
+      "code": 39618799,
+      "previousSha256": [
+        "3297805d731c9172c571f55b98ca0897b656071e228f4ae6cd980ef448f4146d"
+      ],
+      "description": "\"기계천사의 의식\" 등으로 의식 소환한다.\n①: 이 카드가 의식 소환되었을 경우에 발동할 수 있다. 상대는 자신의 필드에 있는 몬스터 1장을 묘지로 보내야 한다.\n②: 이 카드가 몬스터 존에 존재하는 동안, 자신의 의식 몬스터가 수비 표시 몬스터를 공격하고 공격력이 그 수비력을 넘으면 그 차만큼 상대에게 전투 데미지를 준다.\n③: 자신 엔드 페이즈에 자신 묘지에 있는 의식 몬스터 또는 \"기계천사의 의식\" 중 1장을 대상으로 하여 발동할 수 있다. 그 카드를 패에 넣는다."
+    },
+    {
+      "sourceId": 2517,
+      "code": 78316184,
+      "previousSha256": [
+        "376b31c0d57a75fa561b484f50bd52b8a8fbd100b9ae63a2a1f46a2236ca4b9f"
+      ],
+      "description": "\"기계천사의 의식\" 등으로 의식 소환한다.\n①: 이 카드가 의식 소환되었을 경우에 발동할 수 있다. 엑스트라 덱에서 특수 소환된 상대 필드의 몬스터를 모두 파괴한다. 파괴한 수 × 1000의 데미지를 상대에게 준다. 데미지를 주었으면 이 턴의 한 배틀 페이즈에 이 카드로 2번 공격할 수 있다.\n②: 1턴에 1번, 필드의 카드를 파괴하는 마법 / 함정 / 몬스터 효과가 발동했을 때, 자신 묘지의 의식 몬스터 1장을 덱으로 되돌리고 발동할 수 있다. 그 발동을 무효로 하고 파괴한다."
+    },
+    {
+      "sourceId": 2519,
+      "code": 99427357,
+      "previousSha256": [
+        "7ee882afe58810115edaf909c396e5796009802a4a1e5583bd208fb24639b9d6"
+      ],
+      "description": "\"기계천사의 의식\" 등으로 의식 소환한다.\n①: 1턴에 1번, 자신 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터의 공격력의 절반만큼 자신의 LP를 회복한다.\n②: 자신의 의식 몬스터가 공격 대상으로 선택되었을 때 발동할 수 있다. 그 공격을 무효로 한다.\n③: 이 카드가 묘지에 있을 경우, 자신 묘지에서 이 카드 이외의 \"사이버 엔젤\" 몬스터 1장을 제외하고, 상대 필드의 몬스터 1장을 대상으로 하여 발동할 수 있다. 이 카드를 특수 소환한 뒤 그 몬스터의 컨트롤을 얻는다. 이 카드가 먼저 정규 의식 소환되어야 묘지에서 특수 소환할 수 있다."
+    },
+    {
+      "sourceId": 2528,
+      "code": 95658967,
+      "previousSha256": [
+        "21c56ab704292046a8fb07181bdc1a0f71dfeac7ea929ace871428aebed26484"
+      ],
+      "description": "이 카드명의 ①②의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 패에서 마법 카드 1장을 버리고 발동할 수 있다. 덱의 빛 속성 의식 몬스터 또는 의식 마법 카드 중 1장을 패에 넣는다.\n②: 자신 묘지의 마법 카드를 원하는 수만큼 덱으로 되돌리고, 그 수와 레벨이 같은 자신 묘지의 빛 속성 / 천사족 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 특수 소환한다."
+    },
+    {
+      "sourceId": 2529,
+      "code": 56350972,
+      "previousSha256": [
+        "dab633e690aef01cc798e092e4335b6ec49eb70559ea23834c776332868b0378"
+      ],
+      "description": "\"축도의 성가\" 등으로 의식 소환한다. 이 카드명의 효과는 1턴에 1번만 사용할 수 있다.\n①: 이 카드가 의식 소환되었거나, 이 카드가 몬스터 존에 앞면 표시로 있는 동안 패 / 덱에서 빛 속성 몬스터가 묘지로 보내졌다면, 그 턴의 엔드 페이즈에 다음 중 1개를 골라 발동할 수 있다.\n● 자신은 덱에서 2장 드로우한 후, 패에서 카드 1장을 골라 버린다.\n● 상대의 무작위 패 1장을 묘지로 버린다.\n● 자신 묘지의 빛 속성 몬스터 1장을 골라 패에 넣는다."
+    },
+    {
+      "sourceId": 2538,
+      "code": 23459650,
+      "previousSha256": [
+        "2fab5f0e2576859aa22c9c38fe904068a861f0838afc47f1703012bc7d84933a"
+      ],
+      "description": "\"네프티스\" 의식 몬스터의 의식 소환에 사용한다.\n①: 의식 소환할 몬스터의 레벨 이상이 되도록 자신의 패 / 필드에서 몬스터를 릴리스하고, 패의 \"네프티스\" 의식 몬스터 1장을 의식 소환한다. 이때 \"네프티스의 모시는 손\" 또는 \"네프티스의 창황신\"을 릴리스했을 경우, 추가로 필드의 카드 1장을 골라 파괴할 수 있다."
+    },
+    {
+      "sourceId": 2544,
+      "code": 51782995,
+      "previousSha256": [
+        "03a077bd3a54b1941acba0b97d065a524c47f3ed0aef1a464373e7efbdde4a16"
+      ],
+      "description": "이 카드명의 ①②의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 자신 메인 페이즈에 발동할 수 있다. 자신의 패에서 카드 1장을 골라 효과로 파괴하고, 패에서 이 카드명 이외의 레벨 4 이하 \"네프티스\" 몬스터 1장을 특수 소환한다.\n②: 이 카드가 효과로 파괴되어 묘지로 보내졌을 경우, 다음 자신 스탠바이 페이즈에 발동할 수 있다. 덱에서 이 카드명 이외의 \"네프티스\" 몬스터 1장을 골라 파괴한다."
+    },
+    {
+      "sourceId": 2547,
+      "code": 82832464,
+      "previousSha256": [
+        "482cd9edce30eb65cc729ee4408d38b8b72e45210d380bf328273d830e8cfa1a"
+      ],
+      "description": "이 카드명의 ②의 효과는 1턴에 1번만 사용할 수 있다.\n①: 이 카드가 마법 & 함정 존에 존재하는 동안, 자신 필드에 있는 \"네프티스\" 몬스터의 공격력을 300 올린다.\n②: 마법 & 함정 존에 앞면으로 있던 이 카드가 효과로 파괴되어 묘지로 보내졌을 경우 발동할 수 있다. 자신의 패 / 덱 / 묘지에서 \"네프티스\" 몬스터 1장을 골라 특수 소환한다. 그 몬스터는 엔드 페이즈에 파괴된다."
+    },
+    {
+      "sourceId": 2550,
+      "code": 98999181,
+      "previousSha256": [
+        "024ca749b466ea1775650d9dc6fdb27c6ad2dbaafd8113a40dbd78c0d800130c"
+      ],
+      "description": "이 카드명의 ①②의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 자신 메인 페이즈에 발동할 수 있다. 자신의 패에서 카드 1장을 골라 효과로 파괴하고, 덱의 이 카드명 이외의 \"네프티스\" 몬스터 1장을 패에 넣는다.\n②: 이 카드가 효과로 파괴되어 묘지로 보내졌을 경우, 다음 자신 스탠바이 페이즈에 발동할 수 있다. 덱에서 \"네프티스\" 마법 / 함정 카드 1장을 패에 넣는다."
+    },
+    {
+      "sourceId": 2551,
+      "code": 3381441,
+      "previousSha256": [
+        "e881b2a799f732289410b55b59f4f5c91281cb5a9d541b8044ff29f03c01cc34"
+      ],
+      "description": "필드에 앞면 표시로 존재하는 이 카드의 효과로, 필드 마법 카드가 앞면 표시로 존재하지 않는 동안 필드는 \"왕가의 골짜기－네크로밸리\"로 취급한다.\n이 카드가 필드에 앞면 표시로 존재하는 동안, 필드의 모든 \"묘지기\" 몬스터의 공격력과 수비력을 각각 200 올린다."
+    },
+    {
+      "sourceId": 2552,
+      "code": 3825890,
+      "previousSha256": [
+        "b4ac930287a4385206170bee3c3f529d6ad76c75092af8fccc21b8a6b158b81e"
+      ],
+      "description": "이 카드는 \"묘지기\" 몬스터 1장을 릴리스하여 어드밴스 소환할 수 있다.\n이 카드의 공격력은 자신 묘지의 \"묘지기\" 몬스터 1장마다 200 올린다.\n필드에 앞면 표시로 존재하는 이 카드가 파괴될 경우, 그 파괴 대신 패의 \"묘지기\" 몬스터 1장을 버릴 수 있다."
+    },
+    {
+      "sourceId": 2556,
+      "code": 46955770,
+      "previousSha256": [
+        "cdef622c0c3ff8c6de0ac44c452c975c45c75328fe3ba5f58ef775250803c145"
+      ],
+      "description": "①: 이 카드가 몬스터 존에 있고 필드에 \"왕가의 골짜기－네크로밸리\"가 있는 동안, 이 카드는 자신의 효과를 제외한 다른 카드의 효과를 받지 않는다."
+    },
+    {
+      "sourceId": 2557,
+      "code": 56773577,
+      "previousSha256": [
+        "27316548ae7d73d175313c38835fef8ae27aab5d587b47815cb53bb926c4fb2a"
+      ],
+      "description": "①: 필드에 \"묘지기\" 몬스터와 \"왕가의 골짜기－네크로밸리\"가 모두 있는 동안, 상대 필드의 몬스터의 공격력 / 수비력을 각각 500 내린다.\n②: 1턴에 1번, 자신 / 상대의 메인 페이즈에 자신의 필드 존이 비어 있다면 발동할 수 있다. 자신의 패 / 묘지에서 \"왕가의 골짜기－네크로밸리\" 1장을 골라 발동한다.\n③: 이 카드가 상대 효과로 파괴되어 묘지로 보내졌을 경우 발동할 수 있다. 덱에서 이 카드명 이외의 \"네크로밸리\" 마법 / 함정 카드 1장을 골라 자신의 필드에 세트한다."
+    },
+    {
+      "sourceId": 2558,
+      "code": 58139128,
+      "previousSha256": [
+        "79ba70932be7871f8e13efccb5257a4ebc7f56eed2f1039fd4cd313fb35257af"
+      ],
+      "description": "이 카드의 수비력은 자신 묘지에 있는 \"묘지기\" 몬스터 1장마다 200 올린다.\n이 카드가 필드에 앞면 표시로 존재하는 동안, \"묘지기\" 이외의 몬스터가 묘지에서 발동한 효과는 무효가 된다. 같은 조건에서 필드에 \"왕가의 골짜기－네크로밸리\"가 있으면 상대는 필드 마법 카드를 발동할 수 없으며, 필드 마법 카드는 상대의 효과로 파괴되지 않는다."
+    },
+    {
+      "sourceId": 2559,
+      "code": 58657303,
+      "previousSha256": [
+        "97c852bd5198cea977ac6d88d0dc81465611cde37bbf3a70106ed5c6c34a05a3"
+      ],
+      "description": "이 카드명의 효과는 1턴에 1번만 사용할 수 있다.\n①: 필드에 \"왕가의 골짜기－네크로밸리\"가 존재할 경우 자신 메인 페이즈에 발동할 수 있다. 마법사족 융합 몬스터 1장에 적힌 융합 소재를, 이 카드를 포함하여 자신의 패 / 필드에서 묘지로 보내고, 그 몬스터를 엑스트라 덱에서 융합 소환한다."
+    },
+    {
+      "sourceId": 2562,
+      "code": 70000776,
+      "previousSha256": [
+        "61f0318cd10849976efb3956c4780cf09b24369fab35adf58da46229e462e6ba"
+      ],
+      "description": "필드에 \"묘지기\" 몬스터와 \"왕가의 골짜기－네크로밸리\"가 함께 존재할 경우에 발동할 수 있다.\n이 카드가 필드에 존재하는 동안, 양쪽 플레이어는 \"묘지기\" 몬스터만 특수 소환할 수 있다. 그 몬스터와 필드 마법 중 어느 한쪽이 필드에 존재하지 않게 되면 이 카드를 파괴한다."
+    },
+    {
+      "sourceId": 2566,
+      "code": 98715423,
+      "previousSha256": [
+        "8a56e0ab8e49340587188d3c5966d8ab2b38f5edeefe6611d79910f8a8d29aaa"
+      ],
+      "description": "이 카드명의 ②③의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 자신 묘지에 \"현세와 명계의 역전\"이 존재하는 동안, 상대는 묘지에서 카드의 효과를 발동할 수 없고, 묘지의 몬스터를 특수 소환할 수 없다.\n②: 자신 / 상대의 메인 페이즈에 패를 1장 버리고 발동할 수 있다. 덱의 \"묘지기\" 몬스터 또는 땅 속성 / 천사족 몬스터 1장을 패에 넣는다.\n③: 이 카드가 앞면 표시로 존재할 경우, 상대 드로우 페이즈의 일반 드로우 전에 카드명을 1개 선언하고 발동한다. 상대가 일반 드로우한 카드를 확인하고, 선언한 카드이면 그 카드를 묘지로 보낸다."
+    },
+    {
+      "sourceId": 2568,
+      "code": 2106266,
+      "previousSha256": [
+        "e964d4ccc06dfccfd6f62c831ef30eea9d60c672c041b05e2ed674dfa6ddf384"
+      ],
+      "description": "이 카드명의 ②의 효과는 1턴에 1번만 사용할 수 있다.\n①: 자신의 몬스터 존에 \"용기사 가이아\"가 존재하는 동안, 상대는 배틀 페이즈에 카드나 효과를 발동할 수 없다.\n②: 다음 중 1개를 선택하여 발동할 수 있다.\n● 패의 \"암흑 기사 가이아\" 몬스터 1장을 상대에게 보여준다. 덱의 레벨 5 드래곤족 몬스터 1장을 패에 넣는다.\n● 패의 레벨 5 드래곤족 몬스터 1장을 상대에게 보여준다. 덱의 \"암흑 기사 가이아\" 몬스터 1장을 패에 넣는다."
+    },
+    {
+      "sourceId": 2570,
+      "code": 7241272,
+      "previousSha256": [
+        "96c23fa59ebee8416a73925bf06bd024ae2b53a6b61ad849ad0a74855fcb6b07"
+      ],
+      "description": "①: 이 카드가 일반 소환 또는 특수 소환되었을 경우, 필드의 필드 마법 카드 1장을 대상으로 발동할 수 있다. 그 카드를 파괴한다.\n②: 1턴에 1번, 자신 메인 페이즈에 발동할 수 있다. 융합 몬스터 1장에 적힌 융합 소재를 필드의 이 카드를 포함하여 자신 필드에서 묘지로 보낸다. 그 몬스터를 엑스트라 덱에서 융합 소환한다."
+    },
+    {
+      "sourceId": 2571,
+      "code": 7841921,
+      "previousSha256": [
+        "880b3f023346fd8c9525c7cb22e103e7d98428b841218244a9b50e811938d934"
+      ],
+      "description": "이 카드명의 ③의 효과는 1턴에 1번만 사용할 수 있다.\n①: 이 카드는 릴리스 없이 일반 소환할 수 있다.\n②: 릴리스하지 않고 일반 소환한 이 카드의 원래 공격력은 1900이 된다.\n③: 이 카드가 릴리스되었을 경우에 발동할 수 있다. 덱에서 \"카오스 솔저\" 몬스터 1장을 패에 넣는다."
+    },
+    {
+      "sourceId": 2575,
+      "code": 29477860,
+      "previousSha256": [
+        "963c329d3007890916d65276e0f00693d66990b55d8ad946fdab1a1d84941574"
+      ],
+      "description": "이 카드명의 ②의 효과는 1턴에 1번만 사용할 수 있다.\n①: 자신 몬스터 존에 \"용기사 가이아\"가 존재하는 동안, 상대는 \"용기사 가이아\"만 공격 대상으로 선택할 수 있다.\n②: 자신의 \"용기사 가이아\"가 전투하는 공격 선언시에 필드의 카드 1장을 대상으로 하고 발동할 수 있다. 그 카드를 파괴한다."
+    },
+    {
+      "sourceId": 2576,
+      "code": 29904964,
+      "previousSha256": [
+        "82e1d15084d8e9380efc95fbd1d7cacfd01dccb1897fac944c41288c0f2dacbb"
+      ],
+      "description": "이 카드명의 ②의 효과는 1턴에 1번만 사용할 수 있다.\n①: 상대 필드의 몬스터 수가 자신 필드의 몬스터 수보다 많으면 이 카드를 릴리스 없이 일반 소환할 수 있다.\n②: 이 카드가 릴리스되었을 경우에 발동할 수 있다. 자신의 패 / 묘지에서 \"카오스 솔저\" 몬스터 1장을 골라 특수 소환한다.\n③: \"카오스 솔저\" 몬스터를 의식 소환할 때, 필요한 레벨만큼 사용하는 소재 중 1장으로 묘지의 이 카드를 제외할 수 있다."
+    },
+    {
+      "sourceId": 2577,
+      "code": 33318980,
+      "previousSha256": [
+        "621e64a583896677b9726b48ca3a425805b5c91a510c8e16990f93568b7effe0"
+      ],
+      "description": "이 카드명의 ①②③의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 자신 필드의 드래곤족 융합 몬스터 1장을 릴리스하여 발동할 수 있다. 이 카드를 패에서 특수 소환한다. 이 효과는 상대 턴에도 발동할 수 있다.\n②: 이 카드가 특수 소환되었을 경우, 필드의 공격 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 수비 표시로 한다.\n③: 이 카드를 릴리스하여 발동할 수 있다. 덱에서 이 카드명 이외의 레벨 7 이상 전사족 몬스터 1장을 패에 넣는다."
+    },
+    {
+      "sourceId": 2578,
+      "code": 34130561,
+      "previousSha256": [
+        "3936fca282a274973b8a2aa848a220ffe19db26cb71745a12b1fed00fda56bf7"
+      ],
+      "description": "이 카드는 룰상 \"암흑 기사 가이아\" 카드로도 취급한다. 이 카드명의 ②의 효과는 1턴에 1번만 사용할 수 있다.\n①: 자신 필드에 몬스터가 없거나 상대 필드에 공격력 2300 이상의 몬스터가 있을 경우, 이 카드를 릴리스 없이 일반 소환할 수 있다.\n②: 이 카드를 일반 소환 또는 특수 소환했을 경우에 발동할 수 있다. 자신의 패 / 묘지에 있는 레벨 5 드래곤족 몬스터 1장을 골라 수비 표시로 특수 소환한다."
+    },
+    {
+      "sourceId": 2579,
+      "code": 38590361,
+      "previousSha256": [
+        "7f78b2bc3e7a3c8e1503acb620b2c636c16c12108daf34e3e389abe17b9795db"
+      ],
+      "description": "①: 드래곤족 융합 몬스터 1장에 기재된 융합 소재를 자신의 패 / 필드에서 묘지로 보내고, 그 몬스터를 엑스트라 덱에서 융합 소환한다. 이 효과로 \"용기사 가이아\"를 특수 소환했을 경우, 그 몬스터의 공격력은 2600 올라가며, 한 배틀 페이즈에 몬스터를 2번까지 공격할 수 있다."
+    },
+    {
+      "sourceId": 2580,
+      "code": 40089744,
+      "previousSha256": [
+        "4b121af34cdb79bfb543775a038faf3b5090d457dd66e6e004881da41169383a"
+      ],
+      "description": "이 카드명의 카드는 1턴에 1장만 발동할 수 있다.\n①: 이 카드의 발동을 처리할 때 덱에서 \"카오스 솔저\" 의식 몬스터 또는 \"암흑 기사 가이아\" 몬스터 1장을 패에 넣는다.\n②: 이 카드가 필드 존에 있는 동안, 양쪽의 패 / 필드에서 몬스터가 묘지로 보내질 때마다 그 몬스터 1장당 이 카드에 마력 카운터를 1개 놓는다. 이 카드에 놓을 수 있는 마력 카운터는 6개까지이다.\n③: 1턴에 1번, 이 카드에 놓인 마력 카운터 3개를 제거하고 발동할 수 있다. 덱에서 의식 마법 카드 1장을 패에 넣는다."
+    },
+    {
+      "sourceId": 2581,
+      "code": 49328340,
+      "previousSha256": [
+        "b54ac31c9a04e17a3e1a777e8df9f3eee374746751b2248b1fc3a0201475bedd"
+      ],
+      "description": "①: 자신의 \"암흑 기사 가이아\", \"질풍의 암흑 기사 가이아\", \"용기사 가이아\"가 수비 표시 몬스터를 공격하여 공격력이 수비력을 넘었을 경우, 그 차만큼 상대에게 전투 데미지를 준다.\n②: \"용기사 가이아\"가 ①의 효과로 상대에게 전투 데미지를 주었을 경우 발동한다. 자신은 덱에서 2장 드로우한 후 패의 카드 1장을 골라 버린다."
+    },
+    {
+      "sourceId": 2582,
+      "code": 50354944,
+      "previousSha256": [
+        "40474ce2f86d99dad161c7ba1a5caa53de5b8b15472671f1d883513f9ee76f21"
+      ],
+      "description": "이 카드명의 ①③의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 자신의 패에서 레벨 5 이상 몬스터 1장을 묘지로 보내고 발동할 수 있다. 이 카드를 패에서 특수 소환한다.\n②: 전사족 몬스터를 어드밴스 소환할 때 이 카드를 2장분의 릴리스로 사용할 수 있다.\n③: 자신 / 상대의 배틀 페이즈에 묘지의 이 카드를 제외하고, 필드에 있는 현재 공격력이 원래 공격력과 다른 몬스터 1장을 대상으로 하여 발동할 수 있다. 그 몬스터의 공격력을 원래 공격력으로 바꾼다."
+    },
+    {
+      "sourceId": 2583,
+      "code": 56461575,
+      "previousSha256": [
+        "950529bdf6aa11f24abb0efc493eb3b0070a57fc559b09becd9f306c6e77a6a6"
+      ],
+      "description": "이 카드명의 카드는 1턴에 1장만 발동할 수 있다.\n①: 자신 묘지의 레벨 7 이하 드래곤족 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 특수 소환한다. \"용기사 가이아\"를 특수 소환했다면 그 몬스터는 상대 효과의 대상이 되지 않으며, 상대 효과로 파괴되지 않는다."
+    },
+    {
+      "sourceId": 2584,
+      "code": 61525276,
+      "previousSha256": [
+        "c136cac701e88a50871434610dcf5b38fd0493e3c6e65840f50eb65129b92fc0"
+      ],
+      "description": "이 카드명의 ①②의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 이 카드가 일반 소환 또는 특수 소환되었을 경우에 발동할 수 있다. 덱에서 \"용기사 가이아\"의 카드명이 쓰인 마법 / 함정 카드 1장을 패에 넣는다.\n②: 이 카드가 묘지로 보내졌을 경우, 자신 몬스터 존의 \"용기사 가이아\" 1장을 대상으로 하고 발동할 수 있다. 상대 필드의 앞면 표시 몬스터 중 대상 몬스터의 공격력 이하인 몬스터 전부의 효과를 턴 종료시까지 무효로 한다."
+    },
+    {
+      "sourceId": 2585,
+      "code": 72064891,
+      "previousSha256": [
+        "b2eb261e5fbbca844cc1b1fc3a7981d88daf7ee44c3fec97fd1929868c2234f5"
+      ],
+      "description": "전사족 몬스터 ＋ 레벨 5 이상 드래곤족 몬스터\n이 카드명의 ①의 효과는 1턴에 1번만 사용할 수 있다.\n①: 이 카드가 융합 소환되었을 경우, 자신 묘지에서 \"용기사 가이아\"의 카드명이 쓰인 마법 / 함정 카드 1장을 대상으로 하고 발동할 수 있다. 그 카드를 패에 넣는다.\n②: 이 카드가 몬스터 존에 있는 동안, 자신이 레벨 7 드래곤족 몬스터를 융합 소환할 경우 자신의 묘지에서 몬스터를 제외하여 융합 소재로 사용할 수도 있다."
+    },
+    {
+      "sourceId": 2588,
+      "code": 303660,
+      "previousSha256": [
+        "7d0a55e7ad4058806f21b7e09a1daf2b03899511c432b6e1918b51feb1ce45b1"
+      ],
+      "description": "\"인조인간 －사이코 쇼커－\"에만 장착할 수 있다. 이 카드의 발동과 효과는 무효화되지 않는다.\n①: 장착 몬스터의 효과를, 상대는 필드의 함정 효과를 발동할 수 없고 상대 필드의 함정 효과가 무효가 되는 효과로 적용한다. 따라서 이 장착 몬스터의 효과는 자신의 필드의 함정 카드에 적용되지 않는다.\n②: 이 카드가 필드에서 벗어났을 때 장착 몬스터를 파괴한다."
+    },
+    {
+      "sourceId": 2590,
+      "code": 35803249,
+      "previousSha256": [
+        "7c87a4e84f6973d00d4cd78b8b1e1f8483fa276a0513ca05bf47fb18a4e818e0"
+      ],
+      "description": "이 카드는 통상 소환할 수 없다. 자신 필드의 앞면 표시인 \"인조인간 －사이코 쇼커－\" 1장을 묘지로 보내고 패에서만 특수 소환할 수 있다.\n①: 이 카드가 몬스터 존에 있는 동안, 양쪽 플레이어는 필드의 함정 카드의 효과를 발동할 수 없다. 또한 필드의 함정 카드의 효과는 무효가 된다.\n②: 1턴에 1번, 자신 메인 페이즈에 발동할 수 있다. 필드의 앞면 표시 함정 카드를 전부 파괴하고, 파괴한 카드의 수 × 300의 데미지를 상대에게 준다."
+    },
+    {
+      "sourceId": 2591,
+      "code": 37042505,
+      "previousSha256": [
+        "addc7b246e252883e08303f7b27d83e62b983004f8b228d75aeecc4f0d6f9f01"
+      ],
+      "description": "①: 자신 필드에 \"인조인간 －사이코 쇼커－\"가 있을 경우, 다음 중 1개를 선택하여 발동할 수 있다.\n● 현재 자신 필드의 기계족 몬스터는 턴 종료시까지 상대의 효과로 파괴되지 않는다.\n● 자신 필드의 기계족 몬스터를 대상으로 하는 마법 / 함정 / 몬스터 효과가 발동했을 때에 발동할 수 있다. 그 효과를 무효로 한다."
+    },
+    {
+      "sourceId": 2592,
+      "code": 38265153,
+      "previousSha256": [
+        "8d1a5fa1f5d0e328101c9dbba8853189881452e6ac8bf1ea7bb05110c53e9ed3"
+      ],
+      "description": "이 카드명의 카드는 1턴에 1장만 발동할 수 있다.\n①: 자신 필드에 \"인조인간 －사이코 쇼커－\"가 존재할 경우, 필드의 카드 1장을 대상으로 발동할 수 있다. 그 카드를 파괴한다. 이 효과로 필드의 함정 카드를 파괴했을 경우에는, 아래 효과 중 1개를 골라 추가로 적용할 수 있다.\n● 필드의 앞면 표시 카드 1장을 골라 턴 종료시까지 그 효과를 무효로 한다.\n● 자신 필드의 모든 \"인조인간 －사이코 쇼커－\"의 공격력을 800 올린다."
+    },
+    {
+      "sourceId": 2593,
+      "code": 39987731,
+      "previousSha256": [
+        "b0e9b420e68644673f95e43e3ae0358711d4085d6bde8119f396ff373ddd0465"
+      ],
+      "description": "이 카드명의 ①②의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 어느 한쪽 플레이어의 필드에 앞면 표시 함정 카드가 있거나 묘지에 함정 카드가 있으면 발동할 수 있다. 이 카드를 패에서 특수 소환하고, 이 카드의 레벨을 턴 종료시까지 6으로 한다.\n②: 자신 / 상대의 메인 페이즈에 이 카드를 릴리스하여 발동할 수 있다. 자신의 패 / 묘지에서 \"인조인간 －사이코 쇼커－\" 1장을 골라 특수 소환한다. 그 후 상대 필드의 함정 카드를 모두 파괴할 수 있다. 이 처리를 적용할 경우 상대의 세트된 마법 / 함정 카드를 넘겨 확인한다."
+    },
+    {
+      "sourceId": 2594,
+      "code": 51916032,
+      "previousSha256": [
+        "85a4f5aedf1a4987feef2c9ee23727fa368e960ef965b91f9822f5cff5e09882"
+      ],
+      "description": "이 카드명의 ②의 효과는 1턴에 1번만 사용할 수 있다.\n①: 필드 / 묘지에 존재하는 이 카드의 카드명은 \"인조인간 －사이코 쇼커－\"로 취급한다.\n②: 이 카드를 릴리스하고 발동할 수 있다. 덱에서 이 카드명 이외의 \"인조인간\" 몬스터 1장을 패에 넣는다. 그 후, 상대의 마법 & 함정 존에 세트된 카드가 있으면 그 카드를 모두 확인한다. 확인한 함정 카드의 수까지 자신의 패에서 \"인조인간\" 몬스터를 특수 소환할 수 있다."
+    },
+    {
+      "sourceId": 2595,
+      "code": 64659851,
+      "previousSha256": [
+        "c4186f9a0e56995641d869780c43e1d59ecaa77f4b45ada24af934a75e529b49"
+      ],
+      "description": "이 카드명의 카드는 1턴에 1장만 발동할 수 있다.\n①: 상대는 자신의 패 / 덱에서 함정 카드 1장을 골라 자신의 마법 & 함정 존에 세트할 수 있다. 상대가 세트했으면, 자신은 덱의 \"인조인간 －사이코 쇼커－\" 1장을 특수 소환한다. 상대가 세트하지 않았으면, 자신은 덱의 그 카드 1장 또는 그 카드명이 쓰인 몬스터 1장을 패에 넣는다."
+    },
+    {
+      "sourceId": 2596,
+      "code": 65471349,
+      "previousSha256": [
+        "401ccb9ce4127ceb114c8af520a4130494f329e19baccc41f42a996f9e3e7f5b"
+      ],
+      "description": "이 카드명의 ①②의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 이 카드를 일반 소환 또는 특수 소환했을 경우에 발동할 수 있다. 덱의 \"인조인간 －사이코 쇼커－\" 또는 그 이름이 쓰인 마법 / 함정 카드 중 1장을 패에 넣는다.\n②: 이 카드 이외의 자신 몬스터가 상대 몬스터의 공격을 받은 데미지 계산 전에 발동할 수 있다. 그 공격 몬스터와 이 카드를 파괴한다."
+    },
+    {
+      "sourceId": 2598,
+      "code": 80681226,
+      "previousSha256": [
+        "76214e3b84771942e3912c8d829e0c687ae3c192184908b45f1ab4fb7bd51558"
+      ],
+      "description": "이 카드명의 ②의 효과는 1턴에 1번만 사용할 수 있다.\n①: 자신 필드에 기계족 몬스터가 있는 경우, 자신의 패 / 덱에서 \"인조인간 －사이코 쇼커－\" 1장을 묘지로 보내고 발동할 수 있다. 상대에게 600 데미지를 준다.\n②: 이 카드가 묘지로 보내진 턴 이외의 자신 메인 페이즈에 묘지의 이 카드를 제외하고, 자신 묘지의 기계족 몬스터 1장을 대상으로 하여 발동할 수 있다. 덱에서 \"인조인간\" 몬스터 1장을 묘지로 보낸 뒤 대상 몬스터를 패에 넣는다."
+    },
+    {
+      "sourceId": 2599,
+      "code": 91654806,
+      "previousSha256": [
+        "b6335d21123a9bd2aacf3ede60c9dd4dbffe64029be29deb59b8d4105b885920"
+      ],
+      "description": "이 카드명의 ①②의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 원래의 주인이 상대인 자신 필드의 몬스터 1장을 묘지로 보내고 발동할 수 있다. 자신의 패 / 묘지에서 기계족 몬스터 1장을 골라 특수 소환한다.\n②: 자신 필드에 \"인조인간 －사이코 쇼커－\"가 있으며, 상대가 자신의 드로우 페이즈에 일반 드로우를 했을 때 발동할 수 있다. 몬스터 / 마법 / 함정 중 카드의 종류 하나를 선언한다. 양쪽 플레이어는 드로우한 카드를 확인한다. 종류가 맞았으면 이 카드를 묘지로 보내고 자신은 덱에서 1장 드로우한다."
+    },
+    {
+      "sourceId": 2600,
+      "code": 91870448,
+      "previousSha256": [
+        "be8f2c4db72d2fd67f0810e461393ac554847e7dd9b3445adebd217dba07f01a"
+      ],
+      "description": "이 카드명의 카드는 ①의 방법으로 1턴에 1번밖에 특수 소환할 수 없으며, ②의 효과도 1턴에 1번밖에 사용할 수 없다.\n①: 상대 필드에 있는 마법 / 함정 카드가 자신의 필드에 있는 마법 / 함정 카드보다 많을 경우, 이 카드를 패에서 특수 소환할 수 있다.\n②: 자신 필드에 \"인조인간 －사이코 쇼커－\"가 존재하며 이 카드가 상대의 효과 몬스터에게 공격을 선언했을 때, 이 카드를 릴리스하고 발동할 수 있다. 공격 대상 몬스터를 지속 함정 카드로 취급하여 상대의 마법 & 함정 존에 앞면 표시로 놓는다."
+    },
+    {
+      "sourceId": 2601,
+      "code": 30492798,
+      "previousSha256": [
+        "169c8a363636b54ae2e66b63aa9b69c91d0050fb0cf2efcebde49ab8faa157c0"
+      ],
+      "description": "의식 소환을 실행할 경우, 그 의식 소환에 필요한 몬스터 1장으로서 자신 묘지의 이 카드를 제외할 수 있다.\n이 카드를 소재로 의식 소환한 몬스터는 함정 카드의 효과를 받지 않는다."
+    },
+    {
+      "sourceId": 2602,
+      "code": 33145233,
+      "previousSha256": [
+        "b0fc8f9cdb9ed1d75188210e1d3e14258cdf15aad24cbf36d42da9a4b4b0af81"
+      ],
+      "description": "①: 의식 소환을 실행할 경우, 그 의식 소환에 필요한 몬스터 1장으로서 자신 묘지의 이 카드를 제외할 수 있다.\n②: 이 카드를 소재로 의식 소환한 몬스터는 상대 카드 효과의 대상이 되지 않는다."
+    },
+    {
+      "sourceId": 2603,
+      "code": 58851034,
+      "previousSha256": [
+        "6ec5548080264f7cbabf4dd80455b0116228b7682fe716d371cebdbe202d220a"
+      ],
+      "description": "마법 카드가 발동했을 때, 패에서 마법 카드 1장을 버리고 발동할 수 있다. 그 마법 카드의 발동을 무효로 하고 파괴한다.\n이 효과로 그 카드를 파괴했을 경우, 이 듀얼 동안 상대는 파괴된 카드 및 그와 같은 이름의 카드를 발동할 수 없다."
+    },
+    {
+      "sourceId": 2604,
+      "code": 38891741,
+      "previousSha256": [
+        "ecf35bef3540ba58822353be6571d6058e7fa06ca8a1de0fa25c0c9c52e5e6c8"
+      ],
+      "description": "①: 몬스터 효과나 마법 / 함정 카드가 발동했을 때, 그 효과와 같은 종류(몬스터 / 마법 / 함정)의 카드 1장을 패에서 버리고 발동할 수 있다. 그 발동을 무효로 하여 파괴한다."
+    },
+    {
+      "sourceId": 2605,
+      "code": 92512625,
+      "previousSha256": [
+        "66ae338778e9061cca7ecf15f58b6b9f4fe4e9fce6942b1c1c85030c9503cc5b"
+      ],
+      "description": "①: 자신의 마법 & 함정 존에 세트된 카드가 이 카드뿐일 경우, 3000 LP를 지불하고 다음 중 해당하는 효과를 발동할 수 있다.\n●몬스터 효과나 마법 / 함정 카드가 발동했을 때, 그 발동을 무효로 하고 그 카드를 파괴한다.\n●자신 또는 상대가 몬스터를 일반 소환 / 반전 소환 / 특수 소환할 시기에, 그 소환을 무효로 하고 그 몬스터를 파괴한다."
+    },
+    {
+      "sourceId": 2606,
+      "code": 38275183,
+      "previousSha256": [
+        "8537036d7120d4a37b875285ee703341fb645a2f576f7cd54ab7a492a3580849"
+      ],
+      "description": "마법 카드가 발동했을 때 다음 중 1개를 선택하여 발동할 수 있다.\n●그 마법 카드가 필드의 몬스터 1장만을 대상으로 할 경우, 그 발동을 무효로 하고 그 카드를 파괴한다.\n●패의 마법 카드 1장을 묘지로 보내고 발동할 수 있다. 그 마법의 발동을 무효로 하고 그 카드를 파괴한다."
+    },
+    {
+      "sourceId": 2607,
+      "code": 23265313,
+      "previousSha256": [
+        "13290db446578b4bdfacbba3d0b31f2a2d04b970353280342ae3d8204e432d90"
+      ],
+      "description": "①: 패를 1장 버리고 발동할 수 있다. 턴 종료시까지 자신 패의 몬스터의 레벨을 2개 내린다. 이 턴에 자신의 패에 새로 들어온 몬스터에도 적용되며, 이 효과가 적용된 몬스터가 소환되어도 턴 종료시까지 레벨 변화는 유지된다."
+    },
+    {
+      "sourceId": 2608,
+      "code": 43586926,
+      "previousSha256": [
+        "4bb20e252267b460890a0d9779630541463b58b722f16adaa8684b913d3310cd"
+      ],
+      "description": "이 카드가 필드에서 파괴되어 묘지로 보내진 턴의 엔드 페이즈에, 이 카드가 묘지에 존재할 경우에 발동할 수 있다. 이 카드를 특수 소환하고, 이 카드의 공격력과 수비력은 각각 1000이 된다.\n이 카드명의 효과는 듀얼 중에 1번밖에 사용할 수 없다."
+    },
+    {
+      "sourceId": 2610,
+      "code": 5237827,
+      "previousSha256": [
+        "ad8725f84ca0efb027441f98765f575d94442db1e927753a092ee5253fa29a6d"
+      ],
+      "description": "이 카드의 일반 소환에 성공했을 때, 자신 묘지의 장착 마법 카드 1장을 대상으로 하여 발동한다. 그 카드를 앞면으로 제외한다.\n그 카드가 제외되어 있는 경우, 다음 자신의 스탠바이 페이즈에 그 카드를 패에 넣는다."
+    },
+    {
+      "sourceId": 2612,
+      "code": 63789924,
+      "previousSha256": [
+        "9625dee131a4c21fbfc6a57f018d83b2dfd3ce8d9adeeaba089fe87ea5e1899f"
+      ],
+      "description": "몬스터 1장에 장착한다.\n몬스터에 장착된 이 카드가 다른 카드의 효과로 파괴되어 묘지로 보내졌을 때에 발동한다. 상대의 패를 확인하고, 그중 카드 1장을 골라 버린다."
+    },
+    {
+      "sourceId": 2614,
+      "code": 57046845,
+      "previousSha256": [
+        "fdf6590fd25adc65bbd5bcb6996dcb3994fa289d276d5e5fbe242d4ec44521e1"
+      ],
+      "description": "이 카드는 통상 소환할 수 없다. \"구속 해제\"의 효과로만 특수 소환할 수 있다.\n이 카드에 장착 카드가 장착되었을 때, 상대 필드의 몬스터 1장을 대상으로 하여 발동한다. 그 상대 몬스터를 파괴한다."
+    },
+    {
+      "sourceId": 2615,
+      "code": 98847704,
+      "previousSha256": [
+        "e71e8a00b6b95a5d746a97a96486c3033a9327e9fcb1d07b87eedba82d25f953"
+      ],
+      "description": "자신 필드에 앞면 표시로 존재하는 장착 마법 카드 1장을 대상으로 하여 발동할 수 있다. 그 카드를 상대 필드에 세트된 마법 / 함정 카드 전부와 함께 파괴한다."
+    },
+    {
+      "sourceId": 2619,
+      "code": 10012614,
+      "previousSha256": [
+        "3c90ef1c4a6636d2d3b6a020a7d1d9e411bffa789922dd55a8b78b1771362e02"
+      ],
+      "description": "①: 이 카드가 마법 & 함정 존에 존재하는 한, 자신의 배틀 페이즈 동안 자신 필드 몬스터의 공격력은 200 올라간다."
+    },
+    {
+      "sourceId": 2620,
+      "code": 78986941,
+      "previousSha256": [
+        "db6cb702a8d05296f3303d77fd5fce4722aab6b7da600586642a0621d764c78a"
+      ],
+      "description": "①: 토큰 이외의 자신 필드의 앞면 표시 일반 몬스터 1장을 대상으로 하고 발동할 수 있다. 효과 처리로 그 일반 몬스터를 릴리스한다. 릴리스했을 경우, 상대 필드의 몬스터 1장을 골라 파괴한다."
+    },
+    {
+      "sourceId": 2621,
+      "code": 25578802,
+      "previousSha256": [
+        "aecd507f8b6f5fdeeb02e68b244373f9e15a4563387589ac12c8989224ead029"
+      ],
+      "description": "각 플레이어는 자신의 턴의 엔드 페이즈에 1번, 이 효과를 발동할 수 있다. 자신의 패에서 레벨 4 일반 몬스터 1장을 앞면 표시로 특수 소환한다."
+    },
+    {
+      "sourceId": 2622,
+      "code": 54977057,
+      "previousSha256": [
+        "c5390461da25a3e5e073d1f8c0c880ad923839b7fedf679cba0a1a7f7626cc17"
+      ],
+      "description": "이 카드를 발동하는 턴에 자신은 몬스터를 특수 소환할 수 없으며, 배틀 페이즈를 실행할 수 없다.\n①: 효과 처리로 패에서 빛 속성 / 천사족 몬스터 1장을 제외한다. 제외했을 경우, 자신은 덱에서 2장 드로우한다."
+    },
+    {
+      "sourceId": 2629,
+      "code": 30461781,
+      "previousSha256": [
+        "6dff5aa155baa2e0e2b8f6bebcbfcad4debf06290ab7bb65d82b7af71bed0fc8"
+      ],
+      "description": "다음 효과에서 1개를 선택하고 발동한다.\n●자신의 덱에서 카드를 1장 드로우한다.\n●상대 필드 위에 스피릿 몬스터가 앞면 표시로 존재할 때 발동할 수 있다. 자신의 덱에서 카드를 2장 드로우한다."
+    },
+    {
+      "sourceId": 2632,
+      "code": 89362180,
+      "previousSha256": [
+        "1f08202ba47e8bc62fac09240e12a8bd7cf6818b1c91b4d852a6ad7c299a5610"
+      ],
+      "description": "①: 이 카드는 필드 / 묘지에 존재하는 한, 일반 몬스터로 취급한다. ②: 필드의 일반 몬스터 취급의 이 카드를 통상 소환으로서 1번 더 일반 소환할 수 있다. 그 경우 이 카드는 효과 몬스터로 취급되며 이하의 효과를 얻는다.\n●이 카드의 종족 / 속성은 공룡족 / 땅 속성이 된다.\n●이 카드가 전투로 상대 몬스터를 파괴하고 묘지로 보냈을 때에 발동할 수 있다. 그 몬스터를 자신 필드에 수비 표시로 특수 소환한다. 이 효과로 특수 소환한 몬스터의 종족은 언데드족이 된다."
+    },
+    {
+      "sourceId": 2655,
+      "code": 49681811,
+      "previousSha256": [
+        "8e41da4ff44d9ed1e810ee6a34012885c247f64f61548735c8486bb2805ab645"
+      ],
+      "description": "필드의 이 카드를 대상으로 하는 마법 카드의 효과를 무효로 한다. 무효로 했을 경우, 그 마법 카드를 파괴한다.\n자신의 드로우 페이즈에 일반 드로우 대신, 자신의 덱에서 레벨 4 이하 전사족 몬스터 1장을 패에 넣을 수 있다. 이 효과는 이 카드가 필드에 앞면 표시로 존재할 때 발동하고 처리한다. 그 후 덱을 셔플한다."
+    },
+    {
+      "sourceId": 2656,
+      "code": 70676581,
+      "previousSha256": [
+        "ab68edf664acaad3f47662911732cefb627dce9a3ae17a5ddfbbafc2cf118584"
+      ],
+      "description": "이 카드는 특수 소환할 수 없다.\n자신 필드의 앞면 표시 어둠 속성 몬스터를 대상으로 하는 마법 카드의 효과를 무효로 한다. 무효로 했을 경우, 그 마법 카드를 파괴한다.\n자신의 드로우 페이즈에 일반 드로우 대신, 자신의 덱에서 레벨 4 어둠 속성 몬스터 1장을 패에 넣을 수 있다. 이 효과는 이 카드가 필드에 앞면 표시로 존재할 때 발동하고 처리한다."
+    },
+    {
+      "sourceId": 2658,
+      "code": 70832512,
+      "previousSha256": [
+        "9347e449120f2a9e5fb0f71354c92d6f069d0fecc6412be90d1e58a2e7f75ade"
+      ],
+      "description": "이 카드 이외의 앞면 표시 레벨 5 이상 몬스터가 특수 소환에 성공했을 때, 필드의 앞면 표시인 이 카드를 릴리스하고 발동해야 한다. 그 특수 소환된 레벨 5 이상의 몬스터를 파괴한다."
+    },
+    {
+      "sourceId": 2660,
+      "code": 25833572,
+      "previousSha256": [
+        "2274e30a0bd7ca6dd6492a21ffd8a6417ad9c04970f39e4118ae648488e3ad7c"
+      ],
+      "description": "이 카드는 통상 소환할 수 없다. 처음에는 자신 필드의 \"번개 마신－썬가\", \"풍 마신－휴가\", \"수 마신－스가\"를 1장씩 릴리스한 경우에만 패에서 특수 소환할 수 있다."
+    },
+    {
+      "sourceId": 2666,
+      "code": 22339232,
+      "previousSha256": [
+        "96bd3e3574f52d4fc547b6160d503fd962cb72e511365d2615534806283d5f2d"
+      ],
+      "description": "이 카드의 카드명은 묘지에 존재하는 한, \"저주받은 하인\"으로 취급한다. 또한, 이 카드를 패에서 버리고 이하의 효과에서 1개를 선택하고 발동할 수 있다.\n●게임에서 제외되어 있는 자신의 \"저주받은 하인\" 또는 \"저주받은 하인 메어\" 1장을 선택하고 자신의 묘지로 되돌린다.\n●게임에서 제외되어 있는 자신의 \"저주받은 하인 부인\" 또는 \"저주받은 하인 킹\" 1장을 선택하고 필드 위에 특수 소환한다."
+    },
+    {
+      "sourceId": 2734,
+      "code": 6628343,
+      "previousSha256": [
+        "5477f46bd618e15b432c2ae9259954b30058e29c2d5a877fc8839b3a843a96fa"
+      ],
+      "description": "\"개벽의 기사\"의 ①②의 효과는 각각 1턴에 1번밖에 사용할 수 없다. ①: 이 카드를 사용하고 의식 소환한 \"카오스 솔저\" 몬스터는 이하의 효과를 얻는다.\n●1턴에 1번, 상대 필드의 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 제외한다.\n●이 카드가 전투로 상대 몬스터를 파괴하고 묘지로 보냈을 때에 발동할 수 있다. 이 카드는 1번만 더 이어서 공격할 수 있다. ②: 묘지의 이 카드가 제외되었을 경우에 발동할 수 있다. 덱에서 의식 마법 카드 1장을 패에 넣는다."
+    },
+    {
+      "sourceId": 2735,
+      "code": 32013448,
+      "previousSha256": [
+        "9944d07ebc9749937128a72550e0d84d7bbf4a37428f1f4489963a3b072af58b"
+      ],
+      "description": "\"소암의 기사\"의 ①②의 효과는 각각 1턴에 1번밖에 사용할 수 없다. ①: 이 카드를 사용하고 의식 소환한 \"카오스 솔저\" 몬스터는 이하의 효과를 얻는다.\n●1턴에 1번, 상대 필드의 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 제외한다.\n●1턴에 1번, 자신 메인 페이즈에 발동할 수 있다. 상대의 패를 무작위로 1장 고르고, 다음 상대의 엔드 페이즈까지 뒷면 표시로 제외한다. ②: 묘지의 이 카드가 제외되었을 경우에 발동할 수 있다. 덱에서 의식 몬스터 1장을 패에 넣는다."
+    },
+    {
+      "sourceId": 2766,
+      "code": 30079770,
+      "previousSha256": [
+        "d57591ec91a93d36b0a02beb4661b941028fe25d1135366f38bc2bda9567b11e"
+      ],
+      "description": "①: 이 카드는 필드 / 묘지에 존재하는 한, 일반 몬스터로 취급한다. ②: 필드의 일반 몬스터 취급의 이 카드를 통상 소환으로서 1번 더 일반 소환할 수 있다. 그 경우 이 카드는 효과 몬스터로 취급되며, 이하의 효과를 얻는다.\n●이 카드가 전투를 실행한 배틀 페이즈 종료시에 발동할 수 있다. 이 카드의 원래 공격력만큼의 데미지를 상대에게 준다. \"붉은 눈의 흑염룡\"의 이 효과는 1턴에 1번밖에 사용할 수 없다."
+    },
+    {
+      "sourceId": 2768,
+      "code": 84877802,
+      "previousSha256": [
+        "d3d5e9c2526650ee0f71554ab3bd7621d0ab9c3731af7fa1ebc06f74b9a530d4"
+      ],
+      "description": "전사족 몬스터에만 장착 가능. ①: 장착 몬스터의 표시 형식에 따라 이하의 효과를 적용한다.\n●공격 표시: 장착 몬스터의 공격력은, 그 원래 수비력만큼 올린다.\n●수비 표시: 장착 몬스터의 수비력은, 그 원래 공격력만큼 올린다."
+    },
+    {
+      "sourceId": 2858,
+      "code": 97800311,
+      "previousSha256": [
+        "8b727bceb198d26d2a37d9700292882505a7ddcd0b8ebbddfba2a24b5fc5313f"
+      ],
+      "description": "\"왕가의 신전\"의 카드명이 쓰여진 몬스터 × 2\n이 카드는 융합 소환 및 이하의 방법으로만 특수 소환할 수 있다. ●자신 필드의 \"아포피스\" 몬스터 2장을 릴리스했을 경우에 엑스트라 덱에서 특수 소환할 수 있다. ①: 1턴에 1번, 자신 묘지의 \"아포피스\" 함정 카드를 3장까지 대상으로 하고 발동할 수 있다(같은 이름의 카드는 1장까지). 그 카드를 자신 필드에 세트한다. ②: 1턴에 1번, 함정 카드가 발동했을 경우, 상대 필드의 카드 1장을 대상으로 하고 발동할 수 있다. 그 카드를 파괴한다."
+    },
+    {
+      "sourceId": 2861,
+      "code": 23804920,
+      "previousSha256": [
+        "9db6d0b2dfa42a28ea143150f5d8c9c4347042a23dae8ddad3a5d4b324738f35"
+      ],
+      "description": "\"셀케트\" 몬스터 ＋ 공격력 2500 이하의 몬스터\n이 카드명의 ①의 효과는 1턴에 1번밖에 사용할 수 없다. ①: 이 카드를 특수 소환했을 경우, 또는 이 카드가 상대 몬스터와 전투를 실행하는 데미지 스텝 개시시, 상대의 필드(앞면 표시) / 묘지의 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 제외하고, 이 카드의 공격력은 제외한 몬스터의 원래 공격력의 절반만큼 올린다. ②: 레벨 10 이상의 몬스터가 제외되어 있는 한, 이 카드는 1번의 배틀 페이즈 중에 2회 공격할 수 있다."
+    },
+    {
+      "sourceId": 2958,
+      "code": 23924608,
+      "previousSha256": [
+        "451c58b9a6921a88dbf0cc76a526e9a4a47a573c84349a0f1232bff6a68de13e"
+      ],
+      "description": "이 카드를 발동하는 턴에 자신은 배틀 페이즈를 실행할 수 없다.\n①: 필드의 마법 / 함정 카드를 2장까지 대상으로 하고 발동할 수 있다. 그 대상 카드를 파괴한다."
+    },
+    {
+      "sourceId": 2959,
+      "code": 64697431,
+      "previousSha256": [
+        "3d3e6421a75f022b399d01c651814f0c6c79d371ea1f1a3d3b63fff26a1eeaf6"
+      ],
+      "description": "①: 필드에 세트된 마법 / 함정 카드를 모두 각각 주인의 패로 되돌린다."
+    },
+    {
+      "sourceId": 2960,
+      "code": 97120394,
+      "previousSha256": [
+        "0f6d94b8595c956e89dd6cd7f6cfbd123e25fe57fea3876a1e9198780c353673"
+      ],
+      "description": "이 카드의 발동에 체인하여 마법 / 함정 / 몬스터의 효과를 발동할 수 없다.\n①: 자신 또는 상대의 배틀 페이즈 개시시에 발동할 수 있다. 이 카드의 효과 처리 후부터 턴 종료시까지, 서로 마법 / 함정 카드 및 그 효과를 발동할 수 없다."
+    },
+    {
+      "sourceId": 2961,
+      "code": 35726888,
+      "previousSha256": [
+        "569ceec837d1551a4d35d62e4df5c3660c0e2eca68101a5135d64769500aebc7"
+      ],
+      "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다.\n①: 자신의 덱에서 마법 / 함정 카드 1장을 묘지로 보낸다."
+    },
+    {
+      "sourceId": 2962,
+      "code": 11765832,
+      "previousSha256": [
+        "ed7080980efe963f3b69d829513044714e6a82c346573e1f49d6082c058b042e"
+      ],
+      "description": "종족과 속성이 같으며 카드명이 서로 다른 몬스터 × 2\n이 카드명의 ②의 효과는 1턴에 1번밖에 사용할 수 없다.\n①: 이 카드가 실행하는 전투로 상대에게 발생하는 전투 데미지는 2배가 된다.\n②: 이 카드가 묘지로 보내졌을 경우에 발동할 수 있다. 자신은 1장 드로우한다."
+    },
+    {
+      "sourceId": 2963,
+      "code": 54757758,
+      "previousSha256": [
+        "4fbd7e17cd3cd99606947e528ddff7d843dbdb5d0f9209a4df4d2f0eac3f72b3"
+      ],
+      "description": "속성이 같고 종족이 서로 다른 몬스터 × 2\n①: 이 카드가 몬스터 존에 존재하는 한, 상대는 이 카드 및 이 카드와 같은 속성의 필드 몬스터를 효과의 대상으로 할 수 없다.\n②: 1턴에 1번, 속성을 1개 선언하여 발동할 수 있다. 이 카드의 속성은 턴 종료시까지 선언한 속성이 된다. 이 효과는 상대 턴에도 발동할 수 있다."
+    },
+    {
+      "sourceId": 2964,
+      "code": 54693926,
+      "previousSha256": [
+        "27e7d5a1d621fce2ced2a319cb405e8e0563d3806b49da5d3b8a2054fddee2f3"
+      ],
+      "description": "이 카드의 발동에 체인하여 몬스터의 효과를 발동할 수 없다.\n①: 상대 필드에 있는 모든 앞면 표시 몬스터의 효과를 턴 종료시까지 무효로 한다. 이 카드의 효과 처리 후부터 턴 종료시까지 상대가 받는 모든 데미지는 0이 된다."
+    },
+    {
+      "sourceId": 2965,
+      "code": 98645731,
+      "previousSha256": [
+        "8c02647efc4df844897e95aecd288009a17a216b7547b76d2b6af747f9562d22"
+      ],
+      "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. 이 카드를 발동하는 턴에 자신은 몬스터를 특수 소환할 수 없다.\n①: 자신의 덱 위에서 카드 3장을 넘겨 그중 1장을 골라 패에 넣는다. 그 후, 남은 카드를 덱에 되돌리고 셔플한다."
+    },
+    {
+      "sourceId": 2966,
+      "code": 98672567,
+      "previousSha256": [
+        "44d769b61cb6d0b43691a2ee839dd964a8bf7792f8c9f29950386f14d9f2b94b"
+      ],
+      "description": "자신 메인 페이즈 1의 개시시에, 자신 묘지의 종족이 서로 다른 몬스터 3장을 대상으로 하여 발동할 수 있다. 대상 몬스터를 덱으로 되돌리고 셔플한다. 그 후, 자신은 2장 드로우한다.\n이 카드를 발동하는 턴에 자신은 배틀 페이즈를 실행할 수 없다."
+    },
+    {
+      "sourceId": 2967,
+      "code": 67169062,
+      "previousSha256": [
+        "8a79c8541f940e9cc30babb0cd8bbbbf1613071dcab1239185c21ee78392e80e"
+      ],
+      "description": "①: 자신 묘지의 몬스터 5장을 대상으로 하고 발동할 수 있다. 그 몬스터 5장을 덱으로 되돌린다. 메인 덱으로 되돌아간 카드가 있으면 그 덱을 셔플한다. 그 후, 자신은 2장 드로우한다."
+    },
+    {
+      "sourceId": 2968,
+      "code": 5833312,
+      "previousSha256": [
+        "a92668a1d3c40da749741be9b688521dc43f5a49ed111836676f0724aa254968"
+      ],
+      "description": "①: 필드에 있는 앞면 표시 몬스터의 종족에 따라 다음 효과를 얻는다.\n●전사족 / 야수족 / 화염족: 1턴에 1번, 자신이 함정 카드를 발동했을 경우, 상대 필드의 카드 1장을 대상으로 하여 발동할 수 있다. 그 카드를 파괴한다.\n●공룡족 / 해룡족 / 번개족: 1턴에 1번, 자신이 마법 카드를 발동했을 경우에 발동할 수 있다. 상대에게 1000 데미지를 준다.\n●기계족 / 천사족 / 악마족: 1턴에 1번, 자신이 몬스터 효과를 발동했을 경우, 자신 필드의 앞면 표시 몬스터 1장을 대상으로 하여 발동할 수 있다. 그 몬스터의 공격력을 1000 올린다."
+    },
+    {
+      "sourceId": 2989,
+      "code": 87804747,
+      "previousSha256": [
+        "a45c1185fc1b45fd8b4a2ef71f5e427e0d53f81743d87f9801c3c9508bdf4a02"
+      ],
+      "description": "곤충족 / 레벨 8 몬스터 ＋ 곤충족 / 레벨 7 몬스터\n자신은 \"완전체 그레이트 인섹트\"를 1턴에 1번밖에 특수 소환할 수 없다. 이 카드는 융합 소환 및 이하의 방법으로만 엑스트라 덱에서 특수 소환할 수 있다.\n●장착 카드를 장착한 자신의 수비력 2000 이상의 곤충족 몬스터 1장을 릴리스했을 경우에 엑스트라 덱에서 특수 소환할 수 있다.\n①: 이 카드는 전투로는 파괴되지 않는다. ②: 필드 존에 앞면 표시로 카드가 존재할 경우, 자신 / 상대의 배틀 페이즈에 1번, 발동할 수 있다. 상대 필드의 몬스터를 전부 파괴한다."
+    },
+    {
+      "sourceId": 3024,
+      "code": 47664723,
+      "previousSha256": [
+        "75d037dc2f0db29992f07fc276a4d89ba440aece35b0f404118a3c42425aea5a"
+      ],
+      "description": "①: 묘지에서 특수 소환한 이 카드는 이하의 효과를 얻는다.\n●이 카드가 수비 표시 몬스터를 공격했을 경우, 그 수비력을 공격력이 넘은 만큼만 전투 데미지를 준다."
+    },
+    {
+      "sourceId": 3036,
+      "code": 43892408,
+      "previousSha256": [
+        "969efd1bf3843d3289c074fad8cde2fc4a49ca15b1cf592d18024070e00aece5"
+      ],
+      "description": "\"블랙 매지션 걸\" ＋ 드래곤족 몬스터\n이 카드는 상기 카드를 융합 소재로 한 융합 소환 및, \"티마이오스의 눈\"의 효과로만 특수 소환할 수 있다. ①: 자신 / 상대 턴에 1번, 패를 1장 묘지로 보내고, 필드의 앞면 표시 카드 1장을 대상으로 하여 발동할 수 있다. 그 앞면 표시 카드를 파괴한다."
+    }
+  ]
+}
