@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.144",
-  "versionCode": 163,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.144/YGOClassicExpedition-0.18.144-arm64.apk",
-  "sizeBytes": 1018719578,
-  "sha256": "7ef2dbd7a976cb6bc9c860023e293485bc8ec321a8e2be4bc4f9eb551423927d",
-  "releaseNotes": "스피릿·염성 카드팩을 추가했습니다. 기존 카드 247장의 정정된 효과를 인터넷 없이도 볼 수 있습니다."
+  "versionName": "0.18.145",
+  "versionCode": 164,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.145/YGOClassicExpedition-0.18.145-arm64.apk",
+  "sizeBytes": 1018751894,
+  "sha256": "a208f2f4824ece3c25d1450dfb3fbee50738eab9858e09ee29ccf376a537684f",
+  "releaseNotes": "심술꾸러기의 저주와 금지된 성창의 연계 판단을 개선했습니다. 공격력과 수비력 변동 카테고리를 정리했습니다."
 }
