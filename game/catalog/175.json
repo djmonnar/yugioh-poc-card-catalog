@@ -10,7 +10,7 @@
   ],
   "code": 32485518,
   "defense": 200,
-  "description": "이 카드를 릴리스하여 묘지의\n\"언데드 월드\" 1장을 패에\n넣을 수 있다.",
+  "description": "이 카드는 특수 소환할 수 없다.\n①: 이 카드를 릴리스하고 자신 묘지의 \"언데드 월드\" 1장을 대상으로 하여 발동할 수 있다. 대상 카드를 패에 넣는다.",
   "draw_enabled": true,
   "identity_key": "ce4608c097b25edbc2a503b6d2f94a083cb6a94b34edf67e1cb6d20ebca01223",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0764.webp",

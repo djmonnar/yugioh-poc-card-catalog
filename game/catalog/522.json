@@ -9,7 +9,7 @@
   ],
   "code": 77252217,
   "defense": 0,
-  "description": "이 카드가 상대에게 데미지를\n주었을 때, 상대는 자신의\n덱에서 2장 드로우해야 한다.",
+  "description": "이 카드가 전투를 했을 경우, 그 데미지 스텝 종료시에 발동한다. 상대는 덱에서 1장 드로우한다.",
   "draw_enabled": true,
   "identity_key": "d58aeaba652cfefa9a8985dc8eecb399c69e9d8f19da70cead8f017cec3f5206",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0595.webp",

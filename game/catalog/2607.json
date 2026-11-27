@@ -9,7 +9,7 @@
   ],
   "code": 23265313,
   "defense": 0,
-  "description": "패를 1장 버리고 발동한다. 턴 종료까지 자신의 패에 있는 몬스터의 레벨을 2 내린다. 이 턴에 새로 패에 들어오는 몬스터에도 적용되며, 적용된 몬스터를 소환해도 턴 종료까지 레벨 감소가 유지된다.",
+  "description": "①: 패를 1장 버리고 발동할 수 있다. 턴 종료시까지 자신 패의 몬스터의 레벨을 2개 내린다. 이 턴에 자신의 패에 새로 들어온 몬스터에도 적용되며, 이 효과가 적용된 몬스터가 소환되어도 턴 종료시까지 레벨 변화는 유지된다.",
   "draw_enabled": true,
   "identity_key": "19ba64d6dcd39f31b2c29af315060310dc981d4736a748fabc76ac1b969e407b",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2607.jpg",

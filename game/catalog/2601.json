@@ -9,7 +9,7 @@
   ],
   "code": 30492798,
   "defense": 200,
-  "description": "의식 소재가 필요할 때 묘지의 이 카드를 제외하여 소재로 쓸 수 있습니다. 이 카드를 소재로 의식 소환한 몬스터에는 함정 효과가 적용되지 않습니다.",
+  "description": "의식 소환을 실행할 경우, 그 의식 소환에 필요한 몬스터 1장으로서 자신 묘지의 이 카드를 제외할 수 있다.\n이 카드를 소재로 의식 소환한 몬스터는 함정 카드의 효과를 받지 않는다.",
   "draw_enabled": true,
   "identity_key": "f2d92f116ad6d20f267775af80f4fd47335a156d171905a24df2ad68e82d90e9",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native081/cards/2601.jpg",

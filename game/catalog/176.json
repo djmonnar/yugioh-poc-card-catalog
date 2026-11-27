@@ -10,7 +10,7 @@
   ],
   "code": 58071123,
   "defense": 800,
-  "description": "이 카드가 화염족 몬스터에\n의해 파괴되었을 때, 양쪽\n플레이어에게 800 데미지를\n준다.",
+  "description": "①: 이 카드가 화염족 몬스터와의 전투로 파괴되어 묘지에 보내졌을 경우에 발동한다. 서로 800 데미지를 받는다.",
   "draw_enabled": true,
   "identity_key": "c783a81b563b2b5700fd689e66c74a70c704409e52c12b1d527985f4357034ea",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0998.webp",

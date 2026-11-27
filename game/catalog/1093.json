@@ -6,7 +6,7 @@
   "categories": [],
   "code": 34694160,
   "defense": 0,
-  "description": "이 카드가 필드에 앞면으로\n존재하는 동안 상대는 패를\n공개해야 한다. 상대의 패에\n마법 카드가 있으면 상대의\n스탠바이 페이즈마다 상대의\nLP를 1000 회복한다.",
+  "description": "①: 이 카드가 마법 & 함정 존에 있는 동안, 상대는 자신의 패를 계속 공개한다.\n②: 상대 스탠바이 페이즈에 발동한다. 상대는 1000 LP를 회복한다. 이 효과를 발동할 때와 처리할 때, 상대의 패에 마법 카드가 있어야 한다.",
   "draw_enabled": true,
   "identity_key": "f1edb2b07dd84cff0a5a71a75bd31b925cd0c6c5b04479e916f8ab0761ceecc8",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0427.webp",

@@ -9,7 +9,7 @@
   ],
   "code": 1248895,
   "defense": 0,
-  "description": "공격력 2000 이하의 몬스터가\n소환되었을 때 발동할 수\n있다. 특수 소환도 포함한다.\n그 몬스터는 파괴하지 않고,\n소환한 플레이어의 패와 덱에\n있는 같은 이름의 몬스터\n카드를 모두 파괴한다. 그 후\n그 플레이어의 덱을 셔플한다.",
+  "description": "①: 공격력 2000 이하의 몬스터가 일반 소환 / 반전 소환 / 특수 소환되었을 때, 그 앞면 몬스터 1장을 대상으로 발동할 수 있다. 대상의 컨트롤러의 패 / 덱에서 대상과 같은 이름의 카드를 전부 파괴한다.",
   "draw_enabled": true,
   "identity_key": "2ec93a431a9935ca83f93c7f7cf8f0ff7fa21c377685133704266490528a2931",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0549.webp",

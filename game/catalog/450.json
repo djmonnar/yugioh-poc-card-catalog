@@ -8,7 +8,7 @@
   ],
   "code": 9628664,
   "defense": 1200,
-  "description": "체인 3 이상으로 쌓인 체인의\n처리가 끝난 뒤, 1장\n드로우한다.",
+  "description": "체인이 3개 이상 쌓여 모두 처리된 후에 발동한다. 자신은 덱에서 1장 드로우한다. 같은 이름의 카드 효과가 그 체인에서 두 번 이상 발동되었을 경우, 이 효과는 발동할 수 없다.",
   "draw_enabled": true,
   "identity_key": "da6778dd8fc326972d3f6ad86ce9f972af8c0cf5d230b601fc2714292a20d487",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0160.webp",

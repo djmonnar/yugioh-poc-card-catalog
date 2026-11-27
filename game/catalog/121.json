@@ -6,7 +6,7 @@
   "categories": [],
   "code": 26722601,
   "defense": 1900,
-  "description": "\"인벨즈\" 몬스터가 어드밴스\n소환되었을 때, 일반 소환을\n1번 더 실행한다.",
+  "description": "이 카드가 필드에 앞면 표시로 존재하는 동안 \"인벨즈\" 몬스터가 앞면 표시로 어드밴스 소환된 턴에는, 자신은 통상 소환 외에 1번만 몬스터를 일반 소환하거나 세트할 수 있다.",
   "draw_enabled": true,
   "identity_key": "b9e303dd62e48b8c0c97682a85a0259e59c1c1f27fb751b3a49ba80ceb08bd3e",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1005.webp",

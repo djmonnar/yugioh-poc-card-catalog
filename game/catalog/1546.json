@@ -6,7 +6,7 @@
   "categories": [],
   "code": 95286165,
   "defense": 0,
-  "description": "필드의 융합 몬스터 1장을\n융합 덱으로 되돌린다. 그\n몬스터의 융합 소재가 모두\n자신의 묘지에 있으면, 모두\n필드에 앞면 공격 표시 또는\n앞면 수비 표시로 특수 소환할\n수 있다.",
+  "description": "①: 필드의 융합 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 주인의 엑스트라 덱으로 되돌린다. 이후, 그 몬스터의 융합 소환에 사용한 소재 몬스터 1세트 전부가 자신의 묘지에 있으면, 그 1세트를 자신 필드에 특수 소환할 수 있다.",
   "draw_enabled": true,
   "identity_key": "5daba64d5c00ac7822f52fb3496058fd8de181acadece6a3080ae3e2f53538b2",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1028.webp",

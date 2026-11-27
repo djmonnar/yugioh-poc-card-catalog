@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3532",
+  "attack": 2600,
+  "attribute": 4,
+  "categories": [
+    "지원-염성",
+    "지원-염무",
+    "지원-야수전사족",
+    "지원-융합",
+    "발동-소환 시",
+    "효과-데미지",
+    "발동-묘지로 보내기",
+    "효과-파괴"
+  ],
+  "code": 93877990,
+  "defense": 2200,
+  "description": "야수전사족 몬스터 2장\n이 카드명의 ①과 ②의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 이 카드가 특수 소환에 성공했을 경우 발동할 수 있다. 자신 필드의 앞면 표시 \"염무\" 마법 / 함정 카드 수 × 200만큼 상대에게 데미지를 준다.\n②: 자신 / 상대의 배틀 페이즈에, 자신 필드의 앞면 표시 \"염무\" 마법 / 함정 카드 1장을 묘지로 보내고 상대 필드의 카드 1장을 대상으로 발동할 수 있다. 그 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "3b11a76176ce22151ec1c98b2878e27281272dc21b5f43636688f690351677c9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3532.jpg",
+  "level": 8,
+  "links": [],
+  "name": "부염성－하쿠텐오우",
+  "name_english": "Brotherhood of the Fire Fist - Swan",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "UR",
+  "search_aliases": [
+    "부염성－하쿠텐오우",
+    "Brotherhood of the Fire Fist - Swan"
+  ],
+  "source_id": 3532,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 2564
+}

@@ -8,7 +8,7 @@
   ],
   "code": 13316346,
   "defense": 2000,
-  "description": "자신의 필드에 \"가제트\"\n몬스터가 있으면, 이 카드의\n공격력은 2000 올라간다.",
+  "description": "자신 필드에 앞면 표시의 \"가제트\" 몬스터가 존재하는 동안, 이 카드의 공격력은 2000 올린다.",
   "draw_enabled": true,
   "identity_key": "001b36590286f19be1c864c15c8bd45f45e2bc9e424a0c93ce94bb17421529cd",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0238.webp",

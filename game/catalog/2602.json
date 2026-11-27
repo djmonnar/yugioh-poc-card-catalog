@@ -9,7 +9,7 @@
   ],
   "code": 33145233,
   "defense": 600,
-  "description": "의식 소재가 필요할 때 묘지의 이 카드를 제외하여 소재로 쓸 수 있습니다. 이 카드가 소재였던 의식 소환 몬스터를 상대는 카드 효과의 대상으로 고를 수 없습니다.",
+  "description": "①: 의식 소환을 실행할 경우, 그 의식 소환에 필요한 몬스터 1장으로서 자신 묘지의 이 카드를 제외할 수 있다.\n②: 이 카드를 소재로 의식 소환한 몬스터는 상대 카드 효과의 대상이 되지 않는다.",
   "draw_enabled": true,
   "identity_key": "f6b7e64af99c980eea0c15c6b80a71b9ce399881892d186d9aa3e288d112e274",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native081/cards/2602.jpg",

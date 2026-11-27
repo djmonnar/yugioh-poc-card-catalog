@@ -8,7 +8,7 @@
   ],
   "code": 68005187,
   "defense": 0,
-  "description": "상대의 몬스터 1장을 자신의\n몬스터 대신 릴리스한다. 이\n카드를 발동한 턴의 배틀\n페이즈는 건너뛰어야 한다.",
+  "description": "이 카드를 발동하는 턴에는 자신은 배틀 페이즈를 실행할 수 없다.\n①: 상대 필드의 몬스터 1장을 대상으로 하고 발동할 수 있다. 이 턴에 자신이 몬스터를 릴리스할 경우, 자신 몬스터 1장 대신 대상 몬스터를 릴리스해야 한다.",
   "draw_enabled": true,
   "identity_key": "8fdba67eb686ecfa60afc175239f19193acbe9da9b586db53f44c527a068e050",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0264.webp",

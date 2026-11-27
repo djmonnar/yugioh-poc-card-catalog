@@ -9,7 +9,7 @@
   ],
   "code": 63391643,
   "defense": 0,
-  "description": "자신의 필드에 \"블랙\n매지션\"이 있을 때 발동할 수\n있다. 상대 필드의 몬스터\n1장을 파괴한다.",
+  "description": "①: 자신 필드에 \"블랙 매지션\"이 존재할 경우, 상대 필드의 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 파괴한다.",
   "draw_enabled": true,
   "identity_key": "bb23adbc9b15351db086e73ddcff5854a1d7e156093b80599ea356f01f014c76",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0329.webp",

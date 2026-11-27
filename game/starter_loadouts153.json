@@ -124,6 +124,22 @@
       }
     ]
   },
+  "unified039_22e2f5ef0c7521e68f972eb80df068d117740bd0": {
+    "gold": 0,
+    "lp": 4500,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_field",
+        "position": 0,
+        "sourceId": 1840,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
   "unified039_2301015cdcec066c4cb87d572b374984b7cb1a60": {
     "gold": 0,
     "lp": 4000,
@@ -621,22 +637,6 @@
         "kind": "start_grave",
         "position": 0,
         "sourceId": -1,
-        "threshold": 0,
-        "value": 0
-      }
-    ]
-  },
-  "unified039_b85f993fbf845a038f2e937ca24717b3947b57a4": {
-    "gold": 0,
-    "lp": 4500,
-    "openingDrawBonus": 0,
-    "relicIds": [],
-    "skills": [
-      {
-        "entries": [],
-        "kind": "start_field",
-        "position": 0,
-        "sourceId": 1840,
         "threshold": 0,
         "value": 0
       }

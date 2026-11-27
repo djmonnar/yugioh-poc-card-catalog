@@ -10,7 +10,7 @@
   ],
   "code": 72302403,
   "defense": 0,
-  "description": "상대 턴부터 세어 상대는\n자신의 3턴 동안 몬스터로\n공격할 수 없다. 이 카드를\n발동했을 때 상대의 뒷면\n몬스터를 앞면으로 뒤집지만\n수비 표시는 유지한다. 그\n몬스터의 효과는 즉시\n발동한다.",
+  "description": "이 카드는 발동한 후에도 필드에 남는다. 상대 턴을 세어 세 번째 상대 엔드 페이즈에 이 카드를 파괴한다.\n①: 이 카드의 발동을 처리할 때, 상대 필드에 뒷면 표시 몬스터가 있다면 그 몬스터를 모두 앞면 표시로 한다.\n②: 이 카드가 마법 & 함정 존에 존재하는 동안, 상대 몬스터는 공격을 선언할 수 없다.",
   "draw_enabled": true,
   "identity_key": "2f70e4fb1fdba621566962e8968fe8fec261fd5f1cf4c0705f1ad2c48cfabcff",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0740.webp",

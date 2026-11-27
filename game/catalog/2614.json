@@ -10,7 +10,7 @@
   ],
   "code": 57046845,
   "defense": 2200,
-  "description": "일반 소환·세트할 수 없으며 ‘구속 해제’의 효과로만 특수 소환할 수 있다. 이 카드에 장착 카드가 장착되면 상대 필드의 몬스터 1장을 대상으로 하여 파괴한다.",
+  "description": "이 카드는 통상 소환할 수 없다. \"구속 해제\"의 효과로만 특수 소환할 수 있다.\n이 카드에 장착 카드가 장착되었을 때, 상대 필드의 몬스터 1장을 대상으로 하여 발동한다. 그 상대 몬스터를 파괴한다.",
   "draw_enabled": true,
   "identity_key": "50e3cc3f6e91edf1154c81d96fa049c37968900d050e5f791f74f66fa5db842e",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2614.jpg",

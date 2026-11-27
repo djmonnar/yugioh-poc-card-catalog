@@ -9,7 +9,7 @@
   ],
   "code": 5318639,
   "defense": 0,
-  "description": "필드의 마법 / 함정 카드\n1장을 파괴한다.",
+  "description": "①: 필드의 마법 / 함정 카드 1장을 대상으로 발동할 수 있다. 대상 카드 1장을 파괴한다.",
   "draw_enabled": true,
   "identity_key": "2e5b09e8cbb003a78a38101064462aeb0d78745bbca28fb850e2f1911f497552",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0316.webp",

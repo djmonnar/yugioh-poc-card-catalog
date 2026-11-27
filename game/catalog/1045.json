@@ -9,7 +9,7 @@
   ],
   "code": 88279736,
   "defense": 0,
-  "description": "자신의 몬스터 1장이 상대에게\n데미지를 줄 때마다 상대의\n패에서 무작위로 카드 1장을\n선택하여 묘지로 버린다.",
+  "description": "자신 필드의 몬스터가 상대에게 전투 데미지를 줄 때마다 발동한다. 상대는 자신의 패를 무작위로 1장 버린다.",
   "draw_enabled": true,
   "identity_key": "23a49307c4d51477d9e6c3fc0c5a10eefc3a3b57385a696f5fe086ab75ea7b03",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0106.webp",

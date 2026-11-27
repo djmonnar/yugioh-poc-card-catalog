@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3527",
+  "attack": 2200,
+  "attribute": 4,
+  "categories": [
+    "지원-염성",
+    "지원-화염 속성",
+    "지원-싱크로",
+    "소환-싱크로",
+    "발동-소환 시",
+    "소환-덱리크루터",
+    "소환제약"
+  ],
+  "code": 74168099,
+  "defense": 2200,
+  "description": "화염 속성 튜너 1장 ＋ 튜너 이외의 몬스터 1장 이상\n①: 이 카드가 싱크로 소환에 성공했을 때 발동할 수 있다. 덱에서 레벨 3 화염 속성 몬스터 1장을 특수 소환한다.\n②: 이 카드를 싱크로 소환한 뒤, 턴 종료시까지 자신은 레벨 5 이상의 몬스터를 특수 소환할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "26172b5cb883fec85a92f86869ff1b002a2a0b1fca262e2094abc90df98eced6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3527.jpg",
+  "level": 6,
+  "links": [],
+  "name": "염성후－호우신",
+  "name_english": "Brotherhood of the Fire Fist - Horse Prince",
+  "native_type": 8225,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "UR",
+  "search_aliases": [
+    "염성후－호우신",
+    "Brotherhood of the Fire Fist - Horse Prince"
+  ],
+  "source_id": 3527,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "싱크로 몬스터",
+  "web_slot": 2559
+}

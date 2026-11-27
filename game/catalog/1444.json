@@ -8,7 +8,7 @@
   ],
   "code": 84080939,
   "defense": 2000,
-  "description": "앞면의 이 카드를 릴리스하고,\n이 턴에 전투로 파괴된 자신의\n몬스터 1장을 패로 되돌린다.",
+  "description": "앞면 표시의 이 카드를 릴리스하고 발동할 수 있다. 이 턴에 전투로 파괴되어 자신 묘지에 보내진 몬스터 1장을 패로 되돌린다.",
   "draw_enabled": true,
   "identity_key": "5c375dd405e1aa4e96af8e9866492316fd2bb9693ab8fc5ae55d35d0ef7ebb7a",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0377.webp",

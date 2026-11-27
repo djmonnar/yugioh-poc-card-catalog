@@ -6,7 +6,7 @@
   "categories": [],
   "code": 50259460,
   "defense": 900,
-  "description": "이 카드를 융합 소재 몬스터\n1장 대신 사용할 수 있다.\n같은 융합에서 다른 융합\n소재까지 대체할 수는 없다.",
+  "description": "이 카드는 융합 몬스터 카드에 이름이 기재된 융합 소재 몬스터 1장 대신 사용할 수 있다. 나머지 융합 소재는 각각 그 융합 몬스터가 지정한 조건을 충족해야 한다.",
   "draw_enabled": true,
   "identity_key": "026140006354fb4cbca6db18fd5cf686d1393d60f7141f354fe71a12f6f4a6f6",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0705.webp",

@@ -6,7 +6,7 @@
   "categories": [],
   "code": 4149689,
   "defense": 0,
-  "description": "이 카드가 필드에 앞면으로\n존재하는 동안 반전 소환된\n레벨 2 이하의 몬스터를 모두\n파괴한다. 그 몬스터의 효과는\n발동하지 않는다.",
+  "description": "①: 이 카드가 마법 & 함정 존에 존재하는 동안, 레벨 2 이하의 몬스터는 반전 소환에 성공했을 때에 파괴된다. 그 몬스터는 이때 필드에서 발동하는 효과를 발동할 수 없다.",
   "draw_enabled": true,
   "identity_key": "7fe25a0c688bc56b10b0542d969360d4b7cbb0f5ccf640ce1cdc1d2055623bcc",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0607.webp",

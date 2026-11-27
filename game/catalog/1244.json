@@ -6,7 +6,7 @@
   "categories": [],
   "code": 29267084,
   "defense": 0,
-  "description": "상대의 앞면 몬스터 1장을\n선택한다. 공격력을 700\n내리고 표시 형식을 변경할 수\n없게 한다. 그 몬스터가\n파괴되면 이 카드도 파괴된다.",
+  "description": "상대 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다.\n①: 대상 몬스터는 공격력이 700 내려가고, 공격 및 표시 형식의 변경을 할 수 없다. 대상 몬스터가 필드에서 벗어났을 때, 이 카드를 파괴한다.",
   "draw_enabled": true,
   "identity_key": "509f1d451d9ae3e444ffd5b9c35c0f14cefc51e0d0517b28062f5f5e22c9c453",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1017.webp",

@@ -10,7 +10,7 @@
   ],
   "code": 84133008,
   "defense": 350,
-  "description": "1000 LP를 지불하고 묘지의\n\"융합\"을 패로 되돌릴 수\n있다.",
+  "description": "1000 LP를 지불하고 발동할 수 있다. 자신의 묘지에서 \"융합\" 1장을 골라 패에 넣는다.",
   "draw_enabled": true,
   "identity_key": "72024d17a5f03c9f854b2dc9db240a92f1fb799ca0912f92b358e113abca301f",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0994.webp",

@@ -8,7 +8,7 @@
   ],
   "code": 33550694,
   "defense": 0,
-  "description": "이 카드가 필드에 앞면으로\n존재하는 동안 \"융합\" 없이\n융합 몬스터를 특수 소환할 수\n있다. 사용한 융합 소재\n몬스터는 묘지로 보내지 않고\n제외한다.",
+  "description": "①: 이 카드가 필드에 있는 동안, 양쪽 플레이어는 각각 자신의 메인 페이즈에 이 효과를 발동할 수 있다. 자신의 패 / 필드에서 융합 몬스터에 적힌 소재 몬스터를 제외하고, 그 융합 몬스터를 엑스트라 덱에서 융합 소환한다.",
   "draw_enabled": true,
   "identity_key": "a834981c7428069ca648552d60f9a653396ed74a4938acdd7dd249d30eb64507",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0795.webp",

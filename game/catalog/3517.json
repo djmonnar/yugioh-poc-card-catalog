@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3517",
+  "attack": 200,
+  "attribute": 4,
+  "categories": [
+    "지원-염성",
+    "지원-염무",
+    "발동-묘지로 보내졌을 때",
+    "발동-필드에서 묘지로 보내졌을 때",
+    "효과-덱에서 세트",
+    "보호-효과 파괴"
+  ],
+  "code": 44860890,
+  "defense": 1800,
+  "description": "이 카드가 필드에서 묘지로 보내졌을 경우 발동할 수 있다. 덱에서 \"염무\" 마법 카드 1장을 골라 자신 필드에 세트한다.\n이 카드가 몬스터 존에 앞면 표시로 존재하는 동안, 자신 필드의 \"염무\" 마법 / 함정 카드는 상대 효과로 파괴되지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "224e7633ba601398d78eade33921a2fdbcd6df6667215850c45daa6357a3023f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3517.jpg",
+  "level": 3,
+  "links": [],
+  "name": "첩염성－세이븐",
+  "name_english": "Brotherhood of the Fire Fist - Raven",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "R",
+  "search_aliases": [
+    "첩염성－세이븐",
+    "Brotherhood of the Fire Fist - Raven"
+  ],
+  "source_id": 3517,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2549
+}

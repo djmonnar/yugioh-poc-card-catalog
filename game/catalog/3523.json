@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3523",
+  "attack": 1700,
+  "attribute": 4,
+  "categories": [
+    "지원-염성",
+    "지원-염무",
+    "지원-전투",
+    "발동-데미지 계산 시",
+    "발동-묘지로 보내기",
+    "효과-공격력 상승"
+  ],
+  "code": 66084673,
+  "defense": 1400,
+  "description": "자신 필드의 \"염성\" 몬스터가 전투하는 데미지 계산시에, 그 전투 중 1번만 자신 필드의 앞면 표시 \"염무\" 마법 / 함정 카드 1장과 패의 \"염성\" 몬스터 1장을 묘지로 보내고 발동할 수 있다. 전투 중인 자신 몬스터의 공격력은 그 데미지 계산시에만 묘지로 보낸 몬스터의 원래 공격력만큼 올린다.",
+  "draw_enabled": true,
+  "identity_key": "750b62b4f549ddc1eec97ea211f2b0b0340d53988da8339c0f16e9fecb312848",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3523.jpg",
+  "level": 4,
+  "links": [],
+  "name": "공염성－사이쵸",
+  "name_english": "Brotherhood of the Fire Fist - Rhino",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "R",
+  "search_aliases": [
+    "공염성－사이쵸",
+    "Brotherhood of the Fire Fist - Rhino"
+  ],
+  "source_id": 3523,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2555
+}

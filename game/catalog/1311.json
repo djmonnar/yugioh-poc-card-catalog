@@ -9,7 +9,7 @@
   ],
   "code": 24294108,
   "defense": 0,
-  "description": "필드의 모든 필드 마법 카드를\n파괴한다. 추가로 양쪽\n플레이어는 각각 자신의\n스탠바이 페이즈마다 500 직접\n데미지를 받는다.",
+  "description": "①: 이 카드의 발동을 처리할 때, 필드의 필드 마법 카드를 전부 파괴한다.\n②: 서로의 스탠바이 페이즈에 발동한다. 턴 플레이어는 500 데미지를 받는다.",
   "draw_enabled": true,
   "identity_key": "cdf0342ed4d925c7b6df71e9b8537023f277e230889b073a1e08096fca9a39b0",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0987.webp",

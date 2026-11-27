@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3501",
+  "attack": 1300,
+  "attribute": 32,
+  "categories": [
+    "지원-전투",
+    "효과-추가공격",
+    "보호-컨트롤 변경"
+  ],
+  "code": 22609617,
+  "defense": 800,
+  "description": "이 카드는 1번의 배틀 페이즈에 2회 공격할 수 있다.\n이 카드가 몬스터 존에 앞면 표시로 존재하는 동안, 이 카드의 컨트롤은 변경되지 않는다.",
+  "draw_enabled": true,
+  "identity_key": "0157819dd578cd23b2068e2e03c45504c8477524ff892718d9ece7cd186e2eb3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3501.jpg",
+  "level": 3,
+  "links": [],
+  "name": "기습 공격 마타자",
+  "name_english": "Mataza the Zapper",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "기습 공격 마타자",
+    "Mataza the Zapper"
+  ],
+  "source_id": 3501,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2533
+}

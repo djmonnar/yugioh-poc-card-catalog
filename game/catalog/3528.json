@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3528",
+  "attack": 2000,
+  "attribute": 4,
+  "categories": [
+    "지원-염성",
+    "지원-염무",
+    "지원-화염 속성",
+    "지원-싱크로",
+    "소환-싱크로",
+    "발동-소환 시",
+    "효과-덱에서 세트",
+    "효과-공격력 감소"
+  ],
+  "code": 89856523,
+  "defense": 2800,
+  "description": "화염 속성 튜너 1장 ＋ 튜너 이외의 \"염성\" 몬스터 1장 이상\n이 카드가 싱크로 소환에 성공했을 때 발동할 수 있다. 덱에서 \"염무\" 마법 / 함정 카드 1장을 골라 자신 필드에 세트한다.\n이 카드가 몬스터 존에 앞면 표시로 존재하는 동안, 상대 필드 몬스터의 공격력은 자신 필드의 앞면 표시 마법 / 함정 카드 수 × 100만큼 내린다.",
+  "draw_enabled": true,
+  "identity_key": "2abd169c049ce1ddaa27d06cdc1b5660db4ab4bf3a9df4f1dc22f6be747c05ee",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3528.jpg",
+  "level": 8,
+  "links": [],
+  "name": "강염성－리순키",
+  "name_english": "Brotherhood of the Fire Fist - Kirin",
+  "native_type": 8225,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "SR",
+  "search_aliases": [
+    "강염성－리순키",
+    "Brotherhood of the Fire Fist - Kirin"
+  ],
+  "source_id": 3528,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "싱크로 몬스터",
+  "web_slot": 2560
+}

@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3520",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-염무",
+    "지원-염성",
+    "발동-마법 발동 시",
+    "발동-함정 발동 시",
+    "무효-마법",
+    "무효-함정",
+    "효과-파괴"
+  ],
+  "code": 55538156,
+  "defense": 0,
+  "description": "이 카드명은 1턴에 1장만 발동할 수 있다.\n①: 자신 필드에 \"염성\" 몬스터와 \"염무\" 마법 / 함정 카드가 모두 존재하는 상태에서 마법 / 함정 카드가 발동했을 때에 발동할 수 있다. 그 발동을 무효로 하고, 무효로 했을 경우 그 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "b2aa69c920de93e84fabe5c3ac135d6286172337b9306e36eff4ca5e5acec61f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3520.jpg",
+  "level": 0,
+  "links": [],
+  "name": "극염무－「진두」",
+  "name_english": "Ultimate Fire Formation - Sinto",
+  "native_type": 1048580,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "극염무－「진두」",
+    "Ultimate Fire Formation - Sinto"
+  ],
+  "source_id": 3520,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "카운터 함정",
+  "web_slot": 2552
+}

@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3503",
+  "attack": 700,
+  "attribute": 32,
+  "categories": [
+    "효과-사이클 리버스",
+    "효과-뒷면표시",
+    "효과-표시 형식 변경",
+    "발동-반전 소환 시",
+    "효과-데미지"
+  ],
+  "code": 3510565,
+  "defense": 1700,
+  "description": "1턴에 1번, 이 카드를 뒷면 수비 표시로 할 수 있다.\n이 카드의 반전 소환에 성공했을 때에 발동한다. 상대에게 1000 데미지를 준다.",
+  "draw_enabled": true,
+  "identity_key": "3941d855564ecc00656f04f6334312654ff9ae60f50c23e45b372a933cd9d72a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3503.jpg",
+  "level": 3,
+  "links": [],
+  "name": "스텔스 버드",
+  "name_english": "Stealth Bird",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "R",
+  "search_aliases": [
+    "스텔스 버드",
+    "Stealth Bird"
+  ],
+  "source_id": 3503,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2535
+}

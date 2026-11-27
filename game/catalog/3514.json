@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3514",
+  "attack": 2100,
+  "attribute": 4,
+  "categories": [
+    "지원-염성",
+    "지원-염무",
+    "발동-마법 발동 시",
+    "발동-함정 발동 시",
+    "발동-패에서",
+    "소환-패에서",
+    "소환-묘지",
+    "소환제약",
+    "보호-파괴 대체",
+    "효과-묘지로 보내기"
+  ],
+  "code": 35488287,
+  "defense": 400,
+  "description": "이 카드명의 ①과 ②의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 자신이 \"염무\" 마법 / 함정 카드를 발동했을 경우에 발동할 수 있다. 데미지 스텝에는 발동할 수 없다. 이 카드를 패에서 특수 소환한다. 그 후, 자신의 묘지에서 \"수염성－리순마오\" 이외의 \"염성\" 몬스터 1장을 골라 특수 소환할 수 있다. 이 효과를 발동한 뒤 턴 종료시까지, 자신은 \"염성\" 몬스터만 특수 소환할 수 있다.\n②: 자신 필드의 \"염성\" 몬스터가 상대 효과로 파괴될 경우, 대신 자신 필드의 앞면 표시 \"염무\" 마법 / 함정 카드 1장을 묘지로 보낼 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "8deaa5d6d574edfd17937f600964558ceb5a1a25a56637bc103b7ab35f0d41c0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3514.jpg",
+  "level": 5,
+  "links": [],
+  "name": "수염성－리순마오",
+  "name_english": "Brotherhood of the Fire Fist - Panda",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "SR",
+  "search_aliases": [
+    "수염성－리순마오",
+    "Brotherhood of the Fire Fist - Panda"
+  ],
+  "source_id": 3514,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2546
+}

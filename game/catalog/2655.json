@@ -10,7 +10,7 @@
   ],
   "code": 49681811,
   "defense": 1700,
-  "description": "이 카드를 대상으로 하는 마법 카드의 효과를 무효로 하고 그 카드를 파괴한다. 자신 드로우 페이즈의 일반 드로우 대신, 덱에서 레벨 4 이하의 전사족 몬스터 1장을 골라 패에 넣을 수 있다.",
+  "description": "필드의 이 카드를 대상으로 하는 마법 카드의 효과를 무효로 한다. 무효로 했을 경우, 그 마법 카드를 파괴한다.\n자신의 드로우 페이즈에 일반 드로우 대신, 자신의 덱에서 레벨 4 이하 전사족 몬스터 1장을 패에 넣을 수 있다. 이 효과는 이 카드가 필드에 앞면 표시로 존재할 때 발동하고 처리한다. 그 후 덱을 셔플한다.",
   "draw_enabled": true,
   "identity_key": "444e9cba41b5c5e85c2712da0b57f0ae3a1a434989b10822ef6101e12986f605",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native090/cards/2655.jpg",

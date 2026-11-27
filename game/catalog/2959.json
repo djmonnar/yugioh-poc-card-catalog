@@ -9,7 +9,7 @@
   ],
   "code": 64697431,
   "defense": 0,
-  "description": "양쪽 필드에 세트된 모든 마법·함정 카드를 각 주인의 패로 돌려보낸다.",
+  "description": "①: 필드에 세트된 마법 / 함정 카드를 모두 각각 주인의 패로 되돌린다.",
   "draw_enabled": true,
   "identity_key": "cbe0e33213e57d0ed06644870c78ed20f657913b6c0f283a9a91492ad3230c28",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native143/cards/2959.jpg",

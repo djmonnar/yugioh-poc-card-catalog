@@ -8,7 +8,7 @@
   ],
   "code": 22359980,
   "defense": 0,
-  "description": "상대의 모든 공격 몬스터의\n공격력을 절반으로 한다.\n자신의 스탠바이 페이즈마다\n2000 LP를 지불해야 한다.\n지불할 수 없으면 이 카드를\n파괴한다.",
+  "description": "이 카드의 컨트롤러는 자신의 스탠바이 페이즈마다 2000 LP를 지불한다. 지불하지 않을 경우 이 카드를 파괴한다.\n①: 이 카드가 마법 & 함정 존에 존재하는 동안, 공격 중인 상대 몬스터의 공격력은 절반이 된다.",
   "draw_enabled": true,
   "identity_key": "21da5fd9360a7623664f1cf6338c56fc90c3917c5e9d7885ac86d925d961af78",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0232.webp",

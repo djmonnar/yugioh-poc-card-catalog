@@ -10,7 +10,7 @@
   ],
   "code": 39180960,
   "defense": 100,
-  "description": "리버스: 양쪽 플레이어는\n상대의 패에서 각각 카드\n1장을 선택하여 버린다.\n전투로 이 카드를 파괴한\n몬스터의 공격력과 수비력을\n500 내린다.",
+  "description": "리버스했을 경우에 발동한다. 양쪽 플레이어는 각각 자신의 패에서 카드 1장을 골라 버린다.\n이 카드가 전투로 파괴되었을 경우에 발동한다. 이 카드를 파괴한 몬스터의 공격력과 수비력은 각각 500 내린다.",
   "draw_enabled": true,
   "identity_key": "7a003194a45c237deedfd66918540f3f4054041f90c60fd75b49d45fdca1e8ca",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1057.webp",

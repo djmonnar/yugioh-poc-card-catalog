@@ -6,7 +6,7 @@
   "categories": [],
   "code": 44209392,
   "defense": 0,
-  "description": "이 카드를 발동한 턴 동안,\n선택한 몬스터의 수비력을 500\n올린다.",
+  "description": "필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 대상 몬스터의 수비력은 그 턴의 엔드 페이즈까지 500 오른다.",
   "draw_enabled": true,
   "identity_key": "c698f2f64438c63e8aaa7951153b9b63a2cb8d73ee757230d464beefe1de91d1",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0408.webp",

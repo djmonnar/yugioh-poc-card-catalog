@@ -8,7 +8,7 @@
   ],
   "code": 68540059,
   "defense": 0,
-  "description": "발동 후 앞면 몬스터에\n장착한다. 장착 몬스터의\n공격력과 수비력을 300\n올린다. 장착 몬스터로 공격할\n때, 공격 대상의 공격력의\n절반만큼 공격력을 추가로\n올릴 수 있다.",
+  "description": "①: 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 이 카드를 공격력 / 수비력 300을 올리는 장착 카드로 취급하여 대상 몬스터에 장착한다.\n②: 이 카드의 효과로 이 카드를 장착한 몬스터가 몬스터를 공격하는 데미지 계산시에만, 그 장착 몬스터의 공격력은 공격 대상의 공격력의 절반만큼 추가로 오른다.",
   "draw_enabled": true,
   "identity_key": "05b26a45d30cc9f5293e3a00bbc51ea03b2be6d45d06fc37eb468717bccba07f",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0974.webp",

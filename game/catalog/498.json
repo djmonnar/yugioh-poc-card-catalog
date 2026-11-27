@@ -6,7 +6,7 @@
   "categories": [],
   "code": 56647086,
   "defense": 2500,
-  "description": "상대는 속공 마법을 발동할 수\n없다.",
+  "description": "이 카드가 필드에 앞면 표시로 존재하는 동안, 상대는 속공 마법 카드를 발동할 수 없다.",
   "draw_enabled": true,
   "identity_key": "a5693cb2ac640d694c2145ac3e725984bea8f1c8d31ac06ff2f8b80836696944",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0203.webp",

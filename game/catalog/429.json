@@ -8,7 +8,7 @@
   ],
   "code": 78613627,
   "defense": 1700,
-  "description": "공격 몬스터의 공격력이 이\n카드의 수비력보다 낮을 경우,\n그 공격 몬스터를 파괴한다.",
+  "description": "수비 표시의 이 카드를 공격한 몬스터의 공격력이 이 카드의 수비력보다 낮을 경우, 그 공격 몬스터를 파괴한다.",
   "draw_enabled": true,
   "identity_key": "c965c25867bd66042d471be2da9bf26e361c1d04d3e6c771ba1b344aeeb0a261",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0936.webp",

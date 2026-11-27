@@ -6,7 +6,7 @@
   "categories": [],
   "code": 17814387,
   "defense": 0,
-  "description": "이 카드를 발동한 턴 동안,\n선택한 몬스터 1장의 공격력을\n500 올린다.",
+  "description": "①: 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 턴 종료시까지 그 몬스터의 공격력은 500 올린다.",
   "draw_enabled": true,
   "identity_key": "99c9effe61e61c41855eb47f60f9b10a32460ce1defef0cb63330fc228817402",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0102.webp",

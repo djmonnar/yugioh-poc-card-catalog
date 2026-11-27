@@ -8,7 +8,7 @@
   ],
   "code": 82542267,
   "defense": 0,
-  "description": "상대 묘지의 몬스터 2장을\n선택하여 듀얼이 끝날 때까지\n제외한다.",
+  "description": "상대 묘지에 있는 몬스터를 1장 또는 2장 선택하고, 선택한 카드를 제외한다.",
   "draw_enabled": true,
   "identity_key": "4f00c597aeb4e8c19e66a646ad901e82c8208094e77f042e5cd0261e5eb7e8ef",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0710.webp",

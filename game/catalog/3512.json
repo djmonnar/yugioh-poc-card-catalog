@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3512",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-염무",
+    "지원-염성",
+    "지원-야수전사족",
+    "지원-융합",
+    "소환-엑스트라 덱에서",
+    "발동-묘지로 보내졌을 때",
+    "발동-필드에서 묘지로 보내졌을 때",
+    "효과-묘지샐비지"
+  ],
+  "code": 29143457,
+  "defense": 0,
+  "description": "이 카드명의 카드는 1턴에 1장만 발동할 수 있으며, ②의 효과는 1턴에 1번만 사용할 수 있다.\n①: 이 카드의 발동을 처리할 때, 자신의 패 / 필드에서 야수전사족 융합 몬스터 카드에 지정된 소재를 묘지로 보내고, 그 몬스터 1장을 엑스트라 덱에서 융합 소환할 수 있다.\n②: 이 카드가 마법 & 함정 존에서 앞면 표시인 채로 묘지로 보내졌을 경우, 자신의 묘지의 \"염성\" 몬스터 1장을 대상으로 발동할 수 있다. 그 몬스터를 패에 넣는다.",
+  "draw_enabled": true,
+  "identity_key": "ab0a501e7ca07e60fdd6bce5d7be7acca45ac128628588822fc5c1b7ff6f67bc",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3512.jpg",
+  "level": 0,
+  "links": [],
+  "name": "염무－「은원」",
+  "name_english": "Fire Formation - Ingen",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "염무－「은원」",
+    "Fire Formation - Ingen"
+  ],
+  "source_id": 3512,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 2544
+}

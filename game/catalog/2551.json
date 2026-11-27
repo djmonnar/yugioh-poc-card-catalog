@@ -9,7 +9,7 @@
   ],
   "code": 3381441,
   "defense": 1500,
-  "description": "앞면 표시 필드 마법이 없으면 필드를 ‘왕가의 골짜기－네크로밸리’로 취급한다. 필드의 모든 ‘묘지기’ 몬스터의 공격력·수비력은 200 오른다.",
+  "description": "필드에 앞면 표시로 존재하는 이 카드의 효과로, 필드 마법 카드가 앞면 표시로 존재하지 않는 동안 필드는 \"왕가의 골짜기－네크로밸리\"로 취급한다.\n이 카드가 필드에 앞면 표시로 존재하는 동안, 필드의 모든 \"묘지기\" 몬스터의 공격력과 수비력을 각각 200 올린다.",
   "draw_enabled": true,
   "identity_key": "45ecdb5a020eb1e0c9bf643773cb438613c1c3b0b815b2af33d161eab1c53511",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2551.jpg",

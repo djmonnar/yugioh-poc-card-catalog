@@ -15,7 +15,7 @@
   ],
   "code": 11765832,
   "defense": 2400,
-  "description": "속성과 종족이 같고 이름이 서로 다른 몬스터 2장\n① 이 카드가 전투할 때 상대에게 주는 전투 데미지가 2배가 된다.\n② 묘지로 보내졌을 때 카드 한 장을 드로우할 수 있다. 이 이름의 ②는 턴당 한 번만 쓸 수 있다.",
+  "description": "종족과 속성이 같으며 카드명이 서로 다른 몬스터 × 2\n이 카드명의 ②의 효과는 1턴에 1번밖에 사용할 수 없다.\n①: 이 카드가 실행하는 전투로 상대에게 발생하는 전투 데미지는 2배가 된다.\n②: 이 카드가 묘지로 보내졌을 경우에 발동할 수 있다. 자신은 1장 드로우한다.",
   "draw_enabled": true,
   "identity_key": "205140899a0c2f765f90ba6685b31599fc396c1c7d08547e3fa553bb569e3f4d",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native143/cards/2962.jpg",

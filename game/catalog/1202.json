@@ -10,7 +10,7 @@
   ],
   "code": 92377303,
   "defense": 3200,
-  "description": "\"시간의 마술사\"의 효과를\n발동하여 맞혔을 때, \"블랙\n매지션\" 1장을 릴리스하여 이\n카드를 패 또는 덱에서 소환할\n수 있다. 그 후 자신의 덱에서\n마법 카드 1장을 패에 넣고\n덱을 셔플한다.",
+  "description": "이 카드는 통상 소환할 수 없다. \"시간의 마술사\"의 효과에 성공했을 때, 자신의 필드에서 \"블랙 매지션\" 1장을 릴리스하여 패 / 덱에서 이 카드를 특수 소환할 수 있다. 이 방법으로 특수 소환했을 때, 덱의 마법 카드 1장을 패에 넣는다.",
   "draw_enabled": true,
   "identity_key": "a8d478f3928db1f35fd64315d25ecc4f07e824d3411e8ca0c193588ed96c6d3c",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0298.webp",

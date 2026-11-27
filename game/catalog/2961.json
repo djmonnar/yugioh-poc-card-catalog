@@ -9,7 +9,7 @@
   ],
   "code": 35726888,
   "defense": 0,
-  "description": "같은 이름의 카드는 턴당 한 번만 발동할 수 있다. 자신의 덱에서 마법·함정 카드 한 장을 묘지로 보낸다.",
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다.\n①: 자신의 덱에서 마법 / 함정 카드 1장을 묘지로 보낸다.",
   "draw_enabled": true,
   "identity_key": "7be1db0c7ce0c6288490f3b1aaf57c0d30717045e4b0b606f15dbeb2664ffc6a",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native143/cards/2961.jpg",

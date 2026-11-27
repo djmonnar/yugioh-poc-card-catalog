@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3508",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-염무",
+    "지원-염성",
+    "발동-제외",
+    "소환-묘지",
+    "효과-덱에서 세트"
+  ],
+  "code": 6713443,
+  "defense": 0,
+  "description": "자신의 묘지에서 \"염무\" 마법 / 함정 카드 7장을 제외하고 발동할 수 있다. 그 묘지에서 \"염성\" 몬스터를 가능한 만큼 특수 소환한다. 그 후, 이번 효과로 특수 소환한 몬스터의 수까지 덱에서 \"극염무－「성두」\" 이외의 \"염무\" 마법 / 함정 카드를 골라 자신 필드에 세트할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "6e8e9dbdd1ea42af9f3f15aa6c0d40d89bffefb2e5d975d0ab0090f2217f76a3",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3508.jpg",
+  "level": 0,
+  "links": [],
+  "name": "극염무－「성두」",
+  "name_english": "Ultimate Fire Formation - Seito",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "극염무－「성두」",
+    "Ultimate Fire Formation - Seito"
+  ],
+  "source_id": 3508,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2540
+}

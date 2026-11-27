@@ -8,7 +8,7 @@
   ],
   "code": 55608151,
   "defense": 0,
-  "description": "상대가 \"해피의 깃털\"을\n발동했을 때, 자신의 마법 /\n함정 카드 대신 상대의 마법 /\n함정 카드를 전부 파괴한다.",
+  "description": "①: 상대가 \"해피의 깃털\"을 발동했을 때에 발동할 수 있다. 그 카드의 효과를 무효로 하고, 상대 필드의 마법 / 함정 카드를 전부 파괴한다.",
   "draw_enabled": true,
   "identity_key": "c924e05a5ad919071cf418f6c6c5cd5e301437cc87111fe579b41d5df58a1d6a",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0250.webp",

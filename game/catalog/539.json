@@ -9,7 +9,7 @@
   ],
   "code": 60694662,
   "defense": 400,
-  "description": "리버스: 자신의 덱에서 카드를\n1장 드로우할 수 있다.",
+  "description": "①: 이 카드가 리버스했을 경우에 발동한다. 자신은 덱에서 1장 드로우한다.",
   "draw_enabled": true,
   "identity_key": "c9e3aae21560d7a33fa407581886f383542ed4ad7322a2e6aaf40f359c9af18f",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0440.webp",

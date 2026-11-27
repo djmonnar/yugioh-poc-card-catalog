@@ -12,7 +12,7 @@
   ],
   "code": 71616908,
   "defense": 2450,
-  "description": "젬나이트 몬스터 + 물족 몬스터. 융합 소환으로 먼저 소환해야 한다. 필드에서 묘지로 보내지면 필드의 세트된 마법·함정 카드를 모두 주인의 패로 되돌린다.",
+  "description": "\"젬나이트\" 몬스터 ＋ 물족 몬스터\n엑스트라 덱의 이 카드는 융합 소환으로만 특수 소환할 수 있다.\n①: 이 카드가 필드에서 묘지로 보내졌을 경우 발동한다. 양쪽 필드의 뒷면 표시인 마법 / 함정 카드를 모두 주인의 패로 되돌린다.",
   "draw_enabled": true,
   "identity_key": "591aecc3d0397c55830b46c2c96c1a1225900c786f25a93ada0aa3309edd300f",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2484.jpg",

@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3533",
+  "attack": 1000,
+  "attribute": 4,
+  "categories": [
+    "지원-염성",
+    "지원-염무",
+    "발동-소환 시",
+    "발동-묘지로 보내기",
+    "소환-패에서",
+    "효과-덱으로 되돌리기",
+    "효과-덱샐비지",
+    "지원-고레벨"
+  ],
+  "code": 98093548,
+  "defense": 1800,
+  "description": "이 카드명의 ①과 ②의 효과는 각각 1턴에 1번만 사용할 수 있다.\n①: 이 카드가 일반 소환 / 특수 소환에 성공했을 경우, 자신 필드의 앞면 표시 \"염무\" 마법 / 함정 카드 1장을 묘지로 보내고 발동할 수 있다. 패에서 \"준염성－조우세이\" 이외의 \"염성\" 몬스터 1장을 특수 소환한다.\n②: 자신의 묘지의 \"염무\" 마법 / 함정 카드 1장을 대상으로 발동할 수 있다. 그 카드를 덱으로 되돌린다. 그 후, 덱에서 레벨 5 이상의 \"염성\" 몬스터 1장을 패에 넣을 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "cbfe9e71d7bd65218fc6be0349219341fcaf796b77fd6f83d894f70858d51c0f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3533.jpg",
+  "level": 4,
+  "links": [],
+  "name": "준염성－조우세이",
+  "name_english": "Brotherhood of the Fire Fist - Elephant",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "SR",
+  "search_aliases": [
+    "준염성－조우세이",
+    "Brotherhood of the Fire Fist - Elephant"
+  ],
+  "source_id": 3533,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2565
+}

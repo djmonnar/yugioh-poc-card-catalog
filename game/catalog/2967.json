@@ -10,7 +10,7 @@
   ],
   "code": 67169062,
   "defense": 0,
-  "description": "자신의 묘지에 있는 몬스터 5장을 대상으로 발동한다. 그 몬스터들을 덱에 되돌려 섞은 뒤 2장을 드로우한다.",
+  "description": "①: 자신 묘지의 몬스터 5장을 대상으로 하고 발동할 수 있다. 그 몬스터 5장을 덱으로 되돌린다. 메인 덱으로 되돌아간 카드가 있으면 그 덱을 셔플한다. 그 후, 자신은 2장 드로우한다.",
   "draw_enabled": true,
   "identity_key": "d83abeaa38de4d1e3f0d4edf4c1f1b0b04feccb61cf395b68fd7b87737eb107c",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native143/cards/2967.jpg",

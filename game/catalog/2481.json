@@ -10,7 +10,7 @@
   ],
   "code": 67985943,
   "defense": 1950,
-  "description": "젬나이트 몬스터 + 화염족 몬스터. 융합 소환으로 먼저 소환해야 한다. 이 카드가 전투할 때 상대는 데미지 스텝이 끝날 때까지 카드·효과를 발동할 수 없다.",
+  "description": "\"젬나이트\" 몬스터 ＋ 화염족 몬스터\n엑스트라 덱의 이 카드는 융합 소환으로만 특수 소환할 수 있다.\n①: 이 카드가 전투를 할 경우, 상대는 데미지 스텝이 끝날 때까지 마법 / 함정 / 몬스터의 효과를 발동할 수 없다.",
   "draw_enabled": true,
   "identity_key": "785da962c937fcffa28c42fad8e942d30dd6041c3839dc827748bc8a8ce2ba96",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native049/cards/2481.jpg",

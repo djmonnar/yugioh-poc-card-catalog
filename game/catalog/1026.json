@@ -8,7 +8,7 @@
   ],
   "code": 78637313,
   "defense": 0,
-  "description": "\"죽은 자의 소생\"으로\n되살아난 몬스터를 모두\n묘지로 보낸다. 이 카드가\n필드에 존재하는 동안 \"죽은\n자의 소생\"은 사용할 수 없다.",
+  "description": "이 카드가 마법 & 함정 존에 앞면 표시로 존재하는 동안, \"죽은 자의 소생\"의 효과로 특수 소환된 필드의 몬스터를 전부 묘지로 보낸다.\n이 카드가 마법 & 함정 존에 앞면 표시로 존재하는 동안, 상대는 \"죽은 자의 소생\"을 세트하거나 발동할 수 없다.",
   "draw_enabled": true,
   "identity_key": "543d469c1cacd94c07f6cea841ea9ae7d43fa6cd355f83291064ccda9b98852a",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1010.webp",

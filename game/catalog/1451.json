@@ -6,7 +6,7 @@
   "categories": [],
   "code": 19230408,
   "defense": 0,
-  "description": "앞면 몬스터 1장을 파괴한다.\n자신의 다음 드로우 페이즈를\n건너뛴다.",
+  "description": "①: 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 그 앞면 표시 몬스터를 파괴한다. 자신의 다음 드로우 페이즈를 건너뛴다.",
   "draw_enabled": true,
   "identity_key": "9322447537fdf6d910f51ab4daa3fd125aa4436b22825a602da15b4fd5e01516",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0362.webp",

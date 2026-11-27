@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3500",
+  "attack": 1500,
+  "attribute": 4,
+  "categories": [
+    "지원-스피릿",
+    "발동-소환 시",
+    "발동-리버스",
+    "발동-패 공개",
+    "발동-엔드 페이즈 시",
+    "효과-바운스",
+    "소환제약"
+  ],
+  "code": 43378076,
+  "defense": 1900,
+  "description": "이 카드는 특수 소환할 수 없다.\n이 카드를 일반 소환하거나 리버스했을 때, 패에서 \"나찰\" 이외의 스피릿 몬스터 1장을 상대에게 보여주고 상대 필드의 앞면 공격 표시 몬스터 1장을 대상으로 하여 발동할 수 있다. 그 몬스터를 주인의 패로 되돌린다. 이 효과를 발동하는 턴에, 자신은 몬스터를 특수 소환할 수 없다.\n이 카드를 일반 소환하거나 리버스한 턴의 엔드 페이즈에 발동한다. 이 카드를 주인의 패로 되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "4adffb2376af33ce2fa7ceac4fff04e08ebc67669a8c6f905ed4be3764c851cd",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3500.jpg",
+  "level": 4,
+  "links": [],
+  "name": "나찰",
+  "name_english": "Rasetsu",
+  "native_type": 545,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "SR",
+  "search_aliases": [
+    "나찰",
+    "Rasetsu"
+  ],
+  "source_id": 3500,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "스피릿 몬스터",
+  "web_slot": 2532
+}

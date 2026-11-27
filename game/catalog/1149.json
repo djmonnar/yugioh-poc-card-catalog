@@ -9,7 +9,7 @@
   ],
   "code": 9074847,
   "defense": 0,
-  "description": "자신의 몬스터가 1장 이상\n필드에서 패로 돌아왔을 때\n발동할 수 있다. 필드의 모든\n몬스터 카드를 각각의 패로\n되돌린다. 그 후 양쪽\n플레이어는 패에서 같은 수의\n몬스터 카드를 필드에 뒷면\n수비 표시로 특수 소환할 수\n있다.",
+  "description": "상대가 컨트롤하는 카드의 효과로 자신의 몬스터가 필드에서 패로 되돌아갔을 때에 발동할 수 있다. 필드의 몬스터를 모두 주인의 패로 되돌린다. 그 후, 각 플레이어는 이 효과로 자신의 패에 되돌아온 몬스터 수만큼 패에서 몬스터를 뒷면 수비 표시로 특수 소환한다.",
   "draw_enabled": true,
   "identity_key": "e82f10a1ffea252b9b621ae801725836915bf538ba7a49e9eb93e28e87c79eb4",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0117.webp",

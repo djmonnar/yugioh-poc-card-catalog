@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3515",
+  "attack": 0,
+  "attribute": 4,
+  "categories": [
+    "지원-염성",
+    "지원-염무",
+    "발동-릴리즈",
+    "효과-덱에서 세트"
+  ],
+  "code": 39699564,
+  "defense": 200,
+  "description": "이 카드명의 효과는 1턴에 1번만 사용할 수 있다.\n①: 이 카드가 일반 소환 / 특수 소환에 성공한 턴의 자신 메인 페이즈에, 자신 필드의 \"염성\" 몬스터 1장을 릴리스하고 발동할 수 있다. 덱에서 \"염무\" 마법 / 함정 카드 1장을 골라 자신 필드에 세트한다.",
+  "draw_enabled": true,
+  "identity_key": "9d22d3fa938b23405276c34c411197bc8235df5a0e731473a06ca4f9622f2b96",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3515.jpg",
+  "level": 3,
+  "links": [],
+  "name": "속염성－타이효",
+  "name_english": "Brotherhood of the Fire Fist - Leopard",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "R",
+  "search_aliases": [
+    "속염성－타이효",
+    "Brotherhood of the Fire Fist - Leopard"
+  ],
+  "source_id": 3515,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2547
+}

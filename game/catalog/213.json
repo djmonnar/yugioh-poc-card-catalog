@@ -9,7 +9,7 @@
   ],
   "code": 3431737,
   "defense": 1200,
-  "description": "이 카드를 묘지로 버리고\n덱에서 \"버스터 모드\" 1장을\n패에 넣을 수 있다.",
+  "description": "①: 패의 이 카드를 묘지로 버리고 발동할 수 있다. 자신의 덱에서 \"버스터 모드\" 1장을 패에 넣는다.",
   "draw_enabled": true,
   "identity_key": "fbf48bb08cc1838a1ffac771d9580f4571f71b13ba42c8cb833496cac08717c9",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0354.webp",

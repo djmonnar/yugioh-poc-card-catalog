@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3519",
+  "attack": 2000,
+  "attribute": 4,
+  "categories": [
+    "지원-염성",
+    "지원-염무",
+    "소환-패에서"
+  ],
+  "code": 49785720,
+  "defense": 500,
+  "description": "자신 필드에 앞면 표시 \"염무\" 마법 / 함정 카드가 존재하고 자신 필드에 몬스터가 없을 경우, 이 카드를 패에서 특수 소환할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "3b218fa42bf4b5ba1ea3a0543ed35fbe05680ad76e04343cdd268f45c7b6b555",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3519.jpg",
+  "level": 5,
+  "links": [],
+  "name": "기염성－고요우테",
+  "name_english": "Brotherhood of the Fire Fist - Coyote",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "R",
+  "search_aliases": [
+    "기염성－고요우테",
+    "Brotherhood of the Fire Fist - Coyote"
+  ],
+  "source_id": 3519,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2551
+}

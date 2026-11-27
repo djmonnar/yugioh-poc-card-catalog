@@ -10,7 +10,7 @@
   ],
   "code": 95178994,
   "defense": 100,
-  "description": "이 카드가 전투로 묘지로\n보내졌을 때, 상대에게 500\n데미지를 준다. 또한 자신의\n덱에서 같은 이름의 카드를\n골라 필드에 앞면 공격 표시로\n특수 소환할 수 있다. 그 후\n덱을 셔플한다.",
+  "description": "이 카드가 전투로 파괴되어 묘지로 보내졌을 때에 발동한다. 상대에게 500 데미지를 준다. 또한, 덱의 \"자이언트 바이러스\"를 원하는 수만큼 앞면 공격 표시로 특수 소환할 수 있다.",
   "draw_enabled": true,
   "identity_key": "c6106a4882ec3c5e1f5d9fd85e16a5e894ebba711fa5eeb7bb425e2d23cf41d6",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0383.webp",

@@ -13,7 +13,7 @@
   ],
   "code": 73079365,
   "defense": 0,
-  "description": "상대가 사용하는 카드의\n효과로 자신의 필드 마법\n카드가 1장 이상 파괴되어\n묘지로 보내졌을 때 발동할 수\n있다. 필드의 마법 / 함정\n카드 1장을 파괴한다.",
+  "description": "상대가 컨트롤하는 카드의 효과로 자신 필드의 마법 카드가 파괴되어 묘지로 보내졌을 때에 발동할 수 있다. 필드의 마법 / 함정 카드 1장을 대상으로 하고 그 카드를 파괴한다.",
   "draw_enabled": true,
   "identity_key": "da56931d80e7a521bbdfb3377b5af0f3bc83a1aa16cd15dc3cc13ae2944802f9",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0636.webp",

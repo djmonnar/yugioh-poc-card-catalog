@@ -6,7 +6,7 @@
   "categories": [],
   "code": 12253117,
   "defense": 0,
-  "description": "필드 마법 카드가 발동했을 때\n발동할 수 있다. 이 카드를\n발동한 턴 동안 그 필드 마법\n카드를 무효로 한다.",
+  "description": "필드 마법 카드가 발동했을 때에 발동할 수 있다. 턴 종료시까지 필드에 있는 필드 마법 카드의 효과를 무효로 한다.",
   "draw_enabled": true,
   "identity_key": "a6212e0c6f4c1d6a0b9217789193b1e1d87511141a0234c4933d364474873145",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0472.webp",

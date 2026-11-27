@@ -9,7 +9,7 @@
   ],
   "code": 3819470,
   "defense": 0,
-  "description": "자신의 LP를 1000 지불하고\n함정 카드의 발동을 무효로\n하여 파괴한다.",
+  "description": "①: 함정 카드가 발동했을 때, 1000 LP를 지불하고 발동할 수 있다. 그 함정 카드의 발동을 무효로 하여 파괴한다.",
   "draw_enabled": true,
   "identity_key": "99eb671aef76f7730b5f1fc19f4448228a2189fc01ba46b5cad0db24b2811e00",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0624.webp",

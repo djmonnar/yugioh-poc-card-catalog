@@ -10,7 +10,7 @@
   ],
   "code": 16229315,
   "defense": 600,
-  "description": "3000 LP를 지불하고 융합 덱의\n몬스터 1장을 묘지로 버릴 수\n있다.",
+  "description": "①: 3000 LP를 지불하고 발동할 수 있다. 자신의 엑스트라 덱의 몬스터 1장을 묘지에 보낸다.",
   "draw_enabled": true,
   "identity_key": "1e39afd9d4cbe69f0bb85889c97c36125459c78957df87859dc6e5f66b19e2bb",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0271.webp",

@@ -9,7 +9,7 @@
   ],
   "code": 20210570,
   "defense": 1000,
-  "description": "묘지의 필드 마법 1장을\n선택하여 덱으로 되돌릴 수\n있다.",
+  "description": "1턴에 1번, 자신 묘지의 필드 마법 카드 1장을 대상으로 하고 발동할 수 있다. 대상 카드를 덱으로 되돌린다.",
   "draw_enabled": true,
   "identity_key": "25c9622ab57b2007f8c51b40e767a7dc853c7ded1f5ea3691522a9a5bf2fcd1d",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0236.webp",

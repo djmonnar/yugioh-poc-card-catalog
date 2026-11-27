@@ -13,7 +13,7 @@
   ],
   "code": 65830223,
   "defense": 0,
-  "description": "카드가 묘지로 보내질 때마다\n그 카드의 주인에게 카드\n1장당 300 직접 데미지를\n준다.",
+  "description": "상대의 묘지에 몬스터 카드가 보내질 때마다 발동한다. 상대에게 300 데미지를 준다.",
   "draw_enabled": true,
   "identity_key": "8d4f5545eaf6ed3f126ff8917650c7909d7708e0dd5aa5d3581342089b9d6d6a",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0414.webp",

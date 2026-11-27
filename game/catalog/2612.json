@@ -12,7 +12,7 @@
   ],
   "code": 63789924,
   "defense": 0,
-  "description": "몬스터에 장착한다. 장착되어 있던 이 카드가 효과로 파괴되어 묘지로 보내지면, 상대의 패를 확인하고 자신이 고른 카드 1장을 버리게 한다.",
+  "description": "몬스터 1장에 장착한다.\n몬스터에 장착된 이 카드가 다른 카드의 효과로 파괴되어 묘지로 보내졌을 때에 발동한다. 상대의 패를 확인하고, 그중 카드 1장을 골라 버린다.",
   "draw_enabled": true,
   "identity_key": "36a5bb05830b2b114b0cd01a80901282d027989e25e7cac7bd378788747b8f0e",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2612.jpg",

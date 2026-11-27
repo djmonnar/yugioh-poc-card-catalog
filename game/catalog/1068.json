@@ -9,7 +9,7 @@
   ],
   "code": 45986603,
   "defense": 0,
-  "description": "상대의 앞면 몬스터 1장의\n컨트롤을 얻는다. 상대의\n스탠바이 페이즈마다 상대의\nLP를 1000 회복한다.",
+  "description": "상대 필드의 몬스터에만 장착할 수 있다. 장착 몬스터의 컨트롤을 얻는다. 상대는 자신의 스탠바이 페이즈마다 1000 LP를 회복한다.",
   "draw_enabled": true,
   "identity_key": "da00e269e42e378a38633b60dc6d68b8e7df2e2ea4a588f43bedf222b2a8e2a2",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0285.webp",

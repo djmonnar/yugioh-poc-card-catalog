@@ -6,7 +6,7 @@
   "categories": [],
   "code": 59560625,
   "defense": 0,
-  "description": "상대가 자신의 몬스터 1장을\n마법 / 함정 / 공격의\n대상으로 선택했을 때 발동할\n수 있다. 대상을 자신의\n필드에 있는 다른 몬스터로\n변경한다.",
+  "description": "①: 자신 필드의 몬스터 1장만이 상대의 마법 / 함정 효과의 대상이 되었을 때, 또는 상대 몬스터의 공격 대상이 되었을 때에 발동할 수 있다. 그 몬스터와 다른 적절한 자신 필드의 몬스터 1장을 대상으로 하고, 그 효과 또는 공격의 대상을 그 몬스터로 옮긴다.",
   "draw_enabled": true,
   "identity_key": "d03c1150a6f1ddaad3aced5b7eb3dd42933cb8316cac84a05108da048e4437ff",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0379.webp",

@@ -8,7 +8,7 @@
   ],
   "code": 3643300,
   "defense": 1600,
-  "description": "필드에 \"바다\"가 앞면 표시로\n존재하는 한, 이 카드는 모든\n마법 카드의 효과를 받지\n않으며 상대 몬스터의 공격\n대상이 되지 않는다.",
+  "description": "①: 필드에 \"바다\"가 있는 동안, 필드의 이 카드는 마법 카드의 효과를 받지 않는다.\n②: 필드에 \"바다\"가 있는 동안, 이 카드는 공격 대상이 되지 않는다. 자신 필드에 이 효과의 적용을 받는 몬스터만 있을 경우, 상대는 직접 공격할 수 있다.",
   "draw_enabled": true,
   "identity_key": "b93aa6d144f62804a0499f978973f8c1ab33433feea464c4a3f27a5150b54631",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0616.webp",

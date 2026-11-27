@@ -6,7 +6,7 @@
   "categories": [],
   "code": 58074572,
   "defense": 0,
-  "description": "200 포인트만큼 LP를\n늘려보세요.",
+  "description": "자신 또는 상대를 고르고 발동한다. 고른 플레이어는 200 LP 회복한다.",
   "draw_enabled": true,
   "identity_key": "887d6d1b19c0498ae5f07c5eb52027b445321014951326cfe63b1a5b4e84bda6",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0986.webp",

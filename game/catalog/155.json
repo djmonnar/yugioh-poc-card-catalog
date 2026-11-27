@@ -10,7 +10,7 @@
   ],
   "code": 70821187,
   "defense": 1500,
-  "description": "상대에 의해 이 카드가 패에서\n묘지로 보내졌을 때, 이\n카드를 패로 되돌린다.",
+  "description": "상대가 컨트롤하는 카드의 효과로 이 카드가 패에서 묘지로 보내졌을 때에 발동한다. 묘지의 이 카드를 자신의 패로 되돌린다.",
   "draw_enabled": true,
   "identity_key": "9d2797d0610435f26d543deeed0f3034ed2f50b516792d7266de6727f97c5246",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0688.webp",

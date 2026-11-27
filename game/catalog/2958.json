@@ -12,7 +12,7 @@
   ],
   "code": 23924608,
   "defense": 0,
-  "description": "필드의 마법·함정 카드 1~2장을 대상으로 하여 파괴한다. 이 카드를 발동하는 턴에는 자신의 배틀 페이즈를 실행할 수 없다.",
+  "description": "이 카드를 발동하는 턴에 자신은 배틀 페이즈를 실행할 수 없다.\n①: 필드의 마법 / 함정 카드를 2장까지 대상으로 하고 발동할 수 있다. 그 대상 카드를 파괴한다.",
   "draw_enabled": true,
   "identity_key": "4dea881c367baed982936a47bea2b17cd6ec1e38b0aaa4615ce270a9b15bcabb",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native143/cards/2958.jpg",

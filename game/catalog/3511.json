@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3511",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-염무",
+    "지원-야수전사족",
+    "효과-발동 제한",
+    "효과-공격력 상승"
+  ],
+  "code": 19059929,
+  "defense": 0,
+  "description": "상대 필드의 세트된 마법 / 함정 카드 1장을 대상으로 발동한다. 상대는 이 카드의 발동에 체인하여 그 카드를 발동할 수 없다. 이 카드가 마법 & 함정 존에 앞면 표시로 존재하는 동안에도 대상 카드를 발동할 수 없다.\n이 카드가 마법 & 함정 존에 앞면 표시로 존재하는 동안, 자신 필드의 야수전사족 몬스터의 공격력은 100 올린다.",
+  "draw_enabled": true,
+  "identity_key": "74def1917c7239b06e0ac033d1d1938b49048df96720443228dcc29e5bf78485",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3511.jpg",
+  "level": 0,
+  "links": [],
+  "name": "염무－「옥충」",
+  "name_english": "Fire Formation - Gyokkou",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "염무－「옥충」",
+    "Fire Formation - Gyokkou"
+  ],
+  "source_id": 3511,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 2543
+}

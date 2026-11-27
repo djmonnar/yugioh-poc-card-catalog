@@ -6,7 +6,7 @@
   "categories": [],
   "code": 70797118,
   "defense": 800,
-  "description": "필드에 빛 속성 몬스터가\n존재하지 않으면 이 카드를\n파괴한다.",
+  "description": "자신 필드에 빛 속성 이외의 앞면 표시 몬스터가 존재하는 경우, 필드의 앞면 표시인 이 카드를 파괴한다.",
   "draw_enabled": true,
   "identity_key": "04aa803badf0a3e9ac678c3bc0de0fc82a7d77a0d823b6ab73610f4a262711b8",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0391.webp",

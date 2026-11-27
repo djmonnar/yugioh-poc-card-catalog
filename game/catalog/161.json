@@ -8,7 +8,7 @@
   ],
   "code": 28725004,
   "defense": 800,
-  "description": "이 카드가 공격 표시에서 수비\n표시로 변경되었을 때, 자신의\n덱을 셔플한다.",
+  "description": "이 카드가 공격 표시에서 앞면 수비 표시로 변경되었을 때에 발동한다. 자신은 덱을 셔플한다.",
   "draw_enabled": true,
   "identity_key": "65153d00e73219cd581003a83310e45c815c27b3177ebef9094c7ca3eeee6b17",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0017.webp",

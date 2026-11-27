@@ -1,5 +1,5 @@
 {
-  "banlist_enabled": false,
+  "banlist_enabled": true,
   "extra": [],
   "id": "ch2_battle_36cab45ea0bf860992d89397",
   "main": [
@@ -64,6 +64,6 @@
       "source_id": 1882
     }
   ],
-  "name": "마해룡 상급",
-  "version": 37
+  "name": "해룡 다이달로스",
+  "version": 1080
 }

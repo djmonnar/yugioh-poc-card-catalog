@@ -10,7 +10,7 @@
   ],
   "code": 75372290,
   "defense": 2500,
-  "description": "이 카드가 소환되었을 때(특수\n소환 제외), 필드에 수비\n표시로 놓는다. 이 카드는\n공격 표시로 변경하지 않고\n공격할 수 있다. 데미지\n계산은 통상대로 실행한다.",
+  "description": "이 카드를 일반 소환 / 반전 소환했을 경우, 수비 표시로 한다. 이 카드는 수비 표시인 채로 공격할 수 있다. 수비 표시로 공격하는 경우에도 이 카드의 공격력으로 데미지 계산을 한다.",
   "draw_enabled": true,
   "identity_key": "382fb1c74d724caa33a30ed3f297d6b310c62eb129e71c06991886dcbbc00160",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0474.webp",

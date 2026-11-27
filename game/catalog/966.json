@@ -8,7 +8,7 @@
   ],
   "code": 43973174,
   "defense": 0,
-  "description": "자신의 필드에 앞면 \"로드\n오브 드래곤－드래곤의\n지배자\"가 있을 때, 이 카드를\n사용하여 패의 드래곤족\n몬스터를 최대 2장까지 특수\n소환할 수 있다.",
+  "description": "①: 패에서 드래곤족 몬스터를 2장까지 특수 소환한다. 효과의 발동과 처리는 필드에 \"드래곤의 제왕\"이 앞면 표시로 존재할 경우에만 가능하다.",
   "draw_enabled": true,
   "identity_key": "fa594335da2254a0c087155f5da3eb447d6c8e52929b8be8ce3984ddeef198e6",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0654.webp",

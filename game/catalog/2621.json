@@ -9,7 +9,7 @@
   ],
   "code": 25578802,
   "defense": 0,
-  "description": "각 플레이어는 자신의 엔드 페이즈에 1번, 패의 레벨 4 일반 몬스터 1장을 앞면으로 특수 소환할 수 있다.",
+  "description": "각 플레이어는 자신의 턴의 엔드 페이즈에 1번, 이 효과를 발동할 수 있다. 자신의 패에서 레벨 4 일반 몬스터 1장을 앞면 표시로 특수 소환한다.",
   "draw_enabled": true,
   "identity_key": "b7857fa0b5301525239a35e1183a21e9a89a3c160736818f338843aba6794324",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2621.jpg",

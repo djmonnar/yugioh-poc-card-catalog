@@ -12,7 +12,7 @@
   ],
   "code": 25833572,
   "defense": 3400,
-  "description": "이 카드는 일반 소환 / 세트할 수 없다. 자신 필드의 \"번개 마신－썬가\", \"풍 마신－휴가\", \"수 마신－스가\"를 1장씩 릴리스하는 방법으로 패에서 특수 소환할 수 있다.",
+  "description": "이 카드는 통상 소환할 수 없다. 처음에는 자신 필드의 \"번개 마신－썬가\", \"풍 마신－휴가\", \"수 마신－스가\"를 1장씩 릴리스한 경우에만 패에서 특수 소환할 수 있다.",
   "draw_enabled": true,
   "identity_key": "09239c69c7b4cf7bafbcc1b598d3dae39b190f63dfa30414e9ccd25cb9a01601",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native090/cards/2660.jpg",

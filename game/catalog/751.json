@@ -10,7 +10,7 @@
   ],
   "code": 77585513,
   "defense": 1500,
-  "description": "이 카드가 필드에 앞면으로\n존재하는 동안 함정 카드를\n발동할 수 없다. 모든 앞면\n함정 카드의 효과도 무효로\n한다.",
+  "description": "①: 이 카드가 몬스터 존에 존재하는 동안, 서로 필드의 함정 카드 효과를 발동할 수 없으며 필드의 함정 카드 효과는 무효가 된다.",
   "draw_enabled": false,
   "identity_key": "874ea894086d0542a721f8754d5e5ad625e4a83fc137f61584e74e0880a548d1",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0428.webp",

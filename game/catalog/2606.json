@@ -11,7 +11,7 @@
   ],
   "code": 38275183,
   "defense": 0,
-  "description": "마법 카드의 발동에 대응하여 다음 중 하나를 선택한다. 필드의 몬스터 1장만을 대상으로 하는 마법이면 그 발동을 무효로 하고 파괴한다. 또는 패의 마법 카드 1장을 묘지로 보내고, 마법 카드의 발동을 무효로 하고 파괴한다.",
+  "description": "마법 카드가 발동했을 때 다음 중 1개를 선택하여 발동할 수 있다.\n●그 마법 카드가 필드의 몬스터 1장만을 대상으로 할 경우, 그 발동을 무효로 하고 그 카드를 파괴한다.\n●패의 마법 카드 1장을 묘지로 보내고 발동할 수 있다. 그 마법의 발동을 무효로 하고 그 카드를 파괴한다.",
   "draw_enabled": true,
   "identity_key": "f12b3b5d9e2e69e42fba96684f891648d89469671e7b092e80eb13fe52aa16d2",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2606.jpg",

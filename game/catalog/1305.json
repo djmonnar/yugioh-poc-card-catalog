@@ -6,7 +6,7 @@
   "categories": [],
   "code": 35346968,
   "defense": 0,
-  "description": "카드를 드로우할 때 자신의\nLP를 500 회복한다.",
+  "description": "①: 이 카드가 마법 & 함정 존에 존재하는 동안, 자신이 드로우할 때마다 500 LP를 회복한다.",
   "draw_enabled": true,
   "identity_key": "a839e96734b1fb214ab791e2a37455f2fae889fce41d19b42d4b179c3ee28768",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0167.webp",

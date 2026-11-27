@@ -11,7 +11,7 @@
   ],
   "code": 98645731,
   "defense": 0,
-  "description": "같은 이름의 카드는 턴당 한 번만 발동할 수 있다. 발동하는 턴에는 특수 소환할 수 없다. 덱 맨 위 3장을 공개해 그중 1장을 패에 넣고 다른 카드들은 덱으로 되돌려 섞는다.",
+  "description": "이 카드명의 카드는 1턴에 1장밖에 발동할 수 없다. 이 카드를 발동하는 턴에 자신은 몬스터를 특수 소환할 수 없다.\n①: 자신의 덱 위에서 카드 3장을 넘겨 그중 1장을 골라 패에 넣는다. 그 후, 남은 카드를 덱에 되돌리고 셔플한다.",
   "draw_enabled": true,
   "identity_key": "e01cea3eb37826f00dfd86f63556a91f035159771f3d57c0303efa36ba33a897",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native143/cards/2965.jpg",

@@ -8,7 +8,7 @@
   ],
   "code": 70138455,
   "defense": 900,
-  "description": "자신의 스탠바이 페이즈에\n앞면의 이 카드를 릴리스하고\n공격력 1000 이하의 앞면\n몬스터 2장을 파괴한다.",
+  "description": "자신 스탠바이 페이즈에 앞면 표시의 이 카드를 릴리스하고, 필드의 공격력 1000 이하인 앞면 표시 몬스터 2장을 대상으로 하여 발동할 수 있다. 그 2장을 파괴한다.",
   "draw_enabled": true,
   "identity_key": "5756678e6c04f5a329116537199c6068592b89e380f2cf5fc39cc6f10715ed22",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0933.webp",

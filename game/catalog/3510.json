@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3510",
+  "attack": 200,
+  "attribute": 4,
+  "categories": [
+    "지원-염성",
+    "지원-염무",
+    "발동-파괴 시",
+    "효과-덱에서 세트",
+    "효과-공격력 상승",
+    "효과-수비력 상승"
+  ],
+  "code": 17475251,
+  "defense": 1500,
+  "description": "자신이 컨트롤하던 이 카드가 상대 몬스터와의 전투 또는 상대 카드의 효과로 파괴되었을 경우 발동할 수 있다. 덱에서 \"염무\" 마법 카드 1장을 골라 자신 필드에 세트한다.\n자신 필드에 앞면 표시 \"염무\" 마법 / 함정 카드가 존재하는 동안, 자신 필드의 \"염성\" 몬스터의 공격력과 수비력은 각각 500 올린다.",
+  "draw_enabled": true,
+  "identity_key": "d3a8defc93a03279538de3ff91767a1dedd0d633f55e7865434d893b50c7ee79",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3510.jpg",
+  "level": 3,
+  "links": [],
+  "name": "영염성－호크에이",
+  "name_english": "Brotherhood of the Fire Fist - Hawk",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "R",
+  "search_aliases": [
+    "영염성－호크에이",
+    "Brotherhood of the Fire Fist - Hawk"
+  ],
+  "source_id": 3510,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2542
+}

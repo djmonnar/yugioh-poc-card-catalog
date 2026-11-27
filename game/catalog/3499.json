@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3499",
+  "attack": 1200,
+  "attribute": 4,
+  "categories": [
+    "지원-스피릿",
+    "발동-피해 발생 시",
+    "효과-회복",
+    "발동-소환 시",
+    "발동-리버스",
+    "발동-엔드 페이즈 시",
+    "효과-바운스",
+    "소환제약"
+  ],
+  "code": 38538445,
+  "defense": 0,
+  "description": "이 카드는 특수 소환할 수 없다.\n이 카드가 상대에게 전투 데미지를 주었을 때에 발동한다. 자신은 그 전투 데미지와 같은 수치만큼 LP를 회복한다.\n이 카드를 일반 소환하거나 리버스한 턴의 엔드 페이즈에 발동한다. 이 카드를 주인의 패로 되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "3d3a714b30822c26318ce094bdb8540752bda74399aff54c999ed44c37b03f9d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3499.jpg",
+  "level": 4,
+  "links": [],
+  "name": "불사조",
+  "name_english": "Fushi No Tori",
+  "native_type": 545,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "N",
+  "search_aliases": [
+    "불사조",
+    "Fushi No Tori"
+  ],
+  "source_id": 3499,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "스피릿 몬스터",
+  "web_slot": 2531
+}

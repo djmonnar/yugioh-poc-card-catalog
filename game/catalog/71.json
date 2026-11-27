@@ -8,7 +8,7 @@
   ],
   "code": 40240595,
   "defense": 2000,
-  "description": "이 카드를 필드의 앞면 \"꼬마\n모스\"에 장착 마법 카드로\n장착할 수 있다. 장착된 \"꼬마\n모스\"의 공격력과 수비력은\n\"진화의 고치\"와 같아진다.",
+  "description": "패에 있는 이 카드는 앞면 표시의 \"꼬마 모스\"에 장착 카드로 장착할 수 있다. 이 카드를 장착한 \"꼬마 모스\"의 공격력과 수비력은 이 카드에 적힌 수치가 된다.",
   "draw_enabled": true,
   "identity_key": "993ce4f49ac74068a98c04272ce171b7ae3dea9aa696f3cde0b4df3f6a69573e",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0424.webp",

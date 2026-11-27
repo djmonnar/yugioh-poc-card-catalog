@@ -12,7 +12,7 @@
   ],
   "code": 43586926,
   "defense": 1200,
-  "description": "이 카드가 필드에서 파괴되어 묘지로 보내졌다면 그 턴의 엔드 페이즈에 자신을 특수 소환할 수 있다. 이 효과로 소환된 카드의 공격력·수비력은 각각 1000이 된다. 이 카드명의 효과는 듀얼 중 1번만 사용할 수 있다.",
+  "description": "이 카드가 필드에서 파괴되어 묘지로 보내진 턴의 엔드 페이즈에, 이 카드가 묘지에 존재할 경우에 발동할 수 있다. 이 카드를 특수 소환하고, 이 카드의 공격력과 수비력은 각각 1000이 된다.\n이 카드명의 효과는 듀얼 중에 1번밖에 사용할 수 없다.",
   "draw_enabled": true,
   "identity_key": "c465e251a4bb374af4f1f0d7ae50dfddf6cc3f03ef36fcb92e709cd65aeea786",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2608.jpg",

@@ -8,7 +8,7 @@
   ],
   "code": 33225925,
   "defense": 1000,
-  "description": "이 카드가 필드에 앞면으로\n존재하는 동안, 자신의\n스탠바이 페이즈에 상대가\n세트한 뒷면 카드 1장을\n확인할 수 있다.",
+  "description": "이 카드가 일반 소환에 성공했을 때, 상대 필드에 세트되어 있는 카드 1장을 대상으로 하고 발동한다. 그 카드를 확인한다. 상대는 이 효과의 발동에 대하여 마법 / 함정 카드를 발동할 수 없다.",
   "draw_enabled": true,
   "identity_key": "211632445f5d7b36c0f6112e8a8d460e80a89ad29ce65a2b74db1fc8de978646",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0721.webp",

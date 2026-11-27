@@ -8,7 +8,7 @@
   ],
   "code": 24094653,
   "defense": 0,
-  "description": "융합 소재 몬스터 2장 이상을\n융합하여 새로운 융합\n몬스터를 만든다.",
+  "description": "①: 자신의 패 / 필드의 몬스터를 융합 소재로 하여, 엑스트라 덱에서 융합 몬스터 1장을 융합 소환한다.",
   "draw_enabled": true,
   "identity_key": "6e88143a6d19b63d51f9f78d79264941a106691798fb78f1579481304fad7560",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1026.webp",

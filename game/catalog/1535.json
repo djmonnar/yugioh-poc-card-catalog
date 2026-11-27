@@ -6,7 +6,7 @@
   "categories": [],
   "code": 5616412,
   "defense": 0,
-  "description": "상대 필드의 공격 몬스터의\n공격력이, 공격받는 자신의\n수비 표시 몬스터의\n수비력보다 낮을 경우, 그\n공격 몬스터를 파괴한다.\n데미지 계산은 통상대로\n실행한다.",
+  "description": "공격받은 수비 표시 몬스터의 수비력이 상대 공격 몬스터의 공격력보다 높을 경우, 데미지 스텝 종료시에 발동할 수 있다. 그 공격 몬스터를 파괴한다.",
   "draw_enabled": true,
   "identity_key": "49a415d47aa8d6d52cea55b608f011f6a69523d04af805daff0b95df7bf911fc",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0138.webp",

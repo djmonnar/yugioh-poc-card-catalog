@@ -8,7 +8,7 @@
   ],
   "code": 4796100,
   "defense": 1800,
-  "description": "\"환상수왕 가젤\" +\n\"바포메트\". 이 카드가\n파괴되었을 때, 묘지의\n\"환상수왕 가젤\" 또는\n\"바포메트\"를 자신의 필드에\n앞면 공격 표시 또는 앞면\n수비 표시로 특수 소환할 수\n있다.",
+  "description": "\"환상수왕 가젤\" ＋ \"바포메트\"\n①: 이 카드가 파괴되었을 때, 자신 묘지의 \"환상수왕 가젤\" 또는 \"바포메트\" 1장을 대상으로 하고 발동할 수 있다. 그 몬스터를 특수 소환한다.",
   "draw_enabled": true,
   "identity_key": "4970e936917ad3e7a61084eef5d32a39247792548c75b97b8e3bf577ca8ca9f2",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1031.webp",

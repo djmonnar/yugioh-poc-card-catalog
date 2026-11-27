@@ -8,7 +8,7 @@
   ],
   "code": 15866454,
   "defense": 0,
-  "description": "상대 필드의 마법 / 함정 카드\n1장을 상대의 패로 되돌린다.\n이 카드의 발동과 효과는 다른\n카드로 무효로 할 수 없다.",
+  "description": "①: 상대 필드의 마법 / 함정 카드 1장을 대상으로 하여 발동할 수 있다. 그 카드를 주인의 패로 되돌린다. 이 카드의 발동과 효과는 무효화되지 않는다.",
   "draw_enabled": true,
   "identity_key": "cdc2f1d7aafc0e830690f023ae58740e48c2aaca4bf148b6f2d6baf1c2462b92",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0864.webp",

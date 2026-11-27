@@ -10,7 +10,7 @@
   ],
   "code": 55763552,
   "defense": 1800,
-  "description": "리버스: \"드래곤족\n봉인항아리\"를 파괴하고 모든\n앞면 드래곤족 몬스터를 공격\n표시로 변경한다.",
+  "description": "리버스: 필드의 앞면 표시 \"드래곤족 봉인항아리\"를 모두 파괴한다. 이 효과로 파괴했을 경우, 필드의 앞면 표시 드래곤족 몬스터를 전부 공격 표시로 한다.",
   "draw_enabled": true,
   "identity_key": "e67492d7e77fbd1528f526b6e2aa590804353c45366cd2ff520f7919a4a14766",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0569.webp",

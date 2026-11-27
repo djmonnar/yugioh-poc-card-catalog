@@ -10,7 +10,7 @@
   ],
   "code": 423705,
   "defense": 1600,
-  "description": "이 카드에 장착된 장착 카드는\n자동으로 파괴된다.",
+  "description": "①: 이 카드에 장착 카드가 장착되었을 경우에 발동한다. 그 장착 카드를 파괴한다.",
   "draw_enabled": true,
   "identity_key": "79e18285d3a5b9a059ed2294139b2fffb07a63ca10c3ce82ef795bc100d2a700",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0591.webp",

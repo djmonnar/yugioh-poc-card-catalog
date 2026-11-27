@@ -9,7 +9,7 @@
   ],
   "code": 44656491,
   "defense": 0,
-  "description": "자신의 스탠바이 페이즈마다\n100 LP를 지불해야 한다.\n지불할 수 없으면 이 카드를\n파괴한다. 공격력 1500 이상의\n몬스터는 모두 공격할 수\n없다.",
+  "description": "양쪽 필드의 앞면 표시 공격력 1500 이상 몬스터는 공격을 선언할 수 없다. 자신의 스탠바이 페이즈마다 100 LP를 지불한다. 지불하지 않을 경우 이 카드를 파괴한다.",
   "draw_enabled": true,
   "identity_key": "f0deb18499c19499be489e7640fa68549f13cb51ecab64e38946b44ef051505c",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0831.webp",

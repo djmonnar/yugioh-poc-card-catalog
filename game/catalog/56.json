@@ -8,7 +8,7 @@
   ],
   "code": 14141448,
   "defense": 2500,
-  "description": "이 몬스터는 \"진화의 고치\"를\n장착한 \"꼬마 모스\"를, 장착\n후 자신의 4번째 턴에\n릴리스했을 경우에만 특수\n소환할 수 있다.",
+  "description": "이 카드는 통상 소환할 수 없다. 자신 필드에서 \"진화의 고치\"를 장착한 상태로 자신의 턴을 세어 4턴 이상 경과한 \"꼬마 모스\" 1장을 릴리스했을 경우, 패에서 이 카드를 특수 소환할 수 있다.",
   "draw_enabled": true,
   "identity_key": "17888daa0290d2fb17afd2e9034e8ba9bbf1d5e876dd29e4e477b888e599b26c",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0255.webp",

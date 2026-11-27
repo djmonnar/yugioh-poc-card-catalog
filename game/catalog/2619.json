@@ -8,7 +8,7 @@
   ],
   "code": 10012614,
   "defense": 0,
-  "description": "자신의 배틀 페이즈 동안 자신 필드의 몬스터 전부의 공격력을 200 올린다.",
+  "description": "①: 이 카드가 마법 & 함정 존에 존재하는 한, 자신의 배틀 페이즈 동안 자신 필드 몬스터의 공격력은 200 올라간다.",
   "draw_enabled": true,
   "identity_key": "6b77f41eb62e5ff9dd3ce7a9bbf1eb7504fe0a0955ef4bd308140b077bcaf36f",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2619.jpg",

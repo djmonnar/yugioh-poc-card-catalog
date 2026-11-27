@@ -6,7 +6,7 @@
   "categories": [],
   "code": 85255550,
   "defense": 250,
-  "description": "이 카드에게 공격받은\n몬스터는 공격 후 다섯 번째\n턴의 엔드 페이즈에 파괴된다.",
+  "description": "이 카드가 상대 몬스터를 공격하여 데미지 계산을 실행한 후에 발동한다. 그 몬스터가 필드에 계속 존재할 경우, 그 공격 후 다섯 번째 엔드 페이즈에 그 몬스터를 파괴한다.",
   "draw_enabled": true,
   "identity_key": "5b86e1c284825590a2eb4009b4fe2a402919148468854af53ce66bc5b4a7389c",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0044.webp",

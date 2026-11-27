@@ -11,7 +11,7 @@
   ],
   "code": 54693926,
   "defense": 0,
-  "description": "이 카드에는 몬스터 효과로 체인할 수 없다. 해결 시 상대 필드에 앞면으로 있는 몬스터의 효과를 턴 종료까지 무효로 한다. 이 카드의 효과를 해결한 뒤 턴 종료까지 상대가 받는 데미지는 전부 0이 된다.",
+  "description": "이 카드의 발동에 체인하여 몬스터의 효과를 발동할 수 없다.\n①: 상대 필드에 있는 모든 앞면 표시 몬스터의 효과를 턴 종료시까지 무효로 한다. 이 카드의 효과 처리 후부터 턴 종료시까지 상대가 받는 모든 데미지는 0이 된다.",
   "draw_enabled": true,
   "identity_key": "5461ff4599b8464874862e35b4cec5dff2721a7da66d49b25aba6ac5ed12842d",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native143/cards/2964.jpg",

@@ -8,7 +8,7 @@
   ],
   "code": 18807109,
   "defense": 0,
-  "description": "몬스터 1장을 선택한다. 이\n카드가 필드에 앞면으로\n존재하는 동안 그 몬스터는\n공격하거나 표시 형식을\n변경할 수 없다. 마법 / 함정\n/ 효과 몬스터의 효과로\n변경하는 경우는 제외한다. 그\n몬스터가 파괴되면 이 카드도\n파괴된다. 릴리스된 경우 이\n카드는 파괴되지 않는다.",
+  "description": "상대 필드의 몬스터 1장을 대상으로 하고 이 카드를 발동할 수 있다.\n①: 이 카드가 마법 & 함정 존에 존재하는 동안, 그 몬스터는 공격하거나 스스로 표시 형식을 변경할 수 없다. 그 몬스터가 파괴되었을 때, 이 카드를 파괴한다.",
   "draw_enabled": true,
   "identity_key": "e4f184c4fd898c9c92b387022dfea1366ea0a99d167d2f34bc4c89c3725c8935",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1092.webp",

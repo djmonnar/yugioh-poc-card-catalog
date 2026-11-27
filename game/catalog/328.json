@@ -9,7 +9,7 @@
   ],
   "code": 50045299,
   "defense": 0,
-  "description": "필드의 모든 드래곤족\n몬스터를 수비 표시로\n변경한다. 이 카드가 적용되는\n동안 그 표시 형식을\n유지한다.",
+  "description": "이 카드가 필드에 앞면 표시로 존재하는 동안, 필드의 앞면 표시 드래곤족 몬스터는 모두 앞면 수비 표시가 되고 표시 형식을 변경할 수 없다.",
   "draw_enabled": true,
   "identity_key": "6c4492b95772c3be0a302279a737c0a341ce13e95cda3e3afbeb5a80fddc647f",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0649.webp",

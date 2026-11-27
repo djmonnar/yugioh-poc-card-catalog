@@ -10,7 +10,7 @@
   ],
   "code": 47664723,
   "defense": 2000,
-  "description": "①: 묘지에서 특수 소환한 이 카드는 이하의 효과를 얻는다.<br>●이 카드가 수비 표시 몬스터를 공격했을 경우, 그 수비력을 공격력이 넘은 만큼만 전투 데미지를 준다.",
+  "description": "①: 묘지에서 특수 소환한 이 카드는 이하의 효과를 얻는다.\n●이 카드가 수비 표시 몬스터를 공격했을 경우, 그 수비력을 공격력이 넘은 만큼만 전투 데미지를 준다.",
   "draw_enabled": true,
   "identity_key": "f03fd57c87789892c15b2582e9ca3771c49ab749ca7a55fd21e1f178e86f3563",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native152/cards/3024.jpg",

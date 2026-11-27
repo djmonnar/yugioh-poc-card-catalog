@@ -1,0 +1,34 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3504",
+  "attack": 2000,
+  "attribute": 32,
+  "categories": [
+    "지원-일반몬스터"
+  ],
+  "code": 18108166,
+  "defense": 0,
+  "description": "다른 차원에서 불현듯 나타난 정체불명의 생명체. 강력한 공격과 기습에 능하며, 공격받은 대상을 신경 마비와 극심한 환각에 빠뜨린다.",
+  "draw_enabled": true,
+  "identity_key": "37a69ba8e9b8a7291260ccd6a423472a370ae7ba4e6f51072654841b3d291713",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3504.jpg",
+  "level": 4,
+  "links": [],
+  "name": "환각룡",
+  "name_english": "Mystery Shell Dragon",
+  "native_type": 17,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8388608,
+  "rarity": "R",
+  "search_aliases": [
+    "환각룡",
+    "Mystery Shell Dragon"
+  ],
+  "source_id": 3504,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 몬스터",
+  "web_slot": 2536
+}

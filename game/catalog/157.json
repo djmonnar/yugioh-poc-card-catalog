@@ -9,7 +9,7 @@
   ],
   "code": 56514812,
   "defense": 1000,
-  "description": "이 카드의 컨트롤이\n변경되었을 때, 상대는 카드\n1장을 버린다.",
+  "description": "필드에서 앞면 표시인 이 카드의 컨트롤이 옮겨졌을 때에 발동한다. 이 카드의 새 컨트롤러는 자신의 패를 무작위로 1장 버린다.",
   "draw_enabled": true,
   "identity_key": "b36deadfbc45f4414e047f1946d654da5f85e58d57f678e8366f4d32ef9bb101",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0925.webp",

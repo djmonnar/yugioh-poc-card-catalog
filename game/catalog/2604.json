@@ -9,7 +9,7 @@
   ],
   "code": 38891741,
   "defense": 0,
-  "description": "몬스터 효과 또는 마법·함정 카드가 발동했을 때, 발동한 카드와 같은 종류의 카드 1장을 패에서 버리고 발동한다. 몬스터에는 몬스터, 마법에는 마법, 함정에는 함정을 버린다. 그 발동을 무효로 하고 파괴한다.",
+  "description": "①: 몬스터 효과나 마법 / 함정 카드가 발동했을 때, 그 효과와 같은 종류(몬스터 / 마법 / 함정)의 카드 1장을 패에서 버리고 발동할 수 있다. 그 발동을 무효로 하여 파괴한다.",
   "draw_enabled": true,
   "identity_key": "856db37937bc4e8435ddf669e4de0d752b9bc9afcb5c54772cf95e28c47da525",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2604.jpg",

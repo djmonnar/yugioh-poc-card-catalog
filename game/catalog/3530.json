@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3530",
+  "attack": 0,
+  "attribute": 4,
+  "categories": [
+    "지원-염성",
+    "지원-염무",
+    "지원-리버스",
+    "발동-리버스",
+    "발동-반전 소환 시",
+    "효과-덱에서 세트"
+  ],
+  "code": 93294869,
+  "defense": 1900,
+  "description": "이 카드가 리버스했을 경우 발동할 수 있다. 덱에서 \"염무\" 함정 카드 1장을 골라 자신 필드에 세트한다. 반전 소환에 의해 리버스했다면, 그 후 추가로 덱에서 \"염무\" 마법 카드 1장을 골라 자신 필드에 세트할 수 있다.",
+  "draw_enabled": true,
+  "identity_key": "d20a9b2564d67996967abc06e98aac7bf3d3c33b8e275cedf54bfd41ed56381a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3530.jpg",
+  "level": 3,
+  "links": [],
+  "name": "상염성－울브쇼",
+  "name_english": "Brotherhood of the Fire Fist - Wolf",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "R",
+  "search_aliases": [
+    "상염성－울브쇼",
+    "Brotherhood of the Fire Fist - Wolf"
+  ],
+  "source_id": 3530,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2562
+}

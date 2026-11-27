@@ -9,7 +9,7 @@
   ],
   "code": 46955770,
   "defense": 1500,
-  "description": "필드에 ‘왕가의 골짜기－네크로밸리’가 있으면, 필드의 이 카드는 다른 모든 카드의 효과를 받지 않는다.",
+  "description": "①: 이 카드가 몬스터 존에 있고 필드에 \"왕가의 골짜기－네크로밸리\"가 있는 동안, 이 카드는 자신의 효과를 제외한 다른 카드의 효과를 받지 않는다.",
   "draw_enabled": true,
   "identity_key": "2e1f4db61fe961f6b71927b982071f93389fc0b6222cd2c110ee8cc8ae6e0422",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native067/cards/2556.jpg",

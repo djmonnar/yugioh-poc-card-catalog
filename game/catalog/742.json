@@ -9,7 +9,7 @@
   ],
   "code": 81480460,
   "defense": 2200,
-  "description": "동전을 3번 던진다. 3번 중\n2번이 앞면이면 상대 필드의\n몬스터 1장을 파괴한다. 이\n효과는 자신의 턴에만, 턴마다\n한 번 사용할 수 있다.",
+  "description": "①: 1턴에 1번, 상대 필드의 몬스터 1장을 대상으로 하고 발동할 수 있다. 코인 토스를 3회 실행하고, 앞면이 2회 이상 나왔을 경우 대상 몬스터를 파괴한다.",
   "draw_enabled": true,
   "identity_key": "11bce19c7ed65c5511912da16c7ce02eaa668cb2bfbd350fba822328282bc884",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/1062.webp",

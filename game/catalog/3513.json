@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3513",
+  "attack": 1500,
+  "attribute": 4,
+  "categories": [
+    "지원-염성",
+    "지원-염무",
+    "발동-소환 시",
+    "효과-덱샐비지",
+    "발동-묘지로 보내기",
+    "효과-덱에서 세트"
+  ],
+  "code": 30929786,
+  "defense": 100,
+  "description": "이 카드명의 ①의 효과는 1턴에 1번만 사용할 수 있다.\n①: \"염성\" 몬스터의 효과로 특수 소환에 성공했을 때 발동할 수 있다. 덱에서 \"염성\" 몬스터 1장을 패에 넣는다.\n②: 1턴에 1번, 자신 필드의 앞면 표시 \"염무\" 마법 / 함정 카드 1장을 묘지로 보내고 발동할 수 있다. 덱에서 \"염무\" 마법 / 함정 카드 1장을 골라 자신 필드에 세트한다.",
+  "draw_enabled": true,
+  "identity_key": "2c2a4578f5edfd830854d7270a54671d51225e14dd67047e87a4d06753ac02c9",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3513.jpg",
+  "level": 3,
+  "links": [],
+  "name": "입염성－토우케이",
+  "name_english": "Brotherhood of the Fire Fist - Rooster",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32768,
+  "rarity": "SR",
+  "search_aliases": [
+    "입염성－토우케이",
+    "Brotherhood of the Fire Fist - Rooster"
+  ],
+  "source_id": 3513,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2545
+}

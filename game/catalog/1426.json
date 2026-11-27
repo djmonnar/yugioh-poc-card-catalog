@@ -9,7 +9,7 @@
   ],
   "code": 21770260,
   "defense": 0,
-  "description": "자신의 스탠바이 페이즈마다\n자신의 필드에 \"슬라임 토큰\"\n1장을 특수 소환한다. 앞면\n공격 표시 / 물족 / 물 속성 /\n레벨 1 / 공격력 500 / 수비력\n500이다. 이 카드가 필드에\n앞면으로 존재하는 동안 다른\n몬스터는 소환할 수 없다.\n반전 소환과 특수 소환도\n포함한다.",
+  "description": "자신 스탠바이 페이즈마다 자신 필드에 \"슬라임 몬스터 토큰\"(물족 / 물 / 레벨 1 / 공 500 / 수 500) 1장을 공격 표시로 특수 소환한다. 이 카드가 필드에 앞면 표시로 존재하는 동안, 자신은 \"슬라임 몬스터 토큰\" 이외의 몬스터를 일반 소환 / 반전 소환 / 특수 소환할 수 없다.",
   "draw_enabled": true,
   "identity_key": "4a0f2c217f052992c2e1dfb38defd25aa158bf495bbfb4faee930303d727ff2e",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0457.webp",

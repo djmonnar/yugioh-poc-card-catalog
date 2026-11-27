@@ -8,7 +8,7 @@
   ],
   "code": 72630549,
   "defense": 1900,
-  "description": "이 카드를 대상으로 하는\n몬스터 카드의 효과를 무효로\n한다.",
+  "description": "이 카드 1장만을 대상으로 한 몬스터의 효과를 무효로 한다.",
   "draw_enabled": true,
   "identity_key": "76b85bc6ea04c75fa889411fa16cb51535cbb2f785f8138d35054e5a4ba34c7c",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0882.webp",

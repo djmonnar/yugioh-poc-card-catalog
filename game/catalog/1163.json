@@ -14,7 +14,7 @@
   ],
   "code": 79106360,
   "defense": 700,
-  "description": "리버스: 필드의 모든 몬스터를\n각각의 덱으로 되돌리고\n셔플한다. 양쪽 플레이어는\n덱으로 돌아간 레벨 4 이하\n몬스터의 수만큼 레벨 4 이하\n몬스터가 나올 때까지 카드를\n넘긴다. 나온 몬스터는 뒷면\n수비 표시로 특수 소환하고,\n그 밖에 넘긴 카드는 묘지로\n버린다.",
+  "description": "리버스: 필드의 몬스터를 모두 주인의 덱으로 되돌리고 셔플한다. 그 후, 각 플레이어는 자신의 메인 덱으로 되돌린 몬스터 수만큼 몬스터가 나올 때까지 덱 위에서 카드를 넘긴다. 그중 레벨 4 이하의 몬스터를 가능한 한 전부 뒷면 수비 표시로 특수 소환하고, 나머지 넘긴 카드는 묘지로 보낸다.",
   "draw_enabled": true,
   "identity_key": "f29f544b10f2d8081833db528f6cae7fe0a51f019d9c8a6b77feba9427bff56e",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0146.webp",

@@ -12,7 +12,7 @@
   ],
   "code": 58851034,
   "defense": 0,
-  "description": "마법 카드가 발동했을 때 패의 마법 카드 1장을 버리고 발동한다. 그 발동을 무효로 하고 파괴한다. 파괴에 성공하면 상대는 이 듀얼 동안 그 마법과 같은 이름의 카드를 발동할 수 없다.",
+  "description": "마법 카드가 발동했을 때, 패에서 마법 카드 1장을 버리고 발동할 수 있다. 그 마법 카드의 발동을 무효로 하고 파괴한다.\n이 효과로 그 카드를 파괴했을 경우, 이 듀얼 동안 상대는 파괴된 카드 및 그와 같은 이름의 카드를 발동할 수 없다.",
   "draw_enabled": true,
   "identity_key": "3f68a1964d51d24d255a75dce5a5f92fc8a787f7b9a6b5975b0558a2e3892a48",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native084/cards/2603.jpg",

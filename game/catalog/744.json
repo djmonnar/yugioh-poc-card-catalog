@@ -6,7 +6,7 @@
   "categories": [],
   "code": 42035044,
   "defense": 1600,
-  "description": "자신의 필드 몬스터 1장을\n릴리스하지 않으면 이 카드는\n공격할 수 없다.",
+  "description": "①: 이 카드가 몬스터 존에서 공격을 선언할 때, 자신은 이 카드 이외의 자신 필드의 몬스터 1장을 릴리스해야 한다.",
   "draw_enabled": true,
   "identity_key": "e427fc8394c0456eb1a17db1cd8df848412ee6c5cbde63e3ec18d6ebac6f84bb",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0364.webp",

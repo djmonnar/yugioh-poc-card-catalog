@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards216/3497",
+  "attack": 2100,
+  "attribute": 4,
+  "categories": [
+    "지원-스피릿",
+    "발동-소환 시",
+    "발동-리버스",
+    "효과-파괴",
+    "파괴-마법",
+    "파괴-함정",
+    "발동-엔드 페이즈 시",
+    "효과-바운스",
+    "소환제약"
+  ],
+  "code": 50866755,
+  "defense": 1800,
+  "description": "이 카드는 특수 소환할 수 없다.\n이 카드를 일반 소환하거나 리버스했을 때에 발동한다. 상대 필드에 세트된 마법 / 함정 카드를 전부 파괴한다.\n이 카드를 일반 소환하거나 리버스한 턴의 엔드 페이즈에 발동한다. 이 카드를 주인의 패로 되돌린다.",
+  "draw_enabled": true,
+  "identity_key": "132a667d1cdb7e108aeac3ef6aecc4add2b01567d846a87d82958a70bf0f5a8b",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native216/cards/3497.jpg",
+  "level": 6,
+  "links": [],
+  "name": "봉황",
+  "name_english": "Fenghuang",
+  "native_type": 545,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 512,
+  "rarity": "SR",
+  "search_aliases": [
+    "봉황",
+    "Fenghuang"
+  ],
+  "source_id": 3497,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "스피릿 몬스터",
+  "web_slot": 2529
+}

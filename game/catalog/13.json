@@ -9,7 +9,7 @@
   ],
   "code": 39439590,
   "defense": 1900,
-  "description": "상대가 패에서 몬스터를 특수\n소환했을 때, 이 카드를\n패에서 특수 소환한다.",
+  "description": "상대가 패에서 몬스터를 특수 소환했을 때에 발동할 수 있다. 패의 이 카드를 특수 소환한다.",
   "draw_enabled": true,
   "identity_key": "d5aca276e7b69ac580d1a4b4e11863f0713b0832bc9009dca6092e485522aa4f",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0211.webp",

@@ -6,7 +6,7 @@
   "categories": [],
   "code": 3027001,
   "defense": 0,
-  "description": "상대의 마법 / 함정 / 효과\n몬스터의 효과로 자신의 함정\n카드가 파괴될 때, 그 함정\n카드 대신 이 카드를 파괴할\n수 있다.",
+  "description": "자신 필드의 함정 카드를 파괴하는 마법 / 함정 / 몬스터 효과를 상대가 발동했을 때에 발동할 수 있다. 그 함정 카드들 대신 이 카드를 파괴하고, 다른 함정 카드는 파괴하지 않는다. 대신 보호되는 카드 중 세트된 카드는 전부 뒤집어 확인한다.",
   "draw_enabled": true,
   "identity_key": "052d12733536f2810904ede8341e8ae08ad50c256e2a4c5a6c70046134ca7886",
   "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/cards/0675.webp",
