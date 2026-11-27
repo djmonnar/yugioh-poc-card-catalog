@@ -9,17 +9,17 @@
       "source_id": 1351
     },
     {
-      "count": 1,
+      "count": 2,
       "identity_key": "50e3cc3f6e91edf1154c81d96fa049c37968900d050e5f791f74f66fa5db842e",
       "source_id": 2614
     },
     {
-      "count": 1,
+      "count": 2,
       "identity_key": "ae00232eb9c5f9e657dace7ef6f6c3e2941c596334eee0e84ac69213260a3f3d",
       "source_id": 2613
     },
     {
-      "count": 3,
+      "count": 2,
       "identity_key": "ed190dee2874ec322edcf8a4a72a1e0ee4a002d3b2db84ab2cd6354d4284361f",
       "source_id": 2753
     },
@@ -44,11 +44,6 @@
       "source_id": 2609
     },
     {
-      "count": 1,
-      "identity_key": "32623c54e142f5785751955197eeee7937a904db9945c7caa96530125e900ceb",
-      "source_id": 370
-    },
-    {
       "count": 3,
       "identity_key": "33a7d2dab9230946de518a269bc696b001b14131d064b13bc32e603c7fee70e3",
       "source_id": 492
@@ -59,11 +54,16 @@
       "source_id": 1450
     },
     {
-      "count": 2,
+      "count": 1,
       "identity_key": "7f4a69749834c9d67bc83bf88ac1032074234f16b595401ae090a5b5a5532b93",
       "source_id": 1957
+    },
+    {
+      "count": 1,
+      "identity_key": "40ed81512aa2831063fbd3657650e782d98ca30484242fbd0883454014eea624",
+      "source_id": 1927
     }
   ],
   "name": "기어프리드-중급",
-  "version": 641
+  "version": 1094
 }
