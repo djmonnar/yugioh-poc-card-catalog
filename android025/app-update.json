@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.148",
-  "versionCode": 167,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.148/YGOClassicExpedition-0.18.148-arm64.apk",
-  "sizeBytes": 1021829520,
-  "sha256": "7e16444777f0255f0fab1b8873d334febe7a9db4799daad84fbebeab5c4ddf27",
-  "releaseNotes": "연습전을 추가했습니다. 내 시작 덱과 상대 캐릭터·덱을 고르고, 특성을 적용해 직접 대결하거나 AI끼리의 대결을 관전할 수 있습니다."
+  "versionName": "0.18.149",
+  "versionCode": 168,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.149/YGOClassicExpedition-0.18.149-arm64.apk",
+  "sizeBytes": 1021827860,
+  "sha256": "36485c53a7161ec9823d55a056b6c6655ad6e59a65178ed06dca5c96573bfea0",
+  "releaseNotes": "AI 대 AI 연습전에서 양쪽의 캐릭터와 각 캐릭터의 덱을 따로 선택할 수 있습니다. 직접 플레이에서는 내 시작 덱을 선택합니다."
 }
