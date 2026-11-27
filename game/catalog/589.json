@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 1,
   "categories": [
-    "지원-가제트"
+    "지원-가제트",
+    "효과-공격력 상승"
   ],
   "code": 13316346,
   "defense": 2000,

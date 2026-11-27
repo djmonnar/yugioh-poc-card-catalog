@@ -3,7 +3,9 @@
   "art_key": "Cards/1075",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "효과-공격력 상승"
+  ],
   "code": 70046172,
   "defense": 0,
   "description": "①: 필드의 앞면 표시 몬스터 1장을 대상으로 하고 발동할 수 있다. 턴 종료시까지 그 몬스터의 공격력은 700 오른다.",

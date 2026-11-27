@@ -4,7 +4,8 @@
   "attack": 1700,
   "attribute": 32,
   "categories": [
-    "발동-파괴 시"
+    "발동-파괴 시",
+    "효과-공격력 상승"
   ],
   "code": 84055227,
   "defense": 0,

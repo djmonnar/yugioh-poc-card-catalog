@@ -3,7 +3,9 @@
   "art_key": "Cards/808",
   "attack": 2600,
   "attribute": 1,
-  "categories": [],
+  "categories": [
+    "효과-공격력 상승"
+  ],
   "code": 78193831,
   "defense": 2300,
   "description": "상대 필드와 묘지의 드래곤족\n몬스터 1장당 이 카드의\n공격력을 500 올린다.",

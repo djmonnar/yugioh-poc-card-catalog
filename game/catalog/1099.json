@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 0,
   "categories": [
-    "지원-전투"
+    "지원-전투",
+    "효과-공격력 감소"
   ],
   "code": 22359980,
   "defense": 0,

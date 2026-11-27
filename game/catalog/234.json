@@ -4,7 +4,8 @@
   "attack": 1600,
   "attribute": 1,
   "categories": [
-    "지원-식물족"
+    "지원-식물족",
+    "효과-공격력 상승"
   ],
   "code": 20546916,
   "defense": 2000,

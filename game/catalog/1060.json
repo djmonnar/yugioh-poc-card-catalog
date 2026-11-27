@@ -3,7 +3,10 @@
   "art_key": "Cards/1060",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "효과-공격력 상승",
+    "효과-공격력 감소"
+  ],
   "code": 83225447,
   "defense": 0,
   "description": "장착한 몬스터의 공격력은 700 올린다. 자신 스탠바이 페이즈마다 그 몬스터의 공격력을 200씩 내린다.",

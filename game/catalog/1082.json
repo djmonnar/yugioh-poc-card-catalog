@@ -3,7 +3,9 @@
   "art_key": "Cards/1082",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "효과-수비력 감소"
+  ],
   "code": 596051,
   "defense": 0,
   "description": "지정한 몬스터 1장의 수비력을\n턴 종료시까지 500 포인트\n내린다.",

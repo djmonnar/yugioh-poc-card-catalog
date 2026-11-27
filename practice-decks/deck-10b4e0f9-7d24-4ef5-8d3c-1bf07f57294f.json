@@ -1,0 +1,59 @@
+{
+  "banlist_enabled": true,
+  "extra": [],
+  "id": "deck-10b4e0f9-7d24-4ef5-8d3c-1bf07f57294f",
+  "main": [
+    {
+      "count": 3,
+      "identity_key": "7d1cc49a585b5c53b01cb2ce817760cd1971d83d94f0cbf99beec10b0b6ea0f0",
+      "source_id": 2014
+    },
+    {
+      "count": 2,
+      "identity_key": "a5d6ecfecb04d99e6a051aa46ada9f8dad6c2827bc15feb826c724be195ada89",
+      "source_id": 195
+    },
+    {
+      "count": 2,
+      "identity_key": "f006559c05010f47aebcf4b1144f61a6b8c7fee931fa36036b1423cb5c500afa",
+      "source_id": 263
+    },
+    {
+      "count": 1,
+      "identity_key": "64b5039a32f6e686df9f4007c6f4722bbe501a7d62849c8938af6f635830f6cb",
+      "source_id": 101
+    },
+    {
+      "count": 1,
+      "identity_key": "61c53cb1d0b0dc348d3a2dae0412a3bd8d09a98bafb6e32993e036a7f40678fe",
+      "source_id": 2849
+    },
+    {
+      "count": 3,
+      "identity_key": "e18bfa84cfdffbc5f7680ba291d125d138abf433d20bbe968c71b5d2dec49ab8",
+      "source_id": 2617
+    },
+    {
+      "count": 2,
+      "identity_key": "4904a794d17e83888cdc3f99c59fac5f2f7c8dc1d99677c95364cf1519eddea4",
+      "source_id": 2071
+    },
+    {
+      "count": 2,
+      "identity_key": "1771f7d68b08e587cfcc7036c1b6535042035b14b34606706463173890de8e54",
+      "source_id": 2072
+    },
+    {
+      "count": 2,
+      "identity_key": "acf4f999fb88d03df7baa3682e6d2e1fb0a08d863de8229a89ae543f80a11990",
+      "source_id": 1108
+    },
+    {
+      "count": 2,
+      "identity_key": "856db37937bc4e8435ddf669e4de0d752b9bc9afcb5c54772cf95e28c47da525",
+      "source_id": 2604
+    }
+  ],
+  "name": "빛의 피라미드",
+  "version": 1087
+}

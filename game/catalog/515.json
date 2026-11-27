@@ -3,7 +3,10 @@
   "art_key": "Cards/515",
   "attack": 600,
   "attribute": 1,
-  "categories": [],
+  "categories": [
+    "효과-공격력 상승",
+    "효과-수비력 상승"
+  ],
   "code": 46657337,
   "defense": 300,
   "description": "자신의 패의 카드 1장당 이\n카드의 공격력과 수비력을 300\n올린다.",

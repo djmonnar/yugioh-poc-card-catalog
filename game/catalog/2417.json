@@ -3,7 +3,9 @@
   "art_key": "Cards035/2417",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "효과-공격력 감소"
+  ],
   "code": 58169731,
   "defense": 0,
   "description": "상대 몬스터의 공격 선언시에 발동할 수 있다. 상대 필드의 앞면 공격 표시 몬스터의 공격력을, 상대 필드의 몬스터 수 × 800 내린다.",

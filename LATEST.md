@@ -1,14 +1,11 @@
 # 최근 변경
 
-웹 DB 개정 1084 (이전 기록 1079)
+웹 DB 개정 1087 (이전 기록 1084)
 
-- content-profiles (content-profiles) · 변경 1: content-profiles
 - game (game) · 변경 1: starter_loadouts153
-- 카드 (game/catalog) · 변경 250: 7 나노브레이커, 13 사이버 다이너소어, 15 시간의 마술사, 39 항아리 마인, 56 그레이트 모스, 57 크리보, 66 궁극완전체 그레이트 모스, 71 진화의 고치 … / 추가 37: 3497 봉황, 3498 고대의 숲, 3499 불사조, 3500 나찰, 3501 기습 공격 마타자, 3502 다크 버스트, 3503 스텔스 버드, 3504 환각룡 …
-- game/deck_rules035 (game/deck_rules035) · 변경 1: _rest
-- 덱 금제 (game/deck_rules035/rows) · 추가 37: 3497, 3498, 3499, 3500, 3501, 3502, 3503, 3504 …
+- 카드 (game/catalog) · 변경 284: 11 아마조네스의 성전사, 27 다크 발키리어, 82 암흑의 성, 93 에일리언 텔레파스, 98 고스트 왕 펌프킹, 106 죠스맨, 109 크루세이더 오브 엔디미온, 113 환상의 견습 마도사 …
 - game/opponents (game/opponents) · 변경 1: _rest
-- 상대 편성 (game/opponents/opponents) · 변경 4: enc-67202d28-564d-4f41-90ef-936e327c73f8 마해룡, enc-97b06ef6-569e-4dcd-b206-e884edf46628 마해룡, enc-6a9cfa89-2b2e-46af-9cb7-10a6e65add8f 체스데몬, enc-da3d7785-bf5b-491a-b5ff-14542644a50f 체스데몬
+- 상대 편성 (game/opponents/opponents) · 변경 2: enc-33ef5a80-97d4-44f6-b671-1d6fdddf395d 어둠의 바쿠라, enc-4e808042-2e5c-46bf-a842-d1c6d3cded6c 어둠의 바쿠라 / 추가 2: enc-701cacab-7d3f-4ad4-ac97-801c33ee2aef 리시드, enc-ccf791e5-0a72-4cb2-b110-759cce0a78ff 리시드
 - game/starters (game/starters) · 변경 1: _rest
-- 시작 덱 (game/starters/starters) · 변경 1: unified039:deck-5fe2213f-81e5-4e57-9c83-b7a4eed920bc 체스데몬 / 추가 1: unified039:deck-79a7bf98-67d6-439e-96a7-6d9a96368e12 스피릿
-- 연습 덱 (practice-decks) · 변경 3: ch2_battle_36cab45ea0bf860992d89397 해룡 다이달로스, deck-5fe2213f-81e5-4e57-9c83-b7a4eed920bc 체스데몬, _rest
+- 시작 덱 (game/starters/starters) · 변경 1: unified039:deck-78590890-6da4-40eb-80c4-96a8d9988a8c 심술꾸러기
+- 연습 덱 (practice-decks) · 변경 2: deck-78590890-6da4-40eb-80c4-96a8d9988a8c 심술꾸러기, _rest / 추가 1: deck-10b4e0f9-7d24-4ef5-8d3c-1bf07f57294f 빛의 피라미드

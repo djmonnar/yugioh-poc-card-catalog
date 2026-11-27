@@ -3,7 +3,9 @@
   "art_key": "Cards/688",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "효과-공격력·수비력 증감 반전"
+  ],
   "code": 77622396,
   "defense": 0,
   "description": "이 카드가 발동하는 턴,\n공격력, 수비력의 증가와\n감소는 모두 반전됩니다.",

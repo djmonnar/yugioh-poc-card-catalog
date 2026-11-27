@@ -4,7 +4,8 @@
   "attack": 2600,
   "attribute": 2,
   "categories": [
-    "지원-물 속성"
+    "지원-물 속성",
+    "효과-공격력 상승"
   ],
   "code": 50532786,
   "defense": 1600,

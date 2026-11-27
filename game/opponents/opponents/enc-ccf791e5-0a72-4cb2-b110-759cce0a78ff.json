@@ -1,0 +1,45 @@
+{
+  "artKey": "Character126/images/rishid/start",
+  "banlistEnabled": false,
+  "deckName": "빛의 피라미드",
+  "extra": [],
+  "id": "enc-ccf791e5-0a72-4cb2-b110-759cce0a78ff",
+  "lpBonus": 0,
+  "main": [
+    2014,
+    2014,
+    2014,
+    195,
+    195,
+    263,
+    263,
+    101,
+    2849,
+    2617,
+    2617,
+    2617,
+    2071,
+    2071,
+    2072,
+    2072,
+    1108,
+    1108,
+    2604,
+    2604
+  ],
+  "name": "리시드",
+  "openingDrawBonus": 0,
+  "profileId": "rishid",
+  "skills": [
+    {
+      "entries": [],
+      "kind": "start_field",
+      "position": 0,
+      "sourceId": 2849,
+      "threshold": 0,
+      "value": 0
+    }
+  ],
+  "templateId": "unified039:enc-ccf791e5-0a72-4cb2-b110-759cce0a78ff",
+  "usesNativeRules035": true
+}

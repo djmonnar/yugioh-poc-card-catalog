@@ -4,7 +4,8 @@
   "attack": 1500,
   "attribute": 32,
   "categories": [
-    "지원-묘지기"
+    "지원-묘지기",
+    "효과-수비력 상승"
   ],
   "code": 58139128,
   "defense": 1500,

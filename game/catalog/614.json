@@ -4,7 +4,8 @@
   "attack": 2800,
   "attribute": 16,
   "categories": [
-    "발동-소환 시"
+    "발동-소환 시",
+    "효과-공격력 상승"
   ],
   "code": 3954901,
   "defense": 2800,

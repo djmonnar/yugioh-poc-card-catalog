@@ -3,7 +3,10 @@
   "art_key": "Cards/1449",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "효과-공격력 상승",
+    "효과-수비력 상승"
+  ],
   "code": 56747793,
   "defense": 0,
   "description": "자신이 사용하는 앞면 몬스터\n1장당 장착 몬스터의 공격력과\n수비력을 800 올린다.",

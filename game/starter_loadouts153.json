@@ -441,22 +441,6 @@
       }
     ]
   },
-  "unified039_648660f8fc480d7a243a4ab2e3efb6052a685998": {
-    "gold": 0,
-    "lp": 4000,
-    "openingDrawBonus": 0,
-    "relicIds": [],
-    "skills": [
-      {
-        "entries": [],
-        "kind": "start_hand",
-        "position": 0,
-        "sourceId": 688,
-        "threshold": 0,
-        "value": 0
-      }
-    ]
-  },
   "unified039_696c16c636a8ab91eaffeb0595e1ac8eb98318f8": {
     "gold": 0,
     "lp": 4000,
@@ -484,6 +468,22 @@
         "kind": "start_field",
         "position": 0,
         "sourceId": 420,
+        "threshold": 0,
+        "value": 0
+      }
+    ]
+  },
+  "unified039_76e62041c8767547e3beed1b0d6f8e4d4e6cc8d5": {
+    "gold": 0,
+    "lp": 4000,
+    "openingDrawBonus": 0,
+    "relicIds": [],
+    "skills": [
+      {
+        "entries": [],
+        "kind": "start_hand",
+        "position": 0,
+        "sourceId": 688,
         "threshold": 0,
         "value": 0
       }

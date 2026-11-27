@@ -3,7 +3,9 @@
   "art_key": "Cards/1415",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "효과-공격력 감소"
+  ],
   "code": 57882509,
   "defense": 0,
   "description": "배틀 페이즈에만 발동할 수\n있다. 공격 몬스터 1장을\n선택하여 발동한 턴 동안\n공격력을 700 내린다.",

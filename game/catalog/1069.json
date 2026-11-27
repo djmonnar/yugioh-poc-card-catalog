@@ -3,7 +3,9 @@
   "art_key": "Cards/1069",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "효과-수비력 상승"
+  ],
   "code": 81380218,
   "defense": 0,
   "description": "모든 수비 표시 몬스터의\n수비력을 500 올린다.",

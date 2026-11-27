@@ -3,7 +3,10 @@
   "art_key": "Cards/1420",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "효과-공격력 상승",
+    "효과-수비력 감소"
+  ],
   "code": 82432018,
   "defense": 0,
   "description": "장착 몬스터의 공격력을 1000\n올리고 수비력을 1000 내린다.\n자신의 스탠바이 페이즈마다\n1000 LP를 지불한다. 지불할\n수 없으면 이 카드를\n파괴한다.",

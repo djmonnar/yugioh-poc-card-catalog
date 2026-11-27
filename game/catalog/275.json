@@ -4,7 +4,8 @@
   "attack": 1500,
   "attribute": 1,
   "categories": [
-    "지원-천사족"
+    "지원-천사족",
+    "효과-공격력 상승"
   ],
   "code": 82108372,
   "defense": 1800,

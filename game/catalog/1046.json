@@ -3,7 +3,9 @@
   "art_key": "Cards/1046",
   "attack": 0,
   "attribute": 0,
-  "categories": [],
+  "categories": [
+    "효과-공격력 감소"
+  ],
   "code": 24668830,
   "defense": 0,
   "description": "기계족 이외의 몬스터만 장착\n가능. 장착 몬스터의 공격력은\n자신의 스텐바이 페이즈마다\n300 포인트 내린다.",

@@ -4,7 +4,8 @@
   "attack": 3500,
   "attribute": 32,
   "categories": [
-    "소환제약"
+    "소환제약",
+    "효과-공격력 감소"
   ],
   "code": 85605684,
   "defense": 0,
