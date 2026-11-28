@@ -4,7 +4,8 @@
   "attack": 2400,
   "attribute": 4,
   "categories": [
-    "지원-듀얼"
+    "지원-듀얼",
+    "지원-묘지"
   ],
   "code": 95888876,
   "defense": 1500,

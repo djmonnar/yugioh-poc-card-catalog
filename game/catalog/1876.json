@@ -4,7 +4,8 @@
   "attack": 800,
   "attribute": 2,
   "categories": [
-    "발동-파괴 시"
+    "발동-파괴 시",
+    "지원-묘지"
   ],
   "code": 51534754,
   "defense": 1400,

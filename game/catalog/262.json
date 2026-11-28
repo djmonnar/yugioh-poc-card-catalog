@@ -4,7 +4,8 @@
   "attack": 1900,
   "attribute": 16,
   "categories": [
-    "소환-묘지"
+    "소환-묘지",
+    "지원-묘지"
   ],
   "code": 68670547,
   "defense": 1200,

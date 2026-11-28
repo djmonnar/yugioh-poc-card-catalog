@@ -4,7 +4,8 @@
   "attack": 3500,
   "attribute": 1,
   "categories": [
-    "지원-암석족"
+    "지원-암석족",
+    "지원-묘지"
   ],
   "code": 21225115,
   "defense": 0,

@@ -3,7 +3,9 @@
   "art_key": "Cards/108",
   "attack": 1200,
   "attribute": 16,
-  "categories": [],
+  "categories": [
+    "지원-묘지"
+  ],
   "code": 53493204,
   "defense": 1000,
   "description": "이 카드를 융합 소재 몬스터\n1장 대신 사용할 수 있다.\n같은 융합에서 다른 융합\n소재까지 대체할 수는 없다.",

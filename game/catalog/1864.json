@@ -4,7 +4,8 @@
   "attack": 0,
   "attribute": 8,
   "categories": [
-    "발동-묘지로 보내기"
+    "발동-묘지로 보내기",
+    "지원-묘지"
   ],
   "code": 49441499,
   "defense": 0,
