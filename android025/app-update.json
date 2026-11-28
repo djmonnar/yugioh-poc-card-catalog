@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.152",
-  "versionCode": 171,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.152/YGOClassicExpedition-0.18.152-arm64.apk",
-  "sizeBytes": 1043514058,
-  "sha256": "8f1100bcb836469db4593067fe380eb24a8ffba1dced6f2f844da3352227e89c",
-  "releaseNotes": "AI가 필드의 같은 의식 몬스터를 이득 없이 교체하는 판단을 수정했습니다. 리로드 선택 중에도 손패를 확인할 수 있으며, 라이컨 슬로프 등 21종의 카드 상세에 효과 데미지 계산값을 표시합니다."
+  "versionName": "0.18.153",
+  "versionCode": 172,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.153/YGOClassicExpedition-0.18.153-arm64.apk",
+  "sizeBytes": 1043544605,
+  "sha256": "8ec11a43fea6ea0d5899dca685aed5dc9a1f7da224c47f1e2a99629b92872ce3",
+  "releaseNotes": "흑마술의 방어막 거울의 힘이 몬스터마다 제공하는 전투·효과 파괴 방지 횟수를 추적합니다. AI와 카드 상세가 같은 남은 횟수를 사용합니다. 비슷한 효과 파괴 방지 카드도 함께 보완했습니다."
 }
