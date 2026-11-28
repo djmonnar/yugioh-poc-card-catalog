@@ -1,5 +1,7 @@
 // Former category names that transfer to a single current tag.
 export const legacyCategoryAliases131 = new Map([
+  ["발동-필드를 벗어났을 때", ["발동-필드에서 벗어났을 때"]],
+  ["발동-필드를 벗어났을 경우", ["발동-필드에서 벗어났을 경우"]],
   [
     "지원-가이아",
     [

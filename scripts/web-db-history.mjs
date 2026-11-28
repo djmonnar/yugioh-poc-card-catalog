@@ -12,7 +12,7 @@ import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 export const RPC_FLOOR = 161;
-export const RPC_PROBE_AHEAD = 60;
+export const RPC_PROBE_AHEAD = 65;
 // (200) 전송량 줄이기: 이전 기록(revision.json의 route)이 있으면 그 경로부터 위로 이만큼만 찾는다(없는 번호마다 작은 404 요청, 기록이 오래돼도 새 경로를 놓치지 않을 만큼 넉넉히).
 export const RPC_PROBE_AHEAD_RECORDED = 30;
 export const RPC = `poc_bootstrap${RPC_FLOOR}`;
