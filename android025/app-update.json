@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.149",
-  "versionCode": 168,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.149/YGOClassicExpedition-0.18.149-arm64.apk",
-  "sizeBytes": 1021827860,
-  "sha256": "36485c53a7161ec9823d55a056b6c6655ad6e59a65178ed06dca5c96573bfea0",
-  "releaseNotes": "AI 대 AI 연습전에서 양쪽의 캐릭터와 각 캐릭터의 덱을 따로 선택할 수 있습니다. 직접 플레이에서는 내 시작 덱을 선택합니다."
+  "versionName": "0.18.150",
+  "versionCode": 169,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.150/YGOClassicExpedition-0.18.150-arm64.apk",
+  "sizeBytes": 1043453150,
+  "sha256": "9817c4cb665b43093c3a0b3c426284def1edacd7013bd6ef458da0b894270563",
+  "releaseNotes": "라이트레이·라의 익신룡·거대전함과 관련 카드 34종을 추가했습니다. 새 소환 및 후속 효과의 사용 판단을 보강했습니다."
 }
