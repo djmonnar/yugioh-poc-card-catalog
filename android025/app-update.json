@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.153",
-  "versionCode": 172,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.153/YGOClassicExpedition-0.18.153-arm64.apk",
-  "sizeBytes": 1043544605,
-  "sha256": "8ec11a43fea6ea0d5899dca685aed5dc9a1f7da224c47f1e2a99629b92872ce3",
-  "releaseNotes": "흑마술의 방어막 거울의 힘이 몬스터마다 제공하는 전투·효과 파괴 방지 횟수를 추적합니다. AI와 카드 상세가 같은 남은 횟수를 사용합니다. 비슷한 효과 파괴 방지 카드도 함께 보완했습니다."
+  "versionName": "0.18.154",
+  "versionCode": 173,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.154/YGOClassicExpedition-0.18.154-arm64.apk",
+  "sizeBytes": 1043546489,
+  "sha256": "f8e54e4eeddacad6b2b072f2582522b366531429db54e605d936283c0842e8b3",
+  "releaseNotes": "젬나이트 레이디 로즈 다이아가 아군 젬나이트 전체에 제공하는 첫 효과 파괴 방지를 한 번만 공유합니다. 동시에 파괴될 몬스터는 함께 보호하며, AI와 카드 상세에 남은 횟수를 반영합니다."
 }
