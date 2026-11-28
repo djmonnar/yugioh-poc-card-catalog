@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.151",
-  "versionCode": 170,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.151/YGOClassicExpedition-0.18.151-arm64.apk",
-  "sizeBytes": 1043493542,
-  "sha256": "ff03020160a26ed4fea5a40d9be9527f48cf8b0664f9cf29108a9db9f26ef061",
-  "releaseNotes": "AI가 라이트레이 마돌·자이로이드·유람정 서브마리드의 전투 파괴 방지 소모를 보고 공격합니다. 방지 순간과 남은 횟수를 표시하고, 연습전에서 시작 덱과 양쪽 AI 덱의 특성을 보여 줍니다."
+  "versionName": "0.18.152",
+  "versionCode": 171,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.152/YGOClassicExpedition-0.18.152-arm64.apk",
+  "sizeBytes": 1043514058,
+  "sha256": "8f1100bcb836469db4593067fe380eb24a8ffba1dced6f2f844da3352227e89c",
+  "releaseNotes": "AI가 필드의 같은 의식 몬스터를 이득 없이 교체하는 판단을 수정했습니다. 리로드 선택 중에도 손패를 확인할 수 있으며, 라이컨 슬로프 등 21종의 카드 상세에 효과 데미지 계산값을 표시합니다."
 }
