@@ -1,0 +1,42 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3549",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-라의 익신룡",
+    "지원-죽은 자의 소생",
+    "발동-공격 선언 시",
+    "효과-묘지에서 세트",
+    "발동-묘지에서",
+    "발동-제외",
+    "발동-묘지로 보내기",
+    "소환-묘지",
+    "효과-묘지로 보내기"
+  ],
+  "code": 12930501,
+  "defense": 0,
+  "description": "①: 상대 몬스터가 공격을 선언했을 때에, 상대 묘지의 마법 카드 1장을 대상으로 발동할 수 있다. 대상 카드를 자신 필드에 세트한다.\n②: 묘지의 이 카드를 제외하고, 자신의 패 또는 자신 필드의 세트 카드 중 \"죽은 자의 소생\" 1장을 묘지로 보내고 발동할 수 있다. 자신 묘지의 \"라의 익신룡\" 1장을 골라 소환 조건을 무시하여 특수 소환한다. 이어서 상대 필드의 몬스터 1장을 골라 묘지로 보낼 수 있다. 이 효과로 특수 소환한 몬스터는 엔드 페이즈에 묘지로 보낸다.",
+  "draw_enabled": true,
+  "identity_key": "61bcbda729f5ebf9a1614a0035e32b0507e0659b8d807a374877c0d7dabc5c30",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3549.jpg",
+  "level": 0,
+  "links": [],
+  "name": "암흑의 마재생",
+  "name_english": "Dark Spell Regeneration",
+  "native_type": 4,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "암흑의 마재생",
+    "Dark Spell Regeneration"
+  ],
+  "source_id": 3549,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "일반 함정",
+  "web_slot": 2581
+}

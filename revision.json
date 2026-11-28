@@ -1,6 +1,6 @@
 {
-  "authoring_revision": 1094,
-  "game_revision": 1094,
+  "authoring_revision": 1095,
+  "game_revision": 1095,
   "identity": {
     "base_catalog_sha256": "b73dd51c78aeab8c9beebf936b46e4cac16040e70df3a7980dec38c40db21e09",
     "catalog035_sha256": "b5f1e9749cec0c1497c5fdcbfb2dc9c64895dcd859f083ec0ec4014580f05308",
@@ -43,6 +43,7 @@
     "catalog211_sha256": "91534cafe087027bbf092b4b2cbc5166f9f583259a52a486841e2996a0d627df",
     "catalog212_sha256": "e722bc8cfa60a4d6b0606c92667dd9503109b3b1d300a63e66afff03b0063ef0",
     "catalog216_sha256": "e1df13ad4d8ac1f5c2b1287e1f115730a0004b856e52201a342674a8ad978b8e",
+    "catalog226_sha256": "3d1aca3e2d230d02032d9df2d8f08b1b3911a50e79431c80bd6c392fa8a1a675",
     "native_manifest049_sha256": "843bc3bcebe36bcbfe7f5f6e2584222f5ab67bc5175c590b37d2963839134e7f",
     "native_manifest053_sha256": "205ef763b65335d553c1e5870e84f6237814b65b1481c96de06503684dd455aa",
     "native_manifest067_sha256": "5d671f09f3754cef65f05af7344745372404e8f28ed2e1e15cdafcc409c36d3f",
@@ -82,13 +83,14 @@
     "native_manifest211_sha256": "db8a4541a8db2d3b867b8f49f56b4b75187f25b29aa72f4acd9c71f3af69adfe",
     "native_manifest212_sha256": "338fc180cafada45e81f40bb56eab146304ccaeda0d21867a0dd6d7f3c3ad06d",
     "native_manifest216_sha256": "547c6b540099c903399785c7b7ea054820404b514289c712622733e63d5efc5e",
+    "native_manifest226_sha256": "3dd6e6a1f58587d2e962575e4eb391af6e888383740a95026d5b6699883f0c7a",
     "native_manifest_sha256": "4674de031c9e3044c86b90fcd402d9533d9353347802f268863746bf3bd7e4d7"
   },
   "map_rules_revision": 858,
-  "metadata_revision": "1086",
+  "metadata_revision": "1095",
   "practice_decks_sha256": "6fb953c8eb166e70611e435e6d78f3b6d94cefb4e77850d94aeea73a45b62b66",
   "project_id": "ygoclassic-expedition",
-  "project_revision": 1094,
-  "route": "poc_bootstrap216",
-  "source_fingerprint": "a864eb579f18ca964dc807a78ceb5c4d3e4302f9874737348f85afa82e5d7472"
+  "project_revision": 1095,
+  "route": "poc_bootstrap226",
+  "source_fingerprint": "fbef135839c75a6be6085349d7f1fa6117e1445d0492b5e137a0e41f2c8b5e47"
 }

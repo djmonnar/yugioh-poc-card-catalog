@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3540",
+  "attack": 2800,
+  "attribute": 32,
+  "categories": [
+    "지원-어둠 속성",
+    "소환제약",
+    "소환-릴리즈 코스트",
+    "발동-드로우 시",
+    "보호-릴리즈",
+    "효과-카드 확인",
+    "효과-덱으로 되돌리기"
+  ],
+  "code": 29424328,
+  "defense": 1000,
+  "description": "이 카드는 특수 소환할 수 없다. 이 카드의 어드밴스 소환에는 어둠 속성 몬스터만 릴리스할 수 있다.\n①: 이 카드가 몬스터 존에 있는 동안, 카드 효과로 이 카드를 릴리스할 수 없다.\n②: 상대의 드로우 페이즈 중 상대가 통상 드로우하기 전에 발동한다. 상대 덱의 맨 위 카드를 확인해, 그 덱의 맨 위 또는 맨 아래에 놓는다.",
+  "draw_enabled": true,
+  "identity_key": "7ca48cb5c8e667cf2603dd36c171a1a0bc6c897b0180b484a809d143e399bf49",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3540.jpg",
+  "level": 7,
+  "links": [],
+  "name": "마왕 디아블로스",
+  "name_english": "Diabolos, King of the Abyss",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "search_aliases": [
+    "마왕 디아블로스",
+    "Diabolos, King of the Abyss"
+  ],
+  "source_id": 3540,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2572
+}

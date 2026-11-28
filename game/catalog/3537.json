@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3537",
+  "attack": 1200,
+  "attribute": 16,
+  "categories": [
+    "지원-라이트레이",
+    "지원-빛 속성",
+    "지원-제외",
+    "소환-패에서",
+    "면역-전투",
+    "보호-전투 파괴"
+  ],
+  "code": 82579942,
+  "defense": 3000,
+  "description": "자신의 제외 상태인 빛 속성 몬스터가 3장 이상일 경우, 패의 이 카드를 특수 소환할 수 있다.\n이 카드가 전투로 파괴될 경우, 1턴에 1번 그 파괴를 막는다.",
+  "draw_enabled": true,
+  "identity_key": "1bbd6de175b9326effc4fe12d7497bf5e7444910465f53c1a1d8111c4a2f3dd6",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3537.jpg",
+  "level": 6,
+  "links": [],
+  "name": "라이트레이 마돌",
+  "name_english": "Lightray Madoor",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "R",
+  "search_aliases": [
+    "라이트레이 마돌",
+    "Lightray Madoor"
+  ],
+  "source_id": 3537,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2569
+}

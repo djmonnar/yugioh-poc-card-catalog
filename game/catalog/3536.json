@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3536",
+  "attack": 1100,
+  "attribute": 1,
+  "categories": [
+    "지원-전사족",
+    "지원-땅 속성",
+    "발동-전투 파괴 시",
+    "발동-묘지로 보내졌을 때",
+    "발동-필드에서 묘지로 보내졌을 때",
+    "소환-덱리크루터"
+  ],
+  "code": 5438492,
+  "defense": 1200,
+  "description": "이 카드가 전투로 파괴된 뒤 묘지로 보내졌을 때에 발동할 수 있다. 덱에서 공격력 1500 이하인 땅 속성 / 전사족 몬스터 1장을 골라, 자신 필드에 앞면 공격 표시로 특수 소환한다.",
+  "draw_enabled": true,
+  "identity_key": "d4fcafb5c23e889881de246c8c10e36249c8dbca84b19440da8cdb0280e50d96",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3536.jpg",
+  "level": 4,
+  "links": [],
+  "name": "황야의 여전사",
+  "name_english": "Warrior Lady of the Wasteland",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 1,
+  "rarity": "R",
+  "search_aliases": [
+    "황야의 여전사",
+    "Warrior Lady of the Wasteland"
+  ],
+  "source_id": 3536,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2568
+}

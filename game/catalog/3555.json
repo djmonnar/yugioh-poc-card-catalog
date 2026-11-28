@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3555",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-드래곤족",
+    "지원-릴리즈",
+    "지원-패 버리기",
+    "효과-드로우"
+  ],
+  "code": 27770341,
+  "defense": 0,
+  "description": "①: 이 카드를 발동한 턴의 엔드 페이즈에 드로우한다. 드로우할 장수는 이 턴에 자신의 패에서 버린 드래곤족 몬스터의 수와, 자신의 패 또는 필드에서 릴리스한 드래곤족 몬스터의 수를 합한 수치이다.",
+  "draw_enabled": true,
+  "identity_key": "3aeaefd2877dfcef02ab89b7600a3b8fbe9ad087c0c5820b756cb9028d6504c4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3555.jpg",
+  "level": 0,
+  "links": [],
+  "name": "초재생능력",
+  "name_english": "Super Rejuvenation",
+  "native_type": 65538,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "초재생능력",
+    "Super Rejuvenation"
+  ],
+  "source_id": 3555,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "속공 마법",
+  "web_slot": 2587
+}

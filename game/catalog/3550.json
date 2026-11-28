@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3550",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-라의 익신룡",
+    "지원-죽은 자의 소생",
+    "지원-환신야수족",
+    "발동-묘지로 보내기",
+    "효과-덱샐비지",
+    "효과-묘지샐비지",
+    "소환-묘지",
+    "효과-묘지로 보내기"
+  ],
+  "code": 41044418,
+  "defense": 0,
+  "description": "이 카드명의 ①과 ②는 각각 1턴에 1번만 사용할 수 있다.\n①: 패의 환신야수족 몬스터 1장을 묘지로 보내고 발동할 수 있다. 자신의 덱이나 묘지의 \"죽은 자의 소생\" 1장을 골라 패에 넣는다.\n②: 마법 / 함정 존의 앞면 표시인 이 카드를 묘지로 보내고 발동할 수 있다. 이 턴에는 자신이 발동한 \"죽은 자의 소생\"으로 자신의 묘지에서 \"라의 익신룡\"을 소환 조건을 무시하여 특수 소환할 수 있다. 이 턴의 엔드 페이즈에는 자신이 그 소생 효과로 특수 소환한 \"라의 익신룡\"을 묘지로 보내야 한다.",
+  "draw_enabled": true,
+  "identity_key": "1d6c76fb0457cfa48e6e2cfd0a7ae7d6def7483ab2244e9ac55f03115700fda5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3550.jpg",
+  "level": 0,
+  "links": [],
+  "name": "천년의 계시",
+  "name_english": "Millennium Revelation",
+  "native_type": 131074,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "천년의 계시",
+    "Millennium Revelation"
+  ],
+  "source_id": 3550,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 마법",
+  "web_slot": 2582
+}

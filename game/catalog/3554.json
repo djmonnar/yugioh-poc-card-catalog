@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3554",
+  "attack": 2000,
+  "attribute": 32,
+  "categories": [
+    "소환제약",
+    "발동-묘지에서",
+    "발동-배틀 페이즈 종료 시",
+    "효과-패 버리기"
+  ],
+  "code": 76052811,
+  "defense": 1400,
+  "description": "이 카드는 묘지에서 특수 소환할 수 없다.\n①: 전투로 파괴된 이 카드가 묘지에 있는 동안, 상대 배틀 페이즈의 종료시에 발동한다. 처리시에 이 카드가 묘지에 있으면, 상대의 패에서 무작위로 1장을 버린다.",
+  "draw_enabled": true,
+  "identity_key": "4af32731ee0c3be2adc1be97be17596a8392569d95201f766b70cb3a5fcac26d",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3554.jpg",
+  "level": 5,
+  "links": [],
+  "name": "지옥시인 헬포에머",
+  "name_english": "Helpoemer",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8,
+  "rarity": "SR",
+  "search_aliases": [
+    "지옥시인 헬포에머",
+    "Helpoemer"
+  ],
+  "source_id": 3554,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2586
+}

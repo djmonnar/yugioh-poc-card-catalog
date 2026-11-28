@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3559",
+  "attack": 2400,
+  "attribute": 4,
+  "categories": [
+    "지원-거대전함",
+    "발동-소환 시",
+    "발동-데미지 스텝 종료 시",
+    "효과-카운터",
+    "면역-전투",
+    "보호-전투 파괴",
+    "효과-자괴"
+  ],
+  "code": 75937826,
+  "defense": 1100,
+  "description": "자신 필드에 몬스터가 없으면, 이 카드를 릴리스 없이 일반 소환할 수 있다.\n이 카드가 특수 소환에 성공했을 때에 발동한다. 이 카드 위에 카운터를 3개 놓는다.\n이 카드는 전투에 의해서는 파괴되지 않는다.\n이 카드가 전투한 데미지 스텝의 종료시에 발동한다. 이 카드의 카운터 1개를 제거하고, 카운터가 없으면 이 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "f0d5266c77560ad4647a8b8a0618cac95f0000d73ac7420cbc43b3e0435e0667",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3559.jpg",
+  "level": 6,
+  "links": [],
+  "name": "거대전함 빅코어 MK－Ⅱ",
+  "name_english": "B.E.S. Big Core MK-2",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "SR",
+  "search_aliases": [
+    "거대전함 빅코어 MK－Ⅱ",
+    "B.E.S. Big Core MK-2"
+  ],
+  "source_id": 3559,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2591
+}

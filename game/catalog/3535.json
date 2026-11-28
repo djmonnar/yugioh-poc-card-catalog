@@ -1,0 +1,36 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3535",
+  "attack": 1500,
+  "attribute": 1,
+  "categories": [
+    "지원-지속 마법",
+    "효과-공격력 상승"
+  ],
+  "code": 46508640,
+  "defense": 700,
+  "description": "이 카드의 공격력은 자신 마법 / 함정 존의 앞면 표시 지속 마법 1장당 300 올린다.",
+  "draw_enabled": true,
+  "identity_key": "4c1e14092a831228bd9e2e55d330da697a7473972357407f73ef41b6a77a6c8f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3535.jpg",
+  "level": 3,
+  "links": [],
+  "name": "용맥에 사는 자",
+  "name_english": "Dweller in the Depths",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "R",
+  "search_aliases": [
+    "용맥에 사는 자",
+    "용맥에사는자",
+    "Dweller in the Depths"
+  ],
+  "source_id": 3535,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2567
+}

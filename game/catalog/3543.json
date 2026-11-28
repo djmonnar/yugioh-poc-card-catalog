@@ -1,0 +1,37 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3543",
+  "attack": 2600,
+  "attribute": 8,
+  "categories": [
+    "지원-안개 골짜기",
+    "소환-싱크로",
+    "효과-바운스",
+    "효과-공격력 상승"
+  ],
+  "code": 89310929,
+  "defense": 2400,
+  "description": "튜너 ＋ 튜너 이외의 \"안개 골짜기\" 몬스터 1장 이상\n자신 / 상대 턴에 1턴에 1번, 자신 필드의 이 카드 이외의 카드 1장을 대상으로 발동할 수 있다. 그 카드를 주인의 패로 되돌리고, 패로 되돌렸을 경우 이 카드의 공격력을 엔드 페이즈까지 500 올린다.",
+  "draw_enabled": true,
+  "identity_key": "a85f61ebb479557e1c4bf48037d2a5fece218c03662fe0132e76cf4ed04e1ef0",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3543.jpg",
+  "level": 7,
+  "links": [],
+  "name": "안개 골짜기의 뇌신귀",
+  "name_english": "Mist Valley Thunder Lord",
+  "native_type": 8225,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4096,
+  "rarity": "UR",
+  "search_aliases": [
+    "안개 골짜기의 뇌신귀",
+    "Mist Valley Thunder Lord"
+  ],
+  "source_id": 3543,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "싱크로 몬스터",
+  "web_slot": 2575
+}

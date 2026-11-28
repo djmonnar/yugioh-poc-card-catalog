@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3564",
+  "attack": 3100,
+  "attribute": 32,
+  "categories": [
+    "지원-거대전함",
+    "발동-패에서",
+    "발동-묘지로 보내기",
+    "발동-카운터 제거",
+    "소환-패에서",
+    "효과-카운터",
+    "효과-파괴",
+    "파괴-몬스터",
+    "파괴-마법",
+    "파괴-함정"
+  ],
+  "code": 41516133,
+  "defense": 3100,
+  "description": "이 카드명의 ①의 효과는 1턴에 1번만 사용할 수 있다.\n①: 자신의 패 또는 덱에서 레벨 10 이하의 \"거대전함\" 몬스터를 서로 다른 이름으로 1~5장 골라 묘지로 보내고 발동할 수 있다. 이 카드를 패에서 특수 소환한다. 그 후, 이 효과의 발동을 위해 묘지로 보낸 몬스터 1장당 이 카드 위에 카운터를 1개 놓는다.\n②: 자신 또는 상대 턴에 같은 체인에서는 1번만, 이 카드에서 카운터 1개를 제거하고 발동할 수 있다. 자신 필드의 \"거대전함\" 몬스터 1장 이상을 포함한 필드의 앞면 표시 카드 2장을 대상으로 하며, 대상 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "a6f8debb1b59e148bd8a3b28d63e167025c9933cf36cc77407aa883a57a6ac41",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3564.jpg",
+  "level": 11,
+  "links": [],
+  "name": "초거대전함 메탈 슬레이브",
+  "name_english": "Super B.E.S. Metal Slave",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "UR",
+  "search_aliases": [
+    "초거대전함 메탈 슬레이브",
+    "Super B.E.S. Metal Slave"
+  ],
+  "source_id": 3564,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2596
+}

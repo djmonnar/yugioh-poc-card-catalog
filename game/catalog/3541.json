@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3541",
+  "attack": 2800,
+  "attribute": 16,
+  "categories": [
+    "지원-라이트레이",
+    "지원-빛 속성",
+    "소환제약",
+    "소환-패에서",
+    "발동-제외",
+    "효과-카드 확인",
+    "효과-덱으로 되돌리기"
+  ],
+  "code": 30126992,
+  "defense": 1000,
+  "description": "이 카드는 통상 소환할 수 없다. 자신 묘지의 빛 속성 몬스터 중 서로 이름이 다른 몬스터가 5종류 이상이면 패에서 특수 소환할 수 있다.\n1턴에 1번, 자신 묘지의 빛 속성 몬스터 1장을 제외하고 상대 필드의 세트 카드 1장을 대상으로 발동할 수 있다. 그 카드의 내용을 확인하고 주인의 덱 맨 위 또는 맨 아래에 놓는다.",
+  "draw_enabled": true,
+  "identity_key": "74796f95b8a7420187ef19c694407d531dd12f3453e17a5b4449655988aa3e8e",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3541.jpg",
+  "level": 7,
+  "links": [],
+  "name": "라이트레이 디아블로스",
+  "name_english": "Lightray Diabolos",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "SR",
+  "search_aliases": [
+    "라이트레이 디아블로스",
+    "Lightray Diabolos"
+  ],
+  "source_id": 3541,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "특수 소환 몬스터",
+  "web_slot": 2573
+}

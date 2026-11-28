@@ -1,0 +1,40 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3557",
+  "attack": 2300,
+  "attribute": 32,
+  "categories": [
+    "지원-거대전함",
+    "발동-소환 시",
+    "발동-데미지 스텝 종료 시",
+    "효과-카운터",
+    "면역-전투",
+    "보호-전투 파괴",
+    "효과-자괴"
+  ],
+  "code": 14148099,
+  "defense": 1100,
+  "description": "이 카드를 일반 소환했을 때에 발동한다. 이 카드 위에 카운터를 3개 놓는다.\n이 카드는 전투에 의해서는 파괴되지 않는다.\n이 카드가 전투한 데미지 스텝의 종료시에 발동한다. 이 카드의 카운터가 남아 있으면 1개 제거하고, 남아 있지 않으면 이 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "ef9ff97334cbd90f04ff757aaf69b1ef36441ca5f529934b501c12b6556cc97a",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3557.jpg",
+  "level": 6,
+  "links": [],
+  "name": "거대전함 빅 코어",
+  "name_english": "B.E.S. Big Core",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "SR",
+  "search_aliases": [
+    "거대전함 빅 코어",
+    "B.E.S. Big Core"
+  ],
+  "source_id": 3557,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2589
+}

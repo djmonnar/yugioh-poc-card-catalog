@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3547",
+  "attack": 3000,
+  "attribute": 2,
+  "categories": [
+    "지원-물족",
+    "지원-물 속성",
+    "지원-릴리즈",
+    "소환-엑스트라 덱에서",
+    "소환-릴리즈 코스트",
+    "소환제약",
+    "면역-전투",
+    "보호-전투 파괴",
+    "보호-공격 대상 제외",
+    "보호-효과 대상 제외"
+  ],
+  "code": 42166000,
+  "defense": 3000,
+  "description": "물족 몬스터 ＋ 물 속성 / 레벨 10 몬스터\n엑스트라 덱의 이 카드는 융합 소환하거나, 자신 필드에서 공격력이 0인 레벨 10 물족 몬스터 1장을 릴리스하는 방법으로만 특수 소환할 수 있다.\n①: 몬스터 3장을 릴리스해야 하는 어드밴스 소환에 이 카드 1장을 릴리스하고, 그 3장을 대신할 수 있다.\n②: 이 카드는 전투로 파괴되지 않는다. 상대는 \"갓 슬라임\"을 제외한 자신 필드의 몬스터를 공격하거나 효과의 대상으로 지정할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "51c1bdb48daca75e73290112a671c84e0de4ab776445a05c749479ebe55ce3bc",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3547.jpg",
+  "level": 10,
+  "links": [],
+  "name": "갓 슬라임",
+  "name_english": "Egyptian God Slime",
+  "native_type": 97,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 64,
+  "rarity": "UR",
+  "search_aliases": [
+    "갓 슬라임",
+    "Egyptian God Slime"
+  ],
+  "source_id": 3547,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "융합 몬스터",
+  "web_slot": 2579
+}

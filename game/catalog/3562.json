@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3562",
+  "attack": 2500,
+  "attribute": 1,
+  "categories": [
+    "지원-거대전함",
+    "소환-패에서",
+    "발동-소환 시",
+    "발동-데미지 스텝 종료 시",
+    "효과-카운터",
+    "면역-전투",
+    "보호-전투 파괴",
+    "효과-자괴"
+  ],
+  "code": 84257883,
+  "defense": 3000,
+  "description": "이 카드명의 ①의 방법으로 특수 소환할 수 있는 것은 1턴에 1번뿐이다.\n①: 상대 필드의 몬스터가 자신의 몬스터보다 많을 때, 패의 이 카드를 특수 소환할 수 있다.\n②: 이 카드가 일반 소환 또는 특수 소환되었을 경우에 발동한다. 이 카드 위에 카운터를 3개 놓는다.\n③: 이 카드는 전투에 의해서는 파괴되지 않는다.\n④: 이 카드가 전투한 데미지 스텝의 종료시에 발동한다. 이 카드의 카운터를 1개 제거하고, 제거할 수 없으면 이 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "f8c4630566ad1c4c027060eb1ef9557c73f1369aaf4e48d4479f55f7267a5c5f",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3562.jpg",
+  "level": 9,
+  "links": [],
+  "name": "거대전함 블래스터캐논 코어",
+  "name_english": "B.E.S. Blaster Cannon Core",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "UR",
+  "search_aliases": [
+    "거대전함 블래스터캐논 코어",
+    "B.E.S. Blaster Cannon Core"
+  ],
+  "source_id": 3562,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2594
+}

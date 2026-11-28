@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3538",
+  "attack": 2600,
+  "attribute": 16,
+  "categories": [
+    "지원-라이트레이",
+    "지원-빛 속성",
+    "소환제약",
+    "소환-패에서",
+    "효과-파괴",
+    "파괴-마법",
+    "파괴-몬스터",
+    "파괴-함정"
+  ],
+  "code": 38737148,
+  "defense": 1500,
+  "description": "이 카드는 통상 소환할 수 없다. 자신 묘지에 빛 속성 몬스터가 4장 이상일 때에만 패에서 특수 소환할 수 있다.\n1턴에 1번, 필드 마법 1장과 그 이외의 필드 카드 2장을 대상으로 발동할 수 있다. 대상 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "57884493bab4845e660072bb539ab4e3d46113177b2d68f9e73bc61a4c072fa4",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3538.jpg",
+  "level": 7,
+  "links": [],
+  "name": "라이트레이 다이달로스",
+  "name_english": "Lightray Daedalus",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 262144,
+  "rarity": "SR",
+  "search_aliases": [
+    "라이트레이 다이달로스",
+    "Lightray Daedalus"
+  ],
+  "source_id": 3538,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "특수 소환 몬스터",
+  "web_slot": 2570
+}

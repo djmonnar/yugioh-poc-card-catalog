@@ -1,0 +1,38 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3546",
+  "attack": 1000,
+  "attribute": 8,
+  "categories": [
+    "지원-드래곤족",
+    "발동-전투 시",
+    "발동-패 버리기",
+    "효과-공격력 상승",
+    "효과-수비력 상승"
+  ],
+  "code": 67957315,
+  "defense": 1000,
+  "description": "자신의 턴에 이 카드가 전투를 실행하는 경우, 그 배틀 스텝에 패의 드래곤족 몬스터 1장을 묘지로 버리고 발동할 수 있다. 그 배틀 페이즈의 엔드 스텝까지 이 카드의 공격력과 수비력을 각각 1000 올린다.",
+  "draw_enabled": true,
+  "identity_key": "2332e32d9df9730af61007f7b6041468dc08af952f270ef7836ce83f6fadc887",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3546.jpg",
+  "level": 4,
+  "links": [],
+  "name": "스피릿 드래곤",
+  "name_english": "Spirit Ryu",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 8192,
+  "rarity": "R",
+  "search_aliases": [
+    "스피릿 드래곤",
+    "Spirit Ryu"
+  ],
+  "source_id": 3546,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2578
+}

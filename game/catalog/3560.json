@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3560",
+  "attack": 2500,
+  "attribute": 1,
+  "categories": [
+    "지원-거대전함",
+    "발동-소환 시",
+    "발동-데미지 스텝 종료 시",
+    "효과-카운터",
+    "효과-코인 토스",
+    "면역-전투",
+    "보호-전투 파괴",
+    "효과-자괴"
+  ],
+  "code": 15317640,
+  "defense": 800,
+  "description": "이 카드를 일반 소환했을 때에 발동한다. 이 카드 위에 카운터를 2개 놓는다.\n이 카드는 전투에 의해서는 파괴되지 않는다.\n이 카드가 카운터를 가진 상태로 전투한 데미지 스텝의 종료시에 발동한다. 코인의 앞면 또는 뒷면을 선언하여 코인을 1번 던지고, 맞히지 못하면 이 카드의 카운터를 1개 제거한다.\n이 카드가 카운터 없이 전투한 데미지 스텝의 종료시에 발동한다. 이 카드를 파괴한다.",
+  "draw_enabled": true,
+  "identity_key": "2eb688cf223f18fa33a6e11b29173ac799d84e5a02923e3013b6e2668178efa2",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3560.jpg",
+  "level": 7,
+  "links": [],
+  "name": "거대전함 커버드 코어",
+  "name_english": "B.E.S. Covered Core",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 32,
+  "rarity": "SR",
+  "search_aliases": [
+    "거대전함 커버드 코어",
+    "B.E.S. Covered Core"
+  ],
+  "source_id": 3560,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2592
+}

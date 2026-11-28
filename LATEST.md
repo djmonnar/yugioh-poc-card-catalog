@@ -1,9 +1,10 @@
 # 최근 변경
 
-웹 DB 개정 1094 (이전 기록 1093)
+웹 DB 개정 1095 (이전 기록 1094)
 
-- game (game) · 변경 1: starter_loadouts153
-- 상대 편성 (game/opponents/opponents) · 변경 2: enc-a4f74f58-6ba8-4ab1-b80a-11d95bf53acf 전우혁, enc-eb68ebc4-f319-4147-b3ee-d709ce65cb4e 전우혁
-- game/starters (game/starters) · 변경 1: _rest
-- 시작 덱 (game/starters/starters) · 변경 1: unified039:deck-92e00cdf-a871-4578-808f-97a6cd664e72 기어프리드-중급
-- 연습 덱 (practice-decks) · 변경 2: deck-92e00cdf-a871-4578-808f-97a6cd664e72 기어프리드-중급, _rest
+- content-profiles (content-profiles) · 변경 1: content-profiles
+- 카드 (game/catalog) · 변경 16: 2031 킹 모케모케, 2436 암흑계의 용신왕 그라파, 2501 전설의 어부 2세, 2937 프레데터 플래닛, 3101 호루스의 영광－임세티, 3102 호루스의 선도－하피, 3104 호루스의 축복－두아무테프, 3105 호루스의 가호－케벤세누프 … / 추가 34: 3534 라이트레이 소서러, 3535 용맥에 사는 자, 3536 황야의 여전사, 3537 라이트레이 마돌, 3538 라이트레이 다이달로스, 3539 암흑의 마왕 디아블로스, 3540 마왕 디아블로스, 3541 라이트레이 디아블로스 …
+- game/deck_rules035 (game/deck_rules035) · 변경 1: _rest
+- 덱 금제 (game/deck_rules035/rows) · 추가 34: 3534, 3535, 3536, 3537, 3538, 3539, 3540, 3541 …
+- game/opponents (game/opponents) · 변경 1: _rest
+- 연습 덱 (practice-decks) · 변경 1: _rest

@@ -1,0 +1,41 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3534",
+  "attack": 2300,
+  "attribute": 16,
+  "categories": [
+    "지원-라이트레이",
+    "지원-빛 속성",
+    "지원-제외",
+    "소환제약",
+    "소환-패에서",
+    "효과-덱으로 되돌리기",
+    "효과-제외",
+    "제약-공격 불가"
+  ],
+  "code": 91349449,
+  "defense": 2000,
+  "description": "이 카드는 통상 소환할 수 없다. 자신의 제외 상태인 빛 속성 몬스터가 3장 이상일 때에만 패에서 특수 소환할 수 있다.\n1턴에 1번, 앞면으로 제외된 자신의 빛 속성 몬스터 1장과 필드의 앞면 표시 몬스터 1장을 대상으로 발동할 수 있다. 제외된 카드를 덱으로 되돌리고, 되돌렸을 경우 대상인 필드의 몬스터를 제외한다. 이 효과를 발동하는 턴에 이 카드는 공격할 수 없다.",
+  "draw_enabled": true,
+  "identity_key": "ef021cacfc340194de4a938e8c50823a88269c47da97e6841600fe52411caf18",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3534.jpg",
+  "level": 6,
+  "links": [],
+  "name": "라이트레이 소서러",
+  "name_english": "Lightray Sorcerer",
+  "native_type": 33554465,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 2,
+  "rarity": "SR",
+  "search_aliases": [
+    "라이트레이 소서러",
+    "Lightray Sorcerer"
+  ],
+  "source_id": 3534,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "특수 소환 몬스터",
+  "web_slot": 2566
+}

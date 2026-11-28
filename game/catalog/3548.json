@@ -1,0 +1,39 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3548",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-라의 익신룡",
+    "발동-LP 지불",
+    "발동-릴리즈",
+    "효과-공격력 상승",
+    "효과-수비력 상승",
+    "효과-회복"
+  ],
+  "code": 77432167,
+  "defense": 0,
+  "description": "이 카드의 ①과 ②는 같은 체인에서 함께 발동할 수 없다. 원래 카드명이 \"라의 익신룡\"인 몬스터가 자신 필드에 있으면, 세트한 턴에도 이 카드를 발동할 수 있다.\n①: 자신 또는 상대의 메인 페이즈에, 남은 LP가 100이 되도록 지불하고 발동할 수 있다. 자신 필드에서 특수 소환된 \"라의 익신룡\" 1장을 골라 그 공격력과 수비력을 각각 지불한 LP만큼 올린다.\n②: 1턴에 1번, 자신 필드의 \"라의 익신룡\" 1장을 릴리스하고 발동할 수 있다. 릴리스한 몬스터의 공격력만큼 자신의 LP를 회복한다.",
+  "draw_enabled": true,
+  "identity_key": "0c9efdf1ac1e556dd1d59c25075a22b0a84332dccdf8c623fad5dc7b16f52e57",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3548.jpg",
+  "level": 0,
+  "links": [],
+  "name": "태양신합일",
+  "name_english": "Sun God Unification",
+  "native_type": 131076,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "SR",
+  "search_aliases": [
+    "태양신합일",
+    "Sun God Unification"
+  ],
+  "source_id": 3548,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "지속 함정",
+  "web_slot": 2580
+}

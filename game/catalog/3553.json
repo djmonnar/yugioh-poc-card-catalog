@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3553",
+  "attack": 1100,
+  "attribute": 16,
+  "categories": [
+    "지원-라의 익신룡",
+    "지원-오시리스의 천공룡",
+    "지원-오벨리스크의 거신병",
+    "지원-릴리즈",
+    "발동-소환 시",
+    "발동-반전 소환 시",
+    "소환-패에서",
+    "소환-덱리크루터",
+    "소환제약",
+    "효과-소환 봉쇄"
+  ],
+  "code": 74875003,
+  "defense": 600,
+  "description": "①: 이 카드가 일반 소환, 반전 소환 또는 특수 소환에 성공했을 때에 발동할 수 있다. 자신의 패나 덱에서 \"라의 사도\"를 합계 2장까지 특수 소환한다.\n②: 이 카드가 몬스터 존에 있는 동안 자신은 \"라의 사도\"의 효과를 통해서만 몬스터를 특수 소환할 수 있다. 이 카드를 릴리스할 수 있는 것은 \"오시리스의 천공룡\", \"오벨리스크의 거신병\" 또는 \"라의 익신룡\"을 어드밴스 소환하는 경우에 한한다.",
+  "draw_enabled": true,
+  "identity_key": "9b9c11da55101e782f47e8eed172b068096e00f31195da3c54f420108453d1f5",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3553.jpg",
+  "level": 4,
+  "links": [],
+  "name": "라의 사도",
+  "name_english": "Ra's Disciple",
+  "native_type": 33,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 4,
+  "rarity": "SR",
+  "search_aliases": [
+    "라의 사도",
+    "Ra's Disciple"
+  ],
+  "source_id": 3553,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "효과 몬스터",
+  "web_slot": 2585
+}

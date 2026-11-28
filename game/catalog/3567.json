@@ -1,0 +1,43 @@
+{
+  "alias": 0,
+  "art_key": "Cards226/3567",
+  "attack": 0,
+  "attribute": 0,
+  "categories": [
+    "지원-거대전함",
+    "지원-보스 러시",
+    "효과-덱샐비지",
+    "효과-공격력 상승",
+    "효과-수비력 상승",
+    "보호-효과 파괴",
+    "보호-효과 대상 제외",
+    "소환-패에서",
+    "발동-소환 시",
+    "효과-카운터"
+  ],
+  "code": 975299,
+  "defense": 0,
+  "description": "①: 이 카드가 발동하여 해결될 때, 덱에서 \"보스 러시\" 1장을 패에 넣을 수 있다.\n②: 자신 필드의 \"거대전함\" 몬스터는 공격력과 수비력이 각각 500 오르며, 상대 효과로 파괴되지 않고 상대 효과의 대상도 되지 않는다.\n③: 1턴에 1번, 자신의 메인 페이즈에 발동할 수 있다. 패에서 \"거대전함\" 몬스터 1장을 골라 특수 소환한다.\n④: 자신 필드에 \"거대전함\" 몬스터가 일반 소환 또는 특수 소환되었을 경우에 발동한다. 그 몬스터에 그 몬스터 자신의 효과에서 쓰는 카운터를 1개 놓는다.",
+  "draw_enabled": true,
+  "identity_key": "29d40217108289733a8960dc41cf3925482159255cacb1cbb04d83c679ef5b80",
+  "image_url": "https://djmonnar.github.io/yugioh-poc-card-catalog/assets/native226/cards/3567.jpg",
+  "level": 0,
+  "links": [],
+  "name": "거대요새 제로스",
+  "name_english": "B.E.F. Zelos",
+  "native_type": 524290,
+  "normal_limit": 3,
+  "playable": true,
+  "race": 0,
+  "rarity": "UR",
+  "search_aliases": [
+    "거대요새 제로스",
+    "B.E.F. Zelos"
+  ],
+  "source_id": 3567,
+  "speed_limit": null,
+  "stock": true,
+  "token": false,
+  "type_name": "필드 마법",
+  "web_slot": 2599
+}
