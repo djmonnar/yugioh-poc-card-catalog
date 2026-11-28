@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "platform": "Android",
   "packageName": "com.ownervista.ygoclassic.expedition.prototype",
-  "versionName": "0.18.150",
-  "versionCode": 169,
-  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.150/YGOClassicExpedition-0.18.150-arm64.apk",
-  "sizeBytes": 1043453150,
-  "sha256": "9817c4cb665b43093c3a0b3c426284def1edacd7013bd6ef458da0b894270563",
-  "releaseNotes": "라이트레이·라의 익신룡·거대전함과 관련 카드 34종을 추가했습니다. 새 소환 및 후속 효과의 사용 판단을 보강했습니다."
+  "versionName": "0.18.151",
+  "versionCode": 170,
+  "apkUrl": "https://github.com/djmonnar/yugioh-poc-card-catalog/releases/download/android-v0.18.151/YGOClassicExpedition-0.18.151-arm64.apk",
+  "sizeBytes": 1043493542,
+  "sha256": "ff03020160a26ed4fea5a40d9be9527f48cf8b0664f9cf29108a9db9f26ef061",
+  "releaseNotes": "AI가 라이트레이 마돌·자이로이드·유람정 서브마리드의 전투 파괴 방지 소모를 보고 공격합니다. 방지 순간과 남은 횟수를 표시하고, 연습전에서 시작 덱과 양쪽 AI 덱의 특성을 보여 줍니다."
 }
